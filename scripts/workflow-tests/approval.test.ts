@@ -5,15 +5,92 @@ import test from 'node:test';
 import { getOctokit } from '@actions/github';
 
 const repository = 'MAK1MAAaa/ai-arch-proj';
-const AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
+type Octokit = ReturnType<typeof getOctokit>;
 
-function workflowScript(filename) {
+type WorkflowRunFixture = {
+  id: number;
+  workflow_id: number;
+  run_number: number;
+  run_attempt: number;
+  event: string;
+  path: string;
+  head_repository: { full_name: string };
+  head_branch: string;
+  head_sha: string;
+  actor: { login: string };
+  triggering_actor: { login: string };
+  status: string;
+  conclusion: string | null;
+  pull_requests: { number: number }[];
+  html_url: string;
+};
+
+type PullRequestFixture = {
+  number: number;
+  state: string;
+  draft: boolean;
+  user: { login: string };
+  head: { repo: { full_name: string }; ref: string; sha: string };
+  base: { repo: { full_name: string }; ref: string; sha: string };
+};
+
+type ApprovalFixture = {
+  commit_id: string;
+  event: 'APPROVE';
+  body?: string;
+};
+
+type Fixture = {
+  run: WorkflowRunFixture;
+  eventRun: WorkflowRunFixture;
+  pr: PullRequestFixture;
+  runs: WorkflowRunFixture[];
+  jobs: { name: string; status?: string; conclusion: string | null }[];
+  reviews: { user: { login: string }; state: string; commit_id: string }[];
+  approvals: ApprovalFixture[];
+  failures: (string | Error)[];
+  requests: string[];
+  latestReads: number;
+  prReads: number;
+  currentRuns?: (readCount: number) => WorkflowRunFixture[];
+  currentPr?: (readCount: number) => PullRequestFixture;
+};
+
+type Mutation = (state: Fixture) => void;
+type WorkflowContext = {
+  repo: { owner: string; repo: string };
+  payload: { workflow_run: WorkflowRunFixture };
+};
+type CoreFixture = {
+  info: (message: string) => void;
+  setFailed: (message: string | Error) => void;
+};
+type WorkflowScript = (
+  github: Octokit,
+  context: WorkflowContext,
+  core: CoreFixture,
+) => Promise<void>;
+type AsyncFunctionConstructor = new (...parameters: string[]) => WorkflowScript;
+
+const asyncPrototype: unknown = Object.getPrototypeOf(async function () {});
+const AsyncFunction = (asyncPrototype as { constructor: AsyncFunctionConstructor }).constructor;
+
+function isApproval(value: unknown): value is ApprovalFixture {
+  return typeof value === 'object' && value !== null
+    && 'commit_id' in value && typeof value.commit_id === 'string'
+    && 'event' in value && value.event === 'APPROVE'
+    && (!('body' in value) || typeof value.body === 'string');
+}
+
+function workflowScript(filename: string): WorkflowScript {
   const text = readFileSync(new URL(`../../.github/workflows/${filename}`, import.meta.url), 'utf8');
   const lines = text.split(/\r?\n/);
   const marker = lines.findIndex((line) => /^\s+script: \|$/.test(line));
   assert.notEqual(marker, -1, `No github-script block in ${filename}`);
-  const indent = lines[marker].match(/^\s*/)[0].length + 2;
-  const body = [];
+  const whitespace = lines[marker].match(/^\s*/);
+  assert(whitespace !== null);
+  const indent = whitespace[0].length + 2;
+  const body: string[] = [];
   for (const line of lines.slice(marker + 1)) {
     if (line.trim() && !line.startsWith(' '.repeat(indent))) break;
     body.push(line.slice(indent));
@@ -21,8 +98,8 @@ function workflowScript(filename) {
   return new AsyncFunction('github', 'context', 'core', body.join('\n'));
 }
 
-function fixture() {
-  const run = {
+function fixture(): Fixture {
+  const run: WorkflowRunFixture = {
     id: 101, workflow_id: 7, run_number: 10, run_attempt: 1,
     event: 'pull_request', path: '.github/workflows/ci.yml',
     head_repository: { full_name: repository }, head_branch: 'feature/dev',
@@ -32,7 +109,7 @@ function fixture() {
     conclusion: 'success', pull_requests: [{ number: 1 }],
     html_url: `https://github.com/${repository}/actions/runs/101`,
   };
-  const pr = {
+  const pr: PullRequestFixture = {
     number: 1, state: 'open', draft: false, user: { login: 'MAK1MAAaa' },
     head: { repo: { full_name: repository }, ref: 'feature/dev', sha: run.head_sha },
     base: { repo: { full_name: repository }, ref: 'main', sha: 'c'.repeat(40) },
@@ -44,15 +121,15 @@ function fixture() {
   };
 }
 
-function octokitFor(state) {
+function octokitFor(state: Fixture): Octokit {
   const prefix = `/repos/${repository}`;
-  const fetch = async (input, options = {}) => {
-    const url = new URL(typeof input === 'string' ? input : input.url);
+  const fetch: typeof globalThis.fetch = async (input, options = {}) => {
+    const url = new URL(typeof input === 'string' ? input : input instanceof URL ? input.href : input.url);
     const method = options.method ?? 'GET';
     const route = `${method} ${url.pathname}`;
     const page = Number(url.searchParams.get('page') ?? 1);
     state.requests.push(`${route}?page=${page}`);
-    let body;
+    let body: unknown;
     let nextPage = false;
     if (route === `GET ${prefix}/actions/runs/101`) {
       body = state.run;
@@ -83,13 +160,15 @@ function octokitFor(state) {
     } else if (route === `GET ${prefix}/pulls/1/reviews`) {
       body = state.reviews;
     } else if (route === `POST ${prefix}/pulls/1/reviews`) {
-      const review = JSON.parse(options.body);
+      assert(typeof options.body === 'string');
+      const review: unknown = JSON.parse(options.body);
+      assert(isApproval(review));
       state.approvals.push(review);
       body = { id: 42, ...review };
     } else {
       throw new Error(`Unexpected network request: ${route}`);
     }
-    const headers = { 'content-type': 'application/json' };
+    const headers: Record<string, string> = { 'content-type': 'application/json' };
     if (nextPage) {
       const next = new URL(url);
       next.searchParams.set('page', '2');
@@ -104,7 +183,7 @@ function octokitFor(state) {
   return getOctokit('test-token-never-used-on-network', { request: { fetch } });
 }
 
-async function execute(mutate = () => {}) {
+async function execute(mutate: Mutation = () => {}): Promise<Fixture> {
   const state = fixture();
   mutate(state);
   await workflowScript('auto-approve.yml')(
@@ -146,7 +225,7 @@ test('approval reads all pages and approves the current successful commit', asyn
   assert(state.requests.some((route) => route.includes('/jobs?page=2')));
 });
 
-const scenarios = [
+const scenarios: [name: string, mutate: Mutation][] = [
   ['a newer pending CI', (s) => { s.runs = [{ ...s.run, id: 102, run_number: 11, status: 'queued', conclusion: null }]; }],
   ['a newer failed CI', (s) => { s.runs = [{ ...s.run, id: 102, run_number: 11, conclusion: 'failure' }]; }],
   ['an untrusted actor', (s) => { s.run.actor.login = 'outsider'; }],
@@ -179,3 +258,4 @@ test('a dismissed approval does not prevent reapproval after successful CI', asy
   });
   assert.equal(state.approvals.length, 1);
 });
+

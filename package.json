@@ -1,0 +1,19 @@
+{
+  "name": "archsearch-tooling",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": { "node": ">=24 <25" },
+  "scripts": {
+    "build": "tsc -p tsconfig.frontend.json",
+    "typecheck": "tsc -p tsconfig.frontend.json --noEmit && tsc -p tsconfig.tools.json --noEmit",
+    "test:workflows": "node --experimental-strip-types --test scripts/workflow-tests/approval.test.ts"
+  },
+  "devDependencies": {
+    "@actions/github": "9.0.0",
+    "@types/leaflet": "1.9.22",
+    "@types/node": "24.10.1",
+    "typescript": "5.9.3"
+  }
+}

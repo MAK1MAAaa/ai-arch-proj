@@ -8,7 +8,7 @@
 
 初始化 `main` 后，所有功能在 `feature/dev` 开发。每个完整功能批次同步本文档，经过本地检查、独立审查和 CI，再由 GitHub Actions 机器人批准并 squash 合并；`main` 要求 `quality-gate` 和一个批准。
 
-项目基础、真实数据、本地检索 API 与评测引擎已实现，网页地图在界面批次接入。
+输入中文研究问题，在结果列表与地图间双向定位，查看原文、分期证据、代表点精度和来源。支持语义/BM25切换、类型筛选、10/20/50条结果与20对中英文评测查询。
 
 ## 环境与数据验证
 
@@ -20,7 +20,9 @@ uv run --no-sync archsearch prepare
 uv run --no-sync archsearch serve
 ```
 
-API状态地址为 `http://127.0.0.1:8000/api/status`。首次准备下载固定版本E5模型（单份权重约471MB）并构建500×384向量，需要联网。后续启动和新的中文查询只使用本地资源；首次查询包含模型加载，后续请求复用编码器。应用采用CPU推理，运行不需要Node.js、GPU或外部模型API密钥。
+浏览器打开 `http://127.0.0.1:8000/`，API状态地址为 `/api/status`。首次准备下载固定版本E5模型（单份权重约471MB）并构建500×384向量，需要联网。后续启动和新的中文查询只使用本地资源；首次查询包含模型加载，后续请求复用编码器。应用采用CPU推理，运行不需要Node.js、GPU或外部模型API密钥。
+
+界面、字体回退和Leaflet资源均在本地；OpenStreetMap底图联网加载。底图失败时会显示提示，资料、地图标记与点选仍可用，可单独重试底图。地图使用现代地理底图，标记是古代地点代表位置。语义模型未准备时提供明确指引，可手动选择BM25；不会将关键词结果冒充语义结果。
 
 默认模型、索引与报告在当前工作目录的`.archsearch/`。可用全局参数 `archsearch --home <目录> prepare`指定其他目录，serve和evaluate使用相同目录；该参数应放在子命令前。准备完成后再次prepare会校验并复用模型、重建索引。安装若受本机镜像配置影响，可用 `uv sync --locked --dev --default-index https://pypi.org/simple`明确选择官方源。
 
@@ -34,14 +36,18 @@ uv run --no-sync python -m archsearch.corpus --rebuild --download
 
 依赖固定使用官方PyPI与PyTorch CPU源，模型下载缓存、虚拟环境和索引不进入Git。仓库维护者可运行 `./scripts/github_admin.ps1 -Operation Verify` 回读PR保护设置；该脚本从本机Git Credential Manager读取身份，凭据仅存于进程内存。
 
-审批脚本的分页回归使用真实 Octokit 客户端与内存 HTTP 响应，需 Node.js 24：
+前端源码为`src/archsearch/frontend/app.ts`，审批回归为`approval.test.ts`，均使用严格TypeScript。开发需要Node.js 24与pnpm，版本由根`packageManager`固定为11.25.0；依赖由根`pnpm-lock.yaml`管理：
 
 ```powershell
-npm ci --prefix scripts/workflow-tests
-npm test --prefix scripts/workflow-tests
+pnpm install --frozen-lockfile
+pnpm typecheck
+pnpm build
+pnpm test:workflows
 ```
 
-CI在Windows与Ubuntu执行锁定安装、Ruff、mypy、pytest与真实Octokit客户端回归，不下载模型或全量资料。`main`要求一个批准及`quality-gate`，管理员同样受约束，禁止强推和删除。默认分支的`workflow_run`核实可信仓库、作者、分支、最新CI及当前head后，由Actions机器人批准并自动squash合并；审批任务不检出或运行PR代码。
+`pnpm build`生成浏览器执行的`static/app.js`与source map，二者随源码提交；修改应用逻辑时编辑TypeScript源码，由构建生成JavaScript。Leaflet保留本地原版发行文件。应用运行仍只需Python和已生成资源，Node.js与pnpm用于开发构建。
+
+CI在Windows与Ubuntu执行Python锁定安装、Ruff、mypy、pytest，以及pnpm冻结锁文件安装、TypeScript检查、构建和真实Octokit回归；同时校验编译产物与源码一致，不下载模型或全量资料。`main`要求一个批准及`quality-gate`，管理员同样受约束，禁止强推和删除。默认分支的`workflow_run`核实可信仓库、作者、分支、最新CI及当前head后，由Actions机器人批准并自动squash合并；审批任务不检出或运行PR代码。
 
 每批合并后，备份旧head并保存工作区；确认远端开发分支仍为已合并head，才使用明确旧SHA的`--force-with-lease`对齐main。租约失败停止同步，保留远端新增提交。
 
@@ -105,8 +111,30 @@ uv run --no-sync pytest
 
 真实模型离线查询与浏览器交互另行本地验证；CI使用小型确定性夹具验证状态、排序与错误处理。
 
+## Windows运行，Mac展示
+
+Windows终端保持`archsearch serve`运行；两端Tailscale应登录同一tailnet并允许相互访问。Windows执行：
+
+```powershell
+tailscale status
+tailscale serve --bg 8000
+tailscale serve status
+```
+
+按首次HTTPS配置提示完成设置，将输出的`https://<设备名>.<tailnet>.ts.net`地址复制到Mac浏览器。该地址通过 [Tailscale Serve](https://tailscale.com/docs/features/tailscale-serve)代理本机`127.0.0.1:8000`，只在获准的tailnet内访问。Serve需要后端服务持续运行。
+
+演示前在Mac验证中文查询、关键词切换、地图点选和来源详情；底图仍由Mac浏览器联网加载。无法访问时先确认Windows服务、两端在线状态与tailnet访问策略，再检查`tailscale serve status`。Mac端跨设备访问需在你的两台设备上完成验收。
+
 ## 数据及范围
 
 数据来自 [Pleiades v4.1](https://github.com/isawnyu/pleiades.datasets/releases/tag/v4.1)，采用 CC BY 3.0，地点详情保留贡献者与来源。`roman` 指 [罗马早期帝国](https://pleiades.stoa.org/vocabularies/time-periods/roman)。坐标是代表点，不能视为精确发掘坐标。模型和全量下载缓存不提交到 Git。
 
 本项目进行了地理范围筛选、HTML转纯文本、字段规范化和索引加工；引用原始资料应遵循 [Pleiades引用规范](https://pleiades.stoa.org/help/how-to-cite-pleiades)。源模型遵循官方模型卡所载许可。首版定位为资料发现入口，未加入训练、聊天问答、账号或路线规划。
+
+Leaflet 1.9.4按其BSD-2-Clause许可本地分发，许可位于`src/archsearch/static/vendor/leaflet/LICENSE`；底图署名为©OpenStreetMap贡献者，遵守 [OSM瓦片使用政策](https://operations.osmfoundation.org/policies/tiles/)，不提供批量预取或离线瓦片包。
+
+## 界面预览
+
+实际本地模型查询与在线底图截图：
+
+![考古图志中文语义检索与地图联动](docs/preview.png)
