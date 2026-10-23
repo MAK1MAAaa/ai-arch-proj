@@ -30,6 +30,15 @@ uv run python -m archsearch.corpus --rebuild --download
 
 依赖固定使用官方PyPI与PyTorch CPU源，模型下载缓存、虚拟环境和索引不进入Git。仓库维护者可运行 `./scripts/github_admin.ps1 -Operation Verify` 回读PR保护设置；该脚本从本机Git Credential Manager读取身份，凭据仅存于进程内存。
 
+审批脚本的分页回归使用真实 Octokit 客户端与内存 HTTP 响应，需 Node.js 24：
+
+```powershell
+npm ci --prefix scripts/workflow-tests
+npm test --prefix scripts/workflow-tests
+```
+
+首次 PR 的引导审批仅允许 PR #1、初始化 main 的精确 base SHA 和本仓库所有者；在 `quality-gate` 成功后批准当前 head，下一批移除此引导任务。后续审批由默认分支的 `workflow_run` 处理。
+
 ## 数据及范围
 
 数据来自 [Pleiades v4.1](https://github.com/isawnyu/pleiades.datasets/releases/tag/v4.1)，采用 CC BY 3.0，地点详情保留贡献者与来源。`roman` 指 [罗马早期帝国](https://pleiades.stoa.org/vocabularies/time-periods/roman)。坐标是代表点，不能视为精确发掘坐标。模型和全量下载缓存不提交到 Git。
