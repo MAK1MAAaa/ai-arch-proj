@@ -26,17 +26,25 @@
         detailPanel: byId("detail-panel", HTMLElement), detailContent: byId("detail-content", HTMLDivElement),
         tileWarning: byId("tile-warning", HTMLDivElement), tileWarningText: byId("tile-warning-text", HTMLSpanElement),
         mapEmptyLabel: byId("map-empty-label", HTMLDivElement),
+        clearType: byId("clear-type", HTMLButtonElement), emptyClearType: byId("empty-clear-type", HTMLButtonElement),
+        searchProgress: byId("search-progress", HTMLDivElement), progressLabel: byId("search-progress-label", HTMLParagraphElement),
+        cancelSearch: byId("cancel-search", HTMLButtonElement), retryPanel: byId("retry-panel", HTMLDivElement),
+        retrySearch: byId("retry-search", HTMLButtonElement), serviceError: byId("service-error", HTMLDivElement),
+        selectionSummary: byId("selection-summary", HTMLParagraphElement), previousResult: byId("previous-result", HTMLButtonElement),
+        nextResult: byId("next-result", HTMLButtonElement), locateSelected: byId("locate-selected", HTMLButtonElement),
     };
     const state = {
         corpusReady: false, semanticReady: false, statusLoaded: false, searching: false,
         hasSearched: false, displayedMode: null, results: [], selectedId: null, typeLabels: new Map(),
         completedSearch: null, restoringLink: false, detailOpener: null,
         searchController: null, detailController: null, searchSequence: 0,
+        activeSearch: null, failedSearch: null, searchFeedback: null, statusError: null, facetError: null,
         map: null, tiles: null, markerLayer: null, markers: new Map(),
     };
     const initialLink = ArchSearchResearch.parseLink(new URL(window.location.href));
     let pendingLink = initialLink.request;
     let linkError = initialLink.error;
+    let runtimeRefresh = null;
     const fieldLabels = {
         title: "地点名称", names: "别名", description: "原始描述", types: "地点类型",
         periods: "原始时期", details: "原始补充记录", search_text: "检索文本",
@@ -118,6 +126,20 @@
         ui.requestError.textContent = message;
         ui.requestError.hidden = !message;
     }
+    function renderServiceError() {
+        const message = [state.statusError, state.facetError].filter(Boolean).join(" ");
+        ui.serviceError.textContent = message;
+        ui.serviceError.hidden = !message;
+    }
+    function formRequest() {
+        return { query: ui.query.value.trim(), mode: currentMode(), type: ui.typeFilter.value || null, limit: Number(ui.limitFilter.value) };
+    }
+    function sameRequest(left, right) {
+        return left.query === right.query && left.mode === right.mode && left.type === right.type && left.limit === right.limit;
+    }
+    function modeAvailable(mode) {
+        return !state.restoringLink && state.corpusReady && (mode === "bm25" || state.semanticReady);
+    }
     function safeLink(value, label, className) {
         try {
             if (typeof value !== "string")
@@ -168,9 +190,21 @@
     }
     function updateSearchAvailability() {
         const mode = currentMode();
-        const available = !state.restoringLink && state.corpusReady && (mode === "bm25" || state.semanticReady);
-        ui.searchButton.disabled = !available;
-        ui.buttonLabel.textContent = state.searching ? "检索中" : "开始检索";
+        const available = modeAvailable(mode);
+        const samePending = state.searching && state.activeSearch !== null && sameRequest(state.activeSearch, formRequest());
+        ui.searchButton.disabled = !available || samePending;
+        ui.buttonLabel.textContent = state.searching ? samePending ? "检索中" : "更新检索" : "开始检索";
+        ui.cancelSearch.disabled = !state.searching;
+        ui.cancelSearch.hidden = !state.searching;
+        ui.searchProgress.hidden = !state.searching && !state.searchFeedback;
+        ui.progressLabel.textContent = state.searching
+            ? state.completedSearch ? "正在更新，列表与地图仍保留上次检索结果。" : "正在检索本地资料。"
+            : state.searchFeedback || "";
+        ui.retryPanel.hidden = state.failedSearch === null;
+        ui.retrySearch.disabled = state.failedSearch === null || state.searching || !modeAvailable(state.failedSearch.mode);
+        ui.retrySearch.title = state.failedSearch ? `恢复并重试：${state.failedSearch.query}` : "";
+        ui.clearType.disabled = !ui.typeFilter.value || ui.typeFilter.disabled;
+        ui.emptyClearType.hidden = !state.hasSearched || state.results.length > 0 || !ui.typeFilter.value || state.searching || ui.typeFilter.disabled;
         ui.activeMode.textContent = (state.displayedMode || mode) === "semantic" ? "SEMANTIC" : "BM25";
         ui.preparationNote.hidden = mode !== "semantic" || !state.statusLoaded || state.semanticReady;
         ui.modeExplanation.textContent = mode === "semantic"
@@ -190,8 +224,6 @@
         });
     }
     async function loadStatus() {
-        const refreshButton = byId("refresh-status", HTMLButtonElement);
-        refreshButton.disabled = true;
         ui.runtimeLabel.textContent = "检查本地服务";
         try {
             const status = await api("/api/status");
@@ -205,12 +237,7 @@
             ui.runtimeLabel.textContent = state.semanticReady ? "本地检索已就绪" : state.corpusReady ? "关键词检索可用" : "等待资料准备";
             const reason = typeof status.semantic?.reason === "string" ? status.semantic.reason : "";
             ui.preparationReason.textContent = `${reason ? `${reason}。` : ""}请按 README 完成本地模型与索引准备，然后点击右上角刷新运行状态。`;
-            if (!state.corpusReady) {
-                showError("本地资料集尚未准备。请先按 README 导入演示资料，再刷新运行状态。");
-            }
-            else {
-                showError("");
-            }
+            state.statusError = state.corpusReady ? null : "本地资料集尚未准备。请先按 README 导入资料，再刷新运行状态。";
             announce(state.semanticReady ? "本地语义检索已就绪。" : "本地模型尚未就绪，可以选择关键词基线。");
         }
         catch (error) {
@@ -219,33 +246,71 @@
             ui.statusDot.className = "status-dot is-warning";
             ui.runtimeLabel.textContent = "服务连接失败";
             ui.preparationReason.textContent = "无法确认本地模型状态。请检查服务是否启动，再点击右上角刷新运行状态。";
-            showError(`运行状态检查失败：${errorMessage(error)}`);
+            state.statusError = `运行状态检查失败：${errorMessage(error)}`;
         }
         finally {
-            refreshButton.disabled = false;
+            renderServiceError();
             updateSearchAvailability();
         }
     }
     async function loadFacets() {
         try {
             const facets = await api("/api/facets");
+            if (!Array.isArray(facets.types) || !facets.types.length)
+                throw new Error("服务未返回可用的类型列表。");
+            const selected = ui.typeFilter.value;
+            const previousLabel = selected ? typeLabel(selected) : "";
+            const labels = new Map();
+            const options = [element("option", null, "全部类型")];
+            options[0].value = "";
             for (const item of facets.types || []) {
                 if (typeof item.id !== "string")
                     continue;
                 const label = typeof item.label === "string" ? item.label : labelFromId(item.id);
-                state.typeLabels.set(item.id, label);
+                if (labels.has(item.id))
+                    continue;
+                labels.set(item.id, label);
                 const option = element("option", null, `${label} (${Number(item.count) || 0})`);
                 option.value = item.id;
-                ui.typeFilter.append(option);
+                options.push(option);
             }
+            if (!labels.size)
+                throw new Error("类型列表无效。");
+            state.typeLabels = labels;
+            state.facetError = null;
+            if (selected && !labels.has(selected)) {
+                const missing = element("option", null, `${previousLabel}（当前不可用）`);
+                missing.value = selected;
+                missing.disabled = true;
+                options.push(missing);
+                state.facetError = "当前选择的类型已不可用。请改选类型或明确清除筛选后检索。";
+            }
+            ui.typeFilter.replaceChildren(...options);
+            ui.typeFilter.value = selected;
+            ui.typeFilter.disabled = false;
         }
-        catch {
-            ui.typeFilter.disabled = true;
-            ui.typeFilter.options[0].textContent = "类型暂不可用";
+        catch (error) {
+            const retained = state.typeLabels.size > 0;
+            ui.typeFilter.disabled = !retained;
+            if (!retained)
+                ui.typeFilter.options[0].textContent = "类型暂不可用";
+            state.facetError = `类型列表加载失败：${errorMessage(error)} ${retained ? "保留已加载的类型；可再次刷新。" : "可手动检索全部类型，或点击右上角刷新重试。"}`;
         }
         finally {
+            renderServiceError();
             updateSearchAvailability();
         }
+    }
+    function refreshRuntime() {
+        if (runtimeRefresh)
+            return runtimeRefresh;
+        const refreshButton = byId("refresh-status", HTMLButtonElement);
+        refreshButton.disabled = true;
+        runtimeRefresh = Promise.allSettled([loadStatus(), loadFacets()]).then(() => undefined).finally(() => {
+            runtimeRefresh = null;
+            refreshButton.disabled = false;
+        });
+        return runtimeRefresh;
     }
     function point(site) {
         const coordinate = site.repr_point;
@@ -295,6 +360,57 @@
             state.map.fitBounds(L.latLngBounds(coordinates), { padding: [46, 55], maxZoom: 9, animate: false });
         }
     }
+    function selectedResult() {
+        return state.results.find((result) => result.site.id === state.selectedId);
+    }
+    function updateSelectionControls() {
+        const index = state.results.findIndex((result) => result.site.id === state.selectedId);
+        const selected = index >= 0 ? state.results[index] : undefined;
+        ui.selectionSummary.textContent = selected
+            ? `第 ${index + 1} / ${state.results.length} 条 · ${displayTitle(selected.site)}`
+            : state.results.length ? `${state.results.length} 条候选，可逐条浏览或选择地图标记。` : "选择候选，查看地图与原始资料。";
+        ui.selectionSummary.title = ui.selectionSummary.textContent;
+        ui.previousResult.disabled = index <= 0;
+        ui.nextResult.disabled = !state.results.length || index >= state.results.length - 1;
+        ui.nextResult.textContent = index < 0 ? "查看首条" : "下一条";
+        ui.locateSelected.disabled = !state.map || !selected || point(selected.site) === null;
+    }
+    function positionSelectedSite(site) {
+        const coordinate = point(site);
+        if (!state.map || !coordinate)
+            return;
+        state.map.stop();
+        state.map.invalidateSize({ pan: false });
+        state.map.panTo(coordinate, { animate: false });
+        if (ui.detailPanel.hidden)
+            return;
+        const mapBounds = byId("map", HTMLDivElement).getBoundingClientRect();
+        const detailBounds = ui.detailPanel.getBoundingClientRect();
+        const coveredWidth = Math.max(0, Math.min(mapBounds.right, detailBounds.right) - Math.max(mapBounds.left, detailBounds.left));
+        if (mapBounds.width - coveredWidth >= 64) {
+            state.map.panBy([coveredWidth / 2, 0], { animate: false });
+        }
+    }
+    function browseResult(direction) {
+        const index = state.results.findIndex((result) => result.site.id === state.selectedId);
+        const target = index < 0 ? direction === 1 ? 0 : -1 : index + direction;
+        const result = state.results[target];
+        if (result)
+            selectSite(result.site.id);
+    }
+    function locateCurrentSite() {
+        const result = selectedResult();
+        if (!result || !state.map || !point(result.site))
+            return;
+        closeDetail(false);
+        positionSelectedSite(result.site);
+        const marker = state.markers.get(result.site.id);
+        marker?.openTooltip();
+        if (window.matchMedia("(max-width: 780px)").matches)
+            byId("map", HTMLDivElement).scrollIntoView({ block: "center", behavior: "instant" });
+        marker?.getElement()?.focus({ preventScroll: true });
+        announce(`已在地图定位 ${displayTitle(result.site)}。可按 Enter 或空格重新打开详情。`);
+    }
     function renderMarkers() {
         if (!state.map || !state.markerLayer)
             return;
@@ -336,6 +452,9 @@
         return mode === "semantic" ? `语义分数 ${score.toFixed(3)}` : `BM25 ${score.toFixed(2)}`;
     }
     function renderResults(data, context) {
+        const previousFocus = document.activeElement;
+        const removedFocus = ui.list.contains(previousFocus) || ui.detailPanel.contains(previousFocus)
+            || Array.from(state.markers.values()).some((marker) => marker.getElement()?.contains(previousFocus));
         const request = { query: data.query, mode: data.mode, ...context };
         const link = ArchSearchResearch.buildLink(new URL(window.location.href), request);
         closeDetail(false);
@@ -385,6 +504,7 @@
             ui.list.append(item);
         }
         renderMarkers();
+        updateSelectionControls();
         state.completedSearch = { request, response: data, link };
         ui.resultTools.hidden = false;
         ui.copyLink.disabled = false;
@@ -397,6 +517,11 @@
         }
         catch {
             ui.toolsFeedback.textContent = "地址栏未能更新；仍可复制检索链接或导出结果。";
+        }
+        if (removedFocus || (previousFocus instanceof HTMLButtonElement && previousFocus.disabled
+            && [ui.previousResult, ui.nextResult, ui.locateSelected].includes(previousFocus))) {
+            ui.resultSummary.tabIndex = -1;
+            ui.resultSummary.focus({ preventScroll: true });
         }
         announce(`检索完成，返回 ${state.results.length} 条候选资料。${data.mode === "semantic" ? "相似度分数并非相关概率，请核验来源。" : ""}`);
     }
@@ -483,6 +608,7 @@
         await search();
     }
     function setLoading(value) {
+        const focusWasInProgress = !value && ui.searchProgress.contains(document.activeElement);
         state.searching = value;
         ui.resultsPanel.setAttribute("aria-busy", String(value));
         ui.form.classList.toggle("is-searching", value);
@@ -492,54 +618,142 @@
         if (!value)
             ui.empty.hidden = state.results.length > 0;
         updateSearchAvailability();
+        if (focusWasInProgress) {
+            if (!ui.searchProgress.hidden) {
+                ui.progressLabel.tabIndex = -1;
+                ui.progressLabel.focus({ preventScroll: true });
+            }
+            else if (state.failedSearch) {
+                if (!ui.retrySearch.disabled)
+                    ui.retrySearch.focus({ preventScroll: true });
+                else {
+                    ui.requestError.tabIndex = -1;
+                    ui.requestError.focus({ preventScroll: true });
+                }
+            }
+            else {
+                ui.resultSummary.tabIndex = -1;
+                ui.resultSummary.focus({ preventScroll: true });
+            }
+        }
     }
     async function search(event) {
         if (event)
             event.preventDefault();
         cancelLinkRestore();
-        const query = ui.query.value.trim();
-        if (!query) {
+        const request = formRequest();
+        if (!request.query) {
+            if (state.searching)
+                cancelCurrentSearch();
             ui.query.focus();
             return;
         }
-        const mode = currentMode();
-        const context = { type: ui.typeFilter.value || null, limit: Number(ui.limitFilter.value) };
+        await runSearch(request);
+    }
+    function invalidateSearch() {
+        ++state.searchSequence;
         state.searchController?.abort();
-        const sequence = ++state.searchSequence;
-        if (!state.corpusReady || (mode === "semantic" && !state.semanticReady)) {
+        state.searchController = null;
+        state.activeSearch = null;
+    }
+    function cancelCurrentSearch() {
+        if (!state.searching)
+            return;
+        invalidateSearch();
+        state.failedSearch = null;
+        state.searchFeedback = state.completedSearch ? "已取消本次检索，保留上次结果与地图。" : "已取消本次检索，可调整问题后重新提交。";
+        showError("");
+        if (!state.completedSearch) {
+            ui.emptyTitle.textContent = "本次检索已取消";
+            ui.emptyDescription.textContent = "调整研究问题后可重新检索；取消只停止等待，不会清除已有资料。";
+        }
+        setLoading(false);
+        announce(state.searchFeedback);
+    }
+    async function runSearch(request) {
+        if (state.searching && state.activeSearch && sameRequest(state.activeSearch, request))
+            return;
+        invalidateSearch();
+        const sequence = state.searchSequence;
+        state.failedSearch = null;
+        state.searchFeedback = null;
+        showError("");
+        if (!modeAvailable(request.mode)) {
+            state.searchFeedback = "当前检索方式尚未就绪，请查看准备指引或手动选择可用方式。";
             setLoading(false);
-            announce("当前检索方式尚未就绪，请查看准备指引，或选择关键词基线。");
+            announce(state.searchFeedback);
+            return;
+        }
+        if (request.type && !state.typeLabels.has(request.type)) {
+            showError("当前类型无法确认。请刷新类型列表、改选类型或明确清除筛选后检索。");
+            setLoading(false);
             return;
         }
         const controller = new AbortController();
         state.searchController = controller;
-        showError("");
+        state.activeSearch = { ...request };
+        const focusProgress = document.activeElement === ui.searchButton || document.activeElement === ui.retrySearch;
         setLoading(true);
+        if (focusProgress) {
+            ui.progressLabel.tabIndex = -1;
+            ui.progressLabel.focus({ preventScroll: true });
+        }
         announce("正在检索本地资料。");
         try {
             const data = await api("/api/search", {
                 method: "POST", signal: controller.signal,
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ query, mode, ...context }),
+                body: JSON.stringify(request),
             });
             if (sequence !== state.searchSequence)
                 return;
-            renderResults(data, context);
+            renderResults(data, { type: request.type, limit: request.limit });
         }
         catch (error) {
             if (isAbortError(error) || sequence !== state.searchSequence)
                 return;
-            const retained = state.results.length ? "已保留上次结果。" : "请检查本地服务后重试。";
+            state.failedSearch = { ...request };
+            const retained = state.completedSearch ? "已保留上次结果与地图。" : "请检查本地服务后重试。";
             showError(`本次检索未完成：${errorMessage(error)} ${retained}`);
             announce("本次检索失败，请查看错误说明。");
-            if (!state.results.length) {
+            if (!state.completedSearch) {
                 ui.emptyTitle.textContent = "本次检索未完成";
                 ui.emptyDescription.textContent = "上方保留了错误说明。检查本地模型与服务后，可以重试或选择关键词基线。";
             }
         }
         finally {
-            if (sequence === state.searchSequence)
+            if (sequence === state.searchSequence) {
+                state.searchController = null;
+                state.activeSearch = null;
                 setLoading(false);
+            }
+        }
+    }
+    function retryFailedSearch() {
+        const request = state.failedSearch;
+        if (!request || state.searching)
+            return;
+        if (request.type && !state.typeLabels.has(request.type)) {
+            showError("上次失败请求的类型已不可用，未放宽原条件。请刷新类型或重新选择后检索。");
+            return;
+        }
+        ui.query.value = request.query;
+        ui.typeFilter.value = request.type || "";
+        ui.limitFilter.value = String(request.limit);
+        ui.form.querySelectorAll('input[name="mode"]').forEach((radio) => { radio.checked = radio.value === request.mode; });
+        search();
+    }
+    function clearTypeFilter() {
+        const returnFocus = document.activeElement === ui.clearType || document.activeElement === ui.emptyClearType;
+        ui.typeFilter.value = "";
+        applyChangedFilter();
+        if (returnFocus) {
+            if (!ui.searchProgress.hidden) {
+                ui.progressLabel.tabIndex = -1;
+                ui.progressLabel.focus({ preventScroll: true });
+            }
+            else
+                ui.query.focus({ preventScroll: true });
         }
     }
     function detailSection(title, content) {
@@ -643,8 +857,7 @@
             const selected = card.dataset.siteId === id;
             card.classList.toggle("is-selected", selected);
             card.setAttribute("aria-pressed", String(selected));
-            if (selected && fromMap) {
-                card.focus({ preventScroll: true });
+            if (selected) {
                 const listBounds = ui.list.getBoundingClientRect();
                 const cardBounds = card.getBoundingClientRect();
                 if (cardBounds.top < listBounds.top)
@@ -659,20 +872,16 @@
             marker.getElement()?.setAttribute("aria-pressed", String(selected));
             marker.setZIndexOffset(selected ? 1000 : 0);
         }
-        const coordinate = point(result.site);
-        if (state.map && coordinate) {
-            state.map.panTo(coordinate, { animate: false });
-            // Keep the selected point visible to the left of the source drawer.
-            if (byId("map", HTMLDivElement).clientWidth > 500)
-                state.map.panBy([150, 0], { animate: false });
-        }
         ui.detailPanel.hidden = false;
         renderDetail(result.site, result.matched_fields);
         ui.detailPanel.scrollTop = 0;
         ui.detailPanel.focus({ preventScroll: true });
+        positionSelectedSite(result.site);
+        updateSelectionControls();
         if (window.matchMedia("(max-width: 780px)").matches)
             ui.detailPanel.scrollIntoView({ block: "start", behavior: "instant" });
-        announce(`已选择 ${displayTitle(result.site)}，原始资料详情已展开。`);
+        const rank = state.results.findIndex((item) => item.site.id === id) + 1;
+        announce(`已选择第 ${rank} / ${state.results.length} 条：${displayTitle(result.site)}，原始资料详情已展开。`);
         state.detailController?.abort();
         const controller = new AbortController();
         state.detailController = controller;
@@ -702,11 +911,17 @@
     function applyChangedFilter() {
         cancelLinkRestore();
         updateSearchAvailability();
-        if ((state.hasSearched || state.searching) && ui.query.value.trim())
+        if (!ui.query.value.trim() && state.searching)
+            cancelCurrentSearch();
+        else if ((state.hasSearched || state.searching) && ui.query.value.trim())
             search();
     }
     ui.form.addEventListener("submit", search);
-    ui.form.addEventListener("input", cancelLinkRestore);
+    ui.form.addEventListener("input", (event) => {
+        cancelLinkRestore();
+        if (event.target === ui.query && !ui.query.value.trim() && state.searching)
+            cancelCurrentSearch();
+    });
     ui.form.querySelectorAll('input[name="mode"]').forEach((radio) => radio.addEventListener("change", applyChangedFilter));
     ui.typeFilter.addEventListener("change", applyChangedFilter);
     ui.limitFilter.addEventListener("change", applyChangedFilter);
@@ -719,7 +934,7 @@
             search();
         });
     });
-    byId("refresh-status", HTMLButtonElement).addEventListener("click", loadStatus);
+    byId("refresh-status", HTMLButtonElement).addEventListener("click", refreshRuntime);
     byId("fit-map", HTMLButtonElement).addEventListener("click", () => { closeDetail(false); fitMap(); });
     byId("retry-tiles", HTMLButtonElement).addEventListener("click", () => {
         ui.tileWarning.hidden = true;
@@ -728,6 +943,13 @@
     byId("close-detail", HTMLButtonElement).addEventListener("click", () => closeDetail());
     ui.copyLink.addEventListener("click", copySearchLink);
     ui.exportResults.addEventListener("click", exportSearchResults);
+    ui.clearType.addEventListener("click", clearTypeFilter);
+    ui.emptyClearType.addEventListener("click", clearTypeFilter);
+    ui.cancelSearch.addEventListener("click", cancelCurrentSearch);
+    ui.retrySearch.addEventListener("click", retryFailedSearch);
+    ui.previousResult.addEventListener("click", () => browseResult(-1));
+    ui.nextResult.addEventListener("click", () => browseResult(1));
+    ui.locateSelected.addEventListener("click", locateCurrentSite);
     document.addEventListener("keydown", (event) => {
         if (event.key === "Escape" && !ui.detailPanel.hidden)
             closeDetail();
@@ -739,7 +961,8 @@
         ui.form.querySelectorAll('input[name="mode"]').forEach((radio) => { radio.checked = radio.value === pendingLink?.mode; });
     }
     initializeMap();
+    updateSelectionControls();
     updateSearchAvailability();
-    Promise.allSettled([loadStatus(), loadFacets()]).then(finishLinkRestore);
+    refreshRuntime().then(finishLinkRestore);
 })();
 //# sourceMappingURL=app.js.map
