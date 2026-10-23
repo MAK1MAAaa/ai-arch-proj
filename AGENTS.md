@@ -15,7 +15,7 @@ uv run --no-sync mypy src
 uv run --no-sync pytest
 ```
 
-前端与工具源码使用TypeScript，包管理统一pnpm。运行 `pnpm install --frozen-lockfile`、`pnpm typecheck`、`pnpm build`、`pnpm test:frontend`与`pnpm test:workflows`。修改前端时编辑`src/archsearch/frontend/`下的`app.ts`或`research.ts`，编译后的对应`static/*.js`及source map须同步提交，不手工编辑生成文件。Leaflet保留原版第三方资源。
+前端与工具源码使用TypeScript，包管理统一pnpm。运行 `pnpm install --frozen-lockfile`、`pnpm typecheck`、`pnpm build`、`pnpm test:frontend`与`pnpm test:workflows`。修改前端时编辑`src/archsearch/frontend/`下的`app.ts`、`research.ts`或`map-view.ts`，编译后的对应`static/*.js`及source map须同步提交，不手工编辑生成文件。Leaflet保留原版第三方资源。
 
 CI不得下载模型或全量数据；真实模型与浏览器交互在本地另外验证。
 
