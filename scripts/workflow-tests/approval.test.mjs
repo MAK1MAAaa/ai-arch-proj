@@ -1,0 +1,205 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import test from 'node:test';
+
+import { getOctokit } from '@actions/github';
+
+const repository = 'MAK1MAAaa/ai-arch-proj';
+const initialMain = '0fa4092765566cf8d155a4801fa481648b7db6f5';
+const AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
+
+function workflowScript(filename) {
+  const text = readFileSync(new URL(`../../.github/workflows/${filename}`, import.meta.url), 'utf8');
+  const lines = text.split(/\r?\n/);
+  const marker = lines.findIndex((line) => /^\s+script: \|$/.test(line));
+  assert.notEqual(marker, -1, `No github-script block in ${filename}`);
+  const indent = lines[marker].match(/^\s*/)[0].length + 2;
+  const body = [];
+  for (const line of lines.slice(marker + 1)) {
+    if (line.trim() && !line.startsWith(' '.repeat(indent))) break;
+    body.push(line.slice(indent));
+  }
+  return new AsyncFunction('github', 'context', 'core', body.join('\n'));
+}
+
+function fixture(bootstrap = false) {
+  const run = {
+    id: 101, workflow_id: 7, run_number: 10, run_attempt: 1,
+    event: 'pull_request', path: '.github/workflows/ci.yml',
+    head_repository: { full_name: repository }, head_branch: 'feature/dev',
+    head_sha: 'a'.repeat(40), actor: { login: 'MAK1MAAaa' },
+    triggering_actor: { login: 'MAK1MAAaa' },
+    status: bootstrap ? 'in_progress' : 'completed',
+    conclusion: bootstrap ? null : 'success', pull_requests: [{ number: 1 }],
+    html_url: `https://github.com/${repository}/actions/runs/101`,
+  };
+  const pr = {
+    number: 1, state: 'open', draft: false, user: { login: 'MAK1MAAaa' },
+    head: { repo: { full_name: repository }, ref: 'feature/dev', sha: run.head_sha },
+    base: { repo: { full_name: repository }, ref: 'main', sha: initialMain },
+  };
+  return {
+    run, eventRun: structuredClone(run), pr, eventPr: structuredClone(pr),
+    runs: [run], jobs: [{ name: 'quality-gate', status: 'completed', conclusion: 'success' }],
+    reviews: [], approvals: [], failures: [], requests: [], latestReads: 0, prReads: 0,
+  };
+}
+
+function octokitFor(state) {
+  const prefix = `/repos/${repository}`;
+  const fetch = async (input, options = {}) => {
+    const url = new URL(typeof input === 'string' ? input : input.url);
+    const method = options.method ?? 'GET';
+    const route = `${method} ${url.pathname}`;
+    const page = Number(url.searchParams.get('page') ?? 1);
+    state.requests.push(`${route}?page=${page}`);
+    let body;
+    let nextPage = false;
+    if (route === `GET ${prefix}/actions/runs/101`) {
+      body = state.run;
+    } else if (route === `GET ${prefix}/actions/workflows/7/runs`) {
+      assert.equal(url.searchParams.get('branch'), 'feature/dev');
+      assert.equal(url.searchParams.get('event'), 'pull_request');
+      if (page === 1) state.latestReads++;
+      const current = state.currentRuns ? state.currentRuns(state.latestReads) : state.runs;
+      body = {
+        total_count: current.length + 1,
+        workflow_runs: page === 1 ? current : [{ ...state.run, id: 100, run_number: 9 }],
+      };
+      nextPage = page === 1;
+    } else if (route === `GET ${prefix}/actions/runs/101/attempts/1/jobs`) {
+      body = {
+        total_count: state.jobs.length + 1,
+        jobs: page === 1 ? [{ name: 'checks (windows-latest)', conclusion: 'success' }] : state.jobs,
+      };
+      nextPage = page === 1;
+    } else if (route === `GET ${prefix}/pulls`) {
+      assert.equal(url.searchParams.get('state'), 'open');
+      assert.equal(url.searchParams.get('base'), 'main');
+      assert.equal(url.searchParams.get('head'), 'MAK1MAAaa:feature/dev');
+      body = [state.pr];
+    } else if (route === `GET ${prefix}/pulls/1`) {
+      state.prReads++;
+      body = state.currentPr ? state.currentPr(state.prReads) : state.pr;
+    } else if (route === `GET ${prefix}/pulls/1/reviews`) {
+      body = state.reviews;
+    } else if (route === `POST ${prefix}/pulls/1/reviews`) {
+      const review = JSON.parse(options.body);
+      state.approvals.push(review);
+      body = { id: 42, ...review };
+    } else {
+      throw new Error(`Unexpected network request: ${route}`);
+    }
+    const headers = { 'content-type': 'application/json' };
+    if (nextPage) {
+      const next = new URL(url);
+      next.searchParams.set('page', '2');
+      headers.link = `<${next}>; rel="next"`;
+    }
+    const response = new Response(JSON.stringify(body), {
+      status: method === 'POST' ? 201 : 200, headers,
+    });
+    Object.defineProperty(response, 'url', { value: url.toString() });
+    return response;
+  };
+  return getOctokit('test-token-never-used-on-network', { request: { fetch } });
+}
+
+async function execute(bootstrap, mutate = () => {}) {
+  const state = fixture(bootstrap);
+  mutate(state);
+  const previousAttempt = process.env.GITHUB_RUN_ATTEMPT;
+  process.env.GITHUB_RUN_ATTEMPT = '1';
+  try {
+    await workflowScript(bootstrap ? 'ci.yml' : 'auto-approve.yml')(
+      octokitFor(state),
+      {
+        repo: { owner: 'MAK1MAAaa', repo: 'ai-arch-proj' },
+        actor: 'MAK1MAAaa', runId: 101,
+        payload: { workflow_run: state.eventRun, pull_request: state.eventPr },
+      },
+      { info: () => {}, setFailed: (message) => state.failures.push(message) },
+    );
+  } finally {
+    if (previousAttempt === undefined) delete process.env.GITHUB_RUN_ATTEMPT;
+    else process.env.GITHUB_RUN_ATTEMPT = previousAttempt;
+  }
+  for (const approval of state.approvals) {
+    assert.equal(approval.commit_id, state.run.head_sha);
+    assert.equal(approval.event, 'APPROVE');
+  }
+  return state;
+}
+
+test('real Octokit normalizes object-wrapped workflow runs and jobs across pages', async () => {
+  const state = fixture();
+  const github = octokitFor(state);
+  const runs = await github.paginate(github.rest.actions.listWorkflowRuns, {
+    owner: 'MAK1MAAaa', repo: 'ai-arch-proj', workflow_id: 7,
+    branch: 'feature/dev', event: 'pull_request', per_page: 100,
+  }, (response) => {
+    assert(Array.isArray(response.data));
+    return response.data;
+  });
+  assert.deepEqual(runs.map((run) => run.id), [101, 100]);
+  const jobs = await github.paginate(github.rest.actions.listJobsForWorkflowRunAttempt, {
+    owner: 'MAK1MAAaa', repo: 'ai-arch-proj', run_id: 101, attempt_number: 1, per_page: 100,
+  });
+  assert.deepEqual(jobs.map((job) => job.name), ['checks (windows-latest)', 'quality-gate']);
+});
+
+test('normal approval reads all pages and approves the current successful commit', async () => {
+  const state = await execute(false);
+  assert.equal(state.approvals.length, 1);
+  assert.deepEqual(state.failures, []);
+  assert(state.requests.some((route) => route.includes('/jobs?page=2')));
+});
+
+test('bootstrap approves after quality-gate while its own CI run remains in progress', async () => {
+  const state = await execute(true);
+  assert.equal(state.run.status, 'in_progress');
+  assert.equal(state.run.conclusion, null);
+  assert.equal(state.approvals.length, 1);
+  assert.deepEqual(state.failures, []);
+});
+
+for (const bootstrap of [false, true]) {
+  const label = bootstrap ? 'bootstrap' : 'normal';
+  const scenarios = [
+    ['a newer pending CI', (s) => { s.runs = [{ ...s.run, id: 102, run_number: 11, status: 'queued', conclusion: null }]; }],
+    ['a newer failed CI', (s) => { s.runs = [{ ...s.run, id: 102, run_number: 11, status: 'completed', conclusion: 'failure' }]; }],
+    ['an untrusted actor', (s) => { s.run.actor.login = 'outsider'; }],
+    ['an untrusted rerun actor', (s) => { s.run.triggering_actor.login = 'outsider'; }],
+    ['a fork', (s) => { s.run.head_repository.full_name = 'outsider/ai-arch-proj'; }],
+    ['a missing quality gate', (s) => { s.jobs = []; }],
+    ['a skipped quality gate', (s) => { s.jobs[0].conclusion = 'skipped'; }],
+    ['a changed PR head', (s) => { s.pr.head.sha = 'b'.repeat(40); }],
+    ['a changed target branch', (s) => { s.pr.base.ref = 'other'; }],
+    ['a draft PR', (s) => { s.pr.draft = true; }],
+    ['an existing current approval', (s) => { s.reviews = [{ user: { login: 'github-actions[bot]' }, state: 'APPROVED', commit_id: s.run.head_sha }]; }],
+    ['a race introducing newer CI', (s) => { s.currentRuns = (count) => count === 1 ? [s.run] : [{ ...s.run, id: 102, run_number: 11, status: 'queued', conclusion: null }]; }],
+  ];
+  for (const [name, mutate] of scenarios) {
+    test(`${label} refuses approval for ${name}`, async () => {
+      const state = await execute(bootstrap, mutate);
+      assert.equal(state.approvals.length, 0);
+    });
+  }
+}
+
+test('normal approval rejects an event from an older rerun attempt', async () => {
+  const state = await execute(false, (s) => { s.run.run_attempt = 2; });
+  assert.equal(state.approvals.length, 0);
+});
+
+test('bootstrap refuses a changed initial main commit', async () => {
+  const state = await execute(true, (s) => { s.eventPr.base.sha = 'b'.repeat(40); });
+  assert.equal(state.approvals.length, 0);
+  assert.equal(state.failures.length, 1);
+});
+
+test('bootstrap refuses any pull request other than PR 1', async () => {
+  const state = await execute(true, (s) => { s.eventPr.number = 2; });
+  assert.equal(state.approvals.length, 0);
+  assert.equal(state.failures.length, 1);
+});

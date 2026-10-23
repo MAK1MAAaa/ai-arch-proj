@@ -8,7 +8,7 @@ on:
 permissions: {}
 
 concurrency:
-  group: auto-approve-${{ github.event.workflow_run.head_branch }}
+  group: auto-approve-${{ github.event.workflow_run.id }}-${{ github.event.workflow_run.run_attempt }}
   cancel-in-progress: true
 
 jobs:
@@ -57,7 +57,7 @@ jobs:
               const runs = await github.paginate(github.rest.actions.listWorkflowRuns, {
                 owner, repo, workflow_id: run.workflow_id,
                 branch: 'feature/dev', event: 'pull_request', per_page: 100,
-              }, (response) => response.data.workflow_runs);
+              });
               const latest = runs
                 .filter((candidate) => candidate.head_repository?.full_name === repository)
                 .sort((left, right) => right.run_number - left.run_number ||
@@ -74,7 +74,6 @@ jobs:
             const jobs = await github.paginate(
               github.rest.actions.listJobsForWorkflowRunAttempt,
               { owner, repo, run_id: run.id, attempt_number: run.run_attempt, per_page: 100 },
-              (response) => response.data.jobs,
             );
             const gates = jobs.filter((job) => job.name === 'quality-gate');
             if (gates.length !== 1 || gates[0].status !== 'completed' ||
