@@ -30,7 +30,7 @@
           <div class="introduction-main">
             <p class="eyebrow"><span class="section-number">01 /</span> 从研究问题出发，回到原始资料</p>
             <h1 id="page-title">让历史线索，<br>在地图上<span>相遇。</span></h1>
-            <p class="intro-description">用自然语言寻找古代遗址。比较检索结果，阅读原始证据，<br class="desktop-break">在地中海的地理脉络中继续追问。</p>
+            <p class="intro-description">从中文研究问题出发，发现英文资料中的古代地点。<br class="desktop-break">阅读原始描述，再通过地图、时期记录与来源链接核验线索。</p>
           </div>
           <aside class="collection-note" aria-label="当前资料集范围">
             <div class="collection-topline"><span class="collection-rule"></span> 当前研究范围</div>
@@ -46,7 +46,7 @@
             <label class="visually-hidden" for="query">描述你的研究问题</label>
             <div class="search-input-row">
               <svg class="search-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.5"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.5"/></svg>
-              <input id="query" name="query" type="search" maxlength="400" required placeholder="例如：与海上贸易有关的古代港口" aria-describedby="mode-explanation">
+              <input id="query" name="query" type="search" maxlength="500" required placeholder="例如：寻找古代港口遗址" aria-describedby="mode-explanation">
               <button id="search-button" class="primary-button" type="submit" disabled><span id="search-button-label">开始检索</span><span class="button-arrow" aria-hidden="true">↗</span></button>
             </div>
             <div class="search-options">
@@ -55,7 +55,14 @@
               <div class="filter-group limit-filter"><label for="limit-filter">结果数</label><select id="limit-filter" name="limit"><option value="10">10 条</option><option value="20">20 条</option><option value="50">50 条</option></select></div>
             </div>
             <p id="mode-explanation" class="mode-explanation">多语言向量模型支持中文查询；返回的是相近候选，分数并非相关概率。</p>
-            <div class="example-queries"><span>试着寻找</span><button type="button" data-query="与海上贸易有关的古代港口">港口与海上贸易<span aria-hidden="true">↗</span></button><button type="button" data-query="古代剧场与公共建筑">剧场与公共建筑<span aria-hidden="true">↗</span></button><button type="button" data-query="Roman harbours and maritime trade" lang="en">Roman harbours<span aria-hidden="true">↗</span></button></div>
+            <div class="example-queries" role="group" aria-label="按地点类型尝试示例查询" aria-describedby="example-hint">
+              <span>试着寻找</span>
+              <button type="button" data-label="港口遗址" data-query-zh="寻找古代港口遗址" data-query-en="port" data-type="port"><span class="example-label">港口遗址</span><span aria-hidden="true">↗</span></button>
+              <button type="button" data-label="罗马浴场" data-query-zh="寻找罗马浴场" data-query-en="baths" data-type="bath"><span class="example-label">罗马浴场</span><span aria-hidden="true">↗</span></button>
+              <button type="button" data-label="乡村别墅" data-query-zh="寻找罗马乡村别墅" data-query-en="villa" data-type="villa"><span class="example-label">乡村别墅</span><span aria-hidden="true">↗</span></button>
+              <button type="button" data-label="古代剧场" data-query-zh="寻找古代剧场" data-query-en="theater" data-type="theatre"><span class="example-label">古代剧场</span><span aria-hidden="true">↗</span></button>
+            </div>
+            <p id="example-hint" class="example-hint">语义检索使用中文问题；选择示例时会同步筛选对应地点类型。</p>
           </form>
           <div id="preparation-note" class="notice preparation-note" hidden><span class="notice-label">语义检索待准备</span><div><p id="preparation-reason">请按 README 完成本地模型与索引准备，然后刷新运行状态。</p><p>你也可以选择“关键词基线”检索现有原文资料。</p></div></div>
           <div id="request-error" class="notice error-notice" role="alert" hidden></div>
@@ -66,6 +73,7 @@
           <div id="results-panel" class="results-panel" aria-busy="false">
             <header class="panel-heading"><div><span class="eyebrow small-eyebrow">RESULTS / 候选资料</span><h2>检索结果 <span id="result-count" class="result-count">00</span></h2></div><span id="active-mode" class="small-tag">SEMANTIC</span></header>
             <p id="result-summary" class="result-summary">从一个问题开始，探索遗址与它的历史语境。</p>
+            <p id="result-context" class="result-context" hidden></p>
             <div id="results-empty" class="empty-state"><span class="empty-illustration" aria-hidden="true"><svg viewBox="0 0 80 80" fill="none"><path d="M16 62h48M22 56h36M27 50V31h26v19M33 48V34m14 14V34M20 27l20-14 20 14H20Z" stroke="currentColor" stroke-width="1.3"/><circle cx="40" cy="40" r="34" stroke="currentColor" stroke-dasharray="2 5" opacity=".4"/></svg></span><h3 id="empty-title">研究，从提问开始</h3><p id="empty-description">输入中文研究问题，或从上方示例进入。<br>每条候选资料都可回到原始来源核验。</p><span class="empty-coordinate" aria-hidden="true">37° N / 18° E</span></div>
             <ol id="results-list" class="results-list" aria-label="遗址候选结果"></ol>
             <div id="loading-state" class="loading-state" hidden aria-hidden="true"><div></div><div></div><div></div></div>
@@ -89,7 +97,30 @@
           </div>
         </section>
 
-        <section class="reading-note" aria-label="使用说明"><div><span class="section-number">02 /</span><h2>让每一条线索<br>都有据可循。</h2></div><p><strong>先发现，再核验。</strong>语义检索连接中文问题与多语种资料；关键词基线帮助比较原文字词。候选详情保留描述、时期证据与来源链接。资料缺失、代表点精度与检索局限均按原始记录展示。</p><div class="reading-note-stamp" aria-hidden="true">OPEN DATA<br><span>研究 · 发现 · 复查</span></div></section>
+        <section class="reading-note" aria-label="使用说明">
+          <div><span class="section-number">02 /</span><h2>让每一条线索<br>都有据可循。</h2></div>
+          <div class="method-guide">
+            <p class="method-intro"><strong>先发现，再核验。</strong>用问题找到候选，阅读英文原文，再核对地图位置与来源记录。</p>
+            <details class="method-details">
+              <summary>使用步骤与资料说明<span aria-hidden="true">+</span></summary>
+              <div class="method-content">
+                <ol class="method-steps">
+                  <li><strong>提出问题。</strong>用中文问题尝试语义检索，或在关键词基线中输入英文原词与地名。要限定地点类型，请使用类型筛选。</li>
+                  <li><strong>阅读候选。</strong>对照名称、类型和原始描述；打开详情，查看时期记录、资料贡献者与原始来源。</li>
+                  <li><strong>核验位置。</strong>选择结果或地图标记，结合来源中的位置精度与记录范围判断候选是否适合研究问题。</li>
+                </ol>
+                <dl class="method-limits">
+                  <div><dt>数据范围</dt><dd>当前500条资料来自固定版本的 Pleiades 抽样，并非完整遗址目录。地中海周边示范区域不等同于历史边界或沿海范围。</dd></div>
+                  <div><dt>时期含义</dt><dd>地点因名称或位置记录中具有 roman 时期标签而入选；这不表示地点始建于该时期。原始记录也可能涉及其他时期，需结合具体证据阅读。</dd></div>
+                  <div><dt>类型计数</dt><dd>同一地点可同时具有多个类型。各类型的资料数量存在交叠，不可相加作为遗址总数。</dd></div>
+                  <div><dt>位置与底图</dt><dd>地图标记为地点代表点。来源的 precise / rough 精度分类不等于精确发掘坐标；页面使用现代底图，位置判断仍应回到来源核验。</dd></div>
+                  <div><dt>分数与匹配</dt><dd>BM25 按原文字词匹配，语义检索按文本相近度排序。两种分值不能跨模式直接比较，也不能当作历史关联的概率；问题中的年代与空间表述仍需核验。</dd></div>
+                </dl>
+              </div>
+            </details>
+          </div>
+          <div class="reading-note-stamp" aria-hidden="true">OPEN DATA<br><span>研究 · 发现 · 复查</span></div>
+        </section>
       </main>
 
       <footer class="site-footer"><div><span class="footer-brand">考古图志</span><span>面向古代遗址资料的语义检索与地图可视化</span></div><p>资料：<a href="https://pleiades.stoa.org/" target="_blank" rel="noopener noreferrer">Pleiades</a> · <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a><br>底图：© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap 贡献者</a> · 地图组件：<a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet 1.9.4</a></p></footer>

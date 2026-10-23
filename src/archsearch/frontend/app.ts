@@ -51,6 +51,11 @@
     total_candidates: number;
   }
 
+  interface SearchContext {
+    type: string | null;
+    limit: number;
+  }
+
   interface StatusResponse {
     status: string;
     corpus: { count: number; version: string; period: string };
@@ -101,6 +106,7 @@
     corpusCount: byId("corpus-count", HTMLElement), corpusPeriod: byId("corpus-period", HTMLParagraphElement),
     resultsPanel: byId("results-panel", HTMLDivElement), resultCount: byId("result-count", HTMLSpanElement),
     resultSummary: byId("result-summary", HTMLParagraphElement), activeMode: byId("active-mode", HTMLSpanElement),
+    resultContext: byId("result-context", HTMLParagraphElement), exampleHint: byId("example-hint", HTMLParagraphElement),
     list: byId("results-list", HTMLOListElement), empty: byId("results-empty", HTMLDivElement), emptyTitle: byId("empty-title", HTMLHeadingElement),
     emptyDescription: byId("empty-description", HTMLParagraphElement), loading: byId("loading-state", HTMLDivElement),
     detailPanel: byId("detail-panel", HTMLElement), detailContent: byId("detail-content", HTMLDivElement),
@@ -118,6 +124,19 @@
   const fieldLabels: Readonly<Record<string, string>> = {
     title: "地点名称", names: "别名", description: "原始描述", types: "地点类型",
     periods: "原始时期", details: "原始补充记录", search_text: "检索文本",
+  };
+
+  const primaryTypeLabels: Readonly<Record<string, string>> = {
+    settlement: "聚落", villa: "别墅庄园", port: "港口", bath: "浴场", theatre: "剧场", "archaeological-site": "考古遗址",
+  };
+
+  const confidenceLabels: Readonly<Record<string, string>> = {
+    confident: "较有把握", "less-confident": "把握较低",
+    "confident-inferred": "较有把握，基于推断、无同时代证据", "less-confident-inferred": "把握较低，基于推断、无同时代证据",
+  };
+
+  const certaintyLabels: Readonly<Record<string, string>> = {
+    certain: "确定", "less-certain": "确定性较低", uncertain: "不确定",
   };
 
   function element<K extends keyof HTMLElementTagNameMap>(
@@ -142,7 +161,40 @@
   }
 
   function typeLabel(value: string): string {
-    return state.typeLabels.get(value) || labelFromId(value);
+    return state.typeLabels.get(value) || primaryTypeLabels[value] || labelFromId(value);
+  }
+
+  function sourceLabel(value: string | null, labels: Readonly<Record<string, string>>): string {
+    if (!value) return "原始资料未提供";
+    return labels[value] ? `${labels[value]}（${value}）` : value;
+  }
+
+  function periodLabel(value: string): string {
+    return value === "roman" ? "罗马早期帝国（roman）" : value;
+  }
+
+  function displayTitle(site: Site): string {
+    return !site.title.trim() || site.title.trim().toLowerCase() === "untitled"
+      ? `未命名地点 · #${site.id}` : site.title;
+  }
+
+  function hasSourceText(value: string): boolean {
+    return Boolean(value.trim()) && !["none", "null"].includes(value.trim().toLowerCase());
+  }
+
+  function sourceExcerpt(site: Site): { label: string; text: string } {
+    if (site.description.startsWith("An ancient place, cited:") && hasSourceText(site.details)) {
+      return { label: "目录补充原文", text: site.details };
+    }
+    if (hasSourceText(site.description)) return { label: "来源描述原文", text: site.description };
+    if (hasSourceText(site.details)) return { label: "补充记录原文", text: site.details };
+    return { label: "原文状态", text: "当前导出未提供描述，请打开详情核验来源记录。" };
+  }
+
+  function sourceYear(value: number | null): string {
+    if (value === null || !Number.isFinite(value)) return "未提供";
+    if (value === 0) return "原始值 0（未转换纪年）";
+    return value < 0 ? `公元前 ${Math.abs(value)} 年` : `公元 ${value} 年`;
   }
 
   function currentMode(): SearchMode {
@@ -216,8 +268,19 @@
     ui.activeMode.textContent = (state.displayedMode || mode) === "semantic" ? "SEMANTIC" : "BM25";
     ui.preparationNote.hidden = mode !== "semantic" || !state.statusLoaded || state.semanticReady;
     ui.modeExplanation.textContent = mode === "semantic"
-      ? "多语言向量模型支持中文查询；返回的是相近候选，分数并非相关概率。"
-      : "关键词基线按原文字词匹配；英文与古地名更适合，中文零命中不代表资料中没有相关地点。";
+      ? "用中文描述研究问题，在英文原文中寻找语义相近的资料；排序分数不是相关概率，仍需核验原文。"
+      : "按原文字词匹配，建议输入英文关键词或古地名；不会自动翻译或扩展同义词，零命中不代表没有相关资料。";
+    ui.exampleHint.textContent = mode === "semantic"
+      ? "中文问题示例；选择后会同步切换到对应地点类型。"
+      : "英文原词示例；选择后会同步切换到对应地点类型。";
+    document.querySelectorAll<HTMLButtonElement>("[data-query-zh]").forEach((button) => {
+      const query = mode === "semantic" ? button.dataset.queryZh : button.dataset.queryEn;
+      const label = button.querySelector<HTMLSpanElement>(".example-label");
+      if (label) label.textContent = mode === "semantic" ? button.dataset.label || query || "示例" : query || "示例";
+      button.disabled = !available || ui.typeFilter.disabled || !Array.from(ui.typeFilter.options).some((option) => option.value === button.dataset.type);
+      button.setAttribute("aria-label", `检索示例：${query || ""}；类型：${typeLabel(button.dataset.type || "")}`);
+      button.lang = mode === "semantic" ? "zh-CN" : "en";
+    });
   }
 
   async function loadStatus(): Promise<void> {
@@ -268,6 +331,8 @@
     } catch {
       ui.typeFilter.disabled = true;
       ui.typeFilter.options[0].textContent = "类型暂不可用";
+    } finally {
+      updateSearchAvailability();
     }
   }
 
@@ -330,14 +395,14 @@
       markerContent.setAttribute("aria-hidden", "true");
       const marker = L.marker(coordinate, {
         icon: L.divIcon({ className: "site-marker-icon", html: markerContent, iconSize: [30, 30], iconAnchor: [15, 15] }),
-        title: result.site.title,
+        title: displayTitle(result.site),
         keyboard: true,
       }).addTo(state.markerLayer);
-      marker.bindTooltip(element("span", null, result.site.title), { direction: "top", offset: [0, -13] });
+      marker.bindTooltip(element("span", null, displayTitle(result.site)), { direction: "top", offset: [0, -13] });
       marker.on("click", () => selectSite(String(result.site.id), { fromMap: true }));
       const icon = marker.getElement();
       if (icon) {
-        icon.setAttribute("aria-label", `候选 ${index + 1}：${result.site.title}，打开资料详情`);
+        icon.setAttribute("aria-label", `候选 ${index + 1}：${displayTitle(result.site)}，打开资料详情`);
         icon.setAttribute("aria-pressed", "false");
         icon.addEventListener("keydown", (event) => {
           if (event.key === " ") { event.preventDefault(); marker.fire("click"); }
@@ -351,10 +416,10 @@
 
   function scoreLabel(score: number, mode: SearchMode): string {
     if (!Number.isFinite(score)) return "未提供分数";
-    return mode === "semantic" ? `相似度 ${score.toFixed(3)}` : `BM25 ${score.toFixed(2)}`;
+    return mode === "semantic" ? `语义分数 ${score.toFixed(3)}` : `BM25 ${score.toFixed(2)}`;
   }
 
-  function renderResults(data: SearchResponse): void {
+  function renderResults(data: SearchResponse, context: SearchContext): void {
     closeDetail(false);
     state.results = Array.isArray(data.results) ? data.results : [];
     state.selectedId = null;
@@ -364,8 +429,12 @@
     ui.resultCount.textContent = String(state.results.length).padStart(2, "0");
     ui.activeMode.textContent = data.mode === "bm25" ? "BM25" : "SEMANTIC";
     const elapsed = Number.isFinite(data.elapsed_ms) ? `${Math.round(data.elapsed_ms)} ms` : "耗时未提供";
-    const candidates = Number.isFinite(data.total_candidates) ? ` / ${data.total_candidates} 条候选` : "";
-    ui.resultSummary.textContent = `${state.results.length} 条返回结果${candidates} · ${elapsed}`;
+    const candidates = Number.isFinite(data.total_candidates)
+      ? data.mode === "semantic" ? `在当前范围的 ${data.total_candidates} 条资料中，` : `${data.total_candidates} 条资料有字词匹配，`
+      : "";
+    ui.resultSummary.textContent = `${candidates}展示 ${state.results.length} 条 · ${elapsed}`;
+    ui.resultContext.textContent = `本次查询：“${data.query}” · ${data.mode === "semantic" ? "语义检索" : "关键词基线"} · ${context.type ? typeLabel(context.type) : "全部类型"} · 最多 ${context.limit} 条 · Pleiades ${data.corpus_version}`;
+    ui.resultContext.hidden = false;
     ui.empty.hidden = state.results.length > 0;
     if (state.results.length === 0) {
       ui.emptyTitle.textContent = "没有找到候选资料";
@@ -380,18 +449,19 @@
       card.type = "button";
       card.dataset.siteId = String(site.id);
       card.setAttribute("aria-pressed", "false");
-      card.setAttribute("aria-label", `候选 ${index + 1}：${site.title}，查看地图与原始证据`);
+      card.setAttribute("aria-label", `候选 ${index + 1}：${displayTitle(site)}，查看地图与原始证据`);
       const top = element("div", "result-topline");
       top.append(element("span", "result-rank", String(index + 1).padStart(2, "0")));
       const titleArea = element("div");
-      titleArea.append(element("h3", "result-title", site.title || "未命名地点"));
+      titleArea.append(element("h3", "result-title", displayTitle(site)));
       titleArea.append(element("p", "result-type", strings(site.types).map(typeLabel).join(" · ") || "地点类型未提供"));
       top.append(titleArea, element("span", "result-arrow", "↗"));
-      const description = element("p", "result-description", site.description || "原始资料未提供描述，请查看来源记录。");
-      description.lang = "en";
+      const excerpt = sourceExcerpt(site);
+      const description = element("p", "result-description", excerpt.text);
+      description.lang = excerpt.label === "原文状态" ? "zh-CN" : "en";
       const metadata = element("div", "result-metadata");
       metadata.append(element("span", "result-coordinate", coordinateLabel(site)), element("span", "result-score", scoreLabel(result.score, data.mode)));
-      card.append(top, description, metadata);
+      card.append(top, element("p", "result-excerpt-label", excerpt.label), description, metadata);
       card.addEventListener("click", () => selectSite(String(site.id)));
       item.append(card);
       ui.list.append(item);
@@ -415,6 +485,7 @@
     const query = ui.query.value.trim();
     if (!query) { ui.query.focus(); return; }
     const mode = currentMode();
+    const context: SearchContext = { type: ui.typeFilter.value || null, limit: Number(ui.limitFilter.value) };
     state.searchController?.abort();
     const sequence = ++state.searchSequence;
     if (!state.corpusReady || (mode === "semantic" && !state.semanticReady)) {
@@ -431,10 +502,10 @@
       const data = await api<SearchResponse>("/api/search", {
         method: "POST", signal: controller.signal,
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query, mode, type: ui.typeFilter.value || null, limit: Number(ui.limitFilter.value) } satisfies SearchRequest),
+        body: JSON.stringify({ query, mode, ...context } satisfies SearchRequest),
       });
       if (sequence !== state.searchSequence) return;
-      renderResults(data);
+      renderResults(data, context);
     } catch (error) {
       if (isAbortError(error) || sequence !== state.searchSequence) return;
       const retained = state.results.length ? "已保留上次结果。" : "请检查本地服务后重试。";
@@ -463,47 +534,74 @@
     return row;
   }
 
+  function evidenceList(evidence: PeriodEvidence[]): HTMLDivElement {
+    const list = element("div");
+    for (const item of evidence) {
+      const row = element("div", "evidence-item");
+      const resource = item.resource_type === "Name" ? "名称记录" : "位置记录";
+      row.append(element("p", null, `${resource} · ${periodLabel(item.period_id)}`));
+      row.append(element("p", "evidence-meta", `分期标注把握：${sourceLabel(item.confidence, confidenceLabels)}`));
+      row.append(element("p", "evidence-meta", `记录与地点的关联：${sourceLabel(item.association_certainty, certaintyLabels)}`));
+      row.append(element("p", "evidence-meta", `原始记录时间范围：${sourceYear(item.start)} — ${sourceYear(item.end)}`));
+      const links = element("div", "evidence-links");
+      links.append(safeLink(item.resource_uri, "原始记录 ↗"), safeLink(item.period_uri, "时期定义 ↗"));
+      row.append(links);
+      list.append(row);
+    }
+    return list;
+  }
+
   function renderDetail(site: Site, matchedFields: string[] = []): void {
-    const title = element("h3", null, site.title || "未命名地点");
+    const title = element("h3", null, displayTitle(site));
     title.id = "detail-title";
     const sourceId = element("p", "detail-id", `PLEIADES / ${site.id}`);
-    const description = element("p", "detail-description", site.description || "原始资料未提供描述。");
-    description.lang = "en";
-    const nodes: Node[] = [title, sourceId, description];
-    if (typeof site.details === "string" && site.details.trim()) {
-      nodes.push(detailSection("原始补充记录", site.details));
+    const description = element("p", "detail-description", hasSourceText(site.description) ? site.description : "当前导出未提供描述。");
+    description.lang = hasSourceText(site.description) ? "en" : "zh-CN";
+    const nodes: Node[] = [title, sourceId];
+    if (displayTitle(site) !== site.title) {
+      nodes.push(element("p", "detail-source-title", `来源标题原文：${site.title || "未提供"}`));
     }
+    nodes.push(element("p", "detail-note", "来源原文保留原语言；以下内容未经自动翻译或历史补写。"), description);
+    const details = element("p", null, hasSourceText(site.details)
+      ? site.details : `当前导出未提供补充内容${site.details.trim() ? `（原始值：${site.details}）` : ""}。`);
+    if (hasSourceText(site.details)) details.lang = "en";
+    nodes.push(detailSection("原始补充记录", details));
     nodes.push(detailSection("名称与别名", strings(site.names).join(" · ") || "原始资料未提供其他名称。"));
-    nodes.push(detailSection("地点类型", strings(site.types).map(typeLabel).join(" · ") || "原始资料未提供类型。"));
-    nodes.push(detailSection("原始时期记载", strings(site.periods).map(labelFromId).join(" · ") || "原始资料未提供时期标签。"));
+    nodes.push(detailSection("来源类型标签", strings(site.types).map((value) => primaryTypeLabels[value]
+      ? `${typeLabel(value)}（${value}）` : value).join(" · ") || "原始资料未提供类型。"));
+    const periods = detailSection("原始时期标签", strings(site.periods).map(periodLabel).join(" · ") || "原始资料未提供时期标签。");
+    periods.append(element("p", "detail-note", "标签来自名称或位置记录；多个时期标签不能证明地点持续使用，也不能直接视为建造年代。"));
+    nodes.push(periods);
     const facts = element("dl");
-    facts.append(fact("代表点", coordinateLabel(site)), fact("位置精度", site.location_precision || "原始资料未提供精度信息"));
-    nodes.push(detailSection("空间信息", facts));
+    facts.append(fact("代表点", coordinateLabel(site)), fact("原始精度", sourceLabel(site.location_precision, { precise: "精确", rough: "概略" })));
+    const space = detailSection("空间信息 · WGS84", facts);
+    space.append(element("p", "detail-note", "精度按来源标签展示，不承诺米级误差；代表点不等同于实测发掘坐标。"));
+    if (site.location_precision === "rough") {
+      space.append(element("p", "detail-note", "rough 表示应在某个范围内寻找地点；代表点可能只是该范围的中心。"));
+    }
+    nodes.push(space);
     const fields = strings(matchedFields).map((field) => fieldLabels[field] || field);
-    if (fields.length) nodes.push(detailSection("检索涉及字段", fields.join(" · ")));
+    const matches = detailSection("原文字词匹配字段", fields.join(" · ") || "未发现查询与原文字段的字词重叠。");
+    matches.append(element("p", "detail-note", "仅展示字词重叠，不解释语义模型的排序依据；中文问题仍可能检索到英文候选。"));
+    nodes.push(matches);
     const evidence = Array.isArray(site.period_evidence) ? site.period_evidence : [];
     if (evidence.length) {
-      const list = element("div");
-      for (const item of evidence) {
-        const row = element("div", "evidence-item");
-        const resource = item.resource_type === "Name" ? "名称记录" : item.resource_type === "Location" ? "位置记录" : "原始记录";
-        row.append(element("p", null, `${resource} · ${labelFromId(item.period_id || item.period_uri || "时期未提供")}`));
-        const metadata = [];
-        if (item.confidence !== null && item.confidence !== undefined) metadata.push(`原始置信信息：${item.confidence}`);
-        if (item.association_certainty !== null && item.association_certainty !== undefined) metadata.push(`关联确定性：${item.association_certainty}`);
-        if (item.start !== null && item.start !== undefined) metadata.push(`起始：${item.start}`);
-        if (item.end !== null && item.end !== undefined) metadata.push(`结束：${item.end}`);
-        if (metadata.length) row.append(element("p", "evidence-meta", metadata.join(" · ")));
-        const links = element("div", "evidence-links");
-        links.append(safeLink(item.resource_uri, "原始记录 ↗"), safeLink(item.period_uri, "时期定义 ↗"));
-        row.append(links);
-        list.append(row);
+      const roman = evidence.filter((item) => item.period_id === "roman");
+      const other = evidence.filter((item) => item.period_id !== "roman");
+      const section = detailSection("入选分期依据", element("p", "evidence-summary", `名称或位置记录中有 ${roman.length} 条 roman 分期关联。`));
+      section.append(element("p", "detail-note", "本语料以 roman（前30—公元300年）筛选。下方起止年份属于整条原始记录，可能跨越多个分期，不是该分期的起止或遗址的确切断代。"));
+      section.append(evidenceList(roman));
+      if (other.length) {
+        const more = element("details", "evidence-more");
+        more.append(element("summary", null, `查看其他时期关联（${other.length} 条）`), evidenceList(other));
+        section.append(more);
       }
-      nodes.push(detailSection("时期证据与来源", list));
+      nodes.push(section);
     } else {
       nodes.push(detailSection("时期证据与来源", "原始资料未提供可展示的时期证据。"));
     }
     nodes.push(detailSection("资料贡献者", strings(site.contributors).join(" · ") || "当前导出未提供贡献者信息，请在原始来源中核验。"));
+    nodes.push(detailSection("来源与许可", "Pleiades v4.1 · CC BY 3.0。引用时请保留地点编号、原始链接与贡献者信息。"));
     nodes.push(safeLink(site.source_uri, "在 Pleiades 查看原始资料 ↗", "detail-source-link"));
     ui.detailContent.replaceChildren(...nodes);
   }
@@ -538,7 +636,7 @@
     }
     ui.detailPanel.hidden = false;
     renderDetail(result.site, result.matched_fields);
-    announce(`已选择 ${result.site.title}，原始资料详情已展开。`);
+    announce(`已选择 ${displayTitle(result.site)}，原始资料详情已展开。`);
     state.detailController?.abort();
     const controller = new AbortController();
     state.detailController = controller;
@@ -569,9 +667,11 @@
   ui.form.querySelectorAll<HTMLInputElement>('input[name="mode"]').forEach((radio) => radio.addEventListener("change", applyChangedFilter));
   ui.typeFilter.addEventListener("change", applyChangedFilter);
   ui.limitFilter.addEventListener("change", applyChangedFilter);
-  document.querySelectorAll<HTMLButtonElement>("[data-query]").forEach((button) => {
+  document.querySelectorAll<HTMLButtonElement>("[data-query-zh]").forEach((button) => {
     button.addEventListener("click", () => {
-      ui.query.value = button.dataset.query || "";
+      ui.query.value = (currentMode() === "semantic" ? button.dataset.queryZh : button.dataset.queryEn) || "";
+      const type = button.dataset.type || "";
+      ui.typeFilter.value = Array.from(ui.typeFilter.options).some((option) => option.value === type) ? type : "";
       ui.query.focus();
       search();
     });
