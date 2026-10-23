@@ -11,5 +11,5 @@
     "erasableSyntaxOnly": true,
     "verbatimModuleSyntax": true
   },
-  "include": ["scripts/workflow-tests/**/*.ts"]
+  "include": ["scripts/workflow-tests/**/*.ts", "scripts/frontend-tests/**/*.ts"]
 }

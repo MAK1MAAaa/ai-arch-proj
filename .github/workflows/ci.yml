@@ -62,14 +62,16 @@ jobs:
           node-version: "24"
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
-      - name: Install locked frontend and workflow test dependencies
+      - name: Install locked frontend and test dependencies
         run: pnpm install --frozen-lockfile
-      - name: Type check frontend and workflow tools
+      - name: Type check frontend and test tools
         run: pnpm typecheck
       - name: Build TypeScript frontend
         run: pnpm build
       - name: Verify committed frontend build artifacts
-        run: git diff --exit-code -- src/archsearch/static/app.js src/archsearch/static/app.js.map
+        run: git diff --exit-code -- src/archsearch/static/app.js src/archsearch/static/app.js.map src/archsearch/static/research.js src/archsearch/static/research.js.map
+      - name: Test search link and result export contracts
+        run: pnpm test:frontend
       - name: Test workflow pagination and approval guards
         run: pnpm test:workflows
 

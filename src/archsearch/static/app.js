@@ -18,6 +18,9 @@
         resultsPanel: byId("results-panel", HTMLDivElement), resultCount: byId("result-count", HTMLSpanElement),
         resultSummary: byId("result-summary", HTMLParagraphElement), activeMode: byId("active-mode", HTMLSpanElement),
         resultContext: byId("result-context", HTMLParagraphElement), exampleHint: byId("example-hint", HTMLParagraphElement),
+        resultTools: byId("result-tools", HTMLDivElement), copyLink: byId("copy-search-link", HTMLButtonElement),
+        exportResults: byId("export-results", HTMLButtonElement), toolsFeedback: byId("result-tools-feedback", HTMLParagraphElement),
+        shareLinkPanel: byId("share-link-panel", HTMLDivElement), shareLink: byId("share-link", HTMLInputElement),
         list: byId("results-list", HTMLOListElement), empty: byId("results-empty", HTMLDivElement), emptyTitle: byId("empty-title", HTMLHeadingElement),
         emptyDescription: byId("empty-description", HTMLParagraphElement), loading: byId("loading-state", HTMLDivElement),
         detailPanel: byId("detail-panel", HTMLElement), detailContent: byId("detail-content", HTMLDivElement),
@@ -27,9 +30,13 @@
     const state = {
         corpusReady: false, semanticReady: false, statusLoaded: false, searching: false,
         hasSearched: false, displayedMode: null, results: [], selectedId: null, typeLabels: new Map(),
+        completedSearch: null, restoringLink: false, detailOpener: null,
         searchController: null, detailController: null, searchSequence: 0,
         map: null, tiles: null, markerLayer: null, markers: new Map(),
     };
+    const initialLink = ArchSearchResearch.parseLink(new URL(window.location.href));
+    let pendingLink = initialLink.request;
+    let linkError = initialLink.error;
     const fieldLabels = {
         title: "地点名称", names: "别名", description: "原始描述", types: "地点类型",
         periods: "原始时期", details: "原始补充记录", search_text: "检索文本",
@@ -161,7 +168,7 @@
     }
     function updateSearchAvailability() {
         const mode = currentMode();
-        const available = state.corpusReady && (mode === "bm25" || state.semanticReady);
+        const available = !state.restoringLink && state.corpusReady && (mode === "bm25" || state.semanticReady);
         ui.searchButton.disabled = !available;
         ui.buttonLabel.textContent = state.searching ? "检索中" : "开始检索";
         ui.activeMode.textContent = (state.displayedMode || mode) === "semantic" ? "SEMANTIC" : "BM25";
@@ -311,8 +318,9 @@
                 icon.setAttribute("aria-label", `候选 ${index + 1}：${displayTitle(result.site)}，打开资料详情`);
                 icon.setAttribute("aria-pressed", "false");
                 icon.addEventListener("keydown", (event) => {
-                    if (event.key === " ") {
+                    if (event.key === " " || event.key === "Enter") {
                         event.preventDefault();
+                        event.stopPropagation();
                         marker.fire("click");
                     }
                 });
@@ -328,6 +336,8 @@
         return mode === "semantic" ? `语义分数 ${score.toFixed(3)}` : `BM25 ${score.toFixed(2)}`;
     }
     function renderResults(data, context) {
+        const request = { query: data.query, mode: data.mode, ...context };
+        const link = ArchSearchResearch.buildLink(new URL(window.location.href), request);
         closeDetail(false);
         state.results = Array.isArray(data.results) ? data.results : [];
         state.selectedId = null;
@@ -375,7 +385,102 @@
             ui.list.append(item);
         }
         renderMarkers();
+        state.completedSearch = { request, response: data, link };
+        ui.resultTools.hidden = false;
+        ui.copyLink.disabled = false;
+        ui.exportResults.disabled = false;
+        ui.toolsFeedback.textContent = "";
+        ui.shareLinkPanel.hidden = true;
+        ui.shareLink.value = link;
+        try {
+            window.history.replaceState(null, "", link);
+        }
+        catch {
+            ui.toolsFeedback.textContent = "地址栏未能更新；仍可复制检索链接或导出结果。";
+        }
         announce(`检索完成，返回 ${state.results.length} 条候选资料。${data.mode === "semantic" ? "相似度分数并非相关概率，请核验来源。" : ""}`);
+    }
+    async function copySearchLink() {
+        const completed = state.completedSearch;
+        if (!completed)
+            return;
+        try {
+            if (!navigator.clipboard?.writeText)
+                throw new Error("Clipboard unavailable");
+            await navigator.clipboard.writeText(completed.link);
+            if (state.completedSearch !== completed)
+                return;
+            ui.shareLinkPanel.hidden = true;
+            ui.toolsFeedback.textContent = "已复制本次检索链接。复查时需要能访问同一服务。";
+        }
+        catch {
+            if (state.completedSearch !== completed)
+                return;
+            ui.shareLink.value = completed.link;
+            ui.shareLinkPanel.hidden = false;
+            ui.toolsFeedback.textContent = "未能自动复制。链接已选中，可按 Ctrl+C 或 Command+C 手动复制。";
+            ui.shareLink.focus();
+            ui.shareLink.select();
+        }
+    }
+    function exportSearchResults() {
+        const completed = state.completedSearch;
+        if (!completed)
+            return;
+        let objectUrl = null;
+        const download = element("a");
+        try {
+            const exportedAt = new Date().toISOString();
+            const report = ArchSearchResearch.createExport(completed.request, completed.response, exportedAt);
+            objectUrl = URL.createObjectURL(new Blob([JSON.stringify(report, null, 2)], { type: "application/json;charset=utf-8" }));
+            download.href = objectUrl;
+            download.download = `archsearch-${completed.request.mode}-${exportedAt.replace(/[:.]/g, "-")}.json`;
+            download.hidden = true;
+            document.body.append(download);
+            download.click();
+            ui.toolsFeedback.textContent = `已生成 ${completed.response.results.length} 条结果的 JSON 文件，包含原文、检索条件、分数与来源。`;
+        }
+        catch {
+            ui.toolsFeedback.textContent = "结果文件未能生成，请重试或检查浏览器的下载设置。";
+        }
+        finally {
+            download.remove();
+            if (objectUrl !== null) {
+                const disposableUrl = objectUrl;
+                window.setTimeout(() => URL.revokeObjectURL(disposableUrl), 1000);
+            }
+        }
+    }
+    function cancelLinkRestore() {
+        pendingLink = null;
+        linkError = null;
+        state.restoringLink = false;
+        updateSearchAvailability();
+    }
+    async function finishLinkRestore() {
+        const request = pendingLink;
+        pendingLink = null;
+        state.restoringLink = false;
+        if (linkError) {
+            showError(`检索链接未能恢复：${linkError}`);
+            linkError = null;
+        }
+        if (!request) {
+            updateSearchAvailability();
+            return;
+        }
+        if (request.type && (ui.typeFilter.disabled || !Array.from(ui.typeFilter.options).some((option) => option.value === request.type))) {
+            showError("链接中的地点类型无法确认。请检查类型是否有效，或重新选择后手动检索；本次未自动扩大检索范围。");
+            updateSearchAvailability();
+            return;
+        }
+        ui.typeFilter.value = request.type || "";
+        updateSearchAvailability();
+        if (!state.corpusReady || (request.mode === "semantic" && !state.semanticReady)) {
+            showError("链接中的检索条件已恢复；当前服务或所选模型尚未就绪。请查看运行状态，准备后手动检索。");
+            return;
+        }
+        await search();
     }
     function setLoading(value) {
         state.searching = value;
@@ -391,6 +496,7 @@
     async function search(event) {
         if (event)
             event.preventDefault();
+        cancelLinkRestore();
         const query = ui.query.value.trim();
         if (!query) {
             ui.query.focus();
@@ -467,6 +573,7 @@
         return list;
     }
     function renderDetail(site, matchedFields = []) {
+        const focusWasInContent = ui.detailContent.contains(document.activeElement);
         const title = element("h3", null, displayTitle(site));
         title.id = "detail-title";
         const sourceId = element("p", "detail-id", `PLEIADES / ${site.id}`);
@@ -521,11 +628,16 @@
         nodes.push(detailSection("来源与许可", "Pleiades v4.1 · CC BY 3.0。引用时请保留地点编号、原始链接与贡献者信息。"));
         nodes.push(safeLink(site.source_uri, "在 Pleiades 查看原始资料 ↗", "detail-source-link"));
         ui.detailContent.replaceChildren(...nodes);
+        if (focusWasInContent && !ui.detailPanel.hidden)
+            ui.detailPanel.focus({ preventScroll: true });
     }
     async function selectSite(id, { fromMap = false } = {}) {
         const result = state.results.find((item) => String(item.site.id) === id);
         if (!result)
             return;
+        state.detailOpener = fromMap
+            ? state.markers.get(id)?.getElement() || null
+            : Array.from(ui.list.querySelectorAll(".result-card")).find((card) => card.dataset.siteId === id) || null;
         state.selectedId = id;
         for (const card of Array.from(ui.list.querySelectorAll(".result-card"))) {
             const selected = card.dataset.siteId === id;
@@ -556,14 +668,19 @@
         }
         ui.detailPanel.hidden = false;
         renderDetail(result.site, result.matched_fields);
+        ui.detailPanel.scrollTop = 0;
+        ui.detailPanel.focus({ preventScroll: true });
+        if (window.matchMedia("(max-width: 780px)").matches)
+            ui.detailPanel.scrollIntoView({ block: "start", behavior: "instant" });
         announce(`已选择 ${displayTitle(result.site)}，原始资料详情已展开。`);
         state.detailController?.abort();
         const controller = new AbortController();
         state.detailController = controller;
         try {
             const site = await api(`/api/sites/${encodeURIComponent(id)}`, { signal: controller.signal });
-            if (state.selectedId === id && !controller.signal.aborted)
+            if (state.selectedId === id && !controller.signal.aborted && JSON.stringify(site) !== JSON.stringify(result.site)) {
                 renderDetail(site, result.matched_fields);
+            }
         }
         catch (error) {
             if (isAbortError(error) || state.selectedId !== id)
@@ -574,17 +691,22 @@
     function closeDetail(returnFocus = true) {
         state.detailController?.abort();
         ui.detailPanel.hidden = true;
-        if (returnFocus && state.selectedId !== null) {
-            const card = Array.from(ui.list.querySelectorAll(".result-card")).find((item) => item.dataset.siteId === state.selectedId);
-            card?.focus({ preventScroll: true });
+        if (returnFocus && state.detailOpener?.isConnected) {
+            state.detailOpener.focus({ preventScroll: true });
+            if (window.matchMedia("(max-width: 780px)").matches) {
+                state.detailOpener.scrollIntoView({ block: "nearest", behavior: "instant" });
+            }
         }
+        state.detailOpener = null;
     }
     function applyChangedFilter() {
+        cancelLinkRestore();
         updateSearchAvailability();
         if ((state.hasSearched || state.searching) && ui.query.value.trim())
             search();
     }
     ui.form.addEventListener("submit", search);
+    ui.form.addEventListener("input", cancelLinkRestore);
     ui.form.querySelectorAll('input[name="mode"]').forEach((radio) => radio.addEventListener("change", applyChangedFilter));
     ui.typeFilter.addEventListener("change", applyChangedFilter);
     ui.limitFilter.addEventListener("change", applyChangedFilter);
@@ -604,12 +726,20 @@
         state.tiles?.redraw();
     });
     byId("close-detail", HTMLButtonElement).addEventListener("click", () => closeDetail());
+    ui.copyLink.addEventListener("click", copySearchLink);
+    ui.exportResults.addEventListener("click", exportSearchResults);
     document.addEventListener("keydown", (event) => {
         if (event.key === "Escape" && !ui.detailPanel.hidden)
             closeDetail();
     });
+    if (pendingLink) {
+        state.restoringLink = true;
+        ui.query.value = pendingLink.query;
+        ui.limitFilter.value = String(pendingLink.limit);
+        ui.form.querySelectorAll('input[name="mode"]').forEach((radio) => { radio.checked = radio.value === pendingLink?.mode; });
+    }
     initializeMap();
     updateSearchAvailability();
-    Promise.allSettled([loadStatus(), loadFacets()]);
+    Promise.allSettled([loadStatus(), loadFacets()]).then(finishLinkRestore);
 })();
 //# sourceMappingURL=app.js.map

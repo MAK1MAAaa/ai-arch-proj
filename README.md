@@ -22,6 +22,18 @@
 
 “原文字词匹配字段”仅说明词面重叠，不解释语义模型的排序依据。页面下方的方法指南说明发现、比较、核验三步用法，以及抽样范围、多标签类型计数、代表点和检索分数的阅读边界。
 
+## 保存与复查检索
+
+完成一次检索后，可在结果上方复制检索链接或导出本次结果JSON；成功的零结果也可以保存。两项操作始终使用最近一次成功请求的完整快照，改写输入、正在等待的新请求或请求失败不会混入旧结果。
+
+检索链接用`q`、`mode`、`type`、`limit`保存条件，成功检索后同步到地址栏。重新打开时，页面先检查本地服务与类型，再按原条件检索一次。非法或重复参数、未知类型会提示并停止自动检索；模型未就绪时保留条件，准备后需手动提交，不会替换为BM25或放宽类型。加载期间修改表单会取消待恢复的自动检索。链接支持界面的10/20/50条上限，不包含结果数据或模型；复查仍受服务和语料版本影响。
+
+复制失败时显示并选中链接，可用Ctrl+C或Command+C手动复制。从`127.0.0.1`页面复制的地址仅指向访问者自己的设备；在Mac与Windows之间复查时，应从可访问的Tailscale Serve地址打开页面再复制链接。
+
+导出文件包含UTC导出时间、实际查询条件、完整API响应（地点原文、代表点、分数、时期证据、贡献者和来源）及Pleiades许可与使用限制。它用于保存当次候选，未添加人工相关性判断或历史结论。JSON文件由浏览器本地生成，无需额外服务；生成后释放临时下载地址。
+
+界面放大了原文和关键辅助文字，窄屏保留两行摘录。打开资料详情后焦点进入详情区域，手机上同步滚动到详情；来源内容未变化时保留阅读状态，晚到的详情刷新不会让正在阅读的键盘焦点落到页面外层。地图标记可用Enter或空格打开；关闭或按Escape返回触发的结果卡片或地图标记，长资料的关闭按钮保持可见。
+
 ## 环境与数据验证
 
 需要 Python 3.12 和 [uv](https://docs.astral.sh/uv/)。在仓库根目录执行：
@@ -54,12 +66,13 @@ uv run --no-sync python -m archsearch.corpus --rebuild --download
 pnpm install --frozen-lockfile
 pnpm typecheck
 pnpm build
+pnpm test:frontend
 pnpm test:workflows
 ```
 
-`pnpm build`生成浏览器执行的`static/app.js`与source map，二者随源码提交；修改应用逻辑时编辑TypeScript源码，由构建生成JavaScript。Leaflet保留本地原版发行文件。应用运行仍只需Python和已生成资源，Node.js与pnpm用于开发构建。
+`pnpm build`生成浏览器执行的`static/app.js`、`static/research.js`及各自source map，均随源码提交；修改应用逻辑时编辑TypeScript源码，由构建生成JavaScript。`research.ts`集中处理链接校验和结果导出，前端测试执行实际助手源码，覆盖参数边界与完整响应保留。Leaflet保留本地原版发行文件。应用运行仍只需Python和已生成资源，Node.js与pnpm用于开发构建。
 
-CI在Windows与Ubuntu执行Python锁定安装、Ruff、mypy、pytest，以及pnpm冻结锁文件安装、TypeScript检查、构建和真实Octokit回归；同时校验编译产物与源码一致，不下载模型或全量资料。`main`要求一个批准及`quality-gate`，管理员同样受约束，禁止强推和删除。默认分支的`workflow_run`核实可信仓库、作者、分支、最新CI及当前head后，由Actions机器人批准并自动squash合并；审批任务不检出或运行PR代码。
+CI在Windows与Ubuntu执行Python锁定安装、Ruff、mypy、pytest，以及pnpm冻结锁文件安装、TypeScript检查、构建、前端链接与导出测试和真实Octokit回归；同时校验编译产物与源码一致，不下载模型或全量资料。`main`要求一个批准及`quality-gate`，管理员同样受约束，禁止强推和删除。默认分支的`workflow_run`核实可信仓库、作者、分支、最新CI及当前head后，由Actions机器人批准并自动squash合并；审批任务不检出或运行PR代码。
 
 每批合并后，备份旧head并保存工作区；确认远端开发分支仍为已合并head，才使用明确旧SHA的`--force-with-lease`对齐main。租约失败停止同步，保留远端新增提交。
 
