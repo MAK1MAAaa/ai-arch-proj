@@ -1,0 +1,130 @@
+name: Auto approve trusted PR
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+
+permissions: {}
+
+concurrency:
+  group: auto-approve-${{ github.event.workflow_run.head_branch }}
+  cancel-in-progress: true
+
+jobs:
+  approve:
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.actor.login == 'MAK1MAAaa' &&
+      github.event.workflow_run.head_branch == 'feature/dev' &&
+      github.event.workflow_run.head_repository.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      actions: read
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Approve the current head after the latest successful CI
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo;
+            const repository = `${owner}/${repo}`;
+            const trustedActor = 'MAK1MAAaa';
+            const eventRun = context.payload.workflow_run;
+            const { data: run } = await github.rest.actions.getWorkflowRun({
+              owner, repo, run_id: eventRun.id,
+            });
+
+            const isTrustedRun = (candidate) => (
+              candidate.event === 'pull_request' &&
+              candidate.head_repository?.full_name === repository &&
+              candidate.head_branch === 'feature/dev' &&
+              candidate.actor?.login === trustedActor &&
+              candidate.triggering_actor?.login === trustedActor &&
+              candidate.path?.split('@')[0] === '.github/workflows/ci.yml'
+            );
+            if (!isTrustedRun(run) || run.status !== 'completed' ||
+                run.conclusion !== 'success' || run.run_attempt !== eventRun.run_attempt) {
+              core.info('Skip an untrusted, unsuccessful, or superseded CI attempt.');
+              return;
+            }
+
+            const isLatestSuccessfulRun = async () => {
+              const runs = await github.paginate(github.rest.actions.listWorkflowRuns, {
+                owner, repo, workflow_id: run.workflow_id,
+                branch: 'feature/dev', event: 'pull_request', per_page: 100,
+              }, (response) => response.data.workflow_runs);
+              const latest = runs
+                .filter((candidate) => candidate.head_repository?.full_name === repository)
+                .sort((left, right) => right.run_number - left.run_number ||
+                  right.run_attempt - left.run_attempt || right.id - left.id)[0];
+              return latest?.id === run.id && latest.run_attempt === run.run_attempt &&
+                latest.head_sha === run.head_sha && latest.status === 'completed' &&
+                latest.conclusion === 'success' && isTrustedRun(latest);
+            };
+            if (!await isLatestSuccessfulRun()) {
+              core.info('Skip CI superseded by a newer run, including a pending or failed run.');
+              return;
+            }
+
+            const jobs = await github.paginate(
+              github.rest.actions.listJobsForWorkflowRunAttempt,
+              { owner, repo, run_id: run.id, attempt_number: run.run_attempt, per_page: 100 },
+              (response) => response.data.jobs,
+            );
+            const gates = jobs.filter((job) => job.name === 'quality-gate');
+            if (gates.length !== 1 || gates[0].status !== 'completed' ||
+                gates[0].conclusion !== 'success') {
+              core.setFailed('The current CI attempt has no successful quality-gate.');
+              return;
+            }
+
+            const candidates = await github.paginate(github.rest.pulls.list, {
+              owner, repo, state: 'open', base: 'main',
+              head: `${owner}:feature/dev`, per_page: 100,
+            });
+            const linkedPullRequests = new Set((run.pull_requests ?? []).map((pr) => pr.number));
+            const isMatchingPullRequest = (pr) => (
+              pr.state === 'open' && !pr.draft && pr.user?.login === trustedActor &&
+              pr.head.repo?.full_name === repository && pr.head.ref === 'feature/dev' &&
+              pr.base.repo?.full_name === repository && pr.base.ref === 'main' &&
+              pr.head.sha === run.head_sha && linkedPullRequests.has(pr.number)
+            );
+
+            for (const candidate of candidates) {
+              const { data: pr } = await github.rest.pulls.get({
+                owner, repo, pull_number: candidate.number,
+              });
+              if (!isMatchingPullRequest(pr)) continue;
+
+              const reviews = await github.paginate(github.rest.pulls.listReviews, {
+                owner, repo, pull_number: pr.number, per_page: 100,
+              });
+              if (reviews.some((review) => review.user?.login === 'github-actions[bot]' &&
+                  review.state === 'APPROVED' && review.commit_id === run.head_sha)) {
+                core.info(`PR #${pr.number} already has approval for this commit.`);
+                continue;
+              }
+
+              if (!await isLatestSuccessfulRun()) {
+                core.info('A newer CI run appeared before approval.');
+                return;
+              }
+              const { data: current } = await github.rest.pulls.get({
+                owner, repo, pull_number: pr.number,
+              });
+              if (!isMatchingPullRequest(current)) continue;
+
+              await github.rest.pulls.createReview({
+                owner, repo, pull_number: pr.number, event: 'APPROVE',
+                commit_id: run.head_sha,
+                body: `自动审批：提交 \`${run.head_sha}\` 已通过 ` +
+                  `[CI #${run.run_number}（第 ${run.run_attempt} 次运行）](${run.html_url})，` +
+                  'Windows 与 Ubuntu 检查均通过。',
+              });
+              core.info(`Approved PR #${pr.number} at ${run.head_sha}.`);
+            }
