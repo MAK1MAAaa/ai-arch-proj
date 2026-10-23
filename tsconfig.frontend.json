@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "none",
+    "moduleDetection": "legacy",
+    "lib": ["ES2022", "DOM"],
+    "types": ["leaflet"],
+    "rootDir": "src/archsearch/frontend",
+    "outDir": "src/archsearch/static",
+    "strict": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "newLine": "lf",
+    "noEmitOnError": true
+  },
+  "include": ["src/archsearch/frontend/**/*.ts"]
+}
