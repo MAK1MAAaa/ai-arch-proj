@@ -1,0 +1,26 @@
+{
+  "version": "paired-query-v1",
+  "description": "20条中英同意图评价查询。没有预填相关性标签；正式评价前需人工检查译文和资料相关性。",
+  "queries": [
+    {"id": "q01", "query_zh": "寻找古代港口遗址", "query_en": "Find ancient port sites", "topic": "类型：港口"},
+    {"id": "q02", "query_zh": "寻找希腊和罗马剧场", "query_en": "Find Greek and Roman theaters", "topic": "类型：剧场"},
+    {"id": "q03", "query_zh": "寻找罗马浴场", "query_en": "Find Roman baths", "topic": "类型：浴场"},
+    {"id": "q04", "query_zh": "寻找罗马乡村别墅", "query_en": "Find Roman rural villas", "topic": "类型：别墅"},
+    {"id": "q05", "query_zh": "寻找渡槽与供水设施", "query_en": "Find aqueducts and water supply structures", "topic": "主题：供水"},
+    {"id": "q06", "query_zh": "寻找古代墓地或墓葬", "query_en": "Find ancient cemeteries or tombs", "topic": "主题：丧葬"},
+    {"id": "q07", "query_zh": "寻找与赫拉克勒斯有关的圣地", "query_en": "Find sanctuaries associated with Hercules", "topic": "主题：宗教"},
+    {"id": "q08", "query_zh": "寻找雅典阿芙洛狄忒·乌拉尼亚的圣地", "query_en": "Find the Sanctuary of Aphrodite Ourania in Athens", "topic": "地名与宗教"},
+    {"id": "q09", "query_zh": "寻找西西里叙拉古的希腊式剧场", "query_en": "Find the Greek-form theater at Syracuse in Sicily", "topic": "地名与剧场"},
+    {"id": "q10", "query_zh": "寻找波西利波的小型罗马剧场", "query_en": "Find the small Roman theater at Pausilipum", "topic": "地名与剧场"},
+    {"id": "q11", "query_zh": "寻找奥斯蒂亚的帝国宫建筑群", "query_en": "Find the Palazzo Imperiale building complex at Ostia", "topic": "地名与建筑"},
+    {"id": "q12", "query_zh": "寻找厄琉西斯的得墨忒耳圣地", "query_en": "Find the sanctuary of Demeter at Eleusis", "topic": "地名与宗教"},
+    {"id": "q13", "query_zh": "寻找北非的古代聚落", "query_en": "Find ancient settlements in North Africa", "topic": "空间与聚落"},
+    {"id": "q14", "query_zh": "寻找与道路和驿站有关的地点", "query_en": "Find places associated with roads and road stations", "topic": "主题：交通"},
+    {"id": "q15", "query_zh": "寻找连接罗马和蒂布尔的蒂布尔蒂纳大道沿线遗址", "query_en": "Find sites along the Via Tiburtina connecting Rome and Tibur", "topic": "空间与道路"},
+    {"id": "q16", "query_zh": "寻找与港口和仓储设施有关的地点", "query_en": "Find places associated with port and warehouse facilities", "topic": "主题：港口设施"},
+    {"id": "q17", "query_zh": "寻找古代城镇的防御城墙", "query_en": "Find defensive walls of ancient towns", "topic": "主题：防御"},
+    {"id": "q18", "query_zh": "寻找罗马殖民城市", "query_en": "Find Roman colonial cities", "topic": "主题：殖民城市"},
+    {"id": "q19", "query_zh": "寻找带花园、水池和浴场的戈尔迪安宫", "query_en": "Find the Gordian Palace with gardens, pools, and baths", "topic": "原文主题与建筑"},
+    {"id": "q20", "query_zh": "寻找也称为拉特马山亚历山大的阿林达", "query_en": "Find Alinda, also called Alexandria ad Latmum", "topic": "地名与别名"}
+  ]
+}
