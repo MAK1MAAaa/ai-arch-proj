@@ -9,7 +9,7 @@
     "build": "tsc -p tsconfig.frontend.json",
     "typecheck": "tsc -p tsconfig.frontend.json --noEmit && tsc -p tsconfig.tools.json --noEmit",
     "test:workflows": "node --experimental-strip-types --test scripts/workflow-tests/approval.test.ts",
-    "test:frontend": "node --experimental-strip-types --test scripts/frontend-tests/research.test.ts"
+    "test:frontend": "node --experimental-strip-types --test scripts/frontend-tests/research.test.ts scripts/frontend-tests/map-view.test.ts"
   },
   "devDependencies": {
     "@actions/github": "9.0.0",

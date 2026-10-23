@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="/static/styles.css">
     <script defer src="/static/vendor/leaflet/leaflet.js"></script>
     <script defer src="/static/research.js"></script>
+    <script defer src="/static/map-view.js"></script>
     <script defer src="/static/app.js"></script>
   </head>
   <body>
-    <a class="skip-link" href="#query">跳到检索</a>
+    <nav class="skip-navigation" aria-label="快捷导航"><a class="skip-link" href="#query">跳到检索</a><a class="skip-link" href="#result-summary">跳到结果</a><a class="skip-link" href="#map">跳到地图</a></nav>
     <div class="page-shell">
       <header class="masthead">
         <a class="brand" href="/" aria-label="考古图志首页">
@@ -75,7 +76,7 @@
         <section class="workspace" aria-label="检索结果与地图">
           <div id="results-panel" class="results-panel" aria-busy="false">
             <header class="panel-heading"><div><span class="eyebrow small-eyebrow">RESULTS / 候选资料</span><h2>检索结果 <span id="result-count" class="result-count">00</span></h2></div><span id="active-mode" class="small-tag">SEMANTIC</span></header>
-            <p id="result-summary" class="result-summary">从一个问题开始，探索遗址与它的历史语境。</p>
+            <p id="result-summary" class="result-summary" tabindex="-1">从一个问题开始，探索遗址与它的历史语境。</p>
             <p id="result-context" class="result-context" hidden></p>
             <div id="search-progress" class="search-progress" hidden><p id="search-progress-label" class="search-progress-label">正在检索本地资料…</p><button id="cancel-search" class="interaction-button" type="button" disabled>取消本次检索</button></div>
             <div id="result-tools" class="result-tools" hidden>
@@ -99,9 +100,10 @@
           <div class="map-panel">
             <header class="panel-heading map-heading"><div><span class="eyebrow small-eyebrow">SPATIAL CONTEXT / 空间脉络</span><h2>在地图中阅读</h2></div><button id="fit-map" class="text-button" type="button" title="显示全部检索结果"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V3h4m6 0h4v4m0 6v4h-4M7 17H3v-4" stroke="currentColor" stroke-width="1.4"/></svg>全部点位</button></header>
             <div class="map-selection-bar" role="group" aria-label="候选浏览"><p id="selection-summary" class="selection-summary">选择候选，查看地图与原始资料</p><div class="selection-actions"><button id="previous-result" class="interaction-button" type="button" disabled>上一条</button><button id="next-result" class="interaction-button" type="button" disabled>下一条</button><button id="locate-selected" class="interaction-button" type="button" disabled>定位选中</button></div></div>
+            <p id="map-keyboard-help" class="map-keyboard-help">方向键平移，+ / − 缩放；标记 Enter / 空格打开详情。悬停或聚焦仅预览。</p>
             <div id="tile-warning" class="tile-warning" role="status" hidden><span id="tile-warning-text">底图暂未加载；检索结果与遗址标记仍可使用。</span><button id="retry-tiles" type="button">重试底图</button></div>
             <div class="map-shell">
-              <div id="map" aria-label="地中海周边遗址地图"></div>
+              <div id="map" tabindex="0" aria-label="地中海周边遗址地图" aria-describedby="map-keyboard-help"></div>
               <div class="map-caption"><span class="map-caption-dot"></span>现代底图 · 古代地点代表位置</div>
               <div class="map-compass" aria-hidden="true"><span>N</span><svg viewBox="0 0 20 40"><path d="m10 3 6 27-6-7-6 7Z" fill="currentColor"/><path d="m10 3 0 20-6 7Z" fill="#f4f0e7"/></svg></div>
               <div id="map-empty-label" class="map-empty-label" aria-hidden="true"><span>MARE NOSTRUM</span><span>地中海周边 · 资料发现地图</span></div>
@@ -110,7 +112,7 @@
                 <div id="detail-content"></div>
               </aside>
             </div>
-            <footer class="map-footnote"><span><span class="legend-dot"></span>可定位资料</span><span>标记为代表点，非精确发掘坐标</span></footer>
+            <footer class="map-footnote"><span><span class="legend-dot"></span>可定位资料</span><span id="viewport-count" class="viewport-count" title="按代表点中心统计本次返回候选；范围包括详情覆盖的地图区域，不改变检索与排序。" hidden>当前地图范围内 0 / 本次返回 0</span><span>标记为代表点，非精确发掘坐标</span></footer>
           </div>
         </section>
 

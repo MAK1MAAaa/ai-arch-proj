@@ -25,7 +25,7 @@
         emptyDescription: byId("empty-description", HTMLParagraphElement), loading: byId("loading-state", HTMLDivElement),
         detailPanel: byId("detail-panel", HTMLElement), detailContent: byId("detail-content", HTMLDivElement),
         tileWarning: byId("tile-warning", HTMLDivElement), tileWarningText: byId("tile-warning-text", HTMLSpanElement),
-        mapEmptyLabel: byId("map-empty-label", HTMLDivElement),
+        mapEmptyLabel: byId("map-empty-label", HTMLDivElement), viewportCount: byId("viewport-count", HTMLElement),
         clearType: byId("clear-type", HTMLButtonElement), emptyClearType: byId("empty-clear-type", HTMLButtonElement),
         searchProgress: byId("search-progress", HTMLDivElement), progressLabel: byId("search-progress-label", HTMLParagraphElement),
         cancelSearch: byId("cancel-search", HTMLButtonElement), retryPanel: byId("retry-panel", HTMLDivElement),
@@ -45,6 +45,9 @@
     let pendingLink = initialLink.request;
     let linkError = initialLink.error;
     let runtimeRefresh = null;
+    let mapView = null;
+    let autoPositionedSelection = false;
+    let positioningMap = false;
     const fieldLabels = {
         title: "地点名称", names: "别名", description: "原始描述", types: "地点类型",
         periods: "原始时期", details: "原始补充记录", search_text: "检索文本",
@@ -122,6 +125,15 @@
     function announce(message) {
         ui.announcement.textContent = message;
     }
+    function focusWithinView(target) {
+        if (target.tabIndex < 0)
+            target.tabIndex = -1;
+        target.focus({ preventScroll: true });
+        const bounds = target.getBoundingClientRect();
+        if (bounds.top < 0 || bounds.bottom > window.innerHeight) {
+            target.scrollIntoView({ block: "nearest", behavior: "instant" });
+        }
+    }
     function showError(message) {
         ui.requestError.textContent = message;
         ui.requestError.hidden = !message;
@@ -174,7 +186,9 @@
         try {
             data = await response.json();
         }
-        catch {
+        catch (error) {
+            if (isAbortError(error))
+                throw error;
             throw new Error(`服务返回了无法读取的响应（HTTP ${response.status}）。`);
         }
         if (!response.ok) {
@@ -345,13 +359,23 @@
             ui.tileWarningText.textContent = "部分底图未能加载；检索结果与遗址标记仍可使用。";
         });
         state.markerLayer = L.layerGroup().addTo(state.map);
+        state.map.on("movestart zoomstart", () => {
+            if (!positioningMap)
+                autoPositionedSelection = false;
+        });
         if (typeof ResizeObserver !== "undefined") {
-            new ResizeObserver(() => state.map?.invalidateSize({ pan: false })).observe(byId("map", HTMLDivElement));
+            new ResizeObserver(() => {
+                state.map?.invalidateSize({ pan: false });
+                const selected = selectedResult();
+                if (autoPositionedSelection && selected && !ui.detailPanel.hidden)
+                    positionSelectedSite(selected.site);
+            }).observe(byId("map", HTMLDivElement));
         }
     }
     function fitMap() {
         if (!state.map)
             return;
+        autoPositionedSelection = false;
         const coordinates = state.results.map((result) => point(result.site)).filter((coordinate) => coordinate !== null);
         if (coordinates.length === 0) {
             state.map.setView([37.2, 17.4], 4);
@@ -377,18 +401,25 @@
     }
     function positionSelectedSite(site) {
         const coordinate = point(site);
+        autoPositionedSelection = false;
         if (!state.map || !coordinate)
             return;
-        state.map.stop();
-        state.map.invalidateSize({ pan: false });
-        state.map.panTo(coordinate, { animate: false });
-        if (ui.detailPanel.hidden)
-            return;
-        const mapBounds = byId("map", HTMLDivElement).getBoundingClientRect();
-        const detailBounds = ui.detailPanel.getBoundingClientRect();
-        const coveredWidth = Math.max(0, Math.min(mapBounds.right, detailBounds.right) - Math.max(mapBounds.left, detailBounds.left));
-        if (mapBounds.width - coveredWidth >= 64) {
-            state.map.panBy([coveredWidth / 2, 0], { animate: false });
+        positioningMap = true;
+        try {
+            state.map.stop();
+            state.map.invalidateSize({ pan: false });
+            state.map.panTo(coordinate, { animate: false });
+            if (!ui.detailPanel.hidden) {
+                const mapBounds = byId("map", HTMLDivElement).getBoundingClientRect();
+                const detailBounds = ui.detailPanel.getBoundingClientRect();
+                const coveredWidth = Math.max(0, Math.min(mapBounds.right, detailBounds.right) - Math.max(mapBounds.left, detailBounds.left));
+                if (mapBounds.width - coveredWidth >= 64)
+                    state.map.panBy([coveredWidth / 2, 0], { animate: false });
+            }
+            autoPositionedSelection = true;
+        }
+        finally {
+            positioningMap = false;
         }
     }
     function browseResult(direction) {
@@ -426,6 +457,7 @@
                 icon: L.divIcon({ className: "site-marker-icon", html: markerContent, iconSize: [30, 30], iconAnchor: [15, 15] }),
                 title: displayTitle(result.site),
                 keyboard: true,
+                autoPanOnFocus: false,
             }).addTo(state.markerLayer);
             marker.bindTooltip(element("span", null, displayTitle(result.site)), { direction: "top", offset: [0, -13] });
             marker.on("click", () => selectSite(String(result.site.id), { fromMap: true }));
@@ -479,6 +511,7 @@
                 ? "尝试英文关键词或古地名，放宽类型筛选；也可切换语义检索使用中文研究问题。"
                 : "尝试调整问题或放宽类型筛选。当前资料只覆盖地中海周边的演示子集。";
         }
+        const viewCandidates = [];
         for (const [index, result] of state.results.entries()) {
             const site = result.site;
             const item = element("li", "result-item");
@@ -498,12 +531,18 @@
             description.lang = excerpt.label === "原文状态" ? "zh-CN" : "en";
             const metadata = element("div", "result-metadata");
             metadata.append(element("span", "result-coordinate", coordinateLabel(site)), element("span", "result-score", scoreLabel(result.score, data.mode)));
-            card.append(top, element("p", "result-excerpt-label", excerpt.label), description, metadata);
+            const viewHint = element("span", "result-view-hint");
+            viewHint.hidden = true;
+            card.append(top, element("p", "result-excerpt-label", excerpt.label), description, metadata, viewHint);
             card.addEventListener("click", () => selectSite(String(site.id)));
             item.append(card);
             ui.list.append(item);
+            viewCandidates.push({ id: String(site.id), rank: index + 1, title: displayTitle(site), card, marker: null, hint: viewHint });
         }
         renderMarkers();
+        for (const candidate of viewCandidates)
+            candidate.marker = state.markers.get(candidate.id) || null;
+        mapView?.setCandidates(viewCandidates);
         updateSelectionControls();
         state.completedSearch = { request, response: data, link };
         ui.resultTools.hidden = false;
@@ -520,8 +559,7 @@
         }
         if (removedFocus || (previousFocus instanceof HTMLButtonElement && previousFocus.disabled
             && [ui.previousResult, ui.nextResult, ui.locateSelected].includes(previousFocus))) {
-            ui.resultSummary.tabIndex = -1;
-            ui.resultSummary.focus({ preventScroll: true });
+            focusWithinView(ui.resultSummary);
         }
         announce(`检索完成，返回 ${state.results.length} 条候选资料。${data.mode === "semantic" ? "相似度分数并非相关概率，请核验来源。" : ""}`);
     }
@@ -620,20 +658,16 @@
         updateSearchAvailability();
         if (focusWasInProgress) {
             if (!ui.searchProgress.hidden) {
-                ui.progressLabel.tabIndex = -1;
-                ui.progressLabel.focus({ preventScroll: true });
+                focusWithinView(ui.progressLabel);
             }
             else if (state.failedSearch) {
                 if (!ui.retrySearch.disabled)
-                    ui.retrySearch.focus({ preventScroll: true });
-                else {
-                    ui.requestError.tabIndex = -1;
-                    ui.requestError.focus({ preventScroll: true });
-                }
+                    focusWithinView(ui.retrySearch);
+                else
+                    focusWithinView(ui.requestError);
             }
             else {
-                ui.resultSummary.tabIndex = -1;
-                ui.resultSummary.focus({ preventScroll: true });
+                focusWithinView(ui.resultSummary);
             }
         }
     }
@@ -695,8 +729,7 @@
         const focusProgress = document.activeElement === ui.searchButton || document.activeElement === ui.retrySearch;
         setLoading(true);
         if (focusProgress) {
-            ui.progressLabel.tabIndex = -1;
-            ui.progressLabel.focus({ preventScroll: true });
+            focusWithinView(ui.progressLabel);
         }
         announce("正在检索本地资料。");
         try {
@@ -749,11 +782,10 @@
         applyChangedFilter();
         if (returnFocus) {
             if (!ui.searchProgress.hidden) {
-                ui.progressLabel.tabIndex = -1;
-                ui.progressLabel.focus({ preventScroll: true });
+                focusWithinView(ui.progressLabel);
             }
             else
-                ui.query.focus({ preventScroll: true });
+                focusWithinView(ui.query);
         }
     }
     function detailSection(title, content) {
@@ -887,12 +919,12 @@
         state.detailController = controller;
         try {
             const site = await api(`/api/sites/${encodeURIComponent(id)}`, { signal: controller.signal });
-            if (state.selectedId === id && !controller.signal.aborted && JSON.stringify(site) !== JSON.stringify(result.site)) {
+            if (state.detailController === controller && state.selectedId === id && !controller.signal.aborted && JSON.stringify(site) !== JSON.stringify(result.site)) {
                 renderDetail(site, result.matched_fields);
             }
         }
         catch (error) {
-            if (isAbortError(error) || state.selectedId !== id)
+            if (isAbortError(error) || controller.signal.aborted || state.detailController !== controller || state.selectedId !== id)
                 return;
             ui.detailContent.append(element("p", "detail-loading", "详情刷新失败，当前显示检索时返回的原始资料。"));
         }
@@ -961,6 +993,7 @@
         ui.form.querySelectorAll('input[name="mode"]').forEach((radio) => { radio.checked = radio.value === pendingLink?.mode; });
     }
     initializeMap();
+    mapView = ArchSearchMapView.create({ map: state.map, countLabel: ui.viewportCount });
     updateSelectionControls();
     updateSearchAvailability();
     refreshRuntime().then(finishLinkRestore);
