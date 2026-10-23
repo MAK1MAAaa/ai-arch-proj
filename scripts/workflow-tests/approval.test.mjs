@@ -5,7 +5,6 @@ import test from 'node:test';
 import { getOctokit } from '@actions/github';
 
 const repository = 'MAK1MAAaa/ai-arch-proj';
-const initialMain = '0fa4092765566cf8d155a4801fa481648b7db6f5';
 const AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
 
 function workflowScript(filename) {
@@ -22,24 +21,24 @@ function workflowScript(filename) {
   return new AsyncFunction('github', 'context', 'core', body.join('\n'));
 }
 
-function fixture(bootstrap = false) {
+function fixture() {
   const run = {
     id: 101, workflow_id: 7, run_number: 10, run_attempt: 1,
     event: 'pull_request', path: '.github/workflows/ci.yml',
     head_repository: { full_name: repository }, head_branch: 'feature/dev',
     head_sha: 'a'.repeat(40), actor: { login: 'MAK1MAAaa' },
     triggering_actor: { login: 'MAK1MAAaa' },
-    status: bootstrap ? 'in_progress' : 'completed',
-    conclusion: bootstrap ? null : 'success', pull_requests: [{ number: 1 }],
+    status: 'completed',
+    conclusion: 'success', pull_requests: [{ number: 1 }],
     html_url: `https://github.com/${repository}/actions/runs/101`,
   };
   const pr = {
     number: 1, state: 'open', draft: false, user: { login: 'MAK1MAAaa' },
     head: { repo: { full_name: repository }, ref: 'feature/dev', sha: run.head_sha },
-    base: { repo: { full_name: repository }, ref: 'main', sha: initialMain },
+    base: { repo: { full_name: repository }, ref: 'main', sha: 'c'.repeat(40) },
   };
   return {
-    run, eventRun: structuredClone(run), pr, eventPr: structuredClone(pr),
+    run, eventRun: structuredClone(run), pr,
     runs: [run], jobs: [{ name: 'quality-gate', status: 'completed', conclusion: 'success' }],
     reviews: [], approvals: [], failures: [], requests: [], latestReads: 0, prReads: 0,
   };
@@ -105,25 +104,17 @@ function octokitFor(state) {
   return getOctokit('test-token-never-used-on-network', { request: { fetch } });
 }
 
-async function execute(bootstrap, mutate = () => {}) {
-  const state = fixture(bootstrap);
+async function execute(mutate = () => {}) {
+  const state = fixture();
   mutate(state);
-  const previousAttempt = process.env.GITHUB_RUN_ATTEMPT;
-  process.env.GITHUB_RUN_ATTEMPT = '1';
-  try {
-    await workflowScript(bootstrap ? 'ci.yml' : 'auto-approve.yml')(
-      octokitFor(state),
-      {
-        repo: { owner: 'MAK1MAAaa', repo: 'ai-arch-proj' },
-        actor: 'MAK1MAAaa', runId: 101,
-        payload: { workflow_run: state.eventRun, pull_request: state.eventPr },
-      },
-      { info: () => {}, setFailed: (message) => state.failures.push(message) },
-    );
-  } finally {
-    if (previousAttempt === undefined) delete process.env.GITHUB_RUN_ATTEMPT;
-    else process.env.GITHUB_RUN_ATTEMPT = previousAttempt;
-  }
+  await workflowScript('auto-approve.yml')(
+    octokitFor(state),
+    {
+      repo: { owner: 'MAK1MAAaa', repo: 'ai-arch-proj' },
+      payload: { workflow_run: state.eventRun },
+    },
+    { info: () => {}, setFailed: (message) => state.failures.push(message) },
+  );
   for (const approval of state.approvals) {
     assert.equal(approval.commit_id, state.run.head_sha);
     assert.equal(approval.event, 'APPROVE');
@@ -148,58 +139,43 @@ test('real Octokit normalizes object-wrapped workflow runs and jobs across pages
   assert.deepEqual(jobs.map((job) => job.name), ['checks (windows-latest)', 'quality-gate']);
 });
 
-test('normal approval reads all pages and approves the current successful commit', async () => {
-  const state = await execute(false);
+test('approval reads all pages and approves the current successful commit', async () => {
+  const state = await execute();
   assert.equal(state.approvals.length, 1);
   assert.deepEqual(state.failures, []);
   assert(state.requests.some((route) => route.includes('/jobs?page=2')));
 });
 
-test('bootstrap approves after quality-gate while its own CI run remains in progress', async () => {
-  const state = await execute(true);
-  assert.equal(state.run.status, 'in_progress');
-  assert.equal(state.run.conclusion, null);
-  assert.equal(state.approvals.length, 1);
-  assert.deepEqual(state.failures, []);
-});
-
-for (const bootstrap of [false, true]) {
-  const label = bootstrap ? 'bootstrap' : 'normal';
-  const scenarios = [
-    ['a newer pending CI', (s) => { s.runs = [{ ...s.run, id: 102, run_number: 11, status: 'queued', conclusion: null }]; }],
-    ['a newer failed CI', (s) => { s.runs = [{ ...s.run, id: 102, run_number: 11, status: 'completed', conclusion: 'failure' }]; }],
-    ['an untrusted actor', (s) => { s.run.actor.login = 'outsider'; }],
-    ['an untrusted rerun actor', (s) => { s.run.triggering_actor.login = 'outsider'; }],
-    ['a fork', (s) => { s.run.head_repository.full_name = 'outsider/ai-arch-proj'; }],
-    ['a missing quality gate', (s) => { s.jobs = []; }],
-    ['a skipped quality gate', (s) => { s.jobs[0].conclusion = 'skipped'; }],
-    ['a changed PR head', (s) => { s.pr.head.sha = 'b'.repeat(40); }],
-    ['a changed target branch', (s) => { s.pr.base.ref = 'other'; }],
-    ['a draft PR', (s) => { s.pr.draft = true; }],
-    ['an existing current approval', (s) => { s.reviews = [{ user: { login: 'github-actions[bot]' }, state: 'APPROVED', commit_id: s.run.head_sha }]; }],
-    ['a race introducing newer CI', (s) => { s.currentRuns = (count) => count === 1 ? [s.run] : [{ ...s.run, id: 102, run_number: 11, status: 'queued', conclusion: null }]; }],
-  ];
-  for (const [name, mutate] of scenarios) {
-    test(`${label} refuses approval for ${name}`, async () => {
-      const state = await execute(bootstrap, mutate);
-      assert.equal(state.approvals.length, 0);
-    });
-  }
+const scenarios = [
+  ['a newer pending CI', (s) => { s.runs = [{ ...s.run, id: 102, run_number: 11, status: 'queued', conclusion: null }]; }],
+  ['a newer failed CI', (s) => { s.runs = [{ ...s.run, id: 102, run_number: 11, conclusion: 'failure' }]; }],
+  ['an untrusted actor', (s) => { s.run.actor.login = 'outsider'; }],
+  ['an untrusted rerun actor', (s) => { s.run.triggering_actor.login = 'outsider'; }],
+  ['a fork', (s) => { s.run.head_repository.full_name = 'outsider/ai-arch-proj'; }],
+  ['a different workflow file', (s) => { s.run.path = '.github/workflows/other.yml'; }],
+  ['an unfinished CI run', (s) => { s.run.status = 'in_progress'; s.run.conclusion = null; }],
+  ['an unsuccessful CI run', (s) => { s.run.conclusion = 'failure'; }],
+  ['an older rerun attempt', (s) => { s.run.run_attempt = 2; }],
+  ['an unlinked pull request', (s) => { s.run.pull_requests = []; }],
+  ['a missing quality gate', (s) => { s.jobs = []; }],
+  ['a skipped quality gate', (s) => { s.jobs[0].conclusion = 'skipped'; }],
+  ['a changed PR head', (s) => { s.pr.head.sha = 'b'.repeat(40); }],
+  ['a changed target branch', (s) => { s.pr.base.ref = 'other'; }],
+  ['a draft PR', (s) => { s.pr.draft = true; }],
+  ['an existing current approval', (s) => { s.reviews = [{ user: { login: 'github-actions[bot]' }, state: 'APPROVED', commit_id: s.run.head_sha }]; }],
+  ['a race introducing newer CI', (s) => { s.currentRuns = (count) => count === 1 ? [s.run] : [{ ...s.run, id: 102, run_number: 11, status: 'queued', conclusion: null }]; }],
+  ['a race changing the PR head', (s) => { s.currentPr = (count) => count === 1 ? s.pr : { ...s.pr, head: { ...s.pr.head, sha: 'b'.repeat(40) } }; }],
+];
+for (const [name, mutate] of scenarios) {
+  test(`approval is refused for ${name}`, async () => {
+    const state = await execute(mutate);
+    assert.equal(state.approvals.length, 0);
+  });
 }
 
-test('normal approval rejects an event from an older rerun attempt', async () => {
-  const state = await execute(false, (s) => { s.run.run_attempt = 2; });
-  assert.equal(state.approvals.length, 0);
-});
-
-test('bootstrap refuses a changed initial main commit', async () => {
-  const state = await execute(true, (s) => { s.eventPr.base.sha = 'b'.repeat(40); });
-  assert.equal(state.approvals.length, 0);
-  assert.equal(state.failures.length, 1);
-});
-
-test('bootstrap refuses any pull request other than PR 1', async () => {
-  const state = await execute(true, (s) => { s.eventPr.number = 2; });
-  assert.equal(state.approvals.length, 0);
-  assert.equal(state.failures.length, 1);
+test('a dismissed approval does not prevent reapproval after successful CI', async () => {
+  const state = await execute((s) => {
+    s.reviews = [{ user: { login: 'github-actions[bot]' }, state: 'DISMISSED', commit_id: s.run.head_sha }];
+  });
+  assert.equal(state.approvals.length, 1);
 });
