@@ -20,10 +20,16 @@ from urllib.request import Request, urlopen
 
 from pydantic import TypeAdapter, ValidationError
 
-from archsearch.domain import PeriodEvidence, Site
+from archsearch.domain import ChronologyReview, PeriodEvidence, Site, SourceReference
 
 DATA_DIR = Path(__file__).with_name("data")
 DATASET_VERSION = "v4.1"
+CORPUS_VERSION = "global-v2"
+GLOBAL_REGION_QUOTAS = {
+    "east-asia": 20, "south-asia": 15, "west-central-asia": 15, "africa": 15,
+    "europe": 10, "north-america": 10, "south-america": 10, "oceania": 5,
+}
+GLOBAL_ERA_QUOTAS = {"ancient": 50, "middle": 25, "modern": 25}
 SOURCE_COMMIT = "b6a6790f71c45e4a4ef60fce296c506f28f458bf"
 ARCHIVE_URL = "https://codeload.github.com/isawnyu/pleiades.datasets/tar.gz/refs/tags/v4.1"
 CORPUS_SIZE = 500
@@ -181,8 +187,8 @@ def build_document(site: Site) -> str:
     return "\n".join(part for part in parts if part)
 
 
-def load_corpus(data_dir: Path | None = None) -> list[Site]:
-    """Load and verify bundled artifacts; never download data or models."""
+def load_pleiades_corpus(data_dir: Path | None = None) -> list[Site]:
+    """Verify the original, reproducible 500-record Pleiades cohort unchanged."""
     directory = Path(data_dir) if data_dir is not None else DATA_DIR
     try:
         manifest = json.loads((directory / "manifest.json").read_text(encoding="utf-8"))
@@ -208,6 +214,8 @@ def load_corpus(data_dir: Path | None = None) -> list[Site]:
         if ids != [site.id for site in sites]:
             raise CorpusError("site_ids.json does not match the corpus order")
         for site in sites:
+            if site.source_kind != "pleiades":
+                raise CorpusError("original cohort must retain its Pleiades source kind")
             lon, lat = site.repr_point
             if not (
                 BOUNDING_BOX[0] <= lon <= BOUNDING_BOX[2]
@@ -223,6 +231,91 @@ def load_corpus(data_dir: Path | None = None) -> list[Site]:
         raise
     except (OSError, KeyError, TypeError, ValueError, ValidationError) as exc:
         raise CorpusError(f"cannot load local corpus from {directory}: {exc}") from exc
+
+
+def load_corpus(data_dir: Path | None = None) -> list[Site]:
+    """Merge the original cohort, curated global records and separately reviewed stages."""
+    directory = Path(data_dir) if data_dir is not None else DATA_DIR
+    original = load_pleiades_corpus(directory)
+    global_manifest = directory / "global_manifest.json"
+    if data_dir is not None and not global_manifest.exists():
+        return original
+    try:
+        manifest = json.loads(global_manifest.read_text(encoding="utf-8"))
+        if manifest["schema_version"] != 1 or manifest["corpus_version"] != CORPUS_VERSION:
+            raise CorpusError("global corpus manifest version is invalid")
+        if manifest["counts"] != {"pleiades": 500, "global": 100, "total": 600}:
+            raise CorpusError("global corpus counts do not match the 500+100 contract")
+        review = manifest["review"]["global_independent_review"]
+        if review["status"] != "source_check_completed" or review["records"] != 100:
+            raise CorpusError("global source stages have not completed independent agent review")
+        for filename in (
+            "global_sites.json", "chronology.json", "global_candidates.json", "global_ids.txt"
+        ):
+            if _sha256_file(directory / filename) != manifest["files"][filename]["sha256"]:
+                raise CorpusError(f"global corpus checksum mismatch: {filename}")
+        global_sites = _SITES_ADAPTER.validate_json((directory / "global_sites.json").read_bytes())
+        if len(global_sites) != 100 or any(site.source_kind != "global" for site in global_sites):
+            raise CorpusError("global cohort must contain exactly 100 namespaced global records")
+        records = manifest["records"]
+        ids = [site.id for site in global_sites]
+        if (directory / "global_ids.txt").read_text("utf-8").splitlines() != ids:
+            raise CorpusError("frozen global ID list differs from the selected corpus")
+        if [record["id"] for record in records] != ids:
+            raise CorpusError("global selection manifest and record order differ")
+        if manifest["selection"]["seed"] != "global-history-v1:":
+            raise CorpusError("global selection seed differs from the frozen contract")
+        for field, quota, expected in (
+            ("region", "regions", GLOBAL_REGION_QUOTAS),
+            ("era", "eras", GLOBAL_ERA_QUOTAS),
+        ):
+            actual = dict(Counter(record[field] for record in records))
+            if actual != expected or manifest["selection"][quota] != expected:
+                raise CorpusError(f"global cohort {field} quotas do not match")
+        ranks = [
+            hashlib.sha256(("global-history-v1:" + site_id).encode()).hexdigest() for site_id in ids
+        ]
+        if ranks != sorted(ranks):
+            raise CorpusError("global cohort is not in reproducible seeded order")
+        combined = original + global_sites
+        if len({site.id for site in combined}) != 600:
+            raise CorpusError("combined corpus has duplicate identifiers")
+        raw_reviews = json.loads((directory / "chronology.json").read_text(encoding="utf-8"))
+        if set(raw_reviews) != {site.id for site in combined}:
+            raise CorpusError("chronology review must cover exactly the complete corpus")
+        candidates = json.loads((directory / "global_candidates.json").read_text("utf-8"))
+        frozen = candidates["records"]
+        if candidates["seed"] != "global-history-v1:" or len(frozen) != 100:
+            raise CorpusError("frozen global catalogue seed or count is invalid")
+        frozen = sorted(frozen, key=lambda row: hashlib.sha256(
+            ("global-history-v1:" + row["site"]["id"]).encode()
+        ).hexdigest())
+        for candidate, site in zip(frozen, global_sites, strict=True):
+            if (
+                Site.model_validate(candidate["site"]) != site
+                or candidate["record"] != next(row for row in records if row["id"] == site.id)
+                or candidate["chronology"] != raw_reviews[site.id]
+            ):
+                raise CorpusError("derived global records differ from the frozen catalogue")
+        result = []
+        for site in combined:
+            review = ChronologyReview.model_validate(raw_reviews[site.id])
+            if review.status == "not_reviewed":
+                raise CorpusError(f"site {site.id} has not completed its source review")
+            if site.source_kind == "global" and not review.phases:
+                raise CorpusError(f"global site {site.id} has no supported historical stage")
+            if site.source_kind == "global" and "historic-site" not in site.types:
+                raise CorpusError(f"global site {site.id} must include historic-site")
+            sources = site.source_refs or [SourceReference(
+                id=f"pleiades:{site.id}", title=site.title, uri=site.source_uri,
+                publisher="Pleiades contributors", license="CC BY 3.0", revision=SOURCE_COMMIT,
+            )]
+            result.append(site.model_copy(update={"chronology": review, "source_refs": sources}))
+        return result
+    except CorpusError:
+        raise
+    except (OSError, KeyError, TypeError, ValueError, ValidationError) as exc:
+        raise CorpusError(f"cannot load global corpus from {directory}: {exc}") from exc
 
 
 def _archive_members(archive_path: Path) -> Iterable[tuple[str, bytes]]:
@@ -319,7 +412,10 @@ def rebuild_corpus(archive_path: Path, output_dir: Path | None = None) -> dict[s
         eligible_not_selected=len(candidates) - len(sites),
     )
     artifacts = {
-        "sites.json": _json_bytes([site.model_dump(mode="json") for site in sites]),
+        "sites.json": _json_bytes([
+            site.model_dump(mode="json", exclude={"source_kind", "source_refs", "chronology"})
+            for site in sites
+        ]),
         "site_ids.json": _json_bytes([site.id for site in sites]),
     }
     manifest: dict[str, Any] = {
@@ -412,7 +508,7 @@ def main() -> None:
         manifest = rebuild_corpus(archive, arguments.data_dir)
         print(json.dumps(manifest["counts"], sort_keys=True))
     else:
-        print(f"Verified {len(load_corpus(arguments.data_dir))} local Pleiades records.")
+        print(f"Verified {len(load_corpus(arguments.data_dir))} local source-backed records.")
 
 
 if __name__ == "__main__":

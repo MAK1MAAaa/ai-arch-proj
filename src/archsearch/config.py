@@ -10,7 +10,7 @@ PACKAGE_DIR = Path(__file__).resolve().parent
 DATA_DIR = PACKAGE_DIR / "data"
 STATIC_DIR = PACKAGE_DIR / "static"
 DEFAULT_HOME = Path(os.environ.get("ARCHSEARCH_HOME", Path.cwd() / ".archsearch"))
-PERIOD_LABEL = "罗马早期帝国（前30—公元300年）"
+PERIOD_LABEL = "地中海罗马资料与全球历史遗址（古代至近现代）"
 TYPE_LABELS = {
     "settlement": "聚落",
     "villa": "别墅庄园",
@@ -18,4 +18,5 @@ TYPE_LABELS = {
     "bath": "浴场",
     "theatre": "剧场",
     "archaeological-site": "考古遗址",
+    "historic-site": "历史遗址",
 }

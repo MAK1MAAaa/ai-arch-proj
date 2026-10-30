@@ -180,6 +180,15 @@ def test_packaged_queries_have_twenty_unique_pairs() -> None:
     assert all(pair.query_zh and pair.query_en and pair.topic for pair in pairs)
 
 
+def test_corpus_contract_covers_added_records_and_evidence(sample_sites: list[Site]) -> None:
+    first = evaluation.corpus_contract_hash(sample_sites[:1])
+    assert first != evaluation.corpus_contract_hash(sample_sites)
+    updated = sample_sites[0].model_copy(update={
+        "chronology": sample_sites[0].chronology.model_copy(update={"note": "new source evidence"})
+    })
+    assert first != evaluation.corpus_contract_hash([updated])
+
+
 def test_changed_query_text_with_same_ids_rejects_old_judgments(
     rankings: dict[str, dict[str, list[str]]],
     qrels: dict[str, Any],
@@ -262,7 +271,8 @@ def test_evaluation_separates_cold_start_and_preserves_old_templates(
     monkeypatch.setattr(evaluation, "SemanticIndex", FakeIndex)
     monkeypatch.setattr(evaluation, "SearchEngine", FakeEngine)
     monkeypatch.setattr(evaluation, "perf_counter", lambda: clock["seconds"])
-    corpus_hash = hashlib.sha256(corpus_bytes).hexdigest()
+    corpus_hash = evaluation.corpus_contract_hash(sample_sites)
+    assert corpus_hash != hashlib.sha256(corpus_bytes).hexdigest()
     old_pool_signature = hashlib.sha256(
         json.dumps(
             {
