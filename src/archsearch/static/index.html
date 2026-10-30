@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f4f0e7">
-    <meta name="description" content="通过中文研究问题探索 Pleiades 古代遗址资料、原始证据与地图位置。">
-    <title>考古图志 · 古代遗址资料检索</title>
+    <meta name="description" content="通过中文研究问题探索全球历史遗址资料、独立年代证据与历史政权疆域概略。">
+    <title>考古图志 · 全球历史遗址资料检索</title>
     <link rel="stylesheet" href="/static/vendor/leaflet/leaflet.css">
     <link rel="stylesheet" href="/static/styles.css">
     <script defer src="/static/vendor/leaflet/leaflet.js"></script>
     <script defer src="/static/research.js"></script>
     <script defer src="/static/map-view.js"></script>
+    <script defer src="/static/history.js"></script>
     <script defer src="/static/app.js"></script>
   </head>
   <body>
@@ -32,13 +33,13 @@
           <div class="introduction-main">
             <p class="eyebrow"><span class="section-number">01 /</span> 从研究问题出发，回到原始资料</p>
             <h1 id="page-title">让历史线索，<br>在地图上<span>相遇。</span></h1>
-            <p class="intro-description">从中文研究问题出发，发现英文资料中的古代地点。<br class="desktop-break">阅读原始描述，再通过地图、时期记录与来源链接核验线索。</p>
+            <p class="intro-description">从中文研究问题出发，发现古代至近现代的历史遗址。<br class="desktop-break">阅读源资料，核验独立年代证据，并对照历史政权疆域概略。</p>
           </div>
           <aside class="collection-note" aria-label="当前资料集范围">
             <div class="collection-topline"><span class="collection-rule"></span> 当前研究范围</div>
-            <p class="collection-title">地中海周边<br>罗马早期帝国</p>
-            <p id="corpus-period" class="collection-period">前 30 — 公元 300 年</p>
-            <div class="collection-count"><strong id="corpus-count">—</strong><span>条可定位资料<br><span class="muted">PLEIADES 开放数据</span></span></div>
+            <p class="collection-title">全球历史遗址<br>地中海罗马资料</p>
+            <p id="corpus-period" class="collection-period">古代至近现代</p>
+            <div class="collection-count"><strong id="corpus-count">—</strong><span>条可定位资料<br><span class="muted">PLEIADES · UNESCO · WIKIDATA</span></span></div>
           </aside>
         </section>
 
@@ -63,6 +64,8 @@
               <button type="button" data-label="罗马浴场" data-query-zh="寻找罗马浴场" data-query-en="baths" data-type="bath"><span class="example-label">罗马浴场</span><span aria-hidden="true">↗</span></button>
               <button type="button" data-label="乡村别墅" data-query-zh="寻找罗马乡村别墅" data-query-en="villa" data-type="villa"><span class="example-label">乡村别墅</span><span aria-hidden="true">↗</span></button>
               <button type="button" data-label="古代剧场" data-query-zh="寻找古代剧场" data-query-en="theater" data-type="theatre"><span class="example-label">古代剧场</span><span aria-hidden="true">↗</span></button>
+              <button type="button" data-label="佛教石窟" data-query-zh="寻找佛教石窟遗址" data-query-en="Mogao" data-type="historic-site"><span class="example-label">佛教石窟</span><span aria-hidden="true">↗</span></button>
+              <button type="button" data-label="工业遗产" data-query-zh="寻找近现代工业遗产" data-query-en="industrial heritage" data-type="historic-site"><span class="example-label">工业遗产</span><span aria-hidden="true">↗</span></button>
             </div>
             <p id="example-hint" class="example-hint">语义检索使用中文问题；选择示例时会同步筛选对应地点类型。</p>
           </form>
@@ -84,7 +87,7 @@
                 <button id="copy-search-link" class="research-button" type="button" disabled><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m8 12 4-4M7.5 6.5l1.7-1.7a3.9 3.9 0 0 1 5.5 5.5L13 12m-6-4-1.7 1.7a3.9 3.9 0 0 0 5.5 5.5l1.7-1.7" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><span>复制检索链接</span></button>
                 <button id="export-results" class="research-button" type="button" disabled><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 3v9m-3-3 3 3 3-3M4 12v4h12v-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>导出本次结果</span></button>
               </div>
-              <p class="result-tools-description">链接记录检索条件；复查需要访问同一服务。</p>
+              <p class="result-tools-description">保存成功检索条件、实际显示的地图年份及遗址阶段选择；复查需访问同一服务，待加载或失败年份不冒充已显示年份。</p>
               <p id="result-tools-feedback" class="result-tools-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
               <div id="share-link-panel" class="share-link-panel" hidden>
                 <label for="share-link">检索链接（可选中后手动复制）</label>
@@ -99,14 +102,31 @@
 
           <div class="map-panel">
             <header class="panel-heading map-heading"><div><span class="eyebrow small-eyebrow">SPATIAL CONTEXT / 空间脉络</span><h2>在地图中阅读</h2></div><button id="fit-map" class="text-button" type="button" title="显示全部检索结果"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V3h4m6 0h4v4m0 6v4h-4M7 17H3v-4" stroke="currentColor" stroke-width="1.4"/></svg>全部点位</button></header>
+            <section id="history-controls" class="history-controls" aria-label="历史政权疆域概略时间视图" aria-describedby="history-limit-note">
+              <div class="history-title-row"><span class="eyebrow">HISTORICAL ATLAS / 历史政权疆域概略</span><p id="history-applied-year" class="history-applied-year" role="status" aria-live="polite">历史地图尚未加载</p></div>
+              <div class="history-year-row">
+                <button id="history-previous-year" class="interaction-button" type="button" aria-label="上一年" disabled>− 年</button>
+                <div class="history-year-field"><label for="history-year">年份</label><input id="history-year" type="number" inputmode="numeric" min="-3400" max="2024" step="1" value="117" aria-describedby="history-year-help history-draft-year" disabled></div>
+                <button id="history-next-year" class="interaction-button" type="button" aria-label="下一年" disabled>＋ 年</button>
+                <button id="history-apply" class="interaction-button history-apply" type="button" disabled>转到年份</button>
+              </div>
+              <p id="history-year-help" class="history-help">负数表示公元前；公元前 1 年之后是公元 1 年，没有公元 0 年。</p>
+              <label class="visually-hidden" for="history-range">历史年份，跳过公元 0 年</label><input id="history-range" class="history-range" type="range" min="-3400" max="2023" step="1" value="116" aria-valuetext="公元 117 年" aria-describedby="history-year-help history-draft-year" disabled>
+              <div class="history-frame-row"><button id="history-previous-frame" class="interaction-button" type="button" disabled>上一变化</button><p id="history-draft-year" class="history-draft-year">计划年份：公元 117 年</p><button id="history-next-frame" class="interaction-button" type="button" disabled>下一变化</button></div>
+              <div class="history-layer-row"><div class="history-basemap" role="group" aria-label="地理底图"><button id="history-basemap-historical" class="interaction-button" type="button" aria-pressed="true">自然地理</button><button id="history-basemap-modern" class="interaction-button" type="button" aria-pressed="false">现代 OSM</button></div><label class="history-boundary-toggle"><input id="history-boundaries" type="checkbox" checked><span>历史政权疆域概略</span></label></div>
+              <p id="history-feedback" class="history-feedback" role="status" aria-live="polite">准备历史资料后可切换年份，地点标记与检索排序保持独立。</p>
+              <div class="history-error-row"><p id="history-error" class="history-error" role="alert" hidden></p><button id="history-retry" class="interaction-button" type="button" hidden>重试地图视图</button></div>
+              <p id="history-source" class="history-source">来源信息在地图视图成功加载后显示。</p>
+              <p id="history-limit-note" class="history-help">海岸线为现代地理参照；历史政权疆域概略来自资料重建，可能存在概略范围和争议，不代表精密测绘边界。虚线表示复合政体。</p>
+            </section>
             <div class="map-selection-bar" role="group" aria-label="候选浏览"><p id="selection-summary" class="selection-summary">选择候选，查看地图与原始资料</p><div class="selection-actions"><button id="previous-result" class="interaction-button" type="button" disabled>上一条</button><button id="next-result" class="interaction-button" type="button" disabled>下一条</button><button id="locate-selected" class="interaction-button" type="button" disabled>定位选中</button></div></div>
             <p id="map-keyboard-help" class="map-keyboard-help">方向键平移，+ / − 缩放；标记 Enter / 空格打开详情。悬停或聚焦仅预览。</p>
             <div id="tile-warning" class="tile-warning" role="status" hidden><span id="tile-warning-text">底图暂未加载；检索结果与遗址标记仍可使用。</span><button id="retry-tiles" type="button">重试底图</button></div>
             <div class="map-shell">
-              <div id="map" tabindex="0" aria-label="地中海周边遗址地图" aria-describedby="map-keyboard-help"></div>
-              <div class="map-caption"><span class="map-caption-dot"></span>现代底图 · 古代地点代表位置</div>
+              <div id="map" tabindex="0" aria-label="全球遗址与历史政权疆域概略地图" aria-describedby="map-keyboard-help"></div>
+              <div class="map-caption"><span class="map-caption-dot"></span><span id="history-map-caption">现代底图 · 古代地点代表位置</span></div>
               <div class="map-compass" aria-hidden="true"><span>N</span><svg viewBox="0 0 20 40"><path d="m10 3 6 27-6-7-6 7Z" fill="currentColor"/><path d="m10 3 0 20-6 7Z" fill="#f4f0e7"/></svg></div>
-              <div id="map-empty-label" class="map-empty-label" aria-hidden="true"><span>MARE NOSTRUM</span><span>地中海周边 · 资料发现地图</span></div>
+              <div id="map-empty-label" class="map-empty-label" aria-hidden="true"><span>HISTORY ATLAS</span><span>全球历史遗址 · 资料发现地图</span></div>
               <aside id="detail-panel" class="detail-panel" aria-labelledby="detail-title" tabindex="-1" hidden>
                 <div class="detail-topline"><span class="eyebrow small-eyebrow">SOURCE NOTE / 资料详情</span><button id="close-detail" class="icon-button" type="button" aria-label="关闭资料详情"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.4"/></svg></button></div>
                 <div id="detail-content"></div>
@@ -129,10 +149,10 @@
                   <li><strong>核验位置。</strong>选择结果或地图标记，结合来源中的位置精度与记录范围判断候选是否适合研究问题。</li>
                 </ol>
                 <dl class="method-limits">
-                  <div><dt>数据范围</dt><dd>当前500条资料来自固定版本的 Pleiades 抽样，并非完整遗址目录。地中海周边示范区域不等同于历史边界或沿海范围。</dd></div>
-                  <div><dt>时期含义</dt><dd>地点因名称或位置记录中具有 roman 时期标签而入选；这不表示地点始建于该时期。原始记录也可能涉及其他时期，需结合具体证据阅读。</dd></div>
+                  <div><dt>数据范围</dt><dd>当前600条策展样本包含原有500条地中海罗马资料与新增100条全球历史遗址，覆盖古代至近现代，并非完整遗址目录。来源包括 Pleiades、UNESCO 与 Wikidata。</dd></div>
+                  <div><dt>时期含义</dt><dd>原500条资料因名称或位置记录具有 roman 分期关联而入选；该条件不适用于新增全球资料，也不表示地点始建于该时期。独立历史阶段保留事件、精度与原文依据，不补齐时期缺口。</dd></div>
                   <div><dt>类型计数</dt><dd>同一地点可同时具有多个类型。各类型的资料数量存在交叠，不可相加作为遗址总数。</dd></div>
-                  <div><dt>位置与底图</dt><dd>地图标记为地点代表点。来源的 precise / rough 精度分类不等于精确发掘坐标；页面使用现代底图，位置判断仍应回到来源核验。</dd></div>
+                  <div><dt>位置与底图</dt><dd>标记为地点代表点，precise / rough 不承诺米级精度或发掘坐标。Natural Earth 为现代海岸线与自然地理参照；Cliopatria 历史政权疆域概略存在概略范围与争议，不能据代表点自动判定政治归属。</dd></div>
                   <div><dt>分数与匹配</dt><dd>BM25 按原文字词匹配，语义检索按文本相近度排序。两种分值不能跨模式直接比较，也不能当作历史关联的概率；问题中的年代与空间表述仍需核验。</dd></div>
                 </dl>
               </div>
@@ -142,7 +162,7 @@
         </section>
       </main>
 
-      <footer class="site-footer"><div><span class="footer-brand">考古图志</span><span>面向古代遗址资料的语义检索与地图可视化</span></div><p>资料：<a href="https://pleiades.stoa.org/" target="_blank" rel="noopener noreferrer">Pleiades</a> · <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">CC BY 3.0</a><br>底图：© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap 贡献者</a> · 地图组件：<a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet 1.9.4</a></p></footer>
+      <footer class="site-footer"><div><span class="footer-brand">考古图志</span><span>全球历史遗址资料的语义检索与地图可视化</span></div><p>资料：<a href="https://pleiades.stoa.org/" target="_blank" rel="noopener noreferrer">Pleiades · CC BY 3.0</a> · <a href="https://whc.unesco.org/en/disclaimer/" target="_blank" rel="noopener noreferrer">UNESCO 许可指引 · CC BY-SA 3.0 IGO</a> · <a href="https://www.wikidata.org/wiki/Wikidata:Licensing" target="_blank" rel="noopener noreferrer">Wikidata · CC0</a><br>疆域概略：<a href="https://github.com/Seshat-Global-History-Databank/cliopatria" target="_blank" rel="noopener noreferrer">Cliopatria</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> · 自然地理：<a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener noreferrer">Natural Earth · 公有领域</a><br>现代底图：© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap 贡献者</a> · 地图组件：<a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet 1.9.4</a> · 具体资料的许可与版本以各条原始来源为准。</p></footer>
     </div>
     <noscript><p class="noscript-message">请启用 JavaScript 以使用检索与交互地图。</p></noscript>
   </body>

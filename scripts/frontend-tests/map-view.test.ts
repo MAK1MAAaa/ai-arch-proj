@@ -87,6 +87,8 @@ interface Candidate {
 }
 
 interface MapViewHelpers {
+  wrapLongitude(longitude: number, center: number): number;
+  wrapCoordinates(coordinates: [number, number][]): [number, number][];
   containsPoint(point: Point | null, size: Point): boolean;
   create(options: { map: FakeMap | null; countLabel: FakeElement }): { setCandidates(candidates: Candidate[]): void };
 }
@@ -103,6 +105,17 @@ assert.ok(typeof candidate === 'object' && candidate !== null);
 assert.ok('containsPoint' in candidate && typeof candidate.containsPoint === 'function');
 assert.ok('create' in candidate && typeof candidate.create === 'function');
 const helpers = candidate as MapViewHelpers;
+
+test('dateline coordinates use the smallest longitudinal arc without changing source input', () => {
+  const input: [number, number][] = [[-17, 179], [-18, -179]];
+  const result = helpers.wrapCoordinates(input);
+  assert.equal(Math.abs(result[0][1] - result[1][1]), 2);
+  assert.deepEqual(input, [[-17, 179], [-18, -179]]);
+  assert.equal(helpers.wrapLongitude(-179, 179), 181);
+  assert.equal(helpers.wrapLongitude(179, -179), -181);
+  const greenwich = helpers.wrapCoordinates([[40, -10], [40, 20]]);
+  assert.deepEqual(JSON.parse(JSON.stringify(greenwich)), [[40, -10], [40, 20]]);
+});
 
 function item(id: string, coordinate: Point | null = { x: 20, y: 30 }): Candidate {
   return { id, rank: 1, title: `Original source ${id}`, card: new FakeElement(), marker: coordinate === null ? null : new FakeMarker(coordinate), hint: new FakeElement() };

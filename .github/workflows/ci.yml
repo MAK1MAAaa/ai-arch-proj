@@ -69,7 +69,7 @@ jobs:
       - name: Build TypeScript frontend
         run: pnpm build
       - name: Verify committed frontend build artifacts
-        run: git diff --exit-code -- src/archsearch/static/app.js src/archsearch/static/app.js.map src/archsearch/static/research.js src/archsearch/static/research.js.map src/archsearch/static/map-view.js src/archsearch/static/map-view.js.map
+        run: git diff --exit-code -- src/archsearch/static/app.js src/archsearch/static/app.js.map src/archsearch/static/research.js src/archsearch/static/research.js.map src/archsearch/static/map-view.js src/archsearch/static/map-view.js.map src/archsearch/static/history.js src/archsearch/static/history.js.map
       - name: Test frontend search and map interaction contracts
         run: pnpm test:frontend
       - name: Test workflow pagination and approval guards
