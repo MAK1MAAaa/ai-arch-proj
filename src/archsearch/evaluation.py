@@ -16,6 +16,7 @@ from typing import Any, Literal
 
 from archsearch.config import DATA_DIR, MODEL_ID, MODEL_REVISION, TEXT_VERSION
 from archsearch.corpus import load_corpus
+from archsearch.domain import Site
 from archsearch.index import IndexUnavailable, SemanticIndex, document_contract
 from archsearch.search import SearchEngine, SearchRequest
 
@@ -254,6 +255,14 @@ def write_json(path: Path, payload: object) -> None:
             temporary.unlink(missing_ok=True)
 
 
+def corpus_contract_hash(sites: list[Site]) -> str:
+    """Bind relevance judgments to the complete merged records, including stage evidence."""
+    return hashlib.sha256(json.dumps(
+        [site.model_dump(mode="json") for site in sites],
+        sort_keys=True, ensure_ascii=False, separators=(",", ":"),
+    ).encode("utf-8")).hexdigest()
+
+
 def evaluate_corpus(home: Path, output: Path, qrels: Path | None = None) -> dict[str, Any]:
     """Write four paired runs, a review pool, and an unscored annotation template."""
     pairs = load_queries()
@@ -261,7 +270,7 @@ def evaluate_corpus(home: Path, output: Path, qrels: Path | None = None) -> dict
     query_contract_sha256 = query_contract_hash(pairs)
     sites = load_corpus()
     site_ids = {site.id for site in sites}
-    corpus_sha256 = hashlib.sha256((DATA_DIR / "sites.json").read_bytes()).hexdigest()
+    corpus_sha256 = corpus_contract_hash(sites)
     semantic = SemanticIndex(sites, home)
     engine = SearchEngine(sites, semantic)
     semantic_usable = semantic.ready

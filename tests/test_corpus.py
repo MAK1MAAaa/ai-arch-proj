@@ -73,7 +73,7 @@ def test_bundled_corpus_is_offline_verified_and_source_traceable(
         raise AssertionError("load_corpus must not access the network")
 
     monkeypatch.setattr(corpus, "urlopen", disallow_network)
-    sites = load_corpus()
+    sites = corpus.load_pleiades_corpus()
     assert len(sites) == len({site.id for site in sites}) == 500
     ranks = [hashlib.sha256(("mvp-v1:" + site.id).encode()).hexdigest() for site in sites]
     assert ranks == sorted(ranks)
@@ -190,4 +190,6 @@ def test_rebuild_is_deterministic_and_reports_filter_counts(
         "total_places": 7,
     }
     assert all(site.location_precision == "rough" for site in load_corpus(tmp_path / "first"))
+    rebuilt = json.loads((tmp_path / "first" / "sites.json").read_text("utf-8"))
+    assert all("chronology" not in site and "source_kind" not in site for site in rebuilt)
     assert not (tmp_path / "outside.json").exists()

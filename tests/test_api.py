@@ -27,7 +27,7 @@ def test_offline_status_and_bm25_without_model(client: TestClient) -> None:
     result = client.post("/api/search", json={"query": site.title, "mode": "bm25"})
     assert result.status_code == 200
     assert any(hit["site"]["id"] == site.id for hit in result.json()["results"])
-    assert result.json()["corpus_version"] == "v4.1"
+    assert result.json()["corpus_version"] == "global-v2"
     assert client.get(f"/api/sites/{site.id}").json()["repr_point"] == list(site.repr_point)
     assert client.get("/api/sites/not-a-place").status_code == 404
 

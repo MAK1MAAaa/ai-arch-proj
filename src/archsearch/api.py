@@ -21,7 +21,7 @@ from archsearch.config import (
     STATIC_DIR,
     TYPE_LABELS,
 )
-from archsearch.corpus import DATASET_VERSION, load_corpus
+from archsearch.corpus import CORPUS_VERSION, load_corpus
 from archsearch.domain import Site
 from archsearch.index import IndexUnavailable, SemanticIndex
 from archsearch.search import SearchEngine, SearchHit, SearchRequest
@@ -97,7 +97,7 @@ def create_app(
         ready = index.ready
         return StatusResponse(
             status="ready" if ready else "degraded",
-            corpus=CorpusStatus(count=len(corpus), version=DATASET_VERSION, period=PERIOD_LABEL),
+            corpus=CorpusStatus(count=len(corpus), version=CORPUS_VERSION, period=PERIOD_LABEL),
             semantic=SemanticStatus(ready=ready, reason=index.reason),
         )
 
@@ -126,7 +126,7 @@ def create_app(
             mode=body.mode,
             query=body.query,
             elapsed_ms=round((perf_counter() - started) * 1000, 2),
-            corpus_version=DATASET_VERSION,
+            corpus_version=CORPUS_VERSION,
             total_candidates=total,
         )
 
