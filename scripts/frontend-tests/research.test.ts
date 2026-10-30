@@ -26,6 +26,9 @@ interface ExportResult<T> {
   exported_at: string;
   request: SearchSpec;
   response: SearchResponse<T>;
+  map: HistoryView | null;
+  selection: { site: string | null; phase: string | null };
+  sources: { name: string; license: string }[];
   source: {
     name: string;
     version: string;
@@ -41,8 +44,15 @@ interface ExportResult<T> {
 
 interface ResearchHelpers {
   parseLink(url: URL): { request: SearchSpec | null; error: string | null };
-  buildLink(base: URL, request: SearchSpec): string;
-  createExport<T>(request: SearchSpec, response: SearchResponse<T>, exportedAt: string): ExportResult<T>;
+  parseView(url: URL): { view: HistoryView | null; selection: { site: string | null; phase: string | null }; error: string | null };
+  buildLink(base: URL, request: SearchSpec, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }): string;
+  createExport<T>(request: SearchSpec, response: SearchResponse<T>, exportedAt: string, view?: HistoryView | null): ExportResult<T>;
+  automaticPhaseYear(phase: { precision: string; start_year: number | null; end_year: number | null }): number | null;
+}
+
+interface HistoryView {
+  year: number; basemap: 'historical' | 'modern'; boundaries: boolean;
+  frame_id: string | null; source_version: string | null;
 }
 
 const source = readFileSync(new URL('../../src/archsearch/frontend/research.ts', import.meta.url), 'utf8');
@@ -207,7 +217,7 @@ test('exports retain full original sites, ordering, scores and evidence values',
   const response = { ...request, corpus_version: 'v4.1', elapsed_ms: 13.4, total_candidates: 500, results };
   const before = JSON.stringify(response);
   const exported = helpers.createExport(request, response, '2026-10-23T12:34:56.000Z');
-  assert.equal(exported.schema_version, 1);
+  assert.equal(exported.schema_version, 2);
   assert.equal(exported.exported_at, '2026-10-23T12:34:56.000Z');
   assert.deepEqual(plain(exported.request), request);
   assert.deepEqual(plain(exported.response), response);
@@ -243,4 +253,43 @@ test('exports refuse mismatched queries or modes instead of mislabelling earlier
   const response = { query: request.query, mode: request.mode, corpus_version: 'v4.1', elapsed_ms: 1, total_candidates: 0, results: [] };
   assert.throws(() => helpers.createExport({ ...request, query: 'unsent edit' }, response, '2026-10-23T00:00:00.000Z'), /一致/u);
   assert.throws(() => helpers.createExport({ ...request, mode: 'bm25' }, response, '2026-10-23T00:00:00.000Z'), /一致/u);
+});
+
+test('map links preserve committed year, basemap, site and phase while old links stay valid', () => {
+  const view: HistoryView = { year: -1, basemap: 'modern', boundaries: true, frame_id: 'frame', source_version: 'v0.2.1' };
+  const selection = { site: 'wd:Q123', phase: 'construction-1' };
+  const url = new URL(helpers.buildLink(base, request, view, selection));
+  assert.deepEqual(plain(helpers.parseLink(url)), { request, error: null });
+  assert.deepEqual(plain(helpers.parseView(url)), { view: { ...view, frame_id: null, source_version: null }, selection, error: null });
+  assert.equal(helpers.parseView(new URL(helpers.buildLink(base, request))).view, null);
+});
+
+test('map links reject year zero, duplicate years, outside range and orphan phases', () => {
+  for (const query of ['year=0', 'year=2025', 'year=-3401', 'year=1.0', 'year=117&year=117', 'phase=one', 'site=javascript:1', 'basemap=other']) {
+    const parsed = helpers.parseView(new URL(`?${query}`, base));
+    assert.notEqual(parsed.error, null);
+    assert.equal(parsed.view, null);
+  }
+});
+
+test('only exact single years auto-navigate; approximate and period evidence retain uncertainty', () => {
+  assert.equal(helpers.automaticPhaseYear({ precision: 'exact_year', start_year: -1, end_year: -1 }), -1);
+  for (const precision of ['approximate_year', 'range', 'period']) {
+    assert.equal(helpers.automaticPhaseYear({ precision, start_year: 117, end_year: 117 }), null);
+  }
+  assert.equal(helpers.automaticPhaseYear({ precision: 'exact_year', start_year: 0, end_year: 0 }), null);
+  assert.equal(helpers.automaticPhaseYear({ precision: 'period', start_year: null, end_year: null }), null);
+});
+
+test('v2 export freezes the actual displayed map and multiple source licenses', () => {
+  const view: HistoryView = { year: 1930, basemap: 'historical', boundaries: true, frame_id: '1930-frame', source_version: 'v0.2.1' };
+  const response = { query: request.query, mode: request.mode, corpus_version: 'global-v2', elapsed_ms: 1, total_candidates: 600, results: [] };
+  const exported = helpers.createExport(request, response, '2026-10-31T00:00:00Z', view);
+  view.year = 2024;
+  assert.equal(exported.map?.year, 1930);
+  assert.equal(exported.map?.source_version, 'v0.2.1');
+  assert.equal(exported.schema_version, 2);
+  assert.ok(exported.sources.some((source) => source.license === 'CC BY 4.0'));
+  assert.ok(exported.sources.some((source) => source.license === 'CC0'));
+  assert.equal(helpers.createExport(request, response, '2026-10-31T00:00:00Z').map, null);
 });
