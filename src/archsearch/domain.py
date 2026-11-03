@@ -125,7 +125,7 @@ class Geography(BaseModel):
     countries: list[str] = Field(default_factory=list)
     regions: list[str] = Field(default_factory=list)
     source: SourceReference
-    point_count: int = Field(default=1, ge=1)
+    point_count: int = Field(default=1, ge=0)
     note: str = ""
 
     @field_validator("countries")
@@ -143,9 +143,10 @@ class Geography(BaseModel):
         allowed = {
             "africa", "arab-states", "asia-pacific", "europe-north-america",
             "latin-america-caribbean",
+            "antarctica",
         }
         if len(values) != len(set(values)) or not set(values) <= allowed:
-            raise ValueError("regions require unique source UNESCO region identifiers")
+            raise ValueError("regions require unique supported source region identifiers")
         return values
 
 
@@ -160,19 +161,21 @@ class Site(BaseModel):
     names: list[str]
     types: list[str]
     periods: list[str]
-    repr_point: tuple[float, float]
+    repr_point: tuple[float, float] | None
     location_precision: Literal["precise", "rough"] | None = None
     source_uri: str
     contributors: list[str]
     period_evidence: list[PeriodEvidence]
-    source_kind: Literal["pleiades", "global", "unesco"] = "pleiades"
+    source_kind: Literal["pleiades", "global", "unesco", "ats"] = "pleiades"
     source_refs: list[SourceReference] = Field(default_factory=list)
     chronology: ChronologyReview = Field(default_factory=ChronologyReview)
     geography: Geography | None = None
 
     @field_validator("repr_point")
     @classmethod
-    def validate_coordinates(cls, point: tuple[float, float]) -> tuple[float, float]:
+    def validate_coordinates(cls, point: tuple[float, float] | None) -> tuple[float, float] | None:
+        if point is None:
+            return None
         longitude, latitude = point
         if not (-180 <= longitude <= 180 and -90 <= latitude <= 90):
             raise ValueError("representative point is outside WGS84 coordinate bounds")
@@ -180,6 +183,13 @@ class Site(BaseModel):
 
     @model_validator(mode="after")
     def validate_period_evidence(self) -> "Site":
+        if self.source_kind != "ats" and self.repr_point is None:
+            raise ValueError("existing source cohorts require a valid representative point")
+        if (
+            self.source_kind != "ats" and self.geography is not None
+            and self.geography.point_count < 1
+        ):
+            raise ValueError("existing source cohorts require at least one source point")
         evidence_periods = {item.period_id for item in self.period_evidence}
         if self.source_kind == "pleiades" and (
             "roman" not in evidence_periods or "roman" not in self.periods
@@ -194,4 +204,13 @@ class Site(BaseModel):
             or not self.source_refs or self.geography is None
         ):
             raise ValueError("UNESCO sites require authority IDs, geography and source references")
+        if self.source_kind == "ats":
+            if (
+                re.fullmatch(r"ats:hsm:[1-9]\d*", self.id) is None
+                or not self.source_refs or self.geography is None
+                or self.geography.regions != ["antarctica"] or self.geography.countries
+            ):
+                raise ValueError("ATS records require HSM identities and country-neutral geography")
+            if self.geography.point_count != (0 if self.repr_point is None else 1):
+                raise ValueError("ATS point count must preserve known versus unknown location")
         return self

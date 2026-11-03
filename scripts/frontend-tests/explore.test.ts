@@ -7,11 +7,12 @@ import ts from 'typescript';
 
 interface State { country: string | null; region: string | null; offset: number; visible: boolean }
 interface Helpers {
-  create(options: { map: FakeMap | null; onSelect(id: string, opener: FakeElement): void; onFilterChange?(state: State): void; onStateChange?(state: State): void; onCommittedState?(state: State): void }): Controller;
+  create(options: { map: FakeMap | null; onSelect(id: string, opener: FakeElement): void; onFilterChange?(state: State): void; onStateChange?(state: State): void; onCommittedState?(state: State): void; onCatalogue?(points: Point[]): void }): Controller;
   normalizeState(value: Partial<State>): State;
   matches(point: { countries: string[]; regions: string[] }, state: Pick<State, 'country' | 'region'>): boolean;
   coordinate(value: unknown): boolean;
   displayCoordinates(value: [number, number]): [number, number][];
+  locationStatus(value: [number, number] | null): 'mapped' | 'polar' | 'unknown';
 }
 interface Controller {
   load(): Promise<void>;
@@ -19,6 +20,7 @@ interface Controller {
   getState(): State;
   getCommittedState(): State | null;
   getPoint(id: string): [number, number] | null;
+  getLocationStatus(id: string): 'mapped' | 'polar' | 'unknown' | null;
   select(id: string | null): void;
 }
 
@@ -121,12 +123,12 @@ class FakeMap {
   fitBounds(bounds: unknown): void { this.lastBounds = bounds; }
 }
 
-interface Point { id: string; title: string; repr_point: [number, number]; countries: string[]; regions: string[]; source_kind: string; chronology_status: string }
+interface Point { id: string; title: string; repr_point: [number, number] | null; location_status: 'mapped' | 'polar' | 'unknown'; countries: string[]; regions: string[]; source_kind: string; chronology_status: string }
 interface Pending { url: string; signal: AbortSignal; resolve(response: { ok: boolean; status: number; json(): Promise<unknown> }): void; reject(error: Error): void; done: boolean }
 const fixture: Point[] = [
-  { id: 'whc:1', title: '<img src=x onerror=alert(1)>', repr_point: [179, -18], countries: ['NZ'], regions: ['asia-pacific'], source_kind: 'unesco', chronology_status: 'not_reviewed' },
-  { id: 'wd:Q2', title: 'Beta monument', repr_point: [29, 40], countries: ['TR'], regions: ['europe-north-america'], source_kind: 'global', chronology_status: 'reviewed' },
-  { id: '123', title: 'Untitled', repr_point: [12, 42], countries: [], regions: [], source_kind: 'pleiades', chronology_status: 'insufficient' },
+  { id: 'whc:1', title: '<img src=x onerror=alert(1)>', repr_point: [179, -18], location_status: 'mapped', countries: ['NZ'], regions: ['asia-pacific'], source_kind: 'unesco', chronology_status: 'not_reviewed' },
+  { id: 'wd:Q2', title: 'Beta monument', repr_point: [29, 40], location_status: 'mapped', countries: ['TR'], regions: ['europe-north-america'], source_kind: 'global', chronology_status: 'reviewed' },
+  { id: '123', title: 'Untitled', repr_point: [12, 42], location_status: 'mapped', countries: [], regions: [], source_kind: 'pleiades', chronology_status: 'insufficient' },
 ];
 
 function coverageFor(points = fixture) {
@@ -134,6 +136,7 @@ function coverageFor(points = fixture) {
   return { corpus_version: 'global-v3', total: points.length, countries: counts('countries'), regions: counts('regions'),
     sources: [...new Set(points.map(point => point.source_kind))].map(id => ({ id, label: id, count: points.filter(point => point.source_kind === id).length })),
     chronology: { reviewed: points.filter(point => point.chronology_status === 'reviewed').length, insufficient: points.filter(point => point.chronology_status === 'insufficient').length, not_reviewed: points.filter(point => point.chronology_status === 'not_reviewed').length },
+    locations: { mapped: points.filter(point => point.location_status === 'mapped').length, polar: points.filter(point => point.location_status === 'polar').length, unknown: points.filter(point => point.location_status === 'unknown').length },
     geography_unknown: points.filter(point => point.countries.length === 0).length, country_unknown: points.filter(point => point.countries.length === 0).length };
 }
 
@@ -142,11 +145,11 @@ function pageFor(state: Partial<State> = {}, points = fixture) {
   const offset = state.offset ?? 0;
   return { corpus_version: 'global-v3', total: filtered.length, offset, limit: 50,
     sites: filtered.slice(offset, offset + 50).map(point => ({ id: point.id, title: point.title, repr_point: point.repr_point, source_kind: point.source_kind,
-      geography: point.countries.length ? { countries: point.countries, regions: point.regions } : null, chronology: { status: point.chronology_status } })) };
+      geography: point.countries.length || point.regions.length ? { countries: point.countries, regions: point.regions } : null, chronology: { status: point.chronology_status } })) };
 }
 
 function setup(withMap = true) {
-  const ids = ['explore-panel', 'explore-summary', 'explore-authority', 'explore-country', 'explore-region', 'explore-clear', 'explore-points', 'explore-fit', 'explore-count', 'explore-list', 'explore-previous', 'explore-next', 'explore-page', 'explore-feedback', 'explore-retry', 'explore-limit-note'];
+  const ids = ['explore-panel', 'explore-summary', 'explore-authority', 'explore-polar-authority', 'explore-country', 'explore-region', 'explore-clear', 'explore-points', 'explore-fit', 'explore-count', 'explore-list', 'explore-previous', 'explore-next', 'explore-page', 'explore-feedback', 'explore-retry', 'explore-limit-note'];
   const nodes = new Map(ids.map(id => [id, new FakeElement()]));
   const doc: { activeElement: FakeElement | null; getElementById(id: string): FakeElement | null; createElement(tag: string): FakeElement } = {
     activeElement: null, getElementById: id => nodes.get(id) ?? null,
@@ -158,6 +161,7 @@ function setup(withMap = true) {
   const changes: State[] = [];
   const filters: State[] = [];
   const commits: State[] = [];
+  const catalogues: Point[][] = [];
   const circles: FakeCircle[] = [];
   const map = withMap ? new FakeMap() : null;
   const context = createContext({ document: doc, URL, URLSearchParams, AbortController,
@@ -166,7 +170,7 @@ function setup(withMap = true) {
     ArchSearchMapView: { wrapCoordinates: (points: unknown) => points },
   });
   const api = runInContext(`${compiled.outputText}\nArchSearchExplore;`, context) as Helpers;
-  const controller = api.create({ map, onSelect: (id, opener) => selects.push({ id, opener }), onFilterChange: state => filters.push(plain(state)), onStateChange: state => changes.push(plain(state)), onCommittedState: state => commits.push(plain(state)) });
+  const controller = api.create({ map, onSelect: (id, opener) => selects.push({ id, opener }), onFilterChange: state => filters.push(plain(state)), onStateChange: state => changes.push(plain(state)), onCommittedState: state => commits.push(plain(state)), onCatalogue: points => catalogues.push(points) });
   const node = (id: string) => { const found = nodes.get(id); assert.ok(found); return found; };
   const response = (request: Pending, value: unknown, status = 200) => { request.done = true; request.resolve({ ok: status < 400, status, json: async () => value }); };
   const find = (path: string) => { const found = pending.find(item => !item.done && item.url.startsWith(path)); assert.ok(found, path); return found; };
@@ -178,7 +182,7 @@ function setup(withMap = true) {
     }
   };
   const boot = async (points = fixture) => { const job = controller.load(); respondAll(points); await job; };
-  return { controller, node, pending, selects, changes, filters, commits, circles, map, doc, find, response, respondAll, boot };
+  return { controller, node, pending, selects, changes, filters, commits, catalogues, circles, map, doc, find, response, respondAll, boot };
 }
 
 test('coverage, full points and directory page commit together without a model or map', async () => {
@@ -373,4 +377,76 @@ test('authority denominator is source-scoped and retains its official version an
   assert.match(node.children[0].textContent, /官方文化／混合名录 1 \/ 2/u);
   assert.equal((node.children[1] as FakeElement & { href: string }).href, authority.source_uri);
   assert.match(node.children[3].textContent, /2026-11-03.*1 条待覆盖.*纯自然遗产/u);
+});
+
+const antarctic: Point[] = [
+  { id: 'ats:hsm:1', title: 'HSM 1', repr_point: [0, -90], location_status: 'polar', countries: [], regions: ['antarctica'], source_kind: 'ats', chronology_status: 'not_reviewed' },
+  { id: 'ats:hsm:24', title: 'HSM 24', repr_point: [-87.113111, -85.173278], location_status: 'polar', countries: [], regions: ['antarctica'], source_kind: 'ats', chronology_status: 'not_reviewed' },
+  { id: 'ats:hsm:34', title: 'HSM 34', repr_point: [-55.716667, -62.183333], location_status: 'mapped', countries: [], regions: ['antarctica'], source_kind: 'ats', chronology_status: 'not_reviewed' },
+  { id: 'ats:hsm:80', title: 'HSM 80', repr_point: [0, -90], location_status: 'polar', countries: [], regions: ['antarctica'], source_kind: 'ats', chronology_status: 'not_reviewed' },
+  { id: 'ats:hsm:95', title: 'HSM 95', repr_point: null, location_status: 'unknown', countries: [], regions: ['antarctica'], source_kind: 'ats', chronology_status: 'not_reviewed' },
+];
+
+test('location status follows actual coordinates at the Mercator limit without clipping or zero-filling', () => {
+  assert.equal(helpers.locationStatus(null), 'unknown');
+  assert.equal(helpers.locationStatus([0, 0]), 'mapped');
+  assert.equal(helpers.locationStatus([0, -85.0511287798]), 'mapped');
+  assert.equal(helpers.locationStatus([0, -85.0511287799]), 'polar');
+  assert.equal(helpers.locationStatus([0, 90]), 'polar');
+});
+
+test('all records remain browsable while only mapped points are added to the Mercator layer', async () => {
+  const points = [...fixture, ...antarctic]; const app = setup(); await app.boot(points);
+  assert.equal(app.node('explore-list').children.length, 8); assert.equal(app.circles.length, 12);
+  assert.match(app.node('explore-feedback').textContent, /8 条：主图可定位 4、极区 3、位置未知 1/u);
+  assert.deepEqual(plain(app.controller.getPoint('ats:hsm:1')), [0, -90]);
+  assert.deepEqual(plain(app.controller.getPoint('ats:hsm:24')), [-87.113111, -85.173278]);
+  assert.equal(app.controller.getPoint('ats:hsm:95'), null);
+  assert.equal(app.controller.getLocationStatus('ats:hsm:95'), 'unknown');
+  assert.equal(app.controller.getLocationStatus('ats:hsm:1'), 'polar');
+  assert.equal(app.controller.getLocationStatus('missing'), null);
+  const unknown = app.node('explore-list').children.at(-1)!.children[0];
+  assert.equal(unknown.dataset.locationStatus, 'unknown'); assert.match(unknown.children[2].textContent, /位置未知/u);
+  unknown.fire('click'); assert.equal(app.selects.at(-1)?.id, 'ats:hsm:95');
+  app.node('explore-fit').fire('click');
+  assert.deepEqual(plain(app.map?.lastBounds), [[-18, 179], [40, 29], [42, 12], [-62.183333, -55.716667]]);
+});
+
+test('catalogue callbacks always include cloned polar and unknown records independent of browse filters', async () => {
+  const points = [...fixture, ...antarctic]; const app = setup(); await app.boot(points);
+  assert.equal(app.catalogues.length, 1); assert.equal(app.catalogues[0].length, 8);
+  const pole = app.catalogues[0].find(point => point.id === 'ats:hsm:1')!;
+  pole.repr_point![1] = 0; pole.regions.length = 0;
+  assert.deepEqual(plain(app.controller.getPoint('ats:hsm:1')), [0, -90]);
+  const region = app.controller.setState({ region: 'antarctica' }); app.respondAll(points, { region: 'antarctica' }); await region;
+  assert.equal(app.catalogues.length, 1); assert.equal(app.node('explore-list').children.length, 5);
+  assert.equal([...app.map!.layers][0].members.length, 3);
+  assert.match(app.node('explore-feedback').textContent, /主图可定位 1、极区 3、位置未知 1/u);
+  const reload = app.controller.load(); app.respondAll(points, { region: 'antarctica' }); await reload;
+  assert.equal(app.catalogues[1].length, 8);
+});
+
+test('contradictory coordinate/status or location totals cannot replace a successful catalogue', async () => {
+  const app = setup(); await app.boot(); const layer = [...app.map!.layers][0];
+  const invalid = [...fixture, { ...antarctic[0], location_status: 'mapped' as const }];
+  const first = app.controller.load(); const firstRejected = assert.rejects(first, /定位状态与原始坐标/u);
+  app.respondAll(invalid); await firstRejected;
+  assert.equal([...app.map!.layers][0], layer); assert.equal(app.catalogues.length, 1);
+  const second = app.controller.load(); const secondRejected = assert.rejects(second, /统计总数/u);
+  app.response(app.find('/api/coverage'), { ...coverageFor(), locations: { mapped: 1, polar: 0, unknown: 1 } });
+  app.response(app.find('/api/catalogue'), { corpus_version: 'global-v3', total: 3, points: fixture });
+  app.response(app.find('/api/sites'), pageFor()); await secondRejected;
+  assert.equal(app.node('explore-list').children.length, 3);
+});
+
+test('ATS source coverage counts unknown records as collected without claiming geolocation', async () => {
+  const app = setup(); const job = app.controller.load();
+  const polarAuthority = { dataset: 'ATS active HSM', source_uri: 'https://www.ats.aq/devphbackend/api/apa/search?lang=e', source_accessed: '2026-11-04', source_sha256: 'b'.repeat(64), license: 'CC BY 4.0', license_uri: 'https://creativecommons.org/licenses/by/4.0/', eligible_total: 91, covered: 91, missing: 0, excluded_types: { ASPA: 84, ASMA: 7 }, note: 'HSM95 has no confirmed coordinate.' };
+  app.response(app.find('/api/coverage'), { ...coverageFor(antarctic), polar_authority: polarAuthority });
+  app.response(app.find('/api/catalogue'), { corpus_version: 'global-v3', total: antarctic.length, points: antarctic });
+  app.response(app.find('/api/sites'), pageFor({}, antarctic)); await job;
+  const source = app.node('explore-polar-authority'); assert.equal(source.hidden, false);
+  assert.match(source.children[0].textContent, /91 \/ 91 条已收录（包含位置未知记录）/u);
+  assert.equal((source.children[1] as FakeElement & { href: string }).href, polarAuthority.source_uri);
+  assert.match(source.children[3].textContent, /ASPA 84、ASMA 7/u);
 });

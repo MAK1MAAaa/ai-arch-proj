@@ -530,6 +530,8 @@ def load_catalogue(curated: list[Site], data_dir: Path = DATA_DIR) -> list[Site]
                 (data_dir / "world_geography.json").read_text("utf-8")
             ).items()
         }
+        if any(item.point_count < 1 for item in geography.values()):
+            raise CatalogueError("world catalogue geography requires at least one source point")
         partition = manifest["partition"]
         sets = {}
         for name in ("eligible_ids", "curated_ids", "added_ids", "excluded_ids"):

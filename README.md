@@ -2,7 +2,7 @@
 
 面向古代遗址资料的语义检索与地图可视化课程项目。
 
-当前语料 `global-v3` 共1534条：保留原500条Pleiades与100条已策展全球资料，新增934条官方文化／混合遗产名录记录。固定来源中的1033处文化／混合遗产全部可定位，关联159个国家／地区；这不是全球所有遗址的完整清单。提供本地多语言语义检索、全库目录、原文证据与历史地图联动。
+当前语料 `global-v4` 共1625条：保留原500条Pleiades、100条已策展全球资料与934条文化／混合遗产名录记录，新增91条南极条约秘书处（ATS）正式历史遗址或纪念物。覆盖159个来源国家／地区和6个来源分区，其中南极为独立分类，不作主权归属标注。提供本地多语言语义检索、全库目录、原文证据与历史地图联动；这不是全球所有遗址的完整清单。
 
 ## 全球覆盖与完整目录
 
@@ -14,7 +14,7 @@
 
 目录地域条件用于下一次主动提交的检索；浏览、翻页和切换图层时，已有成功检索的条件与排名保持不变。查询参数 `country/region` 保存成功检索的过滤；`browse_country/browse_region/browse_offset/points` 单独保存最后成功目录范围及即时点层开关。目录请求失败时保留成功列表与点层，分享和导出也保留该成功范围。无查询的目录与地图链接可以直接恢复遗址；模型缺失时保留待恢复查询，用户操作优先于晚到的初始化恢复。
 
-国家／地区来自现代名录成员字段，不按代表点或历史疆域推断。跨国遗产计入各关联国家，各国计数不可相加作为总数。501条尚无名录地理标签，502条没有国家标签（另含来源未归类的耶路撒冷）；两项是不同指标。系列遗产只显示一个代表点，`point_count`是来源可用定位点记录数，不代表已逐一核验的组成遗址数。两处来源缺失定位点的记录保留独立Wikidata证据，其中1567明确使用一个关联组成部分定位，不称为整体中心。
+国家／地区来自现代名录成员字段，不按代表点或历史疆域推断。跨国遗产计入各关联国家，各国计数不可相加作为总数。501条尚无来源地理标签，593条没有国家标签（另含来源未归类的耶路撒冷和91条南极资料）；两项是不同指标。系列遗产只显示一个代表点，`point_count`是来源可用定位点记录数，不代表已逐一核验的组成遗址数。两处来源缺失定位点的世界遗产记录保留独立Wikidata证据，其中1567明确使用一个关联组成部分定位，不称为整体中心。
 
 离线查看覆盖与来源分母：
 
@@ -22,13 +22,32 @@
 uv run --no-sync archsearch coverage
 ```
 
-输出包括1534条来源统计、159个可筛国家／地区、三态断代计数，以及固定名录覆盖1033／1033、缺失0、自然遗产排除240。完整来源缓存不进Git；可从固定归档重新生成派生文件：
+输出包括1625条来源统计、159个可筛国家／地区、三态断代计数，以及固定世界遗产名录覆盖1033／1033和ATS历史名录91／91。定位单独统计为1621条主图可显示、3条极区点和1条真实位置未知。完整来源缓存不进Git；可从固定归档重新生成派生文件：
 
 ```powershell
 uv run --no-sync python -m archsearch.catalogue_data --rebuild --download
 ```
 
 默认缓存为 `.archsearch/downloads/unesco-datahub-v1/`；可用 `--source-cache <目录>` 指定已有固定快照。下载内容必须匹配冻结SHA，官方数据改版后应保留本地快照或明确更新来源版本。派生资料的署名、加工与同方式共享条款见 [名录资料许可](src/archsearch/data/CATALOGUE_LICENSE.md)。覆盖及浏览器验收见 [全球覆盖记录](docs/global-coverage.md)。
+
+## 南极历史资料与极区定位
+
+[ATS APA数据库](https://www.ats.aq/devph/en/apa-database)采用2026-11-04冻结快照：182条中纳入91条正式、未撤销的HSM，排除84条ASPA与7条ASMA；本批来源缺号12、13、25、31、58保持缺号。`ats:hsm:<编号>`与来源内部ID分别保存，查询响应及91份详情的SHA256随 `polar_manifest.json` 冻结。资料按[ATS版权声明](https://www.ats.aq/e/copyright.html)遵循CC BY 4.0，未收录照片、视频或其他媒体；具体署名与加工见 [ATS许可](src/archsearch/data/ATS-LICENSE.md)。
+
+新91条均保留原文与来源核对记录，历史阶段为“断代尚未核验”，不把保护认定年转成建造年。原1534条的文件、原文、坐标与阶段不覆盖改写；已有149处有来源支持阶段、451处证据不足，新版共1025处阶段尚未核验。国家筛选不将提议方、管理方或探险队国籍变为南极主权归属。
+
+91条中90条有源坐标：34号仅在来源DMS明确时换算；95号San Telmo沉船真实位置未知，最后目击参照只保留在原文，不作为遗址坐标。未知点的 `repr_point` 为 `null`、`point_count` 为0，继续参与检索、目录、分享和导出，不绘制标记。其余非ATS批次仍要求有效代表点及至少一条来源定位记录。
+
+1、24、80号保留超出Web Mercator范围的原始纬度，主图不夹取。页面可展开“南极定位示意”，以南极点为中心的球面近似方位等距投影显示90处源坐标，并单列未知位置资料。本地Natural Earth仅为现代自然地理参照，未重建古海岸或国界；极区示意不是测绘图或历史疆域图。点击或Enter／空格打开详情，方向键及Home／End可访问重合点；“查看极区位置”定位独立视图，保留主地图年份、视角和检索排名。本地轮廓失败时仍保留点位、网格及明确错误提示。完整目录暂未加载时，可凭已读取的ATS详情定位，明确标注“仅已读详情，完整目录未就绪”；目录恢复后替换为完整91条。
+
+从固定原档重建南极派生资料：
+
+```powershell
+uv run --no-sync python -m archsearch.polar_data --rebuild --download
+uv run --no-sync archsearch prepare
+```
+
+默认源缓存 `.archsearch/downloads/ats-hsm-v1/` 不入Git；已有缓存可省略 `--download`，或使用 `--source-cache <目录>`。下载拒绝与冻结SHA不符的更新；运行期不访问ATS。规范化资料已随代码分发，普通安装不必下载源缓存，只需重新 `prepare` 更新E5索引。实际来源、离线交互及验收见 [南极扩充记录](docs/antarctic-coverage.md)。
 
 ## 保留的600条资料与断代核验
 
@@ -109,7 +128,7 @@ uv run --no-sync archsearch prepare-history
 uv run --no-sync archsearch serve
 ```
 
-浏览器打开 `http://127.0.0.1:8000/`，API状态地址为 `/api/status`。首次准备下载固定版本E5模型（单份权重约471MB）并构建1534×384向量，需要联网。升级语料后须重新运行 `prepare`，旧索引会被明确识别为失效；已下载模型可离线复用。后续启动和新的中文查询只使用本地资源；首次查询包含模型加载，后续复用编码器。应用采用CPU推理，运行不需要Node.js、GPU或外部模型API密钥。
+浏览器打开 `http://127.0.0.1:8000/`，API状态地址为 `/api/status`。首次准备下载固定版本E5模型（单份权重约471MB）并构建1625×384向量，需要联网。升级语料后须重新运行 `prepare`，旧索引会被明确识别为失效；已下载模型可离线复用。后续启动和新的中文查询只使用本地资源；首次查询包含模型加载，后续复用编码器。应用采用CPU推理，运行不需要Node.js、GPU或外部模型API密钥。
 
 ## 本地历史地图数据服务
 
@@ -152,7 +171,7 @@ pnpm test:frontend
 pnpm test:workflows
 ```
 
-`pnpm build`生成`static/app.js`、`research.js`、`map-view.js`、`history.js`、`explore.js`及各自source map，均随源码提交；应用逻辑编辑TypeScript，由构建生成JavaScript。`research.ts`处理独立检索／目录链接和版本2导出，`map-view.ts`处理预览、跨日期线定位与范围提示，`history.ts`处理历史视图，`explore.ts`处理全库目录、覆盖与点层。测试执行实际助手源码，覆盖竞争请求、三态断代、地理过滤、成功快照、图层和范围统计。Leaflet保留本地原版资源。运行仍只需Python和已生成资源，Node.js与pnpm用于开发构建。
+`pnpm build`生成`static/app.js`、`research.js`、`map-view.js`、`history.js`、`explore.js`、`polar-view.js`及各自source map，均随源码提交；应用逻辑编辑TypeScript，由构建生成JavaScript。`research.ts`处理独立检索／目录链接和版本2导出，`map-view.ts`处理预览、跨日期线定位与范围提示，`history.ts`处理历史视图，`explore.ts`处理全库目录、覆盖与点层，`polar-view.ts`处理极区投影、未知位置和独立键盘定位。测试执行实际助手源码，覆盖竞争请求、三态断代、地理过滤、成功快照、图层和范围统计。Leaflet保留本地原版资源。运行仍只需Python和已生成资源，Node.js与pnpm用于开发构建。
 
 CI在Windows与Ubuntu执行Python锁定安装、Ruff、mypy、pytest，以及pnpm冻结锁文件安装、TypeScript检查、构建、前端交互助手测试和真实Octokit回归；同时校验编译产物与源码一致，不下载模型或全量资料。`main`要求一个批准及`quality-gate`，管理员同样受约束，禁止强推和删除。默认分支的`workflow_run`核实可信仓库、作者、分支、最新CI及当前head后，由Actions机器人批准并自动squash合并；审批任务不检出或运行PR代码。
 
@@ -162,7 +181,7 @@ CI在Windows与Ubuntu执行Python锁定安装、Ruff、mypy、pytest，以及pnp
 
 两种检索共享`build_document()`构造的原文，包含名称、别名、类型、描述及补充记录。地图年份不筛选检索候选；未加入LLM或历史政治归属推断。BM25使用正Robertson IDF、k1=1.5、b=0.75；无词项匹配就返回空结果。英文词语、地名和已有中文别名适合关键词基线，中文零命中不意味着资料不存在相关地点。
 
-语义检索使用 [multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small)，固定revision `fd1525a9fd15316a2d503bf26ab031a61d056e98`。文档添加`passage: `、查询添加`query: `，L2归一化后以NumPy精确点积排序。两种方法共享多语种来源文本，包括可用的官方中文描述。模型最多512 token，新版有88条长文档被截断，BM25仍使用完整词项；完整原文保留。相似度是排序分数，不是相关概率，候选仍需人工核验。
+语义检索使用 [multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small)，固定revision `fd1525a9fd15316a2d503bf26ab031a61d056e98`。文档添加`passage: `、查询添加`query: `，L2归一化后以NumPy精确点积排序。两种方法共享多语种来源文本，包括可用的官方中文描述。模型最多512 token，新版有96条长文档被截断，BM25仍使用完整词项；完整原文保留。相似度是排序分数，不是相关概率，候选仍需人工核验。
 
 索引绑定地点顺序、检索文本hash、模型revision、前缀、归一化和模型文件校验和。缺失或损坏时明确标为未就绪，语义请求返回503；BM25继续可用，不进行隐式替代。修复后可刷新状态；模型加载失败时重新prepare并重启服务。
 
@@ -171,8 +190,8 @@ CI在Windows与Ubuntu执行Python锁定安装、Ruff、mypy、pytest，以及pnp
 | `GET /api/status` | 语料版本、数量、语义状态及历史版本、可用年份与就绪原因 |
 | `GET /api/history/boundaries?year=...` | 本地年度政权疆域GeoJSON、原始区间、来源与帧元数据 |
 | `GET /api/facets` | 类型ID、中文标签和数量 |
-| `GET /api/coverage` | 全库国家／分区、来源、断代三态及固定名录覆盖分母 |
-| `GET /api/catalogue` | 轻量全库点，可选country／region／type交集 |
+| `GET /api/coverage` | 全库国家／分区、来源、断代三态、定位三态及两类官方名录覆盖分母 |
+| `GET /api/catalogue` | 轻量全库记录，含可空repr_point和mapped／polar／unknown定位状态，可选country／region／type交集 |
 | `GET /api/sites` | 无查询分页目录，offset及limit（1—100）和地理／类型交集 |
 | `POST /api/search` | 查询、模式、类型筛选及候选排序 |
 | `GET /api/sites/{id}` | 原文、别名、代表点、分期证据、多来源、核验状态、历史阶段和默认阶段 |
@@ -246,6 +265,10 @@ tailscale serve status
 Leaflet 1.9.4按其BSD-2-Clause许可本地分发，许可位于`src/archsearch/static/vendor/leaflet/LICENSE`；底图署名为©OpenStreetMap贡献者，遵守 [OSM瓦片使用政策](https://operations.osmfoundation.org/policies/tiles/)，不提供批量预取或离线瓦片包。
 
 ## 界面预览
+
+实际1625条版本的南极定位示意，90处源坐标与1条未知位置分别展示（断网本地参照）：
+
+![南极历史资料与独立极区定位](docs/antarctic-coverage-preview.png)
 
 实际1534条全库目录、覆盖统计与历史地图（断网本地参照）：
 
