@@ -29,12 +29,15 @@ from archsearch.coverage import (
     CatalogueIndex,
     CatalogueResponse,
     CoverageResponse,
+    SiteLocationsResponse,
     SitePage,
+    SpatialLocationCoverage,
 )
 from archsearch.domain import Site
 from archsearch.history import HistoryStore, HistoryUnavailable, validate_year
 from archsearch.index import IndexUnavailable, SemanticIndex
 from archsearch.search import SearchEngine, SearchHit, SearchRequest
+from archsearch.spatial_data import SpatialDataError
 
 HISTORY_PATH = "/api/history/boundaries"
 HISTORY_PREPARE = "请运行 uv run --no-sync archsearch prepare-history 准备或修复历史疆域缓存。"
@@ -84,6 +87,7 @@ class StatusResponse(BaseModel):
     corpus: CorpusStatus
     semantic: SemanticStatus
     history: HistoryStatus
+    spatial_locations: SpatialLocationCoverage | None = None
 
 
 class Facet(BaseModel):
@@ -159,6 +163,7 @@ def create_app(
             corpus=CorpusStatus(count=len(corpus), version=CORPUS_VERSION, period=PERIOD_LABEL),
             semantic=SemanticStatus(ready=ready, reason=index.reason),
             history=HistoryStatus.model_validate(history_state),
+            spatial_locations=catalogue_index.spatial_coverage(),
         )
 
     @app.get(HISTORY_PATH)
@@ -245,6 +250,16 @@ def create_app(
             corpus_version=CORPUS_VERSION,
             total_candidates=total,
         )
+
+    @app.get("/api/sites/{site_id}/locations", response_model=SiteLocationsResponse)
+    def site_locations(site_id: str) -> SiteLocationsResponse:
+        site = engine.by_id.get(site_id)
+        if site is None:
+            raise HTTPException(status_code=404, detail="地点不存在于本演示语料中。")
+        try:
+            return catalogue_index.site_locations(site)
+        except SpatialDataError as error:
+            raise HTTPException(status_code=503, detail=str(error)) from error
 
     @app.get("/api/sites/{site_id}", response_model=Site)
     def site_detail(site_id: str) -> Site:

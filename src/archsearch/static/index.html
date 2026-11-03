@@ -82,6 +82,7 @@
           <div class="explore-heading"><div><span class="eyebrow small-eyebrow">GLOBAL CATALOGUE / 全库探索</span><h2 id="explore-title">从全球目录开始</h2></div><p id="explore-summary" class="explore-summary">正在核对本地资料覆盖范围</p></div>
           <p id="explore-authority" class="explore-authority" hidden></p>
           <p id="explore-polar-authority" class="explore-authority" hidden></p>
+          <p id="explore-spatial-source" class="explore-authority" hidden></p>
           <div class="explore-controls">
             <div class="explore-filter"><label for="explore-region">来源分区</label><select id="explore-region" aria-describedby="explore-filter-note" disabled><option value="">全部分区</option></select></div>
             <div class="explore-filter"><label for="explore-country">国家／地区</label><select id="explore-country" aria-describedby="explore-filter-note" disabled><option value="">全部国家／地区</option></select></div>
@@ -89,14 +90,14 @@
             <label class="explore-points-toggle"><input id="explore-points" type="checkbox" checked disabled><span>显示全库点位</span></label>
             <button id="explore-fit" class="interaction-button" type="button" disabled>定位主图范围</button>
           </div>
-          <p id="explore-filter-note" class="explore-note">地域选择用于目录浏览和下一次主动检索；已完成的检索排名与地图年份保持原样。</p>
+          <p id="explore-filter-note" class="explore-note">地域选择用于目录浏览和下一次主动检索；已完成的检索排名与地图年份保持原样。跨国遗产按来源成员筛选，仍显示整条遗产的所有源点；没有逐点国别依据，不按坐标推定归属。</p>
           <div class="explore-feedback-row"><p id="explore-feedback" class="explore-feedback" role="status" aria-live="polite">无需输入问题或准备模型，也可浏览本地目录。</p><button id="explore-retry" class="interaction-button" type="button" hidden>重试目录</button></div>
           <details id="explore-directory" class="explore-directory">
             <summary>浏览完整目录 <span id="explore-count">等待资料</span></summary>
             <div class="explore-directory-heading"><p id="explore-page" class="explore-page" tabindex="-1">目录按来源标题排序，不是相关性排名。</p><div class="explore-pagination"><button id="explore-previous" class="interaction-button" type="button" disabled>上一页</button><button id="explore-next" class="interaction-button" type="button" disabled>下一页</button></div></div>
             <ol id="explore-list" class="explore-list" aria-label="全球遗址目录，本页可用键盘选择" tabindex="-1"></ol>
           </details>
-          <p id="explore-limit-note" class="explore-note explore-limit-note">全库圆点与带编号的检索候选分开显示，目录不提供相关性分数。极区点保留原坐标并使用南极定位示意；位置未知的资料保留在目录，未补造坐标。国家／地区及分区来自来源标签，不代表历史政治归属；跨国遗产计数存在交叠。覆盖以当前来源版本为限，未声称收录全球全部遗址。</p>
+          <p id="explore-limit-note" class="explore-note explore-limit-note">全库圆点显示来源定位点及必要代表点，带编号的标记为检索候选；多点遗产在目录仍是一条资料，定位点不等于遗址数量或精确发掘坐标。点击圆点打开所属遗产，保留地图视角；来源名称只作原文标签，不猜组成地点身份。目录不提供相关性分数。极区点保留原坐标并使用南极定位示意；位置未知的资料保留在目录，未补造坐标。国家／地区及分区来自来源标签，不代表历史政治归属；跨国遗产计数存在交叠。覆盖以当前来源版本为限，未声称收录全球全部遗址。</p>
         </section>
 
         <details id="polar-panel" class="polar-panel" hidden>
@@ -177,7 +178,7 @@
                 <div id="detail-content"></div>
               </aside>
             </div>
-            <footer class="map-footnote"><span><span class="legend-dot"></span>编号：检索候选 <span class="catalogue-legend-dot"></span>小圆点：全库资料</span><span id="viewport-count" class="viewport-count" title="仅按本次返回候选的代表点中心统计；不包括全库底层圆点，不改变检索与排序。" hidden>当前地图范围内 0 / 本次返回 0</span><span>代表点，非精确发掘坐标</span></footer>
+            <footer class="map-footnote"><span><span class="legend-dot"></span>编号：检索候选 <span class="catalogue-legend-dot"></span>小圆点：源定位点／必要代表点</span><span id="viewport-count" class="viewport-count" title="仅按本次返回候选的代表点中心统计；不包括全库底层圆点，不改变检索与排序。" hidden>当前地图范围内 0 / 本次返回 0</span><span>定位点，非精确发掘坐标</span></footer>
           </div>
         </section>
 

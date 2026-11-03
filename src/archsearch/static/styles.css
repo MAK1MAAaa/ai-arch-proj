@@ -1190,6 +1190,33 @@
   background: var(--surface);
 }
 
+.explore-point-tooltip {
+  display: grid;
+  gap: 3px;
+  max-width: 260px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.explore-point-kind {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.source-location-list {
+  max-height: 320px;
+  margin: 10px 0;
+  padding-left: 22px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+
+.source-location-list:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .polar-panel > summary {
   display: flex;
   align-items: center;

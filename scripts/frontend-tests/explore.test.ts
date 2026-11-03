@@ -7,12 +7,13 @@ import ts from 'typescript';
 
 interface State { country: string | null; region: string | null; offset: number; visible: boolean }
 interface Helpers {
-  create(options: { map: FakeMap | null; onSelect(id: string, opener: FakeElement): void; onFilterChange?(state: State): void; onStateChange?(state: State): void; onCommittedState?(state: State): void; onCatalogue?(points: Point[]): void }): Controller;
+  create(options: { map: FakeMap | null; onSelect(id: string, opener: FakeElement, options?: { moveMap?: boolean }): void; onFilterChange?(state: State): void; onStateChange?(state: State): void; onCommittedState?(state: State): void; onCatalogue?(points: Point[]): void }): Controller;
   normalizeState(value: Partial<State>): State;
   matches(point: { countries: string[]; regions: string[] }, state: Pick<State, 'country' | 'region'>): boolean;
   coordinate(value: unknown): boolean;
   displayCoordinates(value: [number, number]): [number, number][];
   locationStatus(value: [number, number] | null): 'mapped' | 'polar' | 'unknown';
+  placements(point: { repr_point: [number, number] | null; source_points: [number, number][]; source_location_records: SourceLocation[] }): { coordinate: [number, number]; representative: boolean; sourceIndexes: number[] }[];
 }
 interface Controller {
   load(): Promise<void>;
@@ -21,6 +22,10 @@ interface Controller {
   getCommittedState(): State | null;
   getPoint(id: string): [number, number] | null;
   getLocationStatus(id: string): 'mapped' | 'polar' | 'unknown' | null;
+  getSourcePoints(id: string): [number, number][];
+  getDisplayPoints(id: string): [number, number][];
+  getSourceLocationRecords(id: string): SourceLocation[];
+  getSpatialMetadata(): Record<string, unknown> | null;
   select(id: string | null): void;
 }
 
@@ -29,6 +34,8 @@ const compiled = ts.transpileModule(readFileSync(new URL('../../src/archsearch/f
 });
 assert.equal(compiled.diagnostics?.filter((item) => item.category === ts.DiagnosticCategory.Error).length, 0);
 const helpers = runInContext(`${compiled.outputText}\nArchSearchExplore;`, createContext({ URL })) as Helpers;
+const mapCompiled = ts.transpileModule(readFileSync(new URL('../../src/archsearch/frontend/map-view.ts', import.meta.url), 'utf8'), { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.None } });
+const mapHelpers = runInContext(`${mapCompiled.outputText}\nArchSearchMapView;`, createContext({})) as { wrapCoordinates(points: [number, number][]): [number, number][] };
 const plain = <T>(value: T): T => JSON.parse(JSON.stringify(value)) as T;
 
 test('global exploration defaults are independent of a query, model or historical year', () => {
@@ -123,7 +130,8 @@ class FakeMap {
   fitBounds(bounds: unknown): void { this.lastBounds = bounds; }
 }
 
-interface Point { id: string; title: string; repr_point: [number, number] | null; location_status: 'mapped' | 'polar' | 'unknown'; countries: string[]; regions: string[]; source_kind: string; chronology_status: string }
+interface SourceLocation { source_index: number; coordinate: [number, number]; name: string; ref: string }
+interface Point { id: string; title: string; repr_point: [number, number] | null; location_status: 'mapped' | 'polar' | 'unknown'; countries: string[]; regions: string[]; source_kind: string; chronology_status: string; source_points?: [number, number][]; source_location_records?: SourceLocation[] }
 interface Pending { url: string; signal: AbortSignal; resolve(response: { ok: boolean; status: number; json(): Promise<unknown> }): void; reject(error: Error): void; done: boolean }
 const fixture: Point[] = [
   { id: 'whc:1', title: '<img src=x onerror=alert(1)>', repr_point: [179, -18], location_status: 'mapped', countries: ['NZ'], regions: ['asia-pacific'], source_kind: 'unesco', chronology_status: 'not_reviewed' },
@@ -149,7 +157,7 @@ function pageFor(state: Partial<State> = {}, points = fixture) {
 }
 
 function setup(withMap = true) {
-  const ids = ['explore-panel', 'explore-summary', 'explore-authority', 'explore-polar-authority', 'explore-country', 'explore-region', 'explore-clear', 'explore-points', 'explore-fit', 'explore-count', 'explore-list', 'explore-previous', 'explore-next', 'explore-page', 'explore-feedback', 'explore-retry', 'explore-limit-note'];
+  const ids = ['explore-panel', 'explore-summary', 'explore-authority', 'explore-polar-authority', 'explore-spatial-source', 'explore-country', 'explore-region', 'explore-clear', 'explore-points', 'explore-fit', 'explore-count', 'explore-list', 'explore-previous', 'explore-next', 'explore-page', 'explore-feedback', 'explore-retry', 'explore-limit-note'];
   const nodes = new Map(ids.map(id => [id, new FakeElement()]));
   const doc: { activeElement: FakeElement | null; getElementById(id: string): FakeElement | null; createElement(tag: string): FakeElement } = {
     activeElement: null, getElementById: id => nodes.get(id) ?? null,
@@ -157,7 +165,7 @@ function setup(withMap = true) {
   };
   for (const node of nodes.values()) node.onFocus = () => { doc.activeElement = node; };
   const pending: Pending[] = [];
-  const selects: { id: string; opener: FakeElement }[] = [];
+  const selects: { id: string; opener: FakeElement; options?: { moveMap?: boolean } }[] = [];
   const changes: State[] = [];
   const filters: State[] = [];
   const commits: State[] = [];
@@ -167,21 +175,21 @@ function setup(withMap = true) {
   const context = createContext({ document: doc, URL, URLSearchParams, AbortController,
     fetch: (url: string, options: { signal: AbortSignal }) => new Promise((resolve, reject) => pending.push({ url, signal: options.signal, resolve, reject, done: false })),
     L: { canvas: (options: unknown) => options, layerGroup: () => new FakeLayer(), circleMarker: (location: [number, number], options: Record<string, unknown>) => { const marker = new FakeCircle(location, options); circles.push(marker); return marker; }, latLngBounds: (points: unknown) => points },
-    ArchSearchMapView: { wrapCoordinates: (points: unknown) => points },
+    ArchSearchMapView: mapHelpers,
   });
   const api = runInContext(`${compiled.outputText}\nArchSearchExplore;`, context) as Helpers;
-  const controller = api.create({ map, onSelect: (id, opener) => selects.push({ id, opener }), onFilterChange: state => filters.push(plain(state)), onStateChange: state => changes.push(plain(state)), onCommittedState: state => commits.push(plain(state)), onCatalogue: points => catalogues.push(points) });
+  const controller = api.create({ map, onSelect: (id, opener, options) => selects.push({ id, opener, options: options ? plain(options) : undefined }), onFilterChange: state => filters.push(plain(state)), onStateChange: state => changes.push(plain(state)), onCommittedState: state => commits.push(plain(state)), onCatalogue: points => catalogues.push(points) });
   const node = (id: string) => { const found = nodes.get(id); assert.ok(found); return found; };
   const response = (request: Pending, value: unknown, status = 200) => { request.done = true; request.resolve({ ok: status < 400, status, json: async () => value }); };
   const find = (path: string) => { const found = pending.find(item => !item.done && item.url.startsWith(path)); assert.ok(found, path); return found; };
-  const respondAll = (points = fixture, state: Partial<State> = {}) => {
+  const respondAll = (points = fixture, state: Partial<State> = {}, spatial?: Record<string, unknown> | null) => {
     for (const request of pending.filter(item => !item.done && !item.signal.aborted)) {
-      if (request.url === '/api/coverage') response(request, coverageFor(points));
-      else if (request.url === '/api/catalogue') response(request, { corpus_version: 'global-v3', total: points.length, points });
+      if (request.url === '/api/coverage') response(request, { ...coverageFor(points), ...(spatial !== undefined ? { spatial_locations: spatial } : {}) });
+      else if (request.url === '/api/catalogue') response(request, { corpus_version: 'global-v3', spatial_version: spatial?.version ?? null, total: points.length, points });
       else response(request, pageFor(state, points));
     }
   };
-  const boot = async (points = fixture) => { const job = controller.load(); respondAll(points); await job; };
+  const boot = async (points = fixture, spatial?: Record<string, unknown> | null) => { const job = controller.load(); respondAll(points, {}, spatial); await job; };
   return { controller, node, pending, selects, changes, filters, commits, catalogues, circles, map, doc, find, response, respondAll, boot };
 }
 
@@ -212,7 +220,8 @@ test('literal directory titles and source review status do not become HTML or fa
   assert.equal(button.children[0].textContent, fixture[0].title);
   assert.match(button.children[2].textContent, /断代尚未核验/u);
   assert.match(app.node('explore-list').children[2].children[0].children[2].textContent, /已核验，断代未确定/u);
-  assert.equal(app.circles[0].tooltip?.().textContent, fixture[0].title);
+  assert.equal(app.circles[0].tooltip?.().children[0].textContent, fixture[0].title);
+  assert.match(app.circles[0].tooltip?.().children[1].textContent ?? '', /原始代表点/u);
 });
 
 test('mouse circles and keyboard-accessible buttons only emit site identity and their opener', async () => {
@@ -223,6 +232,8 @@ test('mouse circles and keyboard-accessible buttons only emit site identity and 
   assert.deepEqual(app.selects.map(item => item.id), ['whc:1', 'whc:1']);
   assert.equal(app.selects[0].opener, button);
   assert.equal(app.selects[1].opener, app.map?.container);
+  assert.deepEqual(app.selects[1].options, { moveMap: false });
+  assert.equal(app.selects[0].options, undefined);
   app.controller.select('whc:1');
   assert.equal(button.attributes.get('aria-pressed'), 'true');
   assert.equal(app.circles[0].options.radius, 5);
@@ -398,7 +409,7 @@ test('location status follows actual coordinates at the Mercator limit without c
 test('all records remain browsable while only mapped points are added to the Mercator layer', async () => {
   const points = [...fixture, ...antarctic]; const app = setup(); await app.boot(points);
   assert.equal(app.node('explore-list').children.length, 8); assert.equal(app.circles.length, 12);
-  assert.match(app.node('explore-feedback').textContent, /8 条：主图可定位 4、极区 3、位置未知 1/u);
+  assert.match(app.node('explore-feedback').textContent, /8 条资料.*主图可定位 4、极区 3、位置未知 1/u);
   assert.deepEqual(plain(app.controller.getPoint('ats:hsm:1')), [0, -90]);
   assert.deepEqual(plain(app.controller.getPoint('ats:hsm:24')), [-87.113111, -85.173278]);
   assert.equal(app.controller.getPoint('ats:hsm:95'), null);
@@ -409,7 +420,10 @@ test('all records remain browsable while only mapped points are added to the Mer
   assert.equal(unknown.dataset.locationStatus, 'unknown'); assert.match(unknown.children[2].textContent, /位置未知/u);
   unknown.fire('click'); assert.equal(app.selects.at(-1)?.id, 'ats:hsm:95');
   app.node('explore-fit').fire('click');
-  assert.deepEqual(plain(app.map?.lastBounds), [[-18, 179], [40, 29], [42, 12], [-62.183333, -55.716667]]);
+  const bounds = plain(app.map?.lastBounds) as [number, number][];
+  assert.deepEqual(bounds.map(point => point[0]), [-18, 40, 42, -62.183333]);
+  const canonical = [179, 29, 12, -55.716667];
+  assert.ok(bounds.every((point, index) => Math.abs(((point[1] - canonical[index] + 540) % 360) - 180) < 1e-8));
 });
 
 test('catalogue callbacks always include cloned polar and unknown records independent of browse filters', async () => {
@@ -449,4 +463,140 @@ test('ATS source coverage counts unknown records as collected without claiming g
   assert.match(source.children[0].textContent, /91 \/ 91 条已收录（包含位置未知记录）/u);
   assert.equal((source.children[1] as FakeElement & { href: string }).href, polarAuthority.source_uri);
   assert.match(source.children[3].textContent, /ASPA 84、ASMA 7/u);
+});
+
+const multiPoints: Point[] = fixture.map(point => ({ ...point, source_points: [], source_location_records: [] }));
+multiPoints[0] = { ...multiPoints[0], countries: ['NZ', 'TR'], source_points: [[179, -18], [-179, -18], [179, -18]], source_location_records: [
+  { source_index: 0, coordinate: [179, -18], name: '<b>Source name</b>', ref: '001-001' },
+  { source_index: 1, coordinate: [-179, -18], name: '', ref: '001-002' },
+  { source_index: 2, coordinate: [179, -18], name: 'Second source record at the same coordinate', ref: '001-003' },
+] };
+multiPoints[1] = { ...multiPoints[1], source_points: [[30, 41], [31, 42]], source_location_records: [
+  { source_index: 0, coordinate: [30, 41], name: 'Source A', ref: '' },
+  { source_index: 1, coordinate: [31, 42], name: 'Source B', ref: '' },
+] };
+const spatial = { ready: true, reason: null, version: 'world-locations-v1', records: 2, points: 5, distinct_points: 4, duplicate_points: 1, display_points: 6,
+  source: { name: 'UNESCO DataHub source locations', uri: 'https://data.unesco.org/explore/dataset/whc001/', version: '2026-11-02T07:32:31Z', license: 'CC BY-SA 4.0', license_uri: 'https://creativecommons.org/licenses/by-sa/4.0/', sha256: 'c'.repeat(64) } };
+
+test('source points retain raw order and duplicates while placements add only a necessary mapped representative', () => {
+  const site = multiPoints[0]; const original = plain(site);
+  assert.deepEqual(plain(helpers.placements({ repr_point: site.repr_point, source_points: site.source_points!, source_location_records: site.source_location_records! })), [
+    { coordinate: [179, -18], sourceIndexes: [0, 2], representative: false },
+    { coordinate: [-179, -18], sourceIndexes: [1], representative: false },
+  ]);
+  const second = multiPoints[1];
+  assert.deepEqual(plain(helpers.placements({ repr_point: second.repr_point, source_points: second.source_points!, source_location_records: second.source_location_records! })).map(point => point.coordinate), [[30, 41], [31, 42], [29, 40]]);
+  assert.deepEqual(site, original);
+  assert.deepEqual(plain(helpers.placements({ repr_point: [0, -90], source_points: [[1, -89]], source_location_records: [] })), []);
+  assert.deepEqual(plain(helpers.placements({ repr_point: null, source_points: [], source_location_records: [] })), []);
+});
+
+test('multi-point heritage remains one directory identity and all its source points share selection and a literal tooltip', async () => {
+  const app = setup(); await app.boot(multiPoints, spatial);
+  assert.equal(app.node('explore-list').children.length, 3); assert.equal(app.circles.length, 18);
+  assert.match(app.node('explore-feedback').textContent, /3 条资料 \/ 主图 4 个源定位点 \+ 2 个必要代表点/u);
+  app.controller.select('whc:1');
+  assert.ok(app.circles.slice(0, 6).every(circle => circle.options.radius === 5));
+  assert.ok(app.circles.slice(6).every(circle => circle.options.radius === 3.2));
+  const tooltip = app.circles[0].tooltip!();
+  assert.match(tooltip.children[1].textContent, /来源定位点.*1、3/u);
+  assert.equal(tooltip.children[2].textContent, '<b>Source name</b> · 001-001');
+  assert.match(app.circles[12].tooltip!().children[1].textContent, /原始代表点/u);
+  app.circles[3].handlers.get('click')?.();
+  assert.equal(app.selects.at(-1)?.id, 'whc:1'); assert.deepEqual(app.selects.at(-1)?.options, { moveMap: false });
+  app.controller.select(null); assert.ok(app.circles.every(circle => circle.options.radius === 3.2));
+});
+
+test('raw source arrays, labels and spatial provenance are independently cloned for detail and export callers', async () => {
+  const app = setup(); assert.equal(app.controller.getSpatialMetadata(), null); await app.boot(multiPoints, spatial);
+  assert.deepEqual(plain(app.controller.getSourcePoints('whc:1')), [[179, -18], [-179, -18], [179, -18]]);
+  assert.deepEqual(plain(app.controller.getDisplayPoints('whc:1')), [[179, -18], [-179, -18]]);
+  const coordinates = app.controller.getSourcePoints('whc:1'); coordinates[0][0] = 0;
+  const records = app.controller.getSourceLocationRecords('whc:1'); records[0].coordinate[0] = 0; records[0].name = 'changed';
+  const metadata = app.controller.getSpatialMetadata()!; metadata.points = 0; (metadata.source as { license: string }).license = 'changed';
+  assert.deepEqual(plain(app.controller.getSourcePoints('whc:1')), multiPoints[0].source_points);
+  assert.equal(app.controller.getSourceLocationRecords('whc:1')[0].name, '<b>Source name</b>');
+  assert.equal(app.controller.getSpatialMetadata()?.points, 5);
+  app.catalogues[0][0].source_points![0][0] = 0; app.catalogues[0][0].source_location_records![0].ref = 'changed';
+  assert.equal(app.controller.getSourcePoints('whc:1')[0][0], 179); assert.equal(app.controller.getSourceLocationRecords('whc:1')[0].ref, '001-001');
+  assert.deepEqual(plain(app.controller.getSourcePoints('missing')), []);
+  assert.equal(app.node('explore-spatial-source').hidden, false);
+  assert.match(app.node('explore-spatial-source').children[0].textContent, /2 条遗产资料.*5 个来源定位点记录/u);
+});
+
+test('country membership filtering retains every transnational source point and dateline fitting uses the short span', async () => {
+  const app = setup(); await app.boot(multiPoints, spatial);
+  const selected = app.controller.setState({ country: 'NZ' }); app.respondAll(multiPoints, { country: 'NZ' }); await selected;
+  assert.equal(app.node('explore-list').children.length, 1); assert.equal([...app.map!.layers][0].members.length, 6);
+  app.node('explore-fit').fire('click');
+  const bounds = plain(app.map!.lastBounds) as [number, number][];
+  assert.equal(Math.abs(bounds[0][1] - bounds[1][1]), 2);
+  assert.deepEqual(plain(app.controller.getSourcePoints('whc:1')), [[179, -18], [-179, -18], [179, -18]]);
+  assert.equal(app.controller.getCommittedState()?.country, 'NZ');
+});
+
+test('different heritage identities at a shared source coordinate remain independently selectable', async () => {
+  const shared = multiPoints.map(point => plain(point));
+  shared[1].source_points = [[179, -18]];
+  shared[1].source_location_records = [{ source_index: 0, coordinate: [179, -18], name: 'Different heritage record', ref: '' }];
+  const app = setup(); await app.boot(shared, { ...spatial, points: 4, distinct_points: 3, duplicate_points: 1, display_points: 5 });
+  assert.equal(app.circles.length, 15);
+  app.circles[0].handlers.get('click')?.(); app.circles[6].handlers.get('click')?.();
+  assert.deepEqual(app.selects.map(selection => selection.id), ['whc:1', 'wd:Q2']);
+  app.controller.select('wd:Q2'); assert.equal(app.circles[0].options.radius, 3.2); assert.equal(app.circles[6].options.radius, 5);
+});
+
+test('source coordinates outside Mercator and unknown records stay out of the main layer without clipping', async () => {
+  const points = antarctic.map(point => ({ ...plain(point), source_points: [] as [number, number][], source_location_records: [] as SourceLocation[] }));
+  points[0].source_points = [[42, -89], [15, -90]];
+  points[0].source_location_records = [{ source_index: 0, coordinate: [42, -89], name: '', ref: '' }, { source_index: 1, coordinate: [15, -90], name: '', ref: '' }];
+  const app = setup(); await app.boot(points, { ...spatial, records: 1, points: 2, distinct_points: 2, duplicate_points: 0, display_points: 1 });
+  assert.equal(app.node('explore-list').children.length, 5); assert.equal(app.circles.length, 3);
+  assert.deepEqual(plain(app.controller.getSourcePoints('ats:hsm:1')), [[42, -89], [15, -90]]);
+  assert.deepEqual(plain(app.controller.getDisplayPoints('ats:hsm:1')), []);
+  assert.equal(app.controller.getPoint('ats:hsm:95'), null);
+  assert.match(app.node('explore-feedback').textContent, /主图 0 个源定位点 \+ 1 个必要代表点/u);
+});
+
+test('source sequence, coordinate and version mismatches reject before replacing a successful spatial snapshot', async () => {
+  const variants: { mutate(points: Point[]): void; match: RegExp }[] = [
+    { mutate: points => { points[0].source_points = null as unknown as [number, number][]; }, match: /缺少源点或逐点记录/u },
+    { mutate: points => { points[0].source_points![0] = [181, -18]; }, match: /坐标或数量/u },
+    { mutate: points => { points[0].source_points = Array.from({ length: 10_001 }, () => [0, 0]); }, match: /坐标或数量/u },
+    { mutate: points => { points[0].source_location_records!.pop(); }, match: /记录数量/u },
+    { mutate: points => { points[0].source_location_records![0].source_index = 1; }, match: /顺序或标签/u },
+    { mutate: points => { points[0].source_location_records![0].coordinate = [-179, -18]; }, match: /顺序或标签/u },
+  ];
+  const app = setup(); await app.boot(multiPoints, spatial); const layer = [...app.map!.layers][0];
+  for (const variant of variants) {
+    const invalid = plain(multiPoints); variant.mutate(invalid);
+    const job = app.controller.load(); const rejection = assert.rejects(job, variant.match);
+    app.respondAll(invalid, {}, spatial); await rejection;
+    assert.equal([...app.map!.layers][0], layer); assert.equal(app.controller.getSpatialMetadata()?.points, 5);
+    assert.deepEqual(plain(app.controller.getSourcePoints('whc:1')), multiPoints[0].source_points);
+  }
+  const mismatch = app.controller.load(); const rejected = assert.rejects(mismatch, /目录与统计版本/u);
+  app.response(app.find('/api/coverage'), { ...coverageFor(multiPoints), spatial_locations: spatial });
+  app.response(app.find('/api/catalogue'), { corpus_version: 'global-v3', spatial_version: 'wrong', total: 3, points: multiPoints });
+  app.response(app.find('/api/sites'), pageFor({}, multiPoints)); await rejected;
+  assert.equal([...app.map!.layers][0], layer);
+});
+
+test('unprepared source locations explicitly fall back to existing representative points and legacy snapshots stay compatible', async () => {
+  const app = setup(); const degraded = { ready: false, reason: 'Source hash mismatch', version: null, source: null,
+    records: 0, points: 0, distinct_points: 0, duplicate_points: 0, display_points: 3 };
+  await app.boot(fixture, degraded);
+  assert.equal(app.circles.length, 9); assert.match(app.node('explore-spatial-source').children[0].textContent, /未就绪.*Source hash mismatch.*保留可用代表点/u);
+  assert.deepEqual(plain(app.controller.getSourcePoints('whc:1')), []);
+  const legacy = setup(); await legacy.boot(); assert.equal(legacy.controller.getSpatialMetadata(), null);
+  assert.deepEqual(plain(legacy.controller.getDisplayPoints('whc:1')), [[179, -18]]);
+});
+
+test('pagination counts heritage records rather than source points and does not rebuild the shared layer', async () => {
+  const many = Array.from({ length: 60 }, (_, index): Point => ({ ...plain(multiPoints[0]), id: `whc:${index + 1}`, title: `Site ${String(index + 1).padStart(3, '0')}` }));
+  const app = setup(); await app.boot(many, { ...spatial, records: 60, points: 180, distinct_points: 120, duplicate_points: 60, display_points: 120 });
+  assert.equal(app.node('explore-list').children.length, 50); assert.equal(app.circles.length, 360);
+  const layer = [...app.map!.layers][0]; const next = app.controller.setState({ offset: 50 }); app.respondAll(many, { offset: 50 }); await next;
+  assert.equal(app.node('explore-list').children.length, 10); assert.match(app.node('explore-page').textContent, /51—60.*共 60 条/u);
+  assert.equal([...app.map!.layers][0], layer); assert.equal(app.circles.length, 360);
 });

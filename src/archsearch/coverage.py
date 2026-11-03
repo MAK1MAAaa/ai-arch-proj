@@ -9,10 +9,11 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Literal
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from archsearch.config import DATA_DIR
 from archsearch.domain import Site
+from archsearch.spatial_data import SpatialDataError, WorldLocations, load_world_locations
 
 REGION_LABELS = {
     "africa": "非洲",
@@ -43,6 +44,8 @@ class CoverageRegistry:
     polar_ids: frozenset[str] = frozenset()
     polar_source: Mapping[str, str] | None = None
     polar_excluded_types: Mapping[str, int] = field(default_factory=dict)
+    spatial: WorldLocations | None = None
+    spatial_error: str | None = None
 
 
 def load_registry(data_dir: Path = DATA_DIR) -> CoverageRegistry:
@@ -57,6 +60,12 @@ def load_registry(data_dir: Path = DATA_DIR) -> CoverageRegistry:
     polar_path = Path(data_dir) / "polar_manifest.json"
     polar = json.loads(polar_path.read_text("utf-8")) if polar_path.exists() else {}
     regions.update({row["id"]: row["label"] for row in polar.get("regions", [])})
+    spatial = None
+    spatial_error = None
+    try:
+        spatial = load_world_locations(Path(data_dir))
+    except SpatialDataError as error:
+        spatial_error = str(error)
     return CoverageRegistry(
         countries=countries, regions=regions,
         authority_ids=frozenset(value.get("partition", {}).get("eligible_ids", [])),
@@ -65,6 +74,7 @@ def load_registry(data_dir: Path = DATA_DIR) -> CoverageRegistry:
         polar_ids=frozenset(polar.get("partition", {}).get("active_ids", [])),
         polar_source=polar.get("source"),
         polar_excluded_types=polar.get("partition", {}).get("excluded_types", {}),
+        spatial=spatial, spatial_error=spatial_error,
     )
 
 
@@ -114,6 +124,44 @@ class PolarAuthorityCoverage(BaseModel):
     note: str
 
 
+class SpatialSource(BaseModel):
+    name: str
+    uri: str
+    version: str
+    license: str
+    license_uri: str
+    sha256: str
+
+
+class SpatialLocationCoverage(BaseModel):
+    ready: bool
+    reason: str | None = None
+    version: str | None = None
+    source: SpatialSource | None = None
+    records: int = 0
+    points: int = 0
+    distinct_points: int = 0
+    duplicate_points: int = 0
+    display_points: int = 0
+
+
+class SourceLocationRecord(BaseModel):
+    source_index: int = Field(ge=0)
+    coordinate: tuple[float, float]
+    name: str
+    ref: str
+
+
+class SiteLocationsResponse(BaseModel):
+    site_id: str
+    representative_point: tuple[float, float] | None
+    source_points: list[tuple[float, float]]
+    source_location_records: list[SourceLocationRecord]
+    spatial_version: str
+    source: SpatialSource | None
+    note: str
+
+
 class CoverageResponse(BaseModel):
     corpus_version: str
     total: int
@@ -126,6 +174,7 @@ class CoverageResponse(BaseModel):
     locations: LocationCounts
     authority: AuthorityCoverage | None = None
     polar_authority: PolarAuthorityCoverage | None = None
+    spatial_locations: SpatialLocationCoverage | None = None
 
 
 class CataloguePoint(BaseModel):
@@ -137,12 +186,15 @@ class CataloguePoint(BaseModel):
     regions: list[str]
     source_kind: str
     chronology_status: str
+    source_points: list[tuple[float, float]] = Field(default_factory=list)
+    source_location_records: list[SourceLocationRecord] = Field(default_factory=list)
 
 
 class CatalogueResponse(BaseModel):
     corpus_version: str
     total: int
     points: list[CataloguePoint]
+    spatial_version: str | None = None
 
 
 class SitePage(BaseModel):
@@ -179,6 +231,13 @@ class CatalogueIndex:
         self.sites = tuple(sorted(sites, key=lambda site: (site.title.casefold(), site.id)))
         self.corpus_version = corpus_version
         self.registry = registry if registry is not None else load_registry()
+        self.spatial = self.registry.spatial
+        self.spatial_error = self.registry.spatial_error
+        if self.spatial is not None and not set(self.spatial.points).issubset(
+            site.id for site in self.sites
+        ):
+            self.spatial = None
+            self.spatial_error = "源定位记录集与当前语料身份不匹配；保留原代表点和基础检索。"
         self.country_counts: Counter[str] = Counter()
         self.region_counts: Counter[str] = Counter()
         self.source_counts: Counter[str] = Counter()
@@ -279,6 +338,69 @@ class CatalogueIndex:
             ),
             authority=authority,
             polar_authority=polar_authority,
+            spatial_locations=self.spatial_coverage(),
+        )
+
+    def source_points(self, site_id: str) -> list[tuple[float, float]]:
+        return list(self.spatial.points.get(site_id, ())) if self.spatial else []
+
+    def source_records(self, site_id: str) -> list[SourceLocationRecord]:
+        if self.spatial is None:
+            return []
+        return [SourceLocationRecord(
+            source_index=item.source_index, coordinate=item.coordinate,
+            name=item.name, ref=item.ref,
+        ) for item in self.spatial.records.get(site_id, ())]
+
+    def spatial_source(self) -> SpatialSource | None:
+        if self.spatial is None:
+            return None
+        source = self.spatial.source
+        return SpatialSource(
+            name=f"UNESCO DataHub {source['dataset_id']}", uri=source["uri"],
+            version=source["modified"], license=source["license"],
+            license_uri=source["license_uri"], sha256=source["records_sha256"],
+        )
+
+    def spatial_coverage(self) -> SpatialLocationCoverage | None:
+        if self.spatial is None and self.spatial_error is None:
+            return None
+        display_points = 0
+        for site in self.sites:
+            positions = {
+                point for point in self.source_points(site.id)
+                if abs(point[1]) <= WEB_MERCATOR_MAX_LATITUDE
+            }
+            if site.repr_point is not None and location_status(site) == "mapped":
+                positions.add(site.repr_point)
+            display_points += len(positions)
+        if self.spatial is None:
+            return SpatialLocationCoverage(
+                ready=False, reason=self.spatial_error, display_points=display_points,
+            )
+        points = sum(len(value) for value in self.spatial.points.values())
+        distinct = sum(len(set(value)) for value in self.spatial.points.values())
+        return SpatialLocationCoverage(
+            ready=True, version=self.spatial.version, source=self.spatial_source(),
+            records=len(self.spatial.points), points=points, distinct_points=distinct,
+            duplicate_points=points - distinct, display_points=display_points,
+        )
+
+    def site_locations(self, site: Site) -> SiteLocationsResponse:
+        if self.spatial is None:
+            raise SpatialDataError(self.spatial_error or "源定位记录集尚未准备。")
+        return SiteLocationsResponse(
+            site_id=site.id, representative_point=site.repr_point,
+            source_points=self.source_points(site.id),
+            source_location_records=self.source_records(site.id),
+            spatial_version=self.spatial.version,
+            source=self.spatial_source() if site.id in self.spatial.points else None,
+            note=(
+                "source_points与source_location_records为固定DataHub来源定位记录，"
+                "保留原始顺序及重合记录，不代表独立核验的遗址数量或边界。"
+                "representative_point保持原资料，来源见地点详情；未混入DataHub源数组。"
+                "国别筛选属于整体名录成员关系，不推断各点的政治归属。"
+            ),
         )
 
     def catalogue(
@@ -288,12 +410,15 @@ class CatalogueIndex:
         selected = self.filtered(country, region, kind)
         return CatalogueResponse(
             corpus_version=self.corpus_version, total=len(selected),
+            spatial_version=self.spatial.version if self.spatial else None,
             points=[CataloguePoint(
                 id=site.id, title=site.title, repr_point=site.repr_point,
                 location_status=location_status(site),
                 countries=site.geography.countries if site.geography else [],
                 regions=site.geography.regions if site.geography else [],
                 source_kind=site.source_kind, chronology_status=site.chronology.status,
+                source_points=self.source_points(site.id),
+                source_location_records=self.source_records(site.id),
             ) for site in selected],
         )
 

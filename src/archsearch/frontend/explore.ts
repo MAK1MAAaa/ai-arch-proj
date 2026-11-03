@@ -17,6 +17,15 @@ const ArchSearchExplore = (() => {
     regions: string[];
     source_kind: string;
     chronology_status: "reviewed" | "insufficient" | "not_reviewed";
+    source_points: [number, number][];
+    source_location_records: SourceLocation[];
+  }
+
+  interface SourceLocation { source_index: number; coordinate: [number, number]; name: string; ref: string }
+  interface SpatialMetadata {
+    ready: boolean; reason: string | null; version: string | null;
+    source: { name: string; uri: string; version: string; license: string; license_uri: string; sha256: string } | null;
+    records: number; points: number; distinct_points: number; duplicate_points: number; display_points: number;
   }
 
   interface Facet { id: string; label: string; count: number }
@@ -27,6 +36,7 @@ const ArchSearchExplore = (() => {
     authority: Authority | null;
     polar_authority: PolarAuthority | null;
     locations: { mapped: number; polar: number; unknown: number };
+    spatial_locations: SpatialMetadata | null;
   }
   interface PolarAuthority {
     dataset: string; source_uri: string; source_accessed: string; source_sha256: string;
@@ -38,11 +48,11 @@ const ArchSearchExplore = (() => {
     license: string; license_uri: string; eligible_total: number; covered: number; missing: number;
     excluded_natural: number; note: string;
   }
-  interface Catalogue { corpus_version: string; total: number; points: Point[] }
+  interface Catalogue { corpus_version: string; spatial_version: string | null; total: number; points: Point[] }
   interface Page { corpus_version: string; total: number; offset: number; limit: number; sites: Point[] }
   interface Options {
     map: L.Map | null;
-    onSelect(id: string, opener: HTMLElement): void;
+    onSelect(id: string, opener: HTMLElement, options?: { moveMap?: boolean }): void;
     onFilterChange?(state: State): void;
     onStateChange?(state: State): void;
     onCommittedState?(state: State): void;
@@ -100,6 +110,40 @@ const ArchSearchExplore = (() => {
     return value === null ? "unknown" : Math.abs(value[1]) > mercatorLimit ? "polar" : "mapped";
   }
 
+  function coordinateKey(value: [number, number]): string { return JSON.stringify(value); }
+
+  function placements(point: Pick<Point, "repr_point" | "source_points" | "source_location_records">): { coordinate: [number, number]; sourceIndexes: number[]; representative: boolean }[] {
+    const seen = new Map<string, { coordinate: [number, number]; sourceIndexes: number[]; representative: boolean }>();
+    point.source_points.forEach((value, index) => {
+      if (locationStatus(value) !== "mapped") return;
+      const key = coordinateKey(value); const existing = seen.get(key);
+      if (existing) existing.sourceIndexes.push(index);
+      else seen.set(key, { coordinate: [...value], sourceIndexes: [index], representative: false });
+    });
+    if (point.repr_point && locationStatus(point.repr_point) === "mapped") {
+      const key = coordinateKey(point.repr_point);
+      if (!seen.has(key)) seen.set(key, { coordinate: [...point.repr_point], sourceIndexes: [], representative: true });
+    }
+    return [...seen.values()];
+  }
+
+  function sourcePoints(value: unknown): [number, number][] {
+    if (value === undefined) return [];
+    if (!Array.isArray(value) || value.length > 10_000 || !value.every(coordinate)) throw new Error("来源定位点坐标或数量无效。");
+    return value.map((point) => [...point]);
+  }
+
+  function sourceRecords(value: unknown, points: [number, number][]): SourceLocation[] {
+    if (value === undefined) return [];
+    if (!Array.isArray(value) || value.length !== points.length) throw new Error("来源定位记录数量与源点不一致。");
+    return value.map((item: unknown, index) => {
+      if (!record(item) || item.source_index !== index || !coordinate(item.coordinate)
+        || coordinateKey(item.coordinate) !== coordinateKey(points[index])
+        || typeof item.name !== "string" || typeof item.ref !== "string" || item.name.length > 10_000 || item.ref.length > 10_000) throw new Error("来源定位记录的坐标、顺序或标签无效。");
+      return { source_index: index, coordinate: [...item.coordinate], name: item.name, ref: item.ref };
+    });
+  }
+
   function record(value: unknown): value is Record<string, unknown> {
     return value !== null && typeof value === "object" && !Array.isArray(value);
   }
@@ -154,6 +198,26 @@ const ArchSearchExplore = (() => {
       excluded_types: { ...value.excluded_types } as Record<string, number>, note: value.note };
   }
 
+  function parseSpatial(value: unknown): SpatialMetadata | null {
+    if (value === null || value === undefined) return null;
+    if (!record(value) || typeof value.ready !== "boolean" || !count(value.records) || !count(value.points)
+      || !count(value.distinct_points) || !count(value.duplicate_points) || !count(value.display_points)
+      || value.distinct_points + value.duplicate_points !== value.points) throw new Error("来源定位统计格式或数量无效。");
+    if (!value.ready) {
+      if (!text(value.reason) || value.version !== null || value.source !== null
+        || value.records !== 0 || value.points !== 0 || value.distinct_points !== 0 || value.duplicate_points !== 0) throw new Error("来源定位未就绪状态与版本不一致。");
+      return { ready: false, reason: value.reason, version: null, source: null, records: 0, points: 0, distinct_points: 0, duplicate_points: 0, display_points: value.display_points };
+    }
+    const source = value.source;
+    if (value.reason !== null || !version(value.version) || !record(source) || !text(source.name) || !text(source.version)
+      || !text(source.license) || !text(source.sha256) || !/^[a-f0-9]{64}$/u.test(source.sha256)
+      || value.records < 1 || value.points < 1 || value.distinct_points < 1) throw new Error("来源定位版本或许可元数据无效。");
+    return { ready: true, reason: null, version: value.version,
+      source: { name: source.name, uri: httpUrl(source.uri), version: source.version, license: source.license,
+        license_uri: httpUrl(source.license_uri), sha256: source.sha256 },
+      records: value.records, points: value.points, distinct_points: value.distinct_points, duplicate_points: value.duplicate_points, display_points: value.display_points };
+  }
+
   function facets(value: unknown, kind: "country" | "region" | "source"): Facet[] {
     if (!Array.isArray(value)) throw new Error("覆盖统计缺少来源分组。");
     const seen = new Set<string>();
@@ -178,6 +242,7 @@ const ArchSearchExplore = (() => {
       authority: parseAuthority(value.authority),
       polar_authority: parsePolarAuthority(value.polar_authority),
       locations: { mapped: value.locations.mapped, polar: value.locations.polar, unknown: value.locations.unknown },
+      spatial_locations: parseSpatial(value.spatial_locations),
     };
     if (Object.values(result.chronology).reduce((sum, amount) => sum + amount, 0) !== result.total
       || result.sources.reduce((sum, item) => sum + item.count, 0) !== result.total
@@ -201,13 +266,18 @@ const ArchSearchExplore = (() => {
     if (status !== "reviewed" && status !== "insufficient" && status !== "not_reviewed") throw new Error("目录断代核验状态无效。");
     const placement = locationStatus(value.repr_point);
     if (!fullSite && value.location_status !== placement) throw new Error("目录定位状态与原始坐标不一致。");
+    const points = fullSite ? [] : sourcePoints(value.source_points);
+    const locations = fullSite ? [] : sourceRecords(value.source_location_records, points);
     return { id: value.id, title: value.title, repr_point: value.repr_point === null ? null : [...value.repr_point], location_status: placement, countries: stringArray(geography.countries, "country"),
-      regions: stringArray(geography.regions, "region"), source_kind: value.source_kind, chronology_status: status };
+      regions: stringArray(geography.regions, "region"), source_kind: value.source_kind, chronology_status: status, source_points: points, source_location_records: locations };
   }
 
   function parseCatalogue(value: unknown, coverage: Coverage): Catalogue {
     if (!record(value) || value.corpus_version !== coverage.corpus_version || value.total !== coverage.total
       || !Array.isArray(value.points) || value.points.length !== coverage.total) throw new Error("全库点目录与覆盖统计版本或总数不一致。");
+    const spatial = coverage.spatial_locations;
+    if ((value.spatial_version ?? null) !== (spatial?.version ?? null)) throw new Error("来源定位目录与统计版本不一致。");
+    if (spatial?.ready && value.points.some((point: unknown) => !record(point) || !Array.isArray(point.source_points) || !Array.isArray(point.source_location_records))) throw new Error("来源定位就绪目录缺少源点或逐点记录。");
     const points = value.points.map((item: unknown) => parsePoint(item));
     if (new Set(points.map((item) => item.id)).size !== points.length
       || points.some((item) => item.countries.some((id) => !coverage.countries.some((facet) => facet.id === id))
@@ -215,7 +285,14 @@ const ArchSearchExplore = (() => {
     for (const state of ["mapped", "polar", "unknown"] as const) {
       if (points.filter((point) => point.location_status === state).length !== coverage.locations[state]) throw new Error("全库定位状态数量与覆盖统计不一致。");
     }
-    return { corpus_version: coverage.corpus_version, total: coverage.total, points };
+    if (spatial) {
+      const rawCount = points.reduce((sum, point) => sum + point.source_points.length, 0);
+      const distinct = points.reduce((sum, point) => sum + new Set(point.source_points.map(coordinateKey)).size, 0);
+      const displayCount = points.reduce((sum, point) => sum + placements(point).length, 0);
+      if (rawCount !== spatial.points || distinct !== spatial.distinct_points || displayCount !== spatial.display_points
+        || points.filter((point) => point.source_points.length > 0).length > spatial.records || spatial.records > coverage.total) throw new Error("来源定位点序列与覆盖统计数量不一致。");
+    } else if (points.some((point) => point.source_points.length > 0)) throw new Error("来源定位点缺少版本与许可统计，未替换已有地图。");
+    return { corpus_version: coverage.corpus_version, spatial_version: spatial?.version ?? null, total: coverage.total, points };
   }
 
   function parsePage(value: unknown, catalogue: Catalogue, state: State): Page {
@@ -223,8 +300,11 @@ const ArchSearchExplore = (() => {
     if (!record(value) || value.corpus_version !== catalogue.corpus_version || value.total !== points.length
       || value.offset !== state.offset || value.limit !== pageSize || !Array.isArray(value.sites)
       || value.sites.length !== Math.min(pageSize, Math.max(0, points.length - state.offset))) throw new Error("目录分页与点位范围或版本不一致。");
-    const sites = value.sites.map((item: unknown) => parsePoint(item, true));
     const byId = new Map(points.map((point) => [point.id, point]));
+    const sites = value.sites.map((item: unknown) => {
+      const site = parsePoint(item, true); const point = byId.get(site.id);
+      return { ...site, source_points: point?.source_points ?? [], source_location_records: point?.source_location_records ?? [] };
+    });
     if (new Set(sites.map((site) => site.id)).size !== sites.length || sites.some((site, index) => {
       const point = byId.get(site.id);
       return site.id !== points[state.offset + index]?.id || !point || JSON.stringify(point) !== JSON.stringify(site);
@@ -242,6 +322,7 @@ const ArchSearchExplore = (() => {
       panel: get("explore-panel"), summary: get("explore-summary"), country: get<HTMLSelectElement>("explore-country"),
       authority: get("explore-authority"),
       polarAuthority: get("explore-polar-authority"),
+      spatial: get("explore-spatial-source"),
       region: get<HTMLSelectElement>("explore-region"), clear: get<HTMLButtonElement>("explore-clear"),
       points: get<HTMLInputElement>("explore-points"), fit: get<HTMLButtonElement>("explore-fit"),
       count: get("explore-count"), list: get<HTMLOListElement>("explore-list"),
@@ -316,6 +397,23 @@ const ArchSearchExplore = (() => {
       ui.polarAuthority.replaceChildren(summary, link, license, note);
     }
 
+    function renderSpatial(): void {
+      const spatial = coverage?.spatial_locations;
+      ui.spatial.hidden = spatial === null || spatial === undefined;
+      if (!spatial) { ui.spatial.replaceChildren(); return; }
+      if (!spatial.ready || !spatial.source) {
+        ui.spatial.replaceChildren(element("span", undefined, `来源多点资料未就绪：${spatial.reason ?? "请检查本地数据版本"}。保留可用代表点；目录和检索仍按资料条目展示。`));
+        return;
+      }
+      const source = spatial.source;
+      const summary = element("span", undefined, `${spatial.records.toLocaleString("zh-CN")} 条遗产资料包含 ${spatial.points.toLocaleString("zh-CN")} 个来源定位点记录`);
+      const link = element("a", undefined, source.name); link.href = source.uri; link.target = "_blank"; link.rel = "noopener noreferrer";
+      const license = element("a", undefined, source.license); license.href = source.license_uri; license.target = "_blank"; license.rel = "noopener noreferrer";
+      const note = element("span", "explore-authority-note", `来源版本：${source.version.split("T")[0]} · 同一遗产内 ${spatial.duplicate_points.toLocaleString("zh-CN")} 个同坐标记录保留在来源序列，地图仅绘一次；定位点数不等于遗址数。`);
+      note.title = `${spatial.version}\nSHA256: ${source.sha256}`;
+      ui.spatial.replaceChildren(summary, link, license, note);
+    }
+
     function renderControls(): void {
       ui.panel.setAttribute("aria-busy", String(loading));
       ui.country.disabled = coverage === null;
@@ -323,7 +421,7 @@ const ArchSearchExplore = (() => {
       ui.clear.disabled = desired.country === null && desired.region === null && desired.offset === 0;
       ui.points.checked = desired.visible;
       ui.points.disabled = !map || !catalogue;
-      ui.fit.disabled = !map || !catalogue || catalogue.points.filter((point) => matches(point, applied ?? desired) && point.location_status === "mapped").length === 0;
+      ui.fit.disabled = !map || !catalogue || !catalogue.points.some((point) => matches(point, applied ?? desired) && placements(point).length > 0);
       ui.previous.disabled = loading || page === null || page.offset === 0;
       ui.previous.textContent = page && page.offset >= page.total && page.total > 0 ? "回到首页" : "上一页";
       ui.next.disabled = loading || page === null || page.offset + page.limit >= page.total;
@@ -368,14 +466,22 @@ const ArchSearchExplore = (() => {
       if (!map || !renderer || typeof L === "undefined") return { layer: null, markers: nextMarkers };
       const next = L.layerGroup();
       for (const point of points) {
-        if (point.location_status !== "mapped" || point.repr_point === null) continue;
-        const copies = displayCoordinates(point.repr_point).map((location) => {
+        const copies = placements(point).flatMap((placement) => displayCoordinates(placement.coordinate).map((location) => {
           const marker = L.circleMarker(location, { pane: "catalogue-points", renderer: renderer ?? undefined, radius: 3.2,
             color: "#586f60", fillColor: "#66745b", fillOpacity: 0.5, weight: 0.7 });
-          marker.bindTooltip(() => element("span", undefined, point.title), { direction: "top", offset: [0, -4] });
-          marker.on("click", () => onSelect(point.id, map.getContainer()));
+          marker.bindTooltip(() => {
+            const tooltip = element("span", "explore-point-tooltip");
+            tooltip.append(element("span", undefined, point.title), element("span", "explore-point-kind", placement.representative
+              ? "原始代表点 · 非精确发掘坐标" : `来源定位点 · 源序 ${placement.sourceIndexes.map((index) => index + 1).join("、")}`));
+            for (const index of placement.sourceIndexes) {
+              const source = point.source_location_records[index];
+              if (source && (source.name || source.ref)) tooltip.append(element("span", "explore-point-kind", [source.name, source.ref].filter(Boolean).join(" · ")));
+            }
+            return tooltip;
+          }, { direction: "top", offset: [0, -4] });
+          marker.on("click", () => onSelect(point.id, map.getContainer(), { moveMap: false }));
           marker.addTo(next); return marker;
-        });
+        }));
         nextMarkers.set(point.id, copies);
       }
       return { layer: next, markers: nextMarkers };
@@ -454,15 +560,19 @@ const ArchSearchExplore = (() => {
         layer = next.layer; markers = next.markers;
         ui.summary.textContent = `${coverage.total.toLocaleString("zh-CN")} 条资料 · ${coverage.countries.length} 个国家／地区 · ${coverage.regions.length} 个来源分区`;
         ui.limit.textContent = `${limitNote} 当前 ${coverage.country_unknown.toLocaleString("zh-CN")} 条未标注国家／地区；${coverage.chronology.not_reviewed.toLocaleString("zh-CN")} 条断代尚未核验。`;
-        renderAuthority(); renderPolarAuthority(); renderOptions(); renderPage();
+        renderAuthority(); renderPolarAuthority(); renderSpatial(); renderOptions(); renderPage();
         if (selectedId !== null) select(selectedId);
         const scoped = nextCatalogue.points.filter((point) => matches(point, wanted));
         const mapped = scoped.filter((point) => point.location_status === "mapped").length;
         const polar = scoped.filter((point) => point.location_status === "polar").length;
         const unknown = scoped.filter((point) => point.location_status === "unknown").length;
-        feedback(`当前地域范围 ${page.total.toLocaleString("zh-CN")} 条：主图可定位 ${mapped}、极区 ${polar}、位置未知 ${unknown}。${map ? "小圆点为全库资料，编号为检索候选。" : "地图组件不可用，可使用目录列表。"}`);
+        const positions = scoped.flatMap(placements);
+        const sourceCount = positions.filter((position) => position.sourceIndexes.length > 0).length;
+        const representativeCount = positions.length - sourceCount;
+        feedback(`当前地域范围 ${page.total.toLocaleString("zh-CN")} 条资料 / 主图 ${sourceCount.toLocaleString("zh-CN")} 个源定位点 + ${representativeCount.toLocaleString("zh-CN")} 个必要代表点。代表点状态：主图可定位 ${mapped}、极区 ${polar}、位置未知 ${unknown}。${map ? "同一遗产内同坐标源记录只绘一点；编号为检索候选。" : "地图组件不可用，可使用目录列表。"}`);
         if (reload) onCatalogue?.(nextCatalogue.points.map((point) => ({ ...point,
-          repr_point: point.repr_point === null ? null : [...point.repr_point], countries: [...point.countries], regions: [...point.regions] })));
+          repr_point: point.repr_point === null ? null : [...point.repr_point], countries: [...point.countries], regions: [...point.regions],
+          source_points: point.source_points.map((value) => [...value]), source_location_records: point.source_location_records.map((source) => ({ ...source, coordinate: [...source.coordinate] })) })));
         committed();
       } catch (error) {
         if (abort.signal.aborted || current !== sequence) return;
@@ -505,8 +615,8 @@ const ArchSearchExplore = (() => {
     ui.retry.addEventListener("click", () => { void load().catch(() => undefined); });
     ui.fit.addEventListener("click", () => {
       if (!map || !catalogue) return;
-      const points = catalogue.points.filter((point) => matches(point, applied ?? desired) && point.location_status === "mapped" && point.repr_point !== null)
-        .map((point): L.LatLngTuple => [point.repr_point![1], point.repr_point![0]]);
+      const points = catalogue.points.filter((point) => matches(point, applied ?? desired)).flatMap(placements)
+        .map((point): L.LatLngTuple => [point.coordinate[1], point.coordinate[0]]);
       if (points.length) map.fitBounds(L.latLngBounds(ArchSearchMapView.wrapCoordinates(points)), { padding: [40, 40], maxZoom: 9, animate: false });
     });
     renderControls();
@@ -516,8 +626,15 @@ const ArchSearchExplore = (() => {
         return point?.repr_point ? [...point.repr_point] : null;
       },
       getLocationStatus: (id: string): Point["location_status"] | null => catalogue?.points.find((point) => point.id === id)?.location_status ?? null,
+      getSourcePoints: (id: string): [number, number][] => catalogue?.points.find((point) => point.id === id)?.source_points.map((value) => [...value]) ?? [],
+      getSourceLocationRecords: (id: string): SourceLocation[] => catalogue?.points.find((point) => point.id === id)?.source_location_records.map((source) => ({ ...source, coordinate: [...source.coordinate] })) ?? [],
+      getDisplayPoints: (id: string): [number, number][] => {
+        const point = catalogue?.points.find((item) => item.id === id);
+        return point ? placements(point).map((placement) => [...placement.coordinate]) : [];
+      },
+      getSpatialMetadata: (): SpatialMetadata | null => coverage?.spatial_locations ? JSON.parse(JSON.stringify(coverage.spatial_locations)) as SpatialMetadata : null,
     };
   }
 
-  return { create, normalizeState, matches, coordinate, displayCoordinates, locationStatus, parseCoverage, parseCatalogue, parsePage };
+  return { create, normalizeState, matches, coordinate, displayCoordinates, locationStatus, placements, parseSpatial, parseCoverage, parseCatalogue, parsePage };
 })();
