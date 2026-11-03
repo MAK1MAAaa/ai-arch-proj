@@ -11,7 +11,7 @@ const ArchSearchExplore = (() => {
         "antarctica": "南极",
     };
     const sourceLabels = {
-        pleiades: "Pleiades 罗马资料", global: "已策展全球资料", unesco: "世界遗产名录", ats: "ATS 南极历史遗址",
+        pleiades: "Pleiades 罗马资料", global: "已策展全球资料", unesco: "世界遗产名录", ats: "ATS 南极历史遗址", supplement: "补充国家文化遗址",
     };
     const chronologyLabels = {
         reviewed: "已有来源支持的阶段", insufficient: "已核验，断代未确定", not_reviewed: "断代尚未核验",
@@ -44,7 +44,7 @@ const ArchSearchExplore = (() => {
         return [-360, 0, 360].map((offset) => [value[1], value[0] + offset]);
     }
     const mercatorLimit = 85.0511287798;
-    const locationLabels = { mapped: "主图可定位", polar: "极区定位示意", unknown: "位置未知" };
+    const locationLabels = { mapped: "主图可定位", polar: "极区定位示意", unknown: "暂无可用坐标" };
     function locationStatus(value) {
         return value === null ? "unknown" : Math.abs(value[1]) > mercatorLimit ? "polar" : "mapped";
     }
@@ -211,7 +211,7 @@ const ArchSearchExplore = (() => {
         return value;
     }
     function parsePoint(value, fullSite = false) {
-        if (!record(value) || !text(value.id) || !/^(?:[1-9]\d*|wd:Q[1-9]\d*|whc:[1-9]\d*|ats:hsm:[1-9]\d*)$/u.test(value.id)
+        if (!record(value) || !text(value.id) || !/^(?:[1-9]\d*|wd:Q[1-9]\d*|whc:[1-9]\d*|ats:hsm:[1-9]\d*|auth:[a-z][a-z0-9-]{0,39}:[A-Za-z0-9][A-Za-z0-9._-]{0,79})$/u.test(value.id)
             || !text(value.title) || !(value.repr_point === null || coordinate(value.repr_point)) || !text(value.source_kind))
             throw new Error("目录地点编号、标题或代表点无效。");
         const geography = fullSite ? record(value.geography) ? value.geography : { countries: [], regions: [] } : value;
@@ -584,7 +584,7 @@ const ArchSearchExplore = (() => {
                 const positions = scoped.flatMap(placements);
                 const sourceCount = positions.filter((position) => position.sourceIndexes.length > 0).length;
                 const representativeCount = positions.length - sourceCount;
-                feedback(`当前地域范围 ${page.total.toLocaleString("zh-CN")} 条资料 / 主图 ${sourceCount.toLocaleString("zh-CN")} 个源定位点 + ${representativeCount.toLocaleString("zh-CN")} 个必要代表点。代表点状态：主图可定位 ${mapped}、极区 ${polar}、位置未知 ${unknown}。${map ? "同一遗产内同坐标源记录只绘一点；编号为检索候选。" : "地图组件不可用，可使用目录列表。"}`);
+                feedback(`当前地域范围 ${page.total.toLocaleString("zh-CN")} 条资料 / 主图 ${sourceCount.toLocaleString("zh-CN")} 个源定位点 + ${representativeCount.toLocaleString("zh-CN")} 个必要代表点。代表点状态：主图可定位 ${mapped}、极区 ${polar}、暂无可用坐标 ${unknown}。${map ? "同一遗产内同坐标源记录只绘一点；编号为检索候选。" : "地图组件不可用，可使用目录列表。"}`);
                 if (reload)
                     onCatalogue?.(nextCatalogue.points.map((point) => ({ ...point,
                         repr_point: point.repr_point === null ? null : [...point.repr_point], countries: [...point.countries], regions: [...point.regions],

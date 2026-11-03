@@ -30,7 +30,7 @@ interface ExportResult<T> {
   response: SearchResponse<T>;
   map: HistoryView | null;
   selection: { site: string | null; phase: string | null };
-  sources: { name: string; license: string }[];
+  sources: { name: string; license: string; version?: string | null }[];
   selected_site: unknown;
   spatial: { metadata: unknown; selected: { site_id: string; representative_point: [number, number] | null; source_points: [number, number][]; records: { source_index: number; coordinate: [number, number]; name: string; ref: string }[] } | null } | null;
   browse: BrowseState | null;
@@ -386,4 +386,68 @@ test('spatial exports retain source order, duplicates and labels separately from
   assert.deepEqual(plain(report.spatial), expected);
   assert.deepEqual(report.response.results, []);
   assert.equal(helpers.createExport(request, response, '2026-11-04T00:00:00Z').spatial, null);
+});
+
+test('source-qualified authority IDs round-trip without inventing a search or a historical phase', () => {
+  const browse: BrowseState = { country: 'KI', region: 'asia-pacific', offset: 0, visible: true };
+  const view: HistoryView = { year: 117, basemap: 'historical', boundaries: false, frame_id: 'frame-117', source_version: 'v0.2.1' };
+  for (const id of ['auth:dva:betio-coast-watchers-memorial', 'auth:commonwealth:67579', 'auth:sprep:d6eab109-2e10-4654-b3c4-5bb94f6a8867']) {
+    const selection = { site: id, phase: null };
+    const url = new URL(helpers.buildLink(base, null, view, selection, browse));
+    assert.equal(url.searchParams.get('site'), id);
+    assert.deepEqual(plain(helpers.parseLink(url)), { request: null, error: null });
+    assert.deepEqual(plain(helpers.parseView(url).selection), selection);
+    assert.equal(helpers.parseView(url).view?.year, 117);
+    assert.deepEqual(plain(helpers.parseBrowse(url)), { state: browse, error: null });
+    assert.equal(url.searchParams.has('phase'), false);
+  }
+});
+
+test('authority ID links reject path traversal, embedded URLs, delimiters and invalid namespace boundaries', () => {
+  for (const id of [
+    'auth:dva:../secret', 'auth:dva:..', 'auth:dva:a/b', 'auth:dva:a\\b',
+    'auth:dva:%2Fapi%2Fstatus', 'auth:dva:https://example.org/place', 'auth:dva:a?year=1',
+    'auth:dva:a#fragment', 'auth:dva:a:other', 'auth:DVA:place', 'auth:1provider:place',
+    'auth::place', 'auth:dva:', 'auth:dva: leading', 'auth:dva:trailing ',
+    'auth:dva:<script>', 'auth:dva:place\u0000', `auth:${'x'.repeat(41)}:place`,
+    `auth:dva:${'x'.repeat(81)}`,
+  ]) {
+    const url = new URL(base); url.searchParams.set('site', id);
+    const parsed = helpers.parseView(url);
+    assert.notEqual(parsed.error, null, id);
+    assert.deepEqual(plain(parsed.selection), { site: null, phase: null }, id);
+    assert.equal(helpers.parseLink(url).request, null);
+  }
+});
+
+test('an independently selected unknown supplement exports its own evidence without altering successful ranking', () => {
+  const searched: SearchSpec = { ...request, country: 'BT', region: 'asia-pacific' };
+  const response = { query: searched.query, mode: searched.mode, corpus_version: 'global-v5', elapsed_ms: 4,
+    total_candidates: 1, results: [{ site: { id: 'wd:Q900000001', repr_point: [90, 27] }, score: 0.42, matched_fields: ['description'] }] };
+  const selected = { id: 'auth:dva:betio-coast-watchers-memorial', title: 'Betio Coast Watchers Memorial',
+    source_kind: 'supplement', repr_point: null, location_precision: null, periods: [], period_evidence: [],
+    source_uri: 'https://example.org/official-memorial',
+    source_refs: [{ id: 'authority:memorial', uri: 'https://example.org/official-memorial', publisher: 'Fixture government authority', license: null, revision: 'sha256:fixed', excerpt: 'Memorial at the cemetery.' }],
+    chronology: { status: 'not_reviewed', phases: [], default_phase_id: null },
+    geography: { authority_id: 'supplement:auth:dva:betio-coast-watchers-memorial', countries: ['KI'], regions: ['asia-pacific'], point_count: 0, note: 'No verified public coordinate; not substituted with an island centre.' },
+  };
+  const browse: BrowseState = { country: 'KI', region: 'asia-pacific', offset: 0, visible: false };
+  const before = plain(response);
+  const report = helpers.createExport(searched, response, '2026-11-04T00:00:00Z', null,
+    { site: selected.id, phase: null }, selected, browse,
+    { metadata: null, selected: { site_id: selected.id, representative_point: null, source_points: [], records: [] } });
+  assert.deepEqual(plain(report.response), before);
+  assert.deepEqual(plain(report.request), searched);
+  assert.deepEqual(plain(report.browse), browse);
+  assert.deepEqual(plain(report.selected_site), selected);
+  assert.equal((report.selected_site as typeof selected).repr_point, null);
+  assert.equal((report.selected_site as typeof selected).source_refs[0].license, null);
+  const supplementSource = report.sources.find(source => source.name === 'Country cultural supplement');
+  assert.equal(supplementSource?.version, 'country-supplement-v1');
+  assert.equal(supplementSource?.license, 'Mixed rights — see individual source_refs');
+  assert.equal(report.spatial?.selected?.representative_point, null);
+  assert.deepEqual(plain(report.spatial?.selected?.source_points), []);
+  assert.equal('score' in (report.selected_site as Record<string, unknown>), false);
+  assert.equal('rank' in (report.selected_site as Record<string, unknown>), false);
+  assert.equal(report.map, null);
 });

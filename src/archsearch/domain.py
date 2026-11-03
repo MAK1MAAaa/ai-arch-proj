@@ -166,7 +166,7 @@ class Site(BaseModel):
     source_uri: str
     contributors: list[str]
     period_evidence: list[PeriodEvidence]
-    source_kind: Literal["pleiades", "global", "unesco", "ats"] = "pleiades"
+    source_kind: Literal["pleiades", "global", "unesco", "ats", "supplement"] = "pleiades"
     source_refs: list[SourceReference] = Field(default_factory=list)
     chronology: ChronologyReview = Field(default_factory=ChronologyReview)
     geography: Geography | None = None
@@ -183,10 +183,10 @@ class Site(BaseModel):
 
     @model_validator(mode="after")
     def validate_period_evidence(self) -> "Site":
-        if self.source_kind != "ats" and self.repr_point is None:
+        if self.source_kind not in {"ats", "supplement"} and self.repr_point is None:
             raise ValueError("existing source cohorts require a valid representative point")
         if (
-            self.source_kind != "ats" and self.geography is not None
+            self.source_kind not in {"ats", "supplement"} and self.geography is not None
             and self.geography.point_count < 1
         ):
             raise ValueError("existing source cohorts require at least one source point")
@@ -213,4 +213,17 @@ class Site(BaseModel):
                 raise ValueError("ATS records require HSM identities and country-neutral geography")
             if self.geography.point_count != (0 if self.repr_point is None else 1):
                 raise ValueError("ATS point count must preserve known versus unknown location")
+        if self.source_kind == "supplement":
+            if (
+                re.fullmatch(
+                    r"(?:wd:Q[1-9]\d*|auth:[a-z][a-z0-9-]{0,39}:"
+                    r"[A-Za-z0-9][A-Za-z0-9._-]{0,79})", self.id,
+                ) is None
+                or not self.source_refs or self.geography is None
+                or not self.geography.countries or not self.geography.regions
+                or self.geography.authority_id != "supplement:" + self.id
+            ):
+                raise ValueError("supplement sites require qualified identity and source geography")
+            if self.geography.point_count != (0 if self.repr_point is None else 1):
+                raise ValueError("supplement point count differs from location availability")
         return self

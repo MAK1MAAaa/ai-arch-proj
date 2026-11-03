@@ -1,0 +1,3746 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "文化资格和定位来源核对不等于历史阶段核验；本批未建立阶段，提交日期不是建造年。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "City Hall in Georgetown, Guyana",
+    "description_zh": "蓋亞那建築",
+    "details": "Source country association: Guyana (GY).",
+    "geography": {
+      "authority_id": "supplement:wd:Q5546981",
+      "countries": [
+        "GY"
+      ],
+      "note": "原WD P625 precision=0.0090470019717476度，仅保存来源数值，不代表实地误差或发掘精度。Georgetown City Hall历史市政厅建筑；官方国家信托另列相邻工程师办公室，但本条身份与坐标不扩大到后者。WD精度为0.0090470019717476度，仅保留数值，不承诺米级误差。国家与分区来自来源声明，不从代表点或历史疆界推断政治归属及生命周期。",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q5546981",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2554105318; sha256:ce764f19223e6691ff6b366dd6835d13e155383b246fddb70a580cce5f316d45",
+        "title": "Georgetown City Hall",
+        "uri": "https://www.wikidata.org/wiki/Q5546981"
+      }
+    },
+    "id": "wd:Q5546981",
+    "location_precision": null,
+    "names": [
+      "Georgetown City Hall",
+      "Джорджтаун қалалық мэриясы",
+      "Ратуша Джорджтауна",
+      "Georgetowns stadshus",
+      "喬治城市政廳"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -58.1649,
+      6.81112
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q5546981",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2554105318; sha256:ce764f19223e6691ff6b366dd6835d13e155383b246fddb70a580cce5f316d45",
+        "title": "Georgetown City Hall",
+        "uri": "https://www.wikidata.org/wiki/Q5546981"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "one of the finest examples of Gothic Architecture in the Caribbean.",
+        "id": "qualification:GY:0",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:0b3eeee39c9dafcbab479844183bb9d69914451080f795fa0515f1e4310387e1",
+        "title": "City Hall, Georgetown",
+        "uri": "https://whc.unesco.org/en/tentativelists/274/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Location: Lacytown, Georgetown",
+        "id": "qualification:GY:1",
+        "license": null,
+        "publisher": "National Trust of Guyana",
+        "revision": "sha256:473eddcd49da81d607e835ca24d2c1e80ae653a59074d94eed835917ddfb83ca",
+        "title": "City Hall & City Engineer’s Office",
+        "uri": "https://ntg.gov.gy/monument/city-hall-city-engineers-office/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Latin America & the Carribean, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:GY",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:1037137a3e2c4bb97da109a8a0482fce35f564cce3a1911feeb28a1c7851b70b",
+        "title": "UNESCO World Heritage Convention — Guyana",
+        "uri": "https://whc.unesco.org/en/statesparties/gy/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P297: GY",
+        "id": "wikidata-country:Q734",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562959580; sha256:624edc6092aad046ebc2d737eceae3177ce413c18f24644561e8160bca31acbb",
+        "title": "Guyana",
+        "uri": "https://www.wikidata.org/wiki/Q734"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/274/",
+    "title": "Georgetown City Hall",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "source_metadata_only_pending_independent_chronology_review",
+      "note": "已核对实体名称、文化资格、公开定位点与来源国家/分区；历史阶段尚未独立核验。名录提交、认定、建馆或重开年份不直接转换为遗址生命周期；不标成人工或专家确认。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "fort in Saint Vincent",
+    "description_zh": "",
+    "details": "Source country association: Saint Vincent and the Grenadines (VC).",
+    "geography": {
+      "authority_id": "supplement:wd:Q28448431",
+      "countries": [
+        "VC"
+      ],
+      "note": "只定位Fort Charlotte这一堡垒建筑群，UNESCO官方出版物Table37直接列Cultural heritage monument；不是Rock Art预备名录的代表点，不把现代国界转作历史政治归属。 地点国家字段按来源实体/具名地点所属的当前国家声明，分区按官方国家页面；不依据坐标或历史疆域推断政治归属。precision仅保留来源参数，不承诺米级精度；没有新增遗址生命周期或阶段。",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q28448431",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2512678221; sha256:84cb4bbca20045fd9b74a472142e9d856b0f0243dfb59a35fb4751e2ce41266c",
+        "title": "Fort Charlotte",
+        "uri": "https://www.wikidata.org/wiki/Q28448431"
+      }
+    },
+    "id": "wd:Q28448431",
+    "location_precision": null,
+    "names": [
+      "Fort Charlotte",
+      "Форт Шарлотт (Кингстаун)"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -61.242111111111,
+      13.157888888889
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q28448431",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2512678221; sha256:84cb4bbca20045fd9b74a472142e9d856b0f0243dfb59a35fb4751e2ce41266c",
+        "title": "Fort Charlotte",
+        "uri": "https://www.wikidata.org/wiki/Q28448431"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Cultural heritage monument",
+        "id": "qualification:VC",
+        "license": null,
+        "publisher": "UNESCO",
+        "revision": "sha256:9086309f0addf2513d8a407f50dd6939eb06d744638048026a3838acf8c30e84",
+        "title": "Caribbean Cultural Resources and Creative Assets for Tourism Development Opportunities",
+        "uri": "https://www.unesco.org/sites/default/files/medias/fichiers/2023/11/EN_Caribbean%20Cultural%20Resources.pdf"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Latin America & the Carribean, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:VC",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:27a3dc54507ee61ef8a5d4959c572535e81aef189a5f5fc2e83f227ae696ba7d",
+        "title": "UNESCO World Heritage Convention — Saint Vincent and the Grenadines",
+        "uri": "https://whc.unesco.org/en/statesparties/vc/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q757",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2564285413; sha256:7d40c17a56f4072fda695d71ef05b487f8dae599aeabd6045ed445d99a178d0a",
+        "title": "Saint Vincent and the Grenadines",
+        "uri": "https://www.wikidata.org/wiki/Q757"
+      }
+    ],
+    "source_uri": "https://www.unesco.org/sites/default/files/medias/fichiers/2023/11/EN_Caribbean%20Cultural%20Resources.pdf",
+    "title": "Fort Charlotte",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "cultural_qualification_and_identity_check_only",
+      "note": "本轮核验文化资格、实体身份和定位来源；尚未独立核验建造、使用、改建或毁损阶段，不把保护、列名录或机构设立年份当作遗址生命周期。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors",
+      "Direction des Affaires Culturelles, Gouvernement Princier de Monaco"
+    ],
+    "description": "official residence of the Sovereign of Monaco",
+    "description_zh": "摩纳哥亲王的宫殿",
+    "details": "Source country association: Monaco (MC).",
+    "geography": {
+      "authority_id": "supplement:wd:Q1164788",
+      "countries": [
+        "MC"
+      ],
+      "note": "Monaco文化主管机构建筑遗产页面中的实体宫殿。原要塞／宫殿各期改建需分别核验，首批不自动跳年。 代表点来自固定Wikidata P625；源precision=0.00027777777777778°仅为声明分辨率，不承诺实测定位误差。 国家／地区来自当前来源身份声明，分区来自官方区域资料；不按坐标推政治归属，不据分期推连续存在。",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "P625 q1164788$52FE74B4-4640-4C65-AA8E-318726235E2D; P17 q1164788$4cc9eedf-4b71-53f7-4ad0-98d9312c9538; precision=0.00027777777777778 degrees; globe=Q2.",
+        "id": "wikidata:Q1164788",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2559173125",
+        "title": "Wikidata Q1164788 — original identity, labels and coordinate",
+        "uri": "https://www.wikidata.org/wiki/Q1164788"
+      }
+    },
+    "id": "wd:Q1164788",
+    "location_precision": null,
+    "names": [
+      "Prince's Palace of Monaco",
+      "Palais du Prince",
+      "Palácio do príncipe do Mónaco",
+      "摩納哥王子宮",
+      "亲王宫",
+      "Princely Palace of Monaco",
+      "Prince's Palace",
+      "palais princier de Monaco",
+      "palais princier",
+      "Palácio do Mónaco",
+      "Palais de Monaco",
+      "Fortaleza do Mónaco"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      7.420275,
+      43.731416666667
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P625 q1164788$52FE74B4-4640-4C65-AA8E-318726235E2D; P17 q1164788$4cc9eedf-4b71-53f7-4ad0-98d9312c9538; precision=0.00027777777777778 degrees; globe=Q2.",
+        "id": "wikidata:Q1164788",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2559173125",
+        "title": "Wikidata Q1164788 — original identity, labels and coordinate",
+        "uri": "https://www.wikidata.org/wiki/Q1164788"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "The Prince's Palace",
+        "id": "qualification:mc-palace",
+        "license": null,
+        "publisher": "Direction des Affaires Culturelles, Gouvernement Princier de Monaco",
+        "revision": "sha256:e849c787dbdb52a572a26c59c3847ffda74541c7e5b9568ce5adbc5dd50b8876",
+        "title": "Architectural heritage — Historic buildings",
+        "uri": "https://culture.mc/en/themes/architectural-heritage"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "q235$5A2C4D5B-1D78-4354-966E-8C71170C2580=MC",
+        "id": "wikidata-country:Q235",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2564289829",
+        "title": "Wikidata Q235 — ISO alpha-2 country identity",
+        "uri": "https://www.wikidata.org/wiki/Q235"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Europe and North America",
+        "id": "region:MC",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:6271a4a8c7dbabaeef03987b7b6d2a357591f8af148ae40f97621273eb3bba1f",
+        "title": "UNESCO World Heritage country regional contact — MC",
+        "uri": "https://whc.unesco.org/en/statesparties/mc/"
+      }
+    ],
+    "source_uri": "https://culture.mc/en/themes/architectural-heritage",
+    "title": "Prince's Palace of Monaco",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "文化资格和定位来源核对不等于历史阶段核验；本批未建立阶段，提交日期不是建造年。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "Tentative World Heritage Site in Seychelles",
+    "description_zh": "",
+    "details": "Source country association: Seychelles (SC).",
+    "geography": {
+      "authority_id": "supplement:wd:Q65936233",
+      "countries": [
+        "SC"
+      ],
+      "note": "原WD P625 precision=1e-06度，仅保存来源数值，不代表实地误差或发掘精度。Venn’s Town历史学校/传教遗址，非整个Morne Seychellois自然公园。官方UTM式数字未声明坐标系，未猜测投影；采用同名WD遗址的地球代表点。国家与分区来自来源声明，不从代表点或历史疆界推断政治归属及生命周期。",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q65936233",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "1747613701; sha256:803f86418db696a4ced241c97e4ca79dd13725fa59a2571d20cb80b0579a020f",
+        "title": "Venn's Town",
+        "uri": "https://www.wikidata.org/wiki/Q65936233"
+      }
+    },
+    "id": "wd:Q65936233",
+    "location_precision": null,
+    "names": [
+      "Venn's Town"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      55.4439,
+      -4.6549
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q65936233",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "1747613701; sha256:803f86418db696a4ced241c97e4ca79dd13725fa59a2571d20cb80b0579a020f",
+        "title": "Venn's Town",
+        "uri": "https://www.wikidata.org/wiki/Q65936233"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "The Mission Ruins of Venn's Town",
+        "id": "qualification:SC:0",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:87656e2988861f1eda3f6ffc4965f48948072b98b4002877460b40e46b6cc4f2",
+        "title": "Mission Ruins of Venn's Town",
+        "uri": "https://whc.unesco.org/en/tentativelists/5796/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Africa, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:SC",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:853e46b4dabbffd3108df8c1e229282ee02f36b945ac74379db51db0b2dd5021",
+        "title": "UNESCO World Heritage Convention — Seychelles",
+        "uri": "https://whc.unesco.org/en/statesparties/sc/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P297: SC",
+        "id": "wikidata-country:Q1042",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2564284983; sha256:c69d9ad636f44082b88671973bf70df8f785ca4cc6b8cc961e77c79468a54c50",
+        "title": "Seychelles",
+        "uri": "https://www.wikidata.org/wiki/Q1042"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/5796/",
+    "title": "Venn's Town",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "文化资格和定位来源核对不等于历史阶段核验；本批未建立阶段，提交日期不是建造年。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "island in Liberia",
+    "description_zh": "賴比瑞亞島嶼",
+    "details": "Source country association: Liberia (LR).",
+    "geography": {
+      "authority_id": "supplement:wd:Q27459317",
+      "countries": [
+        "LR"
+      ],
+      "note": "原WD P625 precision=0.001度，仅保存来源数值，不代表实地误差或发掘精度。Providence Island历史贸易和定居场所；在3个非废弃P625中只采用唯一preferred声明，不平均。点是岛屿代表位置，不是某座建筑或河口中心。国家与分区来自来源声明，不从代表点或历史疆界推断政治归属及生命周期。",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q27459317",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2399823438; sha256:505457c965cae5e6ad3edb787b7870d458a2be7a599123f3d286072d3c66b6c4",
+        "title": "Providence Island",
+        "uri": "https://www.wikidata.org/wiki/Q27459317"
+      }
+    },
+    "id": "wd:Q27459317",
+    "location_precision": null,
+    "names": [
+      "island Providence",
+      "Providence Island",
+      "Providence Island (Liberia)",
+      "普洛威頓斯島_(賴比瑞亞)",
+      "Providence Island, Liberia",
+      "Île de la Providence"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -10.802,
+      6.32
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q27459317",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2399823438; sha256:505457c965cae5e6ad3edb787b7870d458a2be7a599123f3d286072d3c66b6c4",
+        "title": "Providence Island",
+        "uri": "https://www.wikidata.org/wiki/Q27459317"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Providence Island is a former trade post",
+        "id": "qualification:LR:0",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:9cafa86f3be45335b7a25113491fa63f5e2cb2455b211f6aa110f32e0683ad4f",
+        "title": "Providence Island",
+        "uri": "https://whc.unesco.org/en/tentativelists/6247/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Africa, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:LR",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:c3cc95b6ee66b2820f230f060b261746e5024f8618ed74a63c233a7205ad480c",
+        "title": "UNESCO World Heritage Convention — Liberia",
+        "uri": "https://whc.unesco.org/en/statesparties/lr/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P297: LR",
+        "id": "wikidata-country:Q1014",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2563802793; sha256:67f7f162cf4528448ff33d8436eb4d09329e2af8534d43516f5dbb8a9f48a28d",
+        "title": "Liberia",
+        "uri": "https://www.wikidata.org/wiki/Q1014"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/6247/",
+    "title": "Providence Island",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "文化资格和定位来源核对不等于历史阶段核验；本批未建立阶段，提交日期不是建造年。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "ancient mine in southern Africa",
+    "description_zh": "史瓦帝尼礦場、歷史遺跡",
+    "details": "Source country association: Eswatini (SZ).",
+    "geography": {
+      "authority_id": "supplement:wd:Q2558479",
+      "countries": [
+        "SZ"
+      ],
+      "note": "原WD P625 precision=0.00027777777777778度，仅保存来源数值，不代表实地误差或发掘精度。Ngwenya历史矿场场所；文化资格针对古代采矿遗存，未把铁矿地质年龄或名录日期当作遗址建造年。点仅为矿场代表点。国家与分区来自来源声明，不从代表点或历史疆界推断政治归属及生命周期。",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q2558479",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2399663572; sha256:de86ac3c4c32e325b440012d13a6475c1da609149cff9ac5b4d0aacdd053a412",
+        "title": "Ngwenya Mine",
+        "uri": "https://www.wikidata.org/wiki/Q2558479"
+      }
+    },
+    "id": "wd:Q2558479",
+    "location_precision": null,
+    "names": [
+      "নেগোওয়েনিয়া খনি",
+      "Ngwenya Mine",
+      "Minas de Ngwenya",
+      "mine de Ngwenya",
+      "Miniera di Ngwenya",
+      "ヌグウェニャ鉱山",
+      "Kopalnie Ngwenya",
+      "Рудник Нгвеня",
+      "Ngwenyagruvan",
+      "恩圭尼亞礦場",
+      "mine Ngwenya"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      31.03138889,
+      -26.19777778
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q2558479",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2399663572; sha256:de86ac3c4c32e325b440012d13a6475c1da609149cff9ac5b4d0aacdd053a412",
+        "title": "Ngwenya Mine",
+        "uri": "https://www.wikidata.org/wiki/Q2558479"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "for the extraction of red haematite and specularite",
+        "id": "qualification:SZ:0",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:1c8f4b333ff2722c53c939cb9671aad9ce6c09ee3df9d5424b68031d46b0745d",
+        "title": "Ngwenya Mines",
+        "uri": "https://whc.unesco.org/en/tentativelists/5421/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Africa, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:SZ",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:28b0fccba759beb98101cf1cce69822df121ef1050597a32354973c0dbedf482",
+        "title": "UNESCO World Heritage Convention — Eswatini",
+        "uri": "https://whc.unesco.org/en/statesparties/sz/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P297: SZ",
+        "id": "wikidata-country:Q1050",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562956810; sha256:9763282748821ff42ec31f1e39ad5598fed13a9414234619f95dd30e7358e975",
+        "title": "Eswatini",
+        "uri": "https://www.wikidata.org/wiki/Q1050"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/5421/",
+    "title": "Ngwenya Mine",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "cultural_qualification_and_identity_check_only",
+      "note": "本轮核验文化资格、实体身份和定位来源；尚未独立核验建造、使用、改建或毁损阶段，不把保护、列名录或机构设立年份当作遗址生命周期。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors",
+      "Hochbauamt des Fürstentums Liechtenstein"
+    ],
+    "description": "castle",
+    "description_zh": "",
+    "details": "Source country association: Liechtenstein (LI).",
+    "geography": {
+      "authority_id": "supplement:wd:Q1012141",
+      "countries": [
+        "LI"
+      ],
+      "note": "Liechtenstein政府建筑／考古主管机构专门保护修复文献中的实体城堡。LI不在本次WHC196缔约方分母内；区域用M49 Europe透明映射，不宣称WHC资格。 代表点来自固定Wikidata P625；源precision=2.7777777777778e-05°仅为声明分辨率，不承诺实测定位误差。 国家／地区来自当前来源身份声明，分区来自官方区域资料；不按坐标推政治归属，不据分期推连续存在。",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "P625 q1012141$8B092A28-F3A4-440D-93F7-C52C4DBC20C5; P17 q1012141$79032B8F-6FA4-4732-BE0C-082763B0437B; precision=2.7777777777778e-05 degrees; globe=Q2.",
+        "id": "wikidata:Q1012141",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2512687070",
+        "title": "Wikidata Q1012141 — original identity, labels and coordinate",
+        "uri": "https://www.wikidata.org/wiki/Q1012141"
+      }
+    },
+    "id": "wd:Q1012141",
+    "location_precision": null,
+    "names": [
+      "Gutenberg Castle",
+      "château de Gutenberg",
+      "Castelo de Gutenberg",
+      "古滕堡城堡",
+      "古滕贝格"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      9.5002777777778,
+      47.06525
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P625 q1012141$8B092A28-F3A4-440D-93F7-C52C4DBC20C5; P17 q1012141$79032B8F-6FA4-4732-BE0C-082763B0437B; precision=2.7777777777778e-05 degrees; globe=Q2.",
+        "id": "wikidata:Q1012141",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2512687070",
+        "title": "Wikidata Q1012141 — original identity, labels and coordinate",
+        "uri": "https://www.wikidata.org/wiki/Q1012141"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Burg Gutenberg in Balzers",
+        "id": "qualification:li-gutenberg-history-exa",
+        "license": null,
+        "publisher": "Hochbauamt des Fürstentums Liechtenstein",
+        "revision": "sha256:8e1500aaf1d0815a531c8ce84acf7a42e5b29b524bf19679c01ba38e019dc13a",
+        "title": "Burg Gutenberg in Balzers — Gebäuderestaurierung 2005–2010",
+        "uri": "https://www.llv.li/serviceportal2/amtsstellen/stabstelle-fuer-staatliche-liegenschaften/ssl-abi-projekt-burg-gutenberg-gebaeuderestaurierung.pdf"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "q347$8906E626-C105-4148-8EDB-CF6A85DA34F0=LI",
+        "id": "wikidata-country:Q347",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562960395",
+        "title": "Wikidata Q347 — ISO alpha-2 country identity",
+        "uri": "https://www.wikidata.org/wiki/Q347"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Europe / Western Europe",
+        "id": "region:LI",
+        "license": null,
+        "publisher": "United Nations Statistics Division",
+        "revision": "sha256:b9048114f6e7f2abda83bf03d4263c9d7cd1bd7230e3d0461025ee7839a7a1fb",
+        "title": "UNSD M49 geographical classification",
+        "uri": "https://unstats.un.org/unsd/methodology/m49/overview/"
+      }
+    ],
+    "source_uri": "https://www.llv.li/serviceportal2/amtsstellen/stabstelle-fuer-staatliche-liegenschaften/ssl-abi-projekt-burg-gutenberg-gebaeuderestaurierung.pdf",
+    "title": "Gutenberg Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "cultural_qualification_and_identity_check_only",
+      "note": "本轮核验文化资格、实体身份和定位来源；尚未独立核验建造、使用、改建或毁损阶段，不把保护、列名录或机构设立年份当作遗址生命周期。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors",
+      "Fundação Calouste Gulbenkian — Heritage of Portuguese Influence (HPIP)"
+    ],
+    "description": "fortress in Guinea-Bissau",
+    "description_zh": "",
+    "details": "Source country association: Guinea-Bissau (GW).",
+    "geography": {
+      "authority_id": "supplement:wd:Q10283780",
+      "countries": [
+        "GW"
+      ],
+      "note": "学术性建筑遗产清单中的Cacheu现存堡垒；不表示UNESCO列入。P17选当前Guinea-Bissau preferred声明，不选有终年的Portuguese Guinea历史声明。 代表点来自固定Wikidata P625；源precision=1e-07°仅为声明分辨率，不承诺实测定位误差。 国家／地区来自当前来源身份声明，分区来自官方区域资料；不按坐标推政治归属，不据分期推连续存在。",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "P625 Q10283780$BF074278-8B05-4BF7-B11A-E22B3541DD3B; P17 Q10283780$BC459259-0B3A-4EBD-A540-36605592EF84; precision=1e-07 degrees; globe=Q2.",
+        "id": "wikidata:Q10283780",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "1758833627",
+        "title": "Wikidata Q10283780 — original identity, labels and coordinate",
+        "uri": "https://www.wikidata.org/wiki/Q10283780"
+      }
+    },
+    "id": "wd:Q10283780",
+    "location_precision": null,
+    "names": [
+      "Forte de Cacheu"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -16.1672615,
+      12.2770279
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P625 Q10283780$BF074278-8B05-4BF7-B11A-E22B3541DD3B; P17 Q10283780$BC459259-0B3A-4EBD-A540-36605592EF84; precision=1e-07 degrees; globe=Q2.",
+        "id": "wikidata:Q10283780",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "1758833627",
+        "title": "Wikidata Q10283780 — original identity, labels and coordinate",
+        "uri": "https://www.wikidata.org/wiki/Q10283780"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Military Architecture",
+        "id": "qualification:gw-cacheu-exa",
+        "license": null,
+        "publisher": "Fundação Calouste Gulbenkian — Heritage of Portuguese Influence (HPIP)",
+        "revision": "sha256:f53cb47613c4ca0cf3089a1d4bfb310c22143713f5697f0149b4f87b09ca5eb0",
+        "title": "HPIP heritage record 1751 — Fort, Cacheu",
+        "uri": "https://hpip.org/en/heritage/details/1751"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "q1007$F77C1CA6-80A9-484B-82C4-486045185F45=GW",
+        "id": "wikidata-country:Q1007",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2561640769",
+        "title": "Wikidata Q1007 — ISO alpha-2 country identity",
+        "uri": "https://www.wikidata.org/wiki/Q1007"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Africa",
+        "id": "region:GW",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:8afeffc00483e5cac55a6eca47c171de22093ca09b998ad31bd84dd8ccccc6f9",
+        "title": "UNESCO World Heritage country regional contact — GW",
+        "uri": "https://whc.unesco.org/en/statesparties/gw/"
+      }
+    ],
+    "source_uri": "https://hpip.org/en/heritage/details/1751",
+    "title": "Forte de Cacheu",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "source_metadata_only_pending_independent_chronology_review",
+      "note": "已核对实体名称、文化资格、公开定位点与来源国家/分区；历史阶段尚未独立核验。名录提交、认定、建馆或重开年份不直接转换为遗址生命周期；不标成人工或专家确认。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "national park in the Bahamas",
+    "description_zh": "",
+    "details": "Source country association: Bahamas (BS).",
+    "geography": {
+      "authority_id": "supplement:wd:Q108607527",
+      "countries": [
+        "BS"
+      ],
+      "note": "定位Clifton Heritage National Park本身，保留园区代表点；政府直接将其列为historic cultural heritage site，非仅依靠national park名称推断文化资格，不把园区点当某座考古建筑的精确坐标。 地点国家字段按来源实体/具名地点所属的当前国家声明，分区按官方国家页面；不依据坐标或历史疆域推断政治归属。precision仅保留来源参数，不承诺米级精度；没有新增遗址生命周期或阶段。",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q108607527",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2266469064; sha256:c68f7d9d85cb09c69b75366de4814956ff961faaceb8f917d1fb2bda564c20b9",
+        "title": "Clifton Heritage National Park",
+        "uri": "https://www.wikidata.org/wiki/Q108607527"
+      }
+    },
+    "id": "wd:Q108607527",
+    "location_precision": null,
+    "names": [
+      "Clifton Heritage National Park"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -77.55,
+      25.013
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q108607527",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2266469064; sha256:c68f7d9d85cb09c69b75366de4814956ff961faaceb8f917d1fb2bda564c20b9",
+        "title": "Clifton Heritage National Park",
+        "uri": "https://www.wikidata.org/wiki/Q108607527"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "historic cultural heritage site",
+        "id": "qualification:BS",
+        "license": null,
+        "publisher": "Government of The Bahamas",
+        "revision": "sha256:0029db012f8ab15cbde019c29aa923332a8f02efb05750d1104c07fb63961c3d",
+        "title": "Clifton Heritage National Park",
+        "uri": "https://www.bahamas.gov.bs/clifton-heritage-national-park"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Latin America & the Carribean, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:BS",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:55040f18454af00121b5674619fbf8d36b6bfb5686d3152c202aad433b2df872",
+        "title": "UNESCO World Heritage Convention — Bahamas",
+        "uri": "https://whc.unesco.org/en/statesparties/bs/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q778",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2563580940; sha256:186007765f016b5edbb339f12f621106a827f7ff4bd0cd8db4c6ad4779b1978d",
+        "title": "The Bahamas",
+        "uri": "https://www.wikidata.org/wiki/Q778"
+      }
+    ],
+    "source_uri": "https://www.bahamas.gov.bs/clifton-heritage-national-park",
+    "title": "Clifton Heritage National Park",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "文化资格和定位来源核对不等于历史阶段核验；本批未建立阶段，提交日期不是建造年。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "archaeological site in Trinidad and Tobago",
+    "description_zh": "",
+    "details": "Source country association: Trinidad and Tobago (TT).",
+    "geography": {
+      "authority_id": "supplement:wd:Q945199",
+      "countries": [
+        "TT"
+      ],
+      "note": "原WD P625 precision=0.001度，仅保存来源数值，不代表实地误差或发掘精度。Banwari Trace考古遗址，非已移至UWI博物馆的Banwari Person遗骨。官方TL粗坐标与文字地点不一致，未用其替换WD Siparia遗址点；National Trust另确认该考古遗址。没有改写或生成历史阶段。国家与分区来自来源声明，不从代表点或历史疆界推断政治归属及生命周期。",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q945199",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2141286475; sha256:18438e95c0cf674460f2dde074c52170308bc1384bc4f182fa33ae3a4f4f94ab",
+        "title": "Banwari Trace",
+        "uri": "https://www.wikidata.org/wiki/Q945199"
+      }
+    },
+    "id": "wd:Q945199",
+    "location_precision": null,
+    "names": [
+      "Banwari Trace"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -61.478,
+      10.175
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q945199",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2141286475; sha256:18438e95c0cf674460f2dde074c52170308bc1384bc4f182fa33ae3a4f4f94ab",
+        "title": "Banwari Trace",
+        "uri": "https://www.wikidata.org/wiki/Q945199"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "the archaeological site at Banwari Trace in southwestern Trinidad",
+        "id": "qualification:TT:0",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:a63029df7e7dd5acdf8d9a5985140df4925efc8c37d428c1d46b3678b594b86d",
+        "title": "Banwari Trace Archaeological Site",
+        "uri": "https://whc.unesco.org/en/tentativelists/5644/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Banwari Trace Archaeological Site",
+        "id": "qualification:TT:1",
+        "license": null,
+        "publisher": "National Trust of Trinidad and Tobago",
+        "revision": "sha256:a9ac6c6fb4163a6b15b59da8ae77cc80cb0d26f8d0c1c647c63bbd8401a8a234",
+        "title": "Banwari Trace Archaeological Site",
+        "uri": "https://nationaltrust.tt/heritage-sites/banwari-trace-archaeological-site/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Latin America & the Carribean, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:TT",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:df195421c1e563e3268c03d18fd70b774a5c3c7ae2fa55659213b5ce8a2d5880",
+        "title": "UNESCO World Heritage Convention — Trinidad and Tobago",
+        "uri": "https://whc.unesco.org/en/statesparties/tt/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P297: TT",
+        "id": "wikidata-country:Q754",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562957964; sha256:74ceeb3fcbfd0e6805d0d82e5dec4367543dff9dad4c3443c8543cff5e234c6a",
+        "title": "Trinidad and Tobago",
+        "uri": "https://www.wikidata.org/wiki/Q754"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/5644/",
+    "title": "Banwari Trace",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "文化资格和定位来源核对不等于历史阶段核验；本批未建立阶段，提交日期不是建造年。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "Tentative World Heritage Site in Grenada",
+    "description_zh": "",
+    "details": "Source country association: Grenada (GD).",
+    "geography": {
+      "authority_id": "supplement:wd:Q65129186",
+      "countries": [
+        "GD"
+      ],
+      "note": "原WD P625 precision=1e-06度，仅保存来源数值，不代表实地误差或发掘精度。St.George Historic District历史街区整体，不扩展为格林纳达全首都；WD点仅作街区代表点，未生成街区多边形。国家与分区来自来源声明，不从代表点或历史疆界推断政治归属及生命周期。",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q65129186",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2399584348; sha256:206a1a2e190b5bd602e4ee0dca446e23c9edb30845a7babeaa815f412aba6360",
+        "title": "St. George Historic District",
+        "uri": "https://www.wikidata.org/wiki/Q65129186"
+      }
+    },
+    "id": "wd:Q65129186",
+    "location_precision": null,
+    "names": [
+      "St. George Historic District",
+      "ville historique de Saint-Georges",
+      "Сент-Джордж тарихи каласы"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -61.7501,
+      12.0282
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q65129186",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2399584348; sha256:206a1a2e190b5bd602e4ee0dca446e23c9edb30845a7babeaa815f412aba6360",
+        "title": "St. George Historic District",
+        "uri": "https://www.wikidata.org/wiki/Q65129186"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "The urban pattern of the Historical District of St. George's",
+        "id": "qualification:GD:0",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:f7aa9a23ff76eeb998d52ed3653182b662534376f16bf8d708370f587c67c492",
+        "title": "St. George Historic District",
+        "uri": "https://whc.unesco.org/en/tentativelists/1924/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Latin America & the Carribean, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:GD",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:72b6516b46a3ca3304e9e5845e86b42e7df6f866c4a6e5a372074138dd304282",
+        "title": "UNESCO World Heritage Convention — Grenada",
+        "uri": "https://whc.unesco.org/en/statesparties/gd/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P297: GD",
+        "id": "wikidata-country:Q769",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562958008; sha256:f05d4eaff4ba6cbc515a24c24abdf91e9faacd5e077b789cc327828df0d1b4bb",
+        "title": "Grenada",
+        "uri": "https://www.wikidata.org/wiki/Q769"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/1924/",
+    "title": "St. George Historic District",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "source_metadata_only_pending_independent_chronology_review",
+      "note": "已核对实体名称、文化资格、公开定位点与来源国家/分区；历史阶段尚未独立核验。名录提交、认定、建馆或重开年份不直接转换为遗址生命周期；不标成人工或专家确认。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "former airfield in Nanumea, Tuvalu",
+    "description_zh": "",
+    "details": "Source country association: Tuvalu (TV).",
+    "geography": {
+      "authority_id": "supplement:wd:Q11762732",
+      "countries": [
+        "TV"
+      ],
+      "note": "仅定位Nanumea废弃二战机场/跑道，Wikidata明确former airfield，官方文化景观说明明确同一岛南潟湖对岸的美军二战跑道。它不是普通现役机场，也不是全国环礁景观中心；P625用于狭长跑道粗定位，不以小数位承诺测量精度。 地点国家字段按来源实体/具名地点所属的当前国家声明，分区按官方国家页面；不依据坐标或历史疆域推断政治归属。precision仅保留来源参数，不承诺米级精度；没有新增遗址生命周期或阶段。",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q11762732",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2510252384; sha256:8ef200eb068690ef833d098c32c331c94bc40a307d7fb31f52107c7cb478823c",
+        "title": "Nanumea Airfield",
+        "uri": "https://www.wikidata.org/wiki/Q11762732"
+      }
+    },
+    "id": "wd:Q11762732",
+    "location_precision": null,
+    "names": [
+      "Nanumea Airfield"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      176.129,
+      -5.683333
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q11762732",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2510252384; sha256:8ef200eb068690ef833d098c32c331c94bc40a307d7fb31f52107c7cb478823c",
+        "title": "Nanumea Airfield",
+        "uri": "https://www.wikidata.org/wiki/Q11762732"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "On the opposite side of the southern lagoon is an airstrip constructed by the American military during World War II.",
+        "id": "qualification:TV",
+        "license": null,
+        "publisher": "Ministry of Local Government and Agriculture / UNESCO WHC",
+        "revision": "sha256:594ce198308f383307ab0b5069e25d781308f5ad9d72b416050dff229796be16",
+        "title": "The Pacific atoll-island cultural landscape of Tuvalu",
+        "uri": "https://whc.unesco.org/en/tentativelists/6707/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Asia & Pacific, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:TV",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:caec695ea044d4958e5d0148d4a140bf37417f2b2d2eef879cd76c331b627a41",
+        "title": "UNESCO World Heritage Convention — Tuvalu",
+        "uri": "https://whc.unesco.org/en/statesparties/tv/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q672",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562959315; sha256:b3bf91df461a36d48b015c91a10e7d276a3439b4263a9ab1d65cf88cdcb72749",
+        "title": "Tuvalu",
+        "uri": "https://www.wikidata.org/wiki/Q672"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/6707/",
+    "title": "Nanumea Airfield",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "文化资格和定位来源核对不等于历史阶段核验；本批未建立阶段，提交日期不是建造年。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [],
+    "description": "",
+    "description_zh": "",
+    "details": "Source country association: South Sudan (SS).",
+    "geography": {
+      "authority_id": "supplement:auth:whc-tentative:6275",
+      "countries": [
+        "SS"
+      ],
+      "note": "原官方坐标未给precision、坐标基准或误差半径。本条为官方6275的Deim Zubeir奴隶壕沟遗址，用官方明确N/E十进制度，未使用约2.7km外WD镇区点。Q985357只作排除的背景身份，不加入ID、名称、别名或坐标。来源未给坐标基准/误差，未标为精确发掘点。国家与分区来自来源声明，不从代表点或历史疆界推断政治归属及生命周期。",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "N7.715453 E26.192068",
+        "id": "coordinates:whc-tentative:6275",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:2cacb3931e12c9579a8c582800383f6dd5b5c62b33cc3a396a3573ed48520c48",
+        "title": "Deim Zubeir – Slave route site",
+        "uri": "https://whc.unesco.org/en/tentativelists/6275/"
+      }
+    },
+    "id": "auth:whc-tentative:6275",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      26.192068,
+      7.715453
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Deim Zubeir is an historical slave trench",
+        "id": "qualification:SS",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:2cacb3931e12c9579a8c582800383f6dd5b5c62b33cc3a396a3573ed48520c48",
+        "title": "Deim Zubeir – Slave route site",
+        "uri": "https://whc.unesco.org/en/tentativelists/6275/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "N7.715453 E26.192068",
+        "id": "coordinates:whc-tentative:6275",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:2cacb3931e12c9579a8c582800383f6dd5b5c62b33cc3a396a3573ed48520c48",
+        "title": "Deim Zubeir – Slave route site",
+        "uri": "https://whc.unesco.org/en/tentativelists/6275/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Africa, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:SS",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:52fd65b99a4f61b7d6305ee717682a28286cd174fdc44920b3fa33240517640a",
+        "title": "UNESCO World Heritage Convention — South Sudan",
+        "uri": "https://whc.unesco.org/en/statesparties/ss/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P297: SS",
+        "id": "wikidata-country:Q958",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562956989; sha256:1fadedd5f2d30c1bea6efb7b92e7032e451fccaeefe2c9ada3680a8d9ce70180",
+        "title": "South Sudan",
+        "uri": "https://www.wikidata.org/wiki/Q958"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/6275/",
+    "title": "Deim Zubeir – Slave route site",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "文化资格和定位来源核对不等于历史阶段核验；本批未建立阶段，提交日期不是建造年。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "Tentative World Heritage Site in Guinée",
+    "description_zh": "",
+    "details": "Source country association: Guinea (GN).",
+    "geography": {
+      "authority_id": "supplement:wd:Q65920478",
+      "countries": [
+        "GN"
+      ],
+      "note": "原WD P625 precision=0.016666666666667度，仅保存来源数值，不代表实地误差或发掘精度。Gberedou/Hamana建筑及文化景观整体；原WD仅有法语名称，未补造英文翻译。点与官方9度13分西、10度53分北吻合，不把每个村落或仪式当作独立遗址。国家与分区来自来源声明，不从代表点或历史疆界推断政治归属及生命周期。",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q65920478",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "1243400999; sha256:c73e2934642610964f20ae9c4b8869a5116933ac843f38e139ba05eb10c7cde9",
+        "title": "Architecture vernaculaire et paysage culturel mandingue du Gberedou/Hamana",
+        "uri": "https://www.wikidata.org/wiki/Q65920478"
+      }
+    },
+    "id": "wd:Q65920478",
+    "location_precision": null,
+    "names": [
+      "Architecture vernaculaire et paysage culturel mandingue du Gberedou/Hamana"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -9.2166666666667,
+      10.883333333333
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q65920478",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "1243400999; sha256:c73e2934642610964f20ae9c4b8869a5116933ac843f38e139ba05eb10c7cde9",
+        "title": "Architecture vernaculaire et paysage culturel mandingue du Gberedou/Hamana",
+        "uri": "https://www.wikidata.org/wiki/Q65920478"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "centres historiques et culturels de la Guinee.",
+        "id": "qualification:GN:0",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:d7c885f9887384eea2c2163b815491c0075a22141f783138a7e4a9052a3b1de4",
+        "title": "Architecture vernaculaire et paysage culturel mandingue du Gberedou/Hamana",
+        "uri": "https://whc.unesco.org/en/tentativelists/1521/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Africa, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:GN",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:6b4ec47dd25e8df20ad6fb8a63d147539c76e484f2d28a1b5163892ba508882d",
+        "title": "UNESCO World Heritage Convention — Guinea",
+        "uri": "https://whc.unesco.org/en/statesparties/gn/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P297: GN",
+        "id": "wikidata-country:Q1006",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2564284945; sha256:f1715d2bdf4390dc3e38dc6ca4b33445aa6b234f3dc9c377b82512e24f6e6a13",
+        "title": "Guinea",
+        "uri": "https://www.wikidata.org/wiki/Q1006"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/1521/",
+    "title": "Architecture vernaculaire et paysage culturel mandingue du Gberedou/Hamana",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "source_metadata_only_pending_independent_chronology_review",
+      "note": "已核对实体名称、文化资格、公开定位点与来源国家/分区；历史阶段尚未独立核验。名录提交、认定、建馆或重开年份不直接转换为遗址生命周期；不标成人工或专家确认。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "museum in Somalia",
+    "description_zh": "",
+    "details": "Source country association: Somalia (SO).",
+    "geography": {
+      "authority_id": "supplement:wd:Q2033310",
+      "countries": [
+        "SO"
+      ],
+      "note": "仅定位National Museum of Somalia这一实际博物馆建筑，UN官方恢复公告确认其文化机构身份。1933/1934开馆年份来源有差异，不合成建造或使用阶段；不把全国文化遗产集合作为一个坐标。 地点国家字段按来源实体/具名地点所属的当前国家声明，分区按官方国家页面；不依据坐标或历史疆域推断政治归属。precision仅保留来源参数，不承诺米级精度；没有新增遗址生命周期或阶段。",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q2033310",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2537661111; sha256:5be09c89b3536886782158d1e47bd47461c7a127e1e6c74d6c6ea4085aabe65d",
+        "title": "National Museum of Somalia",
+        "uri": "https://www.wikidata.org/wiki/Q2033310"
+      }
+    },
+    "id": "wd:Q2033310",
+    "location_precision": null,
+    "names": [
+      "National Museum of Somalia",
+      "Musée national de Somalie",
+      "Museo Nacional de Somalia",
+      "المتحف الوطني الصومالي",
+      "Национальный музей Сомали"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      45.3381,
+      2.0375
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q2033310",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2537661111; sha256:5be09c89b3536886782158d1e47bd47461c7a127e1e6c74d6c6ea4085aabe65d",
+        "title": "National Museum of Somalia",
+        "uri": "https://www.wikidata.org/wiki/Q2033310"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Somalia is making great strides in reviving its cultural heritage by restoring its main cultural institutions",
+        "id": "qualification:SO",
+        "license": null,
+        "publisher": "United Nations in Somalia",
+        "revision": "sha256:f18de4cab685f1bdb3f19b5ba61801bc508c39f7cd685bfc96883aff4db833a7",
+        "title": "The Federal Republic of Somalia reopens its National Museum in Mogadishu",
+        "uri": "https://somalia.un.org/en/51866-federal-republic-somalia-reopens-its-national-museum-mogadishu"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Africa, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:SO",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:6c9e3d52acabe5f05fa24d1a358f6daf7d69e85d95ede225d0cc89c6f0330a5c",
+        "title": "UNESCO World Heritage Convention — Somalia",
+        "uri": "https://whc.unesco.org/en/statesparties/so/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q1045",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2564284999; sha256:2fb0a403655236d28946f67a69245bbd13b5347a58faf31c9028d6b4b1a5a5fc",
+        "title": "Somalia",
+        "uri": "https://www.wikidata.org/wiki/Q1045"
+      }
+    ],
+    "source_uri": "https://somalia.un.org/en/51866-federal-republic-somalia-reopens-its-national-museum-mogadishu",
+    "title": "National Museum of Somalia",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "cultural_qualification_and_identity_check_only",
+      "note": "本轮核验文化资格、实体身份和定位来源；尚未独立核验建造、使用、改建或毁损阶段，不把保护、列名录或机构设立年份当作遗址生命周期。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Nauru Department of Commerce, Industry and Environment / Government of Nauru"
+    ],
+    "description": "",
+    "description_zh": "",
+    "details": "Source country association: Nauru (NR).",
+    "geography": {
+      "authority_id": "supplement:auth:sprep:d6eab109-2e10-4654-b3c4-5bb94f6a8867",
+      "countries": [
+        "NR"
+      ],
+      "note": "政府公开目录UUID所指Father Kayser标记、后被日军用作掩体的实体场址。来源只说拟列为heritage site，不宣称已经正式列级。公开页面未给可核数字坐标，保留未知；不是Command Ridge自然山峰。原资料标SPREP Private Licence，不复制文章，仅公开身份事实和7词引用，未宣称开放许可。 实体身份已核对，未取得可信公开数字坐标；repr_point=null且point_count=0，不补零坐标或近邻坐标。 国家／地区来自当前来源身份声明，分区来自官方区域资料；不按坐标推政治归属，不据分期推连续存在。",
+      "point_count": 0,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "used by the Japanese as a bunker",
+        "id": "qualification:nr-anibare-exa",
+        "license": null,
+        "publisher": "Nauru Department of Commerce, Industry and Environment / Government of Nauru",
+        "revision": "sha256:1ec380de12001c030043296aa63fd313c914661496bf6aaae8adb79e6fea8a98",
+        "title": "National Heritage Site - Location: Anibare",
+        "uri": "https://nauru-data.sprep.org/dataset/national-heritage-site-location-anibare"
+      }
+    },
+    "id": "auth:sprep:d6eab109-2e10-4654-b3c4-5bb94f6a8867",
+    "location_precision": null,
+    "names": [
+      "National Heritage Site - Location: Anibare"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": null,
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "used by the Japanese as a bunker",
+        "id": "qualification:nr-anibare-exa",
+        "license": null,
+        "publisher": "Nauru Department of Commerce, Industry and Environment / Government of Nauru",
+        "revision": "sha256:1ec380de12001c030043296aa63fd313c914661496bf6aaae8adb79e6fea8a98",
+        "title": "National Heritage Site - Location: Anibare",
+        "uri": "https://nauru-data.sprep.org/dataset/national-heritage-site-location-anibare"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "q697$88071E3C-AD50-48CC-8F93-3617C45B39A4=NR",
+        "id": "wikidata-country:Q697",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562956276",
+        "title": "Wikidata Q697 — ISO alpha-2 country identity",
+        "uri": "https://www.wikidata.org/wiki/Q697"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Asia & Pacific",
+        "id": "region:NR",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:425ff5159f3bffbef33cddf6b9876dff03ecd4df8bebb60b6c57f535f3e81b79",
+        "title": "UNESCO World Heritage country regional contact — NR",
+        "uri": "https://whc.unesco.org/en/statesparties/nr/"
+      }
+    ],
+    "source_uri": "https://nauru-data.sprep.org/dataset/national-heritage-site-location-anibare",
+    "title": "National Heritage Site - Location: Anibare",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "source_metadata_only_pending_independent_chronology_review",
+      "note": "已核对实体名称、文化资格、公开定位点与来源国家/分区；历史阶段尚未独立核验。名录提交、认定、建馆或重开年份不直接转换为遗址生命周期；不标成人工或专家确认。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "ancient Samoan structure",
+    "description_zh": "",
+    "details": "Source country association: Samoa (WS).",
+    "geography": {
+      "authority_id": "supplement:wd:Q7259289",
+      "countries": [
+        "WS"
+      ],
+      "note": "只定位Pulemelei Mound这一实体古结构；官方旅游机构直接将其列在历史地点专题，不把整个Savai’i岛或Manono系列文化景观中心当作该土丘。源P625 precision为null，保持未提供。 地点国家字段按来源实体/具名地点所属的当前国家声明，分区按官方国家页面；不依据坐标或历史疆域推断政治归属。precision仅保留来源参数，不承诺米级精度；没有新增遗址生命周期或阶段。",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q7259289",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2510701493; sha256:8ee904097e39a8bc0303b3a006b4d9b564799c105007ed2af8a105a4471ca52d",
+        "title": "Pulemelei Mound",
+        "uri": "https://www.wikidata.org/wiki/Q7259289"
+      }
+    },
+    "id": "wd:Q7259289",
+    "location_precision": null,
+    "names": [
+      "Pulemelei Mound",
+      "普莱梅莱土丘",
+      "Пулемелей (курган)"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -172.32444444444,
+      -13.735
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q7259289",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2510701493; sha256:8ee904097e39a8bc0303b3a006b4d9b564799c105007ed2af8a105a4471ca52d",
+        "title": "Pulemelei Mound",
+        "uri": "https://www.wikidata.org/wiki/Q7259289"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "The Pulemelei Mound (or pyramid) is situated within the Letolo Plantation in Palauli",
+        "id": "qualification:WS",
+        "license": null,
+        "publisher": "Samoa Tourism Authority",
+        "revision": "sha256:fed1c0941e4f5a6e37442465762954d9485c654329755186714844f10dfc20f8",
+        "title": "Samoa’s top historical sites & landmarks",
+        "uri": "https://www.samoa.travel/samoa-travel-blog/samoas-top-historical-sites-landmarks/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Asia & Pacific, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:WS",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:7938418278557c3430d2de2602e2621f3f9c6346bcac26f63162fdd18b3641b6",
+        "title": "UNESCO World Heritage Convention — Samoa",
+        "uri": "https://whc.unesco.org/en/statesparties/ws/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q683",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562960498; sha256:1a571f9450e6da4c0bfb73ce2a1987030642069cf1bc73501374da87b1d7bd5c",
+        "title": "Samoa",
+        "uri": "https://www.wikidata.org/wiki/Q683"
+      }
+    ],
+    "source_uri": "https://www.samoa.travel/samoa-travel-blog/samoas-top-historical-sites-landmarks/",
+    "title": "Pulemelei Mound",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "source_metadata_only_pending_independent_chronology_review",
+      "note": "已核对实体名称、文化资格、公开定位点与来源国家/分区；历史阶段尚未独立核验。名录提交、认定、建馆或重开年份不直接转换为遗址生命周期；不标成人工或专家确认。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "Roman Catholic cathedral in Malabo, Equatorial Guinea",
+    "description_zh": "",
+    "details": "Source country association: Equatorial Guinea (GQ).",
+    "geography": {
+      "authority_id": "supplement:wd:Q8342845",
+      "countries": [
+        "GQ"
+      ],
+      "note": "定位St. Elisabeth Cathedral这一实体建筑；资格依据为赤道几内亚政府马拉博主教座堂历史遗产公报。不是Batete村，也不把Batete教堂含歧义的官方DMS修正为本建筑坐标。 地点国家字段按来源实体/具名地点所属的当前国家声明，分区按官方国家页面；不依据坐标或历史疆域推断政治归属。precision仅保留来源参数，不承诺米级精度；没有新增遗址生命周期或阶段。",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q8342845",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2491550369; sha256:6d86d7b825350d2aa9b3865abcbab2dc64c3616da5445d02dc24fe093f3e53ce",
+        "title": "St. Elisabeth Cathedral",
+        "uri": "https://www.wikidata.org/wiki/Q8342845"
+      }
+    },
+    "id": "wd:Q8342845",
+    "location_precision": null,
+    "names": [
+      "St. Elisabeth Cathedral",
+      "聖伊莎貝爾主教座堂 (馬拉博)",
+      "cathédrale Sainte-Élisabeth de Malabo",
+      "Catedral de Malabo",
+      "Catedral de Santa Isabel (Malabo)"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      8.78276,
+      3.75698
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q8342845",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2491550369; sha256:6d86d7b825350d2aa9b3865abcbab2dc64c3616da5445d02dc24fe093f3e53ce",
+        "title": "St. Elisabeth Cathedral",
+        "uri": "https://www.wikidata.org/wiki/Q8342845"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Este lugar de culto, cuya existencia data desde 1916, hace 104 años y que constituye un patrimonio histórico",
+        "id": "qualification:GQ",
+        "license": null,
+        "publisher": "Government of Equatorial Guinea",
+        "revision": "sha256:a970937db347775bfe2843afedd6d3c09007d58f15f89d041f58babc7e1a5e78",
+        "title": "Comunicado del Gobierno sobre el incendio en la Catedral de Malabo",
+        "uri": "https://www.guineaecuatorialpress.com/noticias/comunicado_del_gobierno_sobre_el_incendio_en_la_catedral_de_malabo"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Africa, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:GQ",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:7fc68f929e21d6103ed9d7415f21e1d33efa60aef5432399e832c82e32635a13",
+        "title": "UNESCO World Heritage Convention — Equatorial Guinea",
+        "uri": "https://whc.unesco.org/en/statesparties/gq/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q983",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2564285048; sha256:63a49ea6df01a258867d369d0156197c747662bb926e89e7eb667ffddd8452db",
+        "title": "Equatorial Guinea",
+        "uri": "https://www.wikidata.org/wiki/Q983"
+      }
+    ],
+    "source_uri": "https://www.guineaecuatorialpress.com/noticias/comunicado_del_gobierno_sobre_el_incendio_en_la_catedral_de_malabo",
+    "title": "St. Elisabeth Cathedral",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "source_metadata_only_pending_independent_chronology_review",
+      "note": "已核对实体名称、文化资格、公开定位点与来源国家/分区；历史阶段尚未独立核验。名录提交、认定、建馆或重开年份不直接转换为遗址生命周期；不标成人工或专家确认。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "a stone trilithon located in Tonga",
+    "description_zh": "",
+    "details": "Source country association: Tonga (TO).",
+    "geography": {
+      "authority_id": "supplement:wd:Q1433433",
+      "countries": [
+        "TO"
+      ],
+      "note": "只定位Ha’amonga ‘a Maui石门（三石结构），它是官方Ancient Capitals系列描述中的明确建筑；不是两个古都或整个历史公园的中心。 地点国家字段按来源实体/具名地点所属的当前国家声明，分区按官方国家页面；不依据坐标或历史疆域推断政治归属。precision仅保留来源参数，不承诺米级精度；没有新增遗址生命周期或阶段。",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q1433433",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2561754630; sha256:2e5999e10755be661776d433bc437b313348b5b9deaee4fb71c4c24ae4f1679b",
+        "title": "Ha'amonga 'a Maui",
+        "uri": "https://www.wikidata.org/wiki/Q1433433"
+      }
+    },
+    "id": "wd:Q1433433",
+    "location_precision": null,
+    "names": [
+      "Ha'amonga 'a Maui",
+      "Burden of Maui",
+      "Хаамонга-а-Мауи"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -175.04805556,
+      -21.13666667
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q1433433",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2561754630; sha256:2e5999e10755be661776d433bc437b313348b5b9deaee4fb71c4c24ae4f1679b",
+        "title": "Ha'amonga 'a Maui",
+        "uri": "https://www.wikidata.org/wiki/Q1433433"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "a monumental stone architecture comprising of three coral limestone slabs.",
+        "id": "qualification:TO",
+        "license": null,
+        "publisher": "Tonga National Commission for UNESCO / UNESCO WHC",
+        "revision": "sha256:055efb79d7afde07fdf91b2be41f1bfd194a494632989a177557795bfa5eb415",
+        "title": "The Ancient Capitals of the Kingdom of Tonga",
+        "uri": "https://whc.unesco.org/en/tentativelists/5167/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Asia & Pacific, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:TO",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:626d6d7bed8c921fc183223ba1a088f4a3c93a757a377aba8e0ccdcf3dcccaa9",
+        "title": "UNESCO World Heritage Convention — Tonga",
+        "uri": "https://whc.unesco.org/en/statesparties/to/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q678",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562960470; sha256:ca3c76289776090b9c040561f4aec1bf74c6b0cd0ffa25a5bdfacec1cc8f1600",
+        "title": "Tonga",
+        "uri": "https://www.wikidata.org/wiki/Q678"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/5167/",
+    "title": "Ha'amonga 'a Maui",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "cultural_qualification_and_identity_check_only",
+      "note": "本轮核验文化资格、实体身份和定位来源；尚未独立核验建造、使用、改建或毁损阶段，不把保护、列名录或机构设立年份当作遗址生命周期。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Australian Government Department of Veterans’ Affairs, Office of Australian War Graves"
+    ],
+    "description": "",
+    "description_zh": "",
+    "details": "Source country association: Kiribati (KI).",
+    "geography": {
+      "authority_id": "supplement:auth:dva:betio-coast-watchers-memorial",
+      "countries": [
+        "KI"
+      ],
+      "note": "DVA确认的Temakin Cemetery实体二战纪念设施，不是Tarawa战役事件或整个Betio岛。未取得该设施的权威数字坐标；真实位置在本资料中记未知，不取邻近岛／战役中心点。 实体身份已核对，未取得可信公开数字坐标；repr_point=null且point_count=0，不补零坐标或近邻坐标。 国家／地区来自当前来源身份声明，分区来自官方区域资料；不按坐标推政治归属，不据分期推连续存在。",
+      "point_count": 0,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "qualification:ki-dva-memorial-exa",
+        "license": null,
+        "publisher": "Australian Government Department of Veterans’ Affairs, Office of Australian War Graves",
+        "revision": "sha256:77ae12b51f36fc76e15d8c5fb34f34909c3f4b42a01862c94db419e25b29e39e",
+        "title": "Kiribati - Betio Coast Watchers Memorial",
+        "uri": "https://www.dva.gov.au/recognition-and-commemoration/memorials/memorials-asia-pacific/kiribati-betio-coast-watchers-memorial"
+      }
+    },
+    "id": "auth:dva:betio-coast-watchers-memorial",
+    "location_precision": null,
+    "names": [
+      "Kiribati - Betio Coast Watchers Memorial"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": null,
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "The Memorial is located at the Temakin Cemetery",
+        "id": "qualification:ki-dva-memorial-exa",
+        "license": null,
+        "publisher": "Australian Government Department of Veterans’ Affairs, Office of Australian War Graves",
+        "revision": "sha256:77ae12b51f36fc76e15d8c5fb34f34909c3f4b42a01862c94db419e25b29e39e",
+        "title": "Kiribati - Betio Coast Watchers Memorial",
+        "uri": "https://www.dva.gov.au/recognition-and-commemoration/memorials/memorials-asia-pacific/kiribati-betio-coast-watchers-memorial"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "q710$7E592525-6793-4100-8FF5-77920A8528E0=KI",
+        "id": "wikidata-country:Q710",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562956283",
+        "title": "Wikidata Q710 — ISO alpha-2 country identity",
+        "uri": "https://www.wikidata.org/wiki/Q710"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Asia & Pacific",
+        "id": "region:KI",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:870a4ac93e28f384bc7f4134939c313a302e0ffabfc3c4aa276b2c939b779247",
+        "title": "UNESCO World Heritage country regional contact — KI",
+        "uri": "https://whc.unesco.org/en/statesparties/ki/"
+      }
+    ],
+    "source_uri": "https://www.dva.gov.au/recognition-and-commemoration/memorials/memorials-asia-pacific/kiribati-betio-coast-watchers-memorial",
+    "title": "Kiribati - Betio Coast Watchers Memorial",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "source_metadata_only_pending_independent_chronology_review",
+      "note": "已核对实体名称、文化资格、公开定位点与来源国家/分区；历史阶段尚未独立核验。名录提交、认定、建馆或重开年份不直接转换为遗址生命周期；不标成人工或专家确认。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "",
+    "description_zh": "",
+    "details": "Source country association: Burundi (BI).",
+    "geography": {
+      "authority_id": "supplement:wd:Q5564954",
+      "countries": [
+        "BI"
+      ],
+      "note": "记录Gishora历史王家院落所在的具名场所；Wikidata条目类型为地理区域，但同名实体的公开身份是王家场地，不冒充某间鼓屋的精确位置。P625仅作场所代表点，不把鼓舞表演这一非物质项目当作新增实体。 地点国家字段按来源实体/具名地点所属的当前国家声明，分区按官方国家页面；不依据坐标或历史疆域推断政治归属。precision仅保留来源参数，不承诺米级精度；没有新增遗址生命周期或阶段。",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q5564954",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "1340829825; sha256:4affe716b1248f1e0ab0ee405fe41a35407c4e217c4f79749994339a0cae4966",
+        "title": "Gishora",
+        "uri": "https://www.wikidata.org/wiki/Q5564954"
+      }
+    },
+    "id": "wd:Q5564954",
+    "location_precision": null,
+    "names": [
+      "Gishora"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      29.922,
+      -3.363
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q5564954",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "1340829825; sha256:4affe716b1248f1e0ab0ee405fe41a35407c4e217c4f79749994339a0cae4966",
+        "title": "Gishora",
+        "uri": "https://www.wikidata.org/wiki/Q5564954"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Ce lieu est une résidence royale qui a été fondée par le roi Ntare Rugamba",
+        "id": "qualification:BI",
+        "license": null,
+        "publisher": "Burundi National Commission for UNESCO / UNESCO WHC",
+        "revision": "sha256:173309af1624f61558af19da10c8742aa8fd9145d44139ad93425a25f6af2c92",
+        "title": "Résidence Royale de Gishora",
+        "uri": "https://whc.unesco.org/en/tentativelists/6927/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Africa, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:BI",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:b9a0d5cd2584bcff669d1355e8356d2e5fb633f5288caf62fb87a46c550f68a0",
+        "title": "UNESCO World Heritage Convention — Burundi",
+        "uri": "https://whc.unesco.org/en/statesparties/bi/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q967",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2560294620; sha256:7ecbfd494a6b9e88a30caa005c44a212b606e0d08762dc6d16e46db0325ad932",
+        "title": "Burundi",
+        "uri": "https://www.wikidata.org/wiki/Q967"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/6927/",
+    "title": "Gishora",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "cultural_qualification_and_identity_check_only",
+      "note": "本轮核验文化资格、实体身份和定位来源；尚未独立核验建造、使用、改建或毁损阶段，不把保护、列名录或机构设立年份当作遗址生命周期。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors",
+      "Saint Lucia National Trust"
+    ],
+    "description": "tourist attraction in Saint-Lucia",
+    "description_zh": "",
+    "details": "Source country association: Saint Lucia (LC).",
+    "geography": {
+      "authority_id": "supplement:wd:Q125907416",
+      "countries": [
+        "LC"
+      ],
+      "note": "National Trust明确列入有形文化遗产的Pigeon Island National Landmark实体历史场址。采用独立landmark QID，不用自然岛主体泛指文化资格；不把整个岛的所有自然要素算遗迹。 代表点来自固定Wikidata P625；源precision=1e-05°仅为声明分辨率，不承诺实测定位误差。 国家／地区来自当前来源身份声明，分区来自官方区域资料；不按坐标推政治归属，不据分期推连续存在。",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "P625 Q125907416$083f6ae1-497a-ad90-3b69-9f85ecabe929; P17 Q125907416$5976b6fb-4f89-b0f2-8d63-cf90bba8249f; precision=1e-05 degrees; globe=Q2.",
+        "id": "wikidata:Q125907416",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2513554349",
+        "title": "Wikidata Q125907416 — original identity, labels and coordinate",
+        "uri": "https://www.wikidata.org/wiki/Q125907416"
+      }
+    },
+    "id": "wd:Q125907416",
+    "location_precision": null,
+    "names": [
+      "Pigeon Island National Landmark"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -60.9643,
+      14.09256
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P625 Q125907416$083f6ae1-497a-ad90-3b69-9f85ecabe929; P17 Q125907416$5976b6fb-4f89-b0f2-8d63-cf90bba8249f; precision=1e-05 degrees; globe=Q2.",
+        "id": "wikidata:Q125907416",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2513554349",
+        "title": "Wikidata Q125907416 — original identity, labels and coordinate",
+        "uri": "https://www.wikidata.org/wiki/Q125907416"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "used to be a Naval Base and Headquarters",
+        "id": "qualification:lc-tangible",
+        "license": null,
+        "publisher": "Saint Lucia National Trust",
+        "revision": "sha256:a9390d2827708f73a1f5f4ace097af7afa3a31c90f1389f004cac01b83b3c284",
+        "title": "Tangible Cultural Heritage Sites in Saint Lucia",
+        "uri": "https://saintlucianationaltrust.com/tangible-cultural-heritage-sites/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "q760$8CDF5B94-4389-4662-ADA6-8C83B3F2B90F=LC",
+        "id": "wikidata-country:Q760",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2563728894",
+        "title": "Wikidata Q760 — ISO alpha-2 country identity",
+        "uri": "https://www.wikidata.org/wiki/Q760"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Latin America & the Carribean",
+        "id": "region:LC",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:31bc71731c4ff978e327bc1509de0b66789e56ef8393d7de7ed9823e23083005",
+        "title": "UNESCO World Heritage country regional contact — LC",
+        "uri": "https://whc.unesco.org/en/statesparties/lc/"
+      }
+    ],
+    "source_uri": "https://saintlucianationaltrust.com/tangible-cultural-heritage-sites/",
+    "title": "Pigeon Island National Landmark",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "文化资格和定位来源核对不等于历史阶段核验；本批未建立阶段，提交日期不是建造年。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "Tentative World Heritage Site in Djibouti",
+    "description_zh": "",
+    "details": "Source country association: Djibouti (DJ).",
+    "geography": {
+      "authority_id": "supplement:wd:Q19606245",
+      "countries": [
+        "DJ"
+      ],
+      "note": "原WD P625 precision=1e-06度，仅保存来源数值，不代表实地误差或发掘精度。Abourma岩刻场所及其源资料整体；源描述涉及沿岩刻区分布，单一WD点不代表每一刻画的发掘坐标或边界。国家与分区来自来源声明，不从代表点或历史疆界推断政治归属及生命周期。",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q19606245",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2517192179; sha256:e9068c0b60ff5d7661a2584e5a94b93afb12406209794cb1c4a58c6cc73d4a07",
+        "title": "Abourma",
+        "uri": "https://www.wikidata.org/wiki/Q19606245"
+      }
+    },
+    "id": "wd:Q19606245",
+    "location_precision": null,
+    "names": [
+      "Abourma"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      42.481649,
+      11.90505
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q19606245",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2517192179; sha256:e9068c0b60ff5d7661a2584e5a94b93afb12406209794cb1c4a58c6cc73d4a07",
+        "title": "Abourma",
+        "uri": "https://www.wikidata.org/wiki/Q19606245"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Ce site exceptionnellement riche d’Abourma, recèle d’un art rupestre de la préhistoire.",
+        "id": "qualification:DJ:0",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:533f5e49a693f677488cef043b04eda9723420b310b048acfa1401b1f93d2807",
+        "title": "Les Gravures Rupestre d’Abourma",
+        "uri": "https://whc.unesco.org/en/tentativelists/5957/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Africa, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:DJ",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:4f0d3aaf35248f005c71f2ec5009cd519e1615dffad99d3a3b87156f5abc8cdf",
+        "title": "UNESCO World Heritage Convention — Djibouti",
+        "uri": "https://whc.unesco.org/en/statesparties/dj/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P297: DJ",
+        "id": "wikidata-country:Q977",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2564285035; sha256:fb79084da3e743d9e9953456f4feb9284bdc69aeefd2855e7cd5bb6c66388edb",
+        "title": "Djibouti",
+        "uri": "https://www.wikidata.org/wiki/Q977"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/5957/",
+    "title": "Abourma",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "文化资格和定位来源核对不等于历史阶段核验；本批未建立阶段，提交日期不是建造年。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "human settlement",
+    "description_zh": "",
+    "details": "Source country association: Bhutan (BT).",
+    "geography": {
+      "authority_id": "supplement:wd:Q1261212",
+      "countries": [
+        "BT"
+      ],
+      "note": "原WD P625 precision=0.016666666666667度，仅保存来源数值，不代表实地误差或发掘精度。Drukgyal Dzong为同名历史宗堡场所；原WD英文描述为human settlement，未将其改写成历史摘要。WD点与官方N27 30 00 E89 20 00吻合，仅作代表点，不表示重建后的所有结构或精确边界。国家与分区来自来源声明，不从代表点或历史疆界推断政治归属及生命周期。",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q1261212",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2447470993; sha256:8fc438e780eaaca8fefc21c3747d60a5451fc8c0a727d2a9f340df54766fd0c6",
+        "title": "Drukgyal Dzong",
+        "uri": "https://www.wikidata.org/wiki/Q1261212"
+      }
+    },
+    "id": "wd:Q1261212",
+    "location_precision": null,
+    "names": [
+      "Drukyel Dzong",
+      "འབྲུག་རྒྱལ་རྫོང་།",
+      "Drukgyal Dzong",
+      "Dzong Drukgyal",
+      "Друкгьял-дзонг",
+      "Grad Drukgyal",
+      "朱克傑宗",
+      "Друкьел-дзонг",
+      "Друкгьел-дзонг"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      89.333333333333,
+      27.5
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q1261212",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2447470993; sha256:8fc438e780eaaca8fefc21c3747d60a5451fc8c0a727d2a9f340df54766fd0c6",
+        "title": "Drukgyal Dzong",
+        "uri": "https://www.wikidata.org/wiki/Q1261212"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Drukgyel Dzong had been served as an important base for defense in the region",
+        "id": "qualification:BT:0",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:7a4328e409e8bf87dd38548dc0d9fc9effe02dc0f50ba6ebf67cad0da03acee5",
+        "title": "Ancient Ruin of Drukgyel Dzong",
+        "uri": "https://whc.unesco.org/en/tentativelists/5694/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Asia & Pacific, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:BT",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:5a228b23f012e8637ebeab4830b840f18469d824572eb42ee766009fc816164e",
+        "title": "UNESCO World Heritage Convention — Bhutan",
+        "uri": "https://whc.unesco.org/en/statesparties/bt/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P297: BT",
+        "id": "wikidata-country:Q917",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2563722862; sha256:81c293a72461cd2b945141363f4250dfdefc2cc09f5fb1873f14941388498a4e",
+        "title": "Bhutan",
+        "uri": "https://www.wikidata.org/wiki/Q917"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/5694/",
+    "title": "Drukgyal Dzong",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "cultural_qualification_and_identity_check_only",
+      "note": "本轮核验文化资格、实体身份和定位来源；尚未独立核验建造、使用、改建或毁损阶段，不把保护、列名录或机构设立年份当作遗址生命周期。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Commonwealth Walkway Trust"
+    ],
+    "description": "",
+    "description_zh": "",
+    "details": "Source country association: Niue (NU).",
+    "geography": {
+      "authority_id": "supplement:auth:commonwealth:67579",
+      "countries": [
+        "NU"
+      ],
+      "note": "公开map_data_point/67579实体墓址；WHO 2025资产记录交叉确认Niue的Nukai Peniamina墓。未把Peniamina人物、Gospel Day节日、Tomb Point自然地理点或现代博物馆代替墓址。REST无公开坐标，保留未知。 实体身份已核对，未取得可信公开数字坐标；repr_point=null且point_count=0，不补零坐标或近邻坐标。 国家／地区来自当前来源身份声明，分区来自官方区域资料；不按坐标推政治归属，不据分期推连续存在。",
+      "point_count": 0,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "Gravesite of Nukai Peniamina",
+        "id": "who:2AOJ8ZZY5NRJ",
+        "license": null,
+        "publisher": "World Health Organization WPRO",
+        "revision": "asset dated 2025-05-07",
+        "title": "WHO Multimedia Library — Niue landscapes and landmarks",
+        "uri": "https://multimedia.who.int/archive/Niue-landscapes-and-landmarks-2AOJ8ZZY5NRJ.html"
+      }
+    },
+    "id": "auth:commonwealth:67579",
+    "location_precision": null,
+    "names": [
+      "Nukai Peniamina’s Grave"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": null,
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Nukai Peniamina’s Grave is where Peniamina is buried.",
+        "id": "qualification:nu-grave-walkway",
+        "license": null,
+        "publisher": "Commonwealth Walkway Trust",
+        "revision": "sha256:bfcf91d5a075c1443772d7026b68ea78513f55a56a759f19864d633a78a13d9c",
+        "title": "Nukai Peniamina’s Grave — Commonwealth Walkway",
+        "uri": "https://commonwealthwalkway.info/place/nukai-peniaminas-grave/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "q34020$AEBCC4E8-6A8F-41E3-9C3C-F0F651AECE36=NU",
+        "id": "wikidata-country:Q34020",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562959268",
+        "title": "Wikidata Q34020 — ISO alpha-2 country identity",
+        "uri": "https://www.wikidata.org/wiki/Q34020"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Asia & Pacific",
+        "id": "region:NU",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:0a846b6fc0a778d1ed2ec3d736666634303bbc28ca4f4eb9ecd426e2f1d63f03",
+        "title": "UNESCO World Heritage country regional contact — NU",
+        "uri": "https://whc.unesco.org/en/statesparties/nu/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Gravesite of Nukai Peniamina",
+        "id": "who:2AOJ8ZZY5NRJ",
+        "license": null,
+        "publisher": "World Health Organization WPRO",
+        "revision": "asset dated 2025-05-07",
+        "title": "WHO Multimedia Library — Niue landscapes and landmarks",
+        "uri": "https://multimedia.who.int/archive/Niue-landscapes-and-landmarks-2AOJ8ZZY5NRJ.html"
+      }
+    ],
+    "source_uri": "https://commonwealthwalkway.info/place/nukai-peniaminas-grave/",
+    "title": "Nukai Peniamina’s Grave",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "cultural_qualification_and_identity_check_only",
+      "note": "本轮核验文化资格、实体身份和定位来源；尚未独立核验建造、使用、改建或毁损阶段，不把保护、列名录或机构设立年份当作遗址生命周期。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors",
+      "National Institute of Culture and History, Institute of Archaeology"
+    ],
+    "description": "archaeological site",
+    "description_zh": "",
+    "details": "Source country association: Belize (BZ).",
+    "geography": {
+      "authority_id": "supplement:wd:Q446176",
+      "countries": [
+        "BZ"
+      ],
+      "note": "NICH考古机构确认的实体玛雅遗址；不将世界遗产自然条目当作文化资格。 代表点来自固定Wikidata P625；源precision=1e-08°仅为声明分辨率，不承诺实测定位误差。 国家／地区来自当前来源身份声明，分区来自官方区域资料；不按坐标推政治归属，不据分期推连续存在。",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "P625 Q446176$8FA0A30B-F937-44C3-A56E-05DABE00DA6E; P17 Q446176$FA0C40DE-FE50-402C-9F2F-88C8C003068D; precision=1e-08 degrees; globe=Q2.",
+        "id": "wikidata:Q446176",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2419779896",
+        "title": "Wikidata Q446176 — original identity, labels and coordinate",
+        "uri": "https://www.wikidata.org/wiki/Q446176"
+      }
+    },
+    "id": "wd:Q446176",
+    "location_precision": null,
+    "names": [
+      "Altun Ha",
+      "Altún Ha",
+      "阿尔通-哈",
+      "阿尔通哈",
+      "阿爾通-哈"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -88.34749809482085,
+      17.76463547004472
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P625 Q446176$8FA0A30B-F937-44C3-A56E-05DABE00DA6E; P17 Q446176$FA0C40DE-FE50-402C-9F2F-88C8C003068D; precision=1e-08 degrees; globe=Q2.",
+        "id": "wikidata:Q446176",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2419779896",
+        "title": "Wikidata Q446176 — original identity, labels and coordinate",
+        "uri": "https://www.wikidata.org/wiki/Q446176"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Altun Ha was an ancient Maya community",
+        "id": "qualification:bz-altun-ha",
+        "license": null,
+        "publisher": "National Institute of Culture and History, Institute of Archaeology",
+        "revision": "sha256:80f804376c02d808e25c50ab3c4c89621a3192afd744c78a7000878430cd57c7",
+        "title": "Altun Ha — National Institute of Culture and History",
+        "uri": "https://nichbelize.org/ia-sites/altun-ha/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "q242$CF6D1D27-540A-4F05-BD0A-9878FF613F83=BZ",
+        "id": "wikidata-country:Q242",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2564276855",
+        "title": "Wikidata Q242 — ISO alpha-2 country identity",
+        "uri": "https://www.wikidata.org/wiki/Q242"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Latin America & the Carribean",
+        "id": "region:BZ",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:1504a95456fdfb9bf2a9958df587132eba267e0521a8c7d15ebcec68f258acad",
+        "title": "UNESCO World Heritage country regional contact — BZ",
+        "uri": "https://whc.unesco.org/en/statesparties/bz/"
+      }
+    ],
+    "source_uri": "https://nichbelize.org/ia-sites/altun-ha/",
+    "title": "Altun Ha",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "source_metadata_only_pending_independent_chronology_review",
+      "note": "已核对实体名称、文化资格、公开定位点与来源国家/分区；历史阶段尚未独立核验。名录提交、认定、建馆或重开年份不直接转换为遗址生命周期；不标成人工或专家确认。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "world War II monument in the Solomon Islands",
+    "description_zh": "",
+    "details": "Source country association: Solomon Islands (SB).",
+    "geography": {
+      "authority_id": "supplement:wd:Q16891911",
+      "countries": [
+        "SB"
+      ],
+      "note": "只定位Guadalcanal American Memorial这一二战纪念园/纪念碑，不作战役全域中心。保留Wikidata原P625及precision；ABMC手册另给S9 26.554 E159 57.441，两份来源坐标略有差异，此点仅为粗定位，不能承诺入口或实测位置精度。 地点国家字段按来源实体/具名地点所属的当前国家声明，分区按官方国家页面；不依据坐标或历史疆域推断政治归属。precision仅保留来源参数，不承诺米级精度；没有新增遗址生命周期或阶段。",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q16891911",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2385500490; sha256:918759f94fb9b133402d4266c592aa71c189d02e406eef60b30228c767e330e2",
+        "title": "Guadalcanal American Memorial",
+        "uri": "https://www.wikidata.org/wiki/Q16891911"
+      }
+    },
+    "id": "wd:Q16891911",
+    "location_precision": null,
+    "names": [
+      "Guadalcanal American Memorial",
+      "Гуадалканал"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      159.958,
+      -9.44261
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q16891911",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2385500490; sha256:918759f94fb9b133402d4266c592aa71c189d02e406eef60b30228c767e330e2",
+        "title": "Guadalcanal American Memorial",
+        "uri": "https://www.wikidata.org/wiki/Q16891911"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Allied servicemen who lost their lives during the Guadalcanal Campaign of World War II",
+        "id": "qualification:SB",
+        "license": null,
+        "publisher": "American Battle Monuments Commission / US Government Publishing Office",
+        "revision": "sha256:f4c03c5aa6278103ee858369e0e85bce8c810ec80eb61668ec97c435f27ac365",
+        "title": "American Battle Monuments Commission Commemorative Sites Booklet",
+        "uri": "https://www.govinfo.gov/content/pkg/GOVPUB-Y3_AM3-PURL-gpo82213/pdf/GOVPUB-Y3_AM3-PURL-gpo82213.pdf"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Asia & Pacific, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:SB",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:b8157c7d52a7ec107fbe99914b82a6f404172dc185b43fc5741d925716291fb0",
+        "title": "UNESCO World Heritage Convention — Solomon Islands",
+        "uri": "https://whc.unesco.org/en/statesparties/sb/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q685",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562959341; sha256:efb6b8723eeebd2c26068ece6ca0418bae61b5e12fe775bf0ca8cf7113970b8e",
+        "title": "Solomon Islands",
+        "uri": "https://www.wikidata.org/wiki/Q685"
+      }
+    ],
+    "source_uri": "https://www.govinfo.gov/content/pkg/GOVPUB-Y3_AM3-PURL-gpo82213/pdf/GOVPUB-Y3_AM3-PURL-gpo82213.pdf",
+    "title": "Guadalcanal American Memorial",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "source_metadata_only_pending_independent_chronology_review",
+      "note": "已核对实体名称、文化资格、公开定位点与来源国家/分区；历史阶段尚未独立核验。名录提交、认定、建馆或重开年份不直接转换为遗址生命周期；不标成人工或专家确认。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Hermann, Aymeric",
+      "Forkel, Robert",
+      "Cook Islands Tourism Corporation"
+    ],
+    "description": "",
+    "description_zh": "",
+    "details": "Source country association: Cook Islands (CK).",
+    "geography": {
+      "authority_id": "supplement:auth:pofatu:cookislandsrarotongaaraitetonga",
+      "countries": [
+        "CK"
+      ],
+      "note": "仅定位POFATU中COOK ISLANDS / RAROTONGA / ARAI-TE-TONGA这一考古取样地点，与Cook Islands Tourism同名marae/royal court对照。采用研究库location元数据的完整公开经纬度（地图GeoJSON另用200.25132度的世界副本经度），不取网页格式化两位小数、不改为Maungaroa文化景观中心、不虚构Wikidata实体。 地点国家字段按来源实体/具名地点所属的当前国家声明，分区按官方国家页面；不依据坐标或历史疆域推断政治归属。precision仅保留来源参数，不承诺米级精度；没有新增遗址生命周期或阶段。",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "pofatu:cookislandsrarotongaaraitetonga",
+        "license": "CC BY 4.0",
+        "publisher": "Hermann, Aymeric & Forkel, Robert / POFATU",
+        "revision": "sha256:e0bdec2bf0a72a865f61e832e30e803dbae03e6b9928357159939567e13e13c9",
+        "title": "COOK ISLANDS / RAROTONGA / ARAI-TE-TONGA",
+        "uri": "https://pofatu.clld.org/languages/cookislandsrarotongaaraitetonga"
+      }
+    },
+    "id": "auth:pofatu:cookislandsrarotongaaraitetonga",
+    "location_precision": null,
+    "names": [
+      "Arai-Te-Tonga",
+      "COOK ISLANDS / RAROTONGA / ARAI-TE-TONGA"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -159.74868,
+      -21.213453
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "pofatu:cookislandsrarotongaaraitetonga",
+        "license": "CC BY 4.0",
+        "publisher": "Hermann, Aymeric & Forkel, Robert / POFATU",
+        "revision": "sha256:e0bdec2bf0a72a865f61e832e30e803dbae03e6b9928357159939567e13e13c9",
+        "title": "COOK ISLANDS / RAROTONGA / ARAI-TE-TONGA",
+        "uri": "https://pofatu.clld.org/languages/cookislandsrarotongaaraitetonga"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Arai-te-Tonga is the name of the marae (temple) and koutu (royal court) of the Makea Tribe of Te-au-o-Tonga",
+        "id": "qualification:CK",
+        "license": null,
+        "publisher": "Cook Islands Tourism Corporation",
+        "revision": "sha256:7867fb5cb0eb204e3f04a7f1b4f14b68114d7cb3152a094e7266af56ba5079ea",
+        "title": "Arai-Te-Tonga",
+        "uri": "https://cookislands.travel/arai-te-tonga"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Asia & Pacific, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:CK",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:ab5248725665e63ac2b24b50400344b5718a3a43a558e6e84c472d38aa4f989a",
+        "title": "UNESCO World Heritage Convention — Cook Islands",
+        "uri": "https://whc.unesco.org/en/statesparties/ck/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q26988",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562959247; sha256:a8639687f1ce81487aa4a6a85616f72ad651a3c98dcd06d06fa544d1f70d3051",
+        "title": "Cook Islands",
+        "uri": "https://www.wikidata.org/wiki/Q26988"
+      }
+    ],
+    "source_uri": "https://cookislands.travel/arai-te-tonga",
+    "title": "COOK ISLANDS / RAROTONGA / ARAI-TE-TONGA",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "文化资格和定位来源核对不等于历史阶段核验；本批未建立阶段，提交日期不是建造年。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "cultural site included in World heritage Tentative Lists",
+    "description_zh": "",
+    "details": "Source country association: Congo (CG).",
+    "geography": {
+      "authority_id": "supplement:wd:Q55595494",
+      "countries": [
+        "CG"
+      ],
+      "note": "原WD P625 precision=0.00027777777777778度，仅保存来源数值，不代表实地误差或发掘精度。Loango旧奴隶出海港文化场所，不是整个Loango城镇；点为WD历史港口代表位置，未判定港口范围、历史主权或逐年使用期。国家与分区来自来源声明，不从代表点或历史疆界推断政治归属及生命周期。",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q55595494",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2399599356; sha256:2b303f26a2738845fca6d2d523f4384689fef67a88709653402a6f5ee24713e8",
+        "title": "Loango Slavery Harbour",
+        "uri": "https://www.wikidata.org/wiki/Q55595494"
+      }
+    },
+    "id": "wd:Q55595494",
+    "location_precision": null,
+    "names": [
+      "Loango Slavery Harbour",
+      "Former slave embarkation port of Loango",
+      "Ancien port d'embarquement des esclaves de Loango",
+      "ロアンゴの旧奴隷積出港",
+      "Лоанго (гавань рабов)",
+      "Bandari ya zamani ya watumwa ya Loango",
+      "Лоанго колларны төяү култыгы"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      11.816944444444,
+      -4.6333333333333
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q55595494",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2399599356; sha256:2b303f26a2738845fca6d2d523f4384689fef67a88709653402a6f5ee24713e8",
+        "title": "Loango Slavery Harbour",
+        "uri": "https://www.wikidata.org/wiki/Q55595494"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "L’Ancien port d’embarquement des esclaves de Loango",
+        "id": "qualification:CG:0",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:34bbd5e882258584f76a862609291d99ab41a255c2c5e47567d8cedfc2b4a89a",
+        "title": "Ancien port d’embarquement des esclaves de Loango",
+        "uri": "https://whc.unesco.org/en/tentativelists/5373/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Africa, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:CG",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:8daf70243200aafcfbe6a73222f3732e53b95237a531d223ae80817d795cec9f",
+        "title": "UNESCO World Heritage Convention — Congo",
+        "uri": "https://whc.unesco.org/en/statesparties/cg/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P297: CG",
+        "id": "wikidata-country:Q971",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562957029; sha256:ec9dd7d06f3927f6f2c48fa78d58cd0e4e5295d9d7c02085bb8f7b8334bda21e",
+        "title": "Republic of the Congo",
+        "uri": "https://www.wikidata.org/wiki/Q971"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/5373/",
+    "title": "Loango Slavery Harbour",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "文化资格和定位来源核对不等于历史阶段核验；本批未建立阶段，提交日期不是建造年。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "historic site in Democratic Republic of the Congo",
+    "description_zh": "",
+    "details": "Source country association: Democratic Republic of the Congo (CD).",
+    "geography": {
+      "authority_id": "supplement:wd:Q1167056",
+      "countries": [
+        "CD"
+      ],
+      "note": "原WD P625 precision=0.0089851015680275度，仅保存来源数值，不代表实地误差或发掘精度。本条是Matupi考古洞穴，非整个Hoyo山地或自然公园；官方混合候选明确有考古遗存，WD坐标仅为洞穴代表点。国家与分区来自来源声明，不从代表点或历史疆界推断政治归属及生命周期。",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q1167056",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2068250796; sha256:3cb6172a55b4bd1a0d2938c74a6bd91b31730306c5fbff056ad7df1381247484",
+        "title": "Matupi Cave",
+        "uri": "https://www.wikidata.org/wiki/Q1167056"
+      }
+    },
+    "id": "wd:Q1167056",
+    "location_precision": null,
+    "names": [
+      "كهف ماتوبي",
+      "كهف ماتوبى",
+      "Matupi Cave",
+      "grotte de Matupi",
+      "Matupi-barlang",
+      "Matupi Mağarası",
+      "马图皮洞穴",
+      "馬圖皮洞穴"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      30.008462,
+      1.193327
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q1167056",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2068250796; sha256:3cb6172a55b4bd1a0d2938c74a6bd91b31730306c5fbff056ad7df1381247484",
+        "title": "Matupi Cave",
+        "uri": "https://www.wikidata.org/wiki/Q1167056"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "La grotte de Matupi est un des sites archéologiques majeurs de l'Afrique subsaharienne.",
+        "id": "qualification:CD:0",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:b6447da381ec9268bde78cb630f790604eee29cf5810383be5d2fcc1eeee3de9",
+        "title": "Grottes de Matupi",
+        "uri": "https://whc.unesco.org/en/tentativelists/962/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Africa, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:CD",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:8682776a26fe210fa6abc88ecd7526bd2d5b34e429ac5f4693d193de07233018",
+        "title": "UNESCO World Heritage Convention — Democratic Republic of the Congo",
+        "uri": "https://whc.unesco.org/en/statesparties/cd/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P297: CD",
+        "id": "wikidata-country:Q974",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2558482625; sha256:762a4ef067000aab9074177510f64be0aa6d2747d46dd98b2f2158b230b44645",
+        "title": "Democratic Republic of the Congo",
+        "uri": "https://www.wikidata.org/wiki/Q974"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/962/",
+    "title": "Matupi Cave",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "cultural_qualification_and_identity_check_only",
+      "note": "本轮核验文化资格、实体身份和定位来源；尚未独立核验建造、使用、改建或毁损阶段，不把保护、列名录或机构设立年份当作遗址生命周期。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors",
+      "Australian National University; Standish, García-Diez, O’Connor and Oliveira"
+    ],
+    "description": "cave and archaeological site in East Timor",
+    "description_zh": "",
+    "details": "Source country association: Timor-Leste (TL).",
+    "geography": {
+      "authority_id": "supplement:wd:Q13403774",
+      "countries": [
+        "TL"
+      ],
+      "note": "ANU研究团队确认有洞穴艺术的实体考古洞穴，不以自然洞穴属性入选。Pleistocene年代仍需独立核验，不把BP概略叙述换成精确公历年份或夹到地图下限。 代表点来自固定Wikidata P625；源precision=2.77777777778e-06°仅为声明分辨率，不承诺实测定位误差。 国家／地区来自当前来源身份声明，分区来自官方区域资料；不按坐标推政治归属，不据分期推连续存在。",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "P625 Q13403774$EFCC007C-E32B-4792-8D46-64C5D5BCFB11; P17 Q13403774$F0599886-A8F6-4070-B50A-A2318EFEA463; precision=2.77777777778e-06 degrees; globe=Q2.",
+        "id": "wikidata:Q13403774",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2438695564",
+        "title": "Wikidata Q13403774 — original identity, labels and coordinate",
+        "uri": "https://www.wikidata.org/wiki/Q13403774"
+      }
+    },
+    "id": "wd:Q13403774",
+    "location_precision": null,
+    "names": [
+      "Lene Hara cave"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      127.29652405,
+      -8.40844179
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P625 Q13403774$EFCC007C-E32B-4792-8D46-64C5D5BCFB11; P17 Q13403774$F0599886-A8F6-4070-B50A-A2318EFEA463; precision=2.77777777778e-06 degrees; globe=Q2.",
+        "id": "wikidata:Q13403774",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2438695564",
+        "title": "Wikidata Q13403774 — original identity, labels and coordinate",
+        "uri": "https://www.wikidata.org/wiki/Q13403774"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "16 hand stencil motifs in Lene Hara Cave",
+        "id": "qualification:tl-lene-hara",
+        "license": null,
+        "publisher": "Australian National University; Standish, García-Diez, O’Connor and Oliveira",
+        "revision": "sha256:06c66a2c5affa246df42800567ad15f4fbfdad42ed864be9fa8b740c13a32e5d",
+        "title": "ANU research record — Hand stencil discoveries at Lene Hara Cave",
+        "uri": "https://researchportalplus.anu.edu.au/en/publications/hand-stencil-discoveries-at-lene-hara-cave-hint-at-pleistocene-ag/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "q574$A7A01ACE-0050-442A-88EA-F4FCE04CB210=TL",
+        "id": "wikidata-country:Q574",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562957303",
+        "title": "Wikidata Q574 — ISO alpha-2 country identity",
+        "uri": "https://www.wikidata.org/wiki/Q574"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Asia & Pacific",
+        "id": "region:TL",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:3992f21eb1249d983ddcb08d44248fab36d384d6a9a3d031f43c00ba73ca7458",
+        "title": "UNESCO World Heritage country regional contact — TL",
+        "uri": "https://whc.unesco.org/en/statesparties/tl/"
+      }
+    ],
+    "source_uri": "https://researchportalplus.anu.edu.au/en/publications/hand-stencil-discoveries-at-lene-hara-cave-hint-at-pleistocene-ag/",
+    "title": "Lene Hara cave",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "文化资格和定位来源核对不等于历史阶段核验；本批未建立阶段，提交日期不是建造年。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "Tentative World Heritage Site in Zambia",
+    "description_zh": "",
+    "details": "Source country association: Zambia (ZM).",
+    "geography": {
+      "authority_id": "supplement:wd:Q65947293",
+      "countries": [
+        "ZM"
+      ],
+      "note": "原WD P625 precision=1e-06度，仅保存来源数值，不代表实地误差或发掘精度。Barotse Cultural Landscape文化景观整体，包括人造水道、聚落等文化要素，非为增加数量收录纯自然湿地。点在官方文字范围内，只代表宽广景观，不作为单一发掘地点或历史疆域。国家与分区来自来源声明，不从代表点或历史疆界推断政治归属及生命周期。",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q65947293",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2398993310; sha256:d50be23bda6d29782c6b4c879030c8109bf7bcc2cf4bf614150387d5d4fd41af",
+        "title": "Barotse Cultural Landscape",
+        "uri": "https://www.wikidata.org/wiki/Q65947293"
+      }
+    },
+    "id": "wd:Q65947293",
+    "location_precision": null,
+    "names": [
+      "Barotse Cultural Landscape",
+      "paysage culturel Barotse",
+      "Баротсе мәдәни ландшафты"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      23.021,
+      -15.224
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q65947293",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2398993310; sha256:d50be23bda6d29782c6b4c879030c8109bf7bcc2cf4bf614150387d5d4fd41af",
+        "title": "Barotse Cultural Landscape",
+        "uri": "https://www.wikidata.org/wiki/Q65947293"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "spectacular man-made canals, natural and man-made mounds, traditional houses and palaces",
+        "id": "qualification:ZM:0",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:2df9c97e4852563bfca4500d7d644a4b2648ce65c7813253363a449dc1f9ed76",
+        "title": "The Barotse Cultural Landscape",
+        "uri": "https://whc.unesco.org/en/tentativelists/5428/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Africa, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:ZM",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:ed006045b575a44b3a6cff4e8760f8b67324736250ca1574bc9cee65d26feb96",
+        "title": "UNESCO World Heritage Convention — Zambia",
+        "uri": "https://whc.unesco.org/en/statesparties/zm/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P297: ZM",
+        "id": "wikidata-country:Q953",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562956969; sha256:512f07110f7980c65ba12ba1eb7b4a8fd56c4759049afd5b039fc49ca9a31773",
+        "title": "Zambia",
+        "uri": "https://www.wikidata.org/wiki/Q953"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/5428/",
+    "title": "Barotse Cultural Landscape",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "文化资格和定位来源核对不等于历史阶段核验；本批未建立阶段，提交日期不是建造年。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "island",
+    "description_zh": "",
+    "details": "Source country association: Sierra Leone (SL).",
+    "geography": {
+      "authority_id": "supplement:wd:Q1004939",
+      "countries": [
+        "SL"
+      ],
+      "note": "原WD P625 precision=2.77777777778e-06度，仅保存来源数值，不代表实地误差或发掘精度。Bunce Island岛上的历史奴隶贸易场所及遗迹；点为具名岛屿代表点，不冒充独立建筑基础。官方坐标简写格式未强制解析。国家与分区来自来源声明，不从代表点或历史疆界推断政治归属及生命周期。",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q1004939",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2554469309; sha256:033ca97eeb3930c2c24d5efb8be7259e14ebf4caff5e3ef49867b447552bd43b",
+        "title": "Bunce Island",
+        "uri": "https://www.wikidata.org/wiki/Q1004939"
+      }
+    },
+    "id": "wd:Q1004939",
+    "location_precision": null,
+    "names": [
+      "جزيرة بونس",
+      "Illa de Bunce",
+      "Bunce Island",
+      "Isla Bunce",
+      "Bunce uhartea",
+      "Bunce",
+      "île de Bunce",
+      "Tsibirin Bunce",
+      "バンス島",
+      "Банс (остров)",
+      "Bunce Adası",
+      "邦斯岛",
+      "Bence Island",
+      "Bance Island",
+      "Bunceön"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -13.04026944,
+      8.56987222
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q1004939",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2554469309; sha256:033ca97eeb3930c2c24d5efb8be7259e14ebf4caff5e3ef49867b447552bd43b",
+        "title": "Bunce Island",
+        "uri": "https://www.wikidata.org/wiki/Q1004939"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Bunce Island was established as a slave trading station",
+        "id": "qualification:SL:0",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:033b32e2b0972987d7a1d0c406260ca6d9549b600fc2c48e185a8502c3ab20f7",
+        "title": "Bunce Island",
+        "uri": "https://whc.unesco.org/en/tentativelists/5745/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Africa, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:SL",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:13950dd534bbc21add182aa73b8b88ae7b727a0cec3b48abe90a815e3e0e353a",
+        "title": "UNESCO World Heritage Convention — Sierra Leone",
+        "uri": "https://whc.unesco.org/en/statesparties/sl/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P297: SL",
+        "id": "wikidata-country:Q1044",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2564284988; sha256:6b903933cf4df59613c7a1dfb1926875dc3c61080bfbc2fbb1bf0ed5fbe8d8ac",
+        "title": "Sierra Leone",
+        "uri": "https://www.wikidata.org/wiki/Q1044"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/5745/",
+    "title": "Bunce Island",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "文化资格和定位来源核对不等于历史阶段核验；本批未建立阶段，提交日期不是建造年。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "",
+    "description_zh": "",
+    "details": "Source country association: Kuwait (KW).",
+    "geography": {
+      "authority_id": "supplement:wd:Q66125133",
+      "countries": [
+        "KW"
+      ],
+      "note": "原WD P625 precision=1e-06度，仅保存来源数值，不代表实地误差或发掘精度。Sheikh Abdullah Al-Jabir Palace宫殿；P17与官方资格页均是Kuwait。WD英、法描述误写Japan/Japon，排除并保留原值及理由，不生成替代描述。国家与分区来自来源声明，不从代表点或历史疆界推断政治归属及生命周期。",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q66125133",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "1297166041; sha256:1917943e8976459ca674e10da57dbdcef679682e2239b4efd1cbdff7b26fcc5b",
+        "title": "Sheikh Abdullah Al-Jabir Palace",
+        "uri": "https://www.wikidata.org/wiki/Q66125133"
+      }
+    },
+    "id": "wd:Q66125133",
+    "location_precision": null,
+    "names": [
+      "Sheikh Abdullah Al-Jabir Palace"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      47.9955,
+      29.3877
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q66125133",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "1297166041; sha256:1917943e8976459ca674e10da57dbdcef679682e2239b4efd1cbdff7b26fcc5b",
+        "title": "Sheikh Abdullah Al-Jabir Palace",
+        "uri": "https://www.wikidata.org/wiki/Q66125133"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "The Palace of Sheikh Abdullah Al-Jabir Al-Sabah is a heritage site",
+        "id": "qualification:KW:0",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:42bd21f0154ec9ea946c9d7a49370786a1f2e380ef21f0cc7be44c8ba24e0c12",
+        "title": "Sheikh Abdullah Al-Jabir Palace",
+        "uri": "https://whc.unesco.org/en/tentativelists/6005/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Arab States, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:KW",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:19c476ec1c09e86fd4690f301c5799743d75a8254e514f54513aa7267d4d86e9",
+        "title": "UNESCO World Heritage Convention — Kuwait",
+        "uri": "https://whc.unesco.org/en/statesparties/kw/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P297: KW",
+        "id": "wikidata-country:Q817",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2562957384; sha256:848322770c99f47d4916c2b3dbf901b632c076350baf79301ffa8a1fa9d8653e",
+        "title": "Kuwait",
+        "uri": "https://www.wikidata.org/wiki/Q817"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/6005/",
+    "title": "Sheikh Abdullah Al-Jabir Palace",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "cultural_qualification_and_identity_check_only",
+      "note": "本轮核验文化资格、实体身份和定位来源；尚未独立核验建造、使用、改建或毁损阶段，不把保护、列名录或机构设立年份当作遗址生命周期。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors",
+      "Attorney General’s Chambers / Government of Brunei Darussalam"
+    ],
+    "description": "historical building in Brunei",
+    "description_zh": "",
+    "details": "Source country association: Brunei (BN).",
+    "geography": {
+      "authority_id": "supplement:wd:Q25227131",
+      "countries": [
+        "BN"
+      ],
+      "note": "2006年官方公报附表中的实体历史建筑。公报保护／公布年份不作为建筑始建年。直接公报URL当前404，固定Exa官方原文快照保留该状态。 代表点来自固定Wikidata P625；源precision=0.00027777777777778°仅为声明分辨率，不承诺实测定位误差。 国家／地区来自当前来源身份声明，分区来自官方区域资料；不按坐标推政治归属，不据分期推连续存在。",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "P625 Q25227131$BE8DB744-AC38-47C5-ACB3-681A8A5B4047; P17 Q25227131$82cbcf57-4783-6795-78e9-83b44ea23336; precision=0.00027777777777778 degrees; globe=Q2.",
+        "id": "wikidata:Q25227131",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2276367869",
+        "title": "Wikidata Q25227131 — original identity, labels and coordinate",
+        "uri": "https://www.wikidata.org/wiki/Q25227131"
+      }
+    },
+    "id": "wd:Q25227131",
+    "location_precision": null,
+    "names": [
+      "Bubungan Dua Belas"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      114.95178,
+      4.877612
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P625 Q25227131$BE8DB744-AC38-47C5-ACB3-681A8A5B4047; P17 Q25227131$82cbcf57-4783-6795-78e9-83b44ea23336; precision=0.00027777777777778 degrees; globe=Q2.",
+        "id": "wikidata:Q25227131",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2276367869",
+        "title": "Wikidata Q25227131 — original identity, labels and coordinate",
+        "uri": "https://www.wikidata.org/wiki/Q25227131"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Bubungan Duabelas Building Jalan Kota Batu",
+        "id": "qualification:bn-gazette-exa",
+        "license": null,
+        "publisher": "Attorney General’s Chambers / Government of Brunei Darussalam",
+        "revision": "sha256:0ab811c032e93f6eefc375b2bd75db1668e70bc8c86fea2543a32c9dea0cce1d",
+        "title": "Brunei Gazette S60 — Ancient Monuments and Historical Sites Order 2006",
+        "uri": "https://www.agc.gov.bn/AGC%20Images/LAWS/Gazette_PDF/2006/EN/s060.pdf"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "q921$5527BD23-E358-4FFE-84A0-E8303319A13A=BN",
+        "id": "wikidata-country:Q921",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2564285118",
+        "title": "Wikidata Q921 — ISO alpha-2 country identity",
+        "uri": "https://www.wikidata.org/wiki/Q921"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Asia & Pacific",
+        "id": "region:BN",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:e2883ea9618d8fbeba0e1c8470936e82d074805acf423db6573772106cf60e0f",
+        "title": "UNESCO World Heritage country regional contact — BN",
+        "uri": "https://whc.unesco.org/en/statesparties/bn/"
+      }
+    ],
+    "source_uri": "https://www.agc.gov.bn/AGC%20Images/LAWS/Gazette_PDF/2006/EN/s060.pdf",
+    "title": "Bubungan Dua Belas",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "文化资格和定位来源核对不等于历史阶段核验；本批未建立阶段，提交日期不是建造年。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "fort in Dominica",
+    "description_zh": "",
+    "details": "Source country association: Dominica (DM).",
+    "geography": {
+      "authority_id": "supplement:wd:Q65123003",
+      "countries": [
+        "DM"
+      ],
+      "note": "原WD P625 precision=1e-06度，仅保存来源数值，不代表实地误差或发掘精度。Fort Shirley历史堡垒，非整个Cabrits National Park；官方简写坐标含格式歧义，未进行猜测换算，独立采用具名堡垒WD P625代表点。国家与分区来自来源声明，不从代表点或历史疆界推断政治归属及生命周期。",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q65123003",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2512678815; sha256:e5be71ea3d7edb33e71d2633f164ff0452b5f7038490f8357c44a467a072daad",
+        "title": "Fort Shirley",
+        "uri": "https://www.wikidata.org/wiki/Q65123003"
+      }
+    },
+    "id": "wd:Q65123003",
+    "location_precision": null,
+    "names": [
+      "Fort Shirley",
+      "Fort Shirley (Dominica)",
+      "fort Shirley"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -61.4734,
+      15.5834
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q65123003",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2512678815; sha256:e5be71ea3d7edb33e71d2633f164ff0452b5f7038490f8357c44a467a072daad",
+        "title": "Fort Shirley",
+        "uri": "https://www.wikidata.org/wiki/Q65123003"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Dominica’s most important historic site",
+        "id": "qualification:DM:0",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:f8678d8086fd3cf9f82359cad37941a35ab8102006665867498561e2f0178ab1",
+        "title": "Fort Shirley",
+        "uri": "https://whc.unesco.org/en/tentativelists/6020/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Latin America & the Carribean, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:DM",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:f039167b4e8bee97600bfb94ffc1bf892e355adabfd51c498dc841cad97b21d2",
+        "title": "UNESCO World Heritage Convention — Dominica",
+        "uri": "https://whc.unesco.org/en/statesparties/dm/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P297: DM",
+        "id": "wikidata-country:Q784",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2563606848; sha256:b02d12e954a2b31bf0297ee0992f3e95e93ae38addbf1e23d661786fb1eb5ee3",
+        "title": "Dominica",
+        "uri": "https://www.wikidata.org/wiki/Q784"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/6020/",
+    "title": "Fort Shirley",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "source_metadata_only_pending_independent_chronology_review",
+      "note": "已核对实体名称、文化资格、公开定位点与来源国家/分区；历史阶段尚未独立核验。名录提交、认定、建馆或重开年份不直接转换为遗址生命周期；不标成人工或专家确认。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "ancient decorated mosque",
+    "description_zh": "",
+    "details": "Source country association: Maldives (MV).",
+    "geography": {
+      "authority_id": "supplement:wd:Q4385992",
+      "countries": [
+        "MV"
+      ],
+      "note": "只定位Male Friday Mosque这一具名清真寺，官方Coral Stone Mosques系列描述明确包含它；不是全国系列名录中心，不自动将它的阶段套给其他清真寺。 地点国家字段按来源实体/具名地点所属的当前国家声明，分区按官方国家页面；不依据坐标或历史疆域推断政治归属。precision仅保留来源参数，不承诺米级精度；没有新增遗址生命周期或阶段。",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q4385992",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2545727103; sha256:5084a1867fd6d5fe81d5ef70ad7c1837c2a6eee6e9c0904ef14f7366c97861a1",
+        "title": "Malé Friday Mosque",
+        "uri": "https://www.wikidata.org/wiki/Q4385992"
+      }
+    },
+    "id": "wd:Q4385992",
+    "location_precision": null,
+    "names": [
+      "Malé Friday Mosque",
+      "Malé Hukuru Miskiy",
+      "马累星期五清真寺",
+      "Mezquita del Viernes de Malé",
+      "مسجد الجمعة ماليه",
+      "Пятничная мечеть (Мале)"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      73.5125,
+      4.178055555555556
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q4385992",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2545727103; sha256:5084a1867fd6d5fe81d5ef70ad7c1837c2a6eee6e9c0904ef14f7366c97861a1",
+        "title": "Malé Friday Mosque",
+        "uri": "https://www.wikidata.org/wiki/Q4385992"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Sultan Ibrahim Iskandar I ordered the construction of a new Friday Mosque in Male’ in 1656 CE (1066 AH)",
+        "id": "qualification:MV",
+        "license": null,
+        "publisher": "Ministry of Tourism, Arts and Culture / UNESCO WHC",
+        "revision": "sha256:b052e87791dc3603e1829dd8bf862887b0b3551764a4aac47c8d16cb70f48851",
+        "title": "Coral Stone Mosques of Maldives",
+        "uri": "https://whc.unesco.org/en/tentativelists/5812/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Asia & Pacific, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:MV",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:b31a33022aeea0e7c1a80526de510188457856bab84db585201c0ee35b5fa604",
+        "title": "UNESCO World Heritage Convention — Maldives",
+        "uri": "https://whc.unesco.org/en/statesparties/mv/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q826",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2563750767; sha256:74653e75c4de9b2d6c9adbf51aa616b1bc6825395d4123c6e3aa90dcd8b76aaa",
+        "title": "Maldives",
+        "uri": "https://www.wikidata.org/wiki/Q826"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/5812/",
+    "title": "Malé Friday Mosque",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "文化资格和定位来源核对不等于历史阶段核验；本批未建立阶段，提交日期不是建造年。",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Wikidata contributors"
+    ],
+    "description": "",
+    "description_zh": "",
+    "details": "Source country association: Central African Republic (CF).",
+    "geography": {
+      "authority_id": "supplement:wd:Q6522472",
+      "countries": [
+        "CF"
+      ],
+      "note": "原WD P625 precision=1e-06度，仅保存来源数值，不代表实地误差或发掘精度。选用Lengo岩刻石面这一具体物理对象，不再使用Bouar大型区域候选；官方描述区分Lengo村与村东岩刻，WD条目P4171直接指向同一岩刻条目。无WD描述则留空，不把整个村庄作为别名或新增遗址。国家与分区来自来源声明，不从代表点或历史疆界推断政治归属及生命周期。",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q6522472",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "1343585869; sha256:ab28d452a951acef30aefebf3eeefe5f58d23cbe4bbe145a1c70e1e329cbc4de",
+        "title": "Lengo Petroglyphs",
+        "uri": "https://www.wikidata.org/wiki/Q6522472"
+      }
+    },
+    "id": "wd:Q6522472",
+    "location_precision": null,
+    "names": [
+      "Lengo Petroglyphs",
+      "Petroglifos de Lengo"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      22.8017,
+      5.6721
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q6522472",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "1343585869; sha256:ab28d452a951acef30aefebf3eeefe5f58d23cbe4bbe145a1c70e1e329cbc4de",
+        "title": "Lengo Petroglyphs",
+        "uri": "https://www.wikidata.org/wiki/Q6522472"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Le site de gravures est situé sur la droite de cette piste",
+        "id": "qualification:CF:0",
+        "license": null,
+        "publisher": "State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:d13405d4454492e6f96f4080a94d2b415d255c9f3b232013727e0acec06cc02e",
+        "title": "Les gravures rupestres de Lengo",
+        "uri": "https://whc.unesco.org/en/tentativelists/4006/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Africa, World Heritage Convention Regional Contact",
+        "id": "whc-stateparty:CF",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:285f567d6b6811cfec4b8a1f12d3736535c42c02de1dcc657c723fdf32f79443",
+        "title": "UNESCO World Heritage Convention — Central African Republic",
+        "uri": "https://whc.unesco.org/en/statesparties/cf/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "P297: CF",
+        "id": "wikidata-country:Q929",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2564285015; sha256:25dded262bb95d894d9d1af175aca06b15be8dc503bbcdf91c3d0943064a20b6",
+        "title": "Central African Republic",
+        "uri": "https://www.wikidata.org/wiki/Q929"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/4006/",
+    "title": "Lengo Petroglyphs",
+    "types": [
+      "historic-site"
+    ]
+  }
+]

@@ -121,7 +121,9 @@
             return { label: "目录补充原文", text: site.details };
         }
         if (hasSourceText(site.description))
-            return { label: "来源描述原文", text: site.description };
+            return { label: site.source_kind === "supplement" ? "Wikidata 来源描述" : "来源描述原文", text: site.description };
+        if (site.source_kind === "supplement" && hasSourceText(site.details))
+            return { label: "来源结构化信息", text: site.details };
         if (hasSourceText(site.details))
             return { label: "补充记录原文", text: site.details };
         return { label: "原文状态", text: "当前导出未提供描述，请打开详情核验来源记录。" };
@@ -386,7 +388,7 @@
     function coordinateLabel(site) {
         const coordinate = sourcePoint(site);
         if (!coordinate)
-            return "来源真实位置未知";
+            return site.source_kind === "ats" ? "来源真实位置未知" : "当前资料无可核代表点";
         const [lat, lon] = coordinate;
         return `${Math.abs(lat).toFixed(3)}° ${lat >= 0 ? "N" : "S"} / ${Math.abs(lon).toFixed(3)}° ${lon >= 0 ? "E" : "W"}`;
     }
@@ -460,7 +462,7 @@
         const polar = selected && ArchSearchMapView.locationStatus(selected.repr_point) === "polar";
         ui.locateSelected.textContent = polar ? "查看极区位置" : "定位选中";
         ui.locateSelected.disabled = !selected || sourcePoint(selected) === null || (!state.map && !polar);
-        ui.locateSelected.title = selected && sourcePoint(selected) === null ? "真实位置未知，不添加遗址地图标记。" : "";
+        ui.locateSelected.title = selected && sourcePoint(selected) === null ? "当前资料无可核代表点，不添加遗址地图标记。" : "";
     }
     function positionSelectedSite(site) {
         const coordinate = point(site);
@@ -1099,7 +1101,7 @@
         const focusWasInContent = ui.detailContent.contains(document.activeElement);
         const title = element("h3", null, displayTitle(site));
         title.id = "detail-title";
-        const sourceId = element("p", "detail-id", `${{ pleiades: "PLEIADES", global: "CURATED", unesco: "UNESCO DATAHUB", ats: "ATS HSM" }[site.source_kind] ?? "SOURCE"} / ${site.id}`);
+        const sourceId = element("p", "detail-id", `${{ pleiades: "PLEIADES", global: "CURATED", unesco: "UNESCO DATAHUB", ats: "ATS HSM", supplement: "CULTURAL SUPPLEMENT" }[site.source_kind] ?? "SOURCE"} / ${site.id}`);
         const description = element("p", "detail-description", hasSourceText(site.description) ? site.description : "当前导出未提供描述。");
         description.lang = hasSourceText(site.description) ? "en" : "zh-CN";
         const nodes = [title, sourceId];
@@ -1117,7 +1119,7 @@
             ? site.details : `当前导出未提供补充内容${site.details.trim() ? `（原始值：${site.details}）` : ""}。`);
         if (hasSourceText(site.details))
             details.lang = "en";
-        nodes.push(detailSection("原始补充记录", details));
+        nodes.push(detailSection(site.source_kind === "supplement" ? "来源结构化信息与范围说明" : "原始补充记录", details));
         nodes.push(detailSection("名称与别名", strings(site.names).join(" · ") || "原始资料未提供其他名称。"));
         nodes.push(detailSection("来源类型标签", strings(site.types).map((value) => primaryTypeLabels[value]
             ? `${typeLabel(value)}（${value}）` : value).join(" · ") || "原始资料未提供类型。"));
@@ -1133,7 +1135,9 @@
             space.append(element("p", "detail-note", "原坐标超出主地图Web Mercator投影范围；主地图不夹取纬度，请使用“查看极区位置”。极区定位为独立现代自然地理示意。"));
         }
         else if (positionStatus === "unknown") {
-            space.append(element("p", "detail-note", "来源未给出已知的遗址真实位置，不绘制遗址标记；如有最后目击参照，仅保留在来源说明中。"));
+            space.append(element("p", "detail-note", site.source_kind === "supplement"
+                ? "文化对象身份已核对，但本记录尚未取得可信公开数字坐标；不以近邻、行政中心或零坐标替代，不绘制遗址标记。"
+                : "来源未给出已知的遗址真实位置，不绘制遗址标记；如有最后目击参照，仅保留在来源说明中。"));
         }
         if (site.location_precision === "rough") {
             space.append(element("p", "detail-note", "rough 表示应在某个范围内寻找地点；代表点可能只是该范围的中心。"));
@@ -1177,6 +1181,9 @@
         const sources = element("div");
         for (const source of site.source_refs ?? []) {
             sources.append(safeLink(source.uri, source.title), element("p", "detail-note", `${source.publisher} · ${source.license ?? "许可见原始来源"} · ${source.revision ?? "版本未提供"}`));
+            if (site.source_kind === "supplement" && source.excerpt.trim()) {
+                sources.append(element("p", "detail-source-excerpt", source.excerpt));
+            }
         }
         sources.append(element("p", "detail-note", "引用时保留地点编号、原始链接、版本与贡献者；不同来源遵循各自许可。"));
         nodes.push(detailSection("来源与许可", sources));

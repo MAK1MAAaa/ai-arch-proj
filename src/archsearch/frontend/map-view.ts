@@ -143,7 +143,7 @@ const ArchSearchMapView = (() => {
         if (candidate.marker === null) {
           candidate.hint.textContent = candidate.locationStatus === "polar"
             ? "超出主地图投影范围，请查看极区定位"
-            : candidate.locationStatus === "unknown" ? "来源真实位置未知" : "无可用代表点";
+            : candidate.locationStatus === "unknown" ? "当前资料无可用代表点" : "无可用代表点";
           candidate.hint.hidden = false;
           continue;
         }
