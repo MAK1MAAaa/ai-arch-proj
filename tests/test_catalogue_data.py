@@ -245,6 +245,23 @@ def test_import_cannot_claim_completed_chronology_review(bundle: Path) -> None:
         catalogue.load_catalogue(load_curated_corpus(), bundle)
 
 
+@pytest.mark.parametrize("namespace", ["whc:", "wd:"])
+def test_nullable_polar_contract_does_not_relax_world_catalogue_source_point_counts(
+    bundle: Path, namespace: str,
+) -> None:
+    geography = json.loads((bundle / "world_geography.json").read_text("utf-8"))
+    identifier = next(key for key in geography if key.startswith(namespace))
+    geography[identifier]["point_count"] = 0
+    rewrite_artifact(bundle, "world_geography.json", geography)
+    rows = json.loads((bundle / "world_sites.json").read_text("utf-8"))
+    for row in rows:
+        if row["id"] == identifier:
+            row["geography"]["point_count"] = 0
+    rewrite_artifact(bundle, "world_sites.json", rows)
+    with pytest.raises(catalogue.CatalogueError, match="at least one source point"):
+        catalogue.load_catalogue(load_curated_corpus(), bundle)
+
+
 @pytest.mark.parametrize("change", ["sources", "source-uri", "scope"])
 def test_coordinate_fallback_preserves_the_independent_source_chain_and_scope(
     bundle: Path, change: str

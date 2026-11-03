@@ -55,11 +55,13 @@
     let mapView = null;
     let historyView = null;
     let explore = null;
+    let polarView = null;
     let selectedPhaseId = null;
     let restoringView = true;
     let autoPositionedSelection = false;
     let positioningMap = false;
     let browseRestored = false;
+    let browseRestoreError = null;
     let initialStatePending = true;
     const fieldLabels = {
         title: "地点名称", names: "别名", description: "原始描述", description_zh: "中文来源描述", types: "地点类型",
@@ -361,6 +363,7 @@
                 catch (error) {
                     invalidLink = true;
                     linkError = `目录条件无法恢复：${errorMessage(error)}`;
+                    browseRestoreError = linkError;
                 }
             }
         }).finally(() => {
@@ -369,7 +372,7 @@
         });
         return runtimeRefresh;
     }
-    function point(site) {
+    function sourcePoint(site) {
         const coordinate = site.repr_point;
         if (!Array.isArray(coordinate) || coordinate.length !== 2)
             return null;
@@ -377,10 +380,13 @@
         return Number.isFinite(lon) && Number.isFinite(lat) && Math.abs(lon) <= 180 && Math.abs(lat) <= 90
             ? [lat, lon] : null;
     }
+    function point(site) {
+        return ArchSearchMapView.locationStatus(site.repr_point) === "mapped" ? sourcePoint(site) : null;
+    }
     function coordinateLabel(site) {
-        const coordinate = point(site);
+        const coordinate = sourcePoint(site);
         if (!coordinate)
-            return "无可用代表点";
+            return "来源真实位置未知";
         const [lat, lon] = coordinate;
         return `${Math.abs(lat).toFixed(3)}° ${lat >= 0 ? "N" : "S"} / ${Math.abs(lon).toFixed(3)}° ${lon >= 0 ? "E" : "W"}`;
     }
@@ -451,7 +457,10 @@
         ui.previousResult.disabled = index <= 0;
         ui.nextResult.disabled = !state.results.length || index >= state.results.length - 1;
         ui.nextResult.textContent = index < 0 ? "查看首条" : "下一条";
-        ui.locateSelected.disabled = !state.map || !selected || point(selected) === null;
+        const polar = selected && ArchSearchMapView.locationStatus(selected.repr_point) === "polar";
+        ui.locateSelected.textContent = polar ? "查看极区位置" : "定位选中";
+        ui.locateSelected.disabled = !selected || sourcePoint(selected) === null || (!state.map && !polar);
+        ui.locateSelected.title = selected && sourcePoint(selected) === null ? "真实位置未知，不添加遗址地图标记。" : "";
     }
     function positionSelectedSite(site) {
         const coordinate = point(site);
@@ -486,7 +495,17 @@
     }
     function locateCurrentSite() {
         const site = currentSelectedSite();
-        if (!site || !state.map || !point(site))
+        if (!site)
+            return;
+        if (ArchSearchMapView.locationStatus(site.repr_point) === "polar") {
+            closeDetail(false);
+            if (polarView?.locate(site.id))
+                announce(`已在独立极区示意定位 ${displayTitle(site)}，主地图不夹取原始纬度。`);
+            else
+                announce("极区定位暂未就绪，已保留来源详情中的原始坐标。请刷新资料目录后重试。");
+            return;
+        }
+        if (!state.map || !point(site))
             return;
         closeDetail(false);
         positionSelectedSite(site);
@@ -551,6 +570,7 @@
         state.selectionMarker?.remove();
         state.selectionMarker = null;
         explore?.select(null);
+        polarView?.select(null);
         selectedPhaseId = null;
         state.hasSearched = true;
         state.displayedMode = data.mode;
@@ -597,7 +617,8 @@
             card.addEventListener("click", () => selectSite(String(site.id)));
             item.append(card);
             ui.list.append(item);
-            viewCandidates.push({ id: String(site.id), rank: index + 1, title: displayTitle(site), card, marker: null, hint: viewHint });
+            viewCandidates.push({ id: String(site.id), rank: index + 1, title: displayTitle(site), card, marker: null,
+                hint: viewHint, locationStatus: ArchSearchMapView.locationStatus(site.repr_point) });
         }
         renderMarkers();
         for (const candidate of viewCandidates)
@@ -684,6 +705,7 @@
         pendingLink = null;
         unresolvedSearchLink = null;
         linkError = null;
+        browseRestoreError = null;
         invalidLink = false;
         pendingSelectionRestore = false;
         state.restoringLink = false;
@@ -696,6 +718,13 @@
         if (linkError) {
             showError(`分享链接未能恢复：${linkError}`);
             linkError = null;
+            if (browseRestoreError && !request && pendingSelectionRestore && initialView.selection.site) {
+                await selectSite(initialView.selection.site, {
+                    phaseId: initialView.selection.phase,
+                    preserveYear: initialView.view !== null || (historyView?.actionVersion() ?? 0) > 0,
+                    restoring: true,
+                });
+            }
             pendingSelectionRestore = false;
             updateSearchAvailability();
             return;
@@ -917,7 +946,8 @@
         if (state.completedSearch && state.completedSearch.link !== link)
             state.completedSearch = { ...state.completedSearch, link };
         ui.shareLink.value = link;
-        ui.resultTools.hidden = !state.completedSearch && !state.selectedSite && historyView?.getView() == null;
+        ui.resultTools.hidden = !state.completedSearch && !state.selectedSite && historyView?.getView() == null
+            && explore?.getCommittedState() == null;
         ui.copyLink.disabled = false;
         ui.exportResults.disabled = state.completedSearch === null || (state.selectedId !== null && currentSelectedSite() === null);
         try {
@@ -1029,7 +1059,7 @@
         const focusWasInContent = ui.detailContent.contains(document.activeElement);
         const title = element("h3", null, displayTitle(site));
         title.id = "detail-title";
-        const sourceId = element("p", "detail-id", `${{ pleiades: "PLEIADES", global: "CURATED", unesco: "UNESCO DATAHUB" }[site.source_kind] ?? "SOURCE"} / ${site.id}`);
+        const sourceId = element("p", "detail-id", `${{ pleiades: "PLEIADES", global: "CURATED", unesco: "UNESCO DATAHUB", ats: "ATS HSM" }[site.source_kind] ?? "SOURCE"} / ${site.id}`);
         const description = element("p", "detail-description", hasSourceText(site.description) ? site.description : "当前导出未提供描述。");
         description.lang = hasSourceText(site.description) ? "en" : "zh-CN";
         const nodes = [title, sourceId];
@@ -1055,17 +1085,24 @@
         periods.append(element("p", "detail-note", "标签来自名称或位置记录；多个时期标签不能证明地点持续使用，也不能直接视为建造年代。"));
         nodes.push(periods);
         const facts = element("dl");
-        facts.append(fact("代表点", coordinateLabel(site)), fact("原始精度", sourceLabel(site.location_precision, { precise: "精确", rough: "概略" })));
+        facts.append(fact("代表点", coordinateLabel(site)), fact(site.source_kind === "pleiades" ? "原始精度" : "定位精度分类", sourceLabel(site.location_precision, { precise: "精确", rough: "概略" })));
         const space = detailSection("空间信息 · WGS84", facts);
         space.append(element("p", "detail-note", "精度按来源标签展示，不承诺米级误差；代表点不等同于实测发掘坐标。"));
+        const positionStatus = ArchSearchMapView.locationStatus(site.repr_point);
+        if (positionStatus === "polar") {
+            space.append(element("p", "detail-note", "原坐标超出主地图Web Mercator投影范围；主地图不夹取纬度，请使用“查看极区位置”。极区定位为独立现代自然地理示意。"));
+        }
+        else if (positionStatus === "unknown") {
+            space.append(element("p", "detail-note", "来源未给出已知的遗址真实位置，不绘制遗址标记；如有最后目击参照，仅保留在来源说明中。"));
+        }
         if (site.location_precision === "rough") {
             space.append(element("p", "detail-note", "rough 表示应在某个范围内寻找地点；代表点可能只是该范围的中心。"));
         }
         nodes.push(space);
         if (site.geography) {
             const geography = site.geography;
-            const scope = detailSection("来源名录中的国家／地区与分区", `国家／地区：${geography.countries.join(" · ") || "来源未明确"}；分区：${geography.regions.join(" · ") || "来源未提供"}。`);
-            scope.append(element("p", "detail-note", geography.note), element("p", "detail-note", `名录可用定位点记录：${geography.point_count}。图上只展示一个代表点，不表示全部组成地点。此处是来源名录标签，不代表历史政治归属。`), safeLink(geography.source.uri, geography.source.title));
+            const scope = detailSection("来源名录中的国家／地区与分区", `国家／地区：${site.source_kind === "ats" ? "不作主权归属标注" : geography.countries.join(" · ") || "来源未明确"}；分区：${geography.regions.map((region) => region === "antarctica" ? "南极洲（独立区域分类）" : region).join(" · ") || "来源未提供"}。`);
+            scope.append(element("p", "detail-note", geography.note), element("p", "detail-note", `名录可用定位点记录：${geography.point_count}。${geography.point_count ? "可定位时只展示一个代表点，不表示全部组成地点。" : "没有可用真实定位点，不绘制遗址标记。"}此处是来源名录标签，不代表历史政治归属。`), safeLink(geography.source.uri, geography.source.title));
             nodes.push(scope);
         }
         const fields = strings(matchedFields).map((field) => fieldLabels[field] || field);
@@ -1126,8 +1163,9 @@
             marker.setZIndexOffset(selected ? 1000 : 0);
         }
         explore?.select(id);
+        polarView?.select(id);
     }
-    function presentSelection(site, matchedFields, fresh) {
+    function presentSelection(site, matchedFields, fresh, moveMap = true) {
         state.selectedSite = site;
         const previousIcon = state.selectionMarker?.getElement();
         const markerOpenedDetail = previousIcon !== undefined && state.detailOpener === previousIcon;
@@ -1158,11 +1196,21 @@
             state.selectionMarker = marker;
         }
         renderDetail(site, matchedFields);
+        if (site.source_kind === "ats")
+            polarView?.ensureSite({
+                id: site.id, title: displayTitle(site), repr_point: site.repr_point,
+                location_status: ArchSearchMapView.locationStatus(site.repr_point),
+                regions: site.geography?.regions ?? [], source_kind: site.source_kind,
+            });
+        polarView?.select(site.id);
         updateSelectionControls();
         if (fresh) {
             ui.detailPanel.scrollTop = 0;
             ui.detailPanel.focus({ preventScroll: true });
-            positionSelectedSite(site);
+            if (moveMap)
+                positionSelectedSite(site);
+            else
+                autoPositionedSelection = false;
             if (window.matchMedia("(max-width: 780px)").matches)
                 ui.detailPanel.scrollIntoView({ block: "start", behavior: "instant" });
             const rank = state.results.findIndex((item) => item.site.id === site.id);
@@ -1170,7 +1218,7 @@
         }
         saveViewLink();
     }
-    async function selectSite(id, { fromMap = false, preserveYear = false, phaseId = null, opener = null, restoring = false, } = {}) {
+    async function selectSite(id, { fromMap = false, preserveYear = false, phaseId = null, opener = null, restoring = false, moveMap = true, } = {}) {
         if (!restoring)
             cancelLinkRestore();
         const result = state.results.find((item) => item.site.id === id);
@@ -1202,7 +1250,7 @@
         };
         if (known) {
             choosePhase(known);
-            presentSelection(known, result?.matched_fields ?? [], true);
+            presentSelection(known, result?.matched_fields ?? [], true, moveMap);
         }
         else {
             state.selectionMarker?.remove();
@@ -1225,7 +1273,7 @@
                     if (!initialPhase && phase && !preserveYear && (historyView?.actionVersion() ?? 0) === userVersion)
                         followPhase(phase);
                 }
-                presentSelection(site, result?.matched_fields ?? [], !known);
+                presentSelection(site, result?.matched_fields ?? [], !known, moveMap);
             }
         }
         catch (error) {
@@ -1238,10 +1286,13 @@
                 state.selectedSite = null;
                 selectedPhaseId = null;
                 explore?.select(null);
+                polarView?.select(null);
                 ui.detailContent.replaceChildren(element("h3", null, "资料未能读取"), element("p", "detail-note", errorMessage(error)));
                 showError(`遗址资料未能恢复：${errorMessage(error)}。地图与检索快照保持不变。`);
-                if (restoring)
+                if (restoring) {
                     invalidLink = true;
+                    browseRestoreError = null;
+                }
                 updateSelectionControls();
                 saveViewLink();
             }
@@ -1261,14 +1312,19 @@
             selectedPhaseId = null;
             pendingSelectionRestore = false;
             explore?.select(null);
+            polarView?.select(null);
             updateSelectionControls();
             saveViewLink();
         }
-        if (returnFocus && state.detailOpener?.isConnected) {
-            state.detailOpener.focus({ preventScroll: true });
-            if (window.matchMedia("(max-width: 780px)").matches) {
-                state.detailOpener.scrollIntoView({ block: "nearest", behavior: "instant" });
+        if (returnFocus) {
+            const opener = state.detailOpener;
+            if (opener?.isConnected && opener.getClientRects().length > 0 && !opener.closest("details:not([open])")) {
+                opener.focus({ preventScroll: true });
+                if (window.matchMedia("(max-width: 780px)").matches)
+                    opener.scrollIntoView({ block: "nearest", behavior: "instant" });
             }
+            else
+                focusWithinView(ui.selectionSummary);
         }
         state.detailOpener = null;
     }
@@ -1337,6 +1393,7 @@
             }
         },
     });
+    polarView = ArchSearchPolarView.create({ onSelect: (id, opener) => { void selectSite(id, { opener, moveMap: false }); } });
     explore = ArchSearchExplore.create({
         map: state.map,
         onSelect: (id, opener) => { void selectSite(id, { opener }); },
@@ -1346,7 +1403,17 @@
             announce("目录筛选已更新；下一次检索将使用当前地区，已显示排名保持原条件。");
         },
         onStateChange: () => { browseRestored = true; invalidLink = false; pendingSelectionRestore = false; saveViewLink(); },
-        onCommittedState: () => { saveViewLink(); },
+        onCommittedState: () => {
+            if (browseRestoreError) {
+                if (ui.requestError.textContent === `分享链接未能恢复：${browseRestoreError}`)
+                    showError("");
+                browseRestoreError = null;
+                invalidLink = false;
+                linkError = null;
+            }
+            saveViewLink();
+        },
+        onCatalogue: (points) => { polarView?.setSites(points); },
         onFeedback: () => { ui.mapEmptyLabel.hidden = true; },
     });
     mapView = ArchSearchMapView.create({ map: state.map, countLabel: ui.viewportCount });

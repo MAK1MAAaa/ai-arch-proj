@@ -25,7 +25,7 @@ from archsearch.domain import ChronologyReview, PeriodEvidence, Site, SourceRefe
 DATA_DIR = Path(__file__).with_name("data")
 DATASET_VERSION = "v4.1"
 CURATED_VERSION = "global-v2"
-CORPUS_VERSION = "global-v3"
+CORPUS_VERSION = "global-v4"
 GLOBAL_REGION_QUOTAS = {
     "east-asia": 20, "south-asia": 15, "west-central-asia": 15, "africa": 15,
     "europe": 10, "north-america": 10, "south-america": 10, "oceania": 5,
@@ -217,6 +217,8 @@ def load_pleiades_corpus(data_dir: Path | None = None) -> list[Site]:
         for site in sites:
             if site.source_kind != "pleiades":
                 raise CorpusError("original cohort must retain its Pleiades source kind")
+            if site.repr_point is None:
+                raise CorpusError("original cohort requires representative points")
             lon, lat = site.repr_point
             if not (
                 BOUNDING_BOX[0] <= lon <= BOUNDING_BOX[2]
@@ -322,14 +324,18 @@ def load_curated_corpus(data_dir: Path | None = None) -> list[Site]:
 def load_corpus(data_dir: Path | None = None) -> list[Site]:
     """Extend the unchanged curated cohort with a pinned, licensed world catalogue."""
     from archsearch.catalogue_data import CatalogueError, load_catalogue
+    from archsearch.polar_data import PolarDataError, load_polar
 
     directory = Path(data_dir) if data_dir is not None else DATA_DIR
     curated = load_curated_corpus(data_dir)
     if data_dir is not None and not (directory / "catalogue_manifest.json").exists():
         return curated
     try:
-        return load_catalogue(curated, directory)
-    except CatalogueError as error:
+        worldwide = load_catalogue(curated, directory)
+        if data_dir is not None and not (directory / "polar_manifest.json").exists():
+            return worldwide
+        return load_polar(worldwide, directory)
+    except (CatalogueError, PolarDataError) as error:
         raise CorpusError(str(error)) from error
 
 

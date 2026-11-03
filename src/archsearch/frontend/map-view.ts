@@ -13,6 +13,7 @@ const ArchSearchMapView = (() => {
     card: HTMLButtonElement;
     marker: L.Marker | null;
     hint: HTMLElement;
+    locationStatus?: "mapped" | "polar" | "unknown";
   }
 
   interface PreviewSource {
@@ -36,6 +37,12 @@ const ArchSearchMapView = (() => {
 
   function wrapLongitude(longitude: number, center: number): number {
     return longitude + 360 * Math.round((center - longitude) / 360);
+  }
+
+  function locationStatus(coordinate: readonly number[] | null | undefined): "mapped" | "polar" | "unknown" {
+    if (!coordinate || coordinate.length !== 2 || !coordinate.every(Number.isFinite)
+      || Math.abs(coordinate[0]) > 180 || Math.abs(coordinate[1]) > 90) return "unknown";
+    return Math.abs(coordinate[1]) > 85.0511287798 ? "polar" : "mapped";
   }
 
   function wrapCoordinates(coordinates: L.LatLngTuple[]): L.LatLngTuple[] {
@@ -134,7 +141,9 @@ const ArchSearchMapView = (() => {
           continue;
         }
         if (candidate.marker === null) {
-          candidate.hint.textContent = "无可用代表点";
+          candidate.hint.textContent = candidate.locationStatus === "polar"
+            ? "超出主地图投影范围，请查看极区定位"
+            : candidate.locationStatus === "unknown" ? "来源真实位置未知" : "无可用代表点";
           candidate.hint.hidden = false;
           continue;
         }
@@ -194,5 +203,5 @@ const ArchSearchMapView = (() => {
     return { setCandidates };
   }
 
-  return { create, containsPoint, wrapLongitude, wrapCoordinates };
+  return { create, containsPoint, wrapLongitude, wrapCoordinates, locationStatus };
 })();

@@ -1,0 +1,2815 @@
+{
+  "cohort_version": "ats-hsm-v1",
+  "corpus_version": "global-v4",
+  "counts": {
+    "base": 1534,
+    "located": 90,
+    "outside_web_mercator": 3,
+    "selected_hsm": 91,
+    "source_apa": 182,
+    "total": 1625,
+    "unknown_location": 1
+  },
+  "files": {
+    "polar_sites.json": {
+      "sha256": "1eb2c3d31f15c20d3e4ac3e5243ca0f40a32e730c24b859ecaa317f80bd04db3"
+    }
+  },
+  "partition": {
+    "active_ids": [
+      "ats:hsm:1",
+      "ats:hsm:2",
+      "ats:hsm:3",
+      "ats:hsm:4",
+      "ats:hsm:5",
+      "ats:hsm:6",
+      "ats:hsm:7",
+      "ats:hsm:8",
+      "ats:hsm:9",
+      "ats:hsm:10",
+      "ats:hsm:11",
+      "ats:hsm:14",
+      "ats:hsm:15",
+      "ats:hsm:16",
+      "ats:hsm:17",
+      "ats:hsm:18",
+      "ats:hsm:19",
+      "ats:hsm:20",
+      "ats:hsm:21",
+      "ats:hsm:22",
+      "ats:hsm:23",
+      "ats:hsm:24",
+      "ats:hsm:26",
+      "ats:hsm:27",
+      "ats:hsm:28",
+      "ats:hsm:29",
+      "ats:hsm:30",
+      "ats:hsm:32",
+      "ats:hsm:33",
+      "ats:hsm:34",
+      "ats:hsm:35",
+      "ats:hsm:36",
+      "ats:hsm:37",
+      "ats:hsm:38",
+      "ats:hsm:39",
+      "ats:hsm:40",
+      "ats:hsm:41",
+      "ats:hsm:42",
+      "ats:hsm:43",
+      "ats:hsm:44",
+      "ats:hsm:45",
+      "ats:hsm:46",
+      "ats:hsm:47",
+      "ats:hsm:48",
+      "ats:hsm:49",
+      "ats:hsm:50",
+      "ats:hsm:51",
+      "ats:hsm:52",
+      "ats:hsm:53",
+      "ats:hsm:54",
+      "ats:hsm:55",
+      "ats:hsm:56",
+      "ats:hsm:57",
+      "ats:hsm:59",
+      "ats:hsm:60",
+      "ats:hsm:61",
+      "ats:hsm:62",
+      "ats:hsm:63",
+      "ats:hsm:64",
+      "ats:hsm:65",
+      "ats:hsm:66",
+      "ats:hsm:67",
+      "ats:hsm:68",
+      "ats:hsm:69",
+      "ats:hsm:70",
+      "ats:hsm:71",
+      "ats:hsm:72",
+      "ats:hsm:73",
+      "ats:hsm:74",
+      "ats:hsm:75",
+      "ats:hsm:76",
+      "ats:hsm:77",
+      "ats:hsm:78",
+      "ats:hsm:79",
+      "ats:hsm:80",
+      "ats:hsm:81",
+      "ats:hsm:82",
+      "ats:hsm:83",
+      "ats:hsm:84",
+      "ats:hsm:85",
+      "ats:hsm:86",
+      "ats:hsm:87",
+      "ats:hsm:88",
+      "ats:hsm:89",
+      "ats:hsm:90",
+      "ats:hsm:91",
+      "ats:hsm:92",
+      "ats:hsm:93",
+      "ats:hsm:94",
+      "ats:hsm:95",
+      "ats:hsm:96"
+    ],
+    "active_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      26,
+      27,
+      28,
+      29,
+      30,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96
+    ],
+    "excluded_types": {
+      "ASMA": 7,
+      "ASPA": 84
+    },
+    "numbers_absent": [
+      12,
+      13,
+      25,
+      31,
+      58
+    ],
+    "outside_web_mercator_ids": [
+      "ats:hsm:1",
+      "ats:hsm:24",
+      "ats:hsm:80"
+    ],
+    "unknown_location_ids": [
+      "ats:hsm:95"
+    ]
+  },
+  "processing": {
+    "dates": "All imported stages not_reviewed; designation dates are not construction dates.",
+    "location": "Keep source WGS84; HSM34 DMS conversion; HSM95 unknown, not last-sighting marker.",
+    "pole": "Preserve -90 and -85.173278 source latitudes; never silently clamp projection.",
+    "sovereignty": "Proponents and managers are not country ownership or political boundaries.",
+    "text": "Official English text, HTML/whitespace normalization, no generated translations."
+  },
+  "records": [
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/82?lang=e",
+      "detail_sha256": "de81faa174941db92f0ae796f7b067f8de5da65f0739dc13ac4a9cfa64b13464",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/82",
+      "hsm_number": 1,
+      "internal_id": 82,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:1",
+      "source_decimal": {
+        "latitude": -90.0,
+        "longitude": 1.0
+      },
+      "source_dms": {
+        "latitude": "90° 0' 0\" S",
+        "longitude": "1° 0' 0\" E"
+      },
+      "type": {
+        "id": 3,
+        "name": "Building: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/83?lang=e",
+      "detail_sha256": "ef99c4ea53611ee5d9758d1bb6b505164ec028c3080a8c6cb5d7005916cc6357",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/83",
+      "hsm_number": 2,
+      "internal_id": 83,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:2",
+      "source_decimal": {
+        "latitude": -69.0,
+        "longitude": 39.583333
+      },
+      "source_dms": {
+        "latitude": "69° 0' 0\" S",
+        "longitude": "39° 35' 0\" E"
+      },
+      "type": {
+        "id": 9,
+        "name": "Monument/commemorative: plaque"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/84?lang=e",
+      "detail_sha256": "137a848639c2fd762d752c7fb420ddb0174b35f5be71216cf74b86ff168a820d",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/84",
+      "hsm_number": 3,
+      "internal_id": 84,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:3",
+      "source_decimal": {
+        "latitude": -65.85,
+        "longitude": 53.683333
+      },
+      "source_dms": {
+        "latitude": "65° 50' 59.9999\" S",
+        "longitude": "53° 41' 0\" E"
+      },
+      "type": {
+        "id": 5,
+        "name": "Other remains: expedition cairn"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/85?lang=e",
+      "detail_sha256": "a4a8993ec957054efd7a34ffa5c462540578c581b01870397b7308c153b8d893",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/85",
+      "hsm_number": 4,
+      "internal_id": 85,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:4",
+      "source_decimal": {
+        "latitude": -82.111667,
+        "longitude": 55.0325
+      },
+      "source_dms": {
+        "latitude": "82° 6' 42.0011\" S",
+        "longitude": "55° 1' 57\" E"
+      },
+      "type": {
+        "id": 2,
+        "name": "Building: station"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/86?lang=e",
+      "detail_sha256": "8cd8e52b67ba54e78f68bbdcb5665ad199f91fd1f54d7b9bdf4280e90fa1981b",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/86",
+      "hsm_number": 5,
+      "internal_id": 86,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:5",
+      "source_decimal": {
+        "latitude": -67.416667,
+        "longitude": 60.783333
+      },
+      "source_dms": {
+        "latitude": "67° 25' 0.0012\" S",
+        "longitude": "60° 47' 0\" E"
+      },
+      "type": {
+        "id": 5,
+        "name": "Other remains: expedition cairn"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/87?lang=e",
+      "detail_sha256": "63c6565f6cf81fec2a28691040dd2f3e9e4f85022a6418b874c356413ff18694",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/87",
+      "hsm_number": 6,
+      "internal_id": 87,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:6",
+      "source_decimal": {
+        "latitude": -68.366667,
+        "longitude": 78.55
+      },
+      "source_dms": {
+        "latitude": "68° 22' 0.0012\" S",
+        "longitude": "78° 33' 0\" E"
+      },
+      "type": {
+        "id": 5,
+        "name": "Other remains: expedition cairn"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/88?lang=e",
+      "detail_sha256": "4c6b4a08d2ec0ec8d86bef22157a8f5e4967ea7b0bc46e4a8bf309a5e7a2f5ad",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/88",
+      "hsm_number": 7,
+      "internal_id": 88,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:7",
+      "source_decimal": {
+        "latitude": -66.534444,
+        "longitude": 92.999167
+      },
+      "source_dms": {
+        "latitude": "66° 32' 3.9983\" S",
+        "longitude": "92° 59' 57\" E"
+      },
+      "type": {
+        "id": 11,
+        "name": "Monument/commemorative: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/89?lang=e",
+      "detail_sha256": "9c77ada71cbbb128d74ad9940993a58b2e0f472100f967fa5b66ee8ebd545006",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/89",
+      "hsm_number": 8,
+      "internal_id": 89,
+      "measure_refs": [
+        {
+          "id": 296,
+          "name": "M  3 (2003) "
+        }
+      ],
+      "site_id": "ats:hsm:8",
+      "source_decimal": {
+        "latitude": -66.578611,
+        "longitude": 92.973056
+      },
+      "source_dms": {
+        "latitude": "66° 34' 43\" S",
+        "longitude": "92° 58' 23\" E"
+      },
+      "type": {
+        "id": 11,
+        "name": "Monument/commemorative: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/90?lang=e",
+      "detail_sha256": "ebe1ab70f5b6887c597aade8812a2784fef846db20ab827fd44e904bdde875f1",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/90",
+      "hsm_number": 9,
+      "internal_id": 90,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:9",
+      "source_decimal": {
+        "latitude": -66.534444,
+        "longitude": 93.0
+      },
+      "source_dms": {
+        "latitude": "66° 32' 4\" S",
+        "longitude": "93° 0' 0\" E"
+      },
+      "type": {
+        "id": 4,
+        "name": "Site"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/91?lang=e",
+      "detail_sha256": "ca631bd52e3c62afb81fd5274355348db321580cc7c4ae90f9fe5e4b15bf4f17",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/91",
+      "hsm_number": 10,
+      "internal_id": 91,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:10",
+      "source_decimal": {
+        "latitude": -66.275,
+        "longitude": 100.750833
+      },
+      "source_dms": {
+        "latitude": "66° 16' 30\" S",
+        "longitude": "100° 45' 3\" E"
+      },
+      "type": {
+        "id": 2,
+        "name": "Building: station"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/92?lang=e",
+      "detail_sha256": "40f06412a32d785b72afd5256bc5848472998f8a0cde3e3dbba5a3685131079d",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/92",
+      "hsm_number": 11,
+      "internal_id": 92,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:11",
+      "source_decimal": {
+        "latitude": -78.466667,
+        "longitude": 106.8
+      },
+      "source_dms": {
+        "latitude": "78° 28' 0\" S",
+        "longitude": "106° 48' 0\" E"
+      },
+      "type": {
+        "id": 11,
+        "name": "Monument/commemorative: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/93?lang=e",
+      "detail_sha256": "1f84f1b8ee285639aa899423cb6a05c27d09118861edc9e7e36ee782c1eeba91",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/93",
+      "hsm_number": 14,
+      "internal_id": 93,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:14",
+      "source_decimal": {
+        "latitude": -74.9,
+        "longitude": 163.716667
+      },
+      "source_dms": {
+        "latitude": "74° 54' 0\" S",
+        "longitude": "163° 43' 0\" E"
+      },
+      "type": {
+        "id": 4,
+        "name": "Site"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/94?lang=e",
+      "detail_sha256": "7045d70677cbd2502a9fac6add81cf994471b049b2f14b52f6792aa5b1a78aea",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/94",
+      "hsm_number": 15,
+      "internal_id": 94,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:15",
+      "source_decimal": {
+        "latitude": -77.55,
+        "longitude": 166.166667
+      },
+      "source_dms": {
+        "latitude": "77° 32' 59.9999\" S",
+        "longitude": "166° 10' 0\" E"
+      },
+      "type": {
+        "id": 1,
+        "name": "Building: hut"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/95?lang=e",
+      "detail_sha256": "b3065f7ec54d8c1257eb74cd315050260a65c671db27c031fbb0ec75f271c51d",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/95",
+      "hsm_number": 16,
+      "internal_id": 95,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:16",
+      "source_decimal": {
+        "latitude": -77.633333,
+        "longitude": 166.4
+      },
+      "source_dms": {
+        "latitude": "77° 37' 59.9987\" S",
+        "longitude": "166° 24' 0\" E"
+      },
+      "type": {
+        "id": 1,
+        "name": "Building: hut"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/196?lang=e",
+      "detail_sha256": "72f2f4a97937f289f5b58724646cc98c1253bc8b2ac2018457370fcd9a768233",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/196",
+      "hsm_number": 17,
+      "internal_id": 196,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:17",
+      "source_decimal": {
+        "latitude": -77.633333,
+        "longitude": 166.4
+      },
+      "source_dms": {
+        "latitude": "77° 37' 59.9987\" S",
+        "longitude": "166° 24' 0\" E"
+      },
+      "type": {
+        "id": 12,
+        "name": "Commemorative item: cross"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/97?lang=e",
+      "detail_sha256": "5fa0c34569828da2e26fe6d70d9bdcbdf062d79e4fe21ba84a412b793f7eaf4c",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/97",
+      "hsm_number": 18,
+      "internal_id": 97,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:18",
+      "source_decimal": {
+        "latitude": -77.833333,
+        "longitude": 166.616667
+      },
+      "source_dms": {
+        "latitude": "77° 49' 59.9987\" S",
+        "longitude": "166° 37' 0\" E"
+      },
+      "type": {
+        "id": 1,
+        "name": "Building: hut"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/98?lang=e",
+      "detail_sha256": "2592b58a8168109602d8c6468a4ce94023d8d32cdfb97fb3fef2cc7bf19908fc",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/98",
+      "hsm_number": 19,
+      "internal_id": 98,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:19",
+      "source_decimal": {
+        "latitude": -77.833333,
+        "longitude": 166.616667
+      },
+      "source_dms": {
+        "latitude": "77° 49' 59.9987\" S",
+        "longitude": "166° 37' 0\" E"
+      },
+      "type": {
+        "id": 12,
+        "name": "Commemorative item: cross"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/99?lang=e",
+      "detail_sha256": "0ffd834e4b22d100e5fa1797c717380d473af5c1c434cb7e2ae560dd12790c65",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/99",
+      "hsm_number": 20,
+      "internal_id": 99,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:20",
+      "source_decimal": {
+        "latitude": -77.85,
+        "longitude": 166.683333
+      },
+      "source_dms": {
+        "latitude": "77° 50' 59.9999\" S",
+        "longitude": "166° 41' 0\" E"
+      },
+      "type": {
+        "id": 12,
+        "name": "Commemorative item: cross"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/100?lang=e",
+      "detail_sha256": "66a545c24fff047f89b21a7f2c975d1a7b5908c1909c49846c6afe0d44d866af",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/100",
+      "hsm_number": 21,
+      "internal_id": 100,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:21",
+      "source_decimal": {
+        "latitude": -77.516667,
+        "longitude": 169.366667
+      },
+      "source_dms": {
+        "latitude": "77° 31' 0.0011\" S",
+        "longitude": "169° 22' 0\" E"
+      },
+      "type": {
+        "id": 3,
+        "name": "Building: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/101?lang=e",
+      "detail_sha256": "5c704104377c16363627bdb3ab366f534d9c6abce261aafa8ceb8fc567c88e93",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/101",
+      "hsm_number": 22,
+      "internal_id": 101,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:22",
+      "source_decimal": {
+        "latitude": -71.3,
+        "longitude": 170.2
+      },
+      "source_dms": {
+        "latitude": "71° 17' 59.9999\" S",
+        "longitude": "170° 12' 0\" E"
+      },
+      "type": {
+        "id": 1,
+        "name": "Building: hut"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/102?lang=e",
+      "detail_sha256": "23013060879ec5fae4d995d6efbf821b73e756f0e40d288085b4c24f24d1b609",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/102",
+      "hsm_number": 23,
+      "internal_id": 102,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:23",
+      "source_decimal": {
+        "latitude": -71.283333,
+        "longitude": 170.216667
+      },
+      "source_dms": {
+        "latitude": "71° 16' 59.9987\" S",
+        "longitude": "170° 13' 0\" E"
+      },
+      "type": {
+        "id": 11,
+        "name": "Monument/commemorative: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/103?lang=e",
+      "detail_sha256": "118fa21ca2b56a93baf71c8204b10f96a37f921ae8698b40fe469da782ec655b",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/103",
+      "hsm_number": 24,
+      "internal_id": 103,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:24",
+      "source_decimal": {
+        "latitude": -85.173278,
+        "longitude": -163.601639
+      },
+      "source_dms": {
+        "latitude": "85° 10' 23.8007\" S",
+        "longitude": "163° 36' 5.9\" W"
+      },
+      "type": {
+        "id": 5,
+        "name": "Other remains: expedition cairn"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/104?lang=e",
+      "detail_sha256": "cfd03ead2f3644acef533acb35f9d1831280a9dceb7e9edc51559999dc88e616",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/104",
+      "hsm_number": 26,
+      "internal_id": 104,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:26",
+      "source_decimal": {
+        "latitude": -68.129722,
+        "longitude": -67.101389
+      },
+      "source_dms": {
+        "latitude": "68° 7' 46.9992\" S",
+        "longitude": "67° 6' 5\" W"
+      },
+      "type": {
+        "id": 8,
+        "name": "Other remains: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/105?lang=e",
+      "detail_sha256": "5c5582ecae5a42ba0eb2d8ec1ec78b1b25990260a4f756a6c564422bbb108264",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/105",
+      "hsm_number": 27,
+      "internal_id": 105,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:27",
+      "source_decimal": {
+        "latitude": -65.166667,
+        "longitude": -64.15
+      },
+      "source_dms": {
+        "latitude": "65° 10' 0.0012\" S",
+        "longitude": "64° 9' 0\" W"
+      },
+      "type": {
+        "id": 9,
+        "name": "Monument/commemorative: plaque"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/106?lang=e",
+      "detail_sha256": "daa8d417efbd5ca6f4a1a3b14b67150efd1ea00b2725aef09141a5a181b877d2",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/106",
+      "hsm_number": 28,
+      "internal_id": 106,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:28",
+      "source_decimal": {
+        "latitude": -65.05,
+        "longitude": -64.016667
+      },
+      "source_dms": {
+        "latitude": "65° 3' 0\" S",
+        "longitude": "64° 1' 0\" W"
+      },
+      "type": {
+        "id": 5,
+        "name": "Other remains: expedition cairn"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/107?lang=e",
+      "detail_sha256": "732ace3f1823a6b965787d6c3a83cd7a64ca0195a88809bbc1ebeae8587ec0a2",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/107",
+      "hsm_number": 29,
+      "internal_id": 107,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:29",
+      "source_decimal": {
+        "latitude": -64.299444,
+        "longitude": -62.968889
+      },
+      "source_dms": {
+        "latitude": "64° 17' 57.9983\" S",
+        "longitude": "62° 58' 8\" W"
+      },
+      "type": {
+        "id": 7,
+        "name": "Other remains: lighthouse"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/108?lang=e",
+      "detail_sha256": "d534fbb0a0cf5e6c919acec3a0a097599be0a00b12f650c31e1d1fff1f70a917",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/108",
+      "hsm_number": 30,
+      "internal_id": 108,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:30",
+      "source_decimal": {
+        "latitude": -64.816667,
+        "longitude": -62.85
+      },
+      "source_dms": {
+        "latitude": "64° 49' 0.0011\" S",
+        "longitude": "62° 51' 0\" W"
+      },
+      "type": {
+        "id": 2,
+        "name": "Building: station"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/109?lang=e",
+      "detail_sha256": "2df12d3877f136d887a3c02f1b7f8d39247a625d5ed13715b3e252b6b06e1b55",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/109",
+      "hsm_number": 32,
+      "internal_id": 109,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:32",
+      "source_decimal": {
+        "latitude": -62.466667,
+        "longitude": -59.666667
+      },
+      "source_dms": {
+        "latitude": "62° 28' 0.0012\" S",
+        "longitude": "59° 40' 0\" W"
+      },
+      "type": {
+        "id": 11,
+        "name": "Monument/commemorative: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/110?lang=e",
+      "detail_sha256": "f0669c89782ac0a546894ea9a64f7c40aa8e6aa609670f931c2e8cfd55cdcfcc",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/110",
+      "hsm_number": 33,
+      "internal_id": 110,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:33",
+      "source_decimal": {
+        "latitude": -62.483333,
+        "longitude": -59.666667
+      },
+      "source_dms": {
+        "latitude": "62° 28' 59.9988\" S",
+        "longitude": "59° 40' 0\" W"
+      },
+      "type": {
+        "id": 1,
+        "name": "Building: hut"
+      }
+    },
+    {
+      "coordinate_method": "dms_conversion",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/111?lang=e",
+      "detail_sha256": "182eaf2a86cb60089926c25ff7dc4e7260d4257645305714c24f8bfb8a4ef7c3",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/111",
+      "hsm_number": 34,
+      "internal_id": 111,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:34",
+      "source_decimal": {
+        "latitude": null,
+        "longitude": null
+      },
+      "source_dms": {
+        "latitude": "62°50'S",
+        "longitude": "59°41'W"
+      },
+      "type": {
+        "id": 10,
+        "name": "Monument/commemorative: bust"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/112?lang=e",
+      "detail_sha256": "ed7c975e0bb61cfa7520642a01ded76e1e661a969449546417188e59eaa3ef74",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/112",
+      "hsm_number": 35,
+      "internal_id": 112,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:35",
+      "source_decimal": {
+        "latitude": -62.483333,
+        "longitude": -59.666667
+      },
+      "source_dms": {
+        "latitude": "62° 28' 59.9988\" S",
+        "longitude": "59° 40' 0\" W"
+      },
+      "type": {
+        "id": 12,
+        "name": "Commemorative item: cross"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/113?lang=e",
+      "detail_sha256": "4212d0be56ac8a03bf0fed14882a2713e75c35de3a340ad9226b5c251da92a7a",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/113",
+      "hsm_number": 36,
+      "internal_id": 113,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:36",
+      "source_decimal": {
+        "latitude": -62.240556,
+        "longitude": -58.679167
+      },
+      "source_dms": {
+        "latitude": "62° 14' 26.0015\" S",
+        "longitude": "58° 40' 45.0011\" W"
+      },
+      "type": {
+        "id": 9,
+        "name": "Monument/commemorative: plaque"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/114?lang=e",
+      "detail_sha256": "91537a8bb16485b7a718a132aa423a62f6af51907132970309bae7b17992f802",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/114",
+      "hsm_number": 37,
+      "internal_id": 114,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:37",
+      "source_decimal": {
+        "latitude": -63.316667,
+        "longitude": -57.9
+      },
+      "source_dms": {
+        "latitude": "63° 19' 0.0012\" S",
+        "longitude": "57° 54' 0\" W"
+      },
+      "type": {
+        "id": 4,
+        "name": "Site"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/115?lang=e",
+      "detail_sha256": "2817145ae2ab959fe692eb42fd1cf91bc1b85997cef200bdf80a5376cea1d19a",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/115",
+      "hsm_number": 38,
+      "internal_id": 115,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:38",
+      "source_decimal": {
+        "latitude": -64.363889,
+        "longitude": -56.992222
+      },
+      "source_dms": {
+        "latitude": "64° 21' 50.0004\" S",
+        "longitude": "56° 59' 32\" W"
+      },
+      "type": {
+        "id": 1,
+        "name": "Building: hut"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/116?lang=e",
+      "detail_sha256": "b902d3a3a5700d8be9f912c172f44b69f9c4ed0c2825e52476643c523ae47947",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/116",
+      "hsm_number": 39,
+      "internal_id": 116,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:39",
+      "source_decimal": {
+        "latitude": -63.395556,
+        "longitude": -56.9975
+      },
+      "source_dms": {
+        "latitude": "63° 23' 44.0015\" S",
+        "longitude": "56° 59' 51\" W"
+      },
+      "type": {
+        "id": 3,
+        "name": "Building: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/117?lang=e",
+      "detail_sha256": "a55f1e81d96132ca9f942a614784ea5d1e01b8ff16ff026828df02f7d0bfc589",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/117",
+      "hsm_number": 40,
+      "internal_id": 117,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:40",
+      "source_decimal": {
+        "latitude": -63.396944,
+        "longitude": -56.999167
+      },
+      "source_dms": {
+        "latitude": "63° 23' 48.9983\" S",
+        "longitude": "56° 59' 57.0011\" W"
+      },
+      "type": {
+        "id": 4,
+        "name": "Site"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/118?lang=e",
+      "detail_sha256": "45a92df29269a253a6ea28aa94c73a8b4b5154a93661650c94a4ac95af15e784",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/118",
+      "hsm_number": 41,
+      "internal_id": 118,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:41",
+      "source_decimal": {
+        "latitude": -63.574722,
+        "longitude": -55.785
+      },
+      "source_dms": {
+        "latitude": "63° 34' 28.9992\" S",
+        "longitude": "55° 47' 6\" W"
+      },
+      "type": {
+        "id": 4,
+        "name": "Site"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/119?lang=e",
+      "detail_sha256": "cfa226bbd3cdc62a030c1fdc98939499f57381675a5b645eaf13e88126a10b93",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/119",
+      "hsm_number": 42,
+      "internal_id": 119,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:42",
+      "source_decimal": {
+        "latitude": -60.738333,
+        "longitude": -44.738611
+      },
+      "source_dms": {
+        "latitude": "60° 44' 17.9987\" S",
+        "longitude": "44° 44' 19\" W"
+      },
+      "type": {
+        "id": 4,
+        "name": "Site"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/120?lang=e",
+      "detail_sha256": "2c65c30a4966394c0cd01d65ab86b845041559438cdc2daa3bb6567bdc331d65",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/120",
+      "hsm_number": 43,
+      "internal_id": 120,
+      "measure_refs": [
+        {
+          "id": 100,
+          "name": "RE VII-9"
+        }
+      ],
+      "site_id": "ats:hsm:43",
+      "source_decimal": {
+        "latitude": -77.876111,
+        "longitude": -34.628611
+      },
+      "source_dms": {
+        "latitude": "77° 52' 33.9995\" S",
+        "longitude": "34° 37' 43\" W"
+      },
+      "type": {
+        "id": 12,
+        "name": "Commemorative item: cross"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/121?lang=e",
+      "detail_sha256": "2b775e19d54b3339a368c0396f75e92a2f3835137028ef5a397649209e7b4d1e",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/121",
+      "hsm_number": 44,
+      "internal_id": 121,
+      "measure_refs": [
+        {
+          "id": 142,
+          "name": "RE XII-7"
+        }
+      ],
+      "site_id": "ats:hsm:44",
+      "source_decimal": {
+        "latitude": -70.75,
+        "longitude": 11.633333
+      },
+      "source_dms": {
+        "latitude": "70° 45' 0\" S",
+        "longitude": "11° 38' 0\" E"
+      },
+      "type": {
+        "id": 9,
+        "name": "Monument/commemorative: plaque"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/122?lang=e",
+      "detail_sha256": "0e48b9fda6b25043ed305ac81f970e199e44bf52ce692c5f24e07fad84ae4d47",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/122",
+      "hsm_number": 45,
+      "internal_id": 122,
+      "measure_refs": [
+        {
+          "id": 159,
+          "name": "RE XIII-16"
+        }
+      ],
+      "site_id": "ats:hsm:45",
+      "source_decimal": {
+        "latitude": -64.033333,
+        "longitude": -62.566667
+      },
+      "source_dms": {
+        "latitude": "64° 1' 59.9987\" S",
+        "longitude": "62° 34' 0\" W"
+      },
+      "type": {
+        "id": 9,
+        "name": "Monument/commemorative: plaque"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/123?lang=e",
+      "detail_sha256": "7b01f2868602f70b14b01f25e3a0baf0b8b37ec84226096efb8b82b8732991d5",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/123",
+      "hsm_number": 46,
+      "internal_id": 123,
+      "measure_refs": [
+        {
+          "id": 159,
+          "name": "RE XIII-16"
+        }
+      ],
+      "site_id": "ats:hsm:46",
+      "source_decimal": {
+        "latitude": -66.816667,
+        "longitude": 141.4
+      },
+      "source_dms": {
+        "latitude": "66° 49' 0.0011\" S",
+        "longitude": "141° 24' 0\" E"
+      },
+      "type": {
+        "id": 4,
+        "name": "Site"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/124?lang=e",
+      "detail_sha256": "3ed1e5877d3a3ac2ec063723f31b7e43497032b03eb71c895efef3305cca3dc9",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/124",
+      "hsm_number": 47,
+      "internal_id": 124,
+      "measure_refs": [
+        {
+          "id": 159,
+          "name": "RE XIII-16"
+        }
+      ],
+      "site_id": "ats:hsm:47",
+      "source_decimal": {
+        "latitude": -66.666667,
+        "longitude": 140.016667
+      },
+      "source_dms": {
+        "latitude": "66° 40' 0.0012\" S",
+        "longitude": "140° 1' 0\" E"
+      },
+      "type": {
+        "id": 1,
+        "name": "Building: hut"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/125?lang=e",
+      "detail_sha256": "660d1d35adc14da43f35e600170f57f3f1e0ce23a6168f1b040493e3e23f2b51",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/125",
+      "hsm_number": 48,
+      "internal_id": 125,
+      "measure_refs": [
+        {
+          "id": 159,
+          "name": "RE XIII-16"
+        }
+      ],
+      "site_id": "ats:hsm:48",
+      "source_decimal": {
+        "latitude": -66.666667,
+        "longitude": 140.016667
+      },
+      "source_dms": {
+        "latitude": "66° 40' 0.0012\" S",
+        "longitude": "140° 1' 0\" E"
+      },
+      "type": {
+        "id": 12,
+        "name": "Commemorative item: cross"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/126?lang=e",
+      "detail_sha256": "f661a3ce966d5a1aa7997ea9708c4eb81f3dad4a3f75959af4b7bf80a9c1bba3",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/126",
+      "hsm_number": 49,
+      "internal_id": 126,
+      "measure_refs": [
+        {
+          "id": 159,
+          "name": "RE XIII-16"
+        }
+      ],
+      "site_id": "ats:hsm:49",
+      "source_decimal": {
+        "latitude": -66.266667,
+        "longitude": 100.75
+      },
+      "source_dms": {
+        "latitude": "66° 16' 0.0011\" S",
+        "longitude": "100° 45' 0\" E"
+      },
+      "type": {
+        "id": 11,
+        "name": "Monument/commemorative: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/127?lang=e",
+      "detail_sha256": "7580431a0de1604d9508d90ca5113ad29bb793505fde374b6d36fe4e5ac60d85",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/127",
+      "hsm_number": 50,
+      "internal_id": 127,
+      "measure_refs": [
+        {
+          "id": 159,
+          "name": "RE XIII-16"
+        }
+      ],
+      "site_id": "ats:hsm:50",
+      "source_decimal": {
+        "latitude": -62.2,
+        "longitude": -59.016667
+      },
+      "source_dms": {
+        "latitude": "62° 12' 0\" S",
+        "longitude": "59° 1' 0\" W"
+      },
+      "type": {
+        "id": 9,
+        "name": "Monument/commemorative: plaque"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/4?lang=e",
+      "detail_sha256": "5591801bb949361d2f03a5da46f2e30eab46a84bb0e10b4c85a67d8df385bd00",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/4",
+      "hsm_number": 51,
+      "internal_id": 4,
+      "measure_refs": [
+        {
+          "id": 159,
+          "name": "RE XIII-16"
+        }
+      ],
+      "site_id": "ats:hsm:51",
+      "source_decimal": {
+        "latitude": -62.216667,
+        "longitude": -58.466667
+      },
+      "source_dms": {
+        "latitude": "62° 13' 0.0012\" S",
+        "longitude": "58° 28' 0\" W"
+      },
+      "type": {
+        "id": 8,
+        "name": "Other remains: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/128?lang=e",
+      "detail_sha256": "c1ccee9aa06efc71731e552ce017fd889a819ed2aa7d9d02a0520df4622eeaa2",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/128",
+      "hsm_number": 52,
+      "internal_id": 128,
+      "measure_refs": [
+        {
+          "id": 159,
+          "name": "RE XIII-16"
+        }
+      ],
+      "site_id": "ats:hsm:52",
+      "source_decimal": {
+        "latitude": -62.216667,
+        "longitude": -58.966667
+      },
+      "source_dms": {
+        "latitude": "62° 13' 0.0012\" S",
+        "longitude": "58° 58' 0\" W"
+      },
+      "type": {
+        "id": 11,
+        "name": "Monument/commemorative: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/5?lang=e",
+      "detail_sha256": "e2b28ffcf4c30fb89d1bc6564822cdcaace20a204cac3253f2ff9167c1aeaad5",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/5",
+      "hsm_number": 53,
+      "internal_id": 5,
+      "measure_refs": [
+        {
+          "id": 167,
+          "name": "RE XIV-8"
+        }
+      ],
+      "site_id": "ats:hsm:53",
+      "source_decimal": {
+        "latitude": -61.05,
+        "longitude": -54.833333
+      },
+      "source_dms": {
+        "latitude": "61° 2' 59.9999\" S",
+        "longitude": "54° 50' 0\" W"
+      },
+      "type": {
+        "id": 10,
+        "name": "Monument/commemorative: bust"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/129?lang=e",
+      "detail_sha256": "1fb4d6ab0ccc3d4ecbf4d6b2100de4fff0aa2a0f0d7c69f156329243d0ce751c",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/129",
+      "hsm_number": 54,
+      "internal_id": 129,
+      "measure_refs": [
+        {
+          "id": 181,
+          "name": "RE XV-12"
+        }
+      ],
+      "site_id": "ats:hsm:54",
+      "source_decimal": {
+        "latitude": -77.85,
+        "longitude": 166.666667
+      },
+      "source_dms": {
+        "latitude": "77° 50' 59.9999\" S",
+        "longitude": "166° 40' 0\" E"
+      },
+      "type": {
+        "id": 10,
+        "name": "Monument/commemorative: bust"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/130?lang=e",
+      "detail_sha256": "ab0ca77333d5a29810a68f07a05b0b6fc964c862fddce1cedd3e50be542256d4",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/130",
+      "hsm_number": 55,
+      "internal_id": 130,
+      "measure_refs": [
+        {
+          "id": 181,
+          "name": "RE XV-12"
+        }
+      ],
+      "site_id": "ats:hsm:55",
+      "source_decimal": {
+        "latitude": -68.183333,
+        "longitude": -67.0
+      },
+      "source_dms": {
+        "latitude": "68° 10' 59.9988\" S",
+        "longitude": "67° 0' 0\" W"
+      },
+      "type": {
+        "id": 2,
+        "name": "Building: station"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/131?lang=e",
+      "detail_sha256": "18c9bccf51c80367d9409aef7fc1d68a79c60137c182f5412a66479e59fc74e8",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/131",
+      "hsm_number": 56,
+      "internal_id": 131,
+      "measure_refs": [
+        {
+          "id": 208,
+          "name": "RE XVI-11"
+        }
+      ],
+      "site_id": "ats:hsm:56",
+      "source_decimal": {
+        "latitude": -64.816667,
+        "longitude": -62.85
+      },
+      "source_dms": {
+        "latitude": "64° 49' 0.0011\" S",
+        "longitude": "62° 51' 0\" W"
+      },
+      "type": {
+        "id": 1,
+        "name": "Building: hut"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/132?lang=e",
+      "detail_sha256": "e1e35f1a9e8e0b32bdf4ad7a9c5542575f7da4aed494336722fccd68d8c4728f",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/132",
+      "hsm_number": 57,
+      "internal_id": 132,
+      "measure_refs": [
+        {
+          "id": 208,
+          "name": "RE XVI-11"
+        }
+      ],
+      "site_id": "ats:hsm:57",
+      "source_decimal": {
+        "latitude": -62.533333,
+        "longitude": -59.75
+      },
+      "source_dms": {
+        "latitude": "62° 31' 59.9987\" S",
+        "longitude": "59° 45' 0\" W"
+      },
+      "type": {
+        "id": 9,
+        "name": "Monument/commemorative: plaque"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/133?lang=e",
+      "detail_sha256": "fb596cb2bb67a2ff1d921f37db0bae34046f989ce040e01b854b7c9c4a314af9",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/133",
+      "hsm_number": 59,
+      "internal_id": 133,
+      "measure_refs": [
+        {
+          "id": 208,
+          "name": "RE XVI-11"
+        }
+      ],
+      "site_id": "ats:hsm:59",
+      "source_decimal": {
+        "latitude": -62.466667,
+        "longitude": -60.766667
+      },
+      "source_dms": {
+        "latitude": "62° 28' 0.0012\" S",
+        "longitude": "60° 46' 0.0011\" W"
+      },
+      "type": {
+        "id": 9,
+        "name": "Monument/commemorative: plaque"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/134?lang=e",
+      "detail_sha256": "aaa22322093c15e5bb245188f3a32a6d2b61abad38bcb2e93e7dad517fcd868d",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/134",
+      "hsm_number": 60,
+      "internal_id": 134,
+      "measure_refs": [
+        {
+          "id": 629,
+          "name": "M  9 (2016) "
+        }
+      ],
+      "site_id": "ats:hsm:60",
+      "source_decimal": {
+        "latitude": -64.296444,
+        "longitude": -56.691861
+      },
+      "source_dms": {
+        "latitude": "64° 17' 47.1983\" S",
+        "longitude": "56° 41' 30.6996\" W"
+      },
+      "type": {
+        "id": 4,
+        "name": "Site"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/135?lang=e",
+      "detail_sha256": "42ff15714aa2f49ac75689003a80eb1351910ec45771ab5868e19538461d972c",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/135",
+      "hsm_number": 61,
+      "internal_id": 135,
+      "measure_refs": [
+        {
+          "id": 219,
+          "name": "M  4 (1995) "
+        }
+      ],
+      "site_id": "ats:hsm:61",
+      "source_decimal": {
+        "latitude": -64.816667,
+        "longitude": -63.483333
+      },
+      "source_dms": {
+        "latitude": "64° 49' 0.0011\" S",
+        "longitude": "63° 29' 0\" W"
+      },
+      "type": {
+        "id": 2,
+        "name": "Building: station"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/136?lang=e",
+      "detail_sha256": "49aae03e8a065705d3182110ef37d5ebcb9f7f9e3340ba6d2c38668f63e71e35",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/136",
+      "hsm_number": 62,
+      "internal_id": 136,
+      "measure_refs": [
+        {
+          "id": 219,
+          "name": "M  4 (1995) "
+        }
+      ],
+      "site_id": "ats:hsm:62",
+      "source_decimal": {
+        "latitude": -65.25,
+        "longitude": -64.266667
+      },
+      "source_dms": {
+        "latitude": "65° 15' 0\" S",
+        "longitude": "64° 16' 0\" W"
+      },
+      "type": {
+        "id": 2,
+        "name": "Building: station"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/137?lang=e",
+      "detail_sha256": "1334f155de014e678652a8ad4ae6ade73835c6ec90fb958d3358cc959f7c1a45",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/137",
+      "hsm_number": 63,
+      "internal_id": 137,
+      "measure_refs": [
+        {
+          "id": 219,
+          "name": "M  4 (1995) "
+        }
+      ],
+      "site_id": "ats:hsm:63",
+      "source_decimal": {
+        "latitude": -67.8,
+        "longitude": -67.3
+      },
+      "source_dms": {
+        "latitude": "67° 47' 59.9999\" S",
+        "longitude": "67° 18' 0\" W"
+      },
+      "type": {
+        "id": 2,
+        "name": "Building: station"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/138?lang=e",
+      "detail_sha256": "1f194bc3a238d6172cd4652a16fb1969520879aa6a954416d001e28de2bc0d63",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/138",
+      "hsm_number": 64,
+      "internal_id": 138,
+      "measure_refs": [
+        {
+          "id": 219,
+          "name": "M  4 (1995) "
+        }
+      ],
+      "site_id": "ats:hsm:64",
+      "source_decimal": {
+        "latitude": -68.183333,
+        "longitude": -67.0
+      },
+      "source_dms": {
+        "latitude": "68° 10' 59.9988\" S",
+        "longitude": "67° 0' 0\" W"
+      },
+      "type": {
+        "id": 2,
+        "name": "Building: station"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/139?lang=e",
+      "detail_sha256": "87a8de95fb789c26a78b0efe71fb90dacacf26039eaf009ac17dc73ccc7afbc0",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/139",
+      "hsm_number": 65,
+      "internal_id": 139,
+      "measure_refs": [
+        {
+          "id": 219,
+          "name": "M  4 (1995) "
+        }
+      ],
+      "site_id": "ats:hsm:65",
+      "source_decimal": {
+        "latitude": -71.933333,
+        "longitude": 171.083333
+      },
+      "source_dms": {
+        "latitude": "71° 55' 59.9988\" S",
+        "longitude": "171° 5' 0\" E"
+      },
+      "type": {
+        "id": 8,
+        "name": "Other remains: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/140?lang=e",
+      "detail_sha256": "a392fe5885fd7401355362b26138925d0ab339d01c9f9f586ed53e01278e48f3",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/140",
+      "hsm_number": 66,
+      "internal_id": 140,
+      "measure_refs": [
+        {
+          "id": 219,
+          "name": "M  4 (1995) "
+        }
+      ],
+      "site_id": "ats:hsm:66",
+      "source_decimal": {
+        "latitude": -77.183333,
+        "longitude": -154.533333
+      },
+      "source_dms": {
+        "latitude": "77° 10' 59.9988\" S",
+        "longitude": "154° 32' 0\" W"
+      },
+      "type": {
+        "id": 5,
+        "name": "Other remains: expedition cairn"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/141?lang=e",
+      "detail_sha256": "ef6bffb8a0112816491a282dcae846a829dad13e434a703120433d703faa4a14",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/141",
+      "hsm_number": 67,
+      "internal_id": 141,
+      "measure_refs": [
+        {
+          "id": 219,
+          "name": "M  4 (1995) "
+        }
+      ],
+      "site_id": "ats:hsm:67",
+      "source_decimal": {
+        "latitude": -77.0,
+        "longitude": 162.533333
+      },
+      "source_dms": {
+        "latitude": "77° 0' 0\" S",
+        "longitude": "162° 32' 0\" E"
+      },
+      "type": {
+        "id": 3,
+        "name": "Building: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/142?lang=e",
+      "detail_sha256": "be7ef92cf30e17bd5d4339ff8751553e7cdcaee0d63b31aa01e1acfa04fbdcf1",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/142",
+      "hsm_number": 68,
+      "internal_id": 142,
+      "measure_refs": [
+        {
+          "id": 219,
+          "name": "M  4 (1995) "
+        }
+      ],
+      "site_id": "ats:hsm:68",
+      "source_decimal": {
+        "latitude": -74.866667,
+        "longitude": 163.833333
+      },
+      "source_dms": {
+        "latitude": "74° 52' 0.0012\" S",
+        "longitude": "163° 50' 0\" E"
+      },
+      "type": {
+        "id": 4,
+        "name": "Site"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/143?lang=e",
+      "detail_sha256": "20e5250eac2e78d66828ca7611e01b304693260ba4ecab1c21d1b6e8ae74c423",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/143",
+      "hsm_number": 69,
+      "internal_id": 143,
+      "measure_refs": [
+        {
+          "id": 219,
+          "name": "M  4 (1995) "
+        }
+      ],
+      "site_id": "ats:hsm:69",
+      "source_decimal": {
+        "latitude": -77.45,
+        "longitude": 169.266667
+      },
+      "source_dms": {
+        "latitude": "77° 27' 0\" S",
+        "longitude": "169° 16' 0\" E"
+      },
+      "type": {
+        "id": 8,
+        "name": "Other remains: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/144?lang=e",
+      "detail_sha256": "44082d109bb80b6bb36467e0900cffdb5f07f8aba555a85339813e8dd678cf7d",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/144",
+      "hsm_number": 70,
+      "internal_id": 144,
+      "measure_refs": [
+        {
+          "id": 219,
+          "name": "M  4 (1995) "
+        }
+      ],
+      "site_id": "ats:hsm:70",
+      "source_decimal": {
+        "latitude": -73.316667,
+        "longitude": 169.783333
+      },
+      "source_dms": {
+        "latitude": "73° 19' 0.0011\" S",
+        "longitude": "169° 47' 0\" E"
+      },
+      "type": {
+        "id": 8,
+        "name": "Other remains: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/145?lang=e",
+      "detail_sha256": "24a187d99f4add75fa0cd2fe76dabdc2116f55bbc39c69fbad85dee63eaffbc4",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/145",
+      "hsm_number": 71,
+      "internal_id": 145,
+      "measure_refs": [
+        {
+          "id": 219,
+          "name": "M  4 (1995) "
+        }
+      ],
+      "site_id": "ats:hsm:71",
+      "source_decimal": {
+        "latitude": -62.983333,
+        "longitude": -60.633333
+      },
+      "source_dms": {
+        "latitude": "62° 58' 59.9988\" S",
+        "longitude": "60° 37' 59.9988\" W"
+      },
+      "type": {
+        "id": 4,
+        "name": "Site"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/146?lang=e",
+      "detail_sha256": "5f1a698020af4601ae530f32486e6e710cb3b5460a2a99c79dd0dd22514a2851",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/146",
+      "hsm_number": 72,
+      "internal_id": 146,
+      "measure_refs": [
+        {
+          "id": 233,
+          "name": "M  2 (1996) "
+        }
+      ],
+      "site_id": "ats:hsm:72",
+      "source_decimal": {
+        "latitude": -68.366667,
+        "longitude": 78.4
+      },
+      "source_dms": {
+        "latitude": "68° 22' 0.0012\" S",
+        "longitude": "78° 24' 0\" E"
+      },
+      "type": {
+        "id": 5,
+        "name": "Other remains: expedition cairn"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/147?lang=e",
+      "detail_sha256": "f1233dbc9005725c75725bcd1d48ada0793702153c8135f9432b2c783db416ae",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/147",
+      "hsm_number": 73,
+      "internal_id": 147,
+      "measure_refs": [
+        {
+          "id": 135,
+          "name": "RE XI-3"
+        }
+      ],
+      "site_id": "ats:hsm:73",
+      "source_decimal": {
+        "latitude": -77.416667,
+        "longitude": 167.45
+      },
+      "source_dms": {
+        "latitude": "77° 25' 0.0012\" S",
+        "longitude": "167° 27' 0\" E"
+      },
+      "type": {
+        "id": 12,
+        "name": "Commemorative item: cross"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/148?lang=e",
+      "detail_sha256": "7ce4cdef2e135c2b51004696484df7b31650d78a9776d925abfc9bc3003253fa",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/148",
+      "hsm_number": 74,
+      "internal_id": 148,
+      "measure_refs": [
+        {
+          "id": 250,
+          "name": "M  2 (1998) "
+        }
+      ],
+      "site_id": "ats:hsm:74",
+      "source_decimal": {
+        "latitude": -61.233333,
+        "longitude": -55.366667
+      },
+      "source_dms": {
+        "latitude": "61° 13' 59.9988\" S",
+        "longitude": "55° 22' 0\" W"
+      },
+      "type": {
+        "id": 4,
+        "name": "Site"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/149?lang=e",
+      "detail_sha256": "3ff5069c8e00bff594d0959885f7b759391543db5a6e42c4cbd9b0523e4a1035",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/149",
+      "hsm_number": 75,
+      "internal_id": 149,
+      "measure_refs": [
+        {
+          "id": 275,
+          "name": "M  1 (2001) "
+        }
+      ],
+      "site_id": "ats:hsm:75",
+      "source_decimal": {
+        "latitude": -77.85,
+        "longitude": 166.766667
+      },
+      "source_dms": {
+        "latitude": "77° 50' 59.9999\" S",
+        "longitude": "166° 46' 0\" E"
+      },
+      "type": {
+        "id": 2,
+        "name": "Building: station"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/150?lang=e",
+      "detail_sha256": "4690ee40c7a72dbfc5815e2c85e3b52814dffa3d98d2ffb6e416ed813057bf80",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/150",
+      "hsm_number": 76,
+      "internal_id": 150,
+      "measure_refs": [
+        {
+          "id": 276,
+          "name": "M  2 (2001) "
+        }
+      ],
+      "site_id": "ats:hsm:76",
+      "source_decimal": {
+        "latitude": -62.983333,
+        "longitude": -60.666667
+      },
+      "source_dms": {
+        "latitude": "62° 58' 59.9988\" S",
+        "longitude": "60° 40' 0\" W"
+      },
+      "type": {
+        "id": 3,
+        "name": "Building: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/151?lang=e",
+      "detail_sha256": "543d3f8c5fa685a29d27192d80c179d6d9ba30c87f3bcd0795485c72131f0546",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/151",
+      "hsm_number": 77,
+      "internal_id": 151,
+      "measure_refs": [
+        {
+          "id": 320,
+          "name": "M  3 (2004) "
+        }
+      ],
+      "site_id": "ats:hsm:77",
+      "source_decimal": {
+        "latitude": -67.008333,
+        "longitude": 142.661111
+      },
+      "source_dms": {
+        "latitude": "67° 0' 29.9987\" S",
+        "longitude": "142° 39' 40\" E"
+      },
+      "type": {
+        "id": 4,
+        "name": "Site"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/152?lang=e",
+      "detail_sha256": "25e8cb18e3486ac2d9e9b9e32fe9581cf4c7907dbc8265b6b84a9c28c0a7da33",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/152",
+      "hsm_number": 78,
+      "internal_id": 152,
+      "measure_refs": [
+        {
+          "id": 320,
+          "name": "M  3 (2004) "
+        }
+      ],
+      "site_id": "ats:hsm:78",
+      "source_decimal": {
+        "latitude": -71.752222,
+        "longitude": 11.208333
+      },
+      "source_dms": {
+        "latitude": "71° 45' 7.9992\" S",
+        "longitude": "11° 12' 30\" E"
+      },
+      "type": {
+        "id": 9,
+        "name": "Monument/commemorative: plaque"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/153?lang=e",
+      "detail_sha256": "dd0def5b33e19cabd65a460a33bac5f4bd5ead011bf5e4e8125f126c5dbfba2d",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/153",
+      "hsm_number": 79,
+      "internal_id": 153,
+      "measure_refs": [
+        {
+          "id": 335,
+          "name": "M  5 (2005) "
+        }
+      ],
+      "site_id": "ats:hsm:79",
+      "source_decimal": {
+        "latitude": -71.2,
+        "longitude": 164.516667
+      },
+      "source_dms": {
+        "latitude": "71° 12' 0\" S",
+        "longitude": "164° 31' 0\" E"
+      },
+      "type": {
+        "id": 1,
+        "name": "Building: hut"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/154?lang=e",
+      "detail_sha256": "a702173f9a2dc79daaa557be2560238d71f9a331f6dea93c01f1c0cb028a240a",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/154",
+      "hsm_number": 80,
+      "internal_id": 154,
+      "measure_refs": [
+        {
+          "id": 335,
+          "name": "M  5 (2005) "
+        }
+      ],
+      "site_id": "ats:hsm:80",
+      "source_decimal": {
+        "latitude": -90.0,
+        "longitude": 1.0
+      },
+      "source_dms": {
+        "latitude": "90° 0' 0\" S",
+        "longitude": "1° 0' 0\" E"
+      },
+      "type": {
+        "id": 6,
+        "name": "Other remains: tent"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/155?lang=e",
+      "detail_sha256": "672567500236eb91319f6cfc333cc497cbc7404f9f688f6c3b1bbcac05199b9f",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/155",
+      "hsm_number": 81,
+      "internal_id": 155,
+      "measure_refs": [
+        {
+          "id": 359,
+          "name": "M  3 (2006) "
+        }
+      ],
+      "site_id": "ats:hsm:81",
+      "source_decimal": {
+        "latitude": -66.605,
+        "longitude": 140.064167
+      },
+      "source_dms": {
+        "latitude": "66° 36' 18\" S",
+        "longitude": "140° 3' 51\" E"
+      },
+      "type": {
+        "id": 4,
+        "name": "Site"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/156?lang=e",
+      "detail_sha256": "b46eeac19986f4660544b311c4c725f8f742235274fe1ee627c75877602f9ac3",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/156",
+      "hsm_number": 82,
+      "internal_id": 156,
+      "measure_refs": [
+        {
+          "id": 377,
+          "name": "M  3 (2007) "
+        }
+      ],
+      "site_id": "ats:hsm:82",
+      "source_decimal": {
+        "latitude": -62.200278,
+        "longitude": -58.961389
+      },
+      "source_dms": {
+        "latitude": "62° 12' 1.0007\" S",
+        "longitude": "58° 57' 41\" W"
+      },
+      "type": {
+        "id": 9,
+        "name": "Monument/commemorative: plaque"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/158?lang=e",
+      "detail_sha256": "5f7a56449fc4b7a9ce083dda3a7add3daf87866466f4877fd7b51294429907d9",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/158",
+      "hsm_number": 83,
+      "internal_id": 158,
+      "measure_refs": [
+        {
+          "id": 431,
+          "name": "M  14 (2009) "
+        }
+      ],
+      "site_id": "ats:hsm:83",
+      "source_decimal": {
+        "latitude": -66.866667,
+        "longitude": -66.8
+      },
+      "source_dms": {
+        "latitude": "66° 52' 0.0012\" S",
+        "longitude": "66° 48' 0\" W"
+      },
+      "type": {
+        "id": 2,
+        "name": "Building: station"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/159?lang=e",
+      "detail_sha256": "669be9887a8b60d831f9036ba99de6630e25e115574bc692611ad934bdb38b76",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/159",
+      "hsm_number": 84,
+      "internal_id": 159,
+      "measure_refs": [
+        {
+          "id": 431,
+          "name": "M  14 (2009) "
+        }
+      ],
+      "site_id": "ats:hsm:84",
+      "source_decimal": {
+        "latitude": -64.816667,
+        "longitude": -63.516667
+      },
+      "source_dms": {
+        "latitude": "64° 49' 0.0011\" S",
+        "longitude": "63° 31' 0\" W"
+      },
+      "type": {
+        "id": 1,
+        "name": "Building: hut"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/160?lang=e",
+      "detail_sha256": "1c6a74b789057810d973b1db19dca2d8f1b94f1ae4ff149ec64a260aa63bc1c3",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/160",
+      "hsm_number": 85,
+      "internal_id": 160,
+      "measure_refs": [
+        {
+          "id": 465,
+          "name": "M  15 (2010) "
+        }
+      ],
+      "site_id": "ats:hsm:85",
+      "source_decimal": {
+        "latitude": -77.85,
+        "longitude": 166.683333
+      },
+      "source_dms": {
+        "latitude": "77° 50' 59.9999\" S",
+        "longitude": "166° 41' 0\" E"
+      },
+      "type": {
+        "id": 9,
+        "name": "Monument/commemorative: plaque"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/164?lang=e",
+      "detail_sha256": "a41e97150e0f4e6eee357e5ac50ef224a3ad67667dd1b373463253fbd578b0db",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/164",
+      "hsm_number": 86,
+      "internal_id": 164,
+      "measure_refs": [
+        {
+          "id": 490,
+          "name": "M  12 (2011) "
+        }
+      ],
+      "site_id": "ats:hsm:86",
+      "source_decimal": {
+        "latitude": -62.217778,
+        "longitude": -58.962222
+      },
+      "source_dms": {
+        "latitude": "62° 13' 4.0008\" S",
+        "longitude": "58° 57' 44\" W"
+      },
+      "type": {
+        "id": 2,
+        "name": "Building: station"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/171?lang=e",
+      "detail_sha256": "ef11f6ab6cc1869acef52404cda4f63030d6d165b3159371c08ee5dfe7d708f8",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/171",
+      "hsm_number": 87,
+      "internal_id": 171,
+      "measure_refs": [
+        {
+          "id": 543,
+          "name": "M  18 (2013) "
+        }
+      ],
+      "site_id": "ats:hsm:87",
+      "source_decimal": {
+        "latitude": -70.7775,
+        "longitude": 11.850833
+      },
+      "source_dms": {
+        "latitude": "70° 46' 39\" S",
+        "longitude": "11° 51' 3\" E"
+      },
+      "type": {
+        "id": 9,
+        "name": "Monument/commemorative: plaque"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/172?lang=e",
+      "detail_sha256": "35a81c4c14beefadfec812cb9dfd8ca00e1b3b0b3c2166aad44b64d1d0d1f987",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/172",
+      "hsm_number": 88,
+      "internal_id": 172,
+      "measure_refs": [
+        {
+          "id": 544,
+          "name": "M  19 (2013) "
+        }
+      ],
+      "site_id": "ats:hsm:88",
+      "source_decimal": {
+        "latitude": -78.466667,
+        "longitude": 106.8
+      },
+      "source_dms": {
+        "latitude": "78° 28' 0.0012\" S",
+        "longitude": "106° 48' 0\" E"
+      },
+      "type": {
+        "id": 3,
+        "name": "Building: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/173?lang=e",
+      "detail_sha256": "9e6a28c9a9a0ad7fc9002ba14d55bb749aeb5ad1e090ff030c17d0b1455ef5c7",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/173",
+      "hsm_number": 89,
+      "internal_id": 173,
+      "measure_refs": [
+        {
+          "id": 545,
+          "name": "M  20 (2013) "
+        }
+      ],
+      "site_id": "ats:hsm:89",
+      "source_decimal": {
+        "latitude": -77.5058,
+        "longitude": 167.1541
+      },
+      "source_dms": {
+        "latitude": "77° 30' 20.8799\" S",
+        "longitude": "167° 9' 14.76\" E"
+      },
+      "type": {
+        "id": 4,
+        "name": "Site"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/174?lang=e",
+      "detail_sha256": "ee43490a5fd3e46096fd06695342b30da140b8629c57c93c93d01fe3f01eb434",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/174",
+      "hsm_number": 90,
+      "internal_id": 174,
+      "measure_refs": [
+        {
+          "id": 546,
+          "name": "M  21 (2013) "
+        }
+      ],
+      "site_id": "ats:hsm:90",
+      "source_decimal": {
+        "latitude": -77.5058,
+        "longitude": 167.1541
+      },
+      "source_dms": {
+        "latitude": "77° 30' 20.8799\" S",
+        "longitude": "167° 9' 14.76\" E"
+      },
+      "type": {
+        "id": 4,
+        "name": "Site"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/178?lang=e",
+      "detail_sha256": "5391ac96ef1de7661123b55411fe7da33fbbe63d7ebbdfd2bd463a0761230e30",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/178",
+      "hsm_number": 91,
+      "internal_id": 178,
+      "measure_refs": [
+        {
+          "id": 605,
+          "name": "M  19 (2015) "
+        }
+      ],
+      "site_id": "ats:hsm:91",
+      "source_decimal": {
+        "latitude": -62.641389,
+        "longitude": -60.364722
+      },
+      "source_dms": {
+        "latitude": "62° 38' 29.0003\" S",
+        "longitude": "60° 21' 53\" W"
+      },
+      "type": {
+        "id": 2,
+        "name": "Building: station"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/179?lang=e",
+      "detail_sha256": "14bfb598f54aed309340eeb1fa10eefb720a60b2e9e7a2a5d72914f7588f7c6d",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/179",
+      "hsm_number": 92,
+      "internal_id": 179,
+      "measure_refs": [
+        {
+          "id": 605,
+          "name": "M  19 (2015) "
+        }
+      ],
+      "site_id": "ats:hsm:92",
+      "source_decimal": {
+        "latitude": -69.378056,
+        "longitude": 76.383083
+      },
+      "source_dms": {
+        "latitude": "69° 22' 41.0016\" S",
+        "longitude": "76° 22' 59.1\" E"
+      },
+      "type": {
+        "id": 11,
+        "name": "Monument/commemorative: other"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/187?lang=e",
+      "detail_sha256": "1b739ea6814bd137c923f6d24ee0a224efe0686ba1b96d3b91d0f0c7a73aabde",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/187",
+      "hsm_number": 93,
+      "internal_id": 187,
+      "measure_refs": [
+        {
+          "id": 693,
+          "name": "M  12 (2019) "
+        }
+      ],
+      "site_id": "ats:hsm:93",
+      "source_decimal": {
+        "latitude": -68.739167,
+        "longitude": -52.329722
+      },
+      "source_dms": {
+        "latitude": "68° 44' 21.0011\" S",
+        "longitude": "52° 19' 46.9991\" W"
+      },
+      "type": {
+        "id": 13,
+        "name": "Other remains: shipwreck"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/188?lang=e",
+      "detail_sha256": "fb807093b7f949c1352970130cbc1a05dde997d1df72951255dded74026ff837",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/188",
+      "hsm_number": 94,
+      "internal_id": 188,
+      "measure_refs": [
+        {
+          "id": 693,
+          "name": "M  12 (2019) "
+        }
+      ],
+      "site_id": "ats:hsm:94",
+      "source_decimal": {
+        "latitude": -64.236961,
+        "longitude": -56.585417
+      },
+      "source_dms": {
+        "latitude": "64° 14' 13.0595\" S",
+        "longitude": "56° 35' 7.5\" W"
+      },
+      "type": {
+        "id": 5,
+        "name": "Other remains: expedition cairn"
+      }
+    },
+    {
+      "coordinate_method": "unknown_last_sighting",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/195?lang=e",
+      "detail_sha256": "4bfb0fe5dcb7fad0273771f2d7399c038228f082a6a17a25c397ac057b39a04d",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/195",
+      "hsm_number": 95,
+      "internal_id": 195,
+      "measure_refs": [
+        {
+          "id": 731,
+          "name": "M  22 (2021) "
+        }
+      ],
+      "site_id": "ats:hsm:95",
+      "source_decimal": {
+        "latitude": -62.0,
+        "longitude": -70.0
+      },
+      "source_dms": {
+        "latitude": "62° 0' 0\" S",
+        "longitude": "70° 0' 0\" W"
+      },
+      "type": {
+        "id": 13,
+        "name": "Other remains: shipwreck"
+      }
+    },
+    {
+      "coordinate_method": "decimal",
+      "detail_api_uri": "https://www.ats.aq/devphbackend/api/apa/199?lang=e",
+      "detail_sha256": "6eb14deae7e4373b5fb9367d1d8c85fc525ab994adefe1afd4f159bf1096022b",
+      "detail_uri": "https://www.ats.aq/devph/en/apa-database/199",
+      "hsm_number": 96,
+      "internal_id": 199,
+      "measure_refs": [
+        {
+          "id": 830,
+          "name": "M  18 (2024) "
+        }
+      ],
+      "site_id": "ats:hsm:96",
+      "source_decimal": {
+        "latitude": -71.340278,
+        "longitude": 13.45
+      },
+      "source_dms": {
+        "latitude": "71° 20' 25.0007\" S",
+        "longitude": "13° 26' 59.9999\" E"
+      },
+      "type": {
+        "id": 9,
+        "name": "Monument/commemorative: plaque"
+      }
+    }
+  ],
+  "regions": [
+    {
+      "id": "antarctica",
+      "label": "南极",
+      "source_label": "Antarctica"
+    }
+  ],
+  "schema_version": 1,
+  "selection": {
+    "is_de_designated": false,
+    "media": "excluded",
+    "order": "ascending integer HSM number",
+    "type_id": 1,
+    "type_name": "HSM"
+  },
+  "source": {
+    "accessed": "2026-11-04",
+    "attribution": "Antarctic Treaty Secretariat",
+    "copyright_sha256": "396f426ddb211048ca4f26c398976168e2ef343e4356328ee9babd87d0d7b7ac",
+    "copyright_uri": "https://www.ats.aq/e/copyright.html",
+    "dataset_id": "ats-hsm",
+    "details_sha256_by_hsm_number": {
+      "1": "de81faa174941db92f0ae796f7b067f8de5da65f0739dc13ac4a9cfa64b13464",
+      "10": "ca631bd52e3c62afb81fd5274355348db321580cc7c4ae90f9fe5e4b15bf4f17",
+      "11": "40f06412a32d785b72afd5256bc5848472998f8a0cde3e3dbba5a3685131079d",
+      "14": "1f84f1b8ee285639aa899423cb6a05c27d09118861edc9e7e36ee782c1eeba91",
+      "15": "7045d70677cbd2502a9fac6add81cf994471b049b2f14b52f6792aa5b1a78aea",
+      "16": "b3065f7ec54d8c1257eb74cd315050260a65c671db27c031fbb0ec75f271c51d",
+      "17": "72f2f4a97937f289f5b58724646cc98c1253bc8b2ac2018457370fcd9a768233",
+      "18": "5fa0c34569828da2e26fe6d70d9bdcbdf062d79e4fe21ba84a412b793f7eaf4c",
+      "19": "2592b58a8168109602d8c6468a4ce94023d8d32cdfb97fb3fef2cc7bf19908fc",
+      "2": "ef99c4ea53611ee5d9758d1bb6b505164ec028c3080a8c6cb5d7005916cc6357",
+      "20": "0ffd834e4b22d100e5fa1797c717380d473af5c1c434cb7e2ae560dd12790c65",
+      "21": "66a545c24fff047f89b21a7f2c975d1a7b5908c1909c49846c6afe0d44d866af",
+      "22": "5c704104377c16363627bdb3ab366f534d9c6abce261aafa8ceb8fc567c88e93",
+      "23": "23013060879ec5fae4d995d6efbf821b73e756f0e40d288085b4c24f24d1b609",
+      "24": "118fa21ca2b56a93baf71c8204b10f96a37f921ae8698b40fe469da782ec655b",
+      "26": "cfd03ead2f3644acef533acb35f9d1831280a9dceb7e9edc51559999dc88e616",
+      "27": "5c5582ecae5a42ba0eb2d8ec1ec78b1b25990260a4f756a6c564422bbb108264",
+      "28": "daa8d417efbd5ca6f4a1a3b14b67150efd1ea00b2725aef09141a5a181b877d2",
+      "29": "732ace3f1823a6b965787d6c3a83cd7a64ca0195a88809bbc1ebeae8587ec0a2",
+      "3": "137a848639c2fd762d752c7fb420ddb0174b35f5be71216cf74b86ff168a820d",
+      "30": "d534fbb0a0cf5e6c919acec3a0a097599be0a00b12f650c31e1d1fff1f70a917",
+      "32": "2df12d3877f136d887a3c02f1b7f8d39247a625d5ed13715b3e252b6b06e1b55",
+      "33": "f0669c89782ac0a546894ea9a64f7c40aa8e6aa609670f931c2e8cfd55cdcfcc",
+      "34": "182eaf2a86cb60089926c25ff7dc4e7260d4257645305714c24f8bfb8a4ef7c3",
+      "35": "ed7c975e0bb61cfa7520642a01ded76e1e661a969449546417188e59eaa3ef74",
+      "36": "4212d0be56ac8a03bf0fed14882a2713e75c35de3a340ad9226b5c251da92a7a",
+      "37": "91537a8bb16485b7a718a132aa423a62f6af51907132970309bae7b17992f802",
+      "38": "2817145ae2ab959fe692eb42fd1cf91bc1b85997cef200bdf80a5376cea1d19a",
+      "39": "b902d3a3a5700d8be9f912c172f44b69f9c4ed0c2825e52476643c523ae47947",
+      "4": "a4a8993ec957054efd7a34ffa5c462540578c581b01870397b7308c153b8d893",
+      "40": "a55f1e81d96132ca9f942a614784ea5d1e01b8ff16ff026828df02f7d0bfc589",
+      "41": "45a92df29269a253a6ea28aa94c73a8b4b5154a93661650c94a4ac95af15e784",
+      "42": "cfa226bbd3cdc62a030c1fdc98939499f57381675a5b645eaf13e88126a10b93",
+      "43": "2c65c30a4966394c0cd01d65ab86b845041559438cdc2daa3bb6567bdc331d65",
+      "44": "2b775e19d54b3339a368c0396f75e92a2f3835137028ef5a397649209e7b4d1e",
+      "45": "0e48b9fda6b25043ed305ac81f970e199e44bf52ce692c5f24e07fad84ae4d47",
+      "46": "7b01f2868602f70b14b01f25e3a0baf0b8b37ec84226096efb8b82b8732991d5",
+      "47": "3ed1e5877d3a3ac2ec063723f31b7e43497032b03eb71c895efef3305cca3dc9",
+      "48": "660d1d35adc14da43f35e600170f57f3f1e0ce23a6168f1b040493e3e23f2b51",
+      "49": "f661a3ce966d5a1aa7997ea9708c4eb81f3dad4a3f75959af4b7bf80a9c1bba3",
+      "5": "8cd8e52b67ba54e78f68bbdcb5665ad199f91fd1f54d7b9bdf4280e90fa1981b",
+      "50": "7580431a0de1604d9508d90ca5113ad29bb793505fde374b6d36fe4e5ac60d85",
+      "51": "5591801bb949361d2f03a5da46f2e30eab46a84bb0e10b4c85a67d8df385bd00",
+      "52": "c1ccee9aa06efc71731e552ce017fd889a819ed2aa7d9d02a0520df4622eeaa2",
+      "53": "e2b28ffcf4c30fb89d1bc6564822cdcaace20a204cac3253f2ff9167c1aeaad5",
+      "54": "1fb4d6ab0ccc3d4ecbf4d6b2100de4fff0aa2a0f0d7c69f156329243d0ce751c",
+      "55": "ab0ca77333d5a29810a68f07a05b0b6fc964c862fddce1cedd3e50be542256d4",
+      "56": "18c9bccf51c80367d9409aef7fc1d68a79c60137c182f5412a66479e59fc74e8",
+      "57": "e1e35f1a9e8e0b32bdf4ad7a9c5542575f7da4aed494336722fccd68d8c4728f",
+      "59": "fb596cb2bb67a2ff1d921f37db0bae34046f989ce040e01b854b7c9c4a314af9",
+      "6": "63c6565f6cf81fec2a28691040dd2f3e9e4f85022a6418b874c356413ff18694",
+      "60": "aaa22322093c15e5bb245188f3a32a6d2b61abad38bcb2e93e7dad517fcd868d",
+      "61": "42ff15714aa2f49ac75689003a80eb1351910ec45771ab5868e19538461d972c",
+      "62": "49aae03e8a065705d3182110ef37d5ebcb9f7f9e3340ba6d2c38668f63e71e35",
+      "63": "1334f155de014e678652a8ad4ae6ade73835c6ec90fb958d3358cc959f7c1a45",
+      "64": "1f194bc3a238d6172cd4652a16fb1969520879aa6a954416d001e28de2bc0d63",
+      "65": "87a8de95fb789c26a78b0efe71fb90dacacf26039eaf009ac17dc73ccc7afbc0",
+      "66": "a392fe5885fd7401355362b26138925d0ab339d01c9f9f586ed53e01278e48f3",
+      "67": "ef6bffb8a0112816491a282dcae846a829dad13e434a703120433d703faa4a14",
+      "68": "be7ef92cf30e17bd5d4339ff8751553e7cdcaee0d63b31aa01e1acfa04fbdcf1",
+      "69": "20e5250eac2e78d66828ca7611e01b304693260ba4ecab1c21d1b6e8ae74c423",
+      "7": "4c6b4a08d2ec0ec8d86bef22157a8f5e4967ea7b0bc46e4a8bf309a5e7a2f5ad",
+      "70": "44082d109bb80b6bb36467e0900cffdb5f07f8aba555a85339813e8dd678cf7d",
+      "71": "24a187d99f4add75fa0cd2fe76dabdc2116f55bbc39c69fbad85dee63eaffbc4",
+      "72": "5f1a698020af4601ae530f32486e6e710cb3b5460a2a99c79dd0dd22514a2851",
+      "73": "f1233dbc9005725c75725bcd1d48ada0793702153c8135f9432b2c783db416ae",
+      "74": "7ce4cdef2e135c2b51004696484df7b31650d78a9776d925abfc9bc3003253fa",
+      "75": "3ff5069c8e00bff594d0959885f7b759391543db5a6e42c4cbd9b0523e4a1035",
+      "76": "4690ee40c7a72dbfc5815e2c85e3b52814dffa3d98d2ffb6e416ed813057bf80",
+      "77": "543d3f8c5fa685a29d27192d80c179d6d9ba30c87f3bcd0795485c72131f0546",
+      "78": "25e8cb18e3486ac2d9e9b9e32fe9581cf4c7907dbc8265b6b84a9c28c0a7da33",
+      "79": "dd0def5b33e19cabd65a460a33bac5f4bd5ead011bf5e4e8125f126c5dbfba2d",
+      "8": "9c77ada71cbbb128d74ad9940993a58b2e0f472100f967fa5b66ee8ebd545006",
+      "80": "a702173f9a2dc79daaa557be2560238d71f9a331f6dea93c01f1c0cb028a240a",
+      "81": "672567500236eb91319f6cfc333cc497cbc7404f9f688f6c3b1bbcac05199b9f",
+      "82": "b46eeac19986f4660544b311c4c725f8f742235274fe1ee627c75877602f9ac3",
+      "83": "5f7a56449fc4b7a9ce083dda3a7add3daf87866466f4877fd7b51294429907d9",
+      "84": "669be9887a8b60d831f9036ba99de6630e25e115574bc692611ad934bdb38b76",
+      "85": "1c6a74b789057810d973b1db19dca2d8f1b94f1ae4ff149ec64a260aa63bc1c3",
+      "86": "a41e97150e0f4e6eee357e5ac50ef224a3ad67667dd1b373463253fbd578b0db",
+      "87": "ef11f6ab6cc1869acef52404cda4f63030d6d165b3159371c08ee5dfe7d708f8",
+      "88": "35a81c4c14beefadfec812cb9dfd8ca00e1b3b0b3c2166aad44b64d1d0d1f987",
+      "89": "9e6a28c9a9a0ad7fc9002ba14d55bb749aeb5ad1e090ff030c17d0b1455ef5c7",
+      "9": "ebe1ab70f5b6887c597aade8812a2784fef846db20ab827fd44e904bdde875f1",
+      "90": "ee43490a5fd3e46096fd06695342b30da140b8629c57c93c93d01fe3f01eb434",
+      "91": "5391ac96ef1de7661123b55411fe7da33fbbe63d7ebbdfd2bd463a0761230e30",
+      "92": "14bfb598f54aed309340eeb1fa10eefb720a60b2e9e7a2a5d72914f7588f7c6d",
+      "93": "1b739ea6814bd137c923f6d24ee0a224efe0686ba1b96d3b91d0f0c7a73aabde",
+      "94": "fb807093b7f949c1352970130cbc1a05dde997d1df72951255dded74026ff837",
+      "95": "4bfb0fe5dcb7fad0273771f2d7399c038228f082a6a17a25c397ac057b39a04d",
+      "96": "6eb14deae7e4373b5fb9367d1d8c85fc525ab994adefe1afd4f159bf1096022b"
+    },
+    "license": "CC BY 4.0",
+    "license_uri": "https://creativecommons.org/licenses/by/4.0/",
+    "modified": null,
+    "query_body": {},
+    "query_method": "POST",
+    "query_sha256": "f2e9b4132d3521731d6aa571f942a3640df410735f60ae435080d96cc9ebd694",
+    "query_uri": "https://www.ats.aq/devphbackend/api/apa/search?lang=e",
+    "sha256": "f2e9b4132d3521731d6aa571f942a3640df410735f60ae435080d96cc9ebd694",
+    "uri": "https://www.ats.aq/devph/en/apa-database"
+  }
+}

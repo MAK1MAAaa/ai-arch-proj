@@ -8,9 +8,10 @@ const ArchSearchExplore = (() => {
         "asia-pacific": "亚太地区",
         "europe-north-america": "欧洲和北美洲",
         "latin-america-caribbean": "拉丁美洲和加勒比地区",
+        "antarctica": "南极",
     };
     const sourceLabels = {
-        pleiades: "Pleiades 罗马资料", global: "已策展全球资料", unesco: "世界遗产名录",
+        pleiades: "Pleiades 罗马资料", global: "已策展全球资料", unesco: "世界遗产名录", ats: "ATS 南极历史遗址",
     };
     const chronologyLabels = {
         reviewed: "已有来源支持的阶段", insufficient: "已核验，断代未确定", not_reviewed: "断代尚未核验",
@@ -41,6 +42,11 @@ const ArchSearchExplore = (() => {
     }
     function displayCoordinates(value) {
         return [-360, 0, 360].map((offset) => [value[1], value[0] + offset]);
+    }
+    const mercatorLimit = 85.0511287798;
+    const locationLabels = { mapped: "主图可定位", polar: "极区定位示意", unknown: "位置未知" };
+    function locationStatus(value) {
+        return value === null ? "unknown" : Math.abs(value[1]) > mercatorLimit ? "polar" : "mapped";
     }
     function record(value) {
         return value !== null && typeof value === "object" && !Array.isArray(value);
@@ -85,6 +91,20 @@ const ArchSearchExplore = (() => {
             source_sha256: value.source_sha256, license: value.license, license_uri: httpUrl(value.license_uri),
             eligible_total: value.eligible_total, covered: value.covered, missing: value.missing, excluded_natural: value.excluded_natural, note: value.note };
     }
+    function parsePolarAuthority(value) {
+        if (value === null || value === undefined)
+            return null;
+        if (!record(value) || !text(value.dataset) || !text(value.source_accessed) || !text(value.source_sha256)
+            || !/^[a-f0-9]{64}$/u.test(value.source_sha256) || !text(value.license) || typeof value.note !== "string"
+            || !count(value.eligible_total) || !count(value.covered) || !count(value.missing) || !record(value.excluded_types)
+            || Object.values(value.excluded_types).some((amount) => !count(amount))
+            || value.covered + value.missing !== value.eligible_total)
+            throw new Error("南极历史名录覆盖分母或来源元数据无效。");
+        return { dataset: value.dataset, source_uri: httpUrl(value.source_uri), source_accessed: value.source_accessed,
+            source_sha256: value.source_sha256, license: value.license, license_uri: httpUrl(value.license_uri),
+            eligible_total: value.eligible_total, covered: value.covered, missing: value.missing,
+            excluded_types: { ...value.excluded_types }, note: value.note };
+    }
     function facets(value, kind) {
         if (!Array.isArray(value))
             throw new Error("覆盖统计缺少来源分组。");
@@ -100,7 +120,8 @@ const ArchSearchExplore = (() => {
     function parseCoverage(value) {
         if (!record(value) || !version(value.corpus_version) || !count(value.total) || !record(value.chronology)
             || !count(value.chronology.reviewed) || !count(value.chronology.insufficient) || !count(value.chronology.not_reviewed)
-            || !count(value.geography_unknown) || !count(value.country_unknown))
+            || !count(value.geography_unknown) || !count(value.country_unknown) || !record(value.locations)
+            || !count(value.locations.mapped) || !count(value.locations.polar) || !count(value.locations.unknown))
             throw new Error("覆盖统计格式无效。");
         const result = {
             corpus_version: value.corpus_version, total: value.total, countries: facets(value.countries, "country"),
@@ -108,9 +129,12 @@ const ArchSearchExplore = (() => {
             chronology: { reviewed: value.chronology.reviewed, insufficient: value.chronology.insufficient, not_reviewed: value.chronology.not_reviewed },
             geography_unknown: value.geography_unknown, country_unknown: value.country_unknown,
             authority: parseAuthority(value.authority),
+            polar_authority: parsePolarAuthority(value.polar_authority),
+            locations: { mapped: value.locations.mapped, polar: value.locations.polar, unknown: value.locations.unknown },
         };
         if (Object.values(result.chronology).reduce((sum, amount) => sum + amount, 0) !== result.total
             || result.sources.reduce((sum, item) => sum + item.count, 0) !== result.total
+            || Object.values(result.locations).reduce((sum, amount) => sum + amount, 0) !== result.total
             || result.country_unknown > result.total || result.geography_unknown > result.total)
             throw new Error("覆盖统计总数不一致。");
         return result;
@@ -123,14 +147,17 @@ const ArchSearchExplore = (() => {
         return value;
     }
     function parsePoint(value, fullSite = false) {
-        if (!record(value) || !text(value.id) || !/^(?:[1-9]\d*|wd:Q[1-9]\d*|whc:[1-9]\d*)$/u.test(value.id)
-            || !text(value.title) || !coordinate(value.repr_point) || !text(value.source_kind))
+        if (!record(value) || !text(value.id) || !/^(?:[1-9]\d*|wd:Q[1-9]\d*|whc:[1-9]\d*|ats:hsm:[1-9]\d*)$/u.test(value.id)
+            || !text(value.title) || !(value.repr_point === null || coordinate(value.repr_point)) || !text(value.source_kind))
             throw new Error("目录地点编号、标题或代表点无效。");
         const geography = fullSite ? record(value.geography) ? value.geography : { countries: [], regions: [] } : value;
         const status = fullSite ? record(value.chronology) ? value.chronology.status : undefined : value.chronology_status;
         if (status !== "reviewed" && status !== "insufficient" && status !== "not_reviewed")
             throw new Error("目录断代核验状态无效。");
-        return { id: value.id, title: value.title, repr_point: [...value.repr_point], countries: stringArray(geography.countries, "country"),
+        const placement = locationStatus(value.repr_point);
+        if (!fullSite && value.location_status !== placement)
+            throw new Error("目录定位状态与原始坐标不一致。");
+        return { id: value.id, title: value.title, repr_point: value.repr_point === null ? null : [...value.repr_point], location_status: placement, countries: stringArray(geography.countries, "country"),
             regions: stringArray(geography.regions, "region"), source_kind: value.source_kind, chronology_status: status };
     }
     function parseCatalogue(value, coverage) {
@@ -142,6 +169,10 @@ const ArchSearchExplore = (() => {
             || points.some((item) => item.countries.some((id) => !coverage.countries.some((facet) => facet.id === id))
                 || item.regions.some((id) => !coverage.regions.some((facet) => facet.id === id))))
             throw new Error("全库点目录存在重复编号或未登记地域标签。");
+        for (const state of ["mapped", "polar", "unknown"]) {
+            if (points.filter((point) => point.location_status === state).length !== coverage.locations[state])
+                throw new Error("全库定位状态数量与覆盖统计不一致。");
+        }
         return { corpus_version: coverage.corpus_version, total: coverage.total, points };
     }
     function parsePage(value, catalogue, state) {
@@ -159,7 +190,7 @@ const ArchSearchExplore = (() => {
             throw new Error("目录分页与点位来源记录不一致。");
         return { corpus_version: catalogue.corpus_version, total: points.length, offset: state.offset, limit: pageSize, sites };
     }
-    function create({ map, onSelect, onFilterChange, onStateChange, onCommittedState, onFeedback }) {
+    function create({ map, onSelect, onFilterChange, onStateChange, onCommittedState, onCatalogue, onFeedback }) {
         const get = (id) => {
             const node = document.getElementById(id);
             if (!node)
@@ -169,6 +200,7 @@ const ArchSearchExplore = (() => {
         const ui = {
             panel: get("explore-panel"), summary: get("explore-summary"), country: get("explore-country"),
             authority: get("explore-authority"),
+            polarAuthority: get("explore-polar-authority"),
             region: get("explore-region"), clear: get("explore-clear"),
             points: get("explore-points"), fit: get("explore-fit"),
             count: get("explore-count"), list: get("explore-list"),
@@ -231,6 +263,27 @@ const ArchSearchExplore = (() => {
             note.title = `${source.dataset}\nSHA256: ${source.source_sha256}\n${source.note}`;
             ui.authority.replaceChildren(summary, link, license, note);
         }
+        function renderPolarAuthority() {
+            const source = coverage?.polar_authority;
+            ui.polarAuthority.hidden = source === null || source === undefined;
+            if (!source) {
+                ui.polarAuthority.replaceChildren();
+                return;
+            }
+            const summary = element("span", undefined, `ATS 历史名录 ${source.covered} / ${source.eligible_total} 条已收录（包含位置未知记录）`);
+            const link = element("a", undefined, "ATS 官方来源");
+            link.href = source.source_uri;
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+            const license = element("a", undefined, source.license);
+            license.href = source.license_uri;
+            license.target = "_blank";
+            license.rel = "noopener noreferrer";
+            const excluded = Object.entries(source.excluded_types).map(([kind, amount]) => `${kind} ${amount}`).join("、");
+            const note = element("span", "explore-authority-note", `来源核对：${source.source_accessed} · 未收录 ${source.missing} 条；排除其他保护区：${excluded || "无"}。`);
+            note.title = `${source.dataset}\nSHA256: ${source.source_sha256}\n${source.note}`;
+            ui.polarAuthority.replaceChildren(summary, link, license, note);
+        }
         function renderControls() {
             ui.panel.setAttribute("aria-busy", String(loading));
             ui.country.disabled = coverage === null;
@@ -238,7 +291,7 @@ const ArchSearchExplore = (() => {
             ui.clear.disabled = desired.country === null && desired.region === null && desired.offset === 0;
             ui.points.checked = desired.visible;
             ui.points.disabled = !map || !catalogue;
-            ui.fit.disabled = !map || !catalogue || catalogue.points.filter((point) => matches(point, applied ?? desired)).length === 0;
+            ui.fit.disabled = !map || !catalogue || catalogue.points.filter((point) => matches(point, applied ?? desired) && point.location_status === "mapped").length === 0;
             ui.previous.disabled = loading || page === null || page.offset === 0;
             ui.previous.textContent = page && page.offset >= page.total && page.total > 0 ? "回到首页" : "上一页";
             ui.next.disabled = loading || page === null || page.offset + page.limit >= page.total;
@@ -291,6 +344,8 @@ const ArchSearchExplore = (() => {
                 return { layer: null, markers: nextMarkers };
             const next = L.layerGroup();
             for (const point of points) {
+                if (point.location_status !== "mapped" || point.repr_point === null)
+                    continue;
                 const copies = displayCoordinates(point.repr_point).map((location) => {
                     const marker = L.circleMarker(location, { pane: "catalogue-points", renderer: renderer ?? undefined, radius: 3.2,
                         color: "#586f60", fillColor: "#66745b", fillOpacity: 0.5, weight: 0.7 });
@@ -314,11 +369,12 @@ const ArchSearchExplore = (() => {
                 const button = element("button", "explore-item");
                 button.type = "button";
                 button.dataset.siteId = site.id;
+                button.dataset.locationStatus = site.location_status;
                 button.setAttribute("aria-pressed", String(site.id === selectedId));
                 const title = site.title.trim().toLowerCase() === "untitled" ? `未命名地点 · #${site.id}` : site.title;
                 button.setAttribute("aria-label", `${title}，打开目录资料，不属于检索排名`);
                 const countries = site.countries.length ? site.countries.map((id) => countryLabels.get(id) ?? id).join(" · ") : "国家／地区未标注";
-                button.append(element("span", "explore-item-title", title), element("span", "explore-item-meta", countries), element("span", "explore-item-meta", `${sourceLabels[site.source_kind] ?? site.source_kind} · ${chronologyLabels[site.chronology_status]}`));
+                button.append(element("span", "explore-item-title", title), element("span", "explore-item-meta", countries), element("span", "explore-item-meta", `${sourceLabels[site.source_kind] ?? site.source_kind} · ${chronologyLabels[site.chronology_status]} · ${locationLabels[site.location_status]}`));
                 button.addEventListener("click", () => onSelect(site.id, button));
                 buttons.set(site.id, button);
                 item.append(button);
@@ -396,11 +452,19 @@ const ArchSearchExplore = (() => {
                 ui.summary.textContent = `${coverage.total.toLocaleString("zh-CN")} 条资料 · ${coverage.countries.length} 个国家／地区 · ${coverage.regions.length} 个来源分区`;
                 ui.limit.textContent = `${limitNote} 当前 ${coverage.country_unknown.toLocaleString("zh-CN")} 条未标注国家／地区；${coverage.chronology.not_reviewed.toLocaleString("zh-CN")} 条断代尚未核验。`;
                 renderAuthority();
+                renderPolarAuthority();
                 renderOptions();
                 renderPage();
                 if (selectedId !== null)
                     select(selectedId);
-                feedback(`当前地域范围 ${page.total.toLocaleString("zh-CN")} 条资料。${map ? "小圆点为全库资料，编号标记为检索候选。" : "地图组件不可用，可使用目录列表。"}`);
+                const scoped = nextCatalogue.points.filter((point) => matches(point, wanted));
+                const mapped = scoped.filter((point) => point.location_status === "mapped").length;
+                const polar = scoped.filter((point) => point.location_status === "polar").length;
+                const unknown = scoped.filter((point) => point.location_status === "unknown").length;
+                feedback(`当前地域范围 ${page.total.toLocaleString("zh-CN")} 条：主图可定位 ${mapped}、极区 ${polar}、位置未知 ${unknown}。${map ? "小圆点为全库资料，编号为检索候选。" : "地图组件不可用，可使用目录列表。"}`);
+                if (reload)
+                    onCatalogue?.(nextCatalogue.points.map((point) => ({ ...point,
+                        repr_point: point.repr_point === null ? null : [...point.repr_point], countries: [...point.countries], regions: [...point.regions] })));
                 committed();
             }
             catch (error) {
@@ -460,7 +524,8 @@ const ArchSearchExplore = (() => {
         ui.fit.addEventListener("click", () => {
             if (!map || !catalogue)
                 return;
-            const points = catalogue.points.filter((point) => matches(point, applied ?? desired)).map((point) => [point.repr_point[1], point.repr_point[0]]);
+            const points = catalogue.points.filter((point) => matches(point, applied ?? desired) && point.location_status === "mapped" && point.repr_point !== null)
+                .map((point) => [point.repr_point[1], point.repr_point[0]]);
             if (points.length)
                 map.fitBounds(L.latLngBounds(ArchSearchMapView.wrapCoordinates(points)), { padding: [40, 40], maxZoom: 9, animate: false });
         });
@@ -468,10 +533,11 @@ const ArchSearchExplore = (() => {
         return { load, getState: () => ({ ...desired }), getCommittedState, setState, select,
             getPoint: (id) => {
                 const point = catalogue?.points.find((item) => item.id === id);
-                return point ? [...point.repr_point] : null;
+                return point?.repr_point ? [...point.repr_point] : null;
             },
+            getLocationStatus: (id) => catalogue?.points.find((point) => point.id === id)?.location_status ?? null,
         };
     }
-    return { create, normalizeState, matches, coordinate, displayCoordinates, parseCoverage, parseCatalogue, parsePage };
+    return { create, normalizeState, matches, coordinate, displayCoordinates, locationStatus, parseCoverage, parseCatalogue, parsePage };
 })();
 //# sourceMappingURL=explore.js.map

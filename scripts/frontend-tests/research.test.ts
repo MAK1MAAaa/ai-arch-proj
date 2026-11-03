@@ -310,6 +310,16 @@ test('catalogue-only links restore a namespaced site without inventing a search'
   assert.deepEqual(plain(helpers.parseBrowse(url)), { state: browse, error: null });
 });
 
+test('Antarctic catalogue links retain independent region and HSM identity', () => {
+  const browse: BrowseState = { country: null, region: 'antarctica', offset: 50, visible: true };
+  const link = new URL(helpers.buildLink(base, null, null, { site: 'ats:hsm:95', phase: null }, browse));
+  assert.equal(helpers.parseView(link).selection.site, 'ats:hsm:95');
+  assert.equal(helpers.parseBrowse(link).state.region, 'antarctica');
+  assert.equal(helpers.parseLink(link).request, null);
+  const spec = { ...request, region: 'antarctica' };
+  assert.deepEqual(plain(helpers.parseLink(new URL(helpers.buildLink(base, spec))).request), spec);
+});
+
 test('successful search filters and independently browsed filters never overwrite each other', () => {
   const searched = { ...request, country: 'FR', region: 'europe-north-america' };
   const browse: BrowseState = { country: 'CN', region: 'asia-pacific', offset: 0, visible: true };
@@ -348,4 +358,13 @@ test('exports include a separately selected catalogue record without fake rankin
   assert.deepEqual(plain(report.response.results), []);
   assert.ok(!('score' in (report.selected_site as Record<string, unknown>)));
   assert.ok(report.sources.some(source => source.name === 'UNESCO DataHub World Heritage List' && source.license === 'CC BY-SA 4.0'));
+});
+
+test('unknown Antarctic positions remain null in standalone exports with their own attribution', () => {
+  const response = { query: request.query, mode: request.mode, corpus_version: 'global-v4', elapsed_ms: 1, total_candidates: 0, results: [] };
+  const selected = { id: 'ats:hsm:95', title: 'Wreck of San Telmo', repr_point: null, source_kind: 'ats' };
+  const report = helpers.createExport(request, response, '2026-11-04T00:00:00Z', null, { site: selected.id, phase: null }, selected);
+  assert.equal((report.selected_site as typeof selected).repr_point, null);
+  assert.ok(!('score' in (report.selected_site as Record<string, unknown>)));
+  assert.ok(report.sources.some(source => source.name.startsWith('Antarctic Treaty Secretariat') && source.license === 'CC BY 4.0'));
 });

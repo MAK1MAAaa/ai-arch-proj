@@ -5,8 +5,9 @@ from __future__ import annotations
 import json
 from collections import Counter
 from collections.abc import Mapping, Sequence
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
+from typing import Literal
 
 from pydantic import BaseModel
 
@@ -19,12 +20,17 @@ REGION_LABELS = {
     "asia-pacific": "亚太地区",
     "europe-north-america": "欧洲与北美",
     "latin-america-caribbean": "拉丁美洲与加勒比",
+    "antarctica": "南极洲",
 }
 SOURCE_LABELS = {
     "pleiades": "Pleiades 地中海资料",
     "global": "全球策展资料",
     "unesco": "UNESCO 世界遗产名录",
+    "ats": "南极条约历史遗址与纪念物",
 }
+
+WEB_MERCATOR_MAX_LATITUDE = 85.0511287798
+LocationStatus = Literal["mapped", "polar", "unknown"]
 
 
 @dataclass(frozen=True)
@@ -34,21 +40,31 @@ class CoverageRegistry:
     authority_ids: frozenset[str] = frozenset()
     source: Mapping[str, str] | None = None
     excluded_natural: int = 0
+    polar_ids: frozenset[str] = frozenset()
+    polar_source: Mapping[str, str] | None = None
+    polar_excluded_types: Mapping[str, int] = field(default_factory=dict)
 
 
 def load_registry(data_dir: Path = DATA_DIR) -> CoverageRegistry:
     """Read labels from the bundled source manifest, never from a network service."""
     path = Path(data_dir) / "catalogue_manifest.json"
-    if not path.exists():
-        return CoverageRegistry(countries={}, regions=REGION_LABELS)
-    value = json.loads(path.read_text("utf-8"))
-    countries = {row["id"]: row["label"] for row in value["countries"]}
-    regions = {row["id"]: row["label"] for row in value["regions"]}
+    value = json.loads(path.read_text("utf-8")) if path.exists() else {}
+    countries = {row["id"]: row["label"] for row in value.get("countries", [])}
+    regions = (
+        {row["id"]: row["label"] for row in value["regions"]}
+        if "regions" in value else dict(REGION_LABELS)
+    )
+    polar_path = Path(data_dir) / "polar_manifest.json"
+    polar = json.loads(polar_path.read_text("utf-8")) if polar_path.exists() else {}
+    regions.update({row["id"]: row["label"] for row in polar.get("regions", [])})
     return CoverageRegistry(
         countries=countries, regions=regions,
         authority_ids=frozenset(value.get("partition", {}).get("eligible_ids", [])),
         source=value.get("source"),
         excluded_natural=value.get("counts", {}).get("excluded_natural", 0),
+        polar_ids=frozenset(polar.get("partition", {}).get("active_ids", [])),
+        polar_source=polar.get("source"),
+        polar_excluded_types=polar.get("partition", {}).get("excluded_types", {}),
     )
 
 
@@ -62,6 +78,12 @@ class ChronologyCounts(BaseModel):
     reviewed: int
     insufficient: int
     not_reviewed: int
+
+
+class LocationCounts(BaseModel):
+    mapped: int
+    polar: int
+    unknown: int
 
 
 class AuthorityCoverage(BaseModel):
@@ -78,6 +100,20 @@ class AuthorityCoverage(BaseModel):
     note: str
 
 
+class PolarAuthorityCoverage(BaseModel):
+    dataset: str
+    source_uri: str
+    source_accessed: str
+    source_sha256: str
+    license: str
+    license_uri: str
+    eligible_total: int
+    covered: int
+    missing: int
+    excluded_types: dict[str, int]
+    note: str
+
+
 class CoverageResponse(BaseModel):
     corpus_version: str
     total: int
@@ -87,13 +123,16 @@ class CoverageResponse(BaseModel):
     chronology: ChronologyCounts
     geography_unknown: int
     country_unknown: int
+    locations: LocationCounts
     authority: AuthorityCoverage | None = None
+    polar_authority: PolarAuthorityCoverage | None = None
 
 
 class CataloguePoint(BaseModel):
     id: str
     title: str
-    repr_point: tuple[float, float]
+    repr_point: tuple[float, float] | None
+    location_status: LocationStatus
     countries: list[str]
     regions: list[str]
     source_kind: str
@@ -123,6 +162,13 @@ def matches_geography(site: Site, country: str | None, region: str | None) -> bo
     return True
 
 
+def location_status(site: Site) -> LocationStatus:
+    """Classify map availability without clipping or inventing a source coordinate."""
+    if site.repr_point is None:
+        return "unknown"
+    return "mapped" if abs(site.repr_point[1]) <= WEB_MERCATOR_MAX_LATITUDE else "polar"
+
+
 class CatalogueIndex:
     """Immutable corpus view with stable ordering for pages, points and coverage totals."""
 
@@ -137,6 +183,7 @@ class CatalogueIndex:
         self.region_counts: Counter[str] = Counter()
         self.source_counts: Counter[str] = Counter()
         self.review_counts: Counter[str] = Counter()
+        self.location_counts: Counter[str] = Counter()
         self.types = {kind for site in sites for kind in site.types}
         for site in self.sites:
             if site.geography is not None:
@@ -144,6 +191,7 @@ class CatalogueIndex:
                 self.region_counts.update(site.geography.regions)
             self.source_counts.update([site.source_kind])
             self.review_counts.update([site.chronology.status])
+            self.location_counts.update([location_status(site)])
 
     def validate_filters(
         self, country: str | None = None, region: str | None = None,
@@ -177,10 +225,12 @@ class CatalogueIndex:
 
         source = self.registry.source
         authority = None
+        polar_authority = None
         if source is not None:
             covered = self.registry.authority_ids.intersection(
                 site.geography.authority_id for site in self.sites
-                if site.geography and site.geography.authority_id is not None
+                if site.source_kind != "ats"
+                and site.geography and site.geography.authority_id is not None
             )
             authority = AuthorityCoverage(
                 dataset=source["dataset_id"], source_uri=source["uri"],
@@ -190,6 +240,23 @@ class CatalogueIndex:
                 missing=len(self.registry.authority_ids - covered),
                 excluded_natural=self.registry.excluded_natural,
                 note="分母为固定版本官方文化／混合遗产名录；不代表全球所有遗址或所有国家。",
+            )
+        if self.registry.polar_source is not None:
+            polar_source = self.registry.polar_source
+            polar_covered = self.registry.polar_ids.intersection(
+                site.id for site in self.sites if site.source_kind == "ats"
+            )
+            polar_authority = PolarAuthorityCoverage(
+                dataset=polar_source["dataset_id"], source_uri=polar_source["uri"],
+                source_accessed=polar_source["accessed"], source_sha256=polar_source["sha256"],
+                license=polar_source["license"], license_uri=polar_source["license_uri"],
+                eligible_total=len(self.registry.polar_ids), covered=len(polar_covered),
+                missing=len(self.registry.polar_ids - polar_covered),
+                excluded_types=dict(self.registry.polar_excluded_types),
+                note=(
+                    "分母为固定南极条约来源中的历史遗址与纪念物名录，排除其他保护区类型；"
+                    "收录状态与可定位状态独立，未知位置和极区记录仍保留。"
+                ),
             )
         return CoverageResponse(
             corpus_version=self.corpus_version,
@@ -206,7 +273,12 @@ class CatalogueIndex:
             country_unknown=sum(
                 site.geography is None or not site.geography.countries for site in self.sites
             ),
+            locations=LocationCounts(
+                mapped=self.location_counts["mapped"], polar=self.location_counts["polar"],
+                unknown=self.location_counts["unknown"],
+            ),
             authority=authority,
+            polar_authority=polar_authority,
         )
 
     def catalogue(
@@ -218,6 +290,7 @@ class CatalogueIndex:
             corpus_version=self.corpus_version, total=len(selected),
             points=[CataloguePoint(
                 id=site.id, title=site.title, repr_point=site.repr_point,
+                location_status=location_status(site),
                 countries=site.geography.countries if site.geography else [],
                 regions=site.geography.regions if site.geography else [],
                 source_kind=site.source_kind, chronology_status=site.chronology.status,

@@ -84,9 +84,11 @@ interface Candidate {
   card: FakeElement;
   marker: FakeMarker | null;
   hint: FakeElement;
+  locationStatus?: 'mapped' | 'polar' | 'unknown';
 }
 
 interface MapViewHelpers {
+  locationStatus(coordinate: number[] | null | undefined): 'mapped' | 'polar' | 'unknown';
   wrapLongitude(longitude: number, center: number): number;
   wrapCoordinates(coordinates: [number, number][]): [number, number][];
   containsPoint(point: Point | null, size: Point): boolean;
@@ -105,6 +107,24 @@ assert.ok(typeof candidate === 'object' && candidate !== null);
 assert.ok('containsPoint' in candidate && typeof candidate.containsPoint === 'function');
 assert.ok('create' in candidate && typeof candidate.create === 'function');
 const helpers = candidate as MapViewHelpers;
+
+test('WGS84 polar locations remain valid and distinct from unknown positions', () => {
+  assert.equal(helpers.locationStatus([1, -90]), 'polar');
+  assert.equal(helpers.locationStatus([0, -85.173278]), 'polar');
+  assert.equal(helpers.locationStatus([0, 85.0511287798]), 'mapped');
+  assert.equal(helpers.locationStatus([0, 85.0511287799]), 'polar');
+  assert.equal(helpers.locationStatus(null), 'unknown');
+  assert.equal(helpers.locationStatus([0, 0]), 'mapped');
+  assert.equal(helpers.locationStatus([NaN, 0]), 'unknown');
+});
+
+test('candidate hints distinguish projection limits from an unknown true location', () => {
+  const polar = item('polar', null); polar.locationStatus = 'polar';
+  const unknown = item('unknown', null); unknown.locationStatus = 'unknown';
+  const { view } = setup(); view.setCandidates([polar, unknown]);
+  assert.match(polar.hint.textContent ?? '', /投影范围/u);
+  assert.match(unknown.hint.textContent ?? '', /真实位置未知/u);
+});
 
 test('dateline coordinates use the smallest longitudinal arc without changing source input', () => {
   const input: [number, number][] = [[-17, 179], [-18, -179]];

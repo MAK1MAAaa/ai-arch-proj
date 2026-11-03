@@ -31,6 +31,7 @@ class SearchRequest(BaseModel):
     region: Literal[
         "africa", "arab-states", "asia-pacific", "europe-north-america",
         "latin-america-caribbean",
+        "antarctica",
     ] | None = None
     limit: int = Field(default=10, ge=1, le=50)
 
