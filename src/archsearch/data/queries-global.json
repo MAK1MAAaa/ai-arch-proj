@@ -1,0 +1,26 @@
+{
+  "version": "global-query-v1",
+  "description": "20对覆盖全球文化遗产的双语研究问题。用于检查全球资料发现能力，不包含预填相关性判断。",
+  "queries": [
+    {"id": "g01", "query_zh": "寻找中国长城的防御遗产", "query_en": "Find the defensive heritage of the Great Wall in China", "topic": "东亚：防御设施"},
+    {"id": "g02", "query_zh": "寻找柬埔寨吴哥的寺庙遗址", "query_en": "Find the temple sites of Angkor in Cambodia", "topic": "东南亚：宗教建筑"},
+    {"id": "g03", "query_zh": "寻找印度尼西亚婆罗浮屠佛教寺庙", "query_en": "Find the Buddhist temple of Borobudur in Indonesia", "topic": "东南亚：佛教遗产"},
+    {"id": "g04", "query_zh": "寻找乌兹别克斯坦撒马尔罕的历史城区", "query_en": "Find the historic urban area of Samarkand in Uzbekistan", "topic": "中亚：历史城市"},
+    {"id": "g05", "query_zh": "寻找伊拉克巴比伦古城遗址", "query_en": "Find the ancient city site of Babylon in Iraq", "topic": "西亚：古代城市"},
+    {"id": "g06", "query_zh": "寻找约旦佩特拉的岩石建筑", "query_en": "Find the rock-cut architecture of Petra in Jordan", "topic": "西亚：岩石建筑"},
+    {"id": "g07", "query_zh": "寻找埃塞俄比亚拉利贝拉的岩凿教堂", "query_en": "Find the rock-hewn churches of Lalibela in Ethiopia", "topic": "东非：宗教遗产"},
+    {"id": "g08", "query_zh": "寻找大津巴布韦的石砌遗址", "query_en": "Find the stone-built archaeological site of Great Zimbabwe", "topic": "南部非洲：聚落遗产"},
+    {"id": "g09", "query_zh": "寻找马里廷巴克图的历史遗产", "query_en": "Find the historic heritage of Timbuktu in Mali", "topic": "西非：历史城市"},
+    {"id": "g10", "query_zh": "寻找摩洛哥阿伊特本哈杜的筑垒村落", "query_en": "Find the fortified settlement of Ait-Ben-Haddou in Morocco", "topic": "北非：防御聚落"},
+    {"id": "g11", "query_zh": "寻找墨西哥奇琴伊察玛雅遗址", "query_en": "Find the Maya archaeological site of Chichen-Itza in Mexico", "topic": "中美洲：考古遗址"},
+    {"id": "g12", "query_zh": "寻找美国查科文化遗址", "query_en": "Find the Chaco Culture archaeological sites in the United States", "topic": "北美：原住民遗产"},
+    {"id": "g13", "query_zh": "寻找古巴哈瓦那旧城及其防御工事", "query_en": "Find Old Havana and its fortifications in Cuba", "topic": "加勒比地区：城市与防御"},
+    {"id": "g14", "query_zh": "寻找秘鲁马丘比丘的印加遗址", "query_en": "Find the Inca site of Machu Picchu in Peru", "topic": "南美：印加遗产"},
+    {"id": "g15", "query_zh": "寻找玻利维亚蒂瓦纳库的文化中心遗址", "query_en": "Find the ceremonial and cultural centre of Tiwanaku in Bolivia", "topic": "南美：礼仪遗产"},
+    {"id": "g16", "query_zh": "寻找拉帕努伊岛的摩艾石像遗产", "query_en": "Find the moai heritage of Rapa Nui", "topic": "太平洋：岛屿文化遗产"},
+    {"id": "g17", "query_zh": "寻找澳大利亚布吉必姆的原住民文化景观", "query_en": "Find the Indigenous cultural landscape of Budj Bim in Australia", "topic": "大洋洲：文化景观"},
+    {"id": "g18", "query_zh": "寻找密克罗尼西亚南马都尔的礼仪中心遗址", "query_en": "Find the ceremonial centre of Nan Madol in Micronesia", "topic": "太平洋：城市遗址"},
+    {"id": "g19", "query_zh": "寻找格陵兰库雅塔的诺尔斯人与因纽特农业景观", "query_en": "Find the Norse and Inuit farming landscape of Kujataa in Greenland", "topic": "北极：文化景观"},
+    {"id": "g20", "query_zh": "寻找马耳他的巨石神庙", "query_en": "Find the megalithic temples of Malta", "topic": "欧洲：史前建筑"}
+  ]
+}

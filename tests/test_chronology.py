@@ -5,7 +5,7 @@ from collections import Counter
 import pytest
 from pydantic import ValidationError
 
-from archsearch.corpus import GLOBAL_ERA_QUOTAS, GLOBAL_REGION_QUOTAS, load_corpus
+from archsearch.corpus import GLOBAL_ERA_QUOTAS, GLOBAL_REGION_QUOTAS, load_curated_corpus
 from archsearch.domain import ChronologyReview, HistoricalPhase, SourceReference
 
 
@@ -51,6 +51,8 @@ def test_review_requires_valid_default_and_real_review_method() -> None:
     )
     assert review.phases[0].kind == "use"
     with pytest.raises(ValidationError):
+        ChronologyReview(phases=[phase()], default_phase_id="use-1")
+    with pytest.raises(ValidationError):
         phase(sources=[SourceReference(
             id="test", title="Source", uri="https://example.org/", publisher="Test",
         )])
@@ -69,7 +71,7 @@ def test_global_corpus_has_complete_audits_without_rewriting_original_attestatio
 
     from archsearch.corpus import DATA_DIR, load_pleiades_corpus
 
-    sites = load_corpus()
+    sites = load_curated_corpus()
     assert len(sites) == len({site.id for site in sites}) == 600
     original = load_pleiades_corpus()
     for old, new in zip(original, sites[:500], strict=True):

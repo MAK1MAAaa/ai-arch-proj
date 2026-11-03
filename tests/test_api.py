@@ -7,7 +7,7 @@ from fastapi.testclient import TestClient
 
 from archsearch.api import create_app
 from archsearch.corpus import CORPUS_VERSION
-from archsearch.domain import Site
+from archsearch.domain import Geography, Site, SourceReference
 from archsearch.history import HistoryStore, HistoryUnavailable
 from archsearch.index import IndexUnavailable, SemanticIndex
 
@@ -256,3 +256,100 @@ def test_unprepared_and_corrupt_history_return_503_with_prepare_guidance(
         assert "校验失败" in response.json()["detail"]
         assert "prepare-history" in response.json()["detail"]
         assert response.headers["cache-control"] == "no-store"
+
+
+@pytest.fixture
+def mapped_client(tmp_path: Path, sample_sites: list[Site]) -> TestClient:
+    source = SourceReference(
+        id="geo", title="Source-declared catalogue membership",
+        uri="https://example.org/geo", publisher="Test catalogue",
+    )
+    sites = list(sample_sites)
+    sites[0] = sites[0].model_copy(update={"geography": Geography(
+        authority_id="11", countries=["CN", "JP"], regions=["asia-pacific"], source=source,
+    )})
+    sites[1] = sites[1].model_copy(update={"geography": Geography(
+        authority_id="12", countries=[], regions=["arab-states"], source=source,
+    )})
+    return TestClient(create_app(home=tmp_path, sites=sites))
+
+
+def test_coverage_and_catalogue_are_available_without_models(mapped_client: TestClient) -> None:
+    response = mapped_client.get("/api/coverage")
+    assert response.status_code == 200
+    coverage = response.json()
+    assert coverage["total"] == 3 and coverage["corpus_version"] == CORPUS_VERSION
+    assert {row["id"]: row["count"] for row in coverage["countries"]} == {"CN": 1, "JP": 1}
+    assert coverage["geography_unknown"] == 1 and coverage["country_unknown"] == 2
+    assert coverage["chronology"] == {"reviewed": 0, "insufficient": 0, "not_reviewed": 3}
+    assert response.headers["cache-control"] == "no-store"
+    catalogue = mapped_client.get("/api/catalogue").json()
+    assert catalogue["total"] == 3
+    assert [point["id"] for point in catalogue["points"]] == ["3", "1", "2"]
+    point = catalogue["points"][0]
+    assert point["countries"] == ["CN", "JP"] and point["repr_point"] == [12.0, 35.0]
+    assert point["chronology_status"] == "not_reviewed" and "description" not in point
+
+
+def test_paginated_browsing_is_stable_and_supports_intersecting_filters(
+    mapped_client: TestClient,
+) -> None:
+    pages = [mapped_client.get(f"/api/sites?offset={offset}&limit=1").json() for offset in range(3)]
+    assert [page["sites"][0]["id"] for page in pages] == ["3", "1", "2"]
+    assert all(page["total"] == 3 and page["limit"] == 1 for page in pages)
+    assert mapped_client.get("/api/sites?offset=100").json()["sites"] == []
+    assert mapped_client.get("/api/sites?country=CN").json()["total"] == 1
+    empty = mapped_client.get("/api/sites?country=CN&region=arab-states").json()
+    assert empty["total"] == 0 and empty["sites"] == []
+    assert mapped_client.get("/api/catalogue?country=CN&type=bath").json()["points"] == []
+    assert mapped_client.get("/api/catalogue?region=arab-states").json()["points"][0]["id"] == "1"
+
+
+@pytest.mark.parametrize("query", [
+    "country=XX", "country=cn", "country=", "region=unknown", "region=", "type=unknown",
+    "country=CN&country=JP", "region=asia-pacific&region=arab-states", "type=port&type=bath",
+])
+@pytest.mark.parametrize("endpoint", ["/api/catalogue", "/api/sites"])
+def test_browse_filters_are_never_silently_broadened(
+    mapped_client: TestClient, endpoint: str, query: str,
+) -> None:
+    response = mapped_client.get(endpoint + "?" + query)
+    assert response.status_code == 422 and response.headers["cache-control"] == "no-store"
+
+
+@pytest.mark.parametrize("query", [
+    "offset=-1", "limit=0", "limit=101", "offset=invalid", "limit=true", "limit=10&limit=20",
+])
+def test_browse_pagination_limits_are_validated(mapped_client: TestClient, query: str) -> None:
+    assert mapped_client.get("/api/sites?" + query).status_code == 422
+
+
+def test_search_geography_filters_match_browsing_and_do_not_require_a_model(
+    mapped_client: TestClient,
+) -> None:
+    selected = mapped_client.post("/api/search", json={
+        "query": "ancient", "mode": "bm25", "country": "CN", "region": "asia-pacific",
+    })
+    assert selected.status_code == 200
+    assert selected.json()["total_candidates"] == 1
+    assert selected.json()["results"][0]["site"]["id"] == "3"
+    for invalid in ({"country": "XX"}, {"country": "cn"}, {"region": "unknown"}):
+        response = mapped_client.post("/api/search", json={"query": "ancient", **invalid})
+        assert response.status_code == 422
+
+
+def test_namespaced_site_detail_route_remains_accessible(
+    tmp_path: Path, sample_sites: list[Site],
+) -> None:
+    source = SourceReference(
+        id="geo", title="Catalogue", uri="https://example.org/geo", publisher="Test",
+    )
+    value = sample_sites[0].model_dump()
+    value.update(id="whc:11", source_kind="unesco", source_refs=[source], geography=Geography(
+        authority_id="11", countries=["CN"], regions=["asia-pacific"], source=source,
+    ))
+    site = Site.model_validate(value)
+    with TestClient(create_app(home=tmp_path, sites=[site])) as client:
+        detail = client.get("/api/sites/whc%3A11")
+        assert detail.status_code == 200
+        assert detail.json()["source_kind"] == "unesco" and detail.json()["id"] == "whc:11"

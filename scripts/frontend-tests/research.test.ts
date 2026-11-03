@@ -10,6 +10,8 @@ interface SearchSpec {
   mode: 'semantic' | 'bm25';
   type: string | null;
   limit: number;
+  country?: string | null;
+  region?: string | null;
 }
 
 interface SearchResponse<T> {
@@ -29,6 +31,8 @@ interface ExportResult<T> {
   map: HistoryView | null;
   selection: { site: string | null; phase: string | null };
   sources: { name: string; license: string }[];
+  selected_site: unknown;
+  browse: BrowseState | null;
   source: {
     name: string;
     version: string;
@@ -45,8 +49,9 @@ interface ExportResult<T> {
 interface ResearchHelpers {
   parseLink(url: URL): { request: SearchSpec | null; error: string | null };
   parseView(url: URL): { view: HistoryView | null; selection: { site: string | null; phase: string | null }; error: string | null };
-  buildLink(base: URL, request: SearchSpec, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }): string;
-  createExport<T>(request: SearchSpec, response: SearchResponse<T>, exportedAt: string, view?: HistoryView | null): ExportResult<T>;
+  parseBrowse(url: URL): { state: BrowseState; error: string | null };
+  buildLink(base: URL, request: SearchSpec | null, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, browse?: BrowseState | null): string;
+  createExport<T>(request: SearchSpec, response: SearchResponse<T>, exportedAt: string, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, selectedSite?: unknown, browse?: BrowseState | null): ExportResult<T>;
   automaticPhaseYear(phase: { precision: string; start_year: number | null; end_year: number | null }): number | null;
 }
 
@@ -54,6 +59,8 @@ interface HistoryView {
   year: number; basemap: 'historical' | 'modern'; boundaries: boolean;
   frame_id: string | null; source_version: string | null;
 }
+
+interface BrowseState { country: string | null; region: string | null; offset: number; visible: boolean }
 
 const source = readFileSync(new URL('../../src/archsearch/frontend/research.ts', import.meta.url), 'utf8');
 const compiled = ts.transpileModule(source, {
@@ -292,4 +299,53 @@ test('v2 export freezes the actual displayed map and multiple source licenses', 
   assert.ok(exported.sources.some((source) => source.license === 'CC BY 4.0'));
   assert.ok(exported.sources.some((source) => source.license === 'CC0'));
   assert.equal(helpers.createExport(request, response, '2026-10-31T00:00:00Z').map, null);
+});
+
+test('catalogue-only links restore a namespaced site without inventing a search', () => {
+  const selection = { site: 'whc:252', phase: null };
+  const browse: BrowseState = { country: 'IN', region: 'asia-pacific', offset: 50, visible: false };
+  const url = new URL(helpers.buildLink(base, null, null, selection, browse));
+  assert.deepEqual(plain(helpers.parseLink(url)), { request: null, error: null });
+  assert.deepEqual(plain(helpers.parseView(url).selection), selection);
+  assert.deepEqual(plain(helpers.parseBrowse(url)), { state: browse, error: null });
+});
+
+test('successful search filters and independently browsed filters never overwrite each other', () => {
+  const searched = { ...request, country: 'FR', region: 'europe-north-america' };
+  const browse: BrowseState = { country: 'CN', region: 'asia-pacific', offset: 0, visible: true };
+  const url = new URL(helpers.buildLink(base, searched, null, { site: null, phase: null }, browse));
+  assert.deepEqual(plain(helpers.parseLink(url).request), searched);
+  assert.deepEqual(plain(helpers.parseBrowse(url).state), browse);
+  assert.equal(url.searchParams.get('country'), 'FR');
+  assert.equal(url.searchParams.get('browse_country'), 'CN');
+});
+
+test('explicitly cleared browse filters remain distinct from successful search filters', () => {
+  const browse: BrowseState = { country: null, region: null, offset: 0, visible: true };
+  const url = new URL(helpers.buildLink(base, { ...request, country: 'FR' }, null, { site: null, phase: null }, browse));
+  assert.equal(url.searchParams.get('browse_country'), '');
+  assert.equal(helpers.parseBrowse(url).state.country, null);
+  assert.equal(helpers.parseLink(url).request?.country, 'FR');
+});
+
+test('geographic links reject malformed, duplicated or orphaned parameters', () => {
+  for (const suffix of ['country=', 'region=', 'country=cn', 'region=unknown', 'country=CN&country=FR', 'region=africa&region=africa']) {
+    assert.notEqual(helpers.parseLink(new URL(`?q=site&${suffix}`, base)).error, null);
+  }
+  for (const suffix of ['browse_country=cn', 'browse_region=unknown', 'points=true', 'browse_offset=-1', 'browse_offset=0&browse_offset=0']) {
+    assert.notEqual(helpers.parseBrowse(new URL(`?${suffix}`, base)).error, null);
+  }
+  for (const site of ['whc:0', 'whc:-1', 'whc:252/javascript']) {
+    assert.notEqual(helpers.parseView(new URL(`?site=${encodeURIComponent(site)}`, base)).error, null);
+  }
+});
+
+test('exports include a separately selected catalogue record without fake ranking or score', () => {
+  const response = { query: request.query, mode: request.mode, corpus_version: 'global-v3', elapsed_ms: 1, total_candidates: 0, results: [] };
+  const selected = { id: 'whc:2', title: 'City of Quito', source_refs: [{ license: 'CC BY-SA 4.0' }] };
+  const report = helpers.createExport(request, response, '2026-11-04T00:00:00Z', null, { site: selected.id, phase: null }, selected);
+  assert.deepEqual(plain(report.selected_site), selected);
+  assert.deepEqual(plain(report.response.results), []);
+  assert.ok(!('score' in (report.selected_site as Record<string, unknown>)));
+  assert.ok(report.sources.some(source => source.name === 'UNESCO DataHub World Heritage List' && source.license === 'CC BY-SA 4.0'));
 });

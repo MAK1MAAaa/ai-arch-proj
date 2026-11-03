@@ -926,3 +926,260 @@
     padding-left: 13px;
   }
 }
+
+.explore-panel {
+  margin: 0 0 24px;
+  padding: 20px 23px 15px;
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--olive);
+  background: var(--surface);
+}
+
+.explore-heading,
+.explore-directory-heading,
+.explore-feedback-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+}
+
+.explore-heading h2 {
+  margin-top: 3px;
+  font: 600 22px/1.5 var(--serif);
+}
+
+.explore-heading .eyebrow {
+  color: var(--olive);
+}
+
+.explore-summary {
+  max-width: 640px;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.explore-authority {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px 12px;
+  margin-top: 9px;
+  color: var(--olive);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.explore-authority > span:first-child {
+  font-weight: 600;
+}
+
+.explore-authority-note {
+  color: var(--muted);
+}
+
+.explore-controls {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.explore-filter {
+  flex: 1 1 190px;
+  min-width: 0;
+}
+
+.explore-filter label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.explore-filter select {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 8px 30px 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+  font-size: 12px;
+}
+
+.explore-points-toggle {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  gap: 8px;
+  padding: 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.explore-points-toggle input {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--olive);
+}
+
+.explore-note,
+.explore-feedback,
+.explore-page {
+  margin-top: 8px;
+  color: #666c60;
+  font-size: 11px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.explore-feedback {
+  color: var(--olive);
+}
+
+.explore-panel.has-error .explore-feedback {
+  color: var(--accent-dark);
+}
+
+.explore-limit-note {
+  padding-top: 9px;
+  border-top: 1px solid var(--line);
+}
+
+.explore-directory {
+  margin-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.explore-directory > summary {
+  min-height: 44px;
+  padding: 10px 0;
+  color: var(--ink);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.explore-directory > summary > span {
+  margin-left: 12px;
+  color: var(--olive);
+  font-size: 11px;
+}
+
+.explore-directory-heading {
+  margin: 0 0 10px;
+}
+
+.explore-page {
+  margin: 0;
+  flex: 1 1 220px;
+}
+
+.explore-pagination {
+  display: flex;
+  gap: 6px;
+}
+
+.explore-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  max-height: 280px;
+  margin: 0;
+  padding: 2px 5px 5px 2px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  list-style: none;
+}
+
+.explore-item {
+  display: block;
+  width: 100%;
+  min-height: 100%;
+  padding: 11px 13px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.explore-item:hover,
+.explore-item[aria-pressed="true"] {
+  border-color: var(--olive);
+  background: #66745b0c;
+}
+
+.explore-item-title {
+  display: block;
+  color: var(--ink);
+  font: 600 16px/1.5 var(--serif);
+}
+
+.explore-item-meta {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.explore-empty {
+  grid-column: 1 / -1;
+  padding: 16px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.catalogue-legend-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 5px 1px 10px;
+  border: 1px solid #596e60;
+  border-radius: 50%;
+  background: #66745b7a;
+}
+
+@media (max-width: 680px) {
+  .explore-panel {
+    margin-bottom: 16px;
+    padding: 15px 13px 12px;
+  }
+
+  .explore-heading {
+    gap: 7px;
+  }
+
+  .explore-heading h2 {
+    font-size: 20px;
+  }
+
+  .explore-summary {
+    flex-basis: 100%;
+    font-size: 11px;
+  }
+
+  .explore-filter {
+    flex-basis: 100%;
+  }
+
+  .explore-controls > button {
+    flex: 1 1 auto;
+  }
+
+  .explore-list {
+    grid-template-columns: 1fr;
+    max-height: 260px;
+  }
+
+  .explore-directory > summary > span {
+    margin-left: 5px;
+  }
+}

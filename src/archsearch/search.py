@@ -13,6 +13,7 @@ from numpy.typing import NDArray
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 from archsearch.corpus import build_document
+from archsearch.coverage import matches_geography
 from archsearch.domain import Site
 from archsearch.index import SemanticIndex
 
@@ -26,6 +27,11 @@ class SearchRequest(BaseModel):
     query: str = Field(min_length=1, max_length=500)
     mode: Literal["semantic", "bm25"] = "semantic"
     type: str | None = None
+    country: str | None = Field(default=None, pattern=r"^[A-Z]{2}$")
+    region: Literal[
+        "africa", "arab-states", "asia-pacific", "europe-north-america",
+        "latin-america-caribbean",
+    ] | None = None
     limit: int = Field(default=10, ge=1, le=50)
 
     @field_validator("query")
@@ -86,7 +92,8 @@ class SearchEngine:
         candidates = [
             i
             for i, site in enumerate(self.sites)
-            if request.type is None or request.type in site.types
+            if (request.type is None or request.type in site.types)
+            and matches_geography(site, request.country, request.region)
         ]
         if not candidates:
             return [], 0

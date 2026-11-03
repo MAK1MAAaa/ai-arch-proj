@@ -24,7 +24,8 @@ from archsearch.domain import ChronologyReview, PeriodEvidence, Site, SourceRefe
 
 DATA_DIR = Path(__file__).with_name("data")
 DATASET_VERSION = "v4.1"
-CORPUS_VERSION = "global-v2"
+CURATED_VERSION = "global-v2"
+CORPUS_VERSION = "global-v3"
 GLOBAL_REGION_QUOTAS = {
     "east-asia": 20, "south-asia": 15, "west-central-asia": 15, "africa": 15,
     "europe": 10, "north-america": 10, "south-america": 10, "oceania": 5,
@@ -181,8 +182,8 @@ def normalize_place(place: dict[str, Any], precision: str | None = None) -> Site
 
 
 def build_document(site: Site) -> str:
-    """Return the exact same English source document for lexical and dense search."""
-    parts = [site.title, "; ".join(site.names), site.description, site.details]
+    """Return the exact same multilingual source document for lexical and dense search."""
+    parts = [site.title, "; ".join(site.names), site.description, site.description_zh, site.details]
     parts.extend(("Types: " + ", ".join(site.types), "Periods: " + ", ".join(site.periods)))
     return "\n".join(part for part in parts if part)
 
@@ -233,7 +234,7 @@ def load_pleiades_corpus(data_dir: Path | None = None) -> list[Site]:
         raise CorpusError(f"cannot load local corpus from {directory}: {exc}") from exc
 
 
-def load_corpus(data_dir: Path | None = None) -> list[Site]:
+def load_curated_corpus(data_dir: Path | None = None) -> list[Site]:
     """Merge the original cohort, curated global records and separately reviewed stages."""
     directory = Path(data_dir) if data_dir is not None else DATA_DIR
     original = load_pleiades_corpus(directory)
@@ -242,7 +243,7 @@ def load_corpus(data_dir: Path | None = None) -> list[Site]:
         return original
     try:
         manifest = json.loads(global_manifest.read_text(encoding="utf-8"))
-        if manifest["schema_version"] != 1 or manifest["corpus_version"] != CORPUS_VERSION:
+        if manifest["schema_version"] != 1 or manifest["corpus_version"] != CURATED_VERSION:
             raise CorpusError("global corpus manifest version is invalid")
         if manifest["counts"] != {"pleiades": 500, "global": 100, "total": 600}:
             raise CorpusError("global corpus counts do not match the 500+100 contract")
@@ -316,6 +317,20 @@ def load_corpus(data_dir: Path | None = None) -> list[Site]:
         raise
     except (OSError, KeyError, TypeError, ValueError, ValidationError) as exc:
         raise CorpusError(f"cannot load global corpus from {directory}: {exc}") from exc
+
+
+def load_corpus(data_dir: Path | None = None) -> list[Site]:
+    """Extend the unchanged curated cohort with a pinned, licensed world catalogue."""
+    from archsearch.catalogue_data import CatalogueError, load_catalogue
+
+    directory = Path(data_dir) if data_dir is not None else DATA_DIR
+    curated = load_curated_corpus(data_dir)
+    if data_dir is not None and not (directory / "catalogue_manifest.json").exists():
+        return curated
+    try:
+        return load_catalogue(curated, directory)
+    except CatalogueError as error:
+        raise CorpusError(str(error)) from error
 
 
 def _archive_members(archive_path: Path) -> Iterable[tuple[str, bytes]]:
@@ -413,7 +428,9 @@ def rebuild_corpus(archive_path: Path, output_dir: Path | None = None) -> dict[s
     )
     artifacts = {
         "sites.json": _json_bytes([
-            site.model_dump(mode="json", exclude={"source_kind", "source_refs", "chronology"})
+            site.model_dump(mode="json", exclude={
+                "source_kind", "source_refs", "chronology", "geography", "description_zh"
+            })
             for site in sites
         ]),
         "site_ids.json": _json_bytes([site.id for site in sites]),

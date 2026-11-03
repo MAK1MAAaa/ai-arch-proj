@@ -8,7 +8,7 @@ import numpy as np
 import pytest
 from pydantic import ValidationError
 
-from archsearch.domain import Site
+from archsearch.domain import Geography, Site, SourceReference
 from archsearch.index import IndexUnavailable, SemanticIndex
 from archsearch.search import BM25, SearchEngine, SearchRequest, tokenize
 
@@ -92,6 +92,10 @@ def test_semantic_failure_never_falls_back_to_bm25(
         {"query": "harbor", "limit": 0},
         {"query": "harbor", "limit": 51},
         {"query": "harbor", "unknown": "field"},
+        {"query": "harbor", "country": "cn"},
+        {"query": "harbor", "country": "CHN"},
+        {"query": "harbor", "country": ""},
+        {"query": "harbor", "region": "unknown"},
     ],
 )
 def test_invalid_search_requests_are_rejected(payload: dict[str, object]) -> None:
@@ -101,6 +105,46 @@ def test_invalid_search_requests_are_rejected(payload: dict[str, object]) -> Non
 
 def test_query_whitespace_is_trimmed() -> None:
     assert SearchRequest(query="  港口  ").query == "港口"
+
+
+def test_geographic_filters_select_source_membership_before_ranking(
+    tmp_path: Path, sample_sites: list[Site], monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    source = SourceReference(
+        id="geo", title="Catalogue membership", uri="https://example.org/geo", publisher="Test",
+    )
+    sites = list(sample_sites)
+    sites[0] = sites[0].model_copy(update={"geography": Geography(
+        countries=["CN", "JP"], regions=["asia-pacific"], source=source,
+    )})
+    sites[1] = sites[1].model_copy(update={"geography": Geography(
+        countries=["FR"], regions=["europe-north-america"], source=source,
+    )})
+    semantic = SemanticIndex(sites, tmp_path)
+    engine = SearchEngine(sites, semantic)
+    monkeypatch.setattr(semantic, "scores", lambda query: np.asarray([0.1, 0.9, 1.0]))
+    for mode in ("semantic", "bm25"):
+        hits, total = engine.search(SearchRequest(
+            query="ancient", mode=mode, country="CN", region="asia-pacific", type="port",
+        ))
+        assert total == 1 and [hit.site.id for hit in hits] == [sites[0].id]
+    assert engine.search(SearchRequest(
+        query="ancient", mode="semantic", country="FR", region="asia-pacific",
+    )) == ([], 0)
+    assert engine.search(SearchRequest(query="ancient", mode="bm25", country="XX")) == ([], 0)
+
+
+def test_geography_with_no_candidates_does_not_encode_a_query(
+    tmp_path: Path, sample_sites: list[Site], monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    semantic = SemanticIndex(sample_sites, tmp_path)
+    engine = SearchEngine(sample_sites, semantic)
+
+    def forbidden_encoding(query: str) -> np.ndarray:
+        raise AssertionError("empty source membership must not invoke semantic encoding")
+
+    monkeypatch.setattr(semantic, "scores", forbidden_encoding)
+    assert engine.search(SearchRequest(query="harbor", country="CN")) == ([], 0)
 
 
 @pytest.mark.parametrize(
