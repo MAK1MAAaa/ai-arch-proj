@@ -166,7 +166,7 @@ const ArchSearchResearch = (() => {
         }
         return url.href;
     }
-    function createExport(request, response, exportedAt, map = null, selection = { site: null, phase: null }, selectedSite = null, browse = null) {
+    function createExport(request, response, exportedAt, map = null, selection = { site: null, phase: null }, selectedSite = null, browse = null, spatial = null) {
         const normalized = normalizeRequest(request);
         if (normalized.query !== response.query || normalized.mode !== response.mode) {
             throw new Error("导出请求必须与成功响应的查询和检索方式一致。");
@@ -179,6 +179,7 @@ const ArchSearchResearch = (() => {
             map: map ? { ...map } : null,
             selection: { ...selection },
             selected_site: selectedSite,
+            spatial: spatial === null ? null : JSON.parse(JSON.stringify(spatial)),
             browse: browse ? { ...browse } : null,
             sources: [
                 { name: "Pleiades", version: "v4.1", license: "CC BY 3.0", uri: "https://pleiades.stoa.org/" },
@@ -209,6 +210,7 @@ const ArchSearchResearch = (() => {
                 chronology: "历史阶段独立记录事件类型、精度、证据和代理核验方式；区间或时期不证明连续存在，未标成人工专家确认。",
                 map: "map保存最后成功显示的年份与疆域版本；null表示尚无成功地图快照，待加载或失败年份不冒充已显示年份。",
                 locations: "repr_point为null时真实位置未知，不等于零坐标；有效极区坐标超出Web Mercator时使用独立极区示意，不截断或伪造纬度。极区底图为现代自然地理参照，不生成历史国界。",
+                source_points: "spatial保留最后成功目录的源点版本及独立选中资料的原始定位序列、重复记录与来源标签。源点和原代表点分开保存；多个定位记录不增加遗产条目数，也不等于独立核验的发掘坐标。地图可合并同一遗产同坐标圆点，导出保留全部源序列。",
             },
         };
     }

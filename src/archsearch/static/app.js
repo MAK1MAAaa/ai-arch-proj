@@ -681,7 +681,11 @@
         const download = element("a");
         try {
             const exportedAt = new Date().toISOString();
-            const report = ArchSearchResearch.createExport(completed.request, completed.response, exportedAt, historyView?.getView() ?? null, { site: state.selectedId, phase: selectedPhaseId }, currentSelectedSite(), explore?.getCommittedState() ?? null);
+            const report = ArchSearchResearch.createExport(completed.request, completed.response, exportedAt, historyView?.getView() ?? null, { site: state.selectedId, phase: selectedPhaseId }, currentSelectedSite(), explore?.getCommittedState() ?? null, { metadata: explore?.getSpatialMetadata() ?? null, selected: state.selectedSite ? {
+                    site_id: state.selectedSite.id, representative_point: state.selectedSite.repr_point,
+                    source_points: explore?.getSourcePoints(state.selectedSite.id) ?? [],
+                    records: explore?.getSourceLocationRecords(state.selectedSite.id) ?? [],
+                } : null });
             objectUrl = URL.createObjectURL(new Blob([JSON.stringify(report, null, 2)], { type: "application/json;charset=utf-8" }));
             download.href = objectUrl;
             download.download = `archsearch-${completed.request.mode}-${exportedAt.replace(/[:.]/g, "-")}.json`;
@@ -1055,6 +1059,42 @@
         if (year !== null)
             historyView?.setYear(year, "site");
     }
+    function sourceLocationsSection(site) {
+        const points = explore?.getSourcePoints(site.id) ?? [];
+        const metadata = explore?.getSpatialMetadata();
+        if (!points.length) {
+            if (!metadata || !site.geography?.authority_id || !/^[1-9]\d*$/u.test(site.geography.authority_id))
+                return null;
+            const section = detailSection("来源组成定位记录", metadata.ready
+                ? "固定名录未提供源定位记录；原代表点来自独立证据，不插入DataHub源数组。"
+                : "源定位数据尚未就绪，当前保留原代表点，不补造源点。请按全库定位状态的准备指引修复。");
+            section.id = "site-source-locations";
+            return section;
+        }
+        const records = explore?.getSourceLocationRecords(site.id) ?? [];
+        const section = detailSection("来源组成定位记录", `${points.length} 条来源记录。它们属于同一遗产条目，不作为新增遗址计数，也不表示已逐点独立核验。`);
+        section.id = "site-source-locations";
+        section.append(element("p", "detail-note", "原代表点保持不变；全库点层另展示源定位记录，同一遗产的重合圆点可合并显示。名称与编号仅为来源标签，不作为唯一身份或精确发掘位置。"));
+        const details = element("details", "evidence-more");
+        details.append(element("summary", null, "查看完整原始顺序、名称与坐标"));
+        const list = element("ol", "source-location-list");
+        list.tabIndex = 0;
+        list.setAttribute("aria-label", "按原始顺序排列的来源定位记录，可滚动阅读");
+        for (const [index, point] of points.entries()) {
+            const record = records[index];
+            const row = element("li", "evidence-item");
+            row.dataset.sourceIndex = String(index);
+            row.append(element("p", null, record?.name || `来源定位记录 ${index + 1}`));
+            const [longitude, latitude] = point;
+            row.append(element("p", "detail-note", `原序号 ${index + 1}${record?.ref ? ` · 来源编号 ${record.ref}` : ""} · WGS84 [${longitude}, ${latitude}]`));
+            list.append(row);
+        }
+        details.append(list);
+        section.append(details);
+        if (metadata?.source)
+            section.append(safeLink(metadata.source.uri, `${metadata.source.name} · ${metadata.source.license}`));
+        return section;
+    }
     function renderDetail(site, matchedFields = []) {
         const focusWasInContent = ui.detailContent.contains(document.activeElement);
         const title = element("h3", null, displayTitle(site));
@@ -1099,6 +1139,9 @@
             space.append(element("p", "detail-note", "rough 表示应在某个范围内寻找地点；代表点可能只是该范围的中心。"));
         }
         nodes.push(space);
+        const sourceLocations = sourceLocationsSection(site);
+        if (sourceLocations)
+            nodes.push(sourceLocations);
         if (site.geography) {
             const geography = site.geography;
             const scope = detailSection("来源名录中的国家／地区与分区", `国家／地区：${site.source_kind === "ats" ? "不作主权归属标注" : geography.countries.join(" · ") || "来源未明确"}；分区：${geography.regions.map((region) => region === "antarctica" ? "南极洲（独立区域分类）" : region).join(" · ") || "来源未提供"}。`);
@@ -1396,7 +1439,7 @@
     polarView = ArchSearchPolarView.create({ onSelect: (id, opener) => { void selectSite(id, { opener, moveMap: false }); } });
     explore = ArchSearchExplore.create({
         map: state.map,
-        onSelect: (id, opener) => { void selectSite(id, { opener }); },
+        onSelect: (id, opener, options) => { void selectSite(id, { opener, moveMap: options?.moveMap ?? true }); },
         onFilterChange: () => {
             cancelLinkRestore();
             updateSearchAvailability();
@@ -1413,7 +1456,36 @@
             }
             saveViewLink();
         },
-        onCatalogue: (points) => { polarView?.setSites(points); },
+        onCatalogue: (points) => {
+            polarView?.setSites(points);
+            const selected = currentSelectedSite();
+            if (selected && !ui.detailPanel.hidden) {
+                const previous = document.getElementById("site-source-locations");
+                const section = sourceLocationsSection(selected);
+                const active = document.activeElement;
+                const ownedFocus = previous?.contains(active) ?? false;
+                const oldDetails = previous?.querySelector("details");
+                const oldList = previous?.querySelector("ol");
+                const previousScroll = oldList?.scrollTop ?? 0;
+                if (previous && section) {
+                    const details = section.querySelector("details");
+                    if (details && oldDetails)
+                        details.open = oldDetails.open;
+                    previous.replaceWith(section);
+                    const list = section.querySelector("ol");
+                    if (list && oldList)
+                        list.scrollTop = previousScroll;
+                }
+                else if (section)
+                    ui.detailContent.append(section);
+                else
+                    previous?.remove();
+                if (ownedFocus)
+                    focusWithinView(active === oldList
+                        ? section?.querySelector("ol") ?? ui.detailPanel
+                        : section?.querySelector("summary") ?? ui.detailPanel);
+            }
+        },
         onFeedback: () => { ui.mapEmptyLabel.hidden = true; },
     });
     mapView = ArchSearchMapView.create({ map: state.map, countLabel: ui.viewportCount });

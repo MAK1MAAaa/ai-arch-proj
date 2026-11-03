@@ -32,6 +32,7 @@ interface ExportResult<T> {
   selection: { site: string | null; phase: string | null };
   sources: { name: string; license: string }[];
   selected_site: unknown;
+  spatial: { metadata: unknown; selected: { site_id: string; representative_point: [number, number] | null; source_points: [number, number][]; records: { source_index: number; coordinate: [number, number]; name: string; ref: string }[] } | null } | null;
   browse: BrowseState | null;
   source: {
     name: string;
@@ -51,7 +52,7 @@ interface ResearchHelpers {
   parseView(url: URL): { view: HistoryView | null; selection: { site: string | null; phase: string | null }; error: string | null };
   parseBrowse(url: URL): { state: BrowseState; error: string | null };
   buildLink(base: URL, request: SearchSpec | null, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, browse?: BrowseState | null): string;
-  createExport<T>(request: SearchSpec, response: SearchResponse<T>, exportedAt: string, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, selectedSite?: unknown, browse?: BrowseState | null): ExportResult<T>;
+  createExport<T>(request: SearchSpec, response: SearchResponse<T>, exportedAt: string, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, selectedSite?: unknown, browse?: BrowseState | null, spatial?: ExportResult<T>['spatial']): ExportResult<T>;
   automaticPhaseYear(phase: { precision: string; start_year: number | null; end_year: number | null }): number | null;
 }
 
@@ -367,4 +368,22 @@ test('unknown Antarctic positions remain null in standalone exports with their o
   assert.equal((report.selected_site as typeof selected).repr_point, null);
   assert.ok(!('score' in (report.selected_site as Record<string, unknown>)));
   assert.ok(report.sources.some(source => source.name.startsWith('Antarctic Treaty Secretariat') && source.license === 'CC BY 4.0'));
+});
+
+test('spatial exports retain source order, duplicates and labels separately from the representative point', () => {
+  const response = { query: request.query, mode: request.mode, corpus_version: 'global-v4', elapsed_ms: 1, total_candidates: 0, results: [] };
+  const snapshot: NonNullable<ExportResult<never>['spatial']> = {
+    metadata: { version: 'world-locations-v1', source: { license: 'CC BY-SA 4.0' } },
+    selected: { site_id: 'whc:1', representative_point: [30, 40], source_points: [[10, 20], [10, 20], [11, 21]], records: [
+      { source_index: 0, coordinate: [10, 20], name: '<b>Original A</b>', ref: 'same-ref' },
+      { source_index: 1, coordinate: [10, 20], name: 'Original B', ref: 'same-ref' },
+      { source_index: 2, coordinate: [11, 21], name: 'Original C', ref: 'same-ref' },
+    ] },
+  };
+  const expected = plain(snapshot);
+  const report = helpers.createExport(request, response, '2026-11-04T00:00:00Z', null, { site: 'whc:1', phase: null }, null, null, snapshot);
+  snapshot.selected!.source_points[0][0] = 0;
+  assert.deepEqual(plain(report.spatial), expected);
+  assert.deepEqual(report.response.results, []);
+  assert.equal(helpers.createExport(request, response, '2026-11-04T00:00:00Z').spatial, null);
 });
