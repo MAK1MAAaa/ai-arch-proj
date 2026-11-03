@@ -1428,3 +1428,11 @@
     inset: 12px;
   }
 }
+.detail-source-excerpt {
+  margin: 8px 0 14px;
+  padding-left: 10px;
+  border-left: 2px solid var(--line);
+  font-size: 12px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}

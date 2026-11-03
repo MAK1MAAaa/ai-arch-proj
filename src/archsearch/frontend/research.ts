@@ -88,7 +88,7 @@ const ArchSearchResearch = (() => {
         || Number(rawYear) < -3400 || Number(rawYear) > 2024)) throw new Error("链接年份应为公元前3400至公元2024年，不能为0。");
       const site = parameters.get("site");
       const phase = parameters.get("phase");
-      if (site !== null && !/^(?:[1-9]\d*|wd:Q[1-9]\d*|whc:[1-9]\d*|ats:hsm:[1-9]\d*)$/u.test(site)) throw new Error("链接中的 site 无效。");
+      if (site !== null && !/^(?:[1-9]\d*|wd:Q[1-9]\d*|whc:[1-9]\d*|ats:hsm:[1-9]\d*|auth:[a-z][a-z0-9-]{0,39}:[A-Za-z0-9][A-Za-z0-9._-]{0,79})$/u.test(site)) throw new Error("链接中的 site 无效。");
       if (phase !== null && (!site || !phase || phase.length > 160 || /[\u0000-\u001f\u007f]/u.test(phase))) throw new Error("链接中的 phase 无效或缺少 site。");
       const hasView = ["year", "basemap", "boundaries"].some((name) => parameters.has(name));
       return { view: hasView ? { year: rawYear === null ? 117 : Number(rawYear), basemap, boundaries: boundaries === "1", frame_id: null, source_version: null } : null, selection: { site, phase }, error: null };
@@ -226,6 +226,7 @@ const ArchSearchResearch = (() => {
         { name: "UNESCO DataHub World Heritage List", license: "CC BY-SA 4.0", uri: "https://data.unesco.org/explore/dataset/whc001/", note: "Frozen cultural and mixed catalogue, HTML-to-text processing; individual records retain snapshot hashes and attribution. No images redistributed." },
         { name: "Antarctic Treaty Secretariat — Historic Sites and Monuments", license: "CC BY 4.0", uri: "https://www.ats.aq/devph/en/apa-database", note: "Frozen active HSM records. Unknown true locations remain null; polar coordinates retain their original values. Proposing parties do not establish sovereignty." },
         { name: "Wikidata", license: "CC0", uri: "https://www.wikidata.org/wiki/Wikidata:Licensing" },
+        { name: "Country cultural supplement", version: "country-supplement-v1", license: "Mixed rights — see individual source_refs", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/SUPPLEMENT-LICENSE.md", note: "Wikidata structured fields CC0; authority excerpts retain individual rights. Proposed heritage is not relabelled as protected or inscribed. Three records lack verified public digital coordinates. No new historical phases inferred." },
         { name: "Cliopatria", version: map?.source_version ?? null, license: "CC BY 4.0", uri: "https://github.com/Seshat-Global-History-Databank/cliopatria", note: "Historical polity approximations; valid source intervals, no interpolation or point-based political attribution." },
         { name: "Natural Earth", license: "Public domain", uri: "https://www.naturalearthdata.com/about/terms-of-use/", note: "Modern natural-geography reference; no ancient coastline reconstruction." },
         { name: "OpenStreetMap contributors", license: "ODbL", uri: "https://www.openstreetmap.org/copyright", displayed: map?.basemap === "modern" },
@@ -242,13 +243,13 @@ const ArchSearchResearch = (() => {
       },
       provenance: {
         processing: "来源资料经 HTML 转纯文本和空白规范化；别名、类型、分期证据、原文出处和贡献者随结果保留，未生成历史事实或补造坐标。",
-        scope: "保留原600条策展资料，扩展固定官方文化／混合遗产目录；不是全世界所有遗址清单。response为成功检索快照，selected_site可为独立选择的目录记录，没有虚构排名或分数。",
+        scope: "保留原有策展资料、固定文化／混合名录与南极历史资料，另有逐条核验的国家文化补充；资格来源可能是预备名录、国家文保或考古研究，不一概表示正式世界遗产。不是全世界所有遗址清单。response为成功检索快照，selected_site可为独立目录选择，没有虚构排名或分数。",
         coordinates: "repr_point 为 WGS84 [经度, 纬度] 代表点，用于地图定位；不等同于实测发掘坐标，location_precision 不承诺米级精度。",
         scores: "检索分数不是相关概率，不同检索方式的分数不可直接比较；本导出不包含人工相关性判断或评测指标。",
         periods: "分期来自名称或位置记录的来源关联；不等同于建造年代或连续使用证明，start/end 保留原始记录时间范围。",
         chronology: "历史阶段独立记录事件类型、精度、证据和代理核验方式；区间或时期不证明连续存在，未标成人工专家确认。",
         map: "map保存最后成功显示的年份与疆域版本；null表示尚无成功地图快照，待加载或失败年份不冒充已显示年份。",
-        locations: "repr_point为null时真实位置未知，不等于零坐标；有效极区坐标超出Web Mercator时使用独立极区示意，不截断或伪造纬度。极区底图为现代自然地理参照，不生成历史国界。",
+        locations: "repr_point为null表示本记录无可用代表点：可能真实位置不明，也可能尚未取得可信公开数字坐标，来源说明保留区别；不等于零坐标。有效极区坐标超出Web Mercator时使用独立极区示意，不截断或伪造纬度。极区底图为现代自然地理参照，不生成历史国界。",
         source_points: "spatial保留最后成功目录的源点版本及独立选中资料的原始定位序列、重复记录与来源标签。源点和原代表点分开保存；多个定位记录不增加遗产条目数，也不等于独立核验的发掘坐标。地图可合并同一遗产同坐标圆点，导出保留全部源序列。",
       },
     };

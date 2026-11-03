@@ -14,6 +14,7 @@ from pydantic import BaseModel, Field
 from archsearch.config import DATA_DIR
 from archsearch.domain import Site
 from archsearch.spatial_data import SpatialDataError, WorldLocations, load_world_locations
+from archsearch.supplement_data import SupplementError, country_labels
 
 REGION_LABELS = {
     "africa": "非洲",
@@ -28,6 +29,7 @@ SOURCE_LABELS = {
     "global": "全球策展资料",
     "unesco": "UNESCO 世界遗产名录",
     "ats": "南极条约历史遗址与纪念物",
+    "supplement": "补充国家文化遗址",
 }
 
 WEB_MERCATOR_MAX_LATITUDE = 85.0511287798
@@ -53,6 +55,13 @@ def load_registry(data_dir: Path = DATA_DIR) -> CoverageRegistry:
     path = Path(data_dir) / "catalogue_manifest.json"
     value = json.loads(path.read_text("utf-8")) if path.exists() else {}
     countries = {row["id"]: row["label"] for row in value.get("countries", [])}
+    if (Path(data_dir) / "supplement_manifest.json").exists():
+        additions = country_labels(Path(data_dir))
+        if countries.keys() & additions.keys():
+            raise SupplementError(
+                "supplement labels cannot overwrite the existing country registry"
+            )
+        countries.update(additions)
     regions = (
         {row["id"]: row["label"] for row in value["regions"]}
         if "regions" in value else dict(REGION_LABELS)

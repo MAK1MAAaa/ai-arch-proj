@@ -123,7 +123,7 @@ test('candidate hints distinguish projection limits from an unknown true locatio
   const unknown = item('unknown', null); unknown.locationStatus = 'unknown';
   const { view } = setup(); view.setCandidates([polar, unknown]);
   assert.match(polar.hint.textContent ?? '', /投影范围/u);
-  assert.match(unknown.hint.textContent ?? '', /真实位置未知/u);
+  assert.match(unknown.hint.textContent ?? '', /当前资料无可用代表点/u);
 });
 
 test('dateline coordinates use the smallest longitudinal arc without changing source input', () => {
