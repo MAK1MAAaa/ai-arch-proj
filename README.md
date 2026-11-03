@@ -2,9 +2,35 @@
 
 面向古代遗址资料的语义检索与地图可视化课程项目。
 
-当前语料 `global-v2` 共600条：保留 Pleiades v4.1 地中海罗马资料500条，新增全球历史遗址100条，覆盖古代至近现代。提供本地多语言语义检索、BM25 对照、原文证据与地图联动。
+当前语料 `global-v3` 共1534条：保留原500条Pleiades与100条已策展全球资料，新增934条官方文化／混合遗产名录记录。固定来源中的1033处文化／混合遗产全部可定位，关联159个国家／地区；这不是全球所有遗址的完整清单。提供本地多语言语义检索、全库目录、原文证据与历史地图联动。
 
-## 600条资料与断代核验
+## 全球覆盖与完整目录
+
+全球扩充使用 [UNESCO DataHub `whc001`](https://data.unesco.org/explore/dataset/whc001/) 的2026-11-02固定快照，采用 **CC BY-SA 4.0**。1273条来源记录中991条文化遗产、42条混合遗产入选，240条纯自然遗产排除；与原99个名录ID去重后新增934条，另保留原500条和非名录的Teouma资料。原600条的原文、坐标和历史阶段不覆盖改写。官方快照及其元数据SHA256随 `catalogue_manifest.json` 冻结，数据更新时拒绝静默换源。
+
+新增记录保留来源的中文描述与六语名称；806条新增记录有官方中文描述，缺失翻译或英文原文时如实留空，不自动补写。新934条均标为“断代尚未核验”，不把世界遗产列入年份变成建造年代。原149处有来源支持阶段、451处证据不足的断代核验结果保持不变。
+
+页面提供全库覆盖统计、国家／地区与来源分区下拉、独立Canvas点层及每页50条的可键盘操作目录；无需模型或查询即可浏览。目录按标题排序，没有相关性分数。点击目录或全库圆点可独立打开原文和来源，选中地点无需位于检索Top10／50内。编号标记属于当前检索候选，“选”标记属于独立选中地点，两者不混入对方的排名。
+
+目录地域条件用于下一次主动提交的检索；浏览、翻页和切换图层时，已有成功检索的条件与排名保持不变。查询参数 `country/region` 保存成功检索的过滤；`browse_country/browse_region/browse_offset/points` 单独保存最后成功目录范围及即时点层开关。目录请求失败时保留成功列表与点层，分享和导出也保留该成功范围。无查询的目录与地图链接可以直接恢复遗址；模型缺失时保留待恢复查询，用户操作优先于晚到的初始化恢复。
+
+国家／地区来自现代名录成员字段，不按代表点或历史疆域推断。跨国遗产计入各关联国家，各国计数不可相加作为总数。501条尚无名录地理标签，502条没有国家标签（另含来源未归类的耶路撒冷）；两项是不同指标。系列遗产只显示一个代表点，`point_count`是来源可用定位点记录数，不代表已逐一核验的组成遗址数。两处来源缺失定位点的记录保留独立Wikidata证据，其中1567明确使用一个关联组成部分定位，不称为整体中心。
+
+离线查看覆盖与来源分母：
+
+```powershell
+uv run --no-sync archsearch coverage
+```
+
+输出包括1534条来源统计、159个可筛国家／地区、三态断代计数，以及固定名录覆盖1033／1033、缺失0、自然遗产排除240。完整来源缓存不进Git；可从固定归档重新生成派生文件：
+
+```powershell
+uv run --no-sync python -m archsearch.catalogue_data --rebuild --download
+```
+
+默认缓存为 `.archsearch/downloads/unesco-datahub-v1/`；可用 `--source-cache <目录>` 指定已有固定快照。下载内容必须匹配冻结SHA，官方数据改版后应保留本地快照或明确更新来源版本。派生资料的署名、加工与同方式共享条款见 [名录资料许可](src/archsearch/data/CATALOGUE_LICENSE.md)。覆盖及浏览器验收见 [全球覆盖记录](docs/global-coverage.md)。
+
+## 保留的600条资料与断代核验
 
 原500条的ID、原文及名称／位置记录分期证据保持不变，原抽样矩形和 `roman` 条件只约束这批资料。新增资料使用 `wd:Q…` 命名空间ID，`historic-site`（历史遗址）类型用于全球古代至近现代资料。两批共享原文检索流程；原500条的其他类型标签也继续保留。
 
@@ -22,7 +48,7 @@
 
 初始化 `main` 后，所有功能在 `feature/dev` 开发。每个完整功能批次同步本文档，经过本地检查、独立审查和 CI，再由 GitHub Actions 机器人批准并 squash 合并；`main` 要求 `quality-gate` 和一个批准。
 
-输入中文研究问题，在结果列表与地图间双向定位，查看原文、分期证据、代表点精度和来源。支持语义/BM25切换、类型筛选、10/20/50条结果与20对中英文评测查询。
+输入中文研究问题，在结果列表与地图间双向定位，查看原文、分期证据、代表点精度和来源。支持语义/BM25、类型与国家／分区过滤、10/20/50条结果，以及原研究问题与全球问题各20对双语评测查询。
 
 ## 阅读结果与证据
 
@@ -68,7 +94,7 @@
 
 复制失败时显示并选中链接，可用Ctrl+C或Command+C手动复制。从`127.0.0.1`页面复制的地址仅指向访问者自己的设备；在Mac与Windows之间复查时，应从可访问的Tailscale Serve地址打开页面再复制链接。
 
-导出升级为 `schema_version: 2`，包含UTC导出时间、成功检索快照、完整API响应、选择和多来源许可。`map`保存最后成功显示的年份、底图、疆域开关、帧ID与疆域版本，尚无成功视图时为null；等待或失败的年份不冒充已显示年份。它用于保存当次候选，未添加人工相关性判断或历史结论。JSON文件由浏览器本地生成，无需额外服务；生成后释放临时下载地址。
+导出使用 `schema_version: 2`，包含UTC时间、成功检索快照、完整API响应、目录状态、选择和多来源许可。`selected_site`附上独立选中遗址的完整资料，即使它不在检索候选中也不伪造分数或名次；读取完成前暂不导出。`map`保存最后成功显示的年份、底图、疆域开关、帧ID与疆域版本，尚无成功视图时为null；等待或失败的年份不冒充已显示年份。它用于保存当次候选，未添加人工相关性判断或历史结论。JSON由浏览器本地生成，生成后释放临时下载地址。
 
 界面放大了原文和关键辅助文字，窄屏保留两行摘录。打开资料详情后焦点进入详情区域，手机上同步滚动到详情；来源内容未变化时保留阅读状态，晚到的详情刷新不会让正在阅读的键盘焦点落到页面外层。关闭后重开同一地点时，已取消或过期的详情请求不会写入新详情或错误提示。地图标记可用Enter或空格打开；关闭或按Escape返回触发的结果卡片或地图标记，长资料的关闭按钮保持可见。
 
@@ -83,7 +109,7 @@ uv run --no-sync archsearch prepare-history
 uv run --no-sync archsearch serve
 ```
 
-浏览器打开 `http://127.0.0.1:8000/`，API状态地址为 `/api/status`。首次准备下载固定版本E5模型（单份权重约471MB）并构建600×384向量，需要联网。升级语料后须重新运行 `prepare`，旧500条索引会被明确识别为失效；模型文件可复用。后续启动和新的中文查询只使用本地资源；首次查询包含模型加载，后续请求复用编码器。应用采用CPU推理，运行不需要Node.js、GPU或外部模型API密钥。
+浏览器打开 `http://127.0.0.1:8000/`，API状态地址为 `/api/status`。首次准备下载固定版本E5模型（单份权重约471MB）并构建1534×384向量，需要联网。升级语料后须重新运行 `prepare`，旧索引会被明确识别为失效；已下载模型可离线复用。后续启动和新的中文查询只使用本地资源；首次查询包含模型加载，后续复用编码器。应用采用CPU推理，运行不需要Node.js、GPU或外部模型API密钥。
 
 ## 本地历史地图数据服务
 
@@ -126,7 +152,7 @@ pnpm test:frontend
 pnpm test:workflows
 ```
 
-`pnpm build`生成浏览器执行的`static/app.js`、`static/research.js`、`static/map-view.js`、`static/history.js`及各自source map，均随源码提交；修改应用逻辑时编辑TypeScript源码，由构建生成JavaScript。`research.ts`集中处理链接校验和版本2导出，`map-view.ts`处理预览、跨日期线定位和范围提示，`history.ts`处理时间轴、独立图层与地图请求状态。前端测试执行实际助手源码，覆盖年份0、竞争请求（包括旧失败）、快照一致性、图层和范围统计。Leaflet保留本地原版发行文件。应用运行仍只需Python和已生成资源，Node.js与pnpm用于开发构建。
+`pnpm build`生成`static/app.js`、`research.js`、`map-view.js`、`history.js`、`explore.js`及各自source map，均随源码提交；应用逻辑编辑TypeScript，由构建生成JavaScript。`research.ts`处理独立检索／目录链接和版本2导出，`map-view.ts`处理预览、跨日期线定位与范围提示，`history.ts`处理历史视图，`explore.ts`处理全库目录、覆盖与点层。测试执行实际助手源码，覆盖竞争请求、三态断代、地理过滤、成功快照、图层和范围统计。Leaflet保留本地原版资源。运行仍只需Python和已生成资源，Node.js与pnpm用于开发构建。
 
 CI在Windows与Ubuntu执行Python锁定安装、Ruff、mypy、pytest，以及pnpm冻结锁文件安装、TypeScript检查、构建、前端交互助手测试和真实Octokit回归；同时校验编译产物与源码一致，不下载模型或全量资料。`main`要求一个批准及`quality-gate`，管理员同样受约束，禁止强推和删除。默认分支的`workflow_run`核实可信仓库、作者、分支、最新CI及当前head后，由Actions机器人批准并自动squash合并；审批任务不检出或运行PR代码。
 
@@ -136,7 +162,7 @@ CI在Windows与Ubuntu执行Python锁定安装、Ruff、mypy、pytest，以及pnp
 
 两种检索共享`build_document()`构造的原文，包含名称、别名、类型、描述及补充记录。地图年份不筛选检索候选；未加入LLM或历史政治归属推断。BM25使用正Robertson IDF、k1=1.5、b=0.75；无词项匹配就返回空结果。英文词语、地名和已有中文别名适合关键词基线，中文零命中不意味着资料不存在相关地点。
 
-语义检索使用 [multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small)，固定revision `fd1525a9fd15316a2d503bf26ab031a61d056e98`。文档添加`passage: `、查询添加`query: `，L2归一化后以NumPy精确点积排序。模型最多512 token，本语料有2条长文档会被截断，BM25仍使用完整词项；完整原文保留。相似度是排序分数，不是相关概率，候选仍需人工核验。
+语义检索使用 [multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small)，固定revision `fd1525a9fd15316a2d503bf26ab031a61d056e98`。文档添加`passage: `、查询添加`query: `，L2归一化后以NumPy精确点积排序。两种方法共享多语种来源文本，包括可用的官方中文描述。模型最多512 token，新版有88条长文档被截断，BM25仍使用完整词项；完整原文保留。相似度是排序分数，不是相关概率，候选仍需人工核验。
 
 索引绑定地点顺序、检索文本hash、模型revision、前缀、归一化和模型文件校验和。缺失或损坏时明确标为未就绪，语义请求返回503；BM25继续可用，不进行隐式替代。修复后可刷新状态；模型加载失败时重新prepare并重启服务。
 
@@ -145,6 +171,9 @@ CI在Windows与Ubuntu执行Python锁定安装、Ruff、mypy、pytest，以及pnp
 | `GET /api/status` | 语料版本、数量、语义状态及历史版本、可用年份与就绪原因 |
 | `GET /api/history/boundaries?year=...` | 本地年度政权疆域GeoJSON、原始区间、来源与帧元数据 |
 | `GET /api/facets` | 类型ID、中文标签和数量 |
+| `GET /api/coverage` | 全库国家／分区、来源、断代三态及固定名录覆盖分母 |
+| `GET /api/catalogue` | 轻量全库点，可选country／region／type交集 |
+| `GET /api/sites` | 无查询分页目录，offset及limit（1—100）和地理／类型交集 |
 | `POST /api/search` | 查询、模式、类型筛选及候选排序 |
 | `GET /api/sites/{id}` | 原文、别名、代表点、分期证据、多来源、核验状态、历史阶段和默认阶段 |
 | `GET /openapi.json` | 完整接口与字段定义 |
@@ -155,7 +184,7 @@ CI在Windows与Ubuntu执行Python锁定安装、Ruff、mypy、pytest，以及pnp
 {"query":"罗马时期的剧场","mode":"semantic","type":"theatre","limit":10}
 ```
 
-`mode`支持`semantic`或`bm25`；type可省略或为null；limit默认10、范围1—50。空查询、超过500字符、未知类型及额外字段返回422，未知地点返回404。响应包含Site、分数、词面匹配字段、耗时和语料版本；匹配字段不是模型的因果解释。
+`mode`支持`semantic`或`bm25`；type、country、region可省略或为null，country为来源ISO双字母大写代码，region从coverage列表选；limit默认10、范围1—50。过滤采用交集，空候选不进行查询编码。空查询、超过500字符、未知／空筛选及额外字段返回422，未知地点404；目录GET也拒绝重复参数。响应包含Site、分数、词面匹配字段、耗时和语料版本；匹配字段不是模型的因果解释。
 
 ## 可复现评测
 
@@ -163,6 +192,7 @@ CI在Windows与Ubuntu执行Python锁定安装、Ruff、mypy、pytest，以及pnp
 
 ```powershell
 uv run --no-sync archsearch evaluate
+uv run --no-sync archsearch evaluate --queries src/archsearch/data/queries-global.json --output .archsearch/reports/global-queries.json
 ```
 
 默认生成`.archsearch/reports/evaluation.json`、`evaluation.pool.json`及带签名的空白标注模板。`--output`接受JSON文件路径。报告独立记录固定预热查询的冷启动时间，四组均值、中位数和p95仅统计预热后的编码与检索，不包括下载。
@@ -216,6 +246,10 @@ tailscale serve status
 Leaflet 1.9.4按其BSD-2-Clause许可本地分发，许可位于`src/archsearch/static/vendor/leaflet/LICENSE`；底图署名为©OpenStreetMap贡献者，遵守 [OSM瓦片使用政策](https://operations.osmfoundation.org/policies/tiles/)，不提供批量预取或离线瓦片包。
 
 ## 界面预览
+
+实际1534条全库目录、覆盖统计与历史地图（断网本地参照）：
+
+![全球文化遗产覆盖与完整目录](docs/global-coverage-preview.png)
 
 实际600条本地模型中文查询与离线历史地图截图（117年）：
 

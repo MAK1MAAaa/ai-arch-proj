@@ -107,6 +107,8 @@ class ChronologyReview(BaseModel):
             raise ValueError("chronology with phases must specify a default phase")
         if self.status == "insufficient" and self.phases:
             raise ValueError("insufficient chronology must preserve the unknown state")
+        if self.status == "not_reviewed" and self.phases:
+            raise ValueError("unreviewed chronology cannot trigger historical navigation")
         if self.status != "not_reviewed":
             if not self.method.strip() or self.reviewed_at is None:
                 raise ValueError("completed chronology review must record its method and date")
@@ -115,12 +117,45 @@ class ChronologyReview(BaseModel):
         return self
 
 
+class Geography(BaseModel):
+    """Modern source catalogue membership, independent of historical political boundaries."""
+
+    model_config = ConfigDict(extra="forbid", frozen=True)
+    authority_id: str | None = None
+    countries: list[str] = Field(default_factory=list)
+    regions: list[str] = Field(default_factory=list)
+    source: SourceReference
+    point_count: int = Field(default=1, ge=1)
+    note: str = ""
+
+    @field_validator("countries")
+    @classmethod
+    def validate_countries(cls, values: list[str]) -> list[str]:
+        if len(values) != len(set(values)) or any(
+            re.fullmatch(r"[A-Z]{2}", value) is None for value in values
+        ):
+            raise ValueError("countries require unique source ISO alpha-2 codes")
+        return values
+
+    @field_validator("regions")
+    @classmethod
+    def validate_regions(cls, values: list[str]) -> list[str]:
+        allowed = {
+            "africa", "arab-states", "asia-pacific", "europe-north-america",
+            "latin-america-caribbean",
+        }
+        if len(values) != len(set(values)) or not set(values) <= allowed:
+            raise ValueError("regions require unique source UNESCO region identifiers")
+        return values
+
+
 class Site(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
 
     id: str = Field(min_length=1)
     title: str = Field(min_length=1)
     description: str
+    description_zh: str = ""
     details: str = ""
     names: list[str]
     types: list[str]
@@ -130,9 +165,10 @@ class Site(BaseModel):
     source_uri: str
     contributors: list[str]
     period_evidence: list[PeriodEvidence]
-    source_kind: Literal["pleiades", "global"] = "pleiades"
+    source_kind: Literal["pleiades", "global", "unesco"] = "pleiades"
     source_refs: list[SourceReference] = Field(default_factory=list)
     chronology: ChronologyReview = Field(default_factory=ChronologyReview)
+    geography: Geography | None = None
 
     @field_validator("repr_point")
     @classmethod
@@ -153,4 +189,9 @@ class Site(BaseModel):
             re.fullmatch(r"wd:Q[1-9]\d*", self.id) is None or not self.source_refs
         ):
             raise ValueError("global sites require a namespaced Wikidata ID and source references")
+        if self.source_kind == "unesco" and (
+            re.fullmatch(r"whc:[1-9]\d*", self.id) is None
+            or not self.source_refs or self.geography is None
+        ):
+            raise ValueError("UNESCO sites require authority IDs, geography and source references")
         return self

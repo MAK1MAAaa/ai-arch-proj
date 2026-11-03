@@ -18,6 +18,7 @@
     id: string;
     title: string;
     description: string;
+    description_zh?: string;
     details: string;
     names: string[];
     types: string[];
@@ -27,7 +28,8 @@
     source_uri: string;
     contributors: string[];
     period_evidence: PeriodEvidence[];
-    source_kind: "pleiades" | "global";
+    source_kind: "pleiades" | "global" | "unesco";
+    geography?: { authority_id: string | null; countries: string[]; regions: string[]; point_count: number; note: string; source: SourceReference } | null;
     source_refs: SourceReference[];
     chronology: {
       status: "not_reviewed" | "reviewed" | "insufficient";
@@ -61,6 +63,8 @@
     mode: SearchMode;
     type: string | null;
     limit: number;
+    country?: string | null;
+    region?: string | null;
   }
 
   interface SearchResponse {
@@ -75,6 +79,8 @@
   interface SearchContext {
     type: string | null;
     limit: number;
+    country?: string | null;
+    region?: string | null;
   }
 
   interface CompletedSearch {
@@ -109,6 +115,8 @@
     displayedMode: SearchMode | null;
     results: SearchResult[];
     selectedId: string | null;
+    selectedSite: Site | null;
+    selectionMarker: L.Marker | null;
     completedSearch: CompletedSearch | null;
     restoringLink: boolean;
     detailOpener: HTMLElement | null;
@@ -161,27 +169,36 @@
 
   const state: ApplicationState = {
     corpusReady: false, semanticReady: false, statusLoaded: false, searching: false,
-    hasSearched: false, displayedMode: null, results: [], selectedId: null, typeLabels: new Map(),
+    hasSearched: false, displayedMode: null, results: [], selectedId: null, selectedSite: null, selectionMarker: null, typeLabels: new Map(),
     completedSearch: null, restoringLink: false, detailOpener: null,
     searchController: null, detailController: null, searchSequence: 0,
     activeSearch: null, failedSearch: null, searchFeedback: null, statusError: null, facetError: null,
     map: null, tiles: null, markerLayer: null, markers: new Map(),
   };
 
-  const initialLink = ArchSearchResearch.parseLink(new URL(window.location.href));
-  const initialView = ArchSearchResearch.parseView(new URL(window.location.href));
-  let pendingLink: SearchRequest | null = initialView.error ? null : initialLink.request;
-  let linkError: string | null = initialLink.error ?? initialView.error;
+  const initialUrl = new URL(window.location.href);
+  const initialLink = ArchSearchResearch.parseLink(initialUrl);
+  const initialView = ArchSearchResearch.parseView(initialUrl);
+  const initialBrowse = ArchSearchResearch.parseBrowse(initialUrl);
+  let pendingLink: SearchRequest | null = initialView.error || initialBrowse.error ? null : initialLink.request;
+  let unresolvedSearchLink: SearchRequest | null = pendingLink;
+  let linkError: string | null = initialLink.error ?? initialView.error ?? initialBrowse.error;
+  let invalidLink = linkError !== null;
+  let pendingSelectionRestore = !invalidLink && initialView.selection.site !== null;
+  let currentLink = window.location.href;
   let runtimeRefresh: Promise<void> | null = null;
   let mapView: ReturnType<typeof ArchSearchMapView.create> | null = null;
   let historyView: ReturnType<typeof ArchSearchHistory.create> | null = null;
+  let explore: ReturnType<typeof ArchSearchExplore.create> | null = null;
   let selectedPhaseId: string | null = null;
   let restoringView = true;
   let autoPositionedSelection = false;
   let positioningMap = false;
+  let browseRestored = false;
+  let initialStatePending = true;
 
   const fieldLabels: Readonly<Record<string, string>> = {
-    title: "地点名称", names: "别名", description: "原始描述", types: "地点类型",
+    title: "地点名称", names: "别名", description: "原始描述", description_zh: "中文来源描述", types: "地点类型",
     periods: "原始时期", details: "原始补充记录", search_text: "检索文本",
   };
 
@@ -242,6 +259,7 @@
   }
 
   function sourceExcerpt(site: Site): { label: string; text: string } {
+    if (site.description_zh && hasSourceText(site.description_zh)) return { label: "中文来源描述", text: site.description_zh };
     if (site.description.startsWith("An ancient place, cited:") && hasSourceText(site.details)) {
       return { label: "目录补充原文", text: site.details };
     }
@@ -287,11 +305,14 @@
   }
 
   function formRequest(): SearchRequest {
-    return { query: ui.query.value.trim(), mode: currentMode(), type: ui.typeFilter.value || null, limit: Number(ui.limitFilter.value) };
+    const scope = explore?.getState();
+    return { query: ui.query.value.trim(), mode: currentMode(), type: ui.typeFilter.value || null,
+      limit: Number(ui.limitFilter.value), country: scope?.country ?? null, region: scope?.region ?? null };
   }
 
   function sameRequest(left: SearchRequest, right: SearchRequest): boolean {
-    return left.query === right.query && left.mode === right.mode && left.type === right.type && left.limit === right.limit;
+    return left.query === right.query && left.mode === right.mode && left.type === right.type && left.limit === right.limit
+      && (left.country ?? null) === (right.country ?? null) && (left.region ?? null) === (right.region ?? null);
   }
 
   function modeAvailable(mode: SearchMode): boolean {
@@ -465,7 +486,17 @@
     if (runtimeRefresh) return runtimeRefresh;
     const refreshButton = byId("refresh-status", HTMLButtonElement);
     refreshButton.disabled = true;
-    runtimeRefresh = Promise.allSettled([loadStatus(), loadFacets()]).then(() => undefined).finally(() => {
+    runtimeRefresh = Promise.allSettled([loadStatus(), loadFacets(), explore?.load()]).then(async (loaded) => {
+      if (!browseRestored && !invalidLink) {
+        browseRestored = true;
+        const explicit = ["browse_country", "browse_region", "browse_offset", "points"].some((name) => initialUrl.searchParams.has(name));
+        const browse = explicit ? initialBrowse.state : { ...initialBrowse.state,
+          country: initialLink.request?.country ?? null, region: initialLink.request?.region ?? null };
+        if (loaded[2].status === "rejected" && !browse.country && !browse.region && browse.offset === 0) return;
+        try { await explore?.setState(browse); }
+        catch (error) { invalidLink = true; linkError = `目录条件无法恢复：${errorMessage(error)}`; }
+      }
+    }).finally(() => {
       runtimeRefresh = null;
       refreshButton.disabled = false;
     });
@@ -493,7 +524,7 @@
       byId("fit-map", HTMLButtonElement).disabled = true;
       return;
     }
-    state.map = L.map("map", { zoomControl: false, minZoom: 1, maxZoom: 18, worldCopyJump: true }).setView([20, 0], 2);
+    state.map = L.map("map", { zoomControl: false, minZoom: 1, maxZoom: 18, worldCopyJump: true }).setView([20, 0], 1);
     L.control.zoom({ position: "bottomleft" }).addTo(state.map);
     state.map.attributionControl?.setPrefix(false);
     state.tiles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -508,11 +539,19 @@
     state.map.on("movestart zoomstart", () => {
       if (!positioningMap) autoPositionedSelection = false;
     });
+    state.map.on("moveend", () => {
+      const marker = state.selectionMarker;
+      const center = state.map?.getCenter().lng;
+      if (marker && center !== undefined) {
+        const location = marker.getLatLng();
+        marker.setLatLng([location.lat, ArchSearchMapView.wrapLongitude(location.lng, center)]);
+      }
+    });
     if (typeof ResizeObserver !== "undefined") {
       new ResizeObserver(() => {
         state.map?.invalidateSize({ pan: false });
-        const selected = selectedResult();
-        if (autoPositionedSelection && selected && !ui.detailPanel.hidden) positionSelectedSite(selected.site);
+        const selected = currentSelectedSite();
+        if (autoPositionedSelection && selected && !ui.detailPanel.hidden) positionSelectedSite(selected);
       }).observe(byId("map", HTMLDivElement));
     }
   }
@@ -522,7 +561,7 @@
     autoPositionedSelection = false;
     const coordinates = state.results.map((result) => point(result.site)).filter((coordinate): coordinate is L.LatLngTuple => coordinate !== null);
     if (coordinates.length === 0) {
-      state.map.setView([20, 0], 2);
+      state.map.setView([20, 0], 1);
     } else {
       state.map.fitBounds(L.latLngBounds(ArchSearchMapView.wrapCoordinates(coordinates)), { padding: [46, 55], maxZoom: 9, animate: false });
     }
@@ -532,17 +571,21 @@
     return state.results.find((result) => result.site.id === state.selectedId);
   }
 
+  function currentSelectedSite(): Site | null {
+    return state.selectedSite?.id === state.selectedId ? state.selectedSite : selectedResult()?.site ?? null;
+  }
+
   function updateSelectionControls(): void {
     const index = state.results.findIndex((result) => result.site.id === state.selectedId);
-    const selected = index >= 0 ? state.results[index] : undefined;
+    const selected = currentSelectedSite();
     ui.selectionSummary.textContent = selected
-      ? `第 ${index + 1} / ${state.results.length} 条 · ${displayTitle(selected.site)}`
+      ? index >= 0 ? `第 ${index + 1} / ${state.results.length} 条 · ${displayTitle(selected)}` : `全库目录 · ${displayTitle(selected)}`
       : state.results.length ? `${state.results.length} 条候选，可逐条浏览或选择地图标记。` : "选择候选，查看地图与原始资料。";
     ui.selectionSummary.title = ui.selectionSummary.textContent;
     ui.previousResult.disabled = index <= 0;
     ui.nextResult.disabled = !state.results.length || index >= state.results.length - 1;
     ui.nextResult.textContent = index < 0 ? "查看首条" : "下一条";
-    ui.locateSelected.disabled = !state.map || !selected || point(selected.site) === null;
+    ui.locateSelected.disabled = !state.map || !selected || point(selected) === null;
   }
 
   function positionSelectedSite(site: Site): void {
@@ -575,15 +618,15 @@
   }
 
   function locateCurrentSite(): void {
-    const result = selectedResult();
-    if (!result || !state.map || !point(result.site)) return;
+    const site = currentSelectedSite();
+    if (!site || !state.map || !point(site)) return;
     closeDetail(false);
-    positionSelectedSite(result.site);
-    const marker = state.markers.get(result.site.id);
+    positionSelectedSite(site);
+    const marker = state.markers.get(site.id) ?? state.selectionMarker;
     marker?.openTooltip();
     if (window.matchMedia("(max-width: 780px)").matches) byId("map", HTMLDivElement).scrollIntoView({ block: "center", behavior: "instant" });
     marker?.getElement()?.focus({ preventScroll: true });
-    announce(`已在地图定位 ${displayTitle(result.site)}。可按 Enter 或空格重新打开详情。`);
+    announce(`已在地图定位 ${displayTitle(site)}。可按 Enter 或空格重新打开详情。`);
   }
 
   function renderMarkers(): void {
@@ -617,7 +660,7 @@
       }
       state.markers.set(String(result.site.id), marker);
     }
-    ui.mapEmptyLabel.hidden = state.results.length > 0;
+    ui.mapEmptyLabel.hidden = state.results.length > 0 || explore !== null;
     fitMap();
   }
 
@@ -635,6 +678,10 @@
     closeDetail(false);
     state.results = Array.isArray(data.results) ? data.results : [];
     state.selectedId = null;
+    state.selectedSite = null;
+    state.selectionMarker?.remove();
+    state.selectionMarker = null;
+    explore?.select(null);
     selectedPhaseId = null;
     state.hasSearched = true;
     state.displayedMode = data.mode;
@@ -646,7 +693,7 @@
       ? data.mode === "semantic" ? `在当前范围的 ${data.total_candidates} 条资料中，` : `${data.total_candidates} 条资料有字词匹配，`
       : "";
     ui.resultSummary.textContent = `${candidates}展示 ${state.results.length} 条 · ${elapsed}`;
-    ui.resultContext.textContent = `本次查询：“${data.query}” · ${data.mode === "semantic" ? "语义检索" : "关键词基线"} · ${context.type ? typeLabel(context.type) : "全部类型"} · 最多 ${context.limit} 条 · 语料 ${data.corpus_version}`;
+    ui.resultContext.textContent = `本次查询：“${data.query}” · ${data.mode === "semantic" ? "语义检索" : "关键词基线"} · ${context.type ? typeLabel(context.type) : "全部类型"}${context.country ? ` · 国家／地区 ${context.country}` : ""}${context.region ? ` · 来源分区 ${context.region}` : ""} · 最多 ${context.limit} 条 · 语料 ${data.corpus_version}`;
     ui.resultContext.hidden = false;
     ui.empty.hidden = state.results.length > 0;
     if (state.results.length === 0) {
@@ -672,7 +719,7 @@
       top.append(titleArea, element("span", "result-arrow", "↗"));
       const excerpt = sourceExcerpt(site);
       const description = element("p", "result-description", excerpt.text);
-      description.lang = excerpt.label === "原文状态" ? "zh-CN" : "en";
+      description.lang = excerpt.label === "原文状态" || excerpt.label === "中文来源描述" ? "zh-CN" : "en";
       const metadata = element("div", "result-metadata");
       metadata.append(element("span", "result-coordinate", coordinateLabel(site)), element("span", "result-score", scoreLabel(result.score, data.mode)));
       const viewHint = element("span", "result-view-hint");
@@ -688,6 +735,7 @@
     mapView?.setCandidates(viewCandidates);
     updateSelectionControls();
     state.completedSearch = { request, response: data, link };
+    if (unresolvedSearchLink && sameRequest(unresolvedSearchLink, request)) unresolvedSearchLink = null;
     saveViewLink();
     ui.resultTools.hidden = false;
     ui.copyLink.disabled = false;
@@ -709,17 +757,16 @@
 
   async function copySearchLink(): Promise<void> {
     saveViewLink();
-    const completed = state.completedSearch;
-    if (!completed) return;
+    const copiedLink = currentLink;
     try {
       if (!navigator.clipboard?.writeText) throw new Error("Clipboard unavailable");
-      await navigator.clipboard.writeText(completed.link);
-      if (state.completedSearch !== completed) return;
+      await navigator.clipboard.writeText(copiedLink);
+      if (currentLink !== copiedLink) return;
       ui.shareLinkPanel.hidden = true;
-      ui.toolsFeedback.textContent = "已复制本次检索链接。复查时需要能访问同一服务。";
+      ui.toolsFeedback.textContent = "已复制研究视图链接。复查时需要能访问同一服务。";
     } catch {
-      if (state.completedSearch !== completed) return;
-      ui.shareLink.value = completed.link;
+      if (currentLink !== copiedLink) return;
+      ui.shareLink.value = copiedLink;
       ui.shareLinkPanel.hidden = false;
       ui.toolsFeedback.textContent = "未能自动复制。链接已选中，可按 Ctrl+C 或 Command+C 手动复制。";
       ui.shareLink.focus();
@@ -730,11 +777,16 @@
   function exportSearchResults(): void {
     const completed = state.completedSearch;
     if (!completed) return;
+    if (state.selectedId && !currentSelectedSite()) {
+      ui.toolsFeedback.textContent = "请等待选中遗址资料读取完成，再导出完整来源附录。";
+      return;
+    }
     let objectUrl: string | null = null;
     const download = element("a");
     try {
       const exportedAt = new Date().toISOString();
-      const report = ArchSearchResearch.createExport(completed.request, completed.response, exportedAt, historyView?.getView() ?? null, { site: state.selectedId, phase: selectedPhaseId });
+      const report = ArchSearchResearch.createExport(completed.request, completed.response, exportedAt, historyView?.getView() ?? null,
+        { site: state.selectedId, phase: selectedPhaseId }, currentSelectedSite(), explore?.getCommittedState() ?? null);
       objectUrl = URL.createObjectURL(new Blob([JSON.stringify(report, null, 2)], { type: "application/json;charset=utf-8" }));
       download.href = objectUrl;
       download.download = `archsearch-${completed.request.mode}-${exportedAt.replace(/[:.]/g, "-")}.json`;
@@ -755,7 +807,10 @@
 
   function cancelLinkRestore(): void {
     pendingLink = null;
+    unresolvedSearchLink = null;
     linkError = null;
+    invalidLink = false;
+    pendingSelectionRestore = false;
     state.restoringLink = false;
     updateSearchAvailability();
   }
@@ -767,8 +822,21 @@
     if (linkError) {
       showError(`分享链接未能恢复：${linkError}`);
       linkError = null;
+      pendingSelectionRestore = false;
+      updateSearchAvailability();
+      return;
     }
-    if (!request) { updateSearchAvailability(); return; }
+    if (!request) {
+      updateSearchAvailability();
+      if (pendingSelectionRestore && initialView.selection.site) await selectSite(initialView.selection.site, {
+        phaseId: initialView.selection.phase,
+        preserveYear: initialView.view !== null || (historyView?.actionVersion() ?? 0) > 0,
+        restoring: true,
+      });
+      pendingSelectionRestore = false;
+      saveViewLink();
+      return;
+    }
     if (request.type && (ui.typeFilter.disabled || !Array.from(ui.typeFilter.options).some((option) => option.value === request.type))) {
       showError("链接中的地点类型无法确认。请检查类型是否有效，或重新选择后手动检索；本次未自动扩大检索范围。");
       updateSearchAvailability();
@@ -781,16 +849,17 @@
       return;
     }
     const actionVersion = historyView?.actionVersion() ?? 0;
-    await search();
-    if (initialView.selection.site && state.completedSearch && sameRequest(state.completedSearch.request, request)
+    await runSearch(request);
+    if (pendingSelectionRestore && initialView.selection.site && state.completedSearch && sameRequest(state.completedSearch.request, request)
       && (historyView?.actionVersion() ?? 0) === actionVersion) {
-      if (state.results.some((result) => result.site.id === initialView.selection.site)) {
-        await selectSite(initialView.selection.site, {
-          phaseId: initialView.selection.phase,
-          preserveYear: initialView.view !== null || (historyView?.actionVersion() ?? 0) > 0,
-        });
-      } else showError("分享的遗址不在本次返回候选中，已保留原检索结果与地图年份。请核对语料版本或调整查询。");
+      await selectSite(initialView.selection.site, {
+        phaseId: initialView.selection.phase,
+        preserveYear: initialView.view !== null || (historyView?.actionVersion() ?? 0) > 0,
+        restoring: true,
+      });
     }
+    pendingSelectionRestore = false;
+    saveViewLink();
   }
 
   function setLoading(value: boolean): void {
@@ -881,7 +950,7 @@
         body: JSON.stringify(request),
       });
       if (sequence !== state.searchSequence) return;
-      renderResults(data, { type: request.type, limit: request.limit });
+      renderResults(data, { type: request.type, limit: request.limit, country: request.country, region: request.region });
     } catch (error) {
       if (isAbortError(error) || sequence !== state.searchSequence) return;
       state.failedSearch = { ...request };
@@ -912,7 +981,7 @@
     ui.typeFilter.value = request.type || "";
     ui.limitFilter.value = String(request.limit);
     ui.form.querySelectorAll<HTMLInputElement>('input[name="mode"]').forEach((radio) => { radio.checked = radio.value === request.mode; });
-    search();
+    void runSearch(request);
   }
 
   function clearTypeFilter(): void {
@@ -958,11 +1027,15 @@
   }
 
   function saveViewLink(): void {
-    if (!state.completedSearch) return;
-    const link = ArchSearchResearch.buildLink(new URL(window.location.href), state.completedSearch.request,
-      historyView?.getView() ?? null, { site: state.selectedId, phase: selectedPhaseId });
-    if (state.completedSearch.link !== link) state.completedSearch = { ...state.completedSearch, link };
+    if (initialStatePending || invalidLink || pendingSelectionRestore || unresolvedSearchLink) return;
+    const link = ArchSearchResearch.buildLink(new URL(window.location.href), state.completedSearch?.request ?? null,
+      historyView?.getView() ?? null, { site: state.selectedId, phase: selectedPhaseId }, explore?.getCommittedState() ?? null);
+    currentLink = link;
+    if (state.completedSearch && state.completedSearch.link !== link) state.completedSearch = { ...state.completedSearch, link };
     ui.shareLink.value = link;
+    ui.resultTools.hidden = !state.completedSearch && !state.selectedSite && historyView?.getView() == null;
+    ui.copyLink.disabled = false;
+    ui.exportResults.disabled = state.completedSearch === null || (state.selectedId !== null && currentSelectedSite() === null);
     try { window.history.replaceState(null, "", link); } catch { /* Copy remains available. */ }
   }
 
@@ -970,7 +1043,10 @@
     const review = site.chronology;
     const content = element("div", "chronology-content");
     if (!review) { content.append(element("p", null, "当前资料尚无断代核验记录。")); return content; }
-    content.append(element("p", "detail-note", `${review.status === "reviewed" ? "已有来源支持的阶段" : "已核验，断代未确定"} · ${review.reviewed_at ?? "日期未提供"}`));
+    const reviewLabel = {
+      reviewed: "已有来源支持的阶段", insufficient: "已核验，断代未确定", not_reviewed: "断代尚未核验",
+    };
+    content.append(element("p", "detail-note", `${reviewLabel[review.status]}${review.reviewed_at ? ` · ${review.reviewed_at}` : ""}`));
     content.append(element("p", null, review.note));
     const audit = element("details");
     audit.append(element("summary", null, "查看核验方式"), element("p", "detail-note", review.method));
@@ -1046,7 +1122,7 @@
     const focusWasInContent = ui.detailContent.contains(document.activeElement);
     const title = element("h3", null, displayTitle(site));
     title.id = "detail-title";
-    const sourceId = element("p", "detail-id", `${site.source_kind === "global" ? "GLOBAL" : "PLEIADES"} / ${site.id}`);
+    const sourceId = element("p", "detail-id", `${{ pleiades: "PLEIADES", global: "CURATED", unesco: "UNESCO DATAHUB" }[site.source_kind] ?? "SOURCE"} / ${site.id}`);
     const description = element("p", "detail-description", hasSourceText(site.description) ? site.description : "当前导出未提供描述。");
     description.lang = hasSourceText(site.description) ? "en" : "zh-CN";
     const nodes: Node[] = [title, sourceId];
@@ -1054,6 +1130,10 @@
       nodes.push(element("p", "detail-source-title", `来源标题原文：${site.title || "未提供"}`));
     }
     nodes.push(element("p", "detail-note", "来源原文保留原语言；未生成历史摘要。"), description);
+    if (site.description_zh && hasSourceText(site.description_zh)) {
+      const chinese = element("p", "detail-description", site.description_zh); chinese.lang = "zh-CN";
+      nodes.push(detailSection("中文来源描述", chinese));
+    }
     nodes.push(detailSection("年代证据与地图联动", phaseContent(site)));
     const details = element("p", null, hasSourceText(site.details)
       ? site.details : `当前导出未提供补充内容${site.details.trim() ? `（原始值：${site.details}）` : ""}。`);
@@ -1073,10 +1153,20 @@
       space.append(element("p", "detail-note", "rough 表示应在某个范围内寻找地点；代表点可能只是该范围的中心。"));
     }
     nodes.push(space);
+    if (site.geography) {
+      const geography = site.geography;
+      const scope = detailSection("来源名录中的国家／地区与分区", `国家／地区：${geography.countries.join(" · ") || "来源未明确"}；分区：${geography.regions.join(" · ") || "来源未提供"}。`);
+      scope.append(element("p", "detail-note", geography.note),
+        element("p", "detail-note", `名录可用定位点记录：${geography.point_count}。图上只展示一个代表点，不表示全部组成地点。此处是来源名录标签，不代表历史政治归属。`),
+        safeLink(geography.source.uri, geography.source.title));
+      nodes.push(scope);
+    }
     const fields = strings(matchedFields).map((field) => fieldLabels[field] || field);
-    const matches = detailSection("原文字词匹配字段", fields.join(" · ") || "未发现查询与原文字段的字词重叠。");
-    matches.append(element("p", "detail-note", "仅展示字词重叠，不解释语义模型的排序依据；中文问题仍可能检索到英文候选。"));
-    nodes.push(matches);
+    if (state.results.some((result) => result.site.id === site.id)) {
+      const matches = detailSection("原文字词匹配字段", fields.join(" · ") || "未发现查询与原文字段的字词重叠。");
+      matches.append(element("p", "detail-note", "仅展示成功检索的字词重叠，不解释语义模型的排序依据；中文问题仍可能检索到英文候选。"));
+      nodes.push(matches);
+    } else nodes.push(detailSection("选择方式", "从全库目录直接选择；此处没有附加检索分数或排名，不将目录选择解释为查询命中。"));
     const evidence = Array.isArray(site.period_evidence) ? site.period_evidence : [];
     if (evidence.length) {
       const roman = evidence.filter((item) => item.period_id === "roman");
@@ -1105,24 +1195,7 @@
     if (focusWasInContent && !ui.detailPanel.hidden) ui.detailPanel.focus({ preventScroll: true });
   }
 
-  async function selectSite(id: string, { fromMap = false, preserveYear = false, phaseId = null }: { fromMap?: boolean; preserveYear?: boolean; phaseId?: string | null } = {}): Promise<void> {
-    const result = state.results.find((item) => String(item.site.id) === id);
-    if (!result) return;
-    state.detailOpener = fromMap
-      ? state.markers.get(id)?.getElement() || null
-      : Array.from(ui.list.querySelectorAll<HTMLButtonElement>(".result-card")).find((card) => card.dataset.siteId === id) || null;
-    state.selectedId = id;
-    const phases = result.site.chronology?.phases ?? [];
-    if (phaseId !== null && !phases.some((phase) => phase.id === phaseId)) {
-      showError("链接中的阶段已失效；现展示遗址默认阶段，保留地图年份，请核对语料版本。");
-      preserveYear = true;
-    }
-    selectedPhaseId = phases.some((phase) => phase.id === phaseId) ? phaseId : result.site.chronology?.default_phase_id ?? null;
-    const selectedPhase = phases.find((phase) => phase.id === selectedPhaseId);
-    const userVersion = historyView?.actionVersion() ?? 0;
-    const phaseAtRequest = selectedPhaseId;
-    if (selectedPhase && !preserveYear) followPhase(selectedPhase);
-    saveViewLink();
+  function markSelection(id: string): void {
     for (const card of Array.from(ui.list.querySelectorAll<HTMLButtonElement>(".result-card"))) {
       const selected = card.dataset.siteId === id;
       card.classList.toggle("is-selected", selected);
@@ -1140,38 +1213,124 @@
       marker.getElement()?.setAttribute("aria-pressed", String(selected));
       marker.setZIndexOffset(selected ? 1000 : 0);
     }
-    ui.detailPanel.hidden = false;
-    renderDetail(result.site, result.matched_fields);
-    ui.detailPanel.scrollTop = 0;
-    ui.detailPanel.focus({ preventScroll: true });
-    positionSelectedSite(result.site);
+    explore?.select(id);
+  }
+
+  function presentSelection(site: Site, matchedFields: string[], fresh: boolean): void {
+    state.selectedSite = site;
+    const previousIcon = state.selectionMarker?.getElement();
+    const markerOpenedDetail = previousIcon !== undefined && state.detailOpener === previousIcon;
+    state.selectionMarker?.remove();
+    state.selectionMarker = null;
+    const coordinate = point(site);
+    if (!state.markers.has(site.id) && state.map && coordinate) {
+      coordinate[1] = ArchSearchMapView.wrapLongitude(coordinate[1], state.map.getCenter().lng);
+      const content = element("span", "site-marker is-selected", "选");
+      content.setAttribute("aria-hidden", "true");
+      const marker = L.marker(coordinate, {
+        icon: L.divIcon({ className: "site-marker-icon is-selected", html: content, iconSize: [30, 30], iconAnchor: [15, 15] }),
+        keyboard: true, autoPanOnFocus: false, title: displayTitle(site), zIndexOffset: 2000,
+      }).addTo(state.map);
+      marker.bindTooltip(element("span", null, displayTitle(site)));
+      marker.on("click", () => { void selectSite(site.id, { opener: marker.getElement() ?? null }); });
+      const icon = marker.getElement();
+      if (markerOpenedDetail) state.detailOpener = icon ?? null;
+      icon?.setAttribute("aria-label", `全库选中：${displayTitle(site)}，打开资料详情`);
+      icon?.addEventListener("keydown", (event) => {
+        if (event.key === " " || event.key === "Enter") {
+          event.preventDefault(); event.stopPropagation(); marker.fire("click");
+        }
+      });
+      state.selectionMarker = marker;
+    }
+    renderDetail(site, matchedFields);
     updateSelectionControls();
-    if (window.matchMedia("(max-width: 780px)").matches) ui.detailPanel.scrollIntoView({ block: "start", behavior: "instant" });
-    const rank = state.results.findIndex((item) => item.site.id === id) + 1;
-    announce(`已选择第 ${rank} / ${state.results.length} 条：${displayTitle(result.site)}，原始资料详情已展开。`);
+    if (fresh) {
+      ui.detailPanel.scrollTop = 0;
+      ui.detailPanel.focus({ preventScroll: true });
+      positionSelectedSite(site);
+      if (window.matchMedia("(max-width: 780px)").matches) ui.detailPanel.scrollIntoView({ block: "start", behavior: "instant" });
+      const rank = state.results.findIndex((item) => item.site.id === site.id);
+      announce(`${rank < 0 ? "已选择全库目录地点" : `已选择第 ${rank + 1} / ${state.results.length} 条`}：${displayTitle(site)}，原始资料详情已展开。`);
+    }
+    saveViewLink();
+  }
+
+  async function selectSite(id: string, {
+    fromMap = false, preserveYear = false, phaseId = null, opener = null, restoring = false,
+  }: { fromMap?: boolean; preserveYear?: boolean; phaseId?: string | null; opener?: HTMLElement | null; restoring?: boolean } = {}): Promise<void> {
+    if (!restoring) cancelLinkRestore();
+    const result = state.results.find((item) => item.site.id === id);
+    const known = result?.site ?? (state.selectedSite?.id === id ? state.selectedSite : null);
+    state.detailOpener = opener ?? (fromMap
+      ? state.markers.get(id)?.getElement() ?? null
+      : Array.from(ui.list.querySelectorAll<HTMLButtonElement>(".result-card")).find((card) => card.dataset.siteId === id) ?? null);
     state.detailController?.abort();
     const controller = new AbortController();
     state.detailController = controller;
+    const userVersion = historyView?.actionVersion() ?? 0;
+    state.selectedId = id;
+    state.selectedSite = known;
+    ui.exportResults.disabled = state.completedSearch === null || known === null;
+    selectedPhaseId = null;
+    markSelection(id);
+    ui.detailPanel.hidden = false;
+    let initialPhase: HistoricalPhase | undefined;
+    const choosePhase = (site: Site): void => {
+      const phases = site.chronology?.phases ?? [];
+      if (phaseId !== null && !phases.some((phase) => phase.id === phaseId)) {
+        showError("链接中的阶段已失效；现展示遗址默认阶段，保留地图年份，请核对语料版本。");
+        preserveYear = true;
+      }
+      selectedPhaseId = phases.some((phase) => phase.id === phaseId) ? phaseId : site.chronology?.default_phase_id ?? null;
+      initialPhase = phases.find((phase) => phase.id === selectedPhaseId);
+      if (initialPhase && !preserveYear && (historyView?.actionVersion() ?? 0) === userVersion) followPhase(initialPhase);
+    };
+    if (known) {
+      choosePhase(known);
+      presentSelection(known, result?.matched_fields ?? [], true);
+    } else {
+      state.selectionMarker?.remove(); state.selectionMarker = null;
+      ui.detailContent.replaceChildren(element("h3", null, "正在读取来源资料"), element("p", "detail-note", id));
+      ui.detailPanel.focus({ preventScroll: true });
+      updateSelectionControls();
+    }
+    const phaseAtRequest = selectedPhaseId;
     try {
       const site = await api<Site>(`/api/sites/${encodeURIComponent(id)}`, { signal: controller.signal });
-      if (state.detailController === controller && state.selectedId === id && !controller.signal.aborted && JSON.stringify(site) !== JSON.stringify(result.site)) {
-        if (selectedPhaseId === phaseAtRequest) {
+      if (state.detailController !== controller || state.selectedId !== id || controller.signal.aborted) return;
+      if (!known || JSON.stringify(site) !== JSON.stringify(known)) {
+        if (!known) choosePhase(site);
+        else if (selectedPhaseId === phaseAtRequest) {
           selectedPhaseId = site.chronology?.phases.some((phase) => phase.id === selectedPhaseId) ? selectedPhaseId : site.chronology?.default_phase_id ?? null;
           const phase = site.chronology?.phases.find((item) => item.id === selectedPhaseId);
-          if (!selectedPhase && phase && !preserveYear && (historyView?.actionVersion() ?? 0) === userVersion) followPhase(phase);
+          if (!initialPhase && phase && !preserveYear && (historyView?.actionVersion() ?? 0) === userVersion) followPhase(phase);
         }
-        renderDetail(site, result.matched_fields);
-        saveViewLink();
+        presentSelection(site, result?.matched_fields ?? [], !known);
       }
     } catch (error) {
       if (isAbortError(error) || controller.signal.aborted || state.detailController !== controller || state.selectedId !== id) return;
-      ui.detailContent.append(element("p", "detail-loading", "详情刷新失败，当前显示检索时返回的原始资料。"));
+      if (known) ui.detailContent.append(element("p", "detail-loading", "详情刷新失败，当前显示检索时返回的原始资料。"));
+      else {
+        state.selectedId = null; state.selectedSite = null; selectedPhaseId = null; explore?.select(null);
+        ui.detailContent.replaceChildren(element("h3", null, "资料未能读取"), element("p", "detail-note", errorMessage(error)));
+        showError(`遗址资料未能恢复：${errorMessage(error)}。地图与检索快照保持不变。`);
+        if (restoring) invalidLink = true;
+        updateSelectionControls();
+        saveViewLink();
+      }
+    } finally {
+      if (state.detailController === controller && restoring) { pendingSelectionRestore = false; saveViewLink(); }
     }
   }
 
   function closeDetail(returnFocus = true): void {
     state.detailController?.abort();
     ui.detailPanel.hidden = true;
+    if (state.selectedId && !currentSelectedSite()) {
+      state.selectedId = null; selectedPhaseId = null; pendingSelectionRestore = false;
+      explore?.select(null); updateSelectionControls(); saveViewLink();
+    }
     if (returnFocus && state.detailOpener?.isConnected) {
       state.detailOpener.focus({ preventScroll: true });
       if (window.matchMedia("(max-width: 780px)").matches) {
@@ -1235,10 +1394,25 @@
   historyView = ArchSearchHistory.create({
     map: state.map, tiles: state.tiles,
     onCommittedView: () => { if (historyView?.getView()?.basemap !== "modern") ui.tileWarning.hidden = true; saveViewLink(); },
-    onUserAction: () => { restoringView = false; },
+    onUserAction: () => {
+      restoringView = false;
+      if (invalidLink) { invalidLink = false; linkError = null; }
+    },
+  });
+  explore = ArchSearchExplore.create({
+    map: state.map,
+    onSelect: (id, opener) => { void selectSite(id, { opener }); },
+    onFilterChange: () => {
+      cancelLinkRestore();
+      updateSearchAvailability();
+      announce("目录筛选已更新；下一次检索将使用当前地区，已显示排名保持原条件。");
+    },
+    onStateChange: () => { browseRestored = true; invalidLink = false; pendingSelectionRestore = false; saveViewLink(); },
+    onCommittedState: () => { saveViewLink(); },
+    onFeedback: () => { ui.mapEmptyLabel.hidden = true; },
   });
   mapView = ArchSearchMapView.create({ map: state.map, countLabel: ui.viewportCount });
   updateSelectionControls();
   updateSearchAvailability();
-  refreshRuntime().then(finishLinkRestore);
+  refreshRuntime().then(finishLinkRestore).finally(() => { initialStatePending = false; saveViewLink(); });
 })();

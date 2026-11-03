@@ -8,7 +8,7 @@ from pathlib import Path
 from time import perf_counter
 from typing import Any
 
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
@@ -25,6 +25,12 @@ from archsearch.config import (
     TYPE_LABELS,
 )
 from archsearch.corpus import CORPUS_VERSION, load_corpus
+from archsearch.coverage import (
+    CatalogueIndex,
+    CatalogueResponse,
+    CoverageResponse,
+    SitePage,
+)
 from archsearch.domain import Site
 from archsearch.history import HistoryStore, HistoryUnavailable, validate_year
 from archsearch.index import IndexUnavailable, SemanticIndex
@@ -109,10 +115,12 @@ def create_app(
     index = semantic if semantic is not None else SemanticIndex(corpus, home)
     history_store = history if history is not None else HistoryStore(home)
     engine = SearchEngine(corpus, index)
+    catalogue_index = CatalogueIndex(corpus, CORPUS_VERSION)
     type_counts = Counter(kind for site in corpus for kind in set(site.types))
     app = FastAPI(title="古迹检索 ArchSearch", version="0.1.0", docs_url=None, redoc_url=None)
     app.state.engine = engine
     app.state.history = history_store
+    app.state.catalogue = catalogue_index
     app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=5)
 
     @app.middleware("http")
@@ -184,10 +192,44 @@ def create_app(
             ]
         )
 
+    def catalogue_filters(
+        request: Request, country: str | None, region: str | None, kind: str | None,
+    ) -> None:
+        for name in ("country", "region", "type", "offset", "limit"):
+            if len(request.query_params.getlist(name)) > 1:
+                raise HTTPException(status_code=422, detail=f"{name}参数不能重复。")
+        try:
+            catalogue_index.validate_filters(country, region, kind)
+        except ValueError as error:
+            raise HTTPException(status_code=422, detail=str(error)) from error
+
+    @app.get("/api/coverage", response_model=CoverageResponse)
+    def coverage() -> CoverageResponse:
+        return catalogue_index.coverage()
+
+    @app.get("/api/catalogue", response_model=CatalogueResponse)
+    def catalogue_points(
+        request: Request, country: str | None = None, region: str | None = None,
+        type: str | None = None,
+    ) -> CatalogueResponse:
+        catalogue_filters(request, country, region, type)
+        return catalogue_index.catalogue(country, region, type)
+
+    @app.get("/api/sites", response_model=SitePage)
+    def browse_sites(
+        request: Request, offset: int = Query(default=0, ge=0),
+        limit: int = Query(default=50, ge=1, le=100),
+        country: str | None = None, region: str | None = None, type: str | None = None,
+    ) -> SitePage:
+        catalogue_filters(request, country, region, type)
+        return catalogue_index.page(offset, limit, country, region, type)
+
     @app.post("/api/search", response_model=SearchResponse)
     def search(body: SearchRequest) -> SearchResponse:
-        if body.type is not None and body.type not in type_counts:
-            raise HTTPException(status_code=422, detail="未知地点类型，请从类型筛选列表选择。")
+        try:
+            catalogue_index.validate_filters(body.country, body.region, body.type)
+        except ValueError as error:
+            raise HTTPException(status_code=422, detail=str(error)) from error
         started = perf_counter()
         if body.mode == "semantic" and not index.ready:
             raise HTTPException(status_code=503, detail=index.reason or "本地语义模型尚未准备。")

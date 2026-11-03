@@ -43,11 +43,11 @@ class QueryPair:
 def query_contract_hash(pairs: Sequence[QueryPair]) -> str:
     """Bind judgments to exact paired intents and the fixed evaluation request."""
     contract = {
-        "schema_version": 1,
+        "schema_version": 2,
         "queries": [
             {"id": pair.id, "query_zh": pair.query_zh, "query_en": pair.query_en} for pair in pairs
         ],
-        "filters": {"type": None},
+        "filters": {"type": None, "country": None, "region": None},
         "limit": 10,
     }
     encoded = json.dumps(contract, ensure_ascii=False, sort_keys=True).encode("utf-8")
@@ -263,9 +263,11 @@ def corpus_contract_hash(sites: list[Site]) -> str:
     ).encode("utf-8")).hexdigest()
 
 
-def evaluate_corpus(home: Path, output: Path, qrels: Path | None = None) -> dict[str, Any]:
+def evaluate_corpus(
+    home: Path, output: Path, qrels: Path | None = None, queries: Path | None = None
+) -> dict[str, Any]:
     """Write four paired runs, a review pool, and an unscored annotation template."""
-    pairs = load_queries()
+    pairs = load_queries() if queries is None else load_queries(queries)
     query_ids = [pair.id for pair in pairs]
     query_contract_sha256 = query_contract_hash(pairs)
     sites = load_corpus()

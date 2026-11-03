@@ -20,11 +20,13 @@ def main() -> None:
     commands = parser.add_subparsers(dest="command", required=True)
     commands.add_parser("prepare", help="联网下载固定版本模型并构建本地索引")
     commands.add_parser("prepare-history", help="准备固定版本 Cliopatria 历史疆域本地缓存")
+    commands.add_parser("coverage", help="离线报告资料来源、国家／地区覆盖及未知状态")
     serve = commands.add_parser("serve", help="只加载本地资源，启动网页及 API")
     serve.add_argument("--host", default="127.0.0.1")
     serve.add_argument("--port", type=int, default=8000)
     evaluate = commands.add_parser("evaluate", help="输出中英查询的排名、耗时及已标注指标")
     evaluate.add_argument("--qrels", type=Path, help="人工确认的相关性标注 JSON")
+    evaluate.add_argument("--queries", type=Path, help="20对双语查询文件，默认保留原研究问题")
     evaluate.add_argument(
         "--output", type=Path, help="报告 JSON 文件，默认 HOME/reports/evaluation.json"
     )
@@ -35,6 +37,12 @@ def main() -> None:
             print(json.dumps({"ready": True, "count": len(result["site_ids"])}, ensure_ascii=False))
         elif args.command == "prepare-history":
             print(json.dumps(prepare_history(args.home), ensure_ascii=False, indent=2))
+        elif args.command == "coverage":
+            from archsearch.corpus import CORPUS_VERSION
+            from archsearch.coverage import CatalogueIndex
+
+            coverage = CatalogueIndex(load_corpus(), CORPUS_VERSION).coverage()
+            print(coverage.model_dump_json(indent=2))
         elif args.command == "serve":
             os.environ["HF_HUB_OFFLINE"] = "1"
             import uvicorn
@@ -46,7 +54,8 @@ def main() -> None:
             from archsearch.evaluation import evaluate_corpus
 
             report = evaluate_corpus(
-                args.home, args.output or args.home / "reports" / "evaluation.json", args.qrels
+                args.home, args.output or args.home / "reports" / "evaluation.json",
+                args.qrels, queries=args.queries,
             )
             print(json.dumps(report, ensure_ascii=False, indent=2))
     except (CorpusError, IndexUnavailable, HistoryUnavailable, ValueError, OSError) as error:

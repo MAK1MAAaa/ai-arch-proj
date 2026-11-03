@@ -180,6 +180,16 @@ def test_packaged_queries_have_twenty_unique_pairs() -> None:
     assert all(pair.query_zh and pair.query_en and pair.topic for pair in pairs)
 
 
+def test_global_query_set_has_its_own_relevance_contract() -> None:
+    from archsearch.config import DATA_DIR
+
+    pairs = load_queries(DATA_DIR / "queries-global.json")
+    assert len(pairs) == len({pair.id for pair in pairs}) == 20
+    assert query_contract_hash(pairs) != query_contract_hash(load_queries())
+    assert any("Nan Madol" in pair.query_en for pair in pairs)
+    assert any("Timbuktu" in pair.query_en for pair in pairs)
+
+
 def test_corpus_contract_covers_added_records_and_evidence(sample_sites: list[Site]) -> None:
     first = evaluation.corpus_contract_hash(sample_sites[:1])
     assert first != evaluation.corpus_contract_hash(sample_sites)
