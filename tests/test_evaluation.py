@@ -190,6 +190,19 @@ def test_global_query_set_has_its_own_relevance_contract() -> None:
     assert any("Timbuktu" in pair.query_en for pair in pairs)
 
 
+def test_southamerica_queries_keep_a_separate_diagnostic_judgment_contract() -> None:
+    from archsearch.config import DATA_DIR
+
+    pairs = load_queries(DATA_DIR / "queries-southamerica.json")
+    assert len(pairs) == len({pair.id for pair in pairs}) == 20
+    assert len({query_contract_hash(load_queries(DATA_DIR / name)) for name in (
+        "queries.json", "queries-global.json", "queries-regional.json",
+        "queries-southamerica.json",
+    )}) == 4
+    assert any("Santa Elina" in pair.query_en for pair in pairs)
+    assert any("Chamangá" in pair.query_en for pair in pairs)
+
+
 def test_corpus_contract_covers_added_records_and_evidence(sample_sites: list[Site]) -> None:
     first = evaluation.corpus_contract_hash(sample_sites[:1])
     assert first != evaluation.corpus_contract_hash(sample_sites)

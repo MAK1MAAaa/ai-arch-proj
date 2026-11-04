@@ -1,0 +1,548 @@
+{
+  "base": {
+    "base_count": 1689,
+    "base_ids_sha256": "356ae4868321ef3da3cefef5d3d453045dc6b8ad1a1f74dbb4606618806ffd12",
+    "base_sites_sha256": "af16416dc1ec4e53c8a2f63bab592a1b141abd9412b2ef117a3c83abbe23a434"
+  },
+  "chronology": "All historical phases remain not_reviewed; no nomination or discovery date becomes a site phase.",
+  "cohort_version": "southamerica-supplement-v1",
+  "corpus_version": "global-v7",
+  "countries": [
+    "BO",
+    "BR",
+    "CL",
+    "CO",
+    "PE",
+    "UY"
+  ],
+  "counts": {
+    "added": 11,
+    "base": 1689,
+    "countries": 6,
+    "known_locations": 10,
+    "no_verified_coordinate": 1,
+    "total": 1700
+  },
+  "files": {
+    "southamerica_review.json": {
+      "sha256": "b47a0025111eab092714ab8ee0311b25377b7390fd382b6f813663e457b64e56"
+    },
+    "southamerica_sites.json": {
+      "sha256": "45f46eb00e961592b45eb125a0dcc0f6d46094aec7dacaeb45dfb9a89a750dca"
+    }
+  },
+  "independent_source_review": {
+    "candidates_sha256": "c6883b889bb292a620c0da2dc8df7009aba006590e433e5f2820e76c2ec0157f",
+    "delegated_report_sha256": "b03903d24bd253cd4217d04ceb98f33c8a00b4cc5bd8be62faed4dbdd18eff38",
+    "report_sha256": "85ac1964ebd7982d87e3a61e4a377b3927519a3004f0bb1c8ca2c0b1f09bbc6b",
+    "scope": "Independent source/identity/location/rights review; not chronology or expert approval.",
+    "translation_candidates_sha256": "8835b3fb6aafc35cbb37c3ca5a914e70c755fcbdb8c5daca6760719c70f7cf0a",
+    "translation_report_sha256": "1075f5a010804abb97a38392362f66f5438e2857f0c742bdcefaf2a8fa37531d"
+  },
+  "licenses": "Wikidata metadata CC0; PLOS author article CC BY4.0; other authority excerpts retain individual rights.",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本公开P625原值，precision=0.016666666666667度仅为来源元数据，不承诺米级误差或发掘精度。",
+        "point": [
+          -70.05,
+          -52.03333333
+        ],
+        "precision": 0.016666666666667,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q1404113",
+        "statement_id": "Q1404113$F4337C28-AD92-4CE4-B4FB-66E5C96EFBC7"
+      },
+      "id": "wd:Q1404113",
+      "identity_review": {
+        "method": "Independent agent compared frozen primary evidence, same-object identity, coordinate source, geographic associations, rights and existing-corpus duplicates. Bound to source report SHA256 85ac1964ebd7982d87e3a61e4a377b3927519a3004f0bb1c8ca2c0b1f09bbc6b; not expert or human archaeology confirmation; no historical phases approved.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/southamerica_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q298.json",
+          "sha256": "d3cf7838d662e50c0ef0fb034f42e049258a019ce1109be1c11b524ebcb81858",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q298.json"
+        },
+        {
+          "filename": "andes/Q1404113.entity.json",
+          "sha256": "2aa25cd31c0358b81e7743a2539cf5ec5fc2de8bbea57e314281026ea907c0e1",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1404113.json"
+        },
+        {
+          "filename": "andes/country-cl.html",
+          "sha256": "b72a30e6bf4cac2731e6f7e6e51b0533f6c7b8225ed4a01d7710b7b24b320017",
+          "uri": "https://whc.unesco.org/en/statesparties/cl/"
+        },
+        {
+          "filename": "andes/fell-pali-aike-unesco.html",
+          "sha256": "e52e83ed9074e4016407c213609ff126ae1beeb3b9c5172266032bf710cdf855",
+          "uri": "https://whc.unesco.org/en/tentativelists/1204/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "作者原文公开同对象DMS：19°28'37.86\"S and 44°2'17.00\"W；严格转换，不增加原始定位精度或假定未声明的基准面。",
+        "point": [
+          -44.03805555555555,
+          -19.477183333333333
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0137456",
+        "statement_id": null
+      },
+      "id": "wd:Q56678621",
+      "identity_review": {
+        "method": "Independent agent compared frozen primary evidence, same-object identity, coordinate source, geographic associations, rights and existing-corpus duplicates. Bound to source report SHA256 85ac1964ebd7982d87e3a61e4a377b3927519a3004f0bb1c8ca2c0b1f09bbc6b; not expert or human archaeology confirmation; no historical phases approved.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/southamerica_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q155.json",
+          "sha256": "3cd2695c9c748351ecd09fc6b6dbe811cc78fd53ff2bb963a81caa4c55be765f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q155.json"
+        },
+        {
+          "filename": "Q56678621.json",
+          "sha256": "7f12ae9efd853cdc1ab77bd24c0a059f2696c055f975d6e405cbe9008c0976ce",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q56678621.json"
+        },
+        {
+          "filename": "br-profile.html",
+          "sha256": "6c44bd97c8b70756c4533a480c075006c93843c6d24244d7569fd2d5437d625d",
+          "uri": "https://whc.unesco.org/en/statesparties/br/"
+        },
+        {
+          "filename": "lapa-plos.html",
+          "sha256": "aa01140f93a8b2be362a4654635e145d0b931ed021b86249d3ed2209a4ba2503",
+          "uri": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0137456"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本公开P625原值，precision=0.009017706458934度仅为来源元数据，不承诺米级误差或发掘精度。",
+        "point": [
+          -73.95120278,
+          5.01735833
+        ],
+        "precision": 0.009017706458934,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q2629521",
+        "statement_id": "Q2629521$C1D6F6C5-3DBC-46E0-8F5C-B6E2B8BF075D"
+      },
+      "id": "wd:Q2629521",
+      "identity_review": {
+        "method": "Independent agent compared frozen primary evidence, same-object identity, coordinate source, geographic associations, rights and existing-corpus duplicates. Bound to source report SHA256 85ac1964ebd7982d87e3a61e4a377b3927519a3004f0bb1c8ca2c0b1f09bbc6b; not expert or human archaeology confirmation; no historical phases approved.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/southamerica_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q2629521.json",
+          "sha256": "145f411d8465f43c2bd1fc0d6360cec6daef1d211ed5bdd59742ca2db4d5f11e",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2629521.json"
+        },
+        {
+          "filename": "Q739.json",
+          "sha256": "21878c76e1745d9a048aecba1cd8a5b0832ebb7abe081dafcce578575b83108e",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q739.json"
+        },
+        {
+          "filename": "co-profile.html",
+          "sha256": "8e2ffaace0b8656e11360681793267b34a3c5a378909cbe1afb3106e55f2ebc4",
+          "uri": "https://whc.unesco.org/en/statesparties/co/"
+        },
+        {
+          "filename": "el-abra.html",
+          "sha256": "ec86c039e753fd48ff74cf2ac0fdc3ff7bf14875937363e03209497f7ecb16da",
+          "uri": "https://www.icanh.gov.co/prensa/actualidad-icanh/desanclaje-de-pines-de-escalada-en-el"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "2006年官方提名表ID1218的概略中心点，PDF第23页/印第22页；原文DMS S17 36 44.10 W65 24 56.63按度分秒严格换算。前一页将此列明确限定为approximate centre point；未声明定位误差，不以小数位承诺发掘精度。",
+        "point": [
+          -65.41573055555556,
+          -17.612250000000003
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://whc.unesco.org/archive/2006/whc06-30com-08Be.pdf",
+        "statement_id": null
+      },
+      "id": "wd:Q970713",
+      "identity_review": {
+        "method": "Independent agent compared frozen primary evidence, same-object identity, coordinate source, geographic associations, rights and existing-corpus duplicates. Bound to source report SHA256 85ac1964ebd7982d87e3a61e4a377b3927519a3004f0bb1c8ca2c0b1f09bbc6b; not expert or human archaeology confirmation; no historical phases approved.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/southamerica_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q750.json",
+          "sha256": "457ae42fbffae1518e03eb64fd3d36c0e9434a1276942a9f473afeb171e9cf9c",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q750.json"
+        },
+        {
+          "filename": "Q970713.json",
+          "sha256": "cccd4c2a116260f1913c3c91f2fbeb39d7c937bf4dc1f5068b2e7b48b8253ae6",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q970713.json"
+        },
+        {
+          "filename": "andes/coord-incallajta-whc2006.pdf",
+          "sha256": "bd699f70ec3b8a53cca69ebfb70e501f83ef2322f7d62e0da1a48e1595980fe2",
+          "uri": "https://whc.unesco.org/archive/2006/whc06-30com-08Be.pdf"
+        },
+        {
+          "filename": "bo-profile.html",
+          "sha256": "03d525825c7cc20a8b734f73d4ca71eaa7f0b673e10627b4e455ed7074a22e96",
+          "uri": "https://whc.unesco.org/en/statesparties/bo/"
+        },
+        {
+          "filename": "incallajta.html",
+          "sha256": "f28c593feef19c5f83359009fe385e39e5d7fb60fb70d3945bdcdd842ea17017",
+          "uri": "https://whc.unesco.org/en/tentativelists/1815/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本公开P625原值，precision=0.00027777777777778度仅为来源元数据，不承诺米级误差或发掘精度。",
+        "point": [
+          -56.5725,
+          -33.554444444444
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q3083792",
+        "statement_id": "Q3083792$F993DD00-8715-4F2B-B079-E33C615EFBDB"
+      },
+      "id": "wd:Q3083792",
+      "identity_review": {
+        "method": "Independent agent compared frozen primary evidence, same-object identity, coordinate source, geographic associations, rights and existing-corpus duplicates. Bound to source report SHA256 85ac1964ebd7982d87e3a61e4a377b3927519a3004f0bb1c8ca2c0b1f09bbc6b; not expert or human archaeology confirmation; no historical phases approved.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/southamerica_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q3083792.json",
+          "sha256": "14bd162571dbe1e64dd77cd46137c7353e6bf918b9c8c675b3604cda1b3d5cc8",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3083792.json"
+        },
+        {
+          "filename": "Q77.json",
+          "sha256": "3c76307082b3d37b73192070e90c49094366abcc110e4371a8ad21e4f480e093",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q77.json"
+        },
+        {
+          "filename": "andes/coord-chamanga-proyecto.pdf",
+          "sha256": "1deccab2ce78ee555d0d746eb26f4c26f892f366f8a5a6b6cb7fe1a74ff2c3d5",
+          "uri": "https://www.gub.uy/ministerio-ambiente/sites/ministerio-ambiente/files/documentos/publicaciones/proyecto.pdf"
+        },
+        {
+          "filename": "chamanga-gov.html",
+          "sha256": "9680b2d26348444e12da058851262ad45957e3dfce8aa4b4ff4d3f7eb9c2f242",
+          "uri": "https://www.gub.uy/ministerio-ambiente/politicas-y-gestion/paisaje-protegido-localidad-rupestre-chamanga-flores"
+        },
+        {
+          "filename": "chamanga.html",
+          "sha256": "432c31001ca35efe7abe719c78be3fd2b9fc350b15de65524b356d10ad2c76fa",
+          "uri": "https://whc.unesco.org/en/tentativelists/2033/"
+        },
+        {
+          "filename": "uy-profile.html",
+          "sha256": "3c72338675f3ca9071ac45a7775e0795edcfb7d45a49fdc5f51c71e43714456d",
+          "uri": "https://whc.unesco.org/en/statesparties/uy/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本公开P625原值，precision=0.0001度仅为来源元数据，不承诺米级误差或发掘精度。",
+        "point": [
+          -71.129575,
+          -52.482063
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q42897776",
+        "statement_id": "Q42897776$5A8B82EC-0B65-40BB-A97E-D2B046CC6D30"
+      },
+      "id": "wd:Q42897776",
+      "identity_review": {
+        "method": "Independent agent compared frozen primary evidence, same-object identity, coordinate source, geographic associations, rights and existing-corpus duplicates. Bound to source report SHA256 85ac1964ebd7982d87e3a61e4a377b3927519a3004f0bb1c8ca2c0b1f09bbc6b; not expert or human archaeology confirmation; no historical phases approved.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/southamerica_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q298.json",
+          "sha256": "d3cf7838d662e50c0ef0fb034f42e049258a019ce1109be1c11b524ebcb81858",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q298.json"
+        },
+        {
+          "filename": "andes/Q42897776.entity.json",
+          "sha256": "b81632107c04961e0685396348e14fe54872c446ffdc1e6fe679df4802dccf7c",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q42897776.json"
+        },
+        {
+          "filename": "andes/country-cl.html",
+          "sha256": "b72a30e6bf4cac2731e6f7e6e51b0533f6c7b8225ed4a01d7710b7b24b320017",
+          "uri": "https://whc.unesco.org/en/statesparties/cl/"
+        },
+        {
+          "filename": "andes/cueva-leona-cmn.html",
+          "sha256": "0f8a9a650c1ae5a70d874198b19011602eacb88d997f068031f7cea99893cb5b",
+          "uri": "https://www.monumentos.gob.cl/monumentos/monumentos-historicos/cueva-de-la-leona"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "unknown",
+        "note": "本批尚未选得可信同对象公开数字坐标；保留实体与来源，不推断其真实位置未知，也不补附近中心。",
+        "point": null,
+        "precision": null,
+        "rank": null,
+        "source_uri": null,
+        "statement_id": null
+      },
+      "id": "wd:Q98115650",
+      "identity_review": {
+        "method": "Independent agent compared frozen primary evidence, same-object identity, coordinate source, geographic associations, rights and existing-corpus duplicates. Bound to source report SHA256 85ac1964ebd7982d87e3a61e4a377b3927519a3004f0bb1c8ca2c0b1f09bbc6b; not expert or human archaeology confirmation; no historical phases approved.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/southamerica_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q155.json",
+          "sha256": "3cd2695c9c748351ecd09fc6b6dbe811cc78fd53ff2bb963a81caa4c55be765f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q155.json"
+        },
+        {
+          "filename": "Q98115650.json",
+          "sha256": "2395dea3571c585a3da81148f83022ef88925b9760a619e0ff45050ed15f1575",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q98115650.json"
+        },
+        {
+          "filename": "br-profile.html",
+          "sha256": "6c44bd97c8b70756c4533a480c075006c93843c6d24244d7569fd2d5437d625d",
+          "uri": "https://whc.unesco.org/en/statesparties/br/"
+        },
+        {
+          "filename": "santa-elina-coordinate-extract.json",
+          "sha256": "2170617a21db34510f37bc8fc07c59054d46535e3f3c57132bd9e64b364b4bea",
+          "uri": "https://www.cambridge.org/core/journals/antiquity/article/peopling-south-americas-centre-the-late-pleistocene-site-of-santa-elina/04FF5616EBC1883B6B79A2F1BDFB928E"
+        },
+        {
+          "filename": "santa-elina-iphan.html",
+          "sha256": "4405c5b67fef7e69f03df252caaee9c1584a84e12d28d54f776c2bf6d64e3984",
+          "uri": "https://www.gov.br/iphan/pt-br/superintendencias/mato-grosso"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本公开P625原值，precision=1e-06度仅为来源元数据，不承诺米级误差或发掘精度。",
+        "point": [
+          -79.306955,
+          -7.92402
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q1632701",
+        "statement_id": "Q1632701$D12575FF-88C2-4197-B0B8-25573877F050"
+      },
+      "id": "wd:Q1632701",
+      "identity_review": {
+        "method": "Independent agent compared frozen primary evidence, same-object identity, coordinate source, geographic associations, rights and existing-corpus duplicates. Bound to source report SHA256 85ac1964ebd7982d87e3a61e4a377b3927519a3004f0bb1c8ca2c0b1f09bbc6b; not expert or human archaeology confirmation; no historical phases approved.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/southamerica_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q419.json",
+          "sha256": "2c4a45b2e0605a1fb0f5613499a24a6bdf8454d2caf0e8a8979ac69071d42f66",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q419.json"
+        },
+        {
+          "filename": "andes/Q1632701.entity.json",
+          "sha256": "16093e498b92f125a616ddebd6e3e00ec6c3abbbdf4fac6713473a77789493da",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1632701.json"
+        },
+        {
+          "filename": "andes/country-pe.html",
+          "sha256": "eb0395b8711abd56b7fcc1524997b03aacb7defc8b3b4a7ca3bfe4ece48cb2e9",
+          "uri": "https://whc.unesco.org/en/statesparties/pe/"
+        },
+        {
+          "filename": "andes/huaca-prieta-cultura.html",
+          "sha256": "7a3b54b00a14c4888f41c4ff69e64280bab55a9506a3a74bc538c4b4c824cb04",
+          "uri": "https://www.gob.pe/institucion/cultura/noticias/47866-ministerio-de-cultura-y-la-fundacion-wiese-conmemoran-25-anos-de-investigaciones-en-el-complejo-arqueologico-el-brujo"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本公开P625原值，precision=1e-05度仅为来源元数据，不承诺米级误差或发掘精度。",
+        "point": [
+          -74.22888888888889,
+          -13.038333333333334
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q2989612",
+        "statement_id": "Q2989612$30EA480F-2F6E-4EB0-BA8A-D2D59DD8A591"
+      },
+      "id": "wd:Q2989612",
+      "identity_review": {
+        "method": "Independent agent compared frozen primary evidence, same-object identity, coordinate source, geographic associations, rights and existing-corpus duplicates. Bound to source report SHA256 85ac1964ebd7982d87e3a61e4a377b3927519a3004f0bb1c8ca2c0b1f09bbc6b; not expert or human archaeology confirmation; no historical phases approved.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/southamerica_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q419.json",
+          "sha256": "2c4a45b2e0605a1fb0f5613499a24a6bdf8454d2caf0e8a8979ac69071d42f66",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q419.json"
+        },
+        {
+          "filename": "andes/Q2989612.entity.json",
+          "sha256": "9ca9b3bd79cfd92dad2cb9c403cec176e15c0b6ab6bdf20e2faf6bac7eb722b1",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2989612.json"
+        },
+        {
+          "filename": "andes/country-pe.html",
+          "sha256": "eb0395b8711abd56b7fcc1524997b03aacb7defc8b3b4a7ca3bfe4ece48cb2e9",
+          "uri": "https://whc.unesco.org/en/statesparties/pe/"
+        },
+        {
+          "filename": "andes/pikimachay-cultura.html",
+          "sha256": "3343b42ed6731b006c5cdfb0256da746f99f885633011760b2453d3a8c97bba2",
+          "uri": "https://www.gob.pe/institucion/cultura/noticias/910521-ministerio-de-cultura-aprobo-expediente-tecnico-del-sitio-arqueologico-cueva-pikimachay-bien-integrante-del-patrimonio-cultural"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本公开P625原值，precision=0.00027777777777778度仅为来源元数据，不承诺米级误差或发掘精度。",
+        "point": [
+          -68.67305556,
+          -15.49472222
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q1674009",
+        "statement_id": "Q1674009$F59EA1D7-CDBD-4776-9128-3C9CC2F529ED"
+      },
+      "id": "wd:Q1674009",
+      "identity_review": {
+        "method": "Independent agent compared frozen primary evidence, same-object identity, coordinate source, geographic associations, rights and existing-corpus duplicates. Bound to source report SHA256 85ac1964ebd7982d87e3a61e4a377b3927519a3004f0bb1c8ca2c0b1f09bbc6b; not expert or human archaeology confirmation; no historical phases approved.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/southamerica_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q1674009.json",
+          "sha256": "a85a7af23b5ea5b978d949ba451688eb2fb8148c717edfb04e5a7842355e0049",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1674009.json"
+        },
+        {
+          "filename": "Q750.json",
+          "sha256": "457ae42fbffae1518e03eb64fd3d36c0e9434a1276942a9f473afeb171e9cf9c",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q750.json"
+        },
+        {
+          "filename": "bo-profile.html",
+          "sha256": "03d525825c7cc20a8b734f73d4ca71eaa7f0b673e10627b4e455ed7074a22e96",
+          "uri": "https://whc.unesco.org/en/statesparties/bo/"
+        },
+        {
+          "filename": "iskanwaya.html",
+          "sha256": "58b520db4f32ff1ff29aea6f125afea78b06dc735c1912daa9b05a6d1864b8dd",
+          "uri": "https://opca.umsa.bo/declaratoriasnacional"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本公开P625原值，来源未提供precision值，不承诺米级误差或发掘精度。",
+        "point": [
+          -73.204444444444,
+          -41.504722222222
+        ],
+        "precision": null,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q975775",
+        "statement_id": "q975775$8A26EC92-4940-45C8-9BC1-9A6E4360F54C"
+      },
+      "id": "wd:Q975775",
+      "identity_review": {
+        "method": "Independent agent compared frozen primary evidence, same-object identity, coordinate source, geographic associations, rights and existing-corpus duplicates. Bound to source report SHA256 85ac1964ebd7982d87e3a61e4a377b3927519a3004f0bb1c8ca2c0b1f09bbc6b; not expert or human archaeology confirmation; no historical phases approved.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/southamerica_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q298.json",
+          "sha256": "d3cf7838d662e50c0ef0fb034f42e049258a019ce1109be1c11b524ebcb81858",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q298.json"
+        },
+        {
+          "filename": "andes/Q975775.entity.json",
+          "sha256": "ad1ed4e0a25e67661cc7b3acb2ce30d87cb7a03353efdbb72e0d25d04c0d8ed8",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q975775.json"
+        },
+        {
+          "filename": "andes/country-cl.html",
+          "sha256": "b72a30e6bf4cac2731e6f7e6e51b0533f6c7b8225ed4a01d7710b7b24b320017",
+          "uri": "https://whc.unesco.org/en/statesparties/cl/"
+        },
+        {
+          "filename": "andes/monte-verde-cmn.html",
+          "sha256": "4a3d20e66c7d5007152fa0bee21f11d454a7f9a78d45719497dc9c029fb7e2ff",
+          "uri": "https://www.monumentos.gob.cl/monumentos/monumentos-arqueologicos/sector-predio-monte-verde"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Eleven frozen, independently source-reviewed cultural records in Bolivia, Brazil, Chile, Colombia, Peru and Uruguay. Selected for existing physical and cultural gaps, not a random or complete regional inventory. IDs ordered by SHA256(\"southamerica-supplement-v1:\"+id). Preserve one unadopted numeric location and all unreviewed historical phases."
+}
