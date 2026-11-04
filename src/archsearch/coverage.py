@@ -30,6 +30,7 @@ REGION_LABELS = {
     "europe-north-america": "欧洲与北美",
     "latin-america-caribbean": "拉丁美洲与加勒比",
     "antarctica": "南极洲",
+    "nps-pacific": "NPS太平洋资料分组",
 }
 SOURCE_LABELS = {
     "pleiades": "Pleiades 地中海资料",
@@ -76,6 +77,14 @@ def load_registry(data_dir: Path = DATA_DIR) -> CoverageRegistry:
     polar_path = Path(data_dir) / "polar_manifest.json"
     polar = json.loads(polar_path.read_text("utf-8")) if polar_path.exists() else {}
     regions.update({row["id"]: row["label"] for row in polar.get("regions", [])})
+    if (Path(data_dir) / "nps_pacific_manifest.json").exists():
+        from archsearch.nps_data import NpsError, new_country_labels, project_region_labels
+
+        nps_countries = new_country_labels(Path(data_dir))
+        if countries.keys() & nps_countries.keys():
+            raise NpsError("NPS country-or-area labels cannot replace existing source labels")
+        countries.update(nps_countries)
+        regions.update(project_region_labels(Path(data_dir)))
     spatial = None
     spatial_error = None
     try:
@@ -91,6 +100,18 @@ def load_registry(data_dir: Path = DATA_DIR) -> CoverageRegistry:
                 raise SpatialDataError(
                     f"{error} 请运行 python -m archsearch.protection_data --rebuild "
                     "修复海牙来源定位；当前统一保留原代表点，不宣称源点完整。"
+                ) from error
+        if (Path(data_dir) / "nps_pacific_manifest.json").exists():
+            from archsearch.nps_spatial_data import load_nps_locations
+
+            try:
+                nps_locations = load_nps_locations(Path(data_dir))
+                if nps_locations.points:
+                    spatial = merge_world_locations(spatial, nps_locations)
+            except SpatialDataError as error:
+                raise SpatialDataError(
+                    f"{error} 请运行 python -m archsearch.nps_spatial_data --rebuild "
+                    "修复NPS来源点；当前统一保留原代表点，不宣称多来源定位完整。"
                 ) from error
     except SpatialDataError as error:
         spatial = None
@@ -412,10 +433,16 @@ class CatalogueIndex:
 
     @staticmethod
     def _spatial_source(source: Mapping[str, str]) -> SpatialSource:
+        dataset_id = source.get("dataset_id", "reviewed-local-source")
+        name = source.get("name") or (
+            f"UNESCO DataHub {dataset_id}" if dataset_id in {"whc001", "chp001"}
+            else dataset_id
+        )
         return SpatialSource(
-            name=f"UNESCO DataHub {source['dataset_id']}", uri=source["uri"],
-            version=source["modified"], license=source["license"],
-            license_uri=source["license_uri"], sha256=source["records_sha256"],
+            name=name, uri=source["uri"],
+            version=source["version"] if "version" in source else source["modified"],
+            license=source["license"], license_uri=source["license_uri"],
+            sha256=source["sha256"] if "sha256" in source else source["records_sha256"],
         )
 
     def spatial_source_groups(self) -> list[SpatialSourceGroup]:
@@ -462,9 +489,9 @@ class CatalogueIndex:
             spatial_version=self.spatial.version,
             source=self.spatial_source(site.id),
             note=(
-                "source_points与source_location_records为固定DataHub来源定位记录，"
+                "source_points与source_location_records为所属固定来源合同中的定位记录，"
                 "保留所属来源经审核的定位顺序及重合记录，不代表独立遗址数量或边界。"
-                "representative_point保持原资料，来源见地点详情；未混入DataHub源数组。"
+                "representative_point单独保留，依据见地点详情；不以项目计算的中心补源点。"
                 "仓储或标签冲突等未纳入地图的记录保留在相应来源审核资料中。"
                 "国别筛选属于整体名录成员关系，不推断各点的政治归属。"
             ),

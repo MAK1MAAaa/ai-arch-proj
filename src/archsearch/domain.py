@@ -144,6 +144,7 @@ class Geography(BaseModel):
             "africa", "arab-states", "asia-pacific", "europe-north-america",
             "latin-america-caribbean",
             "antarctica",
+            "nps-pacific",
         }
         if len(values) != len(set(values)) or not set(values) <= allowed:
             raise ValueError("regions require unique supported source region identifiers")

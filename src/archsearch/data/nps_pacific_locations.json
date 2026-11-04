@@ -1,0 +1,1580 @@
+{
+  "processing": "Reviewed new records only. Keep provider points and zero-based original order; refs compose the original NRIS/layer/OBJECTID/GEOM_ID/provider index. The source SHA identifies the derived reviewed contract, not one raw export. No polygon centre, precise excavation fix, current survival or political inference.",
+  "review_sha256": "48ea82f4bbf71ff85619571d465752ed83de53f06c67c573106694544593a966",
+  "schema_version": 1,
+  "sites": [
+    {
+      "id": "auth:nps-nris:03000549",
+      "records": [
+        {
+          "coordinate": [
+            145.7611471250001,
+            15.179033150000066
+          ],
+          "name": "Hachiman Jinja",
+          "ref": "NRIS:03000549; layer:0; OBJECTID:1477453; GEOM_ID:{628E4595-C568-4C1F-BCEE-4AA6AAE1FF41}; provider_source_index:110",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:03000582",
+      "records": [
+        {
+          "coordinate": [
+            -170.69434989199996,
+            -14.272276819999945
+          ],
+          "name": "Thompson, Sadie, Building",
+          "ref": "NRIS:03000582; layer:0; OBJECTID:1463011; GEOM_ID:{C02376ED-3E46-48F5-B03F-B3AD7AA3A516}; provider_source_index:0",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:04000276",
+      "records": [
+        {
+          "coordinate": [
+            138.1035822450001,
+            9.510212500000023
+          ],
+          "name": "Dinay Village",
+          "ref": "NRIS:04000276; layer:0; OBJECTID:1477431; GEOM_ID:{686C92E4-D417-4DEF-91B6-BB80604A5CF9}; provider_source_index:17",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:04000277",
+      "records": [
+        {
+          "coordinate": [
+            162.91110000000003,
+            5.292380000000037
+          ],
+          "name": "Likinlulem",
+          "ref": "NRIS:04000277; layer:0; OBJECTID:1477458; GEOM_ID:{416FE94C-A163-403C-937E-E36AB49A342F}; provider_source_index:18",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:06001320",
+      "records": [
+        {
+          "coordinate": [
+            144.7501350110001,
+            13.473913871000036
+          ],
+          "name": "Guam Congress Building",
+          "ref": "NRIS:06001320; layer:0; OBJECTID:1463178; GEOM_ID:{D5EACED3-4A4F-45FB-A1C7-8B349583201E}; provider_source_index:38",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:07000123",
+      "records": [
+        {
+          "coordinate": [
+            145.7860228940001,
+            15.174757397000064
+          ],
+          "name": "Brown Beach One Japanese Fortifications",
+          "ref": "NRIS:07000123; layer:0; OBJECTID:1477454; GEOM_ID:{D76E8636-E5BB-41E2-B186-0B4283ADAFAE}; provider_source_index:111",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:08000165",
+      "records": [
+        {
+          "coordinate": [
+            144.78153644700012,
+            13.460936994000065
+          ],
+          "name": "Canada Water Wells",
+          "ref": "NRIS:08000165; layer:0; OBJECTID:1482065; GEOM_ID:{BFDBB56A-9416-4779-B98B-1F5B2820E16C}; provider_source_index:39",
+          "source_index": 0
+        },
+        {
+          "coordinate": [
+            144.78407997800002,
+            13.461447393000071
+          ],
+          "name": "Canada Water Wells",
+          "ref": "NRIS:08000165; layer:0; OBJECTID:1482066; GEOM_ID:{77F83FA3-3B4A-4EA3-9392-EE8F3176C46D}; provider_source_index:40",
+          "source_index": 1
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:08001408",
+      "records": [
+        {
+          "coordinate": [
+            144.65838899100004,
+            13.375896845000057
+          ],
+          "name": "Umang Dam",
+          "ref": "NRIS:08001408; layer:0; OBJECTID:1482067; GEOM_ID:{CD42E327-4516-4D45-BB5E-8F5AB8E4AB41}; provider_source_index:41",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:10000969",
+      "records": [
+        {
+          "coordinate": [
+            144.75744524000004,
+            13.462277419000031
+          ],
+          "name": "Won Pat Outdoor Oven",
+          "ref": "NRIS:10000969; layer:0; OBJECTID:1482068; GEOM_ID:{D3410375-CA6D-4A60-899B-ACA1B85675EA}; provider_source_index:42",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:10000970",
+      "records": [
+        {
+          "coordinate": [
+            144.6933551620001,
+            13.464046665000069
+          ],
+          "name": "Quan Outdoor Oven",
+          "ref": "NRIS:10000970; layer:0; OBJECTID:1482069; GEOM_ID:{C8E21F9B-1971-4843-B635-2179D841FFA1}; provider_source_index:43",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:10000971",
+      "records": [
+        {
+          "coordinate": [
+            144.7406223470001,
+            13.266223221000075
+          ],
+          "name": "Paulino Outdoor Oven",
+          "ref": "NRIS:10000971; layer:0; OBJECTID:1482070; GEOM_ID:{E878EBFC-21D0-4617-B415-DCB6A62A001A}; provider_source_index:44",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:10000972",
+      "records": [
+        {
+          "coordinate": [
+            144.7675865330001,
+            13.403993544000059
+          ],
+          "name": "Baza Outdoor Oven",
+          "ref": "NRIS:10000972; layer:0; OBJECTID:1482071; GEOM_ID:{3CA3D6C6-55D1-49DF-BFDD-69049A71509C}; provider_source_index:45",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:14000035",
+      "records": [
+        {
+          "coordinate": [
+            144.7223590000001,
+            13.458632000000023
+          ],
+          "name": "Fonte River Dam",
+          "ref": "NRIS:14000035; layer:0; OBJECTID:1482764; GEOM_ID:{69F246DA-2DD8-47B4-9EF5-23235D07D58C}; provider_source_index:46",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:14000925",
+      "records": [
+        {
+          "coordinate": [
+            -170.73555499999998,
+            -14.357221999999979
+          ],
+          "name": "Turtle and Shark",
+          "ref": "NRIS:14000925; layer:0; OBJECTID:1477764; GEOM_ID:{77D06532-F4E2-4B95-B1DB-A6D8505551A0}; provider_source_index:8",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:15000812",
+      "records": [
+        {
+          "coordinate": [
+            -169.51738369199998,
+            -14.22392038299995
+          ],
+          "name": "Tui Manu'a Graves Monument",
+          "ref": "NRIS:15000812; layer:0; OBJECTID:1482239; GEOM_ID:{2C67CDD7-F8C3-4153-BA43-977B102746FE}; provider_source_index:9",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:16000129",
+      "records": [
+        {
+          "coordinate": [
+            144.89202645500006,
+            13.571660614000052
+          ],
+          "name": "Chaqui'an Massacre Site",
+          "ref": "NRIS:16000129; layer:0; OBJECTID:1477783; GEOM_ID:{E66D43AB-184B-4736-BB17-A0A0A4762395}; provider_source_index:47",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:72001441",
+      "records": [
+        {
+          "coordinate": [
+            -170.68861099999998,
+            -14.278055999999935
+          ],
+          "name": "Navy Building 38",
+          "ref": "NRIS:72001441; layer:0; OBJECTID:1463007; GEOM_ID:{988E0248-8554-4611-959E-8B4E95E3953C}; provider_source_index:10",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:72001442",
+      "records": [
+        {
+          "coordinate": [
+            -170.68883207099998,
+            -14.273472210999955
+          ],
+          "name": "Navy Building 43",
+          "ref": "NRIS:72001442; layer:0; OBJECTID:1463008; GEOM_ID:{790645D2-1669-4AA7-AB95-25AD968BA04E}; provider_source_index:11",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:72001444",
+      "records": [
+        {
+          "coordinate": [
+            -170.76022113499997,
+            -14.288473503999967
+          ],
+          "name": "Aasu",
+          "ref": "NRIS:72001444; layer:0; OBJECTID:1477417; GEOM_ID:{D45967F5-8DD5-4ACA-AC77-FF0BBF48D223}; provider_source_index:12",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:72001445",
+      "records": [
+        {
+          "coordinate": [
+            -170.80288402999997,
+            -14.326171176999935
+          ],
+          "name": "Atauloma Girls School",
+          "ref": "NRIS:72001445; layer:0; OBJECTID:1463009; GEOM_ID:{3C6ABA66-2DA8-424F-85F9-E0D0AE0BDE0B}; provider_source_index:13",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:72001446",
+      "records": [
+        {
+          "coordinate": [
+            -170.78727557999997,
+            -14.337821409999947
+          ],
+          "name": "Fagalele Boys School",
+          "ref": "NRIS:72001446; layer:0; OBJECTID:1463010; GEOM_ID:{3342F55C-27EB-4B96-8117-85E5CC13B5ED}; provider_source_index:14",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:74002037",
+      "records": [
+        {
+          "coordinate": [
+            144.66096875800008,
+            13.296749895000062
+          ],
+          "name": "San Dionisio Church Ruins",
+          "ref": "NRIS:74002037; layer:0; OBJECTID:1477433; GEOM_ID:{DE1085C3-EFEB-4D4D-B8D8-A3DDA35609B9}; provider_source_index:48",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:74002041",
+      "records": [
+        {
+          "coordinate": [
+            144.6559613180001,
+            13.298447658000043
+          ],
+          "name": "Fort San Jose",
+          "ref": "NRIS:74002041; layer:0; OBJECTID:1477432; GEOM_ID:{7BF5966D-B08C-406C-BF34-0918985DB9DA}; provider_source_index:50",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:74002042",
+      "records": [
+        {
+          "coordinate": [
+            144.6576973650001,
+            13.292518167000026
+          ],
+          "name": "Fort Nuestra Senora de la Soledad",
+          "ref": "NRIS:74002042; layer:0; OBJECTID:1477436; GEOM_ID:{82B731D9-799B-4639-8455-C1758C60271E}; provider_source_index:51",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:74002043",
+      "records": [
+        {
+          "coordinate": [
+            144.6561375970001,
+            13.296425287000034
+          ],
+          "name": "Fort Santo Angel",
+          "ref": "NRIS:74002043; layer:0; OBJECTID:1482064; GEOM_ID:{D6F80D90-71A6-44BB-B266-345DCF9A751F}; provider_source_index:52",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:74002180",
+      "records": [
+        {
+          "coordinate": [
+            -170.69140937399996,
+            -14.273484604999965
+          ],
+          "name": "Courthouse of American Samoa",
+          "ref": "NRIS:74002180; layer:0; OBJECTID:1463006; GEOM_ID:{77145763-E796-427A-A429-0F039CB68169}; provider_source_index:15",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:74002189",
+      "records": [
+        {
+          "coordinate": [
+            145.71906115000002,
+            15.201739031000045
+          ],
+          "name": "Japanese Hospital",
+          "ref": "NRIS:74002189; layer:0; OBJECTID:1463168; GEOM_ID:{620C2328-D4E1-4477-9895-E03000DE501F}; provider_source_index:112",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:74002224",
+      "records": [
+        {
+          "coordinate": [
+            145.7331129260001,
+            15.213316400000053
+          ],
+          "name": "Japanese Lighthouse",
+          "ref": "NRIS:74002224; layer:0; OBJECTID:1482059; GEOM_ID:{0E015966-34E9-470A-B4BF-B6E1352853F8}; provider_source_index:114",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:74002227",
+      "records": [
+        {
+          "coordinate": [
+            158.21121000000005,
+            6.967750000000024
+          ],
+          "name": "Spanish Wall",
+          "ref": "NRIS:74002227; layer:0; OBJECTID:1482072; GEOM_ID:{883BA7C5-64E6-4CE3-8E03-7AC81B143C50}; provider_source_index:20",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:74002300",
+      "records": [
+        {
+          "coordinate": [
+            144.74815702600006,
+            13.474140116000058
+          ],
+          "name": "Agana Spanish Bridge",
+          "ref": "NRIS:74002300; layer:0; OBJECTID:1482035; GEOM_ID:{95D84489-9BCD-4BC8-A87F-A3755C63B595}; provider_source_index:53",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:74002301",
+      "records": [
+        {
+          "coordinate": [
+            144.74559867400012,
+            13.471270788000027
+          ],
+          "name": "Fort Santa Agueda",
+          "ref": "NRIS:74002301; layer:0; OBJECTID:1482034; GEOM_ID:{66EC4436-BCAA-401A-BC9B-679C7F2FA622}; provider_source_index:54",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:74002302",
+      "records": [
+        {
+          "coordinate": [
+            144.75166000000002,
+            13.473860000000059
+          ],
+          "name": "Plaza de Espana",
+          "ref": "NRIS:74002302; layer:0; OBJECTID:1477437; GEOM_ID:{01CC8EDD-7644-4A95-B5AE-ED4199D32C5C}; provider_source_index:55",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:74002303",
+      "records": [
+        {
+          "coordinate": [
+            144.76605909900002,
+            13.463293903000022
+          ],
+          "name": "Spanish Dikes",
+          "ref": "NRIS:74002303; layer:0; OBJECTID:1482037; GEOM_ID:{9450788C-FDCE-41BD-AB7B-F6737F92F94F}; provider_source_index:56",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:74002304",
+      "records": [
+        {
+          "coordinate": [
+            144.643591269,
+            13.352574034000043
+          ],
+          "name": "Taelayag Spanish Bridge",
+          "ref": "NRIS:74002304; layer:0; OBJECTID:1482038; GEOM_ID:{BAE91513-48AD-4C03-B44E-49243854FCB2}; provider_source_index:57",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:74002305",
+      "records": [
+        {
+          "coordinate": [
+            144.6472002700001,
+            13.359140341000057
+          ],
+          "name": "Taleyfac Spanish Bridge",
+          "ref": "NRIS:74002305; layer:0; OBJECTID:1482036; GEOM_ID:{EA3025B6-D521-4531-BBB9-33A5C4ECE86E}; provider_source_index:58",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:74002315",
+      "records": [
+        {
+          "coordinate": [
+            144.66622159700012,
+            13.263582696000071
+          ],
+          "name": "Merizo Conbento",
+          "ref": "NRIS:74002315; layer:0; OBJECTID:1463164; GEOM_ID:{663A6B3E-995F-4C24-B2DE-CC2DCDBA4528}; provider_source_index:59",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:75001909",
+      "records": [
+        {
+          "coordinate": [
+            144.69228029500005,
+            13.46060318900004
+          ],
+          "name": "Piti Coastal Defense Guns",
+          "ref": "NRIS:75001909; layer:0; OBJECTID:1408676; GEOM_ID:{5B6DFC6F-4629-4078-8089-C7844AAEA6A4}; provider_source_index:60",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:75001910",
+      "records": [
+        {
+          "coordinate": [
+            144.65220264000004,
+            13.374312446000033
+          ],
+          "name": "Hill 40",
+          "ref": "NRIS:75001910; layer:0; OBJECTID:1477435; GEOM_ID:{78AECF1C-E37C-4180-944D-E076D5275C8A}; provider_source_index:61",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:75002122",
+      "records": [
+        {
+          "coordinate": [
+            144.8822969040001,
+            13.543517122000026
+          ],
+          "name": "Mataguac Hill Command Post",
+          "ref": "NRIS:75002122; layer:0; OBJECTID:1482033; GEOM_ID:{3F936D2B-92B6-43C7-9C68-0B20E025443D}; provider_source_index:62",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:75002152",
+      "records": [
+        {
+          "coordinate": [
+            144.66585377100012,
+            13.263461861000053
+          ],
+          "name": "Merizo Bell Tower",
+          "ref": "NRIS:75002152; layer:0; OBJECTID:1463163; GEOM_ID:{A6670544-4770-4B3B-97F5-09DF261E957D}; provider_source_index:64",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:75002154",
+      "records": [
+        {
+          "coordinate": [
+            144.80359973200007,
+            13.513794981000046
+          ],
+          "name": "San Vitores Martyrdom Site",
+          "ref": "NRIS:75002154; layer:0; OBJECTID:1477439; GEOM_ID:{815BB8FD-6726-491E-B0A3-7BBCE27358F0}; provider_source_index:65",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76001965",
+      "records": [
+        {
+          "coordinate": [
+            144.77303509900003,
+            13.489642278000076
+          ],
+          "name": "Dungcas Beach Defense Guns",
+          "ref": "NRIS:76001965; layer:0; OBJECTID:1475377; GEOM_ID:{BBEBC944-2BCF-4A85-A88D-AC896CF1C436}; provider_source_index:66",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002192",
+      "records": [
+        {
+          "coordinate": [
+            145.81638401100008,
+            15.28798338200005
+          ],
+          "name": "Banzai Cliff",
+          "ref": "NRIS:76002192; layer:0; OBJECTID:1477450; GEOM_ID:{BD680964-A31F-4EF7-8C76-D133BC3CA359}; provider_source_index:115",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002193",
+      "records": [
+        {
+          "coordinate": [
+            145.8072926650001,
+            15.275216814000032
+          ],
+          "name": "Suicide Cliff",
+          "ref": "NRIS:76002193; layer:0; OBJECTID:1477451; GEOM_ID:{DB43D57D-8CA2-4E07-8CF5-03540C2BE990}; provider_source_index:116",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002194",
+      "records": [
+        {
+          "coordinate": [
+            171.37165987000003,
+            7.085733937000043
+          ],
+          "name": "Marshall Islands War Memorial Park",
+          "ref": "NRIS:76002194; layer:0; OBJECTID:1477507; GEOM_ID:{D33B2A79-3E6A-413F-9136-B8C43ADFC5AF}; provider_source_index:107",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002200",
+      "records": [
+        {
+          "coordinate": [
+            158.2107000000001,
+            6.958650000000034
+          ],
+          "name": "Chief Agriculturist House",
+          "ref": "NRIS:76002200; layer:0; OBJECTID:1463181; GEOM_ID:{A7A2D1FA-2278-4A3A-A686-7076EA6D7ECE}; provider_source_index:21",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002201",
+      "records": [
+        {
+          "coordinate": [
+            158.20495928000003,
+            6.967873852000025
+          ],
+          "name": "German Cemetery",
+          "ref": "NRIS:76002201; layer:0; OBJECTID:1477496; GEOM_ID:{9FBD0D99-7FB0-484F-A537-77F6B3C53121}; provider_source_index:22",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002202",
+      "records": [
+        {
+          "coordinate": [
+            158.19150878200003,
+            6.962336846000028
+          ],
+          "name": "Japenese Artillery Road and Pohndolap Area",
+          "ref": "NRIS:76002202; layer:0; OBJECTID:1477497; GEOM_ID:{50C090C3-73B2-4043-AB42-A679CAAD6DB3}; provider_source_index:23",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002203",
+      "records": [
+        {
+          "coordinate": [
+            158.21139000000005,
+            6.966840000000047
+          ],
+          "name": "Japenese Elementary School for Ponapean Children",
+          "ref": "NRIS:76002203; layer:0; OBJECTID:1463183; GEOM_ID:{ECB8D0C9-87E9-48FC-951C-42A44542526D}; provider_source_index:24",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002204",
+      "records": [
+        {
+          "coordinate": [
+            158.20653000000004,
+            6.959170000000029
+          ],
+          "name": "Japanese Hydro-electric Power Plant",
+          "ref": "NRIS:76002204; layer:0; OBJECTID:1463184; GEOM_ID:{F9DFF441-8848-4B08-84F3-11400B5D79FA}; provider_source_index:25",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002205",
+      "records": [
+        {
+          "coordinate": [
+            158.21249000000012,
+            6.963790000000074
+          ],
+          "name": "Japanese Shrine",
+          "ref": "NRIS:76002205; layer:0; OBJECTID:1463182; GEOM_ID:{2F85AD2A-A324-49DB-9BB9-728053CAE36F}; provider_source_index:26",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002206",
+      "records": [
+        {
+          "coordinate": [
+            158.20519246700007,
+            6.967997584000045
+          ],
+          "name": "Sokehs Mass Grave Site",
+          "ref": "NRIS:76002206; layer:0; OBJECTID:1477495; GEOM_ID:{5109C589-AEC8-425B-B3A3-B4B6A50433F2}; provider_source_index:27",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002208",
+      "records": [
+        {
+          "coordinate": [
+            151.8770192930001,
+            7.377707699000041
+          ],
+          "name": "Japanese Army Headquarters",
+          "ref": "NRIS:76002208; layer:0; OBJECTID:1482093; GEOM_ID:{BB898A47-EBBE-47DD-8E16-4E1ADFC985C0}; provider_source_index:28",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002209",
+      "records": [
+        {
+          "coordinate": [
+            151.8874800000001,
+            7.447480000000041
+          ],
+          "name": "St. Xavier Academy",
+          "ref": "NRIS:76002209; layer:0; OBJECTID:1463179; GEOM_ID:{99CE85F3-E869-4D12-B9E7-56DF71074884}; provider_source_index:29",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002210",
+      "records": [
+        {
+          "coordinate": [
+            151.84640000000002,
+            7.4554200000000606
+          ],
+          "name": "Tonnachau Mountain",
+          "ref": "NRIS:76002210; layer:0; OBJECTID:1477456; GEOM_ID:{F507B9FA-0BBA-4EAA-A281-BA546114558D}; provider_source_index:30",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002211",
+      "records": [
+        {
+          "coordinate": [
+            151.84806000000003,
+            7.441680000000076
+          ],
+          "name": "Tonotan Guns and Caves",
+          "ref": "NRIS:76002211; layer:0; OBJECTID:1477457; GEOM_ID:{EC23724E-282B-46E5-80F3-6FF630E7141B}; provider_source_index:31",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002213",
+      "records": [
+        {
+          "coordinate": [
+            151.86833000000001,
+            7.451980000000049
+          ],
+          "name": "Wiichen Men's Meetinghouse",
+          "ref": "NRIS:76002213; layer:0; OBJECTID:1477455; GEOM_ID:{CCDB9739-2823-4A29-8905-610079506C45}; provider_source_index:32",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002214",
+      "records": [
+        {
+          "coordinate": [
+            138.12283287200012,
+            9.505403044000047
+          ],
+          "name": "Rull Men's Meetinghouse",
+          "ref": "NRIS:76002214; layer:0; OBJECTID:1463160; GEOM_ID:{B6FAB23B-DA75-4280-BA0B-54059927591B}; provider_source_index:33",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002215",
+      "records": [
+        {
+          "coordinate": [
+            138.1266836640001,
+            9.513944792000075
+          ],
+          "name": "Spanish Fort",
+          "ref": "NRIS:76002215; layer:0; OBJECTID:1477429; GEOM_ID:{11DE144F-5654-4233-AC62-ACE32E3F6B1D}; provider_source_index:34",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:76002216",
+      "records": [
+        {
+          "coordinate": [
+            138.13181388100008,
+            9.52731222500006
+          ],
+          "name": "O'Keefe's Island",
+          "ref": "NRIS:76002216; layer:0; OBJECTID:1477430; GEOM_ID:{DAB7EEE0-0967-445E-B337-5C5827D95CDD}; provider_source_index:35",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:77001568",
+      "records": [
+        {
+          "coordinate": [
+            144.74579501200003,
+            13.47396530900005
+          ],
+          "name": "Guam Institute",
+          "ref": "NRIS:77001568; layer:0; OBJECTID:1463165; GEOM_ID:{A8FD82CC-6AA7-40F1-8BE4-C90ED2B6FFE7}; provider_source_index:67",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:79003743",
+      "records": [
+        {
+          "coordinate": [
+            144.6621150840001,
+            13.26664431100005
+          ],
+          "name": "Cook, Merlyn G., School",
+          "ref": "NRIS:79003743; layer:0; OBJECTID:1463166; GEOM_ID:{B7A2E690-5A4F-439A-A63C-3E8CD61C8F41}; provider_source_index:70",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:79003745",
+      "records": [
+        {
+          "coordinate": [
+            144.69701083300004,
+            13.419623827000066
+          ],
+          "name": "Mount Tenjo Fortifications",
+          "ref": "NRIS:79003745; layer:0; OBJECTID:1477440; GEOM_ID:{B92FCD7A-A28D-4D86-9760-31E19CCE54EB}; provider_source_index:71",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:80004399",
+      "records": [
+        {
+          "coordinate": [
+            158.21150000000011,
+            6.968400000000031
+          ],
+          "name": "Catholic Belltower",
+          "ref": "NRIS:80004399; layer:0; OBJECTID:1463180; GEOM_ID:{C08A731E-C295-4E9E-A802-E022CEE5E7E7}; provider_source_index:36",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:81000663",
+      "records": [
+        {
+          "coordinate": [
+            145.1628278380001,
+            14.167277266000042
+          ],
+          "name": "Commissioner's Office",
+          "ref": "NRIS:81000663; layer:0; OBJECTID:1463169; GEOM_ID:{27BBA2D5-C944-465E-AA48-29D5B02EDB26}; provider_source_index:118",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:81000664",
+      "records": [
+        {
+          "coordinate": [
+            145.13631400000008,
+            14.134889630000032
+          ],
+          "name": "Japanese Hospital",
+          "ref": "NRIS:81000664; layer:0; OBJECTID:1463170; GEOM_ID:{FDE8664A-754F-4866-96CD-96DD275F5F87}; provider_source_index:119",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:81000665",
+      "records": [
+        {
+          "coordinate": [
+            145.13751970400006,
+            14.13581178100003
+          ],
+          "name": "Nanyo Kohatsu Kabushiki Kaisha Sugar Mill",
+          "ref": "NRIS:81000665; layer:0; OBJECTID:1463171; GEOM_ID:{E0812F87-56EF-4C6A-B1F3-67D761F67AE7}; provider_source_index:120",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:81000666",
+      "records": [
+        {
+          "coordinate": [
+            145.16681775900008,
+            14.166404022000052
+          ],
+          "name": "Rectory",
+          "ref": "NRIS:81000666; layer:0; OBJECTID:1463176; GEOM_ID:{027CC69E-D9F4-4811-9424-00D0AB1F0874}; provider_source_index:121",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:81000669",
+      "records": [
+        {
+          "coordinate": [
+            145.62064320000002,
+            14.971226042000069
+          ],
+          "name": "Japanese Structure",
+          "ref": "NRIS:81000669; layer:0; OBJECTID:1463172; GEOM_ID:{5CEC1722-B980-48F6-A501-55A29C7A48C6}; provider_source_index:122",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:81000670",
+      "records": [
+        {
+          "coordinate": [
+            145.61905505900006,
+            14.972391497000046
+          ],
+          "name": "Nanyo Kohatsu Kabushiki Kaisha Administration Building",
+          "ref": "NRIS:81000670; layer:0; OBJECTID:1463173; GEOM_ID:{67B72C6E-114E-4FA0-AFFC-AF0DE3053D8B}; provider_source_index:123",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:81000671",
+      "records": [
+        {
+          "coordinate": [
+            145.6232685010001,
+            14.967807093000033
+          ],
+          "name": "Nanyo Kohatsu Kabushiki Kaisha Ice Storage Building",
+          "ref": "NRIS:81000671; layer:0; OBJECTID:1463174; GEOM_ID:{92A12B01-1701-4EAF-8FDD-FCFCC31C17B1}; provider_source_index:124",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:81000672",
+      "records": [
+        {
+          "coordinate": [
+            145.61868314800006,
+            14.972389245000045
+          ],
+          "name": "Nanyo Kohatsu Kabushiki Kaisha Laboratory",
+          "ref": "NRIS:81000672; layer:0; OBJECTID:1463175; GEOM_ID:{C72F263A-8B7E-4FB5-9C6C-552EE8EEE4DA}; provider_source_index:125",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:83004523",
+      "records": [
+        {
+          "coordinate": [
+            151.83744528700004,
+            7.43542390500005
+          ],
+          "name": "Japanese Lighthouse",
+          "ref": "NRIS:83004523; layer:0; OBJECTID:1482094; GEOM_ID:{E8DC16DE-101A-412A-BE55-A2B9B9025280}; provider_source_index:37",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:84000207",
+      "records": [
+        {
+          "coordinate": [
+            145.71554098100012,
+            15.200462525000034
+          ],
+          "name": "Campaneyan Kristo Rai",
+          "ref": "NRIS:84000207; layer:0; OBJECTID:1482058; GEOM_ID:{F09C6C47-B871-4A51-97C1-22B19261EE4E}; provider_source_index:126",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:84002777",
+      "records": [
+        {
+          "coordinate": [
+            145.82604127500008,
+            15.271221036000043
+          ],
+          "name": "Unai Lagua Japanese Defense Pillbox",
+          "ref": "NRIS:84002777; layer:0; OBJECTID:1482060; GEOM_ID:{EE432E4C-18C0-415E-A432-EF20072585E9}; provider_source_index:128",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:85000408",
+      "records": [
+        {
+          "coordinate": [
+            144.75199877500006,
+            13.47207815400003
+          ],
+          "name": "Mesa House",
+          "ref": "NRIS:85000408; layer:0; OBJECTID:1463161; GEOM_ID:{C596A32A-79A4-4225-B0D5-7DEDBA05FBFA}; provider_source_index:72",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:85000410",
+      "records": [
+        {
+          "coordinate": [
+            144.74089515000003,
+            13.474644162000061
+          ],
+          "name": "Toves House",
+          "ref": "NRIS:85000410; layer:0; OBJECTID:1463162; GEOM_ID:{B9189F1B-2289-483A-8C44-D30A9BEF98E9}; provider_source_index:73",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:85001757",
+      "records": [
+        {
+          "coordinate": [
+            167.73193541500007,
+            8.71886489600007
+          ],
+          "name": "Kwajalein Island Battlefield",
+          "ref": "NRIS:85001757; layer:0; OBJECTID:1475687; GEOM_ID:{D56BE803-0EAB-44EF-9494-EF56EBF134F1}; provider_source_index:108",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:85001758",
+      "records": [
+        {
+          "coordinate": [
+            167.47598408600004,
+            9.395448031000058
+          ],
+          "name": "Roi-Namur Battlefield",
+          "ref": "NRIS:85001758; layer:0; OBJECTID:1475378; GEOM_ID:{94D5E0E3-3C26-4588-8BF4-5370CDFD4C59}; provider_source_index:109",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88000612",
+      "records": [
+        {
+          "coordinate": [
+            144.76748385300004,
+            13.334955407000052
+          ],
+          "name": "Aratama Maru",
+          "ref": "NRIS:88000612; layer:0; OBJECTID:1477442; GEOM_ID:{909B86B3-5941-4D06-AE30-591E291D5944}; provider_source_index:75",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88000967",
+      "records": [
+        {
+          "coordinate": [
+            144.65425903300002,
+            13.459076582000023
+          ],
+          "name": "TOKAI MARU",
+          "ref": "NRIS:88000967; layer:0; OBJECTID:1477441; GEOM_ID:{D31CCC9C-468B-4D82-A07E-38C4C97E01B3}; provider_source_index:76",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001863",
+      "records": [
+        {
+          "coordinate": [
+            144.7838229790001,
+            13.505343507000077
+          ],
+          "name": "Ipao Pillbox I",
+          "ref": "NRIS:88001863; layer:0; OBJECTID:1482043; GEOM_ID:{03DBCEBB-B8BA-4048-831B-80D3750A5E61}; provider_source_index:77",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001864",
+      "records": [
+        {
+          "coordinate": [
+            144.7967522570001,
+            13.50523161500007
+          ],
+          "name": "As Sombreru Pillbox II",
+          "ref": "NRIS:88001864; layer:0; OBJECTID:1482041; GEOM_ID:{6A93FD91-50B4-4CCD-B27A-550188F3A0EF}; provider_source_index:78",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001865",
+      "records": [
+        {
+          "coordinate": [
+            144.7978932630001,
+            13.505675391000068
+          ],
+          "name": "Tomhum Pillbox III",
+          "ref": "NRIS:88001865; layer:0; OBJECTID:1482050; GEOM_ID:{6A4CA54A-8AD7-4C73-88C9-CA56C72494CA}; provider_source_index:79",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001866",
+      "records": [
+        {
+          "coordinate": [
+            144.80085999000005,
+            13.510445548000064
+          ],
+          "name": "Tomhum Pillbox II",
+          "ref": "NRIS:88001866; layer:0; OBJECTID:1482049; GEOM_ID:{E01DBE67-6C1F-4752-B6D6-ED41B47AEC4A}; provider_source_index:80",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001871",
+      "records": [
+        {
+          "coordinate": [
+            144.77314805900005,
+            13.386421898000037
+          ],
+          "name": "Ilik River Fortification II",
+          "ref": "NRIS:88001871; layer:0; OBJECTID:1482042; GEOM_ID:{CE01B789-FC65-4D0D-A134-500811C7FFFE}; provider_source_index:81",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001872",
+      "records": [
+        {
+          "coordinate": [
+            144.67229251600008,
+            13.25861431900006
+          ],
+          "name": "Malessu' Pillbox",
+          "ref": "NRIS:88001872; layer:0; OBJECTID:1482044; GEOM_ID:{F5FA52E1-69F3-495F-BF11-3A75018DD713}; provider_source_index:82",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001875",
+      "records": [
+        {
+          "coordinate": [
+            144.76936921100003,
+            13.370800959000064
+          ],
+          "name": "Tokcha' Pillbox",
+          "ref": "NRIS:88001875; layer:0; OBJECTID:1482048; GEOM_ID:{0A40DAAF-7914-48F4-A59B-1BCF28550CB7}; provider_source_index:83",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001876",
+      "records": [
+        {
+          "coordinate": [
+            144.767579672,
+            13.364685674000043
+          ],
+          "name": "Talofofo-Talu'fofu' Pillbox",
+          "ref": "NRIS:88001876; layer:0; OBJECTID:1482047; GEOM_ID:{CAC9B5E6-28AE-4875-A0CA-3FF117A7BB6A}; provider_source_index:84",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001878",
+      "records": [
+        {
+          "coordinate": [
+            144.7822847230001,
+            13.42174402300003
+          ],
+          "name": "Pagu' Pillbox I",
+          "ref": "NRIS:88001878; layer:0; OBJECTID:1482045; GEOM_ID:{C65CC498-0E06-452A-98C9-B77D218E1B4B}; provider_source_index:85",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001879",
+      "records": [
+        {
+          "coordinate": [
+            144.782565255,
+            13.416324687000042
+          ],
+          "name": "Pagu' Pillbox II",
+          "ref": "NRIS:88001879; layer:0; OBJECTID:1482046; GEOM_ID:{DD1267C8-55AE-4E36-BBE4-D87B6DB10229}; provider_source_index:86",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001880",
+      "records": [
+        {
+          "coordinate": [
+            144.7495426040001,
+            13.478019998000036
+          ],
+          "name": "Agana-Hagatna Pillbox",
+          "ref": "NRIS:88001880; layer:0; OBJECTID:1482039; GEOM_ID:{6BC6C3E6-77BB-4B91-B2B4-AAADF2D57B18}; provider_source_index:87",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001886",
+      "records": [
+        {
+          "coordinate": [
+            144.77011287100004,
+            13.340084065000042
+          ],
+          "name": "Mana Pillbox",
+          "ref": "NRIS:88001886; layer:0; OBJECTID:1482051; GEOM_ID:{30F7CA52-B440-4DFD-9F07-89A6A7E2C5B1}; provider_source_index:88",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001887",
+      "records": [
+        {
+          "coordinate": [
+            144.7969588840001,
+            13.504853905000061
+          ],
+          "name": "As Sombreru  Pillbox III",
+          "ref": "NRIS:88001887; layer:0; OBJECTID:1482040; GEOM_ID:{365395E4-756D-49AF-B0A1-EBFD43693D35}; provider_source_index:89",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001890",
+      "records": [
+        {
+          "coordinate": [
+            144.74835487100006,
+            13.273023683000076
+          ],
+          "name": "Inalahan Pillbox",
+          "ref": "NRIS:88001890; layer:0; OBJECTID:1477445; GEOM_ID:{FA6228AD-00F9-4EA5-A490-1F1C8C26AB93}; provider_source_index:90",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001891",
+      "records": [
+        {
+          "coordinate": [
+            144.80322564900007,
+            13.514306774000033
+          ],
+          "name": "Sanvitores Beach Japanese Fortification",
+          "ref": "NRIS:88001891; layer:0; OBJECTID:1477446; GEOM_ID:{FF72887C-6970-4842-866D-99AF2D6129C4}; provider_source_index:91",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001893",
+      "records": [
+        {
+          "coordinate": [
+            144.80207254200002,
+            13.512155032000067
+          ],
+          "name": "Tomhum Pillbox I",
+          "ref": "NRIS:88001893; layer:0; OBJECTID:1482053; GEOM_ID:{BC3FB971-9B0B-44C3-B2A9-1475C10CF16D}; provider_source_index:92",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001894",
+      "records": [
+        {
+          "coordinate": [
+            144.80192521000004,
+            13.523187165000024
+          ],
+          "name": "Gongna Beach Mount Pillbox",
+          "ref": "NRIS:88001894; layer:0; OBJECTID:1477444; GEOM_ID:{45DEA40A-994F-4CC8-A503-A61DE95EFCDA}; provider_source_index:93",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001895",
+      "records": [
+        {
+          "coordinate": [
+            144.80574486400008,
+            13.506440074000068
+          ],
+          "name": "Tomhum Cliffline Fortification I",
+          "ref": "NRIS:88001895; layer:0; OBJECTID:1477447; GEOM_ID:{4177507E-46B6-4EF5-B41B-BA01B2E30F63}; provider_source_index:94",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001896",
+      "records": [
+        {
+          "coordinate": [
+            144.80642088000002,
+            13.508253277000051
+          ],
+          "name": "Tomhum Cliffline Fortification II",
+          "ref": "NRIS:88001896; layer:0; OBJECTID:1477448; GEOM_ID:{2C3162E1-C439-40E7-98FD-72318A9118B0}; provider_source_index:95",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001897",
+      "records": [
+        {
+          "coordinate": [
+            144.801431803,
+            13.523616577000041
+          ],
+          "name": "Gongna Beach Gun Emplacement",
+          "ref": "NRIS:88001897; layer:0; OBJECTID:1482052; GEOM_ID:{892E6E0D-4FAE-4D97-8E84-A5F54F8B5F5E}; provider_source_index:96",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:88001898",
+      "records": [
+        {
+          "coordinate": [
+            144.80178690700006,
+            13.522155803000032
+          ],
+          "name": "Gongna Beach Gun Mount",
+          "ref": "NRIS:88001898; layer:0; OBJECTID:1477443; GEOM_ID:{E5CA5C94-92F4-4436-8916-B00A24EA8B0F}; provider_source_index:97",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:94001310",
+      "records": [
+        {
+          "coordinate": [
+            144.86631731600005,
+            13.584950036000066
+          ],
+          "name": "Cruz Water Catchment",
+          "ref": "NRIS:94001310; layer:0; OBJECTID:1482054; GEOM_ID:{BCD83D6E-DE9C-4255-91EA-70DB9B577A06}; provider_source_index:98",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:94001311",
+      "records": [
+        {
+          "coordinate": [
+            144.8633873000001,
+            13.582033199000023
+          ],
+          "name": "Torre Water Catchment",
+          "ref": "NRIS:94001311; layer:0; OBJECTID:1482055; GEOM_ID:{07926FA6-AD69-4FBF-90BA-C5E6FB1537ED}; provider_source_index:99",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:94001312",
+      "records": [
+        {
+          "coordinate": [
+            144.80633210700012,
+            13.46740784900004
+          ],
+          "name": "Guzman Water Catchment",
+          "ref": "NRIS:94001312; layer:0; OBJECTID:1482056; GEOM_ID:{4FEE12BE-2967-43BB-AC36-C13D11AD05C0}; provider_source_index:100",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:95001048",
+      "records": [
+        {
+          "coordinate": [
+            145.70208975100002,
+            15.110545812000055
+          ],
+          "name": "Japanese 20mm Cannon Blockhouse",
+          "ref": "NRIS:95001048; layer:0; OBJECTID:1463177; GEOM_ID:{06ED26F7-8E05-40F2-ACD5-4324BAD28ED2}; provider_source_index:129",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:95001367",
+      "records": [
+        {
+          "coordinate": [
+            144.67621517800012,
+            13.42241475000003
+          ],
+          "name": "Atantano Shrine",
+          "ref": "NRIS:95001367; layer:0; OBJECTID:1482057; GEOM_ID:{C7C61A9C-A350-41DE-9417-AA734370B494}; provider_source_index:101",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:98000678",
+      "records": [
+        {
+          "coordinate": [
+            144.66132870400008,
+            13.296735135000063
+          ],
+          "name": "Sanchez, Francisco Q., Elementary School",
+          "ref": "NRIS:98000678; layer:0; OBJECTID:1463167; GEOM_ID:{09053D86-9249-428B-8DBF-B09FE5646A3B}; provider_source_index:102",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:99001184",
+      "records": [
+        {
+          "coordinate": [
+            144.65181127800008,
+            13.43362759200005
+          ],
+          "name": "Sumay Cemetery",
+          "ref": "NRIS:99001184; layer:0; OBJECTID:1477452; GEOM_ID:{FE908C17-01AB-45C7-8E31-A69CB6609A3D}; provider_source_index:103",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:99001231",
+      "records": [
+        {
+          "coordinate": [
+            -170.65959683199998,
+            -14.28231106499993
+          ],
+          "name": "Breakers Point Naval Guns",
+          "ref": "NRIS:99001231; layer:0; OBJECTID:1482007; GEOM_ID:{B86B65EE-F8D3-4ECC-A420-8488157356B7}; provider_source_index:16",
+          "source_index": 0
+        }
+      ]
+    },
+    {
+      "id": "auth:nps-nris:99001301",
+      "records": [
+        {
+          "coordinate": [
+            144.65799957600007,
+            13.297553841000024
+          ],
+          "name": "Umatac Outdoor Library",
+          "ref": "NRIS:99001301; layer:0; OBJECTID:1482062; GEOM_ID:{18DA4A10-D427-4F8A-B258-461E0995914C}; provider_source_index:104",
+          "source_index": 0
+        }
+      ]
+    }
+  ],
+  "source": {
+    "dataset_id": "nps-pacific-reviewed-points",
+    "license": "NPS government structured metadata; other source rights retained",
+    "license_uri": "https://www.nps.gov/aboutus/disclaimer.htm",
+    "name": "NPS Pacific reviewed location contract (derived)",
+    "sha256": "48ea82f4bbf71ff85619571d465752ed83de53f06c67c573106694544593a966",
+    "uri": "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/nps_pacific_review.json",
+    "version": "nps-pacific-v1"
+  },
+  "version": "nps-pacific-locations-v1"
+}

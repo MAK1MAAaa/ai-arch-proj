@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "scope": "Twenty paired research-intent probes for the NPS Pacific project grouping and existing associated places. These are cohort-focused diagnostics, not a blind benchmark, a complete inventory, relevance judgments or lifecycle assertions. Source State and ISO country-or-area labels do not infer historical sovereignty; restricted location records need no point to be discoverable.",
+  "queries": [
+    {"id":"n01","query_zh":"寻找关岛的历史防御堡垒","query_en":"Find historic defensive forts in Guam","topic":"Guam fortifications"},
+    {"id":"n02","query_zh":"寻找关岛二战时期的日本军事防御遗址","query_en":"Find Japanese World War II defensive sites in Guam","topic":"Guam military heritage"},
+    {"id":"n03","query_zh":"寻找关岛的历史宗教场所","query_en":"Find historic religious places in Guam","topic":"Guam religious places"},
+    {"id":"n04","query_zh":"寻找关岛的西班牙历史公共建筑","query_en":"Find Spanish historic public buildings in Guam","topic":"Guam public buildings"},
+    {"id":"n05","query_zh":"寻找关岛的历史桥梁","query_en":"Find historic bridges in Guam","topic":"Guam engineering heritage"},
+    {"id":"n06","query_zh":"寻找北马里亚纳群岛的考古遗址","query_en":"Find archaeological sites in the Northern Mariana Islands","topic":"Northern Mariana archaeology"},
+    {"id":"n07","query_zh":"寻找北马里亚纳群岛的日本历史建筑","query_en":"Find Japanese historic buildings in the Northern Mariana Islands","topic":"Northern Mariana built heritage"},
+    {"id":"n08","query_zh":"寻找塞班岛的历史建筑遗存","query_en":"Find historic building remains on Saipan","topic":"Saipan cultural places"},
+    {"id":"n09","query_zh":"寻找天宁岛二战机场遗址","query_en":"Find World War II airfield sites on Tinian","topic":"Tinian aviation heritage"},
+    {"id":"n10","query_zh":"寻找美属萨摩亚的历史村落","query_en":"Find historic villages in American Samoa","topic":"American Samoa village heritage"},
+    {"id":"n11","query_zh":"寻找美属萨摩亚的历史教堂","query_en":"Find historic churches in American Samoa","topic":"American Samoa religious heritage"},
+    {"id":"n12","query_zh":"寻找美属萨摩亚的海岸炮台","query_en":"Find coastal defense batteries in American Samoa","topic":"Existing cultural place and additional source-area association"},
+    {"id":"n13","query_zh":"寻找密克罗尼西亚联邦的文化遗址","query_en":"Find cultural archaeological sites in the Federated States of Micronesia","topic":"Micronesian cultural places"},
+    {"id":"n14","query_zh":"寻找密克罗尼西亚联邦的日本历史建筑","query_en":"Find Japanese historic structures in the Federated States of Micronesia","topic":"Micronesian built heritage"},
+    {"id":"n15","query_zh":"寻找马绍尔群岛二战历史建筑","query_en":"Find World War II historic buildings in the Marshall Islands","topic":"Marshall Islands cultural places"},
+    {"id":"n16","query_zh":"寻找帕劳的传统会议屋","query_en":"Find traditional meeting houses in Palau","topic":"Palauan architectural heritage"},
+    {"id":"n17","query_zh":"寻找美国本土外小岛屿的历史军事遗址","query_en":"Find historic military sites in the United States Minor Outlying Islands","topic":"Source country-or-area grouping rather than a sovereignty inference"},
+    {"id":"n18","query_zh":"寻找太平洋岛屿的石构考古遗址","query_en":"Find stone archaeological structures on Pacific islands","topic":"Pacific archaeological structures"},
+    {"id":"n19","query_zh":"寻找太平洋岛屿的历史公共建筑","query_en":"Find historic public buildings on Pacific islands","topic":"Pacific public architecture"},
+    {"id":"n20","query_zh":"寻找太平洋岛屿港口的军事防御遗址","query_en":"Find military defensive sites at Pacific island harbors","topic":"Pacific harbor heritage"}
+  ]
+}

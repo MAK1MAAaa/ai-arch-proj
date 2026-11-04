@@ -14,7 +14,7 @@ import pytest
 
 from archsearch import southamerica_data as cohort
 from archsearch.catalogue_data import load_catalogue
-from archsearch.corpus import CORPUS_VERSION, build_document, load_corpus, load_curated_corpus
+from archsearch.corpus import build_document, load_curated_corpus, load_pre_nps_corpus
 from archsearch.domain import Site
 from archsearch.polar_data import load_polar
 from archsearch.regional_data import load_regional
@@ -69,13 +69,12 @@ def test_real_bundle_preserves_every_earlier_field_object_document_and_order(
     before = [site.model_dump(mode="json") for site in base1689]
     documents = [build_document(site) for site in base1689]
     loaded = cohort.load_southamerica(base1689, bundle.directory)
-    assert CORPUS_VERSION == "global-v10"
     assert len(base1689) == 1689
     assert len(loaded) == len({site.id for site in loaded}) == 1700
     assert all(old is new for old, new in zip(base1689, loaded[:1689], strict=True))
     assert [site.model_dump(mode="json") for site in loaded[:1689]] == before
     assert [build_document(site) for site in loaded[:1689]] == documents
-    assert [site.model_dump(mode="json") for site in load_corpus()[:1700]] == [
+    assert [site.model_dump(mode="json") for site in load_pre_nps_corpus()[:1700]] == [
         site.model_dump(mode="json") for site in loaded
     ]
     additions = loaded[1689:]
