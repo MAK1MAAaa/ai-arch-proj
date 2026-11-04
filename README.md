@@ -29,6 +29,23 @@ uv run --no-sync archsearch evaluate --queries src/archsearch/data/queries-canad
 
 ![加拿大资料目录与1930年历史参照](docs/canada-preview.png)
 
+## 来源省／地区浏览
+
+Canada 目录支持13个来源省／地区：992个加拿大对象都有经过独立代理核对的整体位置依据，共993条关联。Pimachiowin Aki 同时关联 Manitoba 和 Ontario，因此各省计数有重叠，不能相加当作遗址总数。原始英文省名及 `Québec` 原文保留；这些是现代来源的目录字段，不是省界、古代政治归属或发掘位置。
+
+先选择国家／地区，再选择来源省／地区，可在无需模型的目录及完整点层中浏览；下一次主动检索在排序前应用该条件。目录切换保留已成功的检索排名、选中资料与历史地图年份。没有采用省区索引的国家仍可按国家浏览，不表示其实际地理位置未知。同对象的完整来源点列随对象筛入，不依据点坐标猜测省区；启用独立地图矩形后仍按原有点范围规则处理。
+
+分享链接与版本2导出分别保存实际成功的检索条件和目录条件，包含来源省区版本。请求失败、被取消或返回旧版本时保留上一次成功视图；不会把尚未完成的选择写成已显示范围。旧链接继续可用。
+
+省区索引 `source-subdivisions-v1` 与2976条语料、共享检索文本及E5索引分开固定。本次升级无需重建模型索引，更新代码后重启服务即可。缺失或损坏该索引仅禁用省区条件；清除该条件后基础目录和检索仍可用。
+
+```powershell
+# 使用随代码分发的冻结复核字段重建，不联网
+uv run --no-sync python -m archsearch.subdivisions --rebuild
+```
+
+接口包括 `GET /api/subdivisions?country=CA` 和 `GET /api/sites/{id}/subdivisions`；`GET /api/sites`、`GET /api/catalogue` 与 `POST /api/search` 支持成对的 `country=CA`／`subdivision=CA:ontario`。省区标识是项目命名空间，不是ISO行政区代码。索引状态见 `/api/status.subdivisions`。[来源与加工](src/archsearch/data/SUBDIVISIONS-LICENSE.md)及[验收记录](docs/subdivisions-validation.md)说明证据和验证范围。
+
 ## NPS太平洋资料分组
 
 实际1940条版本的本地检索、NPS双井资料与1930年历史地图（外网阻断）：

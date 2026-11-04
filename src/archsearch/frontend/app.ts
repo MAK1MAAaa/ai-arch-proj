@@ -65,6 +65,7 @@
     limit: number;
     country?: string | null;
     region?: string | null;
+    subdivision?: string | null;
   }
 
   interface SearchResponse {
@@ -74,6 +75,8 @@
     elapsed_ms: number;
     corpus_version: string;
     total_candidates: number;
+    subdivision?: string | null;
+    subdivision_version?: string | null;
   }
 
   interface SearchContext {
@@ -81,6 +84,7 @@
     limit: number;
     country?: string | null;
     region?: string | null;
+    subdivision?: string | null;
   }
 
   interface CompletedSearch {
@@ -95,6 +99,7 @@
     semantic: { ready: boolean; reason: string | null; model: string; revision: string };
     history?: Parameters<ReturnType<typeof ArchSearchHistory.create>["configure"]>[0];
     registered_areas?: { ready: boolean; reason: string | null; version: string | null } | null;
+    subdivisions?: { ready: boolean; reason: string | null; version: string | null } | null;
   }
 
   interface Facet {
@@ -327,12 +332,14 @@
   function formRequest(): SearchRequest {
     const scope = explore?.getState();
     return { query: ui.query.value.trim(), mode: currentMode(), type: ui.typeFilter.value || null,
-      limit: Number(ui.limitFilter.value), country: scope?.country ?? null, region: scope?.region ?? null };
+      limit: Number(ui.limitFilter.value), country: scope?.country ?? null, region: scope?.region ?? null,
+      ...(scope?.subdivision ? { subdivision: scope.subdivision } : {}) };
   }
 
   function sameRequest(left: SearchRequest, right: SearchRequest): boolean {
     return left.query === right.query && left.mode === right.mode && left.type === right.type && left.limit === right.limit
-      && (left.country ?? null) === (right.country ?? null) && (left.region ?? null) === (right.region ?? null);
+      && (left.country ?? null) === (right.country ?? null) && (left.region ?? null) === (right.region ?? null)
+      && (left.subdivision ?? null) === (right.subdivision ?? null);
   }
 
   function modeAvailable(mode: SearchMode): boolean {
@@ -391,8 +398,9 @@
   function updateSearchAvailability(): void {
     const mode = currentMode();
     const available = modeAvailable(mode);
+    const subdivisionReady = explore?.subdivisionReady() ?? true;
     const samePending = state.searching && state.activeSearch !== null && sameRequest(state.activeSearch, formRequest());
-    ui.searchButton.disabled = !available || samePending;
+    ui.searchButton.disabled = !available || !subdivisionReady || samePending;
     ui.buttonLabel.textContent = state.searching ? samePending ? "检索中" : "更新检索" : "开始检索";
     ui.cancelSearch.disabled = !state.searching;
     ui.cancelSearch.hidden = !state.searching;
@@ -418,7 +426,7 @@
       const query = exampleMode === "semantic" ? button.dataset.queryZh : button.dataset.queryEn;
       const label = button.querySelector<HTMLSpanElement>(".example-label");
       if (label) label.textContent = button.dataset.exampleMode === "bm25" || mode === "semantic" ? button.dataset.label || query || "示例" : query || "示例";
-      button.disabled = !modeAvailable(exampleMode) || ui.typeFilter.disabled || !Array.from(ui.typeFilter.options).some((option) => option.value === button.dataset.type);
+      button.disabled = !modeAvailable(exampleMode) || !subdivisionReady || ui.typeFilter.disabled || !Array.from(ui.typeFilter.options).some((option) => option.value === button.dataset.type);
       button.setAttribute("aria-label", `${button.dataset.exampleMode === "bm25" ? "关键词基线 BM25 原名检索" : "检索示例"}：${query || ""}；类型：${typeLabel(button.dataset.type || "")}`);
       button.lang = exampleMode === "semantic" || button.dataset.exampleMode === "bm25" ? "zh-CN" : "en";
     });
@@ -429,6 +437,7 @@
     try {
       const status = await api<StatusResponse>("/api/status");
       historyView?.configure(status.history);
+      explore?.configureSubdivisions(status.subdivisions);
       if (restoringView) {
         restoringView = false;
         if (initialView.view) {
@@ -513,9 +522,10 @@
     runtimeRefresh = Promise.allSettled([loadStatus(), loadFacets(), explore?.load()]).then(async (loaded) => {
       if (!browseRestored && !invalidLink && boundsRestoreError === null) {
         browseRestored = true;
-        const explicit = ["browse_country", "browse_region", "browse_offset", "points", "browse_bbox"].some((name) => initialUrl.searchParams.has(name));
+        const explicit = ["browse_country", "browse_region", "browse_subdivision", "browse_offset", "points", "browse_bbox"].some((name) => initialUrl.searchParams.has(name));
         const browse = explicit ? initialBrowse.state : { ...initialBrowse.state,
-          country: initialLink.request?.country ?? null, region: initialLink.request?.region ?? null };
+          country: initialLink.request?.country ?? null, region: initialLink.request?.region ?? null,
+          ...(initialLink.request?.subdivision ? { subdivision: initialLink.request.subdivision } : {}) };
         if (loaded[2].status === "rejected" && !browse.country && !browse.region && !browse.bbox && browse.offset === 0) return;
         try { await explore?.setState(browse); }
         catch (error) {
@@ -735,7 +745,7 @@
       ? data.mode === "semantic" ? `在当前范围的 ${data.total_candidates} 条资料中，` : `${data.total_candidates} 条资料有字词匹配，`
       : "";
     ui.resultSummary.textContent = `${candidates}展示 ${state.results.length} 条 · ${elapsed}`;
-    ui.resultContext.textContent = `本次查询：“${data.query}” · ${data.mode === "semantic" ? "语义检索" : "关键词基线"} · ${context.type ? typeLabel(context.type) : "全部类型"}${context.country ? ` · 国家／地区 ${context.country}` : ""}${context.region ? ` · 来源分区 ${context.region}` : ""} · 最多 ${context.limit} 条 · 语料 ${data.corpus_version}`;
+    ui.resultContext.textContent = `本次查询：“${data.query}” · ${data.mode === "semantic" ? "语义检索" : "关键词基线"} · ${context.type ? typeLabel(context.type) : "全部类型"}${context.country ? ` · 国家／地区 ${context.country}` : ""}${context.region ? ` · 来源分区 ${context.region}` : ""}${context.subdivision ? ` · 来源省／地区 ${explore?.subdivisionLabel(context.subdivision) ?? "已选来源省区"}` : ""} · 最多 ${context.limit} 条 · 语料 ${data.corpus_version}`;
     ui.resultContext.hidden = false;
     ui.empty.hidden = state.results.length > 0;
     if (state.results.length === 0) {
@@ -1005,13 +1015,21 @@
     }
     announce("正在检索本地资料。");
     try {
+      const expectedSubdivisionVersion = request.subdivision ? await explore?.validateSearchScope(request, controller.signal) : null;
+      if (request.subdivision && !expectedSubdivisionVersion) throw new Error("来源省区尚未确认，未放宽检索范围。");
+      if (sequence !== state.searchSequence) return;
       const data = await api<SearchResponse>("/api/search", {
         method: "POST", signal: controller.signal,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(request),
       });
       if (sequence !== state.searchSequence) return;
-      renderResults(data, { type: request.type, limit: request.limit, country: request.country, region: request.region });
+      if (request.subdivision) {
+        ArchSearchResearch.validateSubdivisionResponse(request, data, expectedSubdivisionVersion);
+        if (explore?.subdivisionVersion() !== expectedSubdivisionVersion) throw new Error("来源省区版本已改变，保留原成功检索，请刷新后重试。");
+      }
+      renderResults(data, { type: request.type, limit: request.limit, country: request.country, region: request.region,
+        ...(request.subdivision ? { subdivision: request.subdivision } : {}) });
     } catch (error) {
       if (isAbortError(error) || sequence !== state.searchSequence) return;
       state.failedSearch = { ...request };
@@ -1535,6 +1553,7 @@
     initialBoundsError: boundsRestoreError,
     initialState: boundsRestoreError !== null ? initialNonBoundsBrowse.state : undefined,
     onBoundsAction: () => { boundsRestoreError = null; browseRestored = true; },
+    onSubdivisionChange: () => { updateSearchAvailability(); },
     onSelect: (id, opener, options) => { void selectSite(id, { opener, moveMap: options?.moveMap ?? true }); },
     onFilterChange: () => {
       cancelLinkRestore();

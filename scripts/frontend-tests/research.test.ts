@@ -12,6 +12,7 @@ interface SearchSpec {
   limit: number;
   country?: string | null;
   region?: string | null;
+  subdivision?: string | null;
 }
 
 interface SearchResponse<T> {
@@ -21,6 +22,8 @@ interface SearchResponse<T> {
   elapsed_ms: number;
   total_candidates: number;
   results: T[];
+  subdivision?: string | null;
+  subdivision_version?: string | null;
 }
 
 interface ExportResult<T> {
@@ -63,6 +66,8 @@ interface ResearchHelpers {
   buildLink(base: URL, request: SearchSpec | null, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, browse?: BrowseState | null): string;
   createExport<T>(request: SearchSpec, response: SearchResponse<T>, exportedAt: string, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, selectedSite?: unknown, browse?: BrowseState | null, spatial?: ExportResult<T>['spatial'], registeredAreas?: RegisteredAreaSnapshot | null, currentCorpusVersion?: string | null, currentRegisteredAreasVersion?: string | null): ExportResult<T>;
   automaticPhaseYear(phase: { precision: string; start_year: number | null; end_year: number | null }): number | null;
+  normalizeSubdivision(country: string | null | undefined, value: unknown): string | null;
+  validateSubdivisionResponse(request: Pick<SearchSpec, 'country' | 'subdivision'>, response: { subdivision?: unknown; subdivision_version?: unknown }, expectedVersion?: string | null): string | null;
 }
 
 interface HistoryView {
@@ -70,7 +75,7 @@ interface HistoryView {
   frame_id: string | null; source_version: string | null;
 }
 
-interface BrowseState { country: string | null; region: string | null; offset: number; visible: boolean; bbox?: [number, number, number, number] | null; spatial_match_mode?: string; spatial_version?: string | null }
+interface BrowseState { country: string | null; region: string | null; offset: number; visible: boolean; bbox?: [number, number, number, number] | null; spatial_match_mode?: string; spatial_version?: string | null; subdivision?: string | null; subdivision_version?: string | null }
 
 const source = readFileSync(new URL('../../src/archsearch/frontend/research.ts', import.meta.url), 'utf8');
 const compiled = ts.transpileModule(source, {
@@ -88,6 +93,49 @@ assert.ok('parseLink' in candidate && typeof candidate.parseLink === 'function')
 assert.ok('buildLink' in candidate && typeof candidate.buildLink === 'function');
 assert.ok('createExport' in candidate && typeof candidate.createExport === 'function');
 const helpers = candidate as ResearchHelpers;
+
+test('source subdivision links keep successful search and browse filters independent', () => {
+  const searched: SearchSpec = { query: 'historic forts', mode: 'bm25', type: null, limit: 10, country: 'CA', subdivision: 'CA:ontario' };
+  const browse: BrowseState = { country: 'CA', region: null, subdivision: 'CA:quebec', offset: 50, visible: false };
+  const url = new URL(helpers.buildLink(new URL('https://example.org/'), searched, null, { site: null, phase: null }, browse));
+  assert.equal(url.searchParams.get('subdivision'), 'CA:ontario');
+  assert.equal(url.searchParams.get('browse_subdivision'), 'CA:quebec');
+  assert.deepEqual(plain(helpers.parseLink(url).request), searched);
+  assert.equal(helpers.parseBrowse(url).state.subdivision, 'CA:quebec');
+  assert.equal(helpers.parseBrowse(url).state.offset, 50);
+});
+
+test('subdivision links reject orphan, foreign, duplicate and malformed conditions without widening', () => {
+  for (const value of ['?q=fort&subdivision=CA:ontario', '?q=fort&country=FR&subdivision=CA:ontario', '?q=fort&country=CA&subdivision=CA:ontario&subdivision=CA:quebec', '?q=fort&country=CA&subdivision=', '?q=fort&country=CA&subdivision=ca:ontario', '?q=fort&country=CA&subdivision=CA:../ontario']) {
+    assert.ok(helpers.parseLink(new URL(value, 'https://example.org/')).error, value);
+  }
+  for (const value of ['?browse_subdivision=CA:ontario', '?browse_country=FR&browse_subdivision=CA:ontario', '?browse_country=CA&browse_subdivision=CA:ontario&browse_subdivision=CA:quebec']) {
+    const parsed = helpers.parseBrowse(new URL(value, 'https://example.org/'));
+    assert.ok(parsed.error, value); assert.equal(parsed.state.subdivision, undefined);
+  }
+  assert.equal(helpers.parseLink(new URL('?q=fort&country=CA', 'https://example.org/')).error, null);
+  assert.equal(helpers.parseBrowse(new URL('?browse_country=CA', 'https://example.org/')).error, null);
+});
+
+test('active subdivision responses require their exact echo and actual source version', () => {
+  const scope = { country: 'CA', subdivision: 'CA:ontario' };
+  for (const reply of [{}, { subdivision: 'CA:ontario' }, { subdivision: 'CA:quebec', subdivision_version: 'v1' }, { subdivision: 'CA:ontario', subdivision_version: 'v2' }]) {
+    assert.throws(() => helpers.validateSubdivisionResponse(scope, reply, 'v1'), /省区.*版本/u);
+  }
+  assert.equal(helpers.validateSubdivisionResponse(scope, { subdivision: 'CA:ontario', subdivision_version: 'v1' }, 'v1'), 'v1');
+  assert.equal(helpers.validateSubdivisionResponse({ country: 'CA' }, {}), null);
+});
+
+test('exports retain independently committed search and browse subdivision versions and reject desired-only scope', () => {
+  const searched: SearchSpec = { query: 'fort', mode: 'bm25', type: null, limit: 10, country: 'CA', subdivision: 'CA:ontario' };
+  const response = { query: 'fort', mode: 'bm25' as const, corpus_version: 'v13', elapsed_ms: 2, total_candidates: 0, results: [], subdivision: 'CA:ontario', subdivision_version: 'registry-v1' };
+  const browse: BrowseState = { country: 'CA', region: null, offset: 0, visible: true, subdivision: 'CA:quebec', subdivision_version: 'registry-v2' };
+  const exported = helpers.createExport(searched, response, '2026-11-05T00:00:00Z', null, { site: null, phase: null }, null, browse);
+  assert.equal(exported.schema_version, 2); assert.equal(exported.request.subdivision, 'CA:ontario');
+  assert.equal(exported.response.subdivision_version, 'registry-v1'); assert.equal(exported.browse?.subdivision_version, 'registry-v2');
+  assert.throws(() => helpers.createExport(searched, { ...response, subdivision_version: null }, '2026-11-05T00:00:00Z'), /省区/u);
+  assert.throws(() => helpers.createExport(searched, response, '2026-11-05T00:00:00Z', null, { site: null, phase: null }, null, { ...browse, subdivision_version: undefined }), /尚未成功/u);
+});
 
 function registeredAreaFixture(): RegisteredAreaSnapshot {
   return {
@@ -328,6 +376,11 @@ test('export provenance includes source release, attribution, license and interp
   assert.equal(canada?.version, 'canada-dfhd-v1');
   assert.equal(canada?.license, 'Open Government Licence - Canada; Wikidata structured claims CC0');
   assert.match(canada?.note ?? '', /Parks Canada.*reference points.*separate from project identity approval/u);
+  const subdivisions = exported.sources.find(source => source.version === 'source-subdivisions-v1');
+  assert.equal(subdivisions?.license, 'Mixed rights — DFHD fields OGL-Canada; CRHP and Parks Canada webpages retain individual rights');
+  assert.equal(subdivisions?.uri, 'https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/SUBDIVISIONS-LICENSE.md');
+  assert.match(subdivisions?.note ?? '', /Only the 986 DFHD objects.*CRHP and Parks Canada.*no blanket OGL or CC0 grant/u);
+  assert.match(subdivisions?.note ?? '', /original fields.*source hashes.*No coordinate geocoding, component inheritance/u);
 });
 
 test('exports refuse mismatched queries or modes instead of mislabelling earlier results', () => {

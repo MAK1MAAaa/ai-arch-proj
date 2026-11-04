@@ -30,7 +30,8 @@ const ArchSearchExplore = (() => {
             throw new Error("目录起始位置应为0至1000000的整数。");
         if (typeof visible !== "boolean")
             throw new Error("目录点位开关无效。");
-        return { country, region, offset, visible, bbox: ArchSearchResearch.normalizeBBox(value.bbox) };
+        const subdivision = ArchSearchResearch.normalizeSubdivision(country, value.subdivision);
+        return { country, region, offset, visible, bbox: ArchSearchResearch.normalizeBBox(value.bbox), ...(subdivision ? { subdivision } : {}) };
     }
     function insideBBox(point, bbox) {
         const [west, south, east, north] = bbox;
@@ -325,7 +326,52 @@ const ArchSearchExplore = (() => {
             throw new Error("来源定位点缺少版本与许可统计，未替换已有地图。");
         return { corpus_version: coverage.corpus_version, spatial_version: spatial?.version ?? null, spatial_match_mode: spatial?.ready ? "source-or-representative" : "representative-only", total: coverage.total, points };
     }
+    function parseSubdivisions(value, country, coverage, status) {
+        const total = coverage.countries.find((item) => item.id === country)?.count;
+        if (!record(value) || value.country !== country || value.corpus_version !== coverage.corpus_version
+            || typeof value.ready !== "boolean" || !text(value.note) || total === undefined)
+            throw new Error("来源省区选项与国家或语料版本不一致。");
+        if (!value.ready)
+            return { ready: false, reason: typeof value.reason === "string" ? value.reason : "来源省区索引未准备。", subdivision_version: null,
+                corpus_version: coverage.corpus_version, country, supported: false, total, assigned: 0, unassigned: total, subdivisions: [], note: value.note };
+        if (!version(value.subdivision_version) || (status?.ready && value.subdivision_version !== status.version)
+            || typeof value.supported !== "boolean" || value.total !== total || !count(value.assigned) || !count(value.unassigned)
+            || value.assigned + value.unassigned !== total || !Array.isArray(value.subdivisions))
+            throw new Error("来源省区统计、索引版本或成员数量不一致。");
+        const seen = new Set();
+        const assigned = value.assigned;
+        const subdivisions = value.subdivisions.map((item) => {
+            if (!record(item) || !text(item.id) || ArchSearchResearch.normalizeSubdivision(country, item.id) !== item.id || seen.has(item.id)
+                || !text(item.label) || !count(item.count) || item.count > assigned)
+                throw new Error("来源省区选项的标识或计数无效。");
+            seen.add(item.id);
+            return { id: item.id, label: item.label, count: item.count };
+        });
+        if ((!value.supported && (value.assigned !== 0 || subdivisions.length !== 0)) || (value.supported && subdivisions.length === 0)
+            || subdivisions.reduce((sum, item) => sum + item.count, 0) < value.assigned)
+            throw new Error("来源省区能力与成员统计不一致。");
+        return { ready: true, reason: null, subdivision_version: value.subdivision_version, corpus_version: coverage.corpus_version,
+            country, supported: value.supported, total, assigned: value.assigned, unassigned: value.unassigned, subdivisions, note: value.note };
+    }
+    function parseSubdivisionCatalogue(value, catalogue, scope, options) {
+        const expected = options.subdivisions.find((item) => item.id === scope.subdivision);
+        if (!record(value) || !expected || value.corpus_version !== catalogue.corpus_version || value.spatial_version !== catalogue.spatial_version
+            || value.total !== expected.count || !Array.isArray(value.points) || value.points.length !== expected.count)
+            throw new Error("省区点位目录与来源成员统计不一致。");
+        const subdivisionVersion = ArchSearchResearch.validateSubdivisionResponse(scope, value, options.subdivision_version);
+        const points = value.points.map((item) => parsePoint(item));
+        const known = new Map(catalogue.points.map((point) => [point.id, point]));
+        if (new Set(points.map((point) => point.id)).size !== points.length || points.some((point) => !point.countries.includes(scope.country)
+            || JSON.stringify(point) !== JSON.stringify(known.get(point.id))))
+            throw new Error("省区点位身份或原始来源记录与全库不一致。");
+        const wantedIds = new Set(points.map((point) => point.id));
+        if (catalogue.points.filter((point) => wantedIds.has(point.id)).some((point, index) => point.id !== points[index].id))
+            throw new Error("省区点位目录顺序与全库不一致。");
+        return { ...catalogue, total: points.length, points, subdivision: scope.subdivision, subdivision_version: subdivisionVersion };
+    }
     function parsePage(value, catalogue, state) {
+        if (state.subdivision)
+            ArchSearchResearch.validateSubdivisionResponse(state, record(value) ? value : {}, catalogue.subdivision_version);
         const points = catalogue.points.filter((point) => matches(point, state, catalogue.spatial_match_mode));
         if (!record(value) || !Object.hasOwn(value, "bbox") || !sameBBox(ArchSearchResearch.normalizeBBox(value.bbox), state.bbox)
             || value.spatial_match_mode !== catalogue.spatial_match_mode || value.spatial_version !== catalogue.spatial_version)
@@ -345,9 +391,10 @@ const ArchSearchExplore = (() => {
             return site.id !== points[state.offset + index]?.id || !point || JSON.stringify(point) !== JSON.stringify(site);
         }))
             throw new Error("目录分页与点位来源记录不一致。");
-        return { corpus_version: catalogue.corpus_version, total: points.length, offset: state.offset, limit: pageSize, bbox: state.bbox ? [...state.bbox] : null, spatial_match_mode: catalogue.spatial_match_mode, spatial_version: catalogue.spatial_version, sites };
+        return { corpus_version: catalogue.corpus_version, total: points.length, offset: state.offset, limit: pageSize, bbox: state.bbox ? [...state.bbox] : null, spatial_match_mode: catalogue.spatial_match_mode, spatial_version: catalogue.spatial_version, sites,
+            ...(state.subdivision ? { subdivision: state.subdivision, subdivision_version: catalogue.subdivision_version } : {}) };
     }
-    function create({ map, initialState, initialBoundsError, onBoundsAction, onSelect, onFilterChange, onStateChange, onCommittedState, onCatalogue, onFeedback }) {
+    function create({ map, initialState, initialBoundsError, onBoundsAction, onSelect, onFilterChange, onStateChange, onCommittedState, onCatalogue, onFeedback, onSubdivisionChange }) {
         const get = (id) => {
             const node = document.getElementById(id);
             if (!node)
@@ -367,6 +414,9 @@ const ArchSearchExplore = (() => {
             limit: get("explore-limit-note"),
             captureBounds: get("explore-capture-bounds"), clearBounds: get("explore-clear-bounds"),
             boundsStatus: get("explore-bounds-status"),
+            subdivisionFilter: get("explore-subdivision-filter"), subdivision: get("explore-subdivision"),
+            subdivisionFeedback: get("explore-subdivision-feedback"),
+            subdivisionNote: get("explore-subdivision-note"), subdivisionRetry: get("explore-subdivision-retry"),
         };
         const limitNote = ui.limit.textContent ?? "";
         let desired = normalizeState(initialState ?? {});
@@ -382,6 +432,15 @@ const ArchSearchExplore = (() => {
         let layer = null;
         let markers = new Map();
         let selectedId = null;
+        let subdivisionStatus;
+        let subdivisions = null;
+        let subdivisionCatalogue = null;
+        let subdivisionController = null;
+        let subdivisionSequence = 0;
+        let subdivisionLoading = false;
+        let subdivisionError = null;
+        let subdivisionPending = null;
+        const subdivisionLabels = new Map();
         const buttons = new Map();
         let renderer = null;
         if (map && typeof L !== "undefined") {
@@ -397,7 +456,134 @@ const ArchSearchExplore = (() => {
             onFeedback?.(message);
         }
         function getCommittedState() {
-            return applied && page && catalogue ? { ...copyState(applied), visible: desired.visible, spatial_match_mode: page.spatial_match_mode, spatial_version: catalogue.spatial_version } : null;
+            return applied && page && catalogue ? { ...copyState(applied), visible: desired.visible, spatial_match_mode: page.spatial_match_mode, spatial_version: catalogue.spatial_version,
+                ...(applied.subdivision ? { subdivision_version: page.subdivision_version } : {}) } : null;
+        }
+        function displayedCatalogue() { return applied?.subdivision ? subdivisionCatalogue : catalogue; }
+        function renderSubdivisions() {
+            const options = subdivisions?.country === desired.country ? subdivisions : null;
+            const visible = Boolean(desired.country && (subdivisionStatus !== undefined || desired.subdivision));
+            ui.subdivisionFeedback.hidden = !visible;
+            ui.subdivisionFilter.hidden = !visible || !options?.supported && !desired.subdivision;
+            ui.subdivisionNote.hidden = !visible;
+            const all = element("option", undefined, "全部来源省／地区");
+            all.value = "";
+            const entries = options?.ready && options.supported ? options.subdivisions : [];
+            const choices = entries.map((item) => { const option = element("option", undefined, `${item.label} · ${item.count}`); option.value = item.id; return option; });
+            if (desired.subdivision && !entries.some((item) => item.id === desired.subdivision)) {
+                const missing = element("option", undefined, `${subdivisionLabels.get(desired.subdivision) ?? desired.subdivision}（尚未确认）`);
+                missing.value = desired.subdivision;
+                missing.disabled = true;
+                choices.push(missing);
+            }
+            ui.subdivision.replaceChildren(all, ...choices);
+            ui.subdivision.value = desired.subdivision ?? "";
+            ui.subdivision.disabled = subdivisionLoading || entries.length === 0 && !desired.subdivision;
+            ui.subdivisionFilter.setAttribute("aria-busy", String(subdivisionLoading));
+            const appliedDiffers = (desired.subdivision ?? null) !== (applied?.subdivision ?? null) || desired.country !== applied?.country
+                || Boolean(desired.subdivision && options?.ready && page?.subdivision_version !== options.subdivision_version);
+            ui.subdivisionNote.textContent = subdivisionLoading ? "正在读取该国家／地区的来源省区；已显示目录与检索排名保持原样。"
+                : subdivisionError ? `来源省区暂不可用：${subdivisionError} 已显示视图保留，未放宽所选省区。`
+                    : options?.ready && options.supported ? `${options.assigned.toLocaleString("zh-CN")} / ${options.total.toLocaleString("zh-CN")} 条有采用的来源省区证据。${options.unassigned ? `${options.unassigned.toLocaleString("zh-CN")} 条未采用省区证据，仍在国家目录中。` : "当前国家目录均有采用的来源省区关联。"}按对象成员计数，跨省对象可计入多项；不表示各定位点所属省。${options.note}${appliedDiffers && desired.subdivision ? " 所选省区尚未成功应用，地图和目录仍保留原范围。" : ""}`
+                        : options?.note ?? subdivisionStatus?.reason ?? (subdivisionStatus === null ? "当前服务未提供来源省区能力；国家目录仍可使用。" : "选择有来源证据的国家／地区后，可按原始省区成员字段浏览。");
+            ui.subdivisionRetry.hidden = !visible || !subdivisionError;
+            ui.subdivisionRetry.disabled = subdivisionLoading;
+        }
+        function subdivisionReady() {
+            return !desired.subdivision || Boolean(coverage && subdivisions?.ready && subdivisions.supported && subdivisions.country === desired.country
+                && subdivisions.subdivisions.some((item) => item.id === desired.subdivision) && !subdivisionLoading && !subdivisionError);
+        }
+        async function loadSubdivisions(country, force = false, referenceCoverage = coverage) {
+            if (!country)
+                return null;
+            if (!force && subdivisionPending?.country === country)
+                return subdivisionPending.promise;
+            if (!force && subdivisions?.country === country && subdivisions.ready && subdivisions.corpus_version === referenceCoverage?.corpus_version
+                && (!subdivisionStatus?.ready || subdivisions.subdivision_version === subdivisionStatus.version))
+                return subdivisions;
+            subdivisionController?.abort();
+            const current = ++subdivisionSequence;
+            const abort = new AbortController();
+            subdivisionController = abort;
+            subdivisionLoading = true;
+            subdivisionError = null;
+            renderSubdivisions();
+            onSubdivisionChange?.();
+            const promise = (async () => {
+                await Promise.resolve();
+                try {
+                    if (!referenceCoverage)
+                        throw new Error("请先读取本地目录覆盖统计。");
+                    if (subdivisionStatus === null || subdivisionStatus?.ready === false)
+                        throw new Error(subdivisionStatus?.reason ?? "当前服务未提供来源省区索引。");
+                    const raw = await json(`/api/subdivisions?country=${country}`, abort.signal);
+                    if (abort.signal.aborted || current !== subdivisionSequence || country !== desired.country)
+                        return null;
+                    const parsed = parseSubdivisions(raw, country, referenceCoverage, subdivisionStatus);
+                    if (!parsed.ready)
+                        throw new Error(parsed.reason ?? "来源省区索引未准备。");
+                    subdivisions = parsed;
+                    for (const item of parsed.subdivisions)
+                        subdivisionLabels.set(item.id, item.label);
+                    return parsed;
+                }
+                catch (error) {
+                    if (abort.signal.aborted || current !== subdivisionSequence)
+                        return null;
+                    subdivisionError = error instanceof Error ? error.message : "读取来源省区失败。";
+                    throw error;
+                }
+                finally {
+                    if (current === subdivisionSequence) {
+                        subdivisionLoading = false;
+                        subdivisionController = null;
+                        subdivisionPending = null;
+                        renderSubdivisions();
+                        onSubdivisionChange?.();
+                    }
+                }
+            })();
+            subdivisionPending = { country, promise };
+            return promise;
+        }
+        function configureSubdivisions(value) {
+            const previous = subdivisionStatus;
+            subdivisionStatus = value && typeof value.ready === "boolean" ? { ready: value.ready, reason: typeof value.reason === "string" ? value.reason : null, version: version(value.version) ? value.version : null } : null;
+            const changed = previous?.ready !== subdivisionStatus?.ready || previous?.version !== subdivisionStatus?.version;
+            if (changed) {
+                subdivisionController?.abort();
+                subdivisionSequence++;
+                subdivisionLoading = false;
+                subdivisionPending = null;
+                subdivisions = null;
+                subdivisionLabels.clear();
+                if (desired.subdivision) {
+                    controller?.abort();
+                    sequence++;
+                    loading = false;
+                    controller = null;
+                    feedback("来源省区索引状态或版本已改变；保留最后成功目录，请重试省区条件。", true);
+                }
+            }
+            renderSubdivisions();
+            renderControls();
+            onSubdivisionChange?.();
+            if (desired.country && coverage && subdivisionStatus?.ready)
+                void loadSubdivisions(desired.country, changed).catch(() => undefined);
+        }
+        async function validateSearchScope(scope, signal) {
+            const subdivision = ArchSearchResearch.normalizeSubdivision(scope.country, scope.subdivision);
+            if (!subdivision)
+                return null;
+            if (!scope.country || !coverage || subdivisionStatus === null || subdivisionStatus?.ready === false)
+                throw new Error("来源省区尚未就绪，请刷新或明确清除该条件，未扩大检索范围。");
+            const raw = await json(`/api/subdivisions?country=${scope.country}`, signal);
+            const parsed = parseSubdivisions(raw, scope.country, coverage, subdivisionStatus);
+            if (!parsed.ready || !parsed.supported || !parsed.subdivisions.some((item) => item.id === subdivision))
+                throw new Error(parsed.reason ?? "该来源省区不在当前可用资料中，未扩大检索范围。");
+            for (const item of parsed.subdivisions)
+                subdivisionLabels.set(item.id, item.label);
+            return parsed.subdivision_version;
         }
         function committed() {
             const state = getCommittedState();
@@ -478,10 +664,11 @@ const ArchSearchExplore = (() => {
             ui.panel.setAttribute("aria-busy", String(loading));
             ui.country.disabled = coverage === null;
             ui.region.disabled = coverage === null;
-            ui.clear.disabled = desired.country === null && desired.region === null && desired.offset === 0;
+            ui.clear.disabled = desired.country === null && desired.region === null && !desired.subdivision && desired.offset === 0;
             ui.points.checked = desired.visible;
             ui.points.disabled = !map || !catalogue;
-            ui.fit.disabled = !map || !catalogue || !catalogue.points.some((point) => matches(point, applied ?? desired, catalogue.spatial_match_mode) && scopedPlacements(point, applied ?? desired).length > 0);
+            const shown = displayedCatalogue();
+            ui.fit.disabled = !map || !shown || !shown.points.some((point) => matches(point, applied ?? desired, shown.spatial_match_mode) && scopedPlacements(point, applied ?? desired).length > 0);
             ui.captureBounds.disabled = !map || (!catalogue && boundsError === null);
             ui.captureBounds.textContent = desired.bbox ? "更新为当前地图范围" : "按当前地图范围浏览";
             ui.clearBounds.disabled = boundsError === null && !desired.bbox && !applied?.bbox;
@@ -503,6 +690,7 @@ const ArchSearchExplore = (() => {
                 else if (!desired.visible && map.hasLayer(layer))
                     map.removeLayer(layer);
             }
+            renderSubdivisions();
         }
         function renderOptions() {
             if (!coverage)
@@ -527,6 +715,7 @@ const ArchSearchExplore = (() => {
             };
             populate(ui.country, coverage.countries, "全部国家／地区", desired.country);
             populate(ui.region, coverage.regions, "全部来源分区", desired.region, true);
+            renderSubdivisions();
         }
         function select(id) {
             selectedId = id;
@@ -626,6 +815,8 @@ const ArchSearchExplore = (() => {
                 parameters.set("country", wanted.country);
             if (wanted.region)
                 parameters.set("region", wanted.region);
+            if (wanted.subdivision)
+                parameters.set("subdivision", wanted.subdivision);
             if (wanted.bbox)
                 parameters.set("bbox", wanted.bbox.join(","));
             loading = true;
@@ -650,9 +841,23 @@ const ArchSearchExplore = (() => {
                 const nextCatalogue = reload ? parseCatalogue(catalogueRaw, nextCoverage) : catalogue;
                 if (!nextCatalogue)
                     throw new Error("全库点位尚未准备。");
-                const nextPage = parsePage(pageRaw, nextCatalogue, wanted);
-                const replacePoints = nextCatalogue !== catalogue || !applied || applied.country !== wanted.country || applied.region !== wanted.region || !sameBBox(applied.bbox, wanted.bbox);
-                const next = replacePoints ? buildLayer(nextCatalogue.points.filter((point) => matches(point, wanted, nextCatalogue.spatial_match_mode)), wanted) : { layer, markers };
+                let nextSubdivisionCatalogue = null;
+                if (wanted.subdivision) {
+                    const sourceOptions = await loadSubdivisions(wanted.country, refresh, nextCoverage);
+                    if (abort.signal.aborted || current !== sequence)
+                        return;
+                    if (!sourceOptions?.ready || !sourceOptions.supported || sourceOptions.corpus_version !== nextCoverage.corpus_version)
+                        throw new Error("所选来源省区尚未确认，未放宽目录范围。");
+                    const scopedRaw = await json(`/api/catalogue?country=${wanted.country}&subdivision=${encodeURIComponent(wanted.subdivision)}`, abort.signal);
+                    if (abort.signal.aborted || current !== sequence)
+                        return;
+                    nextSubdivisionCatalogue = parseSubdivisionCatalogue(scopedRaw, nextCatalogue, wanted, sourceOptions);
+                }
+                const viewCatalogue = nextSubdivisionCatalogue ?? nextCatalogue;
+                const nextPage = parsePage(pageRaw, viewCatalogue, wanted);
+                const replacePoints = nextCatalogue !== catalogue || !applied || applied.country !== wanted.country || applied.region !== wanted.region
+                    || (applied.subdivision ?? null) !== (wanted.subdivision ?? null) || page?.subdivision_version !== nextPage.subdivision_version || !sameBBox(applied.bbox, wanted.bbox);
+                const next = replacePoints ? buildLayer(viewCatalogue.points.filter((point) => matches(point, wanted, viewCatalogue.spatial_match_mode)), wanted) : { layer, markers };
                 pendingLayer = replacePoints ? next.layer : null;
                 if (abort.signal.aborted || current !== sequence)
                     return;
@@ -664,6 +869,7 @@ const ArchSearchExplore = (() => {
                 }
                 coverage = nextCoverage;
                 catalogue = nextCatalogue;
+                subdivisionCatalogue = nextSubdivisionCatalogue;
                 page = nextPage;
                 applied = { ...wanted };
                 layer = next.layer;
@@ -677,7 +883,7 @@ const ArchSearchExplore = (() => {
                 renderPage();
                 if (selectedId !== null)
                     select(selectedId);
-                const scoped = nextCatalogue.points.filter((point) => matches(point, wanted, nextCatalogue.spatial_match_mode));
+                const scoped = viewCatalogue.points.filter((point) => matches(point, wanted, viewCatalogue.spatial_match_mode));
                 const mapped = scoped.filter((point) => point.location_status === "mapped").length;
                 const polar = scoped.filter((point) => point.location_status === "polar").length;
                 const unknown = scoped.filter((point) => point.location_status === "unknown").length;
@@ -689,7 +895,10 @@ const ArchSearchExplore = (() => {
                     onCatalogue?.(nextCatalogue.points.map((point) => ({ ...point,
                         repr_point: point.repr_point === null ? null : [...point.repr_point], countries: [...point.countries], regions: [...point.regions],
                         source_points: point.source_points.map((value) => [...value]), source_location_records: point.source_location_records.map((source) => ({ ...source, coordinate: [...source.coordinate] })) })));
+                if (!wanted.subdivision && wanted.country && subdivisionStatus?.ready)
+                    void loadSubdivisions(wanted.country, refresh).catch(() => undefined);
                 committed();
+                onSubdivisionChange?.();
             }
             catch (error) {
                 if (abort.signal.aborted || current !== sequence)
@@ -713,19 +922,35 @@ const ArchSearchExplore = (() => {
         function load() { return request(true); }
         async function setState(value, options = {}) {
             let next;
+            const merged = { ...desired, ...value };
+            if (value.country !== undefined && value.country !== desired.country && !Object.hasOwn(value, "subdivision"))
+                delete merged.subdivision;
+            if (!Object.hasOwn(value, "offset") && (value.country !== undefined && value.country !== desired.country
+                || Object.hasOwn(value, "subdivision") && (value.subdivision ?? null) !== (desired.subdivision ?? null)))
+                merged.offset = 0;
             try {
-                next = normalizeState({ ...desired, ...value });
+                next = normalizeState(merged);
             }
             catch (error) {
                 feedback(error instanceof Error ? error.message : "目录条件无效。", true);
                 throw error;
             }
-            const filterChanged = next.country !== desired.country || next.region !== desired.region;
+            const countryChanged = next.country !== desired.country;
+            const filterChanged = countryChanged || next.region !== desired.region || (next.subdivision ?? null) !== (desired.subdivision ?? null);
             const bboxChanged = !sameBBox(next.bbox, desired.bbox);
             const pageChanged = next.offset !== desired.offset;
             const visibilityChanged = next.visible !== desired.visible;
             const changed = filterChanged || bboxChanged || pageChanged || next.visible !== desired.visible;
             desired = next;
+            if (countryChanged) {
+                subdivisionController?.abort();
+                subdivisionSequence++;
+                subdivisionController = null;
+                subdivisionPending = null;
+                subdivisionLoading = false;
+                subdivisionError = null;
+                subdivisions = null;
+            }
             renderOptions();
             renderControls();
             if (options.notify && changed) {
@@ -733,7 +958,10 @@ const ArchSearchExplore = (() => {
                     onFilterChange?.(copyState(desired));
                 onStateChange?.(copyState(desired));
             }
-            if (filterChanged || bboxChanged || pageChanged || !catalogue || !sameBBox(desired.bbox, applied?.bbox))
+            const unapplied = !applied || desired.country !== applied.country || desired.region !== applied.region
+                || (desired.subdivision ?? null) !== (applied.subdivision ?? null) || desired.offset !== applied.offset
+                || Boolean(desired.subdivision && (!subdivisions?.ready || page?.subdivision_version !== subdivisions.subdivision_version));
+            if (filterChanged || bboxChanged || pageChanged || !catalogue || (!loading && unapplied) || !sameBBox(desired.bbox, applied?.bbox))
                 await request(false);
             else if (visibilityChanged)
                 committed();
@@ -741,6 +969,15 @@ const ArchSearchExplore = (() => {
         ui.country.addEventListener("change", () => { void setState({ country: ui.country.value || null, offset: 0 }, { notify: true }).catch(() => undefined); });
         ui.region.addEventListener("change", () => { void setState({ region: ui.region.value || null, offset: 0 }, { notify: true }).catch(() => undefined); });
         ui.clear.addEventListener("click", () => { void setState({ country: null, region: null, offset: 0 }, { notify: true }).catch(() => undefined); });
+        ui.subdivision.addEventListener("change", () => { void setState({ subdivision: ui.subdivision.value || null, offset: 0 }, { notify: true }).catch(() => undefined); });
+        ui.subdivisionRetry.addEventListener("click", () => {
+            if (document.activeElement === ui.subdivisionRetry)
+                ui.subdivisionNote.focus({ preventScroll: true });
+            if (desired.subdivision)
+                void request(true).catch(() => undefined);
+            else
+                void loadSubdivisions(desired.country, true).catch(() => undefined);
+        });
         ui.points.addEventListener("change", () => { void setState({ visible: ui.points.checked }, { notify: true }).catch(() => undefined); });
         ui.captureBounds.addEventListener("click", () => {
             if (!map)
@@ -765,15 +1002,19 @@ const ArchSearchExplore = (() => {
             void setState({ offset: page.offset + page.limit }, { notify: true }).catch(() => undefined); });
         ui.retry.addEventListener("click", () => { void load().catch(() => undefined); });
         ui.fit.addEventListener("click", () => {
-            if (!map || !catalogue)
+            const shown = displayedCatalogue();
+            if (!map || !shown)
                 return;
-            const points = catalogue.points.filter((point) => matches(point, applied ?? desired, catalogue.spatial_match_mode)).flatMap((point) => scopedPlacements(point, applied ?? desired))
+            const points = shown.points.filter((point) => matches(point, applied ?? desired, shown.spatial_match_mode)).flatMap((point) => scopedPlacements(point, applied ?? desired))
                 .map((point) => [point.coordinate[1], point.coordinate[0]]);
             if (points.length)
                 map.fitBounds(L.latLngBounds(ArchSearchMapView.wrapCoordinates(points)), { padding: [40, 40], maxZoom: 9, animate: false });
         });
         renderControls();
         return { load, getState: () => copyState(desired), getCommittedState, setState, select,
+            configureSubdivisions, validateSearchScope, subdivisionReady,
+            subdivisionLabel: (id) => subdivisionLabels.get(id) ?? null,
+            subdivisionVersion: () => subdivisionStatus?.ready ? subdivisionStatus.version : subdivisionStatus === undefined ? subdivisions?.subdivision_version ?? null : null,
             getPoint: (id) => {
                 const point = catalogue?.points.find((item) => item.id === id);
                 return point?.repr_point ? [...point.repr_point] : null;
@@ -795,6 +1036,6 @@ const ArchSearchExplore = (() => {
             },
         };
     }
-    return { create, normalizeState, matches, coordinate, displayCoordinates, locationStatus, placements, parseSpatial, parseCoverage, parseCatalogue, parsePage, insideBBox, capturedBounds };
+    return { create, normalizeState, matches, coordinate, displayCoordinates, locationStatus, placements, parseSpatial, parseCoverage, parseCatalogue, parsePage, insideBBox, capturedBounds, parseSubdivisions, parseSubdivisionCatalogue };
 })();
 //# sourceMappingURL=explore.js.map

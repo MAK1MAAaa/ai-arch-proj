@@ -1,0 +1,23 @@
+{
+  "canada_spec_sha256": "4cfdd4fb896c2769de3d77daaf481fdb1544fc79d0e6d8db4911d97d8ad8afbc",
+  "corpus_version": "global-v13",
+  "counts": {
+    "assigned_sites": 992,
+    "memberships": 993,
+    "subdivisions": 13
+  },
+  "files": {
+    "subdivision_review.json": {
+      "sha256": "2b8515d58b0cf5230c22eb84ba0bfb87a90f4393ec0c332c35baf8a50f2486f5"
+    },
+    "subdivisions.json": {
+      "sha256": "db6cd6f641fa4fd29dfd0ed435a426f8921851c646b8e8fb225bfbc079fcab63"
+    }
+  },
+  "policy": "Source-declared whole-object membership only; no component inheritance, coordinate geocoding, borders, chronology or corpus-text changes.",
+  "review_sha256": "2b8515d58b0cf5230c22eb84ba0bfb87a90f4393ec0c332c35baf8a50f2486f5",
+  "schema_version": 1,
+  "source_facts_sha256": "1036ea2a007e6a5096de0d985ea531d2f375abe7748577238cfed6118ff0c4b7",
+  "source_review_sha256": "66209c9c08c4ecaf2e761dae7fa3a12720c133c63c113363cce8b53ccc6c5d3b",
+  "version": "source-subdivisions-v1"
+}

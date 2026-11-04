@@ -89,10 +89,12 @@
           <div class="explore-controls">
             <div class="explore-filter"><label for="explore-region">来源分区</label><select id="explore-region" aria-describedby="explore-filter-note" disabled><option value="">全部分区</option></select></div>
             <div class="explore-filter"><label for="explore-country">国家／地区</label><select id="explore-country" aria-describedby="explore-filter-note" disabled><option value="">全部国家／地区</option></select></div>
+            <div id="explore-subdivision-filter" class="explore-filter explore-subdivision-filter" hidden><label for="explore-subdivision">来源省／地区</label><select id="explore-subdivision" aria-describedby="explore-subdivision-note explore-filter-note" disabled><option value="">全部来源省／地区</option></select></div>
             <button id="explore-clear" class="interaction-button" type="button" disabled>清除地域</button>
             <label class="explore-points-toggle"><input id="explore-points" type="checkbox" checked disabled><span>显示全库点位</span></label>
             <button id="explore-fit" class="interaction-button" type="button" disabled>定位主图范围</button>
           </div>
+          <div id="explore-subdivision-feedback" class="explore-subdivision-feedback" hidden><p id="explore-subdivision-note" class="explore-note" role="status" aria-live="polite" tabindex="-1" hidden></p><button id="explore-subdivision-retry" class="interaction-button" type="button" hidden>重试省区资料</button></div>
           <div class="explore-bounds-controls" role="group" aria-label="固定地图浏览范围">
             <button id="explore-capture-bounds" class="interaction-button" type="button" disabled aria-describedby="explore-bounds-status">按当前地图范围浏览</button>
             <button id="explore-clear-bounds" class="interaction-button" type="button" disabled>清除地图范围</button>

@@ -1,0 +1,298 @@
+{
+  "canada_spec_sha256": "4cfdd4fb896c2769de3d77daaf481fdb1544fc79d0e6d8db4911d97d8ad8afbc",
+  "corpus_countries_sha256": "b89254f8c62b5bb9c59f454d5d3f209eb5237c100fe3ffcba5b15c899b09e102",
+  "corpus_ids_sha256": "589ef4c5bc4d50085d9fea156edc7a3087d7ee0c20bf1d01ff90cbece79ea401",
+  "corpus_version": "global-v13",
+  "extra_memberships": [
+    {
+      "artifact": {
+        "filename": "3b33d499aae886ea-a816aaed7f-fort-conger-registry.html",
+        "sha256": "3b33d499aae886eaa8133cf5d2838440583ab5447ec27ae1fecd8fa3820473da",
+        "uri": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=16360&pid=0"
+      },
+      "field": "LocationDisplay",
+      "raw_value": "Near Alert, Nunavut",
+      "review_method": "Independent agent comparison of original pinned CRHP PlaceId16360/CommonName/LocationDisplay, explicit Nunavut jurisdiction, original active P477 identity and current normal HTTPS bytes; not coordinates, a component-to-parent inference, expert/human approval, or a new chronology/point.",
+      "role": "explicit_place_location",
+      "site_id": "wd:Q3077812",
+      "source": {
+        "accessed": "2026-11-05",
+        "excerpt": "Near Alert, Nunavut",
+        "id": "subdivision:crhp:16360",
+        "license": null,
+        "publisher": "Parks Canada / Canadian Register of Historic Places",
+        "revision": "sha256:3b33d499aae886eaa8133cf5d2838440583ab5447ec27ae1fecd8fa3820473da; original meta LocationDisplay / ProvinceId; PlaceId=16360",
+        "title": "Fort Conger — source location",
+        "uri": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=16360&pid=0"
+      },
+      "source_label": null,
+      "source_row": {
+        "CommonName": "Fort Conger",
+        "Location": "Near Alert, Nunavut",
+        "LocationDisplay": "Near Alert, Nunavut",
+        "PlaceId": "16360",
+        "ProvinceId": "100067"
+      },
+      "source_row_sha256": "886a6135d29e37ab6d79d8b9118807e7b384c75e97a01a3401268a2e9f2f713b",
+      "subdivision_id": "CA:nunavut"
+    },
+    {
+      "artifact": {
+        "filename": "whs-extension/whc-1404-parks.html",
+        "sha256": "076a492bbbb200fd877c5e941868269131eb96b48b8ad9ff0db0f18e69606a6d",
+        "uri": "https://parks.canada.ca/culture/spm-whs/sites-canada/sec02p"
+      },
+      "field": "strong:has(span.fa-map-marker-alt)",
+      "raw_value": "Nova Scotia",
+      "review_method": "Independent agent readback of normally retrieved primary Parks Canada whole-World-Heritage-property header, official hub membership, pinned UNESCO original authority ID/title/country/inscription metadata and scope; Not coordinate inference, component inheritance, human/expert approval, a new site/point, or lifecycle dating.",
+      "role": "explicit_place_location",
+      "site_id": "whc:1404",
+      "source": {
+        "accessed": "2026-11-05",
+        "excerpt": "Nova Scotia",
+        "id": "subdivision:parks-whs:1404",
+        "license": null,
+        "publisher": "Parks Canada / Government of Canada",
+        "revision": "sha256:076a492bbbb200fd877c5e941868269131eb96b48b8ad9ff0db0f18e69606a6d; dcterms.modified=2023-09-19; original HTML location header strong:has(span.fa-map-marker-alt)",
+        "title": "Landscape of Grand Pré — source location",
+        "uri": "https://parks.canada.ca/culture/spm-whs/sites-canada/sec02p"
+      },
+      "source_label": null,
+      "source_row": {
+        "h1#wb-cont": "Landscape of Grand Pré",
+        "meta[name=dcterms.modified].content": "2023-09-19",
+        "meta[name=dcterms.title].content": "Landscape of Grand Pré",
+        "strong:has(span.fa-map-marker-alt)": "Nova Scotia"
+      },
+      "source_row_sha256": "a926a86bcb69a165d7573e43bef84bb146f9a66a48faa85ee77a06b0822ab061",
+      "subdivision_id": "CA:nova-scotia"
+    },
+    {
+      "artifact": {
+        "filename": "whs-extension/whc-1415-parks.html",
+        "sha256": "50ec685a21baede139d3490dac9b844c0226dc036b61b3eab27ebcc4c70c6143",
+        "uri": "https://parks.canada.ca/culture/spm-whs/sites-canada/sec02s"
+      },
+      "field": "strong:has(span.fa-map-marker-alt)",
+      "raw_value": "Manitoba and Ontario",
+      "review_method": "Independent agent readback of normally retrieved primary Parks Canada whole-World-Heritage-property header, official hub membership, pinned UNESCO original authority ID/title/country/inscription metadata and scope; Not coordinate inference, component inheritance, human/expert approval, a new site/point, or lifecycle dating.",
+      "role": "explicit_place_location",
+      "site_id": "whc:1415",
+      "source": {
+        "accessed": "2026-11-05",
+        "excerpt": "Manitoba and Ontario",
+        "id": "subdivision:parks-whs:1415",
+        "license": null,
+        "publisher": "Parks Canada / Government of Canada",
+        "revision": "sha256:50ec685a21baede139d3490dac9b844c0226dc036b61b3eab27ebcc4c70c6143; dcterms.modified=2023-09-19; original HTML location header strong:has(span.fa-map-marker-alt)",
+        "title": "Pimachiowin Aki — source location",
+        "uri": "https://parks.canada.ca/culture/spm-whs/sites-canada/sec02s"
+      },
+      "source_label": null,
+      "source_row": {
+        "h1#wb-cont": "Pimachiowin Aki",
+        "meta[name=dcterms.modified].content": "2023-09-19",
+        "meta[name=dcterms.title].content": "Pimachiowin Aki",
+        "strong:has(span.fa-map-marker-alt)": "Manitoba and Ontario"
+      },
+      "source_row_sha256": "c9846fc11f0767805537ca3f91b6b923ee8e8c4c2c09dd6cee56a77161ad9410",
+      "subdivision_id": "CA:manitoba"
+    },
+    {
+      "artifact": {
+        "filename": "whs-extension/whc-1415-parks.html",
+        "sha256": "50ec685a21baede139d3490dac9b844c0226dc036b61b3eab27ebcc4c70c6143",
+        "uri": "https://parks.canada.ca/culture/spm-whs/sites-canada/sec02s"
+      },
+      "field": "strong:has(span.fa-map-marker-alt)",
+      "raw_value": "Manitoba and Ontario",
+      "review_method": "Independent agent readback of normally retrieved primary Parks Canada whole-World-Heritage-property header, official hub membership, pinned UNESCO original authority ID/title/country/inscription metadata and scope; Not coordinate inference, component inheritance, human/expert approval, a new site/point, or lifecycle dating.",
+      "role": "explicit_place_location",
+      "site_id": "whc:1415",
+      "source": {
+        "accessed": "2026-11-05",
+        "excerpt": "Manitoba and Ontario",
+        "id": "subdivision:parks-whs:1415",
+        "license": null,
+        "publisher": "Parks Canada / Government of Canada",
+        "revision": "sha256:50ec685a21baede139d3490dac9b844c0226dc036b61b3eab27ebcc4c70c6143; dcterms.modified=2023-09-19; original HTML location header strong:has(span.fa-map-marker-alt)",
+        "title": "Pimachiowin Aki — source location",
+        "uri": "https://parks.canada.ca/culture/spm-whs/sites-canada/sec02s"
+      },
+      "source_label": null,
+      "source_row": {
+        "h1#wb-cont": "Pimachiowin Aki",
+        "meta[name=dcterms.modified].content": "2023-09-19",
+        "meta[name=dcterms.title].content": "Pimachiowin Aki",
+        "strong:has(span.fa-map-marker-alt)": "Manitoba and Ontario"
+      },
+      "source_row_sha256": "c9846fc11f0767805537ca3f91b6b923ee8e8c4c2c09dd6cee56a77161ad9410",
+      "subdivision_id": "CA:ontario"
+    },
+    {
+      "artifact": {
+        "filename": "whs-extension/whc-1564-parks.html",
+        "sha256": "b8f499da17a9ef5c25bf411be5d5b84fa366aee75dc4ded8239235d3bf25be36",
+        "uri": "https://parks.canada.ca/culture/spm-whs/sites-canada/trondek-klondike"
+      },
+      "field": "strong:has(span.fa-map-marker-alt)",
+      "raw_value": "Yukon",
+      "review_method": "Independent agent readback of normally retrieved primary Parks Canada whole-World-Heritage-property header, official hub membership, pinned UNESCO original authority ID/title/country/inscription metadata and scope; Not coordinate inference, component inheritance, human/expert approval, a new site/point, or lifecycle dating.",
+      "role": "explicit_place_location",
+      "site_id": "whc:1564",
+      "source": {
+        "accessed": "2026-11-05",
+        "excerpt": "Yukon",
+        "id": "subdivision:parks-whs:1564",
+        "license": null,
+        "publisher": "Parks Canada / Government of Canada",
+        "revision": "sha256:b8f499da17a9ef5c25bf411be5d5b84fa366aee75dc4ded8239235d3bf25be36; dcterms.modified=2024-05-29; original HTML location header strong:has(span.fa-map-marker-alt)",
+        "title": "Tr’ondëk-Klondike, Yukon — source location",
+        "uri": "https://parks.canada.ca/culture/spm-whs/sites-canada/trondek-klondike"
+      },
+      "source_label": null,
+      "source_row": {
+        "h1#wb-cont": "Tr’ondëk-Klondike, Yukon",
+        "meta[name=dcterms.modified].content": "2024-05-29",
+        "meta[name=dcterms.title].content": "Tr’ondëk-Klondike, Yukon",
+        "strong:has(span.fa-map-marker-alt)": "Yukon"
+      },
+      "source_row_sha256": "b8f21c80d1bfa5667b9cce9833b8b940841e48dd18148cb6af8b9d206629c7a4",
+      "subdivision_id": "CA:yukon"
+    },
+    {
+      "artifact": {
+        "filename": "whs-extension/whc-1597-parks.html",
+        "sha256": "6d1823719bb4ca05f5b92aa66a91da147cd3ad4d6eacabfdef949f1414bb151e",
+        "uri": "https://parks.canada.ca/culture/spm-whs/sites-canada/sec02t"
+      },
+      "field": "strong:has(span.fa-map-marker-alt)",
+      "raw_value": "Alberta",
+      "review_method": "Independent agent readback of normally retrieved primary Parks Canada whole-World-Heritage-property header, official hub membership, pinned UNESCO original authority ID/title/country/inscription metadata and scope; Not coordinate inference, component inheritance, human/expert approval, a new site/point, or lifecycle dating.",
+      "role": "explicit_place_location",
+      "site_id": "whc:1597",
+      "source": {
+        "accessed": "2026-11-05",
+        "excerpt": "Alberta",
+        "id": "subdivision:parks-whs:1597",
+        "license": null,
+        "publisher": "Parks Canada / Government of Canada",
+        "revision": "sha256:6d1823719bb4ca05f5b92aa66a91da147cd3ad4d6eacabfdef949f1414bb151e; dcterms.modified=2023-09-19; original HTML location header strong:has(span.fa-map-marker-alt)",
+        "title": "Writing-on-Stone / Áísínai’pi, Alberta — source location",
+        "uri": "https://parks.canada.ca/culture/spm-whs/sites-canada/sec02t"
+      },
+      "source_label": null,
+      "source_row": {
+        "h1#wb-cont": "Writing-on-Stone / Áísínai’pi, Alberta",
+        "meta[name=dcterms.modified].content": "2023-09-19",
+        "meta[name=dcterms.title].content": "Writing-on-Stone / Áísínai’pi, Alberta | World Heritage Site - Writing-on-Stone / Áísínai’pi, Alberta",
+        "strong:has(span.fa-map-marker-alt)": "Alberta"
+      },
+      "source_row_sha256": "c63de1b6d09fc520ccf6b6b3f9a1d6efc360f9e50414455a220309b5021f76b5",
+      "subdivision_id": "CA:alberta"
+    },
+    {
+      "artifact": {
+        "filename": "whs-extension/whc-300-parks.html",
+        "sha256": "fa900279be75980222fcd7fbbe7002e7ac998fed463c590a25028e08d791ad1a",
+        "uri": "https://parks.canada.ca/culture/spm-whs/sites-canada/sec02i"
+      },
+      "field": "strong:has(span.fa-map-marker-alt)",
+      "raw_value": "Québec",
+      "review_method": "Independent agent readback of normally retrieved primary Parks Canada whole-World-Heritage-property header, official hub membership, pinned UNESCO original authority ID/title/country/inscription metadata and scope; explicit literal Québec-to-CA:quebec source alias crosschecked against UNESCO300 Province of Quebec metadata. Not coordinate inference, component inheritance, human/expert approval, a new site/point, or lifecycle dating.",
+      "role": "source_declared_subdivision",
+      "site_id": "whc:300",
+      "source": {
+        "accessed": "2026-11-05",
+        "excerpt": "Québec",
+        "id": "subdivision:parks-whs:300",
+        "license": null,
+        "publisher": "Parks Canada / Government of Canada",
+        "revision": "sha256:fa900279be75980222fcd7fbbe7002e7ac998fed463c590a25028e08d791ad1a; dcterms.modified=2023-09-19; original HTML location header strong:has(span.fa-map-marker-alt)",
+        "title": "Historic District of Old Québec — source location",
+        "uri": "https://parks.canada.ca/culture/spm-whs/sites-canada/sec02i"
+      },
+      "source_label": "Québec",
+      "source_row": {
+        "h1#wb-cont": "Historic District of Old Québec",
+        "meta[name=dcterms.modified].content": "2023-09-19",
+        "meta[name=dcterms.title].content": "Historic District of Old Québec",
+        "strong:has(span.fa-map-marker-alt)": "Québec"
+      },
+      "source_row_sha256": "aa545804c467d48a08d7a5e9dfe35c4d017b550a7744dcc7b4f2d5a0dcf68685",
+      "subdivision_id": "CA:quebec"
+    }
+  ],
+  "review_method": "Independent agent source-field and whole-object identity review v2: retains frozen full1014 DFHD decision/readback and Fort Conger review, adds all five remaining Canadian UNESCO whole-property location headers from normally fetched primary Parks Canada pages, explicitly preserves Québec alias and Pimachiowin Aki Manitoba/Ontario dual membership. No coordinate/component inference or Site/Geography/chronology/text modification; not expert or human confirmation.",
+  "reviewed_at": "2026-11-05",
+  "schema_version": 1,
+  "source_review_sha256": "66209c9c08c4ecaf2e761dae7fa3a12720c133c63c113363cce8b53ccc6c5d3b",
+  "subdivisions": [
+    {
+      "country": "CA",
+      "id": "CA:alberta",
+      "label": "Alberta"
+    },
+    {
+      "country": "CA",
+      "id": "CA:british-columbia",
+      "label": "British Columbia"
+    },
+    {
+      "country": "CA",
+      "id": "CA:manitoba",
+      "label": "Manitoba"
+    },
+    {
+      "country": "CA",
+      "id": "CA:new-brunswick",
+      "label": "New Brunswick"
+    },
+    {
+      "country": "CA",
+      "id": "CA:newfoundland-labrador",
+      "label": "Newfoundland and Labrador"
+    },
+    {
+      "country": "CA",
+      "id": "CA:northwest-territories",
+      "label": "Northwest Territories"
+    },
+    {
+      "country": "CA",
+      "id": "CA:nova-scotia",
+      "label": "Nova Scotia"
+    },
+    {
+      "country": "CA",
+      "id": "CA:nunavut",
+      "label": "Nunavut"
+    },
+    {
+      "country": "CA",
+      "id": "CA:ontario",
+      "label": "Ontario"
+    },
+    {
+      "country": "CA",
+      "id": "CA:prince-edward-island",
+      "label": "Prince Edward Island"
+    },
+    {
+      "country": "CA",
+      "id": "CA:quebec",
+      "label": "Quebec"
+    },
+    {
+      "country": "CA",
+      "id": "CA:saskatchewan",
+      "label": "Saskatchewan"
+    },
+    {
+      "country": "CA",
+      "id": "CA:yukon",
+      "label": "Yukon"
+    }
+  ],
+  "version": "source-subdivisions-v1"
+}
