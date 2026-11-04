@@ -5,11 +5,13 @@ import { createContext, runInContext } from 'node:vm';
 
 import ts from 'typescript';
 
-interface State { country: string | null; region: string | null; offset: number; visible: boolean }
+interface State { country: string | null; region: string | null; offset: number; visible: boolean; bbox?: [number, number, number, number] | null; spatial_match_mode?: string; spatial_version?: string | null }
 interface Helpers {
-  create(options: { map: FakeMap | null; onSelect(id: string, opener: FakeElement, options?: { moveMap?: boolean }): void; onFilterChange?(state: State): void; onStateChange?(state: State): void; onCommittedState?(state: State): void; onCatalogue?(points: Point[]): void }): Controller;
+  create(options: { map: FakeMap | null; initialState?: Partial<State>; initialBoundsError?: string | null; onBoundsAction?(): void; onSelect(id: string, opener: FakeElement, options?: { moveMap?: boolean }): void; onFilterChange?(state: State): void; onStateChange?(state: State): void; onCommittedState?(state: State): void; onCatalogue?(points: Point[]): void }): Controller;
   normalizeState(value: Partial<State>): State;
-  matches(point: { countries: string[]; regions: string[] }, state: Pick<State, 'country' | 'region'>): boolean;
+  matches(point: { countries: string[]; regions: string[]; repr_point?: [number, number] | null; source_points?: [number, number][] }, state: Pick<State, 'country' | 'region' | 'bbox'>, mode?: string): boolean;
+  insideBBox(point: [number, number], bbox: [number, number, number, number]): boolean;
+  capturedBounds(bounds: { getWest(): number; getEast(): number; getSouth(): number; getNorth(): number }): [number, number, number, number];
   coordinate(value: unknown): boolean;
   displayCoordinates(value: [number, number]): [number, number][];
   locationStatus(value: [number, number] | null): 'mapped' | 'polar' | 'unknown';
@@ -33,14 +35,16 @@ const compiled = ts.transpileModule(readFileSync(new URL('../../src/archsearch/f
   fileName: 'explore.ts', compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.None, strict: true }, reportDiagnostics: true,
 });
 assert.equal(compiled.diagnostics?.filter((item) => item.category === ts.DiagnosticCategory.Error).length, 0);
-const helpers = runInContext(`${compiled.outputText}\nArchSearchExplore;`, createContext({ URL })) as Helpers;
+const researchCompiled = ts.transpileModule(readFileSync(new URL('../../src/archsearch/frontend/research.ts', import.meta.url), 'utf8'), { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.None } });
+const researchHelpers = runInContext(`${researchCompiled.outputText}\nArchSearchResearch;`, createContext({ URL }));
+const helpers = runInContext(`${compiled.outputText}\nArchSearchExplore;`, createContext({ URL, ArchSearchResearch: researchHelpers })) as Helpers;
 const mapCompiled = ts.transpileModule(readFileSync(new URL('../../src/archsearch/frontend/map-view.ts', import.meta.url), 'utf8'), { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.None } });
 const mapHelpers = runInContext(`${mapCompiled.outputText}\nArchSearchMapView;`, createContext({})) as { wrapCoordinates(points: [number, number][]): [number, number][] };
 const plain = <T>(value: T): T => JSON.parse(JSON.stringify(value)) as T;
 
 test('global exploration defaults are independent of a query, model or historical year', () => {
-  assert.deepEqual(plain(helpers.normalizeState({})), { country: null, region: null, offset: 0, visible: true });
-  assert.deepEqual(plain(helpers.normalizeState({ country: 'NZ', region: 'asia-pacific', offset: 50, visible: false })), { country: 'NZ', region: 'asia-pacific', offset: 50, visible: false });
+  assert.deepEqual(plain(helpers.normalizeState({})), { country: null, region: null, offset: 0, visible: true, bbox: null });
+  assert.deepEqual(plain(helpers.normalizeState({ country: 'NZ', region: 'asia-pacific', offset: 50, visible: false, bbox: null })), { country: 'NZ', region: 'asia-pacific', offset: 50, visible: false, bbox: null });
 });
 
 test('restored catalogue filters reject coercion, unknown regions and invalid offsets', () => {
@@ -122,6 +126,8 @@ class FakeMap {
   panes = new Map<string, FakeElement>();
   container = new FakeElement();
   lastBounds: unknown = null;
+  bounds: [number, number, number, number] = [-180, -60, 180, 85];
+  getBounds() { return { getWest: () => this.bounds[0], getSouth: () => this.bounds[1], getEast: () => this.bounds[2], getNorth: () => this.bounds[3] }; }
   getPane(name: string): FakeElement | undefined { return this.panes.get(name); }
   createPane(name: string): FakeElement { const node = new FakeElement(); this.panes.set(name, node); return node; }
   getContainer(): FakeElement { return this.container; }
@@ -149,15 +155,18 @@ function coverageFor(points = fixture) {
 }
 
 function pageFor(state: Partial<State> = {}, points = fixture) {
-  const filtered = points.filter(point => (state.country == null || point.countries.includes(state.country)) && (state.region == null || point.regions.includes(state.region)));
+  const mode = points.some(point => point.source_points?.length) ? 'source-or-representative' : 'representative-only';
+  const inside = (point: [number, number]) => !state.bbox || helpers.insideBBox(point, state.bbox);
+  const filtered = points.filter(point => (state.country == null || point.countries.includes(state.country)) && (state.region == null || point.regions.includes(state.region))
+    && (!state.bbox || (point.repr_point !== null && inside(point.repr_point)) || point.source_points?.some(inside)));
   const offset = state.offset ?? 0;
-  return { corpus_version: 'global-v3', total: filtered.length, offset, limit: 50,
+  return { corpus_version: 'global-v3', total: filtered.length, offset, limit: 50, bbox: state.bbox ?? null, spatial_match_mode: mode, spatial_version: mode === 'source-or-representative' ? 'world-locations-v1' : null,
     sites: filtered.slice(offset, offset + 50).map(point => ({ id: point.id, title: point.title, repr_point: point.repr_point, source_kind: point.source_kind,
       geography: point.countries.length || point.regions.length ? { countries: point.countries, regions: point.regions } : null, chronology: { status: point.chronology_status } })) };
 }
 
-function setup(withMap = true) {
-  const ids = ['explore-panel', 'explore-summary', 'explore-authority', 'explore-polar-authority', 'explore-spatial-source', 'explore-country', 'explore-region', 'explore-clear', 'explore-points', 'explore-fit', 'explore-count', 'explore-list', 'explore-previous', 'explore-next', 'explore-page', 'explore-feedback', 'explore-retry', 'explore-limit-note'];
+function setup(withMap = true, initialBoundsError: string | null = null) {
+  const ids = ['explore-panel', 'explore-summary', 'explore-authority', 'explore-polar-authority', 'explore-spatial-source', 'explore-country', 'explore-region', 'explore-clear', 'explore-points', 'explore-fit', 'explore-count', 'explore-list', 'explore-previous', 'explore-next', 'explore-page', 'explore-feedback', 'explore-retry', 'explore-limit-note', 'explore-capture-bounds', 'explore-clear-bounds', 'explore-bounds-status'];
   const nodes = new Map(ids.map(id => [id, new FakeElement()]));
   const doc: { activeElement: FakeElement | null; getElementById(id: string): FakeElement | null; createElement(tag: string): FakeElement } = {
     activeElement: null, getElementById: id => nodes.get(id) ?? null,
@@ -170,15 +179,16 @@ function setup(withMap = true) {
   const filters: State[] = [];
   const commits: State[] = [];
   const catalogues: Point[][] = [];
+  const boundsActions: number[] = [];
   const circles: FakeCircle[] = [];
   const map = withMap ? new FakeMap() : null;
-  const context = createContext({ document: doc, URL, URLSearchParams, AbortController,
+  const context = createContext({ document: doc, URL, URLSearchParams, AbortController, ArchSearchResearch: researchHelpers,
     fetch: (url: string, options: { signal: AbortSignal }) => new Promise((resolve, reject) => pending.push({ url, signal: options.signal, resolve, reject, done: false })),
     L: { canvas: (options: unknown) => options, layerGroup: () => new FakeLayer(), circleMarker: (location: [number, number], options: Record<string, unknown>) => { const marker = new FakeCircle(location, options); circles.push(marker); return marker; }, latLngBounds: (points: unknown) => points },
     ArchSearchMapView: mapHelpers,
   });
   const api = runInContext(`${compiled.outputText}\nArchSearchExplore;`, context) as Helpers;
-  const controller = api.create({ map, onSelect: (id, opener, options) => selects.push({ id, opener, options: options ? plain(options) : undefined }), onFilterChange: state => filters.push(plain(state)), onStateChange: state => changes.push(plain(state)), onCommittedState: state => commits.push(plain(state)), onCatalogue: points => catalogues.push(points) });
+  const controller = api.create({ map, initialBoundsError, onBoundsAction: () => boundsActions.push(1), onSelect: (id, opener, options) => selects.push({ id, opener, options: options ? plain(options) : undefined }), onFilterChange: state => filters.push(plain(state)), onStateChange: state => changes.push(plain(state)), onCommittedState: state => commits.push(plain(state)), onCatalogue: points => catalogues.push(points) });
   const node = (id: string) => { const found = nodes.get(id); assert.ok(found); return found; };
   const response = (request: Pending, value: unknown, status = 200) => { request.done = true; request.resolve({ ok: status < 400, status, json: async () => value }); };
   const find = (path: string) => { const found = pending.find(item => !item.done && item.url.startsWith(path)); assert.ok(found, path); return found; };
@@ -190,7 +200,7 @@ function setup(withMap = true) {
     }
   };
   const boot = async (points = fixture, spatial?: Record<string, unknown> | null) => { const job = controller.load(); respondAll(points, {}, spatial); await job; };
-  return { controller, node, pending, selects, changes, filters, commits, catalogues, circles, map, doc, find, response, respondAll, boot };
+  return { controller, node, pending, selects, changes, filters, commits, catalogues, boundsActions, circles, map, doc, find, response, respondAll, boot };
 }
 
 test('coverage, full points and directory page commit together without a model or map', async () => {
@@ -257,10 +267,10 @@ test('restored filters notify nobody; user filtering notifies next-search condit
 
 test('visibility toggles do not refetch catalogue, replace results or change the map camera', async () => {
   const app = setup(); await app.boot(); const calls = app.pending.length;
-  await app.controller.setState({ visible: false }, { notify: true });
+  await app.controller.setState({ visible: false, bbox: null }, { notify: true });
   assert.equal(app.map?.layers.size, 0); assert.equal(app.pending.length, calls);
   assert.equal(app.filters.length, 0); assert.equal(app.changes.length, 1);
-  await app.controller.setState({ visible: true }, { notify: true });
+  await app.controller.setState({ visible: true, bbox: null }, { notify: true });
   assert.equal(app.map?.layers.size, 1); assert.equal(app.map?.lastBounds, null);
   app.node('explore-fit').fire('click'); assert.notEqual(app.map?.lastBounds, null);
 });
@@ -350,7 +360,7 @@ test('committed browse snapshots stay unchanged before or after a failed draft a
   assert.equal(app.controller.getCommittedState(), null);
   await app.boot();
   const original = plain(app.controller.getCommittedState());
-  assert.deepEqual(original, { country: null, region: null, offset: 0, visible: true });
+  assert.deepEqual(original, { country: null, region: null, offset: 0, visible: true, bbox: null, spatial_match_mode: 'representative-only', spatial_version: null });
   assert.equal(app.commits.length, 1);
   const failed = app.controller.setState({ country: 'NZ' }, { notify: true });
   assert.equal(app.controller.getState().country, 'NZ');
@@ -360,7 +370,7 @@ test('committed browse snapshots stay unchanged before or after a failed draft a
   assert.deepEqual(plain(app.controller.getCommittedState()), original);
   assert.equal(app.commits.length, 1);
   const retry = app.controller.load(); app.respondAll(fixture, { country: 'NZ' }); await retry;
-  assert.deepEqual(plain(app.controller.getCommittedState()), { country: 'NZ', region: null, offset: 0, visible: true });
+  assert.deepEqual(plain(app.controller.getCommittedState()), { country: 'NZ', region: null, offset: 0, visible: true, bbox: null, spatial_match_mode: 'representative-only', spatial_version: null });
   assert.equal(app.commits.length, 2);
   const snapshot = app.controller.getCommittedState(); assert.ok(snapshot); snapshot.country = 'TR';
   assert.equal(app.controller.getCommittedState()?.country, 'NZ');
@@ -369,10 +379,10 @@ test('committed browse snapshots stay unchanged before or after a failed draft a
 test('the point-layer switch commits immediately without relabelling an uncommitted region draft', async () => {
   const app = setup(); await app.boot();
   const pending = app.controller.setState({ country: 'TR' });
-  await app.controller.setState({ visible: false }, { notify: true });
-  assert.deepEqual(plain(app.controller.getCommittedState()), { country: null, region: null, offset: 0, visible: false });
+  await app.controller.setState({ visible: false, bbox: null }, { notify: true });
+  assert.deepEqual(plain(app.controller.getCommittedState()), { country: null, region: null, offset: 0, visible: false, bbox: null, spatial_match_mode: 'representative-only', spatial_version: null });
   app.response(app.find('/api/sites'), pageFor({ country: 'TR' })); await pending;
-  assert.deepEqual(plain(app.controller.getCommittedState()), { country: 'TR', region: null, offset: 0, visible: false });
+  assert.deepEqual(plain(app.controller.getCommittedState()), { country: 'TR', region: null, offset: 0, visible: false, bbox: null, spatial_match_mode: 'representative-only', spatial_version: null });
   assert.equal(app.map?.layers.size, 0);
 });
 
@@ -618,4 +628,137 @@ test('a source-qualified supplement with unknown position remains in the directo
   assert.match(app.node('explore-feedback').textContent, /1 条资料.*0 个源定位点 \+ 0 个必要代表点/u);
   button.fire('click'); assert.equal(app.selects.at(-1)?.id, unknown.id);
   assert.equal(app.selects.at(-1)?.options, undefined);
+});
+
+test('captured map bounds normalize world copies and preserve antimeridian width', () => {
+  const capture = (west: number, east: number) => helpers.capturedBounds({ getWest: () => west, getEast: () => east, getSouth: () => -20, getNorth: () => 30 });
+  for (const pair of [[170, 190], [530, 550], [-190, -170]]) assert.deepEqual(plain(capture(...pair as [number, number])), [170, -20, -170, 30]);
+  assert.deepEqual(plain(capture(170, 180)), [170, -20, 180, 30]);
+  assert.deepEqual(plain(capture(180, 190)), [-180, -20, -170, 30]);
+  assert.deepEqual(plain(capture(180, 540)), [-180, -20, 180, 30]);
+  assert.deepEqual(plain(capture(-541, 180)), [-180, -20, 180, 30]);
+  assert.throws(() => capture(1, 1), /有效范围/u);
+  assert.throws(() => capture(Number.NaN, 3), /有效范围/u);
+});
+
+test('closed bbox membership aliases both dateline spellings and keeps unknowns out', () => {
+  for (const longitude of [-180, 180]) {
+    assert.equal(helpers.insideBBox([longitude, 10], [170, 0, 180, 10]), true);
+    assert.equal(helpers.insideBBox([longitude, 0], [-180, 0, -170, 10]), true);
+    assert.equal(helpers.insideBBox([longitude, 10.1], [170, 0, -170, 10]), false);
+  }
+  assert.equal(helpers.insideBBox([0, 0], [170, -20, -170, 20]), false);
+  assert.equal(helpers.matches({ countries: [], regions: [], repr_point: null }, { country: null, region: null, bbox: [-180, -90, 180, 90] }), false);
+  assert.equal(helpers.matches({ countries: [], regions: [], repr_point: [0, -90] }, { country: null, region: null, bbox: [-180, -90, 180, 90] }), true);
+});
+
+test('a source point in a fixed bbox selects its heritage once and clips outside placements', async () => {
+  const app = setup(); await app.boot(multiPoints, spatial);
+  await assert.rejects(app.controller.setState({ bbox: [30, 41, 30, 42] }), /地图范围/u);
+  const bbox: [number, number, number, number] = [30, 41, 30.5, 41.5];
+  app.controller.select('wd:Q2');
+  const changed = app.controller.setState({ bbox }, { notify: true });
+  const request = app.find('/api/sites');
+  assert.equal(new URL(request.url, 'http://local').searchParams.get('bbox'), bbox.join(','));
+  app.response(request, pageFor({ bbox }, multiPoints)); await changed;
+  assert.equal(app.node('explore-list').children.length, 1);
+  const layer = [...app.map!.layers][0];
+  assert.deepEqual(plain(layer.members.map(circle => circle.location)), [[41, -330], [41, 30], [41, 390]]);
+  assert.ok(layer.members.every(circle => circle.options.radius === 5));
+  assert.deepEqual(plain(app.controller.getPoint('wd:Q2')), [29, 40]);
+  assert.deepEqual(plain(app.controller.getSourcePoints('wd:Q2')), [[30, 41], [31, 42]]);
+  app.node('explore-list').children[0].children[0].fire('click');
+  assert.deepEqual(app.selects.at(-1)?.options, { moveMap: false });
+  assert.equal(app.filters.length, 0);
+  assert.equal(app.pending.filter(request => request.url.startsWith('/api/catalogue')).length, 1);
+  assert.equal(app.pending.filter(request => request.url === '/api/search').length, 0);
+  const snapshot = app.controller.getCommittedState(); assert.ok(snapshot?.bbox); snapshot.bbox[0] = 0;
+  assert.deepEqual(plain(app.controller.getCommittedState()?.bbox), bbox);
+  bbox[0] = 0;
+  assert.deepEqual(plain(app.controller.getState().bbox), [30, 41, 30.5, 41.5]);
+});
+
+test('captured bounds stay fixed after map movement and clearing preserves keyboard focus', async () => {
+  const app = setup(); await app.boot();
+  app.map!.bounds = [170, -20, 190, -10]; app.node('explore-capture-bounds').fire('click');
+  app.response(app.find('/api/sites'), pageFor({ bbox: [170, -20, -170, -10] }));
+  await new Promise(resolve => setImmediate(resolve));
+  assert.deepEqual(plain(app.controller.getCommittedState()?.bbox), [170, -20, -170, -10]);
+  app.map!.bounds = [0, 0, 10, 10];
+  assert.deepEqual(plain(app.controller.getState().bbox), [170, -20, -170, -10]);
+  assert.equal(app.pending.filter(request => !request.done && !request.signal.aborted).length, 0);
+  app.node('explore-clear-bounds').focus(); app.node('explore-clear-bounds').fire('click');
+  app.response(app.find('/api/sites'), pageFor()); await new Promise(resolve => setImmediate(resolve));
+  assert.equal(app.controller.getCommittedState()?.bbox, null);
+  assert.equal(app.doc.activeElement, app.node('explore-bounds-status'));
+  assert.equal([...app.map!.layers][0].members.length, 9);
+});
+
+test('bbox echo, spatial mode and source version mismatches retain the successful snapshot', async () => {
+  const app = setup(); await app.boot(multiPoints, spatial);
+  const original = plain(app.controller.getCommittedState()); const layer = [...app.map!.layers][0];
+  for (const change of [{ bbox: null }, { spatial_match_mode: 'representative-only' }, { spatial_version: 'other-version' }]) {
+    const changed = app.controller.setState({ bbox: [30, 41, 30.5, 41.5] });
+    const rejected = assert.rejects(changed, /地图范围.*定位匹配方式/u);
+    app.response(app.find('/api/sites'), { ...pageFor({ bbox: [30, 41, 30.5, 41.5] }, multiPoints), ...change }); await rejected;
+    assert.deepEqual(plain(app.controller.getCommittedState()), original);
+    assert.equal([...app.map!.layers][0], layer);
+  }
+});
+
+test('late bbox failures cannot replace a newer scope and fallback matches only representatives', async () => {
+  const app = setup(); await app.boot(multiPoints, spatial);
+  const first = app.controller.setState({ bbox: [30, 41, 30.5, 41.5] }); const old = app.find('/api/sites');
+  const second = app.controller.setState({ bbox: [178, -19, 180, -17] });
+  const latest = app.pending.filter(request => request.url.startsWith('/api/sites') && !request.done).at(-1)!;
+  assert.equal(old.signal.aborted, true);
+  app.response(latest, pageFor({ bbox: [178, -19, 180, -17] }, multiPoints)); await second;
+  app.response(old, { detail: 'late old failure' }, 503); await first;
+  assert.deepEqual(plain(app.controller.getCommittedState()?.bbox), [178, -19, 180, -17]);
+  assert.equal(app.node('explore-retry').hidden, true);
+  const fallback = setup();
+  await fallback.boot(fixture, { ready: false, reason: 'missing source archive', version: null, source: null,
+    records: 0, points: 0, distinct_points: 0, duplicate_points: 0, display_points: 3 });
+  const job = fallback.controller.setState({ bbox: [30, 41, 30.5, 41.5] });
+  fallback.response(fallback.find('/api/sites'), pageFor({ bbox: [30, 41, 30.5, 41.5] })); await job;
+  assert.equal([...fallback.map!.layers][0].members.length, 0);
+  assert.equal(fallback.controller.getCommittedState()?.spatial_match_mode, 'representative-only');
+  assert.match(fallback.node('explore-feedback').textContent, /仅按原代表点匹配.*组成地点可能遗漏/u);
+});
+
+test('an invalid restored bbox gates every directory load until an explicit clear action', async () => {
+  const app = setup(true, '链接中的 browse_bbox 参数不能重复。');
+  await assert.rejects(app.controller.load(), /browse_bbox/u);
+  await assert.rejects(app.controller.load(), /browse_bbox/u);
+  await assert.rejects(app.controller.setState({ country: 'NZ' }, { notify: true }), /browse_bbox/u);
+  assert.equal(app.pending.length, 0);
+  assert.equal(app.controller.getCommittedState(), null);
+  assert.equal(app.commits.length, 0);
+  assert.equal(app.map!.layers.size, 0);
+  assert.match(app.node('explore-bounds-status').textContent, /恢复失败.*明确清除范围/u);
+  assert.equal(app.node('explore-clear-bounds').disabled, false);
+  assert.equal(app.node('explore-capture-bounds').disabled, false);
+  assert.equal(app.node('explore-retry').hidden, true);
+  app.node('explore-clear-bounds').focus(); app.node('explore-clear-bounds').fire('click');
+  app.respondAll(fixture, { country: 'NZ' }); await new Promise(resolve => setImmediate(resolve));
+  assert.equal(app.boundsActions.length, 1);
+  assert.equal(app.controller.getCommittedState()?.country, 'NZ');
+  assert.equal(app.controller.getCommittedState()?.bbox, null);
+  assert.equal(app.node('explore-bounds-status').tokens.has('is-invalid'), false);
+  assert.equal(app.doc.activeElement, app.node('explore-bounds-status'));
+});
+
+test('invalid bounds may be replaced by capture while capture failure preserves the recovery gate', async () => {
+  const app = setup(true, '地图范围无效。');
+  app.map!.bounds = [1, 0, 1, 20];
+  app.node('explore-capture-bounds').fire('click');
+  assert.equal(app.boundsActions.length, 0);
+  await assert.rejects(app.controller.load(), /地图范围无效/u);
+  assert.equal(app.pending.length, 0);
+  app.map!.bounds = [170, -20, 190, -10];
+  app.node('explore-capture-bounds').fire('click');
+  app.respondAll(fixture, { bbox: [170, -20, -170, -10] }); await new Promise(resolve => setImmediate(resolve));
+  assert.equal(app.boundsActions.length, 1);
+  assert.deepEqual(plain(app.controller.getCommittedState()?.bbox), [170, -20, -170, -10]);
+  assert.equal(app.node('explore-bounds-status').tokens.has('is-invalid'), false);
 });

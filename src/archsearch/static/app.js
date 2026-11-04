@@ -45,9 +45,21 @@
     const initialLink = ArchSearchResearch.parseLink(initialUrl);
     const initialView = ArchSearchResearch.parseView(initialUrl);
     const initialBrowse = ArchSearchResearch.parseBrowse(initialUrl);
-    let pendingLink = initialView.error || initialBrowse.error ? null : initialLink.request;
+    const nonBoundsUrl = new URL(initialUrl);
+    nonBoundsUrl.searchParams.delete("browse_bbox");
+    const initialNonBoundsBrowse = ArchSearchResearch.parseBrowse(nonBoundsUrl);
+    let boundsRestoreError = null;
+    try {
+        if (initialUrl.searchParams.getAll("browse_bbox").length > 1)
+            throw new Error("链接中的 browse_bbox 参数不能重复。");
+        ArchSearchResearch.parseBBox(initialUrl.searchParams.get("browse_bbox"));
+    }
+    catch (error) {
+        boundsRestoreError = error instanceof Error ? error.message : "地图范围无效。";
+    }
+    let pendingLink = initialView.error || initialNonBoundsBrowse.error ? null : initialLink.request;
     let unresolvedSearchLink = pendingLink;
-    let linkError = initialLink.error ?? initialView.error ?? initialBrowse.error;
+    let linkError = initialLink.error ?? initialView.error ?? initialNonBoundsBrowse.error;
     let invalidLink = linkError !== null;
     let pendingSelectionRestore = !invalidLink && initialView.selection.site !== null;
     let currentLink = window.location.href;
@@ -356,12 +368,12 @@
         const refreshButton = byId("refresh-status", HTMLButtonElement);
         refreshButton.disabled = true;
         runtimeRefresh = Promise.allSettled([loadStatus(), loadFacets(), explore?.load()]).then(async (loaded) => {
-            if (!browseRestored && !invalidLink) {
+            if (!browseRestored && !invalidLink && boundsRestoreError === null) {
                 browseRestored = true;
-                const explicit = ["browse_country", "browse_region", "browse_offset", "points"].some((name) => initialUrl.searchParams.has(name));
+                const explicit = ["browse_country", "browse_region", "browse_offset", "points", "browse_bbox"].some((name) => initialUrl.searchParams.has(name));
                 const browse = explicit ? initialBrowse.state : { ...initialBrowse.state,
                     country: initialLink.request?.country ?? null, region: initialLink.request?.region ?? null };
-                if (loaded[2].status === "rejected" && !browse.country && !browse.region && browse.offset === 0)
+                if (loaded[2].status === "rejected" && !browse.country && !browse.region && !browse.bbox && browse.offset === 0)
                     return;
                 try {
                     await explore?.setState(browse);
@@ -636,17 +648,13 @@
             unresolvedSearchLink = null;
         saveViewLink();
         ui.resultTools.hidden = false;
-        ui.copyLink.disabled = false;
-        ui.exportResults.disabled = false;
+        ui.copyLink.disabled = boundsRestoreError !== null;
+        ui.exportResults.disabled = boundsRestoreError !== null;
         ui.toolsFeedback.textContent = "";
         ui.shareLinkPanel.hidden = true;
-        ui.shareLink.value = link;
-        try {
-            window.history.replaceState(null, "", state.completedSearch.link);
-        }
-        catch {
-            ui.toolsFeedback.textContent = "地址栏未能更新；仍可复制检索链接或导出结果。";
-        }
+        ui.shareLink.value = boundsRestoreError !== null ? currentLink : state.completedSearch.link;
+        if (boundsRestoreError !== null)
+            ui.toolsFeedback.textContent = "地图范围恢复失败；先明确清除或重新捕获范围，再复制或导出研究视图。";
         if (removedFocus || (previousFocus instanceof HTMLButtonElement && previousFocus.disabled
             && [ui.previousResult, ui.nextResult, ui.locateSelected].includes(previousFocus))) {
             focusWithinView(ui.resultSummary);
@@ -654,6 +662,10 @@
         announce(`检索完成，返回 ${state.results.length} 条候选资料。${data.mode === "semantic" ? "相似度分数并非相关概率，请核验来源。" : ""}`);
     }
     async function copySearchLink() {
+        if (boundsRestoreError !== null) {
+            ui.toolsFeedback.textContent = "地图范围尚未恢复；先明确清除或重新捕获范围，再复制或导出研究视图。原链接仍保留在地址栏。";
+            return;
+        }
         saveViewLink();
         const copiedLink = currentLink;
         try {
@@ -679,6 +691,10 @@
         const completed = state.completedSearch;
         if (!completed)
             return;
+        if (boundsRestoreError !== null) {
+            ui.toolsFeedback.textContent = "地图范围尚未恢复；先明确清除或重新捕获范围，再复制或导出研究视图。";
+            return;
+        }
         if (state.selectedId && !currentSelectedSite()) {
             ui.toolsFeedback.textContent = "请等待选中遗址资料读取完成，再导出完整来源附录。";
             return;
@@ -949,7 +965,7 @@
         return list;
     }
     function saveViewLink() {
-        if (initialStatePending || invalidLink || pendingSelectionRestore || unresolvedSearchLink)
+        if (initialStatePending || invalidLink || boundsRestoreError !== null || pendingSelectionRestore || unresolvedSearchLink)
             return;
         const link = ArchSearchResearch.buildLink(new URL(window.location.href), state.completedSearch?.request ?? null, historyView?.getView() ?? null, { site: state.selectedId, phase: selectedPhaseId }, explore?.getCommittedState() ?? null);
         currentLink = link;
@@ -1286,7 +1302,7 @@
         const userVersion = historyView?.actionVersion() ?? 0;
         state.selectedId = id;
         state.selectedSite = known;
-        ui.exportResults.disabled = state.completedSearch === null || known === null;
+        ui.exportResults.disabled = boundsRestoreError !== null || state.completedSearch === null || known === null;
         selectedPhaseId = null;
         markSelection(id);
         ui.detailPanel.hidden = false;
@@ -1450,6 +1466,9 @@
     polarView = ArchSearchPolarView.create({ onSelect: (id, opener) => { void selectSite(id, { opener, moveMap: false }); } });
     explore = ArchSearchExplore.create({
         map: state.map,
+        initialBoundsError: boundsRestoreError,
+        initialState: boundsRestoreError !== null ? initialNonBoundsBrowse.state : undefined,
+        onBoundsAction: () => { boundsRestoreError = null; browseRestored = true; },
         onSelect: (id, opener, options) => { void selectSite(id, { opener, moveMap: options?.moveMap ?? true }); },
         onFilterChange: () => {
             cancelLinkRestore();

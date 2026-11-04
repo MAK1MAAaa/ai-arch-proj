@@ -11,6 +11,7 @@ from typing import Literal
 
 from pydantic import BaseModel, Field
 
+from archsearch.bounds import BBox, SpatialBounds
 from archsearch.config import DATA_DIR
 from archsearch.domain import Site
 from archsearch.spatial_data import SpatialDataError, WorldLocations, load_world_locations
@@ -212,6 +213,9 @@ class SitePage(BaseModel):
     offset: int
     limit: int
     sites: list[Site]
+    bbox: BBox | None = None
+    spatial_match_mode: Literal["source-or-representative", "representative-only"]
+    spatial_version: str | None = None
 
 
 def matches_geography(site: Site, country: str | None, region: str | None) -> bool:
@@ -434,11 +438,23 @@ class CatalogueIndex:
     def page(
         self, offset: int = 0, limit: int = 50,
         country: str | None = None, region: str | None = None, kind: str | None = None,
+        bbox: SpatialBounds | None = None,
     ) -> SitePage:
         if type(offset) is not int or offset < 0 or type(limit) is not int or not 1 <= limit <= 100:
             raise ValueError("offset必须为非负整数，limit必须为1至100的整数。")
         selected = self.filtered(country, region, kind)
+        if bbox is not None:
+            selected = [
+                site for site in selected
+                if (site.repr_point is not None and bbox.contains(site.repr_point))
+                or any(bbox.contains(point) for point in self.source_points(site.id))
+            ]
         return SitePage(
             corpus_version=self.corpus_version, total=len(selected), offset=offset, limit=limit,
             sites=selected[offset:offset + limit],
+            bbox=bbox.as_tuple() if bbox is not None else None,
+            spatial_match_mode=(
+                "source-or-representative" if self.spatial is not None else "representative-only"
+            ),
+            spatial_version=self.spatial.version if self.spatial is not None else None,
         )

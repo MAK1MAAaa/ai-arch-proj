@@ -90,7 +90,12 @@
             <label class="explore-points-toggle"><input id="explore-points" type="checkbox" checked disabled><span>显示全库点位</span></label>
             <button id="explore-fit" class="interaction-button" type="button" disabled>定位主图范围</button>
           </div>
-          <p id="explore-filter-note" class="explore-note">地域选择用于目录浏览和下一次主动检索；已完成的检索排名与地图年份保持原样。跨国遗产按来源成员筛选，仍显示整条遗产的所有源点；没有逐点国别依据，不按坐标推定归属。</p>
+          <div class="explore-bounds-controls" role="group" aria-label="固定地图浏览范围">
+            <button id="explore-capture-bounds" class="interaction-button" type="button" disabled aria-describedby="explore-bounds-status">按当前地图范围浏览</button>
+            <button id="explore-clear-bounds" class="interaction-button" type="button" disabled>清除地图范围</button>
+            <p id="explore-bounds-status" class="explore-note" role="status" aria-live="polite" tabindex="-1">尚未限定地图范围。仅影响目录与全库点层；拖动地图不会更新范围。</p>
+          </div>
+          <p id="explore-filter-note" class="explore-note">地域选择用于目录浏览和下一次主动检索；地图范围仅用于目录和全库点层，不传入检索。已完成的排名与地图年份保持原样。跨国遗产按来源成员筛选；未限定地图范围时显示整条遗产的源点，限定后仅绘框内定位点。没有逐点国别依据，不按坐标推定归属。</p>
           <div class="explore-feedback-row"><p id="explore-feedback" class="explore-feedback" role="status" aria-live="polite">无需输入问题或准备模型，也可浏览本地目录。</p><button id="explore-retry" class="interaction-button" type="button" hidden>重试目录</button></div>
           <details id="explore-directory" class="explore-directory">
             <summary>浏览完整目录 <span id="explore-count">等待资料</span></summary>

@@ -16,6 +16,7 @@ from starlette.middleware.base import RequestResponseEndpoint
 from starlette.middleware.gzip import GZipMiddleware
 from starlette.responses import Response
 
+from archsearch.bounds import SpatialBounds
 from archsearch.config import (
     DEFAULT_HOME,
     MODEL_ID,
@@ -200,7 +201,7 @@ def create_app(
     def catalogue_filters(
         request: Request, country: str | None, region: str | None, kind: str | None,
     ) -> None:
-        for name in ("country", "region", "type", "offset", "limit"):
+        for name in ("country", "region", "type", "offset", "limit", "bbox"):
             if len(request.query_params.getlist(name)) > 1:
                 raise HTTPException(status_code=422, detail=f"{name}参数不能重复。")
         try:
@@ -218,6 +219,8 @@ def create_app(
         type: str | None = None,
     ) -> CatalogueResponse:
         catalogue_filters(request, country, region, type)
+        if "bbox" in request.query_params:
+            raise HTTPException(status_code=422, detail="bbox仅用于/api/sites分页目录。")
         return catalogue_index.catalogue(country, region, type)
 
     @app.get("/api/sites", response_model=SitePage)
@@ -225,9 +228,14 @@ def create_app(
         request: Request, offset: int = Query(default=0, ge=0),
         limit: int = Query(default=50, ge=1, le=100),
         country: str | None = None, region: str | None = None, type: str | None = None,
+        bbox: str | None = Query(default=None, min_length=1, max_length=200),
     ) -> SitePage:
         catalogue_filters(request, country, region, type)
-        return catalogue_index.page(offset, limit, country, region, type)
+        try:
+            bounds = SpatialBounds.from_csv(bbox) if bbox is not None else None
+        except ValueError as error:
+            raise HTTPException(status_code=422, detail=str(error)) from error
+        return catalogue_index.page(offset, limit, country, region, type, bounds)
 
     @app.post("/api/search", response_model=SearchResponse)
     def search(body: SearchRequest) -> SearchResponse:

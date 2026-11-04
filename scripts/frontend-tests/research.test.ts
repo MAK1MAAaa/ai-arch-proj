@@ -61,7 +61,7 @@ interface HistoryView {
   frame_id: string | null; source_version: string | null;
 }
 
-interface BrowseState { country: string | null; region: string | null; offset: number; visible: boolean }
+interface BrowseState { country: string | null; region: string | null; offset: number; visible: boolean; bbox?: [number, number, number, number] | null; spatial_match_mode?: string; spatial_version?: string | null }
 
 const source = readFileSync(new URL('../../src/archsearch/frontend/research.ts', import.meta.url), 'utf8');
 const compiled = ts.transpileModule(source, {
@@ -304,7 +304,7 @@ test('v2 export freezes the actual displayed map and multiple source licenses', 
 
 test('catalogue-only links restore a namespaced site without inventing a search', () => {
   const selection = { site: 'whc:252', phase: null };
-  const browse: BrowseState = { country: 'IN', region: 'asia-pacific', offset: 50, visible: false };
+  const browse: BrowseState = { country: 'IN', region: 'asia-pacific', offset: 50, visible: false, bbox: null };
   const url = new URL(helpers.buildLink(base, null, null, selection, browse));
   assert.deepEqual(plain(helpers.parseLink(url)), { request: null, error: null });
   assert.deepEqual(plain(helpers.parseView(url).selection), selection);
@@ -312,7 +312,7 @@ test('catalogue-only links restore a namespaced site without inventing a search'
 });
 
 test('Antarctic catalogue links retain independent region and HSM identity', () => {
-  const browse: BrowseState = { country: null, region: 'antarctica', offset: 50, visible: true };
+  const browse: BrowseState = { country: null, region: 'antarctica', offset: 50, visible: true, bbox: null };
   const link = new URL(helpers.buildLink(base, null, null, { site: 'ats:hsm:95', phase: null }, browse));
   assert.equal(helpers.parseView(link).selection.site, 'ats:hsm:95');
   assert.equal(helpers.parseBrowse(link).state.region, 'antarctica');
@@ -323,7 +323,7 @@ test('Antarctic catalogue links retain independent region and HSM identity', () 
 
 test('successful search filters and independently browsed filters never overwrite each other', () => {
   const searched = { ...request, country: 'FR', region: 'europe-north-america' };
-  const browse: BrowseState = { country: 'CN', region: 'asia-pacific', offset: 0, visible: true };
+  const browse: BrowseState = { country: 'CN', region: 'asia-pacific', offset: 0, visible: true, bbox: null };
   const url = new URL(helpers.buildLink(base, searched, null, { site: null, phase: null }, browse));
   assert.deepEqual(plain(helpers.parseLink(url).request), searched);
   assert.deepEqual(plain(helpers.parseBrowse(url).state), browse);
@@ -332,7 +332,7 @@ test('successful search filters and independently browsed filters never overwrit
 });
 
 test('explicitly cleared browse filters remain distinct from successful search filters', () => {
-  const browse: BrowseState = { country: null, region: null, offset: 0, visible: true };
+  const browse: BrowseState = { country: null, region: null, offset: 0, visible: true, bbox: null };
   const url = new URL(helpers.buildLink(base, { ...request, country: 'FR' }, null, { site: null, phase: null }, browse));
   assert.equal(url.searchParams.get('browse_country'), '');
   assert.equal(helpers.parseBrowse(url).state.country, null);
@@ -389,7 +389,7 @@ test('spatial exports retain source order, duplicates and labels separately from
 });
 
 test('source-qualified authority IDs round-trip without inventing a search or a historical phase', () => {
-  const browse: BrowseState = { country: 'KI', region: 'asia-pacific', offset: 0, visible: true };
+  const browse: BrowseState = { country: 'KI', region: 'asia-pacific', offset: 0, visible: true, bbox: null };
   const view: HistoryView = { year: 117, basemap: 'historical', boundaries: false, frame_id: 'frame-117', source_version: 'v0.2.1' };
   for (const id of ['auth:dva:betio-coast-watchers-memorial', 'auth:commonwealth:67579', 'auth:sprep:d6eab109-2e10-4654-b3c4-5bb94f6a8867']) {
     const selection = { site: id, phase: null };
@@ -431,7 +431,7 @@ test('an independently selected unknown supplement exports its own evidence with
     chronology: { status: 'not_reviewed', phases: [], default_phase_id: null },
     geography: { authority_id: 'supplement:auth:dva:betio-coast-watchers-memorial', countries: ['KI'], regions: ['asia-pacific'], point_count: 0, note: 'No verified public coordinate; not substituted with an island centre.' },
   };
-  const browse: BrowseState = { country: 'KI', region: 'asia-pacific', offset: 0, visible: false };
+  const browse: BrowseState = { country: 'KI', region: 'asia-pacific', offset: 0, visible: false, bbox: null };
   const before = plain(response);
   const report = helpers.createExport(searched, response, '2026-11-04T00:00:00Z', null,
     { site: selected.id, phase: null }, selected, browse,
@@ -453,4 +453,47 @@ test('an independently selected unknown supplement exports its own evidence with
   assert.equal('score' in (report.selected_site as Record<string, unknown>), false);
   assert.equal('rank' in (report.selected_site as Record<string, unknown>), false);
   assert.equal(report.map, null);
+});
+
+test('fixed browse bounds round-trip independently of search filters and historical selection', () => {
+  const bbox: [number, number, number, number] = [170, -20, -170, 10];
+  const searched = { ...request, country: 'FR' };
+  const browse: BrowseState = { country: 'NZ', region: 'asia-pacific', offset: 50, visible: false, bbox };
+  const url = new URL(helpers.buildLink(base, searched, null, { site: 'whc:1', phase: null }, browse));
+  assert.equal(url.searchParams.get('browse_bbox'), '170,-20,-170,10');
+  assert.deepEqual(plain(helpers.parseBrowse(url)), { state: browse, error: null });
+  assert.deepEqual(plain(helpers.parseLink(url).request), searched);
+  assert.equal(url.searchParams.has('bbox'), false);
+  assert.equal(helpers.parseBrowse(new URL('?q=harbor&mode=bm25', base)).state.bbox, null);
+  assert.deepEqual(plain(helpers.parseBrowse(new URL('?browse_bbox=+1.7e2,+-2e1,-1.7e2,1e1', base)).state.bbox), bbox);
+});
+
+test('invalid or repeated bbox links reject without silently widening the restored scope', () => {
+  const invalid = ['', '1,2,3', '1,2,3,4,5', '1,2,1,4', '180,-20,-180,20', '-181,-20,0,20',
+    '-10,-91,10,20', '-10,0,10,91', '-10,2,10,2', '-10,3,10,2', 'NaN,0,10,20',
+    'Infinity,0,10,20', '1e309,0,10,20', '0x10,0,20,30', '１,0,20,30', `${' '.repeat(190)}-10,0,10,20`];
+  for (const bbox of invalid) {
+    const url = new URL(base); url.searchParams.set('browse_bbox', bbox);
+    assert.notEqual(helpers.parseBrowse(url).error, null, bbox);
+  }
+  assert.notEqual(helpers.parseBrowse(new URL('?browse_bbox=1,2,3,4&browse_bbox=1,2,3,4', base)).error, null);
+  assert.deepEqual(plain(helpers.parseBrowse(new URL('?browse_bbox=-180,-90,180,90', base)).state.bbox), [-180, -90, 180, 90]);
+  const boundary = new URL(base); boundary.searchParams.set('browse_bbox', `${' '.repeat(189)}-10,0,10,20`);
+  assert.equal(boundary.searchParams.get('browse_bbox')?.length, 200);
+  assert.deepEqual(plain(helpers.parseBrowse(boundary).state.bbox), [-10, 0, 10, 20]);
+});
+
+test('exports clone the committed bbox and source matching capability without changing the search snapshot', () => {
+  const bbox: [number, number, number, number] = [29, 40, 31, 42];
+  const browse: BrowseState = { country: 'TR', region: null, offset: 0, visible: true, bbox,
+    spatial_match_mode: 'source-or-representative', spatial_version: 'world-locations-v1' };
+  const response = { query: request.query, mode: request.mode, corpus_version: 'global-v6', elapsed_ms: 1, total_candidates: 1, results: [{ id: 'other' }] };
+  const exported = helpers.createExport(request, response, '2026-11-04T00:00:00Z', null, { site: 'whc:1', phase: null }, null, browse);
+  bbox[0] = 0;
+  assert.deepEqual(plain(exported.browse?.bbox), [29, 40, 31, 42]);
+  assert.equal(exported.browse?.spatial_match_mode, 'source-or-representative');
+  assert.equal(exported.browse?.spatial_version, 'world-locations-v1');
+  assert.deepEqual(plain(exported.request), request);
+  assert.deepEqual(plain(exported.response), response);
+  assert.equal(Object.hasOwn(exported.request, 'bbox'), false);
 });

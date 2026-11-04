@@ -33,6 +33,26 @@ const ArchSearchResearch = (() => {
     region: string | null;
     offset: number;
     visible: boolean;
+    bbox?: [number, number, number, number] | null;
+    spatial_match_mode?: "source-or-representative" | "representative-only";
+    spatial_version?: string | null;
+  }
+
+  function normalizeBBox(value: unknown): [number, number, number, number] | null {
+    if (value === null || value === undefined) return null;
+    if (!Array.isArray(value) || value.length !== 4 || !value.every((item) => typeof item === "number" && Number.isFinite(item))) throw new Error("地图范围须为四个有限数字。");
+    const [west, south, east, north] = value as number[];
+    if (west < -180 || west > 180 || east < -180 || east > 180 || south < -90 || north > 90
+      || south >= north || west === east || (west === 180 && east === -180)) throw new Error("地图范围经纬度越界或范围宽度／高度为零。");
+    return [west, south, east, north];
+  }
+
+  function parseBBox(value: string | null): [number, number, number, number] | null {
+    if (value === null) return null;
+    if (value.length < 1 || value.length > 200) throw new Error("地图范围参数长度应为1至200个字符。");
+    const parts = value.split(",").map((part) => part.trim());
+    if (parts.length !== 4 || parts.some((part) => !/^[+-]?(?:[0-9]+(?:\.[0-9]*)?|\.[0-9]+)(?:[eE][+-]?[0-9]+)?$/u.test(part))) throw new Error("地图范围应为西、南、东、北四个十进制数字。");
+    return normalizeBBox(parts.map(Number));
   }
 
   const regions = ["africa", "arab-states", "asia-pacific", "europe-north-america", "latin-america-caribbean", "antarctica"];
@@ -46,9 +66,9 @@ const ArchSearchResearch = (() => {
   }
 
   function parseBrowse(url: URL): { state: BrowseState; error: string | null } {
-    const empty = { country: null, region: null, offset: 0, visible: true };
+    const empty = { country: null, region: null, offset: 0, visible: true, bbox: null };
     try {
-      for (const name of ["browse_country", "browse_region", "browse_offset", "points"]) {
+      for (const name of ["browse_country", "browse_region", "browse_offset", "points", "browse_bbox"]) {
         if (url.searchParams.getAll(name).length > 1) throw new Error(`链接中的 ${name} 参数不能重复。`);
       }
       const scope = geography(url.searchParams.get("browse_country"), url.searchParams.get("browse_region"));
@@ -56,7 +76,7 @@ const ArchSearchResearch = (() => {
       const points = url.searchParams.get("points") ?? "1";
       if (!/^(?:0|[1-9]\d{0,6})$/u.test(rawOffset) || Number(rawOffset) > 1_000_000) throw new Error("目录页码无效。");
       if (points !== "0" && points !== "1") throw new Error("全库点图层参数无效。");
-      return { state: { ...scope, offset: Number(rawOffset), visible: points === "1" }, error: null };
+      return { state: { ...scope, offset: Number(rawOffset), visible: points === "1", bbox: parseBBox(url.searchParams.get("browse_bbox")) }, error: null };
     } catch (error) {
       return { state: empty, error: error instanceof Error ? error.message : "目录链接无效。" };
     }
@@ -186,11 +206,13 @@ const ArchSearchResearch = (() => {
     if (selection.site && selection.phase) url.searchParams.set("phase", selection.phase);
     if (browse) {
       const scope = geography(browse.country, browse.region);
+      const bbox = normalizeBBox(browse.bbox);
       if (!Number.isInteger(browse.offset) || browse.offset < 0 || browse.offset > 1_000_000) throw new Error("目录页码无效。");
       url.searchParams.set("browse_country", scope.country ?? "");
       url.searchParams.set("browse_region", scope.region ?? "");
       if (browse.offset) url.searchParams.set("browse_offset", String(browse.offset));
       if (!browse.visible) url.searchParams.set("points", "0");
+      if (bbox !== null) url.searchParams.set("browse_bbox", bbox.join(","));
     }
     return url.href;
   }
@@ -219,7 +241,7 @@ const ArchSearchResearch = (() => {
       selection: { ...selection },
       selected_site: selectedSite,
       spatial: spatial === null ? null : JSON.parse(JSON.stringify(spatial)) as SpatialSnapshot,
-      browse: browse ? { ...browse } : null,
+      browse: browse ? { ...browse, bbox: normalizeBBox(browse.bbox) } : null,
       sources: [
         { name: "Pleiades", version: "v4.1", license: "CC BY 3.0", uri: "https://pleiades.stoa.org/" },
         { name: "UNESCO World Heritage descriptions", license: "CC BY-SA 3.0 IGO", uri: "https://whc.unesco.org/en/disclaimer/", note: "Individual record references retain attribution and revisions; other linked documents retain their own rights." },
@@ -252,9 +274,10 @@ const ArchSearchResearch = (() => {
         map: "map保存最后成功显示的年份与疆域版本；null表示尚无成功地图快照，待加载或失败年份不冒充已显示年份。",
         locations: "repr_point为null表示本记录无可用代表点：可能真实位置不明，也可能尚未取得可信公开数字坐标，来源说明保留区别；不等于零坐标。有效极区坐标超出Web Mercator时使用独立极区示意，不截断或伪造纬度。极区底图为现代自然地理参照，不生成历史国界。",
         source_points: "spatial保留最后成功目录的源点版本及独立选中资料的原始定位序列、重复记录与来源标签。源点和原代表点分开保存；多个定位记录不增加遗产条目数，也不等于独立核验的发掘坐标。地图可合并同一遗产同坐标圆点，导出保留全部源序列。",
+        browse: "browse保存成功应用的独立目录条件；bbox为[西,南,东,北]闭区间，西大于东表示跨日期变更线，仅筛目录和全库点层，不改变request中的检索语义。spatial_match_mode及spatial_version记录当时的来源点匹配能力；representative-only可能遗漏无代表点落入框内的组成地点。选中资料的原始源序列仍完整导出。",
       },
     };
   }
 
-  return { parseLink, parseView, parseBrowse, buildLink, createExport, validYear, automaticPhaseYear };
+  return { parseLink, parseView, parseBrowse, buildLink, createExport, validYear, automaticPhaseYear, normalizeBBox, parseBBox };
 })();
