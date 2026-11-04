@@ -9,13 +9,13 @@ from fastapi.testclient import TestClient
 
 from archsearch import canada_data as cohort
 from archsearch.api import create_app
-from archsearch.corpus import build_document, load_corpus, load_pre_canada_corpus
+from archsearch.corpus import build_document, load_pre_canada_corpus, load_pre_hong_kong_corpus
 from archsearch.evaluation import evaluate_corpus, load_queries
 from archsearch.supplement_data import base_contract
 
 
 def test_canadian_cohort_preserves_all_1999_source_records_and_search_documents() -> None:
-    before, current = load_pre_canada_corpus(), load_corpus()
+    before, current = load_pre_canada_corpus(), load_pre_hong_kong_corpus()
     assert base_contract(before) == {
         "base_count": 1999,
         "base_ids_sha256": "1a197b6522e791d4cee045dcaaaf32212a3b62bcee3374f93bfa6205e0b5b46d",
@@ -77,10 +77,10 @@ def test_canadian_derivatives_rebuild_twice_without_raw_downloads(tmp_path: Path
 def test_canadian_catalogue_and_selected_original_point_do_not_infer_years(tmp_path: Path) -> None:
     with TestClient(create_app(home=tmp_path)) as client:
         coverage = client.get("/api/coverage").json()
-        assert coverage["total"] == 2976 and coverage["corpus_version"] == "global-v13"
-        assert len(coverage["countries"]) == 202 and len(coverage["regions"]) == 7
+        assert coverage["total"] == 3116 and coverage["corpus_version"] == "global-v14"
+        assert len(coverage["countries"]) == 203 and len(coverage["regions"]) == 7
         assert coverage["chronology"] == {
-            "reviewed": 149, "insufficient": 451, "not_reviewed": 2376,
+            "reviewed": 149, "insufficient": 451, "not_reviewed": 2516,
         }
         assert coverage["spatial_locations"]["points"] == 5851
         page = client.get("/api/sites", params={"country": "CA", "limit": 50}).json()
@@ -95,13 +95,13 @@ def test_canadian_catalogue_and_selected_original_point_do_not_infer_years(tmp_p
             search = client.post("/api/search", json={
                 "query": detail["title"], "mode": "bm25", "country": "CA", "limit": 10,
             }).json()
-            assert search["corpus_version"] == "global-v13"
+            assert search["corpus_version"] == "global-v14"
             assert any(result["site"]["id"] == site_id for result in search["results"])
         for identifier in ("60", "257", "770", "1779", "1780", "17353"):
             assert client.get("/api/sites/auth:ca-dfhd:" + identifier).status_code == 404
         state = client.get("/api/status").json()
-        assert state["corpus"]["count"] == 2976 and not state["semantic"]["ready"]
-        assert state["registered_areas"]["sites"] == 59
+        assert state["corpus"]["count"] == 3116 and not state["semantic"]["ready"]
+        assert state["registered_areas"]["sites"] == 197
 
 
 def test_canadian_diagnostics_leave_relevance_metrics_unconfirmed(tmp_path: Path) -> None:
@@ -109,7 +109,7 @@ def test_canadian_diagnostics_leave_relevance_metrics_unconfirmed(tmp_path: Path
     pairs = load_queries(queries)
     assert [pair.id for pair in pairs] == [f"ca{index:02d}" for index in range(1, 21)]
     report = evaluate_corpus(tmp_path / "no-model", tmp_path / "report.json", queries=queries)
-    assert report["corpus_count"] == 2976 and report["metrics"] is None
+    assert report["corpus_count"] == 3116 and report["metrics"] is None
     assert report["qrels"]["confirmed"] is False and not report["runs_complete"]
     assert set(report["runs"]) == {"bm25_zh", "bm25_en", "semantic_zh", "semantic_en"}
     assert all(row["error"] is None for key, run in report["runs"].items()

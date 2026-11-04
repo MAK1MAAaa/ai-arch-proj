@@ -53,7 +53,7 @@ interface ExportResult<T> {
 
 interface RegisteredAreaSnapshot {
   site_id: string; corpus_version: string; displayed: true; ready: boolean;
-  reason: string | null; version: string | null; label: '现代遗产登记范围'; note: string;
+  reason: string | null; version: string | null; label: '现代遗产登记范围' | '来源古迹多边形'; note: string;
   features: { id: string; source_index: number; provider_object_id: number; title: string;
     source: { name: string; uri: string; version: string; sha256: string; license: string; license_uri: string };
     geometry_type: 'esriGeometryPolygon'; rings: number[][][] }[];
@@ -164,10 +164,30 @@ test('a displayed matching registered range exports full original WGS84 rings se
   assert.equal(exported.spatial, null); assert.deepEqual(plain(exported.response.results), []);
   assert.equal('score' in exported.registered_areas!, false);
   const source = exported.sources.find(item => item.name === 'Australian National Heritage List public spatial database');
-  assert.equal(source?.license, 'CC BY 3.0 Australia'); assert.equal(source?.version, 'source-fixture-v1');
+  assert.equal(source?.license, 'CC BY 3.0 Australia'); assert.equal(source?.version, 'australia-nhl-v1');
   assert.match(source?.uri ?? '', /National_Heritage_List\/FeatureServer\/0/u);
   assert.equal(exported.registered_areas?.features[0].source.uri, 'https://example.org/original');
   assert.match(exported.provenance.registered_areas, /不推内外环.*不写入分享链接/u);
+});
+
+test('a displayed source polygon exports its own label and source version without relabelling Australian data', () => {
+  const snapshot = registeredAreaFixture();
+  snapshot.site_id = 'auth:hk-amo:monuments-88'; snapshot.label = '来源古迹多边形';
+  snapshot.version = 'areas-fixture-v1+hong-kong-polygons-fixture';
+  snapshot.features[0].source.name = 'Government of HKSAR / CSDI Portal / AMO fixture';
+  snapshot.features[0].source.version = 'DM_20260130_150858';
+  snapshot.features[0].source.license = 'CSDI Portal Terms and Conditions of Use';
+  snapshot.features[0].source.license_uri = 'https://portal.csdi.gov.hk/csdi-webpage/doc/TNC';
+  const selected = { id: snapshot.site_id, repr_point: null };
+  const response = { query: 'synthetic', mode: 'bm25' as const, corpus_version: snapshot.corpus_version, elapsed_ms: 1, total_candidates: 0, results: [] };
+  const searched = { query: 'synthetic', mode: 'bm25' as const, type: null, limit: 10 };
+  const exported = helpers.createExport(searched, response, '2026-11-05T00:00:00Z', null,
+    { site: selected.id, phase: null }, selected, null, null, snapshot, snapshot.corpus_version);
+  assert.equal(exported.registered_areas?.label, '来源古迹多边形');
+  assert.equal(exported.registered_areas?.features[0].source.version, 'DM_20260130_150858');
+  assert.equal(exported.sources.find(item => item.name === 'Australian National Heritage List public spatial database')?.version, 'australia-nhl-v1');
+  assert.match(exported.provenance.registered_areas, /后者不承诺法定边界/u);
+  assert.equal((exported.selected_site as typeof selected).repr_point, null);
 });
 
 test('unshown, stale or differently selected registered ranges are omitted from an otherwise valid export', () => {
@@ -376,11 +396,13 @@ test('export provenance includes source release, attribution, license and interp
   assert.equal(canada?.version, 'canada-dfhd-v1');
   assert.equal(canada?.license, 'Open Government Licence - Canada; Wikidata structured claims CC0');
   assert.match(canada?.note ?? '', /Parks Canada.*reference points.*separate from project identity approval/u);
-  const subdivisions = exported.sources.find(source => source.version === 'source-subdivisions-v1');
-  assert.equal(subdivisions?.license, 'Mixed rights — DFHD fields OGL-Canada; CRHP and Parks Canada webpages retain individual rights');
+  const subdivisions = exported.sources.find(source => source.version === 'source-subdivisions-v2');
+  assert.equal(subdivisions?.license, 'Mixed rights — DFHD fields OGL-Canada; CSDI custom terms; CRHP, Parks Canada and AMO webpages retain individual rights');
   assert.equal(subdivisions?.uri, 'https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/SUBDIVISIONS-LICENSE.md');
-  assert.match(subdivisions?.note ?? '', /Only the 986 DFHD objects.*CRHP and Parks Canada.*no blanket OGL or CC0 grant/u);
-  assert.match(subdivisions?.note ?? '', /original fields.*source hashes.*No coordinate geocoding, component inheritance/u);
+  assert.match(subdivisions?.note ?? '', /Only the986 DFHD objects.*CRHP and Parks Canada.*CSDI Terms/u);
+  assert.match(subdivisions?.note ?? '', /explicitly reviewed whole.*No coordinate geocoding, inferred parent membership/u);
+  const hongKong = exported.sources.find(source => source.version === 'hong-kong-monuments-v1');
+  assert.match(hongKong?.note ?? '', /Government of the Hong Kong Special Administrative Region.*CSDI.*no blanket CSDI licence/u);
 });
 
 test('exports refuse mismatched queries or modes instead of mislabelling earlier results', () => {

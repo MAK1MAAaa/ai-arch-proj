@@ -873,7 +873,7 @@ async function applySubdivision(app: ReturnType<typeof setup>, id: string, state
 test('source province counts support overlap and unassigned objects without altering default country membership', async () => {
   const app = await subdivisionApp();
   assert.match(app.node('explore-count').textContent, /4 条/u);
-  assert.match(app.node('explore-subdivision-note').textContent, /3 \/ 4.*1 条未采用.*跨省/u);
+  assert.match(app.node('explore-subdivision-note').textContent, /3 \/ 4.*1 条未采用.*同一对象可关联多个地区/u);
   assert.equal(app.node('explore-subdivision').disabled, false);
   assert.equal(app.node('explore-subdivision').children[1].textContent, 'Ontario · 2');
   await applySubdivision(app, 'CA:ontario');
@@ -984,7 +984,7 @@ test('province facet failures preserve basic country browsing and keyboard retry
   app.node('explore-subdivision-retry').focus(); app.node('explore-subdivision-retry').fire('click'); await tick();
   assert.equal(app.doc.activeElement, app.node('explore-subdivision-note'));
   app.response(live(app, '/api/subdivisions?country=CA'), { ...subdivisionOptions(), assigned: 4, unassigned: 0 }); await tick();
-  assert.match(app.node('explore-subdivision-note').textContent, /当前国家目录均有采用的来源省区关联/u);
+  assert.match(app.node('explore-subdivision-note').textContent, /当前国家／地区目录均有采用的来源地区关联/u);
   assert.doesNotMatch(app.node('explore-subdivision-note').textContent, /条未采用/u);
   assert.equal(app.node('explore-subdivision-retry').hidden, true);
   assert.deepEqual(plain(app.controller.getCommittedState()), successful); assert.equal([...app.map!.layers][0], layer);

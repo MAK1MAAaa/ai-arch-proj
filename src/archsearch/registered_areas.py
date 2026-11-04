@@ -6,6 +6,8 @@ import argparse
 import hashlib
 import json
 import math
+from collections.abc import Sequence
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Literal
 from urllib.parse import parse_qs, urlsplit
@@ -22,6 +24,9 @@ AREAS_FILE = "registered_areas.json"
 AREAS_VERSION = "registered-areas-v1"
 AREAS_SHA256 = "2ffa50621c5a1b685770c252e284ca78e58b0e4753a84574ac1e97c9af759ece"
 LABEL: Literal["现代遗产登记范围"] = "现代遗产登记范围"
+POLYGON_LABEL: Literal["来源古迹多边形"] = "来源古迹多边形"
+AreaLabel = Literal["现代遗产登记范围", "来源古迹多边形"]
+EMPTY_NOTE = "本项目未采用此资料的公开来源范围；这不表示遗址位置未知或实际不存在范围。"
 MAX_SOURCE_BYTES = 5 * 1024 * 1024
 SERVICE_PATH = (
     "/gispubmap/rest/services/ogc_services/National_Heritage_List/FeatureServer/0/query"
@@ -74,7 +79,7 @@ class RegisteredAreasResponse(BaseModel):
     ready: bool
     reason: str | None = None
     version: str | None = None
-    label: Literal["现代遗产登记范围"] = LABEL
+    label: Literal["现代遗产登记范围", "来源古迹多边形", "来源公开范围"] = LABEL
     note: str = NOTE
     features: list[RegisteredArea] = Field(default_factory=list)
 
@@ -83,11 +88,32 @@ class RegisteredAreasStatus(BaseModel):
     ready: bool
     reason: str | None = None
     version: str | None = None
-    label: Literal["现代遗产登记范围"] = LABEL
+    label: Literal["现代遗产登记范围", "来源公开范围"] = LABEL
     sites: int = 0
     features: int = 0
     rings: int = 0
     coordinate_records: int = 0
+
+
+@dataclass(frozen=True)
+class AreaSourceGroup:
+    """An independently validated provider layer with its own semantics and failure scope."""
+
+    version: str
+    label: AreaLabel
+    note: str
+    site_ids: frozenset[str]
+    features: dict[str, list[RegisteredArea]]
+    ready: bool = True
+    reason: str | None = None
+
+
+@dataclass(frozen=True)
+class _AreaContext:
+    label: AreaLabel
+    note: str
+    ready: bool
+    reason: str | None
 
 
 class AreaInput(BaseModel):
@@ -267,18 +293,31 @@ def rebuild_registered_areas(
 class RegisteredAreasIndex:
     """Load an optional fixed local outline layer independently from point search."""
 
-    def __init__(self, data_dir: Path = DATA_DIR) -> None:
+    def __init__(
+        self, data_dir: Path = DATA_DIR, *, sources: Sequence[AreaSourceGroup] = (),
+    ) -> None:
         self.features: dict[str, list[RegisteredArea]] = {}
         self.ready = True
         self.reason: str | None = None
         self.version: str | None = None
+        self._contexts: dict[str, _AreaContext] = {}
+        self._australia_ids: set[str] = set()
+        self._unscoped_error: str | None = None
+        self._load_australia(data_dir)
+        self._contexts.update({site_id: _AreaContext(LABEL, NOTE, self.ready, self.reason)
+                               for site_id in self._australia_ids})
+        for group in sources:
+            self._add_source(group)
+
+    def _load_australia(self, data_dir: Path) -> None:
         if not (data_dir / "australia_manifest.json").exists():
             return
         try:
+            records, review = australia_inputs(data_dir)
+            self._australia_ids = {record.site_id for record in records}
             payload = (data_dir / AREAS_FILE).read_bytes()
             if _hash(payload) != AREAS_SHA256:
                 raise RegisteredAreasError("registered area sidecar differs from its frozen pin")
-            records, review = australia_inputs(data_dir)
             value = json.loads(payload)
             if (not isinstance(value, dict) or not isinstance(value.get("sites"), dict)
                     or value.get("schema_version") != 1 or value.get("version") != AREAS_VERSION
@@ -304,15 +343,59 @@ class RegisteredAreasIndex:
                                or area.source.sha256 != record.artifact.sha256 for area in areas)):
                     raise RegisteredAreasError("area feature provenance or counts differ")
             self.version = AREAS_VERSION
-        except (OSError, ValueError, KeyError, TypeError, RegisteredAreasError) as error:
+        except (OSError, ValueError, KeyError, TypeError, RecursionError,
+                RegisteredAreasError) as error:
             self.features = {}
             self.ready = False
             self.reason = f"现代登记范围不可用：{error} {PREPARE}"
+            if not self._australia_ids:
+                self._unscoped_error = self.reason
+
+    def _add_source(self, group: AreaSourceGroup) -> None:
+        """A failed provider never replaces successful geometries from another provider."""
+        error = group.reason
+        if (not group.version.strip() or "+" in group.version
+                or group.version in (self.version or "").split("+")
+                or group.label not in {LABEL, POLYGON_LABEL}
+                or not group.note.strip() or not group.site_ids
+                or set(group.features) - group.site_ids
+                or group.site_ids & self._contexts.keys()
+                or any(not rows for rows in group.features.values())):
+            error = "来源范围的版本、身份或对象分组不符合已核验合同。"
+        ready = group.ready and error is None
+        if not group.site_ids and not ready:
+            self._unscoped_error = error
+        context = _AreaContext(group.label if group.label in {LABEL, POLYGON_LABEL}
+                               else POLYGON_LABEL, group.note, ready, error)
+        if group.site_ids & self._contexts.keys():
+            self._contexts.update({site_id: context for site_id in group.site_ids
+                                   if site_id not in self._contexts})
+            self.ready = False
+            self.reason = "；".join(filter(None, (self.reason, error)))
+            return
+        self._contexts.update({site_id: context
+                               for site_id in group.site_ids})
+        if ready:
+            self.features.update({site_id: [row.model_copy(deep=True) for row in rows]
+                                  for site_id, rows in group.features.items()})
+            self.version = "+".join(filter(None, (self.version, group.version)))
+        else:
+            self.ready = False
+            self.reason = "；".join(filter(None, (self.reason,
+                                               error or "来源范围尚未准备。")))
 
     def response(self, site_id: str, corpus_version: str) -> RegisteredAreasResponse:
+        context = self._contexts.get(site_id)
+        fallback_error = self._unscoped_error or (
+            self.reason if not self.ready and not self._contexts else None
+        )
+        legacy_features = bool(self.features.get(site_id))
         return RegisteredAreasResponse(
-            site_id=site_id, corpus_version=corpus_version, ready=self.ready,
-            reason=self.reason, version=self.version,
+            site_id=site_id, corpus_version=corpus_version,
+            ready=context.ready if context else fallback_error is None,
+            reason=context.reason if context else fallback_error, version=self.version,
+            label=context.label if context else LABEL if legacy_features else "来源公开范围",
+            note=context.note if context else NOTE if legacy_features else EMPTY_NOTE,
             features=[row.model_copy(deep=True) for row in self.features.get(site_id, [])],
         )
 
@@ -321,6 +404,8 @@ class RegisteredAreasIndex:
                   if site_ids is None or key in site_ids]
         return RegisteredAreasStatus(
             ready=self.ready, reason=self.reason, version=self.version, sites=len(values),
+            label="来源公开范围" if any(context.label == POLYGON_LABEL
+                                   for context in self._contexts.values()) else LABEL,
             features=sum(len(rows) for rows in values),
             rings=sum(len(area.rings) for rows in values for area in rows),
             coordinate_records=sum(len(ring) for rows in values for area in rows

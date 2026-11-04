@@ -85,7 +85,7 @@ function payload(id = 'auth:fixture:a') {
 function text(node: FakeElement): string { return node.textContent + node.children.map(text).join(' '); }
 async function tick(): Promise<void> { for (let index = 0; index < 20; index++) await Promise.resolve(); }
 function setup(withMap = true, getPadding?: () => { topLeft: [number, number]; bottomRight: [number, number] }) {
-  const ids = ['registered-areas', 'registered-areas-status', 'registered-areas-note', 'registered-areas-sources', 'registered-areas-show', 'registered-areas-hide', 'registered-areas-retry'];
+  const ids = ['registered-areas', 'registered-areas-label', 'registered-areas-status', 'registered-areas-note', 'registered-areas-sources', 'registered-areas-show', 'registered-areas-hide', 'registered-areas-retry'];
   const nodes = new Map(ids.map(id => [id, new FakeElement(id.match(/show|hide|retry$/) ? 'button' : 'section')]));
   const pending: Pending[] = [], lines: Line[] = [];
   const document = { activeElement: null as FakeElement | null,
@@ -135,6 +135,41 @@ test('range reading follows explicit selection and requires a second explicit ac
   env.node('-hide').click();
   assert.equal(env.map.layers.size, 2); assert.equal(env.map.fits.length, 1);
   assert.equal(env.node('-show').getAttribute('aria-pressed'), 'false');
+});
+
+test('a source polygon keeps its own label and does not become a legal registration extent', async () => {
+  const env = setup();
+  const source = { ...payload(), label: '来源古迹多边形', note: 'Original source polygon; not a legal protection boundary.' };
+  env.controller.select('auth:fixture:a', 'Source polygon without representative');
+  env.complete(env.pending[0], source); await tick();
+  assert.equal(text(env.node('-label')), '来源古迹多边形');
+  assert.equal(text(env.node('-show')), '查看来源多边形');
+  assert.equal(env.lines.length, 0);
+  env.node('-show').click();
+  assert.match(text(env.node('-status')), /来源古迹多边形/u);
+  assert.match(text(env.node('-note')), /not a legal protection boundary/u);
+  assert.equal(env.controller.getSnapshot()?.label, '来源古迹多边形');
+  assert.deepEqual(JSON.parse(JSON.stringify(env.controller.getSnapshot()?.features[0].rings)), source.features[0].rings);
+  env.controller.select('auth:fixture:b', 'Another registration');
+  assert.equal(text(env.node('-label')), '来源公开范围');
+  env.complete(env.pending[1], payload('auth:fixture:b')); await tick();
+  assert.equal(text(env.node('-label')), '现代遗产登记范围');
+  assert.equal(text(env.node('-show')), '查看登记范围');
+  assert.equal(env.controller.getSnapshot(), null);
+});
+
+test('a known whole without a source polygon has a successful empty state without asserting an existing point', async () => {
+  const env = setup();
+  env.controller.select('auth:fixture:a', 'Later official whole');
+  env.complete(env.pending[0], { ...payload(), label: '来源古迹多边形', features: [] }); await tick();
+  assert.equal(text(env.node('-label')), '来源古迹多边形');
+  assert.match(text(env.node('-status')), /未提供可用的来源范围/u);
+  assert.doesNotMatch(text(env.node('-status')), /登记范围|已有代表点/u);
+  assert.equal(env.node('-show').hidden, true);
+  assert.equal(env.node('-retry').hidden, true);
+  assert.equal(env.controller.getSnapshot(), null);
+  const malformed = { ...payload(), label: '来源公开范围' };
+  assert.throws(() => env.helpers.parseAreas(malformed, malformed.site_id), /注明已核的来源类型/u);
 });
 
 test('hide and retry leave keyboard focus on a persistent visible control', async () => {
@@ -196,7 +231,7 @@ test('not-ready reasons, successful empty sources and unavailable maps have dist
   assert.match(text(unready.node('-status')), /尚未就绪.*prepare-areas/u); assert.equal(unready.node('-show').hidden, true);
   const empty = setup(); empty.controller.select('auth:fixture:a', 'A');
   empty.complete(empty.pending[0], { ...payload(), features: [] }); await tick();
-  assert.match(text(empty.node('-status')), /没有可用的公开登记范围/u); assert.equal(empty.node('-retry').hidden, true);
+  assert.match(text(empty.node('-status')), /未提供可用的来源范围/u); assert.equal(empty.node('-retry').hidden, true);
   const missing = setup(false); missing.controller.select('auth:fixture:a', 'A');
   missing.complete(missing.pending[0], payload()); await tick();
   assert.equal(missing.node('-show').disabled, true); assert.match(text(missing.node('-status')), /地图组件不可用/u);
@@ -264,7 +299,7 @@ test('corpus mismatch rejects the reply and a later current-version change clear
   env.node('-retry').click(); env.complete(env.pending[1], payload()); await tick(); env.node('-show').click();
   assert.ok(env.controller.getSnapshot()); env.controller.setCorpusVersion('next-corpus', 'area-fixture-v1');
   assert.equal(env.controller.getSnapshot(), null); assert.equal(env.map.layers.size, 2);
-  assert.equal(env.pending.length, 2); assert.match(text(env.node('-status')), /旧登记范围已隐藏/u);
+  assert.equal(env.pending.length, 2); assert.match(text(env.node('-status')), /旧来源范围已隐藏/u);
 });
 
 test('date-line display unwrapping leaves original rings unchanged and does not invent hole relationships', () => {

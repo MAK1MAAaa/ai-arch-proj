@@ -484,7 +484,7 @@ const ArchSearchExplore = (() => {
                 || Boolean(desired.subdivision && options?.ready && page?.subdivision_version !== options.subdivision_version);
             ui.subdivisionNote.textContent = subdivisionLoading ? "正在读取该国家／地区的来源省区；已显示目录与检索排名保持原样。"
                 : subdivisionError ? `来源省区暂不可用：${subdivisionError} 已显示视图保留，未放宽所选省区。`
-                    : options?.ready && options.supported ? `${options.assigned.toLocaleString("zh-CN")} / ${options.total.toLocaleString("zh-CN")} 条有采用的来源省区证据。${options.unassigned ? `${options.unassigned.toLocaleString("zh-CN")} 条未采用省区证据，仍在国家目录中。` : "当前国家目录均有采用的来源省区关联。"}按对象成员计数，跨省对象可计入多项；不表示各定位点所属省。${options.note}${appliedDiffers && desired.subdivision ? " 所选省区尚未成功应用，地图和目录仍保留原范围。" : ""}`
+                    : options?.ready && options.supported ? `${options.assigned.toLocaleString("zh-CN")} / ${options.total.toLocaleString("zh-CN")} 条有采用的来源地区证据。${options.unassigned ? `${options.unassigned.toLocaleString("zh-CN")} 条未采用地区证据，仍在国家／地区目录中。` : "当前国家／地区目录均有采用的来源地区关联。"}按资料对象计数，同一对象可关联多个地区。${options.note}${appliedDiffers && desired.subdivision ? " 所选地区尚未成功应用，地图和目录仍保留原范围。" : ""}`
                         : options?.note ?? subdivisionStatus?.reason ?? (subdivisionStatus === null ? "当前服务未提供来源省区能力；国家目录仍可使用。" : "选择有来源证据的国家／地区后，可按原始省区成员字段浏览。");
             ui.subdivisionRetry.hidden = !visible || !subdivisionError;
             ui.subdivisionRetry.disabled = subdivisionLoading;
