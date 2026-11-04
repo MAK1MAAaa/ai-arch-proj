@@ -5,7 +5,7 @@
 .registered-area-swatch { width: 24px; flex: 0 0 24px; border-top: 2px dashed #286f80; }
 .registered-areas-status { margin: 8px 0; color: #286f80; font-size: 12px; line-height: 1.85; }
 .registered-area-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-.registered-area-actions button { max-width: 100%; white-space: normal; }
+.registered-area-actions button { min-height: 44px; max-width: 100%; white-space: normal; }
 .registered-area-source { margin-top: 12px; padding-top: 10px; border-top: 1px dotted var(--line); overflow-wrap: anywhere; }
 .registered-area-source p, .registered-area-source a { font-size: 11px; line-height: 1.8; }
 @media (max-width: 780px) {

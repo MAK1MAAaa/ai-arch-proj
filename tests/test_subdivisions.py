@@ -301,6 +301,85 @@ def test_reviewed_source_alias_keeps_original_literal_and_requires_its_external_
     assert response.memberships[0].evidence[0].source_label == "Québec"
 
 
+def test_source_feature_districts_keep_whole_identity_and_unassigned_objects(
+    bundle: Bundle, monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    from archsearch import hong_kong_data
+
+    monkeypatch.setattr(hong_kong_data, "SPEC_SHA256", "c" * 64)
+    for identifier in ("auth:fixture:hk-whole", "auth:fixture:hk-no-feature"):
+        bundle.sites.append(Site(
+            id=identifier, title="Whole compound " + identifier, description="",
+            names=[], types=["historic-site"], periods=[], repr_point=None,
+            source_uri="https://example.org/whole", contributors=["Fixture"], period_evidence=[],
+            source_kind="supplement", source_refs=[source()],
+            geography=Geography(authority_id="supplement:" + identifier, countries=["HK"],
+                                regions=["asia-pacific"], source=source(), point_count=0),
+        ))
+    bundle.review.update(sub.corpus_contract(bundle.sites))
+    bundle.review["hong_kong_spec_sha256"] = hong_kong_data.SPEC_SHA256
+    extras = []
+    for oid, district in ((17, "Southern"), (18, "Wan Chai")):
+        code = "HK:" + district.lower().replace(" ", "-")
+        bundle.review["subdivisions"].append({"id": code, "country": "HK", "label": district})
+        original = {"OBJECTID": oid, "DISTRICT": district, "DISTRIC_TC": "原始區名"}
+        evidence = source("feature-district:" + str(oid)).model_copy(update={
+            "uri": "https://example.org/source-feature", "excerpt": district,
+        })
+        extras.append({
+            "site_id": "auth:fixture:hk-whole", "subdivision_id": code,
+            "source": evidence.model_dump(mode="json"),
+            "artifact": {"filename": "source-feature.json", "sha256": "d" * 64,
+                         "uri": evidence.uri},
+            "field": "DISTRICT", "raw_value": district, "source_row": original,
+            "source_row_sha256": sub._row_hash(original), "role": "source_feature_district",
+            "review_method": "Explicit reviewed feature-to-whole fixture, not geocoding.",
+        })
+    bundle.review["extra_memberships"] = extras
+    before = [site.model_dump(mode="json") for site in bundle.sites]
+    bundle.pin_review(facts=True)
+    bundle.compile()
+    index = bundle.index()
+    assert index.ready
+    assert index.ids("HK", "HK:southern") == index.ids("HK", "HK:wan-chai") == {
+        "auth:fixture:hk-whole",
+    }
+    facets = index.facets("HK", 2)
+    assert facets.assigned == 1 and facets.unassigned == 1
+    assert sum(row.count for row in facets.subdivisions) == 2
+    assert "来源要素地区" in facets.note and "不表示整体或全部几何" in facets.note
+    assert index.ids("CA", "CA:ontario") == {"1", "3"}
+    assert [site.model_dump(mode="json") for site in bundle.sites] == before
+    assert index.site_response("auth:fixture:hk-no-feature").memberships == []
+    assert "来源要素地区" in index.site_response("auth:fixture:hk-no-feature").note
+    monkeypatch.setattr(hong_kong_data, "SPEC_SHA256", "e" * 64)
+    assert not bundle.index().ready
+
+
+@pytest.mark.parametrize("country,field,pin", [
+    ("CA", "DISTRICT", "c" * 64), ("HK", "ADDRESS", "c" * 64),
+    ("HK", "DISTRICT", None),
+])
+def test_source_feature_role_rejects_inferred_country_field_or_unbound_contract(
+    bundle: Bundle, country: str, field: str, pin: str | None,
+) -> None:
+    extra = extra_membership("5")
+    extra.update(subdivision_id=country + ":example", field=field, raw_value="Example",
+                 source_row={field: "Example"}, role="source_feature_district")
+    extra["source_row_sha256"] = sub._row_hash(extra["source_row"])
+    bundle.review["extra_memberships"] = [extra]
+    bundle.review["hong_kong_spec_sha256"] = pin
+    bundle.review["subdivisions"].append({"id": country + ":example", "country": country,
+                                         "label": "Example"})
+    if country == "HK":
+        bundle.sites[-2] = bundle.sites[-2].model_copy(update={"geography": Geography(
+            countries=["HK"], regions=["asia-pacific"], source=source(),
+        )})
+    bundle.review.update(sub.corpus_contract(bundle.sites))
+    with pytest.raises(sub.SubdivisionUnavailable, match="香港"):
+        bundle.payload()
+
+
 @pytest.mark.parametrize("mutation", ["raw", "row_hash", "path", "uri", "label", "site"])
 def test_extra_field_or_country_cannot_be_forged(bundle: Bundle, mutation: str) -> None:
     extra = extra_membership("5")

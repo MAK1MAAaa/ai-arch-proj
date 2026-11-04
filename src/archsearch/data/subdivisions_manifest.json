@@ -1,23 +1,24 @@
 {
   "canada_spec_sha256": "4cfdd4fb896c2769de3d77daaf481fdb1544fc79d0e6d8db4911d97d8ad8afbc",
-  "corpus_version": "global-v13",
+  "corpus_version": "global-v14",
   "counts": {
-    "assigned_sites": 992,
-    "memberships": 993,
-    "subdivisions": 13
+    "assigned_sites": 1130,
+    "memberships": 1132,
+    "subdivisions": 30
   },
   "files": {
     "subdivision_review.json": {
-      "sha256": "2b8515d58b0cf5230c22eb84ba0bfb87a90f4393ec0c332c35baf8a50f2486f5"
+      "sha256": "92bf79d0272c6e48fb97a6fa00567c57d2a75ebccda03738b5a5565cdc229555"
     },
     "subdivisions.json": {
-      "sha256": "db6cd6f641fa4fd29dfd0ed435a426f8921851c646b8e8fb225bfbc079fcab63"
+      "sha256": "6f94000056ddcb352a089afae56b77b426ca561b63f1da0740319709ca0abae6"
     }
   },
-  "policy": "Source-declared whole-object membership only; no component inheritance, coordinate geocoding, borders, chronology or corpus-text changes.",
-  "review_sha256": "2b8515d58b0cf5230c22eb84ba0bfb87a90f4393ec0c332c35baf8a50f2486f5",
+  "hong_kong_spec_sha256": "b0bcbe915c46bf611aab9b35b76c4365eb398a1032cf7705aa8302448611bf7a",
+  "policy": "Reviewed Canadian whole-object provinces and Hong Kong source-feature districts. Explicit feature-to-whole links only; no geocoding, boundary, chronology or text inference.",
+  "review_sha256": "92bf79d0272c6e48fb97a6fa00567c57d2a75ebccda03738b5a5565cdc229555",
   "schema_version": 1,
-  "source_facts_sha256": "1036ea2a007e6a5096de0d985ea531d2f375abe7748577238cfed6118ff0c4b7",
-  "source_review_sha256": "66209c9c08c4ecaf2e761dae7fa3a12720c133c63c113363cce8b53ccc6c5d3b",
-  "version": "source-subdivisions-v1"
+  "source_facts_sha256": "048d592289f5769ef96520c541cbb73fb3aae50e85233e55a72cf0e6f94ab7bc",
+  "source_review_sha256": "c11955b0df0b55726fa92d2b1f989f5ca8488f01cfa9cce3fe4cc780f2381748",
+  "version": "source-subdivisions-v2"
 }

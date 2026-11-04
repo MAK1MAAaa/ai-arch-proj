@@ -36,6 +36,7 @@ from archsearch.coverage import (
 )
 from archsearch.domain import Site
 from archsearch.history import HistoryStore, HistoryUnavailable, validate_year
+from archsearch.hong_kong_areas import load_hong_kong_area_group
 from archsearch.index import IndexUnavailable, SemanticIndex
 from archsearch.registered_areas import (
     RegisteredAreasIndex,
@@ -141,7 +142,11 @@ def create_app(
                          else SubdivisionIndex(corpus, CORPUS_VERSION))
     engine = SearchEngine(corpus, index, subdivision_index)
     catalogue_index = CatalogueIndex(corpus, CORPUS_VERSION, subdivisions=subdivision_index)
-    area_index = areas if areas is not None else RegisteredAreasIndex()
+    if areas is not None:
+        area_index = areas
+    else:
+        hong_kong_areas = load_hong_kong_area_group()
+        area_index = RegisteredAreasIndex(sources=[hong_kong_areas] if hong_kong_areas else [])
     type_counts = Counter(kind for site in corpus for kind in set(site.types))
     app = FastAPI(title="古迹检索 ArchSearch", version="0.1.0", docs_url=None, redoc_url=None)
     app.state.engine = engine

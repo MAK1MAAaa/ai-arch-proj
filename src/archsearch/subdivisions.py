@@ -19,17 +19,17 @@ from archsearch.domain import Site, SourceReference
 from archsearch.supplement_data import SourceArtifact
 
 DATA_DIR = Path(__file__).with_name("data")
-VERSION: Literal["source-subdivisions-v1"] = "source-subdivisions-v1"
+VERSION: Literal["source-subdivisions-v2"] = "source-subdivisions-v2"
 REVIEW_FILE = "subdivision_review.json"
 PAYLOAD_FILE = "subdivisions.json"
 MANIFEST_FILE = "subdivisions_manifest.json"
 MAX_PAYLOAD_BYTES = 8 * 1024 * 1024
 MAX_REVIEW_BYTES = 2 * 1024 * 1024
 MAX_MANIFEST_BYTES = 64 * 1024
-REVIEW_SHA256 = "2b8515d58b0cf5230c22eb84ba0bfb87a90f4393ec0c332c35baf8a50f2486f5"
-PAYLOAD_SHA256 = "db6cd6f641fa4fd29dfd0ed435a426f8921851c646b8e8fb225bfbc079fcab63"
-SOURCE_REVIEW_SHA256 = "66209c9c08c4ecaf2e761dae7fa3a12720c133c63c113363cce8b53ccc6c5d3b"
-SOURCE_FACTS_SHA256 = "1036ea2a007e6a5096de0d985ea531d2f375abe7748577238cfed6118ff0c4b7"
+REVIEW_SHA256 = "92bf79d0272c6e48fb97a6fa00567c57d2a75ebccda03738b5a5565cdc229555"
+PAYLOAD_SHA256 = "6f94000056ddcb352a089afae56b77b426ca561b63f1da0740319709ca0abae6"
+SOURCE_REVIEW_SHA256 = "c11955b0df0b55726fa92d2b1f989f5ca8488f01cfa9cce3fe4cc780f2381748"
+SOURCE_FACTS_SHA256 = "048d592289f5769ef96520c541cbb73fb3aae50e85233e55a72cf0e6f94ab7bc"
 SUBDIVISION_PATTERN = r"^[A-Z]{2}:[a-z0-9][a-z0-9-]{0,63}$"
 PREPARATION_HINT = (
     "请运行 python -m archsearch.subdivisions --rebuild 修复来源省区索引并重启服务。"
@@ -38,6 +38,14 @@ MEMBERSHIP_NOTE = (
     "省区来自已复核的现代来源字段，筛选资料对象及完整原定位点列，"
     "不推断各点所属省区、省界、历史政治归属或遗址边界。"
 )
+FEATURE_DISTRICT_NOTE = (
+    "香港区级条件关联已复核整体对应的来源要素地区，不表示整体或全部几何都属于该区。"
+    "筛入整体及完整来源多边形，不按多边形坐标反查行政区或裁切范围，"
+    "不推断法定边界、历史政治归属或遗址生命周期。"
+)
+MembershipRole = Literal[
+    "source_declared_subdivision", "explicit_place_location", "source_feature_district",
+]
 
 
 class SubdivisionUnavailable(RuntimeError):
@@ -66,7 +74,7 @@ class SubdivisionEvidence(BaseModel):
     raw_value: StrictStr = Field(min_length=1)
     source_label: StrictStr | None = Field(default=None, min_length=1)
     source_row_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
-    role: Literal["source_declared_subdivision", "explicit_place_location"]
+    role: MembershipRole
 
 
 class ExtraMembership(BaseModel):
@@ -78,9 +86,9 @@ class ExtraMembership(BaseModel):
     field: StrictStr = Field(min_length=1)
     raw_value: StrictStr = Field(min_length=1)
     source_label: StrictStr | None = Field(default=None, min_length=1)
-    source_row: dict[str, Any] = Field(min_length=1, max_length=16)
+    source_row: dict[str, Any] = Field(min_length=1, max_length=64)
     source_row_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
-    role: Literal["source_declared_subdivision", "explicit_place_location"]
+    role: MembershipRole
     review_method: StrictStr = Field(min_length=1)
 
     @model_validator(mode="after")
@@ -100,11 +108,12 @@ class ExtraMembership(BaseModel):
 class SubdivisionReview(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
     schema_version: Literal[1]
-    version: Literal["source-subdivisions-v1"]
+    version: Literal["source-subdivisions-v2"]
     corpus_version: StrictStr = Field(min_length=1)
     corpus_ids_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     corpus_countries_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     canada_spec_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
+    hong_kong_spec_sha256: StrictStr | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
     source_review_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     review_method: StrictStr = Field(min_length=1)
     reviewed_at: StrictStr = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
@@ -130,19 +139,21 @@ class SubdivisionMembership(BaseModel):
 class SubdivisionPayload(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
     schema_version: Literal[1]
-    version: Literal["source-subdivisions-v1"]
+    version: Literal["source-subdivisions-v2"]
     corpus_version: StrictStr = Field(min_length=1)
     corpus_ids_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     corpus_countries_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     canada_spec_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
+    hong_kong_spec_sha256: StrictStr | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
     source_review_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     source_facts_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     review_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     subdivisions: list[SubdivisionDefinition] = Field(min_length=1)
     memberships: list[SubdivisionMembership] = Field(min_length=1)
     note: Literal[
-        "Source-declared whole-object membership only; no component inheritance, "
-        "coordinate geocoding, borders, chronology or corpus-text changes."
+        "Reviewed Canadian whole-object provinces and Hong Kong source-feature districts. "
+        "Explicit feature-to-whole links only; "
+        "no geocoding, boundary, chronology or text inference."
     ]
 
 
@@ -225,6 +236,14 @@ def source_facts(review: SubdivisionReview) -> dict[str, Any]:
     return review.model_dump(mode="json", exclude={"source_review_sha256"})
 
 
+def _hong_kong_pin_matches(pin: str | None) -> bool:
+    if pin is None:
+        return True
+    from archsearch.hong_kong_data import SPEC_SHA256
+
+    return pin == SPEC_SHA256
+
+
 def _validate_payload(payload: SubdivisionPayload, sites: Sequence[Site], version: str) -> None:
     if payload.corpus_version != version or any(
         getattr(payload, key) != value for key, value in corpus_contract(sites).items()
@@ -247,12 +266,17 @@ def _validate_payload(payload: SubdivisionPayload, sites: Sequence[Site], versio
         used.add(row.subdivision_id)
         for evidence in row.evidence:
             literal = evidence.source_label or definition.label
-            if (evidence.role == "source_declared_subdivision"
+            if (evidence.role in {"source_declared_subdivision", "source_feature_district"}
                     and evidence.raw_value != literal):
                 raise SubdivisionUnavailable("来源省区原始字段与标签不匹配。")
             if (evidence.role == "explicit_place_location"
                     and literal not in evidence.raw_value):
                 raise SubdivisionUnavailable("地点来源未明确给出所采用省区。")
+            if evidence.role == "source_feature_district" and (
+                definition.country != "HK" or evidence.field != "DISTRICT"
+                or payload.hong_kong_spec_sha256 is None
+            ):
+                raise SubdivisionUnavailable("来源要素地区必须绑定香港已核整体与原DISTRICT字段。")
     if used != set(definitions):
         raise SubdivisionUnavailable("来源省区定义不能包含无已审成员的选项。")
 
@@ -263,6 +287,7 @@ def _manifest(payload: SubdivisionPayload, payload_bytes: bytes) -> dict[str, An
         "review_sha256": REVIEW_SHA256, "source_review_sha256": SOURCE_REVIEW_SHA256,
         "source_facts_sha256": SOURCE_FACTS_SHA256,
         "canada_spec_sha256": payload.canada_spec_sha256,
+        "hong_kong_spec_sha256": payload.hong_kong_spec_sha256,
         "files": {REVIEW_FILE: {"sha256": REVIEW_SHA256},
                   PAYLOAD_FILE: {"sha256": _hash(payload_bytes)}},
         "counts": {"subdivisions": len(payload.subdivisions),
@@ -329,14 +354,16 @@ def compile_payload(
         corpus_ids_sha256=review.corpus_ids_sha256,
         corpus_countries_sha256=review.corpus_countries_sha256,
         canada_spec_sha256=review.canada_spec_sha256,
+        hong_kong_spec_sha256=review.hong_kong_spec_sha256,
         source_review_sha256=review.source_review_sha256, review_sha256=REVIEW_SHA256,
         source_facts_sha256=_hash(_bytes(source_facts(review))),
         subdivisions=sorted(review.subdivisions, key=lambda row: row.id),
         memberships=[SubdivisionMembership(site_id=site_id, subdivision_id=subdivision_id,
                                           evidence=evidence)
                      for (site_id, subdivision_id), evidence in sorted(members.items())],
-        note="Source-declared whole-object membership only; no component inheritance, "
-             "coordinate geocoding, borders, chronology or corpus-text changes.",
+        note="Reviewed Canadian whole-object provinces and Hong Kong source-feature districts. "
+             "Explicit feature-to-whole links only; "
+             "no geocoding, boundary, chronology or text inference.",
     )
     _validate_payload(payload, sites, review.corpus_version)
     return payload
@@ -355,6 +382,7 @@ def rebuild_subdivisions(
         if (review.source_review_sha256 != SOURCE_REVIEW_SHA256
                 or _hash(_bytes(source_facts(review))) != SOURCE_FACTS_SHA256
                 or review.canada_spec_sha256 != canada_data.SPEC_SHA256
+                or not _hong_kong_pin_matches(review.hong_kong_spec_sha256)
                 or review.corpus_version != corpus_version):
             raise SubdivisionUnavailable("来源省区事实、源版本或独立审批不符。")
         spec = canada_data._spec(directory)
@@ -396,7 +424,8 @@ class SubdivisionIndex:
                 if (payload.review_sha256 != REVIEW_SHA256
                         or payload.source_review_sha256 != SOURCE_REVIEW_SHA256
                         or payload.source_facts_sha256 != SOURCE_FACTS_SHA256
-                        or payload.canada_spec_sha256 != canada_data.SPEC_SHA256):
+                        or payload.canada_spec_sha256 != canada_data.SPEC_SHA256
+                        or not _hong_kong_pin_matches(payload.hong_kong_spec_sha256)):
                     raise SubdivisionUnavailable("来源省区索引的原始审批或来源绑定不符。")
                 manifest = json.loads(_read_bounded(directory / MANIFEST_FILE,
                                                    MAX_MANIFEST_BYTES))
@@ -418,6 +447,10 @@ class SubdivisionIndex:
         self.definitions = MappingProxyType(definitions)
         self.members = MappingProxyType(members)
         self.associations = MappingProxyType(associations)
+        self.site_countries = MappingProxyType({
+            site.id: frozenset(site.geography.countries) if site.geography else frozenset()
+            for site in sites
+        })
 
     @property
     def ready(self) -> bool:
@@ -451,7 +484,8 @@ class SubdivisionIndex:
             subdivisions=[SubdivisionFacet(id=row.id, label=row.label,
                                            count=len(self.members[row.id]))
                           for row in sorted(definitions, key=lambda row: row.label.casefold())],
-            note=MEMBERSHIP_NOTE + "未采用省区证据不表示实际地理未知；默认国家目录保留全部资料。",
+            note=(FEATURE_DISTRICT_NOTE if country == "HK" else MEMBERSHIP_NOTE)
+                 + "未采用地区证据不表示实际地理未知；默认国家／地区目录保留全部资料。",
         )
 
     def site_response(self, site_id: str) -> SiteSubdivisionsResponse:
@@ -460,7 +494,9 @@ class SubdivisionIndex:
             ready=self.ready, reason=self.reason, subdivision_version=self.version,
             corpus_version=self.corpus_version, site_id=site_id,
             subdivisions=[self.definitions[row.subdivision_id] for row in memberships],
-            memberships=list(memberships), note=MEMBERSHIP_NOTE,
+            memberships=list(memberships),
+            note=(FEATURE_DISTRICT_NOTE if "HK" in self.site_countries.get(site_id, ())
+                  else MEMBERSHIP_NOTE),
         )
 
 

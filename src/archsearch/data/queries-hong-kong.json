@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "scope": "Twenty paired original-name/source-field discovery diagnostics for Hong Kong monument records. Names are source facts, including original Traditional Chinese spellings. No human relevance labels, lifecycle claims, inferred points or declaration-year historical stages. These are not blind benchmarks or a complete archaeological inventory.",
+  "queries": [
+    {"id": "hk01", "query_zh": "寻找香港大浪湾石刻", "query_en": "Find the Rock Carving at Big Wave Bay in Hong Kong", "topic": "Chinese question with simplified spelling; compare with the original source name without assigning relevance."},
+    {"id": "hk02", "query_zh": "寻找蒲台石刻", "query_en": "Find the Rock Carvings on Po Toi Island", "topic": "Original Chinese name discovery; source polygon is not a representative point."},
+    {"id": "hk03", "query_zh": "寻找东涌炮台", "query_en": "Find Tung Chung Fort", "topic": "Simplified Chinese question versus original source names; no generated chronology."},
+    {"id": "hk04", "query_zh": "寻找都爹利街石阶及煤气路灯", "query_en": "Find the Steps and Gas Lamps at Duddell Street", "topic": "Steps and gas lamps form one named whole property; source-feature counts are distinct from site counts."},
+    {"id": "hk05", "query_zh": "寻找西貢上窰村及来源记录中的窰址", "query_en": "Find Sheung Yiu Village and its source-recorded kiln component", "topic": "Explicitly reviewed whole/component link; do not create an extra site from the kiln feature."},
+    {"id": "hk06", "query_zh": "寻找長洲石刻", "query_en": "Find the Rock Carvings on Cheung Chau", "topic": "Original Traditional Chinese name diagnostic; no transliteration-generated identity."},
+    {"id": "hk07", "query_zh": "寻找舊最高法院外部", "query_en": "Find the Exterior of the Old Supreme Court", "topic": "Retain the source's exterior-only property scope, not the whole building or its contents."},
+    {"id": "hk08", "query_zh": "寻找香港大學本部大樓外部", "query_en": "Find the Exterior of the Main Building of the University of Hong Kong", "topic": "Original name and explicit exterior scope; no inferred public access."},
+    {"id": "hk09", "query_zh": "寻找李鄭屋漢墓", "query_en": "Find Lei Cheng Uk Han Tomb", "topic": "Source name identifies the tomb; no source declaration date converted into its construction date."},
+    {"id": "hk10", "query_zh": "寻找九龍寨城南門遺蹟", "query_en": "Find the Remnants of the South Gate of Kowloon Walled City", "topic": "Named remains are distinct from an inferred full city boundary."},
+    {"id": "hk11", "query_zh": "寻找分流石圓環", "query_en": "Find the Stone Circle at Fan Lau", "topic": "Original source identity without inventing an exact date or excavation point."},
+    {"id": "hk12", "query_zh": "寻找舊大埔墟火車站", "query_en": "Find the Old Tai Po Market Railway Station", "topic": "Historic building discovery; retained original names, not a movable collection."},
+    {"id": "hk13", "query_zh": "寻找薄扶林水塘的歷史構築物", "query_en": "Find the historic structures of Pok Fu Lam Reservoir", "topic": "Source-defined compound whole; feature or repeated-name counts do not become site counts."},
+    {"id": "hk14", "query_zh": "寻找大潭水塘群的歷史構築物", "query_en": "Find the historic structures of the Tai Tam Group of Reservoirs", "topic": "The explicit22-component whole retains every original shape, including across source-feature district associations."},
+    {"id": "hk15", "query_zh": "寻找橫瀾燈塔", "query_en": "Find Waglan Lighthouse", "topic": "Island cultural structure; no generated mainland or visitor entrance location."},
+    {"id": "hk16", "query_zh": "寻找銅鑼灣天后廟", "query_en": "Find Tin Hau Temple at Causeway Bay", "topic": "Location-specific source name disambiguates temples without merging similar names."},
+    {"id": "hk17", "query_zh": "寻找景賢里", "query_en": "Find King Yin Lei", "topic": "Original Chinese and English names; no generated historical summary."},
+    {"id": "hk18", "query_zh": "寻找龍躍頭老圍門樓及圍牆", "query_en": "Find the Entrance Tower and Enclosing Walls of Lo Wai at Lung Yeuk Tau", "topic": "Retain the specifically named tower and walls scope."},
+    {"id": "hk19", "query_zh": "寻找灣仔洪聖古廟", "query_en": "Find Hung Shing Temple in Wan Chai", "topic": "Later official October2026 addition is separate from the January2026 CSDI spatial release; missing shape remains missing."},
+    {"id": "hk20", "query_zh": "寻找赤柱清真寺", "query_en": "Find Stanley Mosque", "topic": "Later official whole-object source; a modern declaration date is not a historical phase."}
+  ]
+}

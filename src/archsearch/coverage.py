@@ -94,6 +94,14 @@ def load_registry(data_dir: Path = DATA_DIR) -> CoverageRegistry:
         if countries.keys() & australia_countries.keys():
             raise AustraliaError("NHL labels cannot replace existing source country-or-area labels")
         countries.update(australia_countries)
+    if (Path(data_dir) / "hong_kong_manifest.json").exists():
+        from archsearch.hong_kong_data import HongKongError
+        from archsearch.hong_kong_data import new_country_labels as hong_kong_country_labels
+
+        hong_kong_countries = hong_kong_country_labels(Path(data_dir))
+        if countries.keys() & hong_kong_countries.keys():
+            raise HongKongError("Hong Kong labels cannot replace existing source country labels")
+        countries.update(hong_kong_countries)
     spatial = None
     spatial_error = None
     try:

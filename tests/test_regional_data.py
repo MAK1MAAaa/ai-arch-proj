@@ -480,28 +480,28 @@ def test_real_current_api_preserves_regional_locations_and_source_membership(
     regional_client: TestClient, unchanged_real1663: list[Site],
 ) -> None:
     coverage = regional_client.get("/api/coverage").json()
-    assert coverage["corpus_version"] == "global-v13" and coverage["total"] == 2976
+    assert coverage["corpus_version"] == "global-v14" and coverage["total"] == 3116
     assert {row["id"] for row in coverage["countries"]} == {
         code for site in unchanged_real1663 if site.geography for code in site.geography.countries
-    } | {"AS", "GU", "MP", "UM", "NF"}
-    assert len(coverage["countries"]) == 202 and len(coverage["regions"]) == 7
+    } | {"AS", "GU", "MP", "UM", "NF", "HK"}
+    assert len(coverage["countries"]) == 203 and len(coverage["regions"]) == 7
     assert {row["id"]: row["count"] for row in coverage["sources"]} == {
-        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 1351,
+        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 1491,
     }
-    assert coverage["locations"] == {"mapped": 2863, "polar": 3, "unknown": 110}
+    assert coverage["locations"] == {"mapped": 2863, "polar": 3, "unknown": 250}
     assert coverage["spatial_locations"]["ready"] is True
     assert coverage["spatial_locations"]["points"] == 5851
     assert coverage["spatial_locations"]["display_points"] == 7266
     assert coverage["authority"]["covered"] == coverage["authority"]["eligible_total"] == 1033
     assert coverage["polar_authority"]["covered"] == 91
     status = regional_client.get("/api/status").json()
-    assert status["corpus"]["count"] == 2976 and status["corpus"]["version"] == "global-v13"
+    assert status["corpus"]["count"] == 3116 and status["corpus"]["version"] == "global-v14"
     assert status["semantic"]["ready"] is False
     assert status["history"]["ready"] is False
     catalogue = regional_client.get("/api/catalogue").json()
-    assert catalogue["total"] == len(catalogue["points"]) == 2976
+    assert catalogue["total"] == len(catalogue["points"]) == 3116
     assert Counter(point["location_status"] for point in catalogue["points"]) == {
-        "mapped": 2863, "polar": 3, "unknown": 110,
+        "mapped": 2863, "polar": 3, "unknown": 250,
     }
 
 
@@ -609,7 +609,7 @@ def test_regional_20_paired_queries_create_rankings_and_unscored_manual_template
                and pair.query_en.isascii() and pair.query_zh != pair.query_en for pair in pairs)
     report = evaluate_corpus(tmp_path / "empty-home", tmp_path / "regional.json",
                              queries=queries_file)
-    assert report["corpus_count"] == 2976
+    assert report["corpus_count"] == 3116
     assert report["query_contract_sha256"] == query_contract_hash(pairs)
     assert report["metrics"] is None and report["metric_gate_reasons"]
     assert report["status"] == "retrieval_incomplete" and report["runs_complete"] is False

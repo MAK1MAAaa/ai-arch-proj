@@ -1185,7 +1185,7 @@
         }
         else if (positionStatus === "unknown") {
             space.append(element("p", "detail-note", site.source_kind === "supplement"
-                ? "本记录未采用可信公开代表点，不以近邻、行政中心或零坐标替代。公开登记范围如有提供，会在“现代遗产登记范围”单独列出；范围不补成代表点，也不表示原址实际未知。"
+                ? "本记录未采用可信公开代表点，不以近邻、行政中心或零坐标替代。来源公开范围如有提供，会按其来源类型单独列出；多边形不补成代表点，也不表示原址实际未知。"
                 : "来源未给出已知的遗址真实位置，不绘制遗址标记；如有最后目击参照，仅保留在来源说明中。"));
         }
         if (site.location_precision === "rough") {
@@ -1198,7 +1198,7 @@
         if (site.geography) {
             const geography = site.geography;
             const scope = detailSection("来源名录中的国家／地区与分区", `国家／地区：${site.source_kind === "ats" ? "不作主权归属标注" : geography.countries.join(" · ") || "来源未明确"}；分区：${geography.regions.map((region) => region === "antarctica" ? "南极洲（独立区域分类）" : region).join(" · ") || "来源未提供"}。`);
-            scope.append(element("p", "detail-note", geography.note), element("p", "detail-note", `名录可用定位点记录：${geography.point_count}。${geography.point_count ? "可定位时只展示一个代表点，不表示全部组成地点。" : "未采用可用代表点，不绘制遗址标记；登记范围如有提供另列。"}此处是来源名录标签，不代表历史政治归属。`), safeLink(geography.source.uri, geography.source.title));
+            scope.append(element("p", "detail-note", geography.note), element("p", "detail-note", `名录可用定位点记录：${geography.point_count}。${geography.point_count ? "可定位时只展示一个代表点，不表示全部组成地点。" : "未采用可用代表点，不绘制遗址标记；来源公开范围如有提供另列。"}此处是来源名录标签，不代表历史政治归属。`), safeLink(geography.source.uri, geography.source.title));
             nodes.push(scope);
         }
         const fields = strings(matchedFields).map((field) => fieldLabels[field] || field);

@@ -71,6 +71,7 @@
               <button type="button" data-label="工业遗产" data-query-zh="寻找近现代工业遗产" data-query-en="industrial heritage" data-type="historic-site"><span class="example-label">工业遗产</span><span aria-hidden="true">↗</span></button>
               <button type="button" data-label="南美考古" data-query-zh="寻找 Monte Verde 考古遗址" data-query-en="Monte Verde" data-type="historic-site"><span class="example-label">南美考古</span><span aria-hidden="true">↗</span></button>
               <button type="button" data-label="Menjez 原名 · BM25" data-query-zh="Megalithic Tombs of Menjez" data-query-en="Megalithic Tombs of Menjez" data-example-mode="bm25" data-type="historic-site"><span class="example-label">Menjez 原名 · BM25</span><span aria-hidden="true">↗</span></button>
+              <button type="button" data-label="李鄭屋漢墓 · 原名" data-query-zh="李鄭屋漢墓" data-query-en="Lei Cheng Uk Han Tomb" data-example-mode="bm25" data-type="historic-site"><span class="example-label">李鄭屋漢墓 · 原名</span><span aria-hidden="true">↗</span></button>
             </div>
             <p id="example-hint" class="example-hint">语义检索可用中文问题，专名可保留原文；选择示例时会同步筛选对应地点类型。</p>
           </form>
@@ -107,7 +108,7 @@
             <div class="explore-directory-heading"><p id="explore-page" class="explore-page" tabindex="-1">目录按来源标题排序，不是相关性排名。</p><div class="explore-pagination"><button id="explore-previous" class="interaction-button" type="button" disabled>上一页</button><button id="explore-next" class="interaction-button" type="button" disabled>下一页</button></div></div>
             <ol id="explore-list" class="explore-list" aria-label="全球遗址目录，本页可用键盘选择" tabindex="-1"></ol>
           </details>
-          <p id="explore-limit-note" class="explore-note explore-limit-note">全库圆点显示来源定位点及必要代表点，带编号的标记为检索候选；多点遗产在目录仍是一条资料，定位点不等于遗址数量或精确发掘坐标。点击圆点打开所属遗产，保留地图视角；来源名称只作原文标签，不猜组成地点身份。目录不提供相关性分数。极区点保留原坐标并使用南极定位示意；暂无可用代表点的资料保留在目录；未采用公开来源代表点不表示原址实际未知，公开登记范围如有提供另列，未补造代表点。范围预览不改变目录按代表点／来源点匹配。国家／地区及分区来自来源标签，不代表历史政治归属；跨国遗产计数存在交叠。覆盖以当前来源版本为限，未声称收录全球全部遗址。</p>
+          <p id="explore-limit-note" class="explore-note explore-limit-note">全库圆点显示来源定位点及必要代表点，带编号的标记为检索候选；多点遗产在目录仍是一条资料，定位点不等于遗址数量或精确发掘坐标。点击圆点打开所属遗产，保留地图视角；来源名称只作原文标签，不猜组成地点身份。目录不提供相关性分数。极区点保留原坐标并使用南极定位示意；暂无可用代表点的资料保留在目录；未采用公开来源代表点不表示原址实际未知，来源公开范围如有提供按来源类型另列，未补造代表点。范围预览不改变目录按代表点／来源点匹配。国家／地区及分区来自来源标签，不代表历史政治归属；跨国遗产计数存在交叠。覆盖以当前来源版本为限，未声称收录全球全部遗址。</p>
         </section>
 
         <details id="polar-panel" class="polar-panel" hidden>
@@ -187,7 +188,7 @@
                 <div class="detail-topline"><span class="eyebrow small-eyebrow">SOURCE NOTE / 资料详情</span><button id="close-detail" class="icon-button" type="button" aria-label="关闭资料详情"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.4"/></svg></button></div>
                 <div id="detail-content"></div>
                 <section id="registered-areas" class="detail-section registered-areas" aria-labelledby="registered-areas-title" aria-busy="false" hidden>
-                  <h4 id="registered-areas-title"><span class="registered-area-swatch" aria-hidden="true"></span>现代遗产登记范围</h4>
+                  <h4 id="registered-areas-title"><span class="registered-area-swatch" aria-hidden="true"></span><span id="registered-areas-label">来源公开范围</span></h4>
                   <p id="registered-areas-status" class="registered-areas-status" role="status" aria-live="polite" tabindex="-1"></p>
                   <p id="registered-areas-note" class="detail-note"></p>
                   <div class="registered-area-actions">
@@ -216,7 +217,7 @@
                   <li><strong>核验位置。</strong>选择结果或地图标记，结合来源中的位置精度与记录范围判断候选是否适合研究问题。</li>
                 </ol>
                 <dl class="method-limits">
-                  <div><dt>数据范围</dt><dd>保留原有500条地中海罗马资料及100条已核对阶段的全球遗址，并扩充官方文化／混合世界遗产及南极历史遗址名录。资料总量、国家／地区和分区覆盖按当前本地版本显示，并非全球全部遗址目录。来源包括 Pleiades、UNESCO、DataHub、Wikidata、ATS 与 NPS。NPS太平洋资料分组是按登记来源建立的项目分组，不表示历史主权；受限点与仅有登记范围的资料保留空坐标。</dd></div>
+                  <div><dt>数据范围</dt><dd>保留原有500条地中海罗马资料及100条已核对阶段的全球遗址，并扩充官方文化／混合世界遗产及南极历史遗址名录。资料总量、国家／地区和分区覆盖按当前本地版本显示，并非全球全部遗址目录。来源包括 Pleiades、UNESCO、DataHub、Wikidata、ATS、NPS、CSDI及各地官方文化名录。NPS太平洋资料分组是按登记来源建立的项目分组，不表示历史主权；受限点与只有来源多边形的资料保留空代表坐标。</dd></div>
                   <div><dt>断代状态</dt><dd>新增全量目录的原始描述可直接检索，但历史阶段尚未逐条核验；“断代尚未核验”与“已核验，断代未确定”分别展示。列入世界遗产的年份不视为遗址建造年。</dd></div>
                   <div><dt>时期含义</dt><dd>原500条资料因名称或位置记录具有 roman 分期关联而入选；该条件不适用于新增全球资料，也不表示地点始建于该时期。独立历史阶段保留事件、精度与原文依据，不补齐时期缺口。</dd></div>
                   <div><dt>类型计数</dt><dd>同一地点可同时具有多个类型。各类型的资料数量存在交叠，不可相加作为遗址总数。</dd></div>
@@ -230,7 +231,7 @@
         </section>
       </main>
 
-      <footer class="site-footer"><div><span class="footer-brand">考古图志</span><span>全球历史遗址资料的语义检索与地图可视化</span></div><p>资料：<a href="https://pleiades.stoa.org/" target="_blank" rel="noopener noreferrer">Pleiades · CC BY 3.0</a> · <a href="https://whc.unesco.org/en/disclaimer/" target="_blank" rel="noopener noreferrer">UNESCO 许可指引 · CC BY-SA 3.0 IGO</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">DataHub 名录 · CC BY-SA 4.0</a> · <a href="https://www.wikidata.org/wiki/Wikidata:Licensing" target="_blank" rel="noopener noreferrer">Wikidata · CC0</a> · <a href="https://www.ats.aq/e/protected.html" target="_blank" rel="noopener noreferrer">ATS 南极历史资料 · CC BY 4.0</a> · <a href="https://www.nps.gov/aboutus/disclaimer.htm" target="_blank" rel="noopener noreferrer">NPS 政府登记事实 · 第三方权利保留</a><br>疆域概略：<a href="https://github.com/Seshat-Global-History-Databank/cliopatria" target="_blank" rel="noopener noreferrer">Cliopatria</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> · 自然地理：<a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener noreferrer">Natural Earth · 公有领域</a><br>现代底图：© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap 贡献者</a> · 地图组件：<a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet 1.9.4</a> · 具体资料的许可与版本以各条原始来源为准。</p></footer>
+      <footer class="site-footer"><div><span class="footer-brand">考古图志</span><span>全球历史遗址资料的语义检索与地图可视化</span></div><p>资料：<a href="https://pleiades.stoa.org/" target="_blank" rel="noopener noreferrer">Pleiades · CC BY 3.0</a> · <a href="https://whc.unesco.org/en/disclaimer/" target="_blank" rel="noopener noreferrer">UNESCO 许可指引 · CC BY-SA 3.0 IGO</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">DataHub 名录 · CC BY-SA 4.0</a> · <a href="https://www.wikidata.org/wiki/Wikidata:Licensing" target="_blank" rel="noopener noreferrer">Wikidata · CC0</a> · <a href="https://www.ats.aq/e/protected.html" target="_blank" rel="noopener noreferrer">ATS 南极历史资料 · CC BY 4.0</a> · <a href="https://www.nps.gov/aboutus/disclaimer.htm" target="_blank" rel="noopener noreferrer">NPS 政府登记事实 · 第三方权利保留</a> · <a href="https://portal.csdi.gov.hk/csdi-webpage/doc/TNC" target="_blank" rel="noopener noreferrer">香港特区政府／古迹办 · CSDI 来源与权利</a><br>疆域概略：<a href="https://github.com/Seshat-Global-History-Databank/cliopatria" target="_blank" rel="noopener noreferrer">Cliopatria</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> · 自然地理：<a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noopener noreferrer">Natural Earth · 公有领域</a><br>现代底图：© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap 贡献者</a> · 地图组件：<a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet 1.9.4</a> · 具体资料的许可与版本以各条原始来源为准。</p></footer>
     </div>
     <noscript><p class="noscript-message">请启用 JavaScript 以使用检索与交互地图。</p></noscript>
   </body>
