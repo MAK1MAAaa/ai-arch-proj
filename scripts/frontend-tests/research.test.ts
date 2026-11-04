@@ -32,7 +32,7 @@ interface ExportResult<T> {
   selection: { site: string | null; phase: string | null };
   sources: { name: string; license: string; version?: string | null; note?: string }[];
   selected_site: unknown;
-  spatial: { metadata: unknown; selected: { site_id: string; representative_point: [number, number] | null; source_points: [number, number][]; records: { source_index: number; coordinate: [number, number]; name: string; ref: string }[] } | null } | null;
+  spatial: { metadata: unknown; selected: { site_id: string; representative_point: [number, number] | null; source_points: [number, number][]; records: { source_index: number; coordinate: [number, number]; name: string; ref: string }[]; source?: { name: string; uri: string; version: string; license: string; license_uri: string; sha256: string } | null } | null } | null;
   browse: BrowseState | null;
   source: {
     name: string;
@@ -500,4 +500,27 @@ test('exports clone the committed bbox and source matching capability without ch
   assert.deepEqual(plain(exported.request), request);
   assert.deepEqual(plain(exported.response), response);
   assert.equal(Object.hasOwn(exported.request, 'bbox'), false);
+});
+
+test('a selected protection location exports its own source alongside the combined identity groups', () => {
+  const response = { query: request.query, mode: request.mode, corpus_version: 'fixture-v8', elapsed_ms: 1, total_candidates: 0, results: [] };
+  const selectedSource = { name: 'UNESCO DataHub chp001', uri: 'https://data.unesco.org/explore/dataset/chp001/', version: '2026-10-31', license: 'CC BY-SA 4.0', license_uri: 'https://creativecommons.org/licenses/by-sa/4.0/', sha256: 'a'.repeat(64) };
+  const snapshot: NonNullable<ExportResult<never>['spatial']> = {
+    metadata: { version: 'world-locations-v1+protection-locations-v1', source_groups: [
+      { version: 'world-locations-v1', source: { name: 'UNESCO DataHub whc001' }, site_ids: ['whc:1'] },
+      { version: 'protection-locations-v1', source: selectedSource, site_ids: ['auth:unesco-chp:630'] },
+    ] },
+    selected: { site_id: 'auth:unesco-chp:630', representative_point: [36, 34], source_points: [[36, 34], [36.1, 34.1]], records: [
+      { source_index: 0, coordinate: [36, 34], name: 'Dolmen 1', ref: 'source_index:0' },
+      { source_index: 1, coordinate: [36.1, 34.1], name: 'Dolmen 2', ref: 'source_index:1' },
+    ], source: selectedSource },
+  };
+  const original = plain(snapshot);
+  const report = helpers.createExport(request, response, '2026-11-04T00:00:00Z', null, { site: snapshot.selected!.site_id, phase: null }, null, null, snapshot);
+  selectedSource.uri = 'https://changed.example/'; snapshot.selected!.records[0].name = 'changed';
+  assert.deepEqual(plain(report.spatial), original);
+  assert.equal(report.spatial?.selected?.source?.name, 'UNESCO DataHub chp001');
+  const source = report.sources.find(source => source.name === 'UNESCO Hague cultural properties');
+  assert.equal(source?.license, 'CC BY-SA 4.0');
+  assert.equal(source?.version, 'protection-supplement-v1');
 });

@@ -266,13 +266,14 @@
             ? "中文问题示例，专名可保留原文；选择后会同步切换到对应地点类型。"
             : "英文原词示例；选择后会同步切换到对应地点类型。";
         document.querySelectorAll("[data-query-zh]").forEach((button) => {
-            const query = mode === "semantic" ? button.dataset.queryZh : button.dataset.queryEn;
+            const exampleMode = button.dataset.exampleMode === "bm25" ? "bm25" : mode;
+            const query = exampleMode === "semantic" ? button.dataset.queryZh : button.dataset.queryEn;
             const label = button.querySelector(".example-label");
             if (label)
-                label.textContent = mode === "semantic" ? button.dataset.label || query || "示例" : query || "示例";
-            button.disabled = !available || ui.typeFilter.disabled || !Array.from(ui.typeFilter.options).some((option) => option.value === button.dataset.type);
-            button.setAttribute("aria-label", `检索示例：${query || ""}；类型：${typeLabel(button.dataset.type || "")}`);
-            button.lang = mode === "semantic" ? "zh-CN" : "en";
+                label.textContent = button.dataset.exampleMode === "bm25" || mode === "semantic" ? button.dataset.label || query || "示例" : query || "示例";
+            button.disabled = !modeAvailable(exampleMode) || ui.typeFilter.disabled || !Array.from(ui.typeFilter.options).some((option) => option.value === button.dataset.type);
+            button.setAttribute("aria-label", `${button.dataset.exampleMode === "bm25" ? "关键词基线 BM25 原名检索" : "检索示例"}：${query || ""}；类型：${typeLabel(button.dataset.type || "")}`);
+            button.lang = exampleMode === "semantic" || button.dataset.exampleMode === "bm25" ? "zh-CN" : "en";
         });
     }
     async function loadStatus() {
@@ -707,6 +708,7 @@
                     site_id: state.selectedSite.id, representative_point: state.selectedSite.repr_point,
                     source_points: explore?.getSourcePoints(state.selectedSite.id) ?? [],
                     records: explore?.getSourceLocationRecords(state.selectedSite.id) ?? [],
+                    source: explore?.getSpatialSource(state.selectedSite.id) ?? null,
                 } : null });
             objectUrl = URL.createObjectURL(new Blob([JSON.stringify(report, null, 2)], { type: "application/json;charset=utf-8" }));
             download.href = objectUrl;
@@ -1085,7 +1087,7 @@
         const points = explore?.getSourcePoints(site.id) ?? [];
         const metadata = explore?.getSpatialMetadata();
         if (!points.length) {
-            if (!metadata || !site.geography?.authority_id || !/^[1-9]\d*$/u.test(site.geography.authority_id))
+            if (!metadata || !site.geography?.authority_id || (!/^[1-9]\d*$/u.test(site.geography.authority_id) && !site.id.startsWith("auth:unesco-chp:")))
                 return null;
             const section = detailSection("来源组成定位记录", metadata.ready
                 ? "固定名录未提供源定位记录；原代表点来自独立证据，不插入DataHub源数组。"
@@ -1094,11 +1096,11 @@
             return section;
         }
         const records = explore?.getSourceLocationRecords(site.id) ?? [];
-        const section = detailSection("来源组成定位记录", `${points.length} 条来源记录。它们属于同一遗产条目，不作为新增遗址计数，也不表示已逐点独立核验。`);
+        const section = detailSection("来源定位记录", `${points.length} 条来源记录。它们属于同一文化资料条目，不作为新增遗址计数，也不表示精确发掘位置。`);
         section.id = "site-source-locations";
         section.append(element("p", "detail-note", "原代表点保持不变；全库点层另展示源定位记录，同一遗产的重合圆点可合并显示。名称与编号仅为来源标签，不作为唯一身份或精确发掘位置。"));
         const details = element("details", "evidence-more");
-        details.append(element("summary", null, "查看完整原始顺序、名称与坐标"));
+        details.append(element("summary", null, "查看已核定位的来源顺序、名称与坐标"));
         const list = element("ol", "source-location-list");
         list.tabIndex = 0;
         list.setAttribute("aria-label", "按原始顺序排列的来源定位记录，可滚动阅读");
@@ -1108,13 +1110,16 @@
             row.dataset.sourceIndex = String(index);
             row.append(element("p", null, record?.name || `来源定位记录 ${index + 1}`));
             const [longitude, latitude] = point;
-            row.append(element("p", "detail-note", `原序号 ${index + 1}${record?.ref ? ` · 来源编号 ${record.ref}` : ""} · WGS84 [${longitude}, ${latitude}]`));
+            row.append(element("p", "detail-note", `定位序号 ${index + 1}${record?.ref ? ` · 来源编号 ${record.ref}` : ""} · WGS84 [${longitude}, ${latitude}]`));
             list.append(row);
         }
         details.append(list);
         section.append(details);
-        if (metadata?.source)
-            section.append(safeLink(metadata.source.uri, `${metadata.source.name} · ${metadata.source.license}`));
+        const source = explore?.getSpatialSource(site.id);
+        if (source)
+            section.append(safeLink(source.uri, `${source.name} · ${source.license} · ${source.version}`));
+        if (site.id.startsWith("auth:unesco-chp:"))
+            section.append(element("p", "detail-note", "海牙名录定位只绘制经审核的文化原址点；仓储或标签冲突等排除记录保留在来源审计中。来源编号保留原始序号，保护列入年不作为历史阶段。"));
         return section;
     }
     function renderDetail(site, matchedFields = []) {
@@ -1417,9 +1422,14 @@
     ui.limitFilter.addEventListener("change", applyChangedFilter);
     document.querySelectorAll("[data-query-zh]").forEach((button) => {
         button.addEventListener("click", () => {
+            if (button.dataset.exampleMode === "bm25") {
+                ui.form.querySelectorAll('input[name="mode"]').forEach((radio) => { radio.checked = radio.value === "bm25"; });
+                announce("已选择关键词基线 BM25，按来源原名检索。");
+            }
             ui.query.value = (currentMode() === "semantic" ? button.dataset.queryZh : button.dataset.queryEn) || "";
             const type = button.dataset.type || "";
             ui.typeFilter.value = Array.from(ui.typeFilter.options).some((option) => option.value === type) ? type : "";
+            updateSearchAvailability();
             ui.query.focus();
             search();
         });

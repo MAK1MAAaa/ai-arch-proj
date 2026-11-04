@@ -28,6 +28,7 @@ interface Controller {
   getDisplayPoints(id: string): [number, number][];
   getSourceLocationRecords(id: string): SourceLocation[];
   getSpatialMetadata(): Record<string, unknown> | null;
+  getSpatialSource(id: string): { name: string; uri: string; license: string } | null;
   select(id: string | null): void;
 }
 
@@ -531,7 +532,7 @@ test('raw source arrays, labels and spatial provenance are independently cloned 
   assert.equal(app.controller.getSourcePoints('whc:1')[0][0], 179); assert.equal(app.controller.getSourceLocationRecords('whc:1')[0].ref, '001-001');
   assert.deepEqual(plain(app.controller.getSourcePoints('missing')), []);
   assert.equal(app.node('explore-spatial-source').hidden, false);
-  assert.match(app.node('explore-spatial-source').children[0].textContent, /2 条遗产资料.*5 个来源定位点记录/u);
+  assert.match(app.node('explore-spatial-source').children[0].textContent, /2 条文化资料.*5 个来源定位点记录/u);
 });
 
 test('country membership filtering retains every transnational source point and dateline fitting uses the short span', async () => {
@@ -761,4 +762,67 @@ test('invalid bounds may be replaced by capture while capture failure preserves 
   assert.equal(app.boundsActions.length, 1);
   assert.deepEqual(plain(app.controller.getCommittedState()?.bbox), [170, -20, -170, -10]);
   assert.equal(app.node('explore-bounds-status').tokens.has('is-invalid'), false);
+});
+
+const groupedSpatial = {
+  ...spatial, version: 'world-locations-v1+protection-locations-v1',
+  source_groups: [
+    { version: 'world-locations-v1', source: spatial.source, site_ids: ['whc:1'] },
+    { version: 'protection-locations-v1', source: { ...spatial.source, name: 'UNESCO DataHub chp001', uri: 'https://data.unesco.org/explore/dataset/chp001/', sha256: 'd'.repeat(64) }, site_ids: ['wd:Q2'] },
+  ],
+};
+
+async function bootGrouped(app: ReturnType<typeof setup>, metadata = groupedSpatial): Promise<void> {
+  const job = app.controller.load();
+  for (const request of app.pending.filter(request => !request.done && !request.signal.aborted)) {
+    if (request.url === '/api/coverage') app.response(request, { ...coverageFor(multiPoints), spatial_locations: metadata });
+    else if (request.url === '/api/catalogue') app.response(request, { corpus_version: 'global-v3', spatial_version: metadata.version, total: multiPoints.length, points: multiPoints });
+    else app.response(request, { ...pageFor({}, multiPoints), spatial_version: metadata.version });
+  }
+  await job;
+}
+
+test('multiple location sources retain separate identity, license and cloned provenance', async () => {
+  const app = setup(); await bootGrouped(app);
+  assert.equal(app.controller.getCommittedState()?.spatial_version, groupedSpatial.version);
+  assert.equal(app.controller.getSpatialSource('whc:1')?.uri, spatial.source.uri);
+  assert.equal(app.controller.getSpatialSource('wd:Q2')?.uri, groupedSpatial.source_groups[1].source.uri);
+  assert.equal(app.controller.getSpatialSource('123'), null);
+  const source = app.controller.getSpatialSource('wd:Q2'); assert.ok(source); source.uri = 'https://changed.example/';
+  assert.equal(app.controller.getSpatialSource('wd:Q2')?.uri, groupedSpatial.source_groups[1].source.uri);
+  const metadata = app.controller.getSpatialMetadata()!;
+  (metadata.source_groups as { site_ids: string[] }[])[1].site_ids.push('changed');
+  assert.equal((app.controller.getSpatialMetadata()?.source_groups as { site_ids: string[] }[])[1].site_ids.length, 1);
+  assert.match(app.node('explore-spatial-source').children[0].textContent, /2 套固定来源合计/u);
+  assert.ok(app.node('explore-spatial-source').children.some(node => node.textContent.includes('chp001')));
+  assert.deepEqual(plain(app.controller.getSourcePoints('whc:1')), multiPoints[0].source_points);
+});
+
+test('source-group identity, metadata and version corruption cannot replace a successful layer', async () => {
+  const app = setup(); await bootGrouped(app);
+  const layer = [...app.map!.layers][0];
+  for (const variant of ['version', 'duplicate', 'foreign', 'source'] as const) {
+    const broken = plain(groupedSpatial);
+    if (variant === 'version') broken.source_groups[1].version = 'old-protection-locations';
+    if (variant === 'duplicate') broken.source_groups[1].site_ids = ['whc:1'];
+    if (variant === 'foreign') broken.source_groups[1].site_ids = ['auth:unesco-chp:foreign'];
+    if (variant === 'source') broken.source_groups[0].source.uri = 'https://different.example/';
+    await assert.rejects(bootGrouped(app, broken), /来源定位分组/u);
+    assert.equal([...app.map!.layers][0], layer);
+    assert.equal(app.controller.getCommittedState()?.spatial_version, groupedSpatial.version);
+    assert.equal(app.controller.getSpatialSource('wd:Q2')?.uri, groupedSpatial.source_groups[1].source.uri);
+  }
+});
+
+test('a page with an old single-source version cannot commit a combined-source scope', async () => {
+  const app = setup(); await bootGrouped(app); const layer = [...app.map!.layers][0];
+  const changed = app.controller.setState({ bbox: [30, 41, 30.5, 41.5] });
+  const rejected = assert.rejects(changed, /地图范围.*定位匹配方式/u);
+  app.response(app.find('/api/sites'), pageFor({ bbox: [30, 41, 30.5, 41.5] }, multiPoints)); await rejected;
+  assert.equal([...app.map!.layers][0], layer);
+  assert.equal(app.controller.getCommittedState()?.bbox, null);
+  const retried = app.controller.setState({ bbox: [30, 41, 30.5, 41.5] });
+  app.response(app.find('/api/sites'), { ...pageFor({ bbox: [30, 41, 30.5, 41.5] }, multiPoints), spatial_version: groupedSpatial.version }); await retried;
+  assert.deepEqual(plain(app.controller.getCommittedState()?.bbox), [30, 41, 30.5, 41.5]);
+  assert.equal(app.controller.getSpatialSource('wd:Q2')?.uri, groupedSpatial.source_groups[1].source.uri);
 });

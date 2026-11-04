@@ -224,6 +224,7 @@ const ArchSearchResearch = (() => {
       representative_point: [number, number] | null;
       source_points: [number, number][];
       records: { source_index: number; coordinate: [number, number]; name: string; ref: string }[];
+      source?: { name: string; uri: string; version: string; license: string; license_uri: string; sha256: string } | null;
     } | null;
   }
 
@@ -251,6 +252,7 @@ const ArchSearchResearch = (() => {
         { name: "Country cultural supplement", version: "country-supplement-v1", license: "Mixed rights — see individual source_refs", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/SUPPLEMENT-LICENSE.md", note: "Wikidata structured fields CC0; authority excerpts retain individual rights. Proposed heritage is not relabelled as protected or inscribed. Three records lack verified public digital coordinates. No new historical phases inferred." },
         { name: "Regional cultural supplement", version: "regional-supplement-v1", license: "Mixed rights — see individual source_refs", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/REGIONAL-LICENSE.md", note: "Source-reviewed cultural places in sparse northern, island and interior regions. Original site coordinates are separate from museum display locations. Source qualification and country association do not establish historical dates or sovereignty. No new historical phases inferred." },
         { name: "South America cultural supplement", version: "southamerica-supplement-v1", license: "Mixed rights — see individual source_refs", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/SOUTHAMERICA-LICENSE.md", note: "Source-reviewed cultural places in six South American countries. Public representative coordinates retain source limits; absent or conflicting coordinates remain null. Wikidata English short descriptions and separately attributed Chinese translations are CC0. Identity review does not establish historical stages or a complete regional inventory." },
+        { name: "UNESCO Hague cultural properties", version: "protection-supplement-v1", license: "CC BY-SA 4.0", uri: "https://data.unesco.org/explore/dataset/chp001/", note: "Reviewed cultural places from a fixed protection register; source rows and component locations are not new-site counts. Source protection years do not establish historical phases. Unresolved or storage-only locations remain in the source audit and are not mapped as archaeological places." },
         { name: "Cliopatria", version: map?.source_version ?? null, license: "CC BY 4.0", uri: "https://github.com/Seshat-Global-History-Databank/cliopatria", note: "Historical polity approximations; valid source intervals, no interpolation or point-based political attribution." },
         { name: "Natural Earth", license: "Public domain", uri: "https://www.naturalearthdata.com/about/terms-of-use/", note: "Modern natural-geography reference; no ancient coastline reconstruction." },
         { name: "OpenStreetMap contributors", license: "ODbL", uri: "https://www.openstreetmap.org/copyright", displayed: map?.basemap === "modern" },
@@ -274,8 +276,8 @@ const ArchSearchResearch = (() => {
         chronology: "历史阶段独立记录事件类型、精度、证据和代理核验方式；区间或时期不证明连续存在，未标成人工专家确认。",
         map: "map保存最后成功显示的年份与疆域版本；null表示尚无成功地图快照，待加载或失败年份不冒充已显示年份。",
         locations: "repr_point为null表示本记录无可用代表点：可能真实位置不明，也可能尚未取得可信公开数字坐标，来源说明保留区别；不等于零坐标。有效极区坐标超出Web Mercator时使用独立极区示意，不截断或伪造纬度。极区底图为现代自然地理参照，不生成历史国界。",
-        source_points: "spatial保留最后成功目录的源点版本及独立选中资料的原始定位序列、重复记录与来源标签。源点和原代表点分开保存；多个定位记录不增加遗产条目数，也不等于独立核验的发掘坐标。地图可合并同一遗产同坐标圆点，导出保留全部源序列。",
-        browse: "browse保存成功应用的独立目录条件；bbox为[西,南,东,北]闭区间，西大于东表示跨日期变更线，仅筛目录和全库点层，不改变request中的检索语义。spatial_match_mode及spatial_version记录当时的来源点匹配能力；representative-only可能遗漏无代表点落入框内的组成地点。选中资料的原始源序列仍完整导出。",
+        source_points: "spatial保留最后成功目录的组合源点版本、source_groups对应的来源／版本／许可与地点身份，以及独立选中资料经审核纳入地图的定位序列、重复记录与来源标签。原代表点单独保存；多个定位记录不增加遗址条目数或承诺发掘精度。世界遗产原始序列保持不变；海牙名录排除的仓储、标签冲突等原记录仍保留在来源审计中，不混作考古原址点。",
+        browse: "browse保存成功应用的独立目录条件；bbox为[西,南,东,北]闭区间，西大于东表示跨日期变更线，仅筛目录和全库点层，不改变request中的检索语义。spatial_match_mode及spatial_version记录当时的来源点匹配能力；representative-only可能遗漏无代表点落入框内的组成地点。选中资料纳入地图的来源序列完整导出；海牙名录未纳入地图的保护设施仍留在冻结来源审计中。",
       },
     };
   }

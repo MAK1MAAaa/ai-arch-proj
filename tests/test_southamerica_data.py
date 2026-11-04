@@ -69,13 +69,13 @@ def test_real_bundle_preserves_every_earlier_field_object_document_and_order(
     before = [site.model_dump(mode="json") for site in base1689]
     documents = [build_document(site) for site in base1689]
     loaded = cohort.load_southamerica(base1689, bundle.directory)
-    assert CORPUS_VERSION == "global-v7"
+    assert CORPUS_VERSION == "global-v8"
     assert len(base1689) == 1689
     assert len(loaded) == len({site.id for site in loaded}) == 1700
     assert all(old is new for old, new in zip(base1689, loaded[:1689], strict=True))
     assert [site.model_dump(mode="json") for site in loaded[:1689]] == before
     assert [build_document(site) for site in loaded[:1689]] == documents
-    assert [site.model_dump(mode="json") for site in load_corpus()] == [
+    assert [site.model_dump(mode="json") for site in load_corpus()[:1700]] == [
         site.model_dump(mode="json") for site in loaded
     ]
     additions = loaded[1689:]
