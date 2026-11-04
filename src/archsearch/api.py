@@ -37,6 +37,11 @@ from archsearch.coverage import (
 from archsearch.domain import Site
 from archsearch.history import HistoryStore, HistoryUnavailable, validate_year
 from archsearch.index import IndexUnavailable, SemanticIndex
+from archsearch.registered_areas import (
+    RegisteredAreasIndex,
+    RegisteredAreasResponse,
+    RegisteredAreasStatus,
+)
 from archsearch.search import SearchEngine, SearchHit, SearchRequest
 from archsearch.spatial_data import SpatialDataError
 
@@ -89,6 +94,7 @@ class StatusResponse(BaseModel):
     semantic: SemanticStatus
     history: HistoryStatus
     spatial_locations: SpatialLocationCoverage | None = None
+    registered_areas: RegisteredAreasStatus | None = None
 
 
 class Facet(BaseModel):
@@ -115,17 +121,20 @@ def create_app(
     sites: list[Site] | None = None,
     semantic: SemanticIndex | None = None,
     history: HistoryStore | None = None,
+    areas: RegisteredAreasIndex | None = None,
 ) -> FastAPI:
     corpus = load_corpus() if sites is None else sites
     index = semantic if semantic is not None else SemanticIndex(corpus, home)
     history_store = history if history is not None else HistoryStore(home)
     engine = SearchEngine(corpus, index)
     catalogue_index = CatalogueIndex(corpus, CORPUS_VERSION)
+    area_index = areas if areas is not None else RegisteredAreasIndex()
     type_counts = Counter(kind for site in corpus for kind in set(site.types))
     app = FastAPI(title="古迹检索 ArchSearch", version="0.1.0", docs_url=None, redoc_url=None)
     app.state.engine = engine
     app.state.history = history_store
     app.state.catalogue = catalogue_index
+    app.state.registered_areas = area_index
     app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=5)
 
     @app.middleware("http")
@@ -165,6 +174,7 @@ def create_app(
             semantic=SemanticStatus(ready=ready, reason=index.reason),
             history=HistoryStatus.model_validate(history_state),
             spatial_locations=catalogue_index.spatial_coverage(),
+            registered_areas=area_index.status(set(engine.by_id)),
         )
 
     @app.get(HISTORY_PATH)
@@ -268,6 +278,12 @@ def create_app(
             return catalogue_index.site_locations(site)
         except SpatialDataError as error:
             raise HTTPException(status_code=503, detail=str(error)) from error
+
+    @app.get("/api/sites/{site_id}/areas", response_model=RegisteredAreasResponse)
+    def site_areas(site_id: str) -> RegisteredAreasResponse:
+        if site_id not in engine.by_id:
+            raise HTTPException(status_code=404, detail="地点不存在于本演示语料中。")
+        return area_index.response(site_id, CORPUS_VERSION)
 
     @app.get("/api/sites/{site_id}", response_model=Site)
     def site_detail(site_id: str) -> Site:

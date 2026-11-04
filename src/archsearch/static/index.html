@@ -14,6 +14,7 @@
     <script defer src="/static/history.js"></script>
     <script defer src="/static/explore.js"></script>
     <script defer src="/static/polar-view.js"></script>
+    <script defer src="/static/registered-areas.js"></script>
     <script defer src="/static/app.js"></script>
   </head>
   <body>
@@ -104,7 +105,7 @@
             <div class="explore-directory-heading"><p id="explore-page" class="explore-page" tabindex="-1">目录按来源标题排序，不是相关性排名。</p><div class="explore-pagination"><button id="explore-previous" class="interaction-button" type="button" disabled>上一页</button><button id="explore-next" class="interaction-button" type="button" disabled>下一页</button></div></div>
             <ol id="explore-list" class="explore-list" aria-label="全球遗址目录，本页可用键盘选择" tabindex="-1"></ol>
           </details>
-          <p id="explore-limit-note" class="explore-note explore-limit-note">全库圆点显示来源定位点及必要代表点，带编号的标记为检索候选；多点遗产在目录仍是一条资料，定位点不等于遗址数量或精确发掘坐标。点击圆点打开所属遗产，保留地图视角；来源名称只作原文标签，不猜组成地点身份。目录不提供相关性分数。极区点保留原坐标并使用南极定位示意；暂无可用坐标的资料保留在目录；真实位置不明与尚无可信公开数字坐标在详情区分，未补造坐标。国家／地区及分区来自来源标签，不代表历史政治归属；跨国遗产计数存在交叠。覆盖以当前来源版本为限，未声称收录全球全部遗址。</p>
+          <p id="explore-limit-note" class="explore-note explore-limit-note">全库圆点显示来源定位点及必要代表点，带编号的标记为检索候选；多点遗产在目录仍是一条资料，定位点不等于遗址数量或精确发掘坐标。点击圆点打开所属遗产，保留地图视角；来源名称只作原文标签，不猜组成地点身份。目录不提供相关性分数。极区点保留原坐标并使用南极定位示意；暂无可用代表点的资料保留在目录；未采用公开来源代表点不表示原址实际未知，公开登记范围如有提供另列，未补造代表点。范围预览不改变目录按代表点／来源点匹配。国家／地区及分区来自来源标签，不代表历史政治归属；跨国遗产计数存在交叠。覆盖以当前来源版本为限，未声称收录全球全部遗址。</p>
         </section>
 
         <details id="polar-panel" class="polar-panel" hidden>
@@ -183,6 +184,17 @@
               <aside id="detail-panel" class="detail-panel" aria-labelledby="detail-title" tabindex="-1" hidden>
                 <div class="detail-topline"><span class="eyebrow small-eyebrow">SOURCE NOTE / 资料详情</span><button id="close-detail" class="icon-button" type="button" aria-label="关闭资料详情"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.4"/></svg></button></div>
                 <div id="detail-content"></div>
+                <section id="registered-areas" class="detail-section registered-areas" aria-labelledby="registered-areas-title" aria-busy="false" hidden>
+                  <h4 id="registered-areas-title"><span class="registered-area-swatch" aria-hidden="true"></span>现代遗产登记范围</h4>
+                  <p id="registered-areas-status" class="registered-areas-status" role="status" aria-live="polite" tabindex="-1"></p>
+                  <p id="registered-areas-note" class="detail-note"></p>
+                  <div class="registered-area-actions">
+                    <button id="registered-areas-show" class="interaction-button" type="button" hidden disabled>查看登记范围</button>
+                    <button id="registered-areas-hide" class="interaction-button" type="button" hidden>隐藏登记范围</button>
+                    <button id="registered-areas-retry" class="interaction-button" type="button" hidden>重试读取范围</button>
+                  </div>
+                  <div id="registered-areas-sources" class="registered-area-sources"></div>
+                </section>
               </aside>
             </div>
             <footer class="map-footnote"><span><span class="legend-dot"></span>编号：检索候选 <span class="catalogue-legend-dot"></span>小圆点：源定位点／必要代表点</span><span id="viewport-count" class="viewport-count" title="仅按本次返回候选的代表点中心统计；不包括全库底层圆点，不改变检索与排序。" hidden>当前地图范围内 0 / 本次返回 0</span><span>定位点，非精确发掘坐标</span></footer>

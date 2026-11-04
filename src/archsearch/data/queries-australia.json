@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "scope": "Twenty paired cohort-focused research-intent diagnostics for the reviewed Australian National Heritage List supplement; not blind benchmarks, relevance labels, lifecycle evidence or a complete Australian inventory. Modern registered polygons do not imply representative points or ancient borders. Explicit Norfolk membership retains original Australian source facts.",
+  "queries": [
+    {
+      "id": "au01",
+      "query_zh": "寻找澳大利亚的历史航空基地",
+      "query_en": "Find historic aviation bases in Australia",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au02",
+      "query_zh": "寻找澳大利亚早期议会建筑",
+      "query_en": "Find early parliament buildings in Australia",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au03",
+      "query_zh": "寻找澳大利亚的原住民文化景观",
+      "query_en": "Find Indigenous cultural landscapes in Australia",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au04",
+      "query_zh": "寻找澳大利亚的历史工业设施",
+      "query_en": "Find historic industrial sites in Australia",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au05",
+      "query_zh": "寻找澳大利亚的历史规划城市景观",
+      "query_en": "Find historic planned urban landscapes in Australia",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au06",
+      "query_zh": "寻找澳大利亚铁路历史遗产",
+      "query_en": "Find railway heritage in Australia",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au07",
+      "query_zh": "寻找澳大利亚海上沉船遗产 HMS Sirius Shipwreck",
+      "query_en": "Find maritime wreck heritage HMS Sirius Shipwreck",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au08",
+      "query_zh": "寻找澳大利亚的矿业遗产",
+      "query_en": "Find mining heritage places in Australia",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au09",
+      "query_zh": "寻找澳大利亚山地工程遗产 Snowy Mountains Scheme",
+      "query_en": "Find engineering heritage Snowy Mountains Scheme",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au10",
+      "query_zh": "寻找澳大利亚原住民的鱼栅遗址",
+      "query_en": "Find Indigenous fish trap heritage places in Australia",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au11",
+      "query_zh": "寻找澳大利亚的历史公共公园",
+      "query_en": "Find historic public parks in Australia",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au12",
+      "query_zh": "寻找澳大利亚历史探险路线 The Burke Wills King and Yandruwandha National Heritage Place",
+      "query_en": "Find the Burke Wills King and Yandruwandha National Heritage Place",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au13",
+      "query_zh": "寻找澳大利亚的历史桥梁",
+      "query_en": "Find historic bridges in Australia",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au14",
+      "query_zh": "寻找澳大利亚妇女与民主运动相关的地点",
+      "query_en": "Find Australian places associated with women and democratic movements",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au15",
+      "query_zh": "寻找澳大利亚的劳动运动历史地点",
+      "query_en": "Find labour movement heritage places in Australia",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au16",
+      "query_zh": "寻找悉尼的文化路线 Sydney Gay and Lesbian Mardi Gras Parade Route",
+      "query_en": "Find cultural routes Sydney Gay and Lesbian Mardi Gras Parade Route",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au17",
+      "query_zh": "寻找澳大利亚原住民接触历史地点",
+      "query_en": "Find Indigenous contact history places in Australia",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au18",
+      "query_zh": "寻找澳大利亚与早期殖民地相关的遗址",
+      "query_en": "Find places associated with early colonial history in Australia",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au19",
+      "query_zh": "寻找澳大利亚的传统集会或仪式景观",
+      "query_en": "Find traditional gathering or ceremonial landscapes in Australia",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    },
+    {
+      "id": "au20",
+      "query_zh": "寻找诺福克岛的沉船文化遗产",
+      "query_en": "Find shipwreck cultural heritage on Norfolk Island",
+      "topic": "Source-grounded cultural discovery diagnostic; no relevance annotation supplied."
+    }
+  ]
+}

@@ -11,13 +11,13 @@ from fastapi.testclient import TestClient
 from archsearch import nps_data as cohort
 from archsearch import nps_spatial_data as spatial
 from archsearch.api import create_app
-from archsearch.corpus import build_document, load_corpus, load_pre_nps_corpus
+from archsearch.corpus import build_document, load_pre_australia_corpus, load_pre_nps_corpus
 from archsearch.evaluation import evaluate_corpus, load_queries
 from archsearch.supplement_data import base_contract
 
 
 def test_existing_evidence_and_search_text_survive_only_additive_catalogue_links() -> None:
-    original, current = load_pre_nps_corpus(), load_corpus()
+    original, current = load_pre_nps_corpus(), load_pre_australia_corpus()
     assert len(original) == 1807 and len(current) == 1940
     assert base_contract(original) == {
         "base_count": 1807,
@@ -71,8 +71,8 @@ def test_four_published_files_rebuild_deterministically_offline(tmp_path: Path) 
 def test_public_private_duplicate_names_and_second_point_in_real_api(tmp_path: Path) -> None:
     with TestClient(create_app(home=tmp_path)) as client:
         report = client.get("/api/coverage").json()
-        assert report["total"] == 1940 and report["corpus_version"] == "global-v11"
-        assert len(report["countries"]) == 201 and len(report["regions"]) == 7
+        assert report["total"] == 1999 and report["corpus_version"] == "global-v12"
+        assert len(report["countries"]) == 202 and len(report["regions"]) == 7
         countries = {row["id"]: row["count"] for row in report["countries"]}
         assert {key: countries[key] for key in ["AS", "GU", "MP", "UM", "FM", "MH", "PW"]} == {
             "AS": 14, "GU": 74, "MP": 22, "UM": 1, "FM": 23, "MH": 5, "PW": 4,
@@ -109,7 +109,7 @@ def test_nps_diagnostics_never_invent_relevance_judgments(tmp_path: Path) -> Non
     queries = cohort.DATA_DIR / "queries-nps-pacific.json"
     assert len(load_queries(queries)) == 20
     result = evaluate_corpus(tmp_path / "missing-model", tmp_path / "report.json", queries=queries)
-    assert result["corpus_count"] == 1940 and result["metrics"] is None
+    assert result["corpus_count"] == 1999 and result["metrics"] is None
     assert not result["qrels"]["confirmed"] and not result["runs_complete"]
     assert all(row["error"] is None for key, group in result["runs"].items()
                if key.startswith("bm25_") for row in group["queries"])

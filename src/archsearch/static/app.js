@@ -65,6 +65,9 @@
     let currentLink = window.location.href;
     let runtimeRefresh = null;
     let mapView = null;
+    let registeredAreas = null;
+    let currentCorpusVersion = null;
+    let currentRegisteredAreasVersion = null;
     let historyView = null;
     let explore = null;
     let polarView = null;
@@ -291,6 +294,9 @@
             }
             state.statusLoaded = true;
             state.corpusReady = Number(status.corpus?.count) > 0;
+            currentCorpusVersion = typeof status.corpus?.version === "string" ? status.corpus.version : null;
+            currentRegisteredAreasVersion = status.registered_areas?.version ?? null;
+            registeredAreas?.setCorpusVersion(currentCorpusVersion, currentRegisteredAreasVersion);
             state.semanticReady = status.semantic?.ready === true;
             ui.corpusCount.textContent = Number(status.corpus?.count || 0).toLocaleString("zh-CN");
             if (status.corpus?.period)
@@ -709,7 +715,7 @@
                     source_points: explore?.getSourcePoints(state.selectedSite.id) ?? [],
                     records: explore?.getSourceLocationRecords(state.selectedSite.id) ?? [],
                     source: explore?.getSpatialSource(state.selectedSite.id) ?? null,
-                } : null });
+                } : null }, registeredAreas?.getSnapshot() ?? null, currentCorpusVersion, currentRegisteredAreasVersion);
             objectUrl = URL.createObjectURL(new Blob([JSON.stringify(report, null, 2)], { type: "application/json;charset=utf-8" }));
             download.href = objectUrl;
             download.download = `archsearch-${completed.request.mode}-${exportedAt.replace(/[:.]/g, "-")}.json`;
@@ -1140,6 +1146,8 @@
             nodes.push(detailSection(chineseDescriptionLabel(site), chinese));
         }
         nodes.push(detailSection("年代证据与地图联动", phaseContent(site)));
+        if (registeredAreas)
+            nodes.push(registeredAreas.element);
         const details = element("p", null, hasSourceText(site.details)
             ? site.details : `当前导出未提供补充内容${site.details.trim() ? `（原始值：${site.details}）` : ""}。`);
         if (hasSourceText(site.details))
@@ -1161,7 +1169,7 @@
         }
         else if (positionStatus === "unknown") {
             space.append(element("p", "detail-note", site.source_kind === "supplement"
-                ? "文化对象身份已核对，但本记录尚未取得可信公开数字坐标；不以近邻、行政中心或零坐标替代，不绘制遗址标记。"
+                ? "本记录未采用可信公开代表点，不以近邻、行政中心或零坐标替代。公开登记范围如有提供，会在“现代遗产登记范围”单独列出；范围不补成代表点，也不表示原址实际未知。"
                 : "来源未给出已知的遗址真实位置，不绘制遗址标记；如有最后目击参照，仅保留在来源说明中。"));
         }
         if (site.location_precision === "rough") {
@@ -1174,7 +1182,7 @@
         if (site.geography) {
             const geography = site.geography;
             const scope = detailSection("来源名录中的国家／地区与分区", `国家／地区：${site.source_kind === "ats" ? "不作主权归属标注" : geography.countries.join(" · ") || "来源未明确"}；分区：${geography.regions.map((region) => region === "antarctica" ? "南极洲（独立区域分类）" : region).join(" · ") || "来源未提供"}。`);
-            scope.append(element("p", "detail-note", geography.note), element("p", "detail-note", `名录可用定位点记录：${geography.point_count}。${geography.point_count ? "可定位时只展示一个代表点，不表示全部组成地点。" : "没有可用真实定位点，不绘制遗址标记。"}此处是来源名录标签，不代表历史政治归属。`), safeLink(geography.source.uri, geography.source.title));
+            scope.append(element("p", "detail-note", geography.note), element("p", "detail-note", `名录可用定位点记录：${geography.point_count}。${geography.point_count ? "可定位时只展示一个代表点，不表示全部组成地点。" : "未采用可用代表点，不绘制遗址标记；登记范围如有提供另列。"}此处是来源名录标签，不代表历史政治归属。`), safeLink(geography.source.uri, geography.source.title));
             nodes.push(scope);
         }
         const fields = strings(matchedFields).map((field) => fieldLabels[field] || field);
@@ -1271,6 +1279,7 @@
             state.selectionMarker = marker;
         }
         renderDetail(site, matchedFields);
+        registeredAreas?.select(site.id, displayTitle(site));
         if (site.source_kind === "ats")
             polarView?.ensureSite({
                 id: site.id, title: displayTitle(site), repr_point: site.repr_point,
@@ -1311,6 +1320,7 @@
         selectedPhaseId = null;
         markSelection(id);
         ui.detailPanel.hidden = false;
+        registeredAreas?.select(id, known ? displayTitle(known) : id);
         let initialPhase;
         const choosePhase = (site) => {
             const phases = site.chronology?.phases ?? [];
@@ -1330,7 +1340,7 @@
         else {
             state.selectionMarker?.remove();
             state.selectionMarker = null;
-            ui.detailContent.replaceChildren(element("h3", null, "正在读取来源资料"), element("p", "detail-note", id));
+            ui.detailContent.replaceChildren(element("h3", null, "正在读取来源资料"), element("p", "detail-note", id), ...(registeredAreas ? [registeredAreas.element] : []));
             ui.detailPanel.focus({ preventScroll: true });
             updateSelectionControls();
         }
@@ -1354,6 +1364,7 @@
         catch (error) {
             if (isAbortError(error) || controller.signal.aborted || state.detailController !== controller || state.selectedId !== id)
                 return;
+            registeredAreas?.clear();
             if (known)
                 ui.detailContent.append(element("p", "detail-loading", "详情刷新失败，当前显示检索时返回的原始资料。"));
             else {
@@ -1381,6 +1392,7 @@
     }
     function closeDetail(returnFocus = true) {
         state.detailController?.abort();
+        registeredAreas?.clear();
         ui.detailPanel.hidden = true;
         if (state.selectedId && !currentSelectedSite()) {
             state.selectedId = null;
@@ -1529,6 +1541,29 @@
         onFeedback: () => { ui.mapEmptyLabel.hidden = true; },
     });
     mapView = ArchSearchMapView.create({ map: state.map, countLabel: ui.viewportCount });
+    registeredAreas = ArchSearchRegisteredAreas.create({
+        map: state.map,
+        onShow: () => {
+            autoPositionedSelection = false;
+            if (window.matchMedia("(max-width: 780px)").matches) {
+                byId("registered-areas-show", HTMLButtonElement).scrollIntoView({ block: "nearest", behavior: "instant" });
+                byId("map", HTMLDivElement).scrollIntoView({ block: "start", behavior: "instant" });
+            }
+        },
+        onVisibilityChange: (visible) => { ui.detailPanel.classList.toggle("is-viewing-registered-area", visible); },
+        getPadding: () => {
+            const mapBounds = byId("map", HTMLDivElement).getBoundingClientRect();
+            const detailBounds = ui.detailPanel.getBoundingClientRect();
+            const covered = ui.detailPanel.hidden ? 0 : Math.max(0, Math.min(mapBounds.right, detailBounds.right) - Math.max(mapBounds.left, detailBounds.left));
+            const coveredHeight = ui.detailPanel.hidden ? 0 : Math.max(0, Math.min(mapBounds.bottom, detailBounds.bottom) - Math.max(mapBounds.top, detailBounds.top));
+            return {
+                topLeft: [24, 24],
+                bottomRight: mapBounds.width - covered >= 96 ? [covered + 24, 24]
+                    : mapBounds.height - coveredHeight >= 96 ? [24, coveredHeight + 24] : [24, 24],
+            };
+        },
+    });
+    registeredAreas.setCorpusVersion(currentCorpusVersion, currentRegisteredAreasVersion);
     updateSelectionControls();
     updateSearchAvailability();
     refreshRuntime().then(finishLinkRestore).finally(() => { initialStatePending = false; saveViewLink(); });

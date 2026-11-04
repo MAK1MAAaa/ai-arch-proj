@@ -30,7 +30,8 @@ interface ExportResult<T> {
   response: SearchResponse<T>;
   map: HistoryView | null;
   selection: { site: string | null; phase: string | null };
-  sources: { name: string; license: string; version?: string | null; note?: string }[];
+  sources: { name: string; license: string; version?: string | null; note?: string; uri?: string; license_uri?: string }[];
+  registered_areas: RegisteredAreaSnapshot | null;
   selected_site: unknown;
   spatial: { metadata: unknown; selected: { site_id: string; representative_point: [number, number] | null; source_points: [number, number][]; records: { source_index: number; coordinate: [number, number]; name: string; ref: string }[]; source?: { name: string; uri: string; version: string; license: string; license_uri: string; sha256: string } | null } | null } | null;
   browse: BrowseState | null;
@@ -44,7 +45,15 @@ interface ExportResult<T> {
     license_uri: string;
     attribution: string;
   };
-  provenance: Record<'processing' | 'scope' | 'coordinates' | 'scores' | 'periods', string>;
+  provenance: Record<string, string>;
+}
+
+interface RegisteredAreaSnapshot {
+  site_id: string; corpus_version: string; displayed: true; ready: boolean;
+  reason: string | null; version: string | null; label: '现代遗产登记范围'; note: string;
+  features: { id: string; source_index: number; provider_object_id: number; title: string;
+    source: { name: string; uri: string; version: string; sha256: string; license: string; license_uri: string };
+    geometry_type: 'esriGeometryPolygon'; rings: number[][][] }[];
 }
 
 interface ResearchHelpers {
@@ -52,7 +61,7 @@ interface ResearchHelpers {
   parseView(url: URL): { view: HistoryView | null; selection: { site: string | null; phase: string | null }; error: string | null };
   parseBrowse(url: URL): { state: BrowseState; error: string | null };
   buildLink(base: URL, request: SearchSpec | null, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, browse?: BrowseState | null): string;
-  createExport<T>(request: SearchSpec, response: SearchResponse<T>, exportedAt: string, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, selectedSite?: unknown, browse?: BrowseState | null, spatial?: ExportResult<T>['spatial']): ExportResult<T>;
+  createExport<T>(request: SearchSpec, response: SearchResponse<T>, exportedAt: string, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, selectedSite?: unknown, browse?: BrowseState | null, spatial?: ExportResult<T>['spatial'], registeredAreas?: RegisteredAreaSnapshot | null, currentCorpusVersion?: string | null, currentRegisteredAreasVersion?: string | null): ExportResult<T>;
   automaticPhaseYear(phase: { precision: string; start_year: number | null; end_year: number | null }): number | null;
 }
 
@@ -70,12 +79,72 @@ const compiled = ts.transpileModule(source, {
   reportDiagnostics: true,
 });
 assert.equal(compiled.diagnostics?.filter((item) => item.category === ts.DiagnosticCategory.Error).length, 0);
-const candidate: unknown = runInContext(`${compiled.outputText}\nArchSearchResearch;`, createContext({ URL }));
+const registeredAreasCompiled = ts.transpileModule(readFileSync(new URL('../../src/archsearch/frontend/registered-areas.ts', import.meta.url), 'utf8'), {
+  compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.None, strict: true },
+});
+const candidate: unknown = runInContext(`${registeredAreasCompiled.outputText}\n${compiled.outputText}\nArchSearchResearch;`, createContext({ URL }));
 assert.ok(typeof candidate === 'object' && candidate !== null);
 assert.ok('parseLink' in candidate && typeof candidate.parseLink === 'function');
 assert.ok('buildLink' in candidate && typeof candidate.buildLink === 'function');
 assert.ok('createExport' in candidate && typeof candidate.createExport === 'function');
 const helpers = candidate as ResearchHelpers;
+
+function registeredAreaFixture(): RegisteredAreaSnapshot {
+  return {
+    site_id: 'auth:au-nhl:105665', corpus_version: 'synthetic-current', displayed: true,
+    ready: true, reason: null, version: 'areas-fixture-v1', label: '现代遗产登记范围', note: 'Modern registration only.',
+    features: [{ id: 'fixture-area', source_index: 0, provider_object_id: 12, title: 'Synthetic register',
+      geometry_type: 'esriGeometryPolygon',
+      source: { name: 'NHL public register', uri: 'https://example.org/original', version: 'source-fixture-v1',
+        sha256: 'a'.repeat(64), license: 'CC BY 3.0 Australia', license_uri: 'https://creativecommons.org/licenses/by/3.0/au/' },
+      rings: [[[179, -20], [-179, -20], [-179, -21], [179, -20]]],
+    }],
+  };
+}
+
+test('a displayed matching registered range exports full original WGS84 rings separately from points and scores', () => {
+  const snapshot = registeredAreaFixture();
+  const selected = { id: snapshot.site_id, repr_point: null };
+  const response = { query: 'synthetic', mode: 'bm25' as const, corpus_version: snapshot.corpus_version, elapsed_ms: 1, total_candidates: 0, results: [] };
+  const searched = { query: 'synthetic', mode: 'bm25' as const, type: null, limit: 10 };
+  const exported = helpers.createExport(searched, response, '2026-11-04T00:00:00Z', null,
+    { site: selected.id, phase: null }, selected, null, null, snapshot, snapshot.corpus_version);
+  assert.deepEqual(plain(exported.registered_areas), snapshot);
+  snapshot.features[0].rings[0][0][0] = 999;
+  assert.equal(exported.registered_areas?.features[0].rings[0][0][0], 179);
+  assert.equal((exported.selected_site as typeof selected).repr_point, null);
+  assert.equal(exported.spatial, null); assert.deepEqual(plain(exported.response.results), []);
+  assert.equal('score' in exported.registered_areas!, false);
+  const source = exported.sources.find(item => item.name === 'Australian National Heritage List public spatial database');
+  assert.equal(source?.license, 'CC BY 3.0 Australia'); assert.equal(source?.version, 'source-fixture-v1');
+  assert.match(source?.uri ?? '', /National_Heritage_List\/FeatureServer\/0/u);
+  assert.equal(exported.registered_areas?.features[0].source.uri, 'https://example.org/original');
+  assert.match(exported.provenance.registered_areas, /不推内外环.*不写入分享链接/u);
+});
+
+test('unshown, stale or differently selected registered ranges are omitted from an otherwise valid export', () => {
+  const searched = { query: 'synthetic', mode: 'bm25' as const, type: null, limit: 10 };
+  const response = { query: 'synthetic', mode: 'bm25' as const, corpus_version: 'synthetic-current', elapsed_ms: 1, total_candidates: 0, results: [] };
+  const snapshot = registeredAreaFixture(), selected = { id: snapshot.site_id, repr_point: null };
+  const baseArgs = [searched, response, '2026-11-04T00:00:00Z', null, { site: selected.id, phase: null }, selected, null, null] as const;
+  assert.equal(helpers.createExport(...baseArgs).registered_areas, null);
+  assert.equal(helpers.createExport(...baseArgs, null).registered_areas, null);
+  assert.equal(helpers.createExport(...baseArgs, snapshot, 'new-current-corpus').registered_areas, null);
+  assert.equal(helpers.createExport(...baseArgs, snapshot, snapshot.corpus_version, 'new-area-version').registered_areas, null);
+  assert.equal(helpers.createExport(...baseArgs, { ...snapshot, corpus_version: 'old-corpus' }).registered_areas, null);
+  assert.equal(helpers.createExport(...baseArgs, { ...snapshot, site_id: 'auth:fixture:different' }).registered_areas, null);
+  assert.equal(helpers.createExport(searched, response, baseArgs[2], null, { site: selected.id, phase: null }, { id: 'auth:fixture:other' }, null, null, snapshot).registered_areas, null);
+});
+
+test('matching-context registered range exports reject unversioned or degenerate geometry', () => {
+  const snapshot = registeredAreaFixture(), selected = { id: snapshot.site_id };
+  const searched = { query: 'synthetic', mode: 'bm25' as const, type: null, limit: 10 };
+  const response = { query: 'synthetic', mode: 'bm25' as const, corpus_version: snapshot.corpus_version, elapsed_ms: 1, total_candidates: 0, results: [] };
+  const baseArgs = [searched, response, '2026-11-04T00:00:00Z', null, { site: selected.id, phase: null }, selected, null, null] as const;
+  assert.throws(() => helpers.createExport(...baseArgs, { ...snapshot, version: null }), /版本/u);
+  snapshot.features[0].rings = [[[130, -20], [130, -20], [130, -20], [130, -20]]];
+  assert.throws(() => helpers.createExport(...baseArgs, snapshot), /三个不同位置/u);
+});
 
 const request: SearchSpec = { query: '古代港口', mode: 'semantic', type: 'port', limit: 20 };
 const base = new URL('http://127.0.0.1:8000/');

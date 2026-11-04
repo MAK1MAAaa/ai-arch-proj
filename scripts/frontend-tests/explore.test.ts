@@ -420,7 +420,7 @@ test('location status follows actual coordinates at the Mercator limit without c
 test('all records remain browsable while only mapped points are added to the Mercator layer', async () => {
   const points = [...fixture, ...antarctic]; const app = setup(); await app.boot(points);
   assert.equal(app.node('explore-list').children.length, 8); assert.equal(app.circles.length, 12);
-  assert.match(app.node('explore-feedback').textContent, /8 条资料.*主图可定位 4、极区 3、暂无可用坐标 1/u);
+  assert.match(app.node('explore-feedback').textContent, /8 条资料.*主图可定位 4、极区 3、暂无可用代表点 1/u);
   assert.deepEqual(plain(app.controller.getPoint('ats:hsm:1')), [0, -90]);
   assert.deepEqual(plain(app.controller.getPoint('ats:hsm:24')), [-87.113111, -85.173278]);
   assert.equal(app.controller.getPoint('ats:hsm:95'), null);
@@ -428,7 +428,7 @@ test('all records remain browsable while only mapped points are added to the Mer
   assert.equal(app.controller.getLocationStatus('ats:hsm:1'), 'polar');
   assert.equal(app.controller.getLocationStatus('missing'), null);
   const unknown = app.node('explore-list').children.at(-1)!.children[0];
-  assert.equal(unknown.dataset.locationStatus, 'unknown'); assert.match(unknown.children[2].textContent, /暂无可用坐标/u);
+  assert.equal(unknown.dataset.locationStatus, 'unknown'); assert.match(unknown.children[2].textContent, /暂无可用代表点/u);
   unknown.fire('click'); assert.equal(app.selects.at(-1)?.id, 'ats:hsm:95');
   app.node('explore-fit').fire('click');
   const bounds = plain(app.map?.lastBounds) as [number, number][];
@@ -446,7 +446,7 @@ test('catalogue callbacks always include cloned polar and unknown records indepe
   const region = app.controller.setState({ region: 'antarctica' }); app.respondAll(points, { region: 'antarctica' }); await region;
   assert.equal(app.catalogues.length, 1); assert.equal(app.node('explore-list').children.length, 5);
   assert.equal([...app.map!.layers][0].members.length, 3);
-  assert.match(app.node('explore-feedback').textContent, /主图可定位 1、极区 3、暂无可用坐标 1/u);
+  assert.match(app.node('explore-feedback').textContent, /主图可定位 1、极区 3、暂无可用代表点 1/u);
   const reload = app.controller.load(); app.respondAll(points, { region: 'antarctica' }); await reload;
   assert.equal(app.catalogues[1].length, 8);
 });
@@ -624,7 +624,7 @@ test('a source-qualified supplement with unknown position remains in the directo
   const filtered = app.controller.setState({ country: 'KI' }); app.respondAll(points, { country: 'KI' }); await filtered;
   assert.equal(app.node('explore-list').children.length, 1);
   const button = app.node('explore-list').children[0].children[0];
-  assert.equal(button.dataset.siteId, unknown.id); assert.match(button.children[2].textContent, /暂无可用坐标/u);
+  assert.equal(button.dataset.siteId, unknown.id); assert.match(button.children[2].textContent, /暂无可用代表点/u);
   assert.equal(app.node('explore-fit').disabled, true);
   assert.match(app.node('explore-feedback').textContent, /1 条资料.*0 个源定位点 \+ 0 个必要代表点/u);
   button.fire('click'); assert.equal(app.selects.at(-1)?.id, unknown.id);
