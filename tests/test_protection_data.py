@@ -21,6 +21,7 @@ from archsearch.corpus import (
     build_document,
     load_corpus,
     load_curated_corpus,
+    load_pre_nps_corpus,
     source_excerpts,
 )
 from archsearch.coverage import CatalogueIndex
@@ -678,8 +679,7 @@ def test_published_extension_preserves_old1700_fields_order_objects_and_shared_d
     assert all(old is new for old, new in zip(base1700, loaded[:1700], strict=True))
     assert [site.model_dump(mode="json") for site in loaded[:1700]] == before
     assert [digest(build_document(site).encode()) for site in loaded[:1700]] == documents
-    assert CORPUS_VERSION == "global-v10"
-    assert [site.model_dump(mode="json") for site in load_corpus()[:1795]] == [
+    assert [site.model_dump(mode="json") for site in load_pre_nps_corpus()[:1795]] == [
         site.model_dump(mode="json") for site in loaded
     ]
     assert all(site.source_kind == "supplement" and site.types == ["historic-site"]
@@ -756,7 +756,8 @@ def test_real_combined_source_groups_preserve_world5632_sequence_and_individual_
     index = CatalogueIndex(load_corpus(), CORPUS_VERSION)
     combined = index.spatial
     assert combined is not None
-    assert combined.version == "world-locations-v1+protection-locations-v1"
+    assert combined.version == ("world-locations-v1+protection-locations-v1+"
+                                "nps-pacific-locations-v1")
     assert len(old_locations.points) == 1033
     assert sum(map(len, old_locations.points.values())) == 5632
     assert all(combined.points[key] == value for key, value in old_locations.points.items())
@@ -765,16 +766,22 @@ def test_real_combined_source_groups_preserve_world5632_sequence_and_individual_
     coverage = index.spatial_coverage()
     assert coverage is not None and coverage.ready
     assert (coverage.records, coverage.points, coverage.distinct_points,
-            coverage.duplicate_points, coverage.display_points) == (1128, 5739, 5434, 305, 6189)
+            coverage.duplicate_points, coverage.display_points) == (1239, 5851, 5546, 305, 6301)
     groups = {group.version: group for group in coverage.source_groups}
-    assert set(groups) == {"world-locations-v1", "protection-locations-v1"}
+    assert set(groups) == {"world-locations-v1", "protection-locations-v1",
+                           "nps-pacific-locations-v1"}
     assert set(groups["world-locations-v1"].site_ids) == set(old_locations.points)
     assert set(groups["protection-locations-v1"].site_ids) == set(new_locations.points)
     assert groups["world-locations-v1"].source.uri.endswith("/whc001/")
     assert groups["protection-locations-v1"].source.uri.endswith("/chp001/")
     assert groups["world-locations-v1"].source.sha256 == old_locations.source["records_sha256"]
     assert groups["protection-locations-v1"].source.sha256 == cohort.SOURCE_SHA256
-    assert all(group.source.license == "CC BY-SA 4.0" for group in groups.values())
+    assert all(groups[version].source.license == "CC BY-SA 4.0" for version in (
+        "world-locations-v1", "protection-locations-v1",
+    ))
+    assert groups["nps-pacific-locations-v1"].source.license == (
+        "NPS government structured metadata; other source rights retained"
+    )
     arqa = next(site for site in index.sites if site.id == "auth:unesco-chp:626")
     detail = index.site_locations(arqa)
     assert detail.source == groups["protection-locations-v1"].source
@@ -787,8 +794,8 @@ def test_actual_warehouse_point_does_not_match_arqa_as_an_original_cultural_site
     included = SpatialBounds.from_csv("36.04669,34.53037,36.04673,34.53041")
     assert "auth:unesco-chp:626" not in {site.id for site in index.page(bbox=excluded).sites}
     assert "auth:unesco-chp:626" in {site.id for site in index.page(bbox=included).sites}
-    assert index.page(bbox=SpatialBounds.from_csv("-180,-90,180,90")).total == 1790
-    assert index.coverage().locations.model_dump() == {"mapped": 1787, "polar": 3, "unknown": 17}
+    assert index.page(bbox=SpatialBounds.from_csv("-180,-90,180,90")).total == 1901
+    assert index.coverage().locations.model_dump() == {"mapped": 1898, "polar": 3, "unknown": 39}
 
 
 def test_false_overlap_flag_and_component_rows_are_not_fabricated_as_new_sites() -> None:

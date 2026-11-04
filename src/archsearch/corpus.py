@@ -25,7 +25,7 @@ from archsearch.domain import ChronologyReview, PeriodEvidence, Site, SourceRefe
 DATA_DIR = Path(__file__).with_name("data")
 DATASET_VERSION = "v4.1"
 CURATED_VERSION = "global-v2"
-CORPUS_VERSION = "global-v10"
+CORPUS_VERSION = "global-v11"
 GLOBAL_REGION_QUOTAS = {
     "east-asia": 20, "south-asia": 15, "west-central-asia": 15, "africa": 15,
     "europe": 10, "north-america": 10, "south-america": 10, "oceania": 5,
@@ -334,8 +334,8 @@ def load_curated_corpus(data_dir: Path | None = None) -> list[Site]:
         raise CorpusError(f"cannot load global corpus from {directory}: {exc}") from exc
 
 
-def load_corpus(data_dir: Path | None = None) -> list[Site]:
-    """Extend the unchanged curated cohort with a pinned, licensed world catalogue."""
+def load_pre_nps_corpus(data_dir: Path | None = None) -> list[Site]:
+    """Load the frozen global-v10 cohorts before additional registration associations."""
     from archsearch.africa_data import AfricaError, load_africa
     from archsearch.catalogue_data import CatalogueError, load_catalogue
     from archsearch.pacific_data import PacificError, load_pacific
@@ -376,6 +376,20 @@ def load_corpus(data_dir: Path | None = None) -> list[Site]:
         CatalogueError, PolarDataError, SupplementError, RegionalError, SouthAmericaError,
         ProtectionError, AfricaError, PacificError,
     ) as error:
+        raise CorpusError(str(error)) from error
+
+
+def load_corpus(data_dir: Path | None = None) -> list[Site]:
+    """Load the current source-verified corpus for retrieval and catalogue browsing."""
+    from archsearch.nps_data import NpsError, load_nps
+
+    base = load_pre_nps_corpus(data_dir)
+    directory = Path(data_dir) if data_dir is not None else DATA_DIR
+    if data_dir is not None and not (directory / "nps_pacific_manifest.json").exists():
+        return base
+    try:
+        return load_nps(base, directory)
+    except NpsError as error:
         raise CorpusError(str(error)) from error
 
 

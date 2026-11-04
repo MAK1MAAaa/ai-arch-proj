@@ -339,6 +339,18 @@ test('explicitly cleared browse filters remain distinct from successful search f
   assert.equal(helpers.parseLink(url).request?.country, 'FR');
 });
 
+test('NPS project grouping round trips independently from searched and browsed area codes', () => {
+  const searched = { ...request, country: 'GU', region: 'nps-pacific' };
+  const browse: BrowseState = { country: 'AS', region: 'nps-pacific', offset: 50, visible: true, bbox: null };
+  const selection = { site: 'auth:nps-nris:03000549', phase: null };
+  const url = new URL(helpers.buildLink(base, searched, null, selection, browse));
+  assert.deepEqual(plain(helpers.parseLink(url).request), searched);
+  assert.deepEqual(plain(helpers.parseBrowse(url).state), browse);
+  assert.deepEqual(plain(helpers.parseView(url).selection), selection);
+  assert.equal(url.searchParams.get('region'), 'nps-pacific');
+  assert.equal(url.searchParams.get('browse_country'), 'AS');
+});
+
 test('geographic links reject malformed, duplicated or orphaned parameters', () => {
   for (const suffix of ['country=', 'region=', 'country=cn', 'region=unknown', 'country=CN&country=FR', 'region=africa&region=africa']) {
     assert.notEqual(helpers.parseLink(new URL(`?q=site&${suffix}`, base)).error, null);
@@ -460,6 +472,11 @@ test('an independently selected unknown supplement exports its own evidence with
   assert.equal(pacificSource?.version, 'pacific-interior-supplement-v1');
   assert.equal(pacificSource?.license, 'Mixed rights — see individual source_refs');
   assert.match(pacificSource?.note ?? '', /address-restricted place remains unmapped/u);
+  const npsSource = report.sources.find(source => source.name === 'NPS Pacific register supplement');
+  assert.equal(npsSource?.version, 'nps-pacific-v1');
+  assert.equal(npsSource?.license, 'NPS government structured metadata; other source rights retained');
+  assert.match(npsSource?.note ?? '', /third-party nomination text/u);
+  assert.match(npsSource?.note ?? '', /restricted locations remain unmapped/u);
   assert.equal(report.spatial?.selected?.representative_point, null);
   assert.deepEqual(plain(report.spatial?.selected?.source_points), []);
   assert.equal('score' in (report.selected_site as Record<string, unknown>), false);

@@ -77,6 +77,7 @@ const ArchSearchExplore = (() => {
     "europe-north-america": "欧洲和北美洲",
     "latin-america-caribbean": "拉丁美洲和加勒比地区",
     "antarctica": "南极",
+    "nps-pacific": "NPS太平洋资料分组",
   };
   const sourceLabels: Readonly<Record<string, string>> = {
     pleiades: "Pleiades 罗马资料", global: "已策展全球资料", unesco: "世界遗产名录", ats: "ATS 南极历史遗址", supplement: "文化遗址补充资料",

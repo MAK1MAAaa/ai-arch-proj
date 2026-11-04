@@ -137,7 +137,7 @@ def test_locations_route_separates_sources_and_preserves_identity_and_license(
     assert value["source_points"] == [[10, 30], [10, 30], [11, 31]]
     assert value["source"]["license"] == "CC BY-SA 4.0"
     assert value["spatial_version"] == "fixture-spatial-v1"
-    assert "未混入" in value["note"] and "政治归属" in value["note"]
+    assert "不代表独立遗址数量或边界" in value["note"] and "政治归属" in value["note"]
     empty = spatial_client.get("/api/sites/2/locations").json()
     assert empty["source_points"] == [] and empty["source"] is not None
     unknown = spatial_client.get("/api/sites/ats%3Ahsm%3A95/locations").json()

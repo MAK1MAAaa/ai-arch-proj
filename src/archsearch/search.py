@@ -48,6 +48,7 @@ class SearchRequest(BaseModel):
         "africa", "arab-states", "asia-pacific", "europe-north-america",
         "latin-america-caribbean",
         "antarctica",
+        "nps-pacific",
     ] | None = None
     limit: int = Field(default=10, ge=1, le=50)
 

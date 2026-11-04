@@ -551,15 +551,15 @@ def bundled_client(tmp_path_factory: pytest.TempPathFactory) -> Iterator[TestCli
         yield client
 
 
-def test_real_api_exposes_197_source_declared_countries_and_independent_supplement_counts(
+def test_real_api_preserves_source_country_labels_and_independent_supplement_counts(
     bundled_client: TestClient,
 ) -> None:
     response = bundled_client.get("/api/coverage")
     assert response.status_code == 200
     coverage = response.json()
-    assert coverage["corpus_version"] == "global-v10" and coverage["total"] == 1807
+    assert coverage["corpus_version"] == "global-v11" and coverage["total"] == 1940
     countries = {row["id"]: row for row in coverage["countries"]}
-    assert len(countries) == 197
+    assert len(countries) == 201
     labels = supplement.country_labels()
     assert all(countries[code]["label"] == label
                and countries[code]["count"] == (5 if code == "CD" else 1)
@@ -568,16 +568,16 @@ def test_real_api_exposes_197_source_declared_countries_and_independent_suppleme
     assert len(previous["countries"]) == 159
     assert all(countries[row["id"]]["label"] == row["label"] for row in previous["countries"])
     assert {row["id"]: row["count"] for row in coverage["sources"]} == {
-        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 182,
+        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 315,
     }
-    assert coverage["locations"] == {"mapped": 1787, "polar": 3, "unknown": 17}
+    assert coverage["locations"] == {"mapped": 1898, "polar": 3, "unknown": 39}
     assert coverage["authority"]["covered"] == coverage["authority"]["eligible_total"] == 1033
     assert coverage["polar_authority"]["covered"] == 91
     spatial = coverage["spatial_locations"]
-    assert spatial["ready"] and spatial["records"] == 1128 and spatial["points"] == 5739
-    assert spatial["display_points"] == 6189
+    assert spatial["ready"] and spatial["records"] == 1239 and spatial["points"] == 5851
+    assert spatial["display_points"] == 6301
     status = bundled_client.get("/api/status").json()
-    assert status["corpus"]["count"] == 1807 and status["corpus"]["version"] == "global-v10"
+    assert status["corpus"]["count"] == 1940 and status["corpus"]["version"] == "global-v11"
     assert status["semantic"]["ready"] is False and status["history"]["ready"] is False
 
 
