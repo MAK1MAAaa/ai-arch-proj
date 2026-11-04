@@ -1,8 +1,8 @@
 {
   "canada_spec_sha256": "4cfdd4fb896c2769de3d77daaf481fdb1544fc79d0e6d8db4911d97d8ad8afbc",
-  "corpus_countries_sha256": "eaa4d3e41776be83678dc1ae9c4527ac07e86ea16e3912213dd2be7d5401386d",
-  "corpus_ids_sha256": "9ac7e90feaf3f15f6ad3939be56416253b3c64a9fbf631894b98471e75804b2a",
-  "corpus_version": "global-v14",
+  "corpus_countries_sha256": "9e3494ad2cb53524b939e5d9387df576210c7af580678092f6b8a278985df7ec",
+  "corpus_ids_sha256": "7971d7e7cae2fc916c425ba7eb2d0ba6c1b0554941bf6afdb74d26a5ee6182e7",
+  "corpus_version": "global-v15",
   "hong_kong_spec_sha256": "b0bcbe915c46bf611aab9b35b76c4365eb398a1032cf7705aa8302448611bf7a",
   "memberships": [
     {
@@ -33640,10 +33640,10 @@
     }
   ],
   "note": "Reviewed Canadian whole-object provinces and Hong Kong source-feature districts. Explicit feature-to-whole links only; no geocoding, boundary, chronology or text inference.",
-  "review_sha256": "92bf79d0272c6e48fb97a6fa00567c57d2a75ebccda03738b5a5565cdc229555",
+  "review_sha256": "617454b4d01d975c840aa3af639165680b8dcbc2fa59cff994cf158035040faf",
   "schema_version": 1,
-  "source_facts_sha256": "048d592289f5769ef96520c541cbb73fb3aae50e85233e55a72cf0e6f94ab7bc",
-  "source_review_sha256": "c11955b0df0b55726fa92d2b1f989f5ca8488f01cfa9cce3fe4cc780f2381748",
+  "source_facts_sha256": "6f7600a4ab0dae742a830d6e33a16970321d8636f926712ffee7d35c113cc49f",
+  "source_review_sha256": "5e493d67302bc9f38518d4c1cd2acba0ea0a458a1a04f03d8ffb5ee3c4a87c5a",
   "subdivisions": [
     {
       "country": "CA",
@@ -33796,5 +33796,5 @@
       "label": "Yuen Long"
     }
   ],
-  "version": "source-subdivisions-v2"
+  "version": "source-subdivisions-v3"
 }

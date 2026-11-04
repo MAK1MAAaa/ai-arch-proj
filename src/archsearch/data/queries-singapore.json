@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "scope": "Twenty paired Singapore source-name and source-description discovery diagnostics. Chinese questions are query paraphrases, not adopted Chinese site aliases. No human relevance judgments, chronological phases or precision claims. Only six targets are specified before evaluation; these are not a blind benchmark.",
+  "queries": [
+    {"id": "sg01", "query_zh": "寻找新加坡苏丹清真寺", "query_en": "Find Sultan Mosque in Singapore", "topic": "Predetermined discovery target: Sultan Mosque; a Chinese query does not create a Chinese alias."},
+    {"id": "sg02", "query_zh": "寻找新加坡天福宫", "query_en": "Find Thian Hock Keng in Singapore", "topic": "Predetermined discovery target: Thian Hock Keng; preserve the original English source title."},
+    {"id": "sg03", "query_zh": "寻找新加坡河上的三座历史桥梁整体", "query_en": "Find Singapore River Bridges: Cavenagh Bridge, Anderson Bridge and Elgin Bridge", "topic": "Predetermined discovery target: the single source-defined three-bridge whole; one provider point does not represent three adopted component points."},
+    {"id": "sg04", "query_zh": "寻找樟宜监狱旧入口的门墙与塔楼", "query_en": "Find Changi Prison Entrance Gate, Wall and Turrets", "topic": "Predetermined discovery target: the scope-limited prison entrance structures; no extension to the full prison."},
+    {"id": "sg05", "query_zh": "寻找新加坡旧竹脚医院的三个历史楼块", "query_en": "Find the Former Kandang Kerbau Hospital Blocks 1, 2 and 3", "topic": "Predetermined discovery target: the source-defined hospital blocks; not the current hospital institution or its entire campus."},
+    {"id": "sg06", "query_zh": "寻找新加坡 Former Keng Teck Whay Building 的旧会馆", "query_en": "Find the Former Keng Teck Whay Building", "topic": "Predetermined discovery target: this original business-identity record, distinct from the neighbouring temple in its licensed description."},
+    {"id": "sg07", "query_zh": "寻找新加坡历史清真寺和寺庙", "query_en": "Find historic mosques and temples in Singapore", "topic": "Source-description topic probe; no relevance labels or post-hoc target assignments."},
+    {"id": "sg08", "query_zh": "寻找新加坡的历史学校建筑", "query_en": "Find historic school buildings in Singapore", "topic": "Built-heritage topic probe; no inferred school lifecycle."},
+    {"id": "sg09", "query_zh": "寻找新加坡的旧法院建筑", "query_en": "Find former court buildings in Singapore", "topic": "Source-name disambiguation probe across old court records; no automatic identity merging."},
+    {"id": "sg10", "query_zh": "寻找新加坡的历史纪念物", "query_en": "Find historic memorials in Singapore", "topic": "Topic probe; monument features and named components are not separate site counts."},
+    {"id": "sg11", "query_zh": "寻找新加坡 Chinese High School 的钟楼", "query_en": "Find the Chinese High School Clock Tower Building", "topic": "Retain the specifically protected clock-tower scope rather than the entire school campus."},
+    {"id": "sg12", "query_zh": "寻找新加坡 Goodwood Park Hotel 的历史塔楼", "query_en": "Find the Goodwood Park Hotel Tower Block", "topic": "Retain the Tower Block qualification; not a hotel recommendation or general hotel boundary."},
+    {"id": "sg13", "query_zh": "寻找新加坡莱佛士学院旧建筑群", "query_en": "Find Former Raffles College at Bukit Timah", "topic": "Reviewed six-building and two-quadrangle whole; the related garden context is an audit distinction, not an inferred common identity."},
+    {"id": "sg14", "query_zh": "寻找新加坡南洋大学的历史建筑", "query_en": "Find the Nanyang University historic structures", "topic": "Source-defined composite scope; no component splitting or date inference."},
+    {"id": "sg15", "query_zh": "寻找新加坡 CHIJ 的礼拜堂与 Caldwell House", "query_en": "Find the CHIJ Chapel and Caldwell House", "topic": "A compound whole retains its source scope and one provider reference point."},
+    {"id": "sg16", "query_zh": "寻找新加坡 Sri Mariamman Temple", "query_en": "Find Sri Mariamman Temple in Singapore", "topic": "Original-name discovery probe; no generated alternate-language alias."},
+    {"id": "sg17", "query_zh": "寻找新加坡 St Andrew's Cathedral", "query_en": "Find Saint Andrew's Cathedral in Singapore", "topic": "Original-name probe with spelling variation, without rewriting the original title."},
+    {"id": "sg18", "query_zh": "寻找新加坡的海军历史建筑", "query_en": "Find historic naval buildings in Singapore", "topic": "Description-topic probe; similarly named Canadian heritage places remain independent source identities."},
+    {"id": "sg19", "query_zh": "寻找新加坡的旧医疗机构建筑", "query_en": "Find former medical institution buildings in Singapore", "topic": "Distinguish an original historic building from a current service institution."},
+    {"id": "sg20", "query_zh": "寻找新加坡历史建筑中的会馆和社团空间", "query_en": "Find historic association and community buildings in Singapore", "topic": "Licensed original-description topic probe; no human relevance assessment or fabricated building dates."}
+  ]
+}

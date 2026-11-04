@@ -19,17 +19,17 @@ from archsearch.domain import Site, SourceReference
 from archsearch.supplement_data import SourceArtifact
 
 DATA_DIR = Path(__file__).with_name("data")
-VERSION: Literal["source-subdivisions-v2"] = "source-subdivisions-v2"
+VERSION: Literal["source-subdivisions-v3"] = "source-subdivisions-v3"
 REVIEW_FILE = "subdivision_review.json"
 PAYLOAD_FILE = "subdivisions.json"
 MANIFEST_FILE = "subdivisions_manifest.json"
 MAX_PAYLOAD_BYTES = 8 * 1024 * 1024
 MAX_REVIEW_BYTES = 2 * 1024 * 1024
 MAX_MANIFEST_BYTES = 64 * 1024
-REVIEW_SHA256 = "92bf79d0272c6e48fb97a6fa00567c57d2a75ebccda03738b5a5565cdc229555"
-PAYLOAD_SHA256 = "6f94000056ddcb352a089afae56b77b426ca561b63f1da0740319709ca0abae6"
-SOURCE_REVIEW_SHA256 = "c11955b0df0b55726fa92d2b1f989f5ca8488f01cfa9cce3fe4cc780f2381748"
-SOURCE_FACTS_SHA256 = "048d592289f5769ef96520c541cbb73fb3aae50e85233e55a72cf0e6f94ab7bc"
+REVIEW_SHA256 = "617454b4d01d975c840aa3af639165680b8dcbc2fa59cff994cf158035040faf"
+PAYLOAD_SHA256 = "444c1db1b11618d712cd4b7dd7d288fd4a3a1769547c26bffc550f3adde5e847"
+SOURCE_REVIEW_SHA256 = "5e493d67302bc9f38518d4c1cd2acba0ea0a458a1a04f03d8ffb5ee3c4a87c5a"
+SOURCE_FACTS_SHA256 = "6f7600a4ab0dae742a830d6e33a16970321d8636f926712ffee7d35c113cc49f"
 SUBDIVISION_PATTERN = r"^[A-Z]{2}:[a-z0-9][a-z0-9-]{0,63}$"
 PREPARATION_HINT = (
     "请运行 python -m archsearch.subdivisions --rebuild 修复来源省区索引并重启服务。"
@@ -108,7 +108,7 @@ class ExtraMembership(BaseModel):
 class SubdivisionReview(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
     schema_version: Literal[1]
-    version: Literal["source-subdivisions-v2"]
+    version: Literal["source-subdivisions-v3"]
     corpus_version: StrictStr = Field(min_length=1)
     corpus_ids_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     corpus_countries_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
@@ -139,7 +139,7 @@ class SubdivisionMembership(BaseModel):
 class SubdivisionPayload(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
     schema_version: Literal[1]
-    version: Literal["source-subdivisions-v2"]
+    version: Literal["source-subdivisions-v3"]
     corpus_version: StrictStr = Field(min_length=1)
     corpus_ids_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     corpus_countries_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
