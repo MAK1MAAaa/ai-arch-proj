@@ -9,13 +9,13 @@ from fastapi.testclient import TestClient
 
 from archsearch import australia_data as cohort
 from archsearch.api import create_app
-from archsearch.corpus import build_document, load_corpus, load_pre_australia_corpus
+from archsearch.corpus import build_document, load_pre_australia_corpus, load_pre_canada_corpus
 from archsearch.registered_areas import RegisteredAreasIndex
 from archsearch.supplement_data import base_contract
 
 
 def test_nhl_preserves_every_prior_record_and_has_no_synthetic_representatives() -> None:
-    before, current = load_pre_australia_corpus(), load_corpus()
+    before, current = load_pre_australia_corpus(), load_pre_canada_corpus()
     assert len(before) == 1940 and len(current) == 1999
     assert base_contract(before) == {
         "base_count": 1940,
@@ -53,7 +53,7 @@ def test_published_text_derivatives_rebuild_twice_without_network(tmp_path: Path
 def test_norfolk_is_additional_source_membership_and_area_is_not_a_point(tmp_path: Path) -> None:
     with TestClient(create_app(home=tmp_path)) as client:
         coverage = client.get("/api/coverage").json()
-        assert coverage["total"] == 1999 and coverage["corpus_version"] == "global-v12"
+        assert coverage["total"] == 2976 and coverage["corpus_version"] == "global-v13"
         assert len(coverage["countries"]) == 202 and len(coverage["regions"]) == 7
         countries = {row["id"]: row["count"] for row in coverage["countries"]}
         assert countries["AU"] == 73 and countries["NF"] == 1
@@ -90,7 +90,7 @@ def test_multistate_original_features_and_all_source_rings_survive_the_api(tmp_p
     with TestClient(create_app(home=tmp_path, areas=index)) as client:
         for identifier in ["auth:au-nhl:106061", "auth:au-nhl:105919"]:
             body = client.get("/api/sites/" + identifier + "/areas").json()
-            expected = index.response(identifier, "global-v12").model_dump(mode="json")
+            expected = index.response(identifier, "global-v13").model_dump(mode="json")
             assert body == expected
             assert [row["provider_object_id"] for row in body["features"]] == (
                 records[identifier].registered_range.feature_ids

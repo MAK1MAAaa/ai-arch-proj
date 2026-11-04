@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "scope": "Twenty paired source-grounded research-intent diagnostics for the reviewed Canadian DFHD historic-place supplement. Not blind benchmarks, relevance annotations, lifecycle evidence or an inventory of every Canadian cultural place. Government province fields describe the source association; representative points do not establish legal or archaeological boundaries.",
+  "queries": [
+    {"id": "ca01", "query_zh": "寻找加拿大的历史木构博物馆 Banff Park Museum", "query_en": "Find the historic log-built Banff Park Museum in Canada", "topic": "Historic building, distinct from a movable collection; no relevance labels supplied."},
+    {"id": "ca02", "query_zh": "寻找阿尔伯塔省的原住民文化景观 Blackfoot Crossing", "query_en": "Find the Indigenous cultural landscape Blackfoot Crossing in Alberta", "topic": "Source-defined wider cultural landscape; nested places remain related."},
+    {"id": "ca03", "query_zh": "寻找加拿大的土屋聚落遗址 Earthlodge Village", "query_en": "Find the archaeological earthworks of Earthlodge Village in Canada", "topic": "Source-defined archaeological subsite, not an independent landscape extent."},
+    {"id": "ca04", "query_zh": "寻找不列颠哥伦比亚省的毛皮贸易遗产 Fort St. James", "query_en": "Find fur-trade heritage at Fort St. James in British Columbia", "topic": "Government historic-place description; no lifecycle inference."},
+    {"id": "ca05", "query_zh": "寻找加拿大的历史天文台 Dominion Astrophysical Observatory", "query_en": "Find the historic Dominion Astrophysical Observatory in Canada", "topic": "Public cultural building; representative coordinate selection is separately reviewed."},
+    {"id": "ca06", "query_zh": "寻找新斯科舍省的要塞遗产 Fort Anne", "query_en": "Find fortified heritage at Fort Anne in Nova Scotia", "topic": "Later historic resources and earlier archaeological layers are not merged."},
+    {"id": "ca07", "query_zh": "寻找 Fort Anne 下方的 Charles Fort 考古遗址", "query_en": "Find the archaeological site of Charles Fort underneath Fort Anne", "topic": "Same-site distinct archaeological layer; no exact excavated footprint inferred."},
+    {"id": "ca08", "query_zh": "寻找西北地区大奴湖边的 Fort Reliance 遗址", "query_en": "Find Fort Reliance by Great Slave Lake in the Northwest Territories", "topic": "Distinct from similarly named Yukon places; source province controls association."},
+    {"id": "ca09", "query_zh": "寻找纽芬兰的帕拉第奥风格历史建筑 Government House", "query_en": "Find the Palladian Government House historic building in Newfoundland", "topic": "Province-specific homonym diagnostic, not a relevance judgement."},
+    {"id": "ca10", "query_zh": "寻找多伦多上下叠置的历史剧院 Elgin and Winter Garden", "query_en": "Find the stacked historic Elgin and Winter Garden theatres in Toronto", "topic": "One source-defined building with two theatres; no duplicated site count."},
+    {"id": "ca11", "query_zh": "寻找安大略省的历史水道 Trent Severn Waterway", "query_en": "Find the historic Trent Severn Waterway in Ontario", "topic": "Linear cultural place; a reference point cannot represent the full waterway extent."},
+    {"id": "ca12", "query_zh": "寻找魁北克的检疫站与爱尔兰移民纪念遗产 Grosse Île", "query_en": "Find the quarantine station and Irish immigration memorial heritage at Grosse Île in Quebec", "topic": "Original government narrative retained; no date fields promoted into phases."},
+    {"id": "ca13", "query_zh": "寻找曼尼托巴省的 Churchill Rocket Research Range 历史设施", "query_en": "Find the historic Churchill Rocket Research Range in Manitoba", "topic": "Source-grounded regional discovery diagnostic."},
+    {"id": "ca14", "query_zh": "寻找萨斯喀彻温省的 Batoche 历史遗址", "query_en": "Find the historic site of Batoche in Saskatchewan", "topic": "Source-grounded regional discovery diagnostic."},
+    {"id": "ca15", "query_zh": "寻找新不伦瑞克省的历史天文台 William Brydone Jack Observatory", "query_en": "Find the historic William Brydone Jack Observatory in New Brunswick", "topic": "Source-grounded regional discovery diagnostic."},
+    {"id": "ca16", "query_zh": "寻找爱德华王子岛的 Province House 历史建筑", "query_en": "Find the historic Province House building in Prince Edward Island", "topic": "Province-specific government-building diagnostic."},
+    {"id": "ca17", "query_zh": "寻找努纳武特的 Igloolik Island Archaeological Sites", "query_en": "Find the Igloolik Island Archaeological Sites in Nunavut", "topic": "Public source identity only; no generated excavation locations."},
+    {"id": "ca18", "query_zh": "寻找育空的历史采矿机械原址 Dredge No. 4", "query_en": "Find Dredge No. 4 at its historic mining site in Yukon", "topic": "Fixed last-work-site cultural resource, distinct from movable ships."},
+    {"id": "ca19", "query_zh": "寻找加拿大的历史铁路车站", "query_en": "Find historic railway stations in Canada", "topic": "Open thematic diagnostic, no prefilled relevant sites."},
+    {"id": "ca20", "query_zh": "寻找加拿大的原住民考古遗址和文化景观", "query_en": "Find Indigenous archaeological sites and cultural landscapes in Canada", "topic": "Open thematic diagnostic, no prefilled relevant sites or completeness claim."}
+  ]
+}

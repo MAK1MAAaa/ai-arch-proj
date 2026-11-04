@@ -324,6 +324,10 @@ test('export provenance includes source release, attribution, license and interp
   assert.match(exported.provenance.scores, /不是相关概率.*不可直接比较.*不包含人工/u);
   assert.match(exported.provenance.periods, /不等同于建造年代.*start\/end/u);
   assert.equal('metrics' in exported, false);
+  const canada = exported.sources.find(source => source.name === 'Canadian Federal Heritage Designations historic-place supplement');
+  assert.equal(canada?.version, 'canada-dfhd-v1');
+  assert.equal(canada?.license, 'Open Government Licence - Canada; Wikidata structured claims CC0');
+  assert.match(canada?.note ?? '', /Parks Canada.*reference points.*separate from project identity approval/u);
 });
 
 test('exports refuse mismatched queries or modes instead of mislabelling earlier results', () => {
