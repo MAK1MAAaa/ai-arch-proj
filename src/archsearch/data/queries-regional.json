@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "scope": "Twenty paired intents focused on the regional supplement. This is a cohort-focused diagnostic set, not a representative blind test or completed relevance judgment.",
+  "queries": [
+    {"id": "r01", "query_zh": "寻找西伯利亚北极地区的早期狩猎营地", "query_en": "Find early hunter camps in the Siberian Arctic", "topic": "Arctic prehistory"},
+    {"id": "r02", "query_zh": "寻找北极海岛上的古代居住遗址", "query_en": "Find archaeological settlement sites on high Arctic islands", "topic": "Arctic island archaeology"},
+    {"id": "r03", "query_zh": "寻找白令海峡沿岸的古代墓地", "query_en": "Find ancient coastal burial sites by the Bering Strait", "topic": "Bering coastal archaeology"},
+    {"id": "r04", "query_zh": "寻找俄罗斯北方废弃的贸易城镇", "query_en": "Find abandoned trading towns in northern Russia", "topic": "Northern trading settlements"},
+    {"id": "r05", "query_zh": "寻找加拿大北部历史航行与探险活动的遗址", "query_en": "Find historic navigation and exploration sites in northern Canada", "topic": "Canadian northern exploration"},
+    {"id": "r06", "query_zh": "寻找保存历史建筑的北极探险基地", "query_en": "Find Arctic expedition bases with surviving historic buildings", "topic": "Arctic expedition buildings"},
+    {"id": "r07", "query_zh": "寻找格陵兰岛因纽特人的古聚落遗迹", "query_en": "Find remains of former Inuit settlements in Greenland", "topic": "Greenland settlement archaeology"},
+    {"id": "r08", "query_zh": "寻找河岸或湖岸的古代渔猎采集遗址", "query_en": "Find ancient fishing and forager sites by rivers and lakes", "topic": "River and lake archaeology"},
+    {"id": "r09", "query_zh": "寻找关岛的拉提石建筑遗址", "query_en": "Find latte stone archaeological structures on Guam", "topic": "Guam latte archaeology"},
+    {"id": "r10", "query_zh": "寻找天宁岛的史前拉提石遗址", "query_en": "Find prehistoric latte structures on Tinian", "topic": "Tinian latte archaeology"},
+    {"id": "r11", "query_zh": "寻找美属萨摩亚的二战海岸炮台", "query_en": "Find Second World War coastal batteries in American Samoa", "topic": "Pacific military heritage"},
+    {"id": "r12", "query_zh": "寻找波利尼西亚有防御设施的古代聚落", "query_en": "Find fortified archaeological residences in Polynesia", "topic": "Polynesian fortified places"},
+    {"id": "r13", "query_zh": "寻找甘比尔群岛的历史宗教建筑", "query_en": "Find historic religious buildings in the Gambier Islands", "topic": "Gambier cultural buildings"},
+    {"id": "r14", "query_zh": "寻找查塔姆群岛莫里奥里人的雕刻树木", "query_en": "Find Moriori carved trees on the Chatham Islands", "topic": "Moriori cultural landscapes"},
+    {"id": "r15", "query_zh": "寻找澳大利亚内陆的历史电报站", "query_en": "Find historic telegraph stations in the Australian interior", "topic": "Australian communications heritage"},
+    {"id": "r16", "query_zh": "寻找澳大利亚中部的历史金矿聚落", "query_en": "Find historic gold mining settlements in central Australia", "topic": "Australian mining heritage"},
+    {"id": "r17", "query_zh": "寻找澳大利亚历史传教区的建筑遗存", "query_en": "Find historic mission precinct buildings in Australia", "topic": "Australian mission heritage"},
+    {"id": "r18", "query_zh": "寻找非洲森林边缘的史前岩棚遗址", "query_en": "Find prehistoric rockshelters by the forest edge in Africa", "topic": "African rockshelter archaeology"},
+    {"id": "r19", "query_zh": "寻找刚果湖岸的旧石器考古原址", "query_en": "Find Palaeolithic archaeological sites on Congolese lakeshores", "topic": "Congolese lakeshore archaeology"},
+    {"id": "r20", "query_zh": "寻找波利尼西亚的marae礼仪场所", "query_en": "Find Polynesian marae ceremonial places", "topic": "Polynesian ceremonial heritage"}
+  ]
+}

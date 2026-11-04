@@ -29,7 +29,7 @@ SOURCE_LABELS = {
     "global": "全球策展资料",
     "unesco": "UNESCO 世界遗产名录",
     "ats": "南极条约历史遗址与纪念物",
-    "supplement": "补充国家文化遗址",
+    "supplement": "文化遗址补充资料",
 }
 
 WEB_MERCATOR_MAX_LATITUDE = 85.0511287798

@@ -11,7 +11,7 @@ const ArchSearchExplore = (() => {
         "antarctica": "南极",
     };
     const sourceLabels = {
-        pleiades: "Pleiades 罗马资料", global: "已策展全球资料", unesco: "世界遗产名录", ats: "ATS 南极历史遗址", supplement: "补充国家文化遗址",
+        pleiades: "Pleiades 罗马资料", global: "已策展全球资料", unesco: "世界遗产名录", ats: "ATS 南极历史遗址", supplement: "文化遗址补充资料",
     };
     const chronologyLabels = {
         reviewed: "已有来源支持的阶段", insufficient: "已核验，断代未确定", not_reviewed: "断代尚未核验",

@@ -12,14 +12,30 @@ import numpy as np
 from numpy.typing import NDArray
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
-from archsearch.corpus import build_document
+from archsearch.corpus import build_document, source_excerpts
 from archsearch.coverage import matches_geography
 from archsearch.domain import Site
 from archsearch.index import SemanticIndex
 
+TOKENIZER_VERSION = "unicode-han-bigram-v1"
+BM25_K1 = 1.5
+BM25_B = 0.75
+_HAN_RANGE = (
+    "\u3400-\u4dbf\u4e00-\u9fff\uf900-\ufaff"
+    "\U00020000-\U0002fa1f\U00030000-\U000323af"
+)
+_LEXEMES = re.compile(rf"[{_HAN_RANGE}]+|[^\W_{_HAN_RANGE}]+")
+_HAN = re.compile(rf"[{_HAN_RANGE}]+")
+
 
 def tokenize(text: str) -> list[str]:
-    return re.findall(r"[^\W_]+", unicodedata.normalize("NFKC", text).casefold())
+    """Keep Unicode words and whole Han runs, plus adjacent two-character Han fragments."""
+    terms = []
+    for token in _LEXEMES.findall(unicodedata.normalize("NFKC", text).casefold()):
+        terms.append(token)
+        if len(token) > 2 and _HAN.fullmatch(token):
+            terms.extend(token[index:index + 2] for index in range(len(token) - 1))
+    return terms
 
 
 class SearchRequest(BaseModel):
@@ -70,8 +86,10 @@ class BM25:
                 continue
             inverse = math.log1p((len(self.terms) - count + 0.5) / (count + 0.5))
             frequency = np.asarray([doc.get(term, 0) for doc in self.terms], dtype=np.float64)
-            denominator = frequency + 1.5 * (0.25 + 0.75 * self.lengths / self.average_length)
-            scores += inverse * frequency * 2.5 / denominator
+            denominator = frequency + BM25_K1 * (
+                1 - BM25_B + BM25_B * self.lengths / self.average_length
+            )
+            scores += inverse * frequency * (BM25_K1 + 1) / denominator
         return scores
 
 
@@ -114,7 +132,9 @@ class SearchEngine:
                 "title": site.title,
                 "names": " ".join(site.names),
                 "description": site.description,
+                "description_zh": site.description_zh,
                 "details": site.details,
+                "source_refs": "\n".join(source_excerpts(site)),
                 "types": " ".join(site.types),
                 "periods": " ".join(site.periods),
             }

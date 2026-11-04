@@ -1,0 +1,1303 @@
+{
+  "base": {
+    "base_count": 1663,
+    "base_ids_sha256": "bbe47a74dc55fd9c4b051cad0b2b4f5bc0e3b59d28fee43aa114b9fe0e144c0a",
+    "base_sites_sha256": "38407a7ec508eaebe732042361349881cc0002477b453862387aca2f05f210da"
+  },
+  "chronology": "Identity/location review only; no historical phase is inferred.",
+  "cohort_version": "regional-supplement-v1",
+  "corpus_version": "global-v6",
+  "counts": {
+    "added": 26,
+    "base": 1663,
+    "islands_interior": 14,
+    "known_locations": 23,
+    "no_verified_coordinate": 3,
+    "northern": 12,
+    "total": 1689
+  },
+  "files": {
+    "regional_sites.json": {
+      "sha256": "ec4c7158a45c65bf12391923ccaef098ec51a66d214009bfb96f689b670ff384"
+    },
+    "regional_supplement_review.json": {
+      "sha256": "d81bf00c9fbfd7f33557a63db3f3b577da93516d3f52cccf107df6af73386060"
+    }
+  },
+  "licenses": "Structured fields and authority excerpts retain their individual rights.",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本公开P625原值；precision=0.00027777777777778度仅为来源数值，不是实地误差或发掘精度。",
+        "point": [
+          52.586388888889,
+          67.536388888889
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q1688000",
+        "statement_id": "q1688000$F7AB1EC5-A2DF-421B-9AC5-D4A3E04AAF59"
+      },
+      "focus": "northern",
+      "id": "wd:Q1688000",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/global_experience",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "5bdee807bc7d29e7-46a07189a0-wd-license.html",
+          "sha256": "5bdee807bc7d29e75154371047d359f2cb9810222166237b4b125a72dfedc6aa",
+          "uri": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+        },
+        {
+          "filename": "90b79c8b2ca6ebff-226f188dcb-Q159.json",
+          "sha256": "90b79c8b2ca6ebff16c65bd664bf3256e3fc0f7819a3b215681b914ca9b57efa",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q159.json"
+        },
+        {
+          "filename": "ce5edad20822b6c9-490bdf01bc-Q1688000.json",
+          "sha256": "ce5edad20822b6c977a11303d3ad9de6a247674bb0f21f35f949f914b42d0c09",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1688000.json"
+        },
+        {
+          "filename": "d67575d5ba571a3f-d17876732b-pustozersk.html",
+          "sha256": "d67575d5ba571a3f0035fc94be1888dbe5474c0792fbfc90852b38ebe4f6dd29",
+          "uri": "https://naomuseum.ru/about-us/Museum-reserve-Pustozersk/"
+        },
+        {
+          "filename": "ec66131ee976ed49-fd378adee4-ru-profile.html",
+          "sha256": "ec66131ee976ed492f8009975eba60f8fe36c3a98c47a5f286e0a2adca97befc",
+          "uri": "https://whc.unesco.org/en/statesparties/ru/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本公开P625原值；precision=1e-05度仅为来源数值，不是实地误差或发掘精度。",
+        "point": [
+          -65.416667,
+          62.816667
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q22547674",
+        "statement_id": "Q22547674$444C08C1-C154-4557-8030-F041B28FEFE1"
+      },
+      "focus": "northern",
+      "id": "wd:Q22547674",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/global_experience",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "34f9f7e07327bb26-03c589d0e6-Q16.json",
+          "sha256": "34f9f7e07327bb26f065d04d596622e7e8c424a3978355ac98390f6c389a271f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16.json"
+        },
+        {
+          "filename": "536970c7bbe4c166-6c2982989b-kodlunarn.html",
+          "sha256": "536970c7bbe4c166531410e928fb5e5e95be0262866a78d8e090d483eceac0bb",
+          "uri": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=332"
+        },
+        {
+          "filename": "5bdee807bc7d29e7-46a07189a0-wd-license.html",
+          "sha256": "5bdee807bc7d29e75154371047d359f2cb9810222166237b4b125a72dfedc6aa",
+          "uri": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+        },
+        {
+          "filename": "9adf99a12ba7a159-abea447d4d-ca-profile.html",
+          "sha256": "9adf99a12ba7a159ab8947ba666448185a9324beaee3bead8b9f578d51d991f4",
+          "uri": "https://whc.unesco.org/en/statesparties/ca/"
+        },
+        {
+          "filename": "f444e01d436c8652-a608122f94-Q22547674.json",
+          "sha256": "f444e01d436c8652b0826929ed0a7cf2287ab6bfae0163e35cc902a60e4f1ff0",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q22547674.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "unknown",
+        "note": "No trusted same-object numeric coordinate selected; rejected source statement is retained separately.",
+        "point": null,
+        "precision": null,
+        "rank": null,
+        "source_uri": null,
+        "statement_id": null
+      },
+      "focus": "islands-interior",
+      "id": "wd:Q7679508",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/coverage_sources",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "1f46a527236b4e31-f0027af17e-wf-talietumu.html",
+          "sha256": "1f46a527236b4e310fea7c2debd1be763b80bd0f244e87b738eba50b554ad9ff",
+          "uri": "https://culture.malo.wf/?page_id=169"
+        },
+        {
+          "filename": "42e3e529aa702e77-d669365b5d-Q142.json",
+          "sha256": "42e3e529aa702e77614b8b17dda3de377f9aa8186158adb339ffadec7fac24b6",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q142.json?revision=2564285160"
+        },
+        {
+          "filename": "751da89ce73c0941-f1bb88c01c-Q7679508.json",
+          "sha256": "751da89ce73c0941dda84bfd34c06efe4fae730f32fef56ad3e63e73cc630609",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7679508.json?revision=2344960140"
+        },
+        {
+          "filename": "b9048114f6e7f2ab-d1af648571-un-m49.html",
+          "sha256": "b9048114f6e7f2abda83bf03d4263c9d7cd1bd7230e3d0461025ee7839a7a1fb",
+          "uri": "https://unstats.un.org/unsd/methodology/m49/overview/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Source P625 precision=0.097916814367933 degrees; not a metre-error guarantee or excavation fix.",
+        "point": [
+          134.71666667,
+          -23.44722222
+        ],
+        "precision": 0.097916814367933,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q19870764",
+        "statement_id": "Q19870764$9918798B-C86F-4EA4-80C7-21C513D3006C"
+      },
+      "focus": "islands-interior",
+      "id": "wd:Q19870764",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/coverage_sources",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "2161fd3005acc3b5-c921d7a011-au-arltunga-exa.json",
+          "sha256": "2161fd3005acc3b59afa4ae67a797979b70c3e081490b8ac138fb311da21fb8b",
+          "uri": "https://nt.gov.au/parks/find-a-park/arltunga-historical-reserve"
+        },
+        {
+          "filename": "50e9b957d5828bb3-efe54c5a0d-Q19870764.json",
+          "sha256": "50e9b957d5828bb3692494ce45befda43bb6f94f704fa5eb9b402e29ee2fd582",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q19870764.json?revision=2497937401"
+        },
+        {
+          "filename": "715d49b96453a6fa-5d3cf6629b-Q408.json",
+          "sha256": "715d49b96453a6fa2bdd64e6b5f88c57864c6173dc3c3051f5c2025273529b6a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q408.json?revision=2564191183"
+        },
+        {
+          "filename": "b9048114f6e7f2ab-d1af648571-un-m49.html",
+          "sha256": "b9048114f6e7f2abda83bf03d4263c9d7cd1bd7230e3d0461025ee7839a7a1fb",
+          "uri": "https://unstats.un.org/unsd/methodology/m49/overview/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "官方同对象历史名录页面PlaceLongitude/PlaceLatitude字段；来源未声明基准面/数值精度，未补写为WGS84或精确发掘点。",
+        "point": [
+          -64.75,
+          81.75
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=16360&pid=0",
+        "statement_id": null
+      },
+      "focus": "northern",
+      "id": "wd:Q3077812",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/global_experience",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "34f9f7e07327bb26-03c589d0e6-Q16.json",
+          "sha256": "34f9f7e07327bb26f065d04d596622e7e8c424a3978355ac98390f6c389a271f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16.json"
+        },
+        {
+          "filename": "3b33d499aae886ea-a816aaed7f-fort-conger-registry.html",
+          "sha256": "3b33d499aae886eaa8133cf5d2838440583ab5447ec27ae1fecd8fa3820473da",
+          "uri": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=16360&pid=0"
+        },
+        {
+          "filename": "5bdee807bc7d29e7-46a07189a0-wd-license.html",
+          "sha256": "5bdee807bc7d29e75154371047d359f2cb9810222166237b4b125a72dfedc6aa",
+          "uri": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+        },
+        {
+          "filename": "9adf99a12ba7a159-abea447d4d-ca-profile.html",
+          "sha256": "9adf99a12ba7a159ab8947ba666448185a9324beaee3bead8b9f578d51d991f4",
+          "uri": "https://whc.unesco.org/en/statesparties/ca/"
+        },
+        {
+          "filename": "da4593f8e2a08344-8438002816-Q3077812.json",
+          "sha256": "da4593f8e2a083444d7eb7d0a30b205077b182478b3686c9f23fde45200e8bf0",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3077812.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "代表点直接换算原论文补充材料PDF第3页（印刷页2）的N5°51′31″、E10°04′40″；不使用官方预备名单缺经度且秒值不同的坐标串。原始DMS位数不承诺实测误差。喀麦隆身份由同一论文原文及官方6331文化提报确认；Africa为官方国家页来源分区，不按点推断国界。未转用样品实验室或现代Bamenda城中心。",
+        "point": [
+          10.077777777777778,
+          5.85861111111111
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://reich.hms.harvard.edu/sites/reich.hms.harvard.edu/files/inline-files/Shum_Laka_SI.pdf",
+        "statement_id": null
+      },
+      "focus": "islands-interior",
+      "id": "auth:whc-tentative:6331",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "catalogue_design",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "15ff3356856d941f-36a50cf55c-region-cm.html",
+          "sha256": "15ff3356856d941fbc27baa99c9bfd8ba460a4800281b1cc4cfb2f19ec6904ea",
+          "uri": "https://whc.unesco.org/en/statesparties/cm/"
+        },
+        {
+          "filename": "4dec5354682bc9bb-c7f5a8397b-shum-laka-qualification.html",
+          "sha256": "4dec5354682bc9bb11dc72acc0e32f2bfa88c4fb97851bc21617ea15e809a2d4",
+          "uri": "https://whc.unesco.org/en/tentativelists/6331/"
+        },
+        {
+          "filename": "ebcd7c83755f3427-281b25fd93-shum-laka-si.pdf",
+          "sha256": "ebcd7c83755f34277f5143e026f5338eb2b50d9da146d76c9a5500eecfac2a7b",
+          "uri": "https://reich.hms.harvard.edu/sites/reich.hms.harvard.edu/files/inline-files/Shum_Laka_SI.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "从来源公开度分/度分秒严格转换，保留源分辨率；来源未提供参考系/误差，不能用转换后的更多小数位提高定位精度。",
+        "point": [
+          -170.07333333333332,
+          66.02586111111111
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://whc.unesco.org/en/tentativelists/6440/",
+        "statement_id": null
+      },
+      "focus": "northern",
+      "id": "wd:Q668401",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/global_experience",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "015c9041f9ab158e-8e97730048-Q668401.json",
+          "sha256": "015c9041f9ab158e6c8ec3fdfa8d669b3e3b0de6cd6c946fc562e00860875941",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q668401.json"
+        },
+        {
+          "filename": "43f4c8b08ae133c0-64cd01f332-ekven.html",
+          "sha256": "43f4c8b08ae133c029c0a7b8d464e23b1d17e406d6d970bc28f923ac511cae6e",
+          "uri": "https://whc.unesco.org/en/tentativelists/6440/"
+        },
+        {
+          "filename": "5bdee807bc7d29e7-46a07189a0-wd-license.html",
+          "sha256": "5bdee807bc7d29e75154371047d359f2cb9810222166237b4b125a72dfedc6aa",
+          "uri": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+        },
+        {
+          "filename": "90b79c8b2ca6ebff-226f188dcb-Q159.json",
+          "sha256": "90b79c8b2ca6ebff16c65bd664bf3256e3fc0f7819a3b215681b914ca9b57efa",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q159.json"
+        },
+        {
+          "filename": "ec66131ee976ed49-fd378adee4-ru-profile.html",
+          "sha256": "ec66131ee976ed492f8009975eba60f8fe36c3a98c47a5f286e0a2adca97befc",
+          "uri": "https://whc.unesco.org/en/statesparties/ru/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "unknown",
+        "note": "Official cultural site identity verified; no trusted public same-object numeric coordinate frozen. No valley center or nearby monument borrowed.",
+        "point": null,
+        "precision": null,
+        "rank": null,
+        "source_uri": null,
+        "statement_id": null
+      },
+      "focus": "islands-interior",
+      "id": "auth:pf-dcp:marae-arahurahu",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/coverage_sources",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "234effb2448f2896-885000bb84-pf-arahurahu-origins-exa.json",
+          "sha256": "234effb2448f28964e408bd54c20f478c107e572df99667a923c694a4ff3903c",
+          "uri": "https://www.service-public.pf/dcp/2022/11/28/arahurahu-la-restauration-du-marae-interroge-son-origine/"
+        },
+        {
+          "filename": "42e3e529aa702e77-d669365b5d-Q142.json",
+          "sha256": "42e3e529aa702e77614b8b17dda3de377f9aa8186158adb339ffadec7fac24b6",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q142.json?revision=2564285160"
+        },
+        {
+          "filename": "8e34e74ddc07081e-5f95bcd33c-pf-arahurahu-exa.json",
+          "sha256": "8e34e74ddc07081e80ab122fef9977e48fac0ab2475868de0c34ae154ec01d81",
+          "uri": "https://www.service-public.pf/dcp/2022/10/05/la-restauration-du-site-classe-marae-arahurahu-de-paea-est-terminee/"
+        },
+        {
+          "filename": "b9048114f6e7f2ab-d1af648571-un-m49.html",
+          "sha256": "b9048114f6e7f2abda83bf03d4263c9d7cd1bd7230e3d0461025ee7839a7a1fb",
+          "uri": "https://unstats.un.org/unsd/methodology/m49/overview/"
+        },
+        {
+          "filename": "bfdea5ac8057e3cd-59dad2b479-Q30971.json",
+          "sha256": "bfdea5ac8057e3cd1d480cd9f250249b80473f6145030e0add7980321edbf25f",
+          "uri": "https://www.wikidata.org/wiki/Q30971"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "从来源公开度分/度分秒严格转换，保留源分辨率；来源未提供参考系/误差，不能用转换后的更多小数位提高定位精度。",
+        "point": [
+          152.71666666666667,
+          76.13333333333334
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://par.nsf.gov/servlets/purl/10162025",
+        "statement_id": null
+      },
+      "focus": "northern",
+      "id": "wd:Q97066659",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/global_experience",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "1c0586f85f022357-0290c54a0e-zhokhov-paper.pdf",
+          "sha256": "1c0586f85f022357eedc800d4e66e5f72531ae9d2b8a2a92a29862309014e5b1",
+          "uri": "https://par.nsf.gov/servlets/purl/10162025"
+        },
+        {
+          "filename": "5bdee807bc7d29e7-46a07189a0-wd-license.html",
+          "sha256": "5bdee807bc7d29e75154371047d359f2cb9810222166237b4b125a72dfedc6aa",
+          "uri": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+        },
+        {
+          "filename": "90b79c8b2ca6ebff-226f188dcb-Q159.json",
+          "sha256": "90b79c8b2ca6ebff16c65bd664bf3256e3fc0f7819a3b215681b914ca9b57efa",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q159.json"
+        },
+        {
+          "filename": "e0b733f1c494979e-17147815c6-Q1060418.json",
+          "sha256": "e0b733f1c494979e775abcdf88fd2e9653f3a8af6e67a88f40c3de52950fde90",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1060418.json"
+        },
+        {
+          "filename": "ec66131ee976ed49-fd378adee4-ru-profile.html",
+          "sha256": "ec66131ee976ed492f8009975eba60f8fe36c3a98c47a5f286e0a2adca97befc",
+          "uri": "https://whc.unesco.org/en/statesparties/ru/"
+        },
+        {
+          "filename": "f1ac97d2c48345bc-2cfcc1d3d3-Q97066659.json",
+          "sha256": "f1ac97d2c48345bcf581623ec5243b8712b02c038bcec851b5652ce61935c5c8",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q97066659.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "代表点采用IAU/ICOMOS资料明确标为Original location (find spot)的S0°7′37″、E29°36′2″；不是同页布鲁塞尔博物馆Current location坐标，也不是相距数百米的旧Ishango村庄。遗址身份和CD来源国家由比利时自然科学研究所Ishango遗址目录确认；Africa为官方国家页来源分区。位于自然保护地不作为文化资格，文化依据是独立考古原址资料；不声明该原址是单独正式世界文化遗产。",
+        "point": [
+          29.600555555555555,
+          -0.12694444444444444
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://web.astronomicalheritage.net/index.php/show-entity?identity=85&idsubentity=1",
+        "statement_id": null
+      },
+      "focus": "islands-interior",
+      "id": "auth:rbins:ishango",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "catalogue_design",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "293a3aec4ce481fc-ec2bd1860f-region-cd.html",
+          "sha256": "293a3aec4ce481fc949cbd6533fafe1a519041afea7fa34fa444da411a022cec",
+          "uri": "https://whc.unesco.org/en/statesparties/cd/"
+        },
+        {
+          "filename": "7066bb8cef89d20c-d078ec44ec-ishango-home.html",
+          "sha256": "7066bb8cef89d20cef9bf84c04d3f11c585a2a4d1a51bf10b26a34c368a40066",
+          "uri": "https://ishango.naturalsciences.be/"
+        },
+        {
+          "filename": "78da95b554b2a0a0-46958b59b8-ishango-site.html",
+          "sha256": "78da95b554b2a0a040be3a875d774348a570937424ff9df50916517264b857db",
+          "uri": "https://ishango.naturalsciences.be/en/en-ishango-08.html"
+        },
+        {
+          "filename": "7b62cb57b16df43e-886436d919-ishango-findspot.html",
+          "sha256": "7b62cb57b16df43e5fbf0ac500680c9bbe362777ee0cd1eeafe13e477e362ff8",
+          "uri": "https://web.astronomicalheritage.net/index.php/show-entity?identity=85&idsubentity=1"
+        },
+        {
+          "filename": "7dcbfa91e71871a1-f54d521764-ishango-rbins.html",
+          "sha256": "7dcbfa91e71871a19daa3c8e42d25f650be4b31e1d0f78208acb543f87248fc9",
+          "uri": "https://collections.naturalsciences.be/ssh-anthropology/collections/sites/ishango"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "官方同对象历史名录页面PlaceLongitude/PlaceLatitude字段；来源未声明基准面/数值精度，未补写为WGS84或精确发掘点。",
+        "point": [
+          -115.36861,
+          67.74
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=1167&pid=0",
+        "statement_id": null
+      },
+      "focus": "northern",
+      "id": "auth:crhp:1167",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/global_experience",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "1212243459ea37e7-65df87a292-historic-bloody.html",
+          "sha256": "1212243459ea37e70dcb25cd981f962065291e3e95d80fd5688e0a8bce623457",
+          "uri": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=1167&pid=0"
+        },
+        {
+          "filename": "34f9f7e07327bb26-03c589d0e6-Q16.json",
+          "sha256": "34f9f7e07327bb26f065d04d596622e7e8c424a3978355ac98390f6c389a271f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16.json"
+        },
+        {
+          "filename": "5bdee807bc7d29e7-46a07189a0-wd-license.html",
+          "sha256": "5bdee807bc7d29e75154371047d359f2cb9810222166237b4b125a72dfedc6aa",
+          "uri": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+        },
+        {
+          "filename": "9adf99a12ba7a159-abea447d4d-ca-profile.html",
+          "sha256": "9adf99a12ba7a159ab8947ba666448185a9324beaee3bead8b9f578d51d991f4",
+          "uri": "https://whc.unesco.org/en/statesparties/ca/"
+        },
+        {
+          "filename": "b4d716e3bad6149b-6741fbc822-bloody-falls.html",
+          "sha256": "b4d716e3bad6149b4beb94ea1a2bc119766d55d1e6af08e995465af2dfc62594",
+          "uri": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=321"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Source P625 precision=0.00027777777777778 degrees; not a metre-error guarantee or excavation fix.",
+        "point": [
+          145.61972222,
+          14.96555556
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q15226028",
+        "statement_id": "Q15226028$3AE43A53-34D2-401C-BDA4-6948342EA260"
+      },
+      "focus": "islands-interior",
+      "id": "wd:Q15226028",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/coverage_sources",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "28990abd58f95421-08856b87a4-Q30.json",
+          "sha256": "28990abd58f95421696a7ca205ad362e41b979f698edce5f4c97773c43537989",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q30.json?revision=2564289633"
+        },
+        {
+          "filename": "2fd980715c5bea59-69db54103d-Q15226028.json",
+          "sha256": "2fd980715c5bea593bd4002314deab345ad6e030e26b06092f672d6420de5147",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q15226028.json?revision=2513543966"
+        },
+        {
+          "filename": "59f900ea0c0f68aa-718eab67ba-mp-taga.html",
+          "sha256": "59f900ea0c0f68aa5bd4e409ec86d510392991bf4eece90cef0244f2d9809469",
+          "uri": "https://npgallery.nps.gov/AssetDetail/96a73551-af50-449f-98a4-2bf3400d9eba/"
+        },
+        {
+          "filename": "b9048114f6e7f2ab-d1af648571-un-m49.html",
+          "sha256": "b9048114f6e7f2abda83bf03d4263c9d7cd1bd7230e3d0461025ee7839a7a1fb",
+          "uri": "https://unstats.un.org/unsd/methodology/m49/overview/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Source P625 precision=0.0097678792739452 degrees; not a metre-error guarantee or excavation fix.",
+        "point": [
+          -134.969,
+          -23.1232
+        ],
+        "precision": 0.0097678792739452,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q16536581",
+        "statement_id": "Q16536581$1D7D0880-BFC6-4A96-8600-B8892AF5FF4A"
+      },
+      "focus": "islands-interior",
+      "id": "wd:Q16536581",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/coverage_sources",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "21410fd6712b55db-e68b06890a-Q16536581.json",
+          "sha256": "21410fd6712b55db309a7cbcec14e814e3ec641e9102bc8f31d9769e120f7969",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16536581.json?revision=2561465914"
+        },
+        {
+          "filename": "42e3e529aa702e77-d669365b5d-Q142.json",
+          "sha256": "42e3e529aa702e77614b8b17dda3de377f9aa8186158adb339ffadec7fac24b6",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q142.json?revision=2564285160"
+        },
+        {
+          "filename": "b9048114f6e7f2ab-d1af648571-un-m49.html",
+          "sha256": "b9048114f6e7f2abda83bf03d4263c9d7cd1bd7230e3d0461025ee7839a7a1fb",
+          "uri": "https://unstats.un.org/unsd/methodology/m49/overview/"
+        },
+        {
+          "filename": "dee4326895817542-d959acf8a2-pf-classified.html",
+          "sha256": "dee4326895817542ae925639c3e94d29477ccf270d2862873543063308d3fcf2",
+          "uri": "https://www.service-public.pf/dcp/2024/02/13/les-sites-et-monuments-classees-sont-ils-en-bonne-sante-hiroa-n194-fevrier-2024/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Source P625 precision=1e-05 degrees; not a metre-error guarantee or excavation fix.",
+        "point": [
+          133.889588,
+          -21.52956
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q130394231",
+        "statement_id": "Q130394231$d5522eb3-7a52-4874-abf8-c5ec53e20842"
+      },
+      "focus": "islands-interior",
+      "id": "wd:Q130394231",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/coverage_sources",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "612532bcdaa08ec9-2adbd500a3-au-barrow-exa.json",
+          "sha256": "612532bcdaa08ec9ea5f8c22681f709dc4acbefdf25f6cfa9fd30b43d1462207",
+          "uri": "https://nt.gov.au/parks/find-a-park/barrow-creek-telegraph-station-historical-reserve"
+        },
+        {
+          "filename": "715d49b96453a6fa-5d3cf6629b-Q408.json",
+          "sha256": "715d49b96453a6fa2bdd64e6b5f88c57864c6173dc3c3051f5c2025273529b6a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q408.json?revision=2564191183"
+        },
+        {
+          "filename": "b9048114f6e7f2ab-d1af648571-un-m49.html",
+          "sha256": "b9048114f6e7f2abda83bf03d4263c9d7cd1bd7230e3d0461025ee7839a7a1fb",
+          "uri": "https://unstats.un.org/unsd/methodology/m49/overview/"
+        },
+        {
+          "filename": "fb10d972fd4f0627-e800f8fdcb-Q130394231.json",
+          "sha256": "fb10d972fd4f0627b1e8bd3650eb40798b7d0fb100d449678098ed59176d7a7a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q130394231.json?revision=2410843548"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本公开P625原值；precision=1e-06度仅为来源数值，不是实地误差或发掘精度。",
+        "point": [
+          82.253343,
+          66.689441
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q174072",
+        "statement_id": "Q174072$0CA5B790-3DF4-4FF3-AFC1-CEA0635A0661"
+      },
+      "focus": "northern",
+      "id": "wd:Q174072",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/global_experience",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "177a9e60c16e60ba-4141bfec74-mangazeya-ras.html",
+          "sha256": "177a9e60c16e60baebb7d07c3457417b335534e60cc2a2cbeb3a9c55dd257fe6",
+          "uri": "https://www.old.archeo.ru/izdaniya-1/vagnejshije-izdanija/arhiv-izdanii"
+        },
+        {
+          "filename": "5bdee807bc7d29e7-46a07189a0-wd-license.html",
+          "sha256": "5bdee807bc7d29e75154371047d359f2cb9810222166237b4b125a72dfedc6aa",
+          "uri": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+        },
+        {
+          "filename": "90b79c8b2ca6ebff-226f188dcb-Q159.json",
+          "sha256": "90b79c8b2ca6ebff16c65bd664bf3256e3fc0f7819a3b215681b914ca9b57efa",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q159.json"
+        },
+        {
+          "filename": "e3c82b75efbb3e15-3839d7e3c8-Q174072.json",
+          "sha256": "e3c82b75efbb3e15ae76fd17bfc3c77bc7fc49decfc21ae0d0216e0ac592f671",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q174072.json"
+        },
+        {
+          "filename": "ec66131ee976ed49-fd378adee4-ru-profile.html",
+          "sha256": "ec66131ee976ed492f8009975eba60f8fe36c3a98c47a5f286e0a2adca97befc",
+          "uri": "https://whc.unesco.org/en/statesparties/ru/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "unknown",
+        "note": "官方NRIS明确Address Restricted，不通过第三方Wikidata数字点绕过限制；不补附近镇区中心。",
+        "point": null,
+        "precision": null,
+        "rank": null,
+        "source_uri": null,
+        "statement_id": null
+      },
+      "focus": "northern",
+      "id": "wd:Q4167852",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/global_experience",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "5bdee807bc7d29e7-46a07189a0-wd-license.html",
+          "sha256": "5bdee807bc7d29e75154371047d359f2cb9810222166237b4b125a72dfedc6aa",
+          "uri": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+        },
+        {
+          "filename": "6726ee5c842deb37-250335c3dc-Q4167852.json",
+          "sha256": "6726ee5c842deb377720ca59e3694121a82616e61e4dac99c0e2a27de776758e",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4167852.json"
+        },
+        {
+          "filename": "c36d5eefa9d72fd9-9f18ff63ac-Q30.json",
+          "sha256": "c36d5eefa9d72fd9cf2fc08c379fad49c1df22b44af8bd80fef90a5a36e7953d",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q30.json"
+        },
+        {
+          "filename": "c802144ef2a8627b-b106f5928f-ipiutak-restricted.html",
+          "sha256": "c802144ef2a8627b6777728157c7ed2555b4fcf245f44937496e75787905d8f9",
+          "uri": "https://npgallery.nps.gov/AssetDetail/NRIS/66000157"
+        },
+        {
+          "filename": "d3e5cc9012a2d61d-2332ebea2a-us-profile.html",
+          "sha256": "d3e5cc9012a2d61dce2e7beabe26f19f66096d1971207d68c3d77447991b1238",
+          "uri": "https://whc.unesco.org/en/statesparties/us/"
+        },
+        {
+          "filename": "ea6d655d8edc4990-5e906b8ca2-ipiutak.html",
+          "sha256": "ea6d655d8edc49902b837378cd9c6b7dc4ef88ddbe022b434c25175bae5b0c7e",
+          "uri": "https://www.nps.gov/places/ipiutak-site.htm"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Source P625 precision=2.7777777777778e-07 degrees; not a metre-error guarantee or excavation fix.",
+        "point": [
+          144.82638888889,
+          13.553056111111
+        ],
+        "precision": 2.7777777777778e-07,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q22950225",
+        "statement_id": "Q22950225$8DDCE26F-F216-483D-9277-833835D9B728"
+      },
+      "focus": "islands-interior",
+      "id": "wd:Q22950225",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/coverage_sources",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "28990abd58f95421-08856b87a4-Q30.json",
+          "sha256": "28990abd58f95421696a7ca205ad362e41b979f698edce5f4c97773c43537989",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q30.json?revision=2564289633"
+        },
+        {
+          "filename": "9bd4ea09184a5a6d-d616cfa84a-gu-finegayan.html",
+          "sha256": "9bd4ea09184a5a6d98fa2d9290e05d54c9463993fbf62fce2c68be8070cfbe82",
+          "uri": "https://npgallery.nps.gov/AssetDetail/66531693-2ca7-4f95-9d84-d03f11727f0d"
+        },
+        {
+          "filename": "b9048114f6e7f2ab-d1af648571-un-m49.html",
+          "sha256": "b9048114f6e7f2abda83bf03d4263c9d7cd1bd7230e3d0461025ee7839a7a1fb",
+          "uri": "https://unstats.un.org/unsd/methodology/m49/overview/"
+        },
+        {
+          "filename": "baff04a8747de0ee-e2f8e73f87-Q22950225.json",
+          "sha256": "baff04a8747de0eece94ae4112f2d3e91fcba9fe1dd349d39f5c69d614caf3e0",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q22950225.json?revision=2262956251"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本公开P625原值；precision=0.025299358659675度仅为来源数值，不是实地误差或发掘精度。",
+        "point": [
+          -51.126,
+          69.202
+        ],
+        "precision": 0.025299358659675,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q3957914",
+        "statement_id": "Q3957914$FBCCC82F-BCDF-4A00-8ABA-A1306F16AF0F"
+      },
+      "focus": "northern",
+      "id": "wd:Q3957914",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/global_experience",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "5bdee807bc7d29e7-46a07189a0-wd-license.html",
+          "sha256": "5bdee807bc7d29e75154371047d359f2cb9810222166237b4b125a72dfedc6aa",
+          "uri": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+        },
+        {
+          "filename": "7d6c2d9259b275a6-b8a7beba00-greenland-member.html",
+          "sha256": "7d6c2d9259b275a6db16f181c2fd2b2dba52b7f05bd4b8664b51408c8dbfd558",
+          "uri": "https://whc.unesco.org/en/list/1149/"
+        },
+        {
+          "filename": "a504ed5221c3dc42-19d58652e4-dk-profile.html",
+          "sha256": "a504ed5221c3dc42fba2adf49dd73e6b186f4ce7cee286824b23428dd9a8dc95",
+          "uri": "https://whc.unesco.org/en/statesparties/dk/"
+        },
+        {
+          "filename": "b29a678326d3f290-6ce7e5565f-Q3957914.json",
+          "sha256": "b29a678326d3f2906ea78509667381689a133fb75ef929351bae7c5897e860e4",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3957914.json"
+        },
+        {
+          "filename": "cc641108ef2da518-e453766810-sermermiut.html",
+          "sha256": "cc641108ef2da518a847b661e616fe83a5af6bbd8dff9965fcb8a6ebe90dc169",
+          "uri": "https://eng.geus.dk/explore-geology/learning-about-geology/explore-ilulissat-icefjord/the-land-of-the-%E2%80%98icefjord-people%E2%80%99"
+        },
+        {
+          "filename": "cc67b7468a5b0461-6821b866eb-Q756617.json",
+          "sha256": "cc67b7468a5b0461b42811559e9576ea1bf8813603b46c28fc26bcd254f802ae",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q756617.json"
+        },
+        {
+          "filename": "d2e08c2afb3eaa7f-58a1fe4d40-Q35.json",
+          "sha256": "d2e08c2afb3eaa7fafdb1a9561baee2357d0ae4124011d64b510ff479fab1cf7",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q35.json"
+        },
+        {
+          "filename": "de03d60d63ee677c-e17a2ccfea-Q223.json",
+          "sha256": "de03d60d63ee677c61c2d2dd41fc34fde257138b47cce2e04a6bb0a6c7a2936a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q223.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Source P625 precision=2.77777777778e-06 degrees; not a metre-error guarantee or excavation fix.",
+        "point": [
+          -176.3528,
+          -43.8003
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q15229078",
+        "statement_id": "Q15229078$4144B6B6-7D53-454C-A97B-EFFE592A9EDD"
+      },
+      "focus": "islands-interior",
+      "id": "wd:Q15229078",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/coverage_sources",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "486ea152111f6006-69b6bb66ad-Q15229078.json",
+          "sha256": "486ea152111f600606b478afa3151a6bfc42e4c7fd273e25a104eaa75c25c308",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q15229078.json?revision=2546500023"
+        },
+        {
+          "filename": "53b032c959179396-4d0756613f-nz-hapupu.html",
+          "sha256": "53b032c95917939608fcec6d6f2bb05ec20798c72423c7b02016d16ff0bd6670",
+          "uri": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/chatham-islands/places/hapupu-jm-barker-historic-reserve"
+        },
+        {
+          "filename": "b0e28dae7e828952-cea9a35cb7-Q664.json",
+          "sha256": "b0e28dae7e8289522fd205d3bef7c23af35748ff2e615d96e85edd734c062ad1",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q664.json?revision=2564431561"
+        },
+        {
+          "filename": "b9048114f6e7f2ab-d1af648571-un-m49.html",
+          "sha256": "b9048114f6e7f2abda83bf03d4263c9d7cd1bd7230e3d0461025ee7839a7a1fb",
+          "uri": "https://unstats.un.org/unsd/methodology/m49/overview/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Source P625 precision=2.77777777778e-06 degrees; not a metre-error guarantee or excavation fix.",
+        "point": [
+          -170.676947,
+          -14.285417
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q4930787",
+        "statement_id": "Q4930787$625CD780-8434-425A-A5FD-EEA8A0B39EF5"
+      },
+      "focus": "islands-interior",
+      "id": "wd:Q4930787",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/coverage_sources",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "28990abd58f95421-08856b87a4-Q30.json",
+          "sha256": "28990abd58f95421696a7ca205ad362e41b979f698edce5f4c97773c43537989",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q30.json?revision=2564289633"
+        },
+        {
+          "filename": "727490bfc43d9255-b0e369b9ac-Q4930787.json",
+          "sha256": "727490bfc43d92558416ceccb23569eea86625cba52fc42b697a2c3f9c64b152",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4930787.json?revision=2541206472"
+        },
+        {
+          "filename": "b9048114f6e7f2ab-d1af648571-un-m49.html",
+          "sha256": "b9048114f6e7f2abda83bf03d4263c9d7cd1bd7230e3d0461025ee7839a7a1fb",
+          "uri": "https://unstats.un.org/unsd/methodology/m49/overview/"
+        },
+        {
+          "filename": "e669a39ecfff2572-de09f16526-as-blunts.pdf",
+          "sha256": "e669a39ecfff25725ff78a10f5fd9c3fe5a48b26617e733ebc6ba04e69f66722",
+          "uri": "https://npgallery.nps.gov/NRHP/GetAsset/40c85bcd-ed45-4e23-9c05-d1bde4f18bcc"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本公开P625原值；precision=0.0002777777777777778度仅为来源数值，不是实地误差或发掘精度。",
+        "point": [
+          135.4297222222222,
+          70.72361111111111
+        ],
+        "precision": 0.0002777777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q18399201",
+        "statement_id": "Q18399201$688D734E-8DCE-4C82-9989-1AA7D4748AB2"
+      },
+      "focus": "northern",
+      "id": "wd:Q18399201",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/global_experience",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "1503c16b984c42c8-4bef842579-Q18399201.json",
+          "sha256": "1503c16b984c42c8c60d0031dba5434574fe3323af45bccf1b2ec1ea3fd74f27",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q18399201.json"
+        },
+        {
+          "filename": "196d98148407aba3-99a2c1ad6c-yana.html",
+          "sha256": "196d98148407aba3ebb621999e26035062984d2f76a6636291e68249bd8e5430",
+          "uri": "https://pajis.archeo.ru/journals/2019-02-01-1/articles/9/"
+        },
+        {
+          "filename": "5bdee807bc7d29e7-46a07189a0-wd-license.html",
+          "sha256": "5bdee807bc7d29e75154371047d359f2cb9810222166237b4b125a72dfedc6aa",
+          "uri": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+        },
+        {
+          "filename": "90b79c8b2ca6ebff-226f188dcb-Q159.json",
+          "sha256": "90b79c8b2ca6ebff16c65bd664bf3256e3fc0f7819a3b215681b914ca9b57efa",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q159.json"
+        },
+        {
+          "filename": "ec66131ee976ed49-fd378adee4-ru-profile.html",
+          "sha256": "ec66131ee976ed492f8009975eba60f8fe36c3a98c47a5f286e0a2adca97befc",
+          "uri": "https://whc.unesco.org/en/statesparties/ru/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "官方同对象历史名录页面PlaceLongitude/PlaceLatitude字段；来源未声明基准面/数值精度，未补写为WGS84或精确发掘点。",
+        "point": [
+          -93.92004,
+          61.15164
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=1161&pid=0",
+        "statement_id": null
+      },
+      "focus": "northern",
+      "id": "wd:Q4802400",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/global_experience",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "247a7f1a71834847-a240fb41f6-historic-arviajuaq.html",
+          "sha256": "247a7f1a71834847ca3979509638d1e6c13a0ba98a8e4a31e2cb58aecb61f582",
+          "uri": "https://www.historicplaces.ca/en/rep-reg/place-lieu.aspx?id=1161&pid=0"
+        },
+        {
+          "filename": "2cc1f39555a9c85b-cb1d0d83dd-arviajuaq.html",
+          "sha256": "2cc1f39555a9c85b56e85569aed0232b19b6618377d47a40ef050a2df1bcb8f4",
+          "uri": "https://www.pc.gc.ca/apps/dfhd/page_nhs_eng.aspx?id=836"
+        },
+        {
+          "filename": "34f9f7e07327bb26-03c589d0e6-Q16.json",
+          "sha256": "34f9f7e07327bb26f065d04d596622e7e8c424a3978355ac98390f6c389a271f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16.json"
+        },
+        {
+          "filename": "5bdee807bc7d29e7-46a07189a0-wd-license.html",
+          "sha256": "5bdee807bc7d29e75154371047d359f2cb9810222166237b4b125a72dfedc6aa",
+          "uri": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+        },
+        {
+          "filename": "91f579b80d823c85-98c0e66431-Q4802400.json",
+          "sha256": "91f579b80d823c85a599bdbc7f1cc73bd343d8c668733f6e4c4c382c3dd5131d",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4802400.json"
+        },
+        {
+          "filename": "9adf99a12ba7a159-abea447d4d-ca-profile.html",
+          "sha256": "9adf99a12ba7a159ab8947ba666448185a9324beaee3bead8b9f578d51d991f4",
+          "uri": "https://whc.unesco.org/en/statesparties/ca/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Source P625 precision=1e-06 degrees; not a metre-error guarantee or excavation fix.",
+        "point": [
+          134.228325,
+          -19.553923
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q28219735",
+        "statement_id": "Q28219735$09f8ccb3-418f-9782-29a9-844fe3792561"
+      },
+      "focus": "islands-interior",
+      "id": "wd:Q28219735",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/coverage_sources",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "715d49b96453a6fa-5d3cf6629b-Q408.json",
+          "sha256": "715d49b96453a6fa2bdd64e6b5f88c57864c6173dc3c3051f5c2025273529b6a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q408.json?revision=2564191183"
+        },
+        {
+          "filename": "a536036d627fbae6-304079d6fa-Q28219735.json",
+          "sha256": "a536036d627fbae64115d400379372b763e7183171bda0b4d21cad63245a3c9b",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q28219735.json?revision=2533987003"
+        },
+        {
+          "filename": "a88c57b3f99c7cd4-a69254a22b-au-tennant-exa.json",
+          "sha256": "a88c57b3f99c7cd4d4bb512519cce2746b6cbc1ada31f6659c6bcc5efb4861b9",
+          "uri": "https://nt.gov.au/parks/find-a-park/tennant-creek-telegraph-station-historical-reserve"
+        },
+        {
+          "filename": "b9048114f6e7f2ab-d1af648571-un-m49.html",
+          "sha256": "b9048114f6e7f2abda83bf03d4263c9d7cd1bd7230e3d0461025ee7839a7a1fb",
+          "uri": "https://unstats.un.org/unsd/methodology/m49/overview/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Source P625 precision=0.00027777777777778 degrees; not a metre-error guarantee or excavation fix.",
+        "point": [
+          133.888,
+          -23.672
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q1373400",
+        "statement_id": "Q1373400$1DEA2C56-B45D-4651-81C4-89CF97729039"
+      },
+      "focus": "islands-interior",
+      "id": "wd:Q1373400",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/coverage_sources",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "239abf9a2950c2e5-74873a1aee-au-alice-exa.json",
+          "sha256": "239abf9a2950c2e519644fcff7b7dfe3267aa687ed831c09d80cc752dabcb4d6",
+          "uri": "https://nt.gov.au/parks/find-a-park/alice-springs-telegraph-station-historical-reserve"
+        },
+        {
+          "filename": "672ce8cb56a20d84-5cbbae2d96-Q1373400.json",
+          "sha256": "672ce8cb56a20d84c503960d75fd7e933c2863fe90bc7076d09aec97ce50fca2",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1373400.json?revision=2500512151"
+        },
+        {
+          "filename": "715d49b96453a6fa-5d3cf6629b-Q408.json",
+          "sha256": "715d49b96453a6fa2bdd64e6b5f88c57864c6173dc3c3051f5c2025273529b6a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q408.json?revision=2564191183"
+        },
+        {
+          "filename": "b9048114f6e7f2ab-d1af648571-un-m49.html",
+          "sha256": "b9048114f6e7f2abda83bf03d4263c9d7cd1bd7230e3d0461025ee7839a7a1fb",
+          "uri": "https://unstats.un.org/unsd/methodology/m49/overview/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Source P625 precision=0.0001 degrees; not a metre-error guarantee or excavation fix.",
+        "point": [
+          132.775032,
+          -23.945097
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q38148545",
+        "statement_id": "Q38148545$C0DE1A6A-BA00-49A2-8352-5A30C86D2299"
+      },
+      "focus": "islands-interior",
+      "id": "wd:Q38148545",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/coverage_sources",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "0e4af1aa943746dd-c20fbc1585-Q38148545.json",
+          "sha256": "0e4af1aa943746dd9eafaa0f70d049a4f6ede2cc3da586ed54b68f4e7d879aa3",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q38148545.json?revision=2499103383"
+        },
+        {
+          "filename": "715d49b96453a6fa-5d3cf6629b-Q408.json",
+          "sha256": "715d49b96453a6fa2bdd64e6b5f88c57864c6173dc3c3051f5c2025273529b6a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q408.json?revision=2564191183"
+        },
+        {
+          "filename": "b9048114f6e7f2ab-d1af648571-un-m49.html",
+          "sha256": "b9048114f6e7f2abda83bf03d4263c9d7cd1bd7230e3d0461025ee7839a7a1fb",
+          "uri": "https://unstats.un.org/unsd/methodology/m49/overview/"
+        },
+        {
+          "filename": "f18abd002e5a818e-7edea42ee5-au-hermannsburg-exa.json",
+          "sha256": "f18abd002e5a818e8c6070506617b93fcb038a9605ef299ba0c3ebaf4dd967e0",
+          "uri": "https://www.dcceew.gov.au/parks-heritage/heritage/places/national/hermannsburg"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本公开P625原值；precision=0.0001度仅为来源数值，不是实地误差或发掘精度。",
+        "point": [
+          -52.1819,
+          70.6086
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q1817250",
+        "statement_id": "Q1817250$60D1A671-D6CB-4BA2-B995-EF7E4782D238"
+      },
+      "focus": "northern",
+      "id": "wd:Q1817250",
+      "identity_review": {
+        "method": "Independent agent source-by-source identity, scope, cultural qualification, public coordinate, geography and rights comparison. Not expert or human confirmation.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent /root/global_experience",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "4e955681ba756f0f-b0a59a1978-qilakitsoq.html",
+          "sha256": "4e955681ba756f0fb0582302ff2b652e0c0541656c0a803de862020bbbd30621",
+          "uri": "https://en.nka.gl/museum/exhibitions/new-people-the-thule-culture/qilakitsormiut/"
+        },
+        {
+          "filename": "5bdee807bc7d29e7-46a07189a0-wd-license.html",
+          "sha256": "5bdee807bc7d29e75154371047d359f2cb9810222166237b4b125a72dfedc6aa",
+          "uri": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+        },
+        {
+          "filename": "7d6c2d9259b275a6-b8a7beba00-greenland-member.html",
+          "sha256": "7d6c2d9259b275a6db16f181c2fd2b2dba52b7f05bd4b8664b51408c8dbfd558",
+          "uri": "https://whc.unesco.org/en/list/1149/"
+        },
+        {
+          "filename": "a504ed5221c3dc42-19d58652e4-dk-profile.html",
+          "sha256": "a504ed5221c3dc42fba2adf49dd73e6b186f4ce7cee286824b23428dd9a8dc95",
+          "uri": "https://whc.unesco.org/en/statesparties/dk/"
+        },
+        {
+          "filename": "a530b9fbc7f041ff-a85a3a0795-Q1817250.json",
+          "sha256": "a530b9fbc7f041ff20cd7dcb2bf731173a47aeb210cc9191bd4b9e15e5df2dde",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1817250.json"
+        },
+        {
+          "filename": "cc67b7468a5b0461-6821b866eb-Q756617.json",
+          "sha256": "cc67b7468a5b0461b42811559e9576ea1bf8813603b46c28fc26bcd254f802ae",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q756617.json"
+        },
+        {
+          "filename": "d2e08c2afb3eaa7f-58a1fe4d40-Q35.json",
+          "sha256": "d2e08c2afb3eaa7fafdb1a9561baee2357d0ae4124011d64b510ff479fab1cf7",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q35.json"
+        },
+        {
+          "filename": "de03d60d63ee677c-e17a2ccfea-Q223.json",
+          "sha256": "de03d60d63ee677c61c2d2dd41fc34fde257138b47cce2e04a6bb0a6c7a2936a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q223.json"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Source-reviewed cultural and archaeological places in sparse northern, island and interior regions, assessed against all existing identities and full source locations. Not a complete national or world inventory. Source country and territory associations do not establish historical sovereignty. Restricted or unverified locations remain null; no historical stages are inferred."
+}
