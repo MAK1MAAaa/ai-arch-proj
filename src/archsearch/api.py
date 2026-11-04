@@ -44,6 +44,13 @@ from archsearch.registered_areas import (
 )
 from archsearch.search import SearchEngine, SearchHit, SearchRequest
 from archsearch.spatial_data import SpatialDataError
+from archsearch.subdivisions import (
+    SiteSubdivisionsResponse,
+    SubdivisionFacetsResponse,
+    SubdivisionIndex,
+    SubdivisionStatus,
+    SubdivisionUnavailable,
+)
 
 HISTORY_PATH = "/api/history/boundaries"
 HISTORY_PREPARE = "请运行 uv run --no-sync archsearch prepare-history 准备或修复历史疆域缓存。"
@@ -95,6 +102,7 @@ class StatusResponse(BaseModel):
     history: HistoryStatus
     spatial_locations: SpatialLocationCoverage | None = None
     registered_areas: RegisteredAreasStatus | None = None
+    subdivisions: SubdivisionStatus | None = None
 
 
 class Facet(BaseModel):
@@ -114,6 +122,8 @@ class SearchResponse(BaseModel):
     elapsed_ms: float
     corpus_version: str
     total_candidates: int
+    subdivision: str | None = None
+    subdivision_version: str | None = None
 
 
 def create_app(
@@ -122,12 +132,15 @@ def create_app(
     semantic: SemanticIndex | None = None,
     history: HistoryStore | None = None,
     areas: RegisteredAreasIndex | None = None,
+    subdivisions: SubdivisionIndex | None = None,
 ) -> FastAPI:
     corpus = load_corpus() if sites is None else sites
     index = semantic if semantic is not None else SemanticIndex(corpus, home)
     history_store = history if history is not None else HistoryStore(home)
-    engine = SearchEngine(corpus, index)
-    catalogue_index = CatalogueIndex(corpus, CORPUS_VERSION)
+    subdivision_index = (subdivisions if subdivisions is not None
+                         else SubdivisionIndex(corpus, CORPUS_VERSION))
+    engine = SearchEngine(corpus, index, subdivision_index)
+    catalogue_index = CatalogueIndex(corpus, CORPUS_VERSION, subdivisions=subdivision_index)
     area_index = areas if areas is not None else RegisteredAreasIndex()
     type_counts = Counter(kind for site in corpus for kind in set(site.types))
     app = FastAPI(title="古迹检索 ArchSearch", version="0.1.0", docs_url=None, redoc_url=None)
@@ -135,6 +148,7 @@ def create_app(
     app.state.history = history_store
     app.state.catalogue = catalogue_index
     app.state.registered_areas = area_index
+    app.state.subdivisions = subdivision_index
     app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=5)
 
     @app.middleware("http")
@@ -175,6 +189,7 @@ def create_app(
             history=HistoryStatus.model_validate(history_state),
             spatial_locations=catalogue_index.spatial_coverage(),
             registered_areas=area_index.status(set(engine.by_id)),
+            subdivisions=subdivision_index.status(),
         )
 
     @app.get(HISTORY_PATH)
@@ -210,12 +225,15 @@ def create_app(
 
     def catalogue_filters(
         request: Request, country: str | None, region: str | None, kind: str | None,
+        subdivision: str | None = None,
     ) -> None:
-        for name in ("country", "region", "type", "offset", "limit", "bbox"):
+        for name in ("country", "region", "type", "offset", "limit", "bbox", "subdivision"):
             if len(request.query_params.getlist(name)) > 1:
                 raise HTTPException(status_code=422, detail=f"{name}参数不能重复。")
         try:
-            catalogue_index.validate_filters(country, region, kind)
+            catalogue_index.validate_filters(country, region, kind, subdivision)
+        except SubdivisionUnavailable as error:
+            raise HTTPException(status_code=503, detail=str(error)) from error
         except ValueError as error:
             raise HTTPException(status_code=422, detail=str(error)) from error
 
@@ -223,15 +241,23 @@ def create_app(
     def coverage() -> CoverageResponse:
         return catalogue_index.coverage()
 
+    @app.get("/api/subdivisions", response_model=SubdivisionFacetsResponse)
+    def subdivision_facets(
+        request: Request, country: str = Query(pattern=r"^[A-Z]{2}$"),
+    ) -> SubdivisionFacetsResponse:
+        catalogue_filters(request, country, None, None)
+        return subdivision_index.facets(country, catalogue_index.country_counts[country])
+
     @app.get("/api/catalogue", response_model=CatalogueResponse)
     def catalogue_points(
         request: Request, country: str | None = None, region: str | None = None,
         type: str | None = None,
+        subdivision: str | None = None,
     ) -> CatalogueResponse:
-        catalogue_filters(request, country, region, type)
+        catalogue_filters(request, country, region, type, subdivision)
         if "bbox" in request.query_params:
             raise HTTPException(status_code=422, detail="bbox仅用于/api/sites分页目录。")
-        return catalogue_index.catalogue(country, region, type)
+        return catalogue_index.catalogue(country, region, type, subdivision)
 
     @app.get("/api/sites", response_model=SitePage)
     def browse_sites(
@@ -239,18 +265,21 @@ def create_app(
         limit: int = Query(default=50, ge=1, le=100),
         country: str | None = None, region: str | None = None, type: str | None = None,
         bbox: str | None = Query(default=None, min_length=1, max_length=200),
+        subdivision: str | None = None,
     ) -> SitePage:
-        catalogue_filters(request, country, region, type)
+        catalogue_filters(request, country, region, type, subdivision)
         try:
             bounds = SpatialBounds.from_csv(bbox) if bbox is not None else None
         except ValueError as error:
             raise HTTPException(status_code=422, detail=str(error)) from error
-        return catalogue_index.page(offset, limit, country, region, type, bounds)
+        return catalogue_index.page(offset, limit, country, region, type, bounds, subdivision)
 
     @app.post("/api/search", response_model=SearchResponse)
     def search(body: SearchRequest) -> SearchResponse:
         try:
-            catalogue_index.validate_filters(body.country, body.region, body.type)
+            catalogue_index.validate_filters(body.country, body.region, body.type, body.subdivision)
+        except SubdivisionUnavailable as error:
+            raise HTTPException(status_code=503, detail=str(error)) from error
         except ValueError as error:
             raise HTTPException(status_code=422, detail=str(error)) from error
         started = perf_counter()
@@ -267,7 +296,15 @@ def create_app(
             elapsed_ms=round((perf_counter() - started) * 1000, 2),
             corpus_version=CORPUS_VERSION,
             total_candidates=total,
+            subdivision=body.subdivision,
+            subdivision_version=subdivision_index.version if body.subdivision else None,
         )
+
+    @app.get("/api/sites/{site_id}/subdivisions", response_model=SiteSubdivisionsResponse)
+    def site_subdivisions(site_id: str) -> SiteSubdivisionsResponse:
+        if site_id not in engine.by_id:
+            raise HTTPException(status_code=404, detail="地点不存在于本演示语料中。")
+        return subdivision_index.site_response(site_id)
 
     @app.get("/api/sites/{site_id}/locations", response_model=SiteLocationsResponse)
     def site_locations(site_id: str) -> SiteLocationsResponse:

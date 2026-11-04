@@ -21,6 +21,7 @@ from archsearch.spatial_data import (
     load_world_locations,
     merge_world_locations,
 )
+from archsearch.subdivisions import SubdivisionIndex
 from archsearch.supplement_data import SupplementError, country_labels
 
 REGION_LABELS = {
@@ -260,6 +261,8 @@ class CatalogueResponse(BaseModel):
     total: int
     points: list[CataloguePoint]
     spatial_version: str | None = None
+    subdivision: str | None = None
+    subdivision_version: str | None = None
 
 
 class SitePage(BaseModel):
@@ -271,6 +274,8 @@ class SitePage(BaseModel):
     bbox: BBox | None = None
     spatial_match_mode: Literal["source-or-representative", "representative-only"]
     spatial_version: str | None = None
+    subdivision: str | None = None
+    subdivision_version: str | None = None
 
 
 def matches_geography(site: Site, country: str | None, region: str | None) -> bool:
@@ -295,9 +300,11 @@ class CatalogueIndex:
     def __init__(
         self, sites: Sequence[Site], corpus_version: str,
         registry: CoverageRegistry | None = None,
+        subdivisions: SubdivisionIndex | None = None,
     ) -> None:
         self.sites = tuple(sorted(sites, key=lambda site: (site.title.casefold(), site.id)))
         self.corpus_version = corpus_version
+        self.subdivisions = subdivisions
         self.registry = registry if registry is not None else load_registry()
         self.spatial = self.registry.spatial
         self.spatial_error = self.registry.spatial_error
@@ -330,7 +337,7 @@ class CatalogueIndex:
 
     def validate_filters(
         self, country: str | None = None, region: str | None = None,
-        kind: str | None = None,
+        kind: str | None = None, subdivision: str | None = None,
     ) -> None:
         if country is not None and country not in self.country_counts:
             raise ValueError("未知国家／地区，请从资料覆盖列表选择。")
@@ -338,16 +345,25 @@ class CatalogueIndex:
             raise ValueError("未知来源区域，请从资料覆盖列表选择。")
         if kind is not None and kind not in self.types:
             raise ValueError("未知地点类型，请从类型筛选列表选择。")
+        if subdivision is not None:
+            if self.subdivisions is None:
+                from archsearch.subdivisions import SubdivisionUnavailable
+
+                raise SubdivisionUnavailable("来源省区索引尚未准备。")
+            self.subdivisions.validate(country, subdivision)
 
     def filtered(
         self, country: str | None = None, region: str | None = None,
-        kind: str | None = None,
+        kind: str | None = None, subdivision: str | None = None,
     ) -> list[Site]:
-        self.validate_filters(country, region, kind)
+        self.validate_filters(country, region, kind, subdivision)
+        members = (self.subdivisions.ids(country, subdivision)
+                   if self.subdivisions is not None and subdivision is not None else None)
         return [
             site for site in self.sites
             if matches_geography(site, country, region)
             and (kind is None or kind in site.types)
+            and (members is None or site.id in members)
         ]
 
     def coverage(self) -> CoverageResponse:
@@ -507,12 +523,15 @@ class CatalogueIndex:
 
     def catalogue(
         self, country: str | None = None, region: str | None = None,
-        kind: str | None = None,
+        kind: str | None = None, subdivision: str | None = None,
     ) -> CatalogueResponse:
-        selected = self.filtered(country, region, kind)
+        selected = self.filtered(country, region, kind, subdivision)
         return CatalogueResponse(
             corpus_version=self.corpus_version, total=len(selected),
             spatial_version=self.spatial.version if self.spatial else None,
+            subdivision=subdivision,
+            subdivision_version=(self.subdivisions.version
+                                 if subdivision and self.subdivisions else None),
             points=[CataloguePoint(
                 id=site.id, title=site.title, repr_point=site.repr_point,
                 location_status=location_status(site),
@@ -528,10 +547,11 @@ class CatalogueIndex:
         self, offset: int = 0, limit: int = 50,
         country: str | None = None, region: str | None = None, kind: str | None = None,
         bbox: SpatialBounds | None = None,
+        subdivision: str | None = None,
     ) -> SitePage:
         if type(offset) is not int or offset < 0 or type(limit) is not int or not 1 <= limit <= 100:
             raise ValueError("offset必须为非负整数，limit必须为1至100的整数。")
-        selected = self.filtered(country, region, kind)
+        selected = self.filtered(country, region, kind, subdivision)
         if bbox is not None:
             selected = [
                 site for site in selected
@@ -546,4 +566,7 @@ class CatalogueIndex:
                 "source-or-representative" if self.spatial is not None else "representative-only"
             ),
             spatial_version=self.spatial.version if self.spatial is not None else None,
+            subdivision=subdivision,
+            subdivision_version=(self.subdivisions.version
+                                 if subdivision and self.subdivisions else None),
         )

@@ -5,7 +5,7 @@ import { createContext, runInContext } from 'node:vm';
 
 import ts from 'typescript';
 
-interface State { country: string | null; region: string | null; offset: number; visible: boolean; bbox?: [number, number, number, number] | null; spatial_match_mode?: string; spatial_version?: string | null }
+interface State { country: string | null; region: string | null; offset: number; visible: boolean; bbox?: [number, number, number, number] | null; spatial_match_mode?: string; spatial_version?: string | null; subdivision?: string | null; subdivision_version?: string | null }
 interface Helpers {
   create(options: { map: FakeMap | null; initialState?: Partial<State>; initialBoundsError?: string | null; onBoundsAction?(): void; onSelect(id: string, opener: FakeElement, options?: { moveMap?: boolean }): void; onFilterChange?(state: State): void; onStateChange?(state: State): void; onCommittedState?(state: State): void; onCatalogue?(points: Point[]): void }): Controller;
   normalizeState(value: Partial<State>): State;
@@ -30,6 +30,11 @@ interface Controller {
   getSpatialMetadata(): Record<string, unknown> | null;
   getSpatialSource(id: string): { name: string; uri: string; license: string } | null;
   select(id: string | null): void;
+  configureSubdivisions(status: { ready: boolean; reason: string | null; version: string | null } | null): void;
+  validateSearchScope(scope: { country?: string | null; subdivision?: string | null }, signal: AbortSignal): Promise<string | null>;
+  subdivisionReady(): boolean;
+  subdivisionVersion(): string | null;
+  subdivisionLabel(id: string): string | null;
 }
 
 const compiled = ts.transpileModule(readFileSync(new URL('../../src/archsearch/frontend/explore.ts', import.meta.url), 'utf8'), {
@@ -168,6 +173,7 @@ function pageFor(state: Partial<State> = {}, points = fixture) {
 
 function setup(withMap = true, initialBoundsError: string | null = null) {
   const ids = ['explore-panel', 'explore-summary', 'explore-authority', 'explore-polar-authority', 'explore-spatial-source', 'explore-country', 'explore-region', 'explore-clear', 'explore-points', 'explore-fit', 'explore-count', 'explore-list', 'explore-previous', 'explore-next', 'explore-page', 'explore-feedback', 'explore-retry', 'explore-limit-note', 'explore-capture-bounds', 'explore-clear-bounds', 'explore-bounds-status'];
+  ids.push('explore-subdivision-filter', 'explore-subdivision', 'explore-subdivision-note', 'explore-subdivision-feedback', 'explore-subdivision-retry');
   const nodes = new Map(ids.map(id => [id, new FakeElement()]));
   const doc: { activeElement: FakeElement | null; getElementById(id: string): FakeElement | null; createElement(tag: string): FakeElement } = {
     activeElement: null, getElementById: id => nodes.get(id) ?? null,
@@ -825,4 +831,209 @@ test('a page with an old single-source version cannot commit a combined-source s
   app.response(app.find('/api/sites'), { ...pageFor({ bbox: [30, 41, 30.5, 41.5] }, multiPoints), spatial_version: groupedSpatial.version }); await retried;
   assert.deepEqual(plain(app.controller.getCommittedState()?.bbox), [30, 41, 30.5, 41.5]);
   assert.equal(app.controller.getSpatialSource('wd:Q2')?.uri, groupedSpatial.source_groups[1].source.uri);
+});
+
+const subdivisionFixture: Point[] = [
+  { id: 'auth:ca-dfhd:1', title: 'Alpha fort', repr_point: [-80, 45], location_status: 'mapped', countries: ['CA'], regions: ['europe-north-america'], source_kind: 'supplement', chronology_status: 'not_reviewed' },
+  { id: 'auth:ca-dfhd:2', title: 'Beta building', repr_point: [-70, 46], location_status: 'mapped', countries: ['CA'], regions: ['europe-north-america'], source_kind: 'supplement', chronology_status: 'not_reviewed' },
+  { id: 'auth:ca-dfhd:3', title: 'Cross province landscape', repr_point: null, location_status: 'unknown', countries: ['CA'], regions: ['europe-north-america'], source_kind: 'supplement', chronology_status: 'not_reviewed' },
+  { id: 'auth:fixture:fr', title: 'French place', repr_point: [2, 48], location_status: 'mapped', countries: ['FR'], regions: ['europe-north-america'], source_kind: 'global', chronology_status: 'reviewed' },
+  { id: 'auth:fixture:unassigned', title: 'Unassigned province', repr_point: [-79, 43], location_status: 'mapped', countries: ['CA'], regions: ['europe-north-america'], source_kind: 'global', chronology_status: 'reviewed' },
+];
+const membershipIds: Record<string, string[]> = {
+  'CA:ontario': ['auth:ca-dfhd:1', 'auth:ca-dfhd:3'],
+  'CA:quebec': ['auth:ca-dfhd:2', 'auth:ca-dfhd:3'],
+};
+const subset = (id: string) => subdivisionFixture.filter(point => membershipIds[id].includes(point.id));
+const subdivisionOptions = (version = 'source-subdivisions-v1') => ({
+  ready: true, reason: null, subdivision_version: version, corpus_version: 'global-v3', country: 'CA', supported: true,
+  total: 4, assigned: 3, unassigned: 1, subdivisions: [{ id: 'CA:ontario', label: 'Ontario', count: 2 }, { id: 'CA:quebec', label: 'Quebec', count: 2 }],
+  note: '按来源对象成员筛选，不是省界，也不证明各来源点的省份。',
+});
+const subdivisionPage = (id: string, state: Partial<State> = {}, version = 'source-subdivisions-v1') => ({ ...pageFor({ country: 'CA', ...state }, subset(id)), subdivision: id, subdivision_version: version });
+const subdivisionCatalogue = (id: string, version = 'source-subdivisions-v1') => ({ corpus_version: 'global-v3', spatial_version: null, total: subset(id).length, points: subset(id), subdivision: id, subdivision_version: version });
+const tick = async () => { for (let i = 0; i < 10; i++) await Promise.resolve(); };
+function live(app: ReturnType<typeof setup>, path: string) {
+  const request = app.pending.find(item => !item.done && !item.signal.aborted && item.url.startsWith(path));
+  assert.ok(request, path); return request;
+}
+async function subdivisionApp() {
+  const app = setup(); await app.boot(subdivisionFixture);
+  app.controller.configureSubdivisions({ ready: true, reason: null, version: 'source-subdivisions-v1' });
+  const country = app.controller.setState({ country: 'CA' }); app.response(live(app, '/api/sites'), pageFor({ country: 'CA' }, subdivisionFixture)); await country; await tick();
+  app.response(live(app, '/api/subdivisions?country=CA'), subdivisionOptions()); await tick();
+  return app;
+}
+async function applySubdivision(app: ReturnType<typeof setup>, id: string, state: Partial<State> = {}) {
+  const job = app.controller.setState({ subdivision: id, ...state });
+  app.response(live(app, '/api/sites'), subdivisionPage(id, state)); await tick();
+  app.response(live(app, '/api/catalogue?'), subdivisionCatalogue(id)); await job;
+}
+
+test('source province counts support overlap and unassigned objects without altering default country membership', async () => {
+  const app = await subdivisionApp();
+  assert.match(app.node('explore-count').textContent, /4 条/u);
+  assert.match(app.node('explore-subdivision-note').textContent, /3 \/ 4.*1 条未采用.*跨省/u);
+  assert.equal(app.node('explore-subdivision').disabled, false);
+  assert.equal(app.node('explore-subdivision').children[1].textContent, 'Ontario · 2');
+  await applySubdivision(app, 'CA:ontario');
+  assert.match(app.node('explore-count').textContent, /2 条/u);
+  assert.equal(app.node('explore-list').children[1].children[0].dataset.siteId, 'auth:ca-dfhd:3');
+  assert.equal(app.node('explore-list').children[1].children[0].dataset.locationStatus, 'unknown');
+  assert.equal([...app.map!.layers][0].members.length, 3);
+  assert.deepEqual(plain(app.controller.getPoint('auth:fixture:unassigned')), [-79, 43]);
+  assert.equal(app.catalogues.length, 1);
+  assert.equal(app.controller.getCommittedState()?.subdivision, 'CA:ontario');
+  assert.equal(app.controller.getCommittedState()?.subdivision_version, 'source-subdivisions-v1');
+  assert.ok(app.pending.every(request => request.url !== '/api/search'));
+});
+
+test('an old backend that ignores the province query cannot replace the last successful scoped list or layer', async () => {
+  const app = await subdivisionApp(); await applySubdivision(app, 'CA:quebec');
+  const layer = [...app.map!.layers][0], successful = plain(app.controller.getCommittedState());
+  const job = app.controller.setState({ subdivision: 'CA:ontario' });
+  const rejected = assert.rejects(job, /省区.*条件或资料版本/u);
+  app.response(live(app, '/api/sites'), subdivisionPage('CA:ontario')); await tick();
+  const reply = subdivisionCatalogue('CA:ontario');
+  const { subdivision: _ignored, subdivision_version: _version, ...oldApi } = reply;
+  app.response(live(app, '/api/catalogue?'), oldApi); await rejected;
+  assert.deepEqual(plain(app.controller.getCommittedState()), successful);
+  assert.equal([...app.map!.layers][0], layer);
+  assert.equal(app.controller.getState().subdivision, 'CA:ontario');
+  assert.equal(app.node('explore-list').children[0].children[0].dataset.siteId, 'auth:ca-dfhd:2');
+  await applySubdivision(app, 'CA:ontario');
+  assert.equal(app.controller.getCommittedState()?.subdivision, 'CA:ontario');
+});
+
+test('page and province point versions must match each other and the loaded source options', async () => {
+  for (const changed of ['page', 'catalogue']) {
+    const app = await subdivisionApp(); await applySubdivision(app, 'CA:quebec');
+    const layer = [...app.map!.layers][0];
+    const job = app.controller.setState({ subdivision: 'CA:ontario' }); const rejected = assert.rejects(job, /省区.*版本/u);
+    app.response(live(app, '/api/sites'), subdivisionPage('CA:ontario', {}, changed === 'page' ? 'changed-v2' : undefined)); await tick();
+    app.response(live(app, '/api/catalogue?'), subdivisionCatalogue('CA:ontario', changed === 'catalogue' ? 'changed-v2' : undefined)); await rejected;
+    assert.equal(app.controller.getCommittedState()?.subdivision, 'CA:quebec');
+    assert.equal([...app.map!.layers][0], layer);
+  }
+});
+
+test('a filtered point cannot replace original coordinate evidence or add a foreign identity', async () => {
+  const app = await subdivisionApp(); await applySubdivision(app, 'CA:quebec');
+  const job = app.controller.setState({ subdivision: 'CA:ontario' }); const rejected = assert.rejects(job, /点位身份或原始来源/u);
+  app.response(live(app, '/api/sites'), subdivisionPage('CA:ontario')); await tick();
+  const reply = subdivisionCatalogue('CA:ontario'); reply.points = reply.points.map((point, index) => index ? point : { ...point, repr_point: [-81, 45] });
+  app.response(live(app, '/api/catalogue?'), reply); await rejected;
+  assert.deepEqual(plain(app.controller.getPoint('auth:ca-dfhd:1')), [-80, 45]);
+  assert.equal(app.controller.getCommittedState()?.subdivision, 'CA:quebec');
+});
+
+test('country changes clear desired province and late previous-country options cannot overwrite the new country', async () => {
+  const app = setup(); await app.boot(subdivisionFixture);
+  app.controller.configureSubdivisions({ ready: true, reason: null, version: 'source-subdivisions-v1' });
+  const ca = app.controller.setState({ country: 'CA' }); app.response(live(app, '/api/sites'), pageFor({ country: 'CA' }, subdivisionFixture)); await ca; await tick();
+  const old = live(app, '/api/subdivisions?country=CA');
+  const fr = app.controller.setState({ country: 'FR' }); app.response(live(app, '/api/sites'), pageFor({ country: 'FR' }, subdivisionFixture)); await fr; await tick();
+  app.response(live(app, '/api/subdivisions?country=FR'), { ...subdivisionOptions(), country: 'FR', total: 1, assigned: 0, unassigned: 1, supported: false, subdivisions: [], note: '该国家尚无采用的省区字段。' }); await tick();
+  app.response(old, subdivisionOptions()); await tick();
+  assert.equal(old.signal.aborted, true);
+  assert.equal(app.controller.getState().country, 'FR'); assert.equal(app.controller.getState().subdivision, undefined);
+  assert.equal(app.node('explore-subdivision-filter').hidden, true);
+  assert.match(app.node('explore-subdivision-note').textContent, /该国家尚无/u);
+  assert.equal(app.node('explore-list').children[0].children[0].dataset.siteId, 'auth:fixture:fr');
+});
+
+test('a cancelled province response cannot replace a later successful province selection', async () => {
+  const app = await subdivisionApp();
+  const oldJob = app.controller.setState({ subdivision: 'CA:ontario' }); const oldPage = live(app, '/api/sites');
+  const newJob = app.controller.setState({ subdivision: 'CA:quebec' }); app.response(live(app, '/api/sites'), subdivisionPage('CA:quebec')); await tick();
+  app.response(live(app, '/api/catalogue?'), subdivisionCatalogue('CA:quebec')); await newJob;
+  app.response(oldPage, subdivisionPage('CA:ontario')); await oldJob;
+  assert.equal(oldPage.signal.aborted, true); assert.equal(app.controller.getCommittedState()?.subdivision, 'CA:quebec');
+});
+
+test('missing subdivision capability retains a successful province snapshot and rejects active search validation', async () => {
+  const app = await subdivisionApp(); await applySubdivision(app, 'CA:ontario');
+  const successful = plain(app.controller.getCommittedState()), layer = [...app.map!.layers][0];
+  app.controller.configureSubdivisions({ ready: false, reason: '请运行 prepare source subdivisions', version: null });
+  assert.equal(app.controller.subdivisionReady(), false);
+  await assert.rejects(app.controller.validateSearchScope({ country: 'CA', subdivision: 'CA:ontario' }, new AbortController().signal), /尚未就绪/u);
+  assert.deepEqual(plain(app.controller.getCommittedState()), successful); assert.equal([...app.map!.layers][0], layer);
+  const cleared = app.controller.setState({ subdivision: null }); app.response(live(app, '/api/sites'), pageFor({ country: 'CA' }, subdivisionFixture)); await cleared;
+  assert.equal(app.controller.getCommittedState()?.subdivision, undefined); assert.equal(app.controller.subdivisionReady(), true);
+});
+
+test('explicit search scope is checked independently without changing desired or committed directory country', async () => {
+  const app = await subdivisionApp(); await applySubdivision(app, 'CA:quebec');
+  const before = plain(app.controller.getCommittedState());
+  const validated = app.controller.validateSearchScope({ country: 'CA', subdivision: 'CA:ontario' }, new AbortController().signal);
+  app.response(live(app, '/api/subdivisions?country=CA'), subdivisionOptions());
+  assert.equal(await validated, 'source-subdivisions-v1');
+  assert.equal(app.controller.getState().subdivision, 'CA:quebec'); assert.deepEqual(plain(app.controller.getCommittedState()), before);
+  assert.equal(app.controller.subdivisionLabel('CA:ontario'), 'Ontario');
+});
+
+test('province facet failures preserve basic country browsing and keyboard retry keeps a persistent focus target', async () => {
+  const app = setup(); await app.boot(subdivisionFixture);
+  app.controller.configureSubdivisions({ ready: true, reason: null, version: 'source-subdivisions-v1' });
+  const country = app.controller.setState({ country: 'CA' }); app.response(live(app, '/api/sites'), pageFor({ country: 'CA' }, subdivisionFixture)); await country; await tick();
+  app.response(live(app, '/api/subdivisions?country=CA'), { detail: 'source unavailable' }, 503); await tick();
+  const successful = plain(app.controller.getCommittedState()), layer = [...app.map!.layers][0];
+  assert.equal(app.controller.subdivisionReady(), true);
+  assert.equal(app.node('explore-subdivision-filter').hidden, true);
+  assert.equal(app.node('explore-subdivision-retry').hidden, false);
+  app.node('explore-subdivision-retry').focus(); app.node('explore-subdivision-retry').fire('click'); await tick();
+  assert.equal(app.doc.activeElement, app.node('explore-subdivision-note'));
+  app.response(live(app, '/api/subdivisions?country=CA'), { ...subdivisionOptions(), assigned: 4, unassigned: 0 }); await tick();
+  assert.match(app.node('explore-subdivision-note').textContent, /当前国家目录均有采用的来源省区关联/u);
+  assert.doesNotMatch(app.node('explore-subdivision-note').textContent, /条未采用/u);
+  assert.equal(app.node('explore-subdivision-retry').hidden, true);
+  assert.deepEqual(plain(app.controller.getCommittedState()), successful); assert.equal([...app.map!.layers][0], layer);
+});
+
+test('changing source province or country resets draft pagination while restored explicit offsets remain valid', async () => {
+  const app = await subdivisionApp();
+  const offset = app.controller.setState({ offset: 50 }); app.response(live(app, '/api/sites'), pageFor({ country: 'CA', offset: 50 }, subdivisionFixture)); await offset;
+  await applySubdivision(app, 'CA:ontario'); assert.equal(app.controller.getState().offset, 0);
+  const restored = app.controller.setState({ subdivision: 'CA:quebec', offset: 50 });
+  app.response(live(app, '/api/sites'), subdivisionPage('CA:quebec', { offset: 50 })); await tick();
+  app.response(live(app, '/api/catalogue?'), subdivisionCatalogue('CA:quebec')); await restored;
+  assert.equal(app.controller.getCommittedState()?.offset, 50);
+  const fr = app.controller.setState({ country: 'FR' }); app.response(live(app, '/api/sites'), pageFor({ country: 'FR' }, subdivisionFixture)); await fr;
+  assert.equal(app.controller.getState().offset, 0); assert.equal(app.controller.getState().subdivision, undefined);
+});
+
+test('a registry version change retains the actual earlier snapshot until an explicit successful retry', async () => {
+  const app = await subdivisionApp(); await applySubdivision(app, 'CA:ontario');
+  const before = plain(app.controller.getCommittedState()), layer = [...app.map!.layers][0];
+  app.controller.configureSubdivisions({ ready: true, reason: null, version: 'source-subdivisions-v2' }); await tick();
+  assert.equal(app.controller.subdivisionReady(), false);
+  app.response(live(app, '/api/subdivisions?country=CA'), subdivisionOptions('source-subdivisions-v2')); await tick();
+  assert.deepEqual(plain(app.controller.getCommittedState()), before); assert.equal([...app.map!.layers][0], layer);
+  assert.match(app.node('explore-subdivision-note').textContent, /尚未成功应用/u);
+  const retry = app.controller.setState({ subdivision: 'CA:ontario' });
+  app.response(live(app, '/api/sites'), subdivisionPage('CA:ontario', {}, 'source-subdivisions-v2')); await tick();
+  app.response(live(app, '/api/catalogue?'), subdivisionCatalogue('CA:ontario', 'source-subdivisions-v2')); await retry;
+  assert.equal(app.controller.getCommittedState()?.subdivision_version, 'source-subdivisions-v2');
+});
+
+test('source province membership retains the complete original multi-point object and bbox applies independently', async () => {
+  const points = plain(subdivisionFixture);
+  for (const point of points) { point.source_points = []; point.source_location_records = []; }
+  points[0].source_points = [[-80, 45], [2, 48], [-80, 45]];
+  points[0].source_location_records = points[0].source_points.map((coordinate, source_index) => ({ source_index, coordinate, name: `Original location ${source_index}`, ref: `Official ${source_index}` }));
+  const metadata = { ...spatial, records: 1, points: 3, distinct_points: 2, duplicate_points: 1, display_points: 5 };
+  const members = points.filter(point => membershipIds['CA:ontario'].includes(point.id));
+  const app = setup(); await app.boot(points, metadata);
+  app.controller.configureSubdivisions({ ready: true, reason: null, version: 'source-subdivisions-v1' });
+  const country = app.controller.setState({ country: 'CA' }); app.response(live(app, '/api/sites'), pageFor({ country: 'CA' }, points)); await country; await tick();
+  app.response(live(app, '/api/subdivisions?country=CA'), subdivisionOptions()); await tick();
+  for (const bbox of [null, [1, 47, 3, 49] as [number, number, number, number]]) {
+    const job = app.controller.setState({ subdivision: 'CA:ontario', bbox });
+    app.response(live(app, '/api/sites'), { ...pageFor({ country: 'CA', bbox }, members), subdivision: 'CA:ontario', subdivision_version: 'source-subdivisions-v1' }); await tick();
+    app.response(live(app, '/api/catalogue?'), { ...subdivisionCatalogue('CA:ontario'), spatial_version: 'world-locations-v1', points: members }); await job;
+    assert.deepEqual(plain(app.controller.getSourcePoints(points[0].id)), [[-80, 45], [2, 48], [-80, 45]]);
+    assert.equal([...app.map!.layers][0].members.length, bbox ? 3 : 6);
+    assert.equal(app.controller.getCommittedState()?.subdivision, 'CA:ontario');
+    assert.match(app.node('explore-count').textContent, bbox ? /1 条/u : /2 条/u);
+  }
 });

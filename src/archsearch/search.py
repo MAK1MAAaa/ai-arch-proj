@@ -10,12 +10,13 @@ from typing import Literal
 
 import numpy as np
 from numpy.typing import NDArray
-from pydantic import BaseModel, ConfigDict, Field, field_validator
+from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
 from archsearch.corpus import build_document, source_excerpts
 from archsearch.coverage import matches_geography
 from archsearch.domain import Site
 from archsearch.index import SemanticIndex
+from archsearch.subdivisions import SUBDIVISION_PATTERN, SubdivisionIndex, SubdivisionUnavailable
 
 TOKENIZER_VERSION = "unicode-han-bigram-v1"
 BM25_K1 = 1.5
@@ -44,6 +45,7 @@ class SearchRequest(BaseModel):
     mode: Literal["semantic", "bm25"] = "semantic"
     type: str | None = None
     country: str | None = Field(default=None, pattern=r"^[A-Z]{2}$")
+    subdivision: str | None = Field(default=None, pattern=SUBDIVISION_PATTERN)
     region: Literal[
         "africa", "arab-states", "asia-pacific", "europe-north-america",
         "latin-america-caribbean",
@@ -59,6 +61,12 @@ class SearchRequest(BaseModel):
         if not value:
             raise ValueError("查询不能为空")
         return value
+
+    @model_validator(mode="after")
+    def validate_subdivision_country(self) -> SearchRequest:
+        if self.subdivision is not None and self.country != self.subdivision[:2]:
+            raise ValueError("来源省区必须与已选择的国家／地区一致。")
+        return self
 
 
 class SearchHit(BaseModel):
@@ -95,9 +103,11 @@ class BM25:
 
 
 class SearchEngine:
-    def __init__(self, sites: list[Site], semantic: SemanticIndex) -> None:
+    def __init__(self, sites: list[Site], semantic: SemanticIndex,
+                 subdivisions: SubdivisionIndex | None = None) -> None:
         self.sites = list(sites)
         self.semantic = semantic
+        self.subdivisions = subdivisions
         documents = [build_document(site) for site in self.sites]
         current = list(zip((site.id for site in self.sites), documents, strict=True))
         indexed = [(site.id, build_document(site)) for site in semantic.sites]
@@ -109,11 +119,17 @@ class SearchEngine:
         self.by_id = {site.id: site for site in sites}
 
     def search(self, request: SearchRequest) -> tuple[list[SearchHit], int]:
+        members = None
+        if request.subdivision is not None:
+            if self.subdivisions is None:
+                raise SubdivisionUnavailable("来源省区索引尚未准备。")
+            members = self.subdivisions.ids(request.country, request.subdivision)
         candidates = [
             i
             for i, site in enumerate(self.sites)
             if (request.type is None or request.type in site.types)
             and matches_geography(site, request.country, request.region)
+            and (members is None or site.id in members)
         ]
         if not candidates:
             return [], 0

@@ -8,6 +8,7 @@ const ArchSearchResearch = (() => {
     limit: number;
     country?: string | null;
     region?: string | null;
+    subdivision?: string | null;
   }
 
   interface ParsedLink {
@@ -36,6 +37,8 @@ const ArchSearchResearch = (() => {
     bbox?: [number, number, number, number] | null;
     spatial_match_mode?: "source-or-representative" | "representative-only";
     spatial_version?: string | null;
+    subdivision?: string | null;
+    subdivision_version?: string | null;
   }
 
   function normalizeBBox(value: unknown): [number, number, number, number] | null {
@@ -57,6 +60,25 @@ const ArchSearchResearch = (() => {
 
   const regions = ["africa", "arab-states", "asia-pacific", "europe-north-america", "latin-america-caribbean", "antarctica", "nps-pacific"];
 
+  function normalizeSubdivision(country: string | null | undefined, value: unknown): string | null {
+    if (value === null || value === undefined || value === "") return null;
+    if (typeof value !== "string" || !/^[A-Z]{2}:[a-z0-9][a-z0-9-]{0,63}$/u.test(value)
+      || !country || !value.startsWith(`${country}:`)) throw new Error("来源省区须使用所选国家／地区对应的项目标识。");
+    return value;
+  }
+
+  function subdivisionVersion(value: unknown): value is string {
+    return typeof value === "string" && value.trim().length > 0 && value.length <= 128;
+  }
+
+  function validateSubdivisionResponse(request: Pick<SearchSpec, "country" | "subdivision">, response: { subdivision?: unknown; subdivision_version?: unknown }, expectedVersion?: string | null): string | null {
+    const subdivision = normalizeSubdivision(request.country, request.subdivision);
+    if (!subdivision) return null;
+    if (response.subdivision !== subdivision || !subdivisionVersion(response.subdivision_version)
+      || (expectedVersion !== undefined && response.subdivision_version !== expectedVersion)) throw new Error("来源省区响应的条件或资料版本不一致，未替换成功视图。");
+    return response.subdivision_version;
+  }
+
   function geography(country: string | null | undefined, region: string | null | undefined): { country: string | null; region: string | null } {
     const normalizedCountry = country || null;
     const normalizedRegion = region || null;
@@ -68,15 +90,16 @@ const ArchSearchResearch = (() => {
   function parseBrowse(url: URL): { state: BrowseState; error: string | null } {
     const empty = { country: null, region: null, offset: 0, visible: true, bbox: null };
     try {
-      for (const name of ["browse_country", "browse_region", "browse_offset", "points", "browse_bbox"]) {
+      for (const name of ["browse_country", "browse_region", "browse_subdivision", "browse_offset", "points", "browse_bbox"]) {
         if (url.searchParams.getAll(name).length > 1) throw new Error(`链接中的 ${name} 参数不能重复。`);
       }
       const scope = geography(url.searchParams.get("browse_country"), url.searchParams.get("browse_region"));
+      const subdivision = normalizeSubdivision(scope.country, url.searchParams.get("browse_subdivision"));
       const rawOffset = url.searchParams.get("browse_offset") ?? "0";
       const points = url.searchParams.get("points") ?? "1";
       if (!/^(?:0|[1-9]\d{0,6})$/u.test(rawOffset) || Number(rawOffset) > 1_000_000) throw new Error("目录页码无效。");
       if (points !== "0" && points !== "1") throw new Error("全库点图层参数无效。");
-      return { state: { ...scope, offset: Number(rawOffset), visible: points === "1", bbox: parseBBox(url.searchParams.get("browse_bbox")) }, error: null };
+      return { state: { ...scope, ...(subdivision ? { subdivision } : {}), offset: Number(rawOffset), visible: points === "1", bbox: parseBBox(url.searchParams.get("browse_bbox")) }, error: null };
     } catch (error) {
       return { state: empty, error: error instanceof Error ? error.message : "目录链接无效。" };
     }
@@ -124,9 +147,11 @@ const ArchSearchResearch = (() => {
     elapsed_ms: number;
     total_candidates: number;
     results: T[];
+    subdivision?: string | null;
+    subdivision_version?: string | null;
   }
 
-  const parameterNames = ["q", "mode", "type", "limit", "country", "region"] as const;
+  const parameterNames = ["q", "mode", "type", "limit", "country", "region", "subdivision"] as const;
 
   function normalizeRequest(request: SearchSpec): SearchSpec {
     const query = request.query.trim();
@@ -144,8 +169,9 @@ const ArchSearchResearch = (() => {
       throw new Error("链接中的 type 必须是不超过 128 个字符且不含控制字符的类型 ID。");
     }
     const scope = geography(request.country, request.region);
+    const subdivision = normalizeSubdivision(scope.country, request.subdivision);
     return { query, mode: request.mode, type, limit: request.limit,
-      ...(scope.country ? { country: scope.country } : {}), ...(scope.region ? { region: scope.region } : {}) };
+      ...(scope.country ? { country: scope.country } : {}), ...(scope.region ? { region: scope.region } : {}), ...(subdivision ? { subdivision } : {}) };
   }
 
   function parseLink(url: URL): ParsedLink {
@@ -156,7 +182,7 @@ const ArchSearchResearch = (() => {
         return { request: null, error: `链接中的 ${name} 参数不能重复。` };
       }
     }
-    for (const name of ["country", "region"]) {
+    for (const name of ["country", "region", "subdivision"]) {
       if (parameters.has(name) && parameters.get(name) === "") return { request: null, error: `链接中的 ${name} 不能是空筛选值。` };
     }
     const mode = parameters.get("mode") ?? "semantic";
@@ -174,6 +200,7 @@ const ArchSearchResearch = (() => {
         type: parameters.get("type"),
         limit: Number(limit),
         country: parameters.get("country"), region: parameters.get("region"),
+        subdivision: parameters.get("subdivision"),
       });
       return { request, error: null };
     } catch (error) {
@@ -195,6 +222,7 @@ const ArchSearchResearch = (() => {
       url.searchParams.set("limit", String(normalized.limit));
       if (normalized.country) url.searchParams.set("country", normalized.country);
       if (normalized.region) url.searchParams.set("region", normalized.region);
+      if (normalized.subdivision) url.searchParams.set("subdivision", normalized.subdivision);
     }
     if (view) {
       if (!validYear(view.year) || view.year < -3400 || view.year > 2024) throw new Error("地图年份无效。");
@@ -206,10 +234,12 @@ const ArchSearchResearch = (() => {
     if (selection.site && selection.phase) url.searchParams.set("phase", selection.phase);
     if (browse) {
       const scope = geography(browse.country, browse.region);
+      const subdivision = normalizeSubdivision(scope.country, browse.subdivision);
       const bbox = normalizeBBox(browse.bbox);
       if (!Number.isInteger(browse.offset) || browse.offset < 0 || browse.offset > 1_000_000) throw new Error("目录页码无效。");
       url.searchParams.set("browse_country", scope.country ?? "");
       url.searchParams.set("browse_region", scope.region ?? "");
+      if (subdivision) url.searchParams.set("browse_subdivision", subdivision);
       if (browse.offset) url.searchParams.set("browse_offset", String(browse.offset));
       if (!browse.visible) url.searchParams.set("points", "0");
       if (bbox !== null) url.searchParams.set("browse_bbox", bbox.join(","));
@@ -235,6 +265,9 @@ const ArchSearchResearch = (() => {
     if (normalized.query !== response.query || normalized.mode !== response.mode) {
       throw new Error("导出请求必须与成功响应的查询和检索方式一致。");
     }
+    validateSubdivisionResponse(normalized, response);
+    if (browse?.subdivision && !subdivisionVersion(browse.subdivision_version)) throw new Error("尚未成功应用的来源省区不能加入目录导出。");
+    if (browse) normalizeSubdivision(browse.country, browse.subdivision);
     const selectedMatches = selectedSite !== null && typeof selectedSite === "object" && "id" in selectedSite && selectedSite.id === selection.site;
     const areas = registeredAreas?.displayed === true && selectedMatches && selection.site === registeredAreas.site_id
       && registeredAreas.corpus_version === response.corpus_version && registeredAreas.corpus_version === currentCorpusVersion && registeredAreas.version === currentRegisteredAreasVersion
@@ -264,6 +297,7 @@ const ArchSearchResearch = (() => {
         { name: "Pacific and interior cultural supplement", version: "pacific-interior-supplement-v1", license: "Mixed rights — see individual source_refs", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/PACIFIC-LICENSE.md", note: "Seven independently source-reviewed cultural identities from Pacific registers and African archaeological research. An address-restricted place remains unmapped; unadopted or conflicting representative coordinates remain null. Tentative submissions are not World Heritage inscriptions. No listing, excavation or publication year becomes a historical phase." },
         { name: "NPS Pacific register supplement", version: "nps-pacific-v1", license: "NPS government structured metadata; other source rights retained", uri: "https://www.nps.gov/aboutus/disclaimer.htm", note: "Project grouping of seven source State labels, not a UNESCO region or sovereignty classification. Government metadata does not relicense third-party nomination text, photos or attachments. Viewer text, feature edits and newer downloads have separate version clocks. Source points may be generated reference positions; restricted locations remain unmapped. No registration or publication date becomes a site phase." },
         { name: "Canadian Federal Heritage Designations historic-place supplement", version: "canada-dfhd-v1", license: "Open Government Licence - Canada; Wikidata structured claims CC0", license_uri: "https://open.canada.ca/en/open-government-licence-canada", uri: "https://open.canada.ca/data/en/dataset/49d5ba7d-d860-40d9-9183-892979e4acbe", note: "Parks Canada / Government of Canada. Contains information licensed under the Open Government Licence – Canada. Released NHS identities, original narrative and province fields retain their source version. Adopted public reference points retain separate source statements and roles; no generated centroids or ancient footprints. Commemorative-reason or plaque review notices are separate from project identity approval and chronology. Other webpages and third-party materials retain their own rights." },
+        { name: "Source-declared province and territory memberships", version: "source-subdivisions-v1", license: "Mixed rights — DFHD fields OGL-Canada; CRHP and Parks Canada webpages retain individual rights", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/SUBDIVISIONS-LICENSE.md", note: "Independently source-reviewed whole-object memberships compiled from original fields, explicit aliases and source hashes. Only the 986 DFHD objects' province fields use Open Government Licence – Canada. CRHP and Parks Canada short location facts retain their original webpage rights; no blanket OGL or CC0 grant. Explicit multi-province objects retain each source association. No coordinate geocoding, component inheritance, province borders or new dates." },
         { name: "Australian National Heritage List public spatial database", version: areas?.features[0]?.source.version ?? null, license: "CC BY 3.0 Australia", license_uri: "https://creativecommons.org/licenses/by/3.0/au/", uri: "https://gis.environment.gov.au/gispubmap/rest/services/ogc_services/National_Heritage_List/FeatureServer/0", note: "Public factual register fields and provider registered ranges only. Modern heritage registration is not an ancient footprint, political boundary, access permission or a representative point. Individual feature source URIs, versions, hashes and licences remain with registered_areas; linked third-party materials retain their own rights." },
         { name: "UNESCO Hague cultural properties", version: "protection-supplement-v1", license: "CC BY-SA 4.0", uri: "https://data.unesco.org/explore/dataset/chp001/", note: "Reviewed cultural places from a fixed protection register; source rows and component locations are not new-site counts. Source protection years do not establish historical phases. Unresolved or storage-only locations remain in the source audit and are not mapped as archaeological places." },
         { name: "Cliopatria", version: map?.source_version ?? null, license: "CC BY 4.0", uri: "https://github.com/Seshat-Global-History-Databank/cliopatria", note: "Historical polity approximations; valid source intervals, no interpolation or point-based political attribution." },
@@ -292,9 +326,10 @@ const ArchSearchResearch = (() => {
         source_points: "spatial保留最后成功目录的组合源点版本、source_groups对应的来源／版本／许可与地点身份，以及独立选中资料经审核纳入地图的定位序列、重复记录与来源标签。原代表点单独保存；多个定位记录不增加遗址条目数或承诺发掘精度。世界遗产原始序列保持不变；海牙名录排除的仓储、标签冲突等原记录仍保留在来源审计中，不混作考古原址点。",
         registered_areas: "registered_areas只保存当前实际显示、且与选中资料和当前语料/检索版本一致的公开现代登记范围；null表示未显示或上下文不匹配。保留原WGS84闭环与来源版本/许可，不推内外环、代表点、古址轮廓、准入或点计数。范围显隐不写入分享链接，重新打开后仍须主动点击查看。",
         browse: "browse保存成功应用的独立目录条件；bbox为[西,南,东,北]闭区间，西大于东表示跨日期变更线，仅筛目录和全库点层，不改变request中的检索语义。spatial_match_mode及spatial_version记录当时的来源点匹配能力；representative-only可能遗漏无代表点落入框内的组成地点。选中资料纳入地图的来源序列完整导出；海牙名录未纳入地图的保护设施仍留在冻结来源审计中。",
+        subdivisions: "来源省区按已核对的对象成员字段筛选，不由坐标、省界或历史政权推断。request/response与browse各保存其独立成功条件；subdivision_version为各自实际应用的来源索引版本，未成功的待选条件不冒充已显示范围。",
       },
     };
   }
 
-  return { parseLink, parseView, parseBrowse, buildLink, createExport, validYear, automaticPhaseYear, normalizeBBox, parseBBox };
+  return { parseLink, parseView, parseBrowse, buildLink, createExport, validYear, automaticPhaseYear, normalizeBBox, parseBBox, normalizeSubdivision, validateSubdivisionResponse };
 })();
