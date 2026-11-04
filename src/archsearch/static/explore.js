@@ -184,19 +184,51 @@ const ArchSearchExplore = (() => {
             throw new Error("来源定位统计格式或数量无效。");
         if (!value.ready) {
             if (!text(value.reason) || value.version !== null || value.source !== null
-                || value.records !== 0 || value.points !== 0 || value.distinct_points !== 0 || value.duplicate_points !== 0)
+                || value.records !== 0 || value.points !== 0 || value.distinct_points !== 0 || value.duplicate_points !== 0
+                || (value.source_groups !== undefined && (!Array.isArray(value.source_groups) || value.source_groups.length !== 0)))
                 throw new Error("来源定位未就绪状态与版本不一致。");
-            return { ready: false, reason: value.reason, version: null, source: null, records: 0, points: 0, distinct_points: 0, duplicate_points: 0, display_points: value.display_points };
+            return { ready: false, reason: value.reason, version: null, source: null, ...(value.source_groups !== undefined ? { source_groups: [] } : {}), records: 0, points: 0, distinct_points: 0, duplicate_points: 0, display_points: value.display_points };
         }
-        const source = value.source;
-        if (value.reason !== null || !version(value.version) || !record(source) || !text(source.name) || !text(source.version)
-            || !text(source.license) || !text(source.sha256) || !/^[a-f0-9]{64}$/u.test(source.sha256)
+        if (value.reason !== null || !version(value.version)
             || value.records < 1 || value.points < 1 || value.distinct_points < 1)
             throw new Error("来源定位版本或许可元数据无效。");
+        const source = parseSpatialSource(value.source);
+        let groups;
+        if (value.source_groups !== undefined) {
+            if (!Array.isArray(value.source_groups) || !value.source_groups.length)
+                throw new Error("来源定位分组缺失。");
+            const identities = new Set();
+            const sources = new Set();
+            groups = value.source_groups.map((group) => {
+                if (!record(group) || !version(group.version) || !Array.isArray(group.site_ids) || !group.site_ids.length)
+                    throw new Error("来源定位分组版本或身份无效。");
+                const parsed = parseSpatialSource(group.source);
+                const sourceKey = `${parsed.uri}\n${parsed.version}\n${parsed.sha256}`;
+                if (sources.has(sourceKey))
+                    throw new Error("来源定位分组重复来源。");
+                sources.add(sourceKey);
+                const siteIds = group.site_ids.map((id) => {
+                    if (!text(id) || identities.has(id))
+                        throw new Error("来源定位分组重复或缺少地点身份。");
+                    identities.add(id);
+                    return id;
+                });
+                return { version: group.version, source: parsed, site_ids: siteIds };
+            });
+            if (groups.map((group) => group.version).join("+") !== value.version || identities.size !== value.records
+                || JSON.stringify(groups[0].source) !== JSON.stringify(source))
+                throw new Error("来源定位分组与组合版本、身份数量或主来源不一致。");
+        }
         return { ready: true, reason: null, version: value.version,
-            source: { name: source.name, uri: httpUrl(source.uri), version: source.version, license: source.license,
-                license_uri: httpUrl(source.license_uri), sha256: source.sha256 },
+            source, ...(groups !== undefined ? { source_groups: groups } : {}),
             records: value.records, points: value.points, distinct_points: value.distinct_points, duplicate_points: value.duplicate_points, display_points: value.display_points };
+    }
+    function parseSpatialSource(value) {
+        if (!record(value) || !text(value.name) || !version(value.version) || !text(value.license)
+            || !text(value.sha256) || !/^[a-f0-9]{64}$/u.test(value.sha256))
+            throw new Error("来源定位版本或许可元数据无效。");
+        return { name: value.name, uri: httpUrl(value.uri), version: value.version, license: value.license,
+            license_uri: httpUrl(value.license_uri), sha256: value.sha256 };
     }
     function facets(value, kind) {
         if (!Array.isArray(value))
@@ -281,6 +313,12 @@ const ArchSearchExplore = (() => {
             if (rawCount !== spatial.points || distinct !== spatial.distinct_points || displayCount !== spatial.display_points
                 || points.filter((point) => point.source_points.length > 0).length > spatial.records || spatial.records > coverage.total)
                 throw new Error("来源定位点序列与覆盖统计数量不一致。");
+            if (spatial.source_groups) {
+                const grouped = new Set(spatial.source_groups.flatMap((group) => group.site_ids));
+                const known = new Set(points.map((point) => point.id));
+                if ([...grouped].some((id) => !known.has(id)) || points.some((point) => point.source_points.length && !grouped.has(point.id)))
+                    throw new Error("来源定位分组与全库地点身份不一致。");
+            }
         }
         else if (points.some((point) => point.source_points.length > 0))
             throw new Error("来源定位点缺少版本与许可统计，未替换已有地图。");
@@ -417,19 +455,23 @@ const ArchSearchExplore = (() => {
                 ui.spatial.replaceChildren(element("span", undefined, `来源多点资料未就绪：${spatial.reason ?? "请检查本地数据版本"}。保留可用代表点；目录和检索仍按资料条目展示。`));
                 return;
             }
-            const source = spatial.source;
-            const summary = element("span", undefined, `${spatial.records.toLocaleString("zh-CN")} 条遗产资料包含 ${spatial.points.toLocaleString("zh-CN")} 个来源定位点记录`);
-            const link = element("a", undefined, source.name);
-            link.href = source.uri;
-            link.target = "_blank";
-            link.rel = "noopener noreferrer";
-            const license = element("a", undefined, source.license);
-            license.href = source.license_uri;
-            license.target = "_blank";
-            license.rel = "noopener noreferrer";
-            const note = element("span", "explore-authority-note", `来源版本：${source.version.split("T")[0]} · 同一遗产内 ${spatial.duplicate_points.toLocaleString("zh-CN")} 个同坐标记录保留在来源序列，地图仅绘一次；定位点数不等于遗址数。`);
-            note.title = `${spatial.version}\nSHA256: ${source.sha256}`;
-            ui.spatial.replaceChildren(summary, link, license, note);
+            const sources = spatial.source_groups?.map((group) => group.source) ?? [spatial.source];
+            const summary = element("span", undefined, `${spatial.records.toLocaleString("zh-CN")} 条文化资料包含 ${spatial.points.toLocaleString("zh-CN")} 个来源定位点记录${sources.length > 1 ? ` · ${sources.length} 套固定来源合计` : ""}`);
+            const links = sources.flatMap((source) => {
+                const link = element("a", undefined, `${source.name} · ${source.version.split("T")[0]}`);
+                link.href = source.uri;
+                link.target = "_blank";
+                link.rel = "noopener noreferrer";
+                const license = element("a", undefined, source.license);
+                license.href = source.license_uri;
+                license.target = "_blank";
+                license.rel = "noopener noreferrer";
+                link.title = `SHA256: ${source.sha256}`;
+                return [link, license];
+            });
+            const note = element("span", "explore-authority-note", `同一条目内 ${spatial.duplicate_points.toLocaleString("zh-CN")} 个同坐标记录保留在所属来源序列，地图仅绘一次；定位点数不等于遗址数。仅纳入已核定位，仓储或标签冲突等排除记录保留在来源审计中。`);
+            note.title = spatial.version ?? "";
+            ui.spatial.replaceChildren(summary, ...links, note);
         }
         function renderControls() {
             ui.panel.setAttribute("aria-busy", String(loading));
@@ -743,6 +785,13 @@ const ArchSearchExplore = (() => {
                 return point ? placements(point).map((placement) => [...placement.coordinate]) : [];
             },
             getSpatialMetadata: () => coverage?.spatial_locations ? JSON.parse(JSON.stringify(coverage.spatial_locations)) : null,
+            getSpatialSource: (id) => {
+                const spatial = coverage?.spatial_locations;
+                if (!spatial?.ready || !catalogue?.points.some((point) => point.id === id && point.source_points.length > 0))
+                    return null;
+                const source = spatial.source_groups?.find((group) => group.site_ids.includes(id))?.source ?? spatial.source;
+                return source ? { ...source } : null;
+            },
         };
     }
     return { create, normalizeState, matches, coordinate, displayCoordinates, locationStatus, placements, parseSpatial, parseCoverage, parseCatalogue, parsePage, insideBBox, capturedBounds };

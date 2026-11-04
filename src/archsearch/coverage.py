@@ -14,7 +14,13 @@ from pydantic import BaseModel, Field
 from archsearch.bounds import BBox, SpatialBounds
 from archsearch.config import DATA_DIR
 from archsearch.domain import Site
-from archsearch.spatial_data import SpatialDataError, WorldLocations, load_world_locations
+from archsearch.spatial_data import (
+    SourceGroup,
+    SpatialDataError,
+    WorldLocations,
+    load_world_locations,
+    merge_world_locations,
+)
 from archsearch.supplement_data import SupplementError, country_labels
 
 REGION_LABELS = {
@@ -74,7 +80,20 @@ def load_registry(data_dir: Path = DATA_DIR) -> CoverageRegistry:
     spatial_error = None
     try:
         spatial = load_world_locations(Path(data_dir))
+        if (Path(data_dir) / "protection_manifest.json").exists():
+            from archsearch.protection_data import ProtectionError, load_protection_locations
+
+            try:
+                spatial = merge_world_locations(
+                    spatial, load_protection_locations(Path(data_dir)),
+                )
+            except (ProtectionError, SpatialDataError) as error:
+                raise SpatialDataError(
+                    f"{error} 请运行 python -m archsearch.protection_data --rebuild "
+                    "修复海牙来源定位；当前统一保留原代表点，不宣称源点完整。"
+                ) from error
     except SpatialDataError as error:
+        spatial = None
         spatial_error = str(error)
     return CoverageRegistry(
         countries=countries, regions=regions,
@@ -143,11 +162,18 @@ class SpatialSource(BaseModel):
     sha256: str
 
 
+class SpatialSourceGroup(BaseModel):
+    version: str
+    source: SpatialSource
+    site_ids: list[str]
+
+
 class SpatialLocationCoverage(BaseModel):
     ready: bool
     reason: str | None = None
     version: str | None = None
     source: SpatialSource | None = None
+    source_groups: list[SpatialSourceGroup] = Field(default_factory=list)
     records: int = 0
     points: int = 0
     distinct_points: int = 0
@@ -251,6 +277,14 @@ class CatalogueIndex:
         ):
             self.spatial = None
             self.spatial_error = "源定位记录集与当前语料身份不匹配；保留原代表点和基础检索。"
+        if self.spatial is not None and self.spatial.source_groups:
+            grouped = [site_id for group in self.spatial.source_groups
+                       for site_id in group.site_ids]
+            if (len(grouped) != len(set(grouped)) or set(grouped) != set(self.spatial.points)
+                    or "+".join(group.version for group in self.spatial.source_groups)
+                    != self.spatial.version):
+                self.spatial = None
+                self.spatial_error = "源定位分组、地点身份或组合版本不一致；保留原代表点。"
         self.country_counts: Counter[str] = Counter()
         self.region_counts: Counter[str] = Counter()
         self.source_counts: Counter[str] = Counter()
@@ -365,15 +399,33 @@ class CatalogueIndex:
             name=item.name, ref=item.ref,
         ) for item in self.spatial.records.get(site_id, ())]
 
-    def spatial_source(self) -> SpatialSource | None:
+    def spatial_source(self, site_id: str | None = None) -> SpatialSource | None:
         if self.spatial is None:
             return None
         source = self.spatial.source
+        if site_id is not None:
+            if site_id not in self.spatial.points:
+                return None
+            source = next((group.source for group in self.spatial.source_groups
+                           if site_id in group.site_ids), source)
+        return self._spatial_source(source)
+
+    @staticmethod
+    def _spatial_source(source: Mapping[str, str]) -> SpatialSource:
         return SpatialSource(
             name=f"UNESCO DataHub {source['dataset_id']}", uri=source["uri"],
             version=source["modified"], license=source["license"],
             license_uri=source["license_uri"], sha256=source["records_sha256"],
         )
+
+    def spatial_source_groups(self) -> list[SpatialSourceGroup]:
+        if self.spatial is None:
+            return []
+        groups = self.spatial.source_groups or (SourceGroup(
+            self.spatial.version, self.spatial.source, tuple(sorted(self.spatial.points)),
+        ),)
+        return [SpatialSourceGroup(version=group.version, source=self._spatial_source(group.source),
+                                   site_ids=list(group.site_ids)) for group in groups]
 
     def spatial_coverage(self) -> SpatialLocationCoverage | None:
         if self.spatial is None and self.spatial_error is None:
@@ -395,6 +447,7 @@ class CatalogueIndex:
         distinct = sum(len(set(value)) for value in self.spatial.points.values())
         return SpatialLocationCoverage(
             ready=True, version=self.spatial.version, source=self.spatial_source(),
+            source_groups=self.spatial_source_groups(),
             records=len(self.spatial.points), points=points, distinct_points=distinct,
             duplicate_points=points - distinct, display_points=display_points,
         )
@@ -407,11 +460,12 @@ class CatalogueIndex:
             source_points=self.source_points(site.id),
             source_location_records=self.source_records(site.id),
             spatial_version=self.spatial.version,
-            source=self.spatial_source() if site.id in self.spatial.points else None,
+            source=self.spatial_source(site.id),
             note=(
                 "source_points与source_location_records为固定DataHub来源定位记录，"
-                "保留原始顺序及重合记录，不代表独立核验的遗址数量或边界。"
+                "保留所属来源经审核的定位顺序及重合记录，不代表独立遗址数量或边界。"
                 "representative_point保持原资料，来源见地点详情；未混入DataHub源数组。"
+                "仓储或标签冲突等未纳入地图的记录保留在相应来源审核资料中。"
                 "国别筛选属于整体名录成员关系，不推断各点的政治归属。"
             ),
         )

@@ -169,7 +169,9 @@ def test_real_amazonia_component_is_browsable_without_substituting_its_represent
     assert index.site_locations(theater).source_points == [
         (-48.4937027777, -1.4530277778), (-60.0233972223, -3.1302805556),
     ]
-    assert page.spatial_version == "world-locations-v1"
+    assert page.spatial_version == "world-locations-v1+protection-locations-v1"
+    assert any(group.version == "world-locations-v1" and theater.id in group.site_ids
+               for group in index.spatial_coverage().source_groups)
     assert page.spatial_match_mode == "source-or-representative"
 
 

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "scope": "Twenty paired diagnostic intents for the fixed Hague cultural-property supplement. Source listing/protection years are not archaeological phases. Named-place and thematic probes are cohort-focused, not a blind relevance benchmark; all judgments remain unconfirmed.",
+  "queries": [
+    {"id":"h01","query_zh":"寻找 Menjez 的巨石墓群","query_en":"Find the Megalithic Tombs of Menjez","topic":"Named megalithic tomb group"},
+    {"id":"h02","query_zh":"寻找 Jeb Jennine 的罗马桥","query_en":"Find the Jeb Jennine Roman Bridge","topic":"Named ancient bridge"},
+    {"id":"h03","query_zh":"寻找黎巴嫩的古代神庙","query_en":"Find ancient temples in Lebanon","topic":"Lebanese temple places"},
+    {"id":"h04","query_zh":"寻找 Arqa 考古原址","query_en":"Find the Arqa Archaeological Site","topic":"Archaeology site rather than storage point"},
+    {"id":"h05","query_zh":"寻找 Kharayeb 考古遗址","query_en":"Find the Kharayeb Archaeological Sites","topic":"Named archaeological place"},
+    {"id":"h06","query_zh":"寻找的黎波里的马穆鲁克学校建筑","query_en":"Find Mamluk madrassa buildings in Tripoli","topic":"Grouped historical buildings"},
+    {"id":"h07","query_zh":"寻找的黎波里的历史浴场","query_en":"Find historic hammams in Tripoli","topic":"Bathhouse discovery with unresolved source held out"},
+    {"id":"h08","query_zh":"寻找也门的历史堡垒","query_en":"Find historical forts in Yemen","topic":"Yemeni built heritage"},
+    {"id":"h09","query_zh":"寻找塔伊兹的历史宗教建筑","query_en":"Find historic religious buildings in Taiz","topic":"Taiz historical buildings"},
+    {"id":"h10","query_zh":"寻找布基纳法索的历史城市街区","query_en":"Find historic urban quarters in Burkina Faso","topic":"West African urban cultural places"},
+    {"id":"h11","query_zh":"寻找乌克兰的历史天文台建筑","query_en":"Find historic astronomical observatory buildings in Ukraine","topic":"Astronomical built heritage"},
+    {"id":"h12","query_zh":"寻找 Derzhprom 建筑","query_en":"Find the Derzhprom building","topic":"Named modern built heritage"},
+    {"id":"h13","query_zh":"寻找 Akkerman 堡垒","query_en":"Find the Akkerman Fortress","topic":"Named historical fortification"},
+    {"id":"h14","query_zh":"寻找巴西的贝拉王子皇家堡垒","query_en":"Find the Prince of Beira Royal Fortress in Brazil","topic":"Brazilian fortified place"},
+    {"id":"h15","query_zh":"寻找圣保罗抗争纪念馆的历史建筑","query_en":"Find the historical building of the Memorial of Resistance of Sao Paulo","topic":"Historical building rather than collection provenance"},
+    {"id":"h16","query_zh":"寻找墨西哥国家人类学博物馆建筑","query_en":"Find the National Museum of Anthropology building in Mexico","topic":"Documented architectural property"},
+    {"id":"h17","query_zh":"寻找 Sursock 博物馆历史建筑","query_en":"Find the historic Sursock Museum building","topic":"Named historical museum building"},
+    {"id":"h18","query_zh":"寻找黎巴嫩国家图书馆历史建筑","query_en":"Find the historical Lebanese National Library building","topic":"Named library building"},
+    {"id":"h19","query_zh":"寻找萨伊达的历史商旅建筑","query_en":"Find historic khans in Saida","topic":"Historic Saida buildings with distinct physical scopes"},
+    {"id":"h20","query_zh":"寻找 Niha 的古代神庙","query_en":"Find ancient temples at Niha","topic":"Related names do not imply identical physical scope"}
+  ]
+}

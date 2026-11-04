@@ -25,7 +25,7 @@ from archsearch.domain import ChronologyReview, PeriodEvidence, Site, SourceRefe
 DATA_DIR = Path(__file__).with_name("data")
 DATASET_VERSION = "v4.1"
 CURATED_VERSION = "global-v2"
-CORPUS_VERSION = "global-v7"
+CORPUS_VERSION = "global-v8"
 GLOBAL_REGION_QUOTAS = {
     "east-asia": 20, "south-asia": 15, "west-central-asia": 15, "africa": 15,
     "europe": 10, "north-america": 10, "south-america": 10, "oceania": 5,
@@ -338,6 +338,7 @@ def load_corpus(data_dir: Path | None = None) -> list[Site]:
     """Extend the unchanged curated cohort with a pinned, licensed world catalogue."""
     from archsearch.catalogue_data import CatalogueError, load_catalogue
     from archsearch.polar_data import PolarDataError, load_polar
+    from archsearch.protection_data import ProtectionError, load_protection
     from archsearch.regional_data import RegionalError, load_regional
     from archsearch.southamerica_data import SouthAmericaError, load_southamerica
     from archsearch.supplement_data import SupplementError, load_supplement
@@ -359,9 +360,13 @@ def load_corpus(data_dir: Path | None = None) -> list[Site]:
         regional = load_regional(supplemented, directory)
         if data_dir is not None and not (directory / "southamerica_manifest.json").exists():
             return regional
-        return load_southamerica(regional, directory)
+        southamerica = load_southamerica(regional, directory)
+        if data_dir is not None and not (directory / "protection_manifest.json").exists():
+            return southamerica
+        return load_protection(southamerica, directory)
     except (
         CatalogueError, PolarDataError, SupplementError, RegionalError, SouthAmericaError,
+        ProtectionError,
     ) as error:
         raise CorpusError(str(error)) from error
 

@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import re
 from collections.abc import Mapping
 from dataclasses import dataclass
@@ -79,12 +80,74 @@ class SourceLocation:
 
 
 @dataclass(frozen=True)
+class SourceGroup:
+    version: str
+    source: Mapping[str, str]
+    site_ids: tuple[str, ...]
+
+
+@dataclass(frozen=True)
 class WorldLocations:
     version: str
     points: Mapping[str, tuple[Point, ...]]
     records: Mapping[str, tuple[SourceLocation, ...]]
     source: Mapping[str, str]
     counts: Mapping[str, int]
+    source_groups: tuple[SourceGroup, ...] = ()
+
+
+def merge_world_locations(primary: WorldLocations, additional: WorldLocations) -> WorldLocations:
+    """Combine distinct reviewed identities without relabelling or replacing either source."""
+    if set(primary.points) & set(additional.points):
+        raise SpatialDataError("source location datasets cannot overwrite the same site identity")
+    groups: list[SourceGroup] = []
+    points: dict[str, tuple[Point, ...]] = {}
+    records: dict[str, tuple[SourceLocation, ...]] = {}
+    dataset_ids: set[str] = set()
+    for locations in (primary, additional):
+        if set(locations.records) != set(locations.points):
+            raise SpatialDataError("source location identity and record sequences differ")
+        current_groups = locations.source_groups or (SourceGroup(
+            version=locations.version, source=locations.source,
+            site_ids=tuple(sorted(locations.points)),
+        ),)
+        grouped: set[str] = set()
+        for group in current_groups:
+            dataset_id = group.source.get("dataset_id")
+            if not dataset_id or dataset_id in dataset_ids:
+                raise SpatialDataError("source dataset identity is missing or duplicated")
+            if (not group.version or len(group.site_ids) != len(set(group.site_ids))
+                    or grouped.intersection(group.site_ids)):
+                raise SpatialDataError("source groups duplicate a site identity or lack a version")
+            dataset_ids.add(dataset_id)
+            grouped.update(group.site_ids)
+            groups.append(SourceGroup(group.version, MappingProxyType(dict(group.source)),
+                                      tuple(group.site_ids)))
+        if grouped != set(locations.points):
+            raise SpatialDataError("source groups do not cover their exact location identities")
+        for site_id, positions in locations.points.items():
+            entries = locations.records[site_id]
+            if len(positions) != len(entries):
+                raise SpatialDataError("source point and label counts differ")
+            for index, (position, entry) in enumerate(zip(positions, entries, strict=True)):
+                lon, lat = position
+                if (isinstance(lon, bool) or isinstance(lat, bool)
+                        or not math.isfinite(lon) or not math.isfinite(lat)
+                        or not -180 <= lon <= 180 or not -90 <= lat <= 90
+                        or entry.source_index != index or entry.coordinate != position):
+                    raise SpatialDataError("source location order or coordinates differ")
+            points[site_id] = tuple(positions)
+            records[site_id] = tuple(entries)
+    combined_version = "+".join(group.version for group in groups)
+    if len(combined_version) > 128:
+        raise SpatialDataError("combined source location version exceeds the supported length")
+    return WorldLocations(
+        version=combined_version, points=MappingProxyType(points),
+        records=MappingProxyType(records),
+        source=primary.source,
+        counts=MappingProxyType({"source_points": sum(map(len, points.values()))}),
+        source_groups=tuple(groups),
+    )
 
 
 def _json_bytes(value: Any) -> bytes:
