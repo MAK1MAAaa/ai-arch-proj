@@ -1,0 +1,1552 @@
+{
+  "base_count": 1795,
+  "base_ids_sha256": "2f3badcb912fc0585c554d65f19f68236e2b4b0d9728c81b3e86a509877f3e47",
+  "base_sites_sha256": "7ce905be26b382ca0484c4e3c7bed04752beb9c0c1252f27e9cfcc7aac268ffa",
+  "cohort_version": "africa-supplement-v1",
+  "corpus_version": "global-v9",
+  "independent_report_sha256": "00cffa1fd91d20af0f6b12b891379ef817b3f19ab534256c722e0aa55750663c",
+  "records": [
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "unknown",
+        "note": "官方整体是Dimba与Ngovo两洞群；来源地理栏仅省名，WD单点未说明对应哪处洞穴或为何可代表全组，本草案保留空代表点，不平均、不以村镇定位代替。此处是未核定数字代表点，不是遗址实际位置未知。",
+        "point": null,
+        "precision": null,
+        "rank": null,
+        "source_uri": null,
+        "statement_id": null
+      },
+      "country_label": "Democratic Republic of the Congo",
+      "independent_review": {
+        "method": "Independent reading of frozen official primary page and specific country profile; full WD metadata/P4171 checks; same-object P625 GUID/Earth/rank/precision comparison when adopted; full1795 title/alias/ref and5739 source-name review plus near/fuzzy signals manually considered. No expert/human archaeological confirmation. Source report sha256:00cffa1fd91d20af0f6b12b891379ef817b3f19ab534256c722e0aa55750663c.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/protection_scope_review",
+        "status": "approved"
+      },
+      "provenance": {
+        "deduplication": {
+          "base_count": 1795,
+          "id_collisions": [],
+          "nearest_existing_points": [],
+          "normalized_name_matches": [],
+          "old_source_ref_matches": [],
+          "original_world_raw_count": 5632,
+          "source_label_matches": [],
+          "source_locations_count": 5739,
+          "unknown_point_limit": "No geometric duplicate test or gap reduction claimed when no adopted point exists. Same physical parent/component scopes require independent review."
+        },
+        "geometry_scope": "two-cave archaeological group; no audited common representative",
+        "historical_stage_status": "not_reviewed; no dates inferred",
+        "independent_source_review": {
+          "approval_scope": "approved_unknown_representative",
+          "reason": "Official named two-cave archaeological group. It is not the existing Matupi cave or Ishango place. Keep one group record and null coordinate; do not adopt an unexplained single-cave point, province centre or average.",
+          "report_sha256": "00cffa1fd91d20af0f6b12b891379ef817b3f19ab534256c722e0aa55750663c"
+        },
+        "official": {
+          "category": "Mixed",
+          "geometry_scope": "two-cave archaeological group; no audited common representative",
+          "license": null,
+          "original_coordinate_literal": "Province du Congo Central",
+          "scope": "官方两洞穴考古文化群作为一个对象记录，物理范围不等同Mbanza-Ngungu行政区或任何单洞。",
+          "source_sha256": "7db313555196bc059ec084c0b3ff51e1bc4287508f098363eb4b83d6154c896d",
+          "submission_date": "11/11/1997",
+          "tentative_id": "961",
+          "title": "Grottes de Dimba et Ngovo"
+        },
+        "region_source": {
+          "cache": "cd-profile.html",
+          "excerpt": "Africa, World Heritage Convention Regional Contact",
+          "normalized": "africa",
+          "sha256": "4ec4958212915f4f91a88e86ff68bf47db51f8bcd681b9ff5fcdcf468a8c09c3",
+          "uri": "https://whc.unesco.org/en/statesparties/cd/"
+        },
+        "scope_note": "官方两洞穴考古文化群作为一个对象记录，物理范围不等同Mbanza-Ngungu行政区或任何单洞。 官方整体是Dimba与Ngovo两洞群；来源地理栏仅省名，WD单点未说明对应哪处洞穴或为何可代表全组，本草案保留空代表点，不平均、不以村镇定位代替。此处是未核定数字代表点，不是遗址实际位置未知。 当前来源国家与非洲分区只表示名录关联，不按点位或历史疆域推断政治归属；提名/保护/出版年不形成建造或使用阶段。",
+        "source_country": {
+          "cache": "cd-profile.html",
+          "code": "CD",
+          "label": "Democratic Republic of the Congo",
+          "method": "Official specific StateParty profile URL and matching country link in the TentativeList entry, not point geocoding",
+          "sha256": "4ec4958212915f4f91a88e86ff68bf47db51f8bcd681b9ff5fcdcf468a8c09c3",
+          "uri": "https://whc.unesco.org/en/statesparties/cd/"
+        },
+        "source_policy": "Official pages prove cultural/mixed eligibility and factual scope, no full description/media reused; <=25 unique quotedwords per URI. WD entity metadata CC0 only, no automatic P31-only eligibility.",
+        "wikidata": {
+          "chosen_p625": null,
+          "coordinate_claims_not_acquired": false,
+          "filename": "Q905443.json",
+          "modified": "2026-02-26T15:36:31Z",
+          "original_aliases": {
+            "en": [
+              {
+                "language": "en",
+                "value": "Dimba and Ngovo caves"
+              }
+            ]
+          },
+          "original_descriptions": {
+            "en": {
+              "language": "en",
+              "value": "Tentative World Heritage Site in the Democratic Republic of the Congo"
+            },
+            "fr": {
+              "language": "fr",
+              "value": "site de la liste indicative du patrimoine mondial dans la République démocratique du Congo"
+            },
+            "hu": {
+              "language": "hu",
+              "value": "barlangok a a Kongói Demokratikus Köztársaságban, javasolt világörökségi helyszín"
+            }
+          },
+          "original_labels": {
+            "en": {
+              "language": "en",
+              "value": "Grottes de Dimba et Ngovo"
+            },
+            "fr": {
+              "language": "fr",
+              "value": "Grottes de Dimba et Ngovo"
+            },
+            "hu": {
+              "language": "hu",
+              "value": "Dimba és Ngovo barlangjai"
+            }
+          },
+          "p4171_bridge": [
+            {
+              "id": "Q905443$F2ECA93F-D630-40EA-946C-763AE443FC7E",
+              "mainsnak": {
+                "datatype": "external-id",
+                "datavalue": {
+                  "type": "string",
+                  "value": "961"
+                },
+                "hash": "143fca22e47658293e3e3aa6b9206fac8e4cdcb5",
+                "property": "P4171",
+                "snaktype": "value"
+              },
+              "rank": "normal",
+              "type": "statement"
+            }
+          ],
+          "qid": "Q905443",
+          "rejected_p625": [
+            {
+              "numeric_coordinate_omitted_from_public_draft": true,
+              "rank": "normal",
+              "reason": "官方整体是Dimba与Ngovo两洞群；来源地理栏仅省名，WD单点未说明对应哪处洞穴或为何可代表全组，本草案保留空代表点，不平均、不以村镇定位代替。此处是未核定数字代表点，不是遗址实际位置未知。",
+              "statement_id": "Q905443$2FE92F39-2FEC-4FDF-BE48-20BA0D7258A4"
+            }
+          ],
+          "revision": 2467163410,
+          "sha256": "743ea2d5338df0568d7395bd054b2c43e3b9cda92d81225b4164fa10dd8ce8e9",
+          "text_excluded_due_scope_mismatch": false
+        }
+      },
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "",
+          "note": "本候选仅核对公开文化资格、身份与定位来源；历史事件阶段尚未核验，未把行政提名/保护/出版年份转为生命周期。",
+          "phases": [],
+          "reviewed_at": null,
+          "status": "not_reviewed"
+        },
+        "contributors": [
+          "Wikidata contributors"
+        ],
+        "description": "Tentative World Heritage Site in the Democratic Republic of the Congo",
+        "description_zh": "",
+        "details": "Source country association: Democratic Republic of the Congo (CD).",
+        "geography": {
+          "authority_id": "supplement:auth:whc-tentative:961",
+          "countries": [
+            "CD"
+          ],
+          "note": "官方两洞穴考古文化群作为一个对象记录，物理范围不等同Mbanza-Ngungu行政区或任何单洞。 官方整体是Dimba与Ngovo两洞群；来源地理栏仅省名，WD单点未说明对应哪处洞穴或为何可代表全组，本草案保留空代表点，不平均、不以村镇定位代替。此处是未核定数字代表点，不是遗址实际位置未知。 当前来源国家与非洲分区只表示名录关联，不按点位或历史疆域推断政治归属；提名/保护/出版年不形成建造或使用阶段。",
+          "point_count": 0,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-04",
+            "excerpt": "La grotte de Dimba a livré la plus longue séquence archéologique du Bas-Congo",
+            "id": "qualification:whc-tentative:961",
+            "license": null,
+            "publisher": "State Party submission / UNESCO World Heritage Centre",
+            "revision": "sha256:7db313555196bc059ec084c0b3ff51e1bc4287508f098363eb4b83d6154c896d",
+            "title": "Grottes de Dimba et Ngovo",
+            "uri": "https://whc.unesco.org/en/tentativelists/961/"
+          }
+        },
+        "id": "auth:whc-tentative:961",
+        "location_precision": null,
+        "names": [
+          "Dimba és Ngovo barlangjai",
+          "Dimba and Ngovo caves"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": null,
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-04",
+            "excerpt": "La grotte de Dimba a livré la plus longue séquence archéologique du Bas-Congo",
+            "id": "qualification:whc-tentative:961",
+            "license": null,
+            "publisher": "State Party submission / UNESCO World Heritage Centre",
+            "revision": "sha256:7db313555196bc059ec084c0b3ff51e1bc4287508f098363eb4b83d6154c896d",
+            "title": "Grottes de Dimba et Ngovo",
+            "uri": "https://whc.unesco.org/en/tentativelists/961/"
+          },
+          {
+            "accessed": "2026-11-04",
+            "excerpt": "",
+            "id": "wikidata:Q905443",
+            "license": "CC0-1.0",
+            "publisher": "Wikidata contributors",
+            "revision": "2467163410; sha256:743ea2d5338df0568d7395bd054b2c43e3b9cda92d81225b4164fa10dd8ce8e9",
+            "title": "Grottes de Dimba et Ngovo",
+            "uri": "https://www.wikidata.org/wiki/Q905443"
+          },
+          {
+            "accessed": "2026-11-04",
+            "excerpt": "Africa, World Heritage Convention Regional Contact",
+            "id": "region:whc-CD",
+            "license": null,
+            "publisher": "UNESCO World Heritage Centre",
+            "revision": "sha256:4ec4958212915f4f91a88e86ff68bf47db51f8bcd681b9ff5fcdcf468a8c09c3",
+            "title": "UNESCO State Party profile — Democratic Republic of the Congo",
+            "uri": "https://whc.unesco.org/en/statesparties/cd/"
+          }
+        ],
+        "source_uri": "https://whc.unesco.org/en/tentativelists/961/",
+        "title": "Grottes de Dimba et Ngovo",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q905443.json",
+          "sha256": "743ea2d5338df0568d7395bd054b2c43e3b9cda92d81225b4164fa10dd8ce8e9",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q905443.json"
+        },
+        {
+          "filename": "cd-profile.html",
+          "sha256": "4ec4958212915f4f91a88e86ff68bf47db51f8bcd681b9ff5fcdcf468a8c09c3",
+          "uri": "https://whc.unesco.org/en/statesparties/cd/"
+        },
+        {
+          "filename": "whc-tentative-961.html",
+          "sha256": "7db313555196bc059ec084c0b3ff51e1bc4287508f098363eb4b83d6154c896d",
+          "uri": "https://whc.unesco.org/en/tentativelists/961/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本同一文化实体的公开EarthP625，单一有效声明原值；precision是来源数值参数而非实测误差，未从不规则官方DMS修猜。",
+        "point": [
+          12.877028,
+          -15.938057
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q10378763",
+        "statement_id": "Q10378763$43650a2a-43da-fd43-263e-7bdc9c7b5dda"
+      },
+      "country_label": "Angola",
+      "independent_review": {
+        "method": "Independent reading of frozen official primary page and specific country profile; full WD metadata/P4171 checks; same-object P625 GUID/Earth/rank/precision comparison when adopted; full1795 title/alias/ref and5739 source-name review plus near/fuzzy signals manually considered. No expert/human archaeological confirmation. Source report sha256:00cffa1fd91d20af0f6b12b891379ef817b3f19ab534256c722e0aa55750663c.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/protection_scope_review",
+        "status": "approved"
+      },
+      "provenance": {
+        "deduplication": {
+          "base_count": 1795,
+          "id_collisions": [],
+          "nearest_existing_points": [
+            {
+              "distance_km": 541.40941,
+              "kind": "source",
+              "name": "Twyfelfontein or /Ui-//aes",
+              "point": [
+                14.3750965572,
+                -20.5947689881
+              ],
+              "ref": "1255",
+              "site_id": "whc:1255",
+              "source_index": 0
+            },
+            {
+              "distance_km": 541.40941,
+              "kind": "representative",
+              "point": [
+                14.3750965572,
+                -20.5947689881
+              ],
+              "site_id": "whc:1255",
+              "title": "Twyfelfontein or /Ui-//aes"
+            },
+            {
+              "distance_km": 990.44553,
+              "kind": "source",
+              "name": "Tsodilo",
+              "point": [
+                21.73333333,
+                -18.75
+              ],
+              "ref": "1021",
+              "site_id": "whc:1021",
+              "source_index": 0
+            },
+            {
+              "distance_km": 990.44553,
+              "kind": "representative",
+              "point": [
+                21.73333333,
+                -18.75
+              ],
+              "site_id": "whc:1021",
+              "title": "Tsodilo"
+            },
+            {
+              "distance_km": 1085.5192,
+              "kind": "source",
+              "name": "Mbanza Kongo, Vestiges of the Capital of the former Kingdom of Kongo",
+              "point": [
+                14.2497222222,
+                -6.2688888889
+              ],
+              "ref": "1511",
+              "site_id": "whc:1511",
+              "source_index": 0
+            }
+          ],
+          "normalized_name_matches": [],
+          "old_source_ref_matches": [],
+          "original_world_raw_count": 5632,
+          "source_label_matches": [],
+          "source_locations_count": 5739,
+          "unknown_point_limit": "No geometric duplicate test or gap reduction claimed when no adopted point exists. Same physical parent/component scopes require independent review."
+        },
+        "geometry_scope": "rock-art complex representative, not individual shelter/engraving or centre",
+        "historical_stage_status": "not_reviewed; no dates inferred",
+        "independent_source_review": {
+          "approval_scope": "approved_source_representative",
+          "reason": "Official rock-art/engraving cultural complex, distinct from Mbanza Kongo and existing southern-African named rock-art properties. Same named WD cultural entity bridges official6251 and gives a public representative; not all component locations, geometric centre or property-boundary certification.",
+          "report_sha256": "00cffa1fd91d20af0f6b12b891379ef817b3f19ab534256c722e0aa55750663c"
+        },
+        "official": {
+          "category": "Cultural",
+          "geometry_scope": "rock-art complex representative, not individual shelter/engraving or centre",
+          "license": null,
+          "original_coordinate_literal": null,
+          "scope": "对象是Tchitundu-Hulu岩画/石刻文化复合体；不是Virei村镇、行政中心、博物馆或一般自然丘陵。公开WD同实体点仅作为整体定位参考，未逐一核验其全部洞穴/岩画点，也不称为几何中心。",
+          "source_sha256": "c5f445fd018e7963b5eea60961434dc89ae25f53fad837b2aefabc4b5737a839",
+          "submission_date": "09/05/2017",
+          "tentative_id": "6251",
+          "title": "Site Archéologique de Tchitundu-Hulu"
+        },
+        "region_source": {
+          "cache": "ao-profile.html",
+          "excerpt": "Africa, World Heritage Convention Regional Contact",
+          "normalized": "africa",
+          "sha256": "09644b48495a2e7b4520deb7e9182ae25b297502ebb13d37d366b697a86ccfea",
+          "uri": "https://whc.unesco.org/en/statesparties/ao/"
+        },
+        "scope_note": "对象是Tchitundu-Hulu岩画/石刻文化复合体；不是Virei村镇、行政中心、博物馆或一般自然丘陵。公开WD同实体点仅作为整体定位参考，未逐一核验其全部洞穴/岩画点，也不称为几何中心。 固定版本同一文化实体的公开EarthP625，单一有效声明原值；precision是来源数值参数而非实测误差，未从不规则官方DMS修猜。 当前来源国家与非洲分区只表示名录关联，不按点位或历史疆域推断政治归属；提名/保护/出版年不形成建造或使用阶段。",
+        "source_country": {
+          "cache": "ao-profile.html",
+          "code": "AO",
+          "label": "Angola",
+          "method": "Official specific StateParty profile URL and matching country link in the TentativeList entry, not point geocoding",
+          "sha256": "09644b48495a2e7b4520deb7e9182ae25b297502ebb13d37d366b697a86ccfea",
+          "uri": "https://whc.unesco.org/en/statesparties/ao/"
+        },
+        "source_policy": "Official pages prove cultural/mixed eligibility and factual scope, no full description/media reused; <=25 unique quotedwords per URI. WD entity metadata CC0 only, no automatic P31-only eligibility.",
+        "wikidata": {
+          "chosen_p625": {
+            "id": "Q10378763$43650a2a-43da-fd43-263e-7bdc9c7b5dda",
+            "mainsnak": {
+              "datatype": "globe-coordinate",
+              "datavalue": {
+                "type": "globecoordinate",
+                "value": {
+                  "altitude": null,
+                  "globe": "http://www.wikidata.org/entity/Q2",
+                  "latitude": -15.938057,
+                  "longitude": 12.877028,
+                  "precision": 1e-06
+                }
+              },
+              "hash": "01485f41b5711ed50e436bd5cae059ddcd92875a",
+              "property": "P625",
+              "snaktype": "value"
+            },
+            "rank": "normal",
+            "type": "statement"
+          },
+          "coordinate_claims_not_acquired": false,
+          "filename": "Q10378763.json",
+          "modified": "2025-10-26T12:12:11Z",
+          "original_aliases": {
+            "pt": [
+              {
+                "language": "pt",
+                "value": "Tchitundulo"
+              },
+              {
+                "language": "pt",
+                "value": "Tchitundo-Hulo"
+              },
+              {
+                "language": "pt",
+                "value": "Tchitundo-Hulu"
+              },
+              {
+                "language": "pt",
+                "value": "Chitundulo"
+              }
+            ]
+          },
+          "original_descriptions": {
+            "de": {
+              "language": "de",
+              "value": "archäologische Stätte in Angola"
+            },
+            "en": {
+              "language": "en",
+              "value": "archaeological sitein Angola"
+            },
+            "fr": {
+              "language": "fr",
+              "value": "site archéologique préhistorique d'Angola"
+            },
+            "pt": {
+              "language": "pt",
+              "value": "sítio arqueológico em Angola"
+            }
+          },
+          "original_labels": {
+            "ca": {
+              "language": "ca",
+              "value": "Tchitundo-Hulu"
+            },
+            "de": {
+              "language": "de",
+              "value": "Tchitundu-Hulu-Höhlen"
+            },
+            "en": {
+              "language": "en",
+              "value": "Tchitundo-Hulu"
+            },
+            "fr": {
+              "language": "fr",
+              "value": "Tchitundu-Hulu"
+            },
+            "pt": {
+              "language": "pt",
+              "value": "Chitundo-Hulu"
+            }
+          },
+          "p4171_bridge": [
+            {
+              "id": "Q10378763$EFA41564-48A0-4DB7-BD88-39528F8A12EA",
+              "mainsnak": {
+                "datatype": "external-id",
+                "datavalue": {
+                  "type": "string",
+                  "value": "6251"
+                },
+                "hash": "571c90c68cc089e1989a9ce1721bfe5ec46de9c9",
+                "property": "P4171",
+                "snaktype": "value"
+              },
+              "rank": "normal",
+              "type": "statement"
+            }
+          ],
+          "qid": "Q10378763",
+          "rejected_p625": [],
+          "revision": 2422127001,
+          "sha256": "42df3adaa7fb555fdf13c4d59c87c43fd9d2050a92ed09c74a4c9940dc0ebf51",
+          "text_excluded_due_scope_mismatch": false
+        }
+      },
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "",
+          "note": "本候选仅核对公开文化资格、身份与定位来源；历史事件阶段尚未核验，未把行政提名/保护/出版年份转为生命周期。",
+          "phases": [],
+          "reviewed_at": null,
+          "status": "not_reviewed"
+        },
+        "contributors": [
+          "Wikidata contributors"
+        ],
+        "description": "archaeological sitein Angola",
+        "description_zh": "",
+        "details": "Source country association: Angola (AO).",
+        "geography": {
+          "authority_id": "supplement:auth:whc-tentative:6251",
+          "countries": [
+            "AO"
+          ],
+          "note": "对象是Tchitundu-Hulu岩画/石刻文化复合体；不是Virei村镇、行政中心、博物馆或一般自然丘陵。公开WD同实体点仅作为整体定位参考，未逐一核验其全部洞穴/岩画点，也不称为几何中心。 固定版本同一文化实体的公开EarthP625，单一有效声明原值；precision是来源数值参数而非实测误差，未从不规则官方DMS修猜。 当前来源国家与非洲分区只表示名录关联，不按点位或历史疆域推断政治归属；提名/保护/出版年不形成建造或使用阶段。",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-04",
+            "excerpt": "",
+            "id": "wikidata:Q10378763",
+            "license": "CC0-1.0",
+            "publisher": "Wikidata contributors",
+            "revision": "2422127001; sha256:42df3adaa7fb555fdf13c4d59c87c43fd9d2050a92ed09c74a4c9940dc0ebf51",
+            "title": "Tchitundo-Hulu",
+            "uri": "https://www.wikidata.org/wiki/Q10378763"
+          }
+        },
+        "id": "auth:whc-tentative:6251",
+        "location_precision": null,
+        "names": [
+          "Chitundo-Hulu",
+          "Tchitundo-Hulu",
+          "Tchitundu-Hulu",
+          "Tchitundu-Hulu-Höhlen",
+          "Tchitundulo",
+          "Tchitundo-Hulo",
+          "Chitundulo"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          12.877028,
+          -15.938057
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-04",
+            "excerpt": "Les deux cavités sont décorées avec peintures rupestres",
+            "id": "qualification:whc-tentative:6251",
+            "license": null,
+            "publisher": "State Party submission / UNESCO World Heritage Centre",
+            "revision": "sha256:c5f445fd018e7963b5eea60961434dc89ae25f53fad837b2aefabc4b5737a839",
+            "title": "Site Archéologique de Tchitundu-Hulu",
+            "uri": "https://whc.unesco.org/en/tentativelists/6251/"
+          },
+          {
+            "accessed": "2026-11-04",
+            "excerpt": "",
+            "id": "wikidata:Q10378763",
+            "license": "CC0-1.0",
+            "publisher": "Wikidata contributors",
+            "revision": "2422127001; sha256:42df3adaa7fb555fdf13c4d59c87c43fd9d2050a92ed09c74a4c9940dc0ebf51",
+            "title": "Tchitundo-Hulu",
+            "uri": "https://www.wikidata.org/wiki/Q10378763"
+          },
+          {
+            "accessed": "2026-11-04",
+            "excerpt": "Africa, World Heritage Convention Regional Contact",
+            "id": "region:whc-AO",
+            "license": null,
+            "publisher": "UNESCO World Heritage Centre",
+            "revision": "sha256:09644b48495a2e7b4520deb7e9182ae25b297502ebb13d37d366b697a86ccfea",
+            "title": "UNESCO State Party profile — Angola",
+            "uri": "https://whc.unesco.org/en/statesparties/ao/"
+          }
+        ],
+        "source_uri": "https://whc.unesco.org/en/tentativelists/6251/",
+        "title": "Site Archéologique de Tchitundu-Hulu",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q10378763.json",
+          "sha256": "42df3adaa7fb555fdf13c4d59c87c43fd9d2050a92ed09c74a4c9940dc0ebf51",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10378763.json"
+        },
+        {
+          "filename": "ao-profile.html",
+          "sha256": "09644b48495a2e7b4520deb7e9182ae25b297502ebb13d37d366b697a86ccfea",
+          "uri": "https://whc.unesco.org/en/statesparties/ao/"
+        },
+        {
+          "filename": "whc-tentative-6251.html",
+          "sha256": "c5f445fd018e7963b5eea60961434dc89ae25f53fad837b2aefabc4b5737a839",
+          "uri": "https://whc.unesco.org/en/tentativelists/6251/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "unknown",
+        "note": "官方页面说明文物非法交易及遗产保护风险；本草案仅保留已公开文化身份与资料，未请求P625或调查、披露精细遗址点。官方粗地理栏不提升为可核发掘/墓地数字点，故暂保留空坐标；不宣称实际位置未知。",
+        "point": null,
+        "precision": null,
+        "rank": null,
+        "source_uri": null,
+        "statement_id": null
+      },
+      "country_label": "Niger",
+      "independent_review": {
+        "method": "Independent reading of frozen official primary page and specific country profile; full WD metadata/P4171 checks; same-object P625 GUID/Earth/rank/precision comparison when adopted; full1795 title/alias/ref and5739 source-name review plus near/fuzzy signals manually considered. No expert/human archaeological confirmation. Source report sha256:00cffa1fd91d20af0f6b12b891379ef817b3f19ab534256c722e0aa55750663c.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/protection_scope_review",
+        "status": "approved"
+      },
+      "provenance": {
+        "deduplication": {
+          "base_count": 1795,
+          "id_collisions": [],
+          "nearest_existing_points": [],
+          "normalized_name_matches": [],
+          "old_source_ref_matches": [],
+          "original_world_raw_count": 5632,
+          "source_label_matches": [],
+          "source_locations_count": 5739,
+          "unknown_point_limit": "No geometric duplicate test or gap reduction claimed when no adopted point exists. Same physical parent/component scopes require independent review."
+        },
+        "geometry_scope": "public cultural-site identity only; precise location not acquired",
+        "historical_stage_status": "not_reviewed; no dates inferred",
+        "independent_source_review": {
+          "approval_scope": "approved_unknown_representative",
+          "reason": "Official Bura archaeological/necropolis cultural-place scope, not the whole Bura cultural distribution, village, displayed sculpture or trade location. Null means this batch did not adopt a verified public numerical representative, not that the real location is unknown. No extra P625 or sensitive-location search performed.",
+          "report_sha256": "00cffa1fd91d20af0f6b12b891379ef817b3f19ab534256c722e0aa55750663c"
+        },
+        "official": {
+          "category": "Cultural",
+          "geometry_scope": "public cultural-site identity only; precise location not acquired",
+          "license": null,
+          "original_coordinate_literal": "N13 50 E0 30",
+          "scope": "对象为Bura考古遗址及其名录所述墓地文化范围，不泛指整个Bura文化分布区、同名村镇、馆藏雕像或文物交易地点。",
+          "source_sha256": "b2918a2a8aea3116f269f2d686243ef8299d32a55c51e019f843daffe46d697d",
+          "submission_date": "26/05/2006",
+          "tentative_id": "5045",
+          "title": "Site archéologique de Bura"
+        },
+        "region_source": {
+          "cache": "ne-profile.html",
+          "excerpt": "Africa, World Heritage Convention Regional Contact",
+          "normalized": "africa",
+          "sha256": "0ac4d0e85ad464a4b0d71848b7e225397d52ae150cf9ce44d73564640531c48b",
+          "uri": "https://whc.unesco.org/en/statesparties/ne/"
+        },
+        "scope_note": "对象为Bura考古遗址及其名录所述墓地文化范围，不泛指整个Bura文化分布区、同名村镇、馆藏雕像或文物交易地点。 官方页面说明文物非法交易及遗产保护风险；本草案仅保留已公开文化身份与资料，未请求P625或调查、披露精细遗址点。官方粗地理栏不提升为可核发掘/墓地数字点，故暂保留空坐标；不宣称实际位置未知。 当前来源国家与非洲分区只表示名录关联，不按点位或历史疆域推断政治归属；提名/保护/出版年不形成建造或使用阶段。",
+        "source_country": {
+          "cache": "ne-profile.html",
+          "code": "NE",
+          "label": "Niger",
+          "method": "Official specific StateParty profile URL and matching country link in the TentativeList entry, not point geocoding",
+          "sha256": "0ac4d0e85ad464a4b0d71848b7e225397d52ae150cf9ce44d73564640531c48b",
+          "uri": "https://whc.unesco.org/en/statesparties/ne/"
+        },
+        "source_policy": "Official pages prove cultural/mixed eligibility and factual scope, no full description/media reused; <=25 unique quotedwords per URI. WD entity metadata CC0 only, no automatic P31-only eligibility.",
+        "wikidata": {
+          "chosen_p625": null,
+          "coordinate_claims_not_acquired": true,
+          "filename": "Q3647187-metadata.json",
+          "modified": "2026-10-17T18:07:55Z",
+          "original_aliases": {
+            "it": [
+              {
+                "language": "it",
+                "value": "Sito archeologico di Bura"
+              }
+            ]
+          },
+          "original_descriptions": {
+            "ar": {
+              "language": "ar",
+              "value": "موقع أثري في تيرا، النيجر"
+            },
+            "de": {
+              "language": "de",
+              "value": "archäologische Stätte in Niger"
+            },
+            "en": {
+              "language": "en",
+              "value": "archaeological site in Téra Department, Niger"
+            },
+            "eu": {
+              "language": "eu",
+              "value": "Nigerko aztarnategi arkeologikoa"
+            },
+            "it": {
+              "language": "it",
+              "value": "sito archeologico nel Niger sudoccidentale"
+            },
+            "ml": {
+              "language": "ml",
+              "value": "നൈജറിലെ ടെറ ഡിപ്പാർട്ട്‌മെൻ്റിലെ പുരാവസ്തു സൈറ്റ്"
+            },
+            "nl": {
+              "language": "nl",
+              "value": "archeologische vindplaats"
+            }
+          },
+          "original_labels": {
+            "en": {
+              "language": "en",
+              "value": "Bura archaeological site"
+            },
+            "es": {
+              "language": "es",
+              "value": "Sitio arqueológico de Bura"
+            },
+            "eu": {
+              "language": "eu",
+              "value": "Bura"
+            },
+            "fr": {
+              "language": "fr",
+              "value": "Site archéologique de Bura"
+            },
+            "ha": {
+              "language": "ha",
+              "value": "Wurin Binciken Kayan Tarihi na Bura"
+            },
+            "it": {
+              "language": "it",
+              "value": "Bura"
+            },
+            "mul": {
+              "language": "mul",
+              "value": "Bura archaeological site"
+            },
+            "nl": {
+              "language": "nl",
+              "value": "Bura archaeological site"
+            },
+            "sv": {
+              "language": "sv",
+              "value": "Bura, Niger"
+            },
+            "tt": {
+              "language": "tt",
+              "value": "Бура археологик аланы"
+            }
+          },
+          "p4171_bridge": [
+            {
+              "id": "Q3647187$CFD2706E-8832-414B-8C03-E2675F57CB9D",
+              "mainsnak": {
+                "datatype": "external-id",
+                "datavalue": {
+                  "type": "string",
+                  "value": "5045"
+                },
+                "hash": "ebd24dc5a33aeb4bd79de163b4d3f9233fcf8835",
+                "property": "P4171",
+                "snaktype": "value"
+              },
+              "rank": "normal",
+              "type": "statement"
+            }
+          ],
+          "qid": "Q3647187",
+          "rejected_p625": [],
+          "revision": 2558051384,
+          "sha256": "3c24fe0bad87c44ebbf8dc53d1d61f5ef8a98f74be0fe255a4641eb8b41e9b98",
+          "text_excluded_due_scope_mismatch": false
+        }
+      },
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "",
+          "note": "本候选仅核对公开文化资格、身份与定位来源；历史事件阶段尚未核验，未把行政提名/保护/出版年份转为生命周期。",
+          "phases": [],
+          "reviewed_at": null,
+          "status": "not_reviewed"
+        },
+        "contributors": [
+          "Wikidata contributors"
+        ],
+        "description": "archaeological site in Téra Department, Niger",
+        "description_zh": "",
+        "details": "Source country association: Niger (NE).",
+        "geography": {
+          "authority_id": "supplement:auth:whc-tentative:5045",
+          "countries": [
+            "NE"
+          ],
+          "note": "对象为Bura考古遗址及其名录所述墓地文化范围，不泛指整个Bura文化分布区、同名村镇、馆藏雕像或文物交易地点。 官方页面说明文物非法交易及遗产保护风险；本草案仅保留已公开文化身份与资料，未请求P625或调查、披露精细遗址点。官方粗地理栏不提升为可核发掘/墓地数字点，故暂保留空坐标；不宣称实际位置未知。 当前来源国家与非洲分区只表示名录关联，不按点位或历史疆域推断政治归属；提名/保护/出版年不形成建造或使用阶段。",
+          "point_count": 0,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-04",
+            "excerpt": "Le site de la nécropole de Bura",
+            "id": "qualification:whc-tentative:5045",
+            "license": null,
+            "publisher": "State Party submission / UNESCO World Heritage Centre",
+            "revision": "sha256:b2918a2a8aea3116f269f2d686243ef8299d32a55c51e019f843daffe46d697d",
+            "title": "Site archéologique de Bura",
+            "uri": "https://whc.unesco.org/en/tentativelists/5045/"
+          }
+        },
+        "id": "auth:whc-tentative:5045",
+        "location_precision": null,
+        "names": [
+          "Bura archaeological site",
+          "Bura, Niger",
+          "Bura",
+          "Sitio arqueológico de Bura",
+          "Wurin Binciken Kayan Tarihi na Bura",
+          "Бура археологик аланы",
+          "Sito archeologico di Bura"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": null,
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-04",
+            "excerpt": "Le site de la nécropole de Bura",
+            "id": "qualification:whc-tentative:5045",
+            "license": null,
+            "publisher": "State Party submission / UNESCO World Heritage Centre",
+            "revision": "sha256:b2918a2a8aea3116f269f2d686243ef8299d32a55c51e019f843daffe46d697d",
+            "title": "Site archéologique de Bura",
+            "uri": "https://whc.unesco.org/en/tentativelists/5045/"
+          },
+          {
+            "accessed": "2026-11-04",
+            "excerpt": "",
+            "id": "wikidata:Q3647187",
+            "license": "CC0-1.0",
+            "publisher": "Wikidata contributors",
+            "revision": "2558051384; sha256:3c24fe0bad87c44ebbf8dc53d1d61f5ef8a98f74be0fe255a4641eb8b41e9b98",
+            "title": "Bura archaeological site",
+            "uri": "https://www.wikidata.org/wiki/Q3647187"
+          },
+          {
+            "accessed": "2026-11-04",
+            "excerpt": "Africa, World Heritage Convention Regional Contact",
+            "id": "region:whc-NE",
+            "license": null,
+            "publisher": "UNESCO World Heritage Centre",
+            "revision": "sha256:0ac4d0e85ad464a4b0d71848b7e225397d52ae150cf9ce44d73564640531c48b",
+            "title": "UNESCO State Party profile — Niger",
+            "uri": "https://whc.unesco.org/en/statesparties/ne/"
+          }
+        ],
+        "source_uri": "https://whc.unesco.org/en/tentativelists/5045/",
+        "title": "Site archéologique de Bura",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q3647187-P4171.json",
+          "sha256": "90240a8659bf34540ef87fdc5c60b07a00d3d0ee6afb1e478507f3f21707ad05",
+          "uri": "https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=Q3647187&property=P4171&format=json"
+        },
+        {
+          "filename": "Q3647187-metadata.json",
+          "sha256": "3c24fe0bad87c44ebbf8dc53d1d61f5ef8a98f74be0fe255a4641eb8b41e9b98",
+          "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q3647187&props=info%7Clabels%7Cdescriptions%7Caliases&format=json"
+        },
+        {
+          "filename": "ne-profile.html",
+          "sha256": "0ac4d0e85ad464a4b0d71848b7e225397d52ae150cf9ce44d73564640531c48b",
+          "uri": "https://whc.unesco.org/en/statesparties/ne/"
+        },
+        {
+          "filename": "whc-tentative-5045.html",
+          "sha256": "b2918a2a8aea3116f269f2d686243ef8299d32a55c51e019f843daffe46d697d",
+          "uri": "https://whc.unesco.org/en/tentativelists/5045/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "unknown",
+        "note": "官方对象同时包含高原、堡垒/古城及岩画范围，地理栏为范围字符串；WD条目偏地貌高原，未核定其单点可代表整个文化组团或特定堡垒。未将范围取中心、未采用乡镇或单座堡垒代整体，暂保留空坐标，不宣称真实地理位置未知。",
+        "point": null,
+        "precision": null,
+        "rank": null,
+        "source_uri": null,
+        "statement_id": null
+      },
+      "country_label": "Niger",
+      "independent_review": {
+        "method": "Independent reading of frozen official primary page and specific country profile; full WD metadata/P4171 checks; same-object P625 GUID/Earth/rank/precision comparison when adopted; full1795 title/alias/ref and5739 source-name review plus near/fuzzy signals manually considered. No expert/human archaeological confirmation. Source report sha256:00cffa1fd91d20af0f6b12b891379ef817b3f19ab534256c722e0aa55750663c.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/protection_scope_review",
+        "status": "approved"
+      },
+      "provenance": {
+        "deduplication": {
+          "base_count": 1795,
+          "id_collisions": [],
+          "nearest_existing_points": [],
+          "normalized_name_matches": [],
+          "old_source_ref_matches": [],
+          "original_world_raw_count": 5632,
+          "source_label_matches": [],
+          "source_locations_count": 5739,
+          "unknown_point_limit": "No geometric duplicate test or gap reduction claimed when no adopted point exists. Same physical parent/component scopes require independent review."
+        },
+        "geometry_scope": "official cultural plateau-and-fortified-sites grouping; no single verified point",
+        "historical_stage_status": "not_reviewed; no dates inferred",
+        "independent_source_review": {
+          "approval_scope": "approved_unknown_representative",
+          "reason": "Official Plateau et Fortin cultural scope includes fortified remains and rock-art sites. Distinct from the existing city of Agadez. Keep one official group and null representative; the broader WD landform entity is only a P4171/name-bridge clue, not an equivalence, coordinate or source of descriptions/aliases for this cultural scope.",
+          "report_sha256": "00cffa1fd91d20af0f6b12b891379ef817b3f19ab534256c722e0aa55750663c"
+        },
+        "official": {
+          "category": "Cultural",
+          "geometry_scope": "official cultural plateau-and-fortified-sites grouping; no single verified point",
+          "license": null,
+          "original_coordinate_literal": "N17 12 - 20 30 E8 6 - 10 57",
+          "scope": "按正式候选名录的Plateau et Fortin文化对象记录，区别于Djado乡镇、地貌高原或单一堡垒；范围粒度尚待进一步独立核对，不把自然高原本身当独立考古遗址。",
+          "source_sha256": "202bdd88c104708b616c69bbc3d4d0a285fe186d7df83e43d388cd8397fb5f8f",
+          "submission_date": "26/05/2006",
+          "tentative_id": "5044",
+          "title": "Plateau et Fortin du Djado"
+        },
+        "region_source": {
+          "cache": "ne-profile.html",
+          "excerpt": "Africa, World Heritage Convention Regional Contact",
+          "normalized": "africa",
+          "sha256": "0ac4d0e85ad464a4b0d71848b7e225397d52ae150cf9ce44d73564640531c48b",
+          "uri": "https://whc.unesco.org/en/statesparties/ne/"
+        },
+        "scope_note": "按正式候选名录的Plateau et Fortin文化对象记录，区别于Djado乡镇、地貌高原或单一堡垒；范围粒度尚待进一步独立核对，不把自然高原本身当独立考古遗址。 官方对象同时包含高原、堡垒/古城及岩画范围，地理栏为范围字符串；WD条目偏地貌高原，未核定其单点可代表整个文化组团或特定堡垒。未将范围取中心、未采用乡镇或单座堡垒代整体，暂保留空坐标，不宣称真实地理位置未知。 当前来源国家与非洲分区只表示名录关联，不按点位或历史疆域推断政治归属；提名/保护/出版年不形成建造或使用阶段。",
+        "source_country": {
+          "cache": "ne-profile.html",
+          "code": "NE",
+          "label": "Niger",
+          "method": "Official specific StateParty profile URL and matching country link in the TentativeList entry, not point geocoding",
+          "sha256": "0ac4d0e85ad464a4b0d71848b7e225397d52ae150cf9ce44d73564640531c48b",
+          "uri": "https://whc.unesco.org/en/statesparties/ne/"
+        },
+        "source_policy": "Official pages prove cultural/mixed eligibility and factual scope, no full description/media reused; <=25 unique quotedwords per URI. WD entity metadata CC0 only, no automatic P31-only eligibility.",
+        "wikidata": {
+          "chosen_p625": null,
+          "coordinate_claims_not_acquired": false,
+          "filename": "Q1231998.json",
+          "modified": "2026-09-23T14:48:26Z",
+          "original_aliases": {
+            "fi": [
+              {
+                "language": "fi",
+                "value": "Djadon tasanko"
+              }
+            ],
+            "fr": [
+              {
+                "language": "fr",
+                "value": "Plateau du djado"
+              }
+            ]
+          },
+          "original_descriptions": {
+            "ar": {
+              "language": "ar",
+              "value": "سلسلة جبلية في النيجر"
+            },
+            "arz": {
+              "language": "arz",
+              "value": "سلسله جبليه فى نيجر"
+            },
+            "cs": {
+              "language": "cs",
+              "value": "nigerské pohoří"
+            },
+            "de": {
+              "language": "de",
+              "value": "Gebirgszug in Niger"
+            },
+            "en": {
+              "language": "en",
+              "value": "plateau and historical site in Niger"
+            },
+            "en-us": {
+              "language": "en-us",
+              "value": "plateau and historical site in Niger"
+            },
+            "fr": {
+              "language": "fr",
+              "value": "Massif nigérien"
+            },
+            "ig": {
+              "language": "ig",
+              "value": "ala dị larịị na Niger"
+            },
+            "ml": {
+              "language": "ml",
+              "value": "നൈജറിലെ പീഠഭൂമിയും ചരിത്ര സ്ഥലവും"
+            }
+          },
+          "original_labels": {
+            "arz": {
+              "language": "arz",
+              "value": "هضبة دجادو"
+            },
+            "ca": {
+              "language": "ca",
+              "value": "altiplà del Djadó"
+            },
+            "ceb": {
+              "language": "ceb",
+              "value": "Plateau du Djado"
+            },
+            "cs": {
+              "language": "cs",
+              "value": "Džado"
+            },
+            "de": {
+              "language": "de",
+              "value": "Plateau von Djado"
+            },
+            "en": {
+              "language": "en",
+              "value": "Djado Plateau"
+            },
+            "en-us": {
+              "language": "en-us",
+              "value": "Djado Plateau"
+            },
+            "eo": {
+              "language": "eo",
+              "value": "Altebenaĵo de Djado"
+            },
+            "fi": {
+              "language": "fi",
+              "value": "Djadon ylänkö"
+            },
+            "fr": {
+              "language": "fr",
+              "value": "plateau du Djado"
+            },
+            "ha": {
+              "language": "ha",
+              "value": "Djado Plateau"
+            },
+            "hu": {
+              "language": "hu",
+              "value": "Dzsádói-fennsík"
+            },
+            "it": {
+              "language": "it",
+              "value": "Djado"
+            },
+            "ka": {
+              "language": "ka",
+              "value": "ჯადოს პლატო"
+            },
+            "lt": {
+              "language": "lt",
+              "value": "Džado plynaukštė"
+            },
+            "nl": {
+              "language": "nl",
+              "value": "Djadoplateau"
+            },
+            "ru": {
+              "language": "ru",
+              "value": "Джадо (плато)"
+            },
+            "sv": {
+              "language": "sv",
+              "value": "Djadoplatån"
+            },
+            "tt": {
+              "language": "tt",
+              "value": "Джадо платосы"
+            },
+            "uk": {
+              "language": "uk",
+              "value": "Джада"
+            },
+            "vec": {
+              "language": "vec",
+              "value": "Djado"
+            },
+            "xh": {
+              "language": "xh",
+              "value": "Djado Plateau"
+            },
+            "zh": {
+              "language": "zh",
+              "value": "賈多高原"
+            }
+          },
+          "p4171_bridge": [
+            {
+              "id": "Q1231998$AC6B34CB-68B8-4C01-82E4-B34DF8771785",
+              "mainsnak": {
+                "datatype": "external-id",
+                "datavalue": {
+                  "type": "string",
+                  "value": "5044"
+                },
+                "hash": "fce6d9a7a0b6a1dc8746f95286bceca95c250103",
+                "property": "P4171",
+                "snaktype": "value"
+              },
+              "rank": "normal",
+              "type": "statement"
+            }
+          ],
+          "qid": "Q1231998",
+          "rejected_p625": [
+            {
+              "numeric_coordinate_omitted_from_public_draft": true,
+              "rank": "normal",
+              "reason": "官方对象同时包含高原、堡垒/古城及岩画范围，地理栏为范围字符串；WD条目偏地貌高原，未核定其单点可代表整个文化组团或特定堡垒。未将范围取中心、未采用乡镇或单座堡垒代整体，暂保留空坐标，不宣称真实地理位置未知。",
+              "statement_id": "q1231998$D82B256D-7B08-45F9-AF16-EEB3BF1770CA"
+            }
+          ],
+          "revision": 2548833487,
+          "sha256": "d69f6715febc577b756d445b12d88cd769d4089abc6b69a4937aaf00a263ce66",
+          "text_excluded_due_scope_mismatch": true
+        }
+      },
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "",
+          "note": "本候选仅核对公开文化资格、身份与定位来源；历史事件阶段尚未核验，未把行政提名/保护/出版年份转为生命周期。",
+          "phases": [],
+          "reviewed_at": null,
+          "status": "not_reviewed"
+        },
+        "contributors": [],
+        "description": "",
+        "description_zh": "",
+        "details": "Source country association: Niger (NE).",
+        "geography": {
+          "authority_id": "supplement:auth:whc-tentative:5044",
+          "countries": [
+            "NE"
+          ],
+          "note": "按正式候选名录的Plateau et Fortin文化对象记录，区别于Djado乡镇、地貌高原或单一堡垒；范围粒度尚待进一步独立核对，不把自然高原本身当独立考古遗址。 官方对象同时包含高原、堡垒/古城及岩画范围，地理栏为范围字符串；WD条目偏地貌高原，未核定其单点可代表整个文化组团或特定堡垒。未将范围取中心、未采用乡镇或单座堡垒代整体，暂保留空坐标，不宣称真实地理位置未知。 当前来源国家与非洲分区只表示名录关联，不按点位或历史疆域推断政治归属；提名/保护/出版年不形成建造或使用阶段。",
+          "point_count": 0,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-04",
+            "excerpt": "Le site du Djado est un ensemble fortifié très ancien",
+            "id": "qualification:whc-tentative:5044",
+            "license": null,
+            "publisher": "State Party submission / UNESCO World Heritage Centre",
+            "revision": "sha256:202bdd88c104708b616c69bbc3d4d0a285fe186d7df83e43d388cd8397fb5f8f",
+            "title": "Plateau et Fortin du Djado",
+            "uri": "https://whc.unesco.org/en/tentativelists/5044/"
+          }
+        },
+        "id": "auth:whc-tentative:5044",
+        "location_precision": null,
+        "names": [],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": null,
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-04",
+            "excerpt": "Le site du Djado est un ensemble fortifié très ancien",
+            "id": "qualification:whc-tentative:5044",
+            "license": null,
+            "publisher": "State Party submission / UNESCO World Heritage Centre",
+            "revision": "sha256:202bdd88c104708b616c69bbc3d4d0a285fe186d7df83e43d388cd8397fb5f8f",
+            "title": "Plateau et Fortin du Djado",
+            "uri": "https://whc.unesco.org/en/tentativelists/5044/"
+          },
+          {
+            "accessed": "2026-11-04",
+            "excerpt": "",
+            "id": "wikidata:Q1231998",
+            "license": "CC0-1.0",
+            "publisher": "Wikidata contributors",
+            "revision": "2548833487; sha256:d69f6715febc577b756d445b12d88cd769d4089abc6b69a4937aaf00a263ce66",
+            "title": "Djado Plateau",
+            "uri": "https://www.wikidata.org/wiki/Q1231998"
+          },
+          {
+            "accessed": "2026-11-04",
+            "excerpt": "Africa, World Heritage Convention Regional Contact",
+            "id": "region:whc-NE",
+            "license": null,
+            "publisher": "UNESCO World Heritage Centre",
+            "revision": "sha256:0ac4d0e85ad464a4b0d71848b7e225397d52ae150cf9ce44d73564640531c48b",
+            "title": "UNESCO State Party profile — Niger",
+            "uri": "https://whc.unesco.org/en/statesparties/ne/"
+          }
+        ],
+        "source_uri": "https://whc.unesco.org/en/tentativelists/5044/",
+        "title": "Plateau et Fortin du Djado",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1231998.json",
+          "sha256": "d69f6715febc577b756d445b12d88cd769d4089abc6b69a4937aaf00a263ce66",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1231998.json"
+        },
+        {
+          "filename": "ne-profile.html",
+          "sha256": "0ac4d0e85ad464a4b0d71848b7e225397d52ae150cf9ce44d73564640531c48b",
+          "uri": "https://whc.unesco.org/en/statesparties/ne/"
+        },
+        {
+          "filename": "whc-tentative-5044.html",
+          "sha256": "202bdd88c104708b616c69bbc3d4d0a285fe186d7df83e43d388cd8397fb5f8f",
+          "uri": "https://whc.unesco.org/en/tentativelists/5044/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本同一文化实体的公开EarthP625，单一有效声明原值；precision是来源数值参数而非实测误差，未从不规则官方DMS修猜。",
+        "point": [
+          10.1138,
+          6.0888
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q28493902",
+        "statement_id": "Q28493902$c989cd1e-4c30-239e-f003-5ea658b3bb9e"
+      },
+      "country_label": "Cameroon",
+      "independent_review": {
+        "method": "Independent reading of frozen official primary page and specific country profile; full WD metadata/P4171 checks; same-object P625 GUID/Earth/rank/precision comparison when adopted; full1795 title/alias/ref and5739 source-name review plus near/fuzzy signals manually considered. No expert/human archaeological confirmation. Source report sha256:00cffa1fd91d20af0f6b12b891379ef817b3f19ab534256c722e0aa55750663c.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/protection_scope_review",
+        "status": "approved"
+      },
+      "provenance": {
+        "deduplication": {
+          "base_count": 1795,
+          "id_collisions": [],
+          "nearest_existing_points": [
+            {
+              "distance_km": 25.90403,
+              "kind": "representative",
+              "point": [
+                10.077777777777778,
+                5.85861111111111
+              ],
+              "site_id": "auth:whc-tentative:6331",
+              "title": "Shum Laka"
+            },
+            {
+              "distance_km": 298.27977,
+              "kind": "representative",
+              "point": [
+                8.78276,
+                3.75698
+              ],
+              "site_id": "wd:Q8342845",
+              "title": "St. Elisabeth Cathedral"
+            },
+            {
+              "distance_km": 572.347,
+              "kind": "source",
+              "name": "Belo Monte",
+              "point": [
+                7.4435,
+                1.6842777777
+              ],
+              "ref": "1750-006",
+              "site_id": "whc:1750",
+              "source_index": 5
+            },
+            {
+              "distance_km": 577.28122,
+              "kind": "source",
+              "name": "Sundy",
+              "point": [
+                7.3831388889,
+                1.6690555556
+              ],
+              "ref": "1750-005",
+              "site_id": "whc:1750",
+              "source_index": 3
+            },
+            {
+              "distance_km": 641.25328,
+              "kind": "representative",
+              "point": [
+                4.55222,
+                7.75556
+              ],
+              "site_id": "whc:1118",
+              "title": "Osun-Osogbo Sacred Grove"
+            }
+          ],
+          "normalized_name_matches": [],
+          "old_source_ref_matches": [],
+          "original_world_raw_count": 5632,
+          "source_label_matches": [],
+          "source_locations_count": 5739,
+          "unknown_point_limit": "No geometric duplicate test or gap reduction claimed when no adopted point exists. Same physical parent/component scopes require independent review."
+        },
+        "geometry_scope": "same-identity palace compound representative, not town or museum collection",
+        "historical_stage_status": "not_reviewed; no dates inferred",
+        "independent_source_review": {
+          "approval_scope": "approved_source_representative",
+          "reason": "Official palace/chiefdom compound and WMF palace-conservation page establish the physical architectural place, distinct from Shum Laka rockshelter and the Mandara cultural landscape. Same WD palace entity has6320 bridge and one public Earth representative. Do not repair the malformed official DMS or map a town/museum collection instead; reconstruction chronology remains unreviewed.",
+          "report_sha256": "00cffa1fd91d20af0f6b12b891379ef817b3f19ab534256c722e0aa55750663c"
+        },
+        "official": {
+          "category": "Cultural",
+          "geometry_scope": "same-identity palace compound representative, not town or museum collection",
+          "license": null,
+          "original_coordinate_literal": "N06°05-360’ ; E010° 06.800’",
+          "scope": "对象是Bafut王宫/酋长宫建筑群自身，不是Bafut行政镇、宫内博物馆藏品或其他旧宫。未修猜官方不规则坐标；公开WD同一宫殿点独立保留为代表点。重建范围与传统建筑的具体历史阶段仍未核验。",
+          "source_sha256": "c40cef06856e3bfe93e4788e481b495c64136cdc0ed5a69a567f9a0bf0c9adf7",
+          "submission_date": "02/02/2018",
+          "tentative_id": "6320",
+          "title": "La Chefferie de Bafut"
+        },
+        "region_source": {
+          "cache": "cm-profile.html",
+          "excerpt": "Africa, World Heritage Convention Regional Contact",
+          "normalized": "africa",
+          "sha256": "e612546c607ad610d8bb61f2539f7fbe4f059ab1dd5f94d9642c0c53a209ff83",
+          "uri": "https://whc.unesco.org/en/statesparties/cm/"
+        },
+        "scope_note": "对象是Bafut王宫/酋长宫建筑群自身，不是Bafut行政镇、宫内博物馆藏品或其他旧宫。未修猜官方不规则坐标；公开WD同一宫殿点独立保留为代表点。重建范围与传统建筑的具体历史阶段仍未核验。 固定版本同一文化实体的公开EarthP625，单一有效声明原值；precision是来源数值参数而非实测误差，未从不规则官方DMS修猜。 当前来源国家与非洲分区只表示名录关联，不按点位或历史疆域推断政治归属；提名/保护/出版年不形成建造或使用阶段。",
+        "source_country": {
+          "cache": "cm-profile.html",
+          "code": "CM",
+          "label": "Cameroon",
+          "method": "Official specific StateParty profile URL and matching country link in the TentativeList entry, not point geocoding",
+          "sha256": "e612546c607ad610d8bb61f2539f7fbe4f059ab1dd5f94d9642c0c53a209ff83",
+          "uri": "https://whc.unesco.org/en/statesparties/cm/"
+        },
+        "source_policy": "Official pages prove cultural/mixed eligibility and factual scope, no full description/media reused; <=25 unique quotedwords per URI. WD entity metadata CC0 only, no automatic P31-only eligibility.",
+        "wikidata": {
+          "chosen_p625": {
+            "id": "Q28493902$c989cd1e-4c30-239e-f003-5ea658b3bb9e",
+            "mainsnak": {
+              "datatype": "globe-coordinate",
+              "datavalue": {
+                "type": "globecoordinate",
+                "value": {
+                  "altitude": null,
+                  "globe": "http://www.wikidata.org/entity/Q2",
+                  "latitude": 6.0888,
+                  "longitude": 10.1138,
+                  "precision": 0.0001
+                }
+              },
+              "hash": "2b0aa85d30202dbce0ae015699d62304661052b1",
+              "property": "P625",
+              "snaktype": "value"
+            },
+            "rank": "normal",
+            "type": "statement"
+          },
+          "coordinate_claims_not_acquired": false,
+          "filename": "Q28493902.json",
+          "modified": "2026-03-28T02:46:13Z",
+          "original_aliases": {
+            "fr": [
+              {
+                "language": "fr",
+                "value": "Chefferie de Bafut"
+              }
+            ]
+          },
+          "original_descriptions": {
+            "de": {
+              "language": "de",
+              "value": "Kulturgut in Kamerun"
+            },
+            "en": {
+              "language": "en",
+              "value": "monument of Cameroon"
+            }
+          },
+          "original_labels": {
+            "en": {
+              "language": "en",
+              "value": "Bafut palace"
+            },
+            "fr": {
+              "language": "fr",
+              "value": "La chefferie de Bafut"
+            },
+            "tt": {
+              "language": "tt",
+              "value": "Бафут сарае"
+            }
+          },
+          "p4171_bridge": [
+            {
+              "id": "Q28493902$EF8466FC-8FD8-41C6-A383-278D0A4EAED6",
+              "mainsnak": {
+                "datatype": "external-id",
+                "datavalue": {
+                  "type": "string",
+                  "value": "6320"
+                },
+                "hash": "53f4b8a3ca419d134289409d9c34b3aaf704c3e7",
+                "property": "P4171",
+                "snaktype": "value"
+              },
+              "rank": "normal",
+              "type": "statement"
+            }
+          ],
+          "qid": "Q28493902",
+          "rejected_p625": [],
+          "revision": 2475743089,
+          "sha256": "6c30e58ed0f4b7ddadb7168505458dfb0ef3b7dc9d4c2e689339f79d11b3b2ce",
+          "text_excluded_due_scope_mismatch": false
+        }
+      },
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "",
+          "note": "本候选仅核对公开文化资格、身份与定位来源；历史事件阶段尚未核验，未把行政提名/保护/出版年份转为生命周期。",
+          "phases": [],
+          "reviewed_at": null,
+          "status": "not_reviewed"
+        },
+        "contributors": [
+          "Wikidata contributors"
+        ],
+        "description": "monument of Cameroon",
+        "description_zh": "",
+        "details": "Source country association: Cameroon (CM).",
+        "geography": {
+          "authority_id": "supplement:auth:whc-tentative:6320",
+          "countries": [
+            "CM"
+          ],
+          "note": "对象是Bafut王宫/酋长宫建筑群自身，不是Bafut行政镇、宫内博物馆藏品或其他旧宫。未修猜官方不规则坐标；公开WD同一宫殿点独立保留为代表点。重建范围与传统建筑的具体历史阶段仍未核验。 固定版本同一文化实体的公开EarthP625，单一有效声明原值；precision是来源数值参数而非实测误差，未从不规则官方DMS修猜。 当前来源国家与非洲分区只表示名录关联，不按点位或历史疆域推断政治归属；提名/保护/出版年不形成建造或使用阶段。",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-04",
+            "excerpt": "",
+            "id": "wikidata:Q28493902",
+            "license": "CC0-1.0",
+            "publisher": "Wikidata contributors",
+            "revision": "2475743089; sha256:6c30e58ed0f4b7ddadb7168505458dfb0ef3b7dc9d4c2e689339f79d11b3b2ce",
+            "title": "Bafut palace",
+            "uri": "https://www.wikidata.org/wiki/Q28493902"
+          }
+        },
+        "id": "auth:whc-tentative:6320",
+        "location_precision": null,
+        "names": [
+          "La chefferie de Bafut",
+          "Bafut palace",
+          "Бафут сарае",
+          "Chefferie de Bafut"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          10.1138,
+          6.0888
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-04",
+            "excerpt": "La Chefferie représente une tradition, celle du peuple Bafut et une culture vivante de l’aire culturelle Grassfields.",
+            "id": "qualification:whc-tentative:6320",
+            "license": null,
+            "publisher": "State Party submission / UNESCO World Heritage Centre",
+            "revision": "sha256:c40cef06856e3bfe93e4788e481b495c64136cdc0ed5a69a567f9a0bf0c9adf7",
+            "title": "La Chefferie de Bafut",
+            "uri": "https://whc.unesco.org/en/tentativelists/6320/"
+          },
+          {
+            "accessed": "2026-11-04",
+            "excerpt": "",
+            "id": "wikidata:Q28493902",
+            "license": "CC0-1.0",
+            "publisher": "Wikidata contributors",
+            "revision": "2475743089; sha256:6c30e58ed0f4b7ddadb7168505458dfb0ef3b7dc9d4c2e689339f79d11b3b2ce",
+            "title": "Bafut palace",
+            "uri": "https://www.wikidata.org/wiki/Q28493902"
+          },
+          {
+            "accessed": "2026-11-04",
+            "excerpt": "Africa, World Heritage Convention Regional Contact",
+            "id": "region:whc-CM",
+            "license": null,
+            "publisher": "UNESCO World Heritage Centre",
+            "revision": "sha256:e612546c607ad610d8bb61f2539f7fbe4f059ab1dd5f94d9642c0c53a209ff83",
+            "title": "UNESCO State Party profile — Cameroon",
+            "uri": "https://whc.unesco.org/en/statesparties/cm/"
+          },
+          {
+            "accessed": "2026-11-04",
+            "excerpt": "Bafut Palace is located in the heart of the Bafut kingdom in northwest Cameroon.",
+            "id": "scope:wmf-bafut",
+            "license": null,
+            "publisher": "World Monuments Fund",
+            "revision": "sha256:7a8751a0ff3764edbfd1f8295de3447cce6e50dec10faabbdb6c746cd7a70800",
+            "title": "Bafut Palace",
+            "uri": "https://www.wmf.org/projects/bafut-palace"
+          }
+        ],
+        "source_uri": "https://whc.unesco.org/en/tentativelists/6320/",
+        "title": "La Chefferie de Bafut",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q28493902.json",
+          "sha256": "6c30e58ed0f4b7ddadb7168505458dfb0ef3b7dc9d4c2e689339f79d11b3b2ce",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q28493902.json"
+        },
+        {
+          "filename": "cm-profile.html",
+          "sha256": "e612546c607ad610d8bb61f2539f7fbe4f059ab1dd5f94d9642c0c53a209ff83",
+          "uri": "https://whc.unesco.org/en/statesparties/cm/"
+        },
+        {
+          "filename": "whc-tentative-6320.html",
+          "sha256": "c40cef06856e3bfe93e4788e481b495c64136cdc0ed5a69a567f9a0bf0c9adf7",
+          "uri": "https://whc.unesco.org/en/tentativelists/6320/"
+        },
+        {
+          "filename": "wmf-bafut.html",
+          "sha256": "7a8751a0ff3764edbfd1f8295de3447cce6e50dec10faabbdb6c746cd7a70800",
+          "uri": "https://www.wmf.org/projects/bafut-palace"
+        }
+      ]
+    }
+  ],
+  "reviewed_candidates_sha256": "bafb01060cf5abb6f87662edb238ce1f5d2e30497fa33d6dee356822583f922d",
+  "schema_version": 1,
+  "selection": "Fixed five independently source-reviewed cultural identities from official State Party tentative submissions in Africa; deterministic SHA256(africa-supplement-v1:<id>) order. Not a representative continental sample, inscription list or chronology approval."
+}

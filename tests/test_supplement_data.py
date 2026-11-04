@@ -557,27 +557,27 @@ def test_real_api_exposes_197_source_declared_countries_and_independent_suppleme
     response = bundled_client.get("/api/coverage")
     assert response.status_code == 200
     coverage = response.json()
-    assert coverage["corpus_version"] == "global-v8" and coverage["total"] == 1795
+    assert coverage["corpus_version"] == "global-v9" and coverage["total"] == 1800
     countries = {row["id"]: row for row in coverage["countries"]}
     assert len(countries) == 197
     labels = supplement.country_labels()
     assert all(countries[code]["label"] == label
-               and countries[code]["count"] == (2 if code == "CD" else 1)
+               and countries[code]["count"] == (3 if code == "CD" else 1)
                for code, label in labels.items())
     previous = json.loads((supplement.DATA_DIR / "catalogue_manifest.json").read_bytes())
     assert len(previous["countries"]) == 159
     assert all(countries[row["id"]]["label"] == row["label"] for row in previous["countries"])
     assert {row["id"]: row["count"] for row in coverage["sources"]} == {
-        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 170,
+        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 175,
     }
-    assert coverage["locations"] == {"mapped": 1784, "polar": 3, "unknown": 8}
+    assert coverage["locations"] == {"mapped": 1786, "polar": 3, "unknown": 11}
     assert coverage["authority"]["covered"] == coverage["authority"]["eligible_total"] == 1033
     assert coverage["polar_authority"]["covered"] == 91
     spatial = coverage["spatial_locations"]
     assert spatial["ready"] and spatial["records"] == 1128 and spatial["points"] == 5739
-    assert spatial["display_points"] == 6186
+    assert spatial["display_points"] == 6188
     status = bundled_client.get("/api/status").json()
-    assert status["corpus"]["count"] == 1795 and status["corpus"]["version"] == "global-v8"
+    assert status["corpus"]["count"] == 1800 and status["corpus"]["version"] == "global-v9"
     assert status["semantic"]["ready"] is False and status["history"]["ready"] is False
 
 

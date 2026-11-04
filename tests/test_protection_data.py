@@ -678,8 +678,8 @@ def test_published_extension_preserves_old1700_fields_order_objects_and_shared_d
     assert all(old is new for old, new in zip(base1700, loaded[:1700], strict=True))
     assert [site.model_dump(mode="json") for site in loaded[:1700]] == before
     assert [digest(build_document(site).encode()) for site in loaded[:1700]] == documents
-    assert CORPUS_VERSION == "global-v8"
-    assert [site.model_dump(mode="json") for site in load_corpus()] == [
+    assert CORPUS_VERSION == "global-v9"
+    assert [site.model_dump(mode="json") for site in load_corpus()[:1795]] == [
         site.model_dump(mode="json") for site in loaded
     ]
     assert all(site.source_kind == "supplement" and site.types == ["historic-site"]
@@ -765,7 +765,7 @@ def test_real_combined_source_groups_preserve_world5632_sequence_and_individual_
     coverage = index.spatial_coverage()
     assert coverage is not None and coverage.ready
     assert (coverage.records, coverage.points, coverage.distinct_points,
-            coverage.duplicate_points, coverage.display_points) == (1128, 5739, 5434, 305, 6186)
+            coverage.duplicate_points, coverage.display_points) == (1128, 5739, 5434, 305, 6188)
     groups = {group.version: group for group in coverage.source_groups}
     assert set(groups) == {"world-locations-v1", "protection-locations-v1"}
     assert set(groups["world-locations-v1"].site_ids) == set(old_locations.points)
@@ -787,8 +787,8 @@ def test_actual_warehouse_point_does_not_match_arqa_as_an_original_cultural_site
     included = SpatialBounds.from_csv("36.04669,34.53037,36.04673,34.53041")
     assert "auth:unesco-chp:626" not in {site.id for site in index.page(bbox=excluded).sites}
     assert "auth:unesco-chp:626" in {site.id for site in index.page(bbox=included).sites}
-    assert index.page(bbox=SpatialBounds.from_csv("-180,-90,180,90")).total == 1787
-    assert index.coverage().locations.model_dump() == {"mapped": 1784, "polar": 3, "unknown": 8}
+    assert index.page(bbox=SpatialBounds.from_csv("-180,-90,180,90")).total == 1789
+    assert index.coverage().locations.model_dump() == {"mapped": 1786, "polar": 3, "unknown": 11}
 
 
 def test_false_overlap_flag_and_component_rows_are_not_fabricated_as_new_sites() -> None:
