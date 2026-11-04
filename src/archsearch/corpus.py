@@ -25,7 +25,7 @@ from archsearch.domain import ChronologyReview, PeriodEvidence, Site, SourceRefe
 DATA_DIR = Path(__file__).with_name("data")
 DATASET_VERSION = "v4.1"
 CURATED_VERSION = "global-v2"
-CORPUS_VERSION = "global-v5"
+CORPUS_VERSION = "global-v6"
 GLOBAL_REGION_QUOTAS = {
     "east-asia": 20, "south-asia": 15, "west-central-asia": 15, "africa": 15,
     "europe": 10, "north-america": 10, "south-america": 10, "oceania": 5,
@@ -181,16 +181,22 @@ def normalize_place(place: dict[str, Any], precision: str | None = None) -> Site
     )
 
 
+def source_excerpts(site: Site) -> list[str]:
+    """Expose only the source excerpts included in the shared search document."""
+    if site.source_kind != "supplement":
+        return []
+    return list(dict.fromkeys(
+        source.excerpt for source in site.source_refs
+        if source.excerpt and (
+            source.id.startswith("qualification:") or source.uri == site.source_uri
+        )
+    ))
+
+
 def build_document(site: Site) -> str:
     """Return the exact same multilingual source document for lexical and dense search."""
     parts = [site.title, "; ".join(site.names), site.description, site.description_zh, site.details]
-    if site.source_kind == "supplement":
-        parts.extend(dict.fromkeys(
-            source.excerpt for source in site.source_refs
-            if source.excerpt and (
-                source.id.startswith("qualification:") or source.uri == site.source_uri
-            )
-        ))
+    parts.extend(source_excerpts(site))
     parts.extend(("Types: " + ", ".join(site.types), "Periods: " + ", ".join(site.periods)))
     return "\n".join(part for part in parts if part)
 
@@ -332,6 +338,7 @@ def load_corpus(data_dir: Path | None = None) -> list[Site]:
     """Extend the unchanged curated cohort with a pinned, licensed world catalogue."""
     from archsearch.catalogue_data import CatalogueError, load_catalogue
     from archsearch.polar_data import PolarDataError, load_polar
+    from archsearch.regional_data import RegionalError, load_regional
     from archsearch.supplement_data import SupplementError, load_supplement
 
     directory = Path(data_dir) if data_dir is not None else DATA_DIR
@@ -345,8 +352,11 @@ def load_corpus(data_dir: Path | None = None) -> list[Site]:
         polar = load_polar(worldwide, directory)
         if data_dir is not None and not (directory / "supplement_manifest.json").exists():
             return polar
-        return load_supplement(polar, directory)
-    except (CatalogueError, PolarDataError, SupplementError) as error:
+        supplemented = load_supplement(polar, directory)
+        if data_dir is not None and not (directory / "regional_manifest.json").exists():
+            return supplemented
+        return load_regional(supplemented, directory)
+    except (CatalogueError, PolarDataError, SupplementError, RegionalError) as error:
         raise CorpusError(str(error)) from error
 
 

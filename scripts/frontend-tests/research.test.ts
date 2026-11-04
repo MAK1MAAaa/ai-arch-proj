@@ -445,6 +445,9 @@ test('an independently selected unknown supplement exports its own evidence with
   const supplementSource = report.sources.find(source => source.name === 'Country cultural supplement');
   assert.equal(supplementSource?.version, 'country-supplement-v1');
   assert.equal(supplementSource?.license, 'Mixed rights — see individual source_refs');
+  const regionalSource = report.sources.find(source => source.name === 'Regional cultural supplement');
+  assert.equal(regionalSource?.version, 'regional-supplement-v1');
+  assert.equal(regionalSource?.license, 'Mixed rights — see individual source_refs');
   assert.equal(report.spatial?.selected?.representative_point, null);
   assert.deepEqual(plain(report.spatial?.selected?.source_points), []);
   assert.equal('score' in (report.selected_site as Record<string, unknown>), false);

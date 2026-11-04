@@ -18,7 +18,7 @@ from archsearch.config import DATA_DIR, MODEL_ID, MODEL_REVISION, TEXT_VERSION
 from archsearch.corpus import load_corpus
 from archsearch.domain import Site
 from archsearch.index import IndexUnavailable, SemanticIndex, document_contract
-from archsearch.search import SearchEngine, SearchRequest
+from archsearch.search import BM25_B, BM25_K1, TOKENIZER_VERSION, SearchEngine, SearchRequest
 
 Mode = Literal["bm25", "semantic"]
 Language = Literal["zh", "en"]
@@ -441,6 +441,18 @@ def evaluate_corpus(
         "model_revision": MODEL_REVISION,
         "text_version": TEXT_VERSION,
         "document_contract": document_contract(sites),
+        "lexical_contract": {
+            "algorithm": "BM25",
+            "tokenizer_version": TOKENIZER_VERSION,
+            "normalization": "NFKC and Unicode casefold",
+            "han": (
+                "Whole Han runs plus adjacent two-character fragments within each run; "
+                "punctuation and non-Han runs break fragment boundaries. "
+                "Single characters match only standalone Han runs."
+            ),
+            "k1": BM25_K1,
+            "b": BM25_B,
+        },
         "semantic_ready": semantic_usable,
         "warmup_query": WARMUP_QUERY,
         "cold_start_ms": cold_start_ms,

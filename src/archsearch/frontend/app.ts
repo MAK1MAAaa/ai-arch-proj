@@ -200,7 +200,7 @@
   let initialStatePending = true;
 
   const fieldLabels: Readonly<Record<string, string>> = {
-    title: "地点名称", names: "别名", description: "原始描述", description_zh: "中文来源描述", types: "地点类型",
+    title: "地点名称", names: "别名", description: "原始描述", description_zh: "中文描述／译文", source_refs: "来源资格片段", types: "地点类型",
     periods: "原始时期", details: "原始补充记录", search_text: "检索文本",
   };
 
@@ -260,12 +260,17 @@
     return Boolean(value.trim()) && !["none", "null"].includes(value.trim().toLowerCase());
   }
 
+  function chineseDescriptionLabel(site: Site): string {
+    return site.source_refs?.some((source) => source.id === `translation:wikidata:${site.id.slice(3)}`)
+      ? "中文译文（据 Wikidata 英文）" : "中文来源描述";
+  }
+
   function sourceExcerpt(site: Site): { label: string; text: string } {
-    if (site.description_zh && hasSourceText(site.description_zh)) return { label: "中文来源描述", text: site.description_zh };
+    if (site.description_zh && hasSourceText(site.description_zh)) return { label: chineseDescriptionLabel(site), text: site.description_zh };
     if (site.description.startsWith("An ancient place, cited:") && hasSourceText(site.details)) {
       return { label: "目录补充原文", text: site.details };
     }
-    if (hasSourceText(site.description)) return { label: site.source_kind === "supplement" ? "Wikidata 来源描述" : "来源描述原文", text: site.description };
+    if (hasSourceText(site.description)) return { label: site.source_kind === "supplement" && site.id.startsWith("wd:") ? "Wikidata 来源描述" : "来源描述原文", text: site.description };
     if (site.source_kind === "supplement" && hasSourceText(site.details)) return { label: "来源结构化信息", text: site.details };
     if (hasSourceText(site.details)) return { label: "补充记录原文", text: site.details };
     return { label: "原文状态", text: "当前导出未提供描述，请打开详情核验来源记录。" };
@@ -392,7 +397,7 @@
     ui.preparationNote.hidden = mode !== "semantic" || !state.statusLoaded || state.semanticReady;
     ui.modeExplanation.textContent = mode === "semantic"
       ? "用中文描述研究问题，在英文原文中寻找语义相近的资料；排序分数不是相关概率，仍需核验原文。"
-      : "按原文字词匹配，建议输入英文关键词或古地名；不会自动翻译或扩展同义词，零命中不代表没有相关资料。";
+      : "匹配资料原词和已有中文描述；中文按相邻双字片段匹配，建议输入两个字以上。不会实时翻译或扩展同义词，部分片段重叠也可能命中。";
     ui.exampleHint.textContent = mode === "semantic"
       ? "中文问题示例；选择后会同步切换到对应地点类型。"
       : "英文原词示例；选择后会同步切换到对应地点类型。";
@@ -740,7 +745,7 @@
       top.append(titleArea, element("span", "result-arrow", "↗"));
       const excerpt = sourceExcerpt(site);
       const description = element("p", "result-description", excerpt.text);
-      description.lang = excerpt.label === "原文状态" || excerpt.label === "中文来源描述" ? "zh-CN" : "en";
+      description.lang = excerpt.label === "原文状态" || excerpt.label.startsWith("中文") ? "zh-CN" : "en";
       const metadata = element("div", "result-metadata");
       metadata.append(element("span", "result-coordinate", coordinateLabel(site)), element("span", "result-score", scoreLabel(result.score, data.mode)));
       const viewHint = element("span", "result-view-hint");
@@ -1202,7 +1207,7 @@
     nodes.push(element("p", "detail-note", "来源原文保留原语言；未生成历史摘要。"), description);
     if (site.description_zh && hasSourceText(site.description_zh)) {
       const chinese = element("p", "detail-description", site.description_zh); chinese.lang = "zh-CN";
-      nodes.push(detailSection("中文来源描述", chinese));
+      nodes.push(detailSection(chineseDescriptionLabel(site), chinese));
     }
     nodes.push(detailSection("年代证据与地图联动", phaseContent(site)));
     const details = element("p", null, hasSourceText(site.details)
@@ -1243,7 +1248,7 @@
     }
     const fields = strings(matchedFields).map((field) => fieldLabels[field] || field);
     if (state.results.some((result) => result.site.id === site.id)) {
-      const matches = detailSection("原文字词匹配字段", fields.join(" · ") || "未发现查询与原文字段的字词重叠。");
+      const matches = detailSection("字词片段匹配字段", fields.join(" · ") || "未发现查询与检索字段的字词片段重叠。");
       matches.append(element("p", "detail-note", "仅展示成功检索的字词重叠，不解释语义模型的排序依据；中文问题仍可能检索到英文候选。"));
       nodes.push(matches);
     } else nodes.push(detailSection("选择方式", "从全库目录直接选择；此处没有附加检索分数或排名，不将目录选择解释为查询命中。"));
