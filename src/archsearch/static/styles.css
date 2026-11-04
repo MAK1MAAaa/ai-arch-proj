@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+.source-attribution { margin: 0 0 24px; padding: 16px 0; border-top: 1px solid var(--line); font-size: 12px; line-height: 1.9; overflow-wrap: anywhere; }
+
 .registered-areas { border-left: 2px solid #286f80; padding-left: 12px; }
 .registered-areas h4 { display: flex; align-items: center; gap: 8px; }
 .registered-area-swatch { width: 24px; flex: 0 0 24px; border-top: 2px dashed #286f80; }
@@ -277,6 +279,10 @@
 .detail-section h4,
 .detail-id {
   font-size: 11px;
+}
+
+.detail-id {
+  overflow-wrap: anywhere;
 }
 
 .detail-fact,

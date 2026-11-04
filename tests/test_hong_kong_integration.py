@@ -10,14 +10,14 @@ from fastapi.testclient import TestClient
 
 from archsearch import hong_kong_data as cohort
 from archsearch.api import create_app
-from archsearch.corpus import build_document, load_corpus, load_pre_hong_kong_corpus
+from archsearch.corpus import build_document, load_pre_hong_kong_corpus, load_pre_singapore_corpus
 from archsearch.evaluation import evaluate_corpus, load_queries
 from archsearch.hong_kong_areas import load_hong_kong_area_group
 from archsearch.supplement_data import base_contract
 
 
 def test_complete_hong_kong_supplement_preserves_every_original2976_field() -> None:
-    before, current = load_pre_hong_kong_corpus(), load_corpus()
+    before, current = load_pre_hong_kong_corpus(), load_pre_singapore_corpus()
     assert base_contract(before) == {
         "base_count": 2976,
         "base_ids_sha256": "7dfba2896df4370dc078372b735aaddc3141fcba36ef2c2135d40fa4cc0ef830",
@@ -100,7 +100,7 @@ def test_source_polygons_are_separate_from_points_and_registration_extents(
 ) -> None:
     client = hong_kong_client
     status = client.get("/api/status").json()
-    assert status["corpus"]["count"] == 3116 and not status["semantic"]["ready"]
+    assert status["corpus"]["count"] == 3193 and not status["semantic"]["ready"]
     assert status["registered_areas"]["ready"]
     assert status["registered_areas"]["version"] == "registered-areas-v1+hong-kong-polygons-v1"
     assert (status["registered_areas"]["sites"], status["registered_areas"]["features"],
@@ -147,5 +147,5 @@ def test_twenty_paired_diagnostics_leave_relevance_metrics_unconfirmed(tmp_path:
         f"hk{number:02d}" for number in range(1, 21)
     ]
     report = evaluate_corpus(tmp_path / "no-model", tmp_path / "hk-rankings.json", queries=queries)
-    assert report["corpus_count"] == 3116 and report["metrics"] is None
+    assert report["corpus_count"] == 3193 and report["metrics"] is None
     assert not report["qrels"]["confirmed"] and not report["runs_complete"]

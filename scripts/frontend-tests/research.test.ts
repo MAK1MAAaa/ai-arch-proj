@@ -33,7 +33,7 @@ interface ExportResult<T> {
   response: SearchResponse<T>;
   map: HistoryView | null;
   selection: { site: string | null; phase: string | null };
-  sources: { name: string; license: string; version?: string | null; note?: string; uri?: string; license_uri?: string }[];
+  sources: { name: string; license: string; version?: string | null; note?: string; uri?: string; license_uri?: string; accessed?: string }[];
   registered_areas: RegisteredAreaSnapshot | null;
   selected_site: unknown;
   spatial: { metadata: unknown; selected: { site_id: string; representative_point: [number, number] | null; source_points: [number, number][]; records: { source_index: number; coordinate: [number, number]; name: string; ref: string }[]; source?: { name: string; uri: string; version: string; license: string; license_uri: string; sha256: string } | null } | null } | null;
@@ -396,13 +396,18 @@ test('export provenance includes source release, attribution, license and interp
   assert.equal(canada?.version, 'canada-dfhd-v1');
   assert.equal(canada?.license, 'Open Government Licence - Canada; Wikidata structured claims CC0');
   assert.match(canada?.note ?? '', /Parks Canada.*reference points.*separate from project identity approval/u);
-  const subdivisions = exported.sources.find(source => source.version === 'source-subdivisions-v2');
+  const subdivisions = exported.sources.find(source => source.version === 'source-subdivisions-v3');
   assert.equal(subdivisions?.license, 'Mixed rights — DFHD fields OGL-Canada; CSDI custom terms; CRHP, Parks Canada and AMO webpages retain individual rights');
   assert.equal(subdivisions?.uri, 'https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/SUBDIVISIONS-LICENSE.md');
   assert.match(subdivisions?.note ?? '', /Only the986 DFHD objects.*CRHP and Parks Canada.*CSDI Terms/u);
   assert.match(subdivisions?.note ?? '', /explicitly reviewed whole.*No coordinate geocoding, inferred parent membership/u);
   const hongKong = exported.sources.find(source => source.version === 'hong-kong-monuments-v1');
   assert.match(hongKong?.note ?? '', /Government of the Hong Kong Special Administrative Region.*CSDI.*no blanket CSDI licence/u);
+  const singapore = exported.sources.find(source => source.version === 'singapore-monuments-v1');
+  assert.equal(singapore?.license, 'Singapore Open Data Licence version 1.0');
+  assert.equal(singapore?.license_uri, 'https://data.gov.sg/open-data-licence');
+  assert.equal(singapore?.accessed, '2026-11-05');
+  assert.match(singapore?.note ?? '', /National Heritage Board.*data.gov.sg.*reference position.*not historical phases.*linked webpages, images/u);
 });
 
 test('exports refuse mismatched queries or modes instead of mislabelling earlier results', () => {
