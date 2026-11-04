@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "scope": "Twenty paired diagnostic intents for the five Africa supplement identities. Named and thematic probes are cohort-focused, not a blind benchmark or completed relevance judgment. Missing adopted coordinates do not mean that the real location is unknown. Listing dates are not archaeological phases.",
+  "queries": [
+    {"id":"a01","query_zh":"寻找 Dimba 和 Ngovo 洞穴","query_en":"Find the Dimba and Ngovo caves","topic":"Named cave group"},
+    {"id":"a02","query_zh":"寻找 Tchitundu-Hulu 岩画遗址","query_en":"Find the Tchitundu-Hulu rock art site","topic":"Named cultural complex"},
+    {"id":"a03","query_zh":"寻找 Bura 考古遗址","query_en":"Find the Bura archaeological site","topic":"Named archaeological identity"},
+    {"id":"a04","query_zh":"寻找 Djado 堡垒遗址","query_en":"Find the Djado fortified site","topic":"Named cultural group"},
+    {"id":"a05","query_zh":"寻找 Bafut 宫殿建筑群","query_en":"Find the Bafut Palace complex","topic":"Named built heritage"},
+    {"id":"a06","query_zh":"寻找刚果民主共和国的考古洞穴","query_en":"Find archaeological caves in the Democratic Republic of the Congo","topic":"Congo cave archaeology"},
+    {"id":"a07","query_zh":"寻找安哥拉的岩画遗址","query_en":"Find rock art sites in Angola","topic":"Angolan rock art"},
+    {"id":"a08","query_zh":"寻找尼日尔的考古墓地","query_en":"Find archaeological necropolises in Niger","topic":"Niger cultural places without a coordinate assumption"},
+    {"id":"a09","query_zh":"寻找尼日尔的古代防御建筑群","query_en":"Find ancient fortified complexes in Niger","topic":"Niger fortified cultural scope"},
+    {"id":"a10","query_zh":"寻找喀麦隆的历史宫殿","query_en":"Find historical palaces in Cameroon","topic":"Cameroon built heritage"},
+    {"id":"a11","query_zh":"寻找非洲的考古洞穴群","query_en":"Find archaeological cave groups in Africa","topic":"African cave groups"},
+    {"id":"a12","query_zh":"寻找非洲洞穴里的岩画","query_en":"Find rock paintings in African caves","topic":"Cave rock art"},
+    {"id":"a13","query_zh":"寻找非洲的传统酋长宫建筑","query_en":"Find traditional chiefdom palace buildings in Africa","topic":"Traditional cultural buildings"},
+    {"id":"a14","query_zh":"寻找非洲的古代堡垒","query_en":"Find ancient fortifications in Africa","topic":"African fortified places"},
+    {"id":"a15","query_zh":"寻找非洲的考古墓地文化资料","query_en":"Find cultural records of archaeological necropolises in Africa","topic":"Necropolis discovery without precise positioning"},
+    {"id":"a16","query_zh":"寻找 Grottes de Dimba et Ngovo 文化资料","query_en":"Grottes de Dimba et Ngovo","topic":"Original source name probe"},
+    {"id":"a17","query_zh":"寻找 Site Archeologique de Tchitundu-Hulu 文化资料","query_en":"Site Archeologique de Tchitundu-Hulu","topic":"Original source name with ASCII accent normalization"},
+    {"id":"a18","query_zh":"寻找 Site archeologique de Bura 文化资料","query_en":"Site archeologique de Bura","topic":"Original source name with ASCII accent normalization"},
+    {"id":"a19","query_zh":"寻找 Plateau et Fortin du Djado 文化资料","query_en":"Plateau et Fortin du Djado","topic":"Original source name probe"},
+    {"id":"a20","query_zh":"寻找 La Chefferie de Bafut 文化资料","query_en":"La Chefferie de Bafut","topic":"Original source name probe"}
+  ]
+}

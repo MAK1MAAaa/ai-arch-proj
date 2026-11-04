@@ -1,0 +1,238 @@
+{
+  "base": {
+    "base_count": 1795,
+    "base_ids_sha256": "2f3badcb912fc0585c554d65f19f68236e2b4b0d9728c81b3e86a509877f3e47",
+    "base_sites_sha256": "7ce905be26b382ca0484c4e3c7bed04752beb9c0c1252f27e9cfcc7aac268ffa"
+  },
+  "chronology": "All historical phases remain not_reviewed; no nomination, protection or publication date becomes a site phase.",
+  "cohort_version": "africa-supplement-v1",
+  "corpus_version": "global-v9",
+  "countries": [
+    "AO",
+    "CD",
+    "CM",
+    "NE"
+  ],
+  "counts": {
+    "added": 5,
+    "base": 1795,
+    "countries": 4,
+    "known_locations": 2,
+    "no_adopted_coordinate": 3,
+    "total": 1800
+  },
+  "files": {
+    "africa_review.json": {
+      "sha256": "b3de78f6b0db17c347da2028b351cfae140b9bc5eb15bac871f477986fbca1df"
+    },
+    "africa_sites.json": {
+      "sha256": "31ae3d3ca8076e4f1159008ae766fd922dd2483614873fe9474a94192b2165a6"
+    }
+  },
+  "independent_source_review": {
+    "candidates_sha256": "bafb01060cf5abb6f87662edb238ce1f5d2e30497fa33d6dee356822583f922d",
+    "report_sha256": "00cffa1fd91d20af0f6b12b891379ef817b3f19ab534256c722e0aa55750663c",
+    "scope": "Independent source/identity/location/rights review; not chronology, expert or human archaeological approval."
+  },
+  "licenses": "Wikidata metadata CC0; authority excerpts retain individual rights.",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本同一文化实体的公开EarthP625，单一有效声明原值；precision是来源数值参数而非实测误差，未从不规则官方DMS修猜。",
+        "point": [
+          12.877028,
+          -15.938057
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q10378763",
+        "statement_id": "Q10378763$43650a2a-43da-fd43-263e-7bdc9c7b5dda"
+      },
+      "id": "auth:whc-tentative:6251",
+      "identity_review": {
+        "method": "Independent reading of frozen official primary page and specific country profile; full WD metadata/P4171 checks; same-object P625 GUID/Earth/rank/precision comparison when adopted; full1795 title/alias/ref and5739 source-name review plus near/fuzzy signals manually considered. No expert/human archaeological confirmation. Source report sha256:00cffa1fd91d20af0f6b12b891379ef817b3f19ab534256c722e0aa55750663c.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/protection_scope_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q10378763.json",
+          "sha256": "42df3adaa7fb555fdf13c4d59c87c43fd9d2050a92ed09c74a4c9940dc0ebf51",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10378763.json"
+        },
+        {
+          "filename": "ao-profile.html",
+          "sha256": "09644b48495a2e7b4520deb7e9182ae25b297502ebb13d37d366b697a86ccfea",
+          "uri": "https://whc.unesco.org/en/statesparties/ao/"
+        },
+        {
+          "filename": "whc-tentative-6251.html",
+          "sha256": "c5f445fd018e7963b5eea60961434dc89ae25f53fad837b2aefabc4b5737a839",
+          "uri": "https://whc.unesco.org/en/tentativelists/6251/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "固定版本同一文化实体的公开EarthP625，单一有效声明原值；precision是来源数值参数而非实测误差，未从不规则官方DMS修猜。",
+        "point": [
+          10.1138,
+          6.0888
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q28493902",
+        "statement_id": "Q28493902$c989cd1e-4c30-239e-f003-5ea658b3bb9e"
+      },
+      "id": "auth:whc-tentative:6320",
+      "identity_review": {
+        "method": "Independent reading of frozen official primary page and specific country profile; full WD metadata/P4171 checks; same-object P625 GUID/Earth/rank/precision comparison when adopted; full1795 title/alias/ref and5739 source-name review plus near/fuzzy signals manually considered. No expert/human archaeological confirmation. Source report sha256:00cffa1fd91d20af0f6b12b891379ef817b3f19ab534256c722e0aa55750663c.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/protection_scope_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q28493902.json",
+          "sha256": "6c30e58ed0f4b7ddadb7168505458dfb0ef3b7dc9d4c2e689339f79d11b3b2ce",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q28493902.json"
+        },
+        {
+          "filename": "cm-profile.html",
+          "sha256": "e612546c607ad610d8bb61f2539f7fbe4f059ab1dd5f94d9642c0c53a209ff83",
+          "uri": "https://whc.unesco.org/en/statesparties/cm/"
+        },
+        {
+          "filename": "whc-tentative-6320.html",
+          "sha256": "c40cef06856e3bfe93e4788e481b495c64136cdc0ed5a69a567f9a0bf0c9adf7",
+          "uri": "https://whc.unesco.org/en/tentativelists/6320/"
+        },
+        {
+          "filename": "wmf-bafut.html",
+          "sha256": "7a8751a0ff3764edbfd1f8295de3447cce6e50dec10faabbdb6c746cd7a70800",
+          "uri": "https://www.wmf.org/projects/bafut-palace"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "unknown",
+        "note": "官方对象同时包含高原、堡垒/古城及岩画范围，地理栏为范围字符串；WD条目偏地貌高原，未核定其单点可代表整个文化组团或特定堡垒。未将范围取中心、未采用乡镇或单座堡垒代整体，暂保留空坐标，不宣称真实地理位置未知。",
+        "point": null,
+        "precision": null,
+        "rank": null,
+        "source_uri": null,
+        "statement_id": null
+      },
+      "id": "auth:whc-tentative:5044",
+      "identity_review": {
+        "method": "Independent reading of frozen official primary page and specific country profile; full WD metadata/P4171 checks; same-object P625 GUID/Earth/rank/precision comparison when adopted; full1795 title/alias/ref and5739 source-name review plus near/fuzzy signals manually considered. No expert/human archaeological confirmation. Source report sha256:00cffa1fd91d20af0f6b12b891379ef817b3f19ab534256c722e0aa55750663c.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/protection_scope_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q1231998.json",
+          "sha256": "d69f6715febc577b756d445b12d88cd769d4089abc6b69a4937aaf00a263ce66",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1231998.json"
+        },
+        {
+          "filename": "ne-profile.html",
+          "sha256": "0ac4d0e85ad464a4b0d71848b7e225397d52ae150cf9ce44d73564640531c48b",
+          "uri": "https://whc.unesco.org/en/statesparties/ne/"
+        },
+        {
+          "filename": "whc-tentative-5044.html",
+          "sha256": "202bdd88c104708b616c69bbc3d4d0a285fe186d7df83e43d388cd8397fb5f8f",
+          "uri": "https://whc.unesco.org/en/tentativelists/5044/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "unknown",
+        "note": "官方页面说明文物非法交易及遗产保护风险；本草案仅保留已公开文化身份与资料，未请求P625或调查、披露精细遗址点。官方粗地理栏不提升为可核发掘/墓地数字点，故暂保留空坐标；不宣称实际位置未知。",
+        "point": null,
+        "precision": null,
+        "rank": null,
+        "source_uri": null,
+        "statement_id": null
+      },
+      "id": "auth:whc-tentative:5045",
+      "identity_review": {
+        "method": "Independent reading of frozen official primary page and specific country profile; full WD metadata/P4171 checks; same-object P625 GUID/Earth/rank/precision comparison when adopted; full1795 title/alias/ref and5739 source-name review plus near/fuzzy signals manually considered. No expert/human archaeological confirmation. Source report sha256:00cffa1fd91d20af0f6b12b891379ef817b3f19ab534256c722e0aa55750663c.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/protection_scope_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q3647187-P4171.json",
+          "sha256": "90240a8659bf34540ef87fdc5c60b07a00d3d0ee6afb1e478507f3f21707ad05",
+          "uri": "https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=Q3647187&property=P4171&format=json"
+        },
+        {
+          "filename": "Q3647187-metadata.json",
+          "sha256": "3c24fe0bad87c44ebbf8dc53d1d61f5ef8a98f74be0fe255a4641eb8b41e9b98",
+          "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&ids=Q3647187&props=info%7Clabels%7Cdescriptions%7Caliases&format=json"
+        },
+        {
+          "filename": "ne-profile.html",
+          "sha256": "0ac4d0e85ad464a4b0d71848b7e225397d52ae150cf9ce44d73564640531c48b",
+          "uri": "https://whc.unesco.org/en/statesparties/ne/"
+        },
+        {
+          "filename": "whc-tentative-5045.html",
+          "sha256": "b2918a2a8aea3116f269f2d686243ef8299d32a55c51e019f843daffe46d697d",
+          "uri": "https://whc.unesco.org/en/tentativelists/5045/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "unknown",
+        "note": "官方整体是Dimba与Ngovo两洞群；来源地理栏仅省名，WD单点未说明对应哪处洞穴或为何可代表全组，本草案保留空代表点，不平均、不以村镇定位代替。此处是未核定数字代表点，不是遗址实际位置未知。",
+        "point": null,
+        "precision": null,
+        "rank": null,
+        "source_uri": null,
+        "statement_id": null
+      },
+      "id": "auth:whc-tentative:961",
+      "identity_review": {
+        "method": "Independent reading of frozen official primary page and specific country profile; full WD metadata/P4171 checks; same-object P625 GUID/Earth/rank/precision comparison when adopted; full1795 title/alias/ref and5739 source-name review plus near/fuzzy signals manually considered. No expert/human archaeological confirmation. Source report sha256:00cffa1fd91d20af0f6b12b891379ef817b3f19ab534256c722e0aa55750663c.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/protection_scope_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q905443.json",
+          "sha256": "743ea2d5338df0568d7395bd054b2c43e3b9cda92d81225b4164fa10dd8ce8e9",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q905443.json"
+        },
+        {
+          "filename": "cd-profile.html",
+          "sha256": "4ec4958212915f4f91a88e86ff68bf47db51f8bcd681b9ff5fcdcf468a8c09c3",
+          "uri": "https://whc.unesco.org/en/statesparties/cd/"
+        },
+        {
+          "filename": "whc-tentative-961.html",
+          "sha256": "7db313555196bc059ec084c0b3ff51e1bc4287508f098363eb4b83d6154c896d",
+          "uri": "https://whc.unesco.org/en/tentativelists/961/"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Fixed five independently source-reviewed cultural identities from official State Party tentative submissions in Africa; deterministic SHA256(africa-supplement-v1:<id>) order. Not a representative continental sample, inscription list or chronology approval."
+}

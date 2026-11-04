@@ -452,6 +452,10 @@ test('an independently selected unknown supplement exports its own evidence with
   assert.equal(southAmericaSource?.version, 'southamerica-supplement-v1');
   assert.equal(southAmericaSource?.license, 'Mixed rights — see individual source_refs');
   assert.match(southAmericaSource?.note ?? '', /absent or conflicting coordinates remain null/u);
+  const africaSource = report.sources.find(source => source.name === 'Africa cultural supplement');
+  assert.equal(africaSource?.version, 'africa-supplement-v1');
+  assert.equal(africaSource?.license, 'Mixed rights — see individual source_refs');
+  assert.match(africaSource?.note ?? '', /not World Heritage inscriptions/u);
   assert.equal(report.spatial?.selected?.representative_point, null);
   assert.deepEqual(plain(report.spatial?.selected?.source_points), []);
   assert.equal('score' in (report.selected_site as Record<string, unknown>), false);
