@@ -25,7 +25,7 @@ from archsearch.domain import ChronologyReview, PeriodEvidence, Site, SourceRefe
 DATA_DIR = Path(__file__).with_name("data")
 DATASET_VERSION = "v4.1"
 CURATED_VERSION = "global-v2"
-CORPUS_VERSION = "global-v6"
+CORPUS_VERSION = "global-v7"
 GLOBAL_REGION_QUOTAS = {
     "east-asia": 20, "south-asia": 15, "west-central-asia": 15, "africa": 15,
     "europe": 10, "north-america": 10, "south-america": 10, "oceania": 5,
@@ -339,6 +339,7 @@ def load_corpus(data_dir: Path | None = None) -> list[Site]:
     from archsearch.catalogue_data import CatalogueError, load_catalogue
     from archsearch.polar_data import PolarDataError, load_polar
     from archsearch.regional_data import RegionalError, load_regional
+    from archsearch.southamerica_data import SouthAmericaError, load_southamerica
     from archsearch.supplement_data import SupplementError, load_supplement
 
     directory = Path(data_dir) if data_dir is not None else DATA_DIR
@@ -355,8 +356,13 @@ def load_corpus(data_dir: Path | None = None) -> list[Site]:
         supplemented = load_supplement(polar, directory)
         if data_dir is not None and not (directory / "regional_manifest.json").exists():
             return supplemented
-        return load_regional(supplemented, directory)
-    except (CatalogueError, PolarDataError, SupplementError, RegionalError) as error:
+        regional = load_regional(supplemented, directory)
+        if data_dir is not None and not (directory / "southamerica_manifest.json").exists():
+            return regional
+        return load_southamerica(regional, directory)
+    except (
+        CatalogueError, PolarDataError, SupplementError, RegionalError, SouthAmericaError,
+    ) as error:
         raise CorpusError(str(error)) from error
 
 

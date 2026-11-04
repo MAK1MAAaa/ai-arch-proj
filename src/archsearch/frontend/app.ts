@@ -404,10 +404,10 @@
     ui.activeMode.textContent = (state.displayedMode || mode) === "semantic" ? "SEMANTIC" : "BM25";
     ui.preparationNote.hidden = mode !== "semantic" || !state.statusLoaded || state.semanticReady;
     ui.modeExplanation.textContent = mode === "semantic"
-      ? "用中文描述研究问题，在英文原文中寻找语义相近的资料；排序分数不是相关概率，仍需核验原文。"
+      ? "用中文描述问题，专名可保留原文，在多语种源资料中寻找相近候选；排序分数不是相关概率，仍需核验来源。"
       : "匹配资料原词和已有中文描述；中文按相邻双字片段匹配，建议输入两个字以上。不会实时翻译或扩展同义词，部分片段重叠也可能命中。";
     ui.exampleHint.textContent = mode === "semantic"
-      ? "中文问题示例；选择后会同步切换到对应地点类型。"
+      ? "中文问题示例，专名可保留原文；选择后会同步切换到对应地点类型。"
       : "英文原词示例；选择后会同步切换到对应地点类型。";
     document.querySelectorAll<HTMLButtonElement>("[data-query-zh]").forEach((button) => {
       const query = mode === "semantic" ? button.dataset.queryZh : button.dataset.queryEn;

@@ -30,7 +30,7 @@ interface ExportResult<T> {
   response: SearchResponse<T>;
   map: HistoryView | null;
   selection: { site: string | null; phase: string | null };
-  sources: { name: string; license: string; version?: string | null }[];
+  sources: { name: string; license: string; version?: string | null; note?: string }[];
   selected_site: unknown;
   spatial: { metadata: unknown; selected: { site_id: string; representative_point: [number, number] | null; source_points: [number, number][]; records: { source_index: number; coordinate: [number, number]; name: string; ref: string }[] } | null } | null;
   browse: BrowseState | null;
@@ -448,6 +448,10 @@ test('an independently selected unknown supplement exports its own evidence with
   const regionalSource = report.sources.find(source => source.name === 'Regional cultural supplement');
   assert.equal(regionalSource?.version, 'regional-supplement-v1');
   assert.equal(regionalSource?.license, 'Mixed rights — see individual source_refs');
+  const southAmericaSource = report.sources.find(source => source.name === 'South America cultural supplement');
+  assert.equal(southAmericaSource?.version, 'southamerica-supplement-v1');
+  assert.equal(southAmericaSource?.license, 'Mixed rights — see individual source_refs');
+  assert.match(southAmericaSource?.note ?? '', /absent or conflicting coordinates remain null/u);
   assert.equal(report.spatial?.selected?.representative_point, null);
   assert.deepEqual(plain(report.spatial?.selected?.source_points), []);
   assert.equal('score' in (report.selected_site as Record<string, unknown>), false);

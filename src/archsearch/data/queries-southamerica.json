@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "scope": "Twenty paired diagnostic intents for the South America supplement, including named-place discovery. This is a cohort-focused set, not a representative blind test, completed relevance judgment or chronology assertion.",
+  "queries": [
+    {"id": "s01", "query_zh": "寻找蒙特贝尔德考古遗址", "query_en": "Find the Monte Verde archaeological site", "topic": "Named Chilean archaeology"},
+    {"id": "s02", "query_zh": "寻找智利的考古遗址", "query_en": "Find archaeological sites in Chile", "topic": "Chilean cultural places"},
+    {"id": "s03", "query_zh": "寻找巴塔哥尼亚的洞穴与考古遗址", "query_en": "Find caves and archaeological sites in Patagonia", "topic": "Patagonian cave archaeology"},
+    {"id": "s04", "query_zh": "寻找智利洞穴里的岩画", "query_en": "Find rock paintings in caves in Chile", "topic": "Chilean cave rock art"},
+    {"id": "s05", "query_zh": "寻找秘鲁海岸的考古遗址", "query_en": "Find archaeological sites on the Peruvian coast", "topic": "Peruvian coastal archaeology"},
+    {"id": "s06", "query_zh": "寻找秘鲁Pikimachay洞穴", "query_en": "Find the Pikimachay cave in Peru", "topic": "Named Peruvian cave"},
+    {"id": "s07", "query_zh": "寻找玻利维亚的考古遗址", "query_en": "Find archaeological sites in Bolivia", "topic": "Bolivian archaeology"},
+    {"id": "s08", "query_zh": "寻找Iskanwaya考古遗址", "query_en": "Find the Iskanwaya archaeological site", "topic": "Named Bolivian citadel"},
+    {"id": "s09", "query_zh": "寻找Incallajta考古建筑群", "query_en": "Find the archaeological complex of Incallajta", "topic": "Named Bolivian complex"},
+    {"id": "s10", "query_zh": "寻找乌拉圭的岩画区域", "query_en": "Find rock painting areas in Uruguay", "topic": "Uruguayan rock art"},
+    {"id": "s11", "query_zh": "寻找巴西的考古岩棚", "query_en": "Find archaeological rockshelters in Brazil", "topic": "Brazilian rockshelters"},
+    {"id": "s12", "query_zh": "寻找Santa Elina考古遗址", "query_en": "Find the Santa Elina archaeological site", "topic": "Named site without adopted coordinates"},
+    {"id": "s13", "query_zh": "寻找Lapa do Santo考古遗址", "query_en": "Find the Lapa do Santo archaeological site", "topic": "Named Brazilian archaeology"},
+    {"id": "s14", "query_zh": "寻找哥伦比亚的岩画考古区域", "query_en": "Find archaeological rock art areas in Colombia", "topic": "Colombian rock art"},
+    {"id": "s15", "query_zh": "寻找El Abra考古遗址", "query_en": "Find the El Abra archaeological site", "topic": "Named Colombian archaeology"},
+    {"id": "s16", "query_zh": "寻找巴西马托格罗索州的考古遗址", "query_en": "Find archaeological sites in Mato Grosso, Brazil", "topic": "Mato Grosso cultural places"},
+    {"id": "s17", "query_zh": "寻找Lagoa Santa地区的考古遗址", "query_en": "Find archaeological sites in the Lagoa Santa region", "topic": "Lagoa Santa archaeology"},
+    {"id": "s18", "query_zh": "寻找La Leona洞穴岩画", "query_en": "Find rock paintings at the La Leona cave", "topic": "Named cave rock art"},
+    {"id": "s19", "query_zh": "寻找Huaca Prieta考古遗址", "query_en": "Find the Huaca Prieta archaeological site", "topic": "Named Peruvian archaeology"},
+    {"id": "s20", "query_zh": "寻找Chamangá岩画区域", "query_en": "Find the Chamangá rock painting area", "topic": "Named Uruguayan rock art"}
+  ]
+}

@@ -424,7 +424,7 @@ def test_real_review_compiles_twice_offline_without_rewriting_1663_records(
     assert all(old is new for old, new in zip(unchanged_real1663, loaded[:1663], strict=True))
     assert [site.model_dump(mode="json") for site in loaded[:1663]] == before
     assert [build_document(site) for site in loaded[:1663]] == documents
-    assert [site.model_dump(mode="json") for site in load_corpus()] == [
+    assert [site.model_dump(mode="json") for site in load_corpus()[:1689]] == [
         site.model_dump(mode="json") for site in loaded
     ]
     assert manifest["counts"] == {
@@ -476,32 +476,32 @@ def regional_client(tmp_path_factory: pytest.TempPathFactory) -> Iterator[TestCl
         yield client
 
 
-def test_real_global_v6_api_counts_locations_and_source_membership(
+def test_real_current_api_preserves_regional_locations_and_source_membership(
     regional_client: TestClient, unchanged_real1663: list[Site],
 ) -> None:
     coverage = regional_client.get("/api/coverage").json()
-    assert coverage["corpus_version"] == "global-v6" and coverage["total"] == 1689
+    assert coverage["corpus_version"] == "global-v7" and coverage["total"] == 1700
     assert {row["id"] for row in coverage["countries"]} == {
         code for site in unchanged_real1663 if site.geography for code in site.geography.countries
     }
     assert len(coverage["countries"]) == 197 and len(coverage["regions"]) == 6
     assert {row["id"]: row["count"] for row in coverage["sources"]} == {
-        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 64,
+        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 75,
     }
-    assert coverage["locations"] == {"mapped": 1679, "polar": 3, "unknown": 7}
+    assert coverage["locations"] == {"mapped": 1689, "polar": 3, "unknown": 8}
     assert coverage["spatial_locations"]["ready"] is True
     assert coverage["spatial_locations"]["points"] == 5632
-    assert coverage["spatial_locations"]["display_points"] == 6069
+    assert coverage["spatial_locations"]["display_points"] == 6079
     assert coverage["authority"]["covered"] == coverage["authority"]["eligible_total"] == 1033
     assert coverage["polar_authority"]["covered"] == 91
     status = regional_client.get("/api/status").json()
-    assert status["corpus"]["count"] == 1689 and status["corpus"]["version"] == "global-v6"
+    assert status["corpus"]["count"] == 1700 and status["corpus"]["version"] == "global-v7"
     assert status["semantic"]["ready"] is False
     assert status["history"]["ready"] is False
     catalogue = regional_client.get("/api/catalogue").json()
-    assert catalogue["total"] == len(catalogue["points"]) == 1689
+    assert catalogue["total"] == len(catalogue["points"]) == 1700
     assert Counter(point["location_status"] for point in catalogue["points"]) == {
-        "mapped": 1679, "polar": 3, "unknown": 7,
+        "mapped": 1689, "polar": 3, "unknown": 8,
     }
 
 
@@ -609,7 +609,7 @@ def test_regional_20_paired_queries_create_rankings_and_unscored_manual_template
                and pair.query_en.isascii() and pair.query_zh != pair.query_en for pair in pairs)
     report = evaluate_corpus(tmp_path / "empty-home", tmp_path / "regional.json",
                              queries=queries_file)
-    assert report["corpus_count"] == 1689
+    assert report["corpus_count"] == 1700
     assert report["query_contract_sha256"] == query_contract_hash(pairs)
     assert report["metrics"] is None and report["metric_gate_reasons"]
     assert report["status"] == "retrieval_incomplete" and report["runs_complete"] is False
