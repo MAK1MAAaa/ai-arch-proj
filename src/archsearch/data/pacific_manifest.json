@@ -1,0 +1,278 @@
+{
+  "base": {
+    "base_count": 1800,
+    "base_ids_sha256": "c900145f6641be8722fbf2ef21b8beb04b1f44c4ae6305033738357aa47b07af",
+    "base_sites_sha256": "eeffd19cb62aaa4404517e9fd07cb2b3078cf066502b378ae2e18f5c7abcffa6"
+  },
+  "chronology": "All historical phases remain not_reviewed; no nomination, protection or publication date becomes a site phase.",
+  "cohort_version": "pacific-interior-supplement-v1",
+  "corpus_version": "global-v10",
+  "countries": [
+    "CD",
+    "FJ",
+    "FM",
+    "MH",
+    "PW"
+  ],
+  "counts": {
+    "added": 7,
+    "base": 1800,
+    "countries": 5,
+    "known_locations": 1,
+    "no_adopted_coordinate": 6,
+    "total": 1807
+  },
+  "files": {
+    "pacific_review.json": {
+      "sha256": "6ed31ae1c789ffd90fdff950e9103297800d4a1de20d2df22e12d57c1846d869"
+    },
+    "pacific_sites.json": {
+      "sha256": "b8e1a4f6ffa85af0a97c7e9d943bb461ffe0d84db09b1fcb667e57026142b21a"
+    }
+  },
+  "independent_source_review": {
+    "candidates_sha256": "acd3f49bb1e13aa51d28a03cf452a749cd8f76e21704608b77147382cfad1c6d",
+    "report_sha256": "84628016e43cf3c728fea158871d69b70448b01287db9ad9df251d77ab5bb3cf",
+    "scope": "Independent source/identity/location/rights review; not chronology, expert or human archaeological approval."
+  },
+  "licenses": "Wikidata metadata CC0; authority excerpts retain individual rights.",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "NPS登记号76002195与固定WD P649精确桥接，同一会议屋只有一个有效Earth P625，原值仅作原址/建筑定位参考；precision是来源参数而非发掘精度或测量误差。",
+        "point": [
+          134.56027777777777,
+          7.361111111111111
+        ],
+        "precision": 0.0002777777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Q19871758",
+        "statement_id": "Q19871758$6221dd84-4a0c-8a46-3162-ee923999378e"
+      },
+      "id": "wd:Q19871758",
+      "identity_review": {
+        "method": "Read fixed primary page(s), exact country/profile association and physical-object scope; compare typed Site/coordinate/short-source excerpts; independently review all1800 record titles/aliases/references and5739 original labels/points. Check exact WD P649/P4171 and P625 statements only where supplied. No expert/human archaeology or historical-phase approval. Source report sha256:84628016e43cf3c728fea158871d69b70448b01287db9ad9df251d77ab5bb3cf.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/protection_scope_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q19871758.json",
+          "sha256": "488231e901092ae15684adeed6ae5f509822fb0d0f45186ff1acf6f8baaf3d46",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q19871758.json"
+        },
+        {
+          "filename": "bai-nps.html",
+          "sha256": "a19444aee7e0abec5fb99ba6211426ec5295a509602d5adfd2c0ff0fa10818b3",
+          "uri": "https://npgallery.nps.gov/AssetDetail/NRIS/76002195"
+        },
+        {
+          "filename": "pw-profile.html",
+          "sha256": "3d08707e81d23ed69bea0309bd87a30b5c23cfde55e2abe8cba59dc02982ea9f",
+          "uri": "https://whc.unesco.org/en/statesparties/pw/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "unknown",
+        "note": "固定作者文章明确教堂发掘文化身份；本批未核定同对象公开数字点，代表点暂置空；不表示原址实际位置未知。",
+        "point": null,
+        "precision": null,
+        "rank": null,
+        "source_uri": null,
+        "statement_id": null
+      },
+      "id": "auth:antiquity-projgall:clist347-ngongo-church",
+      "identity_review": {
+        "method": "Read fixed primary page(s), exact country/profile association and physical-object scope; compare typed Site/coordinate/short-source excerpts; independently review all1800 record titles/aliases/references and5739 original labels/points. Check exact WD P649/P4171 and P625 statements only where supplied. No expert/human archaeology or historical-phase approval. Source report sha256:84628016e43cf3c728fea158871d69b70448b01287db9ad9df251d77ab5bb3cf.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/protection_scope_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "cd-profile.html",
+          "sha256": "2063cb3934d934ac9807b46af760a5f0391de92504ace6225f021ceb86543e97",
+          "uri": "https://whc.unesco.org/en/statesparties/cd/"
+        },
+        {
+          "filename": "ngongo-antiquity.html",
+          "sha256": "960a6fb9238416cd601ec3ab61ff084a499b717f4b9e10530e0b503965a5ad41",
+          "uri": "https://antiquity.ac.uk/projgall/clist347"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "unknown",
+        "note": "官方DMS粗值与同实体WD两个非废弃且同为normal的Earth点不一致；两WD点间约百米，来源未指定优先代表，不能为了有点而选择/平均或静默修正官方坐标。暂保留空代表点，并保存全部原声明供独审；不宣称真实位置未知。",
+        "point": null,
+        "precision": null,
+        "rank": null,
+        "source_uri": null,
+        "statement_id": null
+      },
+      "id": "auth:whc-tentative:1375",
+      "identity_review": {
+        "method": "Read fixed primary page(s), exact country/profile association and physical-object scope; compare typed Site/coordinate/short-source excerpts; independently review all1800 record titles/aliases/references and5739 original labels/points. Check exact WD P649/P4171 and P625 statements only where supplied. No expert/human archaeology or historical-phase approval. Source report sha256:84628016e43cf3c728fea158871d69b70448b01287db9ad9df251d77ab5bb3cf.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/protection_scope_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "Q7511961.json",
+          "sha256": "31cf522a43703aa132e8e5910aa9fed2a53a944cd81c81782bcae38b4bc98d6c",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7511961.json"
+        },
+        {
+          "filename": "fj-profile.html",
+          "sha256": "949c32e573f1c9ece4e20c9687a0d47f0a79301d6ef3e9f44c035acd538b08a9",
+          "uri": "https://whc.unesco.org/en/statesparties/fj/"
+        },
+        {
+          "filename": "sigatoka-tl.html",
+          "sha256": "9198d1cf852cdf80161f7c11958f3ed5772e5eb05b9b48de24b93604e9d45937",
+          "uri": "https://whc.unesco.org/en/tentativelists/1375/"
+        },
+        {
+          "filename": "sigatoka-trust.html",
+          "sha256": "5f8742279beff60617bc1adab801ebc3fb5ea56513eab5153705b6798deb2c6a",
+          "uri": "https://nationaltrust.org.fj/ssd/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "unknown",
+        "note": "固定原作者文章确认遗址与发掘，但本批未核定同范围公开数字点。不从示意图推点、不以附近行政镇或墓地单点代整个发掘聚落，暂置空表示数字定位待核，并非实际位置未知。",
+        "point": null,
+        "precision": null,
+        "rank": null,
+        "source_uri": null,
+        "statement_id": null
+      },
+      "id": "auth:antiquity-projgall:clist347-kindoki",
+      "identity_review": {
+        "method": "Read fixed primary page(s), exact country/profile association and physical-object scope; compare typed Site/coordinate/short-source excerpts; independently review all1800 record titles/aliases/references and5739 original labels/points. Check exact WD P649/P4171 and P625 statements only where supplied. No expert/human archaeology or historical-phase approval. Source report sha256:84628016e43cf3c728fea158871d69b70448b01287db9ad9df251d77ab5bb3cf.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/protection_scope_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "cd-profile.html",
+          "sha256": "2063cb3934d934ac9807b46af760a5f0391de92504ace6225f021ceb86543e97",
+          "uri": "https://whc.unesco.org/en/statesparties/cd/"
+        },
+        {
+          "filename": "ngongo-antiquity.html",
+          "sha256": "960a6fb9238416cd601ec3ab61ff084a499b717f4b9e10530e0b503965a5ad41",
+          "uri": "https://antiquity.ac.uk/projgall/clist347"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "unknown",
+        "note": "官方NPS位置栏明确Address Restricted。本草案不请求WD精细P625、不下载含精细定位的提名附件，也不以旅游地图或Lelu镇中心替代；代表点置空表示公开定位受限，不表示原址实际位置未知。",
+        "point": null,
+        "precision": null,
+        "rank": null,
+        "source_uri": null,
+        "statement_id": null
+      },
+      "id": "auth:nps-nris:83004524",
+      "identity_review": {
+        "method": "Read fixed primary page(s), exact country/profile association and physical-object scope; compare typed Site/coordinate/short-source excerpts; independently review all1800 record titles/aliases/references and5739 original labels/points. Check exact WD P649/P4171 and P625 statements only where supplied. No expert/human archaeology or historical-phase approval. Source report sha256:84628016e43cf3c728fea158871d69b70448b01287db9ad9df251d77ab5bb3cf.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/protection_scope_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "fm-profile.html",
+          "sha256": "d6bbdff7b2fc03a6a3220f001ec75780cb08a80cf23e7ebee0c9c4e99fde30d1",
+          "uri": "https://whc.unesco.org/en/statesparties/fm/"
+        },
+        {
+          "filename": "lelu-nps.html",
+          "sha256": "4feb2e50e2f91485cfc8d9b76e0dfc4391eaa12150a8c865942149d6eeb9aaa9",
+          "uri": "https://npgallery.nps.gov/AssetDetail/NRIS/83004524"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "unknown",
+        "note": "主管文化机关公开同名地图查询链接，但冻结页面未直接提供可复现的数字坐标。未把搜索服务动态解析点、州行政中心或邻村作为代表；本批数字定位待独审，暂置空，不宣称实际地点未知。",
+        "point": null,
+        "precision": null,
+        "rank": null,
+        "source_uri": null,
+        "statement_id": null
+      },
+      "id": "auth:palau-register:B.NE-4.4",
+      "identity_review": {
+        "method": "Read fixed primary page(s), exact country/profile association and physical-object scope; compare typed Site/coordinate/short-source excerpts; independently review all1800 record titles/aliases/references and5739 original labels/points. Check exact WD P649/P4171 and P625 statements only where supplied. No expert/human archaeology or historical-phase approval. Source report sha256:84628016e43cf3c728fea158871d69b70448b01287db9ad9df251d77ab5bb3cf.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/protection_scope_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "badrulchau-ministry.html",
+          "sha256": "52fc48c2b9fe77a05424c39d5ba666822f5b5ae50da67a3fdcf76014f9de812c",
+          "uri": "https://ministryofhrctd.pw/badrulchau-stone-monoliths/"
+        },
+        {
+          "filename": "pw-profile.html",
+          "sha256": "3d08707e81d23ed69bea0309bd87a30b5c23cfde55e2abe8cba59dc02982ea9f",
+          "uri": "https://whc.unesco.org/en/statesparties/pw/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "unknown",
+        "note": "官方坐标为整个环礁的经纬范围，不能取均值当历史街区点。未采用旧WDQS中的环礁级点或单屋点代替整体，本批尚未核定同对象数字代表点，暂置空而非宣称原址真实未知。",
+        "point": null,
+        "precision": null,
+        "rank": null,
+        "source_uri": null,
+        "statement_id": null
+      },
+      "id": "auth:whc-tentative:2066",
+      "identity_review": {
+        "method": "Read fixed primary page(s), exact country/profile association and physical-object scope; compare typed Site/coordinate/short-source excerpts; independently review all1800 record titles/aliases/references and5739 original labels/points. Check exact WD P649/P4171 and P625 statements only where supplied. No expert/human archaeology or historical-phase approval. Source report sha256:84628016e43cf3c728fea158871d69b70448b01287db9ad9df251d77ab5bb3cf.",
+        "reviewed_at": "2026-11-04",
+        "reviewer": "independent-agent:/root/protection_scope_review",
+        "status": "approved"
+      },
+      "source_files": [
+        {
+          "filename": "likiep-tl.html",
+          "sha256": "0a71b908011975db764e1996d1ea5e06ac6b8cde35bce9aa26338a76f4de17dd",
+          "uri": "https://whc.unesco.org/en/tentativelists/2066/"
+        },
+        {
+          "filename": "mh-profile.html",
+          "sha256": "addd2420bdf8cb19dfe900eaefa57b3f296b0b07c4e1c88aff4e65f0fdd33e02",
+          "uri": "https://whc.unesco.org/en/statesparties/mh/"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Seven independently source-reviewed Pacific and African-interior cultural identities, deterministic SHA256(pacific-interior-supplement-v1:<id>) order. No complete inventory, political attribution or historical-phase approval."
+}

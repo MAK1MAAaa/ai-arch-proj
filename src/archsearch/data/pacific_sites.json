@@ -1,0 +1,558 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "All historical stages require separate source review; no event dates inferred.",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "National Park Service / National Register Information System"
+    ],
+    "description": "",
+    "description_zh": "",
+    "details": "Source country association: Palau (PW).",
+    "geography": {
+      "authority_id": "supplement:wd:Q19871758",
+      "countries": [
+        "PW"
+      ],
+      "note": "NPS登记号76002195的传统会议屋建筑及原址；不是Airai村镇中心、行政办公室或现代展陈建筑。WD的美国历史地点描述与当前Palau国家字段不一致，排除原英文/乌克兰文描述，不改写替代描述；原始描述保留审计。现存构件、修复与重建阶段未复核。 NPS登记号76002195与固定WD P649精确桥接，同一会议屋只有一个有效Earth P625，原值仅作原址/建筑定位参考；precision是来源参数而非发掘精度或测量误差。 本条仅记录现代来源国家关联，不从代表点推断政治归属；历史阶段未独立核验，不把登记、提名、发掘或出版年当建造/连续使用期。",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q19871758",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2484625162; sha256:488231e901092ae15684adeed6ae5f509822fb0d0f45186ff1acf6f8baaf3d46",
+        "title": "Airai Bai",
+        "uri": "https://www.wikidata.org/wiki/Q19871758"
+      }
+    },
+    "id": "wd:Q19871758",
+    "location_precision": null,
+    "names": [
+      "Airai Bai"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      134.56027777777777,
+      7.361111111111111
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Areas Of Significance: COMMUNITY PLANNING AND DEVELOPMENT POLITICS/GOVERNMENT ARCHITECTURE SOCIAL HISTORY",
+        "id": "qualification:wd:Q19871758",
+        "license": null,
+        "publisher": "National Park Service / National Register Information System",
+        "revision": "sha256:a19444aee7e0abec5fb99ba6211426ec5295a509602d5adfd2c0ff0fa10818b3",
+        "title": "Bai Ra Irrai",
+        "uri": "https://npgallery.nps.gov/AssetDetail/NRIS/76002195"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Asia & Pacific, World Heritage Convention Regional Contact",
+        "id": "region:whc-PW",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:3d08707e81d23ed69bea0309bd87a30b5c23cfde55e2abe8cba59dc02982ea9f",
+        "title": "UNESCO State Party profile — Palau",
+        "uri": "https://whc.unesco.org/en/statesparties/pw/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q19871758",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2484625162; sha256:488231e901092ae15684adeed6ae5f509822fb0d0f45186ff1acf6f8baaf3d46",
+        "title": "Airai Bai",
+        "uri": "https://www.wikidata.org/wiki/Q19871758"
+      }
+    ],
+    "source_uri": "https://npgallery.nps.gov/AssetDetail/NRIS/76002195",
+    "title": "Bai Ra Irrai",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "All historical stages require separate source review; no event dates inferred.",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Bernard Clist et al. / Antiquity Project Gallery"
+    ],
+    "description": "",
+    "description_zh": "",
+    "details": "Source country association: Democratic Republic of the Congo (CD).",
+    "geography": {
+      "authority_id": "supplement:auth:antiquity-projgall:clist347-ngongo-church",
+      "countries": [
+        "CD"
+      ],
+      "note": "作者原始考古研究明确记录的Ngongo Mbata石教堂发掘原址；策展ID由稳定文章clist347及对象后缀构成，不冒称官方登记号。不能用现代村镇或推测省会替代教堂原址。 固定作者文章明确教堂发掘文化身份；本批未核定同对象公开数字点，代表点暂置空；不表示原址实际位置未知。 本条仅记录现代来源国家关联，不从代表点推断政治归属；历史阶段未独立核验，不把登记、提名、发掘或出版年当建造/连续使用期。",
+      "point_count": 0,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "Re-examination of the 1938 excavation at Ngongo Mbata church",
+        "id": "qualification:auth:antiquity-projgall:clist347-ngongo-church",
+        "license": null,
+        "publisher": "Bernard Clist et al. / Antiquity Project Gallery",
+        "revision": "sha256:960a6fb9238416cd601ec3ab61ff084a499b717f4b9e10530e0b503965a5ad41",
+        "title": "Ngongo Mbata church archaeological site",
+        "uri": "https://antiquity.ac.uk/projgall/clist347"
+      }
+    },
+    "id": "auth:antiquity-projgall:clist347-ngongo-church",
+    "location_precision": null,
+    "names": [
+      "Ngongo Mbata church"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": null,
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Re-examination of the 1938 excavation at Ngongo Mbata church",
+        "id": "qualification:auth:antiquity-projgall:clist347-ngongo-church",
+        "license": null,
+        "publisher": "Bernard Clist et al. / Antiquity Project Gallery",
+        "revision": "sha256:960a6fb9238416cd601ec3ab61ff084a499b717f4b9e10530e0b503965a5ad41",
+        "title": "Ngongo Mbata church archaeological site",
+        "uri": "https://antiquity.ac.uk/projgall/clist347"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Africa, World Heritage Convention Regional Contact",
+        "id": "region:whc-CD",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:2063cb3934d934ac9807b46af760a5f0391de92504ace6225f021ceb86543e97",
+        "title": "UNESCO State Party profile — Democratic Republic of the Congo",
+        "uri": "https://whc.unesco.org/en/statesparties/cd/"
+      }
+    ],
+    "source_uri": "https://antiquity.ac.uk/projgall/clist347",
+    "title": "Ngongo Mbata church archaeological site",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "All historical stages require separate source review; no event dates inferred.",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "National Trust for Fiji / State Party submission / UNESCO World Heritage Centre"
+    ],
+    "description": "",
+    "description_zh": "",
+    "details": "Source country association: Fiji (FJ).",
+    "geography": {
+      "authority_id": "supplement:auth:whc-tentative:1375",
+      "countries": [
+        "FJ"
+      ],
+      "note": "正式文化预备名单1375所述含考古材料的沙丘文化景观；文化资格由正式Cultural类别和国家遗产机构考古证据确认，不因自然沙丘或国家公园身份单独认定。不是Suva的Fiji Museum馆藏所在地、现代游客中心、Sigatoka镇或整个河谷。 官方DMS粗值与同实体WD两个非废弃且同为normal的Earth点不一致；两WD点间约百米，来源未指定优先代表，不能为了有点而选择/平均或静默修正官方坐标。暂保留空代表点，并保存全部原声明供独审；不宣称真实位置未知。 本条仅记录现代来源国家关联，不从代表点推断政治归属；历史阶段未独立核验，不把登记、提名、发掘或出版年当建造/连续使用期。",
+      "point_count": 0,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "The Sigatoka Sand Dunes are the location of one of Fiji's earliest recorded prehistoric sites.",
+        "id": "qualification:auth:whc-tentative:1375",
+        "license": null,
+        "publisher": "National Trust for Fiji / State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:9198d1cf852cdf80161f7c11958f3ed5772e5eb05b9b48de24b93604e9d45937",
+        "title": "Sigatoka Sand Dunes",
+        "uri": "https://whc.unesco.org/en/tentativelists/1375/"
+      }
+    },
+    "id": "auth:whc-tentative:1375",
+    "location_precision": null,
+    "names": [
+      "Sigatoka sand dunes",
+      "シンガトカ砂丘群",
+      "dunes de sable de Sigatoka",
+      "Nacionalni park Sigatoka Sand Dunes",
+      "辛加東卡沙丘",
+      "Sigatoka Sand Dunes National Park"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": null,
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "The Sigatoka Sand Dunes are the location of one of Fiji's earliest recorded prehistoric sites.",
+        "id": "qualification:auth:whc-tentative:1375",
+        "license": null,
+        "publisher": "National Trust for Fiji / State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:9198d1cf852cdf80161f7c11958f3ed5772e5eb05b9b48de24b93604e9d45937",
+        "title": "Sigatoka Sand Dunes",
+        "uri": "https://whc.unesco.org/en/tentativelists/1375/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Asia & Pacific, World Heritage Convention Regional Contact",
+        "id": "region:whc-FJ",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:949c32e573f1c9ece4e20c9687a0d47f0a79301d6ef3e9f44c035acd538b08a9",
+        "title": "UNESCO State Party profile — Fiji",
+        "uri": "https://whc.unesco.org/en/statesparties/fj/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "The Park holds significant clues to man’s first arrival in Fiji.",
+        "id": "scope:national-trust-sigatoka",
+        "license": null,
+        "publisher": "National Trust of Fiji",
+        "revision": "sha256:5f8742279beff60617bc1adab801ebc3fb5ea56513eab5153705b6798deb2c6a",
+        "title": "Sigatoka Sand Dunes",
+        "uri": "https://nationaltrust.org.fj/ssd/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "",
+        "id": "wikidata:Q7511961",
+        "license": "CC0-1.0",
+        "publisher": "Wikidata contributors",
+        "revision": "2537796069; sha256:31cf522a43703aa132e8e5910aa9fed2a53a944cd81c81782bcae38b4bc98d6c",
+        "title": "Sigatoka sand dunes",
+        "uri": "https://www.wikidata.org/wiki/Q7511961"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/1375/",
+    "title": "Sigatoka Sand Dunes",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "All historical stages require separate source review; no event dates inferred.",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Bernard Clist et al. / Antiquity Project Gallery"
+    ],
+    "description": "",
+    "description_zh": "",
+    "details": "Source country association: Democratic Republic of the Congo (CD).",
+    "geography": {
+      "authority_id": "supplement:auth:antiquity-projgall:clist347-kindoki",
+      "countries": [
+        "CD"
+      ],
+      "note": "作者原始研究所述Kindoki山顶分散聚落考古发掘地点；策展ID由稳定文章clist347及对象后缀构成。原文称古Mbanza Nsundi历史中心仍难确定，本条不将发掘区等同确定的首府中心、现代村镇、王国全域或馆藏所在地。 固定原作者文章确认遗址与发掘，但本批未核定同范围公开数字点。不从示意图推点、不以附近行政镇或墓地单点代整个发掘聚落，暂置空表示数字定位待核，并非实际位置未知。 本条仅记录现代来源国家关联，不从代表点推断政治归属；历史阶段未独立核验，不把登记、提名、发掘或出版年当建造/连续使用期。",
+      "point_count": 0,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "The archaeological material discovered at the Kindoki site",
+        "id": "qualification:auth:antiquity-projgall:clist347-kindoki",
+        "license": null,
+        "publisher": "Bernard Clist et al. / Antiquity Project Gallery",
+        "revision": "sha256:960a6fb9238416cd601ec3ab61ff084a499b717f4b9e10530e0b503965a5ad41",
+        "title": "Kindoki archaeological site",
+        "uri": "https://antiquity.ac.uk/projgall/clist347"
+      }
+    },
+    "id": "auth:antiquity-projgall:clist347-kindoki",
+    "location_precision": null,
+    "names": [
+      "Kindoki"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": null,
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "The archaeological material discovered at the Kindoki site",
+        "id": "qualification:auth:antiquity-projgall:clist347-kindoki",
+        "license": null,
+        "publisher": "Bernard Clist et al. / Antiquity Project Gallery",
+        "revision": "sha256:960a6fb9238416cd601ec3ab61ff084a499b717f4b9e10530e0b503965a5ad41",
+        "title": "Kindoki archaeological site",
+        "uri": "https://antiquity.ac.uk/projgall/clist347"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Africa, World Heritage Convention Regional Contact",
+        "id": "region:whc-CD",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:2063cb3934d934ac9807b46af760a5f0391de92504ace6225f021ceb86543e97",
+        "title": "UNESCO State Party profile — Democratic Republic of the Congo",
+        "uri": "https://whc.unesco.org/en/statesparties/cd/"
+      }
+    ],
+    "source_uri": "https://antiquity.ac.uk/projgall/clist347",
+    "title": "Kindoki archaeological site",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "All historical stages require separate source review; no event dates inferred.",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "National Park Service / National Register Information System"
+    ],
+    "description": "",
+    "description_zh": "",
+    "details": "Source country association: Micronesia (Federated States of) (FM).",
+    "geography": {
+      "authority_id": "supplement:auth:nps-nris:83004524",
+      "countries": [
+        "FM"
+      ],
+      "note": "NPS登记的Leluh Ruins考古文化原址，位于Kosrae的Lelu岛；不是现代Lelu镇政府或整个Kosrae岛，也不是Pohnpei的Nan Madol。 官方NPS位置栏明确Address Restricted。本草案不请求WD精细P625、不下载含精细定位的提名附件，也不以旅游地图或Lelu镇中心替代；代表点置空表示公开定位受限，不表示原址实际位置未知。 本条仅记录现代来源国家关联，不从代表点推断政治归属；历史阶段未独立核验，不把登记、提名、发掘或出版年当建造/连续使用期。",
+      "point_count": 0,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "Areas Of Significance: PREHISTORIC HISTORIC - ABORIGINAL POLITICS/GOVERNMENT ARCHITECTURE",
+        "id": "qualification:auth:nps-nris:83004524",
+        "license": null,
+        "publisher": "National Park Service / National Register Information System",
+        "revision": "sha256:4feb2e50e2f91485cfc8d9b76e0dfc4391eaa12150a8c865942149d6eeb9aaa9",
+        "title": "Leluh Ruins",
+        "uri": "https://npgallery.nps.gov/AssetDetail/NRIS/83004524"
+      }
+    },
+    "id": "auth:nps-nris:83004524",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": null,
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Areas Of Significance: PREHISTORIC HISTORIC - ABORIGINAL POLITICS/GOVERNMENT ARCHITECTURE",
+        "id": "qualification:auth:nps-nris:83004524",
+        "license": null,
+        "publisher": "National Park Service / National Register Information System",
+        "revision": "sha256:4feb2e50e2f91485cfc8d9b76e0dfc4391eaa12150a8c865942149d6eeb9aaa9",
+        "title": "Leluh Ruins",
+        "uri": "https://npgallery.nps.gov/AssetDetail/NRIS/83004524"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Asia & Pacific, World Heritage Convention Regional Contact",
+        "id": "region:whc-FM",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:d6bbdff7b2fc03a6a3220f001ec75780cb08a80cf23e7ebee0c9c4e99fde30d1",
+        "title": "UNESCO State Party profile — Micronesia (Federated States of)",
+        "uri": "https://whc.unesco.org/en/statesparties/fm/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Lelu Island ; Address Restricted",
+        "id": "restriction:auth:nps-nris:83004524",
+        "license": null,
+        "publisher": "National Park Service / National Register Information System",
+        "revision": "sha256:4feb2e50e2f91485cfc8d9b76e0dfc4391eaa12150a8c865942149d6eeb9aaa9",
+        "title": "NPS public address restriction",
+        "uri": "https://npgallery.nps.gov/AssetDetail/NRIS/83004524"
+      }
+    ],
+    "source_uri": "https://npgallery.nps.gov/AssetDetail/NRIS/83004524",
+    "title": "Leluh Ruins",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "All historical stages require separate source review; no event dates inferred.",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Republic of Palau Ministry of HRCTD / Bureau of Cultural and Historical Preservation"
+    ],
+    "description": "",
+    "description_zh": "",
+    "details": "Source country association: Palau (PW).",
+    "geography": {
+      "authority_id": "supplement:auth:palau-register:B.NE-4.4",
+      "countries": [
+        "PW"
+      ],
+      "note": "Palau正式历史名录B:NE-4:4所指Badrulchau石柱遗址与古台地原址，位于北Babeldaob的Ngarchelong；不是邻近Ollei/Mengellang村镇、石材来源地或南部Rock Islands整体。 主管文化机关公开同名地图查询链接，但冻结页面未直接提供可复现的数字坐标。未把搜索服务动态解析点、州行政中心或邻村作为代表；本批数字定位待独审，暂置空，不宣称实际地点未知。 本条仅记录现代来源国家关联，不从代表点推断政治归属；历史阶段未独立核验，不把登记、提名、发掘或出版年当建造/连续使用期。",
+      "point_count": 0,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "Covering an area of five acres, it contains over 34 monolith columns on the ancient terraces",
+        "id": "qualification:auth:palau-register:B.NE-4.4",
+        "license": null,
+        "publisher": "Republic of Palau Ministry of HRCTD / Bureau of Cultural and Historical Preservation",
+        "revision": "sha256:52fc48c2b9fe77a05424c39d5ba666822f5b5ae50da67a3fdcf76014f9de812c",
+        "title": "Badrulchau",
+        "uri": "https://ministryofhrctd.pw/badrulchau-stone-monoliths/"
+      }
+    },
+    "id": "auth:palau-register:B.NE-4.4",
+    "location_precision": null,
+    "names": [
+      "Badrulchau Stone Monoliths",
+      "The Stone Monoliths of Ngarchelong"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": null,
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Covering an area of five acres, it contains over 34 monolith columns on the ancient terraces",
+        "id": "qualification:auth:palau-register:B.NE-4.4",
+        "license": null,
+        "publisher": "Republic of Palau Ministry of HRCTD / Bureau of Cultural and Historical Preservation",
+        "revision": "sha256:52fc48c2b9fe77a05424c39d5ba666822f5b5ae50da67a3fdcf76014f9de812c",
+        "title": "Badrulchau",
+        "uri": "https://ministryofhrctd.pw/badrulchau-stone-monoliths/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Asia & Pacific, World Heritage Convention Regional Contact",
+        "id": "region:whc-PW",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:3d08707e81d23ed69bea0309bd87a30b5c23cfde55e2abe8cba59dc02982ea9f",
+        "title": "UNESCO State Party profile — Palau",
+        "uri": "https://whc.unesco.org/en/statesparties/pw/"
+      }
+    ],
+    "source_uri": "https://ministryofhrctd.pw/badrulchau-stone-monoliths/",
+    "title": "Badrulchau",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "",
+      "note": "All historical stages require separate source review; no event dates inferred.",
+      "phases": [],
+      "reviewed_at": null,
+      "status": "not_reviewed"
+    },
+    "contributors": [
+      "Alele Museum / State Party submission / UNESCO World Heritage Centre"
+    ],
+    "description": "",
+    "description_zh": "",
+    "details": "Source country association: Marshall Islands (MH).",
+    "geography": {
+      "authority_id": "supplement:auth:whc-tentative:2066",
+      "countries": [
+        "MH"
+      ],
+      "note": "正式文化预备名单2066所述历史街区建筑群；不是整个Likiep环礁、现代同名行政区域或单独DeBrum House。 官方坐标为整个环礁的经纬范围，不能取均值当历史街区点。未采用旧WDQS中的环礁级点或单屋点代替整体，本批尚未核定同对象数字代表点，暂置空而非宣称原址真实未知。 本条仅记录现代来源国家关联，不从代表点推断政治归属；历史阶段未独立核验，不把登记、提名、发掘或出版年当建造/连续使用期。",
+      "point_count": 0,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-04",
+        "excerpt": "Likiep Village Historic District consists of approximately 15 architecturally and/ or historically significant buildings or remnants of buildings",
+        "id": "qualification:auth:whc-tentative:2066",
+        "license": null,
+        "publisher": "Alele Museum / State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:0a71b908011975db764e1996d1ea5e06ac6b8cde35bce9aa26338a76f4de17dd",
+        "title": "Likiep Village Historic District",
+        "uri": "https://whc.unesco.org/en/tentativelists/2066/"
+      }
+    },
+    "id": "auth:whc-tentative:2066",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": null,
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Likiep Village Historic District consists of approximately 15 architecturally and/ or historically significant buildings or remnants of buildings",
+        "id": "qualification:auth:whc-tentative:2066",
+        "license": null,
+        "publisher": "Alele Museum / State Party submission / UNESCO World Heritage Centre",
+        "revision": "sha256:0a71b908011975db764e1996d1ea5e06ac6b8cde35bce9aa26338a76f4de17dd",
+        "title": "Likiep Village Historic District",
+        "uri": "https://whc.unesco.org/en/tentativelists/2066/"
+      },
+      {
+        "accessed": "2026-11-04",
+        "excerpt": "Asia & Pacific, World Heritage Convention Regional Contact",
+        "id": "region:whc-MH",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "sha256:addd2420bdf8cb19dfe900eaefa57b3f296b0b07c4e1c88aff4e65f0fdd33e02",
+        "title": "UNESCO State Party profile — Marshall Islands",
+        "uri": "https://whc.unesco.org/en/statesparties/mh/"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/2066/",
+    "title": "Likiep Village Historic District",
+    "types": [
+      "historic-site"
+    ]
+  }
+]

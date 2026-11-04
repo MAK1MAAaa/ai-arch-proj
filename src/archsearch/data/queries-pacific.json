@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "scope": "Twenty paired diagnostic intents for seven Pacific and African-interior cultural identities. Cohort-focused named and thematic probes are not a blind benchmark, a complete inventory, confirmed relevance judgments or archaeological date assertions. Null adopted representatives do not mean the real locations are unknown.",
+  "queries": [
+    {"id":"p01","query_zh":"寻找 Leluh Ruins 文化遗址","query_en":"Find the Leluh Ruins cultural site","topic":"Named cultural ruins"},
+    {"id":"p02","query_zh":"寻找 Likiep 历史街区","query_en":"Find the Likiep Village Historic District","topic":"Named historic district"},
+    {"id":"p03","query_zh":"寻找 Badrulchau 石柱遗址","query_en":"Find the Badrulchau stone monoliths","topic":"Named monolith site"},
+    {"id":"p04","query_zh":"寻找 Bai Ra Irrai 传统会议屋","query_en":"Find the Bai Ra Irrai meeting house","topic":"Named architectural place"},
+    {"id":"p05","query_zh":"寻找辛加东卡沙丘的考古文化资料","query_en":"Find archaeological cultural records for the Sigatoka Sand Dunes","topic":"Cultural qualification of a sand-dune landscape"},
+    {"id":"p06","query_zh":"寻找 Ngongo Mbata 教堂考古遗址","query_en":"Find the Ngongo Mbata church archaeological site","topic":"Named church excavation"},
+    {"id":"p07","query_zh":"寻找 Kindoki 考古遗址","query_en":"Find the Kindoki archaeological site","topic":"Named archaeological place"},
+    {"id":"p08","query_zh":"寻找密克罗尼西亚联邦的文化遗址","query_en":"Find cultural ruins in the Federated States of Micronesia","topic":"Micronesian cultural places"},
+    {"id":"p09","query_zh":"寻找马绍尔群岛的历史建筑街区","query_en":"Find historic building districts in the Marshall Islands","topic":"Marshall Islands built heritage"},
+    {"id":"p10","query_zh":"寻找帕劳的古代石柱遗址","query_en":"Find ancient stone monolith sites in Palau","topic":"Palauan monolith archaeology"},
+    {"id":"p11","query_zh":"寻找帕劳的传统公共会议建筑","query_en":"Find traditional public meeting buildings in Palau","topic":"Palauan cultural architecture"},
+    {"id":"p12","query_zh":"寻找斐济沙丘中的史前考古遗址","query_en":"Find prehistoric archaeological sites in the sand dunes of Fiji","topic":"Fijian cultural sand-dune landscape"},
+    {"id":"p13","query_zh":"寻找刚果民主共和国的教堂考古遗址","query_en":"Find church archaeological sites in the Democratic Republic of the Congo","topic":"Congo church archaeology"},
+    {"id":"p14","query_zh":"寻找刚果民主共和国的发掘遗址","query_en":"Find archaeological excavation sites in the Democratic Republic of the Congo","topic":"Congo excavation places"},
+    {"id":"p15","query_zh":"寻找太平洋岛屿的历史建筑","query_en":"Find historic buildings on Pacific islands","topic":"Pacific built heritage"},
+    {"id":"p16","query_zh":"寻找太平洋岛屿古代台地上的石柱","query_en":"Find stone monoliths on ancient terraces on Pacific islands","topic":"Cultural terraces and monoliths"},
+    {"id":"p17","query_zh":"寻找 Airai Bai 文化建筑","query_en":"Find the Airai Bai cultural building","topic":"Source-attested architectural alias"},
+    {"id":"p18","query_zh":"寻找包含历史建筑遗存的村落街区","query_en":"Find historic village districts containing building remains","topic":"Historic district rather than a substitute village-centre point"},
+    {"id":"p19","query_zh":"寻找非洲的教堂发掘资料","query_en":"Find archaeological church excavation records in Africa","topic":"Church archaeological evidence"},
+    {"id":"p20","query_zh":"寻找大洋洲的考古与建筑文化资料","query_en":"Find archaeological and architectural cultural records in Oceania","topic":"Regional cultural discovery"}
+  ]
+}
