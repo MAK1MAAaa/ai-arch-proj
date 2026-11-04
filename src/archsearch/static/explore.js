@@ -29,11 +29,41 @@ const ArchSearchExplore = (() => {
             throw new Error("目录起始位置应为0至1000000的整数。");
         if (typeof visible !== "boolean")
             throw new Error("目录点位开关无效。");
-        return { country, region, offset, visible };
+        return { country, region, offset, visible, bbox: ArchSearchResearch.normalizeBBox(value.bbox) };
     }
-    function matches(point, state) {
+    function insideBBox(point, bbox) {
+        const [west, south, east, north] = bbox;
+        if (point[1] < south || point[1] > north)
+            return false;
+        const containsLongitude = (longitude) => west <= east ? longitude >= west && longitude <= east : longitude >= west || longitude <= east;
+        return containsLongitude(point[0]) || (Math.abs(point[0]) === 180 && containsLongitude(-point[0]));
+    }
+    function sameBBox(a, b) {
+        return JSON.stringify(a ?? null) === JSON.stringify(b ?? null);
+    }
+    function copyState(value) { return { ...value, bbox: value.bbox ? [...value.bbox] : null }; }
+    function capturedBounds(bounds) {
+        const west = bounds.getWest();
+        const east = bounds.getEast();
+        const south = bounds.getSouth();
+        const north = bounds.getNorth();
+        if (![west, east, south, north].every(Number.isFinite) || east <= west)
+            throw new Error("当前地图视野无法形成有效范围，请调整地图后重试。");
+        const wrap = (longitude) => ((longitude + 180) % 360 + 360) % 360 - 180;
+        const bbox = east - west >= 360 ? [-180, Math.max(-90, south), 180, Math.min(90, north)]
+            : [wrap(west), Math.max(-90, south), wrap(east), Math.min(90, north)];
+        if (bbox[2] === -180 && bbox[0] > 0)
+            bbox[2] = 180;
+        const valid = ArchSearchResearch.normalizeBBox(bbox);
+        if (!valid)
+            throw new Error("当前地图范围为空。");
+        return valid;
+    }
+    function matches(point, state, mode = "source-or-representative") {
         return (state.country === null || point.countries.includes(state.country))
-            && (state.region === null || point.regions.includes(state.region));
+            && (state.region === null || point.regions.includes(state.region))
+            && (!state.bbox || (point.repr_point !== null && point.repr_point !== undefined && insideBBox(point.repr_point, state.bbox))
+                || (mode === "source-or-representative" && point.source_points?.some((position) => insideBBox(position, state.bbox))) === true);
     }
     function coordinate(value) {
         return Array.isArray(value) && value.length === 2
@@ -254,10 +284,13 @@ const ArchSearchExplore = (() => {
         }
         else if (points.some((point) => point.source_points.length > 0))
             throw new Error("来源定位点缺少版本与许可统计，未替换已有地图。");
-        return { corpus_version: coverage.corpus_version, spatial_version: spatial?.version ?? null, total: coverage.total, points };
+        return { corpus_version: coverage.corpus_version, spatial_version: spatial?.version ?? null, spatial_match_mode: spatial?.ready ? "source-or-representative" : "representative-only", total: coverage.total, points };
     }
     function parsePage(value, catalogue, state) {
-        const points = catalogue.points.filter((point) => matches(point, state));
+        const points = catalogue.points.filter((point) => matches(point, state, catalogue.spatial_match_mode));
+        if (!record(value) || !Object.hasOwn(value, "bbox") || !sameBBox(ArchSearchResearch.normalizeBBox(value.bbox), state.bbox)
+            || value.spatial_match_mode !== catalogue.spatial_match_mode || value.spatial_version !== catalogue.spatial_version)
+            throw new Error("目录响应的地图范围、来源版本或定位匹配方式与请求不一致。");
         if (!record(value) || value.corpus_version !== catalogue.corpus_version || value.total !== points.length
             || value.offset !== state.offset || value.limit !== pageSize || !Array.isArray(value.sites)
             || value.sites.length !== Math.min(pageSize, Math.max(0, points.length - state.offset)))
@@ -273,9 +306,9 @@ const ArchSearchExplore = (() => {
             return site.id !== points[state.offset + index]?.id || !point || JSON.stringify(point) !== JSON.stringify(site);
         }))
             throw new Error("目录分页与点位来源记录不一致。");
-        return { corpus_version: catalogue.corpus_version, total: points.length, offset: state.offset, limit: pageSize, sites };
+        return { corpus_version: catalogue.corpus_version, total: points.length, offset: state.offset, limit: pageSize, bbox: state.bbox ? [...state.bbox] : null, spatial_match_mode: catalogue.spatial_match_mode, spatial_version: catalogue.spatial_version, sites };
     }
-    function create({ map, onSelect, onFilterChange, onStateChange, onCommittedState, onCatalogue, onFeedback }) {
+    function create({ map, initialState, initialBoundsError, onBoundsAction, onSelect, onFilterChange, onStateChange, onCommittedState, onCatalogue, onFeedback }) {
         const get = (id) => {
             const node = document.getElementById(id);
             if (!node)
@@ -293,9 +326,12 @@ const ArchSearchExplore = (() => {
             previous: get("explore-previous"), next: get("explore-next"),
             page: get("explore-page"), feedback: get("explore-feedback"), retry: get("explore-retry"),
             limit: get("explore-limit-note"),
+            captureBounds: get("explore-capture-bounds"), clearBounds: get("explore-clear-bounds"),
+            boundsStatus: get("explore-bounds-status"),
         };
         const limitNote = ui.limit.textContent ?? "";
-        let desired = normalizeState({});
+        let desired = normalizeState(initialState ?? {});
+        let boundsError = initialBoundsError ?? null;
         let applied = null;
         let coverage = null;
         let catalogue = null;
@@ -318,11 +354,11 @@ const ArchSearchExplore = (() => {
             failed = error;
             ui.panel.classList.toggle("has-error", error);
             ui.feedback.textContent = message;
-            ui.retry.hidden = !error;
+            ui.retry.hidden = !error || boundsError !== null;
             onFeedback?.(message);
         }
         function getCommittedState() {
-            return applied ? { ...applied, visible: desired.visible } : null;
+            return applied && page && catalogue ? { ...copyState(applied), visible: desired.visible, spatial_match_mode: page.spatial_match_mode, spatial_version: catalogue.spatial_version } : null;
         }
         function committed() {
             const state = getCommittedState();
@@ -402,7 +438,18 @@ const ArchSearchExplore = (() => {
             ui.clear.disabled = desired.country === null && desired.region === null && desired.offset === 0;
             ui.points.checked = desired.visible;
             ui.points.disabled = !map || !catalogue;
-            ui.fit.disabled = !map || !catalogue || !catalogue.points.some((point) => matches(point, applied ?? desired) && placements(point).length > 0);
+            ui.fit.disabled = !map || !catalogue || !catalogue.points.some((point) => matches(point, applied ?? desired, catalogue.spatial_match_mode) && scopedPlacements(point, applied ?? desired).length > 0);
+            ui.captureBounds.disabled = !map || (!catalogue && boundsError === null);
+            ui.captureBounds.textContent = desired.bbox ? "更新为当前地图范围" : "按当前地图范围浏览";
+            ui.clearBounds.disabled = boundsError === null && !desired.bbox && !applied?.bbox;
+            if (ui.clearBounds.disabled && document.activeElement === ui.clearBounds)
+                ui.boundsStatus.focus({ preventScroll: true });
+            const bbox = applied?.bbox;
+            const appliedLabel = bbox ? `已应用范围：西 ${bbox[0].toFixed(4)}°、南 ${bbox[1].toFixed(4)}°、东 ${bbox[2].toFixed(4)}°、北 ${bbox[3].toFixed(4)}°${bbox[0] > bbox[2] ? "（跨日期变更线）" : ""}。` : "尚未限定地图范围。";
+            ui.boundsStatus.textContent = boundsError !== null
+                ? `地图范围恢复失败：${boundsError}目录与全库点层尚未加载；请明确清除范围或按当前地图重新捕获。检索条件与已有排名仍独立可用。`
+                : `${appliedLabel}${!sameBBox(desired.bbox, applied?.bbox) ? " 新范围尚未成功应用，仍显示上次成功目录与点层。" : ""}仅影响目录与全库点层，拖动地图不会更新范围；检索排名、年份与选中资料保留。${page?.spatial_match_mode === "representative-only" && bbox ? " 当前仅按原代表点匹配，未覆盖来源组成点。" : ""}`;
+            ui.boundsStatus.classList.toggle("is-invalid", boundsError !== null);
             ui.previous.disabled = loading || page === null || page.offset === 0;
             ui.previous.textContent = page && page.offset >= page.total && page.total > 0 ? "回到首页" : "上一页";
             ui.next.disabled = loading || page === null || page.offset + page.limit >= page.total;
@@ -449,13 +496,16 @@ const ArchSearchExplore = (() => {
                     marker.setStyle({ color: active ? "#813d29" : "#586f60", fillColor: active ? "#a55339" : "#66745b", fillOpacity: active ? 0.95 : 0.5, weight: active ? 1.5 : 0.7 });
                 }
         }
-        function buildLayer(points) {
+        function scopedPlacements(point, scope) {
+            return placements(point).filter((placement) => !scope.bbox || insideBBox(placement.coordinate, scope.bbox));
+        }
+        function buildLayer(points, scope) {
             const nextMarkers = new Map();
             if (!map || !renderer || typeof L === "undefined")
                 return { layer: null, markers: nextMarkers };
             const next = L.layerGroup();
             for (const point of points) {
-                const copies = placements(point).flatMap((placement) => displayCoordinates(placement.coordinate).map((location) => {
+                const copies = scopedPlacements(point, scope).flatMap((placement) => displayCoordinates(placement.coordinate).map((location) => {
                     const marker = L.circleMarker(location, { pane: "catalogue-points", renderer: renderer ?? undefined, radius: 3.2,
                         color: "#586f60", fillColor: "#66745b", fillOpacity: 0.5, weight: 0.7 });
                     marker.bindTooltip(() => {
@@ -494,16 +544,16 @@ const ArchSearchExplore = (() => {
                 button.setAttribute("aria-label", `${title}，打开目录资料，不属于检索排名`);
                 const countries = site.countries.length ? site.countries.map((id) => countryLabels.get(id) ?? id).join(" · ") : "国家／地区未标注";
                 button.append(element("span", "explore-item-title", title), element("span", "explore-item-meta", countries), element("span", "explore-item-meta", `${sourceLabels[site.source_kind] ?? site.source_kind} · ${chronologyLabels[site.chronology_status]} · ${locationLabels[site.location_status]}`));
-                button.addEventListener("click", () => onSelect(site.id, button));
+                button.addEventListener("click", () => onSelect(site.id, button, applied?.bbox ? { moveMap: false } : undefined));
                 buttons.set(site.id, button);
                 item.append(button);
                 return item;
             });
             if (!nodes.length)
-                nodes.push(element("li", "explore-empty", page.total === 0 ? "所选国家／地区与分区组合暂无资料，可清除地域后继续浏览。" : "此目录位置超出当前筛选范围，可用上一页返回首页。"));
+                nodes.push(element("li", "explore-empty", page.total === 0 ? "所选地域与地图范围组合暂无资料，可清除筛选后继续浏览。" : "此目录位置超出当前筛选范围，可用上一页返回首页。"));
             ui.list.replaceChildren(...nodes);
             ui.list.scrollTop = 0;
-            ui.count.textContent = `${page.total.toLocaleString("zh-CN")} 条符合地域条件`;
+            ui.count.textContent = `${page.total.toLocaleString("zh-CN")} 条符合目录条件`;
             const start = page.sites.length ? page.offset + 1 : 0;
             const end = page.offset + page.sites.length;
             ui.page.textContent = `${page.sites.length ? `第 ${start}—${end} 条` : "本页无资料"} / 共 ${page.total.toLocaleString("zh-CN")} 条 · 按来源标题排序，无相关性分数`;
@@ -518,16 +568,23 @@ const ArchSearchExplore = (() => {
             return value;
         }
         async function request(refresh) {
+            if (boundsError !== null) {
+                feedback("分享链接中的地图范围无效；目录加载已暂停，请明确清除或重新捕获范围。", true);
+                renderControls();
+                throw new Error(boundsError);
+            }
             controller?.abort();
             const current = ++sequence;
             const abort = new AbortController();
             controller = abort;
-            const wanted = { ...desired };
+            const wanted = copyState(desired);
             const parameters = new URLSearchParams({ offset: String(wanted.offset), limit: String(pageSize) });
             if (wanted.country)
                 parameters.set("country", wanted.country);
             if (wanted.region)
                 parameters.set("region", wanted.region);
+            if (wanted.bbox)
+                parameters.set("bbox", wanted.bbox.join(","));
             loading = true;
             feedback(page ? "正在更新目录；列表与全库点位保留上次成功范围，检索排名和年份不变。" : "正在读取本地全库点位与覆盖统计。");
             renderControls();
@@ -551,8 +608,8 @@ const ArchSearchExplore = (() => {
                 if (!nextCatalogue)
                     throw new Error("全库点位尚未准备。");
                 const nextPage = parsePage(pageRaw, nextCatalogue, wanted);
-                const replacePoints = nextCatalogue !== catalogue || !applied || applied.country !== wanted.country || applied.region !== wanted.region;
-                const next = replacePoints ? buildLayer(nextCatalogue.points.filter((point) => matches(point, wanted))) : { layer, markers };
+                const replacePoints = nextCatalogue !== catalogue || !applied || applied.country !== wanted.country || applied.region !== wanted.region || !sameBBox(applied.bbox, wanted.bbox);
+                const next = replacePoints ? buildLayer(nextCatalogue.points.filter((point) => matches(point, wanted, nextCatalogue.spatial_match_mode)), wanted) : { layer, markers };
                 pendingLayer = replacePoints ? next.layer : null;
                 if (abort.signal.aborted || current !== sequence)
                     return;
@@ -577,14 +634,14 @@ const ArchSearchExplore = (() => {
                 renderPage();
                 if (selectedId !== null)
                     select(selectedId);
-                const scoped = nextCatalogue.points.filter((point) => matches(point, wanted));
+                const scoped = nextCatalogue.points.filter((point) => matches(point, wanted, nextCatalogue.spatial_match_mode));
                 const mapped = scoped.filter((point) => point.location_status === "mapped").length;
                 const polar = scoped.filter((point) => point.location_status === "polar").length;
                 const unknown = scoped.filter((point) => point.location_status === "unknown").length;
-                const positions = scoped.flatMap(placements);
+                const positions = scoped.flatMap((point) => scopedPlacements(point, wanted));
                 const sourceCount = positions.filter((position) => position.sourceIndexes.length > 0).length;
                 const representativeCount = positions.length - sourceCount;
-                feedback(`当前地域范围 ${page.total.toLocaleString("zh-CN")} 条资料 / 主图 ${sourceCount.toLocaleString("zh-CN")} 个源定位点 + ${representativeCount.toLocaleString("zh-CN")} 个必要代表点。代表点状态：主图可定位 ${mapped}、极区 ${polar}、暂无可用坐标 ${unknown}。${map ? "同一遗产内同坐标源记录只绘一点；编号为检索候选。" : "地图组件不可用，可使用目录列表。"}`);
+                feedback(`当前目录范围 ${page.total.toLocaleString("zh-CN")} 条资料 / 主图 ${sourceCount.toLocaleString("zh-CN")} 个源定位点 + ${representativeCount.toLocaleString("zh-CN")} 个必要代表点。代表点状态：主图可定位 ${mapped}、极区 ${polar}、暂无可用坐标 ${unknown}。${wanted.bbox ? "仅绘制固定范围内定位点；无可核点的资料不参与范围匹配。" : ""}${nextPage.spatial_match_mode === "representative-only" && wanted.bbox ? " 来源多点未就绪，仅按原代表点匹配，组成地点可能遗漏。" : ""}${map ? "同一遗产内同坐标源记录只绘一点；编号为检索候选。" : "地图组件不可用，可使用目录列表。"}`);
                 if (reload)
                     onCatalogue?.(nextCatalogue.points.map((point) => ({ ...point,
                         repr_point: point.repr_point === null ? null : [...point.repr_point], countries: [...point.countries], regions: [...point.regions],
@@ -621,18 +678,19 @@ const ArchSearchExplore = (() => {
                 throw error;
             }
             const filterChanged = next.country !== desired.country || next.region !== desired.region;
+            const bboxChanged = !sameBBox(next.bbox, desired.bbox);
             const pageChanged = next.offset !== desired.offset;
             const visibilityChanged = next.visible !== desired.visible;
-            const changed = filterChanged || pageChanged || next.visible !== desired.visible;
+            const changed = filterChanged || bboxChanged || pageChanged || next.visible !== desired.visible;
             desired = next;
             renderOptions();
             renderControls();
             if (options.notify && changed) {
                 if (filterChanged)
-                    onFilterChange?.({ ...desired });
-                onStateChange?.({ ...desired });
+                    onFilterChange?.(copyState(desired));
+                onStateChange?.(copyState(desired));
             }
-            if (filterChanged || pageChanged || !catalogue)
+            if (filterChanged || bboxChanged || pageChanged || !catalogue || !sameBBox(desired.bbox, applied?.bbox))
                 await request(false);
             else if (visibilityChanged)
                 committed();
@@ -641,6 +699,24 @@ const ArchSearchExplore = (() => {
         ui.region.addEventListener("change", () => { void setState({ region: ui.region.value || null, offset: 0 }, { notify: true }).catch(() => undefined); });
         ui.clear.addEventListener("click", () => { void setState({ country: null, region: null, offset: 0 }, { notify: true }).catch(() => undefined); });
         ui.points.addEventListener("change", () => { void setState({ visible: ui.points.checked }, { notify: true }).catch(() => undefined); });
+        ui.captureBounds.addEventListener("click", () => {
+            if (!map)
+                return;
+            try {
+                const bbox = capturedBounds(map.getBounds());
+                boundsError = null;
+                onBoundsAction?.();
+                void setState({ bbox, offset: 0 }, { notify: true }).catch(() => undefined);
+            }
+            catch (error) {
+                feedback(error instanceof Error ? error.message : "无法读取当前地图范围。", true);
+            }
+        });
+        ui.clearBounds.addEventListener("click", () => {
+            boundsError = null;
+            onBoundsAction?.();
+            void setState({ bbox: null, offset: 0 }, { notify: true }).catch(() => undefined);
+        });
         ui.previous.addEventListener("click", () => { void setState({ offset: page && page.offset >= page.total ? 0 : Math.max(0, desired.offset - pageSize) }, { notify: true }).catch(() => undefined); });
         ui.next.addEventListener("click", () => { if (page && page.offset + page.limit < page.total)
             void setState({ offset: page.offset + page.limit }, { notify: true }).catch(() => undefined); });
@@ -648,13 +724,13 @@ const ArchSearchExplore = (() => {
         ui.fit.addEventListener("click", () => {
             if (!map || !catalogue)
                 return;
-            const points = catalogue.points.filter((point) => matches(point, applied ?? desired)).flatMap(placements)
+            const points = catalogue.points.filter((point) => matches(point, applied ?? desired, catalogue.spatial_match_mode)).flatMap((point) => scopedPlacements(point, applied ?? desired))
                 .map((point) => [point.coordinate[1], point.coordinate[0]]);
             if (points.length)
                 map.fitBounds(L.latLngBounds(ArchSearchMapView.wrapCoordinates(points)), { padding: [40, 40], maxZoom: 9, animate: false });
         });
         renderControls();
-        return { load, getState: () => ({ ...desired }), getCommittedState, setState, select,
+        return { load, getState: () => copyState(desired), getCommittedState, setState, select,
             getPoint: (id) => {
                 const point = catalogue?.points.find((item) => item.id === id);
                 return point?.repr_point ? [...point.repr_point] : null;
@@ -669,6 +745,6 @@ const ArchSearchExplore = (() => {
             getSpatialMetadata: () => coverage?.spatial_locations ? JSON.parse(JSON.stringify(coverage.spatial_locations)) : null,
         };
     }
-    return { create, normalizeState, matches, coordinate, displayCoordinates, locationStatus, placements, parseSpatial, parseCoverage, parseCatalogue, parsePage };
+    return { create, normalizeState, matches, coordinate, displayCoordinates, locationStatus, placements, parseSpatial, parseCoverage, parseCatalogue, parsePage, insideBBox, capturedBounds };
 })();
 //# sourceMappingURL=explore.js.map
