@@ -141,7 +141,7 @@ const ArchSearchExplore = (() => {
   }
 
   const mercatorLimit = 85.0511287798;
-  const locationLabels = { mapped: "主图可定位", polar: "极区定位示意", unknown: "暂无可用坐标" };
+  const locationLabels = { mapped: "主图可定位", polar: "极区定位示意", unknown: "暂无可用代表点" };
 
   function locationStatus(value: [number, number] | null): Point["location_status"] {
     return value === null ? "unknown" : Math.abs(value[1]) > mercatorLimit ? "polar" : "mapped";
@@ -665,7 +665,7 @@ const ArchSearchExplore = (() => {
         const positions = scoped.flatMap((point) => scopedPlacements(point, wanted));
         const sourceCount = positions.filter((position) => position.sourceIndexes.length > 0).length;
         const representativeCount = positions.length - sourceCount;
-        feedback(`当前目录范围 ${page.total.toLocaleString("zh-CN")} 条资料 / 主图 ${sourceCount.toLocaleString("zh-CN")} 个源定位点 + ${representativeCount.toLocaleString("zh-CN")} 个必要代表点。代表点状态：主图可定位 ${mapped}、极区 ${polar}、暂无可用坐标 ${unknown}。${wanted.bbox ? "仅绘制固定范围内定位点；无可核点的资料不参与范围匹配。" : ""}${nextPage.spatial_match_mode === "representative-only" && wanted.bbox ? " 来源多点未就绪，仅按原代表点匹配，组成地点可能遗漏。" : ""}${map ? "同一遗产内同坐标源记录只绘一点；编号为检索候选。" : "地图组件不可用，可使用目录列表。"}`);
+        feedback(`当前目录范围 ${page.total.toLocaleString("zh-CN")} 条资料 / 主图 ${sourceCount.toLocaleString("zh-CN")} 个源定位点 + ${representativeCount.toLocaleString("zh-CN")} 个必要代表点。代表点状态：主图可定位 ${mapped}、极区 ${polar}、暂无可用代表点 ${unknown}。${wanted.bbox ? "仅绘制固定范围内定位点；无可核点的资料不参与范围匹配。" : ""}${nextPage.spatial_match_mode === "representative-only" && wanted.bbox ? " 来源多点未就绪，仅按原代表点匹配，组成地点可能遗漏。" : ""}${map ? "同一遗产内同坐标源记录只绘一点；编号为检索候选。" : "地图组件不可用，可使用目录列表。"}`);
         if (reload) onCatalogue?.(nextCatalogue.points.map((point) => ({ ...point,
           repr_point: point.repr_point === null ? null : [...point.repr_point], countries: [...point.countries], regions: [...point.regions],
           source_points: point.source_points.map((value) => [...value]), source_location_records: point.source_location_records.map((source) => ({ ...source, coordinate: [...source.coordinate] })) })));

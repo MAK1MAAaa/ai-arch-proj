@@ -85,6 +85,14 @@ def load_registry(data_dir: Path = DATA_DIR) -> CoverageRegistry:
             raise NpsError("NPS country-or-area labels cannot replace existing source labels")
         countries.update(nps_countries)
         regions.update(project_region_labels(Path(data_dir)))
+    if (Path(data_dir) / "australia_manifest.json").exists():
+        from archsearch.australia_data import AustraliaError
+        from archsearch.australia_data import new_country_labels as australia_country_labels
+
+        australia_countries = australia_country_labels(Path(data_dir))
+        if countries.keys() & australia_countries.keys():
+            raise AustraliaError("NHL labels cannot replace existing source country-or-area labels")
+        countries.update(australia_countries)
     spatial = None
     spatial_error = None
     try:

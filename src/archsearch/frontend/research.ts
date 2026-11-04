@@ -228,11 +228,18 @@ const ArchSearchResearch = (() => {
     } | null;
   }
 
-  function createExport<T>(request: SearchSpec, response: SearchResponse<T>, exportedAt: string, map: HistoryView | null = null, selection: Selection = { site: null, phase: null }, selectedSite: unknown = null, browse: BrowseState | null = null, spatial: SpatialSnapshot | null = null) {
+  type RegisteredAreasSnapshot = NonNullable<ReturnType<ReturnType<typeof ArchSearchRegisteredAreas.create>["getSnapshot"]>>;
+
+  function createExport<T>(request: SearchSpec, response: SearchResponse<T>, exportedAt: string, map: HistoryView | null = null, selection: Selection = { site: null, phase: null }, selectedSite: unknown = null, browse: BrowseState | null = null, spatial: SpatialSnapshot | null = null, registeredAreas: RegisteredAreasSnapshot | null = null, currentCorpusVersion: string | null = response.corpus_version, currentRegisteredAreasVersion: string | null = registeredAreas?.version ?? null) {
     const normalized = normalizeRequest(request);
     if (normalized.query !== response.query || normalized.mode !== response.mode) {
       throw new Error("导出请求必须与成功响应的查询和检索方式一致。");
     }
+    const selectedMatches = selectedSite !== null && typeof selectedSite === "object" && "id" in selectedSite && selectedSite.id === selection.site;
+    const areas = registeredAreas?.displayed === true && selectedMatches && selection.site === registeredAreas.site_id
+      && registeredAreas.corpus_version === response.corpus_version && registeredAreas.corpus_version === currentCorpusVersion && registeredAreas.version === currentRegisteredAreasVersion
+      ? { ...ArchSearchRegisteredAreas.parseAreas(registeredAreas, registeredAreas.site_id, currentCorpusVersion, currentRegisteredAreasVersion), displayed: true as const } : null;
+    if (areas && (!areas.ready || areas.features.length === 0)) throw new Error("未实际显示的登记范围不能加入导出。");
     return {
       schema_version: 2,
       exported_at: exportedAt,
@@ -242,6 +249,7 @@ const ArchSearchResearch = (() => {
       selection: { ...selection },
       selected_site: selectedSite,
       spatial: spatial === null ? null : JSON.parse(JSON.stringify(spatial)) as SpatialSnapshot,
+      registered_areas: areas,
       browse: browse ? { ...browse, bbox: normalizeBBox(browse.bbox) } : null,
       sources: [
         { name: "Pleiades", version: "v4.1", license: "CC BY 3.0", uri: "https://pleiades.stoa.org/" },
@@ -255,6 +263,7 @@ const ArchSearchResearch = (() => {
         { name: "Africa cultural supplement", version: "africa-supplement-v1", license: "Mixed rights — see individual source_refs", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/AFRICA-LICENSE.md", note: "Five source-reviewed cultural identities from State Party tentative submissions, not World Heritage inscriptions or a complete African inventory. Wikidata metadata is CC0; authority excerpts retain individual rights. Unadopted representative coordinates remain null; no new historical phases are inferred." },
         { name: "Pacific and interior cultural supplement", version: "pacific-interior-supplement-v1", license: "Mixed rights — see individual source_refs", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/PACIFIC-LICENSE.md", note: "Seven independently source-reviewed cultural identities from Pacific registers and African archaeological research. An address-restricted place remains unmapped; unadopted or conflicting representative coordinates remain null. Tentative submissions are not World Heritage inscriptions. No listing, excavation or publication year becomes a historical phase." },
         { name: "NPS Pacific register supplement", version: "nps-pacific-v1", license: "NPS government structured metadata; other source rights retained", uri: "https://www.nps.gov/aboutus/disclaimer.htm", note: "Project grouping of seven source State labels, not a UNESCO region or sovereignty classification. Government metadata does not relicense third-party nomination text, photos or attachments. Viewer text, feature edits and newer downloads have separate version clocks. Source points may be generated reference positions; restricted locations remain unmapped. No registration or publication date becomes a site phase." },
+        { name: "Australian National Heritage List public spatial database", version: areas?.features[0]?.source.version ?? null, license: "CC BY 3.0 Australia", license_uri: "https://creativecommons.org/licenses/by/3.0/au/", uri: "https://gis.environment.gov.au/gispubmap/rest/services/ogc_services/National_Heritage_List/FeatureServer/0", note: "Public factual register fields and provider registered ranges only. Modern heritage registration is not an ancient footprint, political boundary, access permission or a representative point. Individual feature source URIs, versions, hashes and licences remain with registered_areas; linked third-party materials retain their own rights." },
         { name: "UNESCO Hague cultural properties", version: "protection-supplement-v1", license: "CC BY-SA 4.0", uri: "https://data.unesco.org/explore/dataset/chp001/", note: "Reviewed cultural places from a fixed protection register; source rows and component locations are not new-site counts. Source protection years do not establish historical phases. Unresolved or storage-only locations remain in the source audit and are not mapped as archaeological places." },
         { name: "Cliopatria", version: map?.source_version ?? null, license: "CC BY 4.0", uri: "https://github.com/Seshat-Global-History-Databank/cliopatria", note: "Historical polity approximations; valid source intervals, no interpolation or point-based political attribution." },
         { name: "Natural Earth", license: "Public domain", uri: "https://www.naturalearthdata.com/about/terms-of-use/", note: "Modern natural-geography reference; no ancient coastline reconstruction." },
@@ -280,6 +289,7 @@ const ArchSearchResearch = (() => {
         map: "map保存最后成功显示的年份与疆域版本；null表示尚无成功地图快照，待加载或失败年份不冒充已显示年份。",
         locations: "repr_point为null表示本记录无可用代表点：可能真实位置不明，也可能尚未取得可信公开数字坐标，来源说明保留区别；不等于零坐标。有效极区坐标超出Web Mercator时使用独立极区示意，不截断或伪造纬度。极区底图为现代自然地理参照，不生成历史国界。",
         source_points: "spatial保留最后成功目录的组合源点版本、source_groups对应的来源／版本／许可与地点身份，以及独立选中资料经审核纳入地图的定位序列、重复记录与来源标签。原代表点单独保存；多个定位记录不增加遗址条目数或承诺发掘精度。世界遗产原始序列保持不变；海牙名录排除的仓储、标签冲突等原记录仍保留在来源审计中，不混作考古原址点。",
+        registered_areas: "registered_areas只保存当前实际显示、且与选中资料和当前语料/检索版本一致的公开现代登记范围；null表示未显示或上下文不匹配。保留原WGS84闭环与来源版本/许可，不推内外环、代表点、古址轮廓、准入或点计数。范围显隐不写入分享链接，重新打开后仍须主动点击查看。",
         browse: "browse保存成功应用的独立目录条件；bbox为[西,南,东,北]闭区间，西大于东表示跨日期变更线，仅筛目录和全库点层，不改变request中的检索语义。spatial_match_mode及spatial_version记录当时的来源点匹配能力；representative-only可能遗漏无代表点落入框内的组成地点。选中资料纳入地图的来源序列完整导出；海牙名录未纳入地图的保护设施仍留在冻结来源审计中。",
       },
     };
