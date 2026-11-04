@@ -19,8 +19,8 @@ from archsearch.supplement_data import base_contract
 
 
 def test_published_append_preserves_pinned1795_and_reviewed_five_facts() -> None:
-    sites = load_corpus()
-    assert CORPUS_VERSION == "global-v9" and len(sites) == 1800
+    sites = load_corpus()[:1800]
+    assert CORPUS_VERSION == "global-v10" and len(sites) == 1800
     assert base_contract(sites[:1795]) == {
         "base_count": 1795,
         "base_ids_sha256": "2f3badcb912fc0585c554d65f19f68236e2b4b0d9728c81b3e86a509877f3e47",
@@ -68,20 +68,20 @@ def test_published_derivatives_rebuild_byte_identically_offline(tmp_path: Path) 
 def test_real_api_country_browse_null_points_bounds_and_keyword_discovery(tmp_path: Path) -> None:
     with TestClient(create_app(home=tmp_path)) as client:
         coverage = client.get("/api/coverage").json()
-        assert coverage["total"] == 1800 and coverage["corpus_version"] == "global-v9"
+        assert coverage["total"] == 1807 and coverage["corpus_version"] == "global-v10"
         assert len(coverage["countries"]) == 197 and len(coverage["regions"]) == 6
-        assert coverage["locations"] == {"mapped": 1786, "polar": 3, "unknown": 11}
+        assert coverage["locations"] == {"mapped": 1787, "polar": 3, "unknown": 17}
         assert coverage["chronology"] == {
-            "reviewed": 149, "insufficient": 451, "not_reviewed": 1200,
+            "reviewed": 149, "insufficient": 451, "not_reviewed": 1207,
         }
         spatial = coverage["spatial_locations"]
         assert (spatial["records"], spatial["points"], spatial["display_points"]) == (
-            1128, 5739, 6188,
+            1128, 5739, 6189,
         )
         assert len(spatial["source_groups"]) == 2
         status = client.get("/api/status").json()
         assert not status["semantic"]["ready"]
-        for site in load_corpus()[1795:]:
+        for site in load_corpus()[1795:1800]:
             assert site.geography
             page = client.get("/api/sites", params={
                 "country": site.geography.countries[0], "region": "africa", "limit": 100,
@@ -110,7 +110,7 @@ def test_africa_diagnostics_do_not_publish_unconfirmed_metrics(tmp_path: Path) -
     assert len(pairs) == len({pair.id for pair in pairs}) == 20
     assert [pair.id for pair in pairs] == [f"a{index:02d}" for index in range(1, 21)]
     report = evaluate_corpus(tmp_path / "missing-model", tmp_path / "report.json", queries=queries)
-    assert report["corpus_count"] == 1800 and report["metrics"] is None
+    assert report["corpus_count"] == 1807 and report["metrics"] is None
     assert report["qrels"]["confirmed"] is False and report["runs_complete"] is False
     assert set(report["runs"]) == {"bm25_zh", "bm25_en", "semantic_zh", "semantic_en"}
     assert all(row["error"] is None for key, run in report["runs"].items()
