@@ -2064,3 +2064,84 @@
     flex: 1 1 0;
   }
 }
+
+.research-workbench .history-auto-status .history-linkage-status {
+  margin: 0;
+  padding: 5px 8px;
+  border-left: 3px solid #967443;
+  background: #f1e8d4;
+  color: #594323;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.research-workbench .history-linkage-status[data-state="matched"] {
+  border-color: #536a52;
+  background: #e8ede2;
+  color: #30452f;
+}
+.research-workbench .history-linkage-status[data-state="mismatched"],
+.research-workbench .history-linkage-status[data-state="unavailable"] {
+  border-color: #a55339;
+  background: #f4e6dd;
+  color: #713b2b;
+}
+.history-source-details > summary {
+  cursor: pointer;
+  min-height: 24px;
+  padding: 3px 0;
+  font-size: 10px;
+  color: var(--muted);
+}
+.research-workbench .modern-boundaries-feedback {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+.research-workbench .modern-boundaries-feedback p {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #42506a;
+}
+.research-workbench .modern-boundaries-feedback p[data-state="error"] {
+  color: var(--accent-dark);
+}
+.research-workbench #modern-boundaries-retry {
+  flex-shrink: 0;
+  min-height: 30px;
+  padding: 4px 7px;
+  font-size: 10px;
+}
+.research-workbench .comparison-modern-legend,
+.research-workbench .comparison-history-legend {
+  height: 44px;
+  min-height: 44px;
+  flex: 0 0 44px;
+  margin: 0;
+  padding: 5px 10px;
+  overflow: auto;
+  font-size: 9px;
+  line-height: 1.5;
+  color: var(--muted);
+  background: var(--surface);
+}
+.modern-border-swatch {
+  display: inline-block;
+  width: 18px;
+  height: 0;
+  border-top: 2px solid #42506a;
+  margin: 0 4px 2px 0;
+}
+.modern-border-swatch.is-disputed {
+  border-color: #795b53;
+  border-top-style: dashed;
+}
+
+.research-workbench #history-linkage-status:focus-visible,
+.research-workbench #modern-boundaries-status:focus-visible {
+  outline: 2px solid var(--accent-dark);
+  outline-offset: 2px;
+}
