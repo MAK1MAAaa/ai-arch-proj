@@ -25,7 +25,7 @@ from archsearch.domain import ChronologyReview, PeriodEvidence, Site, SourceRefe
 DATA_DIR = Path(__file__).with_name("data")
 DATASET_VERSION = "v4.1"
 CURATED_VERSION = "global-v2"
-CORPUS_VERSION = "global-v18"
+CORPUS_VERSION = "global-v19"
 GLOBAL_REGION_QUOTAS = {
     "east-asia": 20, "south-asia": 15, "west-central-asia": 15, "africa": 15,
     "europe": 10, "north-america": 10, "south-america": 10, "oceania": 5,
@@ -477,8 +477,8 @@ def load_pre_merimee_extension_corpus(data_dir: Path | None = None) -> list[Site
         raise CorpusError(str(error)) from error
 
 
-def load_corpus(data_dir: Path | None = None) -> list[Site]:
-    """Load the current source-verified corpus for retrieval and catalogue browsing."""
+def load_pre_targets_corpus(data_dir: Path | None = None) -> list[Site]:
+    """Load the3897 source records before the named-place evidence supplement."""
     from archsearch.merimee_extension_data import MerimeeExtensionError, load_merimee_extension
 
     base = load_pre_merimee_extension_corpus(data_dir)
@@ -488,6 +488,20 @@ def load_corpus(data_dir: Path | None = None) -> list[Site]:
     try:
         return load_merimee_extension(base, directory)
     except MerimeeExtensionError as error:
+        raise CorpusError(str(error)) from error
+
+
+def load_corpus(data_dir: Path | None = None) -> list[Site]:
+    """Load the current source-verified corpus for retrieval and catalogue browsing."""
+    from archsearch.target_data import TargetDataError, load_targets
+
+    base = load_pre_targets_corpus(data_dir)
+    directory = Path(data_dir) if data_dir is not None else DATA_DIR
+    if data_dir is not None and not (directory / "target_review.json").exists():
+        return base
+    try:
+        return load_targets(base, directory)
+    except TargetDataError as error:
         raise CorpusError(str(error)) from error
 
 

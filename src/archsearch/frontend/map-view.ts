@@ -12,6 +12,7 @@ const ArchSearchMapView = (() => {
     title: string;
     card: HTMLButtonElement;
     marker: L.Marker | null;
+    additionalMarkers?: L.Marker[];
     hint: HTMLElement;
     locationStatus?: "mapped" | "polar" | "unknown";
   }
@@ -24,6 +25,11 @@ const ArchSearchMapView = (() => {
   interface ViewOptions {
     map: L.Map | null;
     countLabel: HTMLElement;
+    scopeLabel?: string;
+  }
+
+  function markers(candidate: Candidate): L.Marker[] {
+    return [...(candidate.marker ? [candidate.marker] : []), ...(candidate.additionalMarkers ?? [])];
   }
 
   function containsPoint(point: Point | null, size: Point): boolean {
@@ -59,7 +65,7 @@ const ArchSearchMapView = (() => {
     return coordinates.map(([latitude, longitude]) => [latitude, wrapLongitude(longitude, center) - shift]);
   }
 
-  function create({ map, countLabel }: ViewOptions): { setCandidates(candidates: Candidate[]): void } {
+  function create({ map, countLabel, scopeLabel = "当前地图范围内" }: ViewOptions): { setCandidates(candidates: Candidate[]): void } {
     let candidates: Candidate[] = [];
     let pointerSource: PreviewSource | null = null;
     let focusSource: PreviewSource | null = null;
@@ -73,14 +79,12 @@ const ArchSearchMapView = (() => {
       }
       if (preview !== null) {
         preview.card.classList.remove("is-preview");
-        preview.marker?.getElement()?.classList.remove("is-preview");
-        preview.marker?.closeTooltip();
+        for (const marker of markers(preview)) { marker.getElement()?.classList.remove("is-preview"); marker.closeTooltip(); }
       }
       preview = candidate;
       if (candidate !== null) {
         candidate.card.classList.add("is-preview");
-        candidate.marker?.getElement()?.classList.add("is-preview");
-        candidate.marker?.openTooltip();
+        for (const marker of markers(candidate)) { marker.getElement()?.classList.add("is-preview"); marker.openTooltip(); }
       }
     }
 
@@ -160,22 +164,21 @@ const ArchSearchMapView = (() => {
       }
       countLabel.hidden = map === null;
       countLabel.textContent = map === null
-        ? "" : `当前地图范围内 ${inside} / 本次返回 ${candidates.length}`;
+        ? "" : `${scopeLabel} ${inside} / 本次返回 ${candidates.length}`;
     }
 
     function setCandidates(nextCandidates: Candidate[]): void {
       setPreview(null);
       for (const remove of cleanup) remove();
       cleanup = [];
-      for (const candidate of candidates) candidate.marker?.closeTooltip();
+      for (const candidate of candidates) for (const marker of markers(candidate)) marker.closeTooltip();
       pointerSource = null;
       focusSource = null;
       candidates = [...nextCandidates];
       for (const candidate of candidates) {
         const cardSource: PreviewSource = { candidate, origin: "card" };
         bindDom(cardSource, candidate.card, true);
-        const marker = candidate.marker;
-        if (marker === null) continue;
+        for (const marker of markers(candidate)) {
         const markerSource: PreviewSource = { candidate, origin: "marker" };
         const enter = () => enterPointer(markerSource);
         const leave = () => leavePointer(markerSource);
@@ -192,6 +195,7 @@ const ArchSearchMapView = (() => {
         });
         const markerElement = marker.getElement();
         if (markerElement) bindDom(markerSource, markerElement, false);
+        }
       }
       updateViewport();
     }

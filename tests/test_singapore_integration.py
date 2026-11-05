@@ -77,7 +77,7 @@ def test_country_catalogue_preserves_original_points_without_inventing_districts
 ) -> None:
     client = singapore_client
     page = client.get("/api/sites?country=SG&limit=100").json()
-    assert page["corpus_version"] == "global-v18" and page["total"] == len(page["sites"]) == 78
+    assert page["corpus_version"] == "global-v19" and page["total"] == len(page["sites"]) == 78
     assert client.get("/api/sites", params={
         "country": "SG", "bbox": "-180,-90,180,90",
     }).json()["total"] == 78
@@ -90,10 +90,10 @@ def test_country_catalogue_preserves_original_points_without_inventing_districts
     assert client.get("/api/subdivisions?country=CA").json()["assigned"] == 992
     assert client.get("/api/subdivisions?country=HK").json()["assigned"] == 138
     coverage = client.get("/api/coverage").json()
-    assert coverage["total"] == 3897 and len(coverage["countries"]) == 211
-    assert coverage["locations"] == {"mapped": 3504, "polar": 3, "unknown": 390}
+    assert coverage["total"] == 3898 and len(coverage["countries"]) == 211
+    assert coverage["locations"] == {"mapped": 3505, "polar": 3, "unknown": 390}
     assert coverage["chronology"] == {
-        "reviewed": 149, "insufficient": 451, "not_reviewed": 3297,
+        "reviewed": 150, "insufficient": 451, "not_reviewed": 3297,
     }
 
 
@@ -150,5 +150,5 @@ def test_twenty_paired_diagnostics_do_not_create_relevance_judgments(tmp_path: P
         f"sg{number:02d}" for number in range(1, 21)
     ]
     report = evaluate_corpus(tmp_path / "no-model", tmp_path / "sg-rankings.json", queries=queries)
-    assert report["corpus_count"] == 3897 and report["metrics"] is None
+    assert report["corpus_count"] == 3898 and report["metrics"] is None
     assert not report["qrels"]["confirmed"] and not report["runs_complete"]

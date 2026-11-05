@@ -93,8 +93,8 @@ def test_statistical_area_mapping_preserves_old_source_region_and_components(
     assert client.get("/api/sites/auth:fr-merimee:PA97400023").status_code == 404
     assert client.get("/api/sites/auth:fr-merimee:PA97400026").status_code == 200
     coverage = client.get("/api/coverage").json()
-    assert coverage["total"] == 3897 and len(coverage["countries"]) == 211
-    assert coverage["locations"] == {"mapped": 3504, "polar": 3, "unknown": 390}
+    assert coverage["total"] == 3898 and len(coverage["countries"]) == 211
+    assert coverage["locations"] == {"mapped": 3505, "polar": 3, "unknown": 390}
 
 
 def test_source_wgs84_axis_and_missing_points_do_not_become_guessed_centres(
@@ -121,7 +121,7 @@ def test_commune_browse_retains_compound_values_and_existing_source_memberships(
     for area, count in {"GP": 112, "BL": 7, "MF": 1, "MQ": 124, "RE": 205}.items():
         facets = client.get("/api/subdivisions", params={"country": area}).json()
         assert facets["ready"] and facets["supported"]
-        assert facets["subdivision_version"] == "source-subdivisions-v6"
+        assert facets["subdivision_version"] == "source-subdivisions-v7"
         assert facets["assigned"] == count and facets["unassigned"] == 0
         assert "多地值不拆分" in facets["note"]
     detail = client.get("/api/sites/auth:fr-merimee:PA97400026/subdivisions").json()
@@ -148,5 +148,5 @@ def test_original_name_bm25_works_without_model_and_evaluation_stays_unscored(
     query_file = Path(__file__).parents[1] / "src/archsearch/data/queries-merimee.json"
     assert [q.id for q in load_queries(query_file)] == [f"me{i:02}" for i in range(1, 21)]
     report = evaluate_corpus(tmp_path / "no-model", tmp_path / "rankings.json", queries=query_file)
-    assert report["corpus_count"] == 3897 and report["metrics"] is None
+    assert report["corpus_count"] == 3898 and report["metrics"] is None
     assert not report["qrels"]["confirmed"] and not report["runs_complete"]

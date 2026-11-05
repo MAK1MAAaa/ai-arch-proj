@@ -56,6 +56,10 @@ def test_serve_stays_offline_and_does_not_prepare_history(
     tmp_path: Path,
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
+    monkeypatch.chdir(tmp_path)
+    for name in tuple(os.environ):
+        if name.startswith("ARCHSEARCH_LLM_"):
+            monkeypatch.delenv(name, raising=False)
     application = object()
     create = Mock(return_value=application)
     run = Mock()
@@ -68,7 +72,11 @@ def test_serve_stays_offline_and_does_not_prepare_history(
     monkeypatch.setattr("sys.argv", ["archsearch", "--home", str(tmp_path), "serve"])
     cli.main()
     assert os.environ["HF_HUB_OFFLINE"] == "1"
-    create.assert_called_once_with(tmp_path)
+    create.assert_called_once()
+    assert create.call_args.args == (tmp_path,)
+    manager = create.call_args.kwargs["llm"]
+    assert manager.public_config().config_source == "default"
+    assert manager.public_config().key_count == 0 and not manager.public_config().model
     run.assert_called_once_with(application, host="127.0.0.1", port=8000)
 
 

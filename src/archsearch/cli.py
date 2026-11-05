@@ -48,8 +48,11 @@ def main() -> None:
             import uvicorn
 
             from archsearch.api import create_app
+            from archsearch.env_config import load_env_config
+            from archsearch.llm import LlmManager
 
-            uvicorn.run(create_app(args.home), host=args.host, port=args.port)
+            llm = LlmManager.from_environment(load_env_config(Path.cwd() / ".env"))
+            uvicorn.run(create_app(args.home, llm=llm), host=args.host, port=args.port)
         else:
             from archsearch.evaluation import evaluate_corpus
 

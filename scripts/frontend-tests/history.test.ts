@@ -16,7 +16,7 @@ interface Controller {
   actionVersion(): number;
 }
 interface Helpers {
-  create(options: { map: FakeMap | null; tiles: FakeLayer | null; onCommittedView(view: View): void; onUserAction(): void }): Controller;
+  create(options: { map: FakeMap | null; tiles: FakeLayer | null; onCommittedView(view: View): void; onUserAction(): void; fixedHistorical?: boolean; sharedRenderer?: object | null }): Controller;
   isValidYear(year: number): boolean;
   yearToStep(year: number): number;
   stepToYear(step: number): number;
@@ -65,12 +65,22 @@ class FakeLayer {
   data: unknown;
   options: GeoOptions;
   popups: (FakeElement | (() => FakeElement))[] = [];
+  tooltip: { content: FakeElement; options: Record<string, unknown> } | null = null;
+  tooltipOpen = false;
+  sentToBack = 0;
   constructor(data: unknown = null, options: GeoOptions = {}) { this.data = data; this.options = options; }
   addTo(map: FakeMap): this { map.layers.add(this); return this; }
   bindPopup(node: FakeElement | (() => FakeElement)): this { this.popups.push(node); return this; }
+  bindTooltip(node: FakeElement, options: Record<string, unknown>): this { this.tooltip = { content: node, options }; return this; }
+  getTooltip() { return this.tooltip; }
+  openTooltip(): this { this.tooltipOpen = true; return this; }
+  closeTooltip(): this { this.tooltipOpen = false; return this; }
+  eachLayer(callback: (layer: FakeLayer) => void): void { callback(this); }
+  bringToBack(): this { this.sentToBack++; return this; }
 }
 
 interface GeoOptions {
+  renderer?: object;
   pane?: string;
   interactive?: boolean;
   attribution?: string;
@@ -82,6 +92,7 @@ class FakeMap {
   layers = new Set<FakeLayer>();
   panes = new Map<string, FakeElement>();
   container = new FakeElement();
+  getZoom(): number { return 4; }
   getPane(name: string): FakeElement | undefined { return this.panes.get(name); }
   createPane(name: string): FakeElement { const pane = new FakeElement(); this.panes.set(name, pane); return pane; }
   getContainer(): FakeElement { return this.container; }
@@ -114,8 +125,8 @@ function frame(year: number, options: { from?: number; to?: number; id?: string;
   };
 }
 
-function setup(withMap = true) {
-  const ids = ['history-controls', 'history-year', 'history-range', 'history-apply', 'history-previous-year', 'history-next-year', 'history-previous-frame', 'history-next-frame', 'history-basemap-historical', 'history-basemap-modern', 'history-boundaries', 'history-applied-year', 'history-draft-year', 'history-feedback', 'history-error', 'history-source', 'history-retry', 'history-map-caption'];
+function setup(withMap = true, fixedHistorical = false, sharedRenderer: object | null = null) {
+  const ids = ['history-controls', 'history-year', 'history-range', 'history-apply', 'history-previous-year', 'history-next-year', 'history-previous-frame', 'history-next-frame', 'history-basemap-historical', 'history-basemap-modern', 'history-boundaries', 'history-applied-year', 'history-draft-year', 'history-feedback', 'history-error', 'history-source', 'history-retry', 'history-map-caption', 'comparison-history-year'];
   const nodes = new Map(ids.map((id) => [id, new FakeElement()]));
   const doc: { activeElement: FakeElement | null; getElementById(id: string): FakeElement | null; createElement(tag: string): FakeElement; createTextNode(text: string): FakeElement } = {
     activeElement: null,
@@ -154,7 +165,7 @@ function setup(withMap = true) {
   tiles.addTo(map);
   const commits: View[] = [];
   let actions = 0;
-  const view = helpers.create({ map: withMap ? map : null, tiles: withMap ? tiles : null, onCommittedView: (value) => commits.push(value), onUserAction: () => { actions++; } });
+  const view = helpers.create({ map: withMap ? map : null, tiles: withMap ? tiles : null, onCommittedView: (value) => commits.push(value), onUserAction: () => { actions++; }, fixedHistorical, sharedRenderer });
   const node = (id: string): FakeElement => { const value = nodes.get(id); assert.ok(value); return value; };
   function runTimers(): void { for (const [id, callback] of [...timers]) { timers.delete(id); callback(); } }
   function complete(request: Pending, value: unknown, code = 200): void {
@@ -179,6 +190,33 @@ function setup(withMap = true) {
 async function tick(): Promise<void> { for (let index = 0; index < 20; index++) await Promise.resolve(); }
 function allText(node: FakeElement): string { return node.textContent + node.children.map(allText).join(''); }
 function allNodes(node: FakeElement): FakeElement[] { return [node, ...node.children.flatMap(allNodes)]; }
+
+test('fixed historical comparison retains real filled polities and literal names instead of an OSM base', async () => {
+  const env = setup(true, true); await env.finishInitial({ name: '<b>Kingdom fixture</b>' });
+  const boundary = env.layers.find(layer => layer.options.pane === 'history-boundaries'); assert.ok(boundary);
+  assert.equal(typeof boundary.options.style, 'function');
+  const style = boundary.options.style as (feature: { properties: Record<string, unknown> }) => Record<string, unknown>;
+  assert.equal(style({ properties: { Name: 'Kingdom fixture', composite: false } }).fillOpacity, 0.26);
+  assert.equal(style({ properties: { Name: 'Composite fixture', composite: true } }).fillOpacity, 0);
+  assert.equal(style({ properties: { Name: 'Composite fixture', composite: true } }).dashArray, '7 5');
+  assert.equal(boundary.tooltip?.content.textContent, '<b>Kingdom fixture</b>'); assert.equal(boundary.tooltipOpen, true);
+  assert.equal(env.map.panes.get('history-polity-labels')?.style.zIndex, '420');
+  env.view.setBasemap('modern'); env.runTimers(); await tick();
+  assert.equal(env.view.getView()?.basemap, 'historical'); assert.equal(env.map.hasLayer(env.tiles), false);
+  assert.match(env.node('comparison-history-year').textContent, /117.*v0\.2\.1/u);
+});
+
+test('a quick exact-year site selection while history is unprepared still loads local land without a historical frame', async () => {
+  const env = setup(true, true); env.view.configure({ ready: false, reason: '请准备疆域资料' });
+  env.view.setYear(1616, 'site'); env.runTimers();
+  const request = env.pending.find(item => item.url.endsWith('land.geojson')); assert.ok(request);
+  env.complete(request, land); await tick();
+  assert.equal(env.pending.some(item => item.url.includes('/api/history/')), false);
+  assert.ok(env.layers.some(layer => layer.options.pane === 'history-land' && env.map.hasLayer(layer)));
+  assert.equal(env.view.getView()?.frame_id, null); assert.equal(env.view.getView()?.boundaries, false);
+  assert.match(env.node('comparison-history-year').textContent, /无可用疆域数据/u);
+  assert.equal(env.map.hasLayer(env.tiles), false);
+});
 
 test('the timeline has no year zero and crosses BCE/CE in both directions', () => {
   const { helpers } = setup();
@@ -458,4 +496,17 @@ test('the bundled local Natural Earth geometry is accepted without alteration or
   env.complete(request, geography); env.complete(env.boundaryRequest(117), frame(117)); await tick();
   assert.equal(env.view.getView()?.basemap, 'historical'); assert.equal(env.node('history-error').hidden, true);
   assert.equal(JSON.stringify(geography), JSON.stringify(JSON.parse(original)));
+});
+
+test('shared historical Canvas keeps source-point hit testing and places every replacement polity underneath it', async () => {
+  const sharedRenderer = { fixture: 'same interactive canvas' };
+  const env = setup(true, true, sharedRenderer); await env.finishInitial();
+  const boundaries = () => env.layers.filter(layer => layer.options.pane === 'history-boundaries');
+  const first = boundaries()[0]; assert.ok(first);
+  assert.equal(first.options.renderer, sharedRenderer);
+  assert.equal((first.options.style as (feature: { properties: Record<string, unknown> }) => Record<string, unknown>)({ properties: { Name: 'Fixture' } }).renderer, sharedRenderer);
+  assert.equal(first.sentToBack, 1);
+  env.view.setYear(200); env.runTimers(); env.complete(env.boundaryRequest(200), frame(200, {from:200,to:299,id:'new-frame'})); await tick();
+  assert.equal(boundaries().length, 2); assert.ok(boundaries().every(layer => layer.options.renderer === sharedRenderer && layer.sentToBack === 1));
+  assert.equal(env.map.hasLayer(first), false); assert.equal(env.map.hasLayer(boundaries()[1]), true);
 });

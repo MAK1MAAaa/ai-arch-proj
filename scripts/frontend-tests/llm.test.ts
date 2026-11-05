@@ -4,7 +4,7 @@ import test from 'node:test';
 import { createContext, runInContext } from 'node:vm';
 import ts from 'typescript';
 
-interface Config { provider: 'ollama' | 'openai'; base_url: string; model: string; revision: number; has_api_key: boolean }
+interface Config { provider: 'ollama' | 'openai'; base_url: string; model: string; revision: number; has_api_key: boolean; key_count?: number; active_key_index?: number | null; config_source?: 'default' | 'env' | 'manual' }
 interface Controller {
   load(): Promise<void>; discover(): Promise<void>; apply(clear?: boolean): Promise<void>;
   ready(): boolean; enabled(): boolean; getConfig(): Config | null; setRequested(value: boolean): void;
@@ -188,4 +188,84 @@ test('base URL validation rejects credentials, parameters, fragments and non-HTT
   const h = harness();
   for (const value of ['https://user:secret@example.test/v1', 'https://example.test/v1?api_key=secret', 'https://example.test/v1#secret', 'file:///tmp/a', 'https://example.test/a\\b', 'https://example.test/a\nb']) assert.throws(() => h.helpers.endpoint(value));
   assert.equal(h.helpers.endpoint('https://example.test/v1/'), 'https://example.test/v1');
+});
+
+test('environment configuration hydrates safe pool metadata and auto discovers without enabling enhancement', async () => {
+  const h = harness();
+  await start(h, { provider: 'openai', base_url: 'https://env.example/v1', model: 'env-model',
+    revision: 7, has_api_key: true, key_count: 2, active_key_index: null, config_source: 'env' });
+  assert.equal(h.element('llm-base-url').value, 'https://env.example/v1');
+  assert.equal(h.controller.getConfig()?.model, 'env-model');
+  assert.equal(h.controller.getConfig()?.key_count, 2);
+  assert.equal(h.element('llm-api-key').value, '');
+  assert.equal(JSON.parse(h.pending[1].init.body as string).api_key, null);
+  assert.equal(h.controller.enabled(), false); assert.deepEqual(plain(h.controller.requestOptions()), {});
+  assert.match(h.element('llm-active-model').textContent, /env-model.*环境配置/u);
+  assert.match(h.element('llm-key-hint').textContent, /2 个密钥.*尚未确认.*环境配置/u);
+});
+
+test('successful discovery publishes only matching revision slot metadata without changing model or revision', async () => {
+  const h = harness();
+  await start(h, { provider: 'openai', base_url: 'https://env.example/v1', model: 'env-model',
+    revision: 7, has_api_key: true, key_count: 2, active_key_index: null, config_source: 'env' });
+  const discovering = h.controller.discover();
+  h.pending.at(-1)!.resolve({ models: [{ id: 'env-model', label: 'env-model' }], key_count: 2,
+    active_key_index: 1, config_source: 'env', config_revision: 7 }); await discovering;
+  assert.equal(h.controller.getConfig()?.active_key_index, 1);
+  assert.equal(h.controller.getConfig()?.revision, 7); assert.equal(h.controller.getConfig()?.model, 'env-model');
+  assert.match(h.element('llm-key-hint').textContent, /上次成功槽位 2\/2/u);
+  h.controller.setRequested(true); assert.deepEqual(plain(h.controller.requestOptions()), { enhance: true, llm_revision: 7 });
+});
+
+test('old model-list metadata cannot rewrite a different current configuration revision', async () => {
+  const h = harness();
+  await start(h, { provider: 'openai', base_url: 'https://env.example/v1', model: 'env-model',
+    revision: 7, has_api_key: true, key_count: 2, active_key_index: null, config_source: 'env' });
+  const discovering = h.controller.discover();
+  h.pending.at(-1)!.resolve({ models: [{ id: 'env-model', label: 'env-model' }], key_count: 2,
+    active_key_index: 1, config_source: 'manual', config_revision: 6 }); await discovering;
+  assert.equal(h.controller.getConfig()?.active_key_index, null);
+  assert.equal(h.controller.getConfig()?.config_source, 'env'); assert.equal(h.controller.getConfig()?.revision, 7);
+});
+
+test('a draft single-key override does not replace the applied pool until apply succeeds', async () => {
+  const h = harness();
+  await start(h, { provider: 'openai', base_url: 'https://env.example/v1', model: 'env-model',
+    revision: 7, has_api_key: true, key_count: 2, active_key_index: 1, config_source: 'env' });
+  h.element('llm-api-key').value = 'fixture-single-override'; h.element('llm-api-key').fire('input');
+  h.flushTimers(); await flush();
+  h.pending.at(-1)!.resolve({ models: [{ id: 'chosen-model', label: 'chosen-model' }],
+    key_count: 1, active_key_index: 0, config_source: 'manual', config_revision: 7 }); await flush();
+  assert.equal(h.controller.getConfig()?.key_count, 2);
+  assert.equal(h.controller.getConfig()?.active_key_index, 1);
+  h.element('llm-model').value = 'chosen-model'; const applying = h.controller.apply();
+  h.pending.at(-1)!.resolve({ provider: 'openai', base_url: 'https://env.example/v1', model: 'chosen-model',
+    revision: 8, has_api_key: true, key_count: 1, active_key_index: 0, config_source: 'manual' }); await applying;
+  assert.equal(h.controller.getConfig()?.key_count, 1); assert.equal(h.element('llm-api-key').value, '');
+  assert.equal(JSON.stringify(h.controller.getConfig()).includes('fixture-single-override'), false);
+});
+
+test('clearing an environment pool explains that its local file is unchanged and may reload', async () => {
+  const h = harness();
+  await start(h, { provider: 'openai', base_url: 'https://env.example/v1', model: 'env-model',
+    revision: 7, has_api_key: true, key_count: 2, active_key_index: 1, config_source: 'env' });
+  const clearing = h.controller.apply(true);
+  assert.equal(JSON.parse(h.pending.at(-1)!.init.body as string).api_key, '');
+  h.pending.at(-1)!.resolve({ provider: 'openai', base_url: 'https://env.example/v1', model: '', revision: 8,
+    has_api_key: false, key_count: 0, active_key_index: null, config_source: 'manual' }); await clearing;
+  assert.equal(h.controller.getConfig()?.key_count, 0); assert.equal(h.controller.enabled(), false);
+  assert.match(h.element('llm-feedback').textContent, /\.env 未修改.*重启.*重新读取/u);
+});
+
+test('pool metadata rejects invalid count, slot, source and hidden credential properties', () => {
+  const h = harness();
+  for (const update of [{ key_count: 9 }, { key_count: null }, { key_count: -1 },
+    { key_count: 0, active_key_index: 0 }, { key_count: 2, has_api_key: false },
+    { key_count: 2, has_api_key: true, active_key_index: 2 }, { config_source: 'untrusted' }]) {
+    assert.throws(() => h.helpers.parseConfig({ ...config, ...update }));
+  }
+  const safe = h.helpers.parseConfig({ ...config, api_keys: ['fixture-private-value'],
+    key_count: 0, active_key_index: null, config_source: 'default' });
+  assert.equal(JSON.stringify(safe).includes('fixture-private-value'), false);
+  assert.equal('api_keys' in safe, false);
 });

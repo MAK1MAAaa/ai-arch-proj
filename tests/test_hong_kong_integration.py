@@ -100,7 +100,7 @@ def test_source_polygons_are_separate_from_points_and_registration_extents(
 ) -> None:
     client = hong_kong_client
     status = client.get("/api/status").json()
-    assert status["corpus"]["count"] == 3897 and not status["semantic"]["ready"]
+    assert status["corpus"]["count"] == 3898 and not status["semantic"]["ready"]
     assert status["registered_areas"]["ready"]
     assert status["registered_areas"]["version"] == "registered-areas-v1+hong-kong-polygons-v1"
     assert (status["registered_areas"]["sites"], status["registered_areas"]["features"],
@@ -147,5 +147,5 @@ def test_twenty_paired_diagnostics_leave_relevance_metrics_unconfirmed(tmp_path:
         f"hk{number:02d}" for number in range(1, 21)
     ]
     report = evaluate_corpus(tmp_path / "no-model", tmp_path / "hk-rankings.json", queries=queries)
-    assert report["corpus_count"] == 3897 and report["metrics"] is None
+    assert report["corpus_count"] == 3898 and report["metrics"] is None
     assert not report["qrels"]["confirmed"] and not report["runs_complete"]

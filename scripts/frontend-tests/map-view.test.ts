@@ -83,6 +83,7 @@ interface Candidate {
   title: string;
   card: FakeElement;
   marker: FakeMarker | null;
+  additionalMarkers?: FakeMarker[];
   hint: FakeElement;
   locationStatus?: 'mapped' | 'polar' | 'unknown';
 }
@@ -224,6 +225,17 @@ test('card hover previews both representations and opens its original tooltip', 
   const { view } = setup(); const candidate = item('a'); view.setCandidates([candidate]);
   candidate.card.fire('mouseenter'); assertPreview(candidate, true);
   candidate.card.fire('mouseleave'); assertPreview(candidate, false);
+});
+
+test('a second historical marker shares previews and cleanup while viewport counts use the modern map', () => {
+  const { view, countLabel } = setup(); const candidate = item('comparison');
+  const historical = new FakeMarker({ x: 150, y: 150 }); candidate.additionalMarkers = [historical];
+  view.setCandidates([candidate]); historical.fire('mouseover');
+  assertPreview(candidate, true); assert.equal(historical.element?.classList.contains('is-preview'), true); assert.equal(historical.tooltipOpen, true);
+  assert.equal(countLabel.textContent, '当前地图范围内 1 / 本次返回 1');
+  historical.fire('mouseout'); assertPreview(candidate, false); assert.equal(historical.tooltipOpen, false);
+  candidate.card.fire('focus'); assert.equal(historical.tooltipOpen, true);
+  view.setCandidates([]); assert.equal(historical.listenerCount('mouseover'), 0); assert.equal(historical.tooltipOpen, false);
 });
 
 test('marker hover previews the associated result card without changing selection', () => {

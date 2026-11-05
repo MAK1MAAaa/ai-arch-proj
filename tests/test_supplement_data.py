@@ -557,7 +557,7 @@ def test_real_api_preserves_source_country_labels_and_independent_supplement_cou
     response = bundled_client.get("/api/coverage")
     assert response.status_code == 200
     coverage = response.json()
-    assert coverage["corpus_version"] == "global-v18" and coverage["total"] == 3897
+    assert coverage["corpus_version"] == "global-v19" and coverage["total"] == 3898
     countries = {row["id"]: row for row in coverage["countries"]}
     assert len(countries) == 211
     labels = supplement.country_labels()
@@ -568,16 +568,16 @@ def test_real_api_preserves_source_country_labels_and_independent_supplement_cou
     assert len(previous["countries"]) == 159
     assert all(countries[row["id"]]["label"] == row["label"] for row in previous["countries"])
     assert {row["id"]: row["count"] for row in coverage["sources"]} == {
-        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 2272,
+        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 2273,
     }
-    assert coverage["locations"] == {"mapped": 3504, "polar": 3, "unknown": 390}
+    assert coverage["locations"] == {"mapped": 3505, "polar": 3, "unknown": 390}
     assert coverage["authority"]["covered"] == coverage["authority"]["eligible_total"] == 1033
     assert coverage["polar_authority"]["covered"] == 91
     spatial = coverage["spatial_locations"]
     assert spatial["ready"] and spatial["records"] == 1239 and spatial["points"] == 5851
-    assert spatial["display_points"] == 7907
+    assert spatial["display_points"] == 7908
     status = bundled_client.get("/api/status").json()
-    assert status["corpus"]["count"] == 3897 and status["corpus"]["version"] == "global-v18"
+    assert status["corpus"]["count"] == 3898 and status["corpus"]["version"] == "global-v19"
     assert status["semantic"]["ready"] is False and status["history"]["ready"] is False
 
 

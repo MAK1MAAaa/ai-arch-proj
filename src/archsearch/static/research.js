@@ -1,6 +1,78 @@
 "use strict";
 const ArchSearchResearch = (() => {
     "use strict";
+    function descriptionLabel(site, language) {
+        if (language === "zh") {
+            if (site.source_refs?.some((source) => source.id === `translation:wikidata:${site.id.slice(3)}`))
+                return "中文译文（据 Wikidata 英文）";
+            return site.source_kind === "supplement" ? "中文摘要（依据所列来源）" : "中文来源描述";
+        }
+        if (site.source_kind === "supplement") {
+            if (site.id.startsWith("wd:"))
+                return "Wikidata 来源描述";
+            if (site.id.startsWith("auth:sg-nhb:"))
+                return "来源英文原文（NHB资料集）";
+            return "英文描述（出处见来源）";
+        }
+        return "来源描述原文";
+    }
+    function normalizeCamera(value, maximum) {
+        if (value === null)
+            return null;
+        if (!Array.isArray(value.center) || value.center.length !== 2 || !value.center.every(Number.isFinite)
+            || Math.abs(value.center[0]) > 180 || Math.abs(value.center[1]) > 85.0511287798
+            || !Number.isFinite(value.zoom) || value.zoom < 1 || value.zoom > maximum)
+            throw new Error("对照地图视野坐标或缩放无效。");
+        return { center: [...value.center], zoom: value.zoom };
+    }
+    function parseComparison(url) {
+        const empty = { modern_basemap: "osm", sync_centers: false, modern_view: null, history_view: null };
+        try {
+            for (const name of ["maps", "modern_base", "sync_centers", "modern_view", "history_view"]) {
+                if (url.searchParams.getAll(name).length > 1)
+                    throw new Error(`链接中的 ${name} 参数不能重复。`);
+            }
+            const layout = url.searchParams.get("maps");
+            if (layout !== null && layout !== "compare")
+                throw new Error("对照地图链接中的 maps 仅支持 compare。");
+            const base = url.searchParams.get("modern_base") ?? "osm";
+            const sync = url.searchParams.get("sync_centers") ?? "0";
+            if (base !== "osm" && base !== "natural")
+                throw new Error("现代地图底图参数无效。");
+            if (sync !== "0" && sync !== "1")
+                throw new Error("地图同步参数须为 0 或 1。");
+            const read = (name, maximum) => {
+                const raw = url.searchParams.get(name);
+                if (raw === null)
+                    return null;
+                if (raw.length > 120)
+                    throw new Error("地图视野参数过长。");
+                const parts = raw.split(",");
+                if (parts.length !== 3 || parts.some((part) => !/^[+-]?(?:[0-9]+(?:\.[0-9]*)?|\.[0-9]+)(?:[eE][+-]?[0-9]+)?$/u.test(part)))
+                    throw new Error("地图视野须为经度、纬度、缩放三个数字。");
+                return normalizeCamera({ center: [Number(parts[0]), Number(parts[1])], zoom: Number(parts[2]) }, maximum);
+            };
+            return { state: { modern_basemap: base, sync_centers: sync === "1", modern_view: read("modern_view", 18), history_view: read("history_view", 9) }, error: null };
+        }
+        catch (error) {
+            return { state: empty, error: error instanceof Error ? error.message : "对照地图视图无法恢复。" };
+        }
+    }
+    function normalizeComparison(value, map) {
+        if (value === null)
+            return null;
+        if (!["side-by-side", "stacked"].includes(value.layout) || typeof value.sync_centers !== "boolean" || value.modern.role !== "modern-location"
+            || !["osm", "natural", "loading", "unavailable"].includes(value.modern.basemap)
+            || value.historical.role !== "historical-polities" || (value.historical.basemap !== null && value.historical.basemap !== "natural")
+            || value.historical.year !== (map?.year ?? null) || value.historical.boundaries !== (map?.boundaries ?? false)
+            || value.historical.frame_id !== (map?.frame_id ?? null) || value.historical.source_version !== (map?.source_version ?? null)
+            || value.historical.basemap !== (map ? "natural" : null))
+            throw new Error("对照地图快照与实际成功历史视图不一致。");
+        return { layout: value.layout, sync_centers: value.sync_centers,
+            modern: { role: "modern-location", basemap: value.modern.basemap, view: normalizeCamera(value.modern.view, 18) },
+            historical: { role: "historical-polities", basemap: value.historical.basemap, view: normalizeCamera(value.historical.view, 9),
+                year: value.historical.year, boundaries: value.historical.boundaries, frame_id: value.historical.frame_id, source_version: value.historical.source_version } };
+    }
     const minasSourceFields = ["processo_ano", "denominacao", "denominacao_completa", "categoria", "classe_subclasse", "municipio", "distrito", "ato_legal", "livro_de_tombo"];
     function compactSourceJson(value) {
         let compact = "", quoted = false, escaped = false;
@@ -371,7 +443,7 @@ const ArchSearchResearch = (() => {
             return { request: null, error: error instanceof Error ? error.message : "检索链接参数无效。" };
         }
     }
-    function buildLink(base, request, view = null, selection = { site: null, phase: null }, browse = null) {
+    function buildLink(base, request, view = null, selection = { site: null, phase: null }, browse = null, comparison = null) {
         const normalized = request ? normalizeRequest(request) : null;
         if (base.protocol !== "http:" && base.protocol !== "https:") {
             throw new Error("检索链接仅支持 HTTP 或 HTTPS 页面。");
@@ -420,9 +492,21 @@ const ArchSearchResearch = (() => {
             if (bbox !== null)
                 url.searchParams.set("browse_bbox", bbox.join(","));
         }
+        if (comparison) {
+            if (!["osm", "natural"].includes(comparison.modern_basemap) || typeof comparison.sync_centers !== "boolean")
+                throw new Error("对照地图设置无效。");
+            url.searchParams.set("maps", "compare");
+            url.searchParams.set("modern_base", comparison.modern_basemap);
+            url.searchParams.set("sync_centers", comparison.sync_centers ? "1" : "0");
+            const modern = normalizeCamera(comparison.modern_view, 18), historical = normalizeCamera(comparison.history_view, 9);
+            if (modern)
+                url.searchParams.set("modern_view", [...modern.center, modern.zoom].join(","));
+            if (historical)
+                url.searchParams.set("history_view", [...historical.center, historical.zoom].join(","));
+        }
         return url.href;
     }
-    function createExport(request, response, exportedAt, map = null, selection = { site: null, phase: null }, selectedSite = null, browse = null, spatial = null, registeredAreas = null, currentCorpusVersion = response.corpus_version, currentRegisteredAreasVersion = registeredAreas?.version ?? null) {
+    function createExport(request, response, exportedAt, map = null, selection = { site: null, phase: null }, selectedSite = null, browse = null, spatial = null, registeredAreas = null, currentCorpusVersion = response.corpus_version, currentRegisteredAreasVersion = registeredAreas?.version ?? null, comparison = null) {
         const normalized = normalizeRequest(request);
         if (normalized.query !== response.query || normalized.mode !== response.mode) {
             throw new Error("导出请求必须与成功响应的查询和检索方式一致。");
@@ -445,6 +529,7 @@ const ArchSearchResearch = (() => {
             request: normalized,
             response: enhancement ? { ...response, enhancement } : response,
             map: map ? { ...map } : null,
+            ...(comparison ? { comparison: normalizeComparison(comparison, map) } : {}),
             selection: { ...selection },
             selected_site: selectedSite,
             spatial: spatial === null ? null : JSON.parse(JSON.stringify(spatial)),
@@ -463,7 +548,7 @@ const ArchSearchResearch = (() => {
                 { name: "Pacific and interior cultural supplement", version: "pacific-interior-supplement-v1", license: "Mixed rights — see individual source_refs", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/PACIFIC-LICENSE.md", note: "Seven independently source-reviewed cultural identities from Pacific registers and African archaeological research. An address-restricted place remains unmapped; unadopted or conflicting representative coordinates remain null. Tentative submissions are not World Heritage inscriptions. No listing, excavation or publication year becomes a historical phase." },
                 { name: "NPS Pacific register supplement", version: "nps-pacific-v1", license: "NPS government structured metadata; other source rights retained", uri: "https://www.nps.gov/aboutus/disclaimer.htm", note: "Project grouping of seven source State labels, not a UNESCO region or sovereignty classification. Government metadata does not relicense third-party nomination text, photos or attachments. Viewer text, feature edits and newer downloads have separate version clocks. Source points may be generated reference positions; restricted locations remain unmapped. No registration or publication date becomes a site phase." },
                 { name: "Canadian Federal Heritage Designations historic-place supplement", version: "canada-dfhd-v1", license: "Open Government Licence - Canada; Wikidata structured claims CC0", license_uri: "https://open.canada.ca/en/open-government-licence-canada", uri: "https://open.canada.ca/data/en/dataset/49d5ba7d-d860-40d9-9183-892979e4acbe", note: "Parks Canada / Government of Canada. Contains information licensed under the Open Government Licence – Canada. Released NHS identities, original narrative and province fields retain their source version. Adopted public reference points retain separate source statements and roles; no generated centroids or ancient footprints. Commemorative-reason or plaque review notices are separate from project identity approval and chronology. Other webpages and third-party materials retain their own rights." },
-                { name: "Source-associated province, district, municipality and commune memberships", version: "source-subdivisions-v6", license: "Mixed rights — DFHD fields OGL-Canada; CSDI custom terms; Iepha-MG fields CC BY 4.0; Mérimée fields Open Licence 2.0; other webpages retain individual rights", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/SUBDIVISIONS-LICENSE.md", note: "Only the986 DFHD objects' province fields use Open Government Licence – Canada. CRHP and Parks Canada short location facts retain webpage rights. Canadian whole-object provinces and aliases are unchanged. Hong Kong districts associate source features with an explicitly reviewed whole and do not assert that every shape belongs to that district. CSDI Terms apply to those original fields, not all AMO contents. Version6 retains all earlier source memberships, including Iepha-MG original-record municipio and the first Mérimée Commune_forme_editoriale values in GP, BL, MF, MQ and RE, and appends GF, YT and PM original Commune_forme_editoriale values to global-v18. The first five-area Mérimée cohort and the GF/YT/PM extension keep separate source pins. Literal spelling variants are not merged by COG, and one component notice adds no membership. Compound locality values stay intact; record-to-composite associations do not assert whole-object jurisdiction. Project label IDs are not statutory administrative IDs. Each request/response and browse retains its actual successful version. No coordinate geocoding, inferred parent membership, borders or historical phases." },
+                { name: "Source-associated province, district, municipality and commune memberships", version: "source-subdivisions-v7", license: "Mixed rights — DFHD fields OGL-Canada; CSDI custom terms; Iepha-MG fields CC BY 4.0; Mérimée fields Open Licence 2.0; other webpages retain individual rights", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/SUBDIVISIONS-LICENSE.md", note: "Only the986 DFHD objects' province fields use Open Government Licence – Canada. CRHP and Parks Canada short location facts retain webpage rights. Canadian whole-object provinces and aliases are unchanged. Hong Kong districts associate source features with an explicitly reviewed whole and do not assert that every shape belongs to that district. CSDI Terms apply to those original fields, not all AMO contents. Earlier versions retain all original source memberships, including Iepha-MG original-record municipio and the first Mérimée Commune_forme_editoriale values in GP, BL, MF, MQ and RE, and appends GF, YT and PM original Commune_forme_editoriale values; version7 binds global-v19 and the additional named cultural record without assigning it an inferred source province. All202 existing definitions and1836 memberships remain unchanged. The first five-area Mérimée cohort and the GF/YT/PM extension keep separate source pins. Literal spelling variants are not merged by COG, and one component notice adds no membership. Compound locality values stay intact; record-to-composite associations do not assert whole-object jurisdiction. Project label IDs are not statutory administrative IDs. Each request/response and browse retains its actual successful version. No coordinate geocoding, inferred parent membership, borders or historical phases." },
                 { name: "Iepha-MG protected cultural registration scopes", version: "minas-tombados-v1", license: "CC BY 4.0", license_uri: "https://creativecommons.org/licenses/by/4.0/", uri: "https://dados.mg.gov.br/dataset/bens-tombados", accessed: "2026-11-05", note: "Instituto Estadual do Patrimônio Histórico e Artístico de Minas Gerais, via dados.mg.gov.br; fixed original Portuguese registration fields, grouped by exact process and complete designation after independent source review. Project scope IDs are derived identities, not legal registration numbers. Original process, legal-act and book fields are retained without interpreting them as construction or use dates. The source has no coordinates; representative points and precision remain null. Original municipality values support record-associated browsing without geocoding or asserting a complete regional inventory. Linked documents and photographs are not redistributed." },
                 { name: "Mérimée overseas protected-notice scopes", version: "merimee-overseas-v1", license: "Licence Ouverte / Open Licence version 2.0", license_uri: "https://www.data.gouv.fr/pages/legal/licences/etalab-2-0", uri: "https://www.data.gouv.fr/datasets/immeubles-proteges-au-titre-des-monuments-historiques-2", accessed: "2026-11-05", source_updated: "2026-10-29T02:16:04+00:00", processed: "2026-11-05", note: "Ministère de la Culture, Immeubles protégés au titre des Monuments Historiques, via data.gouv.fr; source updated on2026-10-29T02:16:04+00:00, accessed and processed on2026-11-05. Original French notice fields and protection-scope text retain source qualification: the catalogue includes formerly or currently protected records, without asserting current legal status. Partial protection is not expanded to a whole estate; notice references and record-associated Commune values are not statutory parcels or jurisdiction boundaries. The project uses reviewed published WGS84 points only as reference positions, without a whole-centre or precision claim; the provider did not state point-generation method or precision. Missing points stay null. Original protection dates do not create historical phases. Processing retains original fields and separately reviewed modern area associations; it does not translate names or fabricate historical facts. The dataset licence does not automatically cover linked photographs or third-party contents." },
                 { name: "Mérimée GF/YT/PM notice extension", version: "merimee-extension-v1", license: "Licence Ouverte / Open Licence version 2.0", license_uri: "https://www.data.gouv.fr/pages/legal/licences/etalab-2-0", uri: "https://www.data.gouv.fr/datasets/immeubles-proteges-au-titre-des-monuments-historiques-2", accessed: "2026-11-05", source_updated: "2026-10-29T02:16:04+00:00", processed: "2026-11-05", note: "Ministère de la Culture, via data.gouv.fr. Fixed original GF/YT/PM notice fields extend the unchanged earlier corpus; 123 reviewed notices yield122 accepted source scopes, with the earlier Susky rock-shelter notice linked to the Mamilipann whole instead of adding a new site or inherited point. Published WGS84 references retain unknown generation method and precision. Current INSEE and UN M49 associations support browsing, not sovereignty, jurisdiction boundaries or historical political ownership; PM belongs to Northern America. Original commune spellings stay distinct source options. Former or revised protection is not asserted current, and legal dates are not historical phases. No names are translated or aliases generated. Open Licence2.0 applies to this dataset information, not automatically to linked photographs or third-party materials." },
@@ -473,7 +558,8 @@ const ArchSearchResearch = (() => {
                 { name: "UNESCO Hague cultural properties", version: "protection-supplement-v1", license: "CC BY-SA 4.0", uri: "https://data.unesco.org/explore/dataset/chp001/", note: "Reviewed cultural places from a fixed protection register; source rows and component locations are not new-site counts. Source protection years do not establish historical phases. Unresolved or storage-only locations remain in the source audit and are not mapped as archaeological places." },
                 { name: "Cliopatria", version: map?.source_version ?? null, license: "CC BY 4.0", uri: "https://github.com/Seshat-Global-History-Databank/cliopatria", note: "Historical polity approximations; valid source intervals, no interpolation or point-based political attribution." },
                 { name: "Natural Earth", license: "Public domain", uri: "https://www.naturalearthdata.com/about/terms-of-use/", note: "Modern natural-geography reference; no ancient coastline reconstruction." },
-                { name: "OpenStreetMap contributors", license: "ODbL", uri: "https://www.openstreetmap.org/copyright", displayed: map?.basemap === "modern" },
+                { name: "Source-verified named cultural places", version: "named-places-v1", license: "Mixed rights — Holy Trinity Church and Folger source facts/short excerpts retain individual rights; Wikidata structured church point CC0", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/NAMED-PLACES-LICENSE.md", note: "Source identity and original-language evidence retained. The1616 event is Shakespeare's burial, not a construction date. Published church position is a reference point, not an exact grave coordinate. No linked photographs or images redistributed; source records retain separate attribution." },
+                { name: "OpenStreetMap contributors", license: "ODbL", uri: "https://www.openstreetmap.org/copyright", displayed: comparison ? comparison.modern.basemap === "osm" : map?.basemap === "modern" },
             ],
             source: {
                 name: "Pleiades: A Gazetteer of Past Places",
@@ -494,6 +580,7 @@ const ArchSearchResearch = (() => {
                 periods: "分期来自名称或位置记录的来源关联；不等同于建造年代或连续使用证明，start/end 保留原始记录时间范围。",
                 chronology: "历史阶段独立记录事件类型、精度、证据和代理核验方式；区间或时期不证明连续存在，未标成人工专家确认。",
                 map: "map保存最后成功显示的年份与疆域版本；null表示尚无成功地图快照，待加载或失败年份不冒充已显示年份。",
+                comparison: "comparison区分现代位置与历史政权两张地图，保存实际底图、视野及成功历史年/版本；历史图使用Cliopatria与现代自然地理参照，不是古海岸或街道复原。同步中心须用户明确打开，目录bbox始终只由现代图显式捕获；历史拖图不重筛资料，也不据代表点判定历史政治归属。",
                 locations: "repr_point为null表示本记录无可用代表点：可能真实位置不明，也可能尚未取得可信公开数字坐标，来源说明保留区别；不等于零坐标。有效极区坐标超出Web Mercator时使用独立极区示意，不截断或伪造纬度。极区底图为现代自然地理参照，不生成历史国界。",
                 source_points: "spatial保留最后成功目录的组合源点版本、source_groups对应的来源／版本／许可与地点身份，以及独立选中资料经审核纳入地图的定位序列、重复记录与来源标签。原代表点单独保存；多个定位记录不增加遗址条目数或承诺发掘精度。世界遗产原始序列保持不变；海牙名录排除的仓储、标签冲突等原记录仍保留在来源审计中，不混作考古原址点。",
                 registered_areas: "registered_areas只保存当前实际显示、且与选中资料和当前语料/检索版本一致的来源范围；label区分现代遗产登记范围与来源古迹多边形，后者不承诺法定边界。null表示未显示或上下文不匹配。保留原WGS84闭环与来源版本/许可，不推内外环、代表点、古址轮廓、准入或点计数。范围显隐不写入分享链接，重新打开后仍须主动点击查看。",
@@ -502,6 +589,27 @@ const ArchSearchResearch = (() => {
             },
         };
     }
-    return { parseLink, parseView, parseBrowse, buildLink, createExport, validYear, automaticPhaseYear, normalizeBBox, parseBBox, normalizeSubdivision, validateSubdivisionResponse, validateEnhancement, parseMinasSource, minasSourceFields, parseMerimeeSource, merimeeSourceFields };
+    function createExampleIntent() {
+        let sequence = 0;
+        return {
+            invalidate() { sequence++; },
+            async run(prepare, isReady, submit, onError) {
+                const request = ++sequence;
+                try {
+                    await prepare();
+                    if (request !== sequence)
+                        return;
+                    if (!isReady())
+                        throw new Error("目录条件尚未成功切换为全库，请重试。");
+                    submit();
+                }
+                catch (error) {
+                    if (request === sequence)
+                        onError(error);
+                }
+            },
+        };
+    }
+    return { parseLink, parseView, parseBrowse, parseComparison, buildLink, createExport, descriptionLabel, createExampleIntent, validYear, automaticPhaseYear, normalizeBBox, parseBBox, normalizeSubdivision, validateSubdivisionResponse, validateEnhancement, parseMinasSource, minasSourceFields, parseMerimeeSource, merimeeSourceFields };
 })();
 //# sourceMappingURL=research.js.map

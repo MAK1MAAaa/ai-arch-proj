@@ -1,0 +1,22 @@
+{
+  "base_count": 3897,
+  "base_ids_sha256": "08378c5c096994146d871acf31e4b8b78a94bff8e3c98814555220de09d02324",
+  "base_sites_sha256": "4259502123b0d9a3bbd405df1e3ff85caa0f03c8ea4b227a704ae49c9ae30be8",
+  "cohort_version": "named-places-v1",
+  "corpus_version": "global-v19",
+  "counts": {
+    "added": 1,
+    "total": 3898
+  },
+  "files": {
+    "target_review.json": {
+      "sha256": "636dd971a74da8e0bfd92028fedf7a29a696c318a761913e6900709800fbe9b0"
+    },
+    "target_sites.json": {
+      "sha256": "6764fe78b83500fe5a7b58a270c329d52d31ee51d42b096a8df024d0d4f129d3"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Add one independently source-verified named cultural place absent from the 3897-record corpus, prompted by a concrete search failure. This is a coverage repair, not a retrieval accuracy benchmark or worldwide completeness claim."
+}

@@ -135,7 +135,7 @@ const ArchSearchHistory = (() => {
             throw new Error("历史资料版本已变化，请刷新运行状态后重试。");
         return { data: value, validFrom: metadata.valid_from, validTo: metadata.valid_to, id: metadata.frame_id, source, version, featureCount: value.features.length };
     }
-    function create({ map, tiles, onCommittedView, onUserAction }) {
+    function create({ map, tiles, onCommittedView, onUserAction, fixedHistorical = false, sharedRenderer = null }) {
         const byId = (id) => {
             const node = document.getElementById(id);
             if (!node)
@@ -172,14 +172,19 @@ const ArchSearchHistory = (() => {
         let loading = false;
         let emptyFrame = false;
         const frames = new Map();
-        let renderer = null;
+        let renderer = sharedRenderer;
         if (map && typeof L !== "undefined") {
             const historyPane = map.getPane("history-boundaries") ?? map.createPane("history-boundaries");
             historyPane.style.zIndex = "350";
             const landPane = map.getPane("history-land") ?? map.createPane("history-land");
             landPane.style.zIndex = "210";
             landPane.style.pointerEvents = "none";
-            renderer = L.canvas({ pane: "history-boundaries" });
+            renderer ??= L.canvas({ pane: "history-boundaries" });
+            if (fixedHistorical) {
+                const labelsPane = map.getPane("history-polity-labels") ?? map.createPane("history-polity-labels");
+                labelsPane.style.zIndex = "420";
+                labelsPane.style.pointerEvents = "none";
+            }
         }
         function cancel() {
             sequence++;
@@ -213,8 +218,8 @@ const ArchSearchHistory = (() => {
             ui.nextFrame.disabled = unavailable || targets.next === null || targets.next > maximum;
             ui.previousFrame.title = targets.previous === null ? "已到首个疆域变化" : `上一疆域变化：${formatYear(targets.previous)}`;
             ui.nextFrame.title = targets.next === null ? "已到末个疆域变化" : `下一疆域变化：${formatYear(targets.next)}`;
-            ui.historical.disabled = map === null;
-            ui.modern.disabled = map === null;
+            ui.historical.disabled = map === null || fixedHistorical;
+            ui.modern.disabled = map === null || fixedHistorical;
             ui.boundaries.disabled = map === null;
             ui.historical.setAttribute("aria-pressed", String(desired.basemap === "historical"));
             ui.modern.setAttribute("aria-pressed", String(desired.basemap === "modern"));
@@ -230,7 +235,7 @@ const ArchSearchHistory = (() => {
             ui.draft.textContent = yearDraft.trim() === String(desired.year)
                 ? `计划年份：${formatYear(desired.year)}`
                 : isValidYear(Number(yearDraft)) ? `年份草稿：${formatYear(Number(yearDraft))}，尚未应用` : "年份草稿尚未应用，请输入有效整数后确认。";
-            ui.applied.textContent = committed ? `当前地图：${formatYear(committed.year)}` : "历史地图尚未加载";
+            ui.applied.textContent = committed ? `当前${fixedHistorical ? "历史图" : "地图"}：${formatYear(committed.year)}` : "历史地图尚未加载";
             ui.panel.setAttribute("aria-busy", String(loading));
             ui.retry.hidden = !failed;
             ui.retry.disabled = loading || map === null;
@@ -288,6 +293,31 @@ const ArchSearchHistory = (() => {
             }
             if (ui.caption)
                 ui.caption.textContent = `${frame !== null && desired.boundaries ? "历史政权疆域概略" : "地点代表位置"} · ${desired.basemap === "historical" ? "现代海岸线参照" : "现代 OSM 底图"}`;
+            const actual = document.getElementById("comparison-history-year");
+            if (actual)
+                actual.textContent = committed ? frame ? `${formatYear(committed.year)} · ${frame.version}${committed.boundaries ? "" : " · 疆域层未显示"}` : "无可用疆域数据 · 仅显示本地自然地理参照" : "等待成功历史视图";
+        }
+        function refreshPolityLabels() {
+            if (!fixedHistorical || !map || !boundaryLayer)
+                return;
+            const visible = map.getZoom() >= 3;
+            boundaryLayer.eachLayer((layer) => {
+                const tooltip = layer.getTooltip();
+                if (!tooltip)
+                    return;
+                const bounded = layer;
+                const inView = !bounded.getBounds || map.getBounds().intersects(bounded.getBounds());
+                tooltip.options.permanent = visible && inView;
+                try {
+                    if (visible && inView)
+                        layer.openTooltip();
+                    else
+                        layer.closeTooltip();
+                }
+                catch {
+                    layer.closeTooltip();
+                }
+            });
         }
         async function applyView() {
             const current = sequence;
@@ -326,22 +356,31 @@ const ArchSearchHistory = (() => {
                 }
                 if (frame !== null) {
                     const source = frame.source;
-                    nextBoundary = L.geoJSON(worldCopies(frame.data), {
-                        pane: "history-boundaries", attribution: "Cliopatria · CC BY 4.0",
+                    const boundaryOptions = {
+                        pane: "history-boundaries", renderer: renderer ?? undefined, attribution: "Cliopatria · CC BY 4.0",
                         style: (feature) => {
                             const properties = record(feature?.properties) ? feature.properties : {};
                             const composite = properties.composite === true;
-                            return { pane: "history-boundaries", renderer: renderer ?? undefined, color: colorForName(text(properties.Name, String(feature?.id ?? "unknown"))), weight: composite ? 1.3 : 1, opacity: 0.8, fill: !composite, fillOpacity: composite ? 0 : 0.1, dashArray: composite ? "5 4" : undefined };
+                            return { pane: "history-boundaries", renderer: renderer ?? undefined, color: colorForName(text(properties.Name, String(feature?.id ?? "unknown"))), weight: fixedHistorical ? composite ? 2.1 : 1.7 : composite ? 1.3 : 1, opacity: fixedHistorical ? 0.95 : 0.8, fill: !composite, fillOpacity: composite ? 0 : fixedHistorical ? 0.26 : 0.1, dashArray: composite ? fixedHistorical ? "7 5" : "5 4" : undefined };
                         },
-                        onEachFeature: (feature, layer) => { layer.bindPopup(() => popup(record(feature.properties) ? feature.properties : {}, source), { maxWidth: 310 }); },
-                    });
+                        onEachFeature: (feature, layer) => {
+                            const properties = record(feature.properties) ? feature.properties : {};
+                            layer.bindPopup(() => popup(properties, source), { maxWidth: 310 });
+                            if (fixedHistorical)
+                                layer.bindTooltip(element("span", text(properties.Name, "未命名历史政权")), { pane: "history-polity-labels", className: "history-polity-label", direction: "center", sticky: false, opacity: 0.95 });
+                        },
+                    };
+                    nextBoundary = L.geoJSON(worldCopies(frame.data), boundaryOptions);
                 }
                 if (abort.signal.aborted || current !== sequence)
                     return;
                 if (nextLand)
                     nextLand.addTo(map);
-                if (nextBoundary)
+                if (nextBoundary) {
                     nextBoundary.addTo(map);
+                    if (sharedRenderer)
+                        nextBoundary.bringToBack();
+                }
                 if (request.basemap === "historical") {
                     if (tiles && map.hasLayer(tiles))
                         map.removeLayer(tiles);
@@ -403,6 +442,7 @@ const ArchSearchHistory = (() => {
             ui.year.removeAttribute("aria-invalid");
             map.getContainer().dataset.basemap = request.basemap;
             updateSource(frame);
+            refreshPolityLabels();
             render();
             onCommittedView({ ...committed });
         }
@@ -440,6 +480,8 @@ const ArchSearchHistory = (() => {
                 cancel();
                 ui.feedback.textContent = reason;
                 render();
+                if (fixedHistorical)
+                    timer = setTimeout(() => { void applyView(); }, 200);
                 return;
             }
             schedule();
@@ -448,7 +490,7 @@ const ArchSearchHistory = (() => {
             userAction(intent);
             if (basemap !== "historical" && basemap !== "modern")
                 return;
-            desired = { ...desired, basemap };
+            desired = { ...desired, basemap: fixedHistorical ? "historical" : basemap };
             schedule();
         }
         function setBoundaries(boundaries, intent = "user") {
@@ -480,6 +522,8 @@ const ArchSearchHistory = (() => {
             if (!ready) {
                 cancel();
                 render();
+                if (fixedHistorical)
+                    timer = setTimeout(() => { void applyView(); }, 200);
                 return;
             }
             schedule();
@@ -525,9 +569,11 @@ const ArchSearchHistory = (() => {
         ui.modern.addEventListener("click", () => setBasemap("modern"));
         ui.boundaries.addEventListener("change", () => setBoundaries(ui.boundaries.checked));
         ui.retry.addEventListener("click", () => { userAction("user"); schedule(); });
+        if (fixedHistorical && map && typeof map.on === "function")
+            map.on("moveend zoomend", refreshPolityLabels);
         render();
         return { configure, getView: () => committed ? { ...committed } : null, setYear, setBasemap, setBoundaries, actionVersion: () => actions };
     }
-    return { create, isValidYear, yearToStep, stepToYear, formatYear, frameTargets, colorForName, worldCopies };
+    return { create, isValidYear, yearToStep, stepToYear, formatYear, frameTargets, colorForName, worldCopies, validateCollection };
 })();
 //# sourceMappingURL=history.js.map

@@ -1026,6 +1026,15 @@ const ArchSearchExplore = (() => {
                 const point = catalogue?.points.find((item) => item.id === id);
                 return point ? placements(point).map((placement) => [...placement.coordinate]) : [];
             },
+            getDisplayedPlacements: () => {
+                const shown = displayedCatalogue();
+                const scope = applied;
+                if (!shown || !scope || !desired.visible)
+                    return [];
+                return shown.points.filter((point) => matches(point, scope, shown.spatial_match_mode)).flatMap((point) => scopedPlacements(point, scope).map((placement) => ({
+                    id: point.id, title: point.title, coordinate: [...placement.coordinate], representative: placement.representative,
+                })));
+            },
             getSpatialMetadata: () => coverage?.spatial_locations ? JSON.parse(JSON.stringify(coverage.spatial_locations)) : null,
             getSpatialSource: (id) => {
                 const spatial = coverage?.spatial_locations;

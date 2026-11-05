@@ -1,8 +1,8 @@
 {
   "canada_spec_sha256": "4cfdd4fb896c2769de3d77daaf481fdb1544fc79d0e6d8db4911d97d8ad8afbc",
-  "corpus_countries_sha256": "ebc8e712cc589e67d191205e81bf67afb5cdbf285198842c4ee84f72e1a59951",
-  "corpus_ids_sha256": "19077c342f273be127288e8fc486192d78fac5a4e3b26a9c82eb2a9ce5578f96",
-  "corpus_version": "global-v18",
+  "corpus_countries_sha256": "198315bb36f2f00583c1c9cba61a5ccc46d60f3a0b17168d5173eb3f0276bf95",
+  "corpus_ids_sha256": "3198c4d67589c4b0fe38747f8132a257e40df48a22cedcce6e61713c9d8d1834",
+  "corpus_version": "global-v19",
   "extra_memberships": [
     {
       "artifact": {
@@ -73190,10 +73190,10 @@
   "merimee_extension_spec_sha256": "1bea70c52cbf37a8264d1919888aa6cd9f7151cbdd3f5e6987b2b776cc6e425d",
   "merimee_spec_sha256": "f6b41e4368d1b31082502bf501f93e576cb6718c22a0c9e807b49480a64c9709",
   "minas_spec_sha256": "def84d9b4c6a5c0c04794779337614dfb563e9b5b1d224d927c906d0721c7dca",
-  "review_method": "Independent source review appends GF/YT/PM original communes to unchanged Canadian, Hong Kong, Iepha-MG and first Mérimée memberships. Both Mérimée cohorts retain their own area-specific source pins; literal spelling variants and archaeological whole/component scope remain distinct.",
+  "review_method": "Independent source review appends GF/YT/PM original communes to unchanged Canadian, Hong Kong, Iepha-MG and first Mérimée memberships. Both Mérimée cohorts retain their own area-specific source pins; literal spelling variants and archaeological whole/component scope remain distinct. Rebound to global-v19 after the named grave supplement; all202 definitions and1836 memberships unchanged, and the new UK grave has no inferred subdivision.",
   "reviewed_at": "2026-11-05",
   "schema_version": 1,
-  "source_review_sha256": "60ae194c7c65a5ccd80a8171336b036e3bf3a7a4e8c0963b83f80e5848abe3a9",
+  "source_review_sha256": "f96f4ef463ef7001912ee1293e08f9b99bae62c73608f40270ea0122096e18f8",
   "subdivisions": [
     {
       "country": "CA",
@@ -74206,5 +74206,5 @@
       "label": "Dzaoudzi"
     }
   ],
-  "version": "source-subdivisions-v6"
+  "version": "source-subdivisions-v7"
 }
