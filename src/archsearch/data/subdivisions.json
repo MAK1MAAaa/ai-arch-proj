@@ -1,8 +1,8 @@
 {
   "canada_spec_sha256": "4cfdd4fb896c2769de3d77daaf481fdb1544fc79d0e6d8db4911d97d8ad8afbc",
-  "corpus_countries_sha256": "020541cda9175ea76d4de6ab6fa1a697b07660df0f316af28aca5bcd7c260cd1",
-  "corpus_ids_sha256": "a9f4313e79e60d51d8e655630f0bcd035b8869e79f604b312552a6dd64e3c8ba",
-  "corpus_version": "global-v17",
+  "corpus_countries_sha256": "ebc8e712cc589e67d191205e81bf67afb5cdbf285198842c4ee84f72e1a59951",
+  "corpus_ids_sha256": "19077c342f273be127288e8fc486192d78fac5a4e3b26a9c82eb2a9ce5578f96",
+  "corpus_version": "global-v18",
   "hong_kong_spec_sha256": "b0bcbe915c46bf611aab9b35b76c4365eb398a1032cf7705aa8302448611bf7a",
   "memberships": [
     {
@@ -34802,6 +34802,1195 @@
       "evidence": [
         {
           "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105893",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 6dc4e015fdcd4bfcea5a698cf43820f8937dd83f9fa7ab776fe917e0b09376ba",
+            "title": "Mérimée PA00105893 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105893",
+          "source_label": "Cayenne",
+          "source_row_sha256": "6dc4e015fdcd4bfcea5a698cf43820f8937dd83f9fa7ab776fe917e0b09376ba"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105893",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105894",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 5f07f01e34a13bd04d702d55c1888a64477744809069d0582ed99703fccba6f4",
+            "title": "Mérimée PA00105894 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105894",
+          "source_label": "Cayenne",
+          "source_row_sha256": "5f07f01e34a13bd04d702d55c1888a64477744809069d0582ed99703fccba6f4"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105894",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105895",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 52c51768ce4d8aa50cb45bbc8495e671c3a1d29e255d155e490bdccf8febf9d3",
+            "title": "Mérimée PA00105895 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105895",
+          "source_label": "Cayenne",
+          "source_row_sha256": "52c51768ce4d8aa50cb45bbc8495e671c3a1d29e255d155e490bdccf8febf9d3"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105895",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Iracoubo",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Iracoubo",
+            "id": "commune:fr-merimee:PA00105896",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 5a7b7a95b61a888bb53ebdd2b797fb2ba7209c50ce07e0dcafe6b8101ae26178",
+            "title": "Mérimée PA00105896 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105896",
+          "source_label": "Iracoubo",
+          "source_row_sha256": "5a7b7a95b61a888bb53ebdd2b797fb2ba7209c50ce07e0dcafe6b8101ae26178"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105896",
+      "subdivision_id": "GF:merimee-fa2ccb6a7ae23eb041be01ba5c28b116679e215a010f4ecf33c79ab4"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105897",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 308831bb14d7dd72c3c2d4fc343f650b0a69ebc720d8640ce2a9b6ad23e3f2c7",
+            "title": "Mérimée PA00105897 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105897",
+          "source_label": "Cayenne",
+          "source_row_sha256": "308831bb14d7dd72c3c2d4fc343f650b0a69ebc720d8640ce2a9b6ad23e3f2c7"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105897",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105898",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 010f3658612d86320b938d0d7c4fec32ea05a8c9f33fb56a86fe504b27c7907a",
+            "title": "Mérimée PA00105898 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105898",
+          "source_label": "Cayenne",
+          "source_row_sha256": "010f3658612d86320b938d0d7c4fec32ea05a8c9f33fb56a86fe504b27c7907a"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105898",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105899",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 a48304859b96ab89b68ec4bae6651d0611cc3701dd9ac2c822343cb74100c149",
+            "title": "Mérimée PA00105899 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105899",
+          "source_label": "Cayenne",
+          "source_row_sha256": "a48304859b96ab89b68ec4bae6651d0611cc3701dd9ac2c822343cb74100c149"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105899",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105900",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 bb986e7383035fc56b178e9764ae76f23f1cf480fa7e56f43dd4f060b981b023",
+            "title": "Mérimée PA00105900 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105900",
+          "source_label": "Cayenne",
+          "source_row_sha256": "bb986e7383035fc56b178e9764ae76f23f1cf480fa7e56f43dd4f060b981b023"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105900",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105901",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 3c8c63702b499568d36235b37225c20232203b8596d62d3ec929a0506c934023",
+            "title": "Mérimée PA00105901 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105901",
+          "source_label": "Cayenne",
+          "source_row_sha256": "3c8c63702b499568d36235b37225c20232203b8596d62d3ec929a0506c934023"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105901",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105902",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 37af02698e813d46f551e0b2a9fff13f2eddb9d2ae7d77a27365def82a0dea50",
+            "title": "Mérimée PA00105902 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105902",
+          "source_label": "Cayenne",
+          "source_row_sha256": "37af02698e813d46f551e0b2a9fff13f2eddb9d2ae7d77a27365def82a0dea50"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105902",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105903",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 16d9f4822067df0df76cb1eb588ef20118365e2bff01b9644708a62b5bb7a96a",
+            "title": "Mérimée PA00105903 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105903",
+          "source_label": "Cayenne",
+          "source_row_sha256": "16d9f4822067df0df76cb1eb588ef20118365e2bff01b9644708a62b5bb7a96a"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105903",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105904",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 cdf21e3cce3c6a7047e32251bd52deaba8b22320d456b142cce1454227983a4b",
+            "title": "Mérimée PA00105904 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105904",
+          "source_label": "Cayenne",
+          "source_row_sha256": "cdf21e3cce3c6a7047e32251bd52deaba8b22320d456b142cce1454227983a4b"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105904",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105905",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 55e55d3beb49e69fa1386f683976aac90370e21746d15e2362275732a31f810c",
+            "title": "Mérimée PA00105905 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105905",
+          "source_label": "Cayenne",
+          "source_row_sha256": "55e55d3beb49e69fa1386f683976aac90370e21746d15e2362275732a31f810c"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105905",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105906",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 1bd2738a98cbbccd6f292635179ca60664260b35a328e3bde8987b90d1f55588",
+            "title": "Mérimée PA00105906 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105906",
+          "source_label": "Cayenne",
+          "source_row_sha256": "1bd2738a98cbbccd6f292635179ca60664260b35a328e3bde8987b90d1f55588"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105906",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Mana",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Mana",
+            "id": "commune:fr-merimee:PA00105907",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 f631bdb587a34bfc108a473a1494d41dead35abfac9abed585e21860b9596ae6",
+            "title": "Mérimée PA00105907 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105907",
+          "source_label": "Mana",
+          "source_row_sha256": "f631bdb587a34bfc108a473a1494d41dead35abfac9abed585e21860b9596ae6"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105907",
+      "subdivision_id": "GF:merimee-387630c9e7248ff40fdf13f60569f85396f11bcdd1585da26b60659e"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Mana",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Mana",
+            "id": "commune:fr-merimee:PA00105908",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 2168a7306c85531c22f14b2cf0f6123f4db8e1492c8e22172adc3db430330031",
+            "title": "Mérimée PA00105908 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105908",
+          "source_label": "Mana",
+          "source_row_sha256": "2168a7306c85531c22f14b2cf0f6123f4db8e1492c8e22172adc3db430330031"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105908",
+      "subdivision_id": "GF:merimee-387630c9e7248ff40fdf13f60569f85396f11bcdd1585da26b60659e"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Remire-Montjoly",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Remire-Montjoly",
+            "id": "commune:fr-merimee:PA00105909",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 f0b0a07a7fc2dd95a1551d34e9e71f52a8b92cfa0b054fec6cab6341baf72cdd",
+            "title": "Mérimée PA00105909 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105909",
+          "source_label": "Remire-Montjoly",
+          "source_row_sha256": "f0b0a07a7fc2dd95a1551d34e9e71f52a8b92cfa0b054fec6cab6341baf72cdd"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105909",
+      "subdivision_id": "GF:merimee-6a419ec23d4540f4f7ec97ab10331762c6fb9afc6dfd9a58727c9b1c"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Remire-Montjoly",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Remire-Montjoly",
+            "id": "commune:fr-merimee:PA00105910",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 03e6b67200a1608e935b89bd83e49a8b1b009752060b04dbec592891a226bc2b",
+            "title": "Mérimée PA00105910 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105910",
+          "source_label": "Remire-Montjoly",
+          "source_row_sha256": "03e6b67200a1608e935b89bd83e49a8b1b009752060b04dbec592891a226bc2b"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105910",
+      "subdivision_id": "GF:merimee-6a419ec23d4540f4f7ec97ab10331762c6fb9afc6dfd9a58727c9b1c"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Laurent-du-Maroni",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Laurent-du-Maroni",
+            "id": "commune:fr-merimee:PA00105911",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 eb6ae8d2707705904ea1275af0ceb74c30e12887654963aaf1d70f814e54261c",
+            "title": "Mérimée PA00105911 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105911",
+          "source_label": "Saint-Laurent-du-Maroni",
+          "source_row_sha256": "eb6ae8d2707705904ea1275af0ceb74c30e12887654963aaf1d70f814e54261c"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105911",
+      "subdivision_id": "GF:merimee-36810e9dd921e508a80358cf30c38e0752422fea58a870f6685ef60f"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Laurent-du-Maroni",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Laurent-du-Maroni",
+            "id": "commune:fr-merimee:PA00105912",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 ba6575d4408f8169a193e2c74d0ecb75d263c5de967075831e850205935599e3",
+            "title": "Mérimée PA00105912 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105912",
+          "source_label": "Saint-Laurent-du-Maroni",
+          "source_row_sha256": "ba6575d4408f8169a193e2c74d0ecb75d263c5de967075831e850205935599e3"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105912",
+      "subdivision_id": "GF:merimee-36810e9dd921e508a80358cf30c38e0752422fea58a870f6685ef60f"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Laurent-du-Maroni",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Laurent-du-Maroni",
+            "id": "commune:fr-merimee:PA00105913",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 4ba76cfa2b4cd3ac229188f0e1ab460de3a93a8df2ca0b46c1816efaa303eaca",
+            "title": "Mérimée PA00105913 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105913",
+          "source_label": "Saint-Laurent-du-Maroni",
+          "source_row_sha256": "4ba76cfa2b4cd3ac229188f0e1ab460de3a93a8df2ca0b46c1816efaa303eaca"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105913",
+      "subdivision_id": "GF:merimee-36810e9dd921e508a80358cf30c38e0752422fea58a870f6685ef60f"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Laurent-du-Maroni",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Laurent-du-Maroni",
+            "id": "commune:fr-merimee:PA00105914",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 dce6b9900fd8379784ca5797e70afc97be7d1a4a48142cad3f5be6dfcdd0c195",
+            "title": "Mérimée PA00105914 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105914",
+          "source_label": "Saint-Laurent-du-Maroni",
+          "source_row_sha256": "dce6b9900fd8379784ca5797e70afc97be7d1a4a48142cad3f5be6dfcdd0c195"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105914",
+      "subdivision_id": "GF:merimee-36810e9dd921e508a80358cf30c38e0752422fea58a870f6685ef60f"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Laurent-du-Maroni",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Laurent-du-Maroni",
+            "id": "commune:fr-merimee:PA00105915",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 0a59b3f8584314b43319bfb54d200d4eb52c3ce25435393d93fd404c36fb0f38",
+            "title": "Mérimée PA00105915 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105915",
+          "source_label": "Saint-Laurent-du-Maroni",
+          "source_row_sha256": "0a59b3f8584314b43319bfb54d200d4eb52c3ce25435393d93fd404c36fb0f38"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105915",
+      "subdivision_id": "GF:merimee-36810e9dd921e508a80358cf30c38e0752422fea58a870f6685ef60f"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105916",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 23738d77f86e356a21a390e2e6e31050f6d1d0e2ad1c702eb3be75831c6f7bba",
+            "title": "Mérimée PA00105916 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105916",
+          "source_label": "Cayenne",
+          "source_row_sha256": "23738d77f86e356a21a390e2e6e31050f6d1d0e2ad1c702eb3be75831c6f7bba"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105916",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105917",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 1a88524a88642c430de06e3c4a6f0556559c9ae5cd378122ee3a615991ac6508",
+            "title": "Mérimée PA00105917 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105917",
+          "source_label": "Cayenne",
+          "source_row_sha256": "1a88524a88642c430de06e3c4a6f0556559c9ae5cd378122ee3a615991ac6508"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105917",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105918",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 65a95eabbe074f77e82dd57a2587ce0ad60d7976163a0e26cf65e6242102ce91",
+            "title": "Mérimée PA00105918 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105918",
+          "source_label": "Cayenne",
+          "source_row_sha256": "65a95eabbe074f77e82dd57a2587ce0ad60d7976163a0e26cf65e6242102ce91"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105918",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105919",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 e6a18e00414dcbaf3423a1f81f56c8f7a3761731bea482a5de19c22cc40576bd",
+            "title": "Mérimée PA00105919 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105919",
+          "source_label": "Cayenne",
+          "source_row_sha256": "e6a18e00414dcbaf3423a1f81f56c8f7a3761731bea482a5de19c22cc40576bd"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105919",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Remire-Montjoly",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Remire-Montjoly",
+            "id": "commune:fr-merimee:PA00105920",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 495b68a0d4f134380680491fcd6819b8bf9ee651f6742ff34051a4a8f8d03b2a",
+            "title": "Mérimée PA00105920 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105920",
+          "source_label": "Remire-Montjoly",
+          "source_row_sha256": "495b68a0d4f134380680491fcd6819b8bf9ee651f6742ff34051a4a8f8d03b2a"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105920",
+      "subdivision_id": "GF:merimee-6a419ec23d4540f4f7ec97ab10331762c6fb9afc6dfd9a58727c9b1c"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Iracoubo",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Iracoubo",
+            "id": "commune:fr-merimee:PA00105921",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 9e52382ed231afd8e9d246d320fd599115a0cb54ae6c27e37f5f39dc1d6c230d",
+            "title": "Mérimée PA00105921 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105921",
+          "source_label": "Iracoubo",
+          "source_row_sha256": "9e52382ed231afd8e9d246d320fd599115a0cb54ae6c27e37f5f39dc1d6c230d"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105921",
+      "subdivision_id": "GF:merimee-fa2ccb6a7ae23eb041be01ba5c28b116679e215a010f4ecf33c79ab4"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Régina",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Régina",
+            "id": "commune:fr-merimee:PA00105922",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 12f915cb8eee1f6c8bd9ce1c45d3d7bf7b6604bdf00c7624c8c09d414a4d2b0c",
+            "title": "Mérimée PA00105922 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105922",
+          "source_label": "Régina",
+          "source_row_sha256": "12f915cb8eee1f6c8bd9ce1c45d3d7bf7b6604bdf00c7624c8c09d414a4d2b0c"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105922",
+      "subdivision_id": "GF:merimee-e7bb144016cdeb7d57ca3a9dfce53b6453d23eedeb58975a0836796b"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Laurent-du-Maroni",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Laurent-du-Maroni",
+            "id": "commune:fr-merimee:PA00105923",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 73b4d49d639be873938d4016d0f9aee9cb56a7c1344304a0f5e0a644c5ba5d90",
+            "title": "Mérimée PA00105923 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105923",
+          "source_label": "Saint-Laurent-du-Maroni",
+          "source_row_sha256": "73b4d49d639be873938d4016d0f9aee9cb56a7c1344304a0f5e0a644c5ba5d90"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105923",
+      "subdivision_id": "GF:merimee-36810e9dd921e508a80358cf30c38e0752422fea58a870f6685ef60f"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saül",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saül",
+            "id": "commune:fr-merimee:PA00105924",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 45c4049b4ead8a222456ff079c3cb1e5ea2288613a99d2e6c1fa5896451edd40",
+            "title": "Mérimée PA00105924 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105924",
+          "source_label": "Saül",
+          "source_row_sha256": "45c4049b4ead8a222456ff079c3cb1e5ea2288613a99d2e6c1fa5896451edd40"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105924",
+      "subdivision_id": "GF:merimee-6ad2cd002e86b60580c07bbc5f6a96102f5f07304b5f477ea37547a6"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105925",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 3b698a0aa2d0850c940d6b0f12c2ddd0d00e349c0a7e101cb5721c6adcc15878",
+            "title": "Mérimée PA00105925 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105925",
+          "source_label": "Cayenne",
+          "source_row_sha256": "3b698a0aa2d0850c940d6b0f12c2ddd0d00e349c0a7e101cb5721c6adcc15878"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105925",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105926",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 4f566e2d6610c814e518d059efe78dc5fc6ac4fe4c06e88588412e5654f4528a",
+            "title": "Mérimée PA00105926 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105926",
+          "source_label": "Cayenne",
+          "source_row_sha256": "4f566e2d6610c814e518d059efe78dc5fc6ac4fe4c06e88588412e5654f4528a"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105926",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105927",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 6e845be84958e5d785b1208d9b4bd266706d7aec5249758cec924cb0c9be880b",
+            "title": "Mérimée PA00105927 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105927",
+          "source_label": "Cayenne",
+          "source_row_sha256": "6e845be84958e5d785b1208d9b4bd266706d7aec5249758cec924cb0c9be880b"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105927",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105928",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 c009936ef7302f52cbb67b974cbaaa1cb0377c68d26a071d5caabe96f2a0d09a",
+            "title": "Mérimée PA00105928 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105928",
+          "source_label": "Cayenne",
+          "source_row_sha256": "c009936ef7302f52cbb67b974cbaaa1cb0377c68d26a071d5caabe96f2a0d09a"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105928",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105929",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 681b5a48a2a6e5fa793bb70929beaa6dd181d2337079625890499d14d5e20fbe",
+            "title": "Mérimée PA00105929 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105929",
+          "source_label": "Cayenne",
+          "source_row_sha256": "681b5a48a2a6e5fa793bb70929beaa6dd181d2337079625890499d14d5e20fbe"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105929",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105930",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 7d489a5c243dd514ccbe9cc01b4bc7174c2a4962cd4ef825d80e9aa02586a18f",
+            "title": "Mérimée PA00105930 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105930",
+          "source_label": "Cayenne",
+          "source_row_sha256": "7d489a5c243dd514ccbe9cc01b4bc7174c2a4962cd4ef825d80e9aa02586a18f"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105930",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105931",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 322b5b0a401f4f335873a90a5acabf3c418b6d3598ac31e5b091ac64498a98fe",
+            "title": "Mérimée PA00105931 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105931",
+          "source_label": "Cayenne",
+          "source_row_sha256": "322b5b0a401f4f335873a90a5acabf3c418b6d3598ac31e5b091ac64498a98fe"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105931",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00105932",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 6f10455c99ec8c7ffbb261a4309a02af852aa3c8ff04cfe09461f5512a4bb8d7",
+            "title": "Mérimée PA00105932 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105932",
+          "source_label": "Cayenne",
+          "source_row_sha256": "6f10455c99ec8c7ffbb261a4309a02af852aa3c8ff04cfe09461f5512a4bb8d7"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105932",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Mana",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Mana",
+            "id": "commune:fr-merimee:PA00105933",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 38e94dd0d40dc91a0d514b9457d6c5f27197f84a0ffed6b92670ac332454226d",
+            "title": "Mérimée PA00105933 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00105933",
+          "source_label": "Mana",
+          "source_row_sha256": "38e94dd0d40dc91a0d514b9457d6c5f27197f84a0ffed6b92670ac332454226d"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00105933",
+      "subdivision_id": "GF:merimee-387630c9e7248ff40fdf13f60569f85396f11bcdd1585da26b60659e"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
             "filename": "merimee-source-candidate/raw/merimee-source.csv",
             "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
             "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
@@ -36339,6 +37528,122 @@
       "evidence": [
         {
           "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00125425",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 452791603087d9bf3ea6eca5c8695dfc5e3d98f49af31d5ecdb7d37b3ac02bb0",
+            "title": "Mérimée PA00125425 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00125425",
+          "source_label": "Cayenne",
+          "source_row_sha256": "452791603087d9bf3ea6eca5c8695dfc5e3d98f49af31d5ecdb7d37b3ac02bb0"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00125425",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00125426",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 7cbbdd021c9f48223623a2c15314cc7dec366fdeb541b4ee5c82a7c3107b1f0a",
+            "title": "Mérimée PA00125426 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00125426",
+          "source_label": "Cayenne",
+          "source_row_sha256": "7cbbdd021c9f48223623a2c15314cc7dec366fdeb541b4ee5c82a7c3107b1f0a"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00125426",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Kourou",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Kourou",
+            "id": "commune:fr-merimee:PA00125427",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 ef6a462ee401230ef06fbe7cd7400f68fbc57cc295e3c922578aaf9f40ed248c",
+            "title": "Mérimée PA00125427 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00125427",
+          "source_label": "Kourou",
+          "source_row_sha256": "ef6a462ee401230ef06fbe7cd7400f68fbc57cc295e3c922578aaf9f40ed248c"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00125427",
+      "subdivision_id": "GF:merimee-9ee5b3242ae9a7b0b3bd30c0ea045c928a722fa29518cd4686934aad"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Remire-Montjoly",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Remire-Montjoly",
+            "id": "commune:fr-merimee:PA00125428",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 4ada2dc09bcbc4368d38c35cd26d62f597e177c27a6058c7900ddf7e635b788a",
+            "title": "Mérimée PA00125428 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00125428",
+          "source_label": "Remire-Montjoly",
+          "source_row_sha256": "4ada2dc09bcbc4368d38c35cd26d62f597e177c27a6058c7900ddf7e635b788a"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00125428",
+      "subdivision_id": "GF:merimee-6a419ec23d4540f4f7ec97ab10331762c6fb9afc6dfd9a58727c9b1c"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
             "filename": "merimee-source-candidate/raw/merimee-source.csv",
             "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
             "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
@@ -36508,6 +37813,35 @@
       ],
       "site_id": "auth:fr-merimee:PA00132725",
       "subdivision_id": "MQ:merimee-f4b4b01d1738d9d33156d36499a7d69068e35ed0b1c8dacf6e49a50f"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Remire-Montjoly",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Remire-Montjoly",
+            "id": "commune:fr-merimee:PA00132726",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 2a5d03ef1d9264a39d70f994fedd195b8093947390bb4610169a874fa980f80a",
+            "title": "Mérimée PA00132726 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00132726",
+          "source_label": "Remire-Montjoly",
+          "source_row_sha256": "2a5d03ef1d9264a39d70f994fedd195b8093947390bb4610169a874fa980f80a"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00132726",
+      "subdivision_id": "GF:merimee-6a419ec23d4540f4f7ec97ab10331762c6fb9afc6dfd9a58727c9b1c"
     },
     {
       "evidence": [
@@ -36827,6 +38161,615 @@
       ],
       "site_id": "auth:fr-merimee:PA00135672",
       "subdivision_id": "MQ:merimee-c7d3fdacc1a1469e8cb11f14b478e94bc14424ced757c77243c94719"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00135673",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 4a009f1a5761d0f5c7a903ef08f718a8cab74a1488d952f29320f6323d529fb7",
+            "title": "Mérimée PA00135673 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135673",
+          "source_label": "Cayenne",
+          "source_row_sha256": "4a009f1a5761d0f5c7a903ef08f718a8cab74a1488d952f29320f6323d529fb7"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135673",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00135674",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 babc455c8112a9fae1300bf2c58c8b099987e0dd00923fe98cd8bb5fdea35675",
+            "title": "Mérimée PA00135674 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135674",
+          "source_label": "Cayenne",
+          "source_row_sha256": "babc455c8112a9fae1300bf2c58c8b099987e0dd00923fe98cd8bb5fdea35675"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135674",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00135675",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 e53cef1d42bf5577cdb8b549014103fc271e685e483ce8a9b120b58c0c9568ae",
+            "title": "Mérimée PA00135675 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135675",
+          "source_label": "Cayenne",
+          "source_row_sha256": "e53cef1d42bf5577cdb8b549014103fc271e685e483ce8a9b120b58c0c9568ae"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135675",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00135676",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 a1ffe15843386f29592b191cbbecbee8e07eda3505202867e34540ccc857d9e4",
+            "title": "Mérimée PA00135676 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135676",
+          "source_label": "Cayenne",
+          "source_row_sha256": "a1ffe15843386f29592b191cbbecbee8e07eda3505202867e34540ccc857d9e4"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135676",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00135677",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 e5c7fedab2915feac14578e9aa00dff4945cba2d0f2428444d27519906075264",
+            "title": "Mérimée PA00135677 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135677",
+          "source_label": "Cayenne",
+          "source_row_sha256": "e5c7fedab2915feac14578e9aa00dff4945cba2d0f2428444d27519906075264"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135677",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00135678",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 eee89be22c48ce10f9b52fab554965df4cad54431bd5e0033e7b5201574a976a",
+            "title": "Mérimée PA00135678 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135678",
+          "source_label": "Cayenne",
+          "source_row_sha256": "eee89be22c48ce10f9b52fab554965df4cad54431bd5e0033e7b5201574a976a"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135678",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00135679",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 fec21360dab7cbe6b1b7600fbebe9eb7fa06dc2ce763fc5ad39ac20dd3f42208",
+            "title": "Mérimée PA00135679 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135679",
+          "source_label": "Cayenne",
+          "source_row_sha256": "fec21360dab7cbe6b1b7600fbebe9eb7fa06dc2ce763fc5ad39ac20dd3f42208"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135679",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00135680",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 b05f369df9294c2891d43898ea3a2f6c44fcb425059ce8b467e12268e1dea2ef",
+            "title": "Mérimée PA00135680 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135680",
+          "source_label": "Cayenne",
+          "source_row_sha256": "b05f369df9294c2891d43898ea3a2f6c44fcb425059ce8b467e12268e1dea2ef"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135680",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00135681",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 9a2918b3621677a151822e30d860e81a86c1a60f8927a68c56a14092771a5cf2",
+            "title": "Mérimée PA00135681 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135681",
+          "source_label": "Cayenne",
+          "source_row_sha256": "9a2918b3621677a151822e30d860e81a86c1a60f8927a68c56a14092771a5cf2"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135681",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00135682",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 ca6886fa3fd25e13caba91c4df65d41774d320406ad47b5fcbd70c39e3fc08dc",
+            "title": "Mérimée PA00135682 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135682",
+          "source_label": "Cayenne",
+          "source_row_sha256": "ca6886fa3fd25e13caba91c4df65d41774d320406ad47b5fcbd70c39e3fc08dc"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135682",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00135683",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 c7de4c428295cd24d9cb7259304000a2ffe73347e9c6fb7c69dc98361c8a903c",
+            "title": "Mérimée PA00135683 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135683",
+          "source_label": "Cayenne",
+          "source_row_sha256": "c7de4c428295cd24d9cb7259304000a2ffe73347e9c6fb7c69dc98361c8a903c"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135683",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA00135684",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 4b6944444c81bf8238700c55f8478c36da24b16b906f456e3e29e5293cb6a929",
+            "title": "Mérimée PA00135684 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135684",
+          "source_label": "Cayenne",
+          "source_row_sha256": "4b6944444c81bf8238700c55f8478c36da24b16b906f456e3e29e5293cb6a929"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135684",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Mana",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Mana",
+            "id": "commune:fr-merimee:PA00135685",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 000b3b09d3c34731c2a22213144f796a47c599af1e0733f479e6d2efb1c0693d",
+            "title": "Mérimée PA00135685 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135685",
+          "source_label": "Mana",
+          "source_row_sha256": "000b3b09d3c34731c2a22213144f796a47c599af1e0733f479e6d2efb1c0693d"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135685",
+      "subdivision_id": "GF:merimee-387630c9e7248ff40fdf13f60569f85396f11bcdd1585da26b60659e"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Mana",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Mana",
+            "id": "commune:fr-merimee:PA00135686",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 f3cff50684e7e72202c62f563e224f350bd4245f7495cb0f435ce95a93d711db",
+            "title": "Mérimée PA00135686 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135686",
+          "source_label": "Mana",
+          "source_row_sha256": "f3cff50684e7e72202c62f563e224f350bd4245f7495cb0f435ce95a93d711db"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135686",
+      "subdivision_id": "GF:merimee-387630c9e7248ff40fdf13f60569f85396f11bcdd1585da26b60659e"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Mana",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Mana",
+            "id": "commune:fr-merimee:PA00135687",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 442d90cd32956406b9327569770e02befe3b3c50f543e3028d9752e1d3bfc9d7",
+            "title": "Mérimée PA00135687 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135687",
+          "source_label": "Mana",
+          "source_row_sha256": "442d90cd32956406b9327569770e02befe3b3c50f543e3028d9752e1d3bfc9d7"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135687",
+      "subdivision_id": "GF:merimee-387630c9e7248ff40fdf13f60569f85396f11bcdd1585da26b60659e"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Maripasoula",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Maripasoula",
+            "id": "commune:fr-merimee:PA00135688",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 06ba835f6ef2b05baf2866f12b4c9a3f8bc4a2b13c466f638133a8a942edfffb",
+            "title": "Mérimée PA00135688 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135688",
+          "source_label": "Maripasoula",
+          "source_row_sha256": "06ba835f6ef2b05baf2866f12b4c9a3f8bc4a2b13c466f638133a8a942edfffb"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135688",
+      "subdivision_id": "GF:merimee-73a07eadd04ac9236ade0d188aa89d8528b801d6da21eda68369a09d"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Matoury",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Matoury",
+            "id": "commune:fr-merimee:PA00135689",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 17d1b37f6f560e2df4bbd755b224970ea1fca000875723ad47bf9544faaccfff",
+            "title": "Mérimée PA00135689 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135689",
+          "source_label": "Matoury",
+          "source_row_sha256": "17d1b37f6f560e2df4bbd755b224970ea1fca000875723ad47bf9544faaccfff"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135689",
+      "subdivision_id": "GF:merimee-c3796ec840ceb9126061323d03d595d1a59118e24f0477708edaa5b0"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Montsinéry-Tonnegrande",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Montsinéry-Tonnegrande",
+            "id": "commune:fr-merimee:PA00135690",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 99519ae929fc5ea1f71ef15db25581a26d10ed9c6784dac8c0b12bccfd9bced8",
+            "title": "Mérimée PA00135690 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135690",
+          "source_label": "Montsinéry-Tonnegrande",
+          "source_row_sha256": "99519ae929fc5ea1f71ef15db25581a26d10ed9c6784dac8c0b12bccfd9bced8"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135690",
+      "subdivision_id": "GF:merimee-3c3d01b8638f0445395a5d0bc5c9a7382f643486cbcfb2459bdde4a6"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Remire-Montjoly",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Remire-Montjoly",
+            "id": "commune:fr-merimee:PA00135691",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 098b4fce9d33cf4796985d95cea784fb508875a38ebc9fd43a4a336aa86a6e78",
+            "title": "Mérimée PA00135691 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135691",
+          "source_label": "Remire-Montjoly",
+          "source_row_sha256": "098b4fce9d33cf4796985d95cea784fb508875a38ebc9fd43a4a336aa86a6e78"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135691",
+      "subdivision_id": "GF:merimee-6a419ec23d4540f4f7ec97ab10331762c6fb9afc6dfd9a58727c9b1c"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Laurent-du-Maroni",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Laurent-du-Maroni",
+            "id": "commune:fr-merimee:PA00135692",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 b9658e656e395f342208b9b42ade78f108148096971442875609a65b7999d84b",
+            "title": "Mérimée PA00135692 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135692",
+          "source_label": "Saint-Laurent-du-Maroni",
+          "source_row_sha256": "b9658e656e395f342208b9b42ade78f108148096971442875609a65b7999d84b"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135692",
+      "subdivision_id": "GF:merimee-36810e9dd921e508a80358cf30c38e0752422fea58a870f6685ef60f"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Laurent-du-Maroni",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Laurent-du-Maroni",
+            "id": "commune:fr-merimee:PA00135693",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 83cebbc99574638b59f527231ce68246fad2d5a00820c18d3805e03ba401efae",
+            "title": "Mérimée PA00135693 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA00135693",
+          "source_label": "Saint-Laurent-du-Maroni",
+          "source_row_sha256": "83cebbc99574638b59f527231ce68246fad2d5a00820c18d3805e03ba401efae"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA00135693",
+      "subdivision_id": "GF:merimee-36810e9dd921e508a80358cf30c38e0752422fea58a870f6685ef60f"
     },
     {
       "evidence": [
@@ -40713,6 +42656,673 @@
       ],
       "site_id": "auth:fr-merimee:PA97200058",
       "subdivision_id": "MQ:merimee-16424e2e2d5597c899349d452eb0c7dd6a0aaafe0a47237b614f35d0"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Remire-Montjoly",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Remire-Montjoly",
+            "id": "commune:fr-merimee:PA97300001",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 95d37a9494da9e5c3a4e75cb35c7cb6f25f92e8ba5f10bad0a2249cb21fbcb52",
+            "title": "Mérimée PA97300001 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300001",
+          "source_label": "Remire-Montjoly",
+          "source_row_sha256": "95d37a9494da9e5c3a4e75cb35c7cb6f25f92e8ba5f10bad0a2249cb21fbcb52"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300001",
+      "subdivision_id": "GF:merimee-6a419ec23d4540f4f7ec97ab10331762c6fb9afc6dfd9a58727c9b1c"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Remire-Montjoly",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Remire-Montjoly",
+            "id": "commune:fr-merimee:PA97300002",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 b40e901b9d8ce2ef504a4a47c295dac95919b7550eeb09097b579793ecbec032",
+            "title": "Mérimée PA97300002 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300002",
+          "source_label": "Remire-Montjoly",
+          "source_row_sha256": "b40e901b9d8ce2ef504a4a47c295dac95919b7550eeb09097b579793ecbec032"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300002",
+      "subdivision_id": "GF:merimee-6a419ec23d4540f4f7ec97ab10331762c6fb9afc6dfd9a58727c9b1c"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Remire-Montjoly",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Remire-Montjoly",
+            "id": "commune:fr-merimee:PA97300003",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 8260093baaf4d62496e99bf723e92bbb4ecf0ce3ecd21618c7576eddf7542768",
+            "title": "Mérimée PA97300003 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300003",
+          "source_label": "Remire-Montjoly",
+          "source_row_sha256": "8260093baaf4d62496e99bf723e92bbb4ecf0ce3ecd21618c7576eddf7542768"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300003",
+      "subdivision_id": "GF:merimee-6a419ec23d4540f4f7ec97ab10331762c6fb9afc6dfd9a58727c9b1c"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Remire-Montjoly",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Remire-Montjoly",
+            "id": "commune:fr-merimee:PA97300004",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 c129f8628f411091b90f44a6f044dbcc092db3d94f3fcd9a03010183bc505c9b",
+            "title": "Mérimée PA97300004 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300004",
+          "source_label": "Remire-Montjoly",
+          "source_row_sha256": "c129f8628f411091b90f44a6f044dbcc092db3d94f3fcd9a03010183bc505c9b"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300004",
+      "subdivision_id": "GF:merimee-6a419ec23d4540f4f7ec97ab10331762c6fb9afc6dfd9a58727c9b1c"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Remire-Montjoly",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Remire-Montjoly",
+            "id": "commune:fr-merimee:PA97300005",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 9d47a53e0f87ed464c0e4a8ddcad5b9b22f4f47c87ca053e47d3491874a4396a",
+            "title": "Mérimée PA97300005 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300005",
+          "source_label": "Remire-Montjoly",
+          "source_row_sha256": "9d47a53e0f87ed464c0e4a8ddcad5b9b22f4f47c87ca053e47d3491874a4396a"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300005",
+      "subdivision_id": "GF:merimee-6a419ec23d4540f4f7ec97ab10331762c6fb9afc6dfd9a58727c9b1c"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Remire-Montjoly",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Remire-Montjoly",
+            "id": "commune:fr-merimee:PA97300006",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 222100ab51f6166bea82847409d0b374dfd28e85a25d03833bb6d6d1176379e2",
+            "title": "Mérimée PA97300006 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300006",
+          "source_label": "Remire-Montjoly",
+          "source_row_sha256": "222100ab51f6166bea82847409d0b374dfd28e85a25d03833bb6d6d1176379e2"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300006",
+      "subdivision_id": "GF:merimee-6a419ec23d4540f4f7ec97ab10331762c6fb9afc6dfd9a58727c9b1c"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Remire-Montjoly",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Remire-Montjoly",
+            "id": "commune:fr-merimee:PA97300007",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 4f49c071aaa433d3695824c2bb7752a66565c7c3c3ca872f9e1876fef811a928",
+            "title": "Mérimée PA97300007 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300007",
+          "source_label": "Remire-Montjoly",
+          "source_row_sha256": "4f49c071aaa433d3695824c2bb7752a66565c7c3c3ca872f9e1876fef811a928"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300007",
+      "subdivision_id": "GF:merimee-6a419ec23d4540f4f7ec97ab10331762c6fb9afc6dfd9a58727c9b1c"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Remire-Montjoly",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Remire-Montjoly",
+            "id": "commune:fr-merimee:PA97300008",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 d344de636cfb22a87fde62629c000e86632abcbe7af0fecadfe9a3ee015f635d",
+            "title": "Mérimée PA97300008 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300008",
+          "source_label": "Remire-Montjoly",
+          "source_row_sha256": "d344de636cfb22a87fde62629c000e86632abcbe7af0fecadfe9a3ee015f635d"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300008",
+      "subdivision_id": "GF:merimee-6a419ec23d4540f4f7ec97ab10331762c6fb9afc6dfd9a58727c9b1c"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Camopi",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Camopi",
+            "id": "commune:fr-merimee:PA97300009",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 3a8c15efdb2ab65460a1781d22f99b7f5732848447a4a270ae7c10b363964720",
+            "title": "Mérimée PA97300009 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300009",
+          "source_label": "Camopi",
+          "source_row_sha256": "3a8c15efdb2ab65460a1781d22f99b7f5732848447a4a270ae7c10b363964720"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300009",
+      "subdivision_id": "GF:merimee-fc655480fc459421eccd48018f6ccc9e794cbe18dda6c65525567cac"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Ouanary",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Ouanary",
+            "id": "commune:fr-merimee:PA97300010",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 72672bf19c61cbf1719fddd3798f00c4a4e4edcc17675fac0923e476e8d1b9a4",
+            "title": "Mérimée PA97300010 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300010",
+          "source_label": "Ouanary",
+          "source_row_sha256": "72672bf19c61cbf1719fddd3798f00c4a4e4edcc17675fac0923e476e8d1b9a4"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300010",
+      "subdivision_id": "GF:merimee-e53d7eaa8b854a1bd02327203ef031a15ed48f2552090caa78e5f64c"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Roura",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Roura",
+            "id": "commune:fr-merimee:PA97300011",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 327c32bee0d35986412f6b99413165c2d728cb461b5561d87fe8c61bc119ec12",
+            "title": "Mérimée PA97300011 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300011",
+          "source_label": "Roura",
+          "source_row_sha256": "327c32bee0d35986412f6b99413165c2d728cb461b5561d87fe8c61bc119ec12"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300011",
+      "subdivision_id": "GF:merimee-bf2d24631de1dd245ea12f77da359f88fe4c37ddd0c8fa072596345c"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Remire-Montjoly",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Remire-Montjoly",
+            "id": "commune:fr-merimee:PA97300013",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 7379fc7708321fc819952253c12378d6c20d9cd8d0836094189925e949cef429",
+            "title": "Mérimée PA97300013 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300013",
+          "source_label": "Remire-Montjoly",
+          "source_row_sha256": "7379fc7708321fc819952253c12378d6c20d9cd8d0836094189925e949cef429"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300013",
+      "subdivision_id": "GF:merimee-6a419ec23d4540f4f7ec97ab10331762c6fb9afc6dfd9a58727c9b1c"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA97300014",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 cb6a3c5607960313b47941b8b214d89ccd3324aa6069f6ab97afd79761142f26",
+            "title": "Mérimée PA97300014 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300014",
+          "source_label": "Cayenne",
+          "source_row_sha256": "cb6a3c5607960313b47941b8b214d89ccd3324aa6069f6ab97afd79761142f26"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300014",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA97300015",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 2e4c208f81a94e92033fc052379c10cc902d360d04183deb6f2022f86b101203",
+            "title": "Mérimée PA97300015 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300015",
+          "source_label": "Cayenne",
+          "source_row_sha256": "2e4c208f81a94e92033fc052379c10cc902d360d04183deb6f2022f86b101203"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300015",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA97300016",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 a96837c554adcfb6e4b3e1eba11e2e954474203a1d39e8252a5bfcb23c582439",
+            "title": "Mérimée PA97300016 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300016",
+          "source_label": "Cayenne",
+          "source_row_sha256": "a96837c554adcfb6e4b3e1eba11e2e954474203a1d39e8252a5bfcb23c582439"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300016",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Laurent-du-Maroni",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Laurent-du-Maroni",
+            "id": "commune:fr-merimee:PA97300017",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 8941f443515e3d333b6bc7a925c9ac6f9790301697f1bd98e417c4a824586ad3",
+            "title": "Mérimée PA97300017 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300017",
+          "source_label": "Saint-Laurent-du-Maroni",
+          "source_row_sha256": "8941f443515e3d333b6bc7a925c9ac6f9790301697f1bd98e417c4a824586ad3"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300017",
+      "subdivision_id": "GF:merimee-36810e9dd921e508a80358cf30c38e0752422fea58a870f6685ef60f"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Laurent-du-Maroni",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Laurent-du-Maroni",
+            "id": "commune:fr-merimee:PA97300018",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 bd62aef89e74107b8b2f9dcc48c4df4f2c5b7da0f3bc4e1ad632844616ac18cc",
+            "title": "Mérimée PA97300018 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300018",
+          "source_label": "Saint-Laurent-du-Maroni",
+          "source_row_sha256": "bd62aef89e74107b8b2f9dcc48c4df4f2c5b7da0f3bc4e1ad632844616ac18cc"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300018",
+      "subdivision_id": "GF:merimee-36810e9dd921e508a80358cf30c38e0752422fea58a870f6685ef60f"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Régina",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Régina",
+            "id": "commune:fr-merimee:PA97300019",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 f14c2aed465aa060c7a10c0e3d8d2c2e208d6bf9769c123c3699a741a058fedb",
+            "title": "Mérimée PA97300019 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300019",
+          "source_label": "Régina",
+          "source_row_sha256": "f14c2aed465aa060c7a10c0e3d8d2c2e208d6bf9769c123c3699a741a058fedb"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300019",
+      "subdivision_id": "GF:merimee-e7bb144016cdeb7d57ca3a9dfce53b6453d23eedeb58975a0836796b"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Laurent-du-Maroni",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Laurent-du-Maroni",
+            "id": "commune:fr-merimee:PA97300020",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 6c4f3b12a8a3119e4222a75258c058e0a929f3cb28b7334da42c662997048282",
+            "title": "Mérimée PA97300020 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300020",
+          "source_label": "Saint-Laurent-du-Maroni",
+          "source_row_sha256": "6c4f3b12a8a3119e4222a75258c058e0a929f3cb28b7334da42c662997048282"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300020",
+      "subdivision_id": "GF:merimee-36810e9dd921e508a80358cf30c38e0752422fea58a870f6685ef60f"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Maripasoula",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Maripasoula",
+            "id": "commune:fr-merimee:PA97300021",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 d4b495b1e0f19a9d33010363f14c6170af2039acf9fc287aa37763a3fbdf00d3",
+            "title": "Mérimée PA97300021 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300021",
+          "source_label": "Maripasoula",
+          "source_row_sha256": "d4b495b1e0f19a9d33010363f14c6170af2039acf9fc287aa37763a3fbdf00d3"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300021",
+      "subdivision_id": "GF:merimee-73a07eadd04ac9236ade0d188aa89d8528b801d6da21eda68369a09d"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Montsinéry-Tonnégrande",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Montsinéry-Tonnégrande",
+            "id": "commune:fr-merimee:PA97300022",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 4e6514ffd2d858bbabe2b98236663fbf8e792e1fc2f60e31353b35fc9b7880f3",
+            "title": "Mérimée PA97300022 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300022",
+          "source_label": "Montsinéry-Tonnégrande",
+          "source_row_sha256": "4e6514ffd2d858bbabe2b98236663fbf8e792e1fc2f60e31353b35fc9b7880f3"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300022",
+      "subdivision_id": "GF:merimee-b9ae487d711642e151d38352beab89c3646ef7a22b38a41f2c7bab7f"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Roura",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Roura",
+            "id": "commune:fr-merimee:PA97300023",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 1229d7a47cb272611dd7c0f2d77a77287c0fcc6fc329aa208df2df9819bc809c",
+            "title": "Mérimée PA97300023 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300023",
+          "source_label": "Roura",
+          "source_row_sha256": "1229d7a47cb272611dd7c0f2d77a77287c0fcc6fc329aa208df2df9819bc809c"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300023",
+      "subdivision_id": "GF:merimee-bf2d24631de1dd245ea12f77da359f88fe4c37ddd0c8fa072596345c"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Cayenne",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Cayenne",
+            "id": "commune:fr-merimee:PA97300024",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 38a2455ad4fd6bb76bde2d0b65f3c9ad120aa2e1c8c5377d34fc8881fa91326f",
+            "title": "Mérimée PA97300024 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97300024",
+          "source_label": "Cayenne",
+          "source_row_sha256": "38a2455ad4fd6bb76bde2d0b65f3c9ad120aa2e1c8c5377d34fc8881fa91326f"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97300024",
+      "subdivision_id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34"
     },
     {
       "evidence": [
@@ -45382,6 +47992,934 @@
       ],
       "site_id": "auth:fr-merimee:PA97400166",
       "subdivision_id": "RE:merimee-58b40934670cd4179d970f09f9410838c42337a62e51211726d6c787"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Miquelon-Langlade",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Miquelon-Langlade",
+            "id": "commune:fr-merimee:PA97500001",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 8543e2477075e0cbeb1639379d15a0b72e6aec3eb5dadf44198ca35376e98766",
+            "title": "Mérimée PA97500001 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97500001",
+          "source_label": "Miquelon-Langlade",
+          "source_row_sha256": "8543e2477075e0cbeb1639379d15a0b72e6aec3eb5dadf44198ca35376e98766"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97500001",
+      "subdivision_id": "PM:merimee-0d8f733cd217f03fa9f4c1572034e79128c95354bdafb290e9d23e4a"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Pierre",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Pierre",
+            "id": "commune:fr-merimee:PA97500002",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 7c61d5372c6ad8af73001c5e3148ae33bfe4a091e70c90888228ff65f4544f0e",
+            "title": "Mérimée PA97500002 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97500002",
+          "source_label": "Saint-Pierre",
+          "source_row_sha256": "7c61d5372c6ad8af73001c5e3148ae33bfe4a091e70c90888228ff65f4544f0e"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97500002",
+      "subdivision_id": "PM:merimee-c8f6fdde4ea081282e43d71955ce655b3accb687e4f75ca16367fc02"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Pierre",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Pierre",
+            "id": "commune:fr-merimee:PA97500003",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 64f1c442967a230f6dd2cb0a882bfb8e4ce1e3860cc37bc0143b09d376937719",
+            "title": "Mérimée PA97500003 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97500003",
+          "source_label": "Saint-Pierre",
+          "source_row_sha256": "64f1c442967a230f6dd2cb0a882bfb8e4ce1e3860cc37bc0143b09d376937719"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97500003",
+      "subdivision_id": "PM:merimee-c8f6fdde4ea081282e43d71955ce655b3accb687e4f75ca16367fc02"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Pierre",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Pierre",
+            "id": "commune:fr-merimee:PA97500004",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 765216bf1b3b11277f33b9c3205aad17f02fc01950b45f9425fdb0852003e2b6",
+            "title": "Mérimée PA97500004 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97500004",
+          "source_label": "Saint-Pierre",
+          "source_row_sha256": "765216bf1b3b11277f33b9c3205aad17f02fc01950b45f9425fdb0852003e2b6"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97500004",
+      "subdivision_id": "PM:merimee-c8f6fdde4ea081282e43d71955ce655b3accb687e4f75ca16367fc02"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Pierre",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Pierre",
+            "id": "commune:fr-merimee:PA97500005",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 bc4823434a0324ef686e2540a0752ffa4b037b928a223d54fcc5bd8cb449cdc9",
+            "title": "Mérimée PA97500005 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97500005",
+          "source_label": "Saint-Pierre",
+          "source_row_sha256": "bc4823434a0324ef686e2540a0752ffa4b037b928a223d54fcc5bd8cb449cdc9"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97500005",
+      "subdivision_id": "PM:merimee-c8f6fdde4ea081282e43d71955ce655b3accb687e4f75ca16367fc02"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Pierre",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Pierre",
+            "id": "commune:fr-merimee:PA97500006",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 2bcb9a56fa99b45b86c18dfef590a6bb7f10e95b5069bc1ea8504e23a944f0ab",
+            "title": "Mérimée PA97500006 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97500006",
+          "source_label": "Saint-Pierre",
+          "source_row_sha256": "2bcb9a56fa99b45b86c18dfef590a6bb7f10e95b5069bc1ea8504e23a944f0ab"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97500006",
+      "subdivision_id": "PM:merimee-c8f6fdde4ea081282e43d71955ce655b3accb687e4f75ca16367fc02"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Pierre",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Pierre",
+            "id": "commune:fr-merimee:PA97500007",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 d3d51f32f42667ca05b71930e709137b831a3c48b67e98eec0d4d0233b945588",
+            "title": "Mérimée PA97500007 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97500007",
+          "source_label": "Saint-Pierre",
+          "source_row_sha256": "d3d51f32f42667ca05b71930e709137b831a3c48b67e98eec0d4d0233b945588"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97500007",
+      "subdivision_id": "PM:merimee-c8f6fdde4ea081282e43d71955ce655b3accb687e4f75ca16367fc02"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Pierre",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Pierre",
+            "id": "commune:fr-merimee:PA97500008",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 d69a21c421954cb5f7f16133e819cf0dd8bbc0507d6e256d15f104105a956e50",
+            "title": "Mérimée PA97500008 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97500008",
+          "source_label": "Saint-Pierre",
+          "source_row_sha256": "d69a21c421954cb5f7f16133e819cf0dd8bbc0507d6e256d15f104105a956e50"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97500008",
+      "subdivision_id": "PM:merimee-c8f6fdde4ea081282e43d71955ce655b3accb687e4f75ca16367fc02"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Pierre",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Pierre",
+            "id": "commune:fr-merimee:PA97500009",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 4862f98528c301e1a2886337d5405e95e3cdcdade38548ea0d5fde5cc95822ec",
+            "title": "Mérimée PA97500009 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97500009",
+          "source_label": "Saint-Pierre",
+          "source_row_sha256": "4862f98528c301e1a2886337d5405e95e3cdcdade38548ea0d5fde5cc95822ec"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97500009",
+      "subdivision_id": "PM:merimee-c8f6fdde4ea081282e43d71955ce655b3accb687e4f75ca16367fc02"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Pierre",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Pierre",
+            "id": "commune:fr-merimee:PA97500010",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 9342e92c62c63c033c32a34c5325b0bcf5aefd26accc23b528d8ef01406425a1",
+            "title": "Mérimée PA97500010 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97500010",
+          "source_label": "Saint-Pierre",
+          "source_row_sha256": "9342e92c62c63c033c32a34c5325b0bcf5aefd26accc23b528d8ef01406425a1"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97500010",
+      "subdivision_id": "PM:merimee-c8f6fdde4ea081282e43d71955ce655b3accb687e4f75ca16367fc02"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Miquelon-Langlade",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Miquelon-Langlade",
+            "id": "commune:fr-merimee:PA97500011",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 3c590e1c2622c39daee047bea4f900dfd227d8a0ebafc4dcf9c3dba823b105b1",
+            "title": "Mérimée PA97500011 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97500011",
+          "source_label": "Miquelon-Langlade",
+          "source_row_sha256": "3c590e1c2622c39daee047bea4f900dfd227d8a0ebafc4dcf9c3dba823b105b1"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97500011",
+      "subdivision_id": "PM:merimee-0d8f733cd217f03fa9f4c1572034e79128c95354bdafb290e9d23e4a"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Miquelon-Langlade",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Miquelon-Langlade",
+            "id": "commune:fr-merimee:PA97500012",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 7aa475ce49a4c1967d4b52784115ecea6214afd8a7efb5ffd911930dad861d68",
+            "title": "Mérimée PA97500012 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97500012",
+          "source_label": "Miquelon-Langlade",
+          "source_row_sha256": "7aa475ce49a4c1967d4b52784115ecea6214afd8a7efb5ffd911930dad861d68"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97500012",
+      "subdivision_id": "PM:merimee-0d8f733cd217f03fa9f4c1572034e79128c95354bdafb290e9d23e4a"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Pierre",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Pierre",
+            "id": "commune:fr-merimee:PA97500013",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 8574f8245ebd285679da04ad2c6aa64e7a2a904a7c44471791face4d19b03410",
+            "title": "Mérimée PA97500013 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97500013",
+          "source_label": "Saint-Pierre",
+          "source_row_sha256": "8574f8245ebd285679da04ad2c6aa64e7a2a904a7c44471791face4d19b03410"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97500013",
+      "subdivision_id": "PM:merimee-c8f6fdde4ea081282e43d71955ce655b3accb687e4f75ca16367fc02"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Pierre",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Pierre",
+            "id": "commune:fr-merimee:PA97500014",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 77f131ec24479e15a72003446409231dfc8a118d7d0d6f5cc2d04db8410ced59",
+            "title": "Mérimée PA97500014 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97500014",
+          "source_label": "Saint-Pierre",
+          "source_row_sha256": "77f131ec24479e15a72003446409231dfc8a118d7d0d6f5cc2d04db8410ced59"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97500014",
+      "subdivision_id": "PM:merimee-c8f6fdde4ea081282e43d71955ce655b3accb687e4f75ca16367fc02"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Pierre",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Pierre",
+            "id": "commune:fr-merimee:PA97500015",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 bd15e92b38d985f9811296144e6e3a769ece0883823418e413536e34ed6e7459",
+            "title": "Mérimée PA97500015 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97500015",
+          "source_label": "Saint-Pierre",
+          "source_row_sha256": "bd15e92b38d985f9811296144e6e3a769ece0883823418e413536e34ed6e7459"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97500015",
+      "subdivision_id": "PM:merimee-c8f6fdde4ea081282e43d71955ce655b3accb687e4f75ca16367fc02"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Saint-Pierre",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Saint-Pierre",
+            "id": "commune:fr-merimee:PA97500016",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 eb84252fbc7882037cf50f0406d1460331e2f0091e2f642dcf23a45f2fdd3f45",
+            "title": "Mérimée PA97500016 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97500016",
+          "source_label": "Saint-Pierre",
+          "source_row_sha256": "eb84252fbc7882037cf50f0406d1460331e2f0091e2f642dcf23a45f2fdd3f45"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97500016",
+      "subdivision_id": "PM:merimee-c8f6fdde4ea081282e43d71955ce655b3accb687e4f75ca16367fc02"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Dzaoudzi",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Dzaoudzi",
+            "id": "commune:fr-merimee:PA97600001",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 ef6262078a3e79baf7ec1e301754c2c686d7654d3cc06a2bafe5cfa4906c1131",
+            "title": "Mérimée PA97600001 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97600001",
+          "source_label": "Dzaoudzi",
+          "source_row_sha256": "ef6262078a3e79baf7ec1e301754c2c686d7654d3cc06a2bafe5cfa4906c1131"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97600001",
+      "subdivision_id": "YT:merimee-db60a59d5dcfdc619e3e3ab2da5181984432a2c68e783db5462c3c03"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Tsingoni",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Tsingoni",
+            "id": "commune:fr-merimee:PA97600002",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 d1ff9a300dc1f6a04903e5636eb9c05eaea4065acaee612f22ef2bd73db2ae84",
+            "title": "Mérimée PA97600002 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97600002",
+          "source_label": "Tsingoni",
+          "source_row_sha256": "d1ff9a300dc1f6a04903e5636eb9c05eaea4065acaee612f22ef2bd73db2ae84"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97600002",
+      "subdivision_id": "YT:merimee-54071bfa0a682e430fe3395a91c8c2386a3ec19cb541b0f242f1d4ae"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "M'Tsangamouji",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "M'Tsangamouji",
+            "id": "commune:fr-merimee:PA97600003",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 0b974be0857475b8ba9827d3a7affd6355f257d2bcdf5c18d7c9557a01a502c3",
+            "title": "Mérimée PA97600003 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97600003",
+          "source_label": "M'Tsangamouji",
+          "source_row_sha256": "0b974be0857475b8ba9827d3a7affd6355f257d2bcdf5c18d7c9557a01a502c3"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97600003",
+      "subdivision_id": "YT:merimee-67116e7c0f60b17d24c7079c75a23de685ed8b2f76c2c8a12728d8f3"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Dzaoudzi",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Dzaoudzi",
+            "id": "commune:fr-merimee:PA97600004",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 d0f720026a6cc6c0de4243ff8104a19c9a6fc4857538abedb47024218b560dd3",
+            "title": "Mérimée PA97600004 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97600004",
+          "source_label": "Dzaoudzi",
+          "source_row_sha256": "d0f720026a6cc6c0de4243ff8104a19c9a6fc4857538abedb47024218b560dd3"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97600004",
+      "subdivision_id": "YT:merimee-db60a59d5dcfdc619e3e3ab2da5181984432a2c68e783db5462c3c03"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Dembeni",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Dembeni",
+            "id": "commune:fr-merimee:PA97600005",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 a3e54623cc8f474b6554cfae5e0ca7b747fb3a3907e7c8e3f53948eff5cf24ef",
+            "title": "Mérimée PA97600005 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97600005",
+          "source_label": "Dembeni",
+          "source_row_sha256": "a3e54623cc8f474b6554cfae5e0ca7b747fb3a3907e7c8e3f53948eff5cf24ef"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97600005",
+      "subdivision_id": "YT:merimee-ac4c759bcf2174c80332097e1a8cd6bd900c329366d518ac040e5e35"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Dzaoudzi",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Dzaoudzi",
+            "id": "commune:fr-merimee:PA97600006",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 eaeec3eacf0667a9ba1432c5136fdcbac44448f5e4cccf1e5361f5e0c3a87538",
+            "title": "Mérimée PA97600006 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97600006",
+          "source_label": "Dzaoudzi",
+          "source_row_sha256": "eaeec3eacf0667a9ba1432c5136fdcbac44448f5e4cccf1e5361f5e0c3a87538"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97600006",
+      "subdivision_id": "YT:merimee-db60a59d5dcfdc619e3e3ab2da5181984432a2c68e783db5462c3c03"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Tsingoni",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Tsingoni",
+            "id": "commune:fr-merimee:PA97600007",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 c9b885acb9f1f9af75024ca9f0a8c3db87d61a7e5c1129a6fad0134293a95dac",
+            "title": "Mérimée PA97600007 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97600007",
+          "source_label": "Tsingoni",
+          "source_row_sha256": "c9b885acb9f1f9af75024ca9f0a8c3db87d61a7e5c1129a6fad0134293a95dac"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97600007",
+      "subdivision_id": "YT:merimee-54071bfa0a682e430fe3395a91c8c2386a3ec19cb541b0f242f1d4ae"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Chirongui",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Chirongui",
+            "id": "commune:fr-merimee:PA97600008",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 3fbd3aee4d0705771d839c8517cdf65867650d751f884b3f71035180f72f2e5c",
+            "title": "Mérimée PA97600008 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97600008",
+          "source_label": "Chirongui",
+          "source_row_sha256": "3fbd3aee4d0705771d839c8517cdf65867650d751f884b3f71035180f72f2e5c"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97600008",
+      "subdivision_id": "YT:merimee-57abf95cacf8a91f316061d493923901a728630ce7458438399cc070"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Dzaoudzi",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Dzaoudzi",
+            "id": "commune:fr-merimee:PA97600009",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 d5241e61d7c2667ec6d50df43bb27f9f76fe6f9816329a9bf1ce87471c31678d",
+            "title": "Mérimée PA97600009 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97600009",
+          "source_label": "Dzaoudzi",
+          "source_row_sha256": "d5241e61d7c2667ec6d50df43bb27f9f76fe6f9816329a9bf1ce87471c31678d"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97600009",
+      "subdivision_id": "YT:merimee-db60a59d5dcfdc619e3e3ab2da5181984432a2c68e783db5462c3c03"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Mamoudzou",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Mamoudzou",
+            "id": "commune:fr-merimee:PA97600010",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 656d7d37d26d6a121a9d58b1d5e78f5faba3d97f6aa1bb63000e842915e409ce",
+            "title": "Mérimée PA97600010 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97600010",
+          "source_label": "Mamoudzou",
+          "source_row_sha256": "656d7d37d26d6a121a9d58b1d5e78f5faba3d97f6aa1bb63000e842915e409ce"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97600010",
+      "subdivision_id": "YT:merimee-ab8b4c8d840c41cf597c8edbfb2fa7b5c5344ec6767e86957563011d"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Mamoudzou",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Mamoudzou",
+            "id": "commune:fr-merimee:PA97600011",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 897625843383744860e7b2e2a4ffdd4f8f6051c78e1db38eca2a81654f271e00",
+            "title": "Mérimée PA97600011 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97600011",
+          "source_label": "Mamoudzou",
+          "source_row_sha256": "897625843383744860e7b2e2a4ffdd4f8f6051c78e1db38eca2a81654f271e00"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97600011",
+      "subdivision_id": "YT:merimee-ab8b4c8d840c41cf597c8edbfb2fa7b5c5344ec6767e86957563011d"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Chirongui",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Chirongui",
+            "id": "commune:fr-merimee:PA97600012",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 d7dfd3a6f155c41fe8b6e8151708a98c7d2a739147cb2531016d6e72a0aa93a2",
+            "title": "Mérimée PA97600012 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97600012",
+          "source_label": "Chirongui",
+          "source_row_sha256": "d7dfd3a6f155c41fe8b6e8151708a98c7d2a739147cb2531016d6e72a0aa93a2"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97600012",
+      "subdivision_id": "YT:merimee-57abf95cacf8a91f316061d493923901a728630ce7458438399cc070"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Dzaoudzi",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Dzaoudzi",
+            "id": "commune:fr-merimee:PA97600013",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 531b613204d1d66537c61842ddc1380a006668ad3c383c4e8c7729b1c5b273ca",
+            "title": "Mérimée PA97600013 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97600013",
+          "source_label": "Dzaoudzi",
+          "source_row_sha256": "531b613204d1d66537c61842ddc1380a006668ad3c383c4e8c7729b1c5b273ca"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97600013",
+      "subdivision_id": "YT:merimee-db60a59d5dcfdc619e3e3ab2da5181984432a2c68e783db5462c3c03"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Dzaoudzi",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Dzaoudzi",
+            "id": "commune:fr-merimee:PA97600014",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 dd9d2484c756c29bb687cb329a1ae906e488ca41752ae4aa6d5e90a4a74588eb",
+            "title": "Mérimée PA97600014 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97600014",
+          "source_label": "Dzaoudzi",
+          "source_row_sha256": "dd9d2484c756c29bb687cb329a1ae906e488ca41752ae4aa6d5e90a4a74588eb"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97600014",
+      "subdivision_id": "YT:merimee-db60a59d5dcfdc619e3e3ab2da5181984432a2c68e783db5462c3c03"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Mamoudzou",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Mamoudzou",
+            "id": "commune:fr-merimee:PA97600015",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 45596cfd4a28adf116b569d34296c4f4280e032e479fc9e4db688844d02b5f97",
+            "title": "Mérimée PA97600015 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97600015",
+          "source_label": "Mamoudzou",
+          "source_row_sha256": "45596cfd4a28adf116b569d34296c4f4280e032e479fc9e4db688844d02b5f97"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97600015",
+      "subdivision_id": "YT:merimee-ab8b4c8d840c41cf597c8edbfb2fa7b5c5344ec6767e86957563011d"
+    },
+    {
+      "evidence": [
+        {
+          "artifact": {
+            "filename": "merimee-extension-source-candidate/raw/merimee-source.csv",
+            "sha256": "d83f5a3beb83221ed55169159fc0ce7c6d3dad66edca205a225cd30c136dd6ec",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "field": "Commune_forme_editoriale",
+          "raw_value": "Mamoudzou",
+          "role": "source_record_commune",
+          "source": {
+            "accessed": "2026-11-05",
+            "excerpt": "Mamoudzou",
+            "id": "commune:fr-merimee:PA97600016",
+            "license": "Licence Ouverte / Open Licence version 2.0",
+            "publisher": "Ministère de la Culture",
+            "revision": "Original78-field row SHA256 26e7617aaede0044a3bfedeec1e982bd548a1c2919f202b798063f0a6ed8780f",
+            "title": "Mérimée PA97600016 — original Commune_forme_editoriale",
+            "uri": "https://ministere-culture.s3.sbg.io.cloud.ovh.net/POP/merimee.csv"
+          },
+          "source_id": "commune:fr-merimee:PA97600016",
+          "source_label": "Mamoudzou",
+          "source_row_sha256": "26e7617aaede0044a3bfedeec1e982bd548a1c2919f202b798063f0a6ed8780f"
+        }
+      ],
+      "site_id": "auth:fr-merimee:PA97600016",
+      "subdivision_id": "YT:merimee-ab8b4c8d840c41cf597c8edbfb2fa7b5c5344ec6767e86957563011d"
     },
     {
       "evidence": [
@@ -50655,13 +54193,14 @@
       "subdivision_id": "CA:newfoundland-labrador"
     }
   ],
+  "merimee_extension_spec_sha256": "1bea70c52cbf37a8264d1919888aa6cd9f7151cbdd3f5e6987b2b776cc6e425d",
   "merimee_spec_sha256": "f6b41e4368d1b31082502bf501f93e576cb6718c22a0c9e807b49480a64c9709",
   "minas_spec_sha256": "def84d9b4c6a5c0c04794779337614dfb563e9b5b1d224d927c906d0721c7dca",
   "note": "Reviewed Canadian whole-object provinces, Hong Kong source-feature districts, Iepha-MG original-record municipality values and Mérimée original communes. Explicit record-to-object links only; no geocoding, boundary, chronology or text inference.",
-  "review_sha256": "4a98f123c3b0cef8d9909f1ad16c7377f5a3fea4a9e2ce10ae85b667db448eaa",
+  "review_sha256": "6845883876b8694eba4d54e7c61ca58ed2e808b218dd2f50bb3fc169763aa327",
   "schema_version": 1,
-  "source_facts_sha256": "cd4298d64da78d9d88d8d310dcf0d00c66daba6b0f0733e65ae00dc3276a829d",
-  "source_review_sha256": "b1376e3298257ec932d203cd5a6c51457a5acc7c7f68e9d8be2471fdf52018eb",
+  "source_facts_sha256": "e0d22b77a37edb1736323d5f6050e9d0a1f67dc6f05986d3625d246e534b6350",
+  "source_review_sha256": "60ae194c7c65a5ccd80a8171336b036e3bf3a7a4e8c0963b83f80e5848abe3a9",
   "subdivisions": [
     {
       "country": "BL",
@@ -51069,6 +54608,81 @@
       "label": "Yukon"
     },
     {
+      "country": "GF",
+      "id": "GF:merimee-1228537aefaa1bc9fd1e95ec8be5b6bdeb383ec0d2afb6d587975f34",
+      "label": "Cayenne"
+    },
+    {
+      "country": "GF",
+      "id": "GF:merimee-36810e9dd921e508a80358cf30c38e0752422fea58a870f6685ef60f",
+      "label": "Saint-Laurent-du-Maroni"
+    },
+    {
+      "country": "GF",
+      "id": "GF:merimee-387630c9e7248ff40fdf13f60569f85396f11bcdd1585da26b60659e",
+      "label": "Mana"
+    },
+    {
+      "country": "GF",
+      "id": "GF:merimee-3c3d01b8638f0445395a5d0bc5c9a7382f643486cbcfb2459bdde4a6",
+      "label": "Montsinéry-Tonnegrande"
+    },
+    {
+      "country": "GF",
+      "id": "GF:merimee-6a419ec23d4540f4f7ec97ab10331762c6fb9afc6dfd9a58727c9b1c",
+      "label": "Remire-Montjoly"
+    },
+    {
+      "country": "GF",
+      "id": "GF:merimee-6ad2cd002e86b60580c07bbc5f6a96102f5f07304b5f477ea37547a6",
+      "label": "Saül"
+    },
+    {
+      "country": "GF",
+      "id": "GF:merimee-73a07eadd04ac9236ade0d188aa89d8528b801d6da21eda68369a09d",
+      "label": "Maripasoula"
+    },
+    {
+      "country": "GF",
+      "id": "GF:merimee-9ee5b3242ae9a7b0b3bd30c0ea045c928a722fa29518cd4686934aad",
+      "label": "Kourou"
+    },
+    {
+      "country": "GF",
+      "id": "GF:merimee-b9ae487d711642e151d38352beab89c3646ef7a22b38a41f2c7bab7f",
+      "label": "Montsinéry-Tonnégrande"
+    },
+    {
+      "country": "GF",
+      "id": "GF:merimee-bf2d24631de1dd245ea12f77da359f88fe4c37ddd0c8fa072596345c",
+      "label": "Roura"
+    },
+    {
+      "country": "GF",
+      "id": "GF:merimee-c3796ec840ceb9126061323d03d595d1a59118e24f0477708edaa5b0",
+      "label": "Matoury"
+    },
+    {
+      "country": "GF",
+      "id": "GF:merimee-e53d7eaa8b854a1bd02327203ef031a15ed48f2552090caa78e5f64c",
+      "label": "Ouanary"
+    },
+    {
+      "country": "GF",
+      "id": "GF:merimee-e7bb144016cdeb7d57ca3a9dfce53b6453d23eedeb58975a0836796b",
+      "label": "Régina"
+    },
+    {
+      "country": "GF",
+      "id": "GF:merimee-fa2ccb6a7ae23eb041be01ba5c28b116679e215a010f4ecf33c79ab4",
+      "label": "Iracoubo"
+    },
+    {
+      "country": "GF",
+      "id": "GF:merimee-fc655480fc459421eccd48018f6ccc9e794cbe18dda6c65525567cac",
+      "label": "Camopi"
+    },
+    {
       "country": "GP",
       "id": "GP:merimee-08b7297cc37000ae805e403929e136b9579293c2371cfdc1e89b8b87",
       "label": "Petit-Canal"
@@ -51449,6 +55063,16 @@
       "label": "Le Marin"
     },
     {
+      "country": "PM",
+      "id": "PM:merimee-0d8f733cd217f03fa9f4c1572034e79128c95354bdafb290e9d23e4a",
+      "label": "Miquelon-Langlade"
+    },
+    {
+      "country": "PM",
+      "id": "PM:merimee-c8f6fdde4ea081282e43d71955ce655b3accb687e4f75ca16367fc02",
+      "label": "Saint-Pierre"
+    },
+    {
       "country": "RE",
       "id": "RE:merimee-04efaf591638ef05276b6a3eeb0d087acc4e9dc477ff76df55003eff",
       "label": "Saint-Paul"
@@ -51557,7 +55181,37 @@
       "country": "RE",
       "id": "RE:merimee-f6733518ef6041efa76d3d67958844294ec3494b4e666f245704e5a7",
       "label": "Le Tampon"
+    },
+    {
+      "country": "YT",
+      "id": "YT:merimee-54071bfa0a682e430fe3395a91c8c2386a3ec19cb541b0f242f1d4ae",
+      "label": "Tsingoni"
+    },
+    {
+      "country": "YT",
+      "id": "YT:merimee-57abf95cacf8a91f316061d493923901a728630ce7458438399cc070",
+      "label": "Chirongui"
+    },
+    {
+      "country": "YT",
+      "id": "YT:merimee-67116e7c0f60b17d24c7079c75a23de685ed8b2f76c2c8a12728d8f3",
+      "label": "M'Tsangamouji"
+    },
+    {
+      "country": "YT",
+      "id": "YT:merimee-ab8b4c8d840c41cf597c8edbfb2fa7b5c5344ec6767e86957563011d",
+      "label": "Mamoudzou"
+    },
+    {
+      "country": "YT",
+      "id": "YT:merimee-ac4c759bcf2174c80332097e1a8cd6bd900c329366d518ac040e5e35",
+      "label": "Dembeni"
+    },
+    {
+      "country": "YT",
+      "id": "YT:merimee-db60a59d5dcfdc619e3e3ab2da5181984432a2c68e783db5462c3c03",
+      "label": "Dzaoudzi"
     }
   ],
-  "version": "source-subdivisions-v5"
+  "version": "source-subdivisions-v6"
 }

@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "scope": "Twenty paired source-name and topic discovery queries for GF/YT/PM notice scopes. Chinese is an unverified query paraphrase, not an adopted site alias. English identity queries contain original French names, so this is a practical discovery diagnostic rather than a controlled language benchmark. Six identities declared before ranking; fourteen topic probes have no targets or relevance gold.",
+  "queries": [
+    {
+      "id": "mx01",
+      "query_zh": "寻找法属圭亚那马米利潘巨岩的考古遗存",
+      "query_en": "Find Entités archéologiques de l’Inselberg de la Mamilipann in French Guiana",
+      "topic": "Predetermined source notice identity; query paraphrase is not an adopted Chinese alias or human relevance gold."
+    },
+    {
+      "id": "mx02",
+      "query_zh": "寻找法属圭亚那圣洛朗迪马罗尼的旧流放营",
+      "query_en": "Find the former Camp de la Transportation in Saint-Laurent-du-Maroni, French Guiana",
+      "topic": "Predetermined source notice identity; query paraphrase is not an adopted Chinese alias or human relevance gold."
+    },
+    {
+      "id": "mx03",
+      "query_zh": "寻找马约特宗宁清真寺的保护范围",
+      "query_en": "Find Mosquée du 16e siècle in Tsingoni, Mayotte",
+      "topic": "Predetermined source notice identity; query paraphrase is not an adopted Chinese alias or human relevance gold."
+    },
+    {
+      "id": "mx04",
+      "query_zh": "寻找马约特苏卢旧糖厂的保护范围",
+      "query_en": "Find Ancienne sucrerie de Soulou in Mayotte",
+      "topic": "Predetermined source notice identity; query paraphrase is not an adopted Chinese alias or human relevance gold."
+    },
+    {
+      "id": "mx05",
+      "query_zh": "寻找圣皮埃尔与密克隆的普安特普拉特灯塔",
+      "query_en": "Find Phare de Pointe-Plate in Saint Pierre and Miquelon",
+      "topic": "Predetermined source notice identity; query paraphrase is not an adopted Chinese alias or human relevance gold."
+    },
+    {
+      "id": "mx06",
+      "query_zh": "寻找圣皮埃尔岛昂斯阿亨利的考古遗址",
+      "query_en": "Find Site archéologique de l’Anse-à-Henry in Saint Pierre and Miquelon",
+      "topic": "Predetermined source notice identity; query paraphrase is not an adopted Chinese alias or human relevance gold."
+    },
+    {
+      "id": "mx07",
+      "query_zh": "寻找法属圭亚那的岩画和岩棚考古证据",
+      "query_en": "Find rock painting and rock shelter archaeological evidence in French Guiana",
+      "topic": "Topic probe without a preassigned identity target or relevance judgment."
+    },
+    {
+      "id": "mx08",
+      "query_zh": "寻找救赎群岛的历史流放设施保护范围",
+      "query_en": "Find historic penal facility protection scopes on Iles du Salut",
+      "topic": "Topic probe without a preassigned identity target or relevance judgment."
+    },
+    {
+      "id": "mx09",
+      "query_zh": "寻找卡宴的历史政府建筑登记范围",
+      "query_en": "Find historic government building notice scopes in Cayenne",
+      "topic": "Topic probe without a preassigned identity target or relevance judgment."
+    },
+    {
+      "id": "mx10",
+      "query_zh": "寻找法属圭亚那的历史防御建筑",
+      "query_en": "Find historic defensive buildings in French Guiana",
+      "topic": "Topic probe without a preassigned identity target or relevance judgment."
+    },
+    {
+      "id": "mx11",
+      "query_zh": "寻找法属圭亚那的历史宗教建筑",
+      "query_en": "Find historic religious buildings in French Guiana",
+      "topic": "Topic probe without a preassigned identity target or relevance judgment."
+    },
+    {
+      "id": "mx12",
+      "query_zh": "寻找马约特制糖工业遗产",
+      "query_en": "Find sugar industry heritage in Mayotte",
+      "topic": "Topic probe without a preassigned identity target or relevance judgment."
+    },
+    {
+      "id": "mx13",
+      "query_zh": "寻找宗宁清真寺主体与宣礼塔分别登记的范围",
+      "query_en": "Find separately registered mosque and minaret scopes in Tsingoni",
+      "topic": "Topic probe without a preassigned identity target or relevance judgment."
+    },
+    {
+      "id": "mx14",
+      "query_zh": "寻找藻德济旧医院和医生住宅的来源范围",
+      "query_en": "Find original notice scopes for the old hospital and doctors house in Dzaoudzi",
+      "topic": "Topic probe without a preassigned identity target or relevance judgment."
+    },
+    {
+      "id": "mx15",
+      "query_zh": "寻找马穆楚的历史公共建筑",
+      "query_en": "Find historic public buildings in Mamoudzou",
+      "topic": "Topic probe without a preassigned identity target or relevance judgment."
+    },
+    {
+      "id": "mx16",
+      "query_zh": "寻找圣皮埃尔与密克隆的海事历史建筑",
+      "query_en": "Find maritime historic buildings in Saint Pierre and Miquelon",
+      "topic": "Topic probe without a preassigned identity target or relevance judgment."
+    },
+    {
+      "id": "mx17",
+      "query_zh": "寻找水手岛的历史住宅和公共建筑",
+      "query_en": "Find historic houses and public buildings on Ile-aux-Marins",
+      "topic": "Topic probe without a preassigned identity target or relevance judgment."
+    },
+    {
+      "id": "mx18",
+      "query_zh": "寻找圣皮埃尔岛与渔业制盐有关的建筑",
+      "query_en": "Find buildings related to fishing and salt storage on Saint-Pierre island",
+      "topic": "Topic probe without a preassigned identity target or relevance judgment."
+    },
+    {
+      "id": "mx19",
+      "query_zh": "寻找马约特保护文书经过修改的原始记录",
+      "query_en": "Find original notices with revised protection documents in Mayotte",
+      "topic": "Topic probe without a preassigned identity target or relevance judgment."
+    },
+    {
+      "id": "mx20",
+      "query_zh": "寻找马约特和圭亚那仅保护建筑部分的记录",
+      "query_en": "Find Mayotte and French Guiana notices protecting specified building parts",
+      "topic": "Topic probe without a preassigned identity target or relevance judgment."
+    }
+  ]
+}

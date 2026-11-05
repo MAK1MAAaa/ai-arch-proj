@@ -236,26 +236,32 @@ def test_municipality_association_requires_its_approved_cohort_and_original_fiel
         bundle.payload()
 
 
-def merimee_commune_fixture(bundle: Bundle) -> tuple[str, str]:
-    site_id = "auth:fr-merimee:PA97400026"
-    label = "Saint-Denis;La Possession"
+def merimee_commune_fixture(
+    bundle: Bundle, *, area: str = "RE", reference: str = "PA97400026", extension: bool = False,
+) -> tuple[str, str]:
+    site_id = "auth:fr-merimee:" + reference
+    label = "Saint-Denis;La Possession" if area == "RE" else "Source commune;Other source commune"
+    subdivision_id = area + ":merimee-commune-fixture"
     original = {f"original_{number}": "" for number in range(76)} | {
-        "Reference": "PA97400026", "Commune_forme_editoriale": label,
+        "Reference": reference, "Commune_forme_editoriale": label,
     }
     bundle.sites.append(bundle.sites[3].model_copy(update={
         "id": site_id, "geography": Geography(
-            authority_id="supplement:" + site_id, countries=["RE"],
-            regions=["africa"], source=source(), point_count=0,
+            authority_id="supplement:" + site_id, countries=[area],
+            regions=[{"GF": "latin-america-caribbean", "PM": "europe-north-america"}
+                     .get(area, "africa")],
+            source=source(), point_count=0,
         ),
     }))
     bundle.review.update(sub.corpus_contract(bundle.sites))
-    bundle.review["merimee_spec_sha256"] = "e" * 64
+    pin_key = "merimee_extension_spec_sha256" if extension else "merimee_spec_sha256"
+    bundle.review[pin_key] = "e" * 64
     bundle.review["subdivisions"].append({
-        "id": "RE:merimee-commune-fixture", "country": "RE", "label": label,
+        "id": subdivision_id, "country": area, "label": label,
     })
     bundle.review["extra_memberships"].append({
-        "site_id": site_id, "subdivision_id": "RE:merimee-commune-fixture",
-        "source": source("record:merimee:PA97400026").model_copy(update={"excerpt": label})
+        "site_id": site_id, "subdivision_id": subdivision_id,
+        "source": source("record:merimee:" + reference).model_copy(update={"excerpt": label})
             .model_dump(mode="json"),
         "artifact": {"filename": "merimee.csv", "sha256": "f" * 64,
                      "uri": "https://example.org/record"},
@@ -264,7 +270,8 @@ def merimee_commune_fixture(bundle: Bundle) -> tuple[str, str]:
         "role": "source_record_commune",
         "review_method": "Independent original commune and statistical-area fixture review.",
     })
-    bundle.monkeypatch.setattr(sub, "_merimee_pin_matches", lambda pin: pin == "e" * 64)
+    matcher = "_merimee_extension_pin_matches" if extension else "_merimee_pin_matches"
+    bundle.monkeypatch.setattr(sub, matcher, lambda pin: pin == "e" * 64)
     return site_id, label
 
 
@@ -305,6 +312,48 @@ def test_merimee_commune_requires_approved_source_field_and_statistical_area(
     extra["source_row_sha256"] = sub._row_hash(extra["source_row"])
     with pytest.raises(sub.SubdivisionUnavailable):
         bundle.payload()
+
+
+@pytest.mark.parametrize("area", ["GF", "YT", "PM"])
+def test_extension_commune_has_its_own_source_binding(bundle: Bundle, area: str) -> None:
+    site_id, label = merimee_commune_fixture(
+        bundle, area=area, reference="PA97300099", extension=True,
+    )
+    assert bundle.review.get("merimee_spec_sha256") is None
+    bundle.pin_review(facts=True)
+    bundle.compile()
+    index = bundle.index()
+    assert index.ready
+    assert index.ids(area, area + ":merimee-commune-fixture") == {site_id}
+    assert [r.label for r in index.facets(area, 1).subdivisions] == [label]
+    assert "统计区域" in index.site_response(site_id).note
+    assert index.ids("CA", "CA:ontario") == {"1", "3"}
+
+
+@pytest.mark.parametrize("extension", [False, True])
+def test_original_and_extension_areas_cannot_use_each_others_source_pin(
+    bundle: Bundle, extension: bool,
+) -> None:
+    merimee_commune_fixture(bundle, area="GF" if extension else "RE",
+                           reference="PA97300099" if extension else "PA97400026",
+                           extension=extension)
+    own = "merimee_extension_spec_sha256" if extension else "merimee_spec_sha256"
+    other = "merimee_spec_sha256" if extension else "merimee_extension_spec_sha256"
+    bundle.review[own] = None
+    bundle.review[other] = "e" * 64
+    with pytest.raises(sub.SubdivisionUnavailable):
+        bundle.payload()
+
+
+def test_extension_nonempty_wrong_pin_disables_runtime_and_rebuild(bundle: Bundle) -> None:
+    merimee_commune_fixture(bundle, area="GF", reference="PA97300099", extension=True)
+    bundle.pin_review(facts=True)
+    bundle.compile()
+    assert bundle.index().ready
+    bundle.monkeypatch.setattr(sub, "_merimee_extension_pin_matches", lambda _: False)
+    assert not bundle.index().ready
+    with pytest.raises(sub.SubdivisionUnavailable):
+        sub.rebuild_subdivisions(bundle.sites, CORPUS_VERSION, bundle.directory)
 
 
 def test_rebuild_is_deterministic_and_normal_load_never_reparses_the_large_review(

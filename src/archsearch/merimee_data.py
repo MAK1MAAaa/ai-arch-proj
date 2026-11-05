@@ -6,7 +6,6 @@ import argparse
 import csv
 import hashlib
 import json
-import math
 import re
 from collections import Counter
 from datetime import date
@@ -15,7 +14,21 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr, model_validator
 
-from archsearch.domain import Geography, Site, SourceReference
+from archsearch.domain import Site, SourceReference
+from archsearch.merimee_common import (
+    SOURCE_FIELDS as SOURCE_FIELDS,
+)
+from archsearch.merimee_common import (
+    NoticeProjection,
+    describe_original_fields,
+    project_notice,
+)
+from archsearch.merimee_common import (
+    parse_reference_point as parse_reference_point,
+)
+from archsearch.merimee_common import (
+    project_id as project_id,
+)
 from archsearch.supplement_data import IdentityReview, SourceArtifact, base_contract
 
 DATA_DIR = Path(__file__).with_name("data")
@@ -54,86 +67,6 @@ SITES_SHA256 = "d0a462744555ded18bd8df628ca8200552e4ed463356189ed2ddc683de715845
 _SHA256 = r"^[0-9a-f]{64}$"
 _REFERENCE = r"^PA[0-9]{8}$"
 AreaCode = Literal["GP", "BL", "MF", "MQ", "RE"]
-SOURCE_FIELDS = (
-    "Reference",
-    "Destination_actuelle_de_l_edifice",
-    "Adresse_forme_index",
-    "Etablissement_affectataire_de_l_edifice",
-    "Autre_appellation_de_l_edifice",
-    "Nature_de_la_protection",
-    "Auteur_de_l_edifice",
-    "Cadastre",
-    "Commune_forme_index",
-    "Copyright",
-    "Type_de_couverture",
-    "Datation_de_l_edifice",
-    "Denomination_de_l_edifice",
-    "Lieu_de_conservation_d_un_element_architectural_deplace",
-    "Description_de_l_edifice",
-    "Dimensions_normalisees_des_edicules_uniquement",
-    "Date_de_Label",
-    "Date_de_la_derniere_mise_a_jour",
-    "Date_de_creation_de_la_notice",
-    "Domaine",
-    "Typologie_du_dossier",
-    "Date_et_typologie_de_la_protection",
-    "Departement_format_numerique",
-    "Departement_en_lettres",
-    "Partie_d_elevation_exterieure",
-    "Source_de_l_energie_utilisee_par_l_edifice",
-    "Emplacement__forme_et_structure_de_l_escalier",
-    "Description_de_l_elevation_interieure",
-    "etat_de_conservation",
-    "Cadre_de_l_etude",
-    "Genre_du_destinataire",
-    "Historique",
-    "Nom_du_cours_d_eau_traversant_ou_bordant_l_edifice",
-    "Identifiant_Agregee",
-    "COG_Insee_lors_de_la_protection",
-    "Justification_attribution",
-    "Justification_de_la_datation",
-    "Liens_externes",
-    "Lieudit",
-    "Lien_vers_la_base_Archiv_MH",
-    "Materiaux_du_gros_oeuvre",
-    "Nom_du_redacteur",
-    "Observations",
-    "Precision_affectataire",
-    "Partie_constituante_non_etudiee",
-    "Partie_constituante",
-    "Precision_sur_la_denomination",
-    "Personnes_liees_a_l_edifice",
-    "Typologie_de_plan",
-    "Precision_de_la_localisation",
-    "Precision_de_la_protection",
-    "Description_de_l_iconographie",
-    "Typologie_de_la_protection",
-    "Precision_sur_le_statut_de_l_edifice",
-    "Reference_a_un_ensemble",
-    "Lien_vers_la_base_Joconde",
-    "Lien_vers_la_base_Palissy",
-    "References_des_parties_constituantes_etudiees",
-    "Region",
-    "Elements_remarquables_dans_l_edifice",
-    "Remploi",
-    "Renvoi_vers_une_notice_de_la_base_Merimee_ou_Palissy",
-    "Indexation_iconographique_normalisee",
-    "Siecle_de_campagne_secondaire_de_construction",
-    "Siecle_de_la_campagne_principale_de_construction",
-    "Format_abrege_du_siecle_de_construction",
-    "Typologie_de_la_zone_de_protection",
-    "Statut_juridique_de_l_edifice",
-    "Technique_du_decor_porte_de_l_edifice",
-    "Titre_editorial_de_la_notice",
-    "Materiaux_de_la_couverture",
-    "Couverts_ou_decouverts_du_jardin_de_l_edifice",
-    "Vocable___pour_les_edifices_cultuels",
-    "Typologie_du_couvrement",
-    "Adresse_forme_editoriale",
-    "Commune_forme_editoriale",
-    "coordonnees_au_format_WGS84",
-    "Producteur",
-)
 
 
 class MerimeeError(RuntimeError):
@@ -152,30 +85,6 @@ def compact_hash(value: Any) -> str:
     return _hash(
         json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
     )
-
-
-def project_id(reference: str) -> str:
-    if re.fullmatch(_REFERENCE, reference) is None:
-        raise ValueError("Mérimée project identity requires the exact original PA reference")
-    return "auth:fr-merimee:" + reference
-
-
-def parse_reference_point(literal: str) -> tuple[float, float] | None:
-    """Convert the source's independently checked lat,lon order, never supply a point."""
-    if literal == "":
-        return None
-    parts = literal.split(",")
-    if len(parts) != 2 or any(not value.strip() for value in parts):
-        raise ValueError("source WGS84 reference needs exactly latitude,longitude")
-    latitude, longitude = map(float, parts)
-    if not (
-        math.isfinite(longitude)
-        and math.isfinite(latitude)
-        and -180 <= longitude <= 180
-        and -90 <= latitude <= 90
-    ):
-        raise ValueError("source WGS84 reference is not finite or outside coordinate bounds")
-    return longitude, latitude
 
 
 class FrozenModel(BaseModel):
@@ -576,16 +485,7 @@ def _ordered(spec: MerimeeSpec) -> list[MerimeeDecision]:
 
 
 def _description(fields: dict[str, str], decision: MerimeeDecision) -> str:
-    keys = dict.fromkeys(
-        (
-            "Commune_forme_editoriale",
-            "Region",
-            decision.supported_scope_field,
-            "Description_de_l_edifice",
-            "Historique",
-        )
-    )
-    return "\n\n".join(key + ":\n" + fields[key] for key in keys if fields[key] != "")
+    return describe_original_fields(fields, decision.supported_scope_field)
 
 
 def compile_merimee(spec: MerimeeSpec) -> list[Site]:
@@ -596,69 +496,22 @@ def compile_merimee(spec: MerimeeSpec) -> list[Site]:
     result = []
     for decision in _ordered(spec):
         fields, area = records[decision.reference], areas[decision.area_code]
-        identifier = project_id(decision.reference)
-        point = parse_reference_point(fields["coordonnees_au_format_WGS84"])
-        if decision.point_adoption != "provider_reference":
-            point = None
-        notice_uri = "https://pop.culture.gouv.fr/notice/merimee/" + decision.reference
-        source = SourceReference(
-            id="source:fr-merimee:" + decision.reference,
-            title=fields["Titre_editorial_de_la_notice"],
-            uri=notice_uri,
-            publisher=PUBLISHER,
-            license=LICENCE,
-            revision="sha256:" + spec.roster.source_artifact.sha256,
-            accessed=spec.review.licence.accessed,
-            excerpt=decision.supported_scope_literal,
-        )
         result.append(
-            Site(
-                id=identifier,
-                title=fields["Titre_editorial_de_la_notice"],
-                description=_description(fields, decision),
-                description_zh="",
-                details=DETAILS_PREFIX
-                + json.dumps(
-                    {
-                        "schema_version": 1,
-                        "reference": decision.reference,
-                        "scope": {
-                            "kind": decision.scope_kind,
-                            "source_field": decision.supported_scope_field,
-                            "literal": decision.supported_scope_literal,
-                        },
-                        "source_record": {key: fields[key] for key in SOURCE_FIELDS},
-                    },
-                    ensure_ascii=False,
-                    indent=2,
-                ),
-                names=[],
-                types=["historic-site"],
-                periods=[],
-                repr_point=point,
-                location_precision=None,
-                source_uri=notice_uri,
-                contributors=[PUBLISHER],
-                period_evidence=[],
-                source_kind="supplement",
-                source_refs=[
-                    source,
-                    spec.review.metadata.evidence.source,
-                    spec.review.licence.evidence.source,
-                ],
-                geography=Geography(
-                    authority_id="supplement:" + identifier,
-                    countries=[area.code],
-                    regions=[area.project_region],
-                    source=area.evidence[0].source,
-                    point_count=int(point is not None),
-                    note=(
-                        "原COG经当前INSEE与UN M49对照用于地区浏览，不表示历史政治归属。"
-                        "来源包括曾受或现受保护资料；保护范围保留原文，不自动扩成完整建筑。"
-                        "原WGS84点仅作来源参考，生成方法和精度未知，不等于保护边界或发掘位置。"
-                        "缺点不补点；法律、保护、更新和建筑世纪字段未转成历史阶段。"
-                        "开放许可仅按数据集范围署名，不延伸到链接的照片和档案材料。"
-                    ),
+            project_notice(
+                fields,
+                NoticeProjection(
+                    reference=decision.reference,
+                    scope_kind=decision.scope_kind,
+                    scope_field=decision.supported_scope_field,
+                    scope_literal=decision.supported_scope_literal,
+                    adopt_point=decision.point_adoption == "provider_reference",
+                    area_code=area.code,
+                    project_region=area.project_region,
+                    geography_source=area.evidence[0].source,
+                    raw_source_sha256=spec.roster.source_artifact.sha256,
+                    accessed=spec.review.licence.accessed,
+                    metadata_source=spec.review.metadata.evidence.source,
+                    licence_source=spec.review.licence.evidence.source,
                 ),
             )
         )

@@ -110,6 +110,16 @@ def load_registry(data_dir: Path = DATA_DIR) -> CoverageRegistry:
         if countries.keys() & merimee_countries.keys():
             raise MerimeeError("Mérimée statistical-area labels cannot replace source labels")
         countries.update(merimee_countries)
+    if (Path(data_dir) / "merimee_extension_manifest.json").exists():
+        from archsearch.merimee_extension_data import MerimeeExtensionError
+        from archsearch.merimee_extension_data import (
+            new_country_labels as merimee_extension_country_labels,
+        )
+
+        extension_countries = merimee_extension_country_labels(Path(data_dir))
+        if countries.keys() & extension_countries.keys():
+            raise MerimeeExtensionError("Mérimée extension labels cannot replace source labels")
+        countries.update(extension_countries)
     spatial = None
     spatial_error = None
     try:
