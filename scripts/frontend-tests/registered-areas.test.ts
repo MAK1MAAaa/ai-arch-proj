@@ -316,7 +316,8 @@ test('native keyboard buttons and app lifecycle are wired without changing shari
   for (const id of ['show', 'hide', 'retry']) assert.match(html, new RegExp(`<button id="registered-areas-${id}"[^>]+type="button"`));
   assert.ok(html.indexOf('/static/registered-areas.js') < html.indexOf('/static/app.js'));
   const app = readFileSync(new URL('../../src/archsearch/frontend/app.ts', import.meta.url), 'utf8');
-  assert.match(app, /function closeDetail[\s\S]*?registeredAreas\?\.clear\(\)/u);
+  assert.match(app, /function closeDetail[\s\S]*?ArchSearchWorkspace\.closeDetail\(/u);
+  assert.match(app, /function renderResults[\s\S]*?registeredAreas\?\.clear\(\)/u);
   assert.match(app, /registeredAreas\?\.select\(id, known/u);
   const env = setup(); assert.equal(env.node('-show').getAttribute('aria-controls'), 'map');
 });

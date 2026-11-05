@@ -12,7 +12,7 @@ const ArchSearchComparison = (() => {
     historical: L.Map | null;
     tiles: L.TileLayer | null;
     initial: State;
-    onSelect(id: string, opener: HTMLElement | null): void;
+    onSelect(id: string, opener: HTMLElement | null, options?: { moveMap?: boolean }): void;
     onChanged(): void;
     onEvidence(): void;
   }
@@ -172,7 +172,7 @@ const ArchSearchComparison = (() => {
           const circle = L.circleMarker([value.coordinate[1], value.coordinate[0] + offset], { renderer: sourceRenderer ?? undefined,
             pane: "history-boundaries", radius: 2.2, weight: 0.5, color: "#536a52", fillColor: "#536a52", fillOpacity: 0.55 });
           const label = document.createElement("span"); label.textContent = `${value.title} · ${value.representative ? "参考代表点" : "来源定位点"}`;
-          circle.bindTooltip(label).on("click", () => onSelect(value.id, null)).addTo(catalogueLayer);
+          circle.bindTooltip(label).on("click", () => onSelect(value.id, null, { moveMap: false })).addTo(catalogueLayer);
           const group = circles.get(value.id) ?? []; group.push(circle); circles.set(value.id, group);
         }
       }
@@ -188,7 +188,8 @@ const ArchSearchComparison = (() => {
       if (phase) {
         const date = (year: number | null) => year === null ? "未提供" : ArchSearchHistory.formatYear(year);
         const dates = phase.start_year === phase.end_year ? date(phase.start_year) : `${date(phase.start_year)} — ${date(phase.end_year)}`;
-        ui.evidenceDate.textContent = `${phase.label} · ${dates} · ${phase.precision === "exact_year" ? "明确单年事件，实际图年见右图" : "约略／区间阶段，请在详情选择观察年份"}`;
+        const exact = phase.precision === "exact_year" && phase.start_year !== null && phase.start_year !== 0 && phase.start_year === phase.end_year;
+        ui.evidenceDate.textContent = `${phase.label} · ${dates} · ${exact ? "明确单年事件，历史背景自动联动，实际图年见右图" : "约略／区间证据，不推断年份；保留最后成功的历史背景"}`;
         ui.evidenceQuote.textContent = phase.sources[0]?.excerpt ?? "";
         for (const source of phase.sources) {
           try {
@@ -196,7 +197,7 @@ const ArchSearchComparison = (() => {
             const link = document.createElement("a"); link.href = url.href; link.textContent = source.title; link.target = "_blank"; link.rel = "noopener noreferrer"; ui.evidenceSources.append(link);
           } catch { /* Invalid source links remain available in the original record. */ }
         }
-      } else ui.evidenceDate.textContent = value.status === "insufficient" ? "已核验但断代未确定；历史图年份保持原样。" : "尚无经过核验的历史阶段；历史图年份保持原样。";
+      } else ui.evidenceDate.textContent = value.status === "insufficient" ? "已核验但断代未确定；不推断年份，保留最后成功的历史背景。" : "尚无经过核验的历史阶段；不推断年份，保留最后成功的历史背景。";
       ui.evidenceQuote.hidden = !ui.evidenceQuote.textContent;
       if (value.repr_point && ArchSearchMapView.locationStatus(value.repr_point) === "mapped") {
         if (!markers.has(value.id)) selectedMarker = attachMarker(value.id, value.title, value.repr_point, null);
@@ -204,6 +205,14 @@ const ArchSearchComparison = (() => {
         if (focus && historical) historical.setView([value.repr_point[1], ArchSearchMapView.wrapLongitude(value.repr_point[0], historical.getCenter().lng)], 4, { animate: false });
       }
       renderSelection();
+    }
+    function focusSelected({ preserveCamera = false }: { preserveCamera?: boolean } = {}): boolean {
+      if (preserveCamera || (modern === null && historical === null) || !selected?.repr_point || ArchSearchMapView.locationStatus(selected.repr_point) !== "mapped") return false;
+      const coordinate = selected.repr_point;
+      modernTouched = true; historicalTouched = true; cameraActions++;
+      if (modern) { modern.stop(); modern.setView([coordinate[1], ArchSearchMapView.wrapLongitude(coordinate[0], modern.getCenter().lng)], 15, { animate: false }); }
+      if (historical) { historical.stop(); historical.setView([coordinate[1], ArchSearchMapView.wrapLongitude(coordinate[0], historical.getCenter().lng)], 4, { animate: false }); }
+      return modern !== null || historical !== null;
     }
     if (modern && historical) {
       modern.on("moveend", () => { syncFrom(modern, historical, true); onChanged(); });
@@ -234,7 +243,7 @@ const ArchSearchComparison = (() => {
     }
     render(); if (requested === "natural") void naturalFallback(); else void ensureLand().catch(() => undefined);
     return {
-      setCandidates, fitCandidates, setCatalogue, setSelection, setModernBasemap,
+      setCandidates, fitCandidates, setCatalogue, setSelection, focusSelected, setModernBasemap,
       getHistoricalRenderer: (): L.Canvas | null => sourceRenderer,
       noteInteraction(): void { modernTouched = true; historicalTouched = true; cameraActions++; },
       actionVersion: (): number => cameraActions,

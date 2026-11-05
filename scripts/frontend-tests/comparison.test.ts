@@ -55,17 +55,18 @@ interface Controller {
   setCandidates(values: { id: string; title: string; repr_point: [number, number] | null; rank: number }[], fit?: boolean): void;
   setCatalogue(values: { id: string; title: string; coordinate: [number, number]; representative: boolean }[], visible: boolean): void;
   setSelection(value: Selected | null, focus?: boolean): void; setModernBasemap(value: 'osm' | 'natural'): void;
+  focusSelected(options?: { preserveCamera?: boolean }): boolean;
   getMarker(id: string): Layer | null; restoreInitialViews(): void; noteInteraction(): void; actionVersion(): number;
   getHistoricalRenderer(): object | null;
   state(): State; snapshot(value: Frame | null): { layout: string; modern: { role: string; basemap: string }; historical: { role: string; year: number | null; source_version: string | null } };
 }
-interface Helpers { create(options: { modern: MapView; historical: MapView; tiles: Layer; initial: State; onSelect(id: string, opener: Element | null): void; onChanged(): void; onEvidence(): void }): Controller }
+interface Helpers { create(options: { modern: MapView; historical: MapView; tiles: Layer; initial: State; onSelect(id: string, opener: Element | null, options?: { moveMap?: boolean }): void; onChanged(): void; onEvidence(): void }): Controller }
 const scripts = ['map-view', 'history', 'comparison'].map(name => ts.transpileModule(readFileSync(`src/archsearch/frontend/${name}.ts`, 'utf8'), { compilerOptions: { module: ts.ModuleKind.None, target: ts.ScriptTarget.ES2022 } }).outputText).join('\n');
 const land = { type: 'FeatureCollection', features: [{ type: 'Feature', properties: {}, geometry: { type: 'Polygon', coordinates: [[[0, 0], [10, 0], [10, 10], [0, 0]]] } }] };
 function harness(initial: Partial<State> = {}, small = false) {
   const ids = ['modern-basemap-osm', 'modern-basemap-natural', 'comparison-sync', 'comparison-modern-status', 'tile-warning', 'tile-warning-text', 'comparison-evidence', 'comparison-evidence-title', 'comparison-evidence-date', 'comparison-evidence-quote', 'comparison-evidence-sources', 'comparison-evidence-open'];
   const nodes = new Map(ids.map(id => [id, new Element()])); const pending: ((value: { ok: boolean; json(): Promise<unknown> }) => void)[] = [];
-  const circles: Layer[] = []; const selected: string[] = []; let changes = 0;
+  const circles: Layer[] = []; const selected: string[] = []; const selectionOptions: ({ moveMap?: boolean } | undefined)[] = []; let changes = 0;
   const context = createContext({ URL, Error, window: { matchMedia: () => ({ matches: small }) },
     document: { getElementById: (id: string) => nodes.get(id), createElement: () => new Element() },
     fetch: () => new Promise(resolve => pending.push(resolve)),
@@ -76,8 +77,8 @@ function harness(initial: Partial<State> = {}, small = false) {
   });
   const helper = runInContext(scripts+'\nArchSearchComparison;', context) as Helpers;
   const modern = new MapView(), historical = new MapView(), tiles = new Layer(); tiles.addTo(modern);
-  const controller = helper.create({ modern, historical, tiles, initial: { modern_basemap: 'osm', sync_centers: false, modern_view: null, history_view: null, ...initial }, onSelect: id => selected.push(id), onChanged: () => { changes++; }, onEvidence: () => undefined });
-  return { controller, modern, historical, tiles, circles, pending, selected, node: (id: string) => nodes.get(id)!, changes: () => changes };
+  const controller = helper.create({ modern, historical, tiles, initial: { modern_basemap: 'osm', sync_centers: false, modern_view: null, history_view: null, ...initial }, onSelect: (id, _opener, options) => { selected.push(id); selectionOptions.push(options); }, onChanged: () => { changes++; }, onEvidence: () => undefined });
+  return { controller, modern, historical, tiles, circles, pending, selected, selectionOptions, node: (id: string) => nodes.get(id)!, changes: () => changes };
 }
 async function tick() { for (let i=0;i<20;i++) await Promise.resolve(); }
 async function completeLand(h: ReturnType<typeof harness>, value: unknown = land) { h.pending[0]({ ok: true, json: async () => value }); await tick(); }
@@ -121,6 +122,7 @@ test('source placements preserve coordinates and world copies in a pane above hi
   assert.equal(h.historical.panes.has('comparison-source-points'),false);
   assert.ok(h.circles.every(circle=>circle.options.renderer===h.controller.getHistoricalRenderer()));
   h.circles[1].fire('click'); assert.deepEqual(h.selected,['auth:fixture:coast']);
+  assert.deepEqual(JSON.parse(JSON.stringify(h.selectionOptions)), [{moveMap:false}]);
   h.controller.setCatalogue(values,true); assert.equal(h.circles.length,3);
   assert.deepEqual(values[0].coordinate,[179,-18]);
 });
@@ -150,4 +152,34 @@ test('saved camera centers stay within the projection without modifying site sou
   assert.deepEqual(JSON.parse(JSON.stringify(h.controller.state().modern_view?.center)),[180,85.0511287798]);
   assert.deepEqual(JSON.parse(JSON.stringify(h.controller.state().history_view?.center)),[179,-85.0511287798]);
   assert.deepEqual(selectedSite.repr_point,[-1.71,52.18]);
+});
+
+test('range and approximate evidence retain explicit uncertainty without offering a chosen year', () => {
+  const h = harness();
+  for (const precision of ['range', 'period', 'approximate_year']) {
+    h.controller.setSelection({...selectedSite,phase:{...selectedSite.phase!,precision,start_year:1500,end_year:1650}});
+    assert.match(h.node('comparison-evidence-date').textContent,/1500.*1650.*不推断年份.*保留最后成功/u);
+    assert.doesNotMatch(h.node('comparison-evidence-date').textContent,/选择观察年份/u);
+    assert.equal(h.historical.getZoom(),1);
+  }
+});
+
+test('explicit locate focuses both map roles while preserved or unavailable selections keep their cameras', () => {
+  const h = harness(); h.modern.setView([30,12],18); h.historical.setView([40,22],7);
+  h.controller.setSelection(selectedSite);
+  assert.equal(h.controller.focusSelected({preserveCamera:true}),false);
+  assert.equal(h.modern.getZoom(),18); assert.equal(h.historical.getZoom(),7); assert.equal(h.controller.actionVersion(),0);
+  assert.equal(h.controller.focusSelected(),true);
+  assert.equal(h.modern.getZoom(),15); assert.equal(h.historical.getZoom(),4);
+  assert.equal(h.modern.getCenter().lng,-1.71); assert.equal(h.historical.getCenter().lng,-1.71);
+  assert.ok(h.controller.actionVersion()>0);
+  h.controller.setSelection({...selectedSite,repr_point:null}); const before = h.controller.actionVersion();
+  assert.equal(h.controller.focusSelected(),false); assert.equal(h.controller.actionVersion(),before);
+});
+
+test('source-point selection preserves the clicked view but numbered candidates keep normal locating', () => {
+  const h = harness(); h.controller.setCatalogue([{id:'source',title:'Component',coordinate:[20,10],representative:false}],true);
+  h.circles[1].fire('click'); assert.deepEqual(JSON.parse(JSON.stringify(h.selectionOptions)),[{moveMap:false}]);
+  h.controller.setCandidates([{id:selectedSite.id,title:selectedSite.title,repr_point:selectedSite.repr_point,rank:1}],false);
+  h.controller.getMarker(selectedSite.id)?.fire('click'); assert.equal(h.selectionOptions.at(-1),undefined);
 });

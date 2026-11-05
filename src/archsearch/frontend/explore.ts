@@ -922,6 +922,8 @@ const ArchSearchExplore = (() => {
     });
     renderControls();
     return { load, getState: (): State => copyState(desired), getCommittedState, setState, select,
+      getCoverageSummary: (): { total: number; version: string; countries: number; regions: number } | null => coverage
+        ? { total: coverage.total, version: coverage.corpus_version, countries: coverage.countries.length, regions: coverage.regions.length } : null,
       configureSubdivisions, validateSearchScope, subdivisionReady,
       subdivisionLabel: (id: string): string | null => subdivisionLabels.get(id) ?? null,
       subdivisionVersion: (): string | null => subdivisionStatus?.ready ? subdivisionStatus.version : subdivisionStatus === undefined ? subdivisions?.subdivision_version ?? null : null,

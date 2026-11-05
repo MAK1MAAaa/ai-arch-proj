@@ -135,19 +135,23 @@ const ArchSearchHistory = (() => {
             throw new Error("历史资料版本已变化，请刷新运行状态后重试。");
         return { data: value, validFrom: metadata.valid_from, validTo: metadata.valid_to, id: metadata.frame_id, source, version, featureCount: value.features.length };
     }
-    function create({ map, tiles, onCommittedView, onUserAction, fixedHistorical = false, sharedRenderer = null }) {
+    function create({ map, tiles, onCommittedView, onUserAction, fixedHistorical = false, sharedRenderer = null, automaticOnly = false }) {
+        fixedHistorical ||= automaticOnly;
         const byId = (id) => {
             const node = document.getElementById(id);
             if (!node)
                 throw new Error(`历史控件不存在：${id}`);
             return node;
         };
-        const ui = {
-            panel: byId("history-controls"), year: byId("history-year"), range: byId("history-range"),
+        const controls = automaticOnly ? null : {
+            year: byId("history-year"), range: byId("history-range"),
             apply: byId("history-apply"), previousYear: byId("history-previous-year"), nextYear: byId("history-next-year"),
             previousFrame: byId("history-previous-frame"), nextFrame: byId("history-next-frame"),
             historical: byId("history-basemap-historical"), modern: byId("history-basemap-modern"),
-            boundaries: byId("history-boundaries"), applied: byId("history-applied-year"), draft: byId("history-draft-year"),
+            boundaries: byId("history-boundaries"), draft: byId("history-draft-year"),
+        };
+        const ui = {
+            panel: byId("history-controls"), applied: byId("history-applied-year"),
             feedback: byId("history-feedback"), error: byId("history-error"), source: byId("history-source"),
             retry: byId("history-retry"), caption: document.getElementById("history-map-caption"),
         };
@@ -171,6 +175,7 @@ const ArchSearchHistory = (() => {
         let failed = false;
         let loading = false;
         let emptyFrame = false;
+        let retentionNote = null;
         const frames = new Map();
         let renderer = sharedRenderer;
         if (map && typeof L !== "undefined") {
@@ -208,47 +213,51 @@ const ArchSearchHistory = (() => {
         function render() {
             const previousFocus = document.activeElement;
             const unavailable = map === null || !ready;
-            ui.year.disabled = unavailable;
-            ui.apply.disabled = unavailable;
-            ui.range.disabled = unavailable;
-            ui.previousYear.disabled = unavailable || desired.year <= minimum || desired.year > maximum;
-            ui.nextYear.disabled = unavailable || desired.year >= maximum || desired.year < minimum;
-            const targets = frameTargets(desired.year, changes, minimum);
-            ui.previousFrame.disabled = unavailable || targets.previous === null;
-            ui.nextFrame.disabled = unavailable || targets.next === null || targets.next > maximum;
-            ui.previousFrame.title = targets.previous === null ? "已到首个疆域变化" : `上一疆域变化：${formatYear(targets.previous)}`;
-            ui.nextFrame.title = targets.next === null ? "已到末个疆域变化" : `下一疆域变化：${formatYear(targets.next)}`;
-            ui.historical.disabled = map === null || fixedHistorical;
-            ui.modern.disabled = map === null || fixedHistorical;
-            ui.boundaries.disabled = map === null;
-            ui.historical.setAttribute("aria-pressed", String(desired.basemap === "historical"));
-            ui.modern.setAttribute("aria-pressed", String(desired.basemap === "modern"));
-            ui.boundaries.checked = desired.boundaries;
-            ui.range.min = String(yearToStep(minimum));
-            ui.range.max = String(yearToStep(maximum));
-            ui.range.value = String(yearToStep(desired.year));
-            ui.range.setAttribute("aria-valuetext", formatYear(desired.year));
-            ui.year.min = String(minimum);
-            ui.year.max = String(maximum);
-            if (ui.year.value !== yearDraft)
-                ui.year.value = yearDraft;
-            ui.draft.textContent = yearDraft.trim() === String(desired.year)
-                ? `计划年份：${formatYear(desired.year)}`
-                : isValidYear(Number(yearDraft)) ? `年份草稿：${formatYear(Number(yearDraft))}，尚未应用` : "年份草稿尚未应用，请输入有效整数后确认。";
-            ui.applied.textContent = committed ? `当前${fixedHistorical ? "历史图" : "地图"}：${formatYear(committed.year)}` : "历史地图尚未加载";
+            if (controls) {
+                controls.year.disabled = unavailable;
+                controls.apply.disabled = unavailable;
+                controls.range.disabled = unavailable;
+                controls.previousYear.disabled = unavailable || desired.year <= minimum || desired.year > maximum;
+                controls.nextYear.disabled = unavailable || desired.year >= maximum || desired.year < minimum;
+                const targets = frameTargets(desired.year, changes, minimum);
+                controls.previousFrame.disabled = unavailable || targets.previous === null;
+                controls.nextFrame.disabled = unavailable || targets.next === null || targets.next > maximum;
+                controls.previousFrame.title = targets.previous === null ? "已到首个疆域变化" : `上一疆域变化：${formatYear(targets.previous)}`;
+                controls.nextFrame.title = targets.next === null ? "已到末个疆域变化" : `下一疆域变化：${formatYear(targets.next)}`;
+                controls.historical.disabled = map === null || fixedHistorical;
+                controls.modern.disabled = map === null || fixedHistorical;
+                controls.boundaries.disabled = map === null;
+                controls.historical.setAttribute("aria-pressed", String(desired.basemap === "historical"));
+                controls.modern.setAttribute("aria-pressed", String(desired.basemap === "modern"));
+                controls.boundaries.checked = desired.boundaries;
+                controls.range.min = String(yearToStep(minimum));
+                controls.range.max = String(yearToStep(maximum));
+                controls.range.value = String(yearToStep(desired.year));
+                controls.range.setAttribute("aria-valuetext", formatYear(desired.year));
+                controls.year.min = String(minimum);
+                controls.year.max = String(maximum);
+                if (controls.year.value !== yearDraft)
+                    controls.year.value = yearDraft;
+                controls.draft.textContent = yearDraft.trim() === String(desired.year)
+                    ? `计划年份：${formatYear(desired.year)}`
+                    : isValidYear(Number(yearDraft)) ? `年份草稿：${formatYear(Number(yearDraft))}，尚未应用` : "年份草稿尚未应用，请输入有效整数后确认。";
+            }
+            ui.applied.textContent = committed ? `当前${automaticOnly ? "历史背景" : fixedHistorical ? "历史图" : "地图"}：${formatYear(committed.year)}` : "历史地图尚未加载";
             ui.panel.setAttribute("aria-busy", String(loading));
             ui.retry.hidden = !failed;
             ui.retry.disabled = loading || map === null;
             if (loading)
                 ui.feedback.textContent = `正在加载${formatYear(desired.year)}；地图保留上次成功视图。`;
             else if (!ready && desired.boundaries)
-                ui.feedback.textContent = reason;
+                ui.feedback.textContent = retentionNote ? `${retentionNote} ${reason}` : reason;
+            else if (retentionNote)
+                ui.feedback.textContent = retentionNote;
             else if (!failed)
                 ui.feedback.textContent = emptyFrame && committed?.boundaries
                     ? "该年份没有来源中的活动政权记录；地点标记仍保留。"
-                    : committed?.boundaries ? "历史政权疆域概略独立于遗址排序；时间滑动不会重新检索地点。" : "历史政权疆域概略已关闭，地点与检索结果继续保留。";
+                    : committed?.boundaries ? automaticOnly ? "历史背景按所选资料的明确年份联动；区间或未知年代不推断年份，检索排序保持不变。" : "历史政权疆域概略独立于遗址排序；时间滑动不会重新检索地点。" : "历史政权疆域概略已关闭，地点与检索结果继续保留。";
             if ((previousFocus === ui.retry && ui.retry.hidden)
-                || [ui.year, ui.range, ui.apply, ui.previousYear, ui.nextYear, ui.previousFrame, ui.nextFrame].some((control) => previousFocus === control && control.disabled)) {
+                || (controls && [controls.year, controls.range, controls.apply, controls.previousYear, controls.nextYear, controls.previousFrame, controls.nextFrame].some((control) => previousFocus === control && control.disabled))) {
                 ui.feedback.tabIndex = -1;
                 ui.feedback.focus({ preventScroll: true });
             }
@@ -439,7 +448,7 @@ const ArchSearchHistory = (() => {
             }
             committed = { ...request, boundaries: frame !== null, frame_id: frame?.id ?? null, source_version: frame?.version ?? null };
             emptyFrame = frame?.featureCount === 0;
-            ui.year.removeAttribute("aria-invalid");
+            controls?.year.removeAttribute("aria-invalid");
             map.getContainer().dataset.basemap = request.basemap;
             updateSource(frame);
             refreshPolityLabels();
@@ -455,24 +464,35 @@ const ArchSearchHistory = (() => {
         }
         function setYear(year, intent = "user") {
             userAction(intent);
+            retentionNote = null;
             if (!isValidYear(year)) {
                 if (Number.isFinite(year))
                     yearDraft = String(year);
                 cancel();
-                ui.year.setAttribute("aria-invalid", "true");
-                showError(Number.isInteger(year) && year !== 0
+                controls?.year.setAttribute("aria-invalid", "true");
+                const message = Number.isInteger(year) && year !== 0
                     ? "该年份无可用疆域数据；保留最后成功地图。资料覆盖公元前 3400 年至公元 2024 年。"
-                    : "请输入公元前 3400 年至公元 2024 年的整数年份；负数表示公元前，没有公元 0 年。");
+                    : "请输入公元前 3400 年至公元 2024 年的整数年份；负数表示公元前，没有公元 0 年。";
+                showError(message);
+                if (automaticOnly && committed === null) {
+                    retentionNote = message;
+                    timer = setTimeout(() => { void applyView(); }, 200);
+                }
                 render();
                 return;
             }
             desired = { ...desired, year };
             yearDraft = String(year);
-            ui.year.value = String(year);
-            ui.year.removeAttribute("aria-invalid");
+            if (controls)
+                controls.year.value = String(year);
+            controls?.year.removeAttribute("aria-invalid");
             if (year < minimum || year > maximum) {
                 cancel();
-                showError(`${formatYear(year)}超出当前历史资料范围，计划年份保持不变；请选择范围内年份后应用。`);
+                showError(automaticOnly ? `${formatYear(year)}无可用疆域数据；保留最后成功的历史背景。` : `${formatYear(year)}超出当前历史资料范围，计划年份保持不变；请选择范围内年份后应用。`);
+                if (automaticOnly && committed === null) {
+                    retentionNote = ui.error.textContent;
+                    timer = setTimeout(() => { void applyView(); }, 200);
+                }
                 render();
                 return;
             }
@@ -486,6 +506,17 @@ const ArchSearchHistory = (() => {
             }
             schedule();
         }
+        function retainBackground(note = "当前资料没有明确单年证据；保留最后成功的历史背景，不推断年份。") {
+            cancel();
+            desired = { ...desired, year: committed?.year ?? 117 };
+            yearDraft = String(desired.year);
+            retentionNote = note;
+            failed = false;
+            showError("");
+            render();
+            if (committed === null && fixedHistorical)
+                timer = setTimeout(() => { void applyView(); }, 200);
+        }
         function setBasemap(basemap, intent = "user") {
             userAction(intent);
             if (basemap !== "historical" && basemap !== "modern")
@@ -495,7 +526,7 @@ const ArchSearchHistory = (() => {
         }
         function setBoundaries(boundaries, intent = "user") {
             userAction(intent);
-            desired = { ...desired, boundaries: Boolean(boundaries) };
+            desired = { ...desired, boundaries: automaticOnly || Boolean(boundaries) };
             schedule();
         }
         function configure(status) {
@@ -515,7 +546,7 @@ const ArchSearchHistory = (() => {
             changes = Array.isArray(status?.change_years) ? status.change_years.filter((year) => isValidYear(year) && minimum <= year && year <= maximum) : [];
             if (ready && (desired.year < minimum || desired.year > maximum)) {
                 cancel();
-                showError(`${formatYear(desired.year)}超出当前历史资料范围，计划年份保持不变；请选择范围内年份后应用。`);
+                showError(automaticOnly ? `${formatYear(desired.year)}无可用疆域数据；保留最后成功的历史背景。` : `${formatYear(desired.year)}超出当前历史资料范围，计划年份保持不变；请选择范围内年份后应用。`);
                 render();
                 return;
             }
@@ -528,51 +559,53 @@ const ArchSearchHistory = (() => {
             }
             schedule();
         }
-        const readYear = () => {
-            const raw = ui.year.value.trim();
-            setYear(/^-?\d+$/u.test(raw) ? Number(raw) : NaN);
-        };
-        ui.range.addEventListener("input", () => {
-            try {
-                setYear(stepToYear(Number(ui.range.value)));
-            }
-            catch {
-                showError("年份刻度无效。");
-            }
-        });
-        ui.year.addEventListener("input", () => { yearDraft = ui.year.value; userAction("user"); cancel(); render(); });
-        ui.year.addEventListener("change", readYear);
-        ui.year.addEventListener("keydown", (event) => {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                readYear();
-            }
-            else if (event.key === "ArrowUp" || event.key === "ArrowDown") {
-                event.preventDefault();
-                const draft = Number(ui.year.value);
-                const base = isValidYear(draft) && draft >= minimum && draft <= maximum ? draft : desired.year;
-                const step = yearToStep(base) + (event.key === "ArrowUp" ? 1 : -1);
-                if (step >= yearToStep(minimum) && step <= yearToStep(maximum))
-                    setYear(stepToYear(step));
-            }
-        });
-        ui.apply.addEventListener("click", readYear);
-        ui.previousYear.addEventListener("click", () => { if (desired.year > minimum)
-            setYear(stepToYear(yearToStep(desired.year) - 1)); });
-        ui.nextYear.addEventListener("click", () => { if (desired.year < maximum)
-            setYear(stepToYear(yearToStep(desired.year) + 1)); });
-        ui.previousFrame.addEventListener("click", () => { const target = frameTargets(desired.year, changes, minimum).previous; if (target !== null)
-            setYear(target); });
-        ui.nextFrame.addEventListener("click", () => { const target = frameTargets(desired.year, changes, minimum).next; if (target !== null)
-            setYear(target); });
-        ui.historical.addEventListener("click", () => setBasemap("historical"));
-        ui.modern.addEventListener("click", () => setBasemap("modern"));
-        ui.boundaries.addEventListener("change", () => setBoundaries(ui.boundaries.checked));
+        if (controls) {
+            const readYear = () => {
+                const raw = controls.year.value.trim();
+                setYear(/^-?\d+$/u.test(raw) ? Number(raw) : NaN);
+            };
+            controls.range.addEventListener("input", () => {
+                try {
+                    setYear(stepToYear(Number(controls.range.value)));
+                }
+                catch {
+                    showError("年份刻度无效。");
+                }
+            });
+            controls.year.addEventListener("input", () => { yearDraft = controls.year.value; userAction("user"); cancel(); render(); });
+            controls.year.addEventListener("change", readYear);
+            controls.year.addEventListener("keydown", (event) => {
+                if (event.key === "Enter") {
+                    event.preventDefault();
+                    readYear();
+                }
+                else if (event.key === "ArrowUp" || event.key === "ArrowDown") {
+                    event.preventDefault();
+                    const draft = Number(controls.year.value);
+                    const base = isValidYear(draft) && draft >= minimum && draft <= maximum ? draft : desired.year;
+                    const step = yearToStep(base) + (event.key === "ArrowUp" ? 1 : -1);
+                    if (step >= yearToStep(minimum) && step <= yearToStep(maximum))
+                        setYear(stepToYear(step));
+                }
+            });
+            controls.apply.addEventListener("click", readYear);
+            controls.previousYear.addEventListener("click", () => { if (desired.year > minimum)
+                setYear(stepToYear(yearToStep(desired.year) - 1)); });
+            controls.nextYear.addEventListener("click", () => { if (desired.year < maximum)
+                setYear(stepToYear(yearToStep(desired.year) + 1)); });
+            controls.previousFrame.addEventListener("click", () => { const target = frameTargets(desired.year, changes, minimum).previous; if (target !== null)
+                setYear(target); });
+            controls.nextFrame.addEventListener("click", () => { const target = frameTargets(desired.year, changes, minimum).next; if (target !== null)
+                setYear(target); });
+            controls.historical.addEventListener("click", () => setBasemap("historical"));
+            controls.modern.addEventListener("click", () => setBasemap("modern"));
+            controls.boundaries.addEventListener("change", () => setBoundaries(controls.boundaries.checked));
+        }
         ui.retry.addEventListener("click", () => { userAction("user"); schedule(); });
         if (fixedHistorical && map && typeof map.on === "function")
             map.on("moveend zoomend", refreshPolityLabels);
         render();
-        return { configure, getView: () => committed ? { ...committed } : null, setYear, setBasemap, setBoundaries, actionVersion: () => actions };
+        return { configure, getView: () => committed ? { ...committed } : null, setYear, retainBackground, setBasemap, setBoundaries, actionVersion: () => actions };
     }
     return { create, isValidYear, yearToStep, stepToYear, formatYear, frameTargets, colorForName, worldCopies, validateCollection };
 })();
