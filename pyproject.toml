@@ -16,13 +16,14 @@ dependencies = [
   "sentence-transformers>=5,<6",
   "torch>=2.6,<3",
   "huggingface-hub>=0.30,<2",
+  "httpx>=0.28,<1",
 ]
 
 [project.scripts]
 archsearch = "archsearch.cli:main"
 
 [dependency-groups]
-dev = ["pytest>=8,<10", "httpx>=0.28,<1", "ruff>=0.12,<1", "mypy>=1.15,<2"]
+dev = ["pytest>=8,<10", "ruff>=0.12,<1", "mypy>=1.15,<2"]
 
 [[tool.uv.index]]
 name = "pypi"

@@ -15,6 +15,7 @@
     <script defer src="/static/explore.js"></script>
     <script defer src="/static/polar-view.js"></script>
     <script defer src="/static/registered-areas.js"></script>
+    <script defer src="/static/llm.js"></script>
     <script defer src="/static/app.js"></script>
   </head>
   <body>
@@ -59,6 +60,7 @@
               <fieldset class="mode-switch"><legend class="visually-hidden">检索方式</legend><label><input type="radio" name="mode" value="semantic" checked><span>语义检索<span class="mode-label-en">SEMANTIC</span></span></label><label><input type="radio" name="mode" value="bm25"><span>关键词基线<span class="mode-label-en">BM25</span></span></label></fieldset>
               <div class="filter-group type-filter-group"><label for="type-filter">地点类型</label><select id="type-filter" name="type"><option value="">全部类型</option></select><button id="clear-type" class="interaction-button filter-clear-button" type="button" disabled>清除类型</button></div>
               <div class="filter-group limit-filter"><label for="limit-filter">结果数</label><select id="limit-filter" name="limit"><option value="10">10 条</option><option value="20">20 条</option><option value="50">50 条</option></select></div>
+              <label class="llm-enhance-toggle"><input id="llm-enhance" type="checkbox" disabled><span>LLM 增强</span></label>
             </div>
             <p id="mode-explanation" class="mode-explanation">多语言向量模型支持中文查询；返回的是相近候选，分数并非相关概率。</p>
             <div class="example-queries" role="group" aria-label="按地点类型尝试示例查询" aria-describedby="example-hint">
@@ -77,6 +79,23 @@
             </div>
             <p id="example-hint" class="example-hint">语义检索可用中文问题，专名可保留原文；示例同步地点类型并保留当前地域条件。</p>
           </form>
+          <details id="llm-settings" class="llm-settings">
+            <summary><span>查询增强与模型设置</span><span id="llm-active-model">LLM 未配置</span></summary>
+            <form id="llm-settings-form" class="llm-settings-form" autocomplete="off" aria-busy="false">
+              <p class="llm-method-note">让模型改写与扩展检索词，再从本地语料检索并融合排名。改写仅用于发现资料，不能替代来源证据。</p>
+              <div class="llm-config-grid">
+                <div class="llm-field"><label for="llm-provider">模型服务</label><select id="llm-provider"><option value="ollama">本地 Ollama</option><option value="openai">OpenAI 兼容 API</option></select></div>
+                <div class="llm-field llm-endpoint-field"><label for="llm-base-url">Base URL</label><input id="llm-base-url" type="url" maxlength="2048" value="http://127.0.0.1:11434" placeholder="https://api.example.com/v1" spellcheck="false" autocomplete="off" aria-describedby="llm-provider-note"></div>
+                <div id="llm-api-key-group" class="llm-field llm-secret-field" hidden><label for="llm-api-key">API Key</label><input id="llm-api-key" type="password" maxlength="8192" autocomplete="off" spellcheck="false" placeholder="可留空" aria-describedby="llm-key-hint"><p id="llm-key-hint" class="llm-hint">密钥仅在本次服务内存中使用。</p></div>
+                <div class="llm-field llm-model-field"><label for="llm-model">可选模型</label><select id="llm-model" disabled><option value="">先获取模型列表</option></select></div>
+              </div>
+              <p id="llm-provider-note" class="llm-hint">从 Windows 后端连接本机 Ollama，仅获取已有模型。</p>
+              <div class="llm-actions"><button id="llm-refresh-models" class="interaction-button" type="button">刷新模型列表</button><button id="llm-apply" class="interaction-button llm-apply" type="submit" disabled>应用所选模型</button><button id="llm-clear-config" class="interaction-button" type="button" disabled>清除已应用模型与密钥</button></div>
+              <p id="llm-feedback" class="llm-feedback" role="status" aria-live="polite">正在检查模型配置；基础检索继续可用。</p>
+              <p id="llm-error" class="llm-error" role="alert" hidden></p>
+              <p class="llm-hint">配置只保留在当前服务内存中，重启后需重新选择；密钥不写入浏览器存储、分享链接或导出。</p>
+            </form>
+          </details>
           <div id="preparation-note" class="notice preparation-note" hidden><span class="notice-label">语义检索待准备</span><div><p id="preparation-reason">请按 README 完成本地模型与索引准备，然后刷新运行状态。</p><p>你也可以选择“关键词基线”检索现有原文资料。</p></div></div>
           <div id="request-error" class="notice error-notice" role="alert" hidden></div>
           <div id="retry-panel" class="retry-panel" hidden><button id="retry-search" class="interaction-button" type="button" disabled>按原条件重试</button></div>
@@ -138,6 +157,7 @@
         <section class="workspace" aria-label="检索结果与地图">
           <div id="results-panel" class="results-panel" aria-busy="false">
             <header class="panel-heading"><div><span class="eyebrow small-eyebrow">RESULTS / 候选资料</span><h2>检索结果 <span id="result-count" class="result-count">00</span></h2></div><span id="active-mode" class="small-tag">SEMANTIC</span></header>
+            <section id="llm-result-note" class="llm-result-note" aria-label="本次查询增强" hidden><p id="llm-result-summary"></p><details id="llm-result-queries"><summary>查看本次实际检索查询</summary><ol id="llm-result-query-list"></ol></details><p class="llm-hint">模型改写可能误译专名，请核对原文证据。分享只保存增强开关，接收端需有已应用模型；导出保留本次实际模型与改写。</p></section>
             <p id="result-summary" class="result-summary" tabindex="-1">从一个问题开始，探索遗址与它的历史语境。</p>
             <p id="result-context" class="result-context" hidden></p>
             <div id="search-progress" class="search-progress" hidden><p id="search-progress-label" class="search-progress-label">正在检索本地资料…</p><button id="cancel-search" class="interaction-button" type="button" disabled>取消本次检索</button></div>

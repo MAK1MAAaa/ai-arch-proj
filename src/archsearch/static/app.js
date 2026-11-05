@@ -18,6 +18,8 @@
         resultsPanel: byId("results-panel", HTMLDivElement), resultCount: byId("result-count", HTMLSpanElement),
         resultSummary: byId("result-summary", HTMLParagraphElement), activeMode: byId("active-mode", HTMLSpanElement),
         resultContext: byId("result-context", HTMLParagraphElement), exampleHint: byId("example-hint", HTMLParagraphElement),
+        enhancementNote: byId("llm-result-note", HTMLElement), enhancementSummary: byId("llm-result-summary", HTMLParagraphElement),
+        enhancementQueries: byId("llm-result-query-list", HTMLOListElement),
         resultTools: byId("result-tools", HTMLDivElement), copyLink: byId("copy-search-link", HTMLButtonElement),
         exportResults: byId("export-results", HTMLButtonElement), toolsFeedback: byId("result-tools-feedback", HTMLParagraphElement),
         shareLinkPanel: byId("share-link-panel", HTMLDivElement), shareLink: byId("share-link", HTMLInputElement),
@@ -78,6 +80,7 @@
     let browseRestored = false;
     let browseRestoreError = null;
     let initialStatePending = true;
+    let llmView = null;
     const fieldLabels = {
         title: "地点名称", names: "别名", description: "原始描述", description_zh: "中文描述／译文", source_refs: "来源资格片段", types: "地点类型",
         periods: "原始时期", details: "原始补充记录", search_text: "检索文本",
@@ -196,12 +199,14 @@
         const scope = explore?.getState();
         return { query: ui.query.value.trim(), mode: currentMode(), type: ui.typeFilter.value || null,
             limit: Number(ui.limitFilter.value), country: scope?.country ?? null, region: scope?.region ?? null,
-            ...(scope?.subdivision ? { subdivision: scope.subdivision } : {}) };
+            ...(scope?.subdivision ? { subdivision: scope.subdivision } : {}), ...llmView?.requestOptions() };
     }
     function sameRequest(left, right) {
         return left.query === right.query && left.mode === right.mode && left.type === right.type && left.limit === right.limit
             && (left.country ?? null) === (right.country ?? null) && (left.region ?? null) === (right.region ?? null)
-            && (left.subdivision ?? null) === (right.subdivision ?? null);
+            && (left.subdivision ?? null) === (right.subdivision ?? null)
+            && (left.enhance === true) === (right.enhance === true)
+            && (!left.enhance || left.llm_revision === right.llm_revision);
     }
     function modeAvailable(mode) {
         return !state.restoringLink && state.corpusReady && (mode === "bm25" || state.semanticReady);
@@ -259,26 +264,30 @@
     function updateSearchAvailability() {
         const mode = currentMode();
         const available = modeAvailable(mode);
+        const enhancementReady = !llmView?.enabled() || llmView.ready();
         const subdivisionReady = explore?.subdivisionReady() ?? true;
         const samePending = state.searching && state.activeSearch !== null && sameRequest(state.activeSearch, formRequest());
-        ui.searchButton.disabled = !available || !subdivisionReady || samePending;
+        ui.searchButton.disabled = !available || !subdivisionReady || !enhancementReady || samePending;
         ui.buttonLabel.textContent = state.searching ? samePending ? "检索中" : "更新检索" : "开始检索";
         ui.cancelSearch.disabled = !state.searching;
         ui.cancelSearch.hidden = !state.searching;
         ui.searchProgress.hidden = !state.searching && !state.searchFeedback;
         ui.progressLabel.textContent = state.searching
-            ? state.completedSearch ? "正在更新，列表与地图仍保留上次检索结果。" : "正在检索本地资料。"
+            ? state.activeSearch?.enhance ? "正在生成查询扩展并检索本地资料，保留上次结果与地图。"
+                : state.completedSearch ? "正在更新，列表与地图仍保留上次检索结果。" : "正在检索本地资料。"
             : state.searchFeedback || "";
         ui.retryPanel.hidden = state.failedSearch === null;
-        ui.retrySearch.disabled = state.failedSearch === null || state.searching || !modeAvailable(state.failedSearch.mode);
+        ui.retrySearch.disabled = state.failedSearch === null || state.searching || !modeAvailable(state.failedSearch.mode)
+            || (state.failedSearch.enhance === true && !llmView?.ready());
         ui.retrySearch.title = state.failedSearch ? `恢复并重试：${state.failedSearch.query}` : "";
         ui.clearType.disabled = !ui.typeFilter.value || ui.typeFilter.disabled;
         ui.emptyClearType.hidden = !state.hasSearched || state.results.length > 0 || !ui.typeFilter.value || state.searching || ui.typeFilter.disabled;
-        ui.activeMode.textContent = (state.displayedMode || mode) === "semantic" ? "SEMANTIC" : "BM25";
+        ui.activeMode.textContent = state.completedSearch?.response.enhancement?.applied ? "LLM · RRF"
+            : (state.displayedMode || mode) === "semantic" ? "SEMANTIC" : "BM25";
         ui.preparationNote.hidden = mode !== "semantic" || !state.statusLoaded || state.semanticReady;
         ui.modeExplanation.textContent = mode === "semantic"
             ? "用中文描述问题，专名可保留原文，在多语种源资料中寻找相近候选；排序分数不是相关概率，仍需核验来源。"
-            : "匹配资料原词和已有中文描述；中文按相邻双字片段匹配，建议输入两个字以上。不会实时翻译或扩展同义词，部分片段重叠也可能命中。";
+            : "匹配资料原词和已有中文描述；中文按相邻双字片段匹配，建议输入两个字以上。基础模式不翻译或扩展同义词；开启 LLM 增强后会另用改写查询融合排名。";
         ui.exampleHint.textContent = mode === "semantic"
             ? "中文问题示例，专名可保留原文；示例同步地点类型并保留当前地域条件。"
             : "英文原词示例；示例同步地点类型并保留当前地域条件。";
@@ -288,7 +297,7 @@
             const label = button.querySelector(".example-label");
             if (label)
                 label.textContent = button.dataset.exampleMode === "bm25" || mode === "semantic" ? button.dataset.label || query || "示例" : query || "示例";
-            button.disabled = !modeAvailable(exampleMode) || !subdivisionReady || ui.typeFilter.disabled || !Array.from(ui.typeFilter.options).some((option) => option.value === button.dataset.type);
+            button.disabled = !modeAvailable(exampleMode) || !subdivisionReady || !enhancementReady || ui.typeFilter.disabled || !Array.from(ui.typeFilter.options).some((option) => option.value === button.dataset.type);
             button.setAttribute("aria-label", `${button.dataset.exampleMode === "bm25" ? "关键词基线 BM25 原名检索" : "检索示例"}：${query || ""}；类型：${typeLabel(button.dataset.type || "")}`);
             button.lang = exampleMode === "semantic" || button.dataset.exampleMode === "bm25" ? "zh-CN" : "en";
         });
@@ -389,7 +398,7 @@
             return runtimeRefresh;
         const refreshButton = byId("refresh-status", HTMLButtonElement);
         refreshButton.disabled = true;
-        runtimeRefresh = Promise.allSettled([loadStatus(), loadFacets(), explore?.load()]).then(async (loaded) => {
+        runtimeRefresh = Promise.allSettled([loadStatus(), loadFacets(), explore?.load(), llmView?.load()]).then(async (loaded) => {
             if (!browseRestored && !invalidLink && boundsRestoreError === null) {
                 browseRestored = true;
                 const explicit = ["browse_country", "browse_region", "browse_subdivision", "browse_offset", "points", "browse_bbox"].some((name) => initialUrl.searchParams.has(name));
@@ -593,9 +602,11 @@
         ui.mapEmptyLabel.hidden = state.results.length > 0 || explore !== null;
         fitMap();
     }
-    function scoreLabel(score, mode) {
+    function scoreLabel(score, mode, fused = false) {
         if (!Number.isFinite(score))
             return "未提供分数";
+        if (fused)
+            return `RRF 分数 ${score.toFixed(5)}`;
         return mode === "semantic" ? `语义分数 ${score.toFixed(3)}` : `BM25 ${score.toFixed(2)}`;
     }
     function renderResults(data, context) {
@@ -617,10 +628,22 @@
         state.displayedMode = data.mode;
         ui.list.replaceChildren();
         ui.resultCount.textContent = String(state.results.length).padStart(2, "0");
-        ui.activeMode.textContent = data.mode === "bm25" ? "BM25" : "SEMANTIC";
+        ui.activeMode.textContent = data.enhancement?.applied ? "LLM · RRF" : data.mode === "bm25" ? "BM25" : "SEMANTIC";
+        ui.enhancementNote.hidden = !data.enhancement;
+        ui.enhancementQueries.replaceChildren();
+        if (data.enhancement) {
+            const enhanced = data.enhancement;
+            ui.enhancementSummary.textContent = enhanced.applied
+                ? `本次使用 ${enhanced.provider === "ollama" ? "Ollama" : "API"} · ${enhanced.model} 扩展查询，以 RRF 融合排名；增强耗时 ${Math.round(enhanced.elapsed_ms)} ms。改写不是来源证据。`
+                : `增强失败，已按原查询检索。尝试模型：${enhanced.model}。${enhanced.reason || "模型未完成查询改写。"}`;
+            enhanced.queries.forEach((query) => { ui.enhancementQueries.append(element("li", null, query)); });
+        }
+        else
+            ui.enhancementSummary.textContent = "";
         const elapsed = Number.isFinite(data.elapsed_ms) ? `${Math.round(data.elapsed_ms)} ms` : "耗时未提供";
         const candidates = Number.isFinite(data.total_candidates)
-            ? data.mode === "semantic" ? `在当前范围的 ${data.total_candidates} 条资料中，` : `${data.total_candidates} 条资料有字词匹配，`
+            ? data.enhancement?.applied ? `合并原查询与改写后，在 ${data.total_candidates} 条候选资料中，`
+                : data.mode === "semantic" ? `在当前范围的 ${data.total_candidates} 条资料中，` : `${data.total_candidates} 条资料有字词匹配，`
             : "";
         ui.resultSummary.textContent = `${candidates}展示 ${state.results.length} 条 · ${elapsed}`;
         ui.resultContext.textContent = `本次查询：“${data.query}” · ${data.mode === "semantic" ? "语义检索" : "关键词基线"} · ${context.type ? typeLabel(context.type) : "全部类型"}${context.country ? ` · 国家／地区 ${context.country}` : ""}${context.region ? ` · 来源分区 ${context.region}` : ""}${context.subdivision ? ` · 来源省／地区 ${explore?.subdivisionLabel(context.subdivision) ?? "已选来源省区"}` : ""} · 最多 ${context.limit} 条 · 语料 ${data.corpus_version}`;
@@ -655,7 +678,7 @@
             if (excerpt.lang === "fr" || excerpt.lang === "pt-BR")
                 titleArea.querySelector("h3").lang = excerpt.lang;
             const metadata = element("div", "result-metadata");
-            metadata.append(element("span", "result-coordinate", coordinateLabel(site)), element("span", "result-score", scoreLabel(result.score, data.mode)));
+            metadata.append(element("span", "result-coordinate", coordinateLabel(site)), element("span", "result-score", scoreLabel(result.score, data.mode, data.enhancement?.applied === true)));
             const viewHint = element("span", "result-view-hint");
             viewHint.hidden = true;
             card.append(top, element("p", "result-excerpt-label", excerpt.label), description, metadata, viewHint);
@@ -801,6 +824,17 @@
             return;
         }
         ui.typeFilter.value = request.type || "";
+        llmView?.setRequested(request.enhance === true);
+        if (request.enhance) {
+            const config = llmView?.getConfig();
+            if (!config?.model) {
+                showError("LLM 增强链接已恢复；请先在模型设置中获取并应用模型，再主动检索。本次未改成基础检索。");
+                llmView?.showSettings();
+                updateSearchAvailability();
+                return;
+            }
+            request.llm_revision = config.revision;
+        }
         updateSearchAvailability();
         if (!state.corpusReady || (request.mode === "semantic" && !state.semanticReady)) {
             showError("链接中的检索条件已恢复；当前服务或所选模型尚未就绪。请查看运行状态，准备后手动检索。");
@@ -892,6 +926,15 @@
             announce(state.searchFeedback);
             return;
         }
+        if (request.enhance === true) {
+            const config = llmView?.getConfig();
+            if (!config?.model || request.llm_revision !== config.revision) {
+                showError(config?.model ? "模型配置已经改变，请按当前已应用模型重新发起检索；没有改写原失败请求。" : "请先获取并应用模型，再开启 LLM 增强；当前请求未改成基础检索。");
+                llmView?.showSettings();
+                setLoading(false);
+                return;
+            }
+        }
         if (request.type && !state.typeLabels.has(request.type)) {
             showError("当前类型无法确认。请刷新类型列表、改选类型或明确清除筛选后检索。");
             setLoading(false);
@@ -905,7 +948,7 @@
         if (focusProgress) {
             focusWithinView(ui.progressLabel);
         }
-        announce("正在检索本地资料。");
+        announce(request.enhance ? "正在生成查询扩展并检索本地资料。" : "正在检索本地资料。");
         try {
             const expectedSubdivisionVersion = request.subdivision ? await explore?.validateSearchScope(request, controller.signal) : null;
             if (request.subdivision && !expectedSubdivisionVersion)
@@ -919,13 +962,19 @@
             });
             if (sequence !== state.searchSequence)
                 return;
+            if (data.query !== request.query || data.mode !== request.mode)
+                throw new Error("检索响应与本次查询或方式不一致，保留原成功结果。");
+            const enhancement = ArchSearchResearch.validateEnhancement(request, data.enhancement);
+            if (enhancement)
+                data.enhancement = enhancement;
             if (request.subdivision) {
                 ArchSearchResearch.validateSubdivisionResponse(request, data, expectedSubdivisionVersion);
                 if (explore?.subdivisionVersion() !== expectedSubdivisionVersion)
                     throw new Error("来源省区版本已改变，保留原成功检索，请刷新后重试。");
             }
             renderResults(data, { type: request.type, limit: request.limit, country: request.country, region: request.region,
-                ...(request.subdivision ? { subdivision: request.subdivision } : {}) });
+                ...(request.subdivision ? { subdivision: request.subdivision } : {}),
+                ...(request.enhance ? { enhance: true, llm_revision: request.llm_revision } : {}) });
         }
         catch (error) {
             if (isAbortError(error) || sequence !== state.searchSequence)
@@ -959,6 +1008,7 @@
         ui.typeFilter.value = request.type || "";
         ui.limitFilter.value = String(request.limit);
         ui.form.querySelectorAll('input[name="mode"]').forEach((radio) => { radio.checked = radio.value === request.mode; });
+        llmView?.setRequested(request.enhance === true);
         void runSearch(request);
     }
     function clearTypeFilter() {
@@ -1621,6 +1671,8 @@
         ui.limitFilter.value = String(pendingLink.limit);
         ui.form.querySelectorAll('input[name="mode"]').forEach((radio) => { radio.checked = radio.value === pendingLink?.mode; });
     }
+    llmView = ArchSearchLlm.create({ onChange: () => { updateSearchAvailability(); } });
+    llmView.setRequested(pendingLink?.enhance === true);
     initializeMap();
     historyView = ArchSearchHistory.create({
         map: state.map, tiles: state.tiles,

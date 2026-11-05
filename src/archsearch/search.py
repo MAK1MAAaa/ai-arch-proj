@@ -10,7 +10,15 @@ from typing import Literal
 
 import numpy as np
 from numpy.typing import NDArray
-from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    Field,
+    StrictBool,
+    StrictInt,
+    field_validator,
+    model_validator,
+)
 
 from archsearch.corpus import build_document, source_excerpts
 from archsearch.coverage import matches_geography
@@ -53,6 +61,8 @@ class SearchRequest(BaseModel):
         "nps-pacific",
     ] | None = None
     limit: int = Field(default=10, ge=1, le=50)
+    enhance: StrictBool = False
+    llm_revision: StrictInt | None = Field(default=None, ge=0)
 
     @field_validator("query")
     @classmethod
@@ -66,6 +76,8 @@ class SearchRequest(BaseModel):
     def validate_subdivision_country(self) -> SearchRequest:
         if self.subdivision is not None and self.country != self.subdivision[:2]:
             raise ValueError("来源省区必须与已选择的国家／地区一致。")
+        if self.enhance != (self.llm_revision is not None):
+            raise ValueError("LLM增强检索必须指定已应用的配置版本。")
         return self
 
 
@@ -158,3 +170,54 @@ class SearchEngine:
             matched = [name for name, text in fields.items() if tokens & set(tokenize(text))]
             hits.append(SearchHit(site=site, score=float(scores[i]), matched_fields=matched))
         return hits, len(candidates)
+
+    def search_expanded(
+        self, request: SearchRequest, queries: list[str],
+    ) -> tuple[list[SearchHit], int]:
+        """Fuse full filtered rankings; generated text never changes source records."""
+        if not queries or queries[0] != request.query or len(queries) > 3:
+            raise ValueError("扩展检索必须保留原查询，并至多增加两个检索改写。")
+        normalized = {unicodedata.normalize("NFKC", query.strip()).casefold() for query in queries}
+        if len(normalized) != len(queries) or any(
+            not query.strip() or len(query) > 500 for query in queries
+        ):
+            raise ValueError("扩展检索查询必须非空、去重且不超过500字符。")
+        members = None
+        if request.subdivision is not None:
+            if self.subdivisions is None:
+                raise SubdivisionUnavailable("来源省区索引尚未准备。")
+            members = self.subdivisions.ids(request.country, request.subdivision)
+        candidates = [
+            i for i, site in enumerate(self.sites)
+            if (request.type is None or request.type in site.types)
+            and matches_geography(site, request.country, request.region)
+            and (members is None or site.id in members)
+        ]
+        if not candidates:
+            return [], 0
+        fused: dict[int, float] = {}
+        for query in queries:
+            scores = (self.semantic.scores(query) if request.mode == "semantic"
+                      else self.bm25.scores(query))
+            ranking = [i for i in candidates if request.mode != "bm25" or scores[i] > 0]
+            ranking.sort(key=lambda i: (-float(scores[i]), self.sites[i].id))
+            for rank, index in enumerate(ranking, 1):
+                fused[index] = fused.get(index, 0.0) + 1.0 / (60 + rank)
+        ordered = sorted(fused, key=lambda i: (-fused[i], self.sites[i].id))
+        tokens = {token for query in queries for token in tokenize(query)}
+        hits = []
+        for i in ordered[:request.limit]:
+            site = self.sites[i]
+            fields = {
+                "title": site.title,
+                "names": " ".join(site.names),
+                "description": site.description,
+                "description_zh": site.description_zh,
+                "details": site.details,
+                "source_refs": "\n".join(source_excerpts(site)),
+                "types": " ".join(site.types),
+                "periods": " ".join(site.periods),
+            }
+            matched = [name for name, text in fields.items() if tokens & set(tokenize(text))]
+            hits.append(SearchHit(site=site, score=fused[i], matched_fields=matched))
+        return hits, len(fused)

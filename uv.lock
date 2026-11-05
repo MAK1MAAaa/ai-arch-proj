@@ -43,6 +43,7 @@ version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "fastapi" },
+    { name = "httpx" },
     { name = "huggingface-hub" },
     { name = "numpy" },
     { name = "pydantic" },
@@ -54,7 +55,6 @@ dependencies = [
 
 [package.dev-dependencies]
 dev = [
-    { name = "httpx" },
     { name = "mypy" },
     { name = "pytest" },
     { name = "ruff" },
@@ -63,6 +63,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "fastapi", specifier = ">=0.115,<1" },
+    { name = "httpx", specifier = ">=0.28,<1" },
     { name = "huggingface-hub", specifier = ">=0.30,<2" },
     { name = "numpy", specifier = ">=2,<3" },
     { name = "pydantic", specifier = ">=2.10,<3" },
@@ -73,7 +74,6 @@ requires-dist = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "httpx", specifier = ">=0.28,<1" },
     { name = "mypy", specifier = ">=1.15,<2" },
     { name = "pytest", specifier = ">=8,<10" },
     { name = "ruff", specifier = ">=0.12,<1" },
