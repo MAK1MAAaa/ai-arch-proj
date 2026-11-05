@@ -102,6 +102,14 @@ def load_registry(data_dir: Path = DATA_DIR) -> CoverageRegistry:
         if countries.keys() & hong_kong_countries.keys():
             raise HongKongError("Hong Kong labels cannot replace existing source country labels")
         countries.update(hong_kong_countries)
+    if (Path(data_dir) / "merimee_manifest.json").exists():
+        from archsearch.merimee_data import MerimeeError
+        from archsearch.merimee_data import new_country_labels as merimee_country_labels
+
+        merimee_countries = merimee_country_labels(Path(data_dir))
+        if countries.keys() & merimee_countries.keys():
+            raise MerimeeError("Mérimée statistical-area labels cannot replace source labels")
+        countries.update(merimee_countries)
     spatial = None
     spatial_error = None
     try:

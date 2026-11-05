@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "scope": "Twenty paired discovery queries for fixed Mérimée overseas cultural-notice scopes. Chinese is an unverified query paraphrase, never an adopted site alias. English identity probes contain original French names; the comparison is a practical name-discovery diagnostic, not a controlled language benchmark. Six targets are conditional on independent scope adoption; no prefilled relevance judgments or ranked results.",
+  "queries": [
+    {
+      "id": "me01",
+      "query_zh": "寻找瓜德罗普巴斯特尔的德尔格雷斯堡",
+      "query_en": "Find Fort Delgrès in Basse-Terre, Guadeloupe",
+      "topic": "Predetermined original notice identity probe; not an adopted Chinese alias or relevance gold."
+    },
+    {
+      "id": "me02",
+      "query_zh": "寻找马提尼克巴斯普安特的佩库尔庄园保护范围",
+      "query_en": "Find Habitation Pecoul in Basse-Pointe, Martinique",
+      "topic": "Predetermined original notice identity probe; not an adopted Chinese alias or relevance gold."
+    },
+    {
+      "id": "me03",
+      "query_zh": "寻找留尼汪圣苏珊娜的贝莱尔灯塔",
+      "query_en": "Find Phare de Bel-Air in Sainte-Suzanne, La Réunion",
+      "topic": "Predetermined original notice identity probe; not an adopted Chinese alias or relevance gold."
+    },
+    {
+      "id": "me04",
+      "query_zh": "寻找圣巴泰勒米古斯塔维亚的瑞典钟楼",
+      "query_en": "Find Clocher suédois de Gustavia in Saint-Barthélemy",
+      "topic": "Predetermined original notice identity probe; not an adopted Chinese alias or relevance gold."
+    },
+    {
+      "id": "me05",
+      "query_zh": "寻找圣马丁的莫霍岩刻",
+      "query_en": "Find Roche gravée de Moho in Saint-Martin",
+      "topic": "Predetermined original notice identity probe; not an adopted Chinese alias or relevance gold."
+    },
+    {
+      "id": "me06",
+      "query_zh": "寻找留尼汪圣安德烈的马丁老宅",
+      "query_en": "Find Maison Martin ou Martin Valliamé in Saint-André, La Réunion",
+      "topic": "Predetermined original notice identity probe; not an adopted Chinese alias or relevance gold."
+    },
+    {
+      "id": "me07",
+      "query_zh": "寻找加勒比地区的历史灯塔",
+      "query_en": "Find historic lighthouses in the Caribbean",
+      "topic": "Topic discovery probe without a source identity target or relevance judgment."
+    },
+    {
+      "id": "me08",
+      "query_zh": "寻找留尼汪的历史印度教寺庙",
+      "query_en": "Find historic Hindu temples in La Réunion",
+      "topic": "Topic discovery probe without a source identity target or relevance judgment."
+    },
+    {
+      "id": "me09",
+      "query_zh": "寻找马提尼克的历史糖厂遗迹",
+      "query_en": "Find historic sugar factory remains in Martinique",
+      "topic": "Topic discovery probe without a source identity target or relevance judgment."
+    },
+    {
+      "id": "me10",
+      "query_zh": "寻找瓜德罗普的历史风车",
+      "query_en": "Find historic windmills in Guadeloupe",
+      "topic": "Topic discovery probe without a source identity target or relevance judgment."
+    },
+    {
+      "id": "me11",
+      "query_zh": "寻找加勒比历史建筑中限定保护立面和屋顶的记录",
+      "query_en": "Find Caribbean historic building records limited to protected facades and roofs",
+      "topic": "Topic discovery probe without a source identity target or relevance judgment."
+    },
+    {
+      "id": "me12",
+      "query_zh": "寻找留尼汪的历史火车站",
+      "query_en": "Find historic railway stations in La Réunion",
+      "topic": "Topic discovery probe without a source identity target or relevance judgment."
+    },
+    {
+      "id": "me13",
+      "query_zh": "寻找加勒比的古代岩刻和考古记录",
+      "query_en": "Find rock engravings and archaeological records in the Caribbean",
+      "topic": "Topic discovery probe without a source identity target or relevance judgment."
+    },
+    {
+      "id": "me14",
+      "query_zh": "寻找圣巴泰勒米的历史教堂建筑",
+      "query_en": "Find historic church buildings in Saint-Barthélemy",
+      "topic": "Topic discovery probe without a source identity target or relevance judgment."
+    },
+    {
+      "id": "me15",
+      "query_zh": "寻找留尼汪历史建筑的庭院和花园保护范围",
+      "query_en": "Find courtyard and garden protection scopes for historic buildings in La Réunion",
+      "topic": "Topic discovery probe without a source identity target or relevance judgment."
+    },
+    {
+      "id": "me16",
+      "query_zh": "寻找马提尼克圣皮埃尔的旧剧院遗迹",
+      "query_en": "Find the former theatre ruins in Saint-Pierre, Martinique",
+      "topic": "Topic discovery probe without a source identity target or relevance judgment."
+    },
+    {
+      "id": "me17",
+      "query_zh": "寻找瓜德罗普的历史公共建筑",
+      "query_en": "Find historic public buildings in Guadeloupe",
+      "topic": "Topic discovery probe without a source identity target or relevance judgment."
+    },
+    {
+      "id": "me18",
+      "query_zh": "寻找留尼汪的历史检疫隔离建筑",
+      "query_en": "Find Lazarets de La Grande Chaloupe in La Réunion",
+      "topic": "Topic discovery probe without a source identity target or relevance judgment."
+    },
+    {
+      "id": "me19",
+      "query_zh": "寻找加勒比的历史纪念建筑",
+      "query_en": "Find historic memorial structures in the Caribbean",
+      "topic": "Topic discovery probe without a source identity target or relevance judgment."
+    },
+    {
+      "id": "me20",
+      "query_zh": "寻找法国海外地区已撤销或修改保护的建筑原始记录",
+      "query_en": "Find original records with withdrawn or revised protection in French overseas areas",
+      "topic": "Topic discovery probe without a source identity target or relevance judgment."
+    }
+  ]
+}

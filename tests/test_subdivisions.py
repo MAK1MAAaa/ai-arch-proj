@@ -236,6 +236,77 @@ def test_municipality_association_requires_its_approved_cohort_and_original_fiel
         bundle.payload()
 
 
+def merimee_commune_fixture(bundle: Bundle) -> tuple[str, str]:
+    site_id = "auth:fr-merimee:PA97400026"
+    label = "Saint-Denis;La Possession"
+    original = {f"original_{number}": "" for number in range(76)} | {
+        "Reference": "PA97400026", "Commune_forme_editoriale": label,
+    }
+    bundle.sites.append(bundle.sites[3].model_copy(update={
+        "id": site_id, "geography": Geography(
+            authority_id="supplement:" + site_id, countries=["RE"],
+            regions=["africa"], source=source(), point_count=0,
+        ),
+    }))
+    bundle.review.update(sub.corpus_contract(bundle.sites))
+    bundle.review["merimee_spec_sha256"] = "e" * 64
+    bundle.review["subdivisions"].append({
+        "id": "RE:merimee-commune-fixture", "country": "RE", "label": label,
+    })
+    bundle.review["extra_memberships"].append({
+        "site_id": site_id, "subdivision_id": "RE:merimee-commune-fixture",
+        "source": source("record:merimee:PA97400026").model_copy(update={"excerpt": label})
+            .model_dump(mode="json"),
+        "artifact": {"filename": "merimee.csv", "sha256": "f" * 64,
+                     "uri": "https://example.org/record"},
+        "field": "Commune_forme_editoriale", "raw_value": label, "source_label": label,
+        "source_row": original, "source_row_sha256": sub._row_hash(original),
+        "role": "source_record_commune",
+        "review_method": "Independent original commune and statistical-area fixture review.",
+    })
+    bundle.monkeypatch.setattr(sub, "_merimee_pin_matches", lambda pin: pin == "e" * 64)
+    return site_id, label
+
+
+def test_merimee_compound_commune_keeps_all78_fields_and_unknown_point(bundle: Bundle) -> None:
+    site_id, label = merimee_commune_fixture(bundle)
+    bundle.pin_review(facts=True)
+    bundle.compile()
+    index = bundle.index()
+    assert index.ready and index.ids("RE", "RE:merimee-commune-fixture") == {site_id}
+    assert [row.label for row in index.facets("RE", 1).subdivisions] == [label]
+    assert "多地值不拆分" in index.facets("RE", 1).note
+    assert "统计区域" in index.site_response(site_id).note
+    assert bundle.sites[-1].repr_point is None
+    assert index.ids("CA", "CA:ontario") == {"1", "3"}
+
+
+@pytest.mark.parametrize("change", ["missing_pin", "wrong_field", "wrong_namespace", "wrong_area"])
+def test_merimee_commune_requires_approved_source_field_and_statistical_area(
+    bundle: Bundle, change: str,
+) -> None:
+    merimee_commune_fixture(bundle)
+    extra = bundle.review["extra_memberships"][0]
+    if change == "missing_pin":
+        bundle.review["merimee_spec_sha256"] = None
+    elif change == "wrong_field":
+        extra["field"] = "Region"
+        extra["source_row"]["Region"] = extra["raw_value"]
+    elif change == "wrong_namespace":
+        extra["site_id"] = "auth:fixture:4"
+    else:
+        bundle.sites[-1] = bundle.sites[-1].model_copy(update={"geography": Geography(
+            authority_id="supplement:" + bundle.sites[-1].id, countries=["FR"],
+            regions=["europe-north-america"], source=source(), point_count=0,
+        )})
+        bundle.review.update(sub.corpus_contract(bundle.sites))
+        bundle.review["subdivisions"][-1].update(id="FR:merimee-commune-fixture", country="FR")
+        extra["subdivision_id"] = "FR:merimee-commune-fixture"
+    extra["source_row_sha256"] = sub._row_hash(extra["source_row"])
+    with pytest.raises(sub.SubdivisionUnavailable):
+        bundle.payload()
+
+
 def test_rebuild_is_deterministic_and_normal_load_never_reparses_the_large_review(
     bundle: Bundle, monkeypatch: pytest.MonkeyPatch,
 ) -> None:
@@ -249,6 +320,24 @@ def test_rebuild_is_deterministic_and_normal_load_never_reparses_the_large_revie
     assert bundle.index().ready
     for _ in range(5):
         assert bundle.index().ids("CA", "CA:ontario") == {"1", "3"}
+
+
+def test_wrong_nonempty_merimee_source_pin_disables_runtime_and_rebuild(bundle: Bundle) -> None:
+    merimee_commune_fixture(bundle)
+    bundle.pin_review(facts=True)
+    bundle.compile()
+    assert bundle.index().ready
+    bundle.monkeypatch.setattr(sub, "_merimee_pin_matches", lambda _: False)
+    assert not bundle.index().ready
+    with pytest.raises(sub.SubdivisionUnavailable):
+        sub.rebuild_subdivisions(bundle.sites, CORPUS_VERSION, bundle.directory)
+
+
+def test_large_review_limit_only_applies_to_offline_rebuild(bundle: Bundle) -> None:
+    bundle.monkeypatch.setattr(sub, "MAX_REVIEW_BYTES", 4)
+    assert bundle.index().ready
+    with pytest.raises(sub.SubdivisionUnavailable, match="容量限制"):
+        sub.rebuild_subdivisions(bundle.sites, CORPUS_VERSION, bundle.directory)
 
 
 @pytest.mark.parametrize("name", [sub.PAYLOAD_FILE, sub.MANIFEST_FILE])

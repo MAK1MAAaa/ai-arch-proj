@@ -766,7 +766,7 @@ def test_real_combined_source_groups_preserve_world5632_sequence_and_individual_
     coverage = index.spatial_coverage()
     assert coverage is not None and coverage.ready
     assert (coverage.records, coverage.points, coverage.distinct_points,
-            coverage.duplicate_points, coverage.display_points) == (1239, 5851, 5546, 305, 7343)
+            coverage.duplicate_points, coverage.display_points) == (1239, 5851, 5546, 305, 7785)
     groups = {group.version: group for group in coverage.source_groups}
     assert set(groups) == {"world-locations-v1", "protection-locations-v1",
                            "nps-pacific-locations-v1"}
@@ -794,8 +794,8 @@ def test_actual_warehouse_point_does_not_match_arqa_as_an_original_cultural_site
     included = SpatialBounds.from_csv("36.04669,34.53037,36.04673,34.53041")
     assert "auth:unesco-chp:626" not in {site.id for site in index.page(bbox=excluded).sites}
     assert "auth:unesco-chp:626" in {site.id for site in index.page(bbox=included).sites}
-    assert index.page(bbox=SpatialBounds.from_csv("-180,-90,180,90")).total == 2943
-    assert index.coverage().locations.model_dump() == {"mapped": 2940, "polar": 3, "unknown": 383}
+    assert index.page(bbox=SpatialBounds.from_csv("-180,-90,180,90")).total == 3385
+    assert index.coverage().locations.model_dump() == {"mapped": 3382, "polar": 3, "unknown": 390}
 
 
 def test_false_overlap_flag_and_component_rows_are_not_fabricated_as_new_sites() -> None:

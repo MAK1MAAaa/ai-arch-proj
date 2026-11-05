@@ -10,13 +10,13 @@ from fastapi.testclient import TestClient
 
 from archsearch import minas_data as cohort
 from archsearch.api import create_app
-from archsearch.corpus import build_document, load_corpus, load_pre_minas_corpus
+from archsearch.corpus import build_document, load_pre_merimee_corpus, load_pre_minas_corpus
 from archsearch.evaluation import evaluate_corpus, load_queries
 from archsearch.supplement_data import base_contract
 
 
 def test_original3193_contract_and_source_scope_granularity_are_preserved() -> None:
-    before, current = load_pre_minas_corpus(), load_corpus()
+    before, current = load_pre_minas_corpus(), load_pre_merimee_corpus()
     assert base_contract(before) == {
         "base_count": 3193,
         "base_ids_sha256": "1a989372ce3ed2bb1ed3ee051ca03e60ec1f07165ab210cd4b641f8c49a5b424",
@@ -96,7 +96,7 @@ def test_original_municipality_facets_preserve_old_country_memberships(
     client = minas_client
     districts = client.get("/api/subdivisions?country=BR").json()
     assert districts["ready"] and districts["supported"]
-    assert districts["subdivision_version"] == "source-subdivisions-v4"
+    assert districts["subdivision_version"] == "source-subdivisions-v5"
     assert (districts["total"], districts["assigned"], districts["unassigned"]) == (154, 133, 21)
     assert len(districts["subdivisions"]) == 67
     compound = next(row for row in districts["subdivisions"]
@@ -136,5 +136,5 @@ def test_paired_diagnostics_leave_unconfirmed_relevance_metrics_null(tmp_path: P
                                                          for number in range(1, 21)]
     result = evaluate_corpus(tmp_path / "missing-model", tmp_path / "rankings.json",
                              queries=queries)
-    assert result["corpus_count"] == 3326 and result["metrics"] is None
+    assert result["corpus_count"] == 3775 and result["metrics"] is None
     assert not result["qrels"]["confirmed"] and not result["runs_complete"]

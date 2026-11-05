@@ -134,6 +134,11 @@
             ? "中文译文（据 Wikidata 英文）" : "中文来源描述";
     }
     function sourceExcerpt(site) {
+        const merimee = ArchSearchResearch.parseMerimeeSource(site);
+        if (merimee) {
+            const source = merimee.source_record;
+            return { label: "来源 Commune · 原记录范围（完整原文见详情）", text: `${source.Commune_forme_editoriale}\n${merimee.scope.literal}`, lang: "fr" };
+        }
         const minas = ArchSearchResearch.parseMinasSource(site);
         if (minas) {
             const classes = [...new Set(minas.map((row) => row.classe_subclasse))];
@@ -647,8 +652,8 @@
             if (excerpt.structured)
                 description.classList.add("result-source-fields");
             description.lang = excerpt.lang ?? (excerpt.label === "原文状态" || excerpt.label.startsWith("中文") ? "zh-CN" : "en");
-            if (excerpt.structured)
-                titleArea.querySelector("h3").lang = "pt-BR";
+            if (excerpt.lang === "fr" || excerpt.lang === "pt-BR")
+                titleArea.querySelector("h3").lang = excerpt.lang;
             const metadata = element("div", "result-metadata");
             metadata.append(element("span", "result-coordinate", coordinateLabel(site)), element("span", "result-score", scoreLabel(result.score, data.mode)));
             const viewHint = element("span", "result-view-hint");
@@ -1193,36 +1198,110 @@
         }
         return content;
     }
+    function merimeeSourceContent(site, source) {
+        const content = element("div", "merimee-source");
+        const record = source.source_record;
+        content.append(element("p", "detail-note", "名录包括曾受或现受保护的记录；下列内容保留来源表述，不据此判断当前法律状态。保护限定部分与完整建筑、庄园或街区不能直接等同，保护文书日期也不作为历史阶段。"));
+        const scope = element("section", "merimee-protection");
+        scope.append(element("h5", null, "原文保护范围 · Precision_de_la_protection"));
+        const protection = element("p", "merimee-protection-text", record.Precision_de_la_protection || "原字段为空字符串；请核对下方范围依据与官方来源。");
+        protection.lang = record.Precision_de_la_protection ? "fr" : "zh-CN";
+        scope.append(protection);
+        if (source.scope.source_field !== "Precision_de_la_protection") {
+            scope.append(element("h5", null, `范围依据原字段 · ${source.scope.source_field}`));
+            const literal = element("p", "merimee-protection-text", source.scope.literal || "原字段为空字符串");
+            literal.lang = source.scope.literal ? "fr" : "zh-CN";
+            scope.append(literal);
+        }
+        if (record.Observations !== "" && source.scope.source_field !== "Observations") {
+            scope.append(element("h5", null, "保护说明／变更原文 · Observations"));
+            const observations = element("p", "merimee-protection-text", record.Observations);
+            observations.lang = "fr";
+            scope.append(observations);
+        }
+        content.append(scope);
+        const fields = element("dl", "merimee-source-fields");
+        const selectedFields = [
+            ["Reference", "原名录记录编号（不作为法定地块身份）"],
+            ["Typologie_de_la_protection", "原保护类型字段"],
+            ["Date_et_typologie_de_la_protection", "原保护日期／类型字段（非历史阶段）"],
+            ["Commune_forme_editoriale", "来源 Commune（全文保留）"],
+            ["Region", "来源原 Region"],
+            ["coordonnees_au_format_WGS84", "原 WGS84 坐标字段"],
+        ];
+        for (const [key, label] of selectedFields) {
+            const group = element("div");
+            group.append(element("dt", null, `${label} · ${key}`));
+            const value = element("dd", null, record[key] || "原值为空字符串");
+            value.lang = record[key] ? "fr" : "zh-CN";
+            if (!record[key])
+                value.classList.add("merimee-empty-value");
+            group.append(value);
+            fields.append(group);
+        }
+        content.append(fields, element("p", "detail-note", "原 Region 与项目的现代国家／地区关联分别保留；来源 Commune 全串不拆分，也不据此认定整体全部位于该分区。"), element("p", "detail-note", "项目仅在有已核公开坐标时采用来源点作参考位置，不将其视为整体中心；来源未说明点的生成方法与定位精度。原坐标为空时保留缺失，不用地址、行政中心或零坐标补点。"));
+        const contextFields = ["Description_de_l_edifice", "Historique"];
+        if (contextFields.some((key) => record[key] !== "")) {
+            const context = element("details", "merimee-prose");
+            context.append(element("summary", null, "阅读来源的法文描述与历史原文"));
+            for (const key of contextFields) {
+                if (record[key] === "")
+                    continue;
+                context.append(element("h5", null, key === "Historique" ? "来源历史原文 · Historique" : "来源建筑描述 · Description_de_l_edifice"));
+                const paragraph = element("p", "merimee-protection-text", record[key]);
+                paragraph.lang = "fr";
+                context.append(paragraph);
+            }
+            content.append(context);
+        }
+        const original = element("details", "merimee-original");
+        original.dataset.siteId = site.id;
+        const previous = ui.detailContent.querySelector(".merimee-original");
+        original.open = previous?.dataset.siteId === site.id && previous.open;
+        original.append(element("summary", null, "展开完整原始记录（78 个字段）"));
+        const raw = element("pre", "merimee-raw", site.details);
+        raw.lang = "fr";
+        original.append(raw);
+        content.append(original);
+        return content;
+    }
     function renderDetail(site, matchedFields = []) {
         const focusWasInContent = ui.detailContent.contains(document.activeElement);
         const minas = ArchSearchResearch.parseMinasSource(site);
+        const merimee = ArchSearchResearch.parseMerimeeSource(site);
         const title = element("h3", null, displayTitle(site));
         title.id = "detail-title";
         if (minas)
             title.lang = "pt-BR";
+        else if (merimee)
+            title.lang = "fr";
         const sourceId = element("p", "detail-id", `${{ pleiades: "PLEIADES", global: "CURATED", unesco: "UNESCO DATAHUB", ats: "ATS HSM", supplement: "CULTURAL SUPPLEMENT" }[site.source_kind] ?? "SOURCE"} / ${site.id}`);
         const description = element("p", "detail-description", hasSourceText(site.description) ? site.description : "当前导出未提供描述。");
-        description.lang = hasSourceText(site.description) ? (minas ? "pt-BR" : "en") : "zh-CN";
+        description.lang = hasSourceText(site.description) ? (minas ? "pt-BR" : merimee ? "fr" : "en") : "zh-CN";
         const nodes = [title, sourceId];
         if (displayTitle(site) !== site.title) {
             nodes.push(element("p", "detail-source-title", `来源标题原文：${site.title || "未提供"}`));
         }
-        nodes.push(element("p", "detail-note", minas ? "以下为葡萄牙语原登记字段；未生成历史摘要或中文别名。" : "来源原文保留原语言；未生成历史摘要。"));
-        if (!minas || hasSourceText(site.description))
+        nodes.push(element("p", "detail-note", minas ? "以下为葡萄牙语原登记字段；未生成历史摘要或中文别名。" : merimee ? "以下为法文原名录记录与保护范围；未生成历史摘要或中文别名。" : "来源原文保留原语言；未生成历史摘要。"));
+        if (!merimee && (!minas || hasSourceText(site.description)))
             nodes.push(description);
         if (site.description_zh && hasSourceText(site.description_zh)) {
             const chinese = element("p", "detail-description", site.description_zh);
             chinese.lang = "zh-CN";
             nodes.push(detailSection(chineseDescriptionLabel(site), chinese));
         }
+        const details = merimee ? merimeeSourceContent(site, merimee) : minas ? minasSourceContent(minas) : element("p", null, hasSourceText(site.details)
+            ? site.details : `当前导出未提供补充内容${site.details.trim() ? `（原始值：${site.details}）` : ""}。`);
+        if (!minas && !merimee && hasSourceText(site.details))
+            details.lang = site.id.startsWith("auth:fr-merimee:") ? "fr" : "en";
+        const sourceSection = detailSection(site.source_kind === "supplement" ? "来源结构化信息与范围说明" : "原始补充记录", details);
+        if (merimee)
+            nodes.push(sourceSection);
         nodes.push(detailSection("年代证据与地图联动", phaseContent(site)));
         if (registeredAreas)
             nodes.push(registeredAreas.element);
-        const details = minas ? minasSourceContent(minas) : element("p", null, hasSourceText(site.details)
-            ? site.details : `当前导出未提供补充内容${site.details.trim() ? `（原始值：${site.details}）` : ""}。`);
-        if (!minas && hasSourceText(site.details))
-            details.lang = "en";
-        nodes.push(detailSection(site.source_kind === "supplement" ? "来源结构化信息与范围说明" : "原始补充记录", details));
+        if (!merimee)
+            nodes.push(sourceSection);
         nodes.push(detailSection("名称与别名", strings(site.names).join(" · ") || "原始资料未提供其他名称。"));
         nodes.push(detailSection("来源类型标签", strings(site.types).map((value) => primaryTypeLabels[value]
             ? `${typeLabel(value)}（${value}）` : value).join(" · ") || "原始资料未提供类型。"));
