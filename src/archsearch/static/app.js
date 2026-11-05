@@ -134,6 +134,12 @@
             ? "中文译文（据 Wikidata 英文）" : "中文来源描述";
     }
     function sourceExcerpt(site) {
+        const minas = ArchSearchResearch.parseMinasSource(site);
+        if (minas) {
+            const classes = [...new Set(minas.map((row) => row.classe_subclasse))];
+            const municipalities = [...new Set(minas.map((row) => row.municipio))];
+            return { label: "原登记分类 · 来源行市镇", text: `${classes.join(" / ")}\n${municipalities.join(" / ")}`, lang: "pt-BR", structured: true };
+        }
         if (site.description_zh && hasSourceText(site.description_zh))
             return { label: chineseDescriptionLabel(site), text: site.description_zh };
         if (site.description.startsWith("An ancient place, cited:") && hasSourceText(site.details)) {
@@ -638,7 +644,11 @@
             top.append(titleArea, element("span", "result-arrow", "↗"));
             const excerpt = sourceExcerpt(site);
             const description = element("p", "result-description", excerpt.text);
-            description.lang = excerpt.label === "原文状态" || excerpt.label.startsWith("中文") ? "zh-CN" : "en";
+            if (excerpt.structured)
+                description.classList.add("result-source-fields");
+            description.lang = excerpt.lang ?? (excerpt.label === "原文状态" || excerpt.label.startsWith("中文") ? "zh-CN" : "en");
+            if (excerpt.structured)
+                titleArea.querySelector("h3").lang = "pt-BR";
             const metadata = element("div", "result-metadata");
             metadata.append(element("span", "result-coordinate", coordinateLabel(site)), element("span", "result-score", scoreLabel(result.score, data.mode)));
             const viewHint = element("span", "result-view-hint");
@@ -1144,18 +1154,62 @@
             section.append(element("p", "detail-note", "海牙名录定位只绘制经审核的文化原址点；仓储或标签冲突等排除记录保留在来源审计中。来源编号保留原始序号，保护列入年不作为历史阶段。"));
         return section;
     }
+    function minasSourceContent(rows) {
+        const content = element("div", "minas-source-records");
+        const labels = {
+            processo_ano: "原登记案号／年份字段",
+            denominacao: "原登记简称（不作为整体别名）",
+            denominacao_completa: "原登记完整名称",
+            categoria: "原登记类别代码",
+            classe_subclasse: "原登记分类／子类",
+            municipio: "原来源行市镇（全文保留）",
+            distrito: "原来源行地区字段",
+            ato_legal: "原法律文书字段",
+            livro_de_tombo: "原登记簿字段",
+        };
+        content.append(element("p", "detail-note", `${rows.length} 条来源行对应当前同一登记整体，来源行数不作为遗址数量。字段名称为界面说明，葡萄牙语原值完整保留；登记、法律和簿册字段不转换成建造或使用年代。`));
+        if (rows.some((row) => ArchSearchResearch.minasSourceFields.some((field) => row[field] === "0"))) {
+            content.append(element("p", "detail-note minas-zero-note", "原值“0”按原文保留。数据字典的通用缺失值标记与登记簿字段的具体说明存在歧义，此处不统一解释为缺失、年份或保护状态。"));
+        }
+        for (const row of rows) {
+            const record = element("section", "minas-source-record");
+            record.append(element("h5", "minas-record-heading", `来源行 ${row.record_index}`));
+            const fields = element("dl", "minas-source-fields");
+            for (const key of ArchSearchResearch.minasSourceFields) {
+                const group = element("div");
+                group.append(element("dt", null, `${labels[key]} · ${key}`));
+                const value = element("dd", null, row[key]);
+                value.lang = "pt-BR";
+                if (row[key] === "") {
+                    const empty = element("span", "minas-empty-value", "原值为空字符串");
+                    empty.lang = "zh-CN";
+                    value.append(empty);
+                }
+                group.append(value);
+                fields.append(group);
+            }
+            record.append(fields);
+            content.append(record);
+        }
+        return content;
+    }
     function renderDetail(site, matchedFields = []) {
         const focusWasInContent = ui.detailContent.contains(document.activeElement);
+        const minas = ArchSearchResearch.parseMinasSource(site);
         const title = element("h3", null, displayTitle(site));
         title.id = "detail-title";
+        if (minas)
+            title.lang = "pt-BR";
         const sourceId = element("p", "detail-id", `${{ pleiades: "PLEIADES", global: "CURATED", unesco: "UNESCO DATAHUB", ats: "ATS HSM", supplement: "CULTURAL SUPPLEMENT" }[site.source_kind] ?? "SOURCE"} / ${site.id}`);
         const description = element("p", "detail-description", hasSourceText(site.description) ? site.description : "当前导出未提供描述。");
-        description.lang = hasSourceText(site.description) ? "en" : "zh-CN";
+        description.lang = hasSourceText(site.description) ? (minas ? "pt-BR" : "en") : "zh-CN";
         const nodes = [title, sourceId];
         if (displayTitle(site) !== site.title) {
             nodes.push(element("p", "detail-source-title", `来源标题原文：${site.title || "未提供"}`));
         }
-        nodes.push(element("p", "detail-note", "来源原文保留原语言；未生成历史摘要。"), description);
+        nodes.push(element("p", "detail-note", minas ? "以下为葡萄牙语原登记字段；未生成历史摘要或中文别名。" : "来源原文保留原语言；未生成历史摘要。"));
+        if (!minas || hasSourceText(site.description))
+            nodes.push(description);
         if (site.description_zh && hasSourceText(site.description_zh)) {
             const chinese = element("p", "detail-description", site.description_zh);
             chinese.lang = "zh-CN";
@@ -1164,9 +1218,9 @@
         nodes.push(detailSection("年代证据与地图联动", phaseContent(site)));
         if (registeredAreas)
             nodes.push(registeredAreas.element);
-        const details = element("p", null, hasSourceText(site.details)
+        const details = minas ? minasSourceContent(minas) : element("p", null, hasSourceText(site.details)
             ? site.details : `当前导出未提供补充内容${site.details.trim() ? `（原始值：${site.details}）` : ""}。`);
-        if (hasSourceText(site.details))
+        if (!minas && hasSourceText(site.details))
             details.lang = "en";
         nodes.push(detailSection(site.source_kind === "supplement" ? "来源结构化信息与范围说明" : "原始补充记录", details));
         nodes.push(detailSection("名称与别名", strings(site.names).join(" · ") || "原始资料未提供其他名称。"));

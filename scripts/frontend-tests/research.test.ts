@@ -68,6 +68,20 @@ interface ResearchHelpers {
   automaticPhaseYear(phase: { precision: string; start_year: number | null; end_year: number | null }): number | null;
   normalizeSubdivision(country: string | null | undefined, value: unknown): string | null;
   validateSubdivisionResponse(request: Pick<SearchSpec, 'country' | 'subdivision'>, response: { subdivision?: unknown; subdivision_version?: unknown }, expectedVersion?: string | null): string | null;
+  parseMinasSource(site: { id: string; details: string }): MinasSourceRecord[] | null;
+}
+
+interface MinasSourceRecord {
+  record_index: number;
+  processo_ano: string;
+  denominacao: string;
+  denominacao_completa: string;
+  categoria: string;
+  classe_subclasse: string;
+  municipio: string;
+  distrito: string;
+  ato_legal: string;
+  livro_de_tombo: string;
 }
 
 interface HistoryView {
@@ -93,6 +107,64 @@ assert.ok('parseLink' in candidate && typeof candidate.parseLink === 'function')
 assert.ok('buildLink' in candidate && typeof candidate.buildLink === 'function');
 assert.ok('createExport' in candidate && typeof candidate.createExport === 'function');
 const helpers = candidate as ResearchHelpers;
+
+const minasId = `auth:br-iepha-mg:scope-${'a'.repeat(64)}`;
+
+function minasRow(record_index = 1): MinasSourceRecord {
+  return { record_index, processo_ano: 'PTE040/1980', denominacao: 'Jardim', denominacao_completa: 'Conjunto arquitetônico e paisagístico', categoria: 'CP', classe_subclasse: 'Conjunto; jardim', municipio: 'Serro, Conceição do Mato Dentro; Alvorada de Minas', distrito: '0', ato_legal: 'Deliberação original', livro_de_tombo: '0' };
+}
+
+function minasSite(rows: unknown[]): { id: string; details: string } {
+  return { id: minasId, details: `Original source fields (Portuguese):\n${JSON.stringify(rows, null, 2)}` };
+}
+
+test('Minas original rows preserve whole scope, compound locality, literal zero and Portuguese text without mutation', () => {
+  const first = minasRow(4), second = { ...minasRow(19), denominacao: 'Edificação', municipio: 'Diamantina', ato_legal: '<img src=x onerror="alert(1)"> & texto original' };
+  const site = Object.freeze(minasSite([first, second]));
+  const original = site.details;
+  const parsed = helpers.parseMinasSource(site);
+  assert.deepEqual(plain(parsed), [first, second]);
+  assert.equal(parsed?.[0].municipio, 'Serro, Conceição do Mato Dentro; Alvorada de Minas');
+  assert.equal(parsed?.[0].livro_de_tombo, '0');
+  assert.equal(parsed?.[1].ato_legal, second.ato_legal);
+  assert.equal(site.details, original);
+});
+
+test('Minas parsing rejects missing, extra and non-string original fields for raw-text fallback', () => {
+  const { distrito: _omitted, ...missing } = minasRow();
+  for (const rows of [[missing], [{ ...minasRow(), guessed_point: [0, 0] }], [{ ...minasRow(), distrito: 0 }], [null], [[]], []]) {
+    assert.equal(helpers.parseMinasSource(minasSite(rows)), null);
+  }
+});
+
+test('Minas parsing requires unique positive original row order and the bounded cohort size', () => {
+  for (const rows of [[minasRow(0)], [minasRow(-1)], [minasRow(1.5)], [minasRow(154)], [minasRow(Number.MAX_SAFE_INTEGER)], [minasRow(Number.MAX_SAFE_INTEGER + 1)], [minasRow(3), minasRow(3)], [minasRow(4), minasRow(2)], Array.from({ length: 154 }, (_, index) => minasRow(index + 1))]) {
+    assert.equal(helpers.parseMinasSource(minasSite(rows)), null);
+  }
+  assert.equal(helpers.parseMinasSource(minasSite(Array.from({ length: 153 }, (_, index) => minasRow(index + 1))))?.length, 153);
+});
+
+test('Minas parsing never reinterprets another namespace, malformed JSON or duplicate source keys', () => {
+  const site = minasSite([minasRow()]);
+  for (const id of ['wd:Q1', 'auth:br-iepha-mg:other', `auth:br-iepha-mg:scope-${'a'.repeat(63)}`, `auth:br-iepha-mg:scope-${'A'.repeat(64)}`]) {
+    assert.equal(helpers.parseMinasSource({ ...site, id }), null);
+  }
+  for (const details of [site.details.replace('Portuguese', 'portuguese'), site.details.replace(':\n', ': '), `${site.details} extra`, 'Original source fields (Portuguese):\n{}', site.details.replace('"distrito": "0"', '"distrito": "first value", "distrito": "0"')]) {
+    assert.equal(helpers.parseMinasSource({ ...site, details }), null);
+  }
+});
+
+test('structured Minas display leaves original Site and selected-site export unchanged', () => {
+  const site = Object.freeze({ ...minasSite([minasRow(12), minasRow(13)]), title: 'Conjunto arquitetônico e paisagístico', names: [], repr_point: null, description: '' });
+  assert.equal(helpers.parseMinasSource(site)?.length, 2);
+  const request = { query: 'jardim', mode: 'bm25' as const, type: null, limit: 10 };
+  const response = { query: request.query, mode: request.mode, corpus_version: 'global-v16', elapsed_ms: 1, total_candidates: 1, results: [{ site }] };
+  const exported = helpers.createExport(request, response, '2026-11-05T00:00:00Z', null, { site: site.id, phase: null }, site);
+  assert.equal((exported.selected_site as typeof site).details, site.details);
+  assert.equal(exported.response.results[0].site.details, site.details);
+  assert.deepEqual(plain((exported.selected_site as typeof site).names), []);
+  assert.equal((exported.selected_site as typeof site).repr_point, null);
+});
 
 test('source subdivision links keep successful search and browse filters independent', () => {
   const searched: SearchSpec = { query: 'historic forts', mode: 'bm25', type: null, limit: 10, country: 'CA', subdivision: 'CA:ontario' };
@@ -396,11 +468,19 @@ test('export provenance includes source release, attribution, license and interp
   assert.equal(canada?.version, 'canada-dfhd-v1');
   assert.equal(canada?.license, 'Open Government Licence - Canada; Wikidata structured claims CC0');
   assert.match(canada?.note ?? '', /Parks Canada.*reference points.*separate from project identity approval/u);
-  const subdivisions = exported.sources.find(source => source.version === 'source-subdivisions-v3');
-  assert.equal(subdivisions?.license, 'Mixed rights — DFHD fields OGL-Canada; CSDI custom terms; CRHP, Parks Canada and AMO webpages retain individual rights');
+  const subdivisions = exported.sources.find(source => source.version === 'source-subdivisions-v4');
+  assert.equal(subdivisions?.license, 'Mixed rights — DFHD fields OGL-Canada; CSDI custom terms; Iepha-MG fields CC BY 4.0; other webpages retain individual rights');
   assert.equal(subdivisions?.uri, 'https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/SUBDIVISIONS-LICENSE.md');
   assert.match(subdivisions?.note ?? '', /Only the986 DFHD objects.*CRHP and Parks Canada.*CSDI Terms/u);
   assert.match(subdivisions?.note ?? '', /explicitly reviewed whole.*No coordinate geocoding, inferred parent membership/u);
+  assert.match(subdivisions?.note ?? '', /municipio.*Compound locality values stay intact.*not statutory administrative IDs/u);
+  const minas = exported.sources.find(source => source.version === 'minas-tombados-v1');
+  assert.equal(minas?.license, 'CC BY 4.0');
+  assert.equal(minas?.uri, 'https://dados.mg.gov.br/dataset/bens-tombados');
+  assert.equal(minas?.accessed, '2026-11-05');
+  assert.match(minas?.note ?? '', /Iepha-MG|Instituto Estadual do Patrimônio/u);
+  assert.match(minas?.note ?? '', /no coordinates.*points and precision remain null/u);
+  assert.match(minas?.note ?? '', /without interpreting them as construction or use dates/u);
   const hongKong = exported.sources.find(source => source.version === 'hong-kong-monuments-v1');
   assert.match(hongKong?.note ?? '', /Government of the Hong Kong Special Administrative Region.*CSDI.*no blanket CSDI licence/u);
   const singapore = exported.sources.find(source => source.version === 'singapore-monuments-v1');

@@ -166,6 +166,76 @@ def test_facets_count_distinct_objects_keep_unassigned_and_null_points(bundle: B
     assert fr.ready and not fr.supported and fr.assigned == 0 and fr.unassigned == 1
 
 
+def minas_locality_fixture(bundle: Bundle) -> tuple[str, str]:
+    site_id = "auth:br-iepha-mg:scope-" + "a" * 64
+    label = "Belo Horizonte, Nova Lima e Sabará"
+    original = {"processo_ano": "PTE163/2018", "municipio": label}
+    site = bundle.sites[3].model_copy(update={
+        "id": site_id, "title": "Source-registered composite object", "geography": Geography(
+            authority_id="supplement:" + site_id, countries=["BR"],
+            regions=["latin-america-caribbean"], source=source(), point_count=0,
+        ),
+    })
+    bundle.sites.append(site)
+    bundle.review.update(sub.corpus_contract(bundle.sites))
+    bundle.review["minas_spec_sha256"] = "c" * 64
+    bundle.review["subdivisions"].append({
+        "id": "BR:mg-municipio-fixture", "country": "BR", "label": label,
+    })
+    bundle.review["extra_memberships"].append({
+        "site_id": site_id, "subdivision_id": "BR:mg-municipio-fixture",
+        "source": source("record:iepha-mg:153").model_copy(update={"excerpt": label})
+            .model_dump(mode="json"),
+        "artifact": {"filename": "mg/source.csv", "sha256": "d" * 64,
+                     "uri": "https://example.org/record"},
+        "field": "municipio", "raw_value": label, "source_label": label,
+        "source_row": original, "source_row_sha256": sub._row_hash(original),
+        "role": "source_record_locality",
+        "review_method": "Independent literal original-record locality fixture.",
+    })
+    bundle.monkeypatch.setattr(sub, "_minas_pin_matches", lambda pin: pin == "c" * 64)
+    return site_id, label
+
+
+def test_original_municipality_value_keeps_composite_literal_and_unknown_location(
+    bundle: Bundle,
+) -> None:
+    site_id, label = minas_locality_fixture(bundle)
+    bundle.pin_review(facts=True)
+    bundle.compile()
+    index = bundle.index()
+    assert index.ready and index.ids("BR", "BR:mg-municipio-fixture") == {site_id}
+    response = index.facets("BR", 1)
+    assert response.assigned == 1 and response.unassigned == 0
+    assert [row.label for row in response.subdivisions] == [label]
+    assert "多地值保持原串" in response.note and "不表示整体" in response.note
+    assert bundle.sites[-1].repr_point is None
+    assert index.site_response(site_id).memberships[0].evidence[0].raw_value == label
+    assert index.ids("CA", "CA:ontario") == {"1", "3"}
+
+
+@pytest.mark.parametrize("change", ["missing_pin", "wrong_field", "wrong_site_namespace", "zero"])
+def test_municipality_association_requires_its_approved_cohort_and_original_field(
+    bundle: Bundle, change: str,
+) -> None:
+    minas_locality_fixture(bundle)
+    extra = bundle.review["extra_memberships"][0]
+    if change == "missing_pin":
+        bundle.review["minas_spec_sha256"] = None
+    elif change == "wrong_field":
+        extra["field"] = "distrito"
+        extra["source_row"] = {"distrito": extra["raw_value"]}
+    elif change == "wrong_site_namespace":
+        extra["site_id"] = "auth:fixture:4"
+    else:
+        extra["raw_value"] = extra["source_label"] = "0"
+        extra["source_row"] = {"municipio": "0"}
+        bundle.review["subdivisions"][-1]["label"] = "0"
+    extra["source_row_sha256"] = sub._row_hash(extra["source_row"])
+    with pytest.raises(sub.SubdivisionUnavailable):
+        bundle.payload()
+
+
 def test_rebuild_is_deterministic_and_normal_load_never_reparses_the_large_review(
     bundle: Bundle, monkeypatch: pytest.MonkeyPatch,
 ) -> None:

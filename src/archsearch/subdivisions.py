@@ -19,17 +19,17 @@ from archsearch.domain import Site, SourceReference
 from archsearch.supplement_data import SourceArtifact
 
 DATA_DIR = Path(__file__).with_name("data")
-VERSION: Literal["source-subdivisions-v3"] = "source-subdivisions-v3"
+VERSION: Literal["source-subdivisions-v4"] = "source-subdivisions-v4"
 REVIEW_FILE = "subdivision_review.json"
 PAYLOAD_FILE = "subdivisions.json"
 MANIFEST_FILE = "subdivisions_manifest.json"
 MAX_PAYLOAD_BYTES = 8 * 1024 * 1024
 MAX_REVIEW_BYTES = 2 * 1024 * 1024
 MAX_MANIFEST_BYTES = 64 * 1024
-REVIEW_SHA256 = "617454b4d01d975c840aa3af639165680b8dcbc2fa59cff994cf158035040faf"
-PAYLOAD_SHA256 = "444c1db1b11618d712cd4b7dd7d288fd4a3a1769547c26bffc550f3adde5e847"
-SOURCE_REVIEW_SHA256 = "5e493d67302bc9f38518d4c1cd2acba0ea0a458a1a04f03d8ffb5ee3c4a87c5a"
-SOURCE_FACTS_SHA256 = "6f7600a4ab0dae742a830d6e33a16970321d8636f926712ffee7d35c113cc49f"
+REVIEW_SHA256 = "fe60ca41603060d5800f15c1ca5f310bd034c3dcb42f852b1df2a792f0a28047"
+PAYLOAD_SHA256 = "69bff0222e49cb884b660b8d7a29810e81df25bf075e866877ca70db08ead2d9"
+SOURCE_REVIEW_SHA256 = "121c951c1df3796b496c05bef624baddd8151053ea5efb8c6b305bb392a1508c"
+SOURCE_FACTS_SHA256 = "b9a65eea228ebd0ba7ad571cdd70f9a04e65437a53856b34bfb4eb9994fb35b1"
 SUBDIVISION_PATTERN = r"^[A-Z]{2}:[a-z0-9][a-z0-9-]{0,63}$"
 PREPARATION_HINT = (
     "请运行 python -m archsearch.subdivisions --rebuild 修复来源省区索引并重启服务。"
@@ -43,8 +43,15 @@ FEATURE_DISTRICT_NOTE = (
     "筛入整体及完整来源多边形，不按多边形坐标反查行政区或裁切范围，"
     "不推断法定边界、历史政治归属或遗址生命周期。"
 )
+RECORD_LOCALITY_NOTE = (
+    "巴西地区选项来自Iepha-MG原登记行的municipio（市镇）全文值；"
+    "多地值保持原串，不自动拆分或地理编码。一处登记范围可对应多个原行和地区，"
+    "筛选保留整个资料对象，不表示整体或全部组成部分都属于该地区，"
+    "也不将市镇、保护编号或法律日期转换成坐标、边界或历史阶段。"
+)
 MembershipRole = Literal[
     "source_declared_subdivision", "explicit_place_location", "source_feature_district",
+    "source_record_locality",
 ]
 
 
@@ -108,12 +115,13 @@ class ExtraMembership(BaseModel):
 class SubdivisionReview(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
     schema_version: Literal[1]
-    version: Literal["source-subdivisions-v3"]
+    version: Literal["source-subdivisions-v4"]
     corpus_version: StrictStr = Field(min_length=1)
     corpus_ids_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     corpus_countries_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     canada_spec_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     hong_kong_spec_sha256: StrictStr | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
+    minas_spec_sha256: StrictStr | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
     source_review_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     review_method: StrictStr = Field(min_length=1)
     reviewed_at: StrictStr = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
@@ -139,20 +147,22 @@ class SubdivisionMembership(BaseModel):
 class SubdivisionPayload(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
     schema_version: Literal[1]
-    version: Literal["source-subdivisions-v3"]
+    version: Literal["source-subdivisions-v4"]
     corpus_version: StrictStr = Field(min_length=1)
     corpus_ids_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     corpus_countries_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     canada_spec_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     hong_kong_spec_sha256: StrictStr | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
+    minas_spec_sha256: StrictStr | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
     source_review_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     source_facts_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     review_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     subdivisions: list[SubdivisionDefinition] = Field(min_length=1)
     memberships: list[SubdivisionMembership] = Field(min_length=1)
     note: Literal[
-        "Reviewed Canadian whole-object provinces and Hong Kong source-feature districts. "
-        "Explicit feature-to-whole links only; "
+        "Reviewed Canadian whole-object provinces, Hong Kong source-feature districts "
+        "and Iepha-MG original-record municipality values. "
+        "Explicit record-to-object links only; "
         "no geocoding, boundary, chronology or text inference."
     ]
 
@@ -244,6 +254,14 @@ def _hong_kong_pin_matches(pin: str | None) -> bool:
     return pin == SPEC_SHA256
 
 
+def _minas_pin_matches(pin: str | None) -> bool:
+    if pin is None:
+        return True
+    from archsearch.minas_data import SPEC_SHA256
+
+    return pin == SPEC_SHA256
+
+
 def _validate_payload(payload: SubdivisionPayload, sites: Sequence[Site], version: str) -> None:
     if payload.corpus_version != version or any(
         getattr(payload, key) != value for key, value in corpus_contract(sites).items()
@@ -266,7 +284,8 @@ def _validate_payload(payload: SubdivisionPayload, sites: Sequence[Site], versio
         used.add(row.subdivision_id)
         for evidence in row.evidence:
             literal = evidence.source_label or definition.label
-            if (evidence.role in {"source_declared_subdivision", "source_feature_district"}
+            if (evidence.role in {"source_declared_subdivision", "source_feature_district",
+                                  "source_record_locality"}
                     and evidence.raw_value != literal):
                 raise SubdivisionUnavailable("来源省区原始字段与标签不匹配。")
             if (evidence.role == "explicit_place_location"
@@ -277,6 +296,15 @@ def _validate_payload(payload: SubdivisionPayload, sites: Sequence[Site], versio
                 or payload.hong_kong_spec_sha256 is None
             ):
                 raise SubdivisionUnavailable("来源要素地区必须绑定香港已核整体与原DISTRICT字段。")
+            if evidence.role == "source_record_locality" and (
+                definition.country != "BR" or evidence.field != "municipio"
+                or payload.minas_spec_sha256 is None
+                or not row.site_id.startswith("auth:br-iepha-mg:scope-")
+                or evidence.raw_value in {"", "0"}
+            ):
+                raise SubdivisionUnavailable(
+                    "来源登记地区必须绑定已核Iepha-MG范围及原municipio值。"
+                )
     if used != set(definitions):
         raise SubdivisionUnavailable("来源省区定义不能包含无已审成员的选项。")
 
@@ -288,6 +316,7 @@ def _manifest(payload: SubdivisionPayload, payload_bytes: bytes) -> dict[str, An
         "source_facts_sha256": SOURCE_FACTS_SHA256,
         "canada_spec_sha256": payload.canada_spec_sha256,
         "hong_kong_spec_sha256": payload.hong_kong_spec_sha256,
+        "minas_spec_sha256": payload.minas_spec_sha256,
         "files": {REVIEW_FILE: {"sha256": REVIEW_SHA256},
                   PAYLOAD_FILE: {"sha256": _hash(payload_bytes)}},
         "counts": {"subdivisions": len(payload.subdivisions),
@@ -355,14 +384,16 @@ def compile_payload(
         corpus_countries_sha256=review.corpus_countries_sha256,
         canada_spec_sha256=review.canada_spec_sha256,
         hong_kong_spec_sha256=review.hong_kong_spec_sha256,
+        minas_spec_sha256=review.minas_spec_sha256,
         source_review_sha256=review.source_review_sha256, review_sha256=REVIEW_SHA256,
         source_facts_sha256=_hash(_bytes(source_facts(review))),
         subdivisions=sorted(review.subdivisions, key=lambda row: row.id),
         memberships=[SubdivisionMembership(site_id=site_id, subdivision_id=subdivision_id,
                                           evidence=evidence)
                      for (site_id, subdivision_id), evidence in sorted(members.items())],
-        note="Reviewed Canadian whole-object provinces and Hong Kong source-feature districts. "
-             "Explicit feature-to-whole links only; "
+        note="Reviewed Canadian whole-object provinces, Hong Kong source-feature districts "
+             "and Iepha-MG original-record municipality values. "
+             "Explicit record-to-object links only; "
              "no geocoding, boundary, chronology or text inference.",
     )
     _validate_payload(payload, sites, review.corpus_version)
@@ -383,6 +414,7 @@ def rebuild_subdivisions(
                 or _hash(_bytes(source_facts(review))) != SOURCE_FACTS_SHA256
                 or review.canada_spec_sha256 != canada_data.SPEC_SHA256
                 or not _hong_kong_pin_matches(review.hong_kong_spec_sha256)
+                or not _minas_pin_matches(review.minas_spec_sha256)
                 or review.corpus_version != corpus_version):
             raise SubdivisionUnavailable("来源省区事实、源版本或独立审批不符。")
         spec = canada_data._spec(directory)
@@ -425,7 +457,8 @@ class SubdivisionIndex:
                         or payload.source_review_sha256 != SOURCE_REVIEW_SHA256
                         or payload.source_facts_sha256 != SOURCE_FACTS_SHA256
                         or payload.canada_spec_sha256 != canada_data.SPEC_SHA256
-                        or not _hong_kong_pin_matches(payload.hong_kong_spec_sha256)):
+                        or not _hong_kong_pin_matches(payload.hong_kong_spec_sha256)
+                        or not _minas_pin_matches(payload.minas_spec_sha256)):
                     raise SubdivisionUnavailable("来源省区索引的原始审批或来源绑定不符。")
                 manifest = json.loads(_read_bounded(directory / MANIFEST_FILE,
                                                    MAX_MANIFEST_BYTES))
@@ -484,7 +517,8 @@ class SubdivisionIndex:
             subdivisions=[SubdivisionFacet(id=row.id, label=row.label,
                                            count=len(self.members[row.id]))
                           for row in sorted(definitions, key=lambda row: row.label.casefold())],
-            note=(FEATURE_DISTRICT_NOTE if country == "HK" else MEMBERSHIP_NOTE)
+            note=(FEATURE_DISTRICT_NOTE if country == "HK" else RECORD_LOCALITY_NOTE
+                  if country == "BR" else MEMBERSHIP_NOTE)
                  + "未采用地区证据不表示实际地理未知；默认国家／地区目录保留全部资料。",
         )
 
@@ -496,6 +530,7 @@ class SubdivisionIndex:
             subdivisions=[self.definitions[row.subdivision_id] for row in memberships],
             memberships=list(memberships),
             note=(FEATURE_DISTRICT_NOTE if "HK" in self.site_countries.get(site_id, ())
+                  else RECORD_LOCALITY_NOTE if "BR" in self.site_countries.get(site_id, ())
                   else MEMBERSHIP_NOTE),
         )
 

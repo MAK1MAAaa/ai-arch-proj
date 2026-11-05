@@ -1,6 +1,59 @@
 "use strict";
 const ArchSearchResearch = (() => {
     "use strict";
+    const minasSourceFields = ["processo_ano", "denominacao", "denominacao_completa", "categoria", "classe_subclasse", "municipio", "distrito", "ato_legal", "livro_de_tombo"];
+    function compactSourceJson(value) {
+        let compact = "", quoted = false, escaped = false;
+        for (const character of value) {
+            if (quoted) {
+                compact += character;
+                if (escaped)
+                    escaped = false;
+                else if (character === "\\")
+                    escaped = true;
+                else if (character === '"')
+                    quoted = false;
+            }
+            else if (character === '"') {
+                quoted = true;
+                compact += character;
+            }
+            else if (!/[\t\n\r ]/u.test(character))
+                compact += character;
+        }
+        return compact;
+    }
+    function parseMinasSource(site) {
+        const prefix = "Original source fields (Portuguese):\n";
+        if (typeof site.id !== "string" || !/^auth:br-iepha-mg:scope-[a-f0-9]{64}$/u.test(site.id)
+            || typeof site.details !== "string" || !site.details.startsWith(prefix))
+            return null;
+        try {
+            const original = site.details.slice(prefix.length);
+            const rows = JSON.parse(original);
+            if (!Array.isArray(rows) || rows.length < 1 || rows.length > 153)
+                return null;
+            let previousIndex = 0;
+            for (const row of rows) {
+                if (row === null || typeof row !== "object" || Array.isArray(row))
+                    return null;
+                const record = row;
+                if (Object.keys(record).length !== minasSourceFields.length + 1
+                    || !Number.isSafeInteger(record.record_index) || record.record_index <= previousIndex
+                    || record.record_index > 153
+                    || !minasSourceFields.every((field) => typeof record[field] === "string"))
+                    return null;
+                previousIndex = record.record_index;
+            }
+            // Only source serialization is structured; duplicate keys or alternate encodings retain the original fallback.
+            if (compactSourceJson(original) !== JSON.stringify(rows))
+                return null;
+            return rows;
+        }
+        catch {
+            return null;
+        }
+    }
     function normalizeBBox(value) {
         if (value === null || value === undefined)
             return null;
@@ -258,7 +311,8 @@ const ArchSearchResearch = (() => {
                 { name: "Pacific and interior cultural supplement", version: "pacific-interior-supplement-v1", license: "Mixed rights — see individual source_refs", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/PACIFIC-LICENSE.md", note: "Seven independently source-reviewed cultural identities from Pacific registers and African archaeological research. An address-restricted place remains unmapped; unadopted or conflicting representative coordinates remain null. Tentative submissions are not World Heritage inscriptions. No listing, excavation or publication year becomes a historical phase." },
                 { name: "NPS Pacific register supplement", version: "nps-pacific-v1", license: "NPS government structured metadata; other source rights retained", uri: "https://www.nps.gov/aboutus/disclaimer.htm", note: "Project grouping of seven source State labels, not a UNESCO region or sovereignty classification. Government metadata does not relicense third-party nomination text, photos or attachments. Viewer text, feature edits and newer downloads have separate version clocks. Source points may be generated reference positions; restricted locations remain unmapped. No registration or publication date becomes a site phase." },
                 { name: "Canadian Federal Heritage Designations historic-place supplement", version: "canada-dfhd-v1", license: "Open Government Licence - Canada; Wikidata structured claims CC0", license_uri: "https://open.canada.ca/en/open-government-licence-canada", uri: "https://open.canada.ca/data/en/dataset/49d5ba7d-d860-40d9-9183-892979e4acbe", note: "Parks Canada / Government of Canada. Contains information licensed under the Open Government Licence – Canada. Released NHS identities, original narrative and province fields retain their source version. Adopted public reference points retain separate source statements and roles; no generated centroids or ancient footprints. Commemorative-reason or plaque review notices are separate from project identity approval and chronology. Other webpages and third-party materials retain their own rights." },
-                { name: "Source-declared province and territory memberships", version: "source-subdivisions-v3", license: "Mixed rights — DFHD fields OGL-Canada; CSDI custom terms; CRHP, Parks Canada and AMO webpages retain individual rights", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/SUBDIVISIONS-LICENSE.md", note: "Only the986 DFHD objects' province fields use Open Government Licence – Canada. Canadian whole-object province evidence and aliases are unchanged. CRHP and Parks Canada short location facts retain webpage rights. Hong Kong districts associate reviewed source features with an explicitly reviewed whole; they do not assert the whole or every shape belongs to that district. CSDI Terms apply to those original fields, not all linked AMO contents. Version3 rebinds the unchanged memberships to global-v15; the Singapore point source has no adopted district fields. Each successful request/response and browse retains its own actual version. No coordinate geocoding, inferred parent membership, borders or new dates." },
+                { name: "Source-declared province, district and municipality memberships", version: "source-subdivisions-v4", license: "Mixed rights — DFHD fields OGL-Canada; CSDI custom terms; Iepha-MG fields CC BY 4.0; other webpages retain individual rights", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/SUBDIVISIONS-LICENSE.md", note: "Only the986 DFHD objects' province fields use Open Government Licence – Canada. CRHP and Parks Canada short location facts retain webpage rights. Canadian whole-object provinces and aliases are unchanged. Hong Kong districts associate source features with an explicitly reviewed whole and do not assert that every shape belongs to that district. CSDI Terms apply to those original fields, not all AMO contents. Version4 adds Iepha-MG original-record municipio values to global-v16. Compound locality values stay intact; record-to-composite associations do not assert whole-object jurisdiction. Project label IDs are not statutory administrative IDs. Each request/response and browse retains its actual successful version. No coordinate geocoding, inferred parent membership, borders or historical phases." },
+                { name: "Iepha-MG protected cultural registration scopes", version: "minas-tombados-v1", license: "CC BY 4.0", license_uri: "https://creativecommons.org/licenses/by/4.0/", uri: "https://dados.mg.gov.br/dataset/bens-tombados", accessed: "2026-11-05", note: "Instituto Estadual do Patrimônio Histórico e Artístico de Minas Gerais, via dados.mg.gov.br; fixed original Portuguese registration fields, grouped by exact process and complete designation after independent source review. Project scope IDs are derived identities, not legal registration numbers. Original process, legal-act and book fields are retained without interpreting them as construction or use dates. The source has no coordinates; representative points and precision remain null. Original municipality values support record-associated browsing without geocoding or asserting a complete regional inventory. Linked documents and photographs are not redistributed." },
                 { name: "Australian National Heritage List public spatial database", version: "australia-nhl-v1", license: "CC BY 3.0 Australia", license_uri: "https://creativecommons.org/licenses/by/3.0/au/", uri: "https://gis.environment.gov.au/gispubmap/rest/services/ogc_services/National_Heritage_List/FeatureServer/0", note: "Public factual register fields and provider registered ranges only. Modern heritage registration is not an ancient footprint, political boundary, access permission or a representative point. Individual feature source URIs, versions, hashes and licences remain with registered_areas; linked third-party materials retain their own rights." },
                 { name: "Hong Kong monument source facts and CSDI polygons", version: "hong-kong-monuments-v1", license: "CSDI Portal Terms and Conditions of Use; separate AMO short-fact and linked-content rights", uri: "https://portal.csdi.gov.hk/csdi-webpage/doc/TNC", note: "Data from the Government of the Hong Kong Special Administrative Region, CSDI Portal and Antiquities and Monuments Office; their intellectual property rights are acknowledged. Original January2026 CSDI attributes/polygons and later October2026 official whole-object facts retain separate source dates. Source polygons are not asserted legal or ancient boundaries and never create representative points. AMO introductions, photos and other third-party contents have no blanket CSDI licence." },
                 { name: "Singapore NHB Monuments (GEOJSON)", version: "singapore-monuments-v1", license: "Singapore Open Data Licence version 1.0", license_uri: "https://data.gov.sg/open-data-licence", uri: "https://data.gov.sg/datasets/d_b29c230ec6b609e29ed42f71ca9a8767/view", accessed: "2026-11-05", note: "Contains information from Monuments (GEOJSON), National Heritage Board, accessed on2026-11-05 via data.gov.sg, made available under the Singapore Open Data Licence version1.0. Original licensed descriptions and provider Point coordinates retain their source fields and release clocks. The project uses the original provider Point as a reference position and makes no whole-centre or precision claim; the provider did not state the point-generation method or precision. It is not an excavation or legal-boundary assertion. Feature updates and protection dates are not historical phases. The licence does not automatically cover linked webpages, images or third-party rights." },
@@ -289,10 +343,10 @@ const ArchSearchResearch = (() => {
                 source_points: "spatial保留最后成功目录的组合源点版本、source_groups对应的来源／版本／许可与地点身份，以及独立选中资料经审核纳入地图的定位序列、重复记录与来源标签。原代表点单独保存；多个定位记录不增加遗址条目数或承诺发掘精度。世界遗产原始序列保持不变；海牙名录排除的仓储、标签冲突等原记录仍保留在来源审计中，不混作考古原址点。",
                 registered_areas: "registered_areas只保存当前实际显示、且与选中资料和当前语料/检索版本一致的来源范围；label区分现代遗产登记范围与来源古迹多边形，后者不承诺法定边界。null表示未显示或上下文不匹配。保留原WGS84闭环与来源版本/许可，不推内外环、代表点、古址轮廓、准入或点计数。范围显隐不写入分享链接，重新打开后仍须主动点击查看。",
                 browse: "browse保存成功应用的独立目录条件；bbox为[西,南,东,北]闭区间，西大于东表示跨日期变更线，仅筛目录和全库点层，不改变request中的检索语义。spatial_match_mode及spatial_version记录当时的来源点匹配能力；representative-only可能遗漏无代表点落入框内的组成地点。选中资料纳入地图的来源序列完整导出；海牙名录未纳入地图的保护设施仍留在冻结来源审计中。",
-                subdivisions: "加拿大采用整体省区原字段；香港采用有明确整体／要素关联的来源要素地区，不表示整体或全部几何都属于该区，不由坐标、省界或历史政权推断。request/response与browse各保存其独立成功条件；subdivision_version为各自实际应用的来源索引版本，未成功的待选条件不冒充已显示范围。",
+                subdivisions: "加拿大采用整体省区原字段；香港采用有明确整体／要素关联的来源要素地区；巴西Iepha-MG采用原登记行municipio全文值，多地值不自动拆分。后两者不表示整体或全部组成部分都属于该地区，不由坐标、省界或历史政权推断。request/response与browse各保存其独立成功条件；subdivision_version为各自实际应用的来源索引版本，未成功的待选条件不冒充已显示范围。",
             },
         };
     }
-    return { parseLink, parseView, parseBrowse, buildLink, createExport, validYear, automaticPhaseYear, normalizeBBox, parseBBox, normalizeSubdivision, validateSubdivisionResponse };
+    return { parseLink, parseView, parseBrowse, buildLink, createExport, validYear, automaticPhaseYear, normalizeBBox, parseBBox, normalizeSubdivision, validateSubdivisionResponse, parseMinasSource, minasSourceFields };
 })();
 //# sourceMappingURL=research.js.map

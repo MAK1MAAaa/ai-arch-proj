@@ -25,7 +25,7 @@ from archsearch.domain import ChronologyReview, PeriodEvidence, Site, SourceRefe
 DATA_DIR = Path(__file__).with_name("data")
 DATASET_VERSION = "v4.1"
 CURATED_VERSION = "global-v2"
-CORPUS_VERSION = "global-v15"
+CORPUS_VERSION = "global-v16"
 GLOBAL_REGION_QUOTAS = {
     "east-asia": 20, "south-asia": 15, "west-central-asia": 15, "africa": 15,
     "europe": 10, "north-america": 10, "south-america": 10, "oceania": 5,
@@ -435,8 +435,8 @@ def load_pre_singapore_corpus(data_dir: Path | None = None) -> list[Site]:
         raise CorpusError(str(error)) from error
 
 
-def load_corpus(data_dir: Path | None = None) -> list[Site]:
-    """Load the current source-verified corpus for retrieval and catalogue browsing."""
+def load_pre_minas_corpus(data_dir: Path | None = None) -> list[Site]:
+    """Load all3193 source records before the Iepha-MG registration supplement."""
     from archsearch.singapore_data import SingaporeError, load_singapore
 
     base = load_pre_singapore_corpus(data_dir)
@@ -446,6 +446,20 @@ def load_corpus(data_dir: Path | None = None) -> list[Site]:
     try:
         return load_singapore(base, directory)
     except SingaporeError as error:
+        raise CorpusError(str(error)) from error
+
+
+def load_corpus(data_dir: Path | None = None) -> list[Site]:
+    """Load the current source-verified corpus for retrieval and catalogue browsing."""
+    from archsearch.minas_data import MinasError, load_minas
+
+    base = load_pre_minas_corpus(data_dir)
+    directory = Path(data_dir) if data_dir is not None else DATA_DIR
+    if data_dir is not None and not (directory / "minas_manifest.json").exists():
+        return base
+    try:
+        return load_minas(base, directory)
+    except MinasError as error:
         raise CorpusError(str(error)) from error
 
 
