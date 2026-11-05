@@ -557,9 +557,9 @@ def test_real_api_preserves_source_country_labels_and_independent_supplement_cou
     response = bundled_client.get("/api/coverage")
     assert response.status_code == 200
     coverage = response.json()
-    assert coverage["corpus_version"] == "global-v16" and coverage["total"] == 3326
+    assert coverage["corpus_version"] == "global-v17" and coverage["total"] == 3775
     countries = {row["id"]: row for row in coverage["countries"]}
-    assert len(countries) == 203
+    assert len(countries) == 208
     labels = supplement.country_labels()
     assert all(countries[code]["label"] == label
                and countries[code]["count"] == (5 if code == "CD" else 1)
@@ -568,16 +568,16 @@ def test_real_api_preserves_source_country_labels_and_independent_supplement_cou
     assert len(previous["countries"]) == 159
     assert all(countries[row["id"]]["label"] == row["label"] for row in previous["countries"])
     assert {row["id"]: row["count"] for row in coverage["sources"]} == {
-        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 1701,
+        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 2150,
     }
-    assert coverage["locations"] == {"mapped": 2940, "polar": 3, "unknown": 383}
+    assert coverage["locations"] == {"mapped": 3382, "polar": 3, "unknown": 390}
     assert coverage["authority"]["covered"] == coverage["authority"]["eligible_total"] == 1033
     assert coverage["polar_authority"]["covered"] == 91
     spatial = coverage["spatial_locations"]
     assert spatial["ready"] and spatial["records"] == 1239 and spatial["points"] == 5851
-    assert spatial["display_points"] == 7343
+    assert spatial["display_points"] == 7785
     status = bundled_client.get("/api/status").json()
-    assert status["corpus"]["count"] == 3326 and status["corpus"]["version"] == "global-v16"
+    assert status["corpus"]["count"] == 3775 and status["corpus"]["version"] == "global-v17"
     assert status["semantic"]["ready"] is False and status["history"]["ready"] is False
 
 

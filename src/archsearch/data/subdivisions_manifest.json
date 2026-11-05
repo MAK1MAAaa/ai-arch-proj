@@ -1,25 +1,26 @@
 {
   "canada_spec_sha256": "4cfdd4fb896c2769de3d77daaf481fdb1544fc79d0e6d8db4911d97d8ad8afbc",
-  "corpus_version": "global-v16",
+  "corpus_version": "global-v17",
   "counts": {
-    "assigned_sites": 1263,
-    "memberships": 1265,
-    "subdivisions": 97
+    "assigned_sites": 1712,
+    "memberships": 1714,
+    "subdivisions": 179
   },
   "files": {
     "subdivision_review.json": {
-      "sha256": "fe60ca41603060d5800f15c1ca5f310bd034c3dcb42f852b1df2a792f0a28047"
+      "sha256": "4a98f123c3b0cef8d9909f1ad16c7377f5a3fea4a9e2ce10ae85b667db448eaa"
     },
     "subdivisions.json": {
-      "sha256": "69bff0222e49cb884b660b8d7a29810e81df25bf075e866877ca70db08ead2d9"
+      "sha256": "a0fd789bd09bef6a3c50f159a8029f2ce6c77173951220415fd9a8dbe2e17fa1"
     }
   },
   "hong_kong_spec_sha256": "b0bcbe915c46bf611aab9b35b76c4365eb398a1032cf7705aa8302448611bf7a",
+  "merimee_spec_sha256": "f6b41e4368d1b31082502bf501f93e576cb6718c22a0c9e807b49480a64c9709",
   "minas_spec_sha256": "def84d9b4c6a5c0c04794779337614dfb563e9b5b1d224d927c906d0721c7dca",
-  "policy": "Reviewed Canadian whole-object provinces, Hong Kong source-feature districts and Iepha-MG original-record municipality values. Explicit record-to-object links only; no geocoding, boundary, chronology or text inference.",
-  "review_sha256": "fe60ca41603060d5800f15c1ca5f310bd034c3dcb42f852b1df2a792f0a28047",
+  "policy": "Reviewed Canadian whole-object provinces, Hong Kong source-feature districts, Iepha-MG original-record municipality values and Mérimée original communes. Explicit record-to-object links only; no geocoding, boundary, chronology or text inference.",
+  "review_sha256": "4a98f123c3b0cef8d9909f1ad16c7377f5a3fea4a9e2ce10ae85b667db448eaa",
   "schema_version": 1,
-  "source_facts_sha256": "b9a65eea228ebd0ba7ad571cdd70f9a04e65437a53856b34bfb4eb9994fb35b1",
-  "source_review_sha256": "121c951c1df3796b496c05bef624baddd8151053ea5efb8c6b305bb392a1508c",
-  "version": "source-subdivisions-v4"
+  "source_facts_sha256": "cd4298d64da78d9d88d8d310dcf0d00c66daba6b0f0733e65ae00dc3276a829d",
+  "source_review_sha256": "b1376e3298257ec932d203cd5a6c51457a5acc7c7f68e9d8be2471fdf52018eb",
+  "version": "source-subdivisions-v5"
 }

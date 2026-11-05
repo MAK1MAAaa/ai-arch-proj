@@ -33,7 +33,7 @@ interface ExportResult<T> {
   response: SearchResponse<T>;
   map: HistoryView | null;
   selection: { site: string | null; phase: string | null };
-  sources: { name: string; license: string; version?: string | null; note?: string; uri?: string; license_uri?: string; accessed?: string }[];
+  sources: { name: string; license: string; version?: string | null; note?: string; uri?: string; license_uri?: string; accessed?: string; processed?: string; source_updated?: string }[];
   registered_areas: RegisteredAreaSnapshot | null;
   selected_site: unknown;
   spatial: { metadata: unknown; selected: { site_id: string; representative_point: [number, number] | null; source_points: [number, number][]; records: { source_index: number; coordinate: [number, number]; name: string; ref: string }[]; source?: { name: string; uri: string; version: string; license: string; license_uri: string; sha256: string } | null } | null } | null;
@@ -69,6 +69,15 @@ interface ResearchHelpers {
   normalizeSubdivision(country: string | null | undefined, value: unknown): string | null;
   validateSubdivisionResponse(request: Pick<SearchSpec, 'country' | 'subdivision'>, response: { subdivision?: unknown; subdivision_version?: unknown }, expectedVersion?: string | null): string | null;
   parseMinasSource(site: { id: string; details: string }): MinasSourceRecord[] | null;
+  parseMerimeeSource(site: { id: string; details: string }): MerimeeSource | null;
+  merimeeSourceFields: readonly string[];
+}
+
+interface MerimeeSource {
+  schema_version: 1;
+  reference: string;
+  scope: { kind: string; source_field: string; literal: string };
+  source_record: Record<string, string>;
 }
 
 interface MinasSourceRecord {
@@ -164,6 +173,113 @@ test('structured Minas display leaves original Site and selected-site export unc
   assert.equal(exported.response.results[0].site.details, site.details);
   assert.deepEqual(plain((exported.selected_site as typeof site).names), []);
   assert.equal((exported.selected_site as typeof site).repr_point, null);
+});
+
+function merimeeRecord(): MerimeeSource {
+  const source_record = Object.fromEntries(helpers.merimeeSourceFields.map((key) => [key, '']));
+  Object.assign(source_record, {
+    Reference: 'PA00105850',
+    Titre_editorial_de_la_notice: 'Ancienne habitation : parties protégées',
+    Precision_de_la_protection: 'Façades et toitures du bâtiment ; jardin : inscription par arrêté.',
+    Commune_forme_editoriale: 'Saint-Paul ; Trois-Bassins',
+    Region: 'Guadeloupe',
+    Observations: 'Protection modifiée : texte original de la source, sans conclusion juridique du projet.',
+    coordonnees_au_format_WGS84: '15.9883992141981,-61.722949450198406',
+    Historique: '<img src=x onerror="alert(1)"> & texte français original\nDeuxième paragraphe.',
+  });
+  return { schema_version: 1, reference: source_record.Reference, scope: { kind: 'specified_parts', source_field: 'Precision_de_la_protection', literal: source_record.Precision_de_la_protection }, source_record };
+}
+
+function merimeeSite(record: unknown = merimeeRecord()): { id: string; details: string } {
+  return { id: 'auth:fr-merimee:PA00105850', details: `Original source fields (French):\n${JSON.stringify(record, null, 2)}` };
+}
+
+test('Mérimée parsing preserves all 78 French fields, full partial-protection scope and compound Commune without mutation', () => {
+  assert.equal(helpers.merimeeSourceFields.length, 78);
+  assert.equal(new Set(helpers.merimeeSourceFields).size, 78);
+  const record = merimeeRecord();
+  const site = Object.freeze(merimeeSite(record));
+  const parsed = helpers.parseMerimeeSource(site);
+  assert.deepEqual(plain(parsed), record);
+  assert.equal(parsed?.source_record.Commune_forme_editoriale, 'Saint-Paul ; Trois-Bassins');
+  assert.equal(parsed?.source_record.Region, 'Guadeloupe');
+  assert.equal(parsed?.scope.literal, record.source_record.Precision_de_la_protection);
+  assert.equal(parsed?.source_record.Historique, record.source_record.Historique);
+  assert.equal(parsed?.source_record.Observations, record.source_record.Observations);
+  assert.equal(parsed?.source_record.Copyright, '');
+  assert.equal(site.details, merimeeSite(record).details);
+  const reversed = { ...record, source_record: Object.fromEntries(Object.entries(record.source_record).reverse()) };
+  assert.deepEqual(plain(helpers.parseMerimeeSource(merimeeSite(reversed))), reversed);
+});
+
+test('Mérimée parsing preserves missing coordinates and accepts each declared scope kind without deriving a point', () => {
+  for (const kind of ['whole_notice_scope', 'specified_parts', 'composite_protected_scope']) {
+    const record = merimeeRecord();
+    record.source_record.coordonnees_au_format_WGS84 = '';
+    record.scope.kind = kind;
+    record.scope.source_field = 'Titre_editorial_de_la_notice';
+    record.scope.literal = record.source_record.Titre_editorial_de_la_notice;
+    const parsed = helpers.parseMerimeeSource(merimeeSite(record));
+    assert.equal(parsed?.source_record.coordonnees_au_format_WGS84, '');
+    assert.equal(parsed?.scope.literal, record.scope.literal);
+    assert.equal('repr_point' in (parsed ?? {}), false);
+  }
+});
+
+test('Mérimée parsing rejects missing, extra and non-string fields while retaining the original raw fallback', () => {
+  const { Copyright: _omitted, ...missing } = merimeeRecord().source_record;
+  for (const source_record of [missing, { ...merimeeRecord().source_record, guessed_point: '[0,0]' }, { ...merimeeRecord().source_record, Region: null }, { ...merimeeRecord().source_record, Copyright: 0 }, [], null]) {
+    const site = merimeeSite({ ...merimeeRecord(), source_record });
+    const original = site.details;
+    assert.equal(helpers.parseMerimeeSource(site), null);
+    assert.equal(site.details, original);
+  }
+  for (const record of [{ ...merimeeRecord(), schema_version: 2 }, { ...merimeeRecord(), extra: 'field' }, null, [], {}]) {
+    assert.equal(helpers.parseMerimeeSource(merimeeSite(record)), null);
+  }
+});
+
+test('Mérimée parsing binds the source reference and scope literal to their exact original fields', () => {
+  const record = merimeeRecord();
+  for (const scope of [
+    { ...record.scope, literal: 'whole estate' },
+    { ...record.scope, source_field: 'guessed_scope' },
+    { ...record.scope, kind: 'current_protected_whole' },
+    { ...record.scope, kind: ['specified_parts'] },
+    { ...record.scope, kind: 1 },
+    { ...record.scope, literal: null },
+    { ...record.scope, extra: 'field' }, null, [],
+  ]) assert.equal(helpers.parseMerimeeSource(merimeeSite({ ...record, scope })), null);
+  assert.equal(helpers.parseMerimeeSource(merimeeSite({ ...record, reference: 'PA00105851' })), null);
+  assert.equal(helpers.parseMerimeeSource(merimeeSite({ ...record, source_record: { ...record.source_record, Reference: 'PA00105851' } })), null);
+});
+
+test('Mérimée parsing never reinterprets another namespace, malformed JSON or duplicate source keys', () => {
+  const site = merimeeSite();
+  for (const id of ['wd:Q1', 'auth:fr-merimee:pa00105850', 'auth:fr-merimee:PA0010585', 'auth:fr-merimee:PA001058500', 'auth:fr-merimee:PA00105850:part']) {
+    assert.equal(helpers.parseMerimeeSource({ ...site, id }), null);
+  }
+  for (const details of [
+    site.details.replace('French', 'french'), site.details.replace(':\n', ': '), `${site.details} extra`,
+    site.details.replace('"reference": "PA00105850"', '"reference": "other", "reference": "PA00105850"'),
+    site.details.replace('"Region": "Guadeloupe"', '"Region": "other", "Region": "Guadeloupe"'),
+    site.details.replace('"kind": "specified_parts"', '"kind": "whole_notice_scope", "kind": "specified_parts"'),
+  ]) assert.equal(helpers.parseMerimeeSource({ ...site, details }), null);
+});
+
+test('Mérimée display parsing leaves original description, details, French title and adopted or absent points unchanged in export', () => {
+  for (const repr_point of [[-61.722949450198406, 15.9883992141981], null]) {
+    const site = Object.freeze({ ...merimeeSite(), title: 'Ancienne habitation : parties protégées', names: [], description: 'Commune_forme_editoriale: Saint-Paul ; Trois-Bassins', repr_point, location_precision: null, phases: [] });
+    assert.ok(helpers.parseMerimeeSource(site));
+    const request = { query: 'parties protégées', mode: 'bm25' as const, type: null, limit: 10 };
+    const response = { query: request.query, mode: request.mode, corpus_version: 'global-v17', elapsed_ms: 1, total_candidates: 1, results: [{ site }] };
+    const exported = helpers.createExport(request, response, '2026-11-05T00:00:00Z', null, { site: site.id, phase: null }, site);
+    assert.deepEqual(plain(exported.selected_site), site);
+    assert.deepEqual(plain(exported.response.results[0].site), site);
+    assert.equal((exported.selected_site as typeof site).details, site.details);
+    assert.equal((exported.selected_site as typeof site).location_precision, null);
+    assert.equal(exported.response.elapsed_ms, 1);
+  }
 });
 
 test('source subdivision links keep successful search and browse filters independent', () => {
@@ -468,12 +584,13 @@ test('export provenance includes source release, attribution, license and interp
   assert.equal(canada?.version, 'canada-dfhd-v1');
   assert.equal(canada?.license, 'Open Government Licence - Canada; Wikidata structured claims CC0');
   assert.match(canada?.note ?? '', /Parks Canada.*reference points.*separate from project identity approval/u);
-  const subdivisions = exported.sources.find(source => source.version === 'source-subdivisions-v4');
-  assert.equal(subdivisions?.license, 'Mixed rights — DFHD fields OGL-Canada; CSDI custom terms; Iepha-MG fields CC BY 4.0; other webpages retain individual rights');
+  const subdivisions = exported.sources.find(source => source.version === 'source-subdivisions-v5');
+  assert.equal(subdivisions?.license, 'Mixed rights — DFHD fields OGL-Canada; CSDI custom terms; Iepha-MG fields CC BY 4.0; Mérimée fields Open Licence 2.0; other webpages retain individual rights');
   assert.equal(subdivisions?.uri, 'https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/SUBDIVISIONS-LICENSE.md');
   assert.match(subdivisions?.note ?? '', /Only the986 DFHD objects.*CRHP and Parks Canada.*CSDI Terms/u);
   assert.match(subdivisions?.note ?? '', /explicitly reviewed whole.*No coordinate geocoding, inferred parent membership/u);
   assert.match(subdivisions?.note ?? '', /municipio.*Compound locality values stay intact.*not statutory administrative IDs/u);
+  assert.match(subdivisions?.note ?? '', /Commune_forme_editoriale values in GP, BL, MF, MQ and RE.*global-v17/u);
   const minas = exported.sources.find(source => source.version === 'minas-tombados-v1');
   assert.equal(minas?.license, 'CC BY 4.0');
   assert.equal(minas?.uri, 'https://dados.mg.gov.br/dataset/bens-tombados');
@@ -481,6 +598,16 @@ test('export provenance includes source release, attribution, license and interp
   assert.match(minas?.note ?? '', /Iepha-MG|Instituto Estadual do Patrimônio/u);
   assert.match(minas?.note ?? '', /no coordinates.*points and precision remain null/u);
   assert.match(minas?.note ?? '', /without interpreting them as construction or use dates/u);
+  const merimee = exported.sources.find(source => source.version === 'merimee-overseas-v1');
+  assert.equal(merimee?.license, 'Licence Ouverte / Open Licence version 2.0');
+  assert.equal(merimee?.license_uri, 'https://www.data.gouv.fr/pages/legal/licences/etalab-2-0');
+  assert.equal(merimee?.uri, 'https://www.data.gouv.fr/datasets/immeubles-proteges-au-titre-des-monuments-historiques-2');
+  assert.equal(merimee?.accessed, '2026-11-05');
+  assert.equal(merimee?.processed, '2026-11-05');
+  assert.equal(merimee?.source_updated, '2026-10-29T02:16:04+00:00');
+  assert.match(merimee?.note ?? '', /Ministère de la Culture.*formerly or currently protected.*without asserting current legal status/u);
+  assert.match(merimee?.note ?? '', /Partial protection is not expanded.*without a whole-centre or precision claim.*Missing points stay null/u);
+  assert.match(merimee?.note ?? '', /protection dates do not create historical phases.*does not automatically cover linked photographs/u);
   const hongKong = exported.sources.find(source => source.version === 'hong-kong-monuments-v1');
   assert.match(hongKong?.note ?? '', /Government of the Hong Kong Special Administrative Region.*CSDI.*no blanket CSDI licence/u);
   const singapore = exported.sources.find(source => source.version === 'singapore-monuments-v1');

@@ -54,6 +54,125 @@ const ArchSearchResearch = (() => {
             return null;
         }
     }
+    const merimeeSourceFields = [
+        "Reference",
+        "Destination_actuelle_de_l_edifice",
+        "Adresse_forme_index",
+        "Etablissement_affectataire_de_l_edifice",
+        "Autre_appellation_de_l_edifice",
+        "Nature_de_la_protection",
+        "Auteur_de_l_edifice",
+        "Cadastre",
+        "Commune_forme_index",
+        "Copyright",
+        "Type_de_couverture",
+        "Datation_de_l_edifice",
+        "Denomination_de_l_edifice",
+        "Lieu_de_conservation_d_un_element_architectural_deplace",
+        "Description_de_l_edifice",
+        "Dimensions_normalisees_des_edicules_uniquement",
+        "Date_de_Label",
+        "Date_de_la_derniere_mise_a_jour",
+        "Date_de_creation_de_la_notice",
+        "Domaine",
+        "Typologie_du_dossier",
+        "Date_et_typologie_de_la_protection",
+        "Departement_format_numerique",
+        "Departement_en_lettres",
+        "Partie_d_elevation_exterieure",
+        "Source_de_l_energie_utilisee_par_l_edifice",
+        "Emplacement__forme_et_structure_de_l_escalier",
+        "Description_de_l_elevation_interieure",
+        "etat_de_conservation",
+        "Cadre_de_l_etude",
+        "Genre_du_destinataire",
+        "Historique",
+        "Nom_du_cours_d_eau_traversant_ou_bordant_l_edifice",
+        "Identifiant_Agregee",
+        "COG_Insee_lors_de_la_protection",
+        "Justification_attribution",
+        "Justification_de_la_datation",
+        "Liens_externes",
+        "Lieudit",
+        "Lien_vers_la_base_Archiv_MH",
+        "Materiaux_du_gros_oeuvre",
+        "Nom_du_redacteur",
+        "Observations",
+        "Precision_affectataire",
+        "Partie_constituante_non_etudiee",
+        "Partie_constituante",
+        "Precision_sur_la_denomination",
+        "Personnes_liees_a_l_edifice",
+        "Typologie_de_plan",
+        "Precision_de_la_localisation",
+        "Precision_de_la_protection",
+        "Description_de_l_iconographie",
+        "Typologie_de_la_protection",
+        "Precision_sur_le_statut_de_l_edifice",
+        "Reference_a_un_ensemble",
+        "Lien_vers_la_base_Joconde",
+        "Lien_vers_la_base_Palissy",
+        "References_des_parties_constituantes_etudiees",
+        "Region",
+        "Elements_remarquables_dans_l_edifice",
+        "Remploi",
+        "Renvoi_vers_une_notice_de_la_base_Merimee_ou_Palissy",
+        "Indexation_iconographique_normalisee",
+        "Siecle_de_campagne_secondaire_de_construction",
+        "Siecle_de_la_campagne_principale_de_construction",
+        "Format_abrege_du_siecle_de_construction",
+        "Typologie_de_la_zone_de_protection",
+        "Statut_juridique_de_l_edifice",
+        "Technique_du_decor_porte_de_l_edifice",
+        "Titre_editorial_de_la_notice",
+        "Materiaux_de_la_couverture",
+        "Couverts_ou_decouverts_du_jardin_de_l_edifice",
+        "Vocable___pour_les_edifices_cultuels",
+        "Typologie_du_couvrement",
+        "Adresse_forme_editoriale",
+        "Commune_forme_editoriale",
+        "coordonnees_au_format_WGS84",
+        "Producteur",
+    ];
+    function parseMerimeeSource(site) {
+        const prefix = "Original source fields (French):\n";
+        if (typeof site.id !== "string" || typeof site.details !== "string" || !site.details.startsWith(prefix))
+            return null;
+        const identity = /^auth:fr-merimee:(PA[0-9]{8})$/u.exec(site.id);
+        if (!identity)
+            return null;
+        try {
+            const original = site.details.slice(prefix.length);
+            const parsed = JSON.parse(original);
+            if (parsed === null || typeof parsed !== "object" || Array.isArray(parsed))
+                return null;
+            const value = parsed;
+            if (Object.keys(value).length !== 4 || value.schema_version !== 1 || value.reference !== identity[1])
+                return null;
+            const record = value.source_record, scope = value.scope;
+            if (record === null || typeof record !== "object" || Array.isArray(record)
+                || scope === null || typeof scope !== "object" || Array.isArray(scope))
+                return null;
+            const fields = record, range = scope;
+            if (Object.keys(fields).length !== merimeeSourceFields.length || fields.Reference !== value.reference
+                || !merimeeSourceFields.every((field) => typeof fields[field] === "string"))
+                return null;
+            if (Object.keys(range).length !== 3
+                || typeof range.kind !== "string"
+                || !["whole_notice_scope", "specified_parts", "composite_protected_scope"].includes(range.kind)
+                || typeof range.source_field !== "string"
+                || !merimeeSourceFields.some((field) => field === range.source_field)
+                || typeof range.literal !== "string" || fields[range.source_field] !== range.literal)
+                return null;
+            // Ambiguous JSON preserves the complete original text instead of selecting one duplicate value.
+            if (compactSourceJson(original) !== JSON.stringify(parsed))
+                return null;
+            return parsed;
+        }
+        catch {
+            return null;
+        }
+    }
     function normalizeBBox(value) {
         if (value === null || value === undefined)
             return null;
@@ -311,8 +430,9 @@ const ArchSearchResearch = (() => {
                 { name: "Pacific and interior cultural supplement", version: "pacific-interior-supplement-v1", license: "Mixed rights — see individual source_refs", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/PACIFIC-LICENSE.md", note: "Seven independently source-reviewed cultural identities from Pacific registers and African archaeological research. An address-restricted place remains unmapped; unadopted or conflicting representative coordinates remain null. Tentative submissions are not World Heritage inscriptions. No listing, excavation or publication year becomes a historical phase." },
                 { name: "NPS Pacific register supplement", version: "nps-pacific-v1", license: "NPS government structured metadata; other source rights retained", uri: "https://www.nps.gov/aboutus/disclaimer.htm", note: "Project grouping of seven source State labels, not a UNESCO region or sovereignty classification. Government metadata does not relicense third-party nomination text, photos or attachments. Viewer text, feature edits and newer downloads have separate version clocks. Source points may be generated reference positions; restricted locations remain unmapped. No registration or publication date becomes a site phase." },
                 { name: "Canadian Federal Heritage Designations historic-place supplement", version: "canada-dfhd-v1", license: "Open Government Licence - Canada; Wikidata structured claims CC0", license_uri: "https://open.canada.ca/en/open-government-licence-canada", uri: "https://open.canada.ca/data/en/dataset/49d5ba7d-d860-40d9-9183-892979e4acbe", note: "Parks Canada / Government of Canada. Contains information licensed under the Open Government Licence – Canada. Released NHS identities, original narrative and province fields retain their source version. Adopted public reference points retain separate source statements and roles; no generated centroids or ancient footprints. Commemorative-reason or plaque review notices are separate from project identity approval and chronology. Other webpages and third-party materials retain their own rights." },
-                { name: "Source-declared province, district and municipality memberships", version: "source-subdivisions-v4", license: "Mixed rights — DFHD fields OGL-Canada; CSDI custom terms; Iepha-MG fields CC BY 4.0; other webpages retain individual rights", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/SUBDIVISIONS-LICENSE.md", note: "Only the986 DFHD objects' province fields use Open Government Licence – Canada. CRHP and Parks Canada short location facts retain webpage rights. Canadian whole-object provinces and aliases are unchanged. Hong Kong districts associate source features with an explicitly reviewed whole and do not assert that every shape belongs to that district. CSDI Terms apply to those original fields, not all AMO contents. Version4 adds Iepha-MG original-record municipio values to global-v16. Compound locality values stay intact; record-to-composite associations do not assert whole-object jurisdiction. Project label IDs are not statutory administrative IDs. Each request/response and browse retains its actual successful version. No coordinate geocoding, inferred parent membership, borders or historical phases." },
+                { name: "Source-associated province, district, municipality and commune memberships", version: "source-subdivisions-v5", license: "Mixed rights — DFHD fields OGL-Canada; CSDI custom terms; Iepha-MG fields CC BY 4.0; Mérimée fields Open Licence 2.0; other webpages retain individual rights", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/SUBDIVISIONS-LICENSE.md", note: "Only the986 DFHD objects' province fields use Open Government Licence – Canada. CRHP and Parks Canada short location facts retain webpage rights. Canadian whole-object provinces and aliases are unchanged. Hong Kong districts associate source features with an explicitly reviewed whole and do not assert that every shape belongs to that district. CSDI Terms apply to those original fields, not all AMO contents. Version5 retains Iepha-MG original-record municipio values and adds reviewed Mérimée original-record Commune_forme_editoriale values in GP, BL, MF, MQ and RE to global-v17. Compound locality values stay intact; record-to-composite associations do not assert whole-object jurisdiction. Project label IDs are not statutory administrative IDs. Each request/response and browse retains its actual successful version. No coordinate geocoding, inferred parent membership, borders or historical phases." },
                 { name: "Iepha-MG protected cultural registration scopes", version: "minas-tombados-v1", license: "CC BY 4.0", license_uri: "https://creativecommons.org/licenses/by/4.0/", uri: "https://dados.mg.gov.br/dataset/bens-tombados", accessed: "2026-11-05", note: "Instituto Estadual do Patrimônio Histórico e Artístico de Minas Gerais, via dados.mg.gov.br; fixed original Portuguese registration fields, grouped by exact process and complete designation after independent source review. Project scope IDs are derived identities, not legal registration numbers. Original process, legal-act and book fields are retained without interpreting them as construction or use dates. The source has no coordinates; representative points and precision remain null. Original municipality values support record-associated browsing without geocoding or asserting a complete regional inventory. Linked documents and photographs are not redistributed." },
+                { name: "Mérimée overseas protected-notice scopes", version: "merimee-overseas-v1", license: "Licence Ouverte / Open Licence version 2.0", license_uri: "https://www.data.gouv.fr/pages/legal/licences/etalab-2-0", uri: "https://www.data.gouv.fr/datasets/immeubles-proteges-au-titre-des-monuments-historiques-2", accessed: "2026-11-05", source_updated: "2026-10-29T02:16:04+00:00", processed: "2026-11-05", note: "Ministère de la Culture, Immeubles protégés au titre des Monuments Historiques, via data.gouv.fr; source updated on2026-10-29T02:16:04+00:00, accessed and processed on2026-11-05. Original French notice fields and protection-scope text retain source qualification: the catalogue includes formerly or currently protected records, without asserting current legal status. Partial protection is not expanded to a whole estate; notice references and record-associated Commune values are not statutory parcels or jurisdiction boundaries. The project uses reviewed published WGS84 points only as reference positions, without a whole-centre or precision claim; the provider did not state point-generation method or precision. Missing points stay null. Original protection dates do not create historical phases. Processing retains original fields and separately reviewed modern area associations; it does not translate names or fabricate historical facts. The dataset licence does not automatically cover linked photographs or third-party contents." },
                 { name: "Australian National Heritage List public spatial database", version: "australia-nhl-v1", license: "CC BY 3.0 Australia", license_uri: "https://creativecommons.org/licenses/by/3.0/au/", uri: "https://gis.environment.gov.au/gispubmap/rest/services/ogc_services/National_Heritage_List/FeatureServer/0", note: "Public factual register fields and provider registered ranges only. Modern heritage registration is not an ancient footprint, political boundary, access permission or a representative point. Individual feature source URIs, versions, hashes and licences remain with registered_areas; linked third-party materials retain their own rights." },
                 { name: "Hong Kong monument source facts and CSDI polygons", version: "hong-kong-monuments-v1", license: "CSDI Portal Terms and Conditions of Use; separate AMO short-fact and linked-content rights", uri: "https://portal.csdi.gov.hk/csdi-webpage/doc/TNC", note: "Data from the Government of the Hong Kong Special Administrative Region, CSDI Portal and Antiquities and Monuments Office; their intellectual property rights are acknowledged. Original January2026 CSDI attributes/polygons and later October2026 official whole-object facts retain separate source dates. Source polygons are not asserted legal or ancient boundaries and never create representative points. AMO introductions, photos and other third-party contents have no blanket CSDI licence." },
                 { name: "Singapore NHB Monuments (GEOJSON)", version: "singapore-monuments-v1", license: "Singapore Open Data Licence version 1.0", license_uri: "https://data.gov.sg/open-data-licence", uri: "https://data.gov.sg/datasets/d_b29c230ec6b609e29ed42f71ca9a8767/view", accessed: "2026-11-05", note: "Contains information from Monuments (GEOJSON), National Heritage Board, accessed on2026-11-05 via data.gov.sg, made available under the Singapore Open Data Licence version1.0. Original licensed descriptions and provider Point coordinates retain their source fields and release clocks. The project uses the original provider Point as a reference position and makes no whole-centre or precision claim; the provider did not state the point-generation method or precision. It is not an excavation or legal-boundary assertion. Feature updates and protection dates are not historical phases. The licence does not automatically cover linked webpages, images or third-party rights." },
@@ -343,10 +463,10 @@ const ArchSearchResearch = (() => {
                 source_points: "spatial保留最后成功目录的组合源点版本、source_groups对应的来源／版本／许可与地点身份，以及独立选中资料经审核纳入地图的定位序列、重复记录与来源标签。原代表点单独保存；多个定位记录不增加遗址条目数或承诺发掘精度。世界遗产原始序列保持不变；海牙名录排除的仓储、标签冲突等原记录仍保留在来源审计中，不混作考古原址点。",
                 registered_areas: "registered_areas只保存当前实际显示、且与选中资料和当前语料/检索版本一致的来源范围；label区分现代遗产登记范围与来源古迹多边形，后者不承诺法定边界。null表示未显示或上下文不匹配。保留原WGS84闭环与来源版本/许可，不推内外环、代表点、古址轮廓、准入或点计数。范围显隐不写入分享链接，重新打开后仍须主动点击查看。",
                 browse: "browse保存成功应用的独立目录条件；bbox为[西,南,东,北]闭区间，西大于东表示跨日期变更线，仅筛目录和全库点层，不改变request中的检索语义。spatial_match_mode及spatial_version记录当时的来源点匹配能力；representative-only可能遗漏无代表点落入框内的组成地点。选中资料纳入地图的来源序列完整导出；海牙名录未纳入地图的保护设施仍留在冻结来源审计中。",
-                subdivisions: "加拿大采用整体省区原字段；香港采用有明确整体／要素关联的来源要素地区；巴西Iepha-MG采用原登记行municipio全文值，多地值不自动拆分。后两者不表示整体或全部组成部分都属于该地区，不由坐标、省界或历史政权推断。request/response与browse各保存其独立成功条件；subdivision_version为各自实际应用的来源索引版本，未成功的待选条件不冒充已显示范围。",
+                subdivisions: "加拿大采用整体省区原字段；香港采用有明确整体／要素关联的来源要素地区；巴西Iepha-MG采用原登记行municipio全文值；Mérimée采用原记录Commune_forme_editoriale全文值，多地值不自动拆分。来源要素／原记录关联不表示整体或全部组成部分都属于该地区，不由坐标、省界或历史政权推断。request/response与browse各保存其独立成功条件；subdivision_version为各自实际应用的来源索引版本，未成功的待选条件不冒充已显示范围。",
             },
         };
     }
-    return { parseLink, parseView, parseBrowse, buildLink, createExport, validYear, automaticPhaseYear, normalizeBBox, parseBBox, normalizeSubdivision, validateSubdivisionResponse, parseMinasSource, minasSourceFields };
+    return { parseLink, parseView, parseBrowse, buildLink, createExport, validYear, automaticPhaseYear, normalizeBBox, parseBBox, normalizeSubdivision, validateSubdivisionResponse, parseMinasSource, minasSourceFields, parseMerimeeSource, merimeeSourceFields };
 })();
 //# sourceMappingURL=research.js.map
