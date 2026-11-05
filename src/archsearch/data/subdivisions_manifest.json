@@ -1,26 +1,27 @@
 {
   "canada_spec_sha256": "4cfdd4fb896c2769de3d77daaf481fdb1544fc79d0e6d8db4911d97d8ad8afbc",
-  "corpus_version": "global-v17",
+  "corpus_version": "global-v18",
   "counts": {
-    "assigned_sites": 1712,
-    "memberships": 1714,
-    "subdivisions": 179
+    "assigned_sites": 1834,
+    "memberships": 1836,
+    "subdivisions": 202
   },
   "files": {
     "subdivision_review.json": {
-      "sha256": "4a98f123c3b0cef8d9909f1ad16c7377f5a3fea4a9e2ce10ae85b667db448eaa"
+      "sha256": "6845883876b8694eba4d54e7c61ca58ed2e808b218dd2f50bb3fc169763aa327"
     },
     "subdivisions.json": {
-      "sha256": "a0fd789bd09bef6a3c50f159a8029f2ce6c77173951220415fd9a8dbe2e17fa1"
+      "sha256": "34db3bbeffe43dbf60de981335b55acce42c24d6c21a1ebbb490ed400e6f4164"
     }
   },
   "hong_kong_spec_sha256": "b0bcbe915c46bf611aab9b35b76c4365eb398a1032cf7705aa8302448611bf7a",
+  "merimee_extension_spec_sha256": "1bea70c52cbf37a8264d1919888aa6cd9f7151cbdd3f5e6987b2b776cc6e425d",
   "merimee_spec_sha256": "f6b41e4368d1b31082502bf501f93e576cb6718c22a0c9e807b49480a64c9709",
   "minas_spec_sha256": "def84d9b4c6a5c0c04794779337614dfb563e9b5b1d224d927c906d0721c7dca",
   "policy": "Reviewed Canadian whole-object provinces, Hong Kong source-feature districts, Iepha-MG original-record municipality values and Mérimée original communes. Explicit record-to-object links only; no geocoding, boundary, chronology or text inference.",
-  "review_sha256": "4a98f123c3b0cef8d9909f1ad16c7377f5a3fea4a9e2ce10ae85b667db448eaa",
+  "review_sha256": "6845883876b8694eba4d54e7c61ca58ed2e808b218dd2f50bb3fc169763aa327",
   "schema_version": 1,
-  "source_facts_sha256": "cd4298d64da78d9d88d8d310dcf0d00c66daba6b0f0733e65ae00dc3276a829d",
-  "source_review_sha256": "b1376e3298257ec932d203cd5a6c51457a5acc7c7f68e9d8be2471fdf52018eb",
-  "version": "source-subdivisions-v5"
+  "source_facts_sha256": "e0d22b77a37edb1736323d5f6050e9d0a1f67dc6f05986d3625d246e534b6350",
+  "source_review_sha256": "60ae194c7c65a5ccd80a8171336b036e3bf3a7a4e8c0963b83f80e5848abe3a9",
+  "version": "source-subdivisions-v6"
 }

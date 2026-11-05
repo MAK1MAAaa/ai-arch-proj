@@ -86,4 +86,6 @@ uv run --no-sync archsearch evaluate --queries src/archsearch/data/queries-merim
 
 ![实际法文保护范围与加勒比参考位置](merimee-preview.png)
 
-![无筛选的2024年历史地图与全库来源点](global-preview.png)
+共享全球预览随当前版本更新；上面的数值与验收记录仍对应本批global-v17，当前版本见[后续扩充验收](merimee-extension-validation.md)。
+
+![当前版本无筛选的2024年历史地图与全库来源点](global-preview.png)

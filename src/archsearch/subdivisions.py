@@ -19,17 +19,17 @@ from archsearch.domain import Site, SourceReference
 from archsearch.supplement_data import SourceArtifact
 
 DATA_DIR = Path(__file__).with_name("data")
-VERSION: Literal["source-subdivisions-v5"] = "source-subdivisions-v5"
+VERSION: Literal["source-subdivisions-v6"] = "source-subdivisions-v6"
 REVIEW_FILE = "subdivision_review.json"
 PAYLOAD_FILE = "subdivisions.json"
 MANIFEST_FILE = "subdivisions_manifest.json"
 MAX_PAYLOAD_BYTES = 8 * 1024 * 1024
 MAX_REVIEW_BYTES = 8 * 1024 * 1024
 MAX_MANIFEST_BYTES = 64 * 1024
-REVIEW_SHA256 = "4a98f123c3b0cef8d9909f1ad16c7377f5a3fea4a9e2ce10ae85b667db448eaa"
-PAYLOAD_SHA256 = "a0fd789bd09bef6a3c50f159a8029f2ce6c77173951220415fd9a8dbe2e17fa1"
-SOURCE_REVIEW_SHA256 = "b1376e3298257ec932d203cd5a6c51457a5acc7c7f68e9d8be2471fdf52018eb"
-SOURCE_FACTS_SHA256 = "cd4298d64da78d9d88d8d310dcf0d00c66daba6b0f0733e65ae00dc3276a829d"
+REVIEW_SHA256 = "6845883876b8694eba4d54e7c61ca58ed2e808b218dd2f50bb3fc169763aa327"
+PAYLOAD_SHA256 = "34db3bbeffe43dbf60de981335b55acce42c24d6c21a1ebbb490ed400e6f4164"
+SOURCE_REVIEW_SHA256 = "60ae194c7c65a5ccd80a8171336b036e3bf3a7a4e8c0963b83f80e5848abe3a9"
+SOURCE_FACTS_SHA256 = "e0d22b77a37edb1736323d5f6050e9d0a1f67dc6f05986d3625d246e534b6350"
 SUBDIVISION_PATTERN = r"^[A-Z]{2}:[a-z0-9][a-z0-9-]{0,63}$"
 PREPARATION_HINT = (
     "请运行 python -m archsearch.subdivisions --rebuild 修复来源省区索引并重启服务。"
@@ -49,7 +49,9 @@ RECORD_LOCALITY_NOTE = (
     "筛选保留整个资料对象，不表示整体或全部组成部分都属于该地区，"
     "也不将市镇、保护编号或法律日期转换成坐标、边界或历史阶段。"
 )
-MERIMEE_AREAS = frozenset({"GP", "BL", "MF", "MQ", "RE"})
+MERIMEE_ORIGINAL_AREAS = frozenset({"GP", "BL", "MF", "MQ", "RE"})
+MERIMEE_EXTENSION_AREAS = frozenset({"GF", "YT", "PM"})
+MERIMEE_AREAS = MERIMEE_ORIGINAL_AREAS | MERIMEE_EXTENSION_AREAS
 RECORD_COMMUNE_NOTE = (
     "地区选项保留Mérimée原Commune_forme_editoriale（市镇）全文；多地值不拆分。"
     "国家／地区按原COG码经INSEE2026与UN M49关联现代统计区域，原Region和Departement仍保留。"
@@ -122,7 +124,7 @@ class ExtraMembership(BaseModel):
 class SubdivisionReview(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
     schema_version: Literal[1]
-    version: Literal["source-subdivisions-v5"]
+    version: Literal["source-subdivisions-v6"]
     corpus_version: StrictStr = Field(min_length=1)
     corpus_ids_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     corpus_countries_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
@@ -130,6 +132,7 @@ class SubdivisionReview(BaseModel):
     hong_kong_spec_sha256: StrictStr | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
     minas_spec_sha256: StrictStr | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
     merimee_spec_sha256: StrictStr | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
+    merimee_extension_spec_sha256: StrictStr | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
     source_review_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     review_method: StrictStr = Field(min_length=1)
     reviewed_at: StrictStr = Field(pattern=r"^\d{4}-\d{2}-\d{2}$")
@@ -155,7 +158,7 @@ class SubdivisionMembership(BaseModel):
 class SubdivisionPayload(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
     schema_version: Literal[1]
-    version: Literal["source-subdivisions-v5"]
+    version: Literal["source-subdivisions-v6"]
     corpus_version: StrictStr = Field(min_length=1)
     corpus_ids_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     corpus_countries_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
@@ -163,6 +166,7 @@ class SubdivisionPayload(BaseModel):
     hong_kong_spec_sha256: StrictStr | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
     minas_spec_sha256: StrictStr | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
     merimee_spec_sha256: StrictStr | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
+    merimee_extension_spec_sha256: StrictStr | None = Field(default=None, pattern=r"^[0-9a-f]{64}$")
     source_review_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     source_facts_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     review_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
@@ -279,6 +283,14 @@ def _merimee_pin_matches(pin: str | None) -> bool:
     return pin == SPEC_SHA256
 
 
+def _merimee_extension_pin_matches(pin: str | None) -> bool:
+    if pin is None:
+        return True
+    from archsearch.merimee_extension_data import SPEC_SHA256
+
+    return pin == SPEC_SHA256
+
+
 def _validate_payload(payload: SubdivisionPayload, sites: Sequence[Site], version: str) -> None:
     if payload.corpus_version != version or any(
         getattr(payload, key) != value for key, value in corpus_contract(sites).items()
@@ -325,7 +337,10 @@ def _validate_payload(payload: SubdivisionPayload, sites: Sequence[Site], versio
             if evidence.role == "source_record_commune" and (
                 definition.country not in MERIMEE_AREAS
                 or evidence.field != "Commune_forme_editoriale"
-                or payload.merimee_spec_sha256 is None
+                or (definition.country in MERIMEE_ORIGINAL_AREAS
+                    and payload.merimee_spec_sha256 is None)
+                or (definition.country in MERIMEE_EXTENSION_AREAS
+                    and payload.merimee_extension_spec_sha256 is None)
                 or re.fullmatch(r"auth:fr-merimee:PA[0-9]{8}", row.site_id) is None
                 or not evidence.raw_value.strip()
             ):
@@ -345,6 +360,7 @@ def _manifest(payload: SubdivisionPayload, payload_bytes: bytes) -> dict[str, An
         "hong_kong_spec_sha256": payload.hong_kong_spec_sha256,
         "minas_spec_sha256": payload.minas_spec_sha256,
         "merimee_spec_sha256": payload.merimee_spec_sha256,
+        "merimee_extension_spec_sha256": payload.merimee_extension_spec_sha256,
         "files": {REVIEW_FILE: {"sha256": REVIEW_SHA256},
                   PAYLOAD_FILE: {"sha256": _hash(payload_bytes)}},
         "counts": {"subdivisions": len(payload.subdivisions),
@@ -414,6 +430,7 @@ def compile_payload(
         hong_kong_spec_sha256=review.hong_kong_spec_sha256,
         minas_spec_sha256=review.minas_spec_sha256,
         merimee_spec_sha256=review.merimee_spec_sha256,
+        merimee_extension_spec_sha256=review.merimee_extension_spec_sha256,
         source_review_sha256=review.source_review_sha256, review_sha256=REVIEW_SHA256,
         source_facts_sha256=_hash(_bytes(source_facts(review))),
         subdivisions=sorted(review.subdivisions, key=lambda row: row.id),
@@ -445,6 +462,7 @@ def rebuild_subdivisions(
                 or not _hong_kong_pin_matches(review.hong_kong_spec_sha256)
                 or not _minas_pin_matches(review.minas_spec_sha256)
                 or not _merimee_pin_matches(review.merimee_spec_sha256)
+                or not _merimee_extension_pin_matches(review.merimee_extension_spec_sha256)
                 or review.corpus_version != corpus_version):
             raise SubdivisionUnavailable("来源省区事实、源版本或独立审批不符。")
         spec = canada_data._spec(directory)
@@ -489,7 +507,9 @@ class SubdivisionIndex:
                         or payload.canada_spec_sha256 != canada_data.SPEC_SHA256
                         or not _hong_kong_pin_matches(payload.hong_kong_spec_sha256)
                         or not _minas_pin_matches(payload.minas_spec_sha256)
-                        or not _merimee_pin_matches(payload.merimee_spec_sha256)):
+                        or not _merimee_pin_matches(payload.merimee_spec_sha256)
+                        or not _merimee_extension_pin_matches(
+                            payload.merimee_extension_spec_sha256)):
                     raise SubdivisionUnavailable("来源省区索引的原始审批或来源绑定不符。")
                 manifest = json.loads(_read_bounded(directory / MANIFEST_FILE,
                                                    MAX_MANIFEST_BYTES))

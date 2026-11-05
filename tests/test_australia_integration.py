@@ -53,8 +53,8 @@ def test_published_text_derivatives_rebuild_twice_without_network(tmp_path: Path
 def test_norfolk_is_additional_source_membership_and_area_is_not_a_point(tmp_path: Path) -> None:
     with TestClient(create_app(home=tmp_path)) as client:
         coverage = client.get("/api/coverage").json()
-        assert coverage["total"] == 3775 and coverage["corpus_version"] == "global-v17"
-        assert len(coverage["countries"]) == 208 and len(coverage["regions"]) == 7
+        assert coverage["total"] == 3897 and coverage["corpus_version"] == "global-v18"
+        assert len(coverage["countries"]) == 211 and len(coverage["regions"]) == 7
         countries = {row["id"]: row["count"] for row in coverage["countries"]}
         assert countries["AU"] == 73 and countries["NF"] == 1
         nf = client.get("/api/sites", params={"country": "NF"}).json()
@@ -90,7 +90,7 @@ def test_multistate_original_features_and_all_source_rings_survive_the_api(tmp_p
     with TestClient(create_app(home=tmp_path, areas=index)) as client:
         for identifier in ["auth:au-nhl:106061", "auth:au-nhl:105919"]:
             body = client.get("/api/sites/" + identifier + "/areas").json()
-            expected = index.response(identifier, "global-v17").model_dump(mode="json")
+            expected = index.response(identifier, "global-v18").model_dump(mode="json")
             assert body == expected
             assert [row["provider_object_id"] for row in body["features"]] == (
                 records[identifier].registered_range.feature_ids
