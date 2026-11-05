@@ -14,7 +14,8 @@
         preparationNote: byId("preparation-note", HTMLDivElement), preparationReason: byId("preparation-reason", HTMLParagraphElement),
         requestError: byId("request-error", HTMLDivElement), announcement: byId("announcement", HTMLParagraphElement),
         statusDot: byId("status-dot", HTMLSpanElement), runtimeLabel: byId("runtime-label", HTMLSpanElement),
-        corpusCount: byId("corpus-count", HTMLElement), corpusPeriod: byId("corpus-period", HTMLParagraphElement),
+        corpusCount: byId("corpus-count", HTMLElement), corpusPeriod: byId("corpus-period", HTMLElement),
+        coverage: byId("workspace-coverage", HTMLElement),
         resultsPanel: byId("results-panel", HTMLDivElement), resultCount: byId("result-count", HTMLSpanElement),
         resultSummary: byId("result-summary", HTMLParagraphElement), activeMode: byId("active-mode", HTMLSpanElement),
         resultContext: byId("result-context", HTMLParagraphElement), exampleHint: byId("example-hint", HTMLParagraphElement),
@@ -26,6 +27,8 @@
         list: byId("results-list", HTMLOListElement), empty: byId("results-empty", HTMLDivElement), emptyTitle: byId("empty-title", HTMLHeadingElement),
         emptyDescription: byId("empty-description", HTMLParagraphElement), loading: byId("loading-state", HTMLDivElement),
         detailPanel: byId("detail-panel", HTMLElement), detailContent: byId("detail-content", HTMLDivElement),
+        detailDialog: byId("detail-dialog", HTMLDialogElement),
+        openSelectedDetail: byId("open-selected-detail", HTMLButtonElement),
         tileWarning: byId("tile-warning", HTMLDivElement), tileWarningText: byId("tile-warning-text", HTMLSpanElement),
         mapEmptyLabel: byId("map-empty-label", HTMLDivElement), viewportCount: byId("viewport-count", HTMLElement),
         clearType: byId("clear-type", HTMLButtonElement), emptyClearType: byId("empty-clear-type", HTMLButtonElement),
@@ -304,6 +307,13 @@
             button.lang = exampleMode === "semantic" || button.dataset.exampleMode === "bm25" ? "zh-CN" : "en";
         });
     }
+    function updateScopeHeader() {
+        const coverage = explore?.getCoverageSummary();
+        ui.coverage.textContent = coverage && coverage.version === currentCorpusVersion
+            ? `${coverage.countries} 个国家／地区 · ${coverage.regions} 个资料分组`
+            : "全球文化遗址 · 覆盖统计加载中";
+        ui.coverage.title = currentCorpusVersion ? `当前语料 ${currentCorpusVersion}；来源覆盖不代表全球完整清单。` : "正在核对本地语料版本。";
+    }
     async function loadStatus() {
         ui.runtimeLabel.textContent = "检查本地服务";
         try {
@@ -327,6 +337,7 @@
             ui.corpusCount.textContent = Number(status.corpus?.count || 0).toLocaleString("zh-CN");
             if (status.corpus?.period)
                 ui.corpusPeriod.textContent = status.corpus.period;
+            updateScopeHeader();
             ui.statusDot.className = `status-dot ${state.semanticReady ? "is-ready" : "is-warning"}`;
             ui.runtimeLabel.textContent = state.semanticReady ? "本地检索已就绪" : state.corpusReady ? "关键词检索可用" : "等待资料准备";
             const reason = typeof status.semantic?.reason === "string" ? status.semantic.reason : "";
@@ -476,7 +487,7 @@
             new ResizeObserver(() => {
                 state.map?.invalidateSize({ pan: false });
                 const selected = currentSelectedSite();
-                if (autoPositionedSelection && selected && !ui.detailPanel.hidden)
+                if (autoPositionedSelection && selected)
                     positionSelectedSite(selected);
             }).observe(byId("map", HTMLDivElement));
         }
@@ -513,6 +524,7 @@
         const polar = selected && ArchSearchMapView.locationStatus(selected.repr_point) === "polar";
         ui.locateSelected.textContent = polar ? "查看极区位置" : "定位选中";
         ui.locateSelected.disabled = !selected || sourcePoint(selected) === null || (!state.map && !polar);
+        ui.openSelectedDetail.disabled = selected === null;
         ui.locateSelected.title = selected && sourcePoint(selected) === null ? "当前资料无可核代表点，不添加遗址地图标记。" : "";
     }
     function positionSelectedSite(site) {
@@ -525,15 +537,7 @@
         try {
             state.map.stop();
             state.map.invalidateSize({ pan: false });
-            state.map.panTo(coordinate, { animate: false });
-            if (!ui.detailPanel.hidden) {
-                const mapBounds = byId("map", HTMLDivElement).getBoundingClientRect();
-                const detailBounds = ui.detailPanel.getBoundingClientRect();
-                const verticalOverlap = Math.min(mapBounds.bottom, detailBounds.bottom) - Math.max(mapBounds.top, detailBounds.top);
-                const coveredWidth = verticalOverlap > 0 ? Math.max(0, Math.min(mapBounds.right, detailBounds.right) - Math.max(mapBounds.left, detailBounds.left)) : 0;
-                if (mapBounds.width - coveredWidth >= 64)
-                    state.map.panBy([coveredWidth / 2, 0], { animate: false });
-            }
+            state.map.setView(coordinate, 15, { animate: false });
             autoPositionedSelection = true;
         }
         finally {
@@ -569,6 +573,7 @@
             return;
         closeDetail(false);
         positionSelectedSite(site);
+        updateComparisonSelection(site, true);
         const marker = state.markers.get(site.id) ?? state.selectionMarker;
         marker?.openTooltip();
         byId("map-comparison", HTMLDivElement).scrollIntoView({ block: "start", behavior: "instant" });
@@ -593,7 +598,7 @@
                 autoPanOnFocus: false,
             }).addTo(state.markerLayer);
             marker.bindTooltip(element("span", null, displayTitle(result.site)), { direction: "top", offset: [0, -13] });
-            marker.on("click", () => selectSite(String(result.site.id), { fromMap: true }));
+            marker.on("click", () => selectSite(String(result.site.id), { fromMap: true, showDetail: true }));
             const icon = marker.getElement();
             if (icon) {
                 icon.setAttribute("aria-label", `候选 ${index + 1}：${displayTitle(result.site)}，打开资料详情`);
@@ -626,6 +631,7 @@
         const request = { query: data.query, mode: data.mode, ...context };
         const link = ArchSearchResearch.buildLink(new URL(window.location.href), request);
         closeDetail(false);
+        registeredAreas?.clear();
         state.results = Array.isArray(data.results) ? data.results : [];
         state.selectedId = null;
         state.selectedSite = null;
@@ -693,8 +699,14 @@
             const viewHint = element("span", "result-view-hint");
             viewHint.hidden = true;
             card.append(top, element("p", "result-excerpt-label", excerpt.label), description, metadata, viewHint);
-            card.addEventListener("click", () => selectSite(String(site.id)));
-            item.append(card);
+            card.addEventListener("click", () => selectSite(String(site.id), { opener: card }));
+            const actions = element("div", "result-actions");
+            const detail = element("button", "result-detail-button", "资料详情");
+            detail.type = "button";
+            detail.setAttribute("aria-label", `查看 ${displayTitle(site)} 的资料详情`);
+            detail.addEventListener("click", () => { void selectSite(String(site.id), { opener: detail, showDetail: true }); });
+            actions.append(detail);
+            item.append(card, actions);
             ui.list.append(item);
             viewCandidates.push({ id: String(site.id), rank: index + 1, title: displayTitle(site), card, marker: null,
                 hint: viewHint, locationStatus: ArchSearchMapView.locationStatus(site.repr_point) });
@@ -713,6 +725,7 @@
             unresolvedSearchLink = null;
         saveViewLink();
         ui.resultTools.hidden = false;
+        ArchSearchWorkspace.activateResults({ focus: false });
         ui.copyLink.disabled = boundsRestoreError !== null;
         ui.exportResults.disabled = boundsRestoreError !== null;
         ui.toolsFeedback.textContent = "";
@@ -930,6 +943,7 @@
         announce(state.searchFeedback);
     }
     async function runSearch(request) {
+        ArchSearchWorkspace.activateResults({ focus: false });
         if (state.searching && state.activeSearch && sameRequest(state.activeSearch, request))
             return;
         invalidateSearch();
@@ -1104,88 +1118,33 @@
         content.append(audit);
         if (!review.phases.length)
             return content;
-        const label = element("label", "phase-label", "历史阶段");
-        label.htmlFor = "site-phase";
-        const select = element("select", "phase-select");
-        select.id = "site-phase";
         const kinds = { construction: "建造", use: "使用", rebuild: "改建", destruction: "毁损", other: "其他事件" };
-        for (const phase of review.phases) {
-            const option = element("option", null, `${kinds[phase.kind]} · ${phase.label}`);
-            option.value = phase.id;
-            select.append(option);
-        }
-        const phase = review.phases.find((item) => item.id === selectedPhaseId) ?? review.phases.find((item) => item.id === review.default_phase_id);
-        if (!phase) {
-            content.append(element("p", null, "默认阶段缺失，请核对语料；地图年份保持原样。"));
-            return content;
-        }
-        select.value = phase.id;
         const precision = { exact_year: "明确单年", approximate_year: "约略年份", range: "区间年代", period: "时期描述" };
-        const dates = phase.start_year === null && phase.end_year === null ? "来源未给出可换算的年份" : phase.start_year === phase.end_year
-            ? sourceYear(phase.start_year) : `${sourceYear(phase.start_year)} — ${sourceYear(phase.end_year)}`;
-        content.append(label, select, element("p", "phase-dates", `${precision[phase.precision]} · ${dates}`));
-        if (phase.note)
-            content.append(element("p", "detail-note", phase.note));
-        content.append(element("p", "detail-note", "阶段属于所列事件；不补齐时期缺口，不按代表点认定历史政治归属。"));
-        if (phase.precision !== "exact_year") {
-            content.append(element("p", null, "此阶段不自动切换地图。请结合原文选择要观察的年份。"));
-            const yearLabel = element("label", "phase-label", "观察年份（负数表示公元前）");
-            yearLabel.htmlFor = "phase-year";
-            const input = element("input", "phase-year");
-            input.id = "phase-year";
-            input.type = "number";
-            input.step = "1";
-            if (phase.start_year !== null)
-                input.min = String(phase.start_year);
-            if (phase.end_year !== null)
-                input.max = String(phase.end_year);
-            const current = historyView?.getView()?.year;
-            input.value = current !== undefined && (phase.start_year === null || current >= phase.start_year) && (phase.end_year === null || current <= phase.end_year)
-                ? String(current) : phase.start_year !== null ? String(phase.start_year) : "";
-            const jump = element("button", "interaction-button", "按此年份查看");
-            jump.type = "button";
-            const feedback = element("p", "detail-note");
-            feedback.setAttribute("role", "status");
-            const applyYear = () => {
-                const year = Number(input.value);
-                if (!input.value.trim() || !ArchSearchResearch.validYear(year)
-                    || (phase.start_year !== null && year < phase.start_year) || (phase.end_year !== null && year > phase.end_year)) {
-                    feedback.textContent = "请输入阶段范围内的整数年份，历史纪年没有0年。";
-                    return;
-                }
-                feedback.textContent = year < -3400 || year > 2024 ? "该年份无可用疆域数据；保留最后成功地图。" : "正在切换历史地图。";
-                historyView?.setYear(year, "user");
-            };
-            jump.addEventListener("click", applyYear);
-            input.addEventListener("keydown", (event) => { if (event.key === "Enter") {
-                event.preventDefault();
-                applyYear();
-            } });
-            content.append(yearLabel, input, jump, feedback);
+        content.append(element("p", "detail-note", "年代仅依据来源自动联动。区间、约略或未知年代保留最后成功背景，不提供任意年或手选时间点；各阶段不视为连续生命周期。"));
+        for (const phase of review.phases) {
+            const section = element("section", "phase-record");
+            const current = phase.id === (selectedPhaseId ?? review.default_phase_id);
+            section.append(element("h5", null, `${kinds[phase.kind]} · ${phase.label}${current ? " · 当前资料阶段" : ""}`));
+            const dates = phase.start_year === null && phase.end_year === null ? "来源未给出可换算的年份" : phase.start_year === phase.end_year
+                ? sourceYear(phase.start_year) : `${sourceYear(phase.start_year)} — ${sourceYear(phase.end_year)}`;
+            section.append(element("p", "phase-dates", `${precision[phase.precision]} · ${dates}`));
+            if (phase.note)
+                section.append(element("p", "detail-note", phase.note));
+            for (const source of phase.sources) {
+                const evidence = element("blockquote", "phase-evidence", source.excerpt);
+                evidence.lang = "en";
+                section.append(evidence, safeLink(source.uri, source.title), element("p", "detail-note", `${source.publisher} · ${source.license ?? "许可见原始来源"} · ${source.revision ?? "版本未提供"}`));
+            }
+            content.append(section);
         }
-        else {
-            content.append(element("p", "detail-note", "明确单年阶段在主动选择时切换地图；之后可独立调整地图年份。"));
-        }
-        for (const source of phase.sources) {
-            const evidence = element("blockquote", "phase-evidence", source.excerpt);
-            evidence.lang = "en";
-            content.append(evidence, safeLink(source.uri, source.title), element("p", "detail-note", `${source.publisher} · ${source.license ?? "许可见原始来源"} · ${source.revision ?? "版本未提供"}`));
-        }
-        select.addEventListener("change", () => {
-            selectedPhaseId = select.value;
-            renderDetail(site, selectedResult()?.matched_fields ?? []);
-            const selected = review.phases.find((item) => item.id === selectedPhaseId);
-            if (selected)
-                followPhase(selected);
-            ui.detailContent.querySelector("#site-phase")?.focus({ preventScroll: true });
-            saveViewLink();
-        });
         return content;
     }
     function followPhase(phase) {
         const year = ArchSearchResearch.automaticPhaseYear(phase);
         if (year !== null)
             historyView?.setYear(year, "site");
+        else
+            historyView?.retainBackground("所选阶段仅有区间或约略年代，历史图保留最后成功背景，不推定单年。");
         const site = currentSelectedSite();
         if (site)
             updateComparisonSelection(site, false);
@@ -1453,12 +1412,15 @@
             card.classList.toggle("is-selected", selected);
             card.setAttribute("aria-pressed", String(selected));
             if (selected) {
-                const listBounds = ui.list.getBoundingClientRect();
+                const scrollPanel = document.getElementById("workspace-results-view");
+                if (!scrollPanel || scrollPanel.hidden)
+                    continue;
+                const listBounds = scrollPanel.getBoundingClientRect();
                 const cardBounds = card.getBoundingClientRect();
                 if (cardBounds.top < listBounds.top)
-                    ui.list.scrollTop -= listBounds.top - cardBounds.top;
+                    scrollPanel.scrollTop -= listBounds.top - cardBounds.top;
                 else if (cardBounds.bottom > listBounds.bottom)
-                    ui.list.scrollTop += cardBounds.bottom - listBounds.bottom;
+                    scrollPanel.scrollTop += cardBounds.bottom - listBounds.bottom;
             }
         }
         for (const [markerId, marker] of state.markers) {
@@ -1486,7 +1448,7 @@
                 keyboard: true, autoPanOnFocus: false, title: displayTitle(site), zIndexOffset: 2000,
             }).addTo(state.map);
             marker.bindTooltip(element("span", null, displayTitle(site)));
-            marker.on("click", () => { void selectSite(site.id, { opener: marker.getElement() ?? null }); });
+            marker.on("click", () => { void selectSite(site.id, { opener: marker.getElement() ?? null, showDetail: true }); });
             const icon = marker.getElement();
             if (markerOpenedDetail)
                 state.detailOpener = icon ?? null;
@@ -1514,25 +1476,23 @@
         if (fresh) {
             ui.detailPanel.scrollTop = 0;
             if (moveMap) {
-                const location = point(site);
-                if (location && state.map)
-                    state.map.setView([location[0], ArchSearchMapView.wrapLongitude(location[1], state.map.getCenter().lng)], Math.max(14, state.map.getZoom()), { animate: false });
                 positionSelectedSite(site);
             }
             else
                 autoPositionedSelection = false;
-            byId("comparison-evidence", HTMLElement).scrollIntoView({ block: "start", behavior: "instant" });
-            byId("comparison-evidence-open", HTMLButtonElement).focus({ preventScroll: true });
             const rank = state.results.findIndex((item) => item.site.id === site.id);
-            announce(`${rank < 0 ? "已选择全库目录地点" : `已选择第 ${rank + 1} / ${state.results.length} 条`}：${displayTitle(site)}，原始资料详情已展开。`);
+            announce(`${rank < 0 ? "已选择全库目录地点" : `已选择第 ${rank + 1} / ${state.results.length} 条`}：${displayTitle(site)}，可打开资料详情核验来源。`);
         }
         saveViewLink();
     }
-    async function selectSite(id, { fromMap = false, preserveYear = false, phaseId = null, opener = null, restoring = false, moveMap = true, } = {}) {
+    async function selectSite(id, { fromMap = false, preserveYear = false, phaseId = null, opener = null, restoring = false, moveMap = true, showDetail = false, } = {}) {
+        closeDetail(false);
         if (!restoring) {
             cancelLinkRestore();
             mapComparison?.noteInteraction();
         }
+        if (!restoring)
+            historyView?.retainBackground("正在核对所选资料年代，保留最后成功历史背景。");
         const result = state.results.find((item) => item.site.id === id);
         const known = result?.site ?? (state.selectedSite?.id === id ? state.selectedSite : null);
         state.detailOpener = opener ?? (fromMap
@@ -1548,7 +1508,6 @@
         ui.exportResults.disabled = boundsRestoreError !== null || state.completedSearch === null || known === null;
         selectedPhaseId = null;
         markSelection(id);
-        ui.detailPanel.hidden = false;
         registeredAreas?.select(id, known ? displayTitle(known) : id);
         let initialPhase;
         const choosePhase = (site) => {
@@ -1561,10 +1520,17 @@
             initialPhase = phases.find((phase) => phase.id === selectedPhaseId);
             if (initialPhase && !preserveYear && (historyView?.actionVersion() ?? 0) === userVersion)
                 followPhase(initialPhase);
+            else if (!initialPhase && !preserveYear)
+                historyView?.retainBackground("所选资料没有已核验的明确年份；历史图保留最后成功背景。");
         };
         if (known) {
             choosePhase(known);
             presentSelection(known, result?.matched_fields ?? [], true, moveMap);
+            if (!showDetail && moveMap && !restoring) {
+                if (window.matchMedia("(max-width: 780px)").matches)
+                    byId("map-comparison", HTMLDivElement).scrollIntoView({ block: "start", behavior: "instant" });
+                (state.markers.get(id) ?? state.selectionMarker)?.getElement()?.focus({ preventScroll: true });
+            }
         }
         else {
             mapComparison?.setSelection(null);
@@ -1573,6 +1539,8 @@
             ui.detailContent.replaceChildren(element("h3", null, "正在读取来源资料"), element("p", "detail-note", id), ...(registeredAreas ? [registeredAreas.element] : []));
             updateSelectionControls();
         }
+        if (showDetail)
+            ArchSearchWorkspace.openDetail(state.detailOpener);
         const phaseAtRequest = selectedPhaseId;
         try {
             const site = await api(`/api/sites/${encodeURIComponent(id)}`, { signal: controller.signal });
@@ -1621,29 +1589,16 @@
         }
     }
     function closeDetail(returnFocus = true) {
-        state.detailController?.abort();
-        registeredAreas?.clear();
-        ui.detailPanel.hidden = true;
-        if (state.selectedId && !currentSelectedSite()) {
-            state.selectedId = null;
-            selectedPhaseId = null;
-            pendingSelectionRestore = false;
-            explore?.select(null);
-            polarView?.select(null);
-            updateSelectionControls();
-            saveViewLink();
-        }
-        if (returnFocus) {
-            const opener = state.detailOpener;
-            if (opener?.isConnected && opener.getClientRects().length > 0 && !opener.closest("details:not([open])")) {
-                opener.focus({ preventScroll: true });
-                if (window.matchMedia("(max-width: 780px)").matches)
-                    opener.scrollIntoView({ block: "nearest", behavior: "instant" });
-            }
-            else
-                focusWithinView(ui.selectionSummary);
-        }
-        state.detailOpener = null;
+        ArchSearchWorkspace.closeDetail({ restoreFocus: returnFocus });
+    }
+    function openCurrentDetail() {
+        const site = currentSelectedSite();
+        if (!site)
+            return;
+        const opener = document.activeElement instanceof HTMLElement ? document.activeElement : ui.openSelectedDetail;
+        renderDetail(site, selectedResult()?.matched_fields ?? []);
+        registeredAreas?.select(site.id, displayTitle(site));
+        ArchSearchWorkspace.openDetail(opener);
     }
     function applyChangedFilter() {
         exampleIntent.invalidate();
@@ -1697,7 +1652,6 @@
     byId("retry-tiles", HTMLButtonElement).addEventListener("click", () => {
         mapComparison?.setModernBasemap("osm");
     });
-    byId("close-detail", HTMLButtonElement).addEventListener("click", () => closeDetail());
     ui.copyLink.addEventListener("click", copySearchLink);
     ui.exportResults.addEventListener("click", exportSearchResults);
     ui.clearType.addEventListener("click", clearTypeFilter);
@@ -1707,9 +1661,13 @@
     ui.previousResult.addEventListener("click", () => browseResult(-1));
     ui.nextResult.addEventListener("click", () => browseResult(1));
     ui.locateSelected.addEventListener("click", locateCurrentSite);
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && !ui.detailPanel.hidden)
-            closeDetail();
+    ui.openSelectedDetail.addEventListener("click", openCurrentDetail);
+    window.addEventListener("archsearch:detailclose", () => {
+        ui.detailPanel.hidden = true;
+    });
+    window.addEventListener("archsearch:workspacechange", () => {
+        state.map?.invalidateSize({ pan: false });
+        historicalMap?.invalidateSize({ pan: false });
     });
     if (pendingLink) {
         state.restoringLink = true;
@@ -1722,20 +1680,12 @@
     initializeMap();
     mapComparison = ArchSearchComparison.create({
         modern: state.map, historical: historicalMap, tiles: state.tiles, initial: initialComparison.state,
-        onSelect: (id, opener) => { void selectSite(id, { fromMap: true, opener }); },
+        onSelect: (id, opener, options) => { void selectSite(id, { fromMap: true, opener, moveMap: options?.moveMap ?? true, showDetail: options?.moveMap !== false }); },
         onChanged: saveViewLink,
-        onEvidence: () => {
-            const site = currentSelectedSite();
-            if (!site)
-                return;
-            ui.detailPanel.hidden = false;
-            renderDetail(site, selectedResult()?.matched_fields ?? []);
-            ui.detailPanel.scrollIntoView({ block: "start", behavior: "instant" });
-            ui.detailPanel.focus({ preventScroll: true });
-        },
+        onEvidence: openCurrentDetail,
     });
     historyView = ArchSearchHistory.create({
-        map: historicalMap, tiles: null, fixedHistorical: true, sharedRenderer: mapComparison.getHistoricalRenderer(),
+        map: historicalMap, tiles: null, fixedHistorical: true, automaticOnly: true, sharedRenderer: mapComparison.getHistoricalRenderer(),
         onCommittedView: saveViewLink,
         onUserAction: () => {
             restoringView = false;
@@ -1761,6 +1711,7 @@
         },
         onStateChange: () => { exampleIntent.invalidate(); browseRestored = true; invalidLink = false; pendingSelectionRestore = false; saveViewLink(); },
         onCommittedState: () => {
+            updateScopeHeader();
             mapComparison?.setCatalogue(explore?.getDisplayedPlacements() ?? [], explore?.getCommittedState()?.visible ?? true);
             if (browseRestoreError) {
                 if (ui.requestError.textContent === `分享链接未能恢复：${browseRestoreError}`)
@@ -1808,6 +1759,7 @@
         map: state.map,
         onShow: () => {
             autoPositionedSelection = false;
+            closeDetail(false);
             if (window.matchMedia("(max-width: 780px)").matches) {
                 byId("registered-areas-show", HTMLButtonElement).scrollIntoView({ block: "nearest", behavior: "instant" });
                 byId("map", HTMLDivElement).scrollIntoView({ block: "start", behavior: "instant" });
@@ -1815,15 +1767,7 @@
         },
         onVisibilityChange: (visible) => { ui.detailPanel.classList.toggle("is-viewing-registered-area", visible); },
         getPadding: () => {
-            const mapBounds = byId("map", HTMLDivElement).getBoundingClientRect();
-            const detailBounds = ui.detailPanel.getBoundingClientRect();
-            const covered = ui.detailPanel.hidden ? 0 : Math.max(0, Math.min(mapBounds.right, detailBounds.right) - Math.max(mapBounds.left, detailBounds.left));
-            const coveredHeight = ui.detailPanel.hidden ? 0 : Math.max(0, Math.min(mapBounds.bottom, detailBounds.bottom) - Math.max(mapBounds.top, detailBounds.top));
-            return {
-                topLeft: [24, 24],
-                bottomRight: mapBounds.width - covered >= 96 ? [covered + 24, 24]
-                    : mapBounds.height - coveredHeight >= 96 ? [24, coveredHeight + 24] : [24, 24],
-            };
+            return { topLeft: [24, 24], bottomRight: [24, 24] };
         },
     });
     registeredAreas.setCorpusVersion(currentCorpusVersion, currentRegisteredAreasVersion);

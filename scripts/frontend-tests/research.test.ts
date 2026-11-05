@@ -733,6 +733,17 @@ test('v2 export freezes the actual displayed map and multiple source licenses', 
   assert.equal(helpers.createExport(request, response, '2026-10-31T00:00:00Z').map, null);
 });
 
+test('uncertain selected evidence exports the retained actual background without fabricating a site year', () => {
+  const view: HistoryView = {year:117,basemap:'historical',boundaries:true,frame_id:'default-frame',source_version:'v0.2.1'};
+  const selected = {id:'wd:Q123',chronology:{status:'reviewed',default_phase_id:'uncertain',phases:[{id:'uncertain',precision:'range',start_year:1500,end_year:1650}]}};
+  const response = {query:request.query,mode:request.mode,corpus_version:'global-v19',elapsed_ms:1,total_candidates:3898,results:[]};
+  const exported = helpers.createExport(request,response,'2026-11-05T00:00:00Z',view,{site:selected.id,phase:'uncertain'},selected);
+  assert.equal(exported.map?.year,117); assert.deepEqual(exported.selected_site,selected);
+  assert.match(exported.provenance.chronology,/仅明确单年.*不提供任意年份选择.*不推断年份.*旧分享链接/u);
+  const restored = helpers.parseView(new URL(helpers.buildLink(base,request,view,{site:selected.id,phase:'uncertain'})));
+  assert.equal(restored.view?.year,117); assert.equal(restored.selection.phase,'uncertain');
+});
+
 test('catalogue-only links restore a namespaced site without inventing a search', () => {
   const selection = { site: 'whc:252', phase: null };
   const browse: BrowseState = { country: 'IN', region: 'asia-pacific', offset: 50, visible: false, bbox: null };

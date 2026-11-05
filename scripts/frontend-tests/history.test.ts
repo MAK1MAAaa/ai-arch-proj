@@ -13,10 +13,11 @@ interface Controller {
   setYear(year: number, intent?: 'user' | 'site'): void;
   setBasemap(basemap: 'historical' | 'modern', intent?: 'user' | 'site'): void;
   setBoundaries(enabled: boolean, intent?: 'user' | 'site'): void;
+  retainBackground(note?: string): void;
   actionVersion(): number;
 }
 interface Helpers {
-  create(options: { map: FakeMap | null; tiles: FakeLayer | null; onCommittedView(view: View): void; onUserAction(): void; fixedHistorical?: boolean; sharedRenderer?: object | null }): Controller;
+  create(options: { map: FakeMap | null; tiles: FakeLayer | null; onCommittedView(view: View): void; onUserAction(): void; fixedHistorical?: boolean; sharedRenderer?: object | null; automaticOnly?: boolean }): Controller;
   isValidYear(year: number): boolean;
   yearToStep(year: number): number;
   stepToYear(step: number): number;
@@ -125,9 +126,11 @@ function frame(year: number, options: { from?: number; to?: number; id?: string;
   };
 }
 
-function setup(withMap = true, fixedHistorical = false, sharedRenderer: object | null = null) {
+function setup(withMap = true, fixedHistorical = false, sharedRenderer: object | null = null, automaticOnly = false, includeLegacyControls = !automaticOnly) {
   const ids = ['history-controls', 'history-year', 'history-range', 'history-apply', 'history-previous-year', 'history-next-year', 'history-previous-frame', 'history-next-frame', 'history-basemap-historical', 'history-basemap-modern', 'history-boundaries', 'history-applied-year', 'history-draft-year', 'history-feedback', 'history-error', 'history-source', 'history-retry', 'history-map-caption', 'comparison-history-year'];
   const nodes = new Map(ids.map((id) => [id, new FakeElement()]));
+  const legacyIds = ['history-year', 'history-range', 'history-apply', 'history-previous-year', 'history-next-year', 'history-previous-frame', 'history-next-frame', 'history-basemap-historical', 'history-basemap-modern', 'history-boundaries', 'history-draft-year'];
+  if (!includeLegacyControls) for (const id of legacyIds) nodes.delete(id);
   const doc: { activeElement: FakeElement | null; getElementById(id: string): FakeElement | null; createElement(tag: string): FakeElement; createTextNode(text: string): FakeElement } = {
     activeElement: null,
     getElementById: (id) => nodes.get(id) ?? null,
@@ -165,7 +168,7 @@ function setup(withMap = true, fixedHistorical = false, sharedRenderer: object |
   tiles.addTo(map);
   const commits: View[] = [];
   let actions = 0;
-  const view = helpers.create({ map: withMap ? map : null, tiles: withMap ? tiles : null, onCommittedView: (value) => commits.push(value), onUserAction: () => { actions++; }, fixedHistorical, sharedRenderer });
+  const view = helpers.create({ map: withMap ? map : null, tiles: withMap ? tiles : null, onCommittedView: (value) => commits.push(value), onUserAction: () => { actions++; }, fixedHistorical, sharedRenderer, automaticOnly });
   const node = (id: string): FakeElement => { const value = nodes.get(id); assert.ok(value); return value; };
   function runTimers(): void { for (const [id, callback] of [...timers]) { timers.delete(id); callback(); } }
   function complete(request: Pending, value: unknown, code = 200): void {
@@ -509,4 +512,81 @@ test('shared historical Canvas keeps source-point hit testing and places every r
   env.view.setYear(200); env.runTimers(); env.complete(env.boundaryRequest(200), frame(200, {from:200,to:299,id:'new-frame'})); await tick();
   assert.equal(boundaries().length, 2); assert.ok(boundaries().every(layer => layer.options.renderer === sharedRenderer && layer.sentToBack === 1));
   assert.equal(env.map.hasLayer(first), false); assert.equal(env.map.hasLayer(boundaries()[1]), true);
+});
+
+test('automatic history needs only status display elements and follows explicit site years', async () => {
+  const renderer = { shared: 'source-points-and-polities' };
+  const env = setup(true, false, renderer, true); await env.finishInitial();
+  assert.equal(env.view.getView()?.year, 117);
+  assert.match(env.node('history-applied-year').textContent, /历史背景.*117/u);
+  assert.match(env.node('history-feedback').textContent, /明确年份联动.*区间或未知年代不推断/u);
+  env.view.setYear(1616, 'site'); env.runTimers();
+  env.complete(env.boundaryRequest(1616), frame(1616, {from:1616,to:1616,id:'burial-frame'})); await tick();
+  assert.equal(env.view.getView()?.year, 1616); assert.equal(env.view.getView()?.basemap, 'historical');
+  assert.equal(env.view.actionVersion(), 0); assert.match(allText(env.node('history-source')), /Cliopatria/u);
+  const boundary = env.layers.filter(layer => layer.options.pane === 'history-boundaries').at(-1)!;
+  assert.equal(boundary.options.renderer, renderer); assert.equal(boundary.sentToBack, 1);
+});
+
+test('automatic history never binds old manual controls even when a legacy layout contains them', async () => {
+  const env = setup(true, false, null, true, true); await env.finishInitial(); const before = env.pending.length;
+  env.node('history-year').value = '1930'; env.node('history-year').fire('input'); env.node('history-year').fire('change');
+  env.node('history-year').fire('keydown', 'Enter'); env.node('history-range').value = '1929'; env.node('history-range').fire('input');
+  for (const id of ['history-apply','history-previous-year','history-next-year','history-previous-frame','history-next-frame','history-basemap-modern']) env.node(id).fire('click');
+  env.node('history-boundaries').checked = false; env.node('history-boundaries').fire('change');
+  env.runTimers(); await tick(); assert.equal(env.pending.length, before); assert.equal(env.view.getView()?.year, 117);
+  assert.equal(env.view.getView()?.boundaries, true); assert.equal(env.view.actionVersion(), 0);
+});
+
+test('automatic old shares restore the year while keeping the natural polity view enabled', async () => {
+  const env = setup(true, false, null, true);
+  env.view.setBasemap('modern', 'site'); env.view.setBoundaries(false, 'site'); env.view.setYear(-44, 'site');
+  env.view.configure(status); env.runTimers();
+  const landRequest = env.pending.find(request => request.url.endsWith('land.geojson')); assert.ok(landRequest);
+  env.complete(landRequest, land); env.complete(env.boundaryRequest(-44), frame(-44, {from:-100,to:-1})); await tick();
+  assert.equal(env.view.getView()?.year, -44); assert.equal(env.view.getView()?.basemap, 'historical');
+  assert.equal(env.view.getView()?.boundaries, true); assert.equal(env.map.hasLayer(env.tiles), false);
+});
+
+test('an uncertain selection cancels the previous exact year and retains only the last successful background', async () => {
+  const env = setup(true, false, null, true); await env.finishInitial(); const before = new Set(env.map.layers);
+  env.view.setYear(200, 'site'); env.runTimers(); const old = env.boundaryRequest(200);
+  env.view.retainBackground('区间证据：公元1至100年；不推断年份。');
+  assert.equal(old.signal.aborted, true); assert.equal(env.view.getView()?.year, 117);
+  env.complete(old, frame(200, {from:200,to:299,id:'too-late'})); await tick();
+  assert.equal(env.view.getView()?.year, 117); assert.deepEqual(env.map.layers, before); assert.equal(env.commits.length, 1);
+  assert.match(env.node('history-feedback').textContent, /区间证据.*不推断/u); assert.equal(env.view.actionVersion(), 0);
+});
+
+test('unknown selection before the first frame keeps default117 and still prepares local geography', async () => {
+  const env = setup(true, false, null, true); env.view.configure(status); env.view.setYear(1616, 'site');
+  env.view.retainBackground(); env.runTimers();
+  assert.equal(env.pending.some(request => request.url.includes('year=1616')), false);
+  const geography = env.pending.find(request => request.url.endsWith('land.geojson')); assert.ok(geography);
+  env.complete(geography, land); env.complete(env.boundaryRequest(117), frame(117)); await tick();
+  assert.equal(env.view.getView()?.year, 117); assert.match(env.node('history-feedback').textContent, /没有明确单年证据.*不推断/u);
+});
+
+test('automatic loading failure preserves the successful year and retries without any year input', async () => {
+  const env = setup(true, false, null, true); await env.finishInitial();
+  env.view.setYear(200, 'site'); env.runTimers(); env.complete(env.boundaryRequest(200), {detail:'年度资料失败'}, 503); await tick();
+  assert.equal(env.view.getView()?.year, 117); assert.match(env.node('comparison-history-year').textContent, /117/u);
+  assert.equal(env.node('history-retry').hidden, false); env.node('history-retry').fire('click'); env.runTimers();
+  env.complete(env.boundaryRequest(200), frame(200, {from:200,to:299,id:'retry-success'})); await tick();
+  assert.equal(env.view.getView()?.year, 200); assert.equal(env.node('history-error').hidden, true);
+});
+
+test('automatic exact years outside source coverage never clamp or invent a replacement year', async () => {
+  const env = setup(true, false, null, true); await env.finishInitial(); const before = env.pending.length;
+  env.view.setYear(2025, 'site'); env.runTimers(); await tick();
+  assert.equal(env.pending.length, before); assert.equal(env.view.getView()?.year, 117);
+  assert.match(env.node('history-error').textContent, /无可用疆域数据.*保留最后成功/u);
+});
+
+test('out-of-coverage selection before first automatic frame still loads a clearly unrelated default background', async () => {
+  const env = setup(true, false, null, true); env.view.configure(status); env.view.setYear(-9600, 'site'); env.runTimers();
+  const geography = env.pending.find(request => request.url.endsWith('land.geojson')); assert.ok(geography);
+  env.complete(geography, land); env.complete(env.boundaryRequest(117), frame(117)); await tick();
+  assert.equal(env.view.getView()?.year,117); assert.match(env.node('history-feedback').textContent,/无可用疆域数据/u);
+  assert.equal(env.pending.some(request => request.url.includes('year=-9600')),false);
 });
