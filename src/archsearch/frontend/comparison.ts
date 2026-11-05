@@ -238,7 +238,7 @@ const ArchSearchComparison = (() => {
     ui.evidenceOpen.addEventListener("click", onEvidence);
     for (const [map, view] of [[modern, initial.modern_view], [historical, initial.history_view]] as const) if (map && view) map.setView([view.center[1], view.center[0]], view.zoom, { animate: false });
     if (typeof ResizeObserver !== "undefined") {
-      const observer = new ResizeObserver(() => { modern?.invalidateSize({ pan: false }); historical?.invalidateSize({ pan: false }); });
+      const observer = new ResizeObserver(() => { modern?.invalidateSize({ pan: true, animate: false }); historical?.invalidateSize({ pan: true, animate: false }); });
       if (modern) observer.observe(modern.getContainer()); if (historical) observer.observe(historical.getContainer());
     }
     render(); if (requested === "natural") void naturalFallback(); else void ensureLand().catch(() => undefined);

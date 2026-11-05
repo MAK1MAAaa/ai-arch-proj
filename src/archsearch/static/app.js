@@ -183,12 +183,13 @@
         ui.announcement.textContent = message;
     }
     function focusWithinView(target) {
-        if (target.tabIndex < 0)
-            target.tabIndex = -1;
-        target.focus({ preventScroll: true });
-        const bounds = target.getBoundingClientRect();
+        const destination = target.closest("[hidden]") ? byId("workspace-toggle-sidebar", HTMLButtonElement) : target;
+        if (destination.tabIndex < 0)
+            destination.tabIndex = -1;
+        destination.focus({ preventScroll: true });
+        const bounds = destination.getBoundingClientRect();
         if (bounds.top < 0 || bounds.bottom > window.innerHeight) {
-            target.scrollIntoView({ block: "nearest", behavior: "instant" });
+            destination.scrollIntoView({ block: "nearest", behavior: "instant" });
         }
     }
     function showError(message) {
@@ -485,7 +486,7 @@
         });
         if (typeof ResizeObserver !== "undefined") {
             new ResizeObserver(() => {
-                state.map?.invalidateSize({ pan: false });
+                state.map?.invalidateSize({ pan: true, animate: false });
                 const selected = currentSelectedSite();
                 if (autoPositionedSelection && selected)
                     positionSelectedSite(selected);
@@ -563,6 +564,8 @@
             return;
         if (ArchSearchMapView.locationStatus(site.repr_point) === "polar") {
             closeDetail(false);
+            ArchSearchWorkspace.setSidebarCollapsed(false, { focus: false });
+            ArchSearchWorkspace.activateCatalogue({ focus: false });
             if (polarView?.locate(site.id))
                 announce(`已在独立极区示意定位 ${displayTitle(site)}，主地图不夹取原始纬度。`);
             else
@@ -572,6 +575,7 @@
         if (!state.map || !point(site))
             return;
         closeDetail(false);
+        ArchSearchWorkspace.revealMaps();
         positionSelectedSite(site);
         updateComparisonSelection(site, true);
         const marker = state.markers.get(site.id) ?? state.selectionMarker;
@@ -1413,7 +1417,7 @@
             card.setAttribute("aria-pressed", String(selected));
             if (selected) {
                 const scrollPanel = document.getElementById("workspace-results-view");
-                if (!scrollPanel || scrollPanel.hidden)
+                if (!scrollPanel || scrollPanel.closest("[hidden]"))
                     continue;
                 const listBounds = scrollPanel.getBoundingClientRect();
                 const cardBounds = card.getBoundingClientRect();
@@ -1509,6 +1513,9 @@
         selectedPhaseId = null;
         markSelection(id);
         registeredAreas?.select(id, known ? displayTitle(known) : id);
+        const canLocateImmediately = known ? point(known) !== null : opener?.dataset.locationStatus === "mapped";
+        if (!showDetail && moveMap && !restoring && canLocateImmediately)
+            ArchSearchWorkspace.revealMaps();
         let initialPhase;
         const choosePhase = (site) => {
             const phases = site.chronology?.phases ?? [];
@@ -1648,7 +1655,7 @@
         });
     });
     byId("refresh-status", HTMLButtonElement).addEventListener("click", refreshRuntime);
-    byId("fit-map", HTMLButtonElement).addEventListener("click", () => { mapComparison?.noteInteraction(); closeDetail(false); fitMap(); });
+    byId("fit-map", HTMLButtonElement).addEventListener("click", () => { mapComparison?.noteInteraction(); closeDetail(false); ArchSearchWorkspace.revealMaps(); fitMap(); });
     byId("retry-tiles", HTMLButtonElement).addEventListener("click", () => {
         mapComparison?.setModernBasemap("osm");
     });
@@ -1666,8 +1673,8 @@
         ui.detailPanel.hidden = true;
     });
     window.addEventListener("archsearch:workspacechange", () => {
-        state.map?.invalidateSize({ pan: false });
-        historicalMap?.invalidateSize({ pan: false });
+        state.map?.invalidateSize({ pan: true, animate: false });
+        historicalMap?.invalidateSize({ pan: true, animate: false });
     });
     if (pendingLink) {
         state.restoringLink = true;

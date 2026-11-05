@@ -6,6 +6,7 @@ import ts from 'typescript';
 
 class Element extends EventTarget {
   hidden = false; open = false; tabIndex = 0; isConnected = true; blocked = false; dataset: Record<string,string> = {};
+  textContent = ''; title = '';
   attributes = new Map<string,string>(); values = new Map<string,string>(); captures = new Set<number>(); classes = new Set<string>();
   contained = new Set<Element>();
   style = { setProperty: (key:string,value:string) => this.values.set(key,value) };
@@ -17,10 +18,10 @@ class Element extends EventTarget {
   getBoundingClientRect() { return this.bounds; }
   focus() { this.onFocus(); }
   closest(_selector:string): Element|null { return this.blocked ? this : null; }
-  contains(other: Element|null):boolean { return other === this || other !== null && this.contained.has(other); }
+  contains(other: Element|null):boolean { return other === this || other !== null && [...this.contained].some(child=>child.contains(other)); }
   setPointerCapture(id:number) { this.captures.add(id); }
   hasPointerCapture(id:number) { return this.captures.has(id); }
-  releasePointerCapture(id:number) { this.captures.delete(id); }
+  releasePointerCapture(id:number) { this.captures.delete(id); this.fire('lostpointercapture',{pointerId:id}); }
   showModal() { this.open=true; }
   close() { if(this.open) { this.open=false; const dispatch=()=>this.dispatchEvent(new Event('close')); if(this.queuedClose)this.closeEvents.push(dispatch);else dispatch(); } }
   flushCloseEvents() { for(const dispatch of this.closeEvents.splice(0))dispatch(); }
@@ -33,11 +34,15 @@ interface Helper {
   openDetail(opener?:Element|null):void;
   closeDetail(options?:{restoreFocus?:boolean}):void;
   layoutWidth(value:unknown,available:number):number;
+  setSidebarCollapsed(collapsed:boolean,options?:{focus?:boolean}):void;
+  isSidebarCollapsed():boolean;
+  revealMaps():void;
 }
 const compiled=ts.transpileModule(readFileSync('src/archsearch/frontend/workspace.ts','utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.None}}).outputText;
 function setup(options:{saved?:string;small?:boolean;storageFails?:boolean}={}) {
-  const ids=['workspace','workspace-divider','workspace-sidebar','workspace-tab-results','workspace-tab-catalogue','workspace-results-view','workspace-catalogue-view','detail-dialog','detail-panel','close-detail','workspace-examples','llm-settings'];
+  const ids=['workspace','workspace-divider','workspace-sidebar','workspace-toggle-sidebar','workspace-toggle-sidebar-label','workspace-tab-results','workspace-tab-catalogue','workspace-results-view','workspace-catalogue-view','detail-dialog','detail-panel','close-detail','workspace-examples','llm-settings'];
   const nodes=new Map(ids.map(id=>[id,new Element()]));
+  for(const id of ['workspace-tab-results','workspace-tab-catalogue','workspace-results-view','workspace-catalogue-view'])nodes.get('workspace-sidebar')!.contained.add(nodes.get(id)!);
   const document=new EventTarget() as EventTarget&{activeElement:Element|null;getElementById(id:string):Element|undefined;querySelector(selector:string):Element};
   document.activeElement=null; document.getElementById=id=>nodes.get(id); document.querySelector=()=>new Element();
   for(const node of nodes.values())node.onFocus=()=>{document.activeElement=node;};
@@ -73,17 +78,17 @@ test('programmatic activation restores focus from a panel it hides while preserv
   h.helper.activateCatalogue({focus:false});assert.equal(h.document.activeElement,h.node('workspace-tab-catalogue'));
   const map=new Element();h.document.activeElement=map;h.helper.activateResults({focus:false});assert.equal(h.document.activeElement,map);
 });
-test('keyboard resizing clamps dimensions and stores only an explicit layout width',()=>{
+test('keyboard resizing clamps dimensions and stores only explicit layout preferences',()=>{
   const h=setup();const divider=h.node('workspace-divider');divider.fire('keydown',{key:'End'});assert.equal(divider.attributes.get('aria-valuenow'),'580');
   divider.fire('keydown',{key:'ArrowRight'});assert.equal(divider.attributes.get('aria-valuenow'),'580');
   divider.fire('keydown',{key:'Home'});assert.equal(divider.attributes.get('aria-valuenow'),'280');divider.fire('keydown',{key:'ArrowRight'});assert.equal(divider.attributes.get('aria-valuenow'),'296');
-  assert.deepEqual(JSON.parse(h.writes.at(-1)!.value),{sidebar_width:296});assert.equal(h.writes.at(-1)!.key,'archsearch.workspace.layout.v1');
+  assert.deepEqual(JSON.parse(h.writes.at(-1)!.value),{sidebar_width:296,sidebar_collapsed:false});assert.equal(h.writes.at(-1)!.key,'archsearch.workspace.layout.v1');
 });
 test('pointer resizing uses capture and keeps space for both maps',()=>{
   const h=setup();const divider=h.node('workspace-divider');
   divider.fire('pointerdown',{button:0,isPrimary:true,pointerId:7});assert.equal(divider.hasPointerCapture(7),true);
   divider.fire('pointermove',{pointerId:7,clientX:500});assert.equal(divider.attributes.get('aria-valuenow'),'500');
-  divider.fire('pointerup',{pointerId:7});assert.equal(divider.hasPointerCapture(7),false);assert.deepEqual(JSON.parse(h.writes.at(-1)!.value),{sidebar_width:500});
+  divider.fire('pointerup',{pointerId:7});assert.equal(divider.hasPointerCapture(7),false);assert.deepEqual(JSON.parse(h.writes.at(-1)!.value),{sidebar_width:500,sidebar_collapsed:false});
   assert.equal(h.helper.layoutWidth(580,1000),468);assert.equal(h.helper.layoutWidth(Infinity,1400),350);assert.equal(h.helper.layoutWidth(-10,1400),280);
 });
 test('narrow screens ignore divider dragging and keyboard resizing',()=>{
@@ -92,7 +97,7 @@ test('narrow screens ignore divider dragging and keyboard resizing',()=>{
 });
 test('restored preferences ignore arbitrary properties and malformed or blocked storage',()=>{
   const h=setup({saved:'{"sidebar_width":470,"query":"private","api_key":"secret"}'});h.node('workspace-divider').fire('keydown',{key:'ArrowLeft'});
-  assert.deepEqual(JSON.parse(h.writes.at(-1)!.value),{sidebar_width:454});
+  assert.deepEqual(JSON.parse(h.writes.at(-1)!.value),{sidebar_width:454,sidebar_collapsed:false});
   assert.doesNotThrow(()=>setup({saved:'broken json'}));assert.doesNotThrow(()=>setup({storageFails:true}).node('workspace-divider').fire('keydown',{key:'End'}));
 });
 test('native detail dialogs focus their close action and restore a valid opener',()=>{
@@ -124,4 +129,86 @@ test('only a real backdrop click closes the native dialog',()=>{
 test('popover menus close each other and Escape dismisses them when no modal is active',()=>{
   const h=setup();h.node('workspace-examples').open=true;h.node('llm-settings').open=true;h.node('llm-settings').fire('toggle');assert.equal(h.node('workspace-examples').open,false);
   const escape=new Event('keydown');Object.defineProperty(escape,'key',{value:'Escape'});h.document.dispatchEvent(escape);assert.equal(h.node('llm-settings').open,false);
+});
+
+test('the floating panel toggle hides controls and divider while preserving its active tab',()=>{
+  const h=setup();const toggle=h.node('workspace-toggle-sidebar'),divider=h.node('workspace-divider');
+  h.helper.activateCatalogue();toggle.focus();toggle.fire('click');
+  assert.equal(h.helper.isSidebarCollapsed(),true);assert.equal(h.node('workspace-sidebar').hidden,true);
+  assert.equal(divider.hidden,true);assert.equal(divider.tabIndex,-1);assert.equal(toggle.attributes.get('aria-expanded'),'false');
+  assert.equal(h.node('workspace-toggle-sidebar-label').textContent,'展开资料');
+  assert.equal(h.document.activeElement,toggle);assert.equal(h.node('workspace-sidebar').dataset.activeTab,'catalogue');
+  assert.deepEqual(JSON.parse(h.writes.at(-1)!.value),{sidebar_width:350,sidebar_collapsed:true});
+  divider.fire('keydown',{key:'End'});divider.fire('pointerdown',{button:0,isPrimary:true,pointerId:4});assert.equal(divider.captures.size,0);
+  toggle.fire('click');assert.equal(h.node('workspace-sidebar').hidden,false);assert.equal(divider.hidden,false);assert.equal(divider.tabIndex,0);
+  assert.equal(toggle.attributes.get('aria-expanded'),'true');assert.equal(h.node('workspace-catalogue-view').hidden,false);
+});
+
+test('search activation never expands a collapsed panel or focuses one of its hidden tabs',()=>{
+  const h=setup({saved:'{"sidebar_width":460,"sidebar_collapsed":true}'});const input=new Element();h.document.activeElement=input;
+  h.helper.activateCatalogue();h.helper.activateResults({focus:false});
+  assert.equal(h.helper.isSidebarCollapsed(),true);assert.equal(h.document.activeElement,input);assert.equal(h.writes.length,0);
+  h.helper.activateCatalogue({focus:true});assert.equal(h.document.activeElement,h.node('workspace-toggle-sidebar'));assert.equal(h.node('workspace-sidebar').hidden,true);
+});
+
+test('collapsing focused fields or the divider returns focus to the visible toggle but leaves map focus alone',()=>{
+  const h=setup();const field=new Element();h.node('workspace-catalogue-view').contained.add(field);h.document.activeElement=field;
+  h.helper.setSidebarCollapsed(true,{focus:false});assert.equal(h.document.activeElement,h.node('workspace-toggle-sidebar'));
+  h.helper.setSidebarCollapsed(false);h.node('workspace-divider').focus();h.helper.setSidebarCollapsed(true);
+  assert.equal(h.document.activeElement,h.node('workspace-toggle-sidebar'));
+  const map=new Element();h.document.activeElement=map;h.helper.setSidebarCollapsed(false);h.helper.setSidebarCollapsed(true);assert.equal(h.document.activeElement,map);
+});
+
+test('phone defaults and saved boolean preferences are distinct from legacy width-only preferences',()=>{
+  assert.equal(setup().helper.isSidebarCollapsed(),false);
+  assert.equal(setup({small:true}).helper.isSidebarCollapsed(),true);
+  assert.equal(setup({small:true,saved:'{"sidebar_width":500}'}).helper.isSidebarCollapsed(),true);
+  assert.equal(setup({small:true,saved:'{"sidebar_width":500,"sidebar_collapsed":false}'}).helper.isSidebarCollapsed(),false);
+  assert.equal(setup({saved:'{"sidebar_collapsed":true}'}).helper.isSidebarCollapsed(),true);
+  assert.equal(setup({small:true,saved:'{"sidebar_collapsed":"false","sidebar_width":"500"}'}).node('workspace-divider').attributes.get('aria-valuenow'),'350');
+});
+
+test('desktop width survives phone measurement, collapse persistence, refresh and return to a wide window',()=>{
+  const options={small:false};const h=setup(options),divider=h.node('workspace-divider');
+  divider.fire('pointerdown',{button:0,isPrimary:true,pointerId:8});divider.fire('pointermove',{pointerId:8,clientX:500});divider.fire('pointerup',{pointerId:8});
+  options.small=true;h.node('workspace').bounds.width=390;h.window.dispatchEvent(new Event('resize'));h.helper.setSidebarCollapsed(true);
+  assert.deepEqual(JSON.parse(h.writes.at(-1)!.value),{sidebar_width:500,sidebar_collapsed:true});
+  const restoredOptions={small:true,saved:h.writes.at(-1)!.value};const restored=setup(restoredOptions);
+  restoredOptions.small=false;restored.window.dispatchEvent(new Event('resize'));restored.helper.setSidebarCollapsed(false);
+  assert.equal(restored.node('workspace-divider').attributes.get('aria-valuenow'),'500');
+  restored.node('workspace').bounds.width=1000;restored.window.dispatchEvent(new Event('resize'));assert.equal(restored.node('workspace-divider').attributes.get('aria-valuenow'),'468');
+  restored.helper.setSidebarCollapsed(true);assert.equal(JSON.parse(restored.writes.at(-1)!.value).sidebar_width,500);
+  restored.node('workspace').bounds.width=1400;restored.window.dispatchEvent(new Event('resize'));assert.equal(restored.node('workspace-divider').attributes.get('aria-valuenow'),'500');
+});
+
+test('collapse and cancellation finish active pointer drags before release notifications can reenter',()=>{
+  const h=setup(),divider=h.node('workspace-divider');divider.fire('pointerdown',{button:0,isPrimary:true,pointerId:7});divider.fire('pointermove',{pointerId:7,clientX:490});
+  h.helper.setSidebarCollapsed(true);assert.equal(divider.captures.size,0);assert.equal(h.node('workspace').classes.has('is-resizing'),false);
+  assert.deepEqual(JSON.parse(h.writes.at(-1)!.value),{sidebar_width:490,sidebar_collapsed:true});
+  divider.fire('pointermove',{pointerId:7,clientX:570});assert.equal(divider.attributes.get('aria-valuenow'),'490');
+  h.helper.setSidebarCollapsed(false);divider.fire('pointerdown',{button:0,isPrimary:true,pointerId:9});divider.fire('pointermove',{pointerId:9,clientX:510});divider.fire('pointercancel',{pointerId:9});
+  assert.equal(divider.captures.size,0);assert.equal(h.node('workspace').classes.has('is-resizing'),false);assert.equal(JSON.parse(h.writes.at(-1)!.value).sidebar_width,510);
+  divider.fire('pointerdown',{button:0,isPrimary:true,pointerId:11});divider.fire('pointermove',{pointerId:11,clientX:530});divider.releasePointerCapture(11);
+  assert.equal(divider.captures.size,0);assert.equal(h.node('workspace').classes.has('is-resizing'),false);assert.equal(JSON.parse(h.writes.at(-1)!.value).sidebar_width,530);
+});
+
+test('revealMaps only folds a narrow floating panel and retains search tab selection',()=>{
+  const desktop=setup();desktop.helper.revealMaps();assert.equal(desktop.helper.isSidebarCollapsed(),false);assert.equal(desktop.writes.length,0);
+  const phone=setup({small:true,saved:'{"sidebar_collapsed":false}'});phone.helper.activateCatalogue();phone.helper.revealMaps();
+  assert.equal(phone.helper.isSidebarCollapsed(),true);assert.equal(phone.node('workspace-sidebar').dataset.activeTab,'catalogue');
+  phone.helper.setSidebarCollapsed(false,{focus:false});assert.equal(phone.node('workspace-catalogue-view').hidden,false);
+});
+
+test('closing a detail whose opener is in a collapsed panel restores the visible toggle',()=>{
+  const h=setup(),opener=new Element();h.node('workspace-results-view').contained.add(opener);
+  h.helper.openDetail(opener);h.helper.setSidebarCollapsed(true);assert.equal(h.document.activeElement,h.node('close-detail'));
+  h.helper.closeDetail();assert.equal(h.document.activeElement,h.node('workspace-toggle-sidebar'));
+});
+
+test('Escape respects menus, modal dialogs and map popup focus before folding the panel',()=>{
+  const h=setup();const escape=()=>{const event=new Event('keydown',{cancelable:true});Object.defineProperty(event,'key',{value:'Escape'});h.document.dispatchEvent(event);return event;};
+  const map=new Element();h.document.activeElement=map;escape();assert.equal(h.helper.isSidebarCollapsed(),false);
+  h.node('workspace-tab-results').focus();h.node('llm-settings').open=true;escape();assert.equal(h.node('llm-settings').open,false);assert.equal(h.helper.isSidebarCollapsed(),false);
+  h.helper.openDetail();escape();assert.equal(h.helper.isSidebarCollapsed(),false);h.helper.closeDetail();
+  h.node('workspace-tab-results').focus();assert.equal(escape().defaultPrevented,true);assert.equal(h.helper.isSidebarCollapsed(),true);assert.equal(h.document.activeElement,h.node('workspace-toggle-sidebar'));
 });
