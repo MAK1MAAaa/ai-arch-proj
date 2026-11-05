@@ -13,6 +13,13 @@ interface SearchSpec {
   country?: string | null;
   region?: string | null;
   subdivision?: string | null;
+  enhance?: boolean;
+  llm_revision?: number;
+}
+
+interface Enhancement {
+  requested: true; applied: boolean; provider: 'ollama' | 'openai'; model: string;
+  queries: string[]; elapsed_ms: number; ranking_method: 'rrf' | 'original'; reason: string | null;
 }
 
 interface SearchResponse<T> {
@@ -24,6 +31,7 @@ interface SearchResponse<T> {
   results: T[];
   subdivision?: string | null;
   subdivision_version?: string | null;
+  enhancement?: Enhancement | null;
 }
 
 interface ExportResult<T> {
@@ -68,6 +76,7 @@ interface ResearchHelpers {
   automaticPhaseYear(phase: { precision: string; start_year: number | null; end_year: number | null }): number | null;
   normalizeSubdivision(country: string | null | undefined, value: unknown): string | null;
   validateSubdivisionResponse(request: Pick<SearchSpec, 'country' | 'subdivision'>, response: { subdivision?: unknown; subdivision_version?: unknown }, expectedVersion?: string | null): string | null;
+  validateEnhancement(request: Pick<SearchSpec, 'query' | 'enhance'>, value: unknown): Enhancement | null;
   parseMinasSource(site: { id: string; details: string }): MinasSourceRecord[] | null;
   parseMerimeeSource(site: { id: string; details: string }): MerimeeSource | null;
   merimeeSourceFields: readonly string[];
@@ -404,6 +413,50 @@ test('matching-context registered range exports reject unversioned or degenerate
 
 const request: SearchSpec = { query: '古代港口', mode: 'semantic', type: 'port', limit: 20 };
 const base = new URL('http://127.0.0.1:8000/');
+
+const enhancedRequest: SearchSpec = { query: '寻找古代港口', mode: 'semantic', type: null, limit: 10, enhance: true, llm_revision: 7 };
+const enhancement: Enhancement = { requested: true, applied: true, provider: 'ollama', model: 'qwen3.5:2b', queries: ['寻找古代港口', 'ancient port archaeological sites'], elapsed_ms: 345, ranking_method: 'rrf', reason: null };
+
+test('enhanced links retain only the user intent and omit service revision or configuration', () => {
+  const withSecret = { ...enhancedRequest, api_key: 'secret-key', base_url: 'https://private.example/v1' };
+  const url = new URL(helpers.buildLink(new URL('https://arch.example/view?api_key=old-secret&base_url=private'), withSecret));
+  assert.equal(url.searchParams.get('enhance'), '1'); assert.equal(url.searchParams.has('llm_revision'), false);
+  assert.equal(url.href.includes('secret'), false); assert.equal(url.href.includes('private'), false);
+  assert.deepEqual(plain(helpers.parseLink(url).request), { query: enhancedRequest.query, mode: 'semantic', type: null, limit: 10, enhance: true });
+});
+
+test('invalid enhanced link flags cannot silently run base search', () => {
+  for (const tail of ['enhance=0', 'enhance=true', 'enhance=', 'enhance=1&enhance=1']) {
+    assert.ok(helpers.parseLink(new URL(`http://localhost/?q=site&${tail}`)).error);
+  }
+  assert.ok(helpers.parseLink(new URL('http://localhost/?enhance=1')).error);
+});
+
+test('enhanced export freezes actual response metadata and strips unknown credential fields', () => {
+  const maliciousExtra = { ...enhancement, api_key: 'must-not-export', base_url: 'https://private.example/v1' };
+  const response = { query: enhancedRequest.query, mode: 'semantic' as const, corpus_version: 'fixture', elapsed_ms: 400, total_candidates: 3, results: [], enhancement: maliciousExtra };
+  const report = helpers.createExport(enhancedRequest, response, '2026-11-05T00:00:00Z');
+  assert.deepEqual(plain(report.response.enhancement), enhancement);
+  assert.equal(report.request.llm_revision, undefined); assert.equal(JSON.stringify(report).includes('must-not-export'), false);
+  assert.equal(JSON.stringify(report).includes('private.example'), false);
+  enhancement.queries.push('temporary-mutation'); assert.equal(report.response.enhancement?.queries.length, 2); enhancement.queries.pop();
+  assert.match(report.provenance.enhancement, /不是来源证据/u);
+});
+
+test('fallback exports preserve the requested enhancement and explicitly record original ranking', () => {
+  const fallback: Enhancement = { ...enhancement, applied: false, queries: [enhancedRequest.query], ranking_method: 'original', reason: '增强服务超时，已按原查询检索。' };
+  const response = { query: enhancedRequest.query, mode: 'semantic' as const, corpus_version: 'fixture', elapsed_ms: 400, total_candidates: 3, results: [], enhancement: fallback };
+  const report = helpers.createExport(enhancedRequest, response, '2026-11-05T00:00:00Z');
+  assert.equal(report.request.enhance, true); assert.equal(report.response.enhancement?.applied, false);
+  assert.equal(report.response.enhancement?.ranking_method, 'original'); assert.match(report.response.enhancement?.reason ?? '', /超时/u);
+});
+
+test('enhanced snapshots reject missing models, wrong original queries and inconsistent ranking', () => {
+  for (const value of [null, { ...enhancement, model: '' }, { ...enhancement, queries: ['different query'] }, { ...enhancement, ranking_method: 'original' }, { ...enhancement, queries: [enhancedRequest.query] }, { ...enhancement, reason: 'unexpected' }, { ...enhancement, elapsed_ms: -1 }]) {
+    assert.throws(() => helpers.validateEnhancement(enhancedRequest, value));
+  }
+  assert.throws(() => helpers.validateEnhancement({ query: enhancedRequest.query }, enhancement));
+});
 
 function parse(parameters: Record<string, string>) {
   const url = new URL(base);

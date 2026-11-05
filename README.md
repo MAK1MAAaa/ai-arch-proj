@@ -4,7 +4,7 @@
 
 ## 日常启动
 
-在 Windows PowerShell 中执行：
+使用本地 Ollama 增强时，先打开 Ollama 程序，或在另一个终端运行 `ollama serve`；已经运行时无需重复启动。基础检索可以单独运行。在 Windows PowerShell 中执行：
 
 ```powershell
 cd D:\Github\ai-arch-proj
@@ -26,13 +26,17 @@ uv run --no-sync archsearch serve
 
 首次准备需联网下载固定版本的 E5 模型和历史地图数据；准备完成后，检索及历史地图可离线使用，现代 OSM 瓦片仍需联网。更新语料后重新运行 `prepare` 并重启服务；日常启动无需重复准备。
 
-模型、索引及历史库默认保存在仓库根目录的 `.archsearch/`。仅运行网页无需 Node.js、pnpm 或 GPU。
+模型、索引及历史库默认保存在仓库根目录的 `.archsearch/`。基础检索无需 Node.js、pnpm 或 GPU；LLM 通过单独运行的 Ollama 或 API 服务提供。
 
 ## 当前检索模型
 
-默认使用本地 **`intfloat/multilingual-e5-small`**，通过 CPU 生成向量并按相似度排序，也可手动切换 **BM25** 关键词检索。当前没有接入生成式 LLM、Ollama／Qwen 或外部模型 API，也没有 LLM 查询改写或重排；启动项目无需运行 Ollama 或配置 API 密钥。
+基础检索为本地 **`intfloat/multilingual-e5-small`**（CPU），可切换 **BM25**。启用 **LLM 增强**后，先改写查询，再融合本地检索排名；资料原文和地图位置不由模型生成。
 
-中文专名仍可能漏检，可尝试来源原名或先选择国家／地区浏览。
+展开“查询增强与模型设置”，选择 Ollama，等待自动获取模型列表，选择本机已缓存的 **`qwen3.5:9b`** 并“应用所选模型”，再勾选“LLM 增强”检索。`qwen3.5:2b` 可作为速度优先的备选；应用只获取列表，不自动下载模型。
+
+API 配置初始留空。需要时选择“OpenAI 兼容 API”，填写 **Base URL**、**API Key**，从获取的列表选择模型并应用。配置仅保留在服务内存中，重启后需重新设置。操作、实测与限制见[LLM 增强说明](docs/llm-search.md)。
+
+中文专名仍可能漏检，模型改写也可能误译；请核对实际检索词和来源原文。
 
 ## 详细说明
 

@@ -8,7 +8,7 @@
 
 ## 当前范围
 
-当前语料`global-v18`共3897条，覆盖211个来源国家／地区标签和7个资料分组；这不是全球完整遗址清单。当前使用本地CPU运行`multilingual-e5-small`进行向量编码，并提供BM25切换；没有接入Ollama、Qwen、外部LLM API、生成式查询改写或rerank。E5语义检索不是生成式LLM强化检索。
+当前语料`global-v18`共3897条，覆盖211个来源国家／地区标签和7个资料分组；这不是全球完整遗址清单。基础检索使用本地CPU运行`multilingual-e5-small`，并提供BM25切换；现在可选Ollama／OpenAI兼容API进行查询改写与RRF排名融合。模型设置、启动和实际限制见[LLM查询增强说明](llm-search.md)，生成内容不替代来源证据。
 
 代表点不是实测发掘坐标，来源地区不是历史主权判断。断代和定位缺失继续保留未知；未经确认的人工相关性标注不得变成评测指标。各批来源范围、历史计数和许可分别保留，历史截图不代表当前总数。
 
@@ -460,7 +460,7 @@ uv run --no-sync archsearch evaluate --queries src/archsearch/data/queries-prote
 
 10条采用来源支持的公开代表点。Incallajta使用2006年官方提名表的概略中心，坐标来源与文化资格来源分开保存；Lapa do Santo使用原作者公开的整处岩棚DMS，不替换成某个墓葬的位置。Chamangá采用同实体Wikidata代表点，不声明已经验证位于官方保护边界内，也不将YACARE地图未经核验转换为WGS84。Santa Elina的作者坐标有无效秒数、其他公开点与资料范围冲突，保留`repr_point=null`，不擅自进位修正、平均或补中心；这表示尚未采纳可信公开数字点，不宣称真实位置不明。空坐标资料仍可检索、目录浏览、分享与导出，启用地图范围时不参与匹配。
 
-11条原CC0英文短描述增加忠实简中译文，并经另一代理对照固定实体版本、字段及SHA复核。译文单独标为“中文译文（据 Wikidata 英文）”，保留`translation:wikidata:*`来源与审查，不增添历史年代、用途或故事；没有将它们当作Wikidata原中文。检索共享原文、中文短描述、原有别名与资格短摘录，运行期仍不调用LLM或翻译API。
+11条原CC0英文短描述增加忠实简中译文，并经另一代理对照固定实体版本、字段及SHA复核。译文单独标为“中文译文（据 Wikidata 英文）”，保留`translation:wikidata:*`来源与审查，不增添历史年代、用途或故事；没有将它们当作Wikidata原中文。检索共享原文、中文短描述、原有别名与资格短摘录，这些已提交译文不依赖运行期翻译API；可选LLM查询增强另外配置，不会改写来源资料。
 
 ```powershell
 uv run --no-sync python -m archsearch.southamerica_data --rebuild
@@ -489,7 +489,7 @@ uv run --no-sync archsearch evaluate --queries src/archsearch/data/queries-south
 
 77份来源快照通过校验，26条均经另一代理逐条核对原文、身份范围、公开坐标、地区关联、许可和旧资料去重。历史阶段全部仍为“尚未核验”，不触发自动切年。该批结束时为149条阶段已核验、451条证据不足、1089条尚未核验；当前连同其余补充、NPS、澳大利亚、加拿大、香港、新加坡、巴西及Mérimée批次为3297条尚未核验。原1663条全字段、顺序与检索文档保持不变；新增审计范围说明公开保留在地理备注，来源分区、成员映射和位置限制不当作文化资格片段索引。
 
-19条缺少原中文字段的Wikidata短描述，在保留CC0英文原文的同时增加忠实简中译文，逐条由另一代理对照固定实体版本复核。译文不补原文未说的“北极狩猎”、年代或用途；4条authority记录、2条英文缺失和1条已有原中文的记录不改。界面明确标为“中文译文（据 Wikidata 英文）”，来源与导出保留`translation:wikidata:*`引用及原字段／版本／SHA和翻译审查；不冒充Wikidata原中文、专家确认或生成式历史摘要。两种检索共享这些公开原文、译文及国家事实，运行期没有翻译服务或LLM调用。
+19条缺少原中文字段的Wikidata短描述，在保留CC0英文原文的同时增加忠实简中译文，逐条由另一代理对照固定实体版本复核。译文不补原文未说的“北极狩猎”、年代或用途；4条authority记录、2条英文缺失和1条已有原中文的记录不改。界面明确标为“中文译文（据 Wikidata 英文）”，来源与导出保留`translation:wikidata:*`引用及原字段／版本／SHA和翻译审查；不冒充Wikidata原中文、专家确认或生成式历史摘要。两种检索共享这些公开原文、译文及国家事实，这些已提交译文不依赖运行期翻译服务；可选LLM查询增强不会覆盖原译文或来源。
 
 BM25对Unicode词作NFKC与大小写归一，并为连续汉字保留完整串和相邻双字片段，使“西伯利亚”“电报站”可匹配较长中文描述；标点、拉丁字母与数字会分开汉字片段，不跨边界拼词。建议中文关键词至少两个字；单字只匹配资料中本来独立的单字，部分双字片段重叠也可能命中。这是片段匹配，不是中文词典分词或精确短语搜索，不实时翻译、扩词或转换繁简。英文及其他非汉字的词法保持原规则。字词匹配字段同时覆盖中文描述／译文和实际参与检索的资格短摘录，不把地区、成员或位置限制说明当命中证据。评测报告记录`lexical_contract`的`unicode-han-bigram-v1`及BM25参数；E5文档文本和向量不因这次词法修正而改变。
 
@@ -570,7 +570,7 @@ uv run --no-sync archsearch prepare
 
 ### 模型与本地数据准备
 
-浏览器打开 `http://127.0.0.1:8000/`，API状态地址为 `/api/status`。首次准备下载固定版本E5模型（单份权重约471MB）并构建3897×384向量，需要联网。升级语料后须重新运行 `prepare`，旧索引会被明确识别为失效；已下载模型可离线复用。后续启动和新的中文查询只使用本地资源；首次查询包含模型加载，后续复用编码器。应用采用CPU推理，运行不需要Node.js、GPU或外部模型API密钥。
+浏览器打开 `http://127.0.0.1:8000/`，API状态地址为 `/api/status`。首次准备下载固定版本E5模型（单份权重约471MB）并构建3897×384向量，需要联网。升级语料后须重新运行 `prepare`，旧索引会被明确识别为失效；已下载模型可离线复用。基础检索后续只使用本地资源；首次查询包含模型加载，后续复用编码器。基础E5采用CPU推理，运行不需要Node.js或外部模型API密钥；可选LLM由Ollama或明确配置的API提供，见[模型设置](llm-search.md)。
 
 默认模型、索引与报告在当前工作目录的`.archsearch/`。可用全局参数 `archsearch --home <目录> prepare`指定其他目录，serve和evaluate使用相同目录；该参数应放在子命令前。准备完成后再次prepare会校验并复用模型、重建索引。安装若受本机镜像配置影响，可用 `uv sync --locked --dev --default-index https://pypi.org/simple`明确选择官方源。
 
@@ -604,7 +604,7 @@ CI在Windows与Ubuntu执行Python锁定安装、Ruff、mypy、pytest，以及pnp
 
 ### 检索与 API
 
-两种检索共享`build_document()`构造的原文，包含名称、别名、类型、描述及补充记录。地图年份不筛选检索候选；未加入LLM或历史政治归属推断。BM25使用正Robertson IDF、k1=1.5、b=0.75；无词项匹配就返回空结果。英文词语、地名和已有中文别名适合关键词基线，中文零命中不意味着资料不存在相关地点。
+两种检索共享`build_document()`构造的原文，包含名称、别名、类型、描述及补充记录。地图年份不筛选检索候选；可选LLM仅改写查询并融合排名，不作历史政治归属推断。BM25使用正Robertson IDF、k1=1.5、b=0.75；无词项匹配就返回空结果。英文词语、地名和已有中文别名适合关键词基线，中文零命中不意味着资料不存在相关地点。
 
 语义检索使用 [multilingual-e5-small](https://huggingface.co/intfloat/multilingual-e5-small)，固定revision `fd1525a9fd15316a2d503bf26ab031a61d056e98`。文档添加`passage: `、查询添加`query: `，L2归一化后以NumPy精确点积排序。两种方法共享多语种来源文本，包括可用的官方中文描述。超过512 token的文档会被截断，BM25仍使用完整词项；完整原文保留。相似度是排序分数，不是相关概率，候选仍需人工核验。
 
@@ -618,7 +618,9 @@ CI在Windows与Ubuntu执行Python锁定安装、Ruff、mypy、pytest，以及pnp
 | `GET /api/coverage` | 全库国家／分区、来源、断代三态、定位三态及两类官方名录覆盖分母 |
 | `GET /api/catalogue` | 全库定位目录，含原repr_point、定位状态、完整source_points及同序来源标签，可选country／region／type交集 |
 | `GET /api/sites` | 无查询分页目录，offset及limit（1—100），国家／分区／类型与可选bbox取交集，返回实际匹配方式与定位版本 |
-| `POST /api/search` | 查询、模式、类型筛选及候选排序 |
+| `POST /api/search` | 查询、模式、筛选与可选LLM查询增强及RRF排名 |
+| `GET /api/llm/config`、`POST /api/llm/config` | 读取／应用当前服务内存中的模型配置，不回传密钥 |
+| `POST /api/llm/models` | 根据草稿地址和密钥获取模型列表，支持Ollama／OpenAI兼容API |
 | `GET /api/sites/{id}` | 原文、别名、代表点、分期证据、多来源、核验状态、历史阶段和默认阶段 |
 | `GET /api/sites/{id}/areas` | 独立现代登记范围原环、来源SHA、版本与许可；无范围与未就绪分开表示 |
 | `GET /api/sites/{id}/locations` | 原代表点与已审可绘定位序列分别返回，按地点绑定真正来源、组合版本、标签和许可；无效侧车503，不影响基础检索 |
@@ -632,7 +634,7 @@ CI在Windows与Ubuntu执行Python锁定安装、Ruff、mypy、pytest，以及pnp
 {"query":"罗马时期的剧场","mode":"semantic","type":"theatre","limit":10}
 ```
 
-`mode`支持`semantic`或`bm25`；type、country、region可省略或为null，country为来源ISO双字母大写代码，region从coverage列表选；limit默认10、范围1—50。过滤采用交集，空候选不进行查询编码。空查询、超过500字符、未知／空筛选及额外字段返回422，未知地点404；目录GET也拒绝重复参数。响应包含Site、分数、词面匹配字段、耗时和语料版本；匹配字段不是模型的因果解释。
+`mode`支持`semantic`或`bm25`；type、country、region可省略或为null，country为来源ISO双字母大写代码，region从coverage列表选；limit默认10、范围1—50。过滤采用交集，空候选不进行查询编码。空查询、超过500字符、未知／空筛选及额外字段返回422，未知地点404；目录GET也拒绝重复参数。响应包含Site、分数、词面匹配字段、耗时和语料版本；匹配字段不是模型的因果解释。增强请求额外带`enhance:true`及已应用配置的`llm_revision`，响应`enhancement`保存实际模型、查询和融合／回退状态，具体见[LLM接口说明](llm-search.md#分享导出与接口)。
 
 ### 可复现评测
 

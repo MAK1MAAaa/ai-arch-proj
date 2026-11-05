@@ -9,6 +9,8 @@ const ArchSearchResearch = (() => {
     country?: string | null;
     region?: string | null;
     subdivision?: string | null;
+    enhance?: boolean;
+    llm_revision?: number;
   }
 
   interface ParsedLink {
@@ -315,9 +317,43 @@ const ArchSearchResearch = (() => {
     results: T[];
     subdivision?: string | null;
     subdivision_version?: string | null;
+    enhancement?: Enhancement | null;
   }
 
-  const parameterNames = ["q", "mode", "type", "limit", "country", "region", "subdivision"] as const;
+  interface Enhancement {
+    requested: true;
+    applied: boolean;
+    provider: "ollama" | "openai";
+    model: string;
+    queries: string[];
+    elapsed_ms: number;
+    ranking_method: "rrf" | "original";
+    reason: string | null;
+  }
+
+  function validateEnhancement(request: Pick<SearchSpec, "query" | "enhance">, value: unknown): Enhancement | null {
+    if (request.enhance !== true) {
+      if (value !== null && value !== undefined) throw new Error("基础检索响应不能冒充已请求的 LLM 增强。");
+      return null;
+    }
+    if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error("LLM 增强响应缺少实际模型与查询快照。");
+    const item = value as Record<string, unknown>;
+    if (item.requested !== true || typeof item.applied !== "boolean"
+      || (item.provider !== "ollama" && item.provider !== "openai")
+      || typeof item.model !== "string" || !item.model || item.model.length > 512 || /[\u0000-\u001f\u007f]/u.test(item.model)
+      || !Array.isArray(item.queries) || item.queries.length < 1 || item.queries.length > 3
+      || !item.queries.every((query: unknown) => typeof query === "string" && query.trim() && Array.from(query).length <= 500)
+      || item.queries[0] !== request.query || new Set(item.queries).size !== item.queries.length
+      || typeof item.elapsed_ms !== "number" || !Number.isFinite(item.elapsed_ms) || item.elapsed_ms < 0
+      || (item.applied && (item.ranking_method !== "rrf" || item.queries.length < 2 || item.reason !== null))
+      || (!item.applied && (item.ranking_method !== "original" || item.queries.length !== 1
+        || typeof item.reason !== "string" || !item.reason || item.reason.length > 1000))) throw new Error("LLM 增强响应与本次实际检索不一致，保留原成功结果。");
+    return { requested: true, applied: item.applied, provider: item.provider, model: item.model,
+      queries: [...item.queries] as string[], elapsed_ms: item.elapsed_ms,
+      ranking_method: item.applied ? "rrf" : "original", reason: item.reason as string | null };
+  }
+
+  const parameterNames = ["q", "mode", "type", "limit", "country", "region", "subdivision", "enhance"] as const;
 
   function normalizeRequest(request: SearchSpec): SearchSpec {
     const query = request.query.trim();
@@ -336,8 +372,10 @@ const ArchSearchResearch = (() => {
     }
     const scope = geography(request.country, request.region);
     const subdivision = normalizeSubdivision(scope.country, request.subdivision);
+    if (request.enhance !== undefined && typeof request.enhance !== "boolean") throw new Error("LLM 增强参数必须是布尔值。");
     return { query, mode: request.mode, type, limit: request.limit,
-      ...(scope.country ? { country: scope.country } : {}), ...(scope.region ? { region: scope.region } : {}), ...(subdivision ? { subdivision } : {}) };
+      ...(scope.country ? { country: scope.country } : {}), ...(scope.region ? { region: scope.region } : {}), ...(subdivision ? { subdivision } : {}),
+      ...(request.enhance === true ? { enhance: true } : {}) };
   }
 
   function parseLink(url: URL): ParsedLink {
@@ -352,6 +390,7 @@ const ArchSearchResearch = (() => {
       if (parameters.has(name) && parameters.get(name) === "") return { request: null, error: `链接中的 ${name} 不能是空筛选值。` };
     }
     const mode = parameters.get("mode") ?? "semantic";
+    if (parameters.has("enhance") && parameters.get("enhance") !== "1") return { request: null, error: "链接中的 enhance 仅支持 1，关闭增强时请省略此参数。" };
     if (mode !== "semantic" && mode !== "bm25") {
       return { request: null, error: "链接中的 mode 仅支持 semantic 或 bm25。" };
     }
@@ -367,6 +406,7 @@ const ArchSearchResearch = (() => {
         limit: Number(limit),
         country: parameters.get("country"), region: parameters.get("region"),
         subdivision: parameters.get("subdivision"),
+        ...(parameters.get("enhance") === "1" ? { enhance: true } : {}),
       });
       return { request, error: null };
     } catch (error) {
@@ -389,6 +429,7 @@ const ArchSearchResearch = (() => {
       if (normalized.country) url.searchParams.set("country", normalized.country);
       if (normalized.region) url.searchParams.set("region", normalized.region);
       if (normalized.subdivision) url.searchParams.set("subdivision", normalized.subdivision);
+      if (normalized.enhance) url.searchParams.set("enhance", "1");
     }
     if (view) {
       if (!validYear(view.year) || view.year < -3400 || view.year > 2024) throw new Error("地图年份无效。");
@@ -432,6 +473,7 @@ const ArchSearchResearch = (() => {
       throw new Error("导出请求必须与成功响应的查询和检索方式一致。");
     }
     validateSubdivisionResponse(normalized, response);
+    const enhancement = validateEnhancement(normalized, response.enhancement);
     if (browse?.subdivision && !subdivisionVersion(browse.subdivision_version)) throw new Error("尚未成功应用的来源省区不能加入目录导出。");
     if (browse) normalizeSubdivision(browse.country, browse.subdivision);
     const selectedMatches = selectedSite !== null && typeof selectedSite === "object" && "id" in selectedSite && selectedSite.id === selection.site;
@@ -443,7 +485,7 @@ const ArchSearchResearch = (() => {
       schema_version: 2,
       exported_at: exportedAt,
       request: normalized,
-      response,
+      response: enhancement ? { ...response, enhancement } : response,
       map: map ? { ...map } : null,
       selection: { ...selection },
       selected_site: selectedSite,
@@ -490,6 +532,7 @@ const ArchSearchResearch = (() => {
         scope: "保留原有策展资料、固定文化／混合名录与南极历史资料，另有逐条核验的国家文化补充；资格来源可能是预备名录、国家文保或考古研究，不一概表示正式世界遗产。不是全世界所有遗址清单。response为成功检索快照，selected_site可为独立目录选择，没有虚构排名或分数。",
         coordinates: "repr_point 为 WGS84 [经度, 纬度] 代表点，用于地图定位；不等同于实测发掘坐标，location_precision 不承诺米级精度。",
         scores: "检索分数不是相关概率，不同检索方式的分数不可直接比较；本导出不包含人工相关性判断或评测指标。",
+        enhancement: "enhancement保存成功响应实际使用的模型、查询改写、耗时与排序方法；RRF为多个查询排名融合，失败明确保留原查询与原因。查询改写不是来源证据，不生成遗址事实或历史阶段。API地址、密钥和服务内存revision不写入分享请求或导出。",
         periods: "分期来自名称或位置记录的来源关联；不等同于建造年代或连续使用证明，start/end 保留原始记录时间范围。",
         chronology: "历史阶段独立记录事件类型、精度、证据和代理核验方式；区间或时期不证明连续存在，未标成人工专家确认。",
         map: "map保存最后成功显示的年份与疆域版本；null表示尚无成功地图快照，待加载或失败年份不冒充已显示年份。",
@@ -502,5 +545,5 @@ const ArchSearchResearch = (() => {
     };
   }
 
-  return { parseLink, parseView, parseBrowse, buildLink, createExport, validYear, automaticPhaseYear, normalizeBBox, parseBBox, normalizeSubdivision, validateSubdivisionResponse, parseMinasSource, minasSourceFields, parseMerimeeSource, merimeeSourceFields };
+  return { parseLink, parseView, parseBrowse, buildLink, createExport, validYear, automaticPhaseYear, normalizeBBox, parseBBox, normalizeSubdivision, validateSubdivisionResponse, validateEnhancement, parseMinasSource, minasSourceFields, parseMerimeeSource, merimeeSourceFields };
 })();

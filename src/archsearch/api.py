@@ -2,13 +2,18 @@
 
 from __future__ import annotations
 
+import ipaddress
+import os
 import re
 from collections import Counter
 from pathlib import Path
 from time import perf_counter
-from typing import Any
+from typing import Any, Literal
+from urllib.parse import urlsplit
 
 from fastapi import FastAPI, HTTPException, Query, Request
+from fastapi.exception_handlers import request_validation_exception_handler
+from fastapi.exceptions import RequestValidationError
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
@@ -38,6 +43,16 @@ from archsearch.domain import Site
 from archsearch.history import HistoryStore, HistoryUnavailable, validate_year
 from archsearch.hong_kong_areas import load_hong_kong_area_group
 from archsearch.index import IndexUnavailable, SemanticIndex
+from archsearch.llm import (
+    ConfigApply,
+    ConfigConflict,
+    ConfigDraft,
+    ConfigInvalid,
+    LlmManager,
+    LlmUnavailable,
+    ModelsResponse,
+    PublicConfig,
+)
 from archsearch.registered_areas import (
     RegisteredAreasIndex,
     RegisteredAreasResponse,
@@ -57,6 +72,44 @@ HISTORY_PATH = "/api/history/boundaries"
 HISTORY_PREPARE = "请运行 uv run --no-sync archsearch prepare-history 准备或修复历史疆域缓存。"
 HISTORY_CACHE_CONTROL = "private, no-cache"
 _ENTITY_TAG = r'(?:W/)?"[\x21\x23-\x7e\x80-\xff]*"'
+
+
+def _require_same_origin(request: Request) -> None:
+    try:
+        authority = urlsplit("//" + request.headers.get("host", ""))
+        host = (authority.hostname or "").casefold().rstrip(".")
+        if (not host or authority.username is not None or authority.password is not None
+                or authority.path or authority.query or authority.fragment):
+            raise ValueError
+        port = authority.port
+        if port is not None and not 1 <= port <= 65535:
+            raise ValueError
+        allowed = host == "localhost" or host.endswith(".ts.net")
+        try:
+            ipaddress.ip_address(host)
+            allowed = True
+        except ValueError:
+            pass
+        configured = {name.strip().casefold().rstrip(".") for name in
+                      os.environ.get("ARCHSEARCH_LLM_TRUSTED_HOSTS", "").split(",")}
+        allowed = allowed or host in configured
+    except ValueError:
+        allowed = False
+    if not allowed:
+        raise HTTPException(status_code=403, detail="请从本机、Tailscale或明确授权的域名配置LLM。")
+    origin = request.headers.get("origin")
+    if origin is None:
+        return
+    try:
+        parsed = urlsplit(origin)
+        valid = (parsed.scheme in {"http", "https"}
+                 and parsed.netloc.casefold() == request.headers.get("host", "").casefold()
+                 and not parsed.username and not parsed.password
+                 and parsed.path in {"", "/"} and not parsed.query and not parsed.fragment)
+    except ValueError:
+        valid = False
+    if not valid:
+        raise HTTPException(status_code=403, detail="模型设置与增强请求须来自当前页面。")
 
 
 def _etag_matches(value: str | None, etag: str) -> bool:
@@ -104,6 +157,7 @@ class StatusResponse(BaseModel):
     spatial_locations: SpatialLocationCoverage | None = None
     registered_areas: RegisteredAreasStatus | None = None
     subdivisions: SubdivisionStatus | None = None
+    llm: PublicConfig | None = None
 
 
 class Facet(BaseModel):
@@ -116,6 +170,17 @@ class FacetResponse(BaseModel):
     types: list[Facet]
 
 
+class SearchEnhancement(BaseModel):
+    requested: Literal[True] = True
+    applied: bool
+    provider: Literal["ollama", "openai"]
+    model: str
+    queries: list[str]
+    elapsed_ms: float
+    ranking_method: Literal["rrf", "original"]
+    reason: str | None = None
+
+
 class SearchResponse(BaseModel):
     results: list[SearchHit]
     mode: str
@@ -125,6 +190,7 @@ class SearchResponse(BaseModel):
     total_candidates: int
     subdivision: str | None = None
     subdivision_version: str | None = None
+    enhancement: SearchEnhancement | None = None
 
 
 def create_app(
@@ -134,6 +200,7 @@ def create_app(
     history: HistoryStore | None = None,
     areas: RegisteredAreasIndex | None = None,
     subdivisions: SubdivisionIndex | None = None,
+    llm: LlmManager | None = None,
 ) -> FastAPI:
     corpus = load_corpus() if sites is None else sites
     index = semantic if semantic is not None else SemanticIndex(corpus, home)
@@ -142,6 +209,7 @@ def create_app(
                          else SubdivisionIndex(corpus, CORPUS_VERSION))
     engine = SearchEngine(corpus, index, subdivision_index)
     catalogue_index = CatalogueIndex(corpus, CORPUS_VERSION, subdivisions=subdivision_index)
+    llm_manager = llm if llm is not None else LlmManager()
     if areas is not None:
         area_index = areas
     else:
@@ -154,7 +222,16 @@ def create_app(
     app.state.catalogue = catalogue_index
     app.state.registered_areas = area_index
     app.state.subdivisions = subdivision_index
+    app.state.llm = llm_manager
     app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=5)
+
+    @app.exception_handler(RequestValidationError)
+    async def safe_validation_error(request: Request, error: RequestValidationError) -> Response:
+        if request.url.path.startswith("/api/llm/"):
+            return JSONResponse(status_code=422, content={
+                "detail": "模型配置格式无效，请检查服务、地址、密钥、模型和配置版本。",
+            })
+        return await request_validation_exception_handler(request, error)
 
     @app.middleware("http")
     async def response_headers(request: Request, call_next: RequestResponseEndpoint) -> Response:
@@ -195,7 +272,33 @@ def create_app(
             spatial_locations=catalogue_index.spatial_coverage(),
             registered_areas=area_index.status(set(engine.by_id)),
             subdivisions=subdivision_index.status(),
+            llm=llm_manager.public_config(),
         )
+
+    @app.get("/api/llm/config", response_model=PublicConfig)
+    def llm_config(request: Request) -> PublicConfig:
+        _require_same_origin(request)
+        return llm_manager.public_config()
+
+    @app.post("/api/llm/models", response_model=ModelsResponse)
+    def llm_models(request: Request, body: ConfigDraft) -> ModelsResponse:
+        _require_same_origin(request)
+        try:
+            return llm_manager.discover(body)
+        except ConfigInvalid as error:
+            raise HTTPException(status_code=422, detail=str(error)) from None
+        except LlmUnavailable as error:
+            raise HTTPException(status_code=502, detail=str(error)) from None
+
+    @app.post("/api/llm/config", response_model=PublicConfig)
+    def apply_llm_config(request: Request, body: ConfigApply) -> PublicConfig:
+        _require_same_origin(request)
+        try:
+            return llm_manager.apply(body)
+        except ConfigConflict as error:
+            raise HTTPException(status_code=409, detail=str(error)) from None
+        except ConfigInvalid as error:
+            raise HTTPException(status_code=422, detail=str(error)) from None
 
     @app.get(HISTORY_PATH)
     def historical_boundaries(request: Request, year: str) -> Response:
@@ -280,7 +383,7 @@ def create_app(
         return catalogue_index.page(offset, limit, country, region, type, bounds, subdivision)
 
     @app.post("/api/search", response_model=SearchResponse)
-    def search(body: SearchRequest) -> SearchResponse:
+    def search(body: SearchRequest, request: Request) -> SearchResponse:
         try:
             catalogue_index.validate_filters(body.country, body.region, body.type, body.subdivision)
         except SubdivisionUnavailable as error:
@@ -290,8 +393,37 @@ def create_app(
         started = perf_counter()
         if body.mode == "semantic" and not index.ready:
             raise HTTPException(status_code=503, detail=index.reason or "本地语义模型尚未准备。")
+        enhancement = None
         try:
-            hits, total = engine.search(body)
+            if body.enhance:
+                _require_same_origin(request)
+                assert body.llm_revision is not None
+                try:
+                    snapshot = llm_manager.snapshot(body.llm_revision)
+                except ConfigConflict as error:
+                    raise HTTPException(status_code=409, detail=str(error)) from None
+                except ConfigInvalid as error:
+                    raise HTTPException(status_code=503, detail=str(error)) from None
+                llm_started = perf_counter()
+                try:
+                    queries = [body.query, *llm_manager.rewrite(body.query, snapshot)]
+                except LlmUnavailable:
+                    llm_elapsed = round((perf_counter() - llm_started) * 1000, 2)
+                    hits, total = engine.search(body)
+                    enhancement = SearchEnhancement(
+                        applied=False, provider=snapshot.provider, model=snapshot.model,
+                        queries=[body.query], elapsed_ms=llm_elapsed, ranking_method="original",
+                        reason="LLM增强不可用，本次已按原查询检索。",
+                    )
+                else:
+                    llm_elapsed = round((perf_counter() - llm_started) * 1000, 2)
+                    hits, total = engine.search_expanded(body, queries)
+                    enhancement = SearchEnhancement(
+                        applied=True, provider=snapshot.provider, model=snapshot.model,
+                        queries=queries, elapsed_ms=llm_elapsed, ranking_method="rrf",
+                    )
+            else:
+                hits, total = engine.search(body)
         except IndexUnavailable as error:
             raise HTTPException(status_code=503, detail=str(error)) from error
         return SearchResponse(
@@ -303,6 +435,7 @@ def create_app(
             total_candidates=total,
             subdivision=body.subdivision,
             subdivision_version=subdivision_index.version if body.subdivision else None,
+            enhancement=enhancement,
         )
 
     @app.get("/api/sites/{site_id}/subdivisions", response_model=SiteSubdivisionsResponse)
