@@ -79,14 +79,13 @@
     let polarView = null;
     let selectedPhaseId = null;
     let restoringView = true;
-    let autoPositionedSelection = false;
-    let positioningMap = false;
     let browseRestored = false;
     let browseRestoreError = null;
     let initialStatePending = true;
     let llmView = null;
     let historicalMap = null;
     let mapComparison = null;
+    let modernBoundaries = null;
     const fieldLabels = {
         title: "地点名称", names: "别名", description: "原始描述", description_zh: "中文描述／译文", source_refs: "来源资格片段", types: "地点类型",
         periods: "原始时期", details: "原始补充记录", search_text: "检索文本",
@@ -461,7 +460,7 @@
             byId("fit-map", HTMLButtonElement).disabled = true;
             return;
         }
-        state.map = L.map("map", { zoomControl: false, minZoom: 1, maxZoom: 18, worldCopyJump: true }).setView([20, 0], 1);
+        state.map = L.map("map", { zoomControl: false, minZoom: 1, maxZoom: 9, worldCopyJump: true }).setView([20, 0], 1);
         historicalMap = L.map("history-map", { zoomControl: false, minZoom: 1, maxZoom: 9, worldCopyJump: true }).setView([20, 0], 1);
         L.control.zoom({ position: "bottomleft" }).addTo(historicalMap);
         historicalMap.attributionControl?.setPrefix(false);
@@ -472,10 +471,6 @@
             attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors',
         }).addTo(state.map);
         state.markerLayer = L.layerGroup().addTo(state.map);
-        state.map.on("movestart zoomstart", () => {
-            if (!positioningMap)
-                autoPositionedSelection = false;
-        });
         state.map.on("moveend", () => {
             const marker = state.selectionMarker;
             const center = state.map?.getCenter().lng;
@@ -487,24 +482,23 @@
         if (typeof ResizeObserver !== "undefined") {
             new ResizeObserver(() => {
                 state.map?.invalidateSize({ pan: true, animate: false });
-                const selected = currentSelectedSite();
-                if (autoPositionedSelection && selected)
-                    positionSelectedSite(selected);
             }).observe(byId("map", HTMLDivElement));
         }
     }
     function fitMap() {
         if (!state.map)
             return;
-        autoPositionedSelection = false;
+        if (mapComparison) {
+            mapComparison.fitCandidates();
+            return;
+        }
         const coordinates = state.results.map((result) => point(result.site)).filter((coordinate) => coordinate !== null);
         if (coordinates.length === 0) {
             state.map.setView([20, 0], 1);
         }
         else {
-            state.map.fitBounds(L.latLngBounds(ArchSearchMapView.wrapCoordinates(coordinates)), { padding: [46, 55], maxZoom: 9, animate: false });
+            state.map.fitBounds(L.latLngBounds(ArchSearchMapView.wrapCoordinates(coordinates)), { padding: [35, 35], maxZoom: 4, animate: false });
         }
-        mapComparison?.fitCandidates();
     }
     function selectedResult() {
         return state.results.find((result) => result.site.id === state.selectedId);
@@ -530,24 +524,18 @@
     }
     function positionSelectedSite(site) {
         const coordinate = point(site);
-        autoPositionedSelection = false;
         if (!state.map || !coordinate)
             return;
         coordinate[1] = ArchSearchMapView.wrapLongitude(coordinate[1], state.map.getCenter().lng);
-        positioningMap = true;
-        try {
-            state.map.stop();
-            state.map.invalidateSize({ pan: false });
-            state.map.setView(coordinate, 15, { animate: false });
-            autoPositionedSelection = true;
-        }
-        finally {
-            positioningMap = false;
-        }
+        state.map.stop();
+        state.map.invalidateSize({ pan: true, animate: false });
+        state.map.setView(coordinate, 4, { animate: false });
     }
     function updateComparisonSelection(site, focus) {
         const review = site.chronology;
         const phase = review?.phases.find((item) => item.id === selectedPhaseId) ?? review?.phases.find((item) => item.id === review.default_phase_id) ?? null;
+        historyView?.setSelectionContext({ title: displayTitle(site), precision: phase?.precision ?? null,
+            start_year: phase?.start_year ?? null, end_year: phase?.end_year ?? null });
         mapComparison?.setSelection({ id: site.id, title: displayTitle(site), repr_point: site.repr_point,
             status: review?.status ?? "not_reviewed", phase }, focus);
     }
@@ -635,6 +623,7 @@
         const request = { query: data.query, mode: data.mode, ...context };
         const link = ArchSearchResearch.buildLink(new URL(window.location.href), request);
         closeDetail(false);
+        historyView?.setSelectionContext(null);
         registeredAreas?.clear();
         state.results = Array.isArray(data.results) ? data.results : [];
         state.selectedId = null;
@@ -1146,7 +1135,7 @@
     function followPhase(phase) {
         const year = ArchSearchResearch.automaticPhaseYear(phase);
         if (year !== null)
-            historyView?.setYear(year, "site");
+            historyView?.setYear(year, "site", { selectionOwned: true });
         else
             historyView?.retainBackground("所选阶段仅有区间或约略年代，历史图保留最后成功背景，不推定单年。");
         const site = currentSelectedSite();
@@ -1482,8 +1471,6 @@
             if (moveMap) {
                 positionSelectedSite(site);
             }
-            else
-                autoPositionedSelection = false;
             const rank = state.results.findIndex((item) => item.site.id === site.id);
             announce(`${rank < 0 ? "已选择全库目录地点" : `已选择第 ${rank + 1} / ${state.results.length} 条`}：${displayTitle(site)}，可打开资料详情核验来源。`);
         }
@@ -1491,6 +1478,9 @@
     }
     async function selectSite(id, { fromMap = false, preserveYear = false, phaseId = null, opener = null, restoring = false, moveMap = true, showDetail = false, } = {}) {
         closeDetail(false);
+        if (restoring && (initialComparison.state.modern_view !== null || initialComparison.state.history_view !== null
+            || (mapComparison?.actionVersion() ?? 0) > 0))
+            moveMap = false;
         if (!restoring) {
             cancelLinkRestore();
             mapComparison?.noteInteraction();
@@ -1541,6 +1531,7 @@
         }
         else {
             mapComparison?.setSelection(null);
+            historyView?.setSelectionContext({ title: id, precision: "loading", start_year: null, end_year: null });
             state.selectionMarker?.remove();
             state.selectionMarker = null;
             ui.detailContent.replaceChildren(element("h3", null, "正在读取来源资料"), element("p", "detail-note", id), ...(registeredAreas ? [registeredAreas.element] : []));
@@ -1578,6 +1569,8 @@
                 selectedPhaseId = null;
                 explore?.select(null);
                 polarView?.select(null);
+                historyView?.setSelectionContext(null);
+                mapComparison?.setSelection(null);
                 ui.detailContent.replaceChildren(element("h3", null, "资料未能读取"), element("p", "detail-note", errorMessage(error)));
                 showError(`遗址资料未能恢复：${errorMessage(error)}。地图与检索快照保持不变。`);
                 if (restoring) {
@@ -1685,6 +1678,20 @@
     llmView = ArchSearchLlm.create({ onChange: () => { updateSearchAvailability(); } });
     llmView.setRequested(pendingLink?.enhance === true);
     initializeMap();
+    modernBoundaries = ArchSearchModernBoundaries.create({ map: state.map, onStatus: (status) => {
+            const label = byId("modern-boundaries-status", HTMLElement);
+            label.textContent = status.message;
+            label.dataset.state = status.state;
+            const retry = byId("modern-boundaries-retry", HTMLButtonElement);
+            const retryOwnedFocus = document.activeElement === retry;
+            retry.hidden = status.state !== "error";
+            retry.disabled = status.state === "loading";
+            if (retryOwnedFocus && retry.hidden) {
+                label.tabIndex = -1;
+                label.focus();
+            }
+        } });
+    byId("modern-boundaries-retry", HTMLButtonElement).addEventListener("click", () => { void modernBoundaries?.retry(); });
     mapComparison = ArchSearchComparison.create({
         modern: state.map, historical: historicalMap, tiles: state.tiles, initial: initialComparison.state,
         onSelect: (id, opener, options) => { void selectSite(id, { fromMap: true, opener, moveMap: options?.moveMap ?? true, showDetail: options?.moveMap !== false }); },
@@ -1765,7 +1772,6 @@
     registeredAreas = ArchSearchRegisteredAreas.create({
         map: state.map,
         onShow: () => {
-            autoPositionedSelection = false;
             closeDetail(false);
             if (window.matchMedia("(max-width: 780px)").matches) {
                 byId("registered-areas-show", HTMLButtonElement).scrollIntoView({ block: "nearest", behavior: "instant" });

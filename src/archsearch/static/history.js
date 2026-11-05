@@ -154,6 +154,7 @@ const ArchSearchHistory = (() => {
             panel: byId("history-controls"), applied: byId("history-applied-year"),
             feedback: byId("history-feedback"), error: byId("history-error"), source: byId("history-source"),
             retry: byId("history-retry"), caption: document.getElementById("history-map-caption"),
+            linkage: automaticOnly ? byId("history-linkage-status") : document.getElementById("history-linkage-status"),
         };
         let ready = false;
         let version = null;
@@ -176,6 +177,8 @@ const ArchSearchHistory = (() => {
         let loading = false;
         let emptyFrame = false;
         let retentionNote = null;
+        let selectionContext = null;
+        let selectionOwnsYear = false;
         const frames = new Map();
         let renderer = sharedRenderer;
         if (map && typeof L !== "undefined") {
@@ -210,6 +213,69 @@ const ArchSearchHistory = (() => {
             ui.error.textContent = message;
             ui.error.hidden = !message;
         }
+        function renderLinkage() {
+            if (!automaticOnly || !ui.linkage)
+                return;
+            const hasFrame = committed !== null && committed.boundaries && committed.frame_id !== null;
+            const actual = hasFrame ? formatYear(committed.year) : null;
+            const pending = loading || timer !== null;
+            const context = selectionContext;
+            let state;
+            let message;
+            if (context === null) {
+                state = "unlinked";
+                message = actual ? `未选遗址｜当前 ${actual} 仅为参考背景。` : "未选遗址｜历史疆域尚未载入。";
+            }
+            else if (context.precision === "loading") {
+                state = "loading";
+                message = actual ? `正在核对所选资料年代；当前 ${actual} 仅供参照。` : "正在核对所选资料年代；历史疆域尚未载入。";
+            }
+            else {
+                const usableYear = (value) => value !== null && Number.isInteger(value) && value !== 0;
+                const exact = context.precision === "exact_year" && usableYear(context.start_year) && context.start_year === context.end_year;
+                if (exact) {
+                    const expected = context.start_year;
+                    const source = formatYear(expected);
+                    if (!isValidYear(expected) || expected < minimum || expected > maximum) {
+                        state = actual ? "mismatched" : "unavailable";
+                        message = `来源年代 ${source} 超出疆域覆盖（${formatYear(minimum)} — ${formatYear(maximum)}）；${actual ? `当前 ${actual} 仅供参照，未显示所选阶段的历史背景` : "历史疆域尚未载入，不选择邻近年份代替"}。`;
+                    }
+                    else if (pending && ready && desired.year >= minimum && desired.year <= maximum) {
+                        state = "loading";
+                        message = desired.year === expected
+                            ? `资料年代 ${source}，正在加载；${actual ? `当前仍显示 ${actual}` : "历史疆域尚未载入"}。`
+                            : `来源年代 ${source}；正在加载参考背景 ${formatYear(desired.year)}，与所选阶段不一致；${actual ? `当前仍显示 ${actual}` : "历史疆域尚未载入"}。`;
+                    }
+                    else if (actual && committed.year === expected) {
+                        state = "matched";
+                        message = `已按来源切到 ${actual}，对应所选明确单年阶段。`;
+                    }
+                    else if (actual) {
+                        state = "mismatched";
+                        message = `来源年代 ${source}；当前历史背景 ${actual}，与所选阶段不一致，仅供参照。`;
+                    }
+                    else {
+                        state = "unavailable";
+                        message = `来源年代 ${source}；历史疆域尚未载入，尚未显示所选阶段的历史背景。`;
+                    }
+                }
+                else {
+                    const start = usableYear(context.start_year) ? formatYear(context.start_year) : null;
+                    const end = usableYear(context.end_year) ? formatYear(context.end_year) : null;
+                    const dates = start && end ? start === end ? start : `${start} — ${end}`
+                        : start ? `起年 ${start}，终年未提供` : end ? `起年未提供，终年 ${end}` : null;
+                    const scope = context.precision === "approximate_year" ? `来源约略年代${dates ? `：${dates}` : "未给出可用年份"}`
+                        : context.precision === "range" ? `来源区间${dates ? `：${dates}` : "未给出可用年份"}`
+                            : context.precision === "period" ? `来源仅有时期描述${dates ? `：${dates}` : ""}` : "当前资料无明确单年";
+                    state = actual ? "retained" : "unavailable";
+                    message = actual ? `${scope}；保留 ${actual} 参考背景，不能视为该遗址年代。` : `${scope}；历史疆域尚未载入，不推定遗址年份。`;
+                }
+            }
+            ui.linkage.dataset.state = state;
+            if (ui.linkage.textContent !== message)
+                ui.linkage.textContent = message;
+            ui.linkage.setAttribute("aria-label", context ? `${context.title}：${message}` : message);
+        }
         function render() {
             const previousFocus = document.activeElement;
             const unavailable = map === null || !ready;
@@ -243,6 +309,7 @@ const ArchSearchHistory = (() => {
                     : isValidYear(Number(yearDraft)) ? `年份草稿：${formatYear(Number(yearDraft))}，尚未应用` : "年份草稿尚未应用，请输入有效整数后确认。";
             }
             ui.applied.textContent = committed ? `当前${automaticOnly ? "历史背景" : fixedHistorical ? "历史图" : "地图"}：${formatYear(committed.year)}` : "历史地图尚未加载";
+            renderLinkage();
             ui.panel.setAttribute("aria-busy", String(loading));
             ui.retry.hidden = !failed;
             ui.retry.disabled = loading || map === null;
@@ -255,11 +322,15 @@ const ArchSearchHistory = (() => {
             else if (!failed)
                 ui.feedback.textContent = emptyFrame && committed?.boundaries
                     ? "该年份没有来源中的活动政权记录；地点标记仍保留。"
-                    : committed?.boundaries ? automaticOnly ? "历史背景按所选资料的明确年份联动；区间或未知年代不推断年份，检索排序保持不变。" : "历史政权疆域概略独立于遗址排序；时间滑动不会重新检索地点。" : "历史政权疆域概略已关闭，地点与检索结果继续保留。";
+                    : committed?.boundaries ? automaticOnly ? "历史背景可按明确年份联动；区间或未知年代不推断年份，当前关联见上方状态。" : "历史政权疆域概略独立于遗址排序；时间滑动不会重新检索地点。" : "历史政权疆域概略已关闭，地点与检索结果继续保留。";
             if ((previousFocus === ui.retry && ui.retry.hidden)
                 || (controls && [controls.year, controls.range, controls.apply, controls.previousYear, controls.nextYear, controls.previousFrame, controls.nextFrame].some((control) => previousFocus === control && control.disabled))) {
-                ui.feedback.tabIndex = -1;
-                ui.feedback.focus({ preventScroll: true });
+                const target = automaticOnly && ui.linkage ? ui.linkage : ui.feedback;
+                target.tabIndex = -1;
+                if (automaticOnly && ui.linkage)
+                    target.focus();
+                else
+                    target.focus({ preventScroll: true });
             }
         }
         async function getJson(path, signal) {
@@ -459,11 +530,12 @@ const ArchSearchHistory = (() => {
             cancel();
             failed = false;
             showError("");
-            render();
             timer = setTimeout(() => { void applyView(); }, 200);
+            render();
         }
-        function setYear(year, intent = "user") {
+        function setYear(year, intent = "user", options = {}) {
             userAction(intent);
+            selectionOwnsYear = intent === "site" && options.selectionOwned === true;
             retentionNote = null;
             if (!isValidYear(year)) {
                 if (Number.isFinite(year))
@@ -508,6 +580,7 @@ const ArchSearchHistory = (() => {
         }
         function retainBackground(note = "当前资料没有明确单年证据；保留最后成功的历史背景，不推断年份。") {
             cancel();
+            selectionOwnsYear = false;
             desired = { ...desired, year: committed?.year ?? 117 };
             yearDraft = String(desired.year);
             retentionNote = note;
@@ -516,6 +589,19 @@ const ArchSearchHistory = (() => {
             render();
             if (committed === null && fixedHistorical)
                 timer = setTimeout(() => { void applyView(); }, 200);
+        }
+        function setSelectionContext(context) {
+            selectionContext = context ? { ...context } : null;
+            if (context === null) {
+                if (selectionOwnsYear)
+                    retainBackground("");
+                else {
+                    retentionNote = null;
+                    render();
+                }
+            }
+            else
+                render();
         }
         function setBasemap(basemap, intent = "user") {
             userAction(intent);
@@ -605,7 +691,7 @@ const ArchSearchHistory = (() => {
         if (fixedHistorical && map && typeof map.on === "function")
             map.on("moveend zoomend", refreshPolityLabels);
         render();
-        return { configure, getView: () => committed ? { ...committed } : null, setYear, retainBackground, setBasemap, setBoundaries, actionVersion: () => actions };
+        return { configure, getView: () => committed ? { ...committed } : null, setYear, retainBackground, setSelectionContext, setBasemap, setBoundaries, actionVersion: () => actions };
     }
     return { create, isValidYear, yearToStep, stepToYear, formatYear, frameTargets, colorForName, worldCopies, validateCollection };
 })();

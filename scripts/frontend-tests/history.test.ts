@@ -10,10 +10,11 @@ interface HistoryStatus { ready: boolean; reason?: string; version?: string; min
 interface Controller {
   configure(status: HistoryStatus | null | undefined): void;
   getView(): View | null;
-  setYear(year: number, intent?: 'user' | 'site'): void;
+  setYear(year: number, intent?: 'user' | 'site', options?: { selectionOwned?: boolean }): void;
   setBasemap(basemap: 'historical' | 'modern', intent?: 'user' | 'site'): void;
   setBoundaries(enabled: boolean, intent?: 'user' | 'site'): void;
   retainBackground(note?: string): void;
+  setSelectionContext(context: { title: string; precision: string | null; start_year: number | null; end_year: number | null } | null): void;
   actionVersion(): number;
 }
 interface Helpers {
@@ -45,6 +46,7 @@ class FakeElement extends EventTarget {
   children: FakeElement[] = [];
   attributes = new Map<string, string>();
   tabIndex = 0;
+  lastFocusOptions?: FocusOptions;
   onFocus?: () => void;
 
   constructor(tag = 'div') { super(); this.tagName = tag.toUpperCase(); }
@@ -52,7 +54,7 @@ class FakeElement extends EventTarget {
   removeAttribute(key: string): void { this.attributes.delete(key); }
   append(...nodes: FakeElement[]): void { this.children.push(...nodes); }
   replaceChildren(...nodes: FakeElement[]): void { this.children = [...nodes]; }
-  focus(_options?: FocusOptions): void { this.onFocus?.(); }
+  focus(options?: FocusOptions): void { this.lastFocusOptions=options; this.onFocus?.(); }
   set innerHTML(_value: string) { throw new Error('Unsafe innerHTML write'); }
   fire(type: string, key?: string): Event {
     const event = new Event(type, { cancelable: true });
@@ -128,6 +130,7 @@ function frame(year: number, options: { from?: number; to?: number; id?: string;
 
 function setup(withMap = true, fixedHistorical = false, sharedRenderer: object | null = null, automaticOnly = false, includeLegacyControls = !automaticOnly) {
   const ids = ['history-controls', 'history-year', 'history-range', 'history-apply', 'history-previous-year', 'history-next-year', 'history-previous-frame', 'history-next-frame', 'history-basemap-historical', 'history-basemap-modern', 'history-boundaries', 'history-applied-year', 'history-draft-year', 'history-feedback', 'history-error', 'history-source', 'history-retry', 'history-map-caption', 'comparison-history-year'];
+  if (automaticOnly) ids.push('history-linkage-status');
   const nodes = new Map(ids.map((id) => [id, new FakeElement()]));
   const legacyIds = ['history-year', 'history-range', 'history-apply', 'history-previous-year', 'history-next-year', 'history-previous-frame', 'history-next-frame', 'history-basemap-historical', 'history-basemap-modern', 'history-boundaries', 'history-draft-year'];
   if (!includeLegacyControls) for (const id of legacyIds) nodes.delete(id);
@@ -437,6 +440,19 @@ test('retry controls hand keyboard focus to persistent feedback before becoming 
   env.view.setYear(200); env.runTimers(); env.complete(env.boundaryRequest(200), { detail: '失败' }, 503); await tick();
   env.doc.activeElement = env.node('history-retry'); env.node('history-retry').fire('click');
   assert.equal(env.node('history-retry').hidden, true); assert.equal(env.doc.activeElement, env.node('history-feedback'));
+  assert.equal(env.node('history-feedback').lastFocusOptions?.preventScroll,true);
+});
+
+test('automatic retry hands keyboard focus to the visible linkage banner instead of clipped legacy feedback', async () => {
+  const env=setup(true,false,null,true); await env.finishInitial();
+  env.view.setSelectionContext(exactContext(366)); env.view.setYear(366,'site',{selectionOwned:true}); env.runTimers();
+  env.complete(env.boundaryRequest(366),{detail:'失败'},503); await tick();
+  const linkage=env.node('history-linkage-status');
+  env.doc.activeElement=env.node('history-retry'); env.node('history-retry').fire('click');
+  assert.equal(env.node('history-retry').hidden,true); assert.equal(env.doc.activeElement,linkage);
+  assert.equal(linkage.tabIndex,-1); assert.equal(linkage.lastFocusOptions,undefined);
+  env.runTimers(); env.complete(env.boundaryRequest(366),frame(366,{from:366,to:366,id:'keyboard-retry-366'})); await tick();
+  assert.equal(env.doc.activeElement,linkage); assert.equal(linkage.dataset.state,'matched');
 });
 
 test('a restored year remains pending while data is unavailable and loads unchanged after refresh', async () => {
@@ -589,4 +605,192 @@ test('out-of-coverage selection before first automatic frame still loads a clear
   env.complete(geography, land); env.complete(env.boundaryRequest(117), frame(117)); await tick();
   assert.equal(env.view.getView()?.year,117); assert.match(env.node('history-feedback').textContent,/无可用疆域数据/u);
   assert.equal(env.pending.some(request => request.url.includes('year=-9600')),false);
+});
+
+function exactContext(year: number, title = `地点 ${year}`) {
+  return { title, precision: 'exact_year', start_year: year, end_year: year };
+}
+
+test('automatic linkage distinguishes a reference map from repeated real-year site transitions and unknown dates', async () => {
+  const env = setup(true, false, null, true); await env.finishInitial();
+  const linkage = env.node('history-linkage-status');
+  assert.equal(linkage.dataset.state, 'unlinked');
+  assert.match(linkage.textContent, /未选遗址.*117.*仅为参考背景/u);
+  for (const year of [1616, 366, 1973, -183]) {
+    const previous = env.view.getView()!.year;
+    env.view.setSelectionContext(exactContext(year)); env.view.setYear(year, 'site', {selectionOwned:true});
+    assert.equal(linkage.dataset.state, 'loading');
+    assert.match(linkage.textContent, /正在加载.*当前仍显示/u);
+    assert.ok(linkage.textContent.includes(env.helpers.formatYear(previous)));
+    assert.ok(linkage.textContent.includes(env.helpers.formatYear(year)));
+    env.runTimers();
+    env.complete(env.boundaryRequest(year), frame(year, {from:year,to:year,id:`year-${year}`})); await tick();
+    assert.equal(env.view.getView()?.year, year); assert.equal(linkage.dataset.state, 'matched');
+    assert.ok(linkage.textContent.includes(env.helpers.formatYear(year)));
+  }
+  const before = new Set(env.map.layers), requests = env.pending.length;
+  env.view.setSelectionContext({title:'断代未核验',precision:null,start_year:null,end_year:null});
+  assert.equal(linkage.dataset.state, 'retained');
+  assert.match(linkage.textContent, /无明确单年.*公元前 183 年.*不能视为该遗址年代/u);
+  assert.equal(env.view.getView()?.year, -183); assert.deepEqual(env.map.layers, before); assert.equal(env.pending.length, requests);
+});
+
+test('range approximate and period context report source precision without choosing a year or claiming the retained year', async () => {
+  const env = setup(true, false, null, true); await env.finishInitial();
+  for (const [precision, pattern] of [['range',/来源区间/u],['approximate_year',/来源约略年代/u],['period',/来源仅有时期描述/u]] as const) {
+    env.view.setSelectionContext({title:'有区间证据',precision,start_year:-100,end_year:100});
+    const linkage = env.node('history-linkage-status');
+    assert.equal(linkage.dataset.state, 'retained'); assert.match(linkage.textContent, pattern);
+    assert.match(linkage.textContent, /公元前 100 年 — 公元 100 年.*117.*不能视为该遗址年代/u);
+    assert.equal(env.view.getView()?.year, 117);
+  }
+  env.view.setSelectionContext({title:'详情在途',precision:'loading',start_year:null,end_year:null});
+  assert.equal(env.node('history-linkage-status').dataset.state, 'loading');
+  assert.match(env.node('history-linkage-status').textContent, /正在核对.*117.*仅供参照/u);
+});
+
+test('a saved1930 reference survives initial empty context and does not claim to be a1616 site stage', async () => {
+  const env = setup(true, false, null, true);
+  env.view.setYear(1930, 'site'); env.view.configure(status);
+  env.view.setSelectionContext(null); env.view.setSelectionContext(null);
+  env.view.setSelectionContext(exactContext(1616,'墓的埋葬阶段')); env.runTimers();
+  const request = env.boundaryRequest(1930);
+  assert.equal(request.signal.aborted, false);
+  assert.equal(env.node('history-linkage-status').dataset.state, 'loading');
+  assert.match(env.node('history-linkage-status').textContent, /来源年代 公元 1616 年.*加载参考背景 公元 1930 年.*不一致/u);
+  assert.doesNotMatch(env.node('history-linkage-status').textContent, /资料年代 公元 1616 年，正在加载/u);
+  const geography = env.pending.find(item => item.url.endsWith('land.geojson')); assert.ok(geography);
+  env.complete(geography, land); env.complete(request, frame(1930,{from:1930,to:1930,id:'saved-view'})); await tick();
+  assert.equal(env.view.getView()?.year, 1930); assert.equal(env.node('history-linkage-status').dataset.state, 'mismatched');
+  assert.match(env.node('history-linkage-status').textContent, /1616.*1930.*不一致/u);
+});
+
+test('failed exact-year loading names the actual retained background until a successful retry', async () => {
+  const env = setup(true, false, null, true); await env.finishInitial();
+  env.view.setSelectionContext(exactContext(366)); env.view.setYear(366,'site',{selectionOwned:true}); env.runTimers();
+  env.complete(env.boundaryRequest(366), {detail:'年度请求失败'}, 503); await tick();
+  assert.equal(env.view.getView()?.year,117); assert.equal(env.node('history-linkage-status').dataset.state,'mismatched');
+  assert.match(env.node('history-linkage-status').textContent,/来源年代 公元 366 年.*当前历史背景 公元 117 年.*不一致/u);
+  env.node('history-retry').fire('click'); env.runTimers();
+  assert.equal(env.node('history-linkage-status').dataset.state,'loading');
+  env.complete(env.boundaryRequest(366), frame(366,{from:366,to:366,id:'retry-366'})); await tick();
+  assert.equal(env.node('history-linkage-status').dataset.state,'matched'); assert.equal(env.view.getView()?.year,366);
+});
+
+test('out-of-coverage exact context preserves source date and never labels the reference as the site year', async () => {
+  const env = setup(true, false, null, true); await env.finishInitial(); const requests=env.pending.length;
+  env.view.setSelectionContext(exactContext(-9600)); env.view.setYear(-9600,'site',{selectionOwned:true}); env.runTimers(); await tick();
+  assert.equal(env.view.getView()?.year,117); assert.equal(env.pending.length,requests);
+  assert.equal(env.node('history-linkage-status').dataset.state,'mismatched');
+  assert.match(env.node('history-linkage-status').textContent,/公元前 9600 年.*超出疆域覆盖.*公元 117 年.*仅供参照/u);
+});
+
+test('out-of-coverage explanation survives the initial reference117 fallback clearing transport errors', async () => {
+  const env=setup(true,false,null,true); env.view.configure(status);
+  env.view.setSelectionContext(exactContext(-9600)); env.view.setYear(-9600,'site',{selectionOwned:true}); env.runTimers();
+  const geography=env.pending.find(item=>item.url.endsWith('land.geojson')); assert.ok(geography);
+  env.complete(geography,land); env.complete(env.boundaryRequest(117),frame(117)); await tick();
+  assert.equal(env.view.getView()?.year,117); assert.equal(env.node('history-error').hidden,true);
+  assert.equal(env.node('history-linkage-status').dataset.state,'mismatched');
+  assert.match(env.node('history-linkage-status').textContent,/公元前 9600 年.*超出疆域覆盖.*公元 117 年.*仅供参照/u);
+  assert.equal(env.pending.some(item=>item.url.includes('year=-9600')),false);
+});
+
+test('unprepared geography is never reported as a successfully matched history frame', async () => {
+  const env=setup(true,false,null,true);
+  env.view.setSelectionContext(exactContext(1973)); env.view.setYear(1973,'site',{selectionOwned:true});
+  env.view.configure({ready:false,reason:'历史数据库尚未准备'}); env.runTimers();
+  const geography=env.pending.find(item=>item.url.endsWith('land.geojson')); assert.ok(geography);
+  env.complete(geography,land); await tick();
+  assert.equal(env.view.getView()?.boundaries,false);
+  assert.equal(env.node('history-linkage-status').dataset.state,'unavailable');
+  assert.match(env.node('history-linkage-status').textContent,/1973.*疆域尚未载入/u);
+  assert.doesNotMatch(env.node('history-linkage-status').textContent,/已按来源切到/u);
+});
+
+test('clearing selected context cancels only its pending year and removes stale linkage after a new search', async () => {
+  const env=setup(true,false,null,true); await env.finishInitial();
+  env.view.setSelectionContext(exactContext(1616)); env.view.setYear(1616,'site',{selectionOwned:true}); env.runTimers();
+  const old=env.boundaryRequest(1616);
+  env.view.setSelectionContext(null);
+  assert.equal(old.signal.aborted,true); assert.equal(env.node('history-linkage-status').dataset.state,'unlinked');
+  assert.match(env.node('history-linkage-status').textContent,/未选遗址.*117.*仅为参考背景/u);
+  assert.doesNotMatch(env.node('history-feedback').textContent,/保留最后成功历史背景/u);
+  env.complete(old,frame(1616,{from:1616,to:1616,id:'too-late-1616'})); await tick();
+  assert.equal(env.view.getView()?.year,117); assert.equal(env.commits.length,1);
+});
+
+test('clearing failed loading-site context preserves the independent initial1930 share request', async () => {
+  const env=setup(true,false,null,true);
+  env.view.setYear(1930,'site'); env.view.configure(status);
+  env.view.setSelectionContext({title:'详情尚未读取的遗址',precision:'loading',start_year:null,end_year:null});
+  env.runTimers(); const request=env.boundaryRequest(1930);
+  env.view.setSelectionContext(null);
+  assert.equal(request.signal.aborted,false); assert.equal(env.node('history-linkage-status').dataset.state,'unlinked');
+  assert.equal(env.pending.some(item=>item.url.includes('year=117')),false);
+  const geography=env.pending.find(item=>item.url.endsWith('land.geojson')); assert.ok(geography);
+  env.complete(geography,land); env.complete(request,frame(1930,{from:1930,to:1930,id:'independent-share'})); await tick();
+  assert.equal(env.view.getView()?.year,1930);
+  assert.match(env.node('history-linkage-status').textContent,/未选遗址.*1930.*仅为参考背景/u);
+});
+
+test('matching the selected year does not confer ownership on an independent share', async () => {
+  const env=setup(true,false,null,true); await env.finishInitial();
+  env.view.setYear(1930,'site'); env.view.setSelectionContext(exactContext(1930)); env.runTimers();
+  const request=env.boundaryRequest(1930); env.view.setSelectionContext(null);
+  assert.equal(request.signal.aborted,false);
+  env.complete(request,frame(1930,{from:1930,to:1930,id:'same-year-independent-share'})); await tick();
+  assert.equal(env.view.getView()?.year,1930);
+});
+
+test('a newer explicit user or share year clears selection ownership before context is removed', async () => {
+  for (const intent of ['user','site'] as const) {
+    const env=setup(true,false,null,true); await env.finishInitial();
+    env.view.setSelectionContext(exactContext(1616)); env.view.setYear(1616,'site',{selectionOwned:true}); env.runTimers();
+    const previous=env.boundaryRequest(1616);
+    env.view.setYear(1930,intent); env.runTimers(); const reference=env.boundaryRequest(1930);
+    assert.equal(previous.signal.aborted,true); env.view.setSelectionContext(null); assert.equal(reference.signal.aborted,false);
+    env.complete(reference,frame(1930,{from:1930,to:1930,id:`override-${intent}`})); await tick();
+    assert.equal(env.view.getView()?.year,1930);
+  }
+});
+
+test('status refresh preserves ownership of a still-pending selected phase year', async () => {
+  const env=setup(true,false,null,true); await env.finishInitial();
+  env.view.setSelectionContext(exactContext(1616)); env.view.setYear(1616,'site',{selectionOwned:true});
+  env.view.configure({...status}); env.runTimers(); const request=env.boundaryRequest(1616);
+  env.view.setSelectionContext(null); assert.equal(request.signal.aborted,true);
+  env.complete(request,frame(1616,{from:1616,to:1616,id:'canceled-after-refresh'})); await tick();
+  assert.equal(env.view.getView()?.year,117);
+});
+
+test('removing a failed selected-year plan does not revive that obsolete target on status refresh', async () => {
+  const env=setup(true,false,null,true); await env.finishInitial();
+  env.view.setSelectionContext(exactContext(366)); env.view.setYear(366,'site',{selectionOwned:true}); env.runTimers();
+  env.complete(env.boundaryRequest(366),{detail:'旧阶段请求失败'},503); await tick();
+  const requests=env.pending.length;
+  env.view.setSelectionContext(null); env.view.configure({...status}); env.runTimers(); await tick();
+  assert.equal(env.pending.length,requests); assert.equal(env.view.getView()?.year,117);
+  assert.equal(env.node('history-linkage-status').dataset.state,'unlinked');
+  assert.match(env.node('history-linkage-status').textContent,/117.*仅为参考背景/u);
+});
+
+test('unrelated failed site details cannot erase an independent background failure or its1930 retry', async () => {
+  const env=setup(true,false,null,true); await env.finishInitial();
+  env.view.setYear(1930,'site'); env.runTimers();
+  env.complete(env.boundaryRequest(1930),{detail:'独立1930参考背景请求失败'},503); await tick();
+  assert.equal(env.view.getView()?.year,117); assert.equal(env.node('history-error').hidden,false);
+  assert.equal(env.node('history-retry').hidden,false);
+  const error=env.node('history-error').textContent;
+  env.view.setSelectionContext({title:'另一个读取失败的遗址',precision:'loading',start_year:null,end_year:null});
+  env.view.setSelectionContext(null);
+  assert.equal(env.node('history-linkage-status').dataset.state,'unlinked');
+  assert.equal(env.node('history-error').textContent,error); assert.equal(env.node('history-error').hidden,false);
+  assert.equal(env.node('history-retry').hidden,false);
+  env.node('history-retry').fire('click'); env.runTimers();
+  const retry=env.boundaryRequest(1930); assert.equal(retry.signal.aborted,false);
+  env.complete(retry,frame(1930,{from:1930,to:1930,id:'independent-reference-retry'})); await tick();
+  assert.equal(env.view.getView()?.year,1930); assert.equal(env.node('history-error').hidden,true);
+  assert.equal(env.node('history-retry').hidden,true);
+  assert.match(env.node('history-linkage-status').textContent,/未选遗址.*1930.*仅为参考背景/u);
 });

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "feature_count": 390,
+  "distinct_source_ids": 382,
+  "line_count": 393,
+  "point_count": 19859,
+  "classification_counts": {
+    "Disputed (please verify)": 21,
+    "Indefinite (please verify)": 5,
+    "Line of control (please verify)": 7,
+    "International boundary (verify)": 355,
+    "Indeterminant frontier": 2
+  },
+  "source": {
+    "name": "Natural Earth 1:50m Admin 0 land boundary lines",
+    "version": "5.1.0",
+    "distribution_tag": "v5.1.2",
+    "commit": "f1890d9f152c896d250a77557a5751a93d494776",
+    "uri": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-boundary-lines-2/",
+    "geojson_uri": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/f1890d9f152c896d250a77557a5751a93d494776/geojson/ne_50m_admin_0_boundary_lines_land.geojson",
+    "geojson_sha256": "2faac4f6b34386f3d21b6e018cf151f241f00e5c936d44dd17d7d9bfb147fa48",
+    "archive_uri": "https://naciscdn.org/naturalearth/50m/cultural/ne_50m_admin_0_boundary_lines_land.zip",
+    "archive_sha256": "02f369ae10578c4ce33fc4a08f8cdd69ea11eb39b44d7923e88eb7199aaff8ea",
+    "version_uri": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/f1890d9f152c896d250a77557a5751a93d494776/50m_cultural/ne_50m_admin_0_boundary_lines_land.VERSION.txt",
+    "version_sha256": "c0eacacd7e27bbf341d21e7e0e2997a363840a210d8e358d4babaebd765b5bfd",
+    "license": "Public domain",
+    "license_uri": "https://www.naturalearthdata.com/about/terms-of-use/"
+  },
+  "processing": "Preserve all source coordinates, order, NE_ID and FEATURECLA; remove unused attributes and bounding boxes. Assign record_id from one-based source feature order because eight NE_ID values each occur twice; do not merge those lines. Render all 390 source records, retaining disputed/control/indefinite classifications as dashed lines. No simplification, maritime boundaries, country assignment, alternate POV filtering, or sovereignty inference.",
+  "sha256": "f029701b3cfb5bd51bdcfd4cb5ed220da5d6f52460f691196f515c292c0a24ec",
+  "artifact": "modern-boundaries.geojson",
+  "rebuild": "node --experimental-strip-types scripts/build-modern-boundaries.ts --download"
+}

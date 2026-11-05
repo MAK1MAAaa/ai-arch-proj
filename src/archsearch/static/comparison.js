@@ -7,7 +7,7 @@ const ArchSearchComparison = (() => {
         const center = map.getCenter();
         return { center: [ArchSearchMapView.wrapLongitude(center.lng, 0), Math.max(-85.0511287798, Math.min(85.0511287798, center.lat))], zoom: map.getZoom() };
     }
-    function regionZoom(zoom) { return Math.min(5, Math.max(1, zoom)); }
+    function sharedZoom(zoom) { return Math.min(9, Math.max(1, zoom)); }
     function create({ modern, historical, tiles, initial, onSelect, onChanged, onEvidence }) {
         const byId = (id) => {
             const node = document.getElementById(id);
@@ -27,6 +27,9 @@ const ArchSearchComparison = (() => {
         let displayed = modern ? "loading" : "unavailable";
         let sync = initial.sync_centers;
         let syncing = false;
+        let restoringCameras = false;
+        const restoredZoom = sharedZoom(initial.history_view?.zoom ?? initial.modern_view?.zoom ?? historical?.getZoom() ?? modern?.getZoom() ?? 1);
+        let alignedLegacyZoom = [initial.modern_view, initial.history_view].some(view => view !== null && view.zoom !== restoredZoom);
         let failedTiles = false;
         let land = null;
         let landPromise = null;
@@ -36,6 +39,12 @@ const ArchSearchComparison = (() => {
         let modernTouched = false, historicalTouched = false;
         let catalogueSignature = "";
         let candidateValues = [];
+        const mapSizes = new Map();
+        for (const map of [modern, historical])
+            if (map) {
+                const size = map.getSize();
+                mapSizes.set(map, { x: size.x, y: size.y });
+            }
         const markers = new Map();
         const circles = new Map();
         const candidateLayer = historical && typeof L !== "undefined" ? L.layerGroup().addTo(historical) : null;
@@ -62,6 +71,8 @@ const ArchSearchComparison = (() => {
             ui.modernStatus.textContent = displayed === "osm" ? "OpenStreetMap · 当前现代位置参照"
                 : displayed === "natural" ? failedTiles && requested === "osm" ? "OSM 不可用 · 已显示本地自然轮廓" : "本地自然轮廓 · 现代地理参照"
                     : displayed === "loading" ? "正在加载现代底图；定位点可独立使用" : "现代底图暂不可用，定位点与资料仍保留";
+            if (alignedLegacyZoom)
+                ui.modernStatus.textContent += ` · 旧链接缩放已统一为 ${restoredZoom} 级，分别保留两图中心`;
             if (modern)
                 modern.getContainer().dataset.basemap = displayed;
         }
@@ -122,23 +133,68 @@ const ArchSearchComparison = (() => {
             }
             changed();
         }
-        function syncFrom(source, destination, regional) {
-            if (!sync || syncing)
+        function syncFrom(source, destination, copyCenter = sync) {
+            if (syncing || restoringCameras)
                 return;
             const center = source.getCenter();
             const other = destination.getCenter();
-            const longitude = ArchSearchMapView.wrapLongitude(center.lng, other.lng);
-            const zoom = regional ? regionZoom(destination.getZoom()) : destination.getZoom();
-            if (Math.abs(center.lat - other.lat) < 1e-7 && Math.abs(longitude - other.lng) < 1e-7 && zoom === destination.getZoom())
-                return;
+            const latitude = copyCenter ? center.lat : other.lat;
+            const longitude = copyCenter ? ArchSearchMapView.wrapLongitude(center.lng, other.lng) : other.lng;
+            const zoom = sharedZoom(source.getZoom());
             syncing = true;
             try {
-                destination.stop();
-                destination.setView([center.lat, longitude], zoom, { animate: false });
+                if (source.getZoom() !== zoom) {
+                    source.stop();
+                    source.setView([center.lat, center.lng], zoom, { animate: false });
+                }
+                if (Math.abs(latitude - other.lat) >= 1e-7 || Math.abs(longitude - other.lng) >= 1e-7 || zoom !== destination.getZoom()) {
+                    destination.stop();
+                    destination.setView([latitude, longitude], zoom, { animate: false });
+                }
             }
             finally {
                 syncing = false;
             }
+        }
+        function sizeChanged(map) {
+            const next = map.getSize(), previous = mapSizes.get(map);
+            mapSizes.set(map, { x: next.x, y: next.y });
+            return previous !== undefined && (previous.x !== next.x || previous.y !== next.y);
+        }
+        function positionSelection(coordinate) {
+            syncing = true;
+            try {
+                for (const map of [modern, historical])
+                    if (map) {
+                        map.stop();
+                        map.setView([coordinate[1], ArchSearchMapView.wrapLongitude(coordinate[0], map.getCenter().lng)], 4, { animate: false });
+                    }
+            }
+            finally {
+                syncing = false;
+            }
+            for (const map of [modern, historical])
+                if (map)
+                    sizeChanged(map);
+            onChanged();
+        }
+        function restoreViews() {
+            if ((initial.modern_view === null && initial.history_view === null) || modernTouched || historicalTouched)
+                return;
+            restoringCameras = true;
+            try {
+                for (const [map, view] of [[modern, initial.modern_view], [historical, initial.history_view]])
+                    if (map) {
+                        const center = view ? [view.center[1], view.center[0]] : [map.getCenter().lat, map.getCenter().lng];
+                        map.setView(center, restoredZoom, { animate: false });
+                    }
+            }
+            finally {
+                restoringCameras = false;
+            }
+            for (const map of [modern, historical])
+                if (map)
+                    sizeChanged(map);
         }
         function attachMarker(id, title, coordinate, rank) {
             if (!historical || !candidateLayer)
@@ -191,11 +247,32 @@ const ArchSearchComparison = (() => {
             renderSelection();
         }
         function fitCandidates() {
-            if (!historical)
+            const maps = [modern, historical].filter((map) => map !== null);
+            if (!maps.length)
                 return;
             const coordinates = candidateValues.filter((item) => ArchSearchMapView.locationStatus(item.repr_point) === "mapped").map((item) => [item.repr_point[1], item.repr_point[0]]);
-            if (coordinates.length)
-                historical.fitBounds(L.latLngBounds(ArchSearchMapView.wrapCoordinates(coordinates)), { maxZoom: 4, padding: [35, 35], animate: false });
+            syncing = true;
+            try {
+                let center = { lat: 20, lng: 0 }, zoom = 1;
+                if (coordinates.length) {
+                    const bounds = L.latLngBounds(ArchSearchMapView.wrapCoordinates(coordinates));
+                    zoom = sharedZoom(Math.min(4, ...maps.map(map => map.getBoundsZoom(bounds, false, L.point(70, 70)))));
+                    const reference = maps[0];
+                    reference.stop();
+                    reference.fitBounds(bounds, { maxZoom: zoom, padding: [35, 35], animate: false });
+                    center = reference.getCenter();
+                }
+                for (const map of maps) {
+                    map.stop();
+                    map.setView([center.lat, ArchSearchMapView.wrapLongitude(center.lng, map.getCenter().lng)], zoom, { animate: false });
+                }
+            }
+            finally {
+                syncing = false;
+            }
+            for (const map of maps)
+                sizeChanged(map);
+            onChanged();
         }
         function setCatalogue(values, visible) {
             const signature = visible ? JSON.stringify(values) : "hidden";
@@ -239,7 +316,9 @@ const ArchSearchComparison = (() => {
                 const date = (year) => year === null ? "未提供" : ArchSearchHistory.formatYear(year);
                 const dates = phase.start_year === phase.end_year ? date(phase.start_year) : `${date(phase.start_year)} — ${date(phase.end_year)}`;
                 const exact = phase.precision === "exact_year" && phase.start_year !== null && phase.start_year !== 0 && phase.start_year === phase.end_year;
-                ui.evidenceDate.textContent = `${phase.label} · ${dates} · ${exact ? "明确单年事件，历史背景自动联动，实际图年见右图" : "约略／区间证据，不推断年份；保留最后成功的历史背景"}`;
+                const precision = exact ? "明确单年事件" : phase.precision === "approximate_year" ? "约略年份，不推断单年"
+                    : phase.precision === "range" ? "区间年代，不选取任意一年" : phase.precision === "period" ? "时期描述，未确定单年" : "来源日期未明确单年";
+                ui.evidenceDate.textContent = `来源阶段：${phase.label} · ${dates} · ${precision}；实际背景见右图年份与联动状态。定位点不代表历史政治归属。`;
                 ui.evidenceQuote.textContent = phase.sources[0]?.excerpt ?? "";
                 for (const source of phase.sources) {
                     try {
@@ -257,14 +336,14 @@ const ArchSearchComparison = (() => {
                 }
             }
             else
-                ui.evidenceDate.textContent = value.status === "insufficient" ? "已核验但断代未确定；不推断年份，保留最后成功的历史背景。" : "尚无经过核验的历史阶段；不推断年份，保留最后成功的历史背景。";
+                ui.evidenceDate.textContent = `${value.status === "insufficient" ? "已核验但断代未确定" : "尚无经过核验的历史阶段"}；当前资料没有明确单年，实际背景见右图年份与联动状态。定位点不代表历史政治归属。`;
             ui.evidenceQuote.hidden = !ui.evidenceQuote.textContent;
             if (value.repr_point && ArchSearchMapView.locationStatus(value.repr_point) === "mapped") {
                 if (!markers.has(value.id))
                     selectedMarker = attachMarker(value.id, value.title, value.repr_point, null);
                 selectedMarker?.getElement()?.classList.add("is-selected");
-                if (focus && historical)
-                    historical.setView([value.repr_point[1], ArchSearchMapView.wrapLongitude(value.repr_point[0], historical.getCenter().lng)], 4, { animate: false });
+                if (focus)
+                    positionSelection(value.repr_point);
             }
             renderSelection();
         }
@@ -275,18 +354,19 @@ const ArchSearchComparison = (() => {
             modernTouched = true;
             historicalTouched = true;
             cameraActions++;
-            if (modern) {
-                modern.stop();
-                modern.setView([coordinate[1], ArchSearchMapView.wrapLongitude(coordinate[0], modern.getCenter().lng)], 15, { animate: false });
-            }
-            if (historical) {
-                historical.stop();
-                historical.setView([coordinate[1], ArchSearchMapView.wrapLongitude(coordinate[0], historical.getCenter().lng)], 4, { animate: false });
-            }
+            alignedLegacyZoom = false;
+            render();
+            positionSelection(coordinate);
             return modern !== null || historical !== null;
         }
         if (modern && historical) {
-            modern.on("moveend", () => { syncFrom(modern, historical, true); onChanged(); });
+            modern.on("moveend", () => {
+                if (syncing || restoringCameras)
+                    return;
+                const resized = sizeChanged(modern);
+                syncFrom(modern, historical, sync && !resized);
+                onChanged();
+            });
             historical.on("moveend", () => {
                 for (const marker of [...markers.values(), ...(selectedMarker ? [selectedMarker] : [])]) {
                     const value = marker.getLatLng();
@@ -294,13 +374,14 @@ const ArchSearchComparison = (() => {
                     if (value.lng !== longitude)
                         marker.setLatLng([value.lat, longitude]);
                 }
-                syncFrom(historical, modern, false);
+                if (syncing || restoringCameras)
+                    return;
+                const resized = sizeChanged(historical);
+                syncFrom(historical, modern, sync && !resized);
                 onChanged();
             });
-            modern.on("zoomend", onChanged);
-            historical.on("zoomend", onChanged);
         }
-        for (const [map, touch] of [[modern, () => { modernTouched = true; cameraActions++; }], [historical, () => { historicalTouched = true; cameraActions++; }]]) {
+        for (const [map, touch] of [[modern, () => { modernTouched = true; cameraActions++; alignedLegacyZoom = false; render(); }], [historical, () => { historicalTouched = true; cameraActions++; alignedLegacyZoom = false; render(); }]]) {
             if (!map)
                 continue;
             map.on("dragstart", touch);
@@ -315,12 +396,18 @@ const ArchSearchComparison = (() => {
         } });
         ui.osm.addEventListener("click", () => setModernBasemap("osm"));
         ui.natural.addEventListener("click", () => setModernBasemap("natural"));
-        ui.sync.addEventListener("change", () => { sync = ui.sync.checked; if (sync && modern && historical)
-            syncFrom(modern, historical, true); changed(); });
+        ui.sync.addEventListener("change", () => {
+            modernTouched = true;
+            historicalTouched = true;
+            cameraActions++;
+            alignedLegacyZoom = false;
+            sync = ui.sync.checked;
+            if (modern && historical)
+                syncFrom(modern, historical);
+            changed();
+        });
         ui.evidenceOpen.addEventListener("click", onEvidence);
-        for (const [map, view] of [[modern, initial.modern_view], [historical, initial.history_view]])
-            if (map && view)
-                map.setView([view.center[1], view.center[0]], view.zoom, { animate: false });
+        restoreViews();
         if (typeof ResizeObserver !== "undefined") {
             const observer = new ResizeObserver(() => { modern?.invalidateSize({ pan: true, animate: false }); historical?.invalidateSize({ pan: true, animate: false }); });
             if (modern)
@@ -336,14 +423,9 @@ const ArchSearchComparison = (() => {
         return {
             setCandidates, fitCandidates, setCatalogue, setSelection, focusSelected, setModernBasemap,
             getHistoricalRenderer: () => sourceRenderer,
-            noteInteraction() { modernTouched = true; historicalTouched = true; cameraActions++; },
+            noteInteraction() { modernTouched = true; historicalTouched = true; cameraActions++; alignedLegacyZoom = false; render(); },
             actionVersion: () => cameraActions,
-            restoreInitialViews() {
-                if (modern && initial.modern_view && !modernTouched)
-                    modern.setView([initial.modern_view.center[1], initial.modern_view.center[0]], initial.modern_view.zoom, { animate: false });
-                if (historical && initial.history_view && !historicalTouched)
-                    historical.setView([initial.history_view.center[1], initial.history_view.center[0]], initial.history_view.zoom, { animate: false });
-            },
+            restoreInitialViews: restoreViews,
             getMarker: (id) => markers.get(id) ?? null,
             state: () => ({ modern_basemap: displayed === "natural" ? "natural" : "osm", sync_centers: sync, modern_view: camera(modern), history_view: camera(historical) }),
             snapshot: (view) => ({
@@ -354,6 +436,6 @@ const ArchSearchComparison = (() => {
             }),
         };
     }
-    return { create, camera, regionZoom };
+    return { create, camera };
 })();
 //# sourceMappingURL=comparison.js.map
