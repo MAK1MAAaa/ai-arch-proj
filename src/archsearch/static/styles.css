@@ -1141,6 +1141,10 @@
   gap: 6px;
 }
 
+.explore-pagination .interaction-button {
+  min-height: 44px;
+}
+
 .explore-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1489,4 +1493,64 @@
   font-size: 12px;
   line-height: 1.8;
   overflow-wrap: anywhere;
+}
+
+.result-description.result-source-fields {
+  display: block;
+  -webkit-line-clamp: unset;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.minas-source-records,
+.minas-source-record,
+.minas-source-fields,
+.minas-source-fields > div {
+  min-width: 0;
+}
+
+.minas-source-record {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.minas-record-heading {
+  margin: 0 0 12px;
+  color: var(--accent-dark);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.minas-source-fields {
+  display: grid;
+  gap: 13px;
+  margin: 0;
+}
+
+.minas-source-fields dt {
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.minas-source-fields dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.minas-empty-value {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.minas-zero-note {
+  padding-left: 10px;
+  border-left: 2px solid var(--accent);
 }

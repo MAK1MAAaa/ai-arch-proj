@@ -1,24 +1,25 @@
 {
   "canada_spec_sha256": "4cfdd4fb896c2769de3d77daaf481fdb1544fc79d0e6d8db4911d97d8ad8afbc",
-  "corpus_version": "global-v15",
+  "corpus_version": "global-v16",
   "counts": {
-    "assigned_sites": 1130,
-    "memberships": 1132,
-    "subdivisions": 30
+    "assigned_sites": 1263,
+    "memberships": 1265,
+    "subdivisions": 97
   },
   "files": {
     "subdivision_review.json": {
-      "sha256": "617454b4d01d975c840aa3af639165680b8dcbc2fa59cff994cf158035040faf"
+      "sha256": "fe60ca41603060d5800f15c1ca5f310bd034c3dcb42f852b1df2a792f0a28047"
     },
     "subdivisions.json": {
-      "sha256": "444c1db1b11618d712cd4b7dd7d288fd4a3a1769547c26bffc550f3adde5e847"
+      "sha256": "69bff0222e49cb884b660b8d7a29810e81df25bf075e866877ca70db08ead2d9"
     }
   },
   "hong_kong_spec_sha256": "b0bcbe915c46bf611aab9b35b76c4365eb398a1032cf7705aa8302448611bf7a",
-  "policy": "Reviewed Canadian whole-object provinces and Hong Kong source-feature districts. Explicit feature-to-whole links only; no geocoding, boundary, chronology or text inference.",
-  "review_sha256": "617454b4d01d975c840aa3af639165680b8dcbc2fa59cff994cf158035040faf",
+  "minas_spec_sha256": "def84d9b4c6a5c0c04794779337614dfb563e9b5b1d224d927c906d0721c7dca",
+  "policy": "Reviewed Canadian whole-object provinces, Hong Kong source-feature districts and Iepha-MG original-record municipality values. Explicit record-to-object links only; no geocoding, boundary, chronology or text inference.",
+  "review_sha256": "fe60ca41603060d5800f15c1ca5f310bd034c3dcb42f852b1df2a792f0a28047",
   "schema_version": 1,
-  "source_facts_sha256": "6f7600a4ab0dae742a830d6e33a16970321d8636f926712ffee7d35c113cc49f",
-  "source_review_sha256": "5e493d67302bc9f38518d4c1cd2acba0ea0a458a1a04f03d8ffb5ee3c4a87c5a",
-  "version": "source-subdivisions-v3"
+  "source_facts_sha256": "b9a65eea228ebd0ba7ad571cdd70f9a04e65437a53856b34bfb4eb9994fb35b1",
+  "source_review_sha256": "121c951c1df3796b496c05bef624baddd8151053ea5efb8c6b305bb392a1508c",
+  "version": "source-subdivisions-v4"
 }

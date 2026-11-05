@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "scope": "Twenty paired Minas Gerais source-name and source-field discovery query candidates. Chinese text is a query paraphrase or transliteration, not an adopted Chinese site alias. Six identity targets remain conditional on independent whole-scope inclusion; the remaining fourteen are topic probes without assigned relevance targets. No inferred construction dates, coordinates, historical phases, relevance judgments or evaluated rankings.",
+  "queries": [
+    {
+      "id": "mg01",
+      "query_zh": "寻找巴西阿拉沙的圣塞巴斯蒂安小教堂",
+      "query_en": "Find Capela de São Sebastião in Araxá, Minas Gerais",
+      "topic": "Predetermined source-scope identity candidate: Araxá chapel."
+    },
+    {
+      "id": "mg02",
+      "query_zh": "寻找巴西巴巴塞纳的旧公共监狱建筑",
+      "query_en": "Find Prédio da antiga Cadeia Pública de Barbacena in Minas Gerais",
+      "topic": "Predetermined source-scope identity candidate: former public jail building."
+    },
+    {
+      "id": "mg03",
+      "query_zh": "寻找贝洛奥里藏特的米纳斯州旧参议院建筑",
+      "query_en": "Find Prédio do antigo Senado Mineiro in Belo Horizonte",
+      "topic": "Predetermined source-scope identity candidate: former Senado Mineiro building."
+    },
+    {
+      "id": "mg04",
+      "query_zh": "寻找米纳斯吉拉斯州旧政治与社会秩序部门总部建筑",
+      "query_en": "Find Edifício da antiga sede do Departamento de Ordem Política e Social de Minas Gerais – DOPS-MG",
+      "topic": "Predetermined source-scope identity candidate: former DOPS-MG headquarters building."
+    },
+    {
+      "id": "mg05",
+      "query_zh": "寻找巴西米纳斯吉拉斯州的曼蒂凯拉铁路隧道",
+      "query_en": "Find Túnel da Mantiqueira in Passa Quatro, Minas Gerais",
+      "topic": "Predetermined source-scope identity candidate: Mantiqueira railway tunnel."
+    },
+    {
+      "id": "mg06",
+      "query_zh": "寻找唐博斯科学校的建筑、景观与考古整体及其原骑兵团军营",
+      "query_en": "Find Conjunto arquitetônico, paisagístico e arqueológico das Escolas Dom Bosco - antigo Quartel do Regimento de Cavalaria de Minas Gerais",
+      "topic": "Predetermined source-scope identity candidate: the complete Escolas Dom Bosco ensemble."
+    },
+    {
+      "id": "mg07",
+      "query_zh": "寻找米纳斯吉拉斯州受保护的教堂和小教堂",
+      "query_en": "Find protected churches and chapels in Minas Gerais",
+      "topic": "Source-classification topic diagnostic: temple buildings."
+    },
+    {
+      "id": "mg08",
+      "query_zh": "寻找米纳斯吉拉斯州受保护的农庄和乡村建筑群",
+      "query_en": "Find protected farms and rural ensembles in Minas Gerais",
+      "topic": "Source-classification topic diagnostic: rural ensembles."
+    },
+    {
+      "id": "mg09",
+      "query_zh": "寻找米纳斯吉拉斯州的历史学校建筑",
+      "query_en": "Find historic school buildings in Minas Gerais",
+      "topic": "Source-classification topic diagnostic: school buildings."
+    },
+    {
+      "id": "mg10",
+      "query_zh": "寻找米纳斯吉拉斯州的历史花园和建筑景观",
+      "query_en": "Find historic gardens and architectural landscapes in Minas Gerais",
+      "topic": "Source-classification topic diagnostic: historic gardens."
+    },
+    {
+      "id": "mg11",
+      "query_zh": "寻找米纳斯吉拉斯州与铁路有关的桥梁、车站和隧道",
+      "query_en": "Find railway bridges, stations and tunnels in Minas Gerais",
+      "topic": "Source-name and classification topic diagnostic: railway heritage."
+    },
+    {
+      "id": "mg12",
+      "query_zh": "寻找米纳斯吉拉斯州受保护的考古遗址",
+      "query_en": "Find protected archaeological sites in Minas Gerais",
+      "topic": "Source-classification topic diagnostic: archaeological sites without inferred dates."
+    },
+    {
+      "id": "mg13",
+      "query_zh": "寻找米纳斯吉拉斯州受保护的医院建筑",
+      "query_en": "Find protected hospital buildings in Minas Gerais",
+      "topic": "Source-classification topic diagnostic: hospital buildings and source-defined ensembles."
+    },
+    {
+      "id": "mg14",
+      "query_zh": "寻找米纳斯吉拉斯州与工业有关的历史建筑群",
+      "query_en": "Find industrial historic buildings and ensembles in Minas Gerais",
+      "topic": "Source-classification topic diagnostic: industrial ensembles."
+    },
+    {
+      "id": "mg15",
+      "query_zh": "寻找米纳斯吉拉斯州受保护的历史中心和历史街区",
+      "query_en": "Find protected historic centres and urban historic areas in Minas Gerais",
+      "topic": "Source-category topic diagnostic: historic centres and urban ensembles."
+    },
+    {
+      "id": "mg16",
+      "query_zh": "寻找米纳斯吉拉斯州的教堂遗迹和建筑废墟",
+      "query_en": "Find church ruins and architectural ruins in Minas Gerais",
+      "topic": "Source-classification topic diagnostic: ruins without inferred destruction dates."
+    },
+    {
+      "id": "mg17",
+      "query_zh": "寻找米纳斯吉拉斯州受保护的历史纪念物",
+      "query_en": "Find protected historic commemorative monuments in Minas Gerais",
+      "topic": "Source-classification topic diagnostic: fixed commemorative monuments."
+    },
+    {
+      "id": "mg18",
+      "query_zh": "寻找米纳斯吉拉斯州的历史电影院和影院建筑",
+      "query_en": "Find historic cinemas and cinema buildings in Minas Gerais",
+      "topic": "Source-classification topic diagnostic: cinema heritage buildings."
+    },
+    {
+      "id": "mg19",
+      "query_zh": "寻找米纳斯吉拉斯州保护范围同时包含建筑及其藏品的历史场所",
+      "query_en": "Find protected historic places whose source scope includes both buildings and collections in Minas Gerais",
+      "topic": "Source-scope topic diagnostic: buildings with collections, without splitting movable objects into sites."
+    },
+    {
+      "id": "mg20",
+      "query_zh": "寻找米纳斯吉拉斯州兼有考古遗址属性的受保护景观",
+      "query_en": "Find protected landscapes also classified as archaeological sites in Minas Gerais",
+      "topic": "Source-classification topic diagnostic: combined landscape and archaeological categories."
+    }
+  ]
+}

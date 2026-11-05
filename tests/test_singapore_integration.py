@@ -10,13 +10,13 @@ from fastapi.testclient import TestClient
 
 from archsearch import singapore_data as cohort
 from archsearch.api import create_app
-from archsearch.corpus import build_document, load_corpus, load_pre_singapore_corpus
+from archsearch.corpus import build_document, load_pre_minas_corpus, load_pre_singapore_corpus
 from archsearch.evaluation import evaluate_corpus, load_queries
 from archsearch.supplement_data import base_contract
 
 
 def test_qualified_singapore_wholes_preserve_every_original3116_field() -> None:
-    before, current = load_pre_singapore_corpus(), load_corpus()
+    before, current = load_pre_singapore_corpus(), load_pre_minas_corpus()
     assert base_contract(before) == {
         "base_count": 3116,
         "base_ids_sha256": "6b4ee623a48910f8b8332a81cdd6aea746c50438da60d7c3c95c1d60c3cd5b93",
@@ -77,7 +77,7 @@ def test_country_catalogue_preserves_original_points_without_inventing_districts
 ) -> None:
     client = singapore_client
     page = client.get("/api/sites?country=SG&limit=100").json()
-    assert page["corpus_version"] == "global-v15" and page["total"] == len(page["sites"]) == 78
+    assert page["corpus_version"] == "global-v16" and page["total"] == len(page["sites"]) == 78
     assert client.get("/api/sites", params={
         "country": "SG", "bbox": "-180,-90,180,90",
     }).json()["total"] == 78
@@ -90,10 +90,10 @@ def test_country_catalogue_preserves_original_points_without_inventing_districts
     assert client.get("/api/subdivisions?country=CA").json()["assigned"] == 992
     assert client.get("/api/subdivisions?country=HK").json()["assigned"] == 138
     coverage = client.get("/api/coverage").json()
-    assert coverage["total"] == 3193 and len(coverage["countries"]) == 203
-    assert coverage["locations"] == {"mapped": 2940, "polar": 3, "unknown": 250}
+    assert coverage["total"] == 3326 and len(coverage["countries"]) == 203
+    assert coverage["locations"] == {"mapped": 2940, "polar": 3, "unknown": 383}
     assert coverage["chronology"] == {
-        "reviewed": 149, "insufficient": 451, "not_reviewed": 2593,
+        "reviewed": 149, "insufficient": 451, "not_reviewed": 2726,
     }
 
 
@@ -150,5 +150,5 @@ def test_twenty_paired_diagnostics_do_not_create_relevance_judgments(tmp_path: P
         f"sg{number:02d}" for number in range(1, 21)
     ]
     report = evaluate_corpus(tmp_path / "no-model", tmp_path / "sg-rankings.json", queries=queries)
-    assert report["corpus_count"] == 3193 and report["metrics"] is None
+    assert report["corpus_count"] == 3326 and report["metrics"] is None
     assert not report["qrels"]["confirmed"] and not report["runs_complete"]

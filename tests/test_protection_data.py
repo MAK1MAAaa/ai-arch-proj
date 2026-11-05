@@ -795,7 +795,7 @@ def test_actual_warehouse_point_does_not_match_arqa_as_an_original_cultural_site
     assert "auth:unesco-chp:626" not in {site.id for site in index.page(bbox=excluded).sites}
     assert "auth:unesco-chp:626" in {site.id for site in index.page(bbox=included).sites}
     assert index.page(bbox=SpatialBounds.from_csv("-180,-90,180,90")).total == 2943
-    assert index.coverage().locations.model_dump() == {"mapped": 2940, "polar": 3, "unknown": 250}
+    assert index.coverage().locations.model_dump() == {"mapped": 2940, "polar": 3, "unknown": 383}
 
 
 def test_false_overlap_flag_and_component_rows_are_not_fabricated_as_new_sites() -> None:
