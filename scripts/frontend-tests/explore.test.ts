@@ -26,6 +26,7 @@ interface Controller {
   getLocationStatus(id: string): 'mapped' | 'polar' | 'unknown' | null;
   getSourcePoints(id: string): [number, number][];
   getDisplayPoints(id: string): [number, number][];
+  getDisplayedPlacements(): { id: string; title: string; coordinate: [number, number]; representative: boolean }[];
   getSourceLocationRecords(id: string): SourceLocation[];
   getSpatialMetadata(): Record<string, unknown> | null;
   getSpatialSource(id: string): { name: string; uri: string; license: string } | null;
@@ -671,6 +672,10 @@ test('a source point in a fixed bbox selects its heritage once and clips outside
   assert.equal(app.node('explore-list').children.length, 1);
   const layer = [...app.map!.layers][0];
   assert.deepEqual(plain(layer.members.map(circle => circle.location)), [[41, -330], [41, 30], [41, 390]]);
+  const placements = app.controller.getDisplayedPlacements();
+  assert.deepEqual(plain(placements.map(point => ({ id: point.id, coordinate: point.coordinate, representative: point.representative }))), [{ id: 'wd:Q2', coordinate: [30, 41], representative: false }]);
+  placements[0].coordinate[0] = 0;
+  assert.deepEqual(plain(app.controller.getDisplayedPlacements()[0].coordinate), [30, 41]);
   assert.ok(layer.members.every(circle => circle.options.radius === 5));
   assert.deepEqual(plain(app.controller.getPoint('wd:Q2')), [29, 40]);
   assert.deepEqual(plain(app.controller.getSourcePoints('wd:Q2')), [[30, 41], [31, 42]]);
@@ -683,6 +688,7 @@ test('a source point in a fixed bbox selects its heritage once and clips outside
   assert.deepEqual(plain(app.controller.getCommittedState()?.bbox), bbox);
   bbox[0] = 0;
   assert.deepEqual(plain(app.controller.getState().bbox), [30, 41, 30.5, 41.5]);
+  await app.controller.setState({ visible: false }); assert.deepEqual(plain(app.controller.getDisplayedPlacements()), []);
 });
 
 test('captured bounds stay fixed after map movement and clearing preserves keyboard focus', async () => {

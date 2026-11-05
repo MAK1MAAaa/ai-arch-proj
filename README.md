@@ -1,6 +1,6 @@
 # 考古图志 · ArchSearch
 
-本地运行的文化遗址检索与历史地图网页，当前包含3897项资料。
+本地运行的文化遗址检索与历史地图网页，当前包含3898项资料，支持现代与历史双图对照。
 
 ## 日常启动
 
@@ -34,10 +34,12 @@ uv run --no-sync archsearch serve
 
 展开“查询增强与模型设置”，选择 Ollama，等待自动获取模型列表，选择本机已缓存的 **`qwen3.5:9b`** 并“应用所选模型”，再勾选“LLM 增强”检索。`qwen3.5:2b` 可作为速度优先的备选；应用只获取列表，不自动下载模型。
 
-API 配置初始留空。需要时选择“OpenAI 兼容 API”，填写 **Base URL**、**API Key**，从获取的列表选择模型并应用。配置仅保留在服务内存中，重启后需重新设置。操作、实测与限制见[LLM 增强说明](docs/llm-search.md)。
+首次配置 API 且尚无 `.env` 时，将 [`.env.example`](.env.example) 复制为根目录 `.env`；已有文件直接编辑。填写 `base_url`、`api_keys` JSON 列表和 `model`，重启服务即可加载。多 Key 写成 `api_keys=["你的第一个Key","你的第二个Key"]`；真实 `.env` 不提交 Git。
 
-中文专名仍可能漏检，模型改写也可能误译；请核对实际检索词和来源原文。
+也可在页面选择“OpenAI 兼容 API”，填写地址与密钥，自动获取模型列表后选择并应用。页面修改只保存在服务内存；重启会重新读取 `.env`。操作、Key 轮换及配置优先级见[LLM 增强说明](docs/llm-search.md)。
+
+可直接试搜“寻找莎士比亚的坟墓”，选择结果后对照现代位置与1616年历史疆域。其他中文专名仍可能漏检，模型改写也可能误译；请核对实际检索词和来源原文。
 
 ## 详细说明
 
-地图操作、时间轴、资料来源与许可、评测、API、前端开发及远程访问步骤统一见[使用与开发指南](docs/system-guide.md)。Mac 访问 Windows 的方法见[远程访问](docs/system-guide.md#windows运行mac展示)。
+双图、年代联动与莎士比亚案例见[地图对照说明](docs/map-comparison.md)。资料来源与许可、评测、API、前端开发及远程访问见[使用与开发指南](docs/system-guide.md)。Mac 访问 Windows 的方法见[远程访问](docs/system-guide.md#windows运行mac展示)。

@@ -11,6 +11,7 @@ import httpx
 import pytest
 from pydantic import SecretStr, ValidationError
 
+from archsearch.env_config import EnvLlmConfig
 from archsearch.llm import (
     DEFAULT_OLLAMA_URL,
     MAX_MODELS,
@@ -76,6 +77,7 @@ def test_defaults_do_not_contact_any_service_or_expose_credentials() -> None:
     assert manager.public_config().model_dump() == {
         "provider": "ollama", "base_url": DEFAULT_OLLAMA_URL,
         "model": "", "revision": 0, "has_api_key": False,
+        "key_count": 0, "active_key_index": None, "config_source": "default",
     }
     with pytest.raises(ConfigInvalid, match="选择模型"):
         manager.snapshot(0)
@@ -472,3 +474,205 @@ def test_invalid_request_fields_and_keys_are_rejected_without_echoing_inputs() -
         )
     with pytest.raises(ValidationError):
         ConfigDraft(provider="unknown", base_url="")
+
+
+POOL = ("fixture-pool-key-first-not-real", "fixture-pool-key-second-not-real")
+POOL_BASE = "https://pool.example.test/v1"
+
+
+def pooled(handler: Any, keys: tuple[str, ...] = POOL) -> LlmManager:
+    config = EnvLlmConfig(
+        "openai", POOL_BASE, "qwen-test:2b", tuple(SecretStr(key) for key in keys),
+    )
+    return LlmManager.from_environment(config, transport=httpx.MockTransport(handler))
+
+
+@pytest.mark.parametrize("status", [401, 403, 429])
+@pytest.mark.parametrize("operation", ["discover", "rewrite"])
+def test_key_pool_only_rotates_auth_or_rate_failures_and_reuses_successful_slot(
+    status: int, operation: str,
+) -> None:
+    calls: list[str | None] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        calls.append(request.headers.get("authorization"))
+        if request.headers.get("authorization") == "Bearer " + POOL[0]:
+            return httpx.Response(status, json={"error": POOL[0]}, headers={"Retry-After": "60"})
+        return provider_response(request)
+
+    manager = pooled(handler)
+    old = manager.snapshot(1)
+    assert manager.public_config().active_key_index is None
+    if operation == "discover":
+        manager.discover(draft("openai", POOL_BASE))
+    else:
+        assert manager.rewrite("罗马港口", old) == ["Roman Mediterranean ports"]
+    assert calls == ["Bearer " + key for key in POOL]
+    public = manager.public_config()
+    assert public.key_count == 2 and public.active_key_index == 1 and public.revision == 1
+    assert public.config_source == "env"
+    assert old.active_key_index is None and old.api_key is not None
+    assert old.api_key.get_secret_value() == POOL[0]
+    assert manager.rewrite("另一个问题", manager.snapshot(1)) == ["Roman Mediterranean ports"]
+    assert calls[-1] == "Bearer " + POOL[1] and len(calls) == 3
+    assert all(key not in public.model_dump_json() for key in POOL)
+
+
+@pytest.mark.parametrize("status", [400, 404, 500, 502, 503, 504])
+def test_pool_does_not_replay_non_auth_http_failures(status: int) -> None:
+    calls = 0
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        nonlocal calls
+        calls += 1
+        return httpx.Response(status, text=POOL[0])
+
+    manager = pooled(handler)
+    with pytest.raises(LlmUnavailable) as caught:
+        manager.rewrite("罗马港口", manager.snapshot(1))
+    assert calls == 1 and all(key not in str(caught.value) for key in POOL)
+
+
+@pytest.mark.parametrize("exception", [httpx.ReadTimeout, httpx.ConnectTimeout, httpx.ConnectError])
+def test_pool_never_replays_a_transport_failure(exception: Any) -> None:
+    calls = 0
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        nonlocal calls
+        calls += 1
+        raise exception(POOL[0], request=request)
+
+    manager = pooled(handler)
+    with pytest.raises(LlmUnavailable):
+        manager.rewrite("罗马港口", manager.snapshot(1))
+    assert calls == 1
+
+
+def test_pool_does_not_replay_successful_http_with_invalid_generation_format() -> None:
+    calls = 0
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        nonlocal calls
+        calls += 1
+        return httpx.Response(200, json={"choices": [{"message": {"content": "not json"}}]})
+
+    manager = pooled(handler)
+    with pytest.raises(LlmUnavailable):
+        manager.rewrite("罗马港口", manager.snapshot(1))
+    assert calls == 1
+
+
+def test_pool_cannot_leak_any_slot_in_model_ids_or_rewritten_queries() -> None:
+    def leaking_model(request: httpx.Request) -> httpx.Response:
+        if request.headers.get("authorization") == "Bearer " + POOL[0]:
+            return httpx.Response(401)
+        return httpx.Response(200, json={"data": [{"id": POOL[0]}]})
+
+    manager = pooled(leaking_model)
+    with pytest.raises(LlmUnavailable) as caught:
+        manager.discover(draft("openai", POOL_BASE))
+    assert all(key not in str(caught.value) for key in POOL)
+    content = json.dumps({"queries": ["harbor " + POOL[1]]})
+    manager = pooled(lambda request: httpx.Response(200, json={
+        "choices": [{"message": {"content": content}}],
+    }))
+    with pytest.raises(LlmUnavailable):
+        manager.rewrite("罗马港口", manager.snapshot(1))
+
+
+def test_pool_attempt_count_is_limited_and_all_failures_remain_sanitized() -> None:
+    keys = tuple(f"fixture-key-number-{i}" for i in range(8))
+    calls = 0
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        nonlocal calls
+        calls += 1
+        return httpx.Response(429, json={"echo": keys})
+
+    manager = pooled(handler, keys)
+    with pytest.raises(LlmUnavailable, match="限流") as caught:
+        manager.discover(draft("openai", POOL_BASE))
+    assert calls == 8 and all(key not in str(caught.value) for key in keys)
+    with pytest.raises(ConfigInvalid, match="最多"):
+        pooled(handler, (*keys, "fixture-ninth"))
+
+
+def test_pool_attempts_share_one_deadline_instead_of_multiplying_timeouts(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    now = 0.0
+    timeouts: list[float] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        nonlocal now
+        timeouts.append(request.extensions["timeout"]["read"])
+        now += 16
+        return httpx.Response(401)
+
+    monkeypatch.setattr("archsearch.llm.time.monotonic", lambda: now)
+    manager = pooled(handler, (*POOL, "fixture-third-key"))
+    with pytest.raises(LlmUnavailable, match="超时"):
+        manager.discover(draft("openai", POOL_BASE))
+    assert timeouts == [30.0, 14.0]
+
+
+def test_manual_none_preserves_pool_new_key_overrides_and_empty_key_clears() -> None:
+    manager = pooled(provider_response)
+    manager.discover(draft("openai", POOL_BASE))
+    apply(manager, draft("openai", POOL_BASE), revision=1)
+    assert manager.public_config().key_count == 2 and manager.public_config().revision == 2
+    assert manager.public_config().config_source == "manual"
+    one = draft("openai", POOL_BASE, "fixture-session-override")
+    with pytest.raises(ConfigInvalid):
+        apply(manager, one, revision=2)
+    manager.discover(one)
+    apply(manager, one, revision=2)
+    assert manager.public_config().key_count == 1 and manager.public_config().active_key_index == 0
+    assert manager.snapshot(3).api_key is not None
+    assert manager.snapshot(3).api_key.get_secret_value() == "fixture-session-override"
+    apply(manager, draft("openai", POOL_BASE, ""), model="", revision=3)
+    assert manager.public_config().key_count == 0
+    assert manager.public_config().active_key_index is None
+
+
+def test_pool_is_never_inherited_by_another_endpoint_or_provider() -> None:
+    calls: list[str | None] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        calls.append(request.headers.get("authorization"))
+        return provider_response(request)
+
+    manager = pooled(handler)
+    other = draft("openai", "https://another.example.test/v1")
+    manager.discover(other)
+    apply(manager, other, revision=1)
+    assert calls == [None] and manager.public_config().key_count == 0
+    manager.discover(draft())
+    apply(manager, draft(), revision=2)
+    assert calls[-1] is None and manager.public_config().key_count == 0
+
+
+def test_old_request_cannot_restore_a_pool_after_an_explicit_clear() -> None:
+    entered, release = threading.Event(), threading.Event()
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        if request.headers.get("authorization") == "Bearer " + POOL[0]:
+            return httpx.Response(401)
+        entered.set()
+        assert release.wait(5)
+        return provider_response(request)
+
+    manager = pooled(handler)
+    old = manager.snapshot(1)
+    with ThreadPoolExecutor(max_workers=1) as executor:
+        active = executor.submit(manager.rewrite, "罗马港口", old)
+        assert entered.wait(2)
+        try:
+            apply(manager, draft("openai", POOL_BASE, ""), model="", revision=1)
+        finally:
+            release.set()
+        assert active.result(timeout=2) == ["Roman Mediterranean ports"]
+    current = manager.public_config()
+    assert current.model == "" and current.key_count == 0 and current.revision == 2
+    assert old.active_key_index is None and len(old.api_keys) == 2
+    assert not manager._preferred_slots

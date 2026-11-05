@@ -1,0 +1,126 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": "burial-1616",
+      "method": "Independent Codex root source review of agent research: official church chancel page, Folger/SBT original-register catalogue and Historic England 1187824; automated source comparison, not expert or human confirmation.",
+      "note": "The burial is dated 25 April 1616 in the source register. The map uses year precision; no church lifecycle is inferred.",
+      "phases": [
+        {
+          "end_year": 1616,
+          "id": "burial-1616",
+          "kind": "other",
+          "label": "莎士比亚埋葬（1616年4月25日）",
+          "note": "Burial event only. Source date 25 April 1616 is retained; map navigation uses the explicit year 1616.",
+          "precision": "exact_year",
+          "sources": [
+            {
+              "accessed": "2026-11-05",
+              "excerpt": "William Shakespeare was buried in the chancel in 1616",
+              "id": "qualification:gb-shakespeare:chancel",
+              "license": null,
+              "publisher": "Holy Trinity Church, Stratford-upon-Avon",
+              "revision": "Retrieved HTML SHA256 dbea2c2619d09098295b1db79db7fe1e8641b39b30a0a23aa9cc71266898731d",
+              "title": "The Chancel — Holy Trinity Church",
+              "uri": "https://www.stratford-upon-avon.org/the-chancel"
+            },
+            {
+              "accessed": "2026-11-05",
+              "excerpt": "William Shakespeare’s burial was entered in the parish register for Holy Trinity Church on April 25, 1616",
+              "id": "chronology:gb-shakespeare:burial-1616",
+              "license": "Text rights not specified; short quotation only. No manuscript images redistributed.",
+              "publisher": "Shakespeare Birthplace Trust; Shakespeare Documented, Folger Shakespeare Library",
+              "revision": "Page updated 2020-05-22; DR243/1, burial register, fol.46r; DOI 10.37078/124",
+              "title": "Parish register entry recording William Shakespeare's burial",
+              "uri": "https://shakespearedocumented.folger.edu/resource/document/parish-register-entry-recording-william-shakespeares-burial"
+            }
+          ],
+          "start_year": 1616
+        }
+      ],
+      "reviewed_at": "2026-11-05",
+      "status": "reviewed"
+    },
+    "contributors": [
+      "Holy Trinity Church, Stratford-upon-Avon",
+      "Shakespeare Birthplace Trust",
+      "Robert Bearman",
+      "Wikidata contributors"
+    ],
+    "description": "William Shakespeare's burial place is in the chancel of Holy Trinity Church, Stratford-upon-Avon, United Kingdom. The parish burial entry is dated 25 April 1616. The map point refers to the church, not a surveyed grave location.",
+    "description_zh": "莎士比亚的坟墓位于英国埃文河畔斯特拉特福的圣三一教堂（Holy Trinity Church）室内圣坛区（chancel）。教区登记记载其于1616年4月25日安葬；选择该埋葬阶段可对照1616年的历史政权疆域。地图采用所在教堂的参考位置，不是墓穴精确坐标。",
+    "details": "Scope: William Shakespeare's grave inside the church chancel; the wall memorial and the entire listed church are distinct scopes. The source register is DR243/1, burial register, fol.46r. The default phase records the burial event in 1616, not construction of the church, Shakespeare's lifespan or continuous existence of the grave. Chinese names and summaries are editorial translations of the cited identity and evidence. Church reference point: Wikidata Q472082, P625; its declared numeric precision is not surveyed accuracy of the indoor grave. No manuscript image or full source page is redistributed.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-shakespeare:grave",
+      "countries": [
+        "GB"
+      ],
+      "note": "Modern country and church identity from Q472082 P17=Q145 and P1216=1187824. The grave is inside this church according to the official church source. The point represents the church only; no historical political affiliation is inferred.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-05",
+        "excerpt": "",
+        "id": "location:wikidata:Q472082",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2517889057",
+        "title": "Holy Trinity Church, Stratford-upon-Avon — reference point and identity",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q472082.json"
+      }
+    },
+    "id": "auth:gb-shakespeare:grave",
+    "location_precision": null,
+    "names": [
+      "莎士比亚墓",
+      "莎士比亚的坟墓",
+      "威廉·莎士比亚之墓",
+      "Shakespeare's grave"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.7074,
+      52.1864
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-05",
+        "excerpt": "William Shakespeare was buried in the chancel in 1616",
+        "id": "qualification:gb-shakespeare:chancel",
+        "license": null,
+        "publisher": "Holy Trinity Church, Stratford-upon-Avon",
+        "revision": "Retrieved HTML SHA256 dbea2c2619d09098295b1db79db7fe1e8641b39b30a0a23aa9cc71266898731d",
+        "title": "The Chancel — Holy Trinity Church",
+        "uri": "https://www.stratford-upon-avon.org/the-chancel"
+      },
+      {
+        "accessed": "2026-11-05",
+        "excerpt": "William Shakespeare’s burial was entered in the parish register for Holy Trinity Church on April 25, 1616",
+        "id": "chronology:gb-shakespeare:burial-1616",
+        "license": "Text rights not specified; short quotation only. No manuscript images redistributed.",
+        "publisher": "Shakespeare Birthplace Trust; Shakespeare Documented, Folger Shakespeare Library",
+        "revision": "Page updated 2020-05-22; DR243/1, burial register, fol.46r; DOI 10.37078/124",
+        "title": "Parish register entry recording William Shakespeare's burial",
+        "uri": "https://shakespearedocumented.folger.edu/resource/document/parish-register-entry-recording-william-shakespeares-burial"
+      },
+      {
+        "accessed": "2026-11-05",
+        "excerpt": "",
+        "id": "location:wikidata:Q472082",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2517889057",
+        "title": "Holy Trinity Church, Stratford-upon-Avon — reference point and identity",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q472082.json"
+      }
+    ],
+    "source_uri": "https://www.stratford-upon-avon.org/the-chancel",
+    "title": "William Shakespeare's grave (Holy Trinity Church)",
+    "types": [
+      "historic-site"
+    ]
+  }
+]

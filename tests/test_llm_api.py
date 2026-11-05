@@ -71,6 +71,9 @@ def test_disabled_default_has_no_llm_network_or_changes_to_base_search(
             "model": "",
             "revision": 0,
             "has_api_key": False,
+            "key_count": 0,
+            "active_key_index": None,
+            "config_source": "default",
         }
         assert client.get("/api/status").json()["llm"] == config
         result = client.post("/api/search", json={"query": "bath", "mode": "bm25"})

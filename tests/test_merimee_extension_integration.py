@@ -15,15 +15,15 @@ from archsearch import merimee_extension_data as cohort
 from archsearch.api import create_app
 from archsearch.corpus import (
     build_document,
-    load_corpus,
     load_pre_merimee_extension_corpus,
+    load_pre_targets_corpus,
 )
 from archsearch.evaluation import evaluate_corpus, load_queries
 from archsearch.supplement_data import base_contract
 
 
 def test_original3775_fields_order_and_shared_documents_are_unchanged() -> None:
-    before, current = load_pre_merimee_extension_corpus(), load_corpus()
+    before, current = load_pre_merimee_extension_corpus(), load_pre_targets_corpus()
     assert base_contract(before) == {
         "base_count": 3775,
         "base_ids_sha256": "87fb14327abb2a6d9e720687f53099485211b8f5426aadc941fe5c4c404546af",
@@ -85,10 +85,10 @@ def test_three_statistical_area_directories_paginate_without_country_inference(
         assert all(s["repr_point"] is not None and s["geography"]["countries"] == [area]
                    for p in pages for s in p["sites"])
     coverage = client.get("/api/coverage").json()
-    assert coverage["corpus_version"] == "global-v18" and coverage["total"] == 3897
+    assert coverage["corpus_version"] == "global-v19" and coverage["total"] == 3898
     assert len(coverage["countries"]) == 211
-    assert coverage["locations"] == {"mapped": 3504, "polar": 3, "unknown": 390}
-    assert coverage["spatial_locations"]["display_points"] == 7907
+    assert coverage["locations"] == {"mapped": 3505, "polar": 3, "unknown": 390}
+    assert coverage["spatial_locations"]["display_points"] == 7908
     assert client.get("/api/sites/auth:fr-merimee:PA97300012").status_code == 404
     whole = client.get("/api/sites/auth:fr-merimee:PA97300021").json()
     assert whole["title"] == "Entités archéologiques de l’Inselberg de la Mamilipann"
@@ -100,7 +100,7 @@ def test_literal_commune_variants_survive_same_cog_and_old_memberships_remain(
 ) -> None:
     client = extension_client
     facets = client.get("/api/subdivisions?country=GF").json()
-    assert facets["ready"] and facets["subdivision_version"] == "source-subdivisions-v6"
+    assert facets["ready"] and facets["subdivision_version"] == "source-subdivisions-v7"
     assert facets["assigned"] == 90 and len(facets["subdivisions"]) == 15
     variants = [row for row in facets["subdivisions"] if row["label"] in {
         "Montsinéry-Tonnegrande", "Montsinéry-Tonnégrande",
@@ -146,5 +146,5 @@ def test_new_diagnostic_queries_preserve_the_unconfirmed_relevance_gate(tmp_path
     queries = cohort.DATA_DIR / "queries-merimee-extension.json"
     assert [p.id for p in load_queries(queries)] == [f"mx{i:02}" for i in range(1, 21)]
     report = evaluate_corpus(tmp_path / "no-model", tmp_path / "rankings.json", queries=queries)
-    assert report["corpus_count"] == 3897 and report["metrics"] is None
+    assert report["corpus_count"] == 3898 and report["metrics"] is None
     assert not report["qrels"]["confirmed"] and not report["runs_complete"]

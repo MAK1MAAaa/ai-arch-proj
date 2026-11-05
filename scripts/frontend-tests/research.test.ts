@@ -41,7 +41,7 @@ interface ExportResult<T> {
   response: SearchResponse<T>;
   map: HistoryView | null;
   selection: { site: string | null; phase: string | null };
-  sources: { name: string; license: string; version?: string | null; note?: string; uri?: string; license_uri?: string; accessed?: string; processed?: string; source_updated?: string }[];
+  sources: { name: string; license: string; version?: string | null; note?: string; uri?: string; license_uri?: string; accessed?: string; processed?: string; source_updated?: string; displayed?: boolean }[];
   registered_areas: RegisteredAreaSnapshot | null;
   selected_site: unknown;
   spatial: { metadata: unknown; selected: { site_id: string; representative_point: [number, number] | null; source_points: [number, number][]; records: { source_index: number; coordinate: [number, number]; name: string; ref: string }[]; source?: { name: string; uri: string; version: string; license: string; license_uri: string; sha256: string } | null } | null } | null;
@@ -57,6 +57,14 @@ interface ExportResult<T> {
     attribution: string;
   };
   provenance: Record<string, string>;
+  comparison?: ComparisonSnapshot;
+}
+interface Camera { center: [number, number]; zoom: number }
+interface ComparisonState { modern_basemap: 'osm' | 'natural'; sync_centers: boolean; modern_view: Camera | null; history_view: Camera | null }
+interface ComparisonSnapshot {
+  layout: 'side-by-side' | 'stacked'; sync_centers: boolean;
+  modern: { role: 'modern-location'; basemap: 'osm' | 'natural' | 'loading' | 'unavailable'; view: Camera | null };
+  historical: { role: 'historical-polities'; basemap: 'natural' | null; view: Camera | null; year: number | null; boundaries: boolean; frame_id: string | null; source_version: string | null };
 }
 
 interface RegisteredAreaSnapshot {
@@ -71,8 +79,11 @@ interface ResearchHelpers {
   parseLink(url: URL): { request: SearchSpec | null; error: string | null };
   parseView(url: URL): { view: HistoryView | null; selection: { site: string | null; phase: string | null }; error: string | null };
   parseBrowse(url: URL): { state: BrowseState; error: string | null };
-  buildLink(base: URL, request: SearchSpec | null, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, browse?: BrowseState | null): string;
-  createExport<T>(request: SearchSpec, response: SearchResponse<T>, exportedAt: string, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, selectedSite?: unknown, browse?: BrowseState | null, spatial?: ExportResult<T>['spatial'], registeredAreas?: RegisteredAreaSnapshot | null, currentCorpusVersion?: string | null, currentRegisteredAreasVersion?: string | null): ExportResult<T>;
+  parseComparison(url: URL): { state: ComparisonState; error: string | null };
+  descriptionLabel(site: { id: string; source_kind: string; source_refs?: { id: string }[] }, language: 'en' | 'zh'): string;
+  createExampleIntent(): { invalidate(): void; run(prepare: () => Promise<void>, ready: () => boolean, submit: () => void, error: (value: unknown) => void): Promise<void> };
+  buildLink(base: URL, request: SearchSpec | null, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, browse?: BrowseState | null, comparison?: ComparisonState | null): string;
+  createExport<T>(request: SearchSpec, response: SearchResponse<T>, exportedAt: string, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, selectedSite?: unknown, browse?: BrowseState | null, spatial?: ExportResult<T>['spatial'], registeredAreas?: RegisteredAreaSnapshot | null, currentCorpusVersion?: string | null, currentRegisteredAreasVersion?: string | null, comparison?: ComparisonSnapshot | null): ExportResult<T>;
   automaticPhaseYear(phase: { precision: string; start_year: number | null; end_year: number | null }): number | null;
   normalizeSubdivision(country: string | null | undefined, value: unknown): string | null;
   validateSubdivisionResponse(request: Pick<SearchSpec, 'country' | 'subdivision'>, response: { subdivision?: unknown; subdivision_version?: unknown }, expectedVersion?: string | null): string | null;
@@ -637,13 +648,13 @@ test('export provenance includes source release, attribution, license and interp
   assert.equal(canada?.version, 'canada-dfhd-v1');
   assert.equal(canada?.license, 'Open Government Licence - Canada; Wikidata structured claims CC0');
   assert.match(canada?.note ?? '', /Parks Canada.*reference points.*separate from project identity approval/u);
-  const subdivisions = exported.sources.find(source => source.version === 'source-subdivisions-v6');
+  const subdivisions = exported.sources.find(source => source.version === 'source-subdivisions-v7');
   assert.equal(subdivisions?.license, 'Mixed rights — DFHD fields OGL-Canada; CSDI custom terms; Iepha-MG fields CC BY 4.0; Mérimée fields Open Licence 2.0; other webpages retain individual rights');
   assert.equal(subdivisions?.uri, 'https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/SUBDIVISIONS-LICENSE.md');
   assert.match(subdivisions?.note ?? '', /Only the986 DFHD objects.*CRHP and Parks Canada.*CSDI Terms/u);
   assert.match(subdivisions?.note ?? '', /explicitly reviewed whole.*No coordinate geocoding, inferred parent membership/u);
   assert.match(subdivisions?.note ?? '', /municipio.*Compound locality values stay intact.*not statutory administrative IDs/u);
-  assert.match(subdivisions?.note ?? '', /Commune_forme_editoriale values in GP, BL, MF, MQ and RE.*GF, YT and PM.*global-v18/u);
+  assert.match(subdivisions?.note ?? '', /Commune_forme_editoriale values in GP, BL, MF, MQ and RE.*GF, YT and PM.*global-v19/u);
   const minas = exported.sources.find(source => source.version === 'minas-tombados-v1');
   assert.equal(minas?.license, 'CC BY 4.0');
   assert.equal(minas?.uri, 'https://dados.mg.gov.br/dataset/bens-tombados');
@@ -968,4 +979,70 @@ test('a selected protection location exports its own source alongside the combin
   const source = report.sources.find(source => source.name === 'UNESCO Hague cultural properties');
   assert.equal(source?.license, 'CC BY-SA 4.0');
   assert.equal(source?.version, 'protection-supplement-v1');
+});
+
+
+test('comparison links keep independent modern street and historical region views without credentials', () => {
+  const comparison: ComparisonState = { modern_basemap: 'osm', sync_centers: false, modern_view: { center: [-1.71, 52.18], zoom: 15 }, history_view: { center: [-1.71, 52.18], zoom: 4 } };
+  const link = helpers.buildLink(new URL('https://arch.example/?api_key=secret'), request, { year: 1616, basemap: 'historical', boundaries: true, frame_id: 'actual', source_version: 'v0.2.1' }, { site: null, phase: null }, null, comparison);
+  assert.equal(new URL(link).searchParams.get('year'), '1616'); assert.equal(link.includes('secret'), false);
+  assert.deepEqual(plain(helpers.parseComparison(new URL(link))), { state: comparison, error: null });
+  assert.equal(helpers.parseView(new URL(link)).view?.year, 1616);
+});
+
+test('old historical links remain valid alongside default comparison roles', () => {
+  const url = new URL('http://localhost/?year=117&basemap=modern');
+  assert.equal(helpers.parseView(url).error, null);
+  assert.deepEqual(plain(helpers.parseComparison(url)), { state: { modern_basemap: 'osm', sync_centers: false, modern_view: null, history_view: null }, error: null });
+});
+
+test('invalid comparison camera, sync and duplicate fields never silently broaden a restored view', () => {
+  for (const raw of ['maps=single', 'modern_base=invalid', 'sync_centers=yes', 'sync_centers=0&sync_centers=0', 'modern_view=0,91,4', 'history_view=0,40,14', 'modern_view=0,0,NaN', 'modern_view=', 'history_view=0,40,4&history_view=0,40,4']) assert.ok(helpers.parseComparison(new URL('http://localhost/?'+raw)).error, raw);
+});
+
+test('comparison exports preserve actual historical frame and modern fallback roles independently', () => {
+  const searched = { query: 'grave', mode: 'bm25' as const, type: null, limit: 10 };
+  const response = { query: 'grave', mode: 'bm25' as const, corpus_version: 'fixture', elapsed_ms: 1, total_candidates: 1, results: [] };
+  const map: HistoryView = { year: 1616, basemap: 'historical', boundaries: true, frame_id: '1616-frame', source_version: 'v0.2.1' };
+  const comparison: ComparisonSnapshot = { layout: 'side-by-side', sync_centers: false, modern: { role: 'modern-location', basemap: 'osm', view: { center: [-1.71, 52.18], zoom: 15 } }, historical: { role: 'historical-polities', basemap: 'natural', view: { center: [-1.71, 52.18], zoom: 4 }, year: 1616, boundaries: true, frame_id: '1616-frame', source_version: 'v0.2.1' } };
+  const make = (value: ComparisonSnapshot) => helpers.createExport(searched, response, '2026-11-05T00:00:00Z', map, { site: null, phase: null }, null, null, null, null, 'fixture', null, value);
+  const exported = make(comparison);
+  assert.equal(exported.sources.find(source => source.name === 'OpenStreetMap contributors')?.displayed, true);
+  assert.deepEqual(plain(exported.comparison), comparison);
+  comparison.historical.view!.center[0] = 15; assert.equal(exported.comparison?.historical.view?.center[0], -1.71);
+  const fallback = make({ ...comparison, modern: { ...comparison.modern, basemap: 'natural' } });
+  assert.equal(fallback.sources.find(source => source.name === 'OpenStreetMap contributors')?.displayed, false);
+  assert.equal(fallback.sources.find(source => source.name === 'Source-verified named cultural places')?.version, 'named-places-v1');
+  assert.throws(() => make({ ...comparison, historical: { ...comparison.historical, year: 1700 } }), /实际成功/u);
+  assert.match(exported.provenance.comparison, /bbox.*现代图.*历史拖图/u);
+});
+
+test('editorial supplement summaries are not labelled as official original text', () => {
+  const generic = { id: 'auth:fixture:place', source_kind: 'supplement', source_refs: [] };
+  assert.equal(helpers.descriptionLabel(generic, 'zh'), '中文摘要（依据所列来源）');
+  assert.equal(helpers.descriptionLabel(generic, 'en'), '英文描述（出处见来源）');
+  assert.equal(helpers.descriptionLabel({ id: 'wd:Q100', source_kind: 'supplement', source_refs: [{ id: 'translation:wikidata:Q100' }] }, 'zh'), '中文译文（据 Wikidata 英文）');
+  assert.match(helpers.descriptionLabel({ id: 'auth:sg-nhb:original', source_kind: 'supplement' }, 'en'), /NHB/u);
+});
+
+test('a late global example cannot overwrite a newer typed query or region intent', async () => {
+  const gate = helpers.createExampleIntent(); let finish: (() => void) | undefined;
+  const pending = new Promise<void>(resolve => { finish = resolve; });
+  let query = 'original'; let scope = 'filtered'; const errors: unknown[] = [];
+  const old = gate.run(() => pending, () => scope === 'global', () => { query = 'stale example'; }, error => errors.push(error));
+  gate.invalidate(); query = 'new user query'; scope = 'global'; finish!(); await old;
+  assert.equal(query, 'new user query'); assert.equal(errors.length, 0);
+});
+
+test('an aborted directory request that resolves without a global commit cannot submit a full-corpus example', async () => {
+  const gate = helpers.createExampleIntent(); let submitted = false; const errors: unknown[] = [];
+  await gate.run(async () => undefined, () => false, () => { submitted = true; }, error => errors.push(error));
+  assert.equal(submitted, false); assert.match(String(errors[0]), /目录条件尚未成功切换为全库/u);
+});
+
+test('a newer example wins even when the first directory request resolves last', async () => {
+  const gate = helpers.createExampleIntent(); let finish: (() => void) | undefined; const submitted: string[] = [];
+  const old = gate.run(() => new Promise<void>(resolve => { finish = resolve; }), () => true, () => submitted.push('old'), () => assert.fail('stale failure'));
+  await gate.run(async () => undefined, () => true, () => submitted.push('new'), () => assert.fail('new failure'));
+  finish!(); await old; assert.deepEqual(submitted, ['new']);
 });

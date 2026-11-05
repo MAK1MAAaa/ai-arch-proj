@@ -1,6 +1,9 @@
 "use strict";
 const ArchSearchMapView = (() => {
     "use strict";
+    function markers(candidate) {
+        return [...(candidate.marker ? [candidate.marker] : []), ...(candidate.additionalMarkers ?? [])];
+    }
     function containsPoint(point, size) {
         return point !== null
             && Number.isFinite(point.x) && Number.isFinite(point.y)
@@ -35,7 +38,7 @@ const ArchSearchMapView = (() => {
         const shift = 360 * Math.floor((center + 180) / 360);
         return coordinates.map(([latitude, longitude]) => [latitude, wrapLongitude(longitude, center) - shift]);
     }
-    function create({ map, countLabel }) {
+    function create({ map, countLabel, scopeLabel = "当前地图范围内" }) {
         let candidates = [];
         let pointerSource = null;
         let focusSource = null;
@@ -48,14 +51,18 @@ const ArchSearchMapView = (() => {
             }
             if (preview !== null) {
                 preview.card.classList.remove("is-preview");
-                preview.marker?.getElement()?.classList.remove("is-preview");
-                preview.marker?.closeTooltip();
+                for (const marker of markers(preview)) {
+                    marker.getElement()?.classList.remove("is-preview");
+                    marker.closeTooltip();
+                }
             }
             preview = candidate;
             if (candidate !== null) {
                 candidate.card.classList.add("is-preview");
-                candidate.marker?.getElement()?.classList.add("is-preview");
-                candidate.marker?.openTooltip();
+                for (const marker of markers(candidate)) {
+                    marker.getElement()?.classList.add("is-preview");
+                    marker.openTooltip();
+                }
             }
         }
         function renderPreview() {
@@ -133,7 +140,7 @@ const ArchSearchMapView = (() => {
             }
             countLabel.hidden = map === null;
             countLabel.textContent = map === null
-                ? "" : `当前地图范围内 ${inside} / 本次返回 ${candidates.length}`;
+                ? "" : `${scopeLabel} ${inside} / 本次返回 ${candidates.length}`;
         }
         function setCandidates(nextCandidates) {
             setPreview(null);
@@ -141,34 +148,34 @@ const ArchSearchMapView = (() => {
                 remove();
             cleanup = [];
             for (const candidate of candidates)
-                candidate.marker?.closeTooltip();
+                for (const marker of markers(candidate))
+                    marker.closeTooltip();
             pointerSource = null;
             focusSource = null;
             candidates = [...nextCandidates];
             for (const candidate of candidates) {
                 const cardSource = { candidate, origin: "card" };
                 bindDom(cardSource, candidate.card, true);
-                const marker = candidate.marker;
-                if (marker === null)
-                    continue;
-                const markerSource = { candidate, origin: "marker" };
-                const enter = () => enterPointer(markerSource);
-                const leave = () => leavePointer(markerSource);
-                const suppressPointerTooltip = () => {
-                    if (focusSource !== null && focusSource.candidate !== candidate)
-                        marker.closeTooltip();
-                };
-                marker.on("mouseover", enter);
-                marker.on("mouseout", leave);
-                marker.on("tooltipopen", suppressPointerTooltip);
-                cleanup.push(() => {
-                    marker.off("mouseover", enter);
-                    marker.off("mouseout", leave);
-                    marker.off("tooltipopen", suppressPointerTooltip);
-                });
-                const markerElement = marker.getElement();
-                if (markerElement)
-                    bindDom(markerSource, markerElement, false);
+                for (const marker of markers(candidate)) {
+                    const markerSource = { candidate, origin: "marker" };
+                    const enter = () => enterPointer(markerSource);
+                    const leave = () => leavePointer(markerSource);
+                    const suppressPointerTooltip = () => {
+                        if (focusSource !== null && focusSource.candidate !== candidate)
+                            marker.closeTooltip();
+                    };
+                    marker.on("mouseover", enter);
+                    marker.on("mouseout", leave);
+                    marker.on("tooltipopen", suppressPointerTooltip);
+                    cleanup.push(() => {
+                        marker.off("mouseover", enter);
+                        marker.off("mouseout", leave);
+                        marker.off("tooltipopen", suppressPointerTooltip);
+                    });
+                    const markerElement = marker.getElement();
+                    if (markerElement)
+                        bindDom(markerSource, markerElement, false);
+                }
             }
             updateViewport();
         }

@@ -96,7 +96,7 @@ def test_original_municipality_facets_preserve_old_country_memberships(
     client = minas_client
     districts = client.get("/api/subdivisions?country=BR").json()
     assert districts["ready"] and districts["supported"]
-    assert districts["subdivision_version"] == "source-subdivisions-v6"
+    assert districts["subdivision_version"] == "source-subdivisions-v7"
     assert (districts["total"], districts["assigned"], districts["unassigned"]) == (154, 133, 21)
     assert len(districts["subdivisions"]) == 67
     compound = next(row for row in districts["subdivisions"]
@@ -136,5 +136,5 @@ def test_paired_diagnostics_leave_unconfirmed_relevance_metrics_null(tmp_path: P
                                                          for number in range(1, 21)]
     result = evaluate_corpus(tmp_path / "missing-model", tmp_path / "rankings.json",
                              queries=queries)
-    assert result["corpus_count"] == 3897 and result["metrics"] is None
+    assert result["corpus_count"] == 3898 and result["metrics"] is None
     assert not result["qrels"]["confirmed"] and not result["runs_complete"]

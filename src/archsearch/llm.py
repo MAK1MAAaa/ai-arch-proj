@@ -9,12 +9,15 @@ import threading
 import time
 import unicodedata
 from collections import OrderedDict
-from dataclasses import dataclass, field
-from typing import Any, Literal
+from dataclasses import dataclass, field, replace
+from typing import TYPE_CHECKING, Any, Literal
 from urllib.parse import urlsplit, urlunsplit
 
 import httpx
 from pydantic import BaseModel, ConfigDict, Field, SecretStr, StrictInt, StrictStr, field_validator
+
+if TYPE_CHECKING:
+    from archsearch.env_config import EnvLlmConfig
 
 LlmProvider = Literal["ollama", "openai"]
 DEFAULT_OLLAMA_URL = "http://127.0.0.1:11434"
@@ -22,6 +25,8 @@ MAX_RESPONSE_BYTES = 128 * 1024
 MAX_MODELS = 500
 MAX_DISCOVERED_ENDPOINTS = 8
 MAX_REQUEST_SECONDS = 30.0
+MAX_API_KEYS = 8
+MAX_KEY_ATTEMPTS = MAX_API_KEYS
 QUERY_SCHEMA: dict[str, Any] = {
     "type": "object",
     "properties": {
@@ -62,6 +67,11 @@ class ConfigConflict(RuntimeError):
 
 class LlmUnavailable(RuntimeError):
     """LLM discovery or rewriting failed without exposing upstream contents."""
+
+
+class _RetryableKeyStatus(Exception):
+    def __init__(self, status: int) -> None:
+        self.status = status
 
 
 def _has_control(value: str) -> bool:
@@ -128,6 +138,9 @@ class PublicConfig(BaseModel):
     model: str
     revision: int
     has_api_key: bool
+    key_count: int = 0
+    active_key_index: int | None = None
+    config_source: Literal["default", "env", "manual"] = "default"
 
 
 class ModelOption(BaseModel):
@@ -143,6 +156,10 @@ class ModelsResponse(BaseModel):
 
     models: list[ModelOption]
     truncated: bool = False
+    key_count: int | None = None
+    active_key_index: int | None = None
+    config_source: Literal["default", "env", "manual"] | None = None
+    config_revision: int | None = None
 
 
 @dataclass(frozen=True)
@@ -152,6 +169,9 @@ class LlmSnapshot:
     model: str
     revision: int
     api_key: SecretStr | None = field(default=None, repr=False)
+    api_keys: tuple[SecretStr, ...] = field(default=(), repr=False)
+    active_key_index: int | None = None
+    config_source: Literal["default", "env", "manual"] = "default"
 
 
 def canonical_base_url(value: str, *, allow_empty: bool = False) -> str:
@@ -198,8 +218,22 @@ def _token(config: LlmSnapshot) -> str:
     return config.api_key.get_secret_value() if config.api_key is not None else ""
 
 
+def _keys(config: LlmSnapshot) -> tuple[SecretStr, ...]:
+    if config.api_keys:
+        return config.api_keys
+    return (config.api_key,) if _token(config) and config.api_key is not None else ()
+
+
+def _tokens(config: LlmSnapshot) -> tuple[str, ...]:
+    return tuple(key.get_secret_value() for key in _keys(config))
+
+
+def _contains_secret(value: str, tokens: tuple[str, ...]) -> bool:
+    return any(token and token in value for token in tokens)
+
+
 def _fingerprint(config: LlmSnapshot) -> str:
-    raw = json.dumps([config.provider, config.base_url, _token(config)], ensure_ascii=False)
+    raw = json.dumps([config.provider, config.base_url, _tokens(config)], ensure_ascii=False)
     return hashlib.sha256(raw.encode("utf8")).hexdigest()
 
 
@@ -209,7 +243,10 @@ def _public(config: LlmSnapshot) -> PublicConfig:
         base_url=config.base_url,
         model=config.model,
         revision=config.revision,
-        has_api_key=bool(_token(config)),
+        has_api_key=bool(_keys(config)),
+        key_count=len(_keys(config)),
+        active_key_index=config.active_key_index if _keys(config) else None,
+        config_source=config.config_source,
     )
 
 
@@ -228,6 +265,39 @@ class LlmManager:
         self._rewrite_lock = threading.Lock()
         self._current = LlmSnapshot("ollama", DEFAULT_OLLAMA_URL, "", 0)
         self._discovered: OrderedDict[str, frozenset[str]] = OrderedDict()
+        self._preferred_slots: OrderedDict[str, int] = OrderedDict()
+
+    @classmethod
+    def from_environment(
+        cls, config: EnvLlmConfig | None, *, transport: httpx.BaseTransport | None = None,
+        timeout_seconds: float = MAX_REQUEST_SECONDS,
+    ) -> LlmManager:
+        """Seed an explicit startup configuration without opening files or making requests."""
+        manager = cls(transport=transport, timeout_seconds=timeout_seconds)
+        if config is None or (not config.api_keys and not config.model):
+            return manager
+        checked = ConfigApply(
+            provider=config.provider, base_url=config.base_url, model=config.model,
+            expected_revision=0,
+        )
+        base = canonical_base_url(checked.base_url)
+        if len(config.api_keys) > MAX_API_KEYS:
+            raise ConfigInvalid("API密钥列表最多包含8项。")
+        tokens = tuple(key.get_secret_value() for key in config.api_keys)
+        if len(set(tokens)) != len(tokens) or any(not token for token in tokens):
+            raise ConfigInvalid("API密钥列表包含空值或重复值。")
+        for token in tokens:
+            ConfigDraft(provider=config.provider, base_url=base, api_key=SecretStr(token))
+        if config.provider == "ollama" and tokens:
+            raise ConfigInvalid("本地Ollama模式不使用API密钥。")
+        if _contains_secret(base, tokens) or _contains_secret(checked.model, tokens):
+            raise ConfigInvalid("请将API密钥填写在独立密钥列表中。")
+        keys = tuple(SecretStr(token) for token in tokens)
+        manager._current = LlmSnapshot(
+            checked.provider, base, checked.model, 1, keys[0] if keys else None,
+            keys, None, "env",
+        )
+        return manager
 
     def public_config(self) -> PublicConfig:
         with self._settings_lock:
@@ -237,16 +307,24 @@ class LlmManager:
         base = canonical_base_url(draft.base_url, allow_empty=allow_empty)
         current = self._current
         if draft.api_key is None:
-            token = (_token(current) if draft.provider == current.provider
-                     and base == current.base_url else "")
+            preserve = draft.provider == current.provider and base == current.base_url
+            keys = _keys(current) if preserve else ()
+            active = current.active_key_index if preserve else None
+            source = current.config_source if preserve else "manual"
         else:
             token = draft.api_key.get_secret_value()
-        if draft.provider == "ollama" and token:
+            keys = (SecretStr(token),) if token else ()
+            active = None
+            source = "manual"
+        tokens = tuple(key.get_secret_value() for key in keys)
+        if draft.provider == "ollama" and keys:
             raise ConfigInvalid("本地Ollama模式不使用API密钥。")
-        if token and token in base:
+        if _contains_secret(base, tokens):
             raise ConfigInvalid("请将API密钥填写在独立密钥字段中。")
+        selected = active if active is not None else 0
         return LlmSnapshot(
-            draft.provider, base, "", current.revision, SecretStr(token) if token else None,
+            draft.provider, base, "", current.revision, keys[selected] if keys else None,
+            keys, active, source,
         )
 
     def discover(self, draft: ConfigDraft) -> ModelsResponse:
@@ -259,7 +337,7 @@ class LlmManager:
         if not isinstance(rows, list):
             raise LlmUnavailable("模型列表格式不符合所选服务协议。")
         options: dict[str, ModelOption] = {}
-        secret = _token(target)
+        secrets = _tokens(target)
         for row in rows[:MAX_MODELS]:
             if not isinstance(row, dict):
                 raise LlmUnavailable("模型列表格式不符合所选服务协议。")
@@ -270,17 +348,20 @@ class LlmManager:
                 name = _model_name(raw_id)
             except ValueError:
                 raise LlmUnavailable("模型列表包含无效名称。") from None
-            if not name or (secret and secret in name):
+            if not name or _contains_secret(name, secrets):
                 raise LlmUnavailable("模型列表包含无效名称。")
             raw_size = row.get("size") if target.provider == "ollama" else None
             size = raw_size if type(raw_size) is int and raw_size >= 0 else None
             options[name] = ModelOption(id=name, label=name, size_bytes=size)
-        result = ModelsResponse(
-            models=sorted(options.values(), key=lambda item: (item.id.casefold(), item.id)),
-            truncated=len(rows) > MAX_MODELS,
-        )
         with self._settings_lock:
             key = _fingerprint(target)
+            slot = self._preferred_slots.get(key, target.active_key_index)
+            result = ModelsResponse(
+                models=sorted(options.values(), key=lambda item: (item.id.casefold(), item.id)),
+                truncated=len(rows) > MAX_MODELS,
+                key_count=len(_keys(target)), active_key_index=slot if _keys(target) else None,
+                config_source=target.config_source, config_revision=target.revision,
+            )
             self._discovered[key] = frozenset(options)
             self._discovered.move_to_end(key)
             while len(self._discovered) > MAX_DISCOVERED_ENDPOINTS:
@@ -294,11 +375,15 @@ class LlmManager:
             target = self._target(draft, allow_empty=not draft.model)
             if draft.model and draft.model not in self._discovered.get(_fingerprint(target), ()):
                 raise ConfigInvalid("请先获取当前服务的模型列表，再选择其中的模型。")
-            if _token(target) and _token(target) in draft.model:
+            if _contains_secret(draft.model, _tokens(target)):
                 raise ConfigInvalid("模型名称无效。")
-            self._current = LlmSnapshot(
-                target.provider, target.base_url, draft.model, self._current.revision + 1,
-                target.api_key,
+            slot = self._preferred_slots.get(_fingerprint(target), target.active_key_index)
+            keys = _keys(target)
+            selected = slot if slot is not None else 0
+            self._current = replace(
+                target, model=draft.model, revision=self._current.revision + 1,
+                api_key=keys[selected] if keys else None, active_key_index=slot if keys else None,
+                config_source="manual",
             )
             return _public(self._current)
 
@@ -310,16 +395,58 @@ class LlmManager:
                 raise ConfigInvalid("请先配置LLM服务并选择模型。")
             return self._current
 
+    def _remember_slot(self, target: LlmSnapshot, slot: int | None) -> None:
+        if slot is None:
+            return
+        key = _fingerprint(target)
+        with self._settings_lock:
+            if self._current.revision != target.revision:
+                return
+            self._preferred_slots[key] = slot
+            self._preferred_slots.move_to_end(key)
+            while len(self._preferred_slots) > MAX_DISCOVERED_ENDPOINTS:
+                self._preferred_slots.popitem(last=False)
+            if _fingerprint(self._current) == key:
+                self._current = replace(
+                    self._current, api_key=_keys(self._current)[slot], active_key_index=slot,
+                )
+
     def _request(
         self, target: LlmSnapshot, method: str, endpoint: str,
         payload: dict[str, Any] | None = None,
     ) -> dict[str, Any]:
+        """Only authentication/rate-limit failures may try another key within one deadline."""
+        tokens = _tokens(target)
+        start = target.active_key_index if target.active_key_index is not None else 0
+        slots: list[int | None] = ([(start + i) % len(tokens) for i in range(len(tokens))]
+                                  if tokens else [None])
+        deadline = time.monotonic() + self._timeout_seconds
+        for slot in slots[:MAX_KEY_ATTEMPTS]:
+            if time.monotonic() >= deadline:
+                raise LlmUnavailable("模型服务请求超时，请稍后重试。")
+            token = tokens[slot] if slot is not None else ""
+            try:
+                data = self._request_once(target, method, endpoint, payload, token, deadline)
+            except _RetryableKeyStatus as error:
+                if slot == slots[min(len(slots), MAX_KEY_ATTEMPTS) - 1]:
+                    if error.status in {401, 403}:
+                        message = "模型服务鉴权失败，请检查API密钥与访问权限。"
+                        raise LlmUnavailable(message) from None
+                    raise LlmUnavailable("模型服务限流，已用完本次可尝试的密钥。") from None
+                continue
+            self._remember_slot(target, slot)
+            return data
+        raise LlmUnavailable("模型服务没有可用的密钥。")
+
+    def _request_once(
+        self, target: LlmSnapshot, method: str, endpoint: str, payload: dict[str, Any] | None,
+        secret: str, deadline: float,
+    ) -> dict[str, Any]:
         headers = {"Accept": "application/json", "Accept-Encoding": "identity"}
-        secret = _token(target)
         if target.provider == "openai" and secret:
             headers["Authorization"] = "Bearer " + secret
-        timeout = httpx.Timeout(self._timeout_seconds, connect=min(3.0, self._timeout_seconds))
-        deadline = time.monotonic() + self._timeout_seconds
+        remaining = max(0.001, deadline - time.monotonic())
+        timeout = httpx.Timeout(remaining, connect=min(3.0, remaining))
         try:
             with httpx.Client(
                 transport=self._transport, timeout=timeout, trust_env=False,
@@ -327,9 +454,11 @@ class LlmManager:
             ) as client, client.stream(
                 method, target.base_url + endpoint, headers=headers, json=payload,
             ) as response:
+                if time.monotonic() >= deadline:
+                    raise LlmUnavailable("模型服务请求超时，请稍后重试。")
                 if not 200 <= response.status_code < 300:
-                    if response.status_code in {401, 403}:
-                        raise LlmUnavailable("模型服务鉴权失败，请检查API密钥与访问权限。")
+                    if response.status_code in {401, 403, 429}:
+                        raise _RetryableKeyStatus(response.status_code)
                     if 300 <= response.status_code < 400:
                         raise LlmUnavailable("模型服务返回了重定向，请填写最终服务地址。")
                     if response.status_code == 404:
@@ -392,12 +521,12 @@ class LlmManager:
                 choice = choices[0] if isinstance(choices, list) and choices else None
                 message = choice.get("message") if isinstance(choice, dict) else None
             content = message.get("content") if isinstance(message, dict) else None
-            return self._parse_queries(content, query, _token(snapshot))
+            return self._parse_queries(content, query, _tokens(snapshot))
         finally:
             self._rewrite_lock.release()
 
     @staticmethod
-    def _parse_queries(content: Any, original: str, secret: str) -> list[str]:
+    def _parse_queries(content: Any, original: str, secret: str | tuple[str, ...]) -> list[str]:
         error = "模型返回的查询改写格式不符合要求。"
         if not isinstance(content, str):
             raise LlmUnavailable(error)
@@ -411,12 +540,13 @@ class LlmManager:
         if not isinstance(rows, list) or not 1 <= len(rows) <= 2:
             raise LlmUnavailable(error)
         seen = {unicodedata.normalize("NFKC", original.strip()).casefold()}
+        secrets = (secret,) if isinstance(secret, str) else secret
         result = []
         for row in rows:
             if not isinstance(row, str) or _has_control(row):
                 raise LlmUnavailable(error)
             value = row.strip()
-            if not value or len(value) > 500 or (secret and secret in value):
+            if not value or len(value) > 500 or _contains_secret(value, secrets):
                 raise LlmUnavailable(error)
             key = unicodedata.normalize("NFKC", value).casefold()
             if key not in seen:

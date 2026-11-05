@@ -2,7 +2,9 @@ const ArchSearchLlm = (() => {
   "use strict";
 
   type Provider = "ollama" | "openai";
-  interface PublicConfig { provider: Provider; base_url: string; model: string; revision: number; has_api_key: boolean }
+  type ConfigSource = "default" | "env" | "manual";
+  interface PoolMetadata { key_count: number; active_key_index: number | null; config_source: ConfigSource }
+  interface PublicConfig extends PoolMetadata { provider: Provider; base_url: string; model: string; revision: number; has_api_key: boolean }
   interface Model { id: string; label: string; size_bytes?: number | null }
   interface RequestOptions { enhance?: true; llm_revision?: number }
   interface Options {
@@ -20,11 +22,23 @@ const ArchSearchLlm = (() => {
       || typeof value.base_url !== "string" || typeof value.model !== "string"
       || typeof value.has_api_key !== "boolean" || !Number.isSafeInteger(value.revision)
       || (value.revision as number) < 0) throw new Error("模型配置响应无效，请重新加载配置。");
+    const pool = parsePool(value, value.has_api_key);
     return { provider: value.provider as Provider, base_url: value.base_url, model: value.model,
-      revision: value.revision as number, has_api_key: value.has_api_key };
+      revision: value.revision as number, has_api_key: value.has_api_key, ...pool };
   }
 
-  function parseModels(value: unknown): { models: Model[]; truncated: boolean } {
+  function parsePool(value: Record<string, unknown>, hasKey?: boolean): PoolMetadata {
+    const count = value.key_count === undefined ? (hasKey ? 1 : 0) : value.key_count;
+    const active = value.active_key_index ?? null;
+    const source = value.config_source ?? "manual";
+    if (!Number.isSafeInteger(count) || (count as number) < 0 || (count as number) > 8
+      || (hasKey !== undefined && Boolean(count) !== hasKey)
+      || (active !== null && (!Number.isSafeInteger(active) || (active as number) < 0 || (active as number) >= (count as number)))
+      || !["default", "env", "manual"].includes(String(source))) throw new Error("密钥列表状态响应无效。");
+    return { key_count: count as number, active_key_index: active as number | null, config_source: source as ConfigSource };
+  }
+
+  function parseModels(value: unknown): { models: Model[]; truncated: boolean; pool: PoolMetadata | null; configRevision: number | null } {
     if (!record(value) || !Array.isArray(value.models) || value.models.length > 500) throw new Error("模型列表响应无效。");
     const ids = new Set<string>();
     const models = value.models.map((item: unknown): Model => {
@@ -36,7 +50,10 @@ const ArchSearchLlm = (() => {
       ids.add(item.id);
       return { id: item.id, label: item.label, ...(typeof item.size_bytes === "number" ? { size_bytes: item.size_bytes } : {}) };
     });
-    return { models, truncated: value.truncated === true };
+    const pool = value.key_count === null || value.key_count === undefined ? null : parsePool(value);
+    const revision = value.config_revision ?? null;
+    if (revision !== null && (!Number.isSafeInteger(revision) || (revision as number) < 0)) throw new Error("模型列表配置版本无效。");
+    return { models, truncated: value.truncated === true, pool, configRevision: revision as number | null };
   }
 
   function endpoint(value: string): string {
@@ -104,8 +121,9 @@ const ArchSearchLlm = (() => {
     function notify(): void { render(); options.onChange(); }
     function render(): void {
       const ready = config !== null && Boolean(config.model);
+      const source = config?.config_source === "env" ? "环境配置" : config?.config_source === "default" ? "默认设置" : "会话设置";
       ui.enabled.disabled = !ready && !ui.enabled.checked;
-      ui.active.textContent = config?.model ? `已应用 ${config.provider === "ollama" ? "Ollama" : "API"} · ${config.model}` : "LLM 未配置";
+      ui.active.textContent = config?.model ? `已应用 ${config.provider === "ollama" ? "Ollama" : "API"} · ${config.model} · ${source}` : "LLM 未配置";
       ui.keyGroup.hidden = provider() !== "openai";
       ui.key.disabled = provider() !== "openai" || applying;
       ui.provider.disabled = applying;
@@ -118,8 +136,8 @@ const ArchSearchLlm = (() => {
       ui.apply.textContent = applying ? "正在应用" : "应用所选模型";
       ui.form.setAttribute("aria-busy", String(applying || discovering));
       ui.keyHint.textContent = !keyCleared && sameEndpoint() && config?.has_api_key
-        ? "当前地址的密钥已在服务内存中；留空保留，填写新值可替换。"
-        : "可留空；密钥仅在本次服务内存中使用，不写入分享链接、导出或浏览器存储。";
+        ? `当前地址已配置 ${config.key_count} 个密钥；${config.active_key_index === null ? "尚未确认可用槽位" : `上次成功槽位 ${config.active_key_index + 1}/${config.key_count}`}；来源：${source}。留空保留整个列表，填写新值会作为本会话单个密钥替换。`
+        : "可留空；填写新值会在本会话中使用单个密钥，不写入分享链接、导出或浏览器存储。";
       ui.privacy.textContent = provider() === "ollama"
         ? "从 Windows 后端连接本机 Ollama；仅列出已有模型，不会自动下载。优先测试 qwen3.5:9b，2b 可作速度优先备选。"
         : "填写 OpenAI 兼容服务地址（通常以 /v1 结尾）；开启增强后只发送查询，不发送资料正文。";
@@ -153,6 +171,8 @@ const ArchSearchLlm = (() => {
       catch (error) { showError(safeError(error)); notify(); return; }
       const sequence = discoverySequence;
       const controller = new AbortController(); discoveryController = controller;
+      const appliedPool = provider() === "openai" && sameEndpoint() && keyValue() === null;
+      const appliedRevision = config?.revision ?? null;
       discovering = true; ui.feedback.textContent = "正在获取服务端已有模型。"; notify();
       try {
         const data = parseModels(await send<unknown>("/api/llm/models", {
@@ -161,6 +181,10 @@ const ArchSearchLlm = (() => {
           body: JSON.stringify({ provider: provider(), base_url: base, api_key: provider() === "openai" ? keyValue() : "" }),
         }));
         if (sequence !== discoverySequence || controller.signal.aborted) return;
+        if (appliedPool && config && config.revision === appliedRevision && data.configRevision === appliedRevision && data.pool) {
+          if (data.pool.key_count !== config.key_count) throw new Error("模型列表密钥状态与已应用配置不一致。");
+          config = { ...config, ...data.pool };
+        }
         models = data.models.filter((item) => !ui.key.value || (!item.id.includes(ui.key.value) && !item.label.includes(ui.key.value)));
         const empty = document.createElement("option"); empty.value = ""; empty.textContent = models.length ? "选择一个模型" : "服务未提供可选模型";
         const entries = models.map((item) => {
@@ -204,7 +228,7 @@ const ArchSearchLlm = (() => {
         ui.provider.value = saved.provider; ui.base.value = saved.base_url;
         if (clear) { invalidateDiscovery(); ui.enabled.checked = false; }
         else ui.model.value = saved.model;
-        ui.feedback.textContent = clear ? "已清除应用模型与密钥，LLM 增强已关闭。" : `已应用 ${saved.model}；勾选“LLM 增强”后用于下一次检索。`;
+        ui.feedback.textContent = clear ? "已清除运行内存中的模型与密钥；本地 .env 未修改，重启时会重新读取。LLM 增强已关闭。" : `已应用 ${saved.model}；勾选“LLM 增强”后用于下一次检索。`;
       } catch (error) {
         if (sequence === configSequence) showError(`配置未应用：${safeError(error)}`);
       } finally { if (sequence === configSequence) { applying = false; notify(); } }
@@ -223,7 +247,7 @@ const ArchSearchLlm = (() => {
         if (hydrate) {
           showError(""); invalidateDiscovery(); keyCleared = false;
           ui.provider.value = value.provider; ui.base.value = value.base_url; ui.key.value = "";
-          ui.feedback.textContent = value.model ? `已加载当前服务内存中的 ${value.model}。` : "获取已有模型并应用后，可开启 LLM 增强。";
+          ui.feedback.textContent = value.model ? `已加载${value.config_source === "env" ? "环境配置" : "当前会话"}中的 ${value.model}。` : "获取已有模型并应用后，可开启 LLM 增强。";
           notify(); if (ui.base.value.trim()) void discover();
         } else notify();
       } catch (error) {
