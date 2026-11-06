@@ -27,6 +27,9 @@ const ArchSearchWorkspace = (() => {
     const resultTab = node<HTMLButtonElement>("workspace-tab-results"), catalogueTab = node<HTMLButtonElement>("workspace-tab-catalogue");
     const resultPanel = node("workspace-results-view"), cataloguePanel = node("workspace-catalogue-view");
     const dialog = node<HTMLDialogElement>("detail-dialog"), detail = node("detail-panel"), close = node<HTMLButtonElement>("close-detail");
+    const modelDialog = node<HTMLDialogElement>("llm-settings");
+    const typeFilter = node<HTMLSelectElement>("type-filter"), limitFilter = node<HTMLSelectElement>("limit-filter");
+    const filterSummary = node("search-filter-summary"), filterMenu = node<HTMLDetailsElement>("search-filters");
     let width = defaultWidth, preferredWidth = defaultWidth;
     let drag: number | null = null;
     let returnFocus: HTMLElement | null = null;
@@ -170,12 +173,31 @@ const ArchSearchWorkspace = (() => {
       returnFocus = null; restoreFocus = true;
       window.dispatchEvent(new Event("archsearch:detailclose"));
     });
-    const menus = ["workspace-examples", "llm-settings"].map(id => node<HTMLDetailsElement>(id));
-    for (const menu of menus) menu.addEventListener("toggle", () => { if (menu.open) for (const other of menus) if (other !== menu) other.open = false; });
+    function refreshSearchSummary(): void {
+      const typeLabel = typeFilter.value ? typeFilter.selectedOptions[0]?.textContent?.trim() || typeFilter.value : "全部";
+      const limit = limitFilter.value || "10";
+      filterSummary.textContent = `${typeLabel} · ${limit} 条`;
+      filterSummary.title = `地点类型：${typeLabel}；结果数：${limit} 条`;
+      filterMenu.dataset.active = String(Boolean(typeFilter.value) || limit !== "10");
+    }
+    typeFilter.addEventListener("change", refreshSearchSummary);
+    limitFilter.addEventListener("change", refreshSearchSummary);
+    const menus = [node<HTMLDetailsElement>("workspace-examples"), filterMenu];
+    function closeMenu(menu: HTMLDetailsElement, restore = false): void {
+      const summary = menu.querySelector<HTMLElement>("summary");
+      const hidesFocus = menu.contains(document.activeElement) && document.activeElement !== summary;
+      menu.open = false;
+      if (restore && hidesFocus) summary?.focus({ preventScroll: true });
+    }
+    for (const menu of menus) menu.addEventListener("toggle", () => {
+      if (menu.open) for (const other of menus) if (other !== menu) closeMenu(other, true);
+    });
+    window.addEventListener("archsearch:modelsettingsopen", () => { for (const menu of menus) closeMenu(menu); });
     document.addEventListener("keydown", (event) => {
-      if (event.defaultPrevented || event.key !== "Escape" || dialog.open) return;
+      if (event.defaultPrevented || event.key !== "Escape" || dialog.open || modelDialog.open) return;
       const hadMenu = menus.some(menu => menu.open);
-      for (const menu of menus) menu.open = false;
+      for (const menu of menus) if (menu.open) closeMenu(menu, true);
+      if (hadMenu) event.preventDefault();
       if (!hadMenu && !collapsed && (sidebar.contains(document.activeElement) || document.activeElement === toggle)) {
         event.preventDefault();
         setSidebarCollapsed(true);
@@ -183,9 +205,9 @@ const ArchSearchWorkspace = (() => {
     });
     window.addEventListener("resize", measure);
     if (typeof ResizeObserver !== "undefined" && search) new ResizeObserver(measure).observe(search);
-    activate("results"); measure();
+    activate("results"); measure(); refreshSearchSummary();
     return {
-      openDetail, closeDetail, setSidebarCollapsed,
+      openDetail, closeDetail, setSidebarCollapsed, refreshSearchSummary,
       isSidebarCollapsed: (): boolean => collapsed,
       revealMaps: (): void => { if (narrow() && !collapsed) setSidebarCollapsed(true); },
       activateResults: (options: TabOptions = {}) => activate("results", options),

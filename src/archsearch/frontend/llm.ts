@@ -84,13 +84,15 @@ const ArchSearchLlm = (() => {
       return found as T;
     };
     const ui = {
-      panel: node<HTMLDetailsElement>("llm-settings"), form: node<HTMLFormElement>("llm-settings-form"),
+      panel: node<HTMLDialogElement>("llm-settings"), form: node<HTMLFormElement>("llm-settings-form"),
+      open: node<HTMLButtonElement>("llm-open-settings"), close: node<HTMLButtonElement>("llm-close-settings"),
       provider: node<HTMLSelectElement>("llm-provider"), base: node<HTMLInputElement>("llm-base-url"),
       key: node<HTMLInputElement>("llm-api-key"), keyGroup: node<HTMLDivElement>("llm-api-key-group"),
       keyHint: node<HTMLParagraphElement>("llm-key-hint"), model: node<HTMLSelectElement>("llm-model"),
       refresh: node<HTMLButtonElement>("llm-refresh-models"), apply: node<HTMLButtonElement>("llm-apply"),
       clear: node<HTMLButtonElement>("llm-clear-config"), enabled: node<HTMLInputElement>("llm-enhance"),
       active: node<HTMLSpanElement>("llm-active-model"), feedback: node<HTMLParagraphElement>("llm-feedback"),
+      summary: node<HTMLParagraphElement>("llm-config-summary"),
       privacy: node<HTMLParagraphElement>("llm-provider-note"), error: node<HTMLParagraphElement>("llm-error"),
     };
     const send = options.request ?? request;
@@ -105,6 +107,35 @@ const ArchSearchLlm = (() => {
     let draftChanged = false;
     let keyCleared = false;
     let initialized = false;
+    let returnFocus: HTMLElement | null = null;
+
+    function showSettings(): void {
+      if (ui.panel.open) return;
+      returnFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+      window.dispatchEvent(new Event("archsearch:modelsettingsopen"));
+      ui.panel.showModal();
+      ui.open.setAttribute("aria-expanded", "true");
+      ui.close.focus({ preventScroll: true });
+    }
+    function usableOpener(value: HTMLElement | null): value is HTMLElement {
+      if (!value?.isConnected || value === document.body || value.closest("[hidden], [inert]") || value.matches(":disabled")) return false;
+      const closedMenu = value.closest("details:not([open])");
+      return closedMenu === null || closedMenu.querySelector("summary") === value;
+    }
+    ui.open.addEventListener("click", showSettings);
+    ui.close.addEventListener("click", () => ui.panel.close());
+    ui.panel.addEventListener("click", (event) => {
+      if (event.target !== ui.panel) return;
+      const bounds = ui.panel.getBoundingClientRect();
+      if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) ui.panel.close();
+    });
+    ui.panel.addEventListener("close", () => {
+      if (ui.panel.open) return;
+      ui.open.setAttribute("aria-expanded", "false");
+      const target = usableOpener(returnFocus) ? returnFocus : ui.open;
+      returnFocus = null;
+      target.focus({ preventScroll: true });
+    });
 
     function provider(): Provider { return ui.provider.value === "openai" ? "openai" : "ollama"; }
     function sameEndpoint(): boolean {
@@ -123,7 +154,18 @@ const ArchSearchLlm = (() => {
       const ready = config !== null && Boolean(config.model);
       const source = config?.config_source === "env" ? "环境配置" : config?.config_source === "default" ? "默认设置" : "会话设置";
       ui.enabled.disabled = !ready && !ui.enabled.checked;
-      ui.active.textContent = config?.model ? `已应用 ${config.provider === "ollama" ? "Ollama" : "API"} · ${config.model} · ${source}` : "LLM 未配置";
+      const fullStatus = config?.model ? `已应用 ${config.provider === "ollama" ? "Ollama" : "API"} · ${config.model} · ${source}` : "LLM 未配置";
+      const modelCharacters = Array.from(config?.model ?? "");
+      const shortModel = modelCharacters.length > 28 ? modelCharacters.slice(0, 27).join("") + "…" : modelCharacters.join("");
+      const enhancementStatus = ui.enabled.checked ? ready ? "LLM 增强已开启" : "LLM 增强待配置" : "LLM 增强未开启";
+      ui.active.textContent = config?.model ? `${config.provider === "ollama" ? "Ollama" : "API"} · ${shortModel}` : "未配置";
+      ui.active.title = fullStatus;
+      ui.open.title = `${fullStatus}；${enhancementStatus}`;
+      ui.open.setAttribute("aria-label", `模型设置：${fullStatus}；${enhancementStatus}`);
+      ui.open.setAttribute("aria-expanded", String(ui.panel.open));
+      ui.open.dataset.configured = String(ready);
+      ui.open.dataset.enhanced = String(ui.enabled.checked);
+      ui.summary.textContent = `${fullStatus}。${ui.enabled.checked ? ready ? "LLM 增强已开启。" : "已请求增强，需先应用模型。" : "LLM 增强未开启。"}基础语义检索使用本地 E5 模型。`;
       ui.keyGroup.hidden = provider() !== "openai";
       ui.key.disabled = provider() !== "openai" || applying;
       ui.provider.disabled = applying;
@@ -266,7 +308,7 @@ const ArchSearchLlm = (() => {
     ui.refresh.addEventListener("click", () => { void discover(); });
     ui.form.addEventListener("submit", (event) => { event.preventDefault(); void apply(); });
     ui.clear.addEventListener("click", () => { void apply(true); });
-    ui.enabled.addEventListener("change", () => { options.onChange(); });
+    ui.enabled.addEventListener("change", notify);
     clearModels(); render();
     return {
       load, discover, apply,
@@ -275,7 +317,7 @@ const ArchSearchLlm = (() => {
       getConfig: () => config ? { ...config } : null,
       setRequested(value: boolean): void { ui.enabled.checked = value; render(); options.onChange(); },
       requestOptions(): RequestOptions { return ui.enabled.checked ? { enhance: true, ...(config?.model ? { llm_revision: config.revision } : {}) } : {}; },
-      showSettings(): void { ui.panel.open = true; },
+      showSettings,
     };
   }
 

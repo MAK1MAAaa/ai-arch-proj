@@ -18,23 +18,48 @@ interface Helpers {
 }
 class Element extends EventTarget {
   value = ''; textContent = ''; disabled = false; hidden = false; checked = false; open = false;
+  title = ''; isConnected = true; blocked = false; parentMenu: Element | null = null; summary: Element | null = null;
+  dataset: Record<string, string> = {};
+  onFocus = () => undefined; showCalls = 0; queuedClose = false; closeEvents: (() => void)[] = [];
+  bounds = { left: 100, top: 100, right: 700, bottom: 700, width: 600, height: 600 };
   children: Element[] = []; attributes = new Map<string, string>(); tagName: string;
   constructor(tag = 'div') { super(); this.tagName = tag.toUpperCase(); }
   replaceChildren(...children: Element[]): void { this.children = children; if (this.tagName === 'SELECT') this.value = children[0]?.value ?? ''; }
   setAttribute(key: string, value: string): void { this.attributes.set(key, value); }
-  fire(name: string): void { this.dispatchEvent(new Event(name, { cancelable: true })); }
+  focus(): void { this.onFocus(); }
+  closest(selector: string): Element | null { return selector.includes('details') ? this.parentMenu?.open === false ? this.parentMenu : null : this.blocked ? this : null; }
+  matches(_selector: string): boolean { return this.disabled; }
+  querySelector(_selector: string): Element | null { return this.summary; }
+  getBoundingClientRect() { return this.bounds; }
+  showModal(): void { if (this.open) throw new Error('Already open'); this.showCalls++; this.open = true; }
+  close(): void {
+    if (!this.open) return;
+    this.open = false;
+    const dispatch = () => this.dispatchEvent(new Event('close'));
+    if (this.queuedClose) this.closeEvents.push(dispatch); else dispatch();
+  }
+  flushCloseEvents(): void { for (const dispatch of this.closeEvents.splice(0)) dispatch(); }
+  fire(name: string, properties: Record<string, unknown> = {}): Event {
+    const event = new Event(name, { cancelable: true });
+    for (const [key, value] of Object.entries(properties)) Object.defineProperty(event, key, { value });
+    this.dispatchEvent(event); return event;
+  }
+  pressEscape(): void { if (!this.fire('cancel').defaultPrevented) this.close(); }
   set innerHTML(_value: string) { throw new Error('Unsafe innerHTML'); }
 }
 interface Pending { path: string; init: RequestInit; resolve(value: unknown): void; reject(error: Error): void }
 const source = readFileSync('src/archsearch/frontend/llm.ts', 'utf8');
 const script = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.None } }).outputText;
 function harness() {
-  const ids = ['llm-settings', 'llm-settings-form', 'llm-provider', 'llm-base-url', 'llm-api-key', 'llm-api-key-group', 'llm-key-hint', 'llm-model', 'llm-refresh-models', 'llm-apply', 'llm-clear-config', 'llm-enhance', 'llm-active-model', 'llm-feedback', 'llm-provider-note', 'llm-error'];
+  const ids = ['llm-settings', 'llm-settings-form', 'llm-open-settings', 'llm-close-settings', 'llm-config-summary', 'llm-provider', 'llm-base-url', 'llm-api-key', 'llm-api-key-group', 'llm-key-hint', 'llm-model', 'llm-refresh-models', 'llm-apply', 'llm-clear-config', 'llm-enhance', 'llm-active-model', 'llm-feedback', 'llm-provider-note', 'llm-error'];
   const elements = new Map(ids.map(id => [id, new Element(['llm-provider', 'llm-model'].includes(id) ? 'select' : 'div')]));
+  const document = { activeElement: null as Element | null, body: new Element('body'), getElementById: (id: string) => elements.get(id), createElement: (tag: string) => new Element(tag) };
+  for (const element of elements.values()) element.onFocus = () => { document.activeElement = element; };
+  const window = new EventTarget(); let openings = 0;
+  window.addEventListener('archsearch:modelsettingsopen', () => openings++);
   elements.get('llm-provider')!.value = 'ollama'; elements.get('llm-base-url')!.value = 'http://127.0.0.1:11434';
   const pending: Pending[] = []; const timers = new Map<number, () => void>(); let counter = 0; let changes = 0;
-  const context = createContext({ URL, AbortController, Error,
-    document: { getElementById: (id: string) => elements.get(id), createElement: (tag: string) => new Element(tag) },
+  const context = createContext({ URL, AbortController, Error, HTMLElement: Element, Event, document, window,
     setTimeout: (fn: () => void) => { const key = ++counter; timers.set(key, fn); return key; },
     clearTimeout: (key: number) => timers.delete(key),
     get localStorage() { throw new Error('Credentials must not enter localStorage'); },
@@ -42,7 +67,7 @@ function harness() {
   });
   const helpers = runInContext(`${script}\nArchSearchLlm;`, context) as Helpers;
   const controller = helpers.create({ onChange: () => { changes++; }, request: <T>(path: string, init: RequestInit = {}) => new Promise<T>((resolve, reject) => pending.push({ path, init, resolve: value => resolve(value as T), reject })) });
-  return { helpers, controller, pending, element: (id: string) => elements.get(id)!, timers, changes: () => changes,
+  return { helpers, controller, pending, document, window, openings: () => openings, element: (id: string) => elements.get(id)!, timers, changes: () => changes,
     flushTimers: () => { const callbacks = [...timers.values()]; timers.clear(); callbacks.forEach(fn => fn()); } };
 }
 const plain = <T>(value: T): T => JSON.parse(JSON.stringify(value)) as T;
@@ -63,6 +88,87 @@ test('Ollama discovery prefers cached Qwen9b and requires explicit application',
   call.resolve({ ...config, model: 'qwen3.5:9b', revision: 1 }); await applying;
   h.controller.setRequested(true); assert.deepEqual(plain(h.controller.requestOptions()), { enhance: true, llm_revision: 1 });
   assert.match(h.element('llm-active-model').textContent, /Ollama.*qwen3.5:9b/u);
+});
+
+test('model settings open once on demand, focus their close action and restore the trigger without applying', () => {
+  const h = harness(), trigger = h.element('llm-open-settings'), dialog = h.element('llm-settings');
+  assert.equal(dialog.open, false); assert.equal(h.element('llm-active-model').textContent, '未配置');
+  trigger.focus(); trigger.fire('click'); h.controller.showSettings();
+  assert.equal(dialog.open, true); assert.equal(dialog.showCalls, 1); assert.equal(h.openings(), 1);
+  assert.equal(trigger.attributes.get('aria-expanded'), 'true');
+  assert.equal(h.document.activeElement, h.element('llm-close-settings'));
+  h.element('llm-close-settings').fire('click');
+  assert.equal(dialog.open, false); assert.equal(h.document.activeElement, trigger);
+  assert.equal(trigger.attributes.get('aria-expanded'), 'false'); assert.equal(h.pending.length, 0);
+  assert.equal(h.controller.enabled(), false); assert.deepEqual(plain(h.controller.requestOptions()), {});
+});
+
+test('only a click outside the model dialog bounds closes it and native Escape restores focus', () => {
+  const h = harness(), dialog = h.element('llm-settings'), trigger = h.element('llm-open-settings');
+  trigger.focus(); h.controller.showSettings();
+  dialog.fire('click', { clientX: 101, clientY: 101 });
+  assert.equal(dialog.open, true, 'Dialog padding is inside the dialog.');
+  dialog.fire('click', { clientX: 90, clientY: 90 });
+  assert.equal(dialog.open, false); assert.equal(h.document.activeElement, trigger);
+  h.controller.showSettings(); dialog.pressEscape();
+  assert.equal(dialog.open, false); assert.equal(h.document.activeElement, trigger);
+});
+
+test('removed, disabled, hidden or collapsed-menu openers fall back to the visible model trigger', () => {
+  const h = harness(), opener = new Element('button'), dialog = h.element('llm-settings');
+  opener.onFocus = () => { h.document.activeElement = opener; };
+  for (const unavailable of ['removed', 'disabled', 'hidden', 'collapsed'] as const) {
+    opener.isConnected = unavailable !== 'removed'; opener.disabled = unavailable === 'disabled'; opener.blocked = unavailable === 'hidden';
+    opener.parentMenu = unavailable === 'collapsed' ? new Element('details') : null;
+    opener.focus(); h.controller.showSettings(); dialog.pressEscape();
+    assert.equal(h.document.activeElement, h.element('llm-open-settings'), unavailable);
+  }
+  opener.isConnected = true; opener.disabled = false; opener.blocked = false; opener.parentMenu = null;
+  opener.focus(); h.controller.showSettings(); dialog.pressEscape();
+  assert.equal(h.document.activeElement, opener);
+});
+
+test('a queued old close does not steal focus or replace the opener after the model dialog reopens', () => {
+  const h = harness(), dialog = h.element('llm-settings'), first = new Element(), second = new Element();
+  first.onFocus = () => { h.document.activeElement = first; }; second.onFocus = () => { h.document.activeElement = second; };
+  dialog.queuedClose = true;
+  first.focus(); h.controller.showSettings(); dialog.close();
+  second.focus(); h.controller.showSettings(); dialog.flushCloseEvents();
+  assert.equal(dialog.open, true); assert.equal(h.document.activeElement, h.element('llm-close-settings'));
+  dialog.close(); dialog.flushCloseEvents(); assert.equal(h.document.activeElement, second);
+});
+
+test('closing keeps API drafts and late responses cannot reopen settings or steal subsequent focus', async () => {
+  const h = harness(), loading = h.controller.load();
+  h.element('llm-open-settings').focus(); h.controller.showSettings();
+  h.element('llm-provider').value = 'openai'; h.element('llm-provider').fire('change');
+  h.element('llm-base-url').value = 'https://draft.example/v1'; h.element('llm-base-url').fire('input');
+  h.element('llm-api-key').value = 'fixture-dialog-draft'; h.element('llm-api-key').fire('input'); h.flushTimers();
+  h.element('llm-close-settings').fire('click'); const nextControl = new Element(); h.document.activeElement = nextControl;
+  h.pending[0].resolve({ ...config, model: 'qwen3.5:2b', revision: 2 }); await loading;
+  h.pending[1].resolve({ models: [{ id: 'draft-model', label: 'draft-model' }] }); await flush();
+  assert.equal(h.element('llm-settings').open, false); assert.equal(h.document.activeElement, nextControl);
+  assert.equal(h.element('llm-provider').value, 'openai'); assert.equal(h.element('llm-base-url').value, 'https://draft.example/v1');
+  assert.equal(h.element('llm-api-key').value, 'fixture-dialog-draft'); assert.equal(h.controller.getConfig()?.model, 'qwen3.5:2b');
+  assert.equal(h.controller.enabled(), false); assert.equal(h.pending.filter(call => call.path === '/api/llm/config' && call.init.method === 'POST').length, 0);
+});
+
+test('long model names stay short in the toolbar while the full status distinguishes optional LLM from E5', async () => {
+  const h = harness(), longModel = 'research-model-' + 'long-context-'.repeat(14);
+  await start(h, { ...config, model: longModel, revision: 3 });
+  const active = h.element('llm-active-model'), summary = h.element('llm-config-summary');
+  assert.ok(active.textContent.length < 40); assert.match(active.textContent, /…$/u);
+  assert.equal(active.title.includes(longModel), true); assert.equal(summary.textContent.includes(longModel), true);
+  assert.match(summary.textContent, /LLM 增强未开启.*本地 E5/u);
+  assert.equal(h.controller.enabled(), false); assert.deepEqual(plain(h.controller.requestOptions()), {});
+  h.element('llm-enhance').checked = true; h.element('llm-enhance').fire('change');
+  assert.match(summary.textContent, /LLM 增强已开启/u);
+  assert.equal(h.element('llm-open-settings').dataset.configured, 'true');
+  assert.equal(h.element('llm-open-settings').dataset.enhanced, 'true');
+  assert.equal(h.element('llm-open-settings').attributes.get('aria-label')?.includes(longModel), true);
+  h.controller.showSettings(); h.element('llm-close-settings').fire('click');
+  assert.equal(h.controller.enabled(), true);
+  assert.deepEqual(plain(h.controller.requestOptions()), { enhance: true, llm_revision: 3 });
 });
 
 test('API provider starts with blank address and password without inheriting Ollama endpoint', async () => {
@@ -200,7 +306,7 @@ test('environment configuration hydrates safe pool metadata and auto discovers w
   assert.equal(h.element('llm-api-key').value, '');
   assert.equal(JSON.parse(h.pending[1].init.body as string).api_key, null);
   assert.equal(h.controller.enabled(), false); assert.deepEqual(plain(h.controller.requestOptions()), {});
-  assert.match(h.element('llm-active-model').textContent, /env-model.*环境配置/u);
+  assert.match(h.element('llm-config-summary').textContent, /env-model.*环境配置/u);
   assert.match(h.element('llm-key-hint').textContent, /2 个密钥.*尚未确认.*环境配置/u);
 });
 

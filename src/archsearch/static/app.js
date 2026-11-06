@@ -306,6 +306,7 @@
             button.setAttribute("aria-label", `${button.dataset.exampleMode === "bm25" ? "关键词基线 BM25 原名检索" : "检索示例"}：${query || ""}；类型：${typeLabel(button.dataset.type || "")}`);
             button.lang = exampleMode === "semantic" || button.dataset.exampleMode === "bm25" ? "zh-CN" : "en";
         });
+        ArchSearchWorkspace.refreshSearchSummary();
     }
     function updateScopeHeader() {
         const coverage = explore?.getCoverageSummary();
@@ -1616,6 +1617,10 @@
         cancelLinkRestore();
         if (event.target === ui.query && !ui.query.value.trim() && state.searching)
             cancelCurrentSearch();
+    });
+    byId("llm-enhance", HTMLInputElement).addEventListener("change", () => {
+        exampleIntent.invalidate();
+        cancelLinkRestore();
     });
     ui.form.querySelectorAll('input[name="mode"]').forEach((radio) => radio.addEventListener("change", applyChangedFilter));
     ui.typeFilter.addEventListener("change", applyChangedFilter);
