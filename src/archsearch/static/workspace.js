@@ -23,6 +23,9 @@ const ArchSearchWorkspace = (() => {
         const resultTab = node("workspace-tab-results"), catalogueTab = node("workspace-tab-catalogue");
         const resultPanel = node("workspace-results-view"), cataloguePanel = node("workspace-catalogue-view");
         const dialog = node("detail-dialog"), detail = node("detail-panel"), close = node("close-detail");
+        const modelDialog = node("llm-settings");
+        const typeFilter = node("type-filter"), limitFilter = node("limit-filter");
+        const filterSummary = node("search-filter-summary"), filterMenu = node("search-filters");
         let width = defaultWidth, preferredWidth = defaultWidth;
         let drag = null;
         let returnFocus = null;
@@ -203,18 +206,41 @@ const ArchSearchWorkspace = (() => {
             restoreFocus = true;
             window.dispatchEvent(new Event("archsearch:detailclose"));
         });
-        const menus = ["workspace-examples", "llm-settings"].map(id => node(id));
+        function refreshSearchSummary() {
+            const typeLabel = typeFilter.value ? typeFilter.selectedOptions[0]?.textContent?.trim() || typeFilter.value : "全部";
+            const limit = limitFilter.value || "10";
+            filterSummary.textContent = `${typeLabel} · ${limit} 条`;
+            filterSummary.title = `地点类型：${typeLabel}；结果数：${limit} 条`;
+            filterMenu.dataset.active = String(Boolean(typeFilter.value) || limit !== "10");
+        }
+        typeFilter.addEventListener("change", refreshSearchSummary);
+        limitFilter.addEventListener("change", refreshSearchSummary);
+        const menus = [node("workspace-examples"), filterMenu];
+        function closeMenu(menu, restore = false) {
+            const summary = menu.querySelector("summary");
+            const hidesFocus = menu.contains(document.activeElement) && document.activeElement !== summary;
+            menu.open = false;
+            if (restore && hidesFocus)
+                summary?.focus({ preventScroll: true });
+        }
         for (const menu of menus)
-            menu.addEventListener("toggle", () => { if (menu.open)
-                for (const other of menus)
-                    if (other !== menu)
-                        other.open = false; });
+            menu.addEventListener("toggle", () => {
+                if (menu.open)
+                    for (const other of menus)
+                        if (other !== menu)
+                            closeMenu(other, true);
+            });
+        window.addEventListener("archsearch:modelsettingsopen", () => { for (const menu of menus)
+            closeMenu(menu); });
         document.addEventListener("keydown", (event) => {
-            if (event.defaultPrevented || event.key !== "Escape" || dialog.open)
+            if (event.defaultPrevented || event.key !== "Escape" || dialog.open || modelDialog.open)
                 return;
             const hadMenu = menus.some(menu => menu.open);
             for (const menu of menus)
-                menu.open = false;
+                if (menu.open)
+                    closeMenu(menu, true);
+            if (hadMenu)
+                event.preventDefault();
             if (!hadMenu && !collapsed && (sidebar.contains(document.activeElement) || document.activeElement === toggle)) {
                 event.preventDefault();
                 setSidebarCollapsed(true);
@@ -225,8 +251,9 @@ const ArchSearchWorkspace = (() => {
             new ResizeObserver(measure).observe(search);
         activate("results");
         measure();
+        refreshSearchSummary();
         return {
-            openDetail, closeDetail, setSidebarCollapsed,
+            openDetail, closeDetail, setSidebarCollapsed, refreshSearchSummary,
             isSidebarCollapsed: () => collapsed,
             revealMaps: () => { if (narrow() && !collapsed)
                 setSidebarCollapsed(true); },

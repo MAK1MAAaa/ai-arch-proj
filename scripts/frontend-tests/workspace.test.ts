@@ -6,7 +6,7 @@ import ts from 'typescript';
 
 class Element extends EventTarget {
   hidden = false; open = false; tabIndex = 0; isConnected = true; blocked = false; dataset: Record<string,string> = {};
-  textContent = ''; title = '';
+  textContent = ''; title = ''; value = ''; selectedOptions: Element[] = []; summary: Element|null = null;
   attributes = new Map<string,string>(); values = new Map<string,string>(); captures = new Set<number>(); classes = new Set<string>();
   contained = new Set<Element>();
   style = { setProperty: (key:string,value:string) => this.values.set(key,value) };
@@ -16,6 +16,7 @@ class Element extends EventTarget {
   onFocus = () => undefined;
   setAttribute(key:string,value:string) { this.attributes.set(key,value); }
   getBoundingClientRect() { return this.bounds; }
+  querySelector(_selector:string):Element|null { return this.summary; }
   focus() { this.onFocus(); }
   closest(_selector:string): Element|null { return this.blocked ? this : null; }
   contains(other: Element|null):boolean { return other === this || other !== null && [...this.contained].some(child=>child.contains(other)); }
@@ -37,14 +38,20 @@ interface Helper {
   setSidebarCollapsed(collapsed:boolean,options?:{focus?:boolean}):void;
   isSidebarCollapsed():boolean;
   revealMaps():void;
+  refreshSearchSummary():void;
 }
 const compiled=ts.transpileModule(readFileSync('src/archsearch/frontend/workspace.ts','utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.None}}).outputText;
 function setup(options:{saved?:string;small?:boolean;storageFails?:boolean}={}) {
-  const ids=['workspace','workspace-divider','workspace-sidebar','workspace-toggle-sidebar','workspace-toggle-sidebar-label','workspace-tab-results','workspace-tab-catalogue','workspace-results-view','workspace-catalogue-view','detail-dialog','detail-panel','close-detail','workspace-examples','llm-settings'];
+  const ids=['workspace','workspace-divider','workspace-sidebar','workspace-toggle-sidebar','workspace-toggle-sidebar-label','workspace-tab-results','workspace-tab-catalogue','workspace-results-view','workspace-catalogue-view','detail-dialog','detail-panel','close-detail','workspace-examples','llm-settings','search-filters','search-filter-summary','type-filter','limit-filter'];
   const nodes=new Map(ids.map(id=>[id,new Element()]));
   for(const id of ['workspace-tab-results','workspace-tab-catalogue','workspace-results-view','workspace-catalogue-view'])nodes.get('workspace-sidebar')!.contained.add(nodes.get(id)!);
   const document=new EventTarget() as EventTarget&{activeElement:Element|null;getElementById(id:string):Element|undefined;querySelector(selector:string):Element};
   document.activeElement=null; document.getElementById=id=>nodes.get(id); document.querySelector=()=>new Element();
+  for(const id of ['workspace-examples','search-filters']) {
+    const menu=nodes.get(id)!,summary=new Element();summary.onFocus=()=>{document.activeElement=summary;};menu.summary=summary;menu.contained.add(summary);
+  }
+  nodes.get('search-filters')!.contained.add(nodes.get('type-filter')!);nodes.get('search-filters')!.contained.add(nodes.get('limit-filter')!);
+  nodes.get('limit-filter')!.value='10';
   for(const node of nodes.values())node.onFocus=()=>{document.activeElement=node;};
   const window=new EventTarget() as EventTarget&{innerHeight:number;scrollY:number;matchMedia(query:string):{matches:boolean}};
   window.innerHeight=1000; window.scrollY=0; window.matchMedia=()=>({matches:options.small??false});
@@ -147,9 +154,37 @@ test('only a real backdrop click closes the native dialog',()=>{
   const h=setup();const dialog=h.node('detail-dialog');dialog.bounds={left:100,top:100,right:700,bottom:700,width:600,height:600};h.helper.openDetail();
   dialog.fire('click',{clientX:200,clientY:200});assert.equal(dialog.open,true);dialog.fire('click',{clientX:20,clientY:20});assert.equal(dialog.open,false);
 });
-test('popover menus close each other and Escape dismisses them when no modal is active',()=>{
-  const h=setup();h.node('workspace-examples').open=true;h.node('llm-settings').open=true;h.node('llm-settings').fire('toggle');assert.equal(h.node('workspace-examples').open,false);
-  const escape=new Event('keydown');Object.defineProperty(escape,'key',{value:'Escape'});h.document.dispatchEvent(escape);assert.equal(h.node('llm-settings').open,false);
+test('inline filter and example menus close each other and Escape returns focus from hidden fields to the summary',()=>{
+  const h=setup();h.node('workspace-examples').open=true;h.node('search-filters').open=true;h.node('search-filters').fire('toggle');assert.equal(h.node('workspace-examples').open,false);
+  h.node('type-filter').focus();
+  const escape=new Event('keydown',{cancelable:true});Object.defineProperty(escape,'key',{value:'Escape'});h.document.dispatchEvent(escape);
+  assert.equal(h.node('search-filters').open,false);assert.equal(escape.defaultPrevented,true);
+  assert.equal(h.document.activeElement,h.node('search-filters').summary);assert.equal(h.helper.isSidebarCollapsed(),false);
+});
+
+test('filter summaries reflect user changes and programmatic restoration without altering preferences',()=>{
+  const h=setup(),summary=h.node('search-filter-summary'),type=h.node('type-filter'),limit=h.node('limit-filter');
+  assert.equal(summary.textContent,'全部 · 10 条');
+  assert.equal(h.node('search-filters').dataset.active,'false');
+  const option=new Element();option.textContent='历史遗址';type.value='historic-site';type.selectedOptions=[option];type.fire('change');
+  assert.equal(summary.textContent,'历史遗址 · 10 条');
+  assert.equal(h.node('search-filters').dataset.active,'true');
+  limit.value='20';limit.fire('change');assert.equal(summary.textContent,'历史遗址 · 20 条');
+  type.value='';limit.value='50';h.helper.refreshSearchSummary();
+  assert.equal(summary.textContent,'全部 · 50 条');assert.equal(summary.title,'地点类型：全部；结果数：50 条');
+  assert.equal(h.node('search-filters').dataset.active,'true');limit.value='10';h.helper.refreshSearchSummary();assert.equal(h.node('search-filters').dataset.active,'false');
+  assert.equal(h.writes.length,0);
+});
+
+test('opening model settings folds inline menus and Escape leaves model dialog focus and sidebar state alone',()=>{
+  const h=setup(),model=h.node('llm-settings');
+  h.node('workspace-examples').open=true;h.node('search-filters').open=true;
+  h.window.dispatchEvent(new Event('archsearch:modelsettingsopen'));
+  assert.equal(h.node('workspace-examples').open,false);assert.equal(h.node('search-filters').open,false);
+  model.open=true;const field=new Element();h.document.activeElement=field;h.node('search-filters').open=true;
+  const escape=new Event('keydown',{cancelable:true});Object.defineProperty(escape,'key',{value:'Escape'});h.document.dispatchEvent(escape);
+  assert.equal(model.open,true);assert.equal(h.node('search-filters').open,true);assert.equal(escape.defaultPrevented,false);
+  assert.equal(h.document.activeElement,field);assert.equal(h.helper.isSidebarCollapsed(),false);assert.equal(h.writes.length,0);
 });
 
 test('the floating panel toggle hides controls and divider while preserving its active tab',()=>{
@@ -229,7 +264,8 @@ test('closing a detail whose opener is in a collapsed panel restores the visible
 test('Escape respects menus, modal dialogs and map popup focus before folding the panel',()=>{
   const h=setup();const escape=()=>{const event=new Event('keydown',{cancelable:true});Object.defineProperty(event,'key',{value:'Escape'});h.document.dispatchEvent(event);return event;};
   const map=new Element();h.document.activeElement=map;escape();assert.equal(h.helper.isSidebarCollapsed(),false);
-  h.node('workspace-tab-results').focus();h.node('llm-settings').open=true;escape();assert.equal(h.node('llm-settings').open,false);assert.equal(h.helper.isSidebarCollapsed(),false);
+  h.node('workspace-tab-results').focus();h.node('search-filters').open=true;escape();assert.equal(h.node('search-filters').open,false);assert.equal(h.helper.isSidebarCollapsed(),false);
+  h.node('llm-settings').open=true;escape();assert.equal(h.node('llm-settings').open,true);assert.equal(h.helper.isSidebarCollapsed(),false);h.node('llm-settings').open=false;
   h.helper.openDetail();escape();assert.equal(h.helper.isSidebarCollapsed(),false);h.helper.closeDetail();
   h.node('workspace-tab-results').focus();assert.equal(escape().defaultPrevented,true);assert.equal(h.helper.isSidebarCollapsed(),true);assert.equal(h.document.activeElement,h.node('workspace-toggle-sidebar'));
 });

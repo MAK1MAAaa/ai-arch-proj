@@ -39,13 +39,16 @@
               <input id="query" name="query" type="search" maxlength="500" required placeholder="例如：寻找古代港口遗址" aria-describedby="mode-explanation">
               <button id="search-button" class="primary-button" type="submit" disabled><span id="search-button-label">开始检索</span><span class="button-arrow" aria-hidden="true">↗</span></button>
             </div>
-            <div class="search-options">
-              <fieldset class="mode-switch"><legend class="visually-hidden">检索方式</legend><label><input type="radio" name="mode" value="semantic" checked><span>语义检索<span class="mode-label-en">SEMANTIC</span></span></label><label><input type="radio" name="mode" value="bm25"><span>关键词基线<span class="mode-label-en">BM25</span></span></label></fieldset>
+            <div class="search-options search-toolbar">
+              <fieldset class="mode-switch"><legend class="visually-hidden">检索方式</legend><label><input type="radio" name="mode" value="semantic" checked><span><span class="mode-short-label" aria-hidden="true">语义</span><span class="mode-full-label">语义检索<span class="mode-label-en">SEMANTIC</span></span></span></label><label><input type="radio" name="mode" value="bm25"><span><span class="mode-short-label" aria-hidden="true">关键词</span><span class="mode-full-label">关键词基线<span class="mode-label-en">BM25</span></span></span></label></fieldset>
+              <details id="search-filters" class="search-filters">
+                <summary><span>筛选</span><span id="search-filter-summary" class="search-filter-summary">全部类型 · 10 条</span></summary>
+                <div class="search-filters-body">
               <div class="filter-group type-filter-group"><label for="type-filter">地点类型</label><select id="type-filter" name="type"><option value="">全部类型</option></select><button id="clear-type" class="interaction-button filter-clear-button" type="button" disabled>清除类型</button></div>
               <div class="filter-group limit-filter"><label for="limit-filter">结果数</label><select id="limit-filter" name="limit"><option value="10">10 条</option><option value="20">20 条</option><option value="50">50 条</option></select></div>
-              <label class="llm-enhance-toggle"><input id="llm-enhance" type="checkbox" disabled><span>LLM 增强</span></label>
-            </div>
-            </form><details id="workspace-examples" class="workspace-examples"><summary>示例与说明</summary><div class="workspace-examples-body"><p id="mode-explanation" class="mode-explanation">多语言向量模型支持中文查询；返回的是相近候选，分数并非相关概率。</p>
+                </div>
+              </details>
+              <details id="workspace-examples" class="workspace-examples"><summary>示例<span class="visually-hidden">与说明</span></summary><div class="workspace-examples-body"><p id="mode-explanation" class="mode-explanation">多语言向量模型支持中文查询；返回的是相近候选，分数并非相关概率。</p>
             <div class="example-queries" role="group" aria-label="按地点类型尝试示例查询" aria-describedby="example-hint">
               <span>试着寻找</span>
               <button type="button" data-label="港口遗址" data-query-zh="寻找古代港口遗址" data-query-en="port" data-type="port"><span class="example-label">港口遗址</span><span aria-hidden="true">↗</span></button>
@@ -63,9 +66,15 @@
             </div>
             <p id="example-hint" class="example-hint">语义检索可用中文问题，专名可保留原文；示例同步地点类型并保留当前地域条件。</p>
           </div></details>
-          <details id="llm-settings" class="llm-settings">
-            <summary><span>查询增强与模型设置</span><span id="llm-active-model">LLM 未配置</span></summary>
+              <button id="llm-open-settings" class="llm-settings-trigger" type="button" aria-haspopup="dialog" aria-controls="llm-settings"><span>模型</span><span id="llm-active-model">未配置</span><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m6 3 5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            </div>
+          </form>
+          <dialog id="llm-settings" class="llm-settings-dialog" aria-labelledby="llm-settings-title">
+            <header class="llm-settings-heading"><div><span class="eyebrow">查询增强</span><h2 id="llm-settings-title">模型配置</h2></div><button id="llm-close-settings" class="interaction-button" type="button">关闭<span class="visually-hidden">模型配置</span></button></header>
+            <p id="llm-config-summary" class="llm-config-summary">LLM 未配置</p>
+            <div class="llm-dialog-toggle"><label class="llm-enhance-toggle"><input id="llm-enhance" type="checkbox" disabled><span>在检索中启用 LLM 增强</span></label></div>
             <form id="llm-settings-form" class="llm-settings-form" autocomplete="off" aria-busy="false">
+              <div class="llm-settings-body">
               <p class="llm-method-note">让模型改写与扩展检索词，再从本地语料检索并融合排名。改写仅用于发现资料，不能替代来源证据。</p>
               <div class="llm-config-grid">
                 <div class="llm-field"><label for="llm-provider">模型服务</label><select id="llm-provider"><option value="ollama">本地 Ollama</option><option value="openai">OpenAI 兼容 API</option></select></div>
@@ -74,12 +83,14 @@
                 <div class="llm-field llm-model-field"><label for="llm-model">可选模型</label><select id="llm-model" disabled><option value="">先获取模型列表</option></select></div>
               </div>
               <p id="llm-provider-note" class="llm-hint">从 Windows 后端连接本机 Ollama，仅获取已有模型。</p>
-              <div class="llm-actions"><button id="llm-refresh-models" class="interaction-button" type="button">刷新模型列表</button><button id="llm-apply" class="interaction-button llm-apply" type="submit" disabled>应用所选模型</button><button id="llm-clear-config" class="interaction-button" type="button" disabled>清除已应用模型与密钥</button></div>
+
               <p id="llm-feedback" class="llm-feedback" role="status" aria-live="polite">正在检查模型配置；基础检索继续可用。</p>
               <p id="llm-error" class="llm-error" role="alert" hidden></p>
               <p class="llm-hint">.env 启动配置可自动加载，页面修改只保留当前服务会话；密钥不写入浏览器存储、分享链接或导出。</p>
+              </div>
+              <div class="llm-actions"><button id="llm-refresh-models" class="interaction-button" type="button">刷新模型列表</button><button id="llm-apply" class="interaction-button llm-apply" type="submit" disabled>应用所选模型</button><button id="llm-clear-config" class="interaction-button" type="button" disabled>清除已应用模型与密钥</button></div>
             </form>
-          </details>
+          </dialog>
           <div id="preparation-note" class="notice preparation-note" hidden><span class="notice-label">语义检索待准备</span><div><p id="preparation-reason">请按 README 完成本地模型与索引准备，然后刷新运行状态。</p><p>你也可以选择“关键词基线”检索现有原文资料。</p></div></div>
           <div id="request-error" class="notice error-notice" role="alert" hidden></div>
           <div id="retry-panel" class="retry-panel" hidden><button id="retry-search" class="interaction-button" type="button" disabled>按原条件重试</button></div>
