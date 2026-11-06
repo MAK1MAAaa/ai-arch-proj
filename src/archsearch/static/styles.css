@@ -2145,3 +2145,230 @@
   outline: 2px solid var(--accent-dark);
   outline-offset: 2px;
 }
+
+/* Reference material stays compact until the reader opens a section. */
+.research-workbench .workspace-reference {
+  margin: 0 0 16px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+}
+.research-workbench .workspace-reference > summary,
+.research-workbench .workspace-reference .reference-panel > summary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 52px;
+  padding: 12px 18px;
+  list-style: none;
+  cursor: pointer;
+}
+.research-workbench .workspace-reference > summary::-webkit-details-marker,
+.research-workbench .workspace-reference .reference-panel > summary::-webkit-details-marker {
+  display: none;
+}
+.research-workbench .workspace-reference > summary::after,
+.research-workbench .workspace-reference .reference-panel > summary::after {
+  content: "";
+  flex: 0 0 7px;
+  width: 7px;
+  height: 7px;
+  margin: 0 3px 4px auto;
+  border-right: 1.5px solid var(--accent-dark);
+  border-bottom: 1.5px solid var(--accent-dark);
+  transform: rotate(45deg);
+}
+.research-workbench .workspace-reference[open] > summary::after,
+.research-workbench .workspace-reference .reference-panel[open] > summary::after {
+  margin-top: 6px;
+  transform: rotate(225deg);
+}
+.research-workbench .workspace-reference summary:focus-visible {
+  outline: 2px solid var(--accent-dark);
+  outline-offset: -3px;
+  background: var(--paper);
+}
+.research-workbench .workspace-reference > summary:hover,
+.research-workbench .workspace-reference .reference-panel > summary:hover {
+  background: var(--paper);
+}
+.research-workbench .workspace-reference[open] > summary {
+  border-bottom: 1px solid var(--line);
+}
+.workspace-reference .reference-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+.workspace-reference .reference-summary-meta {
+  margin-left: 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+.workspace-reference .reference-body {
+  padding: 0 18px;
+}
+.workspace-reference .reference-panel + .reference-panel {
+  border-top: 1px solid var(--line);
+}
+.research-workbench .workspace-reference .reference-panel > summary {
+  min-height: 66px;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+.workspace-reference .reference-index {
+  flex: 0 0 26px;
+  color: var(--accent-dark);
+  font: italic 12px/1.5 Georgia, serif;
+}
+.workspace-reference .reference-panel-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.workspace-reference .reference-panel-title strong {
+  font-size: 13px;
+  font-weight: 500;
+}
+.workspace-reference .reference-panel-title > span {
+  color: var(--muted);
+  font-size: 11px;
+}
+.workspace-reference .reference-content {
+  padding: 0 2px 22px 42px;
+  color: #5f655b;
+  font-size: 12px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+.workspace-reference .reference-intro {
+  margin: 0 0 14px;
+}
+.workspace-reference .reference-intro strong,
+.workspace-reference .reference-steps strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+.workspace-reference .reference-steps {
+  margin: 0;
+  padding-left: 20px;
+}
+.workspace-reference .reference-steps li + li {
+  margin-top: 10px;
+}
+.workspace-reference .reference-steps li::marker {
+  color: var(--accent-dark);
+  font-family: Georgia, serif;
+}
+.workspace-reference .reference-tip {
+  margin: 16px 0 0;
+  padding-left: 12px;
+  border-left: 2px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+}
+.workspace-reference .reference-limits {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 28px;
+  margin: 0;
+}
+.workspace-reference .reference-limits > div {
+  min-width: 0;
+}
+.workspace-reference .reference-limits dt {
+  margin: 0 0 5px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 500;
+}
+.workspace-reference .reference-limits dd {
+  margin: 0;
+  font-size: 12px;
+}
+.workspace-reference .reference-source-group + .reference-source-group {
+  margin-top: 22px;
+}
+.workspace-reference .reference-source-group h3 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 600;
+}
+.workspace-reference .reference-source-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.workspace-reference .reference-source-list > li {
+  min-width: 0;
+  padding: 8px 0;
+  border-top: 1px dotted var(--line);
+}
+.workspace-reference .reference-source-list a {
+  display: inline-block;
+  min-height: 26px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.workspace-reference .reference-source-list .reference-source-notice {
+  grid-column: 1 / -1;
+  padding-top: 12px;
+}
+.workspace-reference .reference-source-notice h4 {
+  margin: 0 0 5px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 500;
+}
+.workspace-reference .reference-source-label {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.workspace-reference .reference-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px 18px;
+  padding: 14px 2px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+}
+.workspace-reference .reference-footer-brand {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+@media (max-width: 700px) {
+  .workspace-reference .reference-summary-meta {
+    display: none;
+  }
+  .workspace-reference .reference-body {
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+  .workspace-reference .reference-content {
+    padding-left: 2px;
+    font-size: 12px;
+  }
+  .workspace-reference .reference-limits,
+  .workspace-reference .reference-source-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .workspace-reference .reference-limits {
+    gap: 18px;
+  }
+  .workspace-reference .reference-source-list {
+    gap: 4px;
+  }
+}
