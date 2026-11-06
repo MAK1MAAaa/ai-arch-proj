@@ -46,8 +46,8 @@ function setup(options:{saved?:string;small?:boolean;storageFails?:boolean}={}) 
   const document=new EventTarget() as EventTarget&{activeElement:Element|null;getElementById(id:string):Element|undefined;querySelector(selector:string):Element};
   document.activeElement=null; document.getElementById=id=>nodes.get(id); document.querySelector=()=>new Element();
   for(const node of nodes.values())node.onFocus=()=>{document.activeElement=node;};
-  const window=new EventTarget() as EventTarget&{innerHeight:number;matchMedia(query:string):{matches:boolean}};
-  window.innerHeight=1000; window.matchMedia=()=>({matches:options.small??false});
+  const window=new EventTarget() as EventTarget&{innerHeight:number;scrollY:number;matchMedia(query:string):{matches:boolean}};
+  window.innerHeight=1000; window.scrollY=0; window.matchMedia=()=>({matches:options.small??false});
   const writes:{key:string;value:string}[]=[]; let changes=0,closed=0;
   window.addEventListener('archsearch:workspacechange',()=>changes++);window.addEventListener('archsearch:detailclose',()=>closed++);
   const context=createContext({window,document,HTMLElement:Element,Event,localStorage:{getItem:()=>{if(options.storageFails)throw new Error('blocked');return options.saved??null;},setItem:(key:string,value:string)=>{if(options.storageFails)throw new Error('blocked');writes.push({key,value});}}});
@@ -77,6 +77,27 @@ test('programmatic activation restores focus from a panel it hides while preserv
   const resultButton=new Element();h.node('workspace-results-view').contained.add(resultButton);h.document.activeElement=resultButton;
   h.helper.activateCatalogue({focus:false});assert.equal(h.document.activeElement,h.node('workspace-tab-catalogue'));
   const map=new Element();h.document.activeElement=map;h.helper.activateResults({focus:false});assert.equal(h.document.activeElement,map);
+});
+
+test('resizing while reading below the workspace keeps height independent of scroll and returns cleanly to the top',()=>{
+  const h=setup({saved:'{"sidebar_width":500}'}),grid=h.node('workspace');
+  const reader=new Element();h.document.activeElement=reader;
+  assert.equal(grid.values.get('--workspace-height'),'806px');
+  h.window.innerHeight=844;
+  for(const scrollY of [1058,1960,900]) {
+    h.window.scrollY=scrollY;grid.bounds.top=180-scrollY;
+    h.window.dispatchEvent(new Event('resize'));
+    assert.equal(grid.values.get('--workspace-height'),'650px');
+    assert.equal(h.node('workspace-divider').attributes.get('aria-valuenow'),'500');
+    assert.equal(h.document.activeElement,reader);
+  }
+  h.window.scrollY=0;grid.bounds.top=180;h.window.innerHeight=1000;
+  h.window.dispatchEvent(new Event('resize'));
+  assert.equal(grid.values.get('--workspace-height'),'806px');
+  h.window.innerHeight=400;h.window.scrollY=1200;grid.bounds.top=-1020;
+  h.window.dispatchEvent(new Event('resize'));
+  assert.equal(grid.values.get('--workspace-height'),'430px');
+  assert.equal(h.writes.length,0);
 });
 test('keyboard resizing clamps dimensions and stores only explicit layout preferences',()=>{
   const h=setup();const divider=h.node('workspace-divider');divider.fire('keydown',{key:'End'});assert.equal(divider.attributes.get('aria-valuenow'),'580');

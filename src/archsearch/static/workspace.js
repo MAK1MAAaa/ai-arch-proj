@@ -99,7 +99,8 @@ const ArchSearchWorkspace = (() => {
             changed();
         }
         function measure() {
-            const available = Math.max(430, window.innerHeight - grid.getBoundingClientRect().top - 14);
+            const documentTop = grid.getBoundingClientRect().top + window.scrollY;
+            const available = Math.max(430, window.innerHeight - documentTop - 14);
             grid.style.setProperty("--workspace-height", `${Math.round(available)}px`);
             if (narrow() || collapsed)
                 stopDrag(true);
