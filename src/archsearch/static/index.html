@@ -13,6 +13,7 @@
     <script defer src="/static/map-view.js"></script>
     <script defer src="/static/history.js"></script>
     <script defer src="/static/modern-boundaries.js"></script>
+    <script defer src="/static/density.js"></script>
     <script defer src="/static/explore.js"></script>
     <script defer src="/static/polar-view.js"></script>
     <script defer src="/static/registered-areas.js"></script>
@@ -176,14 +177,15 @@
               <summary><span>图层与说明</span><span class="map-tools-summary-note">底图 · 同步 · 图例与来源</span></summary>
               <div class="map-tools-body">
                 <div class="comparison-toolbar"><p>现代位置与来源年份的政权疆域概略对照。</p><label><input id="comparison-sync" type="checkbox"><span>同步地图中心（缩放始终一致）</span></label></div>
+                <p class="map-density-note">方框数字表示聚合定位点数，并非遗址数量；点击查看真实资料或放大。两图按各自显示空间聚合，历史图为政权名称留白；背景年不用于筛选遗址。圆形编号保留检索排名，聚合位置仅为示意。</p>
                 <section class="map-tools-section" aria-labelledby="modern-tools-title"><h4 id="modern-tools-title">现代底图与国界</h4><div class="comparison-basemap-controls"><button id="modern-basemap-osm" class="interaction-button" type="button" aria-pressed="true">现代 OSM</button><button id="modern-basemap-natural" class="interaction-button" type="button" aria-pressed="false">本地自然轮廓</button></div><div class="modern-boundaries-feedback"><p id="modern-boundaries-status" role="status" aria-live="polite">正在加载本地现代国界参考。</p></div><p class="comparison-modern-legend"><span class="modern-border-swatch"></span>现代陆地国界参考 <span class="modern-border-swatch is-disputed"></span>虚线：来源争议／控制等线；不含海洋划界。</p></section>
-                <section class="map-tools-section" aria-labelledby="historical-tools-title"><h4 id="historical-tools-title">历史疆域与适用范围</h4><p class="comparison-history-legend"><span class="polity-fill-swatch"></span>实线与填色：来源政权范围 <span class="polity-composite-swatch"></span>虚线：复合政体；区域缩放显示原名，点击核验来源。</p><p id="history-source" class="history-source">来源信息在地图视图成功加载后显示。</p><p id="history-limit-note">历史政权疆域概略来自Cliopatria，现代自然轮廓来自Natural Earth；不复原古海岸，不据代表点推断历史政治归属。</p></section>
+                <section class="map-tools-section" aria-labelledby="historical-tools-title"><h4 id="historical-tools-title">历史疆域与适用范围</h4><p class="comparison-history-legend"><span class="polity-fill-swatch"></span>实线与填色：来源政权范围 <span class="polity-composite-swatch"></span>虚线：复合政体；常驻名称按可用空间择显，点击疆域查看完整名称与来源。</p><p id="history-source" class="history-source">来源信息在地图视图成功加载后显示。</p><p id="history-limit-note">历史政权疆域概略来自Cliopatria，现代自然轮廓来自Natural Earth；不复原古海岸，不据代表点推断历史政治归属。</p></section>
               </div>
             </details>
             </header>
 
             <div class="map-selection-bar" role="group" aria-label="候选浏览"><p id="selection-summary" class="selection-summary">选择候选，查看地图与原始资料</p><div id="selection-actions" class="selection-actions" hidden><button id="open-selected-detail" class="interaction-button" type="button" disabled>查看详情</button><button id="previous-result" class="interaction-button" type="button" disabled>上一条</button><button id="next-result" class="interaction-button" type="button" disabled>下一条</button><button id="locate-selected" class="interaction-button" type="button" disabled>定位选中</button></div></div>
-            <p id="map-keyboard-help" class="map-keyboard-help visually-hidden">方向键平移，+ / − 缩放；编号标记 Enter / 空格打开详情。全库圆点可通过目录列表用键盘选择；悬停仅预览。</p>
+            <p id="map-keyboard-help" class="map-keyboard-help visually-hidden">方向键平移，+ / − 缩放；编号标记 Enter / 空格打开详情。聚合方框 Enter / 空格查看成员，也可通过全库目录用键盘选择真实资料；悬停仅预览。</p>
             <div id="tile-warning" class="tile-warning" role="status" hidden><span id="tile-warning-text">底图暂未加载；检索结果与遗址标记仍可使用。</span><button id="retry-tiles" type="button">重试底图</button></div>
             <section id="comparison-evidence" class="comparison-evidence" aria-label="选中资料与年代证据" hidden><div><strong id="comparison-evidence-title"></strong><p id="comparison-evidence-date"></p></div><details class="comparison-evidence-more"><summary>查看来源摘录</summary><blockquote id="comparison-evidence-quote"></blockquote><div id="comparison-evidence-sources" class="comparison-evidence-sources"></div></details><button id="comparison-evidence-open" class="interaction-button" type="button">查看完整年代证据</button></section>
             <div id="map-comparison" class="comparison-columns">
@@ -199,7 +201,7 @@
               <section class="comparison-frame historical-frame" aria-labelledby="historical-map-title"><header class="comparison-map-heading"><div class="map-frame-title"><h3 id="historical-map-title">历史政权疆域概略</h3><p id="comparison-history-year" class="map-year-badge" role="status" aria-live="polite">等待成功历史视图</p></div><section id="history-controls" class="history-auto-status" aria-label="选中遗址年代与历史地图状态"><p id="history-linkage-status" class="history-linkage-status" role="status" aria-live="polite">正在核对历史背景与所选资料的关联。</p><p id="history-applied-year" class="history-applied-year visually-hidden" role="status" aria-live="polite">历史地图尚未加载</p><p id="history-feedback" class="history-feedback visually-hidden" role="status" aria-live="polite">选择遗址后自动对照已核验阶段；未知与区间年代保留其证据状态。</p><p id="history-error" class="history-error" role="alert" hidden></p><button id="history-retry" class="interaction-button" type="button" hidden>重试地图视图</button></section></header><div class="map-shell comparison-history-shell"><div id="history-map" tabindex="0" aria-label="独立历史政权疆域地图；不用于目录矩形筛选" aria-describedby="history-limit-note"></div><div class="map-caption"><span class="map-caption-dot"></span><span id="history-map-caption">等待历史政权资料</span></div></div></section>
             </div>
 
-            <footer class="map-footnote"><span><span class="legend-dot"></span>编号：检索候选 <span class="catalogue-legend-dot"></span>小圆点：源定位点／必要代表点</span><span id="viewport-count" class="viewport-count" title="仅按本次返回候选的代表点中心统计；不包括全库底层圆点，不改变检索与排序。" hidden>当前地图范围内 0 / 本次返回 0</span><span>定位点，非精确发掘坐标</span></footer>
+            <footer class="map-footnote"><span><span class="legend-dot"></span>圆形编号：检索排名 <span class="catalogue-cluster-swatch" aria-hidden="true">N</span>方框：聚合点数 <span class="catalogue-legend-dot"></span>小点：真实定位点</span><span id="viewport-count" class="viewport-count" title="仅按本次返回候选的代表点中心统计；不包括全库底层圆点，不改变检索与排序。" hidden>当前地图范围内 0 / 本次返回 0</span><span>定位点，非精确发掘坐标</span></footer>
           </div></section><details id="workspace-reference" class="workspace-reference">
             <summary><span class="reference-title">使用说明与来源许可</span><span class="reference-summary-meta">操作指南 · 阅读边界 · 数据署名</span></summary>
             <div class="reference-body">

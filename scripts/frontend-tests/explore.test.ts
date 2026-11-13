@@ -47,6 +47,7 @@ const researchHelpers = runInContext(`${researchCompiled.outputText}\nArchSearch
 const helpers = runInContext(`${compiled.outputText}\nArchSearchExplore;`, createContext({ URL, ArchSearchResearch: researchHelpers })) as Helpers;
 const mapCompiled = ts.transpileModule(readFileSync(new URL('../../src/archsearch/frontend/map-view.ts', import.meta.url), 'utf8'), { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.None } });
 const mapHelpers = runInContext(`${mapCompiled.outputText}\nArchSearchMapView;`, createContext({})) as { wrapCoordinates(points: [number, number][]): [number, number][] };
+const densityCompiled = ts.transpileModule(readFileSync(new URL('../../src/archsearch/frontend/density.ts', import.meta.url), 'utf8'), { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.None } });
 const plain = <T>(value: T): T => JSON.parse(JSON.stringify(value)) as T;
 
 test('global exploration defaults are independent of a query, model or historical year', () => {
@@ -92,6 +93,7 @@ class FakeElement extends EventTarget {
   checked = true;
   type = '';
   tabIndex = 0;
+  isConnected = true;
   scrollTop = 0;
   style: Record<string, string> = {};
   dataset: Record<string, string> = {};
@@ -106,13 +108,18 @@ class FakeElement extends EventTarget {
   setAttribute(key: string, value: string): void { this.attributes.set(key, value); }
   contains(node: FakeElement | null): boolean { return node === this || this.children.some(child => child.contains(node)); }
   focus(_options?: FocusOptions): void { this.onFocus?.(); }
+  getBoundingClientRect() { return {left:0,top:0,right:600,bottom:400,width:600,height:400}; }
   fire(type: string): void { this.dispatchEvent(new Event(type)); }
   set innerHTML(_value: string) { throw new Error('Unsafe HTML insertion'); }
 }
 
 class FakeLayer {
   members: FakeCircle[] = [];
-  addTo(map: FakeMap): this { map.layers.add(this); return this; }
+  handlers=new Map<string,()=>void>();
+  on(name:string,handler:()=>void):this { this.handlers.set(name,handler);return this; }
+  addTo(map: FakeMap): this { map.layers.add(this); this.handlers.get('add')?.(); return this; }
+  clearLayers():this {this.members=[];return this;}
+  removeLayer(layer:FakeCircle):this {this.members=this.members.filter(item=>item!==layer);return this;}
 }
 
 class FakeCircle {
@@ -126,6 +133,20 @@ class FakeCircle {
   addTo(layer: FakeLayer): this { layer.members.push(this); return this; }
   setRadius(radius: number): this { this.options.radius = radius; return this; }
   setStyle(style: Record<string, unknown>): this { Object.assign(this.options, style); return this; }
+  bringToFront():this {return this;}
+}
+
+class FakeMarker extends FakeCircle {
+  element=new FakeElement('div');
+  getElement(){return this.element;}
+  setLatLng(value:{lat:number;lng:number}){this.location=[value.lat,value.lng];return this;}
+  override addTo(layer:FakeLayer):this {super.addTo(layer);this.handlers.get('add')?.();return this;}
+}
+class FakePopup extends FakeMarker {
+  content=new FakeElement('section'); map:FakeMap|null=null;
+  setContent(content:FakeElement){this.content=content;this.element.children=[content];return this;}
+  openOn(map:FakeMap){this.map=map;map.popup=this;return this;}
+  remove(){if(this.map)this.map.popup=null;return this;}
 }
 
 class FakeMap {
@@ -134,12 +155,23 @@ class FakeMap {
   container = new FakeElement();
   lastBounds: unknown = null;
   bounds: [number, number, number, number] = [-180, -60, 180, 85];
+  zoom=9;center={lat:0,lng:0};listeners=new Map<string,(()=>void)[]>();
+  popup:FakePopup|null=null;
+  on(names:string,callback:()=>void):this {for(const name of names.split(' '))this.listeners.set(name,[...(this.listeners.get(name)??[]),callback]);return this;}
+  off(names:string,callback:()=>void):this {for(const name of names.split(' '))this.listeners.set(name,(this.listeners.get(name)??[]).filter(item=>item!==callback));return this;}
+  fire(name:string):this {for(const callback of this.listeners.get(name)??[])callback();return this;}
+  getZoom(){return this.zoom;}getCenter(){return this.center;}
+  getSize(){const world=256*2**this.zoom;return{x:world*3,y:world};}
+  project(value:[number,number]|{lat:number;lng:number},zoom=this.zoom){const point=Array.isArray(value)?{lat:value[0],lng:value[1]}:value,world=256*2**zoom;return{x:(point.lng+180)/360*world,y:(90-point.lat)/180*world};}
+  unproject(value:[number,number],zoom=this.zoom){const world=256*2**zoom;return{lng:value[0]/world*360-180,lat:90-value[1]/world*180};}
+  layerPointToContainerPoint(point:[number,number]){return{x:point[0],y:point[1]};}
+  stop(){}setView(value:{lat:number;lng:number},zoom:number){this.center={...value};this.zoom=zoom;this.fire('zoomend').fire('moveend');return this;}
   getBounds() { return { getWest: () => this.bounds[0], getSouth: () => this.bounds[1], getEast: () => this.bounds[2], getNorth: () => this.bounds[3] }; }
   getPane(name: string): FakeElement | undefined { return this.panes.get(name); }
   createPane(name: string): FakeElement { const node = new FakeElement(); this.panes.set(name, node); return node; }
   getContainer(): FakeElement { return this.container; }
   hasLayer(layer: FakeLayer): boolean { return this.layers.has(layer); }
-  removeLayer(layer: FakeLayer): this { this.layers.delete(layer); return this; }
+  removeLayer(layer: FakeLayer): this { this.layers.delete(layer); layer.handlers.get('remove')?.(); return this; }
   fitBounds(bounds: unknown): void { this.lastBounds = bounds; }
 }
 
@@ -190,12 +222,14 @@ function setup(withMap = true, initialBoundsError: string | null = null) {
   const boundsActions: number[] = [];
   const circles: FakeCircle[] = [];
   const map = withMap ? new FakeMap() : null;
-  const context = createContext({ document: doc, URL, URLSearchParams, AbortController, ArchSearchResearch: researchHelpers,
+  const context = createContext({ document: doc, URL, URLSearchParams, AbortController, ArchSearchResearch: researchHelpers,requestAnimationFrame:(fn:()=>void)=>fn(),
     fetch: (url: string, options: { signal: AbortSignal }) => new Promise((resolve, reject) => pending.push({ url, signal: options.signal, resolve, reject, done: false })),
-    L: { canvas: (options: unknown) => options, layerGroup: () => new FakeLayer(), circleMarker: (location: [number, number], options: Record<string, unknown>) => { const marker = new FakeCircle(location, options); circles.push(marker); return marker; }, latLngBounds: (points: unknown) => points },
+    L: { canvas: (options: unknown) => options, layerGroup: () => new FakeLayer(), circleMarker: (location: [number, number], options: Record<string, unknown>) => { const marker = new FakeCircle(location, options); circles.push(marker); return marker; },
+      marker:(location:{lat:number;lng:number},options:Record<string,unknown>)=>new FakeMarker([location.lat,location.lng],options),divIcon:(options:unknown)=>options,
+      popup:()=>new FakePopup([0,0],{}),latLngBounds: (points: unknown) => points },
     ArchSearchMapView: mapHelpers,
   });
-  const api = runInContext(`${compiled.outputText}\nArchSearchExplore;`, context) as Helpers;
+  const api = runInContext(`${densityCompiled.outputText}\n${compiled.outputText}\nArchSearchExplore;`, context) as Helpers;
   const controller = api.create({ map, initialBoundsError, onBoundsAction: () => boundsActions.push(1), onSelect: (id, opener, options) => selects.push({ id, opener, options: options ? plain(options) : undefined }), onFilterChange: state => filters.push(plain(state)), onStateChange: state => changes.push(plain(state)), onCommittedState: state => commits.push(plain(state)), onCatalogue: points => catalogues.push(points) });
   const node = (id: string) => { const found = nodes.get(id); assert.ok(found); return found; };
   const response = (request: Pending, value: unknown, status = 200) => { request.done = true; request.resolve({ ok: status < 400, status, json: async () => value }); };
@@ -342,8 +376,8 @@ test('pagination exposes every matching record without assigning scores or chang
   const app = setup(); await app.boot(many);
   assert.equal(app.node('explore-list').children.length, 50); assert.equal(app.node('explore-next').disabled, false);
   const originalLayer = [...app.map!.layers][0];
-  const originalCircles = app.circles.length;
   app.controller.select('whc:1');
+  const originalCircles = app.circles.length;
   const next = app.controller.setState({ offset: 50 }, { notify: true }); app.respondAll(many, { offset: 50 }); await next;
   assert.equal(app.node('explore-list').children.length, 10); assert.equal(app.node('explore-next').disabled, true);
   assert.equal(app.node('explore-list').children[0].children[0].dataset.siteId, 'whc:51');
@@ -558,10 +592,16 @@ test('different heritage identities at a shared source coordinate remain indepen
   shared[1].source_points = [[179, -18]];
   shared[1].source_location_records = [{ source_index: 0, coordinate: [179, -18], name: 'Different heritage record', ref: '' }];
   const app = setup(); await app.boot(shared, { ...spatial, points: 4, distinct_points: 3, duplicate_points: 1, display_points: 5 });
-  assert.equal(app.circles.length, 15);
-  app.circles[0].handlers.get('click')?.(); app.circles[6].handlers.get('click')?.();
+  assert.equal(app.map!.container.dataset.densityLogicalPoints, '5');
+  const cluster=[...app.map!.layers][0].members.find(marker=>marker.options.pane==='catalogue-density-clusters');assert.ok(cluster);
+  cluster.handlers.get('click')?.();assert.ok(app.map!.popup);
+  const descendants=(element:FakeElement):FakeElement[]=>[element,...element.children.flatMap(descendants)];
+  const buttons=descendants(app.map!.popup!.content).filter(element=>element.dataset.siteId);
+  const first=buttons.find(button=>button.dataset.siteId==='whc:1'),second=buttons.find(button=>button.dataset.siteId==='wd:Q2');assert.ok(first);assert.ok(second);
+  first.fire('click');second.fire('click');
   assert.deepEqual(app.selects.map(selection => selection.id), ['whc:1', 'wd:Q2']);
-  app.controller.select('wd:Q2'); assert.equal(app.circles[0].options.radius, 3.2); assert.equal(app.circles[6].options.radius, 5);
+  app.controller.select('wd:Q2');assert.equal(second.attributes.get('aria-pressed'),'true');
+  assert.ok([...app.map!.layers][0].members.some(marker=>marker.options.radius===5));
 });
 
 test('source coordinates outside Mercator and unknown records stay out of the main layer without clipping', async () => {
@@ -613,10 +653,11 @@ test('unprepared source locations explicitly fall back to existing representativ
 test('pagination counts heritage records rather than source points and does not rebuild the shared layer', async () => {
   const many = Array.from({ length: 60 }, (_, index): Point => ({ ...plain(multiPoints[0]), id: `whc:${index + 1}`, title: `Site ${String(index + 1).padStart(3, '0')}` }));
   const app = setup(); await app.boot(many, { ...spatial, records: 60, points: 180, distinct_points: 120, duplicate_points: 60, display_points: 120 });
-  assert.equal(app.node('explore-list').children.length, 50); assert.equal(app.circles.length, 360);
+  assert.equal(app.node('explore-list').children.length, 50);assert.equal(app.map!.container.dataset.densityLogicalPoints,'120');
+  assert.equal(app.circles.length,0);assert.match(app.node('explore-feedback').textContent,/主图 120 个源定位点/u);
   const layer = [...app.map!.layers][0]; const next = app.controller.setState({ offset: 50 }); app.respondAll(many, { offset: 50 }); await next;
   assert.equal(app.node('explore-list').children.length, 10); assert.match(app.node('explore-page').textContent, /51—60.*共 60 条/u);
-  assert.equal([...app.map!.layers][0], layer); assert.equal(app.circles.length, 360);
+  assert.equal([...app.map!.layers][0], layer); assert.equal(app.circles.length,0);assert.equal(app.map!.container.dataset.densityLogicalPoints,'120');
 });
 
 test('a source-qualified supplement with unknown position remains in the directory and country facets', async () => {

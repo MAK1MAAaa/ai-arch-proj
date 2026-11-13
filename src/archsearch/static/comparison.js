@@ -46,15 +46,16 @@ const ArchSearchComparison = (() => {
                 mapSizes.set(map, { x: size.x, y: size.y });
             }
         const markers = new Map();
-        const circles = new Map();
         const candidateLayer = historical && typeof L !== "undefined" ? L.layerGroup().addTo(historical) : null;
-        const catalogueLayer = historical && typeof L !== "undefined" ? L.layerGroup().addTo(historical) : null;
         let sourceRenderer = null;
         if (historical && typeof L !== "undefined") {
             const pane = historical.getPane("history-boundaries") ?? historical.createPane("history-boundaries");
             pane.style.zIndex = "350";
             sourceRenderer = L.canvas({ pane: "history-boundaries" });
         }
+        const density = historical && sourceRenderer ? ArchSearchDensity.create({ map: historical, pane: "history-boundaries", renderer: sourceRenderer, cellSize: 128,
+            onSelect: (id, opener) => onSelect(id, opener, { moveMap: false }) }) : null;
+        const catalogueLayer = density?.layer.addTo(historical) ?? null;
         if (modern) {
             const pane = modern.getPane("comparison-modern-land") ?? modern.createPane("comparison-modern-land");
             pane.style.zIndex = "190";
@@ -227,9 +228,8 @@ const ArchSearchComparison = (() => {
                 marker.getElement()?.setAttribute("aria-pressed", String(active));
                 marker.setZIndexOffset(active ? 1500 : 0);
             }
-            for (const [id, group] of circles)
-                for (const circle of group)
-                    circle.setStyle({ fillColor: id === selected?.id ? "#a55339" : "#536a52", fillOpacity: id === selected?.id ? 0.95 : 0.55 });
+            density?.select(selected?.id ?? null);
+            historical?.fire("archsearch:markerschange");
         }
         function setCandidates(values, fit = true) {
             candidateValues = values;
@@ -279,24 +279,13 @@ const ArchSearchComparison = (() => {
             if (signature === catalogueSignature)
                 return;
             catalogueSignature = signature;
-            catalogueLayer?.clearLayers();
-            circles.clear();
-            if (!historical || !catalogueLayer || !visible)
+            if (!historical || !catalogueLayer || !density)
                 return;
-            for (const value of values) {
-                if (ArchSearchMapView.locationStatus(value.coordinate) !== "mapped")
-                    continue;
-                for (const offset of [-360, 0, 360]) {
-                    const circle = L.circleMarker([value.coordinate[1], value.coordinate[0] + offset], { renderer: sourceRenderer ?? undefined,
-                        pane: "history-boundaries", radius: 2.2, weight: 0.5, color: "#536a52", fillColor: "#536a52", fillOpacity: 0.55 });
-                    const label = document.createElement("span");
-                    label.textContent = `${value.title} · ${value.representative ? "参考代表点" : "来源定位点"}`;
-                    circle.bindTooltip(label).on("click", () => onSelect(value.id, null, { moveMap: false })).addTo(catalogueLayer);
-                    const group = circles.get(value.id) ?? [];
-                    group.push(circle);
-                    circles.set(value.id, group);
-                }
-            }
+            density.setData(values);
+            if (visible && !historical.hasLayer(catalogueLayer))
+                catalogueLayer.addTo(historical);
+            else if (!visible && historical.hasLayer(catalogueLayer))
+                historical.removeLayer(catalogueLayer);
             renderSelection();
         }
         function setSelection(value, focus = false) {

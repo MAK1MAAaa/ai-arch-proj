@@ -26,7 +26,10 @@ interface Helpers {
   frameTargets(year: number, changes: number[], minimum?: number): { previous: number | null; next: number | null };
   colorForName(name: string): string;
   worldCopies(value: unknown): unknown;
+  layoutPolityLabels(candidates: LabelCandidate[], viewport: { width: number; height: number }, exclusions?: LabelRect[]): number[];
 }
+interface LabelRect { x: number; y: number; width: number; height: number }
+interface LabelCandidate extends LabelRect { token: number; name: string; area: number; composite: boolean }
 
 class FakeElement extends EventTarget {
   tagName: string;
@@ -49,13 +52,21 @@ class FakeElement extends EventTarget {
   tabIndex = 0;
   lastFocusOptions?: FocusOptions;
   onFocus?: () => void;
+  parentElement: FakeElement | null = null;
+  fixtureNodes: FakeElement[] = [];
+  bounds = { left: 0, top: 0, width: 600, height: 400 };
+  canvasUnavailable = false;
 
   constructor(tag = 'div') { super(); this.tagName = tag.toUpperCase(); }
   setAttribute(key: string, value: string): void { this.attributes.set(key, value); }
   removeAttribute(key: string): void { this.attributes.delete(key); }
-  append(...nodes: FakeElement[]): void { this.children.push(...nodes); }
+  append(...nodes: FakeElement[]): void { for (const node of nodes) node.parentElement = this; this.children.push(...nodes); }
   replaceChildren(...nodes: FakeElement[]): void { this.children = [...nodes]; }
   focus(options?: FocusOptions): void { this.lastFocusOptions=options; this.onFocus?.(); }
+  remove(): void { if (this.parentElement) this.parentElement.children = this.parentElement.children.filter((child) => child !== this); this.parentElement = null; }
+  getBoundingClientRect() { return { ...this.bounds, right: this.bounds.left + this.bounds.width, bottom: this.bounds.top + this.bounds.height }; }
+  querySelectorAll(): FakeElement[] { return this.fixtureNodes; }
+  getContext() { return this.canvasUnavailable ? null : { font: '', measureText: (value: string) => ({ width: Array.from(value).length * 7 }) }; }
   set innerHTML(_value: string) { throw new Error('Unsafe innerHTML write'); }
   fire(type: string, key?: string): Event {
     const event = new Event(type, { cancelable: true });
@@ -65,21 +76,51 @@ class FakeElement extends EventTarget {
   }
 }
 
+class FakeBounds {
+  west: number; south: number; east: number; north: number;
+  constructor(west: number, south: number, east: number, north: number) { this.west = west; this.south = south; this.east = east; this.north = north; }
+  isValid(): boolean { return [this.west, this.south, this.east, this.north].every(Number.isFinite); }
+  getCenter() { return { lat: (this.south + this.north) / 2, lng: (this.west + this.east) / 2 }; }
+  getNorthWest() { return { lat: this.north, lng: this.west }; }
+  getSouthEast() { return { lat: this.south, lng: this.east }; }
+  intersects(other: FakeBounds): boolean { return this.west <= other.east && this.east >= other.west && this.south <= other.north && this.north >= other.south; }
+}
+
 class FakeLayer {
   data: unknown;
   options: GeoOptions;
   popups: (FakeElement | (() => FakeElement))[] = [];
-  tooltip: { content: FakeElement; options: Record<string, unknown> } | null = null;
+  tooltip: { content: FakeElement; options: Record<string, unknown>; element: FakeElement; getElement(): FakeElement } | null = null;
   tooltipOpen = false;
   sentToBack = 0;
+  members: FakeLayer[] = [];
+  tooltipAnchor: { lat: number; lng: number } | null = null;
+  listeners = new Map<string, (() => void)[]>();
   constructor(data: unknown = null, options: GeoOptions = {}) { this.data = data; this.options = options; }
   addTo(map: FakeMap): this { map.layers.add(this); return this; }
   bindPopup(node: FakeElement | (() => FakeElement)): this { this.popups.push(node); return this; }
-  bindTooltip(node: FakeElement, options: Record<string, unknown>): this { this.tooltip = { content: node, options }; return this; }
+  bindTooltip(node: FakeElement, options: Record<string, unknown>): this {
+    const element = new FakeElement(); this.tooltip = { content: node, options, element, getElement: () => element };
+    this.on('mouseover', () => { this.openTooltip(); }); this.on('mouseout', () => { this.closeTooltip(); });
+    return this;
+  }
+  on(name: string, callback: () => void): this { this.listeners.set(name, [...this.listeners.get(name) ?? [], callback]); return this; }
+  fire(name: string): void { for (const callback of this.listeners.get(name) ?? []) callback(); }
   getTooltip() { return this.tooltip; }
-  openTooltip(): this { this.tooltipOpen = true; return this; }
+  openTooltip(anchor?: { lat: number; lng: number }): this { this.tooltipOpen = true; this.tooltipAnchor = anchor ?? null; return this; }
   closeTooltip(): this { this.tooltipOpen = false; return this; }
-  eachLayer(callback: (layer: FakeLayer) => void): void { callback(this); }
+  eachLayer(callback: (layer: FakeLayer) => void): void { for (const child of this.members) callback(child); }
+  getBounds(): FakeBounds {
+    const points: [number, number][] = [];
+    const visit = (input: unknown): void => {
+      if (!Array.isArray(input)) return;
+      if (typeof input[0] === 'number' && typeof input[1] === 'number') points.push([input[0], input[1]]);
+      else input.forEach(visit);
+    };
+    visit((this.data as { geometry?: { coordinates?: unknown } })?.geometry?.coordinates);
+    return new FakeBounds(Math.min(...points.map(point => point[0])), Math.min(...points.map(point => point[1])), Math.max(...points.map(point => point[0])), Math.max(...points.map(point => point[1])));
+  }
+  getCenter() { return this.getBounds().getCenter(); }
   bringToBack(): this { this.sentToBack++; return this; }
 }
 
@@ -96,12 +137,22 @@ class FakeMap {
   layers = new Set<FakeLayer>();
   panes = new Map<string, FakeElement>();
   container = new FakeElement();
-  getZoom(): number { return 4; }
+  zoom = 4; center = { lat: 30.5, lng: 10.5 }; width = 600; height = 400;
+  listeners = new Map<string, (() => void)[]>();
+  getZoom(): number { return this.zoom; }
+  getSize() { return { x: this.width, y: this.height }; }
+  latLngToContainerPoint(value: { lat: number; lng: number }) {
+    const scale = 256 * 2 ** this.zoom / 360;
+    return { x: this.width / 2 + (value.lng - this.center.lng) * scale, y: this.height / 2 - (value.lat - this.center.lat) * scale };
+  }
+  getBounds(): FakeBounds { const scale = 256 * 2 ** this.zoom / 360; return new FakeBounds(this.center.lng - this.width / scale / 2, this.center.lat - this.height / scale / 2, this.center.lng + this.width / scale / 2, this.center.lat + this.height / scale / 2); }
+  on(names: string, callback: () => void): this { for (const name of names.split(' ')) this.listeners.set(name, [...this.listeners.get(name) ?? [], callback]); return this; }
+  fire(name: string): void { for (const callback of this.listeners.get(name) ?? []) callback(); }
   getPane(name: string): FakeElement | undefined { return this.panes.get(name); }
   createPane(name: string): FakeElement { const pane = new FakeElement(); this.panes.set(name, pane); return pane; }
   getContainer(): FakeElement { return this.container; }
   hasLayer(layer: FakeLayer): boolean { return this.layers.has(layer); }
-  removeLayer(layer: FakeLayer): this { this.layers.delete(layer); return this; }
+  removeLayer(layer: FakeLayer): this { this.layers.delete(layer); layer.eachLayer(child => child.closeTooltip()); return this; }
 }
 
 interface Pending {
@@ -147,8 +198,11 @@ function setup(withMap = true, fixedHistorical = false, sharedRenderer: object |
   const timers = new Map<number, () => void>();
   const delays: number[] = [];
   let timerId = 0;
+  const animationFrames: (() => void)[] = [];
   const context = createContext({
     document: doc, URL, AbortController,
+    getComputedStyle: () => ({ fontStyle: 'normal', fontWeight: '600', fontSize: '12px', fontFamily: 'Georgia, serif' }),
+    requestAnimationFrame(callback: () => void) { animationFrames.push(callback); return animationFrames.length; },
     setTimeout(callback: () => void, delay: number) { delays.push(delay); const id = ++timerId; timers.set(id, callback); return id; },
     clearTimeout(id: number) { timers.delete(id); },
     fetch(url: string, options: { signal: AbortSignal }) {
@@ -158,8 +212,11 @@ function setup(withMap = true, fixedHistorical = false, sharedRenderer: object |
       canvas: (options: object) => ({ ...options }),
       geoJSON(data: unknown, options: GeoOptions) {
         const layer = new FakeLayer(data, options);
-        if (options.onEachFeature && typeof data === 'object' && data !== null && 'features' in data && Array.isArray(data.features)) {
-          for (const feature of data.features as { properties: Record<string, unknown>; id?: string }[]) options.onEachFeature(feature, layer);
+        if (typeof data === 'object' && data !== null && 'features' in data && Array.isArray(data.features)) {
+          for (const feature of data.features as { properties: Record<string, unknown>; id?: string }[]) {
+            const child = new FakeLayer(feature, options); layer.members.push(child);
+            options.onEachFeature?.(feature, child);
+          }
         }
         layers.push(layer);
         return layer;
@@ -174,6 +231,7 @@ function setup(withMap = true, fixedHistorical = false, sharedRenderer: object |
   let actions = 0;
   const view = helpers.create({ map: withMap ? map : null, tiles: withMap ? tiles : null, onCommittedView: (value) => commits.push(value), onUserAction: () => { actions++; }, fixedHistorical, sharedRenderer, automaticOnly });
   const node = (id: string): FakeElement => { const value = nodes.get(id); assert.ok(value); return value; };
+  const flushLabels = () => { const callbacks = animationFrames.splice(0); callbacks.forEach(callback => callback()); };
   function runTimers(): void { for (const [id, callback] of [...timers]) { timers.delete(id); callback(); } }
   function complete(request: Pending, value: unknown, code = 200): void {
     request.done = true;
@@ -191,22 +249,124 @@ function setup(withMap = true, fixedHistorical = false, sharedRenderer: object |
     complete(boundaryRequest(117), frame(117, options));
     await tick();
   }
-  return { helpers, view, map, tiles, pending, commits, node, doc, layers, delays, runTimers, complete, boundaryRequest, finishInitial, get actions() { return actions; } };
+  return { helpers, view, map, tiles, pending, commits, node, doc, layers, delays, runTimers, complete, boundaryRequest, finishInitial, flushLabels, animationFrames, get actions() { return actions; } };
 }
 
 async function tick(): Promise<void> { for (let index = 0; index < 20; index++) await Promise.resolve(); }
 function allText(node: FakeElement): string { return node.textContent + node.children.map(allText).join(''); }
 function allNodes(node: FakeElement): FakeElement[] { return [node, ...node.children.flatMap(allNodes)]; }
 
+function candidate(token: number, x: number, y: number, extra: Partial<LabelCandidate> = {}): LabelCandidate {
+  return { token, name: `Polity ${token}`, x, y, width: 90, height: 20, area: 8000, composite: false, ...extra };
+}
+
+test('screen label layout is deterministic, rejects collisions and prioritizes solid larger visible shapes', () => {
+  const { helpers } = setup();
+  const values = [candidate(1, 60, 30, { area: 1000 }), candidate(2, 64, 32, { area: 9000 }),
+    candidate(3, 65, 34, { area: 100000, composite: true }), candidate(4, 210, 30), candidate(5, 210, 120)];
+  const selected = helpers.layoutPolityLabels(values, { width: 400, height: 240 });
+  assert.deepEqual(Array.from(selected), [2, 5, 4]);
+  assert.deepEqual(Array.from(helpers.layoutPolityLabels(values.slice().reverse(), { width: 400, height: 240 })), Array.from(selected));
+  const selectedBoxes = selected.map(token => values.find(value => value.token === token)!);
+  for (const [index, left] of selectedBoxes.entries()) for (const right of selectedBoxes.slice(index + 1)) {
+    assert(left.x + left.width + 6 <= right.x || right.x + right.width + 6 <= left.x || left.y + left.height + 6 <= right.y || right.y + right.height + 6 <= left.y);
+  }
+});
+
+test('same-name fragments and world copies choose one fitting label without merging source identity', () => {
+  const { helpers } = setup();
+  const values = [candidate(1, -50, 40, { name: 'Shared source name' }), candidate(2, 20, 60, { name: 'Shared source name' }),
+    candidate(3, 150, 90, { name: 'Shared source name' }), candidate(4, 310, 60, { name: 'Other source name' })];
+  const frozen = JSON.stringify(values);
+  assert.deepEqual(Array.from(helpers.layoutPolityLabels(values, { width: 450, height: 220 })), [3, 4]);
+  assert.equal(JSON.stringify(values), frozen);
+});
+
+test('labels avoid marker and control rectangles and do not force tiny, offscreen or invalid names into the view', () => {
+  const { helpers } = setup();
+  const values = [candidate(1, 50, 50), candidate(2, 200, 50), candidate(3, 40, 120, { area: 10 }),
+    candidate(4, 330, 20, { width: 100 }), candidate(5, 30, 100, { name: '  ' }), candidate(6, 80, 80, { x: NaN })];
+  assert.deepEqual(Array.from(helpers.layoutPolityLabels(values, { width: 400, height: 200 }, [{ x: 40, y: 40, width: 120, height: 44 }])), [2]);
+  assert.deepEqual(Array.from(helpers.layoutPolityLabels(values, { width: 0, height: 200 })), []);
+  assert.deepEqual(Array.from(helpers.layoutPolityLabels(values, { width: 400, height: NaN })), []);
+});
+
+test('historical label refresh batches map changes and avoids point markers and sibling captions without requesting another year', async () => {
+  const env = setup(true, true); env.map.zoom = 7; await env.finishInitial();
+  const boundary = env.layers.find(layer => layer.options.pane === 'history-boundaries')!;
+  const visible = () => boundary.members.filter(layer => layer.tooltipOpen);
+  assert.equal(visible().length, 1);
+  const original = JSON.stringify(boundary.data), requests = env.pending.length;
+  const marker = new FakeElement(); marker.bounds = { left: 270, top: 180, width: 60, height: 40 }; env.map.container.fixtureNodes = [marker];
+  for (const event of ['moveend', 'resize', 'archsearch:markerschange']) env.map.fire(event);
+  assert.equal(env.animationFrames.length, 1); env.flushLabels(); assert.equal(visible().length, 0);
+  env.map.container.fixtureNodes = [];
+  const shell = new FakeElement(), caption = new FakeElement(); caption.bounds = { left: 260, top: 180, width: 80, height: 40 };
+  shell.fixtureNodes = [caption]; env.map.container.parentElement = shell;
+  env.map.fire('archsearch:markerschange'); env.flushLabels(); assert.equal(visible().length, 0);
+  shell.fixtureNodes = []; env.map.width = 390; env.map.height = 200;
+  env.map.fire('resize'); env.flushLabels(); assert.equal(visible().length, 1);
+  env.map.fire('zoomstart'); assert.equal(visible().length, 0);
+  env.map.zoom = 2; env.map.fire('zoomend'); env.flushLabels(); assert.equal(visible().length, 0);
+  env.map.zoom = 7; env.map.fire('zoomend'); env.flushLabels(); assert.equal(visible().length, 1);
+  assert.equal(env.pending.length, requests); assert.equal(env.view.getView()?.year, 117); assert.equal(env.actions, 0);
+  assert.equal(JSON.stringify(boundary.data), original);
+});
+
+test('long and absent permanent labels retain complete safe source popups and new frames close old labels', async () => {
+  const env = setup(true, true); env.map.zoom = 7;
+  const name = '<b>Literal source</b> ' + 'VeryLongName'.repeat(30); await env.finishInitial({ name });
+  const old = env.layers.find(layer => layer.options.pane === 'history-boundaries')!;
+  const chosen = old.members.find(layer => layer.tooltipOpen)!;
+  assert.ok(chosen); assert.equal(chosen.tooltip?.content.textContent, name);
+  assert.equal(chosen.tooltip?.content.style.width, '128px'); assert.equal(chosen.tooltip?.content.style.height, '32px');
+  assert.equal(chosen.tooltip?.element.attributes.get('data-polity-label'), name);
+  const sourcePopup = chosen.popups[0]; assert.equal(typeof sourcePopup, 'function');
+  assert.ok(allText((sourcePopup as () => FakeElement)()).includes(name));
+  env.view.setYear(200); env.runTimers(); env.complete(env.boundaryRequest(200), frame(200, { from: 200, to: 299, name: '' })); await tick();
+  assert.ok(old.members.every(layer => !layer.tooltipOpen));
+  const next = env.layers.filter(layer => layer.options.pane === 'history-boundaries').at(-1)!;
+  assert.ok(next.members.every(layer => !layer.tooltipOpen && layer.tooltip !== null));
+  assert.ok(next.members.every(layer => layer.popups.length === 1));
+  assert.equal(env.view.getView()?.year, 200);
+});
+
+test('no canvas text context never estimates permanent label widths and leaves source reading available', async () => {
+  const env = setup(true, true); env.map.zoom = 7;
+  const create = env.doc.createElement;
+  env.doc.createElement = (tag) => { const node = create(tag); if (tag === 'canvas') node.canvasUnavailable = true; return node; };
+  await env.finishInitial();
+  const boundary = env.layers.find(layer => layer.options.pane === 'history-boundaries')!;
+  assert.ok(boundary.members.every(layer => !layer.tooltipOpen && layer.tooltip !== null));
+  assert.ok(boundary.members.every(layer => layer.tooltip?.content.style.width === '128px' && layer.tooltip.content.style.height === '32px'));
+  boundary.members[1].openTooltip(); assert.equal(boundary.members[1].tooltipOpen, true);
+  const source = boundary.members[1].popups[0]; assert.equal(typeof source, 'function');
+  assert.match(allText((source as () => FakeElement)()), /Roman Empire.*Cliopatria.*CC BY 4\.0/u);
+});
+
+test('native mouseout does not erase a managed permanent name while a suppressed name remains an ordinary hover tooltip', async () => {
+  const env = setup(true, true); env.map.zoom = 7; await env.finishInitial();
+  const boundary = env.layers.find(layer => layer.options.pane === 'history-boundaries')!;
+  const selected = boundary.members.find(layer => layer.tooltipOpen)!;
+  selected.fire('mouseover'); selected.fire('mouseout');
+  assert.equal(selected.tooltipOpen, true); assert.equal(selected.tooltip?.options.permanent, true);
+  const marker = new FakeElement(); marker.bounds = { left: 270, top: 180, width: 60, height: 40 }; env.map.container.fixtureNodes = [marker];
+  env.map.fire('archsearch:markerschange'); env.flushLabels();
+  assert.equal(selected.tooltipOpen, false); assert.equal(selected.tooltip?.options.permanent, false);
+  selected.fire('mouseover'); assert.equal(selected.tooltipOpen, true);
+  selected.fire('mouseout'); assert.equal(selected.tooltipOpen, false);
+});
+
 test('fixed historical comparison retains real filled polities and literal names instead of an OSM base', async () => {
-  const env = setup(true, true); await env.finishInitial({ name: '<b>Kingdom fixture</b>' });
+  const env = setup(true, true); env.map.zoom = 7; await env.finishInitial({ name: '<b>Kingdom fixture</b>' });
   const boundary = env.layers.find(layer => layer.options.pane === 'history-boundaries'); assert.ok(boundary);
   assert.equal(typeof boundary.options.style, 'function');
   const style = boundary.options.style as (feature: { properties: Record<string, unknown> }) => Record<string, unknown>;
   assert.equal(style({ properties: { Name: 'Kingdom fixture', composite: false } }).fillOpacity, 0.26);
   assert.equal(style({ properties: { Name: 'Composite fixture', composite: true } }).fillOpacity, 0);
   assert.equal(style({ properties: { Name: 'Composite fixture', composite: true } }).dashArray, '7 5');
-  assert.equal(boundary.tooltip?.content.textContent, '<b>Kingdom fixture</b>'); assert.equal(boundary.tooltipOpen, true);
+  const names = boundary.members.filter(child => child.tooltipOpen);
+  assert.equal(names.length, 1); assert.equal(names[0].tooltip?.content.textContent, '<b>Kingdom fixture</b>');
   assert.equal(env.map.panes.get('history-polity-labels')?.style.zIndex, '420');
   env.view.setBasemap('modern'); env.runTimers(); await tick();
   assert.equal(env.view.getView()?.basemap, 'historical'); assert.equal(env.map.hasLayer(env.tiles), false);
@@ -376,7 +536,7 @@ test('source content remains literal text and composite boundaries have no fill'
   const normal = styleFor({ properties: { Name: 'Empire', composite: false } });
   assert.equal(normal.fillOpacity, 0.1);
   assert.equal(env.helpers.colorForName('Empire'), normal.color);
-  const readPopup = boundary.popups[0]; assert.ok(typeof readPopup === 'function');
+  const readPopup = boundary.members[0].popups[0]; assert.ok(typeof readPopup === 'function');
   const popup = readPopup();
   assert.match(allText(popup), /<img src=x onerror=alert\(1\)>/);
   assert.ok(allNodes(popup).filter((node) => node.tagName === 'A').every((node) => node.href.startsWith('https://')));
@@ -508,7 +668,8 @@ test('both historical boundaries and local land use display copies while committ
   assert.equal((boundaries.data as { features: unknown[] }).features.length, 3);
   assert.equal((geography.data as { features: unknown[] }).features.length, 3);
   assert.equal(env.view.getView()?.frame_id, 'frame-100-199');
-  assert.ok(boundaries.popups.every((content) => typeof content === 'function'));
+  assert.equal(boundaries.members.length, 3);
+  assert.ok(boundaries.members.every(member => member.popups.length === 1 && typeof member.popups[0] === 'function'));
 });
 
 test('the bundled local Natural Earth geometry is accepted without alteration or network dependencies', async () => {
