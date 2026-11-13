@@ -30,6 +30,7 @@ const ArchSearchWorkspace = (() => {
     const modelDialog = node<HTMLDialogElement>("llm-settings");
     const typeFilter = node<HTMLSelectElement>("type-filter"), limitFilter = node<HTMLSelectElement>("limit-filter");
     const filterSummary = node("search-filter-summary"), filterMenu = node<HTMLDetailsElement>("search-filters");
+    const mapTools = node<HTMLDetailsElement>("map-tools");
     let width = defaultWidth, preferredWidth = defaultWidth;
     let drag: number | null = null;
     let returnFocus: HTMLElement | null = null;
@@ -192,9 +193,27 @@ const ArchSearchWorkspace = (() => {
     for (const menu of menus) menu.addEventListener("toggle", () => {
       if (menu.open) for (const other of menus) if (other !== menu) closeMenu(other, true);
     });
+    function focusMapToolsSummary(): void {
+      const summary = mapTools.querySelector<HTMLElement>("summary");
+      if (!summary) return;
+      summary.focus({ preventScroll: true });
+      const bounds = summary.getBoundingClientRect();
+      const visibleTop = Math.max(0, search?.getBoundingClientRect().bottom ?? 0);
+      if (bounds.top < visibleTop || bounds.bottom > window.innerHeight) summary.scrollIntoView({ block: "center", behavior: "instant" });
+    }
+    mapTools.addEventListener("toggle", () => {
+      if (!mapTools.open && mapTools.contains(document.activeElement)) focusMapToolsSummary();
+      changed();
+    });
     window.addEventListener("archsearch:modelsettingsopen", () => { for (const menu of menus) closeMenu(menu); });
     document.addEventListener("keydown", (event) => {
       if (event.defaultPrevented || event.key !== "Escape" || dialog.open || modelDialog.open) return;
+      if (mapTools.open && mapTools.contains(document.activeElement)) {
+        mapTools.open = false;
+        focusMapToolsSummary();
+        event.preventDefault();
+        return;
+      }
       const hadMenu = menus.some(menu => menu.open);
       for (const menu of menus) if (menu.open) closeMenu(menu, true);
       if (hadMenu) event.preventDefault();

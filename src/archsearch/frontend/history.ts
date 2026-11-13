@@ -398,7 +398,14 @@ const ArchSearchHistory = (() => {
       }
       if (ui.caption) ui.caption.textContent = `${frame !== null && desired.boundaries ? "历史政权疆域概略" : "地点代表位置"} · ${desired.basemap === "historical" ? "现代海岸线参照" : "现代 OSM 底图"}`;
       const actual = document.getElementById("comparison-history-year");
-      if (actual) actual.textContent = committed ? frame ? `${formatYear(committed.year)} · ${frame.version}${committed.boundaries ? "" : " · 疆域层未显示"}` : "无可用疆域数据 · 仅显示本地自然地理参照" : "等待成功历史视图";
+      if (actual) {
+        const yearLabel = committed ? formatYear(committed.year) : null;
+        const layerState = frame ? committed?.boundaries ? "" : "疆域层未显示" : "无可用疆域数据";
+        actual.textContent = yearLabel ? [yearLabel, layerState].filter(Boolean).join(" · ") : "尚未加载";
+        actual.title = yearLabel ? [yearLabel, frame?.version, layerState, frame ? null : "仅显示本地自然地理参照"].filter(Boolean).join(" · ") : "等待成功历史视图";
+        actual.setAttribute("aria-label", `实际显示的历史背景：${actual.title}`);
+        actual.dataset.state = committed ? frame && committed.boundaries ? "ready" : "reference" : "loading";
+      }
     }
 
     function refreshPolityLabels(): void {

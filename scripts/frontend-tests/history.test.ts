@@ -31,6 +31,7 @@ interface Helpers {
 class FakeElement extends EventTarget {
   tagName: string;
   textContent = '';
+  title = '';
   className = '';
   hidden = false;
   disabled = false;
@@ -209,7 +210,9 @@ test('fixed historical comparison retains real filled polities and literal names
   assert.equal(env.map.panes.get('history-polity-labels')?.style.zIndex, '420');
   env.view.setBasemap('modern'); env.runTimers(); await tick();
   assert.equal(env.view.getView()?.basemap, 'historical'); assert.equal(env.map.hasLayer(env.tiles), false);
-  assert.match(env.node('comparison-history-year').textContent, /117.*v0\.2\.1/u);
+  assert.equal(env.node('comparison-history-year').textContent, '公元 117 年');
+  assert.match(env.node('comparison-history-year').title, /117.*v0\.2\.1/u);
+  assert.match(env.node('comparison-history-year').attributes.get('aria-label')!, /实际显示.*117.*v0\.2\.1/u);
 });
 
 test('a quick exact-year site selection while history is unprepared still loads local land without a historical frame', async () => {
@@ -585,11 +588,16 @@ test('unknown selection before the first frame keeps default117 and still prepar
 
 test('automatic loading failure preserves the successful year and retries without any year input', async () => {
   const env = setup(true, false, null, true); await env.finishInitial();
-  env.view.setYear(200, 'site'); env.runTimers(); env.complete(env.boundaryRequest(200), {detail:'年度资料失败'}, 503); await tick();
+  env.view.setYear(200, 'site'); env.runTimers();
+  assert.equal(env.node('comparison-history-year').textContent, '公元 117 年');
+  env.complete(env.boundaryRequest(200), {detail:'年度资料失败'}, 503); await tick();
   assert.equal(env.view.getView()?.year, 117); assert.match(env.node('comparison-history-year').textContent, /117/u);
+  assert.equal(env.node('comparison-history-year').dataset.state, 'ready');
+  assert.match(env.node('comparison-history-year').title, /117.*v0\.2\.1/u);
   assert.equal(env.node('history-retry').hidden, false); env.node('history-retry').fire('click'); env.runTimers();
   env.complete(env.boundaryRequest(200), frame(200, {from:200,to:299,id:'retry-success'})); await tick();
   assert.equal(env.view.getView()?.year, 200); assert.equal(env.node('history-error').hidden, true);
+  assert.equal(env.node('comparison-history-year').textContent, '公元 200 年');
 });
 
 test('automatic exact years outside source coverage never clamp or invent a replacement year', async () => {

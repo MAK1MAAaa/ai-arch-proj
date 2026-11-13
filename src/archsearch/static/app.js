@@ -35,7 +35,8 @@
         searchProgress: byId("search-progress", HTMLDivElement), progressLabel: byId("search-progress-label", HTMLParagraphElement),
         cancelSearch: byId("cancel-search", HTMLButtonElement), retryPanel: byId("retry-panel", HTMLDivElement),
         retrySearch: byId("retry-search", HTMLButtonElement), serviceError: byId("service-error", HTMLDivElement),
-        selectionSummary: byId("selection-summary", HTMLParagraphElement), previousResult: byId("previous-result", HTMLButtonElement),
+        selectionSummary: byId("selection-summary", HTMLParagraphElement), selectionActions: byId("selection-actions", HTMLDivElement),
+        previousResult: byId("previous-result", HTMLButtonElement),
         nextResult: byId("next-result", HTMLButtonElement), locateSelected: byId("locate-selected", HTMLButtonElement),
     };
     const state = {
@@ -514,6 +515,13 @@
             ? index >= 0 ? `第 ${index + 1} / ${state.results.length} 条 · ${displayTitle(selected)}` : `全库目录 · ${displayTitle(selected)}`
             : state.results.length ? `${state.results.length} 条候选，可逐条浏览或选择地图标记。` : "选择候选，查看地图与原始资料。";
         ui.selectionSummary.title = ui.selectionSummary.textContent;
+        const hideActions = state.results.length === 0 && selected === null;
+        const actionsOwnedFocus = ui.selectionActions.contains(document.activeElement);
+        ui.selectionActions.hidden = hideActions;
+        if (hideActions && actionsOwnedFocus) {
+            ui.selectionSummary.tabIndex = -1;
+            ui.selectionSummary.focus({ preventScroll: true });
+        }
         ui.previousResult.disabled = index <= 0;
         ui.nextResult.disabled = !state.results.length || index >= state.results.length - 1;
         ui.nextResult.textContent = index < 0 ? "查看首条" : "下一条";
@@ -1687,13 +1695,17 @@
             const label = byId("modern-boundaries-status", HTMLElement);
             label.textContent = status.message;
             label.dataset.state = status.state;
+            const alert = byId("modern-boundaries-alert", HTMLElement);
+            alert.hidden = status.state !== "error" && status.state !== "unavailable";
+            alert.textContent = alert.hidden ? "" : status.message;
             const retry = byId("modern-boundaries-retry", HTMLButtonElement);
             const retryOwnedFocus = document.activeElement === retry;
             retry.hidden = status.state !== "error";
             retry.disabled = status.state === "loading";
             if (retryOwnedFocus && retry.hidden) {
-                label.tabIndex = -1;
-                label.focus();
+                const target = alert.hidden ? byId("modern-map-title", HTMLElement) : alert;
+                target.tabIndex = -1;
+                target.focus({ preventScroll: true });
             }
         } });
     byId("modern-boundaries-retry", HTMLButtonElement).addEventListener("click", () => { void modernBoundaries?.retry(); });
