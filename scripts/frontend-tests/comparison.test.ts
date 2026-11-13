@@ -7,6 +7,8 @@ import ts from 'typescript';
 class Element extends EventTarget {
   hidden = false; disabled = false; checked = false; textContent = ''; className = ''; href = ''; target = ''; rel = '';
   style: Record<string, string> = {}; dataset: Record<string, string> = {}; children: Element[] = []; attributes = new Map<string, string>();
+  isConnected=true;focus(_options?:FocusOptions){}contains(node:unknown):boolean{return node===this||this.children.some(child=>child.contains(node));}
+  getBoundingClientRect(){return{left:0,top:0,right:600,bottom:400,width:600,height:400};}
   tokens = new Set<string>(); classList = { toggle: (key: string, active?: boolean) => { if (active ?? !this.tokens.has(key)) this.tokens.add(key); else this.tokens.delete(key); }, add: (key: string) => this.tokens.add(key) };
   append(...nodes: Element[]): void { this.children.push(...nodes); }
   replaceChildren(...nodes: Element[]): void { this.children = nodes; }
@@ -18,20 +20,23 @@ class Events {
   listeners = new Map<string, (() => void)[]>();
   on(names: string, callback: () => void): this { for (const name of names.split(' ')) this.listeners.set(name, [...(this.listeners.get(name) ?? []), callback]); return this; }
   fire(name: string): this { for (const callback of this.listeners.get(name) ?? []) callback(); return this; }
+  off(names:string,callback:()=>void):this {for(const name of names.split(' '))this.listeners.set(name,(this.listeners.get(name)??[]).filter(item=>item!==callback));return this;}
 }
 class Layer extends Events {
   layers = new Set<Layer>(); parent: { layers: Set<Layer> } | null = null; element = new Element(); tooltip: Element | null = null;
   location = { lat: 0, lng: 0 }; options: Record<string, unknown>; zIndex = 0;
   constructor(options: Record<string, unknown> = {}) { super(); this.options = options; }
-  addTo(parent: { layers: Set<Layer> }): this { this.parent = parent; parent.layers.add(this); return this; }
+  addTo(parent: { layers: Set<Layer> }): this { this.parent = parent; parent.layers.add(this); this.fire('add'); return this; }
   remove(): this { this.parent?.layers.delete(this); return this; }
   clearLayers(): this { this.layers.clear(); return this; }
+  removeLayer(layer:Layer):this {layer.element.isConnected=false;this.layers.delete(layer);return this;}
   bindTooltip(element: Element): this { this.tooltip = element; return this; }
   getElement(): Element { return this.element; }
   getLatLng() { return this.location; }
-  setLatLng(value: [number, number]): this { this.location = { lat: value[0], lng: value[1] }; return this; }
+  setLatLng(value: [number, number]|{lat:number;lng:number}): this { this.location = Array.isArray(value)?{lat:value[0],lng:value[1]}:{...value}; return this; }
   setZIndexOffset(value: number): this { this.zIndex = value; return this; }
   setStyle(value: Record<string, unknown>): this { Object.assign(this.options, value); return this; }
+  setRadius(value:number):this {this.options.radius=value;return this;}bringToFront():this{return this;}
   redraw(): this { return this; }
 }
 interface Bounds { points: [number, number][] }
@@ -47,6 +52,9 @@ class MapView extends Events {
   getCenter() { return this.center; }
   getZoom() { return this.zoom; }
   getSize() { return { x: this.width, y: this.height }; }
+  project(value:[number,number]|{lat:number;lng:number},zoom=this.zoom){const point=Array.isArray(value)?{lat:value[0],lng:value[1]}:value,world=256*2**zoom;return{x:(point.lng+180)/360*world,y:(90-point.lat)/180*world};}
+  unproject(value:[number,number],zoom=this.zoom){const world=256*2**zoom;return{lng:value[0]/world*360-180,lat:90-value[1]/world*180};}
+  layerPointToContainerPoint(point:[number,number]){return{x:point[0],y:point[1]};}
   setView(center: [number, number], zoom: number): this {
     const zoomChanged = this.zoom !== zoom, moved = this.center.lat !== center[0] || this.center.lng !== center[1];
     this.center = { lat: center[0], lng: center[1] }; this.zoom = zoom;
@@ -67,7 +75,7 @@ class MapView extends Events {
     if (changed) this.fire('moveend');
   }
   hasLayer(layer: Layer) { return this.layers.has(layer); }
-  removeLayer(layer: Layer): this { this.layers.delete(layer); return this; }
+  removeLayer(layer: Layer): this { this.layers.delete(layer); layer.fire('remove'); return this; }
 }
 interface State { modern_basemap: 'osm' | 'natural'; sync_centers: boolean; modern_view: { center: [number, number]; zoom: number } | null; history_view: { center: [number, number]; zoom: number } | null }
 interface Selected { id: string; title: string; repr_point: [number, number] | null; status: string; phase: { label: string; precision: string; start_year: number | null; end_year: number | null; sources: { title: string; uri: string; excerpt: string }[] } | null }
@@ -82,19 +90,19 @@ interface Controller {
   state(): State; snapshot(value: Frame | null): { layout: string; modern: { role: string; basemap: string }; historical: { role: string; year: number | null; source_version: string | null } };
 }
 interface Helpers { create(options: { modern: MapView; historical: MapView; tiles: Layer; initial: State; onSelect(id: string, opener: Element | null, options?: { moveMap?: boolean }): void; onChanged(): void; onEvidence(): void }): Controller }
-const scripts = ['map-view', 'history', 'comparison'].map(name => ts.transpileModule(readFileSync(`src/archsearch/frontend/${name}.ts`, 'utf8'), { compilerOptions: { module: ts.ModuleKind.None, target: ts.ScriptTarget.ES2022 } }).outputText).join('\n');
+const scripts = ['map-view', 'density', 'history', 'comparison'].map(name => ts.transpileModule(readFileSync(`src/archsearch/frontend/${name}.ts`, 'utf8'), { compilerOptions: { module: ts.ModuleKind.None, target: ts.ScriptTarget.ES2022 } }).outputText).join('\n');
 const land = { type: 'FeatureCollection', features: [{ type: 'Feature', properties: {}, geometry: { type: 'Polygon', coordinates: [[[0, 0], [10, 0], [10, 10], [0, 0]]] } }] };
 function harness(initial: Partial<State> = {}, small = false) {
   const ids = ['modern-basemap-osm', 'modern-basemap-natural', 'comparison-sync', 'comparison-modern-status', 'tile-warning', 'tile-warning-text', 'comparison-evidence', 'comparison-evidence-title', 'comparison-evidence-date', 'comparison-evidence-quote', 'comparison-evidence-sources', 'comparison-evidence-open'];
   const nodes = new Map(ids.map(id => [id, new Element()])); const pending: ((value: { ok: boolean; json(): Promise<unknown> }) => void)[] = [];
   const circles: Layer[] = []; const selected: string[] = []; const selectionOptions: ({ moveMap?: boolean } | undefined)[] = []; let changes = 0;
   const resizeCallbacks: (() => void)[] = [];
-  const context = createContext({ URL, Error, window: { matchMedia: () => ({ matches: small }) },
+  const context = createContext({ URL, Error, window: { matchMedia: () => ({ matches: small }) },requestAnimationFrame:(fn:()=>void)=>fn(),
     ResizeObserver: class { constructor(callback: () => void) { resizeCallbacks.push(callback); } observe(_element: Element): void {} },
     document: { getElementById: (id: string) => nodes.get(id), createElement: () => new Element() },
     fetch: () => new Promise(resolve => pending.push(resolve)),
     L: { canvas: (options: object) => ({ ...options }), geoJSON: (_value: unknown, options: Record<string, unknown>) => new Layer(options), layerGroup: () => new Layer(),
-      marker: (coordinate: [number, number], options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate), divIcon: (value: unknown) => value,
+      marker: (coordinate: [number, number]|{lat:number;lng:number}, options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate), divIcon: (value: unknown) => value,
       circleMarker: (coordinate: [number, number], options: Record<string, unknown>) => { const layer = new Layer(options).setLatLng(coordinate); circles.push(layer); return layer; },
       latLngBounds: (points: [number, number][]) => ({points}), point: (x: number, y: number) => ({x,y}) },
   });
@@ -141,14 +149,14 @@ test('an explicit natural base ignores errors from old OSM tiles and can retry O
 });
 test('source placements preserve coordinates and world copies in a pane above historical polygons', () => {
   const h=harness(); const values=[{id:'auth:fixture:coast',title:'Source reference',coordinate:[179,-18] as [number,number],representative:false}];
-  h.controller.setCatalogue(values,true); assert.equal(h.circles.length,3);
-  assert.deepEqual(h.circles.map(circle=>circle.getLatLng().lng),[-181,179,539]);
+  h.controller.setCatalogue(values,true); assert.equal(h.circles.length,2);
+  assert.deepEqual(h.circles.map(circle=>circle.getLatLng().lng),[-181,179]);
   assert.equal(h.historical.panes.get('history-boundaries')?.style.zIndex,'350');
   assert.equal(h.historical.panes.has('comparison-source-points'),false);
   assert.ok(h.circles.every(circle=>circle.options.renderer===h.controller.getHistoricalRenderer()));
   h.circles[1].fire('click'); assert.deepEqual(h.selected,['auth:fixture:coast']);
   assert.deepEqual(JSON.parse(JSON.stringify(h.selectionOptions)), [{moveMap:false}]);
-  h.controller.setCatalogue(values,true); assert.equal(h.circles.length,3);
+  h.controller.setCatalogue(values,true); assert.equal(h.circles.length,2);
   assert.deepEqual(values[0].coordinate,[179,-18]);
 });
 test('unknown coordinates do not create zero markers and unknown dates retain their state', () => {
@@ -206,7 +214,7 @@ test('explicit locate focuses both map roles while preserved or unavailable sele
 
 test('source-point selection preserves the clicked view but numbered candidates keep normal locating', () => {
   const h = harness(); h.controller.setCatalogue([{id:'source',title:'Component',coordinate:[20,10],representative:false}],true);
-  h.circles[1].fire('click'); assert.deepEqual(JSON.parse(JSON.stringify(h.selectionOptions)),[{moveMap:false}]);
+  h.circles[0].fire('click'); assert.deepEqual(JSON.parse(JSON.stringify(h.selectionOptions)),[{moveMap:false}]);
   h.controller.setCandidates([{id:selectedSite.id,title:selectedSite.title,repr_point:selectedSite.repr_point,rank:1}],false);
   h.controller.getMarker(selectedSite.id)?.fire('click'); assert.equal(h.selectionOptions.at(-1),undefined);
 });

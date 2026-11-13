@@ -463,7 +463,7 @@ const ArchSearchExplore = (() => {
     let loading = false;
     let failed = false;
     let layer: L.LayerGroup | null = null;
-    let markers = new Map<string, L.CircleMarker[]>();
+    let density: ReturnType<typeof ArchSearchDensity.create> | null = null;
     let selectedId: string | null = null;
     let subdivisionStatus: SubdivisionStatus | null | undefined;
     let subdivisions: Subdivisions | null = null;
@@ -480,6 +480,9 @@ const ArchSearchExplore = (() => {
       const pane = map.getPane("catalogue-points") ?? map.createPane("catalogue-points");
       pane.style.zIndex = "450";
       renderer = L.canvas({ pane: "catalogue-points", padding: 0.5 });
+      density = ArchSearchDensity.create({ map, pane: "catalogue-points", renderer,
+        onSelect: (id, opener) => onSelect(id, opener, { moveMap: false }) });
+      layer = density.layer;
     }
 
     function feedback(message: string, error = false): void {
@@ -669,7 +672,7 @@ const ArchSearchExplore = (() => {
       ui.next.disabled = loading || page === null || page.offset + page.limit >= page.total;
       ui.retry.disabled = loading;
       if (layer && map) {
-        if (desired.visible && !map.hasLayer(layer)) layer.addTo(map);
+        if (desired.visible && catalogue && !map.hasLayer(layer)) layer.addTo(map);
         else if (!desired.visible && map.hasLayer(layer)) map.removeLayer(layer);
       }
       renderSubdivisions();
@@ -698,26 +701,17 @@ const ArchSearchExplore = (() => {
     function select(id: string | null): void {
       selectedId = id;
       for (const [pointId, button] of buttons) button.setAttribute("aria-pressed", String(pointId === id));
-      for (const [pointId, copies] of markers) for (const marker of copies) {
-        const active = pointId === id;
-        marker.setRadius(active ? 5 : 3.2);
-        marker.setStyle({ color: active ? "#813d29" : "#586f60", fillColor: active ? "#a55339" : "#66745b", fillOpacity: active ? 0.95 : 0.5, weight: active ? 1.5 : 0.7 });
-      }
+      density?.select(id);
     }
 
     function scopedPlacements(point: Point, scope: State) {
       return placements(point).filter((placement) => !scope.bbox || insideBBox(placement.coordinate, scope.bbox));
     }
 
-    function buildLayer(points: Point[], scope: State): { layer: L.LayerGroup | null; markers: Map<string, L.CircleMarker[]> } {
-      const nextMarkers = new Map<string, L.CircleMarker[]>();
-      if (!map || !renderer || typeof L === "undefined") return { layer: null, markers: nextMarkers };
-      const next = L.layerGroup();
-      for (const point of points) {
-        const copies = scopedPlacements(point, scope).flatMap((placement) => displayCoordinates(placement.coordinate).map((location) => {
-          const marker = L.circleMarker(location, { pane: "catalogue-points", renderer: renderer ?? undefined, radius: 3.2,
-            color: "#586f60", fillColor: "#66745b", fillOpacity: 0.5, weight: 0.7 });
-          marker.bindTooltip(() => {
+    function displayPlacements(points: Point[], scope: State): Parameters<ReturnType<typeof ArchSearchDensity.create>["setData"]>[0] {
+      return points.flatMap(point => scopedPlacements(point, scope).map(placement => ({
+        id: point.id, title: point.title, coordinate: [...placement.coordinate] as [number, number], representative: placement.representative,
+        tooltip: () => {
             const tooltip = element("span", "explore-point-tooltip");
             tooltip.append(element("span", undefined, point.title), element("span", "explore-point-kind", placement.representative
               ? "原始代表点 · 非精确发掘坐标" : `来源定位点 · 源序 ${placement.sourceIndexes.map((index) => index + 1).join("、")}`));
@@ -726,13 +720,8 @@ const ArchSearchExplore = (() => {
               if (source && (source.name || source.ref)) tooltip.append(element("span", "explore-point-kind", [source.name, source.ref].filter(Boolean).join(" · ")));
             }
             return tooltip;
-          }, { direction: "top", offset: [0, -4] });
-          marker.on("click", () => onSelect(point.id, map.getContainer(), { moveMap: false }));
-          marker.addTo(next); return marker;
-        }));
-        nextMarkers.set(point.id, copies);
-      }
-      return { layer: next, markers: nextMarkers };
+        },
+      })));
     }
 
     function renderPage(): void {
@@ -787,7 +776,6 @@ const ArchSearchExplore = (() => {
       loading = true;
       feedback(page ? "正在更新目录；列表与全库点位保留上次成功范围，检索排名和年份不变。" : "正在读取本地全库点位与覆盖统计。");
       renderControls();
-      let pendingLayer: L.LayerGroup | null = null;
       try {
         const reload = refresh || !coverage || !catalogue;
         const [coverageRaw, catalogueRaw, pageRaw] = await Promise.all([
@@ -815,15 +803,10 @@ const ArchSearchExplore = (() => {
         const nextPage = parsePage(pageRaw, viewCatalogue, wanted);
         const replacePoints = nextCatalogue !== catalogue || !applied || applied.country !== wanted.country || applied.region !== wanted.region
           || (applied.subdivision ?? null) !== (wanted.subdivision ?? null) || page?.subdivision_version !== nextPage.subdivision_version || !sameBBox(applied.bbox, wanted.bbox);
-        const next = replacePoints ? buildLayer(viewCatalogue.points.filter((point) => matches(point, wanted, viewCatalogue.spatial_match_mode)), wanted) : { layer, markers };
-        pendingLayer = replacePoints ? next.layer : null;
+        const next = replacePoints ? displayPlacements(viewCatalogue.points.filter((point) => matches(point, wanted, viewCatalogue.spatial_match_mode)), wanted) : null;
         if (abort.signal.aborted || current !== sequence) return;
-        if (replacePoints) {
-          if (next.layer && desired.visible && map) next.layer.addTo(map);
-          if (layer && map && map.hasLayer(layer)) map.removeLayer(layer);
-        }
         coverage = nextCoverage; catalogue = nextCatalogue; subdivisionCatalogue = nextSubdivisionCatalogue; page = nextPage; applied = { ...wanted };
-        layer = next.layer; markers = next.markers;
+        if (next) density?.setData(next);
         ui.summary.textContent = `${coverage.total.toLocaleString("zh-CN")} 条资料 · ${coverage.countries.length} 个国家／地区 · ${coverage.regions.length} 个来源分区`;
         ui.limit.textContent = `${limitNote} 当前 ${coverage.country_unknown.toLocaleString("zh-CN")} 条未标注国家／地区；${coverage.chronology.not_reviewed.toLocaleString("zh-CN")} 条断代尚未核验。`;
         renderAuthority(); renderPolarAuthority(); renderSpatial(); renderOptions(); renderPage();
@@ -844,7 +827,6 @@ const ArchSearchExplore = (() => {
         onSubdivisionChange?.();
       } catch (error) {
         if (abort.signal.aborted || current !== sequence) return;
-        if (pendingLayer && map?.hasLayer(pendingLayer)) map.removeLayer(pendingLayer);
         if (layer && desired.visible && map && !map.hasLayer(layer)) layer.addTo(map);
         abort.abort();
         feedback(`${error instanceof Error ? error.message : "目录加载失败。"}${page ? " 保留上次成功目录与点位。" : " 可重试本地目录；基础检索仍独立可用。"}`, true);
