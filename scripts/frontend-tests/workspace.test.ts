@@ -8,6 +8,7 @@ class Element extends EventTarget {
   hidden = false; open = false; tabIndex = 0; isConnected = true; blocked = false; dataset: Record<string,string> = {};
   textContent = ''; title = ''; value = ''; selectedOptions: Element[] = []; summary: Element|null = null;
   attributes = new Map<string,string>(); values = new Map<string,string>(); captures = new Set<number>(); classes = new Set<string>();
+  scrolls: {block?:string;behavior?:string}[] = [];
   contained = new Set<Element>();
   style = { setProperty: (key:string,value:string) => this.values.set(key,value) };
   classList = { add: (key:string) => this.classes.add(key), remove: (key:string) => this.classes.delete(key) };
@@ -18,6 +19,7 @@ class Element extends EventTarget {
   getBoundingClientRect() { return this.bounds; }
   querySelector(_selector:string):Element|null { return this.summary; }
   focus() { this.onFocus(); }
+  scrollIntoView(options:{block?:string;behavior?:string}) { this.scrolls.push({...options}); }
   closest(_selector:string): Element|null { return this.blocked ? this : null; }
   contains(other: Element|null):boolean { return other === this || other !== null && [...this.contained].some(child=>child.contains(other)); }
   setPointerCapture(id:number) { this.captures.add(id); }
@@ -42,13 +44,14 @@ interface Helper {
 }
 const compiled=ts.transpileModule(readFileSync('src/archsearch/frontend/workspace.ts','utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.None}}).outputText;
 function setup(options:{saved?:string;small?:boolean;storageFails?:boolean}={}) {
-  const ids=['workspace','workspace-divider','workspace-sidebar','workspace-toggle-sidebar','workspace-toggle-sidebar-label','workspace-tab-results','workspace-tab-catalogue','workspace-results-view','workspace-catalogue-view','detail-dialog','detail-panel','close-detail','workspace-examples','llm-settings','search-filters','search-filter-summary','type-filter','limit-filter'];
+  const ids=['workspace','workspace-divider','workspace-sidebar','workspace-toggle-sidebar','workspace-toggle-sidebar-label','workspace-tab-results','workspace-tab-catalogue','workspace-results-view','workspace-catalogue-view','detail-dialog','detail-panel','close-detail','workspace-examples','llm-settings','search-filters','search-filter-summary','type-filter','limit-filter','map-tools'];
   const nodes=new Map(ids.map(id=>[id,new Element()]));
   for(const id of ['workspace-tab-results','workspace-tab-catalogue','workspace-results-view','workspace-catalogue-view'])nodes.get('workspace-sidebar')!.contained.add(nodes.get(id)!);
   const document=new EventTarget() as EventTarget&{activeElement:Element|null;getElementById(id:string):Element|undefined;querySelector(selector:string):Element};
-  document.activeElement=null; document.getElementById=id=>nodes.get(id); document.querySelector=()=>new Element();
-  for(const id of ['workspace-examples','search-filters']) {
-    const menu=nodes.get(id)!,summary=new Element();summary.onFocus=()=>{document.activeElement=summary;};menu.summary=summary;menu.contained.add(summary);
+  const search=new Element();search.bounds={left:0,top:0,width:1400,right:1400,bottom:111,height:111};
+  document.activeElement=null; document.getElementById=id=>nodes.get(id); document.querySelector=()=>search;
+  for(const id of ['workspace-examples','search-filters','map-tools']) {
+    const menu=nodes.get(id)!,summary=new Element();summary.bounds={left:0,top:200,width:200,right:200,bottom:244,height:44};summary.onFocus=()=>{document.activeElement=summary;};menu.summary=summary;menu.contained.add(summary);
   }
   nodes.get('search-filters')!.contained.add(nodes.get('type-filter')!);nodes.get('search-filters')!.contained.add(nodes.get('limit-filter')!);
   nodes.get('limit-filter')!.value='10';
@@ -59,7 +62,7 @@ function setup(options:{saved?:string;small?:boolean;storageFails?:boolean}={}) 
   window.addEventListener('archsearch:workspacechange',()=>changes++);window.addEventListener('archsearch:detailclose',()=>closed++);
   const context=createContext({window,document,HTMLElement:Element,Event,localStorage:{getItem:()=>{if(options.storageFails)throw new Error('blocked');return options.saved??null;},setItem:(key:string,value:string)=>{if(options.storageFails)throw new Error('blocked');writes.push({key,value});}}});
   const helper=runInContext(compiled+'\nArchSearchWorkspace;',context) as Helper;
-  return{helper,document,window,writes,node:(id:string)=>nodes.get(id)!,changes:()=>changes,closed:()=>closed};
+  return{helper,document,window,search,writes,node:(id:string)=>nodes.get(id)!,changes:()=>changes,closed:()=>closed};
 }
 
 test('the workspace opens results and exposes one keyboard tab stop without changing search state',()=>{
@@ -185,6 +188,80 @@ test('opening model settings folds inline menus and Escape leaves model dialog f
   const escape=new Event('keydown',{cancelable:true});Object.defineProperty(escape,'key',{value:'Escape'});h.document.dispatchEvent(escape);
   assert.equal(model.open,true);assert.equal(h.node('search-filters').open,true);assert.equal(escape.defaultPrevented,false);
   assert.equal(h.document.activeElement,field);assert.equal(h.helper.isSidebarCollapsed(),false);assert.equal(h.writes.length,0);
+});
+
+test('map tools notify layout changes independently without changing tabs or persisted sidebar preferences',()=>{
+  const h=setup({saved:'{"sidebar_width":500}'}),tools=h.node('map-tools');
+  h.helper.activateCatalogue();h.node('workspace-examples').open=true;
+  const before=h.changes();
+  for(const open of [true,false,true,false]) {
+    tools.open=open;tools.fire('toggle');
+    assert.equal(h.node('workspace-examples').open,true);
+    assert.equal(h.node('workspace-sidebar').dataset.activeTab,'catalogue');
+    assert.equal(h.node('workspace-divider').attributes.get('aria-valuenow'),'500');
+    assert.equal(h.helper.isSidebarCollapsed(),false);
+  }
+  assert.equal(h.changes(),before+4);assert.equal(h.writes.length,0);
+});
+
+test('Escape inside open map tools closes only that disclosure and restores its visible summary',()=>{
+  const h=setup(),tools=h.node('map-tools'),field=new Element();tools.contained.add(field);tools.open=true;
+  h.node('search-filters').open=true;h.document.activeElement=field;
+  const escape=new Event('keydown',{cancelable:true});Object.defineProperty(escape,'key',{value:'Escape'});h.document.dispatchEvent(escape);
+  assert.equal(escape.defaultPrevented,true);assert.equal(tools.open,false);assert.equal(h.document.activeElement,tools.summary);
+  assert.equal(h.node('search-filters').open,true);assert.equal(h.helper.isSidebarCollapsed(),false);assert.equal(h.writes.length,0);
+});
+
+test('Escape elsewhere leaves map tools open and preserves the existing sidebar keyboard action',()=>{
+  const h=setup(),tools=h.node('map-tools');tools.open=true;
+  const escape=()=>{const event=new Event('keydown',{cancelable:true});Object.defineProperty(event,'key',{value:'Escape'});h.document.dispatchEvent(event);return event;};
+  const map=new Element();h.document.activeElement=map;
+  assert.equal(escape().defaultPrevented,false);assert.equal(tools.open,true);assert.equal(h.document.activeElement,map);
+  h.node('workspace-tab-results').focus();assert.equal(escape().defaultPrevented,true);
+  assert.equal(h.helper.isSidebarCollapsed(),true);assert.equal(tools.open,true);
+});
+
+test('closing map tools reveals its summary when it is above, below or obscured by the sticky search bar',()=>{
+  const h=setup({saved:'{"sidebar_width":500}'}),tools=h.node('map-tools'),summary=tools.summary!,field=new Element();tools.contained.add(field);
+  h.window.innerHeight=390;
+  for(const [index,top] of [-70,75,360].entries()) {
+    summary.bounds={left:0,top,width:200,right:200,bottom:top+44,height:44};tools.open=true;h.document.activeElement=field;
+    const escape=new Event('keydown',{cancelable:true});Object.defineProperty(escape,'key',{value:'Escape'});h.document.dispatchEvent(escape);
+    assert.equal(tools.open,false);assert.equal(h.document.activeElement,summary);assert.equal(escape.defaultPrevented,true);
+    assert.equal(summary.scrolls.length,index+1);assert.deepEqual(summary.scrolls.at(-1),{block:'center',behavior:'instant'});
+  }
+  summary.bounds={left:0,top:-70,width:200,right:200,bottom:-26,height:44};h.document.activeElement=field;tools.fire('toggle');
+  assert.equal(h.document.activeElement,summary);assert.equal(summary.scrolls.length,4);
+  assert.equal(h.helper.isSidebarCollapsed(),false);assert.equal(h.node('workspace-divider').attributes.get('aria-valuenow'),'500');assert.equal(h.writes.length,0);
+});
+
+test('closing map tools keeps an already visible summary in place across desktop and narrow viewports',()=>{
+  const h=setup(),tools=h.node('map-tools'),summary=tools.summary!,field=new Element();tools.contained.add(field);
+  for(const [height,searchBottom,top] of [[1000,173,176],[844,168,171],[390,111,176]]) {
+    h.window.innerHeight=height;h.search.bounds.bottom=searchBottom;summary.bounds={left:0,top,width:200,right:200,bottom:top+44,height:44};
+    tools.open=true;h.document.activeElement=field;
+    const escape=new Event('keydown',{cancelable:true});Object.defineProperty(escape,'key',{value:'Escape'});h.document.dispatchEvent(escape);
+    assert.equal(h.document.activeElement,summary);assert.equal(summary.scrolls.length,0);
+    h.document.activeElement=field;tools.fire('toggle');assert.equal(h.document.activeElement,summary);assert.equal(summary.scrolls.length,0);
+  }
+  assert.equal(h.writes.length,0);assert.equal(h.helper.isSidebarCollapsed(),false);
+});
+
+test('closing map tools restores hidden field focus without stealing an unrelated map focus',()=>{
+  const h=setup(),tools=h.node('map-tools'),field=new Element();tools.contained.add(field);
+  h.document.activeElement=field;tools.open=false;const before=h.changes();tools.fire('toggle');
+  assert.equal(h.document.activeElement,tools.summary);assert.equal(h.changes(),before+1);
+  const map=new Element();h.document.activeElement=map;tools.fire('toggle');
+  assert.equal(h.document.activeElement,map);assert.equal(h.writes.length,0);
+});
+
+test('modal Escape and handled keyboard events do not close background map tools',()=>{
+  const h=setup(),tools=h.node('map-tools');tools.open=true;h.document.activeElement=tools.summary;
+  const escape=(handled=false)=>{const event=new Event('keydown',{cancelable:true});Object.defineProperty(event,'key',{value:'Escape'});if(handled)event.preventDefault();h.document.dispatchEvent(event);return event;};
+  h.node('llm-settings').open=true;assert.equal(escape().defaultPrevented,false);assert.equal(tools.open,true);
+  h.node('llm-settings').open=false;h.helper.openDetail();assert.equal(escape().defaultPrevented,false);assert.equal(tools.open,true);
+  h.helper.closeDetail();h.document.activeElement=tools.summary;escape(true);assert.equal(tools.open,true);
+  assert.equal(h.helper.isSidebarCollapsed(),false);assert.equal(h.writes.length,0);
 });
 
 test('the floating panel toggle hides controls and divider while preserving its active tab',()=>{

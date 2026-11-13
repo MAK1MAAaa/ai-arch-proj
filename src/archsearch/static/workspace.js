@@ -26,6 +26,7 @@ const ArchSearchWorkspace = (() => {
         const modelDialog = node("llm-settings");
         const typeFilter = node("type-filter"), limitFilter = node("limit-filter");
         const filterSummary = node("search-filter-summary"), filterMenu = node("search-filters");
+        const mapTools = node("map-tools");
         let width = defaultWidth, preferredWidth = defaultWidth;
         let drag = null;
         let returnFocus = null;
@@ -230,11 +231,32 @@ const ArchSearchWorkspace = (() => {
                         if (other !== menu)
                             closeMenu(other, true);
             });
+        function focusMapToolsSummary() {
+            const summary = mapTools.querySelector("summary");
+            if (!summary)
+                return;
+            summary.focus({ preventScroll: true });
+            const bounds = summary.getBoundingClientRect();
+            const visibleTop = Math.max(0, search?.getBoundingClientRect().bottom ?? 0);
+            if (bounds.top < visibleTop || bounds.bottom > window.innerHeight)
+                summary.scrollIntoView({ block: "center", behavior: "instant" });
+        }
+        mapTools.addEventListener("toggle", () => {
+            if (!mapTools.open && mapTools.contains(document.activeElement))
+                focusMapToolsSummary();
+            changed();
+        });
         window.addEventListener("archsearch:modelsettingsopen", () => { for (const menu of menus)
             closeMenu(menu); });
         document.addEventListener("keydown", (event) => {
             if (event.defaultPrevented || event.key !== "Escape" || dialog.open || modelDialog.open)
                 return;
+            if (mapTools.open && mapTools.contains(document.activeElement)) {
+                mapTools.open = false;
+                focusMapToolsSummary();
+                event.preventDefault();
+                return;
+            }
             const hadMenu = menus.some(menu => menu.open);
             for (const menu of menus)
                 if (menu.open)
