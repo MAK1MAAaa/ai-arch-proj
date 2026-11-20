@@ -17,6 +17,30 @@ def test_tokenization_normalizes_case_and_unicode() -> None:
     assert tokenize("ＲＯＭＡ, Harbor_123 港口") == ["roma", "harbor", "123", "港口"]
 
 
+def test_latin_diacritics_fold_in_composed_and_decomposed_forms() -> None:
+    assert tokenize("Gorée, Que\u0301bec, Viet\u0323nam, Đà Nẵng") == [
+        "goree", "quebec", "vietnam", "đa", "nang",
+    ]
+    assert tokenize("İstanbul Łódź Ærø") == ["istanbul", "łodz", "ærø"]
+    assert tokenize("Άλφα Москва ゼク") == ["άλφα", "москва", "ゼク"]
+
+
+def test_unaccented_lookup_retains_original_spelling_in_results(
+    tmp_path: Path, sample_sites: list[Site],
+) -> None:
+    island = sample_sites[0].model_copy(update={
+        "title": "Island of Gorée", "names": ["Île de Gorée"],
+    })
+    sites = [island, *sample_sites[1:]]
+    engine = SearchEngine(sites, SemanticIndex(sites, tmp_path))
+    plain, total = engine.search(SearchRequest(query="Goree", mode="bm25"))
+    accented, _ = engine.search(SearchRequest(query="Gorée", mode="bm25"))
+    assert total == 1 and plain == accented
+    assert plain[0].site.title == "Island of Gorée"
+    assert plain[0].site.names == ["Île de Gorée"]
+    assert plain[0].matched_fields == ["title", "names"]
+
+
 def test_bm25_has_positive_idf_and_zero_scores_for_unknown_terms() -> None:
     bm25 = BM25(["harbor", "harbor harbor", ""])
     assert np.all(bm25.scores("harbor")[:2] > 0)
@@ -248,7 +272,8 @@ def test_mixed_han_latin_digits_and_non_han_words_keep_their_boundaries() -> Non
         tokenize("ＨＭＳ２０２４西伯利亚B2")
     )
     other_words = BM25(["ＣＡＦÉ カタカナ Москва", "cafe カタ カナ"])
-    assert np.flatnonzero(other_words.scores("CAFÉ")).tolist() == [0]
+    assert np.flatnonzero(other_words.scores("CAFÉ")).tolist() == [0, 1]
+    assert np.array_equal(other_words.scores("CAFÉ"), other_words.scores("cafe"))
     assert np.flatnonzero(other_words.scores("カタカナ")).tolist() == [0]
     assert np.flatnonzero(other_words.scores("МОСКВА")).tolist() == [0]
 

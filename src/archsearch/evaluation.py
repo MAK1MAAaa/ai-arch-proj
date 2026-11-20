@@ -444,7 +444,10 @@ def evaluate_corpus(
         "lexical_contract": {
             "algorithm": "BM25",
             "tokenizer_version": TOKENIZER_VERSION,
-            "normalization": "NFKC and Unicode casefold",
+            "normalization": (
+                "NFKC, Unicode casefold and Latin diacritic folding to a-z "
+                "for canonically decomposable Latin letters"
+            ),
             "han": (
                 "Whole Han runs plus adjacent two-character fragments within each run; "
                 "punctuation and non-Han runs break fragment boundaries. "

@@ -293,7 +293,7 @@
         ui.preparationNote.hidden = mode !== "semantic" || !state.statusLoaded || state.semanticReady;
         ui.modeExplanation.textContent = mode === "semantic"
             ? "用中文描述问题，专名可保留原文，在多语种源资料中寻找相近候选；排序分数不是相关概率，仍需核验来源。"
-            : "匹配资料原词和已有中文描述；中文按相邻双字片段匹配，建议输入两个字以上。基础模式不翻译或扩展同义词；开启 LLM 增强后会另用改写查询融合排名。";
+            : "匹配资料原词和已有中文描述。拉丁地名可省略常见变音符号，如用 Goree 查找 Gorée；中文关键词建议至少两个字。开启 LLM 增强后会另用改写查询融合排名。";
         ui.exampleHint.textContent = mode === "semantic"
             ? "中文问题示例，专名可保留原文；示例同步地点类型并保留当前地域条件。"
             : "英文原词示例；示例同步地点类型并保留当前地域条件。";
