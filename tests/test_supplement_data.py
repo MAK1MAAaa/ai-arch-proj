@@ -561,8 +561,9 @@ def test_real_api_preserves_source_country_labels_and_independent_supplement_cou
     countries = {row["id"]: row for row in coverage["countries"]}
     assert len(countries) == 211
     labels = supplement.country_labels()
+    expected_counts = {"CD": 5, "GY": 8}
     assert all(countries[code]["label"] == label
-               and countries[code]["count"] == (5 if code == "CD" else 1)
+               and countries[code]["count"] == expected_counts.get(code, 1)
                for code, label in labels.items())
     previous = json.loads((supplement.DATA_DIR / "catalogue_manifest.json").read_bytes())
     assert len(previous["countries"]) == 159
