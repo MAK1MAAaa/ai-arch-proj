@@ -44,6 +44,8 @@ uv run --no-sync archsearch serve
 
 基础检索为本地 **`intfloat/multilingual-e5-small`**（CPU），可切换 **BM25**。启用 **LLM 增强**后，先改写查询，再融合本地检索排名；资料原文和地图位置不由模型生成。
 
+关键词模式支持省略常见拉丁变音符号。例如用 `Goree` 查找 `Gorée`，结果和来源保留原始拼写。此更新可直接使用已有 E5 索引，重启服务后生效。
+
 点击顶部“模型”，在弹窗中选择 Ollama，等待自动获取模型列表，选择本机已缓存的 **`qwen3.5:9b`** 并“应用所选模型”，勾选弹窗中的“LLM 增强”后关闭并检索。顶部显示增强开关状态；`qwen3.5:2b` 可作为速度优先的备选，应用只获取列表，不自动下载模型。
 
 首次配置 API 且尚无 `.env` 时，将 [`.env.example`](.env.example) 复制为根目录 `.env`；已有文件直接编辑。填写 `base_url`、`api_keys` JSON 列表和 `model`，重启服务即可加载。多 Key 写成 `api_keys=["你的第一个Key","你的第二个Key"]`；真实 `.env` 不提交 Git。

@@ -26,7 +26,7 @@ from archsearch.domain import Site
 from archsearch.index import SemanticIndex
 from archsearch.subdivisions import SUBDIVISION_PATTERN, SubdivisionIndex, SubdivisionUnavailable
 
-TOKENIZER_VERSION = "unicode-han-bigram-v1"
+TOKENIZER_VERSION = "unicode-han-bigram-v2"
 BM25_K1 = 1.5
 BM25_B = 0.75
 _HAN_RANGE = (
@@ -35,12 +35,24 @@ _HAN_RANGE = (
 )
 _LEXEMES = re.compile(rf"[{_HAN_RANGE}]+|[^\W_{_HAN_RANGE}]+")
 _HAN = re.compile(rf"[{_HAN_RANGE}]+")
+_LATIN_WITH_MARKS = re.compile(
+    r"[a-z][\u0300-\u036f]+|[\u00c0-\u024f\u1e00-\u1eff][\u0300-\u036f]*"
+)
+
+
+def _fold_latin_diacritics(match: re.Match[str]) -> str:
+    text = match[0]
+    base = unicodedata.normalize("NFD", text)[0]
+    return base if "a" <= base <= "z" else text
 
 
 def tokenize(text: str) -> list[str]:
-    """Keep Unicode words and whole Han runs, plus adjacent two-character Han fragments."""
+    """Fold Latin accents and keep whole Han runs plus adjacent Han bigrams."""
+    normalized = unicodedata.normalize("NFKC", text).casefold()
+    if not normalized.isascii():
+        normalized = _LATIN_WITH_MARKS.sub(_fold_latin_diacritics, normalized)
     terms = []
-    for token in _LEXEMES.findall(unicodedata.normalize("NFKC", text).casefold()):
+    for token in _LEXEMES.findall(normalized):
         terms.append(token)
         if len(token) > 2 and _HAN.fullmatch(token):
             terms.extend(token[index:index + 2] for index in range(len(token) - 1))
