@@ -143,6 +143,22 @@ const ArchSearchExplore = (() => {
         catch { /* Keep the source label when locale display names are unavailable. */ }
         return `${facet.label}（${facet.id}）`;
     }
+    function scopedFacets(facets, points, field, filter, selected) {
+        if (filter === null)
+            return facets;
+        const filterField = field === "countries" ? "regions" : "countries";
+        const counts = new Map();
+        for (const point of points) {
+            if (!point[filterField].includes(filter))
+                continue;
+            for (const id of point[field])
+                counts.set(id, (counts.get(id) ?? 0) + 1);
+        }
+        return facets.flatMap((facet) => {
+            const total = counts.get(facet.id) ?? 0;
+            return total > 0 || facet.id === selected ? [{ ...facet, count: total }] : [];
+        });
+    }
     function httpUrl(value) {
         if (!text(value))
             throw new Error("覆盖统计来源链接缺失。");
@@ -696,13 +712,13 @@ const ArchSearchExplore = (() => {
             renderSubdivisions();
         }
         function renderOptions() {
-            if (!coverage)
+            if (!coverage || !catalogue)
                 return;
             const populate = (select, values, label, selected, isRegion = false) => {
                 const all = element("option", undefined, label);
                 all.value = "";
                 const options = values.map((item) => {
-                    const option = element("option", undefined, `${isRegion ? regionLabels[item.id] : countryLabel(item)} · ${item.count}`);
+                    const option = element("option", undefined, `${isRegion ? regionLabels[item.id] : countryLabel(item)} · ${item.count.toLocaleString("zh-CN")}`);
                     option.title = item.label;
                     option.value = item.id;
                     return option;
@@ -716,8 +732,10 @@ const ArchSearchExplore = (() => {
                 select.replaceChildren(all, ...options);
                 select.value = selected ?? "";
             };
-            populate(ui.country, coverage.countries, "全部国家／地区", desired.country);
-            populate(ui.region, coverage.regions, "全部来源分区", desired.region, true);
+            const countries = scopedFacets(coverage.countries, catalogue.points, "countries", desired.region, desired.country);
+            const regions = scopedFacets(coverage.regions, catalogue.points, "regions", desired.country, desired.region);
+            populate(ui.country, countries, "全部国家／地区", desired.country);
+            populate(ui.region, regions, "全部来源分区", desired.region, true);
             renderSubdivisions();
         }
         function select(id) {

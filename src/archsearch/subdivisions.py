@@ -19,17 +19,17 @@ from archsearch.domain import Site, SourceReference
 from archsearch.supplement_data import SourceArtifact
 
 DATA_DIR = Path(__file__).with_name("data")
-VERSION: Literal["source-subdivisions-v7"] = "source-subdivisions-v7"
+VERSION: Literal["source-subdivisions-v8"] = "source-subdivisions-v8"
 REVIEW_FILE = "subdivision_review.json"
 PAYLOAD_FILE = "subdivisions.json"
 MANIFEST_FILE = "subdivisions_manifest.json"
 MAX_PAYLOAD_BYTES = 8 * 1024 * 1024
 MAX_REVIEW_BYTES = 8 * 1024 * 1024
 MAX_MANIFEST_BYTES = 64 * 1024
-REVIEW_SHA256 = "d971c214ebd9e98048a756eb8d32d0ed27590c26b575d663d125e42a5002c0e7"
-PAYLOAD_SHA256 = "84ce2a91952456796e65150ed5b57073a57391314a17be7ff8faec6ec8ae9049"
+REVIEW_SHA256 = "d967b91839ad4c631135044deb66418e2c2e80200c905f77d65f8fc56b76efaa"
+PAYLOAD_SHA256 = "54cc99670dfcc7d55f5dbfa6929588aa7265dd32209aace06e6e88097f842529"
 SOURCE_REVIEW_SHA256 = "f96f4ef463ef7001912ee1293e08f9b99bae62c73608f40270ea0122096e18f8"
-SOURCE_FACTS_SHA256 = "6154e68b133a9683cb5298ec68422925373111dba868525ee548c4459d58e029"
+SOURCE_FACTS_SHA256 = "be735d2a7f5223b190ba0e307522c1e993303cd04f825382f034e455bd389bf4"
 SUBDIVISION_PATTERN = r"^[A-Z]{2}:[a-z0-9][a-z0-9-]{0,63}$"
 PREPARATION_HINT = (
     "请运行 python -m archsearch.subdivisions --rebuild 修复来源省区索引并重启服务。"
@@ -124,7 +124,7 @@ class ExtraMembership(BaseModel):
 class SubdivisionReview(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
     schema_version: Literal[1]
-    version: Literal["source-subdivisions-v7"]
+    version: Literal["source-subdivisions-v8"]
     corpus_version: StrictStr = Field(min_length=1)
     corpus_ids_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     corpus_countries_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
@@ -158,7 +158,7 @@ class SubdivisionMembership(BaseModel):
 class SubdivisionPayload(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
     schema_version: Literal[1]
-    version: Literal["source-subdivisions-v7"]
+    version: Literal["source-subdivisions-v8"]
     corpus_version: StrictStr = Field(min_length=1)
     corpus_ids_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")
     corpus_countries_sha256: StrictStr = Field(pattern=r"^[0-9a-f]{64}$")

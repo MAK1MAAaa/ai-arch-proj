@@ -1,0 +1,828 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": "monument-unveiled-1976",
+      "method": "Independent Codex source comparison of the National Trust of Guyana record, named scope, stage and precision, and cached alternate evidence where applicable; checked adopted Earth statements or kept points unavailable where unresolved. Automated agent verification, not expert or human confirmation.",
+      "note": "The monument’s title names the year of the commemorated rebellion. The selected event is the 1976 unveiling of the object in this record.",
+      "phases": [
+        {
+          "end_year": 1976,
+          "id": "monument-unveiled-1976",
+          "kind": "other",
+          "label": "纪念碑揭幕（1976年5月23日）",
+          "note": "The monument’s title names the year of the commemorated rebellion. The selected event is the 1976 unveiling of the object in this record.",
+          "precision": "exact_year",
+          "sources": [
+            {
+              "accessed": "2026-11-20",
+              "excerpt": "The structure was unveiled by President Linden Forbes Sampson Burnham on May 23, 1976.",
+              "id": "qualification:gy-ntg:1763-monument",
+              "license": null,
+              "publisher": "National Trust of Guyana",
+              "revision": "Retrieved artifact SHA256 36f03c44559ec10bedeab5eb4276f32efaf15bae4cb82fea301411614fb793c3",
+              "title": "1763 Monument (Georgetown)",
+              "uri": "https://ntg.gov.gy/monument/1763-monument/"
+            }
+          ],
+          "start_year": 1976
+        }
+      ],
+      "reviewed_at": "2026-11-20",
+      "status": "reviewed"
+    },
+    "contributors": [
+      "National Trust of Guyana",
+      "Wikidata contributors"
+    ],
+    "description": "The 1763 Monument in Georgetown, Guyana commemorates the 1763 rebellion of enslaved people in Berbice. The National Trust records its unveiling on 23 May 1976.",
+    "description_zh": "乔治敦的1763年起义纪念碑纪念伯比斯被奴役者于1763年发起的起义。国家信托机构记载，纪念碑于1976年5月23日揭幕。",
+    "details": "This record is the commemorative monument at the eastern end of Brickdam, not a site of the 1763 rebellion itself or the distinct nearby Independence Arch. The National Trust gives a street location. No same-identity point with the adopted source and licensing criteria was frozen. No park, nearby monument or city-centre point is substituted.",
+    "geography": {
+      "authority_id": "supplement:auth:gy-ntg:1763-monument",
+      "countries": [
+        "GY"
+      ],
+      "note": "The official National Trust catalogue records the place in Demerara-Mahaica (Region 4), Guyana. GY is the modern ISO country code of Wikidata Q734, not a historical attribution.",
+      "point_count": 0,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-20",
+        "excerpt": "The structure was unveiled by President Linden Forbes Sampson Burnham on May 23, 1976.",
+        "id": "qualification:gy-ntg:1763-monument",
+        "license": null,
+        "publisher": "National Trust of Guyana",
+        "revision": "Retrieved artifact SHA256 36f03c44559ec10bedeab5eb4276f32efaf15bae4cb82fea301411614fb793c3",
+        "title": "1763 Monument (Georgetown)",
+        "uri": "https://ntg.gov.gy/monument/1763-monument/"
+      }
+    },
+    "id": "auth:gy-ntg:1763-monument",
+    "location_precision": null,
+    "names": [
+      "1763年起义纪念碑",
+      "1763纪念碑",
+      "卡菲纪念碑",
+      "库菲纪念碑",
+      "Cuffy Monument",
+      "1763 Monument"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": null,
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "The structure was unveiled by President Linden Forbes Sampson Burnham on May 23, 1976.",
+        "id": "qualification:gy-ntg:1763-monument",
+        "license": null,
+        "publisher": "National Trust of Guyana",
+        "revision": "Retrieved artifact SHA256 36f03c44559ec10bedeab5eb4276f32efaf15bae4cb82fea301411614fb793c3",
+        "title": "1763 Monument (Georgetown)",
+        "uri": "https://ntg.gov.gy/monument/1763-monument/"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "wikidata:Q734",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2566645116",
+        "title": "Guyana — ISO alpha-2 country code",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q734.json"
+      }
+    ],
+    "source_uri": "https://ntg.gov.gy/monument/1763-monument/",
+    "title": "1763 Monument (Georgetown)",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Independent Codex source comparison of the National Trust of Guyana record, named scope, stage and precision, and cached alternate evidence where applicable; checked adopted Earth statements or kept points unavailable where unresolved. Automated agent verification, not expert or human confirmation.",
+      "note": "The trust’s broad early dating is not a specific dated event or a supported start/end interval for the full group. The excavation record supplies context and separate site descriptions without establishing one date for the full group. No stage is adopted.",
+      "phases": [],
+      "reviewed_at": "2026-11-20",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Trust of Guyana",
+      "Wikidata contributors",
+      "Denis Williams; Walter Roth Museum of Archaeology and Anthropology (Boise State University archive)"
+    ],
+    "description": "An archaeological group of rock engravings across the Aishalton area in Guyana’s South Rupununi. The National Trust identifies Makatau Mountain as one locality. Archaeological field reports describe engravings in multiple places.",
+    "description_zh": "艾沙尔顿岩刻群分布在圭亚那南鲁普努尼的艾沙尔顿一带。马卡陶山是国家信托机构记录的岩刻地点之一，考古调查还报告了分布在其他地点的岩刻。",
+    "details": "The catalogue entry covers the wider archaeological group, including Makatau. The settlement of Aishalton is a different entity, and the record is not a single panel or excavation. There is no adopted representative point for the distributed archaeological group. The village and component coordinates are not substituted.",
+    "geography": {
+      "authority_id": "supplement:auth:gy-ntg:aishalton-petroglyphs",
+      "countries": [
+        "GY"
+      ],
+      "note": "The official National Trust catalogue records the place in Upper Takutu–Upper Essequibo (Region 9), Guyana. GY is the modern ISO country code of Wikidata Q734, not a historical attribution.",
+      "point_count": 0,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-20",
+        "excerpt": "Petroglyphs are scattered across the Aishalton district in the Rupununi, Savannah.",
+        "id": "qualification:gy-ntg:aishalton-petroglyphs",
+        "license": null,
+        "publisher": "National Trust of Guyana",
+        "revision": "Retrieved artifact SHA256 a3744136729ef5ec198e1de92a365a2a0802969bda45d49ddf5b29eb720646a1",
+        "title": "Aishalton Petroglyphs",
+        "uri": "https://ntg.gov.gy/monument/aishalton-petroglyphs/"
+      }
+    },
+    "id": "auth:gy-ntg:aishalton-petroglyphs",
+    "location_precision": null,
+    "names": [
+      "艾沙尔顿岩刻群",
+      "艾沙尔顿岩刻",
+      "艾沙尔顿岩画",
+      "Aishalton rock engravings",
+      "Aishalton Petroglyph Complex"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": null,
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "Petroglyphs are scattered across the Aishalton district in the Rupununi, Savannah.",
+        "id": "qualification:gy-ntg:aishalton-petroglyphs",
+        "license": null,
+        "publisher": "National Trust of Guyana",
+        "revision": "Retrieved artifact SHA256 a3744136729ef5ec198e1de92a365a2a0802969bda45d49ddf5b29eb720646a1",
+        "title": "Aishalton Petroglyphs",
+        "uri": "https://ntg.gov.gy/monument/aishalton-petroglyphs/"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "wikidata:Q734",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2566645116",
+        "title": "Guyana — ISO alpha-2 country code",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q734.json"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "identity-check:gy-ntg:aishalton-petroglyphs",
+        "license": null,
+        "publisher": "Denis Williams; Walter Roth Museum of Archaeology and Anthropology (Boise State University archive)",
+        "revision": "Retrieved artifact SHA256 9ea383673908a4892fc42ac95bcf166bd780c4985dc7a4e3f69e1ef251002df5",
+        "title": "A report on preceramic lithic artifacts in the South Rupununi savannas (1979), pp. 11 and 40",
+        "uri": "https://www.boisestate.edu/anthropology/wp-content/uploads/sites/773/2025/11/ArchaeologyandAnthropology_Vol.2_No.1.pdf"
+      }
+    ],
+    "source_uri": "https://ntg.gov.gy/monument/aishalton-petroglyphs/",
+    "title": "Aishalton Petroglyphs",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": "dutch-building-circa-1616",
+      "method": "Independent Codex source comparison of the National Trust of Guyana record, named scope, stage and precision, and cached alternate evidence where applicable; checked adopted Earth statements or kept points unavailable where unresolved. Automated agent verification, not expert or human confirmation.",
+      "note": "The year is explicitly circa and describes the Dutch replacement building only. It does not assign a year or founder to the earlier installation.",
+      "phases": [
+        {
+          "end_year": 1616,
+          "id": "dutch-building-circa-1616",
+          "kind": "construction",
+          "label": "荷兰永久建筑（约1616年）",
+          "note": "The year is explicitly circa and describes the Dutch replacement building only. It does not assign a year or founder to the earlier installation.",
+          "precision": "approximate_year",
+          "sources": [
+            {
+              "accessed": "2026-11-20",
+              "excerpt": "This structure was then replaced by the Dutch, circa 1616, with a permanent building",
+              "id": "qualification:gy-ntg:fort-kyk-over-al",
+              "license": null,
+              "publisher": "National Trust of Guyana",
+              "revision": "Retrieved artifact SHA256 e310c0e726dc61130670c535f567b567819815a668528badf2905e3e8fc11c01",
+              "title": "Fort Kyk-Over-Al",
+              "uri": "https://ntg.gov.gy/monument/fort-kyk-over-al/"
+            }
+          ],
+          "start_year": 1616
+        }
+      ],
+      "reviewed_at": "2026-11-20",
+      "status": "reviewed"
+    },
+    "contributors": [
+      "National Trust of Guyana",
+      "Wikidata contributors",
+      "Museu Marítimo EXEA",
+      "Atlas of Mutual Heritage",
+      "Dan Lundberg; Wikimedia Commons contributors"
+    ],
+    "description": "Remains of a Dutch trading outpost on a small island near the Mazaruni–Cuyuni confluence in Guyana. The National Trust dates the permanent Dutch building to approximately 1616.",
+    "description_zh": "凯克欧弗阿尔堡位于圭亚那马扎鲁尼河与库尤尼河交汇处附近的小岛上，现存遗迹属于荷兰贸易据点。圭亚那国家信托机构将荷兰永久建筑的年代记为约1616年。",
+    "details": "The record covers the military fort remains on the islet. The National Trust describes a possible earlier outpost without an established builder, followed by the Dutch permanent building. The same named fort’s Wikidata point agrees with the published site coordinate of Museu Marítimo EXEA and is close to published camera-position metadata from the islet. Atlas of Mutual Heritage displays a different position for the fort. The chosen point is the Wikidata Earth reference point, not the photo location, Atlas point or a survey of individual remains.",
+    "geography": {
+      "authority_id": "supplement:auth:gy-ntg:fort-kyk-over-al",
+      "countries": [
+        "GY"
+      ],
+      "note": "The official National Trust catalogue records the place in Cuyuni-Mazaruni (Region 7), Guyana. GY is the modern ISO country code of Wikidata Q734, not a historical attribution.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "wikidata:Q2926371",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2512673921",
+        "title": "Fort Kyk-Over-Al — representative point and identity",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2926371.json"
+      }
+    },
+    "id": "auth:gy-ntg:fort-kyk-over-al",
+    "location_precision": null,
+    "names": [
+      "凯克欧弗阿尔堡",
+      "凯克奥弗阿尔堡",
+      "Fort Kyk Over Al",
+      "Fort ter Hoogen"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -58.68888888888889,
+      6.378055555555555
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "This structure was then replaced by the Dutch, circa 1616, with a permanent building",
+        "id": "qualification:gy-ntg:fort-kyk-over-al",
+        "license": null,
+        "publisher": "National Trust of Guyana",
+        "revision": "Retrieved artifact SHA256 e310c0e726dc61130670c535f567b567819815a668528badf2905e3e8fc11c01",
+        "title": "Fort Kyk-Over-Al",
+        "uri": "https://ntg.gov.gy/monument/fort-kyk-over-al/"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "wikidata:Q2926371",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2512673921",
+        "title": "Fort Kyk-Over-Al — representative point and identity",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2926371.json"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "wikidata:Q734",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2566645116",
+        "title": "Guyana — ISO alpha-2 country code",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q734.json"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "location-check:exea:fort-kyk-over-al",
+        "license": null,
+        "publisher": "Museu Marítimo EXEA",
+        "revision": "Retrieved artifact SHA256 7cf36791aaf409ae138fa2c87c2e3b804626a44cbca5f7e44de7bda9aff02d33",
+        "title": "Fort Kyk-Over-Al — published site coordinate",
+        "uri": "https://www.museuexea.org/fortificacoes/fort-kyk-over-al"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "location-check:amh:2195",
+        "license": null,
+        "publisher": "Atlas of Mutual Heritage",
+        "revision": "Retrieved artifact SHA256 5342dfceeb3751b4601aa4866d5bf3023eed753ef5b7999c788f5c782cc4da22",
+        "title": "Kykoveral, fort — differing location reference",
+        "uri": "https://www.atlasofmutualheritage.nl/page/2195/kyk-overal-fort"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "location-check:commons:fort-kyk-over-al-island",
+        "license": null,
+        "publisher": "Dan Lundberg; Wikimedia Commons contributors",
+        "revision": "Retrieved artifact SHA256 8708bfbcf721969085c69cbf6bccdc28e4b52442b9e5c61ce1dd2fb384f379e9",
+        "title": "Fort Kyk-Over-Al islet — photograph camera-position context",
+        "uri": "https://commons.wikimedia.org/wiki/File:20191123_Guyana_0228_Kyk_Over_Al_Island_sRGB_(49295897097).jpg"
+      }
+    ],
+    "source_uri": "https://ntg.gov.gy/monument/fort-kyk-over-al/",
+    "title": "Fort Kyk-Over-Al",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": "relocation-1629-1630",
+      "method": "Independent Codex source comparison of the National Trust of Guyana record, named scope, stage and precision, and cached alternate evidence where applicable; checked adopted Earth statements or kept points unavailable where unresolved. Automated agent verification, not expert or human confirmation.",
+      "note": "The interval represents relocation reported by the National Trust. Establishment in 1627 concerns an earlier position. The coordinates do not locate the earlier post or resolve the individual sites of later rebuilding.",
+      "phases": [
+        {
+          "end_year": 1630,
+          "id": "relocation-1629-1630",
+          "kind": "other",
+          "label": "伯比斯河上游迁址（1629—1630年）",
+          "note": "The interval represents relocation reported by the National Trust. Establishment in 1627 concerns an earlier position. The coordinates do not locate the earlier post or resolve the individual sites of later rebuilding.",
+          "precision": "range",
+          "sources": [
+            {
+              "accessed": "2026-11-20",
+              "excerpt": "From 1629-1630, the fort was moved 80 kilometres (49.71 miles) from the mouth of the Berbice River.",
+              "id": "qualification:gy-ntg:fort-nassau",
+              "license": null,
+              "publisher": "National Trust of Guyana",
+              "revision": "Retrieved artifact SHA256 21f7d3f592e117a556f86f24f45e3ce7563f6077ed003be73f5712ceb734d0b4",
+              "title": "Fort Nassau (Upper Berbice)",
+              "uri": "https://ntg.gov.gy/monument/fort-nassau/"
+            }
+          ],
+          "start_year": 1629
+        }
+      ],
+      "reviewed_at": "2026-11-20",
+      "status": "reviewed"
+    },
+    "contributors": [
+      "National Trust of Guyana",
+      "Wikidata contributors",
+      "Atlas of Mutual Heritage"
+    ],
+    "description": "A colonial archaeological complex on the upper Berbice River in Guyana. The National Trust distinguishes an earlier trading post, a relocation in 1629–1630, and later rebuilding at a nearby location.",
+    "description_zh": "拿骚堡是圭亚那伯比斯河上游的殖民时期考古遗址群。国家信托机构区分了早期贸易据点、1629至1630年的迁址，以及后续在附近展开的重建。",
+    "details": "This record is the named archaeological complex of Upper Berbice. It does not identify the Ghanaian fort of the same name or a single structure preserved at every stage of the complex. Wikidata and the Atlas of Mutual Heritage show different reference points about 0.57 km apart for the same named complex. The adopted Wikidata point represents the complex for navigation; the sources do not fix it to a particular fort building or phase.",
+    "geography": {
+      "authority_id": "supplement:auth:gy-ntg:fort-nassau",
+      "countries": [
+        "GY"
+      ],
+      "note": "The official National Trust catalogue records the place in Upper Demerara-Berbice (Region 10), Guyana. GY is the modern ISO country code of Wikidata Q734, not a historical attribution. Wikidata Q3395011 has preferred P17=Guyana (Q734) and a separate normal-rank historical Berbice (Q675322) statement. The latter is not a modern country facet.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "wikidata:Q3395011",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2512674496",
+        "title": "Fort Nassau (Upper Berbice) — representative point and identity",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3395011.json"
+      }
+    },
+    "id": "auth:gy-ntg:fort-nassau",
+    "location_precision": null,
+    "names": [
+      "拿骚堡",
+      "纳绍堡",
+      "圭亚那拿骚堡",
+      "Fort Nassau",
+      "Berbice Fort Nassau"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -57.66166666666667,
+      5.7524999999999995
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "From 1629-1630, the fort was moved 80 kilometres (49.71 miles) from the mouth of the Berbice River.",
+        "id": "qualification:gy-ntg:fort-nassau",
+        "license": null,
+        "publisher": "National Trust of Guyana",
+        "revision": "Retrieved artifact SHA256 21f7d3f592e117a556f86f24f45e3ce7563f6077ed003be73f5712ceb734d0b4",
+        "title": "Fort Nassau (Upper Berbice)",
+        "uri": "https://ntg.gov.gy/monument/fort-nassau/"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "wikidata:Q3395011",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2512674496",
+        "title": "Fort Nassau (Upper Berbice) — representative point and identity",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3395011.json"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "wikidata:Q734",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2566645116",
+        "title": "Guyana — ISO alpha-2 country code",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q734.json"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "location-check:gy-ntg:fort-nassau",
+        "license": null,
+        "publisher": "Atlas of Mutual Heritage",
+        "revision": "Retrieved artifact SHA256 204d8ff258ac352376ca0ffa99dbaf6a848cd2896bef4cdb168984d0ce17fd3e",
+        "title": "Nassau, fort (Berbice)",
+        "uri": "https://www.atlasofmutualheritage.nl/page/1922/nassau-fort-berbice"
+      }
+    ],
+    "source_uri": "https://ntg.gov.gy/monument/fort-nassau/",
+    "title": "Fort Nassau (Upper Berbice)",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": "brick-fort-completed-1744",
+      "method": "Independent Codex source comparison of the National Trust of Guyana record, named scope, stage and precision, and cached alternate evidence where applicable; checked adopted Earth statements or kept points unavailable where unresolved. Automated agent verification, not expert or human confirmation.",
+      "note": "Completion date of the brick fort from the National Trust’s explicit completion account. The joint UNESCO tentative submission describes an approximate construction date. The earlier timber fort and the Court of Policy building are separate.",
+      "phases": [
+        {
+          "end_year": 1744,
+          "id": "brick-fort-completed-1744",
+          "kind": "construction",
+          "label": "砖堡竣工（1744年）",
+          "note": "Completion date of the brick fort from the National Trust’s explicit completion account. The joint UNESCO tentative submission describes an approximate construction date. The earlier timber fort and the Court of Policy building are separate.",
+          "precision": "exact_year",
+          "sources": [
+            {
+              "accessed": "2026-11-20",
+              "excerpt": "the fort was completed in 1744 and was named Fort Zeelandia",
+              "id": "qualification:gy-ntg:fort-zeelandia",
+              "license": null,
+              "publisher": "National Trust of Guyana",
+              "revision": "Retrieved artifact SHA256 b6faf06d019898bd801364265884ddb14019da5bd1c40afdc9bfb3e5cb0f04d0",
+              "title": "Fort Zeelandia (Fort Island, Guyana)",
+              "uri": "https://ntg.gov.gy/monument/fort-zeelandia/"
+            }
+          ],
+          "start_year": 1744
+        }
+      ],
+      "reviewed_at": "2026-11-20",
+      "status": "reviewed"
+    },
+    "contributors": [
+      "National Trust of Guyana",
+      "Wikidata contributors",
+      "UNESCO World Heritage Centre; submission by Guyana Commission for UNESCO",
+      "Atlas of Mutual Heritage"
+    ],
+    "description": "A brick Dutch fort on Fort Island in the Essequibo River, Guyana. The National Trust dates completion of the brick fort to 1744 and describes an earlier timber predecessor.",
+    "description_zh": "圭亚那埃塞奎博河上的堡岛保存着这座荷兰砖砌堡垒。国家信托机构记载砖堡于1744年竣工，当地此前另有木质防御工事。",
+    "details": "This record covers the brick fort. The adjacent Court of Policy building is part of the joint UNESCO Tentative List property. The public GLSC gazetteer records Zeelandia, Fort as a named Locality on the east side of Fort Island. The project's representative point is the WGS84 geometry of that entry, with no adopted positional accuracy. It does not locate an excavated feature, entrance or legal boundary. The distinct DMS fields, Wikidata and Atlas points are retained as source context and are not substituted or averaged.",
+    "geography": {
+      "authority_id": "supplement:auth:gy-ntg:fort-zeelandia",
+      "countries": [
+        "GY"
+      ],
+      "note": "Guyana and the Latin America and Caribbean grouping are modern catalogue labels. The adopted geometry is a GLSC named-locality reference on Fort Island.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-20",
+        "excerpt": "the fort was completed in 1744 and was named Fort Zeelandia",
+        "id": "qualification:gy-ntg:fort-zeelandia",
+        "license": null,
+        "publisher": "National Trust of Guyana",
+        "revision": "Retrieved artifact SHA256 b6faf06d019898bd801364265884ddb14019da5bd1c40afdc9bfb3e5cb0f04d0",
+        "title": "Fort Zeelandia (Fort Island, Guyana)",
+        "uri": "https://ntg.gov.gy/monument/fort-zeelandia/"
+      }
+    },
+    "id": "auth:gy-ntg:fort-zeelandia",
+    "location_precision": null,
+    "names": [
+      "圭亚那热兰遮堡",
+      "热兰遮堡",
+      "热兰遮城（圭亚那）",
+      "泽兰迪亚堡",
+      "Fort Zeelandia, Guyana",
+      "Zeelandia Fort"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -58.50840000000001,
+      6.782699999999987
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "the fort was completed in 1744 and was named Fort Zeelandia",
+        "id": "qualification:gy-ntg:fort-zeelandia",
+        "license": null,
+        "publisher": "National Trust of Guyana",
+        "revision": "Retrieved artifact SHA256 b6faf06d019898bd801364265884ddb14019da5bd1c40afdc9bfb3e5cb0f04d0",
+        "title": "Fort Zeelandia (Fort Island, Guyana)",
+        "uri": "https://ntg.gov.gy/monument/fort-zeelandia/"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "wikidata:Q172962",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2512672031",
+        "title": "Fort Zeelandia — identity; point not adopted",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q172962.json"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "wikidata:Q734",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2566645116",
+        "title": "Guyana — ISO alpha-2 country code",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q734.json"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "scope:unesco-tentative:273",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre; submission by Guyana Commission for UNESCO",
+        "revision": "Retrieved artifact SHA256 a189df4b53b4e05609c815952df539c5bb67adc86f155bc497eb4d545200289e",
+        "title": "Fort Zeelandia (including Court of Policy Building) — Tentative List",
+        "uri": "https://whc.unesco.org/en/tentativelists/273/"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "location-check:amh:1863",
+        "license": null,
+        "publisher": "Atlas of Mutual Heritage",
+        "revision": "Retrieved artifact SHA256 bd5e3fee2490b2c60c157c2ee8e262c78e2ea97791690b64660d0cdefd61c25a",
+        "title": "Zeelandia, fort (Essequibo) — location comparison",
+        "uri": "https://www.atlasofmutualheritage.nl/page/1863/zeelandia-fort-essequibo"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "location:glsc-gazetteer:5443",
+        "license": null,
+        "publisher": "Guyana Lands and Surveys Commission",
+        "revision": "Layer edited 2025-09-08; WGS84 record SHA256 3d4b418dc65e6fa2932dbcf9636021a083f9f583692b3315c6dc465a85143b02",
+        "title": "Guyana National Gazetteer - Zeelandia, Fort (locality 5443)",
+        "uri": "https://services3.arcgis.com/9QdN8AGqFexQGuDv/arcgis/rest/services/Guyana_National_Gazetteer/FeatureServer/0/query?where=ObjectId+%3D+5443&outFields=ObjectId%2CNAME%2CFEATURE%2CLOCATION%2CDMS_Lat%2CDMS_Long%2CMAP_REFERE%2CREGIONAL_C&outSR=4326&returnGeometry=true&f=json"
+      }
+    ],
+    "source_uri": "https://ntg.gov.gy/monument/fort-zeelandia/",
+    "title": "Fort Zeelandia (Fort Island, Guyana)",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": "present-cathedral-consecrated-1894",
+      "method": "Independent Codex source comparison of the National Trust of Guyana record, named scope, stage and precision, and cached alternate evidence where applicable; checked adopted Earth statements or kept points unavailable where unresolved. Automated agent verification, not expert or human confirmation.",
+      "note": "The date concerns consecration of the current building, not the earlier opening for worship, construction start or predecessor buildings.",
+      "phases": [
+        {
+          "end_year": 1894,
+          "id": "present-cathedral-consecrated-1894",
+          "kind": "other",
+          "label": "现圣乔治座堂祝圣（1894年11月8日）",
+          "note": "The date concerns consecration of the current building, not the earlier opening for worship, construction start or predecessor buildings.",
+          "precision": "exact_year",
+          "sources": [
+            {
+              "accessed": "2026-11-20",
+              "excerpt": "On November 8, 1894, the fourth St. George’s Cathedral, was consecrated by Bishop William Proctor Swaby.",
+              "id": "qualification:gy-ntg:st-georges-cathedral",
+              "license": null,
+              "publisher": "National Trust of Guyana",
+              "revision": "Retrieved artifact SHA256 5d6c94026533a04b3fdf56396a9748f4b463829605ba138a8c69da476fa05076",
+              "title": "St. George’s Cathedral (Georgetown)",
+              "uri": "https://ntg.gov.gy/monument/st-georges-cathedral/"
+            }
+          ],
+          "start_year": 1894
+        }
+      ],
+      "reviewed_at": "2026-11-20",
+      "status": "reviewed"
+    },
+    "contributors": [
+      "National Trust of Guyana",
+      "Wikidata contributors"
+    ],
+    "description": "The present Gothic Revival Anglican cathedral on North Road, Georgetown, Guyana. The National Trust describes it as the fourth cathedral building and gives 8 November 1894 as its consecration date.",
+    "description_zh": "乔治敦圣乔治座堂是圭亚那乔治敦北路的一座哥特复兴式圣公会建筑。国家信托机构记载现建筑为第四座座堂，于1894年11月8日祝圣。",
+    "details": "This record covers the standing cathedral, which is distinct from earlier chapels and cathedral buildings, and from the parish’s institutional foundation. The source identifies the historic building, but Wikidata Q4256302’s sole coordinate declares negative precision in the retrieved revisions. No representative point is adopted and no neighbourhood point is substituted.",
+    "geography": {
+      "authority_id": "supplement:auth:gy-ntg:st-georges-cathedral",
+      "countries": [
+        "GY"
+      ],
+      "note": "The official National Trust catalogue records the place in Demerara-Mahaica (Region 4), Guyana. GY is the modern ISO country code of Wikidata Q734, not a historical attribution.",
+      "point_count": 0,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-20",
+        "excerpt": "On November 8, 1894, the fourth St. George’s Cathedral, was consecrated by Bishop William Proctor Swaby.",
+        "id": "qualification:gy-ntg:st-georges-cathedral",
+        "license": null,
+        "publisher": "National Trust of Guyana",
+        "revision": "Retrieved artifact SHA256 5d6c94026533a04b3fdf56396a9748f4b463829605ba138a8c69da476fa05076",
+        "title": "St. George’s Cathedral (Georgetown)",
+        "uri": "https://ntg.gov.gy/monument/st-georges-cathedral/"
+      }
+    },
+    "id": "auth:gy-ntg:st-georges-cathedral",
+    "location_precision": null,
+    "names": [
+      "乔治敦圣乔治座堂",
+      "圣乔治大教堂",
+      "St. George's Cathedral",
+      "Saint George Cathedral Guyana"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": null,
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "On November 8, 1894, the fourth St. George’s Cathedral, was consecrated by Bishop William Proctor Swaby.",
+        "id": "qualification:gy-ntg:st-georges-cathedral",
+        "license": null,
+        "publisher": "National Trust of Guyana",
+        "revision": "Retrieved artifact SHA256 5d6c94026533a04b3fdf56396a9748f4b463829605ba138a8c69da476fa05076",
+        "title": "St. George’s Cathedral (Georgetown)",
+        "uri": "https://ntg.gov.gy/monument/st-georges-cathedral/"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "wikidata:Q4256302",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2571855129",
+        "title": "St. George’s Cathedral (Georgetown) — identity; point not adopted",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4256302.json"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "wikidata:Q734",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2566645116",
+        "title": "Guyana — ISO alpha-2 country code",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q734.json"
+      }
+    ],
+    "source_uri": "https://ntg.gov.gy/monument/st-georges-cathedral/",
+    "title": "St. George’s Cathedral (Georgetown)",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": "current-market-opened-1881",
+      "method": "Independent Codex source comparison of the National Trust of Guyana record, named scope, stage and precision, and cached alternate evidence where applicable; checked adopted Earth statements or kept points unavailable where unresolved. Automated agent verification, not expert or human confirmation.",
+      "note": "The date is the opening of the present building. The authority separately documents laying its cornerstone in 1880 and prior markets at the site.",
+      "phases": [
+        {
+          "end_year": 1881,
+          "id": "current-market-opened-1881",
+          "kind": "use",
+          "label": "现市场大厅开放（1881年11月1日）",
+          "note": "The date is the opening of the present building. The authority separately documents laying its cornerstone in 1880 and prior markets at the site.",
+          "precision": "exact_year",
+          "sources": [
+            {
+              "accessed": "2026-11-20",
+              "excerpt": "was completed and declared opened on November 1, 1881.",
+              "id": "qualification:gy-ntg:stabroek-market",
+              "license": null,
+              "publisher": "National Trust of Guyana",
+              "revision": "Retrieved artifact SHA256 967e6343fc2004d15e70605c7d2698c84cc71b71e7c3786058d67f84b9f68e55",
+              "title": "Stabroek Market",
+              "uri": "https://ntg.gov.gy/monument/stabroek-market/"
+            }
+          ],
+          "start_year": 1881
+        }
+      ],
+      "reviewed_at": "2026-11-20",
+      "status": "reviewed"
+    },
+    "contributors": [
+      "National Trust of Guyana",
+      "Wikidata contributors"
+    ],
+    "description": "The historic steel-framed market hall on the Demerara waterfront in Georgetown, Guyana. The present hall opened on 1 November 1881 and retains a prominent clock tower.",
+    "description_zh": "斯塔布鲁克市场是圭亚那乔治敦德梅拉拉河滨的历史钢架市场建筑，以钟楼著称。现在的市场大厅于1881年11月1日开放。",
+    "details": "This record is the current market hall. Earlier market activity and the former market building are distinct stages at the same site. Georgetown City Hall is a separate building. The same market hall has a Wikidata reference point with a coarse angular precision declaration of about 0.0090°. The numeric point is not a surveyed outline or entrance.",
+    "geography": {
+      "authority_id": "supplement:auth:gy-ntg:stabroek-market",
+      "countries": [
+        "GY"
+      ],
+      "note": "The official National Trust catalogue records the place in Demerara-Mahaica (Region 4), Guyana. GY is the modern ISO country code of Wikidata Q734, not a historical attribution.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "wikidata:Q7595794",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2422808034",
+        "title": "Stabroek Market — representative point and identity",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7595794.json"
+      }
+    },
+    "id": "auth:gy-ntg:stabroek-market",
+    "location_precision": null,
+    "names": [
+      "斯塔布鲁克市场",
+      "斯塔布罗克市场",
+      "斯塔布罗克集市",
+      "Stabroek Market Georgetown"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -58.1676,
+      6.80993
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "was completed and declared opened on November 1, 1881.",
+        "id": "qualification:gy-ntg:stabroek-market",
+        "license": null,
+        "publisher": "National Trust of Guyana",
+        "revision": "Retrieved artifact SHA256 967e6343fc2004d15e70605c7d2698c84cc71b71e7c3786058d67f84b9f68e55",
+        "title": "Stabroek Market",
+        "uri": "https://ntg.gov.gy/monument/stabroek-market/"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "wikidata:Q7595794",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2422808034",
+        "title": "Stabroek Market — representative point and identity",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7595794.json"
+      },
+      {
+        "accessed": "2026-11-20",
+        "excerpt": "",
+        "id": "wikidata:Q734",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2566645116",
+        "title": "Guyana — ISO alpha-2 country code",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q734.json"
+      }
+    ],
+    "source_uri": "https://ntg.gov.gy/monument/stabroek-market/",
+    "title": "Stabroek Market",
+    "types": [
+      "historic-site"
+    ]
+  }
+]

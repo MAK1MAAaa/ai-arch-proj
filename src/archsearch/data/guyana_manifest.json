@@ -1,0 +1,22 @@
+{
+  "base_count": 3898,
+  "base_ids_sha256": "1c3d1be3aa8f51ff7b8250de7ee27a5525b57e0cbdc99f4a61f63313a50c5eb4",
+  "base_sites_sha256": "d820b598e1042a08b58d52c0355893a1b320e9ba85e6c8e5f82368e554d237dc",
+  "cohort_version": "guyana-named-places-v1",
+  "corpus_version": "global-v20",
+  "counts": {
+    "added": 7,
+    "total": 3905
+  },
+  "files": {
+    "guyana_review.json": {
+      "sha256": "b60e4d13bd63e7ea1a74085a4931925fba0c7910d76778497346819923618904"
+    },
+    "guyana_sites.json": {
+      "sha256": "42309086e8ed2a5f01f92e68d6bd09529dc28ea5b75d2946348fb578a5831a80"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Seven individually verified National Trust of Guyana cultural places missing from global-v19, including the dispersed Aishalton archaeological group. The named structures and their events retain separate source and spatial scopes. This sample does not represent the complete register or the entire country."
+}

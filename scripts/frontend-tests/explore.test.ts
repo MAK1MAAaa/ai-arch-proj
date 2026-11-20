@@ -395,6 +395,42 @@ test('a valid region and country with no intersection commits an explicit empty 
   assert.match(app.node('explore-list').children[0].textContent, /暂无资料/u);
   assert.equal([...app.map!.layers][0].members.length, 0);
   assert.equal(app.node('explore-fit').disabled, true);
+  const country = app.node('explore-country');
+  const region = app.node('explore-region');
+  assert.equal(country.value, 'NZ');
+  assert.equal(region.value, 'europe-north-america');
+  assert.match(country.children.find(option => option.value === 'NZ')?.textContent ?? '', / · 0$/u);
+  assert.match(region.children.find(option => option.value === 'europe-north-america')?.textContent ?? '', / · 0$/u);
+  const cleared = app.controller.setState({ region: null });
+  app.respondAll(fixture, { country: 'NZ' }); await cleared;
+  assert.equal(region.value, '');
+  assert.match(app.node('explore-count').textContent, /1 条/u);
+});
+
+test('country and source region choices narrow by record membership independently of coordinates and bounds', async () => {
+  const points: Point[] = [
+    ...fixture,
+    { id: 'wd:Q3', title: 'Cross-region cultural record', repr_point: null, location_status: 'unknown',
+      countries: ['NZ', 'KI'], regions: ['asia-pacific', 'nps-pacific'], source_kind: 'supplement', chronology_status: 'not_reviewed' },
+    { id: 'wd:Q4', title: 'Island monument', repr_point: [179, 10], location_status: 'mapped',
+      countries: ['KI'], regions: ['asia-pacific'], source_kind: 'supplement', chronology_status: 'not_reviewed' },
+  ];
+  const app = setup(); await app.boot(points);
+  const country = app.node('explore-country');
+  const region = app.node('explore-region');
+  assert.match(country.children.find(option => option.value === 'NZ')?.textContent ?? '', / · 2$/u);
+  const scope: Partial<State> = { region: 'nps-pacific', bbox: [1, 1, 2, 2] };
+  const filtered = app.controller.setState(scope); app.respondAll(points, scope); await filtered;
+  assert.deepEqual(country.children.map(option => option.value), ['', 'NZ', 'KI']);
+  assert.ok(country.children.slice(1).every(option => option.textContent.endsWith(' · 1')));
+  assert.match(app.node('explore-count').textContent, /0 条/u);
+  const selected = app.controller.setState({ country: 'NZ' }); app.respondAll(points, { ...scope, country: 'NZ' }); await selected;
+  assert.deepEqual(region.children.map(option => option.value), ['', 'asia-pacific', 'nps-pacific']);
+  assert.match(region.children[1].textContent, / · 2$/u);
+  assert.match(region.children[2].textContent, / · 1$/u);
+  assert.equal(app.map!.lastBounds, null);
+  assert.deepEqual(app.filters, []);
+  assert.ok(app.pending.every(request => request.url !== '/api/search'));
 });
 
 test('committed browse snapshots stay unchanged before or after a failed draft and publish only after success', async () => {
@@ -925,6 +961,7 @@ test('source province counts support overlap and unassigned objects without alte
   assert.equal(app.node('explore-subdivision').children[1].textContent, 'Ontario · 2');
   await applySubdivision(app, 'CA:ontario');
   assert.match(app.node('explore-count').textContent, /2 条/u);
+  assert.match(app.node('explore-region').children[1].textContent, / · 4$/u);
   assert.equal(app.node('explore-list').children[1].children[0].dataset.siteId, 'auth:ca-dfhd:3');
   assert.equal(app.node('explore-list').children[1].children[0].dataset.locationStatus, 'unknown');
   assert.equal([...app.map!.layers][0].members.length, 3);

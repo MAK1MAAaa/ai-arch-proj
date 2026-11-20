@@ -143,7 +143,7 @@
             <button id="explore-clear-bounds" class="interaction-button" type="button" disabled>清除地图范围</button>
             <p id="explore-bounds-status" class="explore-note" role="status" aria-live="polite" tabindex="-1">尚未限定地图范围。仅影响目录与全库点层；拖动地图不会更新范围。</p>
           </div>
-          <details class="workspace-catalogue-note"><summary>地域与范围规则</summary><p id="explore-filter-note" class="explore-note">地域选择用于目录浏览和下一次主动检索；地图范围仅用于目录和全库点层，不传入检索。已完成的排名与地图年份保持原样。跨国遗产按来源成员筛选；未限定地图范围时显示整条遗产的源点，限定后仅绘框内定位点。没有逐点国别依据，不按坐标推定归属。</p></details>
+          <details class="workspace-catalogue-note"><summary>地域与范围规则</summary><p id="explore-filter-note" class="explore-note">选定国家／地区或来源分区后，另一项按共有资料缩小选项，数字包含未采用代表点的资料。地域选择用于目录浏览和下一次主动检索；地图范围仅用于目录和全库点层，不传入检索。已完成的排名与地图年份保持原样。跨国遗产按来源成员筛选；未限定地图范围时显示整条遗产的源点，限定后仅绘框内定位点。没有逐点国别依据，不按坐标推定归属。</p></details>
           <div class="explore-feedback-row"><p id="explore-feedback" class="explore-feedback" role="status" aria-live="polite">无需输入问题或准备模型，也可浏览本地目录。</p><button id="explore-retry" class="interaction-button" type="button" hidden>重试目录</button></div>
           <details id="explore-directory" class="explore-directory" open>
             <summary>浏览完整目录 <span id="explore-count">等待资料</span></summary>
@@ -222,7 +222,7 @@
                 <div class="reference-content">
                   <dl class="reference-limits">
                   <div><dt>数据范围</dt><dd>保留原有500条地中海罗马资料及100条已核对阶段的全球遗址，并扩充官方文化／混合世界遗产及南极历史遗址名录。资料总量、国家／地区和分区覆盖按当前本地版本显示，并非全球全部遗址目录。来源包括 Pleiades、UNESCO、DataHub、Wikidata、ATS、NPS、CSDI及各地官方文化名录。NPS太平洋资料分组是按登记来源建立的项目分组，不表示历史主权；受限点与只有来源多边形的资料保留空代表坐标。</dd></div>
-                  <div><dt>断代状态</dt><dd>新增全量目录的原始描述可直接检索，但历史阶段尚未逐条核验；“断代尚未核验”与“已核验，断代未确定”分别展示。列入世界遗产的年份不视为遗址建造年。</dd></div>
+                  <div><dt>断代状态</dt><dd>断代分为“有来源支持的阶段”“已核验，断代未确定”和“断代尚未核验”。选择有明确单年事件的资料时，历史图可对照该年份。列入世界遗产的年份不视为遗址建造年。</dd></div>
                   <div><dt>时期含义</dt><dd>原500条资料因名称或位置记录具有 roman 分期关联而入选；该条件不适用于新增全球资料，也不表示地点始建于该时期。独立历史阶段保留事件、精度与原文依据，不补齐时期缺口。</dd></div>
                   <div><dt>类型计数</dt><dd>同一地点可同时具有多个类型。各类型的资料数量存在交叠，不可相加作为遗址总数。</dd></div>
                   <div><dt>位置与底图</dt><dd>标记为地点代表点，precise / rough 不承诺米级精度或发掘坐标。南极点及主图投影范围以外的真实纬度保留在独立定位示意；未知位置保留在目录，不补造坐标。Natural Earth 为现代海岸线与自然地理参照；Cliopatria 历史政权疆域概略存在概略范围与争议，不能据代表点自动判定政治归属。</dd></div>
@@ -243,6 +243,7 @@
                       <li><a href="https://www.ats.aq/e/protected.html" target="_blank" rel="noopener noreferrer">ATS 南极历史资料 · CC BY 4.0</a></li>
                       <li><a href="https://www.nps.gov/aboutus/disclaimer.htm" target="_blank" rel="noopener noreferrer">NPS 政府登记事实 · 第三方权利保留</a></li>
                       <li><a href="https://portal.csdi.gov.hk/csdi-webpage/doc/TNC" target="_blank" rel="noopener noreferrer">香港特区政府／古迹办 · CSDI 来源与权利</a></li>
+                      <li><a href="https://ntg.gov.gy/monuments/" target="_blank" rel="noopener noreferrer">圭亚那国家信托名录 · 事实摘要与短摘录，权利依来源</a></li>
                       <li class="reference-source-notice"><aside aria-label="新加坡开放资料署名"><h4>新加坡古迹资料</h4><p>新加坡古迹资料采用 <a href="https://data.gov.sg/datasets/d_b29c230ec6b609e29ed42f71ca9a8767/view" target="_blank" rel="noopener noreferrer">National Heritage Board 经 data.gov.sg 提供的 Monuments (GEOJSON)</a>，取得日期 2026-11-05，按 <a href="https://data.gov.sg/open-data-licence" target="_blank" rel="noopener noreferrer">Singapore Open Data Licence 1.0</a> 使用。</p></aside></li>
                       <li class="reference-source-notice"><aside aria-label="巴西米纳斯吉拉斯州开放资料署名"><h4>巴西登记资料</h4><p>巴西登记资料采用 <a href="https://dados.mg.gov.br/dataset/bens-tombados" target="_blank" rel="noopener noreferrer">Iepha-MG 经 dados.mg.gov.br 发布的 Patrimônio Cultural Tombado</a>，取得日期 2026-11-05，按 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> 整理为登记范围与原市镇字段；源未给坐标，保留未知位置。</p></aside></li>
                     </ul>
