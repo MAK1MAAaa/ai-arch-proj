@@ -648,13 +648,13 @@ test('export provenance includes source release, attribution, license and interp
   assert.equal(canada?.version, 'canada-dfhd-v1');
   assert.equal(canada?.license, 'Open Government Licence - Canada; Wikidata structured claims CC0');
   assert.match(canada?.note ?? '', /Parks Canada.*reference points.*separate from project identity approval/u);
-  const subdivisions = exported.sources.find(source => source.version === 'source-subdivisions-v7');
+  const subdivisions = exported.sources.find(source => source.version === 'source-subdivisions-v8');
   assert.equal(subdivisions?.license, 'Mixed rights — DFHD fields OGL-Canada; CSDI custom terms; Iepha-MG fields CC BY 4.0; Mérimée fields Open Licence 2.0; other webpages retain individual rights');
   assert.equal(subdivisions?.uri, 'https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/SUBDIVISIONS-LICENSE.md');
   assert.match(subdivisions?.note ?? '', /Only the986 DFHD objects.*CRHP and Parks Canada.*CSDI Terms/u);
   assert.match(subdivisions?.note ?? '', /explicitly reviewed whole.*No coordinate geocoding, inferred parent membership/u);
   assert.match(subdivisions?.note ?? '', /municipio.*Compound locality values stay intact.*not statutory administrative IDs/u);
-  assert.match(subdivisions?.note ?? '', /Commune_forme_editoriale values in GP, BL, MF, MQ and RE.*GF, YT and PM.*global-v19/u);
+  assert.match(subdivisions?.note ?? '', /Commune_forme_editoriale values in GP, BL, MF, MQ and RE.*GF, YT and PM.*global-v20/u);
   const minas = exported.sources.find(source => source.version === 'minas-tombados-v1');
   assert.equal(minas?.license, 'CC BY 4.0');
   assert.equal(minas?.uri, 'https://dados.mg.gov.br/dataset/bens-tombados');

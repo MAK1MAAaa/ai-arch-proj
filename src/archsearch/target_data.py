@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Literal
 
@@ -29,6 +30,30 @@ SITES_SHA256 = "6764fe78b83500fe5a7b58a270c329d52d31ee51d42b096a8df024d0d4f129d3
 MAX_ARTIFACT_BYTES = 1024 * 1024
 
 
+@dataclass(frozen=True)
+class NamedPlaceCohort:
+    version: str
+    corpus_version: str
+    file_prefix: str
+    review_sha256: str
+    sites_sha256: str
+
+    @property
+    def filenames(self) -> tuple[str, str, str]:
+        prefix = self.file_prefix
+        return f"{prefix}_review.json", f"{prefix}_sites.json", f"{prefix}_manifest.json"
+
+
+ORIGINAL = NamedPlaceCohort(VERSION, CORPUS_VERSION, "target", SPEC_SHA256, SITES_SHA256)
+GUYANA = NamedPlaceCohort(
+    "guyana-named-places-v1",
+    "global-v20",
+    "guyana",
+    "b60e4d13bd63e7ea1a74085a4931925fba0c7910d76778497346819923618904",
+    "42309086e8ed2a5f01f92e68d6bd09529dc28ea5b75d2946348fb578a5831a80",
+)
+
+
 class TargetDataError(RuntimeError):
     """Named-place evidence or its frozen base corpus differs from its reviewed snapshot."""
 
@@ -46,9 +71,10 @@ class TargetRecord(BaseModel):
     def validate_evidence(self) -> TargetRecord:
         site = self.site
         if (
-            site.source_kind != "supplement" or site.types != ["historic-site"]
+            site.source_kind != "supplement"
+            or site.types not in (["historic-site"], ["archaeological-site"])
             or site.periods or site.period_evidence or site.geography is None
-            or site.chronology.status != "reviewed" or site.location_precision is not None
+            or site.chronology.status == "not_reviewed" or site.location_precision is not None
             or site.repr_point != self.coordinate.point
         ):
             raise ValueError("named places need their own reviewed scope, point and event evidence")
@@ -74,9 +100,9 @@ class TargetSpec(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
 
     schema_version: Literal[1]
-    cohort_version: Literal["named-places-v1"]
-    corpus_version: Literal["global-v19"]
-    base_count: Literal[3897]
+    cohort_version: str
+    corpus_version: str
+    base_count: int = Field(gt=0)
     base_ids_sha256: str = Field(pattern=r"^[0-9a-f]{64}$")
     base_sites_sha256: str = Field(pattern=r"^[0-9a-f]{64}$")
     selection: str = Field(min_length=1)
@@ -99,25 +125,32 @@ def _read(path: Path) -> bytes:
     return raw
 
 
-def _compile(base: list[Site], directory: Path) -> tuple[list[Site], bytes, dict[str, Any]]:
-    raw = _read(directory / SPEC_FILE)
-    if _hash(raw) != SPEC_SHA256:
+def _compile(
+    base: list[Site], directory: Path, cohort: NamedPlaceCohort,
+) -> tuple[list[Site], bytes, dict[str, Any]]:
+    spec_file, sites_file, _ = cohort.filenames
+    raw = _read(directory / spec_file)
+    if _hash(raw) != cohort.review_sha256:
         raise TargetDataError("named-place review differs from its independent checksum")
     spec = TargetSpec.model_validate_json(raw)
-    if any(getattr(spec, key) != value for key, value in base_contract(base).items()):
+    if (spec.cohort_version, spec.corpus_version) != (cohort.version, cohort.corpus_version):
+        raise TargetDataError("named-place review belongs to another cohort or corpus version")
+    base_facts = base_contract(base)
+    if any(getattr(spec, key) != value for key, value in base_facts.items()):
         raise TargetDataError("named-place base identities or fields changed")
     additions = sorted((record.site for record in spec.records), key=lambda site: site.id)
     ids = [site.id for site in [*base, *additions]]
     if len(ids) != len(set(ids)):
         raise TargetDataError("named places duplicate an existing corpus identity")
     payload = _bytes([site.model_dump(mode="json") for site in additions])
-    if _hash(payload) != SITES_SHA256:
+    if _hash(payload) != cohort.sites_sha256:
         raise TargetDataError("named-place derivative differs from the reviewed checksum")
     manifest = {
-        "schema_version": 1, "cohort_version": VERSION, "corpus_version": CORPUS_VERSION,
-        **base_contract(base),
-        "files": {SPEC_FILE: {"sha256": SPEC_SHA256},
-                  SITES_FILE: {"sha256": SITES_SHA256}},
+        "schema_version": 1, "cohort_version": cohort.version,
+        "corpus_version": cohort.corpus_version,
+        **base_facts,
+        "files": {spec_file: {"sha256": cohort.review_sha256},
+                  sites_file: {"sha256": cohort.sites_sha256}},
         "counts": {"added": len(additions), "total": len(base) + len(additions)},
         "selection": spec.selection,
         "processing": "Source-based bilingual summaries; no generated dates or coordinates. "
@@ -126,33 +159,42 @@ def _compile(base: list[Site], directory: Path) -> tuple[list[Site], bytes, dict
     return additions, payload, manifest
 
 
-def load_targets(base: list[Site], data_dir: Path = DATA_DIR) -> list[Site]:
+def load_targets(
+    base: list[Site], data_dir: Path = DATA_DIR, *, cohort: NamedPlaceCohort = ORIGINAL,
+) -> list[Site]:
     """Validate and append the frozen named-place cohort without reading source caches."""
     try:
-        additions, payload, manifest = _compile(base, Path(data_dir))
-        if (_read(Path(data_dir) / SITES_FILE) != payload
-                or json.loads(_read(Path(data_dir) / MANIFEST_FILE)) != manifest):
+        _, sites_file, manifest_file = cohort.filenames
+        additions, payload, manifest = _compile(base, data_dir, cohort)
+        if (_read(data_dir / sites_file) != payload
+                or json.loads(_read(data_dir / manifest_file)) != manifest):
             raise TargetDataError("named-place shipped files do not match their reviewed facts")
         return [*base, *additions]
     except (OSError, ValueError, TypeError, KeyError, RecursionError) as error:
         raise TargetDataError("named-place evidence is absent or invalid") from error
 
 
-def rebuild_targets(base: list[Site], data_dir: Path = DATA_DIR) -> dict[str, Any]:
+def rebuild_targets(
+    base: list[Site], data_dir: Path = DATA_DIR, *, cohort: NamedPlaceCohort = ORIGINAL,
+) -> dict[str, Any]:
     """Rebuild deterministic public artifacts from the compact, reviewed evidence."""
-    _, payload, manifest = _compile(base, Path(data_dir))
-    (data_dir / SITES_FILE).write_bytes(payload)
-    (data_dir / MANIFEST_FILE).write_bytes(_bytes(manifest))
+    _, sites_file, manifest_file = cohort.filenames
+    _, payload, manifest = _compile(base, data_dir, cohort)
+    (data_dir / sites_file).write_bytes(payload)
+    (data_dir / manifest_file).write_bytes(_bytes(manifest))
     return manifest
 
 
 def main() -> None:
-    from archsearch.corpus import load_pre_targets_corpus
+    from archsearch.corpus import load_named_places_v1_corpus, load_pre_targets_corpus
 
     parser = argparse.ArgumentParser(description="重建已复核的专名地点资料")
     parser.add_argument("--output", type=Path, default=DATA_DIR)
+    parser.add_argument("--guyana", action="store_true", help="重建圭亚那批次")
     args = parser.parse_args()
-    print(json.dumps(rebuild_targets(load_pre_targets_corpus(), args.output),
+    base = load_named_places_v1_corpus() if args.guyana else load_pre_targets_corpus()
+    cohort = GUYANA if args.guyana else ORIGINAL
+    print(json.dumps(rebuild_targets(base, args.output, cohort=cohort),
                      ensure_ascii=False, indent=2))
 
 

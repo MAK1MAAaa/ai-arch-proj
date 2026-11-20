@@ -213,6 +213,20 @@ const ArchSearchExplore = (() => {
     return `${facet.label}（${facet.id}）`;
   }
 
+  function scopedFacets(facets: Facet[], points: Point[], field: "countries" | "regions", filter: string | null, selected: string | null): Facet[] {
+    if (filter === null) return facets;
+    const filterField = field === "countries" ? "regions" : "countries";
+    const counts = new Map<string, number>();
+    for (const point of points) {
+      if (!point[filterField].includes(filter)) continue;
+      for (const id of point[field]) counts.set(id, (counts.get(id) ?? 0) + 1);
+    }
+    return facets.flatMap((facet) => {
+      const total = counts.get(facet.id) ?? 0;
+      return total > 0 || facet.id === selected ? [{ ...facet, count: total }] : [];
+    });
+  }
+
   function httpUrl(value: unknown): string {
     if (!text(value)) throw new Error("覆盖统计来源链接缺失。");
     const url = new URL(value);
@@ -679,11 +693,11 @@ const ArchSearchExplore = (() => {
     }
 
     function renderOptions(): void {
-      if (!coverage) return;
+      if (!coverage || !catalogue) return;
       const populate = (select: HTMLSelectElement, values: Facet[], label: string, selected: string | null, isRegion = false): void => {
         const all = element("option", undefined, label); all.value = "";
         const options = values.map((item) => {
-          const option = element("option", undefined, `${isRegion ? regionLabels[item.id] : countryLabel(item)} · ${item.count}`);
+          const option = element("option", undefined, `${isRegion ? regionLabels[item.id] : countryLabel(item)} · ${item.count.toLocaleString("zh-CN")}`);
           option.title = item.label;
           option.value = item.id; return option;
         });
@@ -693,8 +707,10 @@ const ArchSearchExplore = (() => {
         }
         select.replaceChildren(all, ...options); select.value = selected ?? "";
       };
-      populate(ui.country, coverage.countries, "全部国家／地区", desired.country);
-      populate(ui.region, coverage.regions, "全部来源分区", desired.region, true);
+      const countries = scopedFacets(coverage.countries, catalogue.points, "countries", desired.region, desired.country);
+      const regions = scopedFacets(coverage.regions, catalogue.points, "regions", desired.country, desired.region);
+      populate(ui.country, countries, "全部国家／地区", desired.country);
+      populate(ui.region, regions, "全部来源分区", desired.region, true);
       renderSubdivisions();
     }
 
