@@ -13,7 +13,7 @@ from pydantic import BaseModel, Field
 
 from archsearch.bounds import BBox, SpatialBounds
 from archsearch.config import DATA_DIR
-from archsearch.domain import Site
+from archsearch.domain import ChronologyStatus, Site
 from archsearch.spatial_data import (
     SourceGroup,
     SpatialDataError,
@@ -277,7 +277,7 @@ class CataloguePoint(BaseModel):
     countries: list[str]
     regions: list[str]
     source_kind: str
-    chronology_status: str
+    chronology_status: ChronologyStatus
     source_points: list[tuple[float, float]] = Field(default_factory=list)
     source_location_records: list[SourceLocationRecord] = Field(default_factory=list)
 
@@ -302,6 +302,7 @@ class SitePage(BaseModel):
     spatial_version: str | None = None
     subdivision: str | None = None
     subdivision_version: str | None = None
+    chronology_status: ChronologyStatus | None = None
 
 
 def matches_geography(site: Site, country: str | None, region: str | None) -> bool:
@@ -574,10 +575,14 @@ class CatalogueIndex:
         country: str | None = None, region: str | None = None, kind: str | None = None,
         bbox: SpatialBounds | None = None,
         subdivision: str | None = None,
+        *,
+        chronology_status: ChronologyStatus | None = None,
     ) -> SitePage:
         if type(offset) is not int or offset < 0 or type(limit) is not int or not 1 <= limit <= 100:
             raise ValueError("offset必须为非负整数，limit必须为1至100的整数。")
         selected = self.filtered(country, region, kind, subdivision)
+        if chronology_status is not None:
+            selected = [site for site in selected if site.chronology.status == chronology_status]
         if bbox is not None:
             selected = [
                 site for site in selected
@@ -595,4 +600,5 @@ class CatalogueIndex:
             subdivision=subdivision,
             subdivision_version=(self.subdivisions.version
                                  if subdivision and self.subdivisions else None),
+            chronology_status=chronology_status,
         )

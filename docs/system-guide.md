@@ -72,7 +72,9 @@
 
 左侧“全库浏览”提供覆盖统计、互相联动的国家／地区与来源分区下拉、原始单点／聚合点层及每页50条的可键盘操作目录；无需模型或查询即可浏览。目录按标题排序，没有相关性分数。点击目录可定位并通过“查看详情”阅读原文；点击全库来源圆点保留当前视角，不跳回所属资料的整体代表点。选中地点无需位于检索Top10／50内。编号标记属于当前检索候选，“选”标记属于独立选中地点，两者不混入对方的排名。
 
-目录国家／地区条件用于下一次主动提交的检索；浏览、翻页和切换图层时，已有成功检索的条件与排名保持不变。查询参数 `country/region` 保存成功检索的过滤；`browse_country/browse_region/browse_offset/browse_bbox/points` 单独保存最后成功目录范围及即时点层开关。目录请求失败时保留成功列表与点层，分享和导出也保留该成功范围。无查询的目录与地图链接可以直接恢复遗址；模型缺失时保留待恢复查询，用户操作优先于晚到的初始化恢复。
+目录国家／地区条件用于下一次主动提交的检索；浏览、翻页和切换图层时，已有成功检索的条件与排名保持不变。查询参数 `country/region` 保存成功检索的过滤。`browse_country/browse_region/browse_subdivision/browse_chronology/browse_offset/browse_bbox/points` 单独保存最后成功目录范围及即时点层开关。目录请求失败时保留成功列表与点层，分享和导出也保留该成功范围。无查询的目录与地图链接可以直接恢复遗址；模型缺失时保留待恢复查询，用户操作优先于晚到的初始化恢复。
+
+“断代状态”按已有来源阶段、已核验但断代未确定、尚未核验三类过滤。当前全库已有来源阶段的156条中，2条未采用代表点，仍可在目录中打开。条件与国家、分区、省区和固定地图范围取交集，并同步筛两张主图的全库背景点。已有检索排名、选中地点与当前历史背景保留。南极独立示意继续展示其完整目录。已有来源阶段涵盖不同的时间精度，只有明确单年阶段在主动选中遗址时自动切年。
 
 国家／地区来自现代名录成员字段，不按代表点或历史疆域推断。跨国遗产计入各关联国家，各国计数不可相加作为总数。501条尚无来源地理标签，593条没有国家标签（另含来源未归类的耶路撒冷和91条南极资料）；两项是不同指标。各资料保留其原代表点或空值，地图另显示名录源定位记录；`point_count`不代表已逐一核验的组成遗址数。两处来源缺失定位点的世界遗产记录保留独立Wikidata证据，其中1567明确使用一个关联组成部分定位，不称为整体中心。
 
@@ -644,7 +646,7 @@ CI在Windows与Ubuntu执行Python锁定安装、Ruff、mypy、pytest，以及pnp
 | `GET /api/facets` | 类型ID、中文标签和数量 |
 | `GET /api/coverage` | 全库国家／分区、来源、断代三态、定位三态及两类官方名录覆盖分母 |
 | `GET /api/catalogue` | 全库定位目录，含原repr_point、定位状态、完整source_points及同序来源标签，可选country／region／type交集 |
-| `GET /api/sites` | 无查询分页目录，offset及limit（1—100），国家／分区／类型与可选bbox取交集，返回实际匹配方式与定位版本 |
+| `GET /api/sites` | 无查询分页目录，offset及limit（1—100），国家／分区／省区／类型、可选断代状态和bbox取交集，返回实际匹配方式与定位版本 |
 | `POST /api/search` | 查询、模式、筛选与可选LLM查询增强及RRF排名 |
 | `GET /api/llm/config`、`POST /api/llm/config` | 读取／应用当前服务内存中的模型配置，不回传密钥 |
 | `POST /api/llm/models` | 根据草稿地址和密钥获取模型列表，支持Ollama／OpenAI兼容API |
@@ -654,6 +656,8 @@ CI在Windows与Ubuntu执行Python锁定安装、Ruff、mypy、pytest，以及pnp
 | `GET /openapi.json` | 完整接口与字段定义 |
 
 地图目录示例：`GET /api/sites?bbox=-60.05,-3.16,-60,-3.10&limit=50`。`bbox`只接受单个1—200字符的十进制CSV，四个数均须有限，经度为±180°、纬度为±90°，南界小于北界；全经度请用`-180,south,180,north`。响应回显`bbox`并提供`spatial_match_mode`与`spatial_version`；`GET /api/catalogue`拒绝`bbox`，仍用作全库来源点缓存，`POST /api/search`也不接受此字段。
+
+断代目录示例为 `GET /api/sites?country=CA&chronology_status=reviewed`。可选参数 `chronology_status` 接受单个 `reviewed`、`insufficient` 或 `not_reviewed`，响应回显已应用的值。分享使用 `browse_chronology`，版本2导出的 `browse.chronology` 保存已成功显示的条件。省略参数的旧链接仍显示全部断代状态。
 
 搜索请求示例：
 

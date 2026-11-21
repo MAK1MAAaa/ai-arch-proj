@@ -22,7 +22,7 @@ from archsearch.bounds import SpatialBounds
 from archsearch.config import MODEL_REVISION
 from archsearch.corpus import CORPUS_VERSION, build_document
 from archsearch.coverage import CatalogueIndex, CoverageRegistry
-from archsearch.domain import Geography, Site, SourceReference
+from archsearch.domain import ChronologyReview, Geography, Site, SourceReference
 from archsearch.index import SemanticIndex
 from archsearch.search import SearchEngine, SearchRequest
 from archsearch.spatial_data import SourceLocation, WorldLocations
@@ -682,6 +682,11 @@ def test_province_selection_retains_every_original_source_point_and_bbox_rule(
 
 
 def test_api_facets_search_page_and_catalogue_echo_the_same_supported_scope(bundle: Bundle) -> None:
+    review = ChronologyReview(
+        status="insufficient", method="Fixture audit", reviewed_at="2026-11-01",
+    )
+    bundle.sites[:] = [site.model_copy(update={"chronology": review}) if site.id in {"3", "2"}
+                      else site for site in bundle.sites]
     with TestClient(create_app(sites=bundle.sites,
             semantic=cast(SemanticIndex, FakeSemantic(bundle.sites)), home=bundle.directory,
             subdivisions=bundle.index())) as client:
@@ -693,6 +698,13 @@ def test_api_facets_search_page_and_catalogue_echo_the_same_supported_scope(bund
             body = client.get(path, params=params).json()
             assert body["total"] == 2 and body["subdivision"] == "CA:ontario"
             assert body["subdivision_version"] == sub.VERSION
+        insufficient = client.get("/api/sites", params={
+            **params, "chronology_status": "insufficient",
+        }).json()
+        assert insufficient["total"] == 1 and insufficient["chronology_status"] == "insufficient"
+        assert insufficient["subdivision"] == "CA:ontario"
+        assert insufficient["subdivision_version"] == sub.VERSION
+        assert insufficient["sites"][0]["id"] == "3"
         searched = client.post("/api/search", json={"query": "harbor", "mode": "semantic",
                                                    "limit": 1, **params}).json()
         assert searched["results"][0]["site"]["id"] == "1"

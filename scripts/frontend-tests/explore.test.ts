@@ -5,7 +5,8 @@ import { createContext, runInContext } from 'node:vm';
 
 import ts from 'typescript';
 
-interface State { country: string | null; region: string | null; offset: number; visible: boolean; bbox?: [number, number, number, number] | null; spatial_match_mode?: string; spatial_version?: string | null; subdivision?: string | null; subdivision_version?: string | null }
+type ChronologyStatus = 'reviewed' | 'insufficient' | 'not_reviewed';
+interface State { country: string | null; region: string | null; offset: number; visible: boolean; bbox?: [number, number, number, number] | null; spatial_match_mode?: string; spatial_version?: string | null; subdivision?: string | null; subdivision_version?: string | null; chronology?: ChronologyStatus | null }
 interface Helpers {
   create(options: { map: FakeMap | null; initialState?: Partial<State>; initialBoundsError?: string | null; onBoundsAction?(): void; onSelect(id: string, opener: FakeElement, options?: { moveMap?: boolean }): void; onFilterChange?(state: State): void; onStateChange?(state: State): void; onCommittedState?(state: State): void; onCatalogue?(points: Point[]): void }): Controller;
   normalizeState(value: Partial<State>): State;
@@ -58,6 +59,9 @@ test('global exploration defaults are independent of a query, model or historica
 test('restored catalogue filters reject coercion, unknown regions and invalid offsets', () => {
   for (const country of ['', 'nz', 'NZA', ' NZ ', '<script>']) assert.throws(() => helpers.normalizeState({ country }), /代码/u);
   for (const region of ['', 'asia', '__proto__']) assert.throws(() => helpers.normalizeState({ region }), /分区/u);
+  for (const chronology of ['', 'REVIEWED', ' reviewed', '__proto__']) {
+    assert.throws(() => helpers.normalizeState({ chronology: chronology as ChronologyStatus }), /断代/u);
+  }
   for (const offset of [-1, 0.5, Number.NaN, Number.POSITIVE_INFINITY, 1_000_001]) assert.throws(() => helpers.normalizeState({ offset }), /起始位置/u);
   assert.throws(() => helpers.normalizeState({ visible: 'false' as unknown as boolean }), /开关/u);
 });
@@ -197,9 +201,11 @@ function pageFor(state: Partial<State> = {}, points = fixture) {
   const mode = points.some(point => point.source_points?.length) ? 'source-or-representative' : 'representative-only';
   const inside = (point: [number, number]) => !state.bbox || helpers.insideBBox(point, state.bbox);
   const filtered = points.filter(point => (state.country == null || point.countries.includes(state.country)) && (state.region == null || point.regions.includes(state.region))
+    && (state.chronology == null || point.chronology_status === state.chronology)
     && (!state.bbox || (point.repr_point !== null && inside(point.repr_point)) || point.source_points?.some(inside)));
   const offset = state.offset ?? 0;
   return { corpus_version: 'global-v3', total: filtered.length, offset, limit: 50, bbox: state.bbox ?? null, spatial_match_mode: mode, spatial_version: mode === 'source-or-representative' ? 'world-locations-v1' : null,
+    ...(state.chronology ? { chronology_status: state.chronology } : {}),
     sites: filtered.slice(offset, offset + 50).map(point => ({ id: point.id, title: point.title, repr_point: point.repr_point, source_kind: point.source_kind,
       geography: point.countries.length || point.regions.length ? { countries: point.countries, regions: point.regions } : null, chronology: { status: point.chronology_status } })) };
 }
@@ -207,6 +213,7 @@ function pageFor(state: Partial<State> = {}, points = fixture) {
 function setup(withMap = true, initialBoundsError: string | null = null) {
   const ids = ['explore-panel', 'explore-summary', 'explore-authority', 'explore-polar-authority', 'explore-spatial-source', 'explore-country', 'explore-region', 'explore-clear', 'explore-points', 'explore-fit', 'explore-count', 'explore-list', 'explore-previous', 'explore-next', 'explore-page', 'explore-feedback', 'explore-retry', 'explore-limit-note', 'explore-capture-bounds', 'explore-clear-bounds', 'explore-bounds-status'];
   ids.push('explore-subdivision-filter', 'explore-subdivision', 'explore-subdivision-note', 'explore-subdivision-feedback', 'explore-subdivision-retry');
+  ids.push('explore-chronology');
   const nodes = new Map(ids.map(id => [id, new FakeElement()]));
   const doc: { activeElement: FakeElement | null; getElementById(id: string): FakeElement | null; createElement(tag: string): FakeElement } = {
     activeElement: null, getElementById: id => nodes.get(id) ?? null,
@@ -305,6 +312,84 @@ test('restored filters notify nobody; user filtering notifies next-search condit
   app.respondAll(fixture, { country: 'TR', region: 'europe-north-america' }); await changed;
   assert.equal(app.changes.length, 1); assert.equal(app.filters.length, 1);
   assert.ok(app.pending.every(request => request.url !== '/api/search'));
+});
+
+test('chronology controls filter the committed list and map points independently of search', async () => {
+  const reviewed = fixture[1];
+  const points: Point[] = [
+    ...fixture,
+    { ...reviewed, id: 'auth:fixture:unknown', title: 'Reviewed without point', repr_point: null, location_status: 'unknown' },
+    { ...reviewed, id: 'auth:fixture:polar', title: 'Reviewed polar record', repr_point: [0, -90], location_status: 'polar' },
+    { ...reviewed, id: 'auth:fixture:unchecked', title: 'Unreviewed nearby record', chronology_status: 'not_reviewed' },
+  ];
+  const app = setup(); await app.boot(points);
+  const geography = { country: 'TR', region: 'europe-north-america' };
+  const previous = app.controller.setState({ ...geography, offset: 50 });
+  app.respondAll(points, { ...geography, offset: 50 }); await previous;
+  const control = app.node('explore-chronology');
+  assert.equal(control.disabled, false);
+  control.value = 'reviewed'; control.fire('change');
+  const request = app.find('/api/sites');
+  const filters = new URL(request.url, 'http://example.org').searchParams;
+  assert.equal(filters.get('chronology_status'), 'reviewed');
+  assert.equal(filters.get('offset'), '0');
+  assert.equal(filters.get('country'), 'TR');
+  assert.equal(app.controller.getCommittedState()?.offset, 50);
+  assert.equal(app.controller.getCommittedState()?.chronology, undefined);
+  app.response(request, pageFor({ ...geography, chronology: 'reviewed' }, points));
+  await new Promise(resolve => setImmediate(resolve));
+  assert.equal(app.controller.getCommittedState()?.chronology, 'reviewed');
+  assert.deepEqual(app.node('explore-list').children.map(item => item.children[0].dataset.siteId),
+    ['wd:Q2', 'auth:fixture:unknown', 'auth:fixture:polar']);
+  assert.match(app.node('explore-feedback').textContent, /3 条资料（已有来源支持的阶段）.*极区 1、暂无可用代表点 1/u);
+  assert.deepEqual(plain(app.controller.getDisplayedPlacements().map(point => point.id)), ['wd:Q2']);
+  assert.equal(app.catalogues.length, 1);
+  assert.equal(app.catalogues[0].length, points.length);
+  assert.equal(app.map?.lastBounds, null);
+  app.node('explore-fit').fire('click');
+  assert.deepEqual(plain(app.map?.lastBounds), [[40, 29]]);
+  assert.equal(app.changes.length, 1);
+  assert.equal(app.filters.length, 0);
+
+  const bbox: State['bbox'] = [28, 39, 30, 41];
+  const bounded = app.controller.setState({ bbox });
+  app.respondAll(points, { ...geography, chronology: 'reviewed', bbox }); await bounded;
+  assert.equal(app.node('explore-list').children.length, 1);
+  control.value = ''; control.fire('change');
+  const cleared = app.find('/api/sites');
+  const clearedFilters = new URL(cleared.url, 'http://example.org').searchParams;
+  assert.equal(clearedFilters.has('chronology_status'), false);
+  assert.equal(clearedFilters.get('bbox'), '28,39,30,41');
+  app.response(cleared, pageFor({ ...geography, bbox }, points)); // legacy unfiltered echo
+  await new Promise(resolve => setImmediate(resolve));
+  assert.equal(app.node('explore-list').children.length, 2);
+  assert.equal(app.controller.getCommittedState()?.chronology, undefined);
+  assert.deepEqual(plain(app.controller.getCommittedState()?.bbox), bbox);
+  assert.equal(app.filters.length, 0);
+  assert.ok(app.pending.every(item => item.url !== '/api/search'));
+});
+
+test('chronology needs an exact response echo and stale success cannot replace a committed scope', async () => {
+  const app = setup(); await app.boot();
+  const original = plain(app.controller.getCommittedState());
+  const reviewed = app.controller.setState({ chronology: 'reviewed' });
+  const stale = app.pending.at(-1)!;
+  const insufficient = app.controller.setState({ chronology: 'insufficient' });
+  const active = app.pending.at(-1)!;
+  const rejected = assert.rejects(insufficient, /断代筛选条件/u);
+  assert.equal(stale.signal.aborted, true);
+  app.response(active, { ...pageFor({ chronology: 'insufficient' }), chronology_status: undefined });
+  await rejected;
+  app.response(stale, pageFor({ chronology: 'reviewed' }));
+  await reviewed;
+  assert.deepEqual(plain(app.controller.getCommittedState()), original);
+  assert.equal(app.node('explore-list').children.length, fixture.length);
+  assert.equal(app.controller.getDisplayedPlacements().length, fixture.length);
+
+  const retried = app.controller.load();
+  app.respondAll(fixture, { chronology: 'insufficient' }); await retried;
+  assert.equal(app.controller.getCommittedState()?.chronology, 'insufficient');
+  assert.deepEqual(plain(app.controller.getDisplayedPlacements().map(point => point.id)), ['123']);
 });
 
 test('visibility toggles do not refetch catalogue, replace results or change the map camera', async () => {

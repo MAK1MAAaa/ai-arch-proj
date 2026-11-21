@@ -39,7 +39,7 @@ from archsearch.coverage import (
     SitePage,
     SpatialLocationCoverage,
 )
-from archsearch.domain import Site
+from archsearch.domain import ChronologyStatus, Site
 from archsearch.history import HistoryStore, HistoryUnavailable, validate_year
 from archsearch.hong_kong_areas import load_hong_kong_area_group
 from archsearch.index import IndexUnavailable, SemanticIndex
@@ -335,7 +335,10 @@ def create_app(
         request: Request, country: str | None, region: str | None, kind: str | None,
         subdivision: str | None = None,
     ) -> None:
-        for name in ("country", "region", "type", "offset", "limit", "bbox", "subdivision"):
+        for name in (
+            "country", "region", "type", "offset", "limit", "bbox", "subdivision",
+            "chronology_status",
+        ):
             if len(request.query_params.getlist(name)) > 1:
                 raise HTTPException(status_code=422, detail=f"{name}参数不能重复。")
         try:
@@ -363,8 +366,9 @@ def create_app(
         subdivision: str | None = None,
     ) -> CatalogueResponse:
         catalogue_filters(request, country, region, type, subdivision)
-        if "bbox" in request.query_params:
-            raise HTTPException(status_code=422, detail="bbox仅用于/api/sites分页目录。")
+        for name in ("bbox", "chronology_status"):
+            if name in request.query_params:
+                raise HTTPException(status_code=422, detail=f"{name}仅用于/api/sites分页目录。")
         return catalogue_index.catalogue(country, region, type, subdivision)
 
     @app.get("/api/sites", response_model=SitePage)
@@ -374,13 +378,17 @@ def create_app(
         country: str | None = None, region: str | None = None, type: str | None = None,
         bbox: str | None = Query(default=None, min_length=1, max_length=200),
         subdivision: str | None = None,
+        chronology_status: ChronologyStatus | None = None,
     ) -> SitePage:
         catalogue_filters(request, country, region, type, subdivision)
         try:
             bounds = SpatialBounds.from_csv(bbox) if bbox is not None else None
         except ValueError as error:
             raise HTTPException(status_code=422, detail=str(error)) from error
-        return catalogue_index.page(offset, limit, country, region, type, bounds, subdivision)
+        return catalogue_index.page(
+            offset, limit, country, region, type, bounds, subdivision,
+            chronology_status=chronology_status,
+        )
 
     @app.post("/api/search", response_model=SearchResponse)
     def search(body: SearchRequest, request: Request) -> SearchResponse:

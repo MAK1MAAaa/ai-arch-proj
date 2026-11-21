@@ -9,9 +9,11 @@ const ArchSearchExplore = (() => {
     bbox?: [number, number, number, number] | null;
     subdivision?: string | null;
     subdivision_version?: string | null;
+    chronology?: ChronologyStatus | null;
   }
   type BBox = [number, number, number, number];
   type SpatialMatchMode = "source-or-representative" | "representative-only";
+  type ChronologyStatus = "reviewed" | "insufficient" | "not_reviewed";
 
   interface Point {
     id: string;
@@ -21,7 +23,7 @@ const ArchSearchExplore = (() => {
     countries: string[];
     regions: string[];
     source_kind: string;
-    chronology_status: "reviewed" | "insufficient" | "not_reviewed";
+    chronology_status: ChronologyStatus;
     source_points: [number, number][];
     source_location_records: SourceLocation[];
   }
@@ -90,21 +92,28 @@ const ArchSearchExplore = (() => {
   const sourceLabels: Readonly<Record<string, string>> = {
     pleiades: "Pleiades 罗马资料", global: "已策展全球资料", unesco: "世界遗产名录", ats: "ATS 南极历史遗址", supplement: "文化遗址补充资料",
   };
-  const chronologyLabels: Readonly<Record<Point["chronology_status"], string>> = {
+  const chronologyLabels: Readonly<Record<ChronologyStatus, string>> = {
     reviewed: "已有来源支持的阶段", insufficient: "已核验，断代未确定", not_reviewed: "断代尚未核验",
   };
+
+  function isChronologyStatus(value: unknown): value is ChronologyStatus {
+    return typeof value === "string" && Object.hasOwn(chronologyLabels, value);
+  }
 
   function normalizeState(value: Partial<State>): State {
     const country = value.country ?? null;
     const region = value.region ?? null;
     const offset = value.offset ?? 0;
     const visible = value.visible ?? true;
+    const chronology = value.chronology ?? null;
     if (country !== null && (typeof country !== "string" || !/^[A-Z]{2}$/u.test(country))) throw new Error("目录国家／地区代码应为来源中的大写双字母代码。");
     if (region !== null && (typeof region !== "string" || !Object.hasOwn(regionLabels, region))) throw new Error("目录分区代码不在来源分区中。");
     if (!Number.isSafeInteger(offset) || offset < 0 || offset > 1_000_000) throw new Error("目录起始位置应为0至1000000的整数。");
     if (typeof visible !== "boolean") throw new Error("目录点位开关无效。");
+    if (chronology !== null && !isChronologyStatus(chronology)) throw new Error("目录断代筛选状态无效。");
     const subdivision = ArchSearchResearch.normalizeSubdivision(country, value.subdivision);
-    return { country, region, offset, visible, bbox: ArchSearchResearch.normalizeBBox(value.bbox), ...(subdivision ? { subdivision } : {}) };
+    return { country, region, offset, visible, bbox: ArchSearchResearch.normalizeBBox(value.bbox),
+      ...(subdivision ? { subdivision } : {}), ...(chronology ? { chronology } : {}) };
   }
 
   function insideBBox(point: [number, number], bbox: BBox): boolean {
@@ -132,9 +141,12 @@ const ArchSearchExplore = (() => {
     return valid;
   }
 
-  function matches(point: Pick<Point, "countries" | "regions"> & Partial<Pick<Point, "repr_point" | "source_points">>, state: Pick<State, "country" | "region" | "bbox">, mode: SpatialMatchMode = "source-or-representative"): boolean {
+  function matches(point: Pick<Point, "countries" | "regions"> & Partial<Pick<Point, "repr_point" | "source_points" | "chronology_status">>,
+                   state: Pick<State, "country" | "region" | "bbox" | "chronology">,
+                   mode: SpatialMatchMode = "source-or-representative"): boolean {
     return (state.country === null || point.countries.includes(state.country))
       && (state.region === null || point.regions.includes(state.region))
+      && (!state.chronology || point.chronology_status === state.chronology)
       && (!state.bbox || (point.repr_point !== null && point.repr_point !== undefined && insideBBox(point.repr_point, state.bbox))
         || (mode === "source-or-representative" && point.source_points?.some((position) => insideBBox(position, state.bbox!))) === true);
   }
@@ -348,7 +360,7 @@ const ArchSearchExplore = (() => {
       || !text(value.title) || !(value.repr_point === null || coordinate(value.repr_point)) || !text(value.source_kind)) throw new Error("目录地点编号、标题或代表点无效。");
     const geography = fullSite ? record(value.geography) ? value.geography : { countries: [], regions: [] } : value;
     const status = fullSite ? record(value.chronology) ? value.chronology.status : undefined : value.chronology_status;
-    if (status !== "reviewed" && status !== "insufficient" && status !== "not_reviewed") throw new Error("目录断代核验状态无效。");
+    if (!isChronologyStatus(status)) throw new Error("目录断代核验状态无效。");
     const placement = locationStatus(value.repr_point);
     if (!fullSite && value.location_status !== placement) throw new Error("目录定位状态与原始坐标不一致。");
     const points = fullSite ? [] : sourcePoints(value.source_points);
@@ -369,6 +381,9 @@ const ArchSearchExplore = (() => {
         || item.regions.some((id) => !coverage.regions.some((facet) => facet.id === id)))) throw new Error("全库点目录存在重复编号或未登记地域标签。");
     for (const state of ["mapped", "polar", "unknown"] as const) {
       if (points.filter((point) => point.location_status === state).length !== coverage.locations[state]) throw new Error("全库定位状态数量与覆盖统计不一致。");
+    }
+    for (const status of Object.keys(chronologyLabels) as ChronologyStatus[]) {
+      if (points.filter((point) => point.chronology_status === status).length !== coverage.chronology[status]) throw new Error("全库断代状态数量与覆盖统计不一致。");
     }
     if (spatial) {
       const rawCount = points.reduce((sum, point) => sum + point.source_points.length, 0);
@@ -426,6 +441,7 @@ const ArchSearchExplore = (() => {
     const points = catalogue.points.filter((point) => matches(point, state, catalogue.spatial_match_mode));
     if (!record(value) || !Object.hasOwn(value, "bbox") || !sameBBox(ArchSearchResearch.normalizeBBox(value.bbox), state.bbox)
       || value.spatial_match_mode !== catalogue.spatial_match_mode || value.spatial_version !== catalogue.spatial_version) throw new Error("目录响应的地图范围、来源版本或定位匹配方式与请求不一致。");
+    if ((value.chronology_status ?? null) !== (state.chronology ?? null)) throw new Error("目录响应的断代筛选条件与请求不一致。");
     if (!record(value) || value.corpus_version !== catalogue.corpus_version || value.total !== points.length
       || value.offset !== state.offset || value.limit !== pageSize || !Array.isArray(value.sites)
       || value.sites.length !== Math.min(pageSize, Math.max(0, points.length - state.offset))) throw new Error("目录分页与点位范围或版本不一致。");
@@ -454,6 +470,7 @@ const ArchSearchExplore = (() => {
       polarAuthority: get("explore-polar-authority"),
       spatial: get("explore-spatial-source"),
       region: get<HTMLSelectElement>("explore-region"), clear: get<HTMLButtonElement>("explore-clear"),
+      chronology: get<HTMLSelectElement>("explore-chronology"),
       points: get<HTMLInputElement>("explore-points"), fit: get<HTMLButtonElement>("explore-fit"),
       count: get("explore-count"), list: get<HTMLOListElement>("explore-list"),
       previous: get<HTMLButtonElement>("explore-previous"), next: get<HTMLButtonElement>("explore-next"),
@@ -666,6 +683,8 @@ const ArchSearchExplore = (() => {
       ui.panel.setAttribute("aria-busy", String(loading));
       ui.country.disabled = coverage === null;
       ui.region.disabled = coverage === null;
+      ui.chronology.disabled = coverage === null && !desired.chronology;
+      ui.chronology.value = desired.chronology ?? "";
       ui.clear.disabled = desired.country === null && desired.region === null && !desired.subdivision && desired.offset === 0;
       ui.points.checked = desired.visible;
       ui.points.disabled = !map || !catalogue;
@@ -758,7 +777,7 @@ const ArchSearchExplore = (() => {
         button.addEventListener("click", () => onSelect(site.id, button, applied?.bbox ? { moveMap: false } : undefined));
         buttons.set(site.id, button); item.append(button); return item;
       });
-      if (!nodes.length) nodes.push(element("li", "explore-empty", page.total === 0 ? "所选地域与地图范围组合暂无资料，可清除筛选后继续浏览。" : "此目录位置超出当前筛选范围，可用上一页返回首页。"));
+      if (!nodes.length) nodes.push(element("li", "explore-empty", page.total === 0 ? "当前目录条件暂无资料，可清除筛选后继续浏览。" : "此目录位置超出当前筛选范围，可用上一页返回首页。"));
       ui.list.replaceChildren(...nodes);
       ui.list.scrollTop = 0;
       ui.count.textContent = `${page.total.toLocaleString("zh-CN")} 条符合目录条件`;
@@ -789,6 +808,7 @@ const ArchSearchExplore = (() => {
       if (wanted.region) parameters.set("region", wanted.region);
       if (wanted.subdivision) parameters.set("subdivision", wanted.subdivision);
       if (wanted.bbox) parameters.set("bbox", wanted.bbox.join(","));
+      if (wanted.chronology) parameters.set("chronology_status", wanted.chronology);
       loading = true;
       feedback(page ? "正在更新目录；列表与全库点位保留上次成功范围，检索排名和年份不变。" : "正在读取本地全库点位与覆盖统计。");
       renderControls();
@@ -817,9 +837,11 @@ const ArchSearchExplore = (() => {
         }
         const viewCatalogue = nextSubdivisionCatalogue ?? nextCatalogue;
         const nextPage = parsePage(pageRaw, viewCatalogue, wanted);
+        const scoped = viewCatalogue.points.filter((point) => matches(point, wanted, viewCatalogue.spatial_match_mode));
         const replacePoints = nextCatalogue !== catalogue || !applied || applied.country !== wanted.country || applied.region !== wanted.region
-          || (applied.subdivision ?? null) !== (wanted.subdivision ?? null) || page?.subdivision_version !== nextPage.subdivision_version || !sameBBox(applied.bbox, wanted.bbox);
-        const next = replacePoints ? displayPlacements(viewCatalogue.points.filter((point) => matches(point, wanted, viewCatalogue.spatial_match_mode)), wanted) : null;
+          || (applied.subdivision ?? null) !== (wanted.subdivision ?? null) || applied.chronology !== wanted.chronology
+          || page?.subdivision_version !== nextPage.subdivision_version || !sameBBox(applied.bbox, wanted.bbox);
+        const next = replacePoints ? displayPlacements(scoped, wanted) : null;
         if (abort.signal.aborted || current !== sequence) return;
         coverage = nextCoverage; catalogue = nextCatalogue; subdivisionCatalogue = nextSubdivisionCatalogue; page = nextPage; applied = { ...wanted };
         if (next) density?.setData(next);
@@ -827,14 +849,14 @@ const ArchSearchExplore = (() => {
         ui.limit.textContent = `${limitNote} 当前 ${coverage.country_unknown.toLocaleString("zh-CN")} 条未标注国家／地区；${coverage.chronology.not_reviewed.toLocaleString("zh-CN")} 条断代尚未核验。`;
         renderAuthority(); renderPolarAuthority(); renderSpatial(); renderOptions(); renderPage();
         if (selectedId !== null) select(selectedId);
-        const scoped = viewCatalogue.points.filter((point) => matches(point, wanted, viewCatalogue.spatial_match_mode));
         const mapped = scoped.filter((point) => point.location_status === "mapped").length;
         const polar = scoped.filter((point) => point.location_status === "polar").length;
         const unknown = scoped.filter((point) => point.location_status === "unknown").length;
         const positions = scoped.flatMap((point) => scopedPlacements(point, wanted));
         const sourceCount = positions.filter((position) => position.sourceIndexes.length > 0).length;
         const representativeCount = positions.length - sourceCount;
-        feedback(`当前目录范围 ${page.total.toLocaleString("zh-CN")} 条资料 / 主图 ${sourceCount.toLocaleString("zh-CN")} 个源定位点 + ${representativeCount.toLocaleString("zh-CN")} 个必要代表点。代表点状态：主图可定位 ${mapped}、极区 ${polar}、暂无可用代表点 ${unknown}。${wanted.bbox ? "仅绘制固定范围内定位点；无可核点的资料不参与范围匹配。" : ""}${nextPage.spatial_match_mode === "representative-only" && wanted.bbox ? " 来源多点未就绪，仅按原代表点匹配，组成地点可能遗漏。" : ""}${map ? "同一遗产内同坐标源记录只绘一点；编号为检索候选。" : "地图组件不可用，可使用目录列表。"}`);
+        const chronologyLabel = wanted.chronology ? `（${chronologyLabels[wanted.chronology]}）` : "";
+        feedback(`当前目录范围 ${page.total.toLocaleString("zh-CN")} 条资料${chronologyLabel} / 主图 ${sourceCount.toLocaleString("zh-CN")} 个源定位点 + ${representativeCount.toLocaleString("zh-CN")} 个必要代表点。代表点状态：主图可定位 ${mapped}、极区 ${polar}、暂无可用代表点 ${unknown}。${wanted.bbox ? "仅绘制固定范围内定位点；无可核点的资料不参与范围匹配。" : ""}${nextPage.spatial_match_mode === "representative-only" && wanted.bbox ? " 来源多点未就绪，仅按原代表点匹配，组成地点可能遗漏。" : ""}${map ? "同一遗产内同坐标源记录只绘一点；编号为检索候选。" : "地图组件不可用，可使用目录列表。"}`);
         if (reload) onCatalogue?.(nextCatalogue.points.map((point) => ({ ...point,
           repr_point: point.repr_point === null ? null : [...point.repr_point], countries: [...point.countries], regions: [...point.regions],
           source_points: point.source_points.map((value) => [...value]), source_location_records: point.source_location_records.map((source) => ({ ...source, coordinate: [...source.coordinate] })) })));
@@ -858,8 +880,10 @@ const ArchSearchExplore = (() => {
       let next: State;
       const merged = { ...desired, ...value };
       if (value.country !== undefined && value.country !== desired.country && !Object.hasOwn(value, "subdivision")) delete merged.subdivision;
+      const chronologyChanged = Object.hasOwn(value, "chronology") && (value.chronology ?? null) !== (desired.chronology ?? null);
       if (!Object.hasOwn(value, "offset") && (value.country !== undefined && value.country !== desired.country
-        || Object.hasOwn(value, "subdivision") && (value.subdivision ?? null) !== (desired.subdivision ?? null))) merged.offset = 0;
+        || Object.hasOwn(value, "subdivision") && (value.subdivision ?? null) !== (desired.subdivision ?? null)
+        || chronologyChanged)) merged.offset = 0;
       try { next = normalizeState(merged); }
       catch (error) { feedback(error instanceof Error ? error.message : "目录条件无效。", true); throw error; }
       const countryChanged = next.country !== desired.country;
@@ -867,7 +891,8 @@ const ArchSearchExplore = (() => {
       const bboxChanged = !sameBBox(next.bbox, desired.bbox);
       const pageChanged = next.offset !== desired.offset;
       const visibilityChanged = next.visible !== desired.visible;
-      const changed = filterChanged || bboxChanged || pageChanged || next.visible !== desired.visible;
+      const scopeChanged = filterChanged || chronologyChanged || bboxChanged;
+      const changed = scopeChanged || pageChanged || visibilityChanged;
       desired = next;
       if (countryChanged) {
         subdivisionController?.abort(); subdivisionSequence++; subdivisionController = null; subdivisionPending = null;
@@ -879,14 +904,15 @@ const ArchSearchExplore = (() => {
         onStateChange?.(copyState(desired));
       }
       const unapplied = !applied || desired.country !== applied.country || desired.region !== applied.region
-        || (desired.subdivision ?? null) !== (applied.subdivision ?? null) || desired.offset !== applied.offset
+        || (desired.subdivision ?? null) !== (applied.subdivision ?? null) || desired.chronology !== applied.chronology || desired.offset !== applied.offset
         || Boolean(desired.subdivision && (!subdivisions?.ready || page?.subdivision_version !== subdivisions.subdivision_version));
-      if (filterChanged || bboxChanged || pageChanged || !catalogue || (!loading && unapplied) || !sameBBox(desired.bbox, applied?.bbox)) await request(false);
+      if (scopeChanged || pageChanged || !catalogue || (!loading && unapplied) || !sameBBox(desired.bbox, applied?.bbox)) await request(false);
       else if (visibilityChanged) committed();
     }
 
     ui.country.addEventListener("change", () => { void setState({ country: ui.country.value || null, offset: 0 }, { notify: true }).catch(() => undefined); });
     ui.region.addEventListener("change", () => { void setState({ region: ui.region.value || null, offset: 0 }, { notify: true }).catch(() => undefined); });
+    ui.chronology.addEventListener("change", () => { void setState({ chronology: (ui.chronology.value || null) as ChronologyStatus | null }, { notify: true }).catch(() => undefined); });
     ui.clear.addEventListener("click", () => { void setState({ country: null, region: null, offset: 0 }, { notify: true }).catch(() => undefined); });
     ui.subdivision.addEventListener("change", () => { void setState({ subdivision: ui.subdivision.value || null, offset: 0 }, { notify: true }).catch(() => undefined); });
     ui.subdivisionRetry.addEventListener("click", () => {

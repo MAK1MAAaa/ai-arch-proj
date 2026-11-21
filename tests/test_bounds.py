@@ -13,7 +13,7 @@ from archsearch.api import create_app
 from archsearch.bounds import SpatialBounds
 from archsearch.corpus import CORPUS_VERSION, load_corpus
 from archsearch.coverage import CatalogueIndex, CoverageRegistry
-from archsearch.domain import Geography, Site, SourceReference
+from archsearch.domain import ChronologyReview, Geography, HistoricalPhase, Site, SourceReference
 from archsearch.spatial_data import SourceLocation, WorldLocations
 
 
@@ -57,12 +57,27 @@ def located_sites(sample_sites: list[Site]) -> list[Site]:
         id="fixture-culture", title="Fixture culture record", uri="https://example.org/record",
         publisher="Fixture authority", excerpt="Fixture named cultural place.",
     )
+    review = ChronologyReview(
+        status="reviewed", method="Fixture audit", reviewed_at="2026-11-01",
+        default_phase_id="use",
+        phases=[HistoricalPhase(
+            id="use", kind="use", label="Dated use", precision="range", start_year=100,
+            end_year=120, sources=[source.model_copy(update={
+                "excerpt": "Fixture use recorded from AD 100 to AD 120.",
+            })],
+        )],
+    )
     sites = [
-        sample_sites[0].model_copy(update={"title": "A source property", "geography": Geography(
-            countries=["FR", "JP"], regions=["asia-pacific"], source=source,
-        )}),
+        sample_sites[0].model_copy(update={
+            "title": "A source property", "chronology": review,
+            "geography": Geography(countries=["FR", "JP"], regions=["asia-pacific"],
+                                   source=source),
+        }),
         sample_sites[1].model_copy(update={
             "title": "B Greenwich bath", "repr_point": (0.0, 0.0),
+            "chronology": ChronologyReview(
+                status="insufficient", method="Fixture audit", reviewed_at="2026-11-01",
+            ),
             "geography": Geography(countries=["FR"], regions=["europe-north-america"],
                                    source=source),
         }),
@@ -71,14 +86,15 @@ def located_sites(sample_sites: list[Site]) -> list[Site]:
             "geography": Geography(countries=["US"], regions=["asia-pacific"], source=source),
         }),
     ]
-    for identifier, kind, point, countries, regions in [
-        ("auth:fixture:unknown", "supplement", None, ["FR"], ["asia-pacific"]),
-        ("ats:hsm:1", "ats", (30.0, -89.0), [], ["antarctica"]),
+    for identifier, kind, point, countries, regions, chronology in [
+        ("auth:fixture:unknown", "supplement", None, ["FR"], ["asia-pacific"], review),
+        ("ats:hsm:1", "ats", (30.0, -89.0), [], ["antarctica"], ChronologyReview()),
     ]:
         value = sample_sites[0].model_dump()
         value.update(
             id=identifier, source_kind=kind, title=identifier, repr_point=point,
             types=["historic-site"], periods=[], period_evidence=[], source_refs=[source],
+            chronology=chronology,
             geography=Geography(
                 authority_id="supplement:" + identifier if kind == "supplement" else identifier,
                 countries=countries, regions=regions, source=source,
@@ -218,3 +234,52 @@ def test_api_never_silently_widens_an_invalid_or_repeated_bounds_request(
     client: TestClient, suffix: str,
 ) -> None:
     assert client.get("/api/sites?" + suffix).status_code == 422
+
+
+def test_chronology_status_intersects_geo_type_and_bbox_before_pagination(
+    client: TestClient,
+) -> None:
+    points = client.get("/api/catalogue").json()
+    query = {"query": "harbor", "mode": "bm25"}
+    prior_results = client.post("/api/search", json=query).json()["results"]
+    assert client.get("/api/sites").json()["chronology_status"] is None
+
+    params = {"country": "FR", "region": "asia-pacific", "chronology_status": "reviewed"}
+    pages = [client.get("/api/sites", params={**params, "limit": 1, "offset": offset}).json()
+             for offset in range(3)]
+    assert all(page["total"] == 2 and page["chronology_status"] == "reviewed" for page in pages)
+    assert [site["id"] for page in pages for site in page["sites"]] == ["3", "auth:fixture:unknown"]
+    assert pages[1]["sites"][0]["repr_point"] is None
+
+    typed = client.get("/api/sites", params={**params, "type": "historic-site"}).json()
+    assert [site["id"] for site in typed["sites"]] == ["auth:fixture:unknown"]
+    bounded = client.get("/api/sites", params={**params, "bbox": "170,-10,-170,10"}).json()
+    assert bounded["total"] == 1 and bounded["sites"][0]["id"] == "3"
+    assert bounded["spatial_match_mode"] == "source-or-representative"
+
+    no_evidence = client.get("/api/sites?chronology_status=insufficient").json()
+    assert no_evidence["chronology_status"] == "insufficient"
+    assert [site["id"] for site in no_evidence["sites"]] == ["1"]
+    unreviewed = client.get("/api/sites?chronology_status=not_reviewed").json()
+    assert unreviewed["chronology_status"] == "not_reviewed"
+    assert unreviewed["total"] == 2
+    assert [site["id"] for site in unreviewed["sites"]] == ["ats:hsm:1", "2"]
+
+    assert client.get("/api/catalogue").json() == points
+    assert client.get("/api/catalogue?chronology_status=reviewed").status_code == 422
+    assert client.post("/api/search", json=query).json()["results"] == prior_results
+    assert client.post(
+        "/api/search", json={**query, "chronology_status": "reviewed"},
+    ).status_code == 422
+
+
+@pytest.mark.parametrize("suffix", [
+    "chronology_status=", "chronology_status=unknown", "chronology_status=Reviewed",
+    "chronology_status=reviewed&chronology_status=reviewed",
+    "chronology_status=reviewed&chronology_status=insufficient",
+])
+def test_api_rejects_invalid_and_repeated_chronology_status(
+    client: TestClient, suffix: str,
+) -> None:
+    response = client.get("/api/sites?" + suffix)
+    assert response.status_code == 422 and response.headers["cache-control"] == "no-store"
