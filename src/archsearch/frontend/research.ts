@@ -97,6 +97,8 @@ const ArchSearchResearch = (() => {
         year: value.historical.year, boundaries: value.historical.boundaries, frame_id: value.historical.frame_id, source_version: value.historical.source_version } };
   }
 
+  type ChronologyStatus = "reviewed" | "insufficient" | "not_reviewed";
+
   interface BrowseState {
     country: string | null;
     region: string | null;
@@ -107,6 +109,7 @@ const ArchSearchResearch = (() => {
     spatial_version?: string | null;
     subdivision?: string | null;
     subdivision_version?: string | null;
+    chronology?: ChronologyStatus | null;
   }
 
   const minasSourceFields = ["processo_ano", "denominacao", "denominacao_completa", "categoria", "classe_subclasse", "municipio", "distrito", "ato_legal", "livro_de_tombo"] as const;
@@ -321,19 +324,30 @@ const ArchSearchResearch = (() => {
     return { country: normalizedCountry, region: normalizedRegion };
   }
 
+  function normalizeChronology(value: unknown): ChronologyStatus | null {
+    if (value === undefined || value === null) return null;
+    if (value === "reviewed" || value === "insufficient" || value === "not_reviewed") return value;
+    throw new Error("目录断代状态参数无效。");
+  }
+
   function parseBrowse(url: URL): { state: BrowseState; error: string | null } {
     const empty = { country: null, region: null, offset: 0, visible: true, bbox: null };
     try {
-      for (const name of ["browse_country", "browse_region", "browse_subdivision", "browse_offset", "points", "browse_bbox"]) {
+      for (const name of ["browse_country", "browse_region", "browse_subdivision", "browse_offset", "points", "browse_bbox", "browse_chronology"]) {
         if (url.searchParams.getAll(name).length > 1) throw new Error(`链接中的 ${name} 参数不能重复。`);
       }
       const scope = geography(url.searchParams.get("browse_country"), url.searchParams.get("browse_region"));
       const subdivision = normalizeSubdivision(scope.country, url.searchParams.get("browse_subdivision"));
+      const chronology = normalizeChronology(url.searchParams.get("browse_chronology"));
       const rawOffset = url.searchParams.get("browse_offset") ?? "0";
       const points = url.searchParams.get("points") ?? "1";
       if (!/^(?:0|[1-9]\d{0,6})$/u.test(rawOffset) || Number(rawOffset) > 1_000_000) throw new Error("目录页码无效。");
       if (points !== "0" && points !== "1") throw new Error("全库点图层参数无效。");
-      return { state: { ...scope, ...(subdivision ? { subdivision } : {}), offset: Number(rawOffset), visible: points === "1", bbox: parseBBox(url.searchParams.get("browse_bbox")) }, error: null };
+      return {
+        state: { ...scope, ...(subdivision ? { subdivision } : {}), ...(chronology ? { chronology } : {}),
+          offset: Number(rawOffset), visible: points === "1", bbox: parseBBox(url.searchParams.get("browse_bbox")) },
+        error: null,
+      };
     } catch (error) {
       return { state: empty, error: error instanceof Error ? error.message : "目录链接无效。" };
     }
@@ -508,11 +522,13 @@ const ArchSearchResearch = (() => {
     if (browse) {
       const scope = geography(browse.country, browse.region);
       const subdivision = normalizeSubdivision(scope.country, browse.subdivision);
+      const chronology = normalizeChronology(browse.chronology);
       const bbox = normalizeBBox(browse.bbox);
       if (!Number.isInteger(browse.offset) || browse.offset < 0 || browse.offset > 1_000_000) throw new Error("目录页码无效。");
       url.searchParams.set("browse_country", scope.country ?? "");
       url.searchParams.set("browse_region", scope.region ?? "");
       if (subdivision) url.searchParams.set("browse_subdivision", subdivision);
+      if (chronology) url.searchParams.set("browse_chronology", chronology);
       if (browse.offset) url.searchParams.set("browse_offset", String(browse.offset));
       if (!browse.visible) url.searchParams.set("points", "0");
       if (bbox !== null) url.searchParams.set("browse_bbox", bbox.join(","));
@@ -548,8 +564,14 @@ const ArchSearchResearch = (() => {
     }
     validateSubdivisionResponse(normalized, response);
     const enhancement = validateEnhancement(normalized, response.enhancement);
-    if (browse?.subdivision && !subdivisionVersion(browse.subdivision_version)) throw new Error("尚未成功应用的来源省区不能加入目录导出。");
-    if (browse) normalizeSubdivision(browse.country, browse.subdivision);
+    let browseSnapshot: BrowseState | null = null;
+    if (browse) {
+      const { chronology: rawChronology, ...scope } = browse;
+      if (scope.subdivision && !subdivisionVersion(scope.subdivision_version)) throw new Error("尚未成功应用的来源省区不能加入目录导出。");
+      normalizeSubdivision(scope.country, scope.subdivision);
+      const chronology = normalizeChronology(rawChronology);
+      browseSnapshot = { ...scope, ...(chronology ? { chronology } : {}), bbox: normalizeBBox(scope.bbox) };
+    }
     const selectedMatches = selectedSite !== null && typeof selectedSite === "object" && "id" in selectedSite && selectedSite.id === selection.site;
     const areas = registeredAreas?.displayed === true && selectedMatches && selection.site === registeredAreas.site_id
       && registeredAreas.corpus_version === response.corpus_version && registeredAreas.corpus_version === currentCorpusVersion && registeredAreas.version === currentRegisteredAreasVersion
@@ -566,7 +588,7 @@ const ArchSearchResearch = (() => {
       selected_site: selectedSite,
       spatial: spatial === null ? null : JSON.parse(JSON.stringify(spatial)) as SpatialSnapshot,
       registered_areas: areas,
-      browse: browse ? { ...browse, bbox: normalizeBBox(browse.bbox) } : null,
+      browse: browseSnapshot,
       sources: [
         { name: "Pleiades", version: "v4.1", license: "CC BY 3.0", uri: "https://pleiades.stoa.org/" },
         { name: "UNESCO World Heritage descriptions", license: "CC BY-SA 3.0 IGO", uri: "https://whc.unesco.org/en/disclaimer/", note: "Individual record references retain attribution and revisions; other linked documents retain their own rights." },
@@ -617,7 +639,7 @@ const ArchSearchResearch = (() => {
         locations: "repr_point为null表示本记录无可用代表点：可能真实位置不明，也可能尚未取得可信公开数字坐标，来源说明保留区别；不等于零坐标。有效极区坐标超出Web Mercator时使用独立极区示意，不截断或伪造纬度。极区底图为现代自然地理参照，不生成历史国界。",
         source_points: "spatial保留最后成功目录的组合源点版本、source_groups对应的来源／版本／许可与地点身份，以及独立选中资料经审核纳入地图的定位序列、重复记录与来源标签。原代表点单独保存；多个定位记录不增加遗址条目数或承诺发掘精度。世界遗产原始序列保持不变；海牙名录排除的仓储、标签冲突等原记录仍保留在来源审计中，不混作考古原址点。",
         registered_areas: "registered_areas只保存当前实际显示、且与选中资料和当前语料/检索版本一致的来源范围；label区分现代遗产登记范围与来源古迹多边形，后者不承诺法定边界。null表示未显示或上下文不匹配。保留原WGS84闭环与来源版本/许可，不推内外环、代表点、古址轮廓、准入或点计数。范围显隐不写入分享链接，重新打开后仍须主动点击查看。",
-        browse: "browse保存成功应用的独立目录条件；bbox为[西,南,东,北]闭区间，西大于东表示跨日期变更线，仅筛目录和全库点层，不改变request中的检索语义。spatial_match_mode及spatial_version记录当时的来源点匹配能力；representative-only可能遗漏无代表点落入框内的组成地点。选中资料纳入地图的来源序列完整导出；海牙名录未纳入地图的保护设施仍留在冻结来源审计中。",
+        browse: "browse保存成功应用的独立目录条件。chronology记录已选断代状态。bbox为[西,南,东,北]闭区间，西大于东表示跨日期变更线。断代筛选及矩形范围只作用于目录和全库点层。spatial_match_mode及spatial_version记录当时的来源点匹配能力，representative-only可能遗漏无代表点落入框内的组成地点。选中资料纳入地图的来源序列完整导出。海牙名录未纳入地图的保护设施仍留在冻结来源审计中。",
         subdivisions: "加拿大采用整体省区原字段；香港采用有明确整体／要素关联的来源要素地区；巴西Iepha-MG采用原登记行municipio全文值；Mérimée采用原记录Commune_forme_editoriale全文值，多地值不自动拆分。来源要素／原记录关联不表示整体或全部组成部分都属于该地区，不由坐标、省界或历史政权推断。request/response与browse各保存其独立成功条件；subdivision_version为各自实际应用的来源索引版本，未成功的待选条件不冒充已显示范围。",
       },
     };

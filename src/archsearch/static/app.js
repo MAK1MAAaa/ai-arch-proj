@@ -416,14 +416,14 @@
         runtimeRefresh = Promise.allSettled([loadStatus(), loadFacets(), explore?.load(), llmView?.load()]).then(async (loaded) => {
             if (!browseRestored && !invalidLink && boundsRestoreError === null) {
                 browseRestored = true;
-                const explicit = ["browse_country", "browse_region", "browse_subdivision", "browse_offset", "points", "browse_bbox"].some((name) => initialUrl.searchParams.has(name));
+                const explicit = ["browse_country", "browse_region", "browse_subdivision", "browse_chronology", "browse_offset", "points", "browse_bbox"].some((name) => initialUrl.searchParams.has(name));
                 const browse = explicit ? initialBrowse.state : { ...initialBrowse.state,
                     country: initialLink.request?.country ?? null, region: initialLink.request?.region ?? null,
                     ...(initialLink.request?.subdivision ? { subdivision: initialLink.request.subdivision } : {}) };
-                if (loaded[2].status === "rejected" && !browse.country && !browse.region && !browse.bbox && browse.offset === 0)
+                if (loaded[2].status === "rejected" && !browse.country && !browse.region && !browse.bbox && !browse.chronology && browse.offset === 0)
                     return;
                 try {
-                    await explore?.setState(browse);
+                    await explore?.setState({ ...browse, chronology: browse.chronology ?? null });
                 }
                 catch (error) {
                     invalidLink = true;

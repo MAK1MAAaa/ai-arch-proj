@@ -7,6 +7,8 @@ from urllib.parse import urlsplit
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
+ChronologyStatus = Literal["not_reviewed", "reviewed", "insufficient"]
+
 
 class PeriodEvidence(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
@@ -87,7 +89,7 @@ class HistoricalPhase(BaseModel):
 
 class ChronologyReview(BaseModel):
     model_config = ConfigDict(extra="forbid", frozen=True)
-    status: Literal["not_reviewed", "reviewed", "insufficient"] = "not_reviewed"
+    status: ChronologyStatus = "not_reviewed"
     method: str = ""
     reviewed_at: str | None = None
     note: str = ""

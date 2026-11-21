@@ -118,7 +118,7 @@ interface HistoryView {
   frame_id: string | null; source_version: string | null;
 }
 
-interface BrowseState { country: string | null; region: string | null; offset: number; visible: boolean; bbox?: [number, number, number, number] | null; spatial_match_mode?: string; spatial_version?: string | null; subdivision?: string | null; subdivision_version?: string | null }
+interface BrowseState { country: string | null; region: string | null; offset: number; visible: boolean; bbox?: [number, number, number, number] | null; spatial_match_mode?: string; spatial_version?: string | null; subdivision?: string | null; subdivision_version?: string | null; chronology?: 'reviewed' | 'insufficient' | 'not_reviewed' | null }
 
 const source = readFileSync(new URL('../../src/archsearch/frontend/research.ts', import.meta.url), 'utf8');
 const compiled = ts.transpileModule(source, {
@@ -773,6 +773,35 @@ test('successful search filters and independently browsed filters never overwrit
   assert.equal(url.searchParams.get('browse_country'), 'CN');
 });
 
+test('directory chronology round-trips independently of search and can be cleared', () => {
+  const searched = { ...request, country: 'FR' };
+  const selection = { site: 'whc:252', phase: null };
+  const scope: BrowseState = { country: 'CA', region: 'europe-north-america', subdivision: 'CA:quebec', offset: 50, visible: false, bbox: [-90, 40, -70, 60] };
+  for (const chronology of ['reviewed', 'insufficient', 'not_reviewed'] as const) {
+    const browse = { ...scope, chronology };
+    const url = new URL(helpers.buildLink(base, searched, null, selection, browse));
+    assert.equal(url.searchParams.get('browse_chronology'), chronology);
+    assert.deepEqual(plain(helpers.parseBrowse(url)), { state: browse, error: null });
+    assert.deepEqual(plain(helpers.parseLink(url).request), searched);
+    assert.deepEqual(plain(helpers.parseView(url).selection), selection);
+  }
+  const cleared = new URL(helpers.buildLink(base, null, null, selection, { ...scope, chronology: null }));
+  assert.equal(cleared.searchParams.has('browse_chronology'), false);
+  assert.deepEqual(plain(helpers.parseBrowse(cleared)), { state: scope, error: null });
+  assert.equal(Object.hasOwn(helpers.parseBrowse(new URL('?q=harbor&mode=bm25', base)).state, 'chronology'), false);
+});
+
+test('directory chronology rejects unknown, empty and repeated values', () => {
+  for (const params of ['browse_chronology=unknown', 'browse_chronology=', 'browse_chronology=reviewed+', 'browse_chronology=reviewed&browse_chronology=reviewed']) {
+    const parsed = helpers.parseBrowse(new URL(`?browse_country=CA&${params}`, base));
+    assert.equal(typeof parsed.error, 'string', params);
+    assert.equal(parsed.state.country, null);
+    assert.equal(Object.hasOwn(parsed.state, 'chronology'), false);
+  }
+  const invalid = { country: null, region: null, offset: 0, visible: true, chronology: '' as BrowseState['chronology'] };
+  assert.throws(() => helpers.buildLink(base, null, null, undefined, invalid), /目录断代状态参数无效/u);
+});
+
 test('explicitly cleared browse filters remain distinct from successful search filters', () => {
   const browse: BrowseState = { country: null, region: null, offset: 0, visible: true, bbox: null };
   const url = new URL(helpers.buildLink(base, { ...request, country: 'FR' }, null, { site: null, phase: null }, browse));
@@ -954,19 +983,29 @@ test('invalid or repeated bbox links reject without silently widening the restor
   assert.deepEqual(plain(helpers.parseBrowse(boundary).state.bbox), [-10, 0, 10, 20]);
 });
 
-test('exports clone the committed bbox and source matching capability without changing the search snapshot', () => {
+test('exports clone committed directory chronology, bbox and source matching without altering the search snapshot', () => {
   const bbox: [number, number, number, number] = [29, 40, 31, 42];
-  const browse: BrowseState = { country: 'TR', region: null, offset: 0, visible: true, bbox,
+  const browse: BrowseState = { country: 'TR', region: null, offset: 0, visible: true, bbox, chronology: 'reviewed',
     spatial_match_mode: 'source-or-representative', spatial_version: 'world-locations-v1' };
   const response = { query: request.query, mode: request.mode, corpus_version: 'global-v6', elapsed_ms: 1, total_candidates: 1, results: [{ id: 'other' }] };
   const exported = helpers.createExport(request, response, '2026-11-04T00:00:00Z', null, { site: 'whc:1', phase: null }, null, browse);
   bbox[0] = 0;
+  browse.chronology = 'not_reviewed';
+  assert.equal(exported.browse?.chronology, 'reviewed');
   assert.deepEqual(plain(exported.browse?.bbox), [29, 40, 31, 42]);
   assert.equal(exported.browse?.spatial_match_mode, 'source-or-representative');
   assert.equal(exported.browse?.spatial_version, 'world-locations-v1');
   assert.deepEqual(plain(exported.request), request);
   assert.deepEqual(plain(exported.response), response);
   assert.equal(Object.hasOwn(exported.request, 'bbox'), false);
+  assert.equal(Object.hasOwn(exported.request, 'chronology'), false);
+  assert.equal(Object.hasOwn(exported.response, 'chronology'), false);
+  const cleared = helpers.createExport(request, response, '2026-11-04T00:00:00Z', null, undefined, null, { ...browse, chronology: null });
+  assert.equal(Object.hasOwn(cleared.browse!, 'chronology'), false);
+  assert.throws(
+    () => helpers.createExport(request, response, '2026-11-04T00:00:00Z', null, undefined, null, { ...browse, chronology: 'unknown' as BrowseState['chronology'] }),
+    /目录断代状态参数无效/u,
+  );
 });
 
 test('a selected protection location exports its own source alongside the combined identity groups', () => {
