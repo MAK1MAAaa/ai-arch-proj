@@ -11,7 +11,7 @@ const ArchSearchDensity = (() => {
   interface Pixel { x: number; y: number }
   interface Viewport { origin: Pixel; width: number; height: number; worldWidth: number; cellSize?: number; selectedId?: string | null }
   interface Item { value: Placement; coordinate: [number, number]; pixel: Pixel; copy: number }
-  interface Group { key: string; items: Item[]; pixel: Pixel; focusPixel: Pixel; copy: number }
+  interface Group { key: string; items: Item[]; pixel: Pixel; focusPixel: Pixel; badge: boolean }
   interface Options {
     map: L.Map;
     pane: string;
@@ -21,9 +21,37 @@ const ArchSearchDensity = (() => {
   }
   interface Symbol { layer: L.Layer; circle?: L.CircleMarker; marker?: L.Marker; count?: HTMLElement }
 
+  const badgeSize = 44;
+  const selectionClearance = badgeSize / 2 + 8;
+
   function valid(value: unknown): value is [number, number] {
     return Array.isArray(value) && value.length === 2 && value.every(item => typeof item === "number" && Number.isFinite(item))
       && Math.abs(value[0]) <= 180 && Math.abs(value[1]) <= 85.0511287798;
+  }
+
+  function mergeAdjacentPoints(bins: Map<string, Item[]>, cellSize: number): void {
+    const parents = new Map<string, string>();
+    function firstCell(key: string): string {
+      while (parents.has(key)) key = parents.get(key)!;
+      return key;
+    }
+    for (const [key, items] of bins) {
+      if (items.length !== 1) continue;
+      const point = items[0].pixel, x = Math.floor(point.x / cellSize), y = Math.floor(point.y / cellSize);
+      for (let dx = -1; dx <= 1; dx++) for (let dy = -1; dy <= 1; dy++) {
+        const neighborKey = `${x + dx}:${y + dy}`, neighbor = bins.get(neighborKey);
+        if (key >= neighborKey || neighbor?.length !== 1) continue;
+        const candidate = neighbor[0].pixel;
+        if (Math.hypot(point.x - candidate.x, point.y - candidate.y) >= 10) continue;
+        const a = firstCell(key), b = firstCell(neighborKey);
+        if (a !== b) parents.set(a < b ? b : a, a < b ? a : b);
+      }
+    }
+    for (const key of parents.keys()) {
+      const root = firstCell(key);
+      bins.get(root)!.push(...bins.get(key)!);
+      bins.delete(key);
+    }
   }
 
   function plan(values: readonly Placement[], project: (coordinate: [number, number]) => Pixel, viewport: Viewport): Group[] {
@@ -31,6 +59,9 @@ const ArchSearchDensity = (() => {
     const cellSize = viewport.cellSize ?? 48;
     if (![origin.x, origin.y, width, height, worldWidth, cellSize].every(Number.isFinite)
       || width <= 0 || height <= 0 || worldWidth <= 0 || cellSize < 24) return [];
+    const selectedPoint = selectedId === null ? undefined : values.find(value => value.id === selectedId && value.representative && valid(value.coordinate))
+      ?? values.find(value => value.id === selectedId && valid(value.coordinate));
+    const activeIdentity = selectedPoint ? JSON.stringify([selectedPoint.id, ...selectedPoint.coordinate]) : null;
     const bins = new Map<string, Item[]>();
     const seen = new Set<string>();
     for (const value of values) {
@@ -47,23 +78,70 @@ const ArchSearchDensity = (() => {
         const x = Math.floor(pixel.x / cellSize), y = Math.floor(pixel.y / cellSize);
         if ((x + 1) * cellSize < origin.x - cellSize || x * cellSize > origin.x + width + cellSize
           || (y + 1) * cellSize < origin.y - cellSize || y * cellSize > origin.y + height + cellSize) continue;
-        const key = value.id === selectedId ? `selected:${identity}:${copy}` : `${x}:${y}`;
+        const key = identity === activeIdentity ? `selected:${identity}:${copy}` : `${x}:${y}`;
         const items = bins.get(key) ?? [];
         items.push({ value, coordinate: [value.coordinate[0] + copy * 360, value.coordinate[1]], pixel, copy });
         bins.set(key, items);
       }
     }
-    const selectedPixels = [...bins.values()].flatMap(items => items.filter(item => item.value.id === selectedId).map(item => item.pixel));
-    return [...bins].flatMap(([key, items]): Group[] => {
+    function groupAt(key: string, items: Item[], center: Pixel, badge: boolean): Group {
       const focusPixel = { x: items.reduce((sum, item) => sum + item.pixel.x, 0) / items.length,
         y: items.reduce((sum, item) => sum + item.pixel.y, 0) / items.length };
-      const pixel = items.length > 1 ? { x: (Math.floor(items[0].pixel.x / cellSize) + 0.5) * cellSize,
-        y: (Math.floor(items[0].pixel.y / cellSize) + 0.5) * cellSize } : focusPixel;
-      if (items.length > 1 && selectedPixels.some(point => Math.hypot(point.x - pixel.x, point.y - pixel.y) < 28)) {
-        return items.map((item, index) => ({ key: `${key}:near-selection:${index}`, items: [item], pixel: item.pixel, focusPixel: item.pixel, copy: item.copy }));
+      return { key, items, pixel: badge ? center : focusPixel, focusPixel, badge };
+    }
+    const selected: Group[] = [];
+    for (const [key, items] of bins) {
+      if (!key.startsWith("selected:")) continue;
+      selected.push(groupAt(key, items, items[0].pixel, false));
+      bins.delete(key);
+    }
+    mergeAdjacentPoints(bins, cellSize);
+    const overlaps = (a: Pixel, b: Pixel, clearance: number) => Math.abs(a.x - b.x) < clearance && Math.abs(a.y - b.y) < clearance;
+    const conflicts = (pixel: Pixel, clearance: number) => selected.some(({ pixel: point }) => overlaps(point, pixel, clearance));
+    const cellCenter = (x: number, y: number): Pixel => ({ x: (x + 0.5) * cellSize, y: (y + 0.5) * cellSize });
+    const inView = ({ x, y }: Pixel) => x > origin.x && x < origin.x + width && y > origin.y && y < origin.y + height;
+    const layout = new Map<string, Group>();
+    const displaced: { group: Group; x: number; y: number }[] = [];
+    for (const [key, items] of bins) {
+      const x = Math.floor(items[0].pixel.x / cellSize), y = Math.floor(items[0].pixel.y / cellSize);
+      const badge = items.length > 1 || conflicts(items[0].pixel, 10);
+      const group = groupAt(key, items, cellCenter(x, y), badge);
+      if (badge && conflicts(group.pixel, selectionClearance)) displaced.push({ group, x, y });
+      else layout.set(key, group);
+    }
+    for (const { group, x, y } of displaced) {
+      if (!inView(group.pixel) && !group.items.some(item => inView(item.pixel))) {
+        layout.set(group.key, group);
+        continue;
       }
-      return [{ key, items, pixel, focusPixel, copy: items[0].copy }];
-    });
+      const placements = new Set(group.items.map(item => item.value));
+      const slots: { key: string; pixel: Pixel; offscreen: boolean; distance: number }[] = [];
+      for (let dx = -2; dx <= 2; dx++) for (let dy = -2; dy <= 2; dy++) {
+        const pixel = cellCenter(x + dx, y + dy), key = `${x + dx}:${y + dy}`;
+        if (pixel.y < 0 || pixel.y > worldWidth || conflicts(pixel, selectionClearance)) continue;
+        // Other displaced groups may still need to fall back to their original cell.
+        if (!layout.has(key) && bins.has(key)) continue;
+        if (layout.get(key)?.items.some(item => placements.has(item.value))) continue;
+        const offscreen = !inView(pixel);
+        const distance = Math.hypot(pixel.x - group.focusPixel.x, pixel.y - group.focusPixel.y);
+        slots.push({ key, pixel, offscreen, distance });
+      }
+      const slot = slots.sort((a, b) => Number(a.offscreen) - Number(b.offscreen) || a.distance - b.distance
+        || Number(layout.has(a.key)) - Number(layout.has(b.key)))[0];
+      if (!slot) { layout.set(group.key, group); continue; }
+      const neighbor = layout.get(slot.key);
+      layout.set(slot.key, neighbor ? groupAt(neighbor.key, [...neighbor.items, ...group.items], slot.pixel, true)
+        : { ...group, pixel: slot.pixel });
+    }
+    for (const group of layout.values()) {
+      if (!group.badge || inView(group.pixel)) continue;
+      const center = inView(group.focusPixel) ? group.focusPixel : group.items.find(item => inView(item.pixel))?.pixel;
+      if (!center || conflicts(center, selectionClearance)) continue;
+      const blocked = [...layout.values()].some(other => other !== group &&
+        overlaps(center, other.pixel, other.badge ? badgeSize : badgeSize / 2 + 5));
+      if (!blocked) group.pixel = center;
+    }
+    return [...layout.values(), ...selected];
   }
 
   function members(group: Pick<Group, "items">): Placement[] {
@@ -94,14 +172,15 @@ const ArchSearchDensity = (() => {
     let popupContent: HTMLElement | null = null;
     let clusterMarkers: L.Marker[] = [];
     const clusterByKey = new Map<string, L.Marker>();
+    const focusableBadges = new WeakMap<L.Marker, boolean>();
     const drawn = new Map<string, Symbol>();
     const groupsByKey = new Map<string, Group>();
     const memberButtons = new Map<string, HTMLButtonElement>();
     let stats = { logicalPoints: 0, visiblePoints: 0, clusters: 0, symbols: 0 };
 
     function notify(): void { map.fire("archsearch:markerschange"); }
-    function restorePopupFocus(): void {
-      const icon = popupKey ? clusterByKey.get(popupKey)?.getElement() : null;
+    function restorePopupFocus(key: string | null): void {
+      const icon = key ? clusterByKey.get(key)?.getElement() : null;
       const bounds = map.getContainer().getBoundingClientRect(), rect = icon?.getBoundingClientRect(), screen = visibleScreen();
       const visible = icon?.isConnected && rect && rect.top >= bounds.top + screen.top && rect.bottom <= bounds.top + screen.bottom
         && rect.left >= bounds.left + screen.left && rect.right <= bounds.left + screen.right;
@@ -110,9 +189,9 @@ const ArchSearchDensity = (() => {
     }
     function closePopup(restore = false): void {
       const ownedFocus = popup?.getElement()?.contains(document.activeElement) ?? false;
+      const key = popupKey;
       popup?.remove();
-      if (restore || ownedFocus) restorePopupFocus();
-      popup = null; popupZoom = null; popupKey = null; popupContent = null; memberButtons.clear();
+      if (restore || ownedFocus) restorePopupFocus(key);
     }
     function label(group: Group): string {
       return `${group.items.length.toLocaleString("zh-CN")} 个定位点 / ${members(group).length.toLocaleString("zh-CN")} 条资料 · 屏幕聚合示意，非遗址数量`;
@@ -166,6 +245,7 @@ const ArchSearchDensity = (() => {
         }
       }
       render(); activePopup.setLatLng(popupAnchor()).setContent(content).openOn(map);
+      followPopupViewport(activePopup);
       const wrapper = activePopup.getElement();
       wrapper?.addEventListener("keydown", (event) => {
         event.stopPropagation();
@@ -190,31 +270,59 @@ const ArchSearchDensity = (() => {
       const bottom = Math.min(size.y, viewportHeight - bounds.top), left = Math.max(0, -bounds.left), right = Math.min(size.x, viewportWidth - bounds.left);
       return { top, bottom, left, right, height: Math.max(0, bottom - top), width: Math.max(0, right - left) };
     }
-    function popupAnchor(): L.LatLng {
-      const size = map.getSize(), zoom = map.getZoom(), center = map.project(map.getCenter(), zoom), screen = visibleScreen();
+    function popupAnchor(screen = visibleScreen()): L.LatLng {
+      const size = map.getSize(), zoom = map.getZoom(), center = map.project(map.getCenter(), zoom);
       const x = screen.width > 0 ? (screen.left + screen.right) / 2 : size.x / 2;
       const y = screen.height > 0 ? screen.bottom - 12 : size.y - 12;
       return map.unproject([center.x + x - size.x / 2, center.y + y - size.y / 2], zoom);
     }
 
+    function positionPopup(): void {
+      if (!popup) return;
+      const screen = visibleScreen();
+      popup.setLatLng(popupAnchor(screen));
+      if (popupContent) popupContent.style.maxHeight = `${Math.max(120, screen.height - 80)}px`;
+      if (popupZoom) popupZoom.disabled = map.getZoom() >= 9;
+    }
+
+    function followPopupViewport(activePopup: L.Popup): void {
+      let pending = false;
+      const mapContainer = map.getContainer();
+      function onScroll(event: Event): void {
+        const target = event.target;
+        if (pending || (target !== window && target !== document
+          && !(target instanceof Element && target.contains(mapContainer)))) return;
+        pending = true;
+        requestAnimationFrame(() => {
+          pending = false;
+          if (popup === activePopup) positionPopup();
+        });
+      }
+      if (typeof window !== "undefined") window.addEventListener("scroll", onScroll, { capture: true, passive: true });
+      activePopup.on("remove", () => {
+        if (typeof window !== "undefined") window.removeEventListener("scroll", onScroll, { capture: true });
+        if (popup !== activePopup) return;
+        popup = null; popupZoom = null; popupKey = null; popupContent = null; memberButtons.clear();
+      });
+    }
+
     function configureMarker(marker: L.Marker): void {
       const icon = marker.getElement();
-      if (!icon || icon.dataset.densityKeyboard === "ready") return;
+      if (!icon) return;
+      icon.tabIndex = focusableBadges.get(marker) ? 0 : -1;
+      if (icon.tabIndex === -1 && document.activeElement === icon) map.getContainer().focus({ preventScroll: true });
+      if (icon.dataset.densityKeyboard === "ready") return;
       icon.dataset.densityKeyboard = "ready";
       icon.setAttribute("role", "button");
       icon.setAttribute("aria-label", marker.options.title ?? "查看聚合定位点资料");
       icon.addEventListener("keydown", (event) => {
-        if (event.key !== " ") return;
+        if (event.key !== " " && event.key !== "Enter") return;
         event.preventDefault(); event.stopPropagation(); marker.fire("click");
       });
     }
 
     function refresh(): void {
-      if (popup) {
-        popup.setLatLng(popupAnchor());
-        if (popupContent) popupContent.style.maxHeight = `${Math.max(120, visibleScreen().height - 80)}px`;
-        if (popupZoom) popupZoom.disabled = map.getZoom() >= 9;
-      }
+      positionPopup();
       if (destroyed || (prepared && !map.hasLayer(layer))) return;
       const zoom = map.getZoom(), size = map.getSize(), center = map.project(map.getCenter(), zoom);
       const nextSignature = [revision, selectedId, zoom, center.x, center.y, size.x, size.y].join(":");
@@ -227,7 +335,7 @@ const ArchSearchDensity = (() => {
       clusterMarkers = []; clusterByKey.clear(); groupsByKey.clear();
       const retained = new Set<string>();
       for (const group of groups) {
-        if (group.items.length === 1) {
+        if (!group.badge) {
           const item = group.items[0], active = item.value.id === selectedId;
           const key = `point:${JSON.stringify([item.value.id, ...item.coordinate])}`;
           retained.add(key);
@@ -254,7 +362,8 @@ const ArchSearchDensity = (() => {
         if (!symbol) {
           const count = document.createElement("span"); count.className = "catalogue-cluster-count"; count.setAttribute("aria-hidden", "true");
           const marker = L.marker(coordinate, { pane: "catalogue-density-clusters", keyboard: true, autoPanOnFocus: false,
-            title: label(group), alt: label(group), icon: L.divIcon({ className: "catalogue-cluster-marker", html: count, iconSize: [44, 44], iconAnchor: [22, 22] }) });
+            title: label(group), alt: label(group), icon: L.divIcon({ className: "catalogue-cluster-marker", html: count,
+              iconSize: [badgeSize, badgeSize], iconAnchor: [badgeSize / 2, badgeSize / 2] }) });
           marker.on("click", () => {
             const current = groupsByKey.get(group.key);
             if (current) openMembers(current, map.unproject([current.focusPixel.x, current.focusPixel.y], map.getZoom()));
@@ -264,6 +373,8 @@ const ArchSearchDensity = (() => {
           symbol = { layer: marker, marker, count }; drawn.set(key, symbol);
         }
         const marker = symbol.marker!;
+        focusableBadges.set(marker, group.pixel.x > origin.x && group.pixel.x < origin.x + size.x
+          && group.pixel.y > origin.y && group.pixel.y < origin.y + size.y);
         symbol.count!.textContent = group.items.length > 999 ? "999+" : String(group.items.length);
         marker.setLatLng(coordinate); marker.options.title = label(group);
         marker.getElement()?.setAttribute("aria-label", label(group)); marker.getElement()?.setAttribute("title", label(group));
@@ -279,7 +390,7 @@ const ArchSearchDensity = (() => {
         const item = group.items[0]; drawn.get(`point:${JSON.stringify([item.value.id, ...item.coordinate])}`)?.circle?.bringToFront();
       }
       stats = { logicalPoints: new Set(values.filter(value => valid(value.coordinate)).map(value => JSON.stringify([value.id, ...value.coordinate]))).size,
-        visiblePoints: groups.reduce((sum, group) => sum + group.items.length, 0), clusters: groups.filter(group => group.items.length > 1).length, symbols: groups.length };
+        visiblePoints: groups.reduce((sum, group) => sum + group.items.length, 0), clusters: groups.filter(group => group.badge).length, symbols: groups.length };
       const container = map.getContainer();
       container.dataset.densitySymbols = String(map.hasLayer(layer) ? stats.symbols : 0); container.dataset.densityClusters = String(map.hasLayer(layer) ? stats.clusters : 0);
       container.dataset.densityLogicalPoints = String(stats.logicalPoints);

@@ -254,6 +254,7 @@ const ArchSearchHistory = (() => {
     let labelContext: CanvasRenderingContext2D | null | undefined;
     let labelFont = "";
     let labelRefreshPending = false;
+    let labelsMoving = false;
     let labelsZooming = false;
     let renderer: L.Canvas | null = sharedRenderer;
     if (map && typeof L !== "undefined") {
@@ -465,7 +466,7 @@ const ArchSearchHistory = (() => {
     function labelExclusions(): LabelRect[] {
       if (!map) return [];
       const container = map.getContainer(), origin = container.getBoundingClientRect();
-      const nodes = [...Array.from(container.querySelectorAll<HTMLElement>(".site-marker-icon, .catalogue-cluster-marker, .leaflet-control")),
+      const nodes = [...Array.from(container.querySelectorAll<HTMLElement>(".site-marker-icon, .catalogue-cluster-marker, .leaflet-control, .leaflet-popup")),
         ...Array.from(container.parentElement?.querySelectorAll<HTMLElement>(".map-caption") ?? [])];
       return nodes.map((node) => {
         const bounds = node.getBoundingClientRect();
@@ -473,31 +474,30 @@ const ArchSearchHistory = (() => {
       });
     }
 
+    function removePolityLabel(layer: L.Layer): void {
+      layer.getTooltip()?.getElement()?.removeAttribute("data-polity-label");
+      layer.unbindTooltip();
+    }
+
     function hidePolityLabels(): void {
-      boundaryLayer?.eachLayer((layer) => {
-        const tooltip = layer.getTooltip();
-        if (!tooltip) return;
-        tooltip.options.permanent = false;
-        tooltip.getElement()?.removeAttribute("data-polity-label");
-        layer.closeTooltip();
-      });
+      boundaryLayer?.eachLayer(removePolityLabel);
     }
 
     function refreshPolityLabels(): void {
       if (!fixedHistorical || !map || !boundaryLayer) return;
-      if (labelsZooming || map.getZoom() < 3) { hidePolityLabels(); return; }
+      if (labelsMoving || labelsZooming || map.getZoom() < 3) { hidePolityLabels(); return; }
       const viewport = map.getSize(), candidates: PolityLabelCandidate[] = [];
       const entries: { layer: L.Layer; anchor: L.LatLng }[] = [];
       boundaryLayer.eachLayer((layer) => {
-        const metadata = labelMetadata.get(layer), tooltip = layer.getTooltip();
-        if (!metadata || !tooltip) return;
-        tooltip.options.permanent = false;
-        tooltip.getElement()?.removeAttribute("data-polity-label");
+        const metadata = labelMetadata.get(layer);
+        if (!metadata) return;
         const polygon = layer as L.Polygon;
         try {
-          const bounds = polygon.getBounds(), anchor = polygon.getCenter();
+          const bounds = polygon.getBounds();
+          if (!bounds.isValid() || !map!.getBounds().intersects(bounds)) { removePolityLabel(layer); return; }
           const size = labelSize(metadata.name);
-          if (!size || !bounds.isValid() || !map!.getBounds().intersects(bounds)) { layer.closeTooltip(); return; }
+          if (!size) { removePolityLabel(layer); return; }
+          const anchor = polygon.getCenter();
           const point = map!.latLngToContainerPoint(anchor), northWest = map!.latLngToContainerPoint(bounds.getNorthWest()), southEast = map!.latLngToContainerPoint(bounds.getSouthEast());
           const left = Math.max(0, Math.min(northWest.x, southEast.x)), right = Math.min(viewport.x, Math.max(northWest.x, southEast.x));
           const top = Math.max(0, Math.min(northWest.y, southEast.y)), bottom = Math.min(viewport.y, Math.max(northWest.y, southEast.y));
@@ -506,16 +506,17 @@ const ArchSearchHistory = (() => {
           entries.push({ layer, anchor });
           candidates.push({ token, name: metadata.name, composite: metadata.composite, area: Math.max(0, right - left) * Math.max(0, bottom - top),
             x: point.x - size.width / 2, y: point.y - size.height / 2, ...size });
-        } catch { layer.closeTooltip(); }
+        } catch { removePolityLabel(layer); }
       });
       const chosen = new Set(layoutPolityLabels(candidates, { width: viewport.x, height: viewport.y }, labelExclusions()));
       for (const [index, entry] of entries.entries()) {
-        const tooltip = entry.layer.getTooltip()!;
-        tooltip.options.permanent = chosen.has(index);
-        if (tooltip.options.permanent) {
-          entry.layer.openTooltip(entry.anchor);
-          tooltip.getElement()?.setAttribute("data-polity-label", labelMetadata.get(entry.layer)!.name);
-        } else entry.layer.closeTooltip();
+        if (!chosen.has(index)) { removePolityLabel(entry.layer); continue; }
+        const metadata = labelMetadata.get(entry.layer)!;
+        if (!entry.layer.getTooltip()) {
+          entry.layer.bindTooltip(metadata.content, { permanent: true, pane: "history-polity-labels", className: "history-polity-label", direction: "center", opacity: 0.95 });
+        }
+        entry.layer.openTooltip(entry.anchor);
+        entry.layer.getTooltip()?.getElement()?.setAttribute("data-polity-label", metadata.name);
       }
     }
 
@@ -571,12 +572,10 @@ const ArchSearchHistory = (() => {
               layer.bindPopup(() => popup(properties, source), { maxWidth: 310 });
               if (fixedHistorical) {
                 const name = typeof properties.Name === "string" ? properties.Name.trim() : "";
-                const content = element("span", name || "未命名历史政权");
+                if (!name) return;
+                const content = element("span", name);
                 content.className = "history-polity-label-text"; content.title = name;
-                content.style.width = "128px"; content.style.height = "32px";
                 labelMetadata.set(layer, { name, composite: properties.composite === true, content });
-                layer.bindTooltip(content, { pane: "history-polity-labels", className: "history-polity-label", direction: "center", sticky: false, opacity: 0.95 });
-                layer.on("mouseout", () => { if (layer.getTooltip()?.options.permanent) layer.openTooltip(); });
               }
             },
           };
@@ -760,7 +759,9 @@ const ArchSearchHistory = (() => {
     }
     ui.retry.addEventListener("click", () => { userAction("user"); schedule(); });
     if (fixedHistorical && map) {
-      map.on("moveend resize archsearch:markerschange", schedulePolityLabels);
+      map.on("resize archsearch:markerschange popupopen popupclose", schedulePolityLabels);
+      map.on("movestart", () => { labelsMoving = true; hidePolityLabels(); });
+      map.on("moveend", () => { labelsMoving = false; schedulePolityLabels(); });
       map.on("zoomstart", () => { labelsZooming = true; hidePolityLabels(); });
       map.on("zoomend", () => { labelsZooming = false; schedulePolityLabels(); });
       document.fonts?.ready.then(() => { labelSizes.clear(); labelFont = ""; schedulePolityLabels(); });

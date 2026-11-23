@@ -7,7 +7,7 @@ import ts from 'typescript';
 interface Placement {id:string;title:string;coordinate:[number,number];representative:boolean;tooltip?():Element}
 interface Pixel {x:number;y:number}
 interface Item {value:Placement;coordinate:[number,number];pixel:Pixel;copy:number}
-interface Group {key:string;items:Item[];pixel:Pixel;focusPixel:Pixel;copy:number}
+interface Group {key:string;items:Item[];pixel:Pixel;focusPixel:Pixel;badge:boolean}
 interface Viewport {origin:Pixel;width:number;height:number;worldWidth:number;cellSize?:number;selectedId?:string|null}
 interface Controller {layer:Layer;setData(values:Placement[]):void;select(id:string|null):void;refresh():void;destroy():void;stats():{logicalPoints:number;visiblePoints:number;clusters:number;symbols:number}}
 interface Helpers {valid(value:unknown):boolean;plan(values:Placement[],project:(coordinate:[number,number])=>Pixel,viewport:Viewport):Group[];members(group:Group):Placement[];create(options:{map:MapView;pane:string;renderer:object;cellSize?:number;onSelect(id:string,opener:Element):void}):Controller}
@@ -57,10 +57,10 @@ class MapView extends Events {
 const script=ts.transpileModule(readFileSync('src/archsearch/frontend/density.ts','utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.None}}).outputText;
 function harness(cellSize=48){
   const doc={activeElement:null as Element|null,querySelector:()=>null,createElement:()=>{const element=new Element();element.onFocus=()=>{doc.activeElement=element;};return element;}};
-  const viewport={innerWidth:600,innerHeight:400};
+  const viewport=Object.assign(new EventTarget(),{innerWidth:600,innerHeight:400});
   const frames:(()=>void)[]=[];const map=new MapView();map.container.onFocus=()=>{doc.activeElement=map.container;};
   const popups:Popup[]=[],markers:Layer[]=[],circles:Layer[]=[];
-  const helpers=runInContext(script+'\nArchSearchDensity;',createContext({Event,window:viewport,document:doc,requestAnimationFrame:(fn:()=>void)=>frames.push(fn),
+  const helpers=runInContext(script+'\nArchSearchDensity;',createContext({Event,Element,window:viewport,document:doc,requestAnimationFrame:(fn:()=>void)=>frames.push(fn),
     L:{layerGroup:()=>new Layer(),circleMarker:(coordinate:[number,number],options:Record<string,unknown>)=>{const circle=new Layer().setLatLng(coordinate);circle.options={...options};circles.push(circle);return circle;},
       marker:(coordinate:{lat:number;lng:number},options:Record<string,unknown>)=>{const marker=new Layer().setLatLng(coordinate);marker.options={...options};marker.element.onFocus=()=>{doc.activeElement=marker.element;};markers.push(marker);return marker;},
       divIcon:(options:object)=>options,popup:()=>{const popup=new Popup();popups.push(popup);return popup;}}})) as Helpers;
@@ -88,6 +88,39 @@ test('dateline neighbors share their physical screen cell without inflating thei
   assert.equal(groups.length,1);assert.equal(groups[0].items.length,2);assert.equal(h.helpers.members(groups[0]).length,2);
   assert.deepEqual(JSON.parse(JSON.stringify(groups[0].items.map(item=>item.coordinate))),[[179.9,0],[180.1,0]]);
 });
+test('date line neighbors across a historical grid edge remain individually reachable in one badge', () => {
+  const h = harness();
+  const groups = h.helpers.plan([value('west',-179.9),value('east',179.9)], projection,
+    {...viewport,origin:{x:460,y:0},width:100,cellSize:128});
+  assert.equal(groups.length,1);
+  assert.equal(groups[0].badge,true);
+  assert.deepEqual(Array.from(h.helpers.members(groups[0]), member => member.id),['east','west']);
+  assert.equal(groups[0].focusPixel.x,512);
+  assert.equal(groups[0].pixel.x,512);
+  assert.deepEqual(Array.from(groups[0].items, item => item.coordinate[0]).sort((a,b) => a-b),[179.9,180.1]);
+});
+
+test('nearby points at a grid corner form a stable group while distant points remain separate', () => {
+  const h = harness(), project = ([x,y]:[number,number]) => ({x,y});
+  const values = [value('a',47,47),value('b',49,47),value('c',47,49),value('d',49,49),value('separate',96,84)];
+  const scope = {...viewport,width:192,height:128};
+  for (const points of [values, [...values].reverse()]) {
+    const groups = h.helpers.plan(points,project,scope);
+    const badge = groups.find(group => group.badge)!;
+    assert.equal(groups.length,2);
+    assert.equal(badge.key,'0:0');
+    assert.deepEqual(Array.from(h.helpers.members(badge), member => member.id), ['a','b','c','d']);
+    assert.equal(groups.find(group => !group.badge)?.items[0].value.id,'separate');
+  }
+});
+
+test('members visible at the viewport edge keep their cluster control reachable', () => {
+  const h = harness(), project = ([x,y]:[number,number]) => ({x,y});
+  const groups = h.helpers.plan([value('a',110,30),value('b',115,30)],project,
+    {...viewport,origin:{x:100,y:0},width:390,cellSize:128});
+  assert.equal(groups[0].pixel.x,112.5);
+  assert.deepEqual(Array.from(h.helpers.members(groups[0]), member => member.id), ['a','b']);
+});
 test('adjacent dense cell anchors cannot overlap and zoom focus keeps the real member center',()=>{
   const h=harness();const project=([x,y]:[number,number])=>({x,y});
   const groups=h.helpers.plan([value('a',47.8,30),value('b',47.9,30),value('c',48.1,30),value('d',48.2,30)],project,{...viewport,width:120,height:100,worldWidth:360});
@@ -97,8 +130,81 @@ test('adjacent dense cell anchors cannot overlap and zoom focus keeps the real m
 test('invalid and polar locations are omitted; genuine zero and selected coordinates retain their source meaning',()=>{
   const h=harness();for(const coordinate of [null,[null,null],[181,0],[0,86],[NaN,0]])assert.equal(h.helpers.valid(coordinate),false);
   const groups=h.helpers.plan([value('chosen',0),value('near',0),value('third',1),{...value('bad'),coordinate:null as unknown as [number,number]}],projection,{...viewport,selectedId:'chosen'});
-  assert.equal(groups.reduce((sum,group)=>sum+group.items.length,0),3);assert.ok(groups.every(group=>group.items.length===1));
-  const selected=groups.find(group=>group.items[0].value.id==='chosen')!;assert.deepEqual(JSON.parse(JSON.stringify(selected.items[0].coordinate)),[0,0]);
+  assert.equal(groups.reduce((sum,group)=>sum+group.items.length,0),3);
+  const selected=groups.find(group=>group.items[0].value.id==='chosen')!;assert.equal(selected.badge,false);
+  assert.deepEqual(JSON.parse(JSON.stringify(selected.items[0].coordinate)),[0,0]);
+});
+
+for (const cellSize of [48, 128]) {
+  test(`selecting a point preserves a heavily populated cell at ${cellSize}px`, () => {
+    const h = harness(), center = cellSize / 2, project = ([x, y]: [number, number]) => ({x,y});
+    const values = [value('chosen', center + 20, center + 20), ...Array.from({length: 1200}, (_, index) => value(`site:${index}`, center, center))];
+    const scope = {...viewport, width: 320, height: 300, cellSize};
+    assert.equal(h.helpers.plan(values, project, scope).length, 1);
+    const groups = h.helpers.plan(values, project, {...scope, selectedId: 'chosen'});
+    const badge = groups.find(group => group.badge)!, chosen = groups.find(group => !group.badge)!;
+    assert.equal(groups.length, 2);
+    assert.equal(badge.items.length, 1200);
+    assert.equal(h.helpers.members(badge).length, 1200);
+    assert.ok(Math.abs(badge.pixel.x - chosen.pixel.x) >= 30 || Math.abs(badge.pixel.y - chosen.pixel.y) >= 30);
+    assert.equal(chosen.pixel.x, center + 20);
+    assert.equal(chosen.pixel.y, center + 20);
+    assert.equal(badge.focusPixel.x, center);
+    assert.equal(badge.focusPixel.y, center);
+  });
+}
+
+test('coincident records keep a reachable badge after choosing one and preserve the original coordinate', () => {
+  const h = harness();
+  h.controller.setData([value('chosen'), value('other')]);
+  h.controller.select('chosen');
+  assert.equal(h.controller.stats().clusters, 1);
+  assert.equal(h.controller.stats().symbols, 2);
+  h.markers.at(-1)!.fire('click');
+  const popup = h.popups.at(-1)!;
+  assert.deepEqual(memberButtons(popup).map(button => button.dataset.siteId), ['other']);
+  memberButtons(popup)[0].fire('click');
+  assert.equal(h.selected.at(-1)?.id, 'other');
+  findAction(popup, 'zoom').fire('click');
+  assert.deepEqual(h.map.center, {lat: 0, lng: 0});
+});
+
+test('choosing a record with hundreds of source points keeps those points grouped around its representative point', () => {
+  const h = harness(), project = ([x,y]:[number,number]) => ({x,y});
+  const values = Array.from({length:750}, (_, index) => value('chosen', 25 + index / 1000, 23));
+  values.push({...value('chosen',24,24),representative:true},value('other',23,23));
+  const groups = h.helpers.plan(values,project,{...viewport,width:320,selectedId:'chosen'});
+  assert.equal(groups.length,2);
+  assert.equal(groups.find(group => group.badge)?.items.length,751);
+  assert.equal(groups.find(group => !group.badge)?.items[0].value.representative,true);
+});
+
+test('selection does not pull offscreen copies into the visible map or count one point twice in a badge', () => {
+  const h = harness(), projected = () => ({x:64,y:192});
+  const points = [value('chosen'),value('other-a'),value('other-b')];
+  const scope = {...viewport,origin:{x:220,y:0},cellSize:128,selectedId:'chosen'};
+  for (const width of [192,390,640]) {
+    const groups = h.helpers.plan(points,projected,{...scope,width});
+    const badges = groups.filter(group => group.badge);
+    const visible = badges.filter(group => group.pixel.x >= scope.origin.x && group.pixel.x <= scope.origin.x + width);
+    assert.equal(visible.length,width === 192 ? 0 : 1);
+    assert.ok(badges.every(group => new Set(group.items.map(item => item.value.id)).size === group.items.length));
+  }
+});
+
+test('a visible badge accepts Enter and Space, and clipped badges stay outside the Tab order', () => {
+  const h = harness();
+  h.controller.setData([value('visible-a'),value('visible-b'),value('outside-a',-118),value('outside-b',-118)]);
+  const visible = h.markers.find(marker => marker.getElement().tabIndex === 0)!;
+  assert.ok(visible);
+  assert.ok(h.markers.some(marker => marker.getElement().tabIndex === -1));
+  visible.getElement().focus();
+  assert.equal(visible.getElement().fire('keydown','Enter').defaultPrevented,true);
+  assert.equal(h.popups.length,1);
+  h.popups[0].element.fire('keydown','Escape');
+  assert.equal(h.doc.activeElement,visible.getElement());
+  assert.equal(visible.getElement().fire('keydown',' ').defaultPrevented,true);
+  assert.equal(h.popups.length,2);
 });
 test('world-anchored grouping is stable under small pans while culling complete distant cells',()=>{
   const h=harness(),values=[value('one',2,3),value('two',3,3),value('far',150,70)];
@@ -163,6 +269,50 @@ test('opening from a partly visible canvas scrolls only the document and fits th
   assert.equal(h.map.container.scrolls,1);assert.equal(h.map.cameraChanges,0);
   assert.equal(h.popups[0].content.style.maxHeight,'320px');assert.equal(h.doc.activeElement,h.popups[0].content.children[0]);
   h.map.center.lng=3;h.map.fire('moveend');h.flush();assert.equal(h.map.container.scrolls,1);
+});
+
+test('page and ancestor scroll only reposition an open popup, preserving its page and focus', () => {
+  const h = harness();
+  const scroll = (target: EventTarget | typeof h.doc = h.viewport) => {
+    const event = new Event('scroll');
+    Object.defineProperty(event, 'target', {value: target});
+    h.viewport.dispatchEvent(event);
+  };
+  scroll(h.doc);
+  assert.equal(h.frames.length, 0);
+  h.controller.setData(Array.from({length: 12}, (_, index) => value('site:' + String(index).padStart(2, '0'))));
+  h.markers[0].fire('click');
+  const popup = h.popups[0], position = popup.location;
+  findAction(popup, 'next').fire('click');
+  const currentMember = memberButtons(popup)[0];
+  assert.equal(currentMember.dataset.siteId, 'site:10');
+  currentMember.focus();
+
+  scroll(popup.content);
+  assert.equal(h.frames.length, 0);
+  const mapAncestor = new Element();
+  mapAncestor.append(h.map.container);
+  h.map.container.bounds = {left: 0, top: 150, right: 600, bottom: 550, width: 600, height: 400};
+  scroll(mapAncestor);
+  scroll(h.doc);
+  assert.equal(h.frames.length, 1);
+  h.flush();
+  assert.notDeepEqual(popup.location, position);
+  assert.equal(popup.content.style.maxHeight, '170px');
+  assert.equal(h.doc.activeElement, currentMember);
+  assert.equal(memberButtons(popup)[0], currentMember);
+  assert.equal(h.map.container.scrolls, 0);
+  assert.equal(h.map.cameraChanges, 0);
+  assert.equal(h.popups.length, 1);
+  assert.equal(h.markers.length, 1);
+
+  scroll();
+  const lastPosition = popup.location;
+  popup.remove();
+  h.flush();
+  assert.deepEqual(popup.location, lastPosition);
+  scroll();
+  assert.equal(h.frames.length, 0);
 });
 
 test('popup pane escapes the map-pane stacking context and tracks public pane offsets until destruction',()=>{

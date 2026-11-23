@@ -101,13 +101,23 @@ class FakeLayer {
   bindPopup(node: FakeElement | (() => FakeElement)): this { this.popups.push(node); return this; }
   bindTooltip(node: FakeElement, options: Record<string, unknown>): this {
     const element = new FakeElement(); this.tooltip = { content: node, options, element, getElement: () => element };
-    this.on('mouseover', () => { this.openTooltip(); }); this.on('mouseout', () => { this.closeTooltip(); });
+    if (options.permanent) this.openTooltip();
     return this;
   }
+  unbindTooltip(): this { this.closeTooltip(); this.tooltip = null; return this; }
   on(name: string, callback: () => void): this { this.listeners.set(name, [...this.listeners.get(name) ?? [], callback]); return this; }
-  fire(name: string): void { for (const callback of this.listeners.get(name) ?? []) callback(); }
+  fire(name: string): void {
+    if (this.tooltip && !this.tooltip.options.permanent) {
+      if (name === 'mouseover') this.openTooltip();
+      if (name === 'mouseout') this.closeTooltip();
+    }
+    for (const callback of this.listeners.get(name) ?? []) callback();
+  }
   getTooltip() { return this.tooltip; }
-  openTooltip(anchor?: { lat: number; lng: number }): this { this.tooltipOpen = true; this.tooltipAnchor = anchor ?? null; return this; }
+  openTooltip(anchor?: { lat: number; lng: number }): this {
+    if (this.tooltip) { this.tooltipOpen = true; this.tooltipAnchor = anchor ?? null; }
+    return this;
+  }
   closeTooltip(): this { this.tooltipOpen = false; return this; }
   eachLayer(callback: (layer: FakeLayer) => void): void { for (const child of this.members) callback(child); }
   getBounds(): FakeBounds {
@@ -306,9 +316,17 @@ test('historical label refresh batches map changes and avoids point markers and 
   env.map.fire('archsearch:markerschange'); env.flushLabels(); assert.equal(visible().length, 0);
   shell.fixtureNodes = []; env.map.width = 390; env.map.height = 200;
   env.map.fire('resize'); env.flushLabels(); assert.equal(visible().length, 1);
+  env.map.fire('movestart'); assert.equal(visible().length, 0);
+  env.map.fire('archsearch:markerschange'); env.flushLabels(); assert.equal(visible().length, 0);
+  env.map.fire('moveend'); env.flushLabels(); assert.equal(visible().length, 1);
   env.map.fire('zoomstart'); assert.equal(visible().length, 0);
   env.map.zoom = 2; env.map.fire('zoomend'); env.flushLabels(); assert.equal(visible().length, 0);
   env.map.zoom = 7; env.map.fire('zoomend'); env.flushLabels(); assert.equal(visible().length, 1);
+  env.map.container.fixtureNodes = [marker];
+  marker.bounds = { left: 160, top: 80, width: 70, height: 40 };
+  env.map.fire('popupopen'); env.flushLabels(); assert.equal(visible().length, 0);
+  env.map.container.fixtureNodes = [];
+  env.map.fire('popupclose'); env.flushLabels(); assert.equal(visible().length, 1);
   assert.equal(env.pending.length, requests); assert.equal(env.view.getView()?.year, 117); assert.equal(env.actions, 0);
   assert.equal(JSON.stringify(boundary.data), original);
 });
@@ -326,7 +344,7 @@ test('long and absent permanent labels retain complete safe source popups and ne
   env.view.setYear(200); env.runTimers(); env.complete(env.boundaryRequest(200), frame(200, { from: 200, to: 299, name: '' })); await tick();
   assert.ok(old.members.every(layer => !layer.tooltipOpen));
   const next = env.layers.filter(layer => layer.options.pane === 'history-boundaries').at(-1)!;
-  assert.ok(next.members.every(layer => !layer.tooltipOpen && layer.tooltip !== null));
+  assert.ok(next.members.every(layer => !layer.tooltipOpen && layer.tooltip === null));
   assert.ok(next.members.every(layer => layer.popups.length === 1));
   assert.equal(env.view.getView()?.year, 200);
 });
@@ -337,24 +355,27 @@ test('no canvas text context never estimates permanent label widths and leaves s
   env.doc.createElement = (tag) => { const node = create(tag); if (tag === 'canvas') node.canvasUnavailable = true; return node; };
   await env.finishInitial();
   const boundary = env.layers.find(layer => layer.options.pane === 'history-boundaries')!;
-  assert.ok(boundary.members.every(layer => !layer.tooltipOpen && layer.tooltip !== null));
-  assert.ok(boundary.members.every(layer => layer.tooltip?.content.style.width === '128px' && layer.tooltip.content.style.height === '32px'));
-  boundary.members[1].openTooltip(); assert.equal(boundary.members[1].tooltipOpen, true);
+  assert.ok(boundary.members.every(layer => !layer.tooltipOpen && layer.tooltip === null));
   const source = boundary.members[1].popups[0]; assert.equal(typeof source, 'function');
   assert.match(allText((source as () => FakeElement)()), /Roman Empire.*Cliopatria.*CC BY 4\.0/u);
 });
 
-test('native mouseout does not erase a managed permanent name while a suppressed name remains an ordinary hover tooltip', async () => {
+test('hover cannot resurrect a suppressed name or erase a managed name, and the original popup remains available', async () => {
   const env = setup(true, true); env.map.zoom = 7; await env.finishInitial();
   const boundary = env.layers.find(layer => layer.options.pane === 'history-boundaries')!;
   const selected = boundary.members.find(layer => layer.tooltipOpen)!;
   selected.fire('mouseover'); selected.fire('mouseout');
-  assert.equal(selected.tooltipOpen, true); assert.equal(selected.tooltip?.options.permanent, true);
+  assert.equal(selected.tooltipOpen, true); assert.equal(selected.getTooltip()?.options.permanent, true);
   const marker = new FakeElement(); marker.bounds = { left: 270, top: 180, width: 60, height: 40 }; env.map.container.fixtureNodes = [marker];
   env.map.fire('archsearch:markerschange'); env.flushLabels();
-  assert.equal(selected.tooltipOpen, false); assert.equal(selected.tooltip?.options.permanent, false);
-  selected.fire('mouseover'); assert.equal(selected.tooltipOpen, true);
+  assert.equal(selected.tooltipOpen, false); assert.equal(selected.tooltip, null);
+  selected.fire('mouseover'); assert.equal(selected.tooltipOpen, false);
   selected.fire('mouseout'); assert.equal(selected.tooltipOpen, false);
+  const source = selected.popups[0]; assert.equal(typeof source, 'function');
+  assert.match(allText((source as () => FakeElement)()), /Roman Empire.*Cliopatria.*CC BY 4.0/u);
+  env.map.container.fixtureNodes = [];
+  env.map.fire('archsearch:markerschange'); env.flushLabels();
+  assert.equal(selected.tooltipOpen, true); assert.equal(selected.getTooltip()?.options.permanent, true);
 });
 
 test('fixed historical comparison retains real filled polities and literal names instead of an OSM base', async () => {
