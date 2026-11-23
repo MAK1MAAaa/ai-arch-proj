@@ -285,10 +285,14 @@
         ui.cancelSearch.disabled = !state.searching;
         ui.cancelSearch.hidden = !state.searching;
         ui.searchProgress.hidden = !state.searching && !state.searchFeedback;
-        ui.progressLabel.textContent = state.searching
-            ? state.activeSearch?.enhance ? "正在生成查询扩展并检索本地资料，保留上次结果与地图。"
-                : state.completedSearch ? "正在更新，列表与地图仍保留上次检索结果。" : "正在检索本地资料。"
-            : state.searchFeedback || "";
+        if (state.searching) {
+            const status = state.activeSearch?.enhance ? "正在扩展查询并检索本地资料。" : "正在检索本地资料。";
+            const model = state.activeSearch?.mode === "semantic" ? "首次语义检索可能需要加载本地模型。" : "";
+            const retained = state.completedSearch ? "上次结果仍可查看。" : "";
+            ui.progressLabel.textContent = status + model + retained;
+        }
+        else
+            ui.progressLabel.textContent = state.searchFeedback ?? "";
         ui.retryPanel.hidden = state.failedSearch === null;
         ui.retrySearch.disabled = state.failedSearch === null || state.searching || !modeAvailable(state.failedSearch.mode)
             || (state.failedSearch.enhance === true && !llmView?.ready());
@@ -964,7 +968,7 @@
         pendingSelectionRestore = false;
         saveViewLink();
     }
-    function setLoading(value) {
+    function setLoading(value, reason) {
         const focusWasInProgress = !value && ui.searchProgress.contains(document.activeElement);
         state.searching = value;
         ui.resultsPanel.setAttribute("aria-busy", String(value));
@@ -975,20 +979,18 @@
         if (!value)
             ui.empty.hidden = state.results.length > 0;
         updateSearchAvailability();
-        if (focusWasInProgress) {
-            if (!ui.searchProgress.hidden) {
-                focusWithinView(ui.progressLabel);
-            }
-            else if (state.failedSearch) {
-                if (!ui.retrySearch.disabled)
-                    focusWithinView(ui.retrySearch);
-                else
-                    focusWithinView(ui.requestError);
-            }
-            else {
-                focusWithinView(ui.resultSummary);
-            }
-        }
+        if (!focusWasInProgress)
+            return;
+        if (reason === "cancelled")
+            focusWithinView(ui.query);
+        else if (!ui.retrySearch.disabled)
+            focusWithinView(ui.retrySearch);
+        else if (!ui.requestError.hidden)
+            focusWithinView(ui.requestError);
+        else if (!ui.searchProgress.hidden)
+            focusWithinView(ui.progressLabel);
+        else
+            focusWithinView(ui.resultSummary);
     }
     async function search(event) {
         exampleIntent.invalidate();
@@ -1016,13 +1018,13 @@
             return;
         invalidateSearch();
         state.failedSearch = null;
-        state.searchFeedback = state.completedSearch ? "已取消本次检索，保留上次结果与地图。" : "已取消本次检索，可调整问题后重新提交。";
+        state.searchFeedback = state.completedSearch ? "已取消本次等待，保留上次结果与地图。" : "已取消本次等待，可以调整问题后重新检索。";
         showError("");
         if (!state.completedSearch) {
             ui.emptyTitle.textContent = "本次检索已取消";
             ui.emptyDescription.textContent = "调整研究问题后可重新检索；取消只停止等待，不会清除已有资料。";
         }
-        setLoading(false);
+        setLoading(false, "cancelled");
         announce(state.searchFeedback);
     }
     async function runSearch(request) {
@@ -1062,7 +1064,7 @@
         if (focusProgress) {
             focusWithinView(ui.progressLabel);
         }
-        announce(request.enhance ? "正在生成查询扩展并检索本地资料。" : "正在检索本地资料。");
+        announce(ui.progressLabel.textContent ?? "");
         try {
             const expectedSubdivisionVersion = request.subdivision ? await explore?.validateSearchScope(request, controller.signal) : null;
             if (request.subdivision && !expectedSubdivisionVersion)
@@ -1130,7 +1132,7 @@
         ui.typeFilter.value = "";
         applyChangedFilter();
         if (returnFocus) {
-            if (!ui.searchProgress.hidden) {
+            if (state.searching) {
                 focusWithinView(ui.progressLabel);
             }
             else
@@ -1716,6 +1718,8 @@
     ui.form.addEventListener("submit", search);
     ui.form.addEventListener("input", (event) => {
         exampleIntent.invalidate();
+        if (event.target === ui.query && !state.searching)
+            state.searchFeedback = null;
         cancelLinkRestore();
         if (event.target === ui.query && !ui.query.value.trim() && state.searching)
             cancelCurrentSearch();
