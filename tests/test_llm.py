@@ -78,9 +78,25 @@ def test_defaults_do_not_contact_any_service_or_expose_credentials() -> None:
         "provider": "ollama", "base_url": DEFAULT_OLLAMA_URL,
         "model": "", "revision": 0, "has_api_key": False,
         "key_count": 0, "active_key_index": None, "config_source": "default",
+        "environment_config_invalid": False,
     }
     with pytest.raises(ConfigInvalid, match="选择模型"):
         manager.snapshot(0)
+
+
+def test_manual_recovery_keeps_the_environment_diagnostic_until_restart() -> None:
+    manager = LlmManager(
+        transport=httpx.MockTransport(provider_response), environment_config_invalid=True,
+    )
+    initial = manager.public_config()
+    assert initial.environment_config_invalid and not initial.model and not initial.has_api_key
+    override = draft()
+    manager.discover(override)
+    applied = manager.apply(ConfigApply.model_validate(override.model_dump() | {
+        "model": "qwen-test:2b", "expected_revision": 0,
+    }))
+    assert applied.environment_config_invalid and applied.model == "qwen-test:2b"
+    assert applied == manager.public_config()
 
 
 @pytest.mark.parametrize(

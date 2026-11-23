@@ -17,10 +17,18 @@ const ArchSearchComparison = (() => {
     onEvidence(): void;
   }
 
+  const latitudeLimit = 85.0511287798;
+  const cameraTolerance = 1e-7;
+
+  function settledCenter(latitude: number, longitude: number): L.LatLngTuple {
+    return [Math.max(-latitudeLimit, Math.min(latitudeLimit, latitude)), ArchSearchMapView.wrapLongitude(longitude, 0)];
+  }
+
   function camera(map: L.Map | null): Camera | null {
     if (!map) return null;
     const center = map.getCenter();
-    return { center: [ArchSearchMapView.wrapLongitude(center.lng, 0), Math.max(-85.0511287798, Math.min(85.0511287798, center.lat))], zoom: map.getZoom() };
+    const [latitude, longitude] = settledCenter(center.lat, center.lng);
+    return { center: [longitude, latitude], zoom: map.getZoom() };
   }
 
   function sharedZoom(zoom: number): number { return Math.min(9, Math.max(1, zoom)); }
@@ -123,17 +131,26 @@ const ArchSearchComparison = (() => {
       }
       changed();
     }
-    function syncFrom(source: L.Map, destination: L.Map, copyCenter = sync): void {
+    function applyCamera(map: L.Map, center: L.LatLngTuple, zoom: number): void {
+      const actual = map.getCenter();
+      const longitudeDelta = Math.abs(center[1] - actual.lng);
+      if (Math.abs(center[0] - actual.lat) < cameraTolerance && longitudeDelta < cameraTolerance && zoom === map.getZoom()) return;
+      // Leaflet can resolve a same-zoom correction to a zero-pixel pan at the projection limit.
+      const reset = Math.abs(actual.lat) > latitudeLimit + cameraTolerance || longitudeDelta > 180;
+      const options = { animate: false, reset };
+      map.setView(center, zoom, options);
+    }
+    function syncFrom(source: L.Map, destination: L.Map | null, copyCenter = sync): void {
       if (syncing || restoringCameras) return;
-      const center = source.getCenter(); const other = destination.getCenter();
-      const latitude = copyCenter ? center.lat : other.lat;
-      const longitude = copyCenter ? ArchSearchMapView.wrapLongitude(center.lng, other.lng) : other.lng;
+      const actual = source.getCenter();
+      const center = settledCenter(actual.lat, actual.lng);
       const zoom = sharedZoom(source.getZoom());
       syncing = true;
       try {
-        if (source.getZoom() !== zoom) { source.stop(); source.setView([center.lat, center.lng], zoom, { animate: false }); }
-        if (Math.abs(latitude - other.lat) >= 1e-7 || Math.abs(longitude - other.lng) >= 1e-7 || zoom !== destination.getZoom()) {
-          destination.stop(); destination.setView([latitude, longitude], zoom, { animate: false });
+        applyCamera(source, center, zoom);
+        if (destination) {
+          const other = destination.getCenter();
+          applyCamera(destination, copyCenter ? center : [other.lat, other.lng], zoom);
         }
       }
       finally { syncing = false; }
@@ -143,11 +160,17 @@ const ArchSearchComparison = (() => {
       mapSizes.set(map, { x: next.x, y: next.y });
       return previous !== undefined && (previous.x !== next.x || previous.y !== next.y);
     }
+    function finishMove(source: L.Map, destination: L.Map | null): void {
+      if (syncing || restoringCameras) return;
+      const resized = sizeChanged(source);
+      syncFrom(source, destination, sync && !resized);
+      onChanged();
+    }
     function positionSelection(coordinate: [number, number]): void {
       syncing = true;
       try {
         for (const map of [modern, historical]) if (map) {
-          map.stop(); map.setView([coordinate[1], ArchSearchMapView.wrapLongitude(coordinate[0], map.getCenter().lng)], 4, { animate: false });
+          map.stop(); map.setView(settledCenter(coordinate[1], coordinate[0]), 4, { animate: false });
         }
       } finally { syncing = false; }
       for (const map of [modern, historical]) if (map) sizeChanged(map);
@@ -158,7 +181,8 @@ const ArchSearchComparison = (() => {
       restoringCameras = true;
       try {
         for (const [map, view] of [[modern, initial.modern_view], [historical, initial.history_view]] as const) if (map) {
-          const center = view ? [view.center[1], view.center[0]] as L.LatLngTuple : [map.getCenter().lat, map.getCenter().lng] as L.LatLngTuple;
+          const actual = map.getCenter();
+          const center = view ? settledCenter(view.center[1], view.center[0]) : settledCenter(actual.lat, actual.lng);
           map.setView(center, restoredZoom, { animate: false });
         }
       } finally { restoringCameras = false; }
@@ -211,7 +235,7 @@ const ArchSearchComparison = (() => {
           center = reference.getCenter();
         }
         for (const map of maps) {
-          map.stop(); map.setView([center.lat, ArchSearchMapView.wrapLongitude(center.lng, map.getCenter().lng)], zoom, { animate: false });
+          map.stop(); map.setView(settledCenter(center.lat, center.lng), zoom, { animate: false });
         }
       } finally { syncing = false; }
       for (const map of maps) sizeChanged(map);
@@ -265,20 +289,14 @@ const ArchSearchComparison = (() => {
       positionSelection(coordinate);
       return modern !== null || historical !== null;
     }
-    if (modern && historical) {
-      modern.on("moveend", () => {
-        if (syncing || restoringCameras) return;
-        const resized = sizeChanged(modern);
-        syncFrom(modern, historical, sync && !resized); onChanged();
-      });
+    if (modern) modern.on("moveend", () => finishMove(modern, historical));
+    if (historical) {
       historical.on("moveend", () => {
         for (const marker of [...markers.values(), ...(selectedMarker ? [selectedMarker] : [])]) {
           const value = marker.getLatLng(); const longitude = ArchSearchMapView.wrapLongitude(value.lng, historical.getCenter().lng);
           if (value.lng !== longitude) marker.setLatLng([value.lat, longitude]);
         }
-        if (syncing || restoringCameras) return;
-        const resized = sizeChanged(historical);
-        syncFrom(historical, modern, sync && !resized); onChanged();
+        finishMove(historical, modern);
       });
     }
     for (const [map, touch] of [[modern, () => { modernTouched = true; cameraActions++; alignedLegacyZoom = false; render(); }], [historical, () => { historicalTouched = true; cameraActions++; alignedLegacyZoom = false; render(); }]] as const) {

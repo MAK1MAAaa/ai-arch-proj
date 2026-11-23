@@ -4,7 +4,7 @@ import test from 'node:test';
 import { createContext, runInContext } from 'node:vm';
 import ts from 'typescript';
 
-interface Config { provider: 'ollama' | 'openai'; base_url: string; model: string; revision: number; has_api_key: boolean; key_count?: number; active_key_index?: number | null; config_source?: 'default' | 'env' | 'manual' }
+interface Config { provider: 'ollama' | 'openai'; base_url: string; model: string; revision: number; has_api_key: boolean; key_count?: number; active_key_index?: number | null; config_source?: 'default' | 'env' | 'manual'; environment_config_invalid?: boolean }
 interface Controller {
   load(): Promise<void>; discover(): Promise<void>; apply(clear?: boolean): Promise<void>;
   ready(): boolean; enabled(): boolean; getConfig(): Config | null; setRequested(value: boolean): void;
@@ -51,7 +51,7 @@ interface Pending { path: string; init: RequestInit; resolve(value: unknown): vo
 const source = readFileSync('src/archsearch/frontend/llm.ts', 'utf8');
 const script = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.None } }).outputText;
 function harness() {
-  const ids = ['llm-settings', 'llm-settings-form', 'llm-open-settings', 'llm-close-settings', 'llm-config-summary', 'llm-provider', 'llm-base-url', 'llm-api-key', 'llm-api-key-group', 'llm-key-hint', 'llm-model', 'llm-refresh-models', 'llm-apply', 'llm-clear-config', 'llm-enhance', 'llm-active-model', 'llm-feedback', 'llm-provider-note', 'llm-error'];
+  const ids = ['llm-settings', 'llm-settings-form', 'llm-open-settings', 'llm-close-settings', 'llm-config-summary', 'llm-startup-warning', 'llm-provider', 'llm-base-url', 'llm-api-key', 'llm-api-key-group', 'llm-key-hint', 'llm-model', 'llm-refresh-models', 'llm-apply', 'llm-clear-config', 'llm-enhance', 'llm-active-model', 'llm-feedback', 'llm-provider-note', 'llm-error'];
   const elements = new Map(ids.map(id => [id, new Element(['llm-provider', 'llm-model'].includes(id) ? 'select' : 'div')]));
   const document = { activeElement: null as Element | null, body: new Element('body'), getElementById: (id: string) => elements.get(id), createElement: (tag: string) => new Element(tag) };
   for (const element of elements.values()) element.onFocus = () => { document.activeElement = element; };
@@ -88,6 +88,21 @@ test('Ollama discovery prefers cached Qwen9b and requires explicit application',
   call.resolve({ ...config, model: 'qwen3.5:9b', revision: 1 }); await applying;
   h.controller.setRequested(true); assert.deepEqual(plain(h.controller.requestOptions()), { enhance: true, llm_revision: 1 });
   assert.match(h.element('llm-active-model').textContent, /Ollama.*qwen3.5:9b/u);
+});
+
+test('an invalid startup environment keeps recovery available and shows the diagnostic after an override', async () => {
+  const h = harness(), warning = h.element('llm-startup-warning');
+  assert.equal(warning.hidden, true);
+  await start(h,{...config,environment_config_invalid:true});
+  assert.equal(warning.hidden, false);
+  assert.equal(h.controller.ready(), false);
+  assert.equal(h.element('llm-apply').disabled, false);
+  const applying = h.controller.apply();
+  h.pending.at(-1)!.resolve({...config, model:'qwen3.5:9b',revision:1,environment_config_invalid:true});
+  await applying;
+  assert.equal(h.controller.ready(), true);
+  assert.equal(warning.hidden, false);
+  assert.throws(() => h.helpers.parseConfig({...config,environment_config_invalid:'invalid'}));
 });
 
 test('model settings open once on demand, focus their close action and restore the trigger without applying', () => {

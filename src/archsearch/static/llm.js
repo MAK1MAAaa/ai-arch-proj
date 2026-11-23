@@ -8,11 +8,12 @@ const ArchSearchLlm = (() => {
         if (!record(value) || !["ollama", "openai"].includes(String(value.provider))
             || typeof value.base_url !== "string" || typeof value.model !== "string"
             || typeof value.has_api_key !== "boolean" || !Number.isSafeInteger(value.revision)
+            || (value.environment_config_invalid !== undefined && typeof value.environment_config_invalid !== "boolean")
             || value.revision < 0)
             throw new Error("模型配置响应无效，请重新加载配置。");
         const pool = parsePool(value, value.has_api_key);
         return { provider: value.provider, base_url: value.base_url, model: value.model,
-            revision: value.revision, has_api_key: value.has_api_key, ...pool };
+            revision: value.revision, has_api_key: value.has_api_key, environment_config_invalid: value.environment_config_invalid === true, ...pool };
     }
     function parsePool(value, hasKey) {
         const count = value.key_count === undefined ? (hasKey ? 1 : 0) : value.key_count;
@@ -87,6 +88,7 @@ const ArchSearchLlm = (() => {
             clear: node("llm-clear-config"), enabled: node("llm-enhance"),
             active: node("llm-active-model"), feedback: node("llm-feedback"),
             summary: node("llm-config-summary"),
+            startupWarning: node("llm-startup-warning"),
             privacy: node("llm-provider-note"), error: node("llm-error"),
         };
         const send = options.request ?? request;
@@ -167,6 +169,7 @@ const ArchSearchLlm = (() => {
             ui.open.dataset.configured = String(ready);
             ui.open.dataset.enhanced = String(ui.enabled.checked);
             ui.summary.textContent = `${fullStatus}。${ui.enabled.checked ? ready ? "LLM 增强已开启。" : "已请求增强，需先应用模型。" : "LLM 增强未开启。"}基础语义检索使用本地 E5 模型。`;
+            ui.startupWarning.hidden = config?.environment_config_invalid !== true;
             ui.keyGroup.hidden = provider() !== "openai";
             ui.key.disabled = provider() !== "openai" || applying;
             ui.provider.disabled = applying;

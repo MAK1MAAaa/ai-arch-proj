@@ -215,3 +215,37 @@ def test_help_and_prepare_never_load_dotenv(
     monkeypatch.setattr(sys, "argv", ["archsearch", "prepare"])
     cli.main()
     assert '"ready": true' in capsys.readouterr().out
+
+
+@pytest.mark.parametrize("source", ["file", "process"])
+def test_serve_ignores_invalid_optional_model_settings_without_echoing_secrets(
+    source: str, tmp_path: Path, monkeypatch: pytest.MonkeyPatch,
+    capsys: pytest.CaptureFixture[str],
+) -> None:
+    import uvicorn
+
+    from archsearch import api, cli, env_config
+
+    monkeypatch.chdir(tmp_path)
+    broken_keys = f'["{KEYS[0]}"'
+    environ = {"ARCHSEARCH_LLM_API_KEYS": broken_keys} if source == "process" else {}
+    if source == "file":
+        (tmp_path / ".env").write_text(f"api_keys={broken_keys}\n", encoding="utf8")
+    monkeypatch.setattr(env_config, "load_env_config", lambda path: load_env_config(path, environ))
+    managers: list[LlmManager] = []
+    served: list[str] = []
+
+    def app(home: Path, *, llm: LlmManager) -> str:
+        managers.append(llm)
+        return "fixture-app"
+
+    monkeypatch.setattr(api, "create_app", app)
+    monkeypatch.setattr(uvicorn, "run", lambda application, **kwargs: served.append(application))
+    monkeypatch.setattr(sys, "argv", ["archsearch", "serve"])
+    cli.main()
+    assert served == ["fixture-app"]
+    public = managers[0].public_config()
+    assert public.environment_config_invalid and public.model == "" and public.key_count == 0
+    output = capsys.readouterr()
+    assert "基础检索和地图继续启动" in output.err
+    assert KEYS[0] not in output.out + output.err + public.model_dump_json()

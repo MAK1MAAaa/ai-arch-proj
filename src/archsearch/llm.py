@@ -141,6 +141,7 @@ class PublicConfig(BaseModel):
     key_count: int = 0
     active_key_index: int | None = None
     config_source: Literal["default", "env", "manual"] = "default"
+    environment_config_invalid: bool = False
 
 
 class ModelOption(BaseModel):
@@ -237,16 +238,18 @@ def _fingerprint(config: LlmSnapshot) -> str:
     return hashlib.sha256(raw.encode("utf8")).hexdigest()
 
 
-def _public(config: LlmSnapshot) -> PublicConfig:
+def _public(config: LlmSnapshot, *, environment_config_invalid: bool) -> PublicConfig:
+    keys = _keys(config)
     return PublicConfig(
         provider=config.provider,
         base_url=config.base_url,
         model=config.model,
         revision=config.revision,
-        has_api_key=bool(_keys(config)),
-        key_count=len(_keys(config)),
-        active_key_index=config.active_key_index if _keys(config) else None,
+        has_api_key=bool(keys),
+        key_count=len(keys),
+        active_key_index=config.active_key_index if keys else None,
         config_source=config.config_source,
+        environment_config_invalid=environment_config_invalid,
     )
 
 
@@ -256,11 +259,13 @@ class LlmManager:
     def __init__(
         self, *, transport: httpx.BaseTransport | None = None,
         timeout_seconds: float = MAX_REQUEST_SECONDS,
+        environment_config_invalid: bool = False,
     ) -> None:
         if not 0 < timeout_seconds <= MAX_REQUEST_SECONDS:
             raise ValueError("模型请求超时须在0至30秒之间。")
         self._transport = transport
         self._timeout_seconds = timeout_seconds
+        self._environment_config_invalid = environment_config_invalid
         self._settings_lock = threading.RLock()
         self._rewrite_lock = threading.Lock()
         self._current = LlmSnapshot("ollama", DEFAULT_OLLAMA_URL, "", 0)
@@ -301,7 +306,9 @@ class LlmManager:
 
     def public_config(self) -> PublicConfig:
         with self._settings_lock:
-            return _public(self._current)
+            return _public(
+                self._current, environment_config_invalid=self._environment_config_invalid,
+            )
 
     def _target(self, draft: ConfigDraft, *, allow_empty: bool = False) -> LlmSnapshot:
         base = canonical_base_url(draft.base_url, allow_empty=allow_empty)
@@ -385,7 +392,7 @@ class LlmManager:
                 api_key=keys[selected] if keys else None, active_key_index=slot if keys else None,
                 config_source="manual",
             )
-            return _public(self._current)
+            return self.public_config()
 
     def snapshot(self, expected_revision: int) -> LlmSnapshot:
         with self._settings_lock:
