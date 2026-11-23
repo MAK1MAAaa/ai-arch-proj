@@ -71,3 +71,5 @@ LLM 启动配置有误时，基础检索和地图照常启动。终端与“模�
 ## 详细说明
 
 双图、年代联动与莎士比亚案例见[地图对照说明](docs/map-comparison.md)。资料来源与许可、评测、API、前端开发及远程访问见[使用与开发指南](docs/system-guide.md)。Mac 访问 Windows 的方法见[远程访问](docs/system-guide.md#windows运行mac展示)。
+
+本地接口回归和提交前检查见[开发验证](docs/system-guide.md#验证)。

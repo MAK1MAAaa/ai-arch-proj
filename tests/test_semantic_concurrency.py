@@ -9,12 +9,12 @@ from typing import Literal
 
 import numpy as np
 import pytest
+from api_test_app import create_test_app
 from fastapi.testclient import TestClient
 from numpy.typing import NDArray
 from test_index import unit_vectors, write_assets
 
 from archsearch import index
-from archsearch.api import create_app
 from archsearch.domain import Site
 
 
@@ -46,7 +46,7 @@ def test_status_and_keyword_search_can_finish_while_semantic_search_is_busy(
 
     write_assets(tmp_path, sample_sites)
     monkeypatch.setattr(index, "LocalEncoder", GatedEncoder)
-    app = create_app(home=tmp_path, sites=sample_sites)
+    app = create_test_app(tmp_path, sample_sites)
     with TestClient(app) as client, ThreadPoolExecutor(max_workers=3) as pool:
         if phase == "encode":
             warmup = client.post("/api/search", json={"query": "Eastern", "mode": "semantic"})

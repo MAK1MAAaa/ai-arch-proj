@@ -5,9 +5,9 @@ from pathlib import Path
 
 import httpx
 import pytest
+from api_test_app import create_test_app
 from fastapi.testclient import TestClient
 
-from archsearch.api import create_app
 from archsearch.domain import Site
 from archsearch.llm import LlmManager
 
@@ -69,7 +69,7 @@ def test_disabled_default_has_no_llm_network_or_changes_to_base_search(
 ) -> None:
     manager, calls = manager_fixture(environment_config_invalid=environment_config_invalid)
     with TestClient(
-        create_app(tmp_path, sites=sample_sites, llm=manager), base_url="http://localhost"
+        create_test_app(tmp_path, sample_sites, llm=manager), base_url="http://localhost"
     ) as client:
         config = client.get("/api/llm/config").json()
         assert config == {
@@ -99,7 +99,7 @@ def test_real_provider_contract_drives_fusion_without_modifying_evidence(
     manager, calls = manager_fixture()
     before = sample_sites[1].model_dump(mode="json")
     with TestClient(
-        create_app(tmp_path, sites=sample_sites, llm=manager), base_url="http://localhost"
+        create_test_app(tmp_path, sample_sites, llm=manager), base_url="http://localhost"
     ) as client:
         config = configure(client, api=api)
         assert config["has_api_key"] is api
@@ -134,7 +134,7 @@ def test_unavailable_rewrite_returns_explicit_original_query_results(
 ) -> None:
     manager, _ = manager_fixture(fail_chat=True)
     with TestClient(
-        create_app(tmp_path, sites=sample_sites, llm=manager), base_url="http://localhost"
+        create_test_app(tmp_path, sample_sites, llm=manager), base_url="http://localhost"
     ) as client:
         config = configure(client)
         response = client.post(
@@ -159,7 +159,7 @@ def test_missing_config_stale_revision_and_missing_semantic_model_are_explicit(
 ) -> None:
     manager, calls = manager_fixture()
     with TestClient(
-        create_app(tmp_path, sites=sample_sites, llm=manager), base_url="http://localhost"
+        create_test_app(tmp_path, sample_sites, llm=manager), base_url="http://localhost"
     ) as client:
         body = {"query": "bath", "mode": "bm25", "enhance": True, "llm_revision": 0}
         assert client.post("/api/search", json=body).status_code == 503
@@ -188,7 +188,7 @@ def test_clear_configuration_drops_key_without_needing_working_upstream_authenti
 ) -> None:
     manager, calls = manager_fixture()
     with TestClient(
-        create_app(tmp_path, sites=sample_sites, llm=manager), base_url="http://localhost"
+        create_test_app(tmp_path, sample_sites, llm=manager), base_url="http://localhost"
     ) as client:
         configure(client, api=True)
         response = client.post(
@@ -214,7 +214,7 @@ def test_validation_errors_never_echo_secret_inputs(
 ) -> None:
     manager, calls = manager_fixture()
     with TestClient(
-        create_app(tmp_path, sites=sample_sites, llm=manager), base_url="http://localhost"
+        create_test_app(tmp_path, sample_sites, llm=manager), base_url="http://localhost"
     ) as client:
         response = client.post(
             "/api/llm/" + endpoint,
@@ -236,7 +236,7 @@ def test_browser_cross_origin_config_and_enhanced_requests_are_refused(
 ) -> None:
     manager, calls = manager_fixture()
     with TestClient(
-        create_app(tmp_path, sites=sample_sites, llm=manager), base_url="http://localhost"
+        create_test_app(tmp_path, sample_sites, llm=manager), base_url="http://localhost"
     ) as client:
         draft = {"provider": "ollama", "base_url": "http://127.0.0.1:11434"}
         assert (
@@ -270,7 +270,7 @@ def test_matching_untrusted_host_and_origin_cannot_access_llm_configuration(
 ) -> None:
     manager, calls = manager_fixture()
     with TestClient(
-        create_app(tmp_path, sites=sample_sites, llm=manager), base_url="http://untrusted.example"
+        create_test_app(tmp_path, sample_sites, llm=manager), base_url="http://untrusted.example"
     ) as client:
         assert client.get("/api/llm/config").status_code == 403
         response = client.post(
@@ -294,7 +294,7 @@ def test_local_ip_and_tailscale_origins_can_manage_llm(
 ) -> None:
     manager, _ = manager_fixture()
     with TestClient(
-        create_app(tmp_path, sites=sample_sites, llm=manager), base_url=origin
+        create_test_app(tmp_path, sample_sites, llm=manager), base_url=origin
     ) as client:
         assert client.get("/api/llm/config").status_code == 200
         response = client.post(
@@ -316,6 +316,6 @@ def test_additional_host_requires_explicit_process_configuration(
     monkeypatch.setenv("ARCHSEARCH_LLM_TRUSTED_HOSTS", "research.example")
     manager, _ = manager_fixture()
     with TestClient(
-        create_app(tmp_path, sites=sample_sites, llm=manager), base_url="https://research.example"
+        create_test_app(tmp_path, sample_sites, llm=manager), base_url="https://research.example"
     ) as client:
         assert client.get("/api/llm/config").status_code == 200
