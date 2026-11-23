@@ -786,6 +786,7 @@ const ArchSearchExplore = (() => {
             const focused = ui.list.contains(document.activeElement);
             buttons.clear();
             const countryLabels = new Map(coverage.countries.map((item) => [item.id, countryLabel(item)]));
+            const canMoveMap = map !== null && !applied.bbox;
             const nodes = page.sites.map((site) => {
                 const item = element("li");
                 const button = element("button", "explore-item");
@@ -794,10 +795,11 @@ const ArchSearchExplore = (() => {
                 button.dataset.locationStatus = site.location_status;
                 button.setAttribute("aria-pressed", String(site.id === selectedId));
                 const title = site.title.trim().toLowerCase() === "untitled" ? `未命名地点 · #${site.id}` : site.title;
-                button.setAttribute("aria-label", `${title}，打开目录资料，不属于检索排名`);
+                const locate = canMoveMap && site.location_status === "mapped";
+                button.setAttribute("aria-label", `${title}，${locate ? "在双图定位目录资料" : "打开目录资料详情"}，不属于检索排名`);
                 const countries = site.countries.length ? site.countries.map((id) => countryLabels.get(id) ?? id).join(" · ") : "国家／地区未标注";
                 button.append(element("span", "explore-item-title", title), element("span", "explore-item-meta", countries), element("span", "explore-item-meta", `${sourceLabels[site.source_kind] ?? site.source_kind} · ${chronologyLabels[site.chronology_status]} · ${locationLabels[site.location_status]}`));
-                button.addEventListener("click", () => onSelect(site.id, button, applied?.bbox ? { moveMap: false } : undefined));
+                button.addEventListener("click", () => onSelect(site.id, button, locate ? undefined : { moveMap: false, showDetail: true }));
                 buttons.set(site.id, button);
                 item.append(button);
                 return item;

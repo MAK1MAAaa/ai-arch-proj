@@ -15,7 +15,9 @@ SECRET = "fixture-key-never-public-123"
 MODEL = "qwen3.5:2b"
 
 
-def manager_fixture(*, fail_chat: bool = False) -> tuple[LlmManager, list[httpx.Request]]:
+def manager_fixture(
+    *, fail_chat: bool = False, environment_config_invalid: bool = False,
+) -> tuple[LlmManager, list[httpx.Request]]:
     calls: list[httpx.Request] = []
 
     def upstream(request: httpx.Request) -> httpx.Response:
@@ -31,7 +33,10 @@ def manager_fixture(*, fail_chat: bool = False) -> tuple[LlmManager, list[httpx.
             return httpx.Response(200, json={"choices": [{"message": {"content": content}}]})
         return httpx.Response(200, json={"message": {"content": content}})
 
-    return LlmManager(transport=httpx.MockTransport(upstream)), calls
+    return LlmManager(
+        transport=httpx.MockTransport(upstream),
+        environment_config_invalid=environment_config_invalid,
+    ), calls
 
 
 def configure(client: TestClient, *, api: bool = False) -> dict[str, object]:
@@ -56,11 +61,13 @@ def configure(client: TestClient, *, api: bool = False) -> dict[str, object]:
     return applied.json()
 
 
+@pytest.mark.parametrize("environment_config_invalid", [False, True])
 def test_disabled_default_has_no_llm_network_or_changes_to_base_search(
     tmp_path: Path,
     sample_sites: list[Site],
+    environment_config_invalid: bool,
 ) -> None:
-    manager, calls = manager_fixture()
+    manager, calls = manager_fixture(environment_config_invalid=environment_config_invalid)
     with TestClient(
         create_app(tmp_path, sites=sample_sites, llm=manager), base_url="http://localhost"
     ) as client:
@@ -74,6 +81,7 @@ def test_disabled_default_has_no_llm_network_or_changes_to_base_search(
             "key_count": 0,
             "active_key_index": None,
             "config_source": "default",
+            "environment_config_invalid": environment_config_invalid,
         }
         assert client.get("/api/status").json()["llm"] == config
         result = client.post("/api/search", json={"query": "bath", "mode": "bm25"})

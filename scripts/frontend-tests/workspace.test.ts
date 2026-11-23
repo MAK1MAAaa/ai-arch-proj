@@ -39,6 +39,7 @@ interface Helper {
   layoutWidth(value:unknown,available:number):number;
   setSidebarCollapsed(collapsed:boolean,options?:{focus?:boolean}):void;
   isSidebarCollapsed():boolean;
+  setSearchResultCount(count:number):void;
   revealMaps():void;
   refreshSearchSummary():void;
 }
@@ -79,6 +80,25 @@ test('tabs support arrows and Home/End, with explicit focus and resize notificat
 test('programmatic result activation can retain the current query focus',()=>{
   const h=setup();h.helper.activateCatalogue();const input=new Element();h.document.activeElement=input;
   h.helper.activateResults({focus:false});assert.equal(h.document.activeElement,input);assert.equal(h.node('workspace-results-view').hidden,false);
+});
+
+test('a folded results panel exposes the result count without changing focus or layout preference',()=>{
+  const h=setup({small:true}),toggle=h.node('workspace-toggle-sidebar'),label=h.node('workspace-toggle-sidebar-label');
+  const input=new Element();h.document.activeElement=input;
+  assert.equal(label.textContent,'展开资料');
+  h.helper.setSearchResultCount(10);
+  assert.equal(label.textContent,'结果 10');
+  assert.equal(toggle.attributes.get('aria-label'),'查看检索结果，共 10 条');
+  assert.equal(h.node('workspace-sidebar').hidden,true);
+  assert.equal(h.document.activeElement,input);
+  assert.equal(h.writes.length,0);
+  h.helper.setSearchResultCount(0);
+  assert.equal(label.textContent,'结果 0');
+  toggle.fire('click');
+  assert.equal(label.textContent,'收起资料');
+  assert.equal(h.node('workspace-results-view').hidden,false);
+  h.helper.activateCatalogue();toggle.fire('click');
+  assert.equal(label.textContent,'展开资料');
 });
 test('programmatic activation restores focus from a panel it hides while preserving an unrelated map focus',()=>{
   const h=setup();h.helper.activateCatalogue();const country=new Element();h.node('workspace-catalogue-view').contained.add(country);h.document.activeElement=country;

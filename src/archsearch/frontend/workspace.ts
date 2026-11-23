@@ -35,6 +35,7 @@ const ArchSearchWorkspace = (() => {
     let drag: number | null = null;
     let returnFocus: HTMLElement | null = null;
     let restoreFocus = true;
+    let resultCount: number | null = null;
     const narrow = () => window.matchMedia("(max-width: 900px)").matches;
     let collapsed = narrow();
     const changed = () => window.dispatchEvent(new Event("archsearch:workspacechange"));
@@ -65,9 +66,14 @@ const ArchSearchWorkspace = (() => {
       if (collapsed) grid.classList.add("is-sidebar-collapsed");
       else grid.classList.remove("is-sidebar-collapsed");
       toggle.setAttribute("aria-expanded", String(!collapsed));
-      toggle.setAttribute("aria-label", collapsed ? "展开资料面板，查看检索结果与全库目录" : "收起资料面板，扩大双图区域");
-      toggle.title = collapsed ? "展开资料面板" : "收起资料面板";
-      toggleLabel.textContent = collapsed ? "展开资料" : "收起资料";
+      updateToggleLabel();
+    }
+    function updateToggleLabel(): void {
+      const count = collapsed && resultCount !== null && activeTab() === resultTab ? resultCount.toLocaleString("zh-CN") : null;
+      toggle.setAttribute("aria-label", count !== null ? `查看检索结果，共 ${count} 条`
+        : collapsed ? "展开资料面板，查看检索结果与全库目录" : "收起资料面板，扩大双图区域");
+      toggle.title = count !== null ? "查看检索结果" : collapsed ? "展开资料面板" : "收起资料面板";
+      toggleLabel.textContent = count !== null ? `结果 ${count}` : collapsed ? "展开资料" : "收起资料";
     }
     function setSidebarCollapsed(next: boolean, options: SidebarOptions = {}): void {
       const hidesFocusedControl = next && (sidebar.contains(document.activeElement) || document.activeElement === divider);
@@ -116,6 +122,7 @@ const ArchSearchWorkspace = (() => {
         tab.setAttribute("aria-selected", String(selected)); tab.tabIndex = selected ? 0 : -1;
       }
       sidebar.dataset.activeTab = which;
+      updateToggleLabel();
       if (options.focus || hidesFocusedControl) focusTarget().focus({ preventScroll: true });
       changed();
     }
@@ -228,6 +235,7 @@ const ArchSearchWorkspace = (() => {
     return {
       openDetail, closeDetail, setSidebarCollapsed, refreshSearchSummary,
       isSidebarCollapsed: (): boolean => collapsed,
+      setSearchResultCount: (count: number): void => { resultCount = count; updateToggleLabel(); },
       revealMaps: (): void => { if (narrow() && !collapsed) setSidebarCollapsed(true); },
       activateResults: (options: TabOptions = {}) => activate("results", options),
       activateCatalogue: (options: TabOptions = {}) => activate("catalogue", options),

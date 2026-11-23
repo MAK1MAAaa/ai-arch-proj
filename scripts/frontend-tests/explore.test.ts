@@ -8,7 +8,7 @@ import ts from 'typescript';
 type ChronologyStatus = 'reviewed' | 'insufficient' | 'not_reviewed';
 interface State { country: string | null; region: string | null; offset: number; visible: boolean; bbox?: [number, number, number, number] | null; spatial_match_mode?: string; spatial_version?: string | null; subdivision?: string | null; subdivision_version?: string | null; chronology?: ChronologyStatus | null }
 interface Helpers {
-  create(options: { map: FakeMap | null; initialState?: Partial<State>; initialBoundsError?: string | null; onBoundsAction?(): void; onSelect(id: string, opener: FakeElement, options?: { moveMap?: boolean }): void; onFilterChange?(state: State): void; onStateChange?(state: State): void; onCommittedState?(state: State): void; onCatalogue?(points: Point[]): void }): Controller;
+  create(options: { map: FakeMap | null; initialState?: Partial<State>; initialBoundsError?: string | null; onBoundsAction?(): void; onSelect(id: string, opener: FakeElement, options?: { moveMap?: boolean; showDetail?: boolean }): void; onFilterChange?(state: State): void; onStateChange?(state: State): void; onCommittedState?(state: State): void; onCatalogue?(points: Point[]): void }): Controller;
   normalizeState(value: Partial<State>): State;
   matches(point: { countries: string[]; regions: string[]; repr_point?: [number, number] | null; source_points?: [number, number][] }, state: Pick<State, 'country' | 'region' | 'bbox'>, mode?: string): boolean;
   insideBBox(point: [number, number], bbox: [number, number, number, number]): boolean;
@@ -221,7 +221,7 @@ function setup(withMap = true, initialBoundsError: string | null = null) {
   };
   for (const node of nodes.values()) node.onFocus = () => { doc.activeElement = node; };
   const pending: Pending[] = [];
-  const selects: { id: string; opener: FakeElement; options?: { moveMap?: boolean } }[] = [];
+  const selects: { id: string; opener: FakeElement; options?: { moveMap?: boolean; showDetail?: boolean } }[] = [];
   const changes: State[] = [];
   const filters: State[] = [];
   const commits: State[] = [];
@@ -262,6 +262,10 @@ test('coverage, full points and directory page commit together without a model o
   assert.deepEqual(plain(app.controller.getPoint('whc:1')), [179, -18]);
   assert.equal(app.node('explore-points').disabled, true);
   assert.match(app.node('explore-feedback').textContent, /地图组件不可用/u);
+  const button = app.node('explore-list').children[0].children[0];
+  assert.match(button.attributes.get('aria-label') ?? '', /打开目录资料详情/u);
+  button.fire('click');
+  assert.deepEqual(app.selects.at(-1), { id: 'whc:1', opener: button, options: { moveMap: false, showDetail: true } });
 });
 
 test('Canvas uses an independent pane and adjacent worlds while source point coordinates remain unchanged', async () => {
@@ -286,6 +290,7 @@ test('literal directory titles and source review status do not become HTML or fa
 test('mouse circles and keyboard-accessible buttons only emit site identity and their opener', async () => {
   const app = setup(); await app.boot();
   const button = app.node('explore-list').children[0].children[0];
+  assert.match(button.attributes.get('aria-label') ?? '', /在双图定位目录资料/u);
   button.fire('click');
   app.circles[0].handlers.get('click')?.();
   assert.deepEqual(app.selects.map(item => item.id), ['whc:1', 'whc:1']);
@@ -592,6 +597,10 @@ test('all records remain browsable while only mapped points are added to the Mer
   const unknown = app.node('explore-list').children.at(-1)!.children[0];
   assert.equal(unknown.dataset.locationStatus, 'unknown'); assert.match(unknown.children[2].textContent, /暂无可用代表点/u);
   unknown.fire('click'); assert.equal(app.selects.at(-1)?.id, 'ats:hsm:95');
+  const polar = app.node('explore-list').children.find(row => row.children[0].dataset.siteId === 'ats:hsm:1')!.children[0];
+  assert.match(polar.attributes.get('aria-label') ?? '', /打开目录资料详情/u);
+  polar.fire('click');
+  assert.deepEqual(app.selects.at(-1), { id: 'ats:hsm:1', opener: polar, options: { moveMap: false, showDetail: true } });
   app.node('explore-fit').fire('click');
   const bounds = plain(app.map?.lastBounds) as [number, number][];
   assert.deepEqual(bounds.map(point => point[0]), [-18, 40, 42, -62.183333]);
@@ -794,10 +803,11 @@ test('a source-qualified supplement with unknown position remains in the directo
   assert.equal(app.node('explore-list').children.length, 1);
   const button = app.node('explore-list').children[0].children[0];
   assert.equal(button.dataset.siteId, unknown.id); assert.match(button.children[2].textContent, /暂无可用代表点/u);
+  assert.match(button.attributes.get('aria-label') ?? '', /打开目录资料详情/u);
   assert.equal(app.node('explore-fit').disabled, true);
   assert.match(app.node('explore-feedback').textContent, /1 条资料.*0 个源定位点 \+ 0 个必要代表点/u);
   button.fire('click'); assert.equal(app.selects.at(-1)?.id, unknown.id);
-  assert.equal(app.selects.at(-1)?.options, undefined);
+  assert.deepEqual(app.selects.at(-1)?.options, { moveMap: false, showDetail: true });
 });
 
 test('captured map bounds normalize world copies and preserve antimeridian width', () => {
@@ -841,8 +851,10 @@ test('a source point in a fixed bbox selects its heritage once and clips outside
   assert.ok(layer.members.every(circle => circle.options.radius === 5));
   assert.deepEqual(plain(app.controller.getPoint('wd:Q2')), [29, 40]);
   assert.deepEqual(plain(app.controller.getSourcePoints('wd:Q2')), [[30, 41], [31, 42]]);
-  app.node('explore-list').children[0].children[0].fire('click');
-  assert.deepEqual(app.selects.at(-1)?.options, { moveMap: false });
+  const button = app.node('explore-list').children[0].children[0];
+  assert.match(button.attributes.get('aria-label') ?? '', /打开目录资料详情/u);
+  button.fire('click');
+  assert.deepEqual(app.selects.at(-1)?.options, { moveMap: false, showDetail: true });
   assert.equal(app.filters.length, 0);
   assert.equal(app.pending.filter(request => request.url.startsWith('/api/catalogue')).length, 1);
   assert.equal(app.pending.filter(request => request.url === '/api/search').length, 0);

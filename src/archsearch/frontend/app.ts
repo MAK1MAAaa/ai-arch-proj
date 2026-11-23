@@ -210,6 +210,7 @@
   } catch (error) { boundsRestoreError = error instanceof Error ? error.message : "地图范围无效。"; }
   let pendingLink: SearchRequest | null = initialView.error || initialNonBoundsBrowse.error || initialComparison.error ? null : initialLink.request;
   let unresolvedSearchLink: SearchRequest | null = pendingLink;
+  let restoringSearchController: AbortController | null = null;
   let linkError: string | null = initialLink.error ?? initialView.error ?? initialNonBoundsBrowse.error ?? initialComparison.error;
   let invalidLink = linkError !== null;
   let pendingSelectionRestore = !invalidLink && initialView.selection.site !== null;
@@ -827,6 +828,7 @@
     state.displayedMode = data.mode;
     ui.list.replaceChildren();
     ui.resultCount.textContent = String(state.results.length).padStart(2, "0");
+    ArchSearchWorkspace.setSearchResultCount(state.results.length);
     ui.activeMode.textContent = data.enhancement?.applied ? "LLM · RRF" : data.mode === "bm25" ? "BM25" : "SEMANTIC";
     ui.enhancementNote.hidden = !data.enhancement;
     ui.enhancementQueries.replaceChildren();
@@ -1021,42 +1023,14 @@
     invalidLink = false;
     pendingSelectionRestore = false;
     state.restoringLink = false;
+    if (restoringSearchController && restoringSearchController === state.searchController) cancelCurrentSearch();
     updateSearchAvailability();
   }
 
-  async function finishLinkRestore(): Promise<void> {
-    const request = pendingLink;
-    pendingLink = null;
-    state.restoringLink = false;
-    if (linkError) {
-      showError(`分享链接未能恢复：${linkError}`);
-      linkError = null;
-      if (browseRestoreError && !request && pendingSelectionRestore && initialView.selection.site) {
-        await selectSite(initialView.selection.site, {
-          phaseId: initialView.selection.phase,
-          preserveYear: initialView.view !== null || (historyView?.actionVersion() ?? 0) > 0,
-          restoring: true,
-        });
-      }
-      pendingSelectionRestore = false;
-      updateSearchAvailability();
-      return;
-    }
-    if (!request) {
-      updateSearchAvailability();
-      if (pendingSelectionRestore && initialView.selection.site) await selectSite(initialView.selection.site, {
-        phaseId: initialView.selection.phase,
-        preserveYear: initialView.view !== null || (historyView?.actionVersion() ?? 0) > 0,
-        restoring: true,
-      });
-      pendingSelectionRestore = false;
-      saveViewLink();
-      return;
-    }
+  function prepareLinkedSearch(request: SearchRequest): boolean {
     if (request.type && (ui.typeFilter.disabled || !Array.from(ui.typeFilter.options).some((option) => option.value === request.type))) {
       showError("链接中的地点类型无法确认。请检查类型是否有效，或重新选择后手动检索；本次未自动扩大检索范围。");
-      updateSearchAvailability();
-      return;
+      return false;
     }
     ui.typeFilter.value = request.type || "";
     llmView?.setRequested(request.enhance === true);
@@ -1064,22 +1038,44 @@
       const config = llmView?.getConfig();
       if (!config?.model) {
         showError("LLM 增强链接已恢复；请先在模型设置中获取并应用模型，再主动检索。本次未改成基础检索。");
-        llmView?.showSettings(); updateSearchAvailability(); return;
+        llmView?.showSettings();
+        return false;
       }
       request.llm_revision = config.revision;
     }
-    updateSearchAvailability();
     if (!state.corpusReady || (request.mode === "semantic" && !state.semanticReady)) {
       showError("链接中的检索条件已恢复；当前服务或所选模型尚未就绪。请查看运行状态，准备后手动检索。");
-      return;
+      return false;
     }
+    return true;
+  }
+
+  async function finishLinkRestore(): Promise<void> {
+    const request = pendingLink;
+    pendingLink = null;
+    state.restoringLink = false;
     const actionVersion = historyView?.actionVersion() ?? 0;
-    await runSearch(request);
-    if (pendingSelectionRestore && initialView.selection.site && state.completedSearch && sameRequest(state.completedSearch.request, request)
+
+    if (linkError) {
+      showError(`分享链接未能恢复：${linkError}`);
+      linkError = null;
+      if (!browseRestoreError || request) pendingSelectionRestore = false;
+    } else if (request && prepareLinkedSearch(request)) {
+      const search = runSearch(request);
+      restoringSearchController = state.searchController;
+      try {
+        await search;
+      } finally {
+        restoringSearchController = null;
+      }
+    }
+    updateSearchAvailability();
+
+    if (pendingSelectionRestore && initialView.selection.site
       && (historyView?.actionVersion() ?? 0) === actionVersion) {
       await selectSite(initialView.selection.site, {
         phaseId: initialView.selection.phase,
-        preserveYear: initialView.view !== null || (historyView?.actionVersion() ?? 0) > 0,
+        preserveYear: initialView.view !== null || actionVersion > 0,
         restoring: true,
       });
     }
@@ -1864,7 +1860,7 @@
       if (invalidLink) { invalidLink = false; linkError = null; }
     },
   });
-  polarView = ArchSearchPolarView.create({ onSelect: (id, opener) => { void selectSite(id, { opener, moveMap: false }); } });
+  polarView = ArchSearchPolarView.create({ onSelect: (id, opener) => { void selectSite(id, { opener, moveMap: false, showDetail: true }); } });
   explore = ArchSearchExplore.create({
     map: state.map,
     initialBoundsError: boundsRestoreError,
@@ -1876,7 +1872,7 @@
       updateSiteExportControl();
     },
     onSubdivisionChange: () => { updateSearchAvailability(); },
-    onSelect: (id, opener, options) => { void selectSite(id, { opener, moveMap: options?.moveMap ?? true }); },
+    onSelect: (id, opener, options) => { void selectSite(id, { opener, ...options }); },
     onFilterChange: () => {
       exampleIntent.invalidate();
       cancelLinkRestore();

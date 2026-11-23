@@ -4,7 +4,9 @@ const ArchSearchLlm = (() => {
   type Provider = "ollama" | "openai";
   type ConfigSource = "default" | "env" | "manual";
   interface PoolMetadata { key_count: number; active_key_index: number | null; config_source: ConfigSource }
-  interface PublicConfig extends PoolMetadata { provider: Provider; base_url: string; model: string; revision: number; has_api_key: boolean }
+  interface PublicConfig extends PoolMetadata {
+    provider: Provider; base_url: string; model: string; revision: number; has_api_key: boolean; environment_config_invalid: boolean;
+  }
   interface Model { id: string; label: string; size_bytes?: number | null }
   interface RequestOptions { enhance?: true; llm_revision?: number }
   interface Options {
@@ -21,10 +23,11 @@ const ArchSearchLlm = (() => {
     if (!record(value) || !["ollama", "openai"].includes(String(value.provider))
       || typeof value.base_url !== "string" || typeof value.model !== "string"
       || typeof value.has_api_key !== "boolean" || !Number.isSafeInteger(value.revision)
+      || (value.environment_config_invalid !== undefined && typeof value.environment_config_invalid !== "boolean")
       || (value.revision as number) < 0) throw new Error("模型配置响应无效，请重新加载配置。");
     const pool = parsePool(value, value.has_api_key);
     return { provider: value.provider as Provider, base_url: value.base_url, model: value.model,
-      revision: value.revision as number, has_api_key: value.has_api_key, ...pool };
+      revision: value.revision as number, has_api_key: value.has_api_key, environment_config_invalid: value.environment_config_invalid === true, ...pool };
   }
 
   function parsePool(value: Record<string, unknown>, hasKey?: boolean): PoolMetadata {
@@ -93,6 +96,7 @@ const ArchSearchLlm = (() => {
       clear: node<HTMLButtonElement>("llm-clear-config"), enabled: node<HTMLInputElement>("llm-enhance"),
       active: node<HTMLSpanElement>("llm-active-model"), feedback: node<HTMLParagraphElement>("llm-feedback"),
       summary: node<HTMLParagraphElement>("llm-config-summary"),
+      startupWarning: node<HTMLParagraphElement>("llm-startup-warning"),
       privacy: node<HTMLParagraphElement>("llm-provider-note"), error: node<HTMLParagraphElement>("llm-error"),
     };
     const send = options.request ?? request;
@@ -166,6 +170,7 @@ const ArchSearchLlm = (() => {
       ui.open.dataset.configured = String(ready);
       ui.open.dataset.enhanced = String(ui.enabled.checked);
       ui.summary.textContent = `${fullStatus}。${ui.enabled.checked ? ready ? "LLM 增强已开启。" : "已请求增强，需先应用模型。" : "LLM 增强未开启。"}基础语义检索使用本地 E5 模型。`;
+      ui.startupWarning.hidden = config?.environment_config_invalid !== true;
       ui.keyGroup.hidden = provider() !== "openai";
       ui.key.disabled = provider() !== "openai" || applying;
       ui.provider.disabled = applying;

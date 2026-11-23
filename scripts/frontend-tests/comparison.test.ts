@@ -45,6 +45,7 @@ class MapView extends Events {
   width = 600; height = 400; boundsZoom = 4;
   private measuredWidth = this.width; private measuredHeight = this.height;
   sizeOptions: { pan?: boolean; animate?: boolean }[] = [];
+  viewOptions: { animate?: boolean; reset?: boolean }[] = [];
   boundsRead: { points: [number, number][]; padding: { x: number; y: number } } | null = null;
   getPane(name: string) { return this.panes.get(name); }
   createPane(name: string) { const element = new Element(); this.panes.set(name, element); return element; }
@@ -55,7 +56,8 @@ class MapView extends Events {
   project(value:[number,number]|{lat:number;lng:number},zoom=this.zoom){const point=Array.isArray(value)?{lat:value[0],lng:value[1]}:value,world=256*2**zoom;return{x:(point.lng+180)/360*world,y:(90-point.lat)/180*world};}
   unproject(value:[number,number],zoom=this.zoom){const world=256*2**zoom;return{lng:value[0]/world*360-180,lat:90-value[1]/world*180};}
   layerPointToContainerPoint(point:[number,number]){return{x:point[0],y:point[1]};}
-  setView(center: [number, number], zoom: number): this {
+  setView(center: [number, number], zoom: number, options: { animate?: boolean; reset?: boolean } = {}): this {
+    this.viewOptions.push(options);
     const zoomChanged = this.zoom !== zoom, moved = this.center.lat !== center[0] || this.center.lng !== center[1];
     this.center = { lat: center[0], lng: center[1] }; this.zoom = zoom;
     if (zoomChanged) this.fire('zoomend');
@@ -183,9 +185,30 @@ test('failed local natural data does not claim a successful fallback', async () 
 
 test('saved camera centers stay within the projection without modifying site source coordinates', () => {
   const h=harness(); h.modern.setView([91,540],15); h.historical.setView([-95,-541],4);
+  assert.deepEqual(h.modern.getCenter(), {lat:85.0511287798,lng:180});
+  assert.deepEqual(h.historical.getCenter(), {lat:-85.0511287798,lng:179});
   assert.deepEqual(JSON.parse(JSON.stringify(h.controller.state().modern_view?.center)),[180,85.0511287798]);
   assert.deepEqual(JSON.parse(JSON.stringify(h.controller.state().history_view?.center)),[179,-85.0511287798]);
+  assert.ok(h.modern.viewOptions.some(options => options.reset === true));
+  assert.equal(h.historical.viewOptions.at(-1)?.reset,true);
+  assert.equal(h.modern.getZoom(),4);
+  assert.equal(h.changes(),2);
   assert.deepEqual(selectedSite.repr_point,[-1.71,52.18]);
+});
+
+test('repeated wrapped keyboard pans keep both cameras in the same world', () => {
+  const h=harness({sync_centers:true});
+  for (const source of [h.modern, h.historical]) {
+    for (let step=1; step<=18; step++) {
+      // At zoom 1, Leaflet wraps each 80-pixel keyboard step into the base world.
+      const wrapped=(step*56.25+180)%360-180;
+      source.setView([20,wrapped],1);
+      const longitude=wrapped===-180 ? 180 : wrapped;
+      assert.deepEqual(h.modern.getCenter(), {lat:20,lng:longitude});
+      assert.deepEqual(h.historical.getCenter(), {lat:20,lng:longitude});
+    }
+  }
+  assert.equal(h.changes(),36);
 });
 
 test('range and approximate evidence retain explicit uncertainty without offering a chosen year', () => {

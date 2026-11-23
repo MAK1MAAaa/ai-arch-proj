@@ -48,10 +48,16 @@ def main() -> None:
             import uvicorn
 
             from archsearch.api import create_app
-            from archsearch.env_config import load_env_config
+            from archsearch.env_config import EnvConfigError, load_env_config
             from archsearch.llm import LlmManager
 
-            llm = LlmManager.from_environment(load_env_config(Path.cwd() / ".env"))
+            try:
+                config = load_env_config(Path.cwd() / ".env")
+            except EnvConfigError as error:
+                print(f"ArchSearch: {error} 基础检索和地图继续启动。", file=sys.stderr)
+                llm = LlmManager(environment_config_invalid=True)
+            else:
+                llm = LlmManager.from_environment(config)
             uvicorn.run(create_app(args.home, llm=llm), host=args.host, port=args.port)
         else:
             from archsearch.evaluation import evaluate_corpus
