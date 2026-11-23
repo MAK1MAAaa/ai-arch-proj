@@ -275,8 +275,7 @@ def evaluate_corpus(
     corpus_sha256 = corpus_contract_hash(sites)
     semantic = SemanticIndex(sites, home)
     engine = SearchEngine(sites, semantic)
-    semantic_usable = semantic.ready
-    warmup_error = semantic.reason if not semantic_usable else None
+    semantic_usable, warmup_error = semantic.status()
     cold_start_ms: float | None = None
     if semantic_usable:
         warmup_started = perf_counter()

@@ -34,14 +34,18 @@ def test_semantic_rrf_keeps_filters_full_rankings_and_deterministic_ties(
 ) -> None:
     semantic = Mock(spec=SemanticIndex)
     semantic.sites = sample_sites
-    semantic.scores.side_effect = [np.array([0.9, 0.1, 0.2]), np.array([0.2, 0.1, 0.9])]
+    semantic.scores_many.return_value = (
+        np.array([0.9, 0.1, 0.2], dtype=np.float32),
+        np.array([0.2, 0.1, 0.9], dtype=np.float32),
+    )
     engine = SearchEngine(sample_sites, semantic)
     request = SearchRequest(query="港口", type="port", limit=2)
     hits, total = engine.search_expanded(request, [request.query, "harbor"])
     assert total == 2 and [hit.site.id for hit in hits] == ["2", "3"]
     assert all(hit.score == pytest.approx(1 / 61 + 1 / 62) for hit in hits)
     assert all(hit.site.types == ["port"] for hit in hits)
-    assert [call.args[0] for call in semantic.scores.call_args_list] == ["港口", "harbor"]
+    semantic.scores_many.assert_called_once_with(["港口", "harbor"])
+    semantic.scores.assert_not_called()
 
 
 def test_expanded_empty_scope_and_keyword_miss_have_no_invented_candidates(
@@ -55,11 +59,12 @@ def test_expanded_empty_scope_and_keyword_miss_have_no_invented_candidates(
         SearchRequest(query="港口", type="missing"),
         ["港口", "harbor"],
     ) == ([], 0)
-    semantic.scores.assert_not_called()
     assert engine.search_expanded(
         SearchRequest(query="xyzmissingkeyword", mode="bm25"),
         ["xyzmissingkeyword", "zzzabsent"],
     ) == ([], 0)
+    semantic.scores_many.assert_not_called()
+    semantic.scores.assert_not_called()
 
 
 def test_expanded_semantic_failure_does_not_switch_to_keywords(
@@ -68,11 +73,12 @@ def test_expanded_semantic_failure_does_not_switch_to_keywords(
 ) -> None:
     semantic = Mock(spec=SemanticIndex)
     semantic.sites = sample_sites
-    semantic.scores.side_effect = IndexUnavailable("missing local model")
+    semantic.scores_many.side_effect = IndexUnavailable("missing local model")
     engine = SearchEngine(sample_sites, semantic)
     engine.bm25.scores = Mock(side_effect=AssertionError("unexpected keyword fallback"))
-    with pytest.raises(IndexUnavailable):
+    with pytest.raises(IndexUnavailable, match="missing local model"):
         engine.search_expanded(SearchRequest(query="港口"), ["港口", "harbor"])
+    semantic.scores.assert_not_called()
 
 
 @pytest.mark.parametrize(

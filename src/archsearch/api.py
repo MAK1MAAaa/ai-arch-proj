@@ -258,7 +258,7 @@ def create_app(
 
     @app.get("/api/status", response_model=StatusResponse)
     def status() -> StatusResponse:
-        ready = index.ready
+        ready, semantic_reason = index.status()
         history_state = history_store.status()
         if not history_state["ready"]:
             history_state["reason"] = (
@@ -267,7 +267,7 @@ def create_app(
         return StatusResponse(
             status="ready" if ready else "degraded",
             corpus=CorpusStatus(count=len(corpus), version=CORPUS_VERSION, period=PERIOD_LABEL),
-            semantic=SemanticStatus(ready=ready, reason=index.reason),
+            semantic=SemanticStatus(ready=ready, reason=semantic_reason),
             history=HistoryStatus.model_validate(history_state),
             spatial_locations=catalogue_index.spatial_coverage(),
             registered_areas=area_index.status(set(engine.by_id)),
@@ -399,8 +399,10 @@ def create_app(
         except ValueError as error:
             raise HTTPException(status_code=422, detail=str(error)) from error
         started = perf_counter()
-        if body.mode == "semantic" and not index.ready:
-            raise HTTPException(status_code=503, detail=index.reason or "本地语义模型尚未准备。")
+        if body.mode == "semantic":
+            ready, reason = index.status()
+            if not ready:
+                raise HTTPException(status_code=503, detail=reason or "本地语义模型尚未准备。")
         enhancement = None
         try:
             if body.enhance:

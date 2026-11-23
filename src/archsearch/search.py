@@ -6,6 +6,7 @@ import math
 import re
 import unicodedata
 from collections import Counter
+from collections.abc import Iterable
 from typing import Literal
 
 import numpy as np
@@ -207,10 +208,13 @@ class SearchEngine:
         ]
         if not candidates:
             return [], 0
+        score_sets: Iterable[NDArray[np.float32] | NDArray[np.float64]] = (
+            self.semantic.scores_many(queries)
+            if request.mode == "semantic"
+            else (self.bm25.scores(query) for query in queries)
+        )
         fused: dict[int, float] = {}
-        for query in queries:
-            scores = (self.semantic.scores(query) if request.mode == "semantic"
-                      else self.bm25.scores(query))
+        for scores in score_sets:
             ranking = [i for i in candidates if request.mode != "bm25" or scores[i] > 0]
             ranking.sort(key=lambda i: (-float(scores[i]), self.sites[i].id))
             for rank, index in enumerate(ranking, 1):

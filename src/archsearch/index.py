@@ -5,11 +5,15 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import re
 import threading
+from collections.abc import Sequence
 from pathlib import Path
-from typing import Any
+from tempfile import TemporaryDirectory
+from typing import Any, NamedTuple
 
 import numpy as np
+from filelock import FileLock
 from numpy.typing import NDArray
 
 from archsearch.config import DEFAULT_HOME, MODEL_ID, MODEL_REVISION, TEXT_VERSION
@@ -32,6 +36,14 @@ REQUIRED_MODEL_FILES = (
 )
 MODEL_MARKER = "archsearch-model.json"
 _RESOURCE_ERRORS = (OSError, ValueError, KeyError, TypeError, IndexError, EOFError)
+_RESOURCES_CHANGING = "本地模型或索引正在更新，请稍后重试。"
+_ENCODER_FAILURE = "本地模型加载或编码失败，请重新运行 prepare 修复模型和索引。"
+type _FileSignature = tuple[str, int, int, int] | tuple[str]
+
+
+class _ResourceSignature(NamedTuple):
+    model_and_manifest: tuple[_FileSignature, ...]
+    vectors: _FileSignature
 
 
 class IndexUnavailable(RuntimeError):
@@ -44,6 +56,18 @@ def sha256(path: Path) -> str:
         for block in iter(lambda: stream.read(1024 * 1024), b""):
             digest.update(block)
     return digest.hexdigest()
+
+
+def _embeddings_filename(digest: str) -> str:
+    return f"embeddings-{digest}.npy"
+
+
+def _file_signature(path: Path) -> _FileSignature:
+    try:
+        stat = path.stat()
+        return (str(path), stat.st_mtime_ns, stat.st_size, stat.st_ino)
+    except OSError:
+        return (str(path),)
 
 
 def document_contract(sites: list[Site]) -> dict[str, Any]:
@@ -128,6 +152,12 @@ class LocalEncoder:
 def prepare_index(sites: list[Site], home: Path = DEFAULT_HOME) -> dict[str, Any]:
     """Download a fixed snapshot explicitly, then publish its validated local index."""
     home = Path(home)
+    home.mkdir(parents=True, exist_ok=True)
+    with FileLock(home / ".prepare-index.lock"):
+        return _prepare_index(sites, home)
+
+
+def _prepare_index(sites: list[Site], home: Path) -> dict[str, Any]:
     model_dir = home / "model"
     index_dir = home / "index"
     model_dir.mkdir(parents=True, exist_ok=True)
@@ -155,25 +185,36 @@ def prepare_index(sites: list[Site], home: Path = DEFAULT_HOME) -> dict[str, Any
         )
         model_meta = _model_manifest(model_dir)
 
-        marker_temp = model_dir / (MODEL_MARKER + ".tmp")
-        marker_temp.write_text(json.dumps(model_meta, sort_keys=True), "utf-8")
-        marker_temp.replace(marker)
+        with TemporaryDirectory(dir=model_dir, prefix=".prepare-") as staging:
+            marker_temp = Path(staging) / MODEL_MARKER
+            marker_temp.write_text(json.dumps(model_meta, sort_keys=True), "utf-8")
+            marker_temp.replace(marker)
+    model_manifest_hash = sha256(marker)
     encoder = LocalEncoder(model_dir)
     vectors = _validate_vectors(
         encoder.encode([PASSAGE_PREFIX + build_document(site) for site in sites]), len(sites)
     )
-    temporary = index_dir / "embeddings.tmp"
-    with temporary.open("wb") as stream:
-        np.save(stream, vectors, allow_pickle=False)
-    embeddings_hash = sha256(temporary)
-    manifest = document_contract(sites) | {
-        "embeddings_sha256": embeddings_hash,
-        "model_manifest_sha256": sha256(marker),
-    }
-    temporary_meta = index_dir / "manifest.tmp"
-    temporary_meta.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), "utf-8")
-    temporary.replace(index_dir / "embeddings.npy")
-    temporary_meta.replace(index_dir / "manifest.json")
+    _validate_model(model_dir)
+    if sha256(marker) != model_manifest_hash:
+        raise IndexUnavailable(_RESOURCES_CHANGING)
+    with TemporaryDirectory(dir=index_dir, prefix=".prepare-") as staging:
+        staged_index = Path(staging)
+        next_vectors = staged_index / "embeddings.npy"
+        next_manifest = staged_index / "manifest.json"
+        np.save(next_vectors, vectors, allow_pickle=False)
+        embeddings_hash = sha256(next_vectors)
+        filename = _embeddings_filename(embeddings_hash)
+        manifest = document_contract(sites) | {
+            "embeddings_sha256": embeddings_hash,
+            "embeddings_file": filename,
+            "model_manifest_sha256": model_manifest_hash,
+        }
+        next_manifest.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), "utf-8")
+        published_vectors = index_dir / filename
+        if not published_vectors.is_file() or sha256(published_vectors) != embeddings_hash:
+            next_vectors.replace(published_vectors)
+        # The manifest is the commit point. Readers may still hold the previous vectors open.
+        next_manifest.replace(index_dir / "manifest.json")
     return manifest
 
 
@@ -183,59 +224,72 @@ class SemanticIndex:
         self.home = Path(home)
         self.vectors: NDArray[np.float32] | None = None
         self.encoder: LocalEncoder | None = None
-        self.load_lock = threading.RLock()
+        self._state_lock = threading.Lock()
+        self._inference_lock = threading.Lock()
         self.reason: str | None = None
-        self._signature: tuple[tuple[str, int, int, int] | tuple[str], ...] | None = None
+        self._signature: _ResourceSignature | None = None
+        self._vectors_path = self.home / "index" / "embeddings.npy"
         self._refresh()
 
-    def _resource_signature(self) -> tuple[tuple[str, int, int, int] | tuple[str], ...]:
+    def _resource_signature(self, vectors_path: Path | None = None) -> _ResourceSignature:
         paths = [
             *(self.home / "model" / filename for filename in REQUIRED_MODEL_FILES),
             self.home / "model" / MODEL_MARKER,
             self.home / "index" / "manifest.json",
-            self.home / "index" / "embeddings.npy",
         ]
-        signature: list[tuple[str, int, int, int] | tuple[str]] = []
-        for path in paths:
-            try:
-                stat = path.stat()
-                signature.append((str(path), stat.st_mtime_ns, stat.st_size, stat.st_ino))
-            except OSError:
-                signature.append((str(path),))
-        return tuple(signature)
+        return _ResourceSignature(
+            tuple(_file_signature(path) for path in paths),
+            _file_signature(vectors_path or self._vectors_path),
+        )
 
     def _refresh(self) -> None:
-        with self.load_lock:
-            signature = self._resource_signature()
-            if signature == self._signature:
-                return
-            self.encoder = None
+        # Call under _state_lock after construction.
+        initial = self._resource_signature()
+        if initial == self._signature:
+            return
+        signature = initial
+        vectors_path = self._vectors_path
+        self.encoder = None
+        self.vectors = None
+        self.reason = None
+        try:
+            index_dir = self.home / "index"
+            meta = json.loads((index_dir / "manifest.json").read_text("utf-8"))
+            if not isinstance(meta, dict):
+                raise IndexUnavailable("索引清单格式无效。")
+            vectors_path = index_dir / self._read_embeddings_filename(meta)
+            signature = self._resource_signature(vectors_path)
+            if signature.model_and_manifest == initial.model_and_manifest:
+                self.vectors = self._validate(meta, vectors_path)
+        except (*_RESOURCE_ERRORS, IndexUnavailable) as error:
+            self.reason = f"{error} 请运行 uv run archsearch prepare 修复本地模型和索引。"
+        self._vectors_path = vectors_path
+        self._signature = signature
+        if (signature.model_and_manifest != initial.model_and_manifest
+                or signature != self._resource_signature()):
             self.vectors = None
-            self.reason = None
-            try:
-                self._validate()
-            except (*_RESOURCE_ERRORS, IndexUnavailable) as error:
-                self.reason = f"{error} 请运行 uv run archsearch prepare 修复本地模型和索引。"
-                self.vectors = None
-            self._signature = signature
-            if signature != self._resource_signature():
-                self.reason = "本地模型或索引正在更新，请稍后重试。"
-                self.vectors = None
-                self._signature = None
+            self.reason = _RESOURCES_CHANGING
+            self._signature = None
 
-    def _validate(self) -> None:
+    @staticmethod
+    def _read_embeddings_filename(meta: dict[str, Any]) -> str:
+        if "embeddings_file" not in meta:
+            return "embeddings.npy"
+        name = meta["embeddings_file"]
+        digest = meta.get("embeddings_sha256")
+        if (not isinstance(digest, str) or re.fullmatch(r"[0-9a-f]{64}", digest) is None
+                or name != _embeddings_filename(digest)):
+            raise IndexUnavailable("向量文件名与索引清单校验值不匹配。")
+        return _embeddings_filename(digest)
+
+    def _validate(self, meta: dict[str, Any], path: Path) -> NDArray[np.float32]:
         model_dir = self.home / "model"
         _validate_model(model_dir)
-        index_dir = self.home / "index"
-        meta = json.loads((index_dir / "manifest.json").read_text("utf-8"))
-        if not isinstance(meta, dict):
-            raise IndexUnavailable("索引清单格式无效。")
         for key, value in document_contract(self.sites).items():
             if meta.get(key) != value:
                 raise IndexUnavailable("索引与语料、模型或文本构造版本不匹配。")
         if sha256(model_dir / MODEL_MARKER) != meta["model_manifest_sha256"]:
             raise IndexUnavailable("索引与本地模型文件清单不匹配。")
-        path = index_dir / "embeddings.npy"
         if sha256(path) != meta["embeddings_sha256"]:
             raise IndexUnavailable("向量文件校验失败。")
         loaded = np.load(path, allow_pickle=False)
@@ -245,25 +299,66 @@ class SemanticIndex:
             raise IndexUnavailable("向量文件必须是 NumPy 数组。")
         vectors = _validate_vectors(loaded, len(self.sites))
         vectors.setflags(write=False)
-        self.vectors = vectors
+        return vectors
+
+    def status(self) -> tuple[bool, str | None]:
+        """Read verified resource readiness without waiting for inference."""
+        with self._state_lock:
+            self._refresh()
+            return self.reason is None and self.vectors is not None, self.reason
 
     @property
     def ready(self) -> bool:
-        self._refresh()
-        return self.reason is None and self.vectors is not None
+        return self.status()[0]
+
+    def _matches_snapshot(
+        self, signature: _ResourceSignature | None, vectors: NDArray[np.float32],
+    ) -> bool:
+        return (self.vectors is vectors and self._signature == signature
+                and signature == self._resource_signature())
+
+    def _record_encoder_failure(
+        self, signature: _ResourceSignature | None, vectors: NDArray[np.float32],
+    ) -> str:
+        with self._state_lock:
+            if not self._matches_snapshot(signature, vectors):
+                return _RESOURCES_CHANGING
+            self.encoder = None
+            self.vectors = None
+            self.reason = _ENCODER_FAILURE
+            return self.reason
 
     def scores(self, query: str) -> NDArray[np.float32]:
-        with self.load_lock:
-            self._refresh()
-            if self.reason is not None or self.vectors is None:
-                raise IndexUnavailable(self.reason or "语义索引不可用。")
+        return self.scores_many((query,))[0]
+
+    def scores_many(self, queries: Sequence[str]) -> tuple[NDArray[np.float32], ...]:
+        """Score one request against a single verified model and vector snapshot."""
+        if not queries:
+            return ()
+        with self._inference_lock:
+            with self._state_lock:
+                self._refresh()
+                vectors, encoder, signature = self.vectors, self.encoder, self._signature
+                if self.reason is not None or vectors is None:
+                    raise IndexUnavailable(self.reason or "语义索引不可用。")
+            if encoder is None:
+                try:
+                    encoder = LocalEncoder(self.home / "model")
+                except Exception as error:
+                    reason = self._record_encoder_failure(signature, vectors)
+                    raise IndexUnavailable(reason) from error
+                with self._state_lock:
+                    if not self._matches_snapshot(signature, vectors):
+                        raise IndexUnavailable(_RESOURCES_CHANGING)
+                    self.encoder = encoder
             try:
-                if self.encoder is None:
-                    self.encoder = LocalEncoder(self.home / "model")
-                query_vectors = _validate_vectors(self.encoder.encode([QUERY_PREFIX + query]), 1)
-                return np.asarray(self.vectors @ query_vectors[0], dtype=np.float32)
+                scores = []
+                for query in queries:
+                    query_vectors = _validate_vectors(encoder.encode([QUERY_PREFIX + query]), 1)
+                    scores.append(np.asarray(vectors @ query_vectors[0], dtype=np.float32))
             except Exception as error:
-                self.encoder = None
-                self.vectors = None
-                self.reason = "本地模型加载或编码失败，请重新运行 prepare 修复模型和索引。"
-                raise IndexUnavailable(self.reason) from error
+                raise IndexUnavailable(self._record_encoder_failure(signature, vectors)) from error
+            with self._state_lock:
+                if not self._matches_snapshot(signature, vectors):
+                    raise IndexUnavailable(_RESOURCES_CHANGING)
+            return tuple(scores)
