@@ -99,6 +99,29 @@ interface SiteExportResult<T extends EvidenceSite> extends Omit<ExportResult<nev
   selected_site: T;
 }
 
+interface SearchExportEvidenceOptions<T extends EvidenceSite> {
+  search: Pick<SearchResponse<{ site: T }>, 'corpus_version' | 'results'>;
+  selection: ExportResult<never>['selection'];
+  displayedSite: T | null;
+  verifiedDetail: { site: T; corpusVersion: string } | null;
+  catalogue: {
+    corpusVersion: string;
+    browse: BrowseState;
+    getSpatial(site: T | null): ExportResult<never>['spatial'];
+  } | null;
+}
+
+interface SearchExportEvidence<T extends EvidenceSite> {
+  selection: ExportResult<never>['selection'];
+  selectedSite: T | null;
+  browse: BrowseState | null;
+  spatial: ExportResult<never>['spatial'];
+  selectionStatus: 'none' | 'verified' | 'ranked' | 'omitted';
+  phaseOmitted: boolean;
+  catalogueOmitted: boolean;
+  spatialOmitted: boolean;
+}
+
 interface ResearchHelpers {
   parseLink(url: URL): { request: SearchSpec | null; error: string | null };
   parseView(url: URL): { view: HistoryView | null; selection: { site: string | null; phase: string | null }; error: string | null };
@@ -109,6 +132,7 @@ interface ResearchHelpers {
   buildLink(base: URL, request: SearchSpec | null, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, browse?: BrowseState | null, comparison?: ComparisonState | null): string;
   createExport<T>(request: SearchSpec, response: SearchResponse<T>, exportedAt: string, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, selectedSite?: unknown, browse?: BrowseState | null, spatial?: ExportResult<T>['spatial'], registeredAreas?: RegisteredAreaSnapshot | null, currentCorpusVersion?: string | null, currentRegisteredAreasVersion?: string | null, comparison?: ComparisonSnapshot | null): ExportResult<T>;
   createSiteExport<T extends EvidenceSite>(options: SiteExportOptions<T>): SiteExportResult<T>;
+  selectSearchExportEvidence<T extends EvidenceSite>(options: SearchExportEvidenceOptions<T>): SearchExportEvidence<T>;
   automaticPhaseYear(phase: { precision: string; start_year: number | null; end_year: number | null }): number | null;
   normalizeSubdivision(country: string | null | undefined, value: unknown): string | null;
   validateSubdivisionResponse(request: Pick<SearchSpec, 'country' | 'subdivision'>, response: { subdivision?: unknown; subdivision_version?: unknown }, expectedVersion?: string | null): string | null;
@@ -161,6 +185,7 @@ assert.ok('parseLink' in candidate && typeof candidate.parseLink === 'function')
 assert.ok('buildLink' in candidate && typeof candidate.buildLink === 'function');
 assert.ok('createExport' in candidate && typeof candidate.createExport === 'function');
 assert.ok('createSiteExport' in candidate && typeof candidate.createSiteExport === 'function');
+assert.ok('selectSearchExportEvidence' in candidate && typeof candidate.selectSearchExportEvidence === 'function');
 const helpers = candidate as ResearchHelpers;
 
 const minasId = `auth:br-iepha-mg:scope-${'a'.repeat(64)}`;
@@ -519,6 +544,161 @@ test('site evidence export binds identity, phase and directory evidence and omit
   assert.equal(withoutMaps.map, null);
   assert.equal(withoutMaps.comparison, undefined);
   assert.equal(withoutMaps.registered_areas, null);
+});
+
+function searchEvidenceFixture() {
+  const site: EvidenceSite & { title: string } = { id: 'auth:fixture:compatible', repr_point: [179, -20], title: 'Original ranking evidence',
+    chronology: { phases: [{ id: 'search-stage' }] } };
+  const search: SearchResponse<{ site: typeof site; score: number }> = {
+    query: 'test-place', mode: 'bm25', corpus_version: 'corpus-v1', elapsed_ms: 5, total_candidates: 1, results: [{ site, score: 12 }],
+  };
+  const browse: BrowseState = { country: null, region: null, offset: 0, visible: true, spatial_version: 'spatial-v1' };
+  const getSpatial = (selected: typeof site | null): NonNullable<ExportResult<never>['spatial']> => ({
+    metadata: { version: 'spatial-v1' },
+    selected: selected ? { site_id: selected.id, representative_point: selected.repr_point, source_points: [], records: [] } : null,
+  });
+  const selection = { site: site.id, phase: 'search-stage' };
+  const options: SearchExportEvidenceOptions<typeof site> = {
+    search, selection, displayedSite: site, verifiedDetail: null, catalogue: { corpusVersion: search.corpus_version, browse, getSpatial },
+  };
+  return { site, search, browse, getSpatial, selection, options };
+}
+
+test('same-corpus verified search evidence produces identical version 2 export bytes', () => {
+  const { site, search, selection, browse, getSpatial, options } = searchEvidenceFixture();
+  const verifiedSite = { ...site, title: 'Verified same-corpus source record' };
+  const evidence = helpers.selectSearchExportEvidence({ ...options, verifiedDetail: { site: verifiedSite, corpusVersion: search.corpus_version } });
+  assert.equal(evidence.selectionStatus, 'verified');
+  assert.equal(evidence.selectedSite, verifiedSite);
+  assert.equal(evidence.phaseOmitted || evidence.catalogueOmitted || evidence.spatialOmitted, false);
+
+  const spec: SearchSpec = { query: search.query, mode: search.mode, type: null, limit: 10 };
+  const map: HistoryView = { year: 1616, basemap: 'historical', boundaries: true, frame_id: 'last-successful', source_version: 'history-v1' };
+  const time = '2026-11-23T00:00:00Z';
+  const prior = helpers.createExport(spec, search, time, map, selection, verifiedSite, browse, getSpatial(verifiedSite));
+  const current = helpers.createExport(spec, search, time, map, evidence.selection, evidence.selectedSite, evidence.browse, evidence.spatial);
+  assert.equal(JSON.stringify(current), JSON.stringify(prior));
+});
+
+test('search evidence uses the frozen ranked site when newer detail or a different identity cannot supply it', () => {
+  const { site, search, selection, options } = searchEvidenceFixture();
+  const newer = { ...site, title: 'Regenerated evidence', repr_point: null, chronology: { phases: [{ id: 'new-stage' }] } };
+  const cases = [
+    { site: newer, corpusVersion: 'corpus-v2' },
+    { site: { ...newer, id: 'auth:fixture:other' }, corpusVersion: search.corpus_version },
+    null,
+  ];
+  for (const verifiedDetail of cases) {
+    const evidence = helpers.selectSearchExportEvidence({ ...options, selection: { ...selection, phase: 'new-stage' }, verifiedDetail });
+    assert.equal(evidence.selectionStatus, 'ranked');
+    assert.equal(evidence.selectedSite, site);
+    assert.deepEqual(plain(evidence.selection), { site: site.id, phase: null });
+    assert.equal(evidence.phaseOmitted, true);
+    assert.deepEqual(plain(evidence.spatial?.selected?.representative_point), site.repr_point);
+  }
+});
+
+test('the same phase ID only survives a ranked fallback if its displayed date and supporting text still match', () => {
+  const { site, search } = searchEvidenceFixture();
+  const stage = { id: 'search-stage', start_year: 1616, end_year: 1616, sources: [{ excerpt: 'Original source text' }] };
+  const ranked = { ...site, chronology: { phases: [stage] } };
+  const selection = { site: site.id, phase: stage.id };
+  const withPhase = (phase: typeof stage) => ({ ...ranked, chronology: { phases: [phase] } });
+  const options = { search: { ...search, results: [{ site: ranked }] }, selection, catalogue: null };
+
+  for (const phase of [
+    { ...stage, start_year: 1600, end_year: 1600 },
+    { ...stage, sources: [{ excerpt: 'Revised source text' }] },
+  ]) {
+    const displayedSite = withPhase(phase);
+    const stale = helpers.selectSearchExportEvidence({ ...options, displayedSite,
+      verifiedDetail: { site: displayedSite, corpusVersion: 'corpus-v2' } });
+    assert.equal(stale.selectionStatus, 'ranked');
+    assert.equal(stale.selectedSite, ranked);
+    assert.equal(stale.selection.phase, null);
+    assert.equal(stale.phaseOmitted, true);
+  }
+
+  const missing = helpers.selectSearchExportEvidence({ ...options, displayedSite: null, verifiedDetail: null });
+  assert.equal(missing.selection.phase, null);
+  assert.equal(missing.phaseOmitted, true);
+  const preserved = helpers.selectSearchExportEvidence({ ...options, displayedSite: structuredClone(ranked), verifiedDetail: null });
+  assert.equal(preserved.selection.phase, stage.id);
+  assert.equal(preserved.phaseOmitted, false);
+  const verified = helpers.selectSearchExportEvidence({ ...options, displayedSite: null,
+    verifiedDetail: { site: ranked, corpusVersion: search.corpus_version } });
+  assert.equal(verified.selection.phase, stage.id);
+  assert.equal(verified.phaseOmitted, false);
+});
+
+test('independent selection requires a verified same-corpus record and does not add a ranking', () => {
+  const { site, search, options } = searchEvidenceFixture();
+  const outsideResult = { ...site, id: 'auth:fixture:independent', repr_point: null };
+  const selection = { site: outsideResult.id, phase: 'search-stage' };
+  const stale = helpers.selectSearchExportEvidence({ ...options, selection, verifiedDetail: { site: outsideResult, corpusVersion: 'corpus-v2' } });
+  assert.equal(stale.selectionStatus, 'omitted');
+  assert.equal(stale.selectedSite, null);
+  assert.deepEqual(plain(stale.selection), { site: null, phase: null });
+  assert.equal(stale.phaseOmitted, false);
+  assert.equal(stale.spatial?.selected, null);
+  const same = helpers.selectSearchExportEvidence({ ...options, selection, verifiedDetail: { site: outsideResult, corpusVersion: search.corpus_version } });
+  assert.equal(same.selectionStatus, 'verified');
+  assert.deepEqual(plain(same.selection), selection);
+  assert.equal(same.selectedSite, outsideResult);
+  assert.equal(same.spatial?.selected?.representative_point, null);
+  assert.deepEqual(search.results.map(result => result.site.id), [site.id]);
+});
+
+test('old search retains ranked records and its actual historical frame when a newer catalogue is committed', () => {
+  const { site, search, browse, options } = searchEvidenceFixture();
+  const evidence = helpers.selectSearchExportEvidence({ ...options, catalogue: {
+    corpusVersion: 'corpus-v2', browse,
+    getSpatial() { assert.fail('Equal spatial version cannot establish catalogue corpus compatibility'); },
+  } });
+  assert.equal(evidence.catalogueOmitted, true);
+  assert.equal(evidence.spatialOmitted, false);
+  assert.equal(evidence.spatial, null);
+  assert.equal(evidence.browse, null);
+  assert.equal(evidence.selectedSite, site);
+  const map: HistoryView = { year: 1930, basemap: 'historical', boundaries: true, frame_id: 'retained-year', source_version: 'history-v1' };
+  const spec: SearchSpec = { query: search.query, mode: search.mode, type: null, limit: 10 };
+  const report = helpers.createExport(spec, search, '2026-11-23T00:00:00Z', map, evidence.selection,
+    evidence.selectedSite, evidence.browse, evidence.spatial);
+  assert.equal(report.schema_version, 2);
+  assert.deepEqual(plain(report.response), search);
+  assert.deepEqual(plain(report.map), map);
+  assert.equal(report.browse, null);
+  assert.equal(report.spatial, null);
+});
+
+test('a compatible browse scope never lends its version to incompatible selected coordinates or source locations', () => {
+  const { site, search, browse, getSpatial, options } = searchEvidenceFixture();
+  const snapshot = getSpatial(site);
+  const location = snapshot.selected!;
+  const mismatch = [
+    { browse, spatial: { ...snapshot, metadata: { version: 'other-spatial' } } },
+    { browse, spatial: { ...snapshot, selected: { ...location, site_id: 'auth:fixture:other' } } },
+    { browse, spatial: { ...snapshot, selected: { ...location, representative_point: null } } },
+    { browse: { ...browse, spatial_version: undefined }, spatial: { ...snapshot, metadata: { version: undefined } } },
+    { browse: { ...browse, spatial_version: null }, spatial: { metadata: null, selected: {
+      ...location, source_points: [[178, -20] as [number, number]],
+    } } },
+  ];
+  for (const item of mismatch) {
+    const evidence = helpers.selectSearchExportEvidence({ ...options, catalogue: {
+      corpusVersion: search.corpus_version, browse: item.browse, getSpatial: () => item.spatial,
+    } });
+    assert.equal(evidence.catalogueOmitted, false);
+    assert.equal(evidence.spatialOmitted, true);
+    assert.equal(evidence.spatial, null);
+    assert.equal(evidence.browse, item.browse);
+  }
+  const representative = helpers.selectSearchExportEvidence({ ...options, catalogue: {
+    corpusVersion: search.corpus_version, browse: { ...browse, spatial_version: null },
+    getSpatial: () => ({ ...snapshot, metadata: null }),
+  } });
+  assert.equal(representative.spatial?.selected?.representative_point, site.repr_point);
+  assert.equal(representative.spatialOmitted, false);
 });
 
 const request: SearchSpec = { query: '古代港口', mode: 'semantic', type: 'port', limit: 20 };
