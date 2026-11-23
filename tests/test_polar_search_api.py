@@ -156,8 +156,7 @@ def test_search_and_pages_keep_unknown_and_polar_sites(
 ) -> None:
     semantic = Mock(spec=SemanticIndex)
     semantic.sites = antarctic_sites
-    semantic.ready = True
-    semantic.reason = None
+    semantic.status.return_value = (True, None)
     semantic.scores.return_value = np.asarray([0.1, 0.2, 0.9], dtype=np.float32)
     engine = SearchEngine(antarctic_sites, semantic)
     for mode in ("semantic", "bm25"):

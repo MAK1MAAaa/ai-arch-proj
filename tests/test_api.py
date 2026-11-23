@@ -73,8 +73,7 @@ def test_semantic_ranking_uses_query_and_returns_source_evidence(
     sites = sample_sites
     semantic = Mock(spec=SemanticIndex)
     semantic.sites = sites
-    semantic.ready = True
-    semantic.reason = None
+    semantic.status.return_value = (True, None)
     semantic.scores.return_value = np.asarray([0.1, 0.9, 0.3], dtype=np.float32)
     with TestClient(create_app(home=tmp_path, sites=sites, semantic=semantic)) as client:
         response = client.post("/api/search", json={"query": "  港口  ", "limit": 2})

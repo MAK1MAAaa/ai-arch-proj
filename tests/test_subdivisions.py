@@ -633,9 +633,10 @@ def test_compact_lookup_cannot_apply_to_a_different_corpus(bundle: Bundle, mutat
 class FakeSemantic:
     def __init__(self, sites: list[Site]) -> None:
         self.sites = sites
-        self.ready = True
-        self.reason = None
         self.revision = MODEL_REVISION
+
+    def status(self) -> tuple[bool, str | None]:
+        return True, None
 
     def scores(self, query: str) -> Any:
         return np.array([1, 2, 90, 80, 100, 200], dtype=np.float32)

@@ -272,8 +272,9 @@ def test_evaluation_separates_cold_start_and_preserves_old_templates(
     class FakeIndex:
         def __init__(self, sites: list[Site], home: Path) -> None:
             self.sites = sites
-            self.ready = True
-            self.reason = None
+
+        def status(self) -> tuple[bool, str | None]:
+            return True, None
 
     class FakeEngine:
         def __init__(self, sites: list[Site], semantic: FakeIndex) -> None:
