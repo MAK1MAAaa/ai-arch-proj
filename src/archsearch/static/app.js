@@ -28,6 +28,8 @@
         emptyDescription: byId("empty-description", HTMLParagraphElement), loading: byId("loading-state", HTMLDivElement),
         detailPanel: byId("detail-panel", HTMLElement), detailContent: byId("detail-content", HTMLDivElement),
         detailDialog: byId("detail-dialog", HTMLDialogElement),
+        exportSiteEvidence: byId("export-site-evidence", HTMLButtonElement),
+        siteExportFeedback: byId("site-export-feedback", HTMLParagraphElement),
         openSelectedDetail: byId("open-selected-detail", HTMLButtonElement),
         tileWarning: byId("tile-warning", HTMLDivElement), tileWarningText: byId("tile-warning-text", HTMLSpanElement),
         mapEmptyLabel: byId("map-empty-label", HTMLDivElement), viewportCount: byId("viewport-count", HTMLElement),
@@ -74,6 +76,7 @@
     let mapView = null;
     let registeredAreas = null;
     let currentCorpusVersion = null;
+    let verifiedDetail = null;
     let currentRegisteredAreasVersion = null;
     let historyView = null;
     let explore = null;
@@ -243,7 +246,7 @@
     function isAbortError(error) {
         return error instanceof Error && error.name === "AbortError";
     }
-    async function api(path, options = {}) {
+    async function readApi(path, options = {}) {
         const headers = new Headers(options.headers);
         headers.set("Accept", "application/json");
         const response = await fetch(path, { ...options, headers });
@@ -265,7 +268,10 @@
                 detail = detail.message || detail.reason;
             throw new Error(typeof detail === "string" ? detail : `请求未完成（HTTP ${response.status}）。`);
         }
-        return data;
+        return { data: data, headers: response.headers };
+    }
+    async function api(path, options = {}) {
+        return (await readApi(path, options)).data;
     }
     function updateSearchAvailability() {
         const mode = currentMode();
@@ -358,6 +364,7 @@
         finally {
             renderServiceError();
             updateSearchAvailability();
+            updateSiteExportControl();
         }
     }
     async function loadFacets() {
@@ -508,6 +515,35 @@
     function currentSelectedSite() {
         return state.selectedSite?.id === state.selectedId ? state.selectedSite : selectedResult()?.site ?? null;
     }
+    function exportableDetail() {
+        return boundsRestoreError === null && verifiedDetail?.site.id === state.selectedId
+            && verifiedDetail.corpusVersion === currentCorpusVersion ? verifiedDetail : null;
+    }
+    function setSiteExportFeedback(message) {
+        ui.siteExportFeedback.textContent = message;
+        ui.siteExportFeedback.hidden = !message;
+    }
+    function updateSiteExportControl() {
+        const wasDisabled = ui.exportSiteEvidence.disabled;
+        ui.exportSiteEvidence.disabled = exportableDetail() === null;
+        if (boundsRestoreError !== null) {
+            setSiteExportFeedback("地图范围尚未恢复。请清除或重新捕获范围后再导出。");
+        }
+        else if (verifiedDetail && currentCorpusVersion === null) {
+            setSiteExportFeedback("工作区语料版本尚未确认。请刷新运行状态后再试。");
+        }
+        else if (verifiedDetail && verifiedDetail.corpusVersion !== currentCorpusVersion) {
+            setSiteExportFeedback("语料版本已变化。请刷新页面后重新核对资料。");
+        }
+        else if (wasDisabled && !ui.exportSiteEvidence.disabled) {
+            setSiteExportFeedback("");
+        }
+    }
+    function resetSiteExport() {
+        verifiedDetail = null;
+        setSiteExportFeedback("");
+        updateSiteExportControl();
+    }
     function updateSelectionControls() {
         const index = state.results.findIndex((result) => result.site.id === state.selectedId);
         const selected = currentSelectedSite();
@@ -637,6 +673,7 @@
         state.results = Array.isArray(data.results) ? data.results : [];
         state.selectedId = null;
         state.selectedSite = null;
+        resetSiteExport();
         state.selectionMarker?.remove();
         state.selectionMarker = null;
         mapComparison?.setSelection(null);
@@ -767,6 +804,33 @@
             ui.shareLink.select();
         }
     }
+    function exportSpatial(site) {
+        return {
+            metadata: explore?.getSpatialMetadata() ?? null,
+            selected: site ? {
+                site_id: site.id,
+                representative_point: site.repr_point,
+                source_points: explore?.getSourcePoints(site.id) ?? [],
+                records: explore?.getSourceLocationRecords(site.id) ?? [],
+                source: explore?.getSpatialSource(site.id) ?? null,
+            } : null,
+        };
+    }
+    function downloadJson(filename, report) {
+        const download = element("a");
+        const objectUrl = URL.createObjectURL(new Blob([JSON.stringify(report, null, 2)], { type: "application/json;charset=utf-8" }));
+        try {
+            download.href = objectUrl;
+            download.download = filename;
+            download.hidden = true;
+            document.body.append(download);
+            download.click();
+        }
+        finally {
+            download.remove();
+            window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+        }
+    }
     function exportSearchResults() {
         const completed = state.completedSearch;
         if (!completed)
@@ -779,33 +843,38 @@
             ui.toolsFeedback.textContent = "请等待选中遗址资料读取完成，再导出完整来源附录。";
             return;
         }
-        let objectUrl = null;
-        const download = element("a");
         try {
             const exportedAt = new Date().toISOString();
-            const report = ArchSearchResearch.createExport(completed.request, completed.response, exportedAt, historyView?.getView() ?? null, { site: state.selectedId, phase: selectedPhaseId }, currentSelectedSite(), explore?.getCommittedState() ?? null, { metadata: explore?.getSpatialMetadata() ?? null, selected: state.selectedSite ? {
-                    site_id: state.selectedSite.id, representative_point: state.selectedSite.repr_point,
-                    source_points: explore?.getSourcePoints(state.selectedSite.id) ?? [],
-                    records: explore?.getSourceLocationRecords(state.selectedSite.id) ?? [],
-                    source: explore?.getSpatialSource(state.selectedSite.id) ?? null,
-                } : null }, registeredAreas?.getSnapshot() ?? null, currentCorpusVersion, currentRegisteredAreasVersion, mapComparison?.snapshot(historyView?.getView() ?? null) ?? null);
-            objectUrl = URL.createObjectURL(new Blob([JSON.stringify(report, null, 2)], { type: "application/json;charset=utf-8" }));
-            download.href = objectUrl;
-            download.download = `archsearch-${completed.request.mode}-${exportedAt.replace(/[:.]/g, "-")}.json`;
-            download.hidden = true;
-            document.body.append(download);
-            download.click();
+            const map = historyView?.getView() ?? null;
+            const report = ArchSearchResearch.createExport(completed.request, completed.response, exportedAt, map, { site: state.selectedId, phase: selectedPhaseId }, currentSelectedSite(), explore?.getCommittedState() ?? null, exportSpatial(state.selectedSite), registeredAreas?.getSnapshot() ?? null, currentCorpusVersion, currentRegisteredAreasVersion, mapComparison?.snapshot(map) ?? null);
+            downloadJson(`archsearch-${completed.request.mode}-${exportedAt.replace(/[:.]/g, "-")}.json`, report);
             ui.toolsFeedback.textContent = `已生成 ${completed.response.results.length} 条结果的 JSON 文件，包含原文、检索条件、分数与来源。`;
         }
         catch {
             ui.toolsFeedback.textContent = "结果文件未能生成，请重试或检查浏览器的下载设置。";
         }
-        finally {
-            download.remove();
-            if (objectUrl !== null) {
-                const disposableUrl = objectUrl;
-                window.setTimeout(() => URL.revokeObjectURL(disposableUrl), 1000);
-            }
+    }
+    function exportSiteEvidence() {
+        const evidence = exportableDetail();
+        if (!evidence)
+            return;
+        try {
+            const { site, corpusVersion } = evidence;
+            const exportedAt = new Date().toISOString();
+            const map = historyView?.getView() ?? null;
+            const catalogueMatches = explore?.getCoverageSummary()?.version === corpusVersion;
+            const report = ArchSearchResearch.createSiteExport({
+                exportedAt, corpusVersion, selection: { site: site.id, phase: selectedPhaseId }, selectedSite: site,
+                map, comparison: mapComparison?.snapshot(map) ?? null, browse: catalogueMatches ? explore?.getCommittedState() ?? null : null,
+                spatial: catalogueMatches ? exportSpatial(site) : null, registeredAreas: registeredAreas?.getSnapshot() ?? null,
+                registeredAreasVersion: currentRegisteredAreasVersion,
+            });
+            const filenameId = site.id.replace(/[^a-zA-Z0-9_-]/g, "-");
+            downloadJson(`archsearch-site-${filenameId}-${exportedAt.replace(/[:.]/g, "-")}.json`, report);
+            setSiteExportFeedback("已生成资料 JSON，包含来源、年代证据和实际显示的地图状态。");
+        }
+        catch (error) {
+            setSiteExportFeedback(`资料文件未能生成。${errorMessage(error)}`);
         }
     }
     function cancelLinkRestore() {
@@ -1508,6 +1577,7 @@
         const cameraVersion = mapComparison?.actionVersion() ?? 0;
         state.selectedId = id;
         state.selectedSite = known;
+        resetSiteExport();
         ui.exportResults.disabled = boundsRestoreError !== null || state.completedSearch === null || known === null;
         selectedPhaseId = null;
         markSelection(id);
@@ -1543,16 +1613,20 @@
             historyView?.setSelectionContext({ title: id, precision: "loading", start_year: null, end_year: null });
             state.selectionMarker?.remove();
             state.selectionMarker = null;
-            ui.detailContent.replaceChildren(element("h3", null, "正在读取来源资料"), element("p", "detail-note", id), ...(registeredAreas ? [registeredAreas.element] : []));
+            const loadingTitle = element("h3", null, "正在读取来源资料");
+            loadingTitle.id = "detail-title";
+            ui.detailContent.replaceChildren(loadingTitle, element("p", "detail-note", id), ...(registeredAreas ? [registeredAreas.element] : []));
             updateSelectionControls();
         }
         if (showDetail)
             ArchSearchWorkspace.openDetail(state.detailOpener);
         const phaseAtRequest = selectedPhaseId;
         try {
-            const site = await api(`/api/sites/${encodeURIComponent(id)}`, { signal: controller.signal });
+            const { data: site, headers } = await readApi(`/api/sites/${encodeURIComponent(id)}`, { signal: controller.signal });
             if (state.detailController !== controller || state.selectedId !== id || controller.signal.aborted)
                 return;
+            if (!isRecord(site) || site.id !== id)
+                throw new Error("详情返回的遗址编号与当前选择不一致。");
             if (!known || JSON.stringify(site) !== JSON.stringify(known)) {
                 if (!known)
                     choosePhase(site);
@@ -1565,11 +1639,18 @@
                 const untouched = (mapComparison?.actionVersion() ?? 0) === cameraVersion && (historyView?.actionVersion() ?? 0) === userVersion;
                 presentSelection(site, result?.matched_fields ?? [], !known && untouched, moveMap && untouched);
             }
+            const corpusVersion = headers.get("X-ArchSearch-Corpus-Version");
+            if (corpusVersion)
+                verifiedDetail = { site, corpusVersion };
+            else
+                setSiteExportFeedback("未能确认资料语料版本。请重启本地服务并重新打开资料。");
+            updateSiteExportControl();
         }
         catch (error) {
             if (isAbortError(error) || controller.signal.aborted || state.detailController !== controller || state.selectedId !== id)
                 return;
             registeredAreas?.clear();
+            setSiteExportFeedback("完整资料未能读取。重新选择遗址后可再试导出。");
             if (known)
                 ui.detailContent.append(element("p", "detail-loading", "详情刷新失败，当前显示检索时返回的原始资料。"));
             else {
@@ -1580,7 +1661,9 @@
                 polarView?.select(null);
                 historyView?.setSelectionContext(null);
                 mapComparison?.setSelection(null);
-                ui.detailContent.replaceChildren(element("h3", null, "资料未能读取"), element("p", "detail-note", errorMessage(error)));
+                const failedTitle = element("h3", null, "资料未能读取");
+                failedTitle.id = "detail-title";
+                ui.detailContent.replaceChildren(failedTitle, element("p", "detail-note", errorMessage(error)));
                 showError(`遗址资料未能恢复：${errorMessage(error)}。地图与检索快照保持不变。`);
                 if (restoring) {
                     invalidLink = true;
@@ -1667,6 +1750,7 @@
     });
     ui.copyLink.addEventListener("click", copySearchLink);
     ui.exportResults.addEventListener("click", exportSearchResults);
+    ui.exportSiteEvidence.addEventListener("click", exportSiteEvidence);
     ui.clearType.addEventListener("click", clearTypeFilter);
     ui.emptyClearType.addEventListener("click", clearTypeFilter);
     ui.cancelSearch.addEventListener("click", cancelCurrentSearch);
@@ -1731,7 +1815,12 @@
         map: state.map,
         initialBoundsError: boundsRestoreError,
         initialState: boundsRestoreError !== null ? initialNonBoundsBrowse.state : undefined,
-        onBoundsAction: () => { boundsRestoreError = null; browseRestored = true; },
+        onBoundsAction: () => {
+            boundsRestoreError = null;
+            browseRestored = true;
+            setSiteExportFeedback("");
+            updateSiteExportControl();
+        },
         onSubdivisionChange: () => { updateSearchAvailability(); },
         onSelect: (id, opener, options) => { void selectSite(id, { opener, moveMap: options?.moveMap ?? true }); },
         onFilterChange: () => {

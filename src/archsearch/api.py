@@ -469,10 +469,11 @@ def create_app(
         return area_index.response(site_id, CORPUS_VERSION)
 
     @app.get("/api/sites/{site_id}", response_model=Site)
-    def site_detail(site_id: str) -> Site:
+    def site_detail(site_id: str, response: Response) -> Site:
         site = engine.by_id.get(site_id)
         if site is None:
             raise HTTPException(status_code=404, detail="地点不存在于本演示语料中。")
+        response.headers["X-ArchSearch-Corpus-Version"] = CORPUS_VERSION
         return site
 
     @app.get("/", include_in_schema=False)

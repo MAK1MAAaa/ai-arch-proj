@@ -557,38 +557,38 @@ const ArchSearchResearch = (() => {
 
   type RegisteredAreasSnapshot = NonNullable<ReturnType<ReturnType<typeof ArchSearchRegisteredAreas.create>["getSnapshot"]>>;
 
-  function createExport<T>(request: SearchSpec, response: SearchResponse<T>, exportedAt: string, map: HistoryView | null = null, selection: Selection = { site: null, phase: null }, selectedSite: unknown = null, browse: BrowseState | null = null, spatial: SpatialSnapshot | null = null, registeredAreas: RegisteredAreasSnapshot | null = null, currentCorpusVersion: string | null = response.corpus_version, currentRegisteredAreasVersion: string | null = registeredAreas?.version ?? null, comparison: ComparisonSnapshot | null = null) {
-    const normalized = normalizeRequest(request);
-    if (normalized.query !== response.query || normalized.mode !== response.mode) {
-      throw new Error("导出请求必须与成功响应的查询和检索方式一致。");
-    }
-    validateSubdivisionResponse(normalized, response);
-    const enhancement = validateEnhancement(normalized, response.enhancement);
-    let browseSnapshot: BrowseState | null = null;
-    if (browse) {
-      const { chronology: rawChronology, ...scope } = browse;
-      if (scope.subdivision && !subdivisionVersion(scope.subdivision_version)) throw new Error("尚未成功应用的来源省区不能加入目录导出。");
-      normalizeSubdivision(scope.country, scope.subdivision);
-      const chronology = normalizeChronology(rawChronology);
-      browseSnapshot = { ...scope, ...(chronology ? { chronology } : {}), bbox: normalizeBBox(scope.bbox) };
-    }
-    const selectedMatches = selectedSite !== null && typeof selectedSite === "object" && "id" in selectedSite && selectedSite.id === selection.site;
-    const areas = registeredAreas?.displayed === true && selectedMatches && selection.site === registeredAreas.site_id
-      && registeredAreas.corpus_version === response.corpus_version && registeredAreas.corpus_version === currentCorpusVersion && registeredAreas.version === currentRegisteredAreasVersion
-      ? { ...ArchSearchRegisteredAreas.parseAreas(registeredAreas, registeredAreas.site_id, currentCorpusVersion, currentRegisteredAreasVersion), displayed: true as const } : null;
+  function exportBrowse(browse: BrowseState | null): BrowseState | null {
+    if (!browse) return null;
+    const { chronology: rawChronology, ...scope } = browse;
+    if (scope.subdivision && !subdivisionVersion(scope.subdivision_version)) throw new Error("尚未成功应用的来源省区不能加入目录导出。");
+    normalizeSubdivision(scope.country, scope.subdivision);
+    const chronology = normalizeChronology(rawChronology);
+    return { ...scope, ...(chronology ? { chronology } : {}), bbox: normalizeBBox(scope.bbox) };
+  }
+
+  function exportDisplayedAreas(registeredAreas: RegisteredAreasSnapshot | null, siteId: string | null,
+                                exportCorpusVersion: string, currentCorpusVersion: string | null,
+                                currentRegisteredAreasVersion: string | null): RegisteredAreasSnapshot | null {
+    const areas = registeredAreas?.displayed === true && siteId === registeredAreas.site_id
+      && registeredAreas.corpus_version === exportCorpusVersion && registeredAreas.corpus_version === currentCorpusVersion
+      && registeredAreas.version === currentRegisteredAreasVersion
+      ? { ...ArchSearchRegisteredAreas.parseAreas(registeredAreas, registeredAreas.site_id, currentCorpusVersion, currentRegisteredAreasVersion), displayed: true as const }
+      : null;
     if (areas && (!areas.ready || areas.features.length === 0)) throw new Error("未实际显示的登记范围不能加入导出。");
+    return areas;
+  }
+
+  function exportEvidenceFields<T>(map: HistoryView | null, comparison: ComparisonSnapshot | null, selection: Selection,
+                                   selectedSite: T, browse: BrowseState | null, spatial: SpatialSnapshot | null,
+                                   areas: RegisteredAreasSnapshot | null) {
     return {
-      schema_version: 2,
-      exported_at: exportedAt,
-      request: normalized,
-      response: enhancement ? { ...response, enhancement } : response,
       map: map ? { ...map } : null,
       ...(comparison ? { comparison: normalizeComparison(comparison, map) } : {}),
       selection: { ...selection },
       selected_site: selectedSite,
       spatial: spatial === null ? null : JSON.parse(JSON.stringify(spatial)) as SpatialSnapshot,
       registered_areas: areas,
-      browse: browseSnapshot,
+      browse,
       sources: [
         { name: "Pleiades", version: "v4.1", license: "CC BY 3.0", uri: "https://pleiades.stoa.org/" },
         { name: "UNESCO World Heritage descriptions", license: "CC BY-SA 3.0 IGO", uri: "https://whc.unesco.org/en/disclaimer/", note: "Individual record references retain attribution and revisions; other linked documents retain their own rights." },
@@ -616,6 +616,25 @@ const ArchSearchResearch = (() => {
         { name: "Guyana historic places", version: "guyana-named-places-v1", license: "Mixed rights - National Trust and research facts and short excerpts; GLSC gazetteer location fact; Wikidata structured points CC0", uri: "https://github.com/MAK1MAAaa/ai-arch-proj/blob/main/src/archsearch/data/GUYANA-LICENSE.md", note: "Refers to the individual named places and events described by each source. Representative points retain their original scope. Unadopted points remain null; no historical dates are inferred. Listing, publication and commemoration subject dates do not establish construction." },
         { name: "OpenStreetMap contributors", license: "ODbL", uri: "https://www.openstreetmap.org/copyright", displayed: comparison ? comparison.modern.basemap === "osm" : map?.basemap === "modern" },
       ],
+    };
+  }
+
+  function createExport<T>(request: SearchSpec, response: SearchResponse<T>, exportedAt: string, map: HistoryView | null = null, selection: Selection = { site: null, phase: null }, selectedSite: unknown = null, browse: BrowseState | null = null, spatial: SpatialSnapshot | null = null, registeredAreas: RegisteredAreasSnapshot | null = null, currentCorpusVersion: string | null = response.corpus_version, currentRegisteredAreasVersion: string | null = registeredAreas?.version ?? null, comparison: ComparisonSnapshot | null = null) {
+    const normalized = normalizeRequest(request);
+    if (normalized.query !== response.query || normalized.mode !== response.mode) {
+      throw new Error("导出请求必须与成功响应的查询和检索方式一致。");
+    }
+    validateSubdivisionResponse(normalized, response);
+    const enhancement = validateEnhancement(normalized, response.enhancement);
+    const browseSnapshot = exportBrowse(browse);
+    const selectedMatches = selectedSite !== null && typeof selectedSite === "object" && "id" in selectedSite && selectedSite.id === selection.site;
+    const areas = exportDisplayedAreas(registeredAreas, selectedMatches ? selection.site : null, response.corpus_version, currentCorpusVersion, currentRegisteredAreasVersion);
+    return {
+      schema_version: 2,
+      exported_at: exportedAt,
+      request: normalized,
+      response: enhancement ? { ...response, enhancement } : response,
+      ...exportEvidenceFields(map, comparison, selection, selectedSite, browseSnapshot, spatial, areas),
       source: {
         name: "Pleiades: A Gazetteer of Past Places",
         version: "v4.1",
@@ -626,22 +645,91 @@ const ArchSearchResearch = (() => {
         license_uri: "https://creativecommons.org/licenses/by/3.0/",
         attribution: "Copyright The Contributors. Pleiades, Ancient World Mapping Center and Institute for the Study of the Ancient World.",
       },
-      provenance: {
-        processing: "来源资料经 HTML 转纯文本和空白规范化；别名、类型、分期证据、原文出处和贡献者随结果保留，未生成历史事实或补造坐标。",
-        scope: "保留原有策展资料、固定文化／混合名录与南极历史资料，另有逐条核验的国家文化补充；资格来源可能是预备名录、国家文保或考古研究，不一概表示正式世界遗产。不是全世界所有遗址清单。response为成功检索快照，selected_site可为独立目录选择，没有虚构排名或分数。",
+      provenance: exportProvenance(false),
+    };
+  }
+
+  function exportProvenance(siteOnly: boolean) {
+    return {
+        processing: siteOnly
+          ? "资料保留来源原文、别名、分期证据、出处与贡献者。原文经过 HTML 转纯文本和空白规范化。"
+          : "来源资料经 HTML 转纯文本和空白规范化；别名、类型、分期证据、原文出处和贡献者随结果保留，未生成历史事实或补造坐标。",
+        scope: siteOnly
+          ? "selected_site 保存当前选中资料，包含适用的来源与许可。sources 列出语料库和底图的通用出处。"
+          : "保留原有策展资料、固定文化／混合名录与南极历史资料，另有逐条核验的国家文化补充；资格来源可能是预备名录、国家文保或考古研究，不一概表示正式世界遗产。不是全世界所有遗址清单。response为成功检索快照，selected_site可为独立目录选择，没有虚构排名或分数。",
         coordinates: "repr_point 为 WGS84 [经度, 纬度] 代表点，用于地图定位；不等同于实测发掘坐标，location_precision 不承诺米级精度。",
-        scores: "检索分数不是相关概率，不同检索方式的分数不可直接比较；本导出不包含人工相关性判断或评测指标。",
-        enhancement: "enhancement保存成功响应实际使用的模型、查询改写、耗时与排序方法；RRF为多个查询排名融合，失败明确保留原查询与原因。查询改写不是来源证据，不生成遗址事实或历史阶段。API地址、密钥和服务内存revision不写入分享请求或导出。",
+        ...(!siteOnly ? {
+          scores: "检索分数不是相关概率，不同检索方式的分数不可直接比较；本导出不包含人工相关性判断或评测指标。",
+          enhancement: "enhancement保存成功响应实际使用的模型、查询改写、耗时与排序方法；RRF为多个查询排名融合，失败明确保留原查询与原因。查询改写不是来源证据，不生成遗址事实或历史阶段。API地址、密钥和服务内存revision不写入分享请求或导出。",
+        } : {}),
         periods: "分期来自名称或位置记录的来源关联；不等同于建造年代或连续使用证明，start/end 保留原始记录时间范围。",
         chronology: "历史阶段独立记录事件类型、精度、证据和代理核验方式；仅明确单年事件自动联动历史背景，界面不提供任意年份选择。约略、区间、时期或未知年代不推断年份，保留最后成功的背景；旧分享链接的year仅兼容恢复已保存背景。区间或时期不证明连续存在，未标成人工专家确认。",
         map: "map保存最后成功显示的年份与疆域版本；null表示尚无成功地图快照，待加载或失败年份不冒充已显示年份。",
         comparison: "comparison区分现代位置与历史政权两张地图，保存实际底图、视野及成功历史年/版本；历史图使用Cliopatria与现代自然地理参照，不是古海岸或街道复原。同步中心须用户明确打开，目录bbox始终只由现代图显式捕获；历史拖图不重筛资料，也不据代表点判定历史政治归属。",
         locations: "repr_point为null表示本记录无可用代表点：可能真实位置不明，也可能尚未取得可信公开数字坐标，来源说明保留区别；不等于零坐标。有效极区坐标超出Web Mercator时使用独立极区示意，不截断或伪造纬度。极区底图为现代自然地理参照，不生成历史国界。",
         source_points: "spatial保留最后成功目录的组合源点版本、source_groups对应的来源／版本／许可与地点身份，以及独立选中资料经审核纳入地图的定位序列、重复记录与来源标签。原代表点单独保存；多个定位记录不增加遗址条目数或承诺发掘精度。世界遗产原始序列保持不变；海牙名录排除的仓储、标签冲突等原记录仍保留在来源审计中，不混作考古原址点。",
-        registered_areas: "registered_areas只保存当前实际显示、且与选中资料和当前语料/检索版本一致的来源范围；label区分现代遗产登记范围与来源古迹多边形，后者不承诺法定边界。null表示未显示或上下文不匹配。保留原WGS84闭环与来源版本/许可，不推内外环、代表点、古址轮廓、准入或点计数。范围显隐不写入分享链接，重新打开后仍须主动点击查看。",
+        registered_areas: siteOnly
+          ? "registered_areas 保存实际显示且与选中资料、当前语料和来源范围版本一致的来源范围，未显示时为 null。原始 WGS84 闭环与来源许可随要素保存。来源公开范围用于查阅，法定界线与考古范围须另行核实。"
+          : "registered_areas只保存当前实际显示、且与选中资料和当前语料/检索版本一致的来源范围；label区分现代遗产登记范围与来源古迹多边形，后者不承诺法定边界。null表示未显示或上下文不匹配。保留原WGS84闭环与来源版本/许可，不推内外环、代表点、古址轮廓、准入或点计数。范围显隐不写入分享链接，重新打开后仍须主动点击查看。",
         browse: "browse保存成功应用的独立目录条件。chronology记录已选断代状态。bbox为[西,南,东,北]闭区间，西大于东表示跨日期变更线。断代筛选及矩形范围只作用于目录和全库点层。spatial_match_mode及spatial_version记录当时的来源点匹配能力，representative-only可能遗漏无代表点落入框内的组成地点。选中资料纳入地图的来源序列完整导出。海牙名录未纳入地图的保护设施仍留在冻结来源审计中。",
-        subdivisions: "加拿大采用整体省区原字段；香港采用有明确整体／要素关联的来源要素地区；巴西Iepha-MG采用原登记行municipio全文值；Mérimée采用原记录Commune_forme_editoriale全文值，多地值不自动拆分。来源要素／原记录关联不表示整体或全部组成部分都属于该地区，不由坐标、省界或历史政权推断。request/response与browse各保存其独立成功条件；subdivision_version为各自实际应用的来源索引版本，未成功的待选条件不冒充已显示范围。",
-      },
+        subdivisions: siteOnly
+          ? "browse.subdivision_version 记录目录实际使用的来源省区索引版本。来源地区字段用于浏览，行政归属与历史政权须依据各自来源核实。"
+          : "加拿大采用整体省区原字段；香港采用有明确整体／要素关联的来源要素地区；巴西Iepha-MG采用原登记行municipio全文值；Mérimée采用原记录Commune_forme_editoriale全文值，多地值不自动拆分。来源要素／原记录关联不表示整体或全部组成部分都属于该地区，不由坐标、省界或历史政权推断。request/response与browse各保存其独立成功条件；subdivision_version为各自实际应用的来源索引版本，未成功的待选条件不冒充已显示范围。",
+    };
+  }
+
+  interface EvidenceSite {
+    id: string;
+    repr_point: [number, number] | null;
+    chronology?: { phases: readonly { id: string }[] };
+  }
+
+  interface SiteExportOptions<T extends EvidenceSite> {
+    exportedAt: string;
+    corpusVersion: string | null;
+    selection: Selection;
+    selectedSite: T;
+    map?: HistoryView | null;
+    comparison?: ComparisonSnapshot | null;
+    browse?: BrowseState | null;
+    spatial?: SpatialSnapshot | null;
+    registeredAreas?: RegisteredAreasSnapshot | null;
+    registeredAreasVersion?: string | null;
+  }
+
+  function createSiteExport<T extends EvidenceSite>({
+    exportedAt, corpusVersion, selection, selectedSite, map = null, comparison = null, browse = null,
+    spatial = null, registeredAreas = null, registeredAreasVersion = null,
+  }: SiteExportOptions<T>) {
+    if (typeof selectedSite?.id !== "string" || !selectedSite.id.trim() || selection.site !== selectedSite.id) {
+      throw new Error("选中资料编号与导出快照不一致。");
+    }
+    if (!corpusVersion?.trim()) throw new Error("当前语料版本尚未准备。");
+    if (selection.phase !== null && !selectedSite.chronology?.phases.some(phase => phase.id === selection.phase)) {
+      throw new Error("选中阶段不属于导出的资料。");
+    }
+    if (spatial) {
+      const point = selectedSite.repr_point;
+      const location = spatial.selected;
+      if (!location || location.site_id !== selectedSite.id
+        || JSON.stringify(location.representative_point) !== JSON.stringify(point)) {
+        throw new Error("源定位快照与选中资料不一致。");
+      }
+      const metadata = spatial.metadata;
+      const version = metadata && typeof metadata === "object" && "version" in metadata ? metadata.version : null;
+      if (browse?.spatial_version !== undefined && browse.spatial_version !== version) {
+        throw new Error("源定位快照与已应用目录版本不一致。");
+      }
+    }
+    const browseSnapshot = exportBrowse(browse);
+    const areas = exportDisplayedAreas(registeredAreas, selectedSite.id, corpusVersion, corpusVersion, registeredAreasVersion);
+    return {
+      export_kind: "site-evidence" as const,
+      schema_version: 1 as const,
+      exported_at: exportedAt,
+      corpus_version: corpusVersion,
+      ...exportEvidenceFields(map, comparison, selection, JSON.parse(JSON.stringify(selectedSite)) as T, browseSnapshot, spatial, areas),
+      provenance: exportProvenance(true),
     };
   }
 
@@ -661,5 +749,5 @@ const ArchSearchResearch = (() => {
     };
   }
 
-  return { parseLink, parseView, parseBrowse, parseComparison, buildLink, createExport, descriptionLabel, createExampleIntent, validYear, automaticPhaseYear, normalizeBBox, parseBBox, normalizeSubdivision, validateSubdivisionResponse, validateEnhancement, parseMinasSource, minasSourceFields, parseMerimeeSource, merimeeSourceFields };
+  return { parseLink, parseView, parseBrowse, parseComparison, buildLink, createExport, createSiteExport, descriptionLabel, createExampleIntent, validYear, automaticPhaseYear, normalizeBBox, parseBBox, normalizeSubdivision, validateSubdivisionResponse, validateEnhancement, parseMinasSource, minasSourceFields, parseMerimeeSource, merimeeSourceFields };
 })();

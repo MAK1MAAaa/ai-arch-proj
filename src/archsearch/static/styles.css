@@ -2114,7 +2114,10 @@
 .detail-dialog{width:min(780px,calc(100vw - 36px));max-width:none;max-height:90dvh;padding:0;border:1px solid #c7bdab;background:var(--surface);color:var(--ink);box-shadow:0 24px 80px #282b2840;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
 .detail-dialog::backdrop{background:#20271f66;backdrop-filter:blur(2px)}
 .detail-dialog .detail-panel{position:relative;inset:auto;width:100%;max-width:none;max-height:none;padding:20px 28px 28px;background:transparent;border:0;box-shadow:none;overflow:visible;animation:none}
-.detail-dialog .detail-topline{position:sticky;top:0;z-index:3;background:var(--surface);padding:4px 0 12px;margin-bottom:18px}
+.detail-dialog .detail-topline{position:sticky;top:0;z-index:3;background:var(--surface);padding:4px 0 12px;margin-bottom:18px;flex-wrap:wrap;gap:8px}
+.detail-topline-actions{display:flex;align-items:center;gap:8px;margin-left:auto}
+.detail-dialog #export-site-evidence{min-height:44px;white-space:nowrap}
+.site-export-feedback{flex-basis:100%;color:var(--muted);font-size:12px;line-height:1.5}
 .detail-dialog #close-detail{width:44px;height:44px;background:var(--paper);border:1px solid var(--line)}
 .detail-dialog .detail-panel h3{font-size:31px}
 .detail-dialog .detail-description{font-size:14px;line-height:1.9}

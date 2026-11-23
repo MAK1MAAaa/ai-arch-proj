@@ -338,7 +338,7 @@ def test_search_geography_filters_match_browsing_and_do_not_require_a_model(
         assert response.status_code == 422
 
 
-def test_namespaced_site_detail_route_remains_accessible(
+def test_namespaced_site_detail_preserves_record_and_identifies_corpus_version(
     tmp_path: Path, sample_sites: list[Site],
 ) -> None:
     source = SourceReference(
@@ -352,4 +352,10 @@ def test_namespaced_site_detail_route_remains_accessible(
     with TestClient(create_app(home=tmp_path, sites=[site])) as client:
         detail = client.get("/api/sites/whc%3A11")
         assert detail.status_code == 200
-        assert detail.json()["source_kind"] == "unesco" and detail.json()["id"] == "whc:11"
+        assert detail.json() == site.model_dump(mode="json")
+        assert detail.headers["x-archsearch-corpus-version"] == CORPUS_VERSION
+        assert detail.headers["cache-control"] == "no-store"
+
+        missing = client.get("/api/sites/whc%3A999")
+        assert missing.status_code == 404
+        assert "x-archsearch-corpus-version" not in missing.headers

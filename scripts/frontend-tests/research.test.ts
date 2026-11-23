@@ -75,6 +75,30 @@ interface RegisteredAreaSnapshot {
     geometry_type: 'esriGeometryPolygon'; rings: number[][][] }[];
 }
 
+interface EvidenceSite {
+  id: string;
+  repr_point: [number, number] | null;
+  chronology?: { phases: readonly { id: string }[] };
+}
+interface SiteExportOptions<T extends EvidenceSite> {
+  exportedAt: string;
+  corpusVersion: string | null;
+  selection: ExportResult<never>['selection'];
+  selectedSite: T;
+  map?: HistoryView | null;
+  comparison?: ComparisonSnapshot | null;
+  browse?: BrowseState | null;
+  spatial?: ExportResult<never>['spatial'];
+  registeredAreas?: RegisteredAreaSnapshot | null;
+  registeredAreasVersion?: string | null;
+}
+interface SiteExportResult<T extends EvidenceSite> extends Omit<ExportResult<never>, 'request' | 'response' | 'source' | 'selected_site' | 'schema_version'> {
+  export_kind: 'site-evidence';
+  schema_version: 1;
+  corpus_version: string;
+  selected_site: T;
+}
+
 interface ResearchHelpers {
   parseLink(url: URL): { request: SearchSpec | null; error: string | null };
   parseView(url: URL): { view: HistoryView | null; selection: { site: string | null; phase: string | null }; error: string | null };
@@ -84,6 +108,7 @@ interface ResearchHelpers {
   createExampleIntent(): { invalidate(): void; run(prepare: () => Promise<void>, ready: () => boolean, submit: () => void, error: (value: unknown) => void): Promise<void> };
   buildLink(base: URL, request: SearchSpec | null, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, browse?: BrowseState | null, comparison?: ComparisonState | null): string;
   createExport<T>(request: SearchSpec, response: SearchResponse<T>, exportedAt: string, view?: HistoryView | null, selection?: { site: string | null; phase: string | null }, selectedSite?: unknown, browse?: BrowseState | null, spatial?: ExportResult<T>['spatial'], registeredAreas?: RegisteredAreaSnapshot | null, currentCorpusVersion?: string | null, currentRegisteredAreasVersion?: string | null, comparison?: ComparisonSnapshot | null): ExportResult<T>;
+  createSiteExport<T extends EvidenceSite>(options: SiteExportOptions<T>): SiteExportResult<T>;
   automaticPhaseYear(phase: { precision: string; start_year: number | null; end_year: number | null }): number | null;
   normalizeSubdivision(country: string | null | undefined, value: unknown): string | null;
   validateSubdivisionResponse(request: Pick<SearchSpec, 'country' | 'subdivision'>, response: { subdivision?: unknown; subdivision_version?: unknown }, expectedVersion?: string | null): string | null;
@@ -135,6 +160,7 @@ assert.ok(typeof candidate === 'object' && candidate !== null);
 assert.ok('parseLink' in candidate && typeof candidate.parseLink === 'function');
 assert.ok('buildLink' in candidate && typeof candidate.buildLink === 'function');
 assert.ok('createExport' in candidate && typeof candidate.createExport === 'function');
+assert.ok('createSiteExport' in candidate && typeof candidate.createSiteExport === 'function');
 const helpers = candidate as ResearchHelpers;
 
 const minasId = `auth:br-iepha-mg:scope-${'a'.repeat(64)}`;
@@ -420,6 +446,79 @@ test('matching-context registered range exports reject unversioned or degenerate
   assert.throws(() => helpers.createExport(...baseArgs, { ...snapshot, version: null }), /版本/u);
   snapshot.features[0].rings = [[[130, -20], [130, -20], [130, -20], [130, -20]]];
   assert.throws(() => helpers.createExport(...baseArgs, snapshot), /三个不同位置/u);
+});
+
+test('site evidence export preserves selected source, committed views and shown areas without search fields', () => {
+  const areas = registeredAreaFixture();
+  const site = {
+    id: areas.site_id,
+    title: 'Source title',
+    repr_point: null,
+    source_refs: [{ title: 'Primary evidence', uri: 'https://example.org/evidence', excerpt: 'Original source text' }],
+    chronology: { phases: [{ id: 'uncertain-date', precision: 'period' }] },
+  };
+  const map: HistoryView = { year: 117, basemap: 'historical', boundaries: true, frame_id: 'retained-frame', source_version: 'history-v1' };
+  const comparison: ComparisonSnapshot = {
+    layout: 'stacked', sync_centers: false,
+    modern: { role: 'modern-location', basemap: 'natural', view: { center: [179, -20], zoom: 5 } },
+    historical: { role: 'historical-polities', basemap: 'natural', view: null, year: 117, boundaries: true, frame_id: 'retained-frame', source_version: 'history-v1' },
+  };
+  const browse: BrowseState = { country: 'AU', region: null, offset: 0, visible: true, chronology: 'reviewed', bbox: [179, -21, -179, -20], spatial_version: 'spatial-v1' };
+  const spatial: NonNullable<SiteExportOptions<EvidenceSite>['spatial']> = {
+    metadata: { version: 'spatial-v1' },
+    selected: { site_id: site.id, representative_point: null, source_points: [[179, -20]], records: [{ source_index: 0, coordinate: [179, -20], name: 'Original label', ref: 'record-ref' }],
+      source: { name: 'Licensed source', uri: 'https://example.org/source', version: '1', license: 'CC BY 4.0', license_uri: 'https://creativecommons.org/licenses/by/4.0/', sha256: 'f'.repeat(64) } },
+  };
+  const report = helpers.createSiteExport({
+    exportedAt: '2026-11-23T00:00:00Z', corpusVersion: areas.corpus_version, selection: { site: site.id, phase: 'uncertain-date' },
+    selectedSite: site, map, comparison, browse, spatial, registeredAreas: areas, registeredAreasVersion: areas.version,
+  });
+  assert.equal(report.export_kind, 'site-evidence');
+  assert.equal(report.schema_version, 1);
+  assert.equal(report.corpus_version, areas.corpus_version);
+  assert.equal(report.exported_at, '2026-11-23T00:00:00Z');
+  assert.deepEqual(plain(report.selection), { site: site.id, phase: 'uncertain-date' });
+  assert.deepEqual(plain(report.map), map);
+  assert.deepEqual(plain(report.comparison), comparison);
+  assert.deepEqual(plain(report.browse), browse);
+  assert.deepEqual(plain(report.selected_site), site);
+  assert.deepEqual(plain(report.registered_areas), areas);
+  assert.deepEqual(plain(report.spatial), spatial);
+  assert.equal(report.sources.find(source => source.name === 'Cliopatria')?.version, 'history-v1');
+  assert.equal(report.sources.find(source => source.name === 'OpenStreetMap contributors')?.displayed, false);
+  for (const field of ['request', 'response', 'results', 'rank', 'score', 'source']) assert.ok(!(field in report), field);
+  assert.ok(!('scores' in report.provenance) && !('enhancement' in report.provenance));
+  site.source_refs[0].excerpt = 'Mutated source';
+  spatial.selected!.records[0].name = 'Mutated label';
+  assert.equal(report.selected_site.source_refs[0].excerpt, 'Original source text');
+  assert.equal(report.spatial?.selected?.records[0].name, 'Original label');
+});
+
+test('site evidence export binds identity, phase and directory evidence and omits stale shown areas', () => {
+  const areas = registeredAreaFixture();
+  const site = { id: areas.site_id, repr_point: [179, -20] as [number, number], chronology: { phases: [{ id: 'valid-phase' }] } };
+  const options: SiteExportOptions<typeof site> = {
+    exportedAt: '2026-11-23T00:00:00Z', corpusVersion: areas.corpus_version, selectedSite: site,
+    selection: { site: site.id, phase: 'valid-phase' },
+    browse: { country: null, region: null, offset: 0, visible: true, spatial_version: 'spatial-v1' },
+    spatial: { metadata: { version: 'spatial-v1' }, selected: { site_id: site.id, representative_point: site.repr_point, source_points: [], records: [] } },
+    registeredAreas: areas, registeredAreasVersion: areas.version,
+  };
+  assert.throws(() => helpers.createSiteExport({ ...options, selection: { site: '', phase: null }, selectedSite: { ...site, id: '' } }), /资料编号/u);
+  assert.throws(() => helpers.createSiteExport({ ...options, selection: { site: 'whc:2', phase: 'valid-phase' } }), /资料编号/u);
+  assert.throws(() => helpers.createSiteExport({ ...options, corpusVersion: null }), /语料版本/u);
+  assert.throws(() => helpers.createSiteExport({ ...options, selection: { site: site.id, phase: 'absent' } }), /选中阶段/u);
+  const makeSpatial = (change: Partial<NonNullable<NonNullable<SiteExportOptions<EvidenceSite>['spatial']>['selected']>>) =>
+    ({ ...options.spatial!, selected: { ...options.spatial!.selected!, ...change } });
+  assert.throws(() => helpers.createSiteExport({ ...options, spatial: makeSpatial({ site_id: 'whc:2' }) }), /源定位快照.*选中资料/u);
+  assert.throws(() => helpers.createSiteExport({ ...options, spatial: makeSpatial({ representative_point: null }) }), /源定位快照.*选中资料/u);
+  assert.throws(() => helpers.createSiteExport({ ...options, spatial: { ...options.spatial!, metadata: { version: 'stale-version' } } }), /源定位快照.*目录版本/u);
+  assert.equal(helpers.createSiteExport({ ...options, registeredAreasVersion: 'older-areas' }).registered_areas, null);
+  assert.equal(helpers.createSiteExport({ ...options, registeredAreas: { ...areas, corpus_version: 'other-corpus' } }).registered_areas, null);
+  const withoutMaps = helpers.createSiteExport({ ...options, browse: null, spatial: null, registeredAreas: null });
+  assert.equal(withoutMaps.map, null);
+  assert.equal(withoutMaps.comparison, undefined);
+  assert.equal(withoutMaps.registered_areas, null);
 });
 
 const request: SearchSpec = { query: '古代港口', mode: 'semantic', type: 'port', limit: 20 };
