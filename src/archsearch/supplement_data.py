@@ -6,13 +6,16 @@ import argparse
 import hashlib
 import json
 import math
+from collections.abc import Iterator
+from contextlib import contextmanager
+from contextvars import ContextVar
 from datetime import date
 from pathlib import Path, PurePosixPath, PureWindowsPath
 from types import MappingProxyType
 from typing import Any, Literal
 from urllib.parse import urlsplit
 
-from pydantic import BaseModel, ConfigDict, Field, model_validator
+from pydantic import BaseModel, ConfigDict, Field, TypeAdapter, model_validator
 
 from archsearch.domain import Site
 
@@ -28,6 +31,10 @@ SITES_SHA256 = "b1aac96510bd46942f4ed7925f08cc83a568f7d2f6ee653b34aa8ce2653aa1fb
 EXPECTED_COUNTRIES = frozenset(
     "BI BN BS BT BZ CD CF CG CK DJ DM GD GN GQ GW GY KI KW LC LI LR MC MV NR NU "
     "SB SC SL SO SS SZ TL TO TT TV VC WS ZM".split()
+)
+_CONTENT_KEY = TypeAdapter(dict[str, Any], config=ConfigDict(ser_json_inf_nan="constants"))
+_BASE_CONTRACT_FRAGMENTS: ContextVar[dict[str, tuple[bytes, bytes]] | None] = ContextVar(
+    "base_contract_fragments", default=None,
 )
 
 
@@ -166,11 +173,42 @@ def _hash(value: bytes) -> str:
     return hashlib.sha256(value).hexdigest()
 
 
+@contextmanager
+def reuse_base_contract_fragments() -> Iterator[None]:
+    """Reuse record encoding within one complete corpus load."""
+    token = _BASE_CONTRACT_FRAGMENTS.set({})
+    try:
+        yield
+    finally:
+        _BASE_CONTRACT_FRAGMENTS.reset(token)
+
+
+def _base_sites_hash(sites: list[Site]) -> str:
+    fragments = _BASE_CONTRACT_FRAGMENTS.get()
+    if fragments is None or not sites:
+        return _hash(_bytes([site.model_dump(mode="json") for site in sites]))
+    digest = hashlib.sha256(b"[\n")
+    separator = b""
+    for site in sites:
+        snapshot = site.model_dump(mode="json")
+        content_key = _CONTENT_KEY.dump_json(snapshot)
+        previous_key, fragment = fragments.get(site.id, (None, b""))
+        if previous_key != content_key:
+            # A one-element array supplies the original indentation for each record.
+            fragment = _bytes([snapshot])[2:-3]
+            fragments[site.id] = (content_key, fragment)
+        digest.update(separator)
+        digest.update(fragment)
+        separator = b",\n"
+    digest.update(b"\n]\n")
+    return digest.hexdigest()
+
+
 def base_contract(sites: list[Site]) -> dict[str, str | int]:
     return {
         "base_count": len(sites),
         "base_ids_sha256": _hash(_bytes([site.id for site in sites])),
-        "base_sites_sha256": _hash(_bytes([site.model_dump(mode="json") for site in sites])),
+        "base_sites_sha256": _base_sites_hash(sites),
     }
 
 

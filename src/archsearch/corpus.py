@@ -507,16 +507,20 @@ def load_named_places_v1_corpus(data_dir: Path | None = None) -> list[Site]:
 
 def load_corpus(data_dir: Path | None = None) -> list[Site]:
     """Load the current source-verified corpus for retrieval and catalogue browsing."""
+    from archsearch.supplement_data import reuse_base_contract_fragments
     from archsearch.target_data import GUYANA, TargetDataError, load_targets
 
-    base = load_named_places_v1_corpus(data_dir)
-    directory = Path(data_dir) if data_dir is not None else DATA_DIR
-    if data_dir is not None and not any((directory / name).exists() for name in GUYANA.filenames):
-        return base
-    try:
-        return load_targets(base, directory, cohort=GUYANA)
-    except TargetDataError as error:
-        raise CorpusError(str(error)) from error
+    with reuse_base_contract_fragments():
+        base = load_named_places_v1_corpus(data_dir)
+        directory = Path(data_dir) if data_dir is not None else DATA_DIR
+        if data_dir is not None and not any(
+            (directory / name).exists() for name in GUYANA.filenames
+        ):
+            return base
+        try:
+            return load_targets(base, directory, cohort=GUYANA)
+        except TargetDataError as error:
+            raise CorpusError(str(error)) from error
 
 
 def _archive_members(archive_path: Path) -> Iterable[tuple[str, bytes]]:
