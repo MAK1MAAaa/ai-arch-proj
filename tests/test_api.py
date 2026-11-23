@@ -3,6 +3,7 @@ from unittest.mock import Mock
 
 import numpy as np
 import pytest
+from api_test_app import create_test_app
 from fastapi.testclient import TestClient
 
 from archsearch.api import create_app
@@ -14,12 +15,13 @@ from archsearch.index import IndexUnavailable, SemanticIndex
 
 @pytest.fixture
 def client(tmp_path: Path, sample_sites: list[Site]) -> TestClient:
-    return TestClient(create_app(home=tmp_path, sites=sample_sites))
+    return TestClient(create_test_app(tmp_path, sample_sites))
 
 
 def test_offline_status_and_bm25_without_model(
-    client: TestClient, sample_sites: list[Site]
+    tmp_path: Path, sample_sites: list[Site],
 ) -> None:
+    client = TestClient(create_app(home=tmp_path, sites=sample_sites))
     status = client.get("/api/status")
     assert status.status_code == 200
     assert status.json()["semantic"]["ready"] is False
@@ -75,7 +77,7 @@ def test_semantic_ranking_uses_query_and_returns_source_evidence(
     semantic.sites = sites
     semantic.status.return_value = (True, None)
     semantic.scores.return_value = np.asarray([0.1, 0.9, 0.3], dtype=np.float32)
-    with TestClient(create_app(home=tmp_path, sites=sites, semantic=semantic)) as client:
+    with TestClient(create_test_app(tmp_path, sites, semantic=semantic)) as client:
         response = client.post("/api/search", json={"query": "  港口  ", "limit": 2})
         assert response.status_code == 200
         data = response.json()
@@ -126,7 +128,7 @@ def test_history_status_and_year_frame_are_independent_of_semantic_model(
     sample_sites: list[Site],
 ) -> None:
     history = historical_store()
-    with TestClient(create_app(home=tmp_path, sites=sample_sites, history=history)) as client:
+    with TestClient(create_test_app(tmp_path, sample_sites, history=history)) as client:
         status = client.get("/api/status").json()
         assert status["semantic"]["ready"] is False and status["history"]["ready"] is True
         assert status["history"]["version"] == "v0.2.1"
@@ -163,7 +165,7 @@ def test_history_year_is_strict_and_validated_before_store_access(
     suffix: str,
 ) -> None:
     history = historical_store()
-    with TestClient(create_app(home=tmp_path, sites=sample_sites, history=history)) as client:
+    with TestClient(create_test_app(tmp_path, sample_sites, history=history)) as client:
         response = client.get("/api/history/boundaries" + suffix)
         assert response.status_code == 422
         assert response.headers["cache-control"] == "no-store"
@@ -185,7 +187,7 @@ def test_history_conditional_get_has_empty_304_and_security_headers(
     conditional: str,
 ) -> None:
     with TestClient(
-        create_app(home=tmp_path, sites=sample_sites, history=historical_store())
+        create_test_app(tmp_path, sample_sites, history=historical_store())
     ) as client:
         response = client.get(
             "/api/history/boundaries?year=117", headers={"If-None-Match": conditional}
@@ -206,7 +208,7 @@ def test_history_cache_miss_and_malformed_conditions_return_full_frame(
     conditional: str,
 ) -> None:
     with TestClient(
-        create_app(home=tmp_path, sites=sample_sites, history=historical_store())
+        create_test_app(tmp_path, sample_sites, history=historical_store())
     ) as client:
         response = client.get(
             "/api/history/boundaries?year=117", headers={"If-None-Match": conditional}
@@ -224,7 +226,7 @@ def test_large_history_json_is_gzipped_with_semantic_etag(
     frame["source_fixture_description"] = "历史资料" * 1000
     history.boundaries.side_effect = None
     history.boundaries.return_value = frame, etag
-    with TestClient(create_app(home=tmp_path, sites=sample_sites, history=history)) as client:
+    with TestClient(create_test_app(tmp_path, sample_sites, history=history)) as client:
         compressed = client.get(
             "/api/history/boundaries?year=117", headers={"Accept-Encoding": "gzip"}
         )
@@ -249,7 +251,7 @@ def test_unprepared_and_corrupt_history_return_503_with_prepare_guidance(
     assert response.headers["cache-control"] == "no-store" and "etag" not in response.headers
     history = historical_store()
     history.boundaries.side_effect = HistoryUnavailable("历史记录校验失败")
-    with TestClient(create_app(home=tmp_path, sites=sample_sites, history=history)) as broken:
+    with TestClient(create_test_app(tmp_path, sample_sites, history=history)) as broken:
         response = broken.get("/api/history/boundaries?year=117")
         assert response.status_code == 503
         assert "校验失败" in response.json()["detail"]
@@ -258,7 +260,7 @@ def test_unprepared_and_corrupt_history_return_503_with_prepare_guidance(
 
 
 @pytest.fixture
-def mapped_client(tmp_path: Path, sample_sites: list[Site]) -> TestClient:
+def mapped_sites(sample_sites: list[Site]) -> list[Site]:
     source = SourceReference(
         id="geo", title="Source-declared catalogue membership",
         uri="https://example.org/geo", publisher="Test catalogue",
@@ -270,10 +272,18 @@ def mapped_client(tmp_path: Path, sample_sites: list[Site]) -> TestClient:
     sites[1] = sites[1].model_copy(update={"geography": Geography(
         authority_id="12", countries=[], regions=["arab-states"], source=source,
     )})
-    return TestClient(create_app(home=tmp_path, sites=sites))
+    return sites
 
 
-def test_coverage_and_catalogue_are_available_without_models(mapped_client: TestClient) -> None:
+@pytest.fixture
+def mapped_client(tmp_path: Path, mapped_sites: list[Site]) -> TestClient:
+    return TestClient(create_test_app(tmp_path, mapped_sites))
+
+
+def test_coverage_and_catalogue_are_available_without_models(
+    tmp_path: Path, mapped_sites: list[Site],
+) -> None:
+    mapped_client = TestClient(create_app(home=tmp_path, sites=mapped_sites))
     response = mapped_client.get("/api/coverage")
     assert response.status_code == 200
     coverage = response.json()
@@ -348,7 +358,7 @@ def test_namespaced_site_detail_preserves_record_and_identifies_corpus_version(
         authority_id="11", countries=["CN"], regions=["asia-pacific"], source=source,
     ))
     site = Site.model_validate(value)
-    with TestClient(create_app(home=tmp_path, sites=[site])) as client:
+    with TestClient(create_test_app(tmp_path, [site])) as client:
         detail = client.get("/api/sites/whc%3A11")
         assert detail.status_code == 200
         assert detail.json() == site.model_dump(mode="json")

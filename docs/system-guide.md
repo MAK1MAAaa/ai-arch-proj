@@ -705,6 +705,16 @@ Recall@5以已标注相关地点为分母，nDCG@10采用分级收益；候选�
 
 ### 验证
 
+改动接口时可先快速回归检索、疆域 HTTP 缓存、模型配置与语义并发。
+
+```powershell
+uv run --no-sync pytest tests/test_api.py tests/test_llm_api.py tests/test_semantic_concurrency.py
+```
+
+接口用例使用小型地理夹具，调用实际路由、中间件和检索引擎。默认应用装配由离线状态和目录用例覆盖，地区整合用例继续验证随仓语料、来源坐标、辖区和登记范围。
+
+提交前运行全量检查。
+
 ```powershell
 uv run --no-sync python -m archsearch.corpus
 uv run --no-sync ruff check .
