@@ -266,7 +266,14 @@
               <footer class="reference-footer"><span class="reference-footer-brand">考古图志</span><p>具体资料的许可与版本以各条原始来源为准。</p></footer>
             </div>
           </details></main></div><dialog id="detail-dialog" class="detail-dialog" aria-labelledby="detail-title"><aside id="detail-panel" class="detail-panel" aria-labelledby="detail-title" tabindex="-1" hidden>
-                <div class="detail-topline"><span class="eyebrow small-eyebrow">SOURCE NOTE / 资料详情</span><button id="close-detail" class="icon-button" type="button" aria-label="关闭资料详情"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.4"/></svg></button></div>
+                <div class="detail-topline">
+                  <span class="eyebrow small-eyebrow">SOURCE NOTE / 资料详情</span>
+                  <div class="detail-topline-actions">
+                    <button id="export-site-evidence" class="interaction-button" type="button" aria-describedby="site-export-feedback" disabled>导出资料 JSON</button>
+                    <button id="close-detail" class="icon-button" type="button" aria-label="关闭资料详情"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.4"/></svg></button>
+                  </div>
+                  <p id="site-export-feedback" class="site-export-feedback" role="status" aria-live="polite" hidden></p>
+                </div>
                 <div id="detail-content"></div>
                 <section id="registered-areas" class="detail-section registered-areas" aria-labelledby="registered-areas-title" aria-busy="false" hidden>
                   <h4 id="registered-areas-title"><span class="registered-area-swatch" aria-hidden="true"></span><span id="registered-areas-label">来源公开范围</span></h4>
