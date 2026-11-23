@@ -70,6 +70,22 @@ test('the workspace opens results and exposes one keyboard tab stop without chan
   const h=setup();assert.equal(h.node('workspace-results-view').hidden,false);assert.equal(h.node('workspace-catalogue-view').hidden,true);
   assert.equal(h.node('workspace-tab-results').tabIndex,0);assert.equal(h.node('workspace-tab-catalogue').tabIndex,-1);assert.equal(h.writes.length,0);
 });
+
+test('search progress, cancellation and retry are reachable outside the collapsible sidebar', () => {
+  const html = readFileSync('src/archsearch/static/index.html','utf8');
+  const form = html.match(/<form id="search-form"[^>]*>([\s\S]*?)<\/form>/)?.[1];
+  assert.ok(form);
+  assert.match(form, /<div id="search-progress"[^>]*\bhidden\b/);
+  assert.match(form, /<p id="search-progress-label"[^>]*tabindex="-1"/);
+  assert.match(form, /<button id="cancel-search"[^>]*type="button"/);
+  const sidebar = html.indexOf('id="workspace-sidebar"');
+  const error = html.indexOf('id="request-error"');
+  const retry = html.indexOf('id="retry-search"');
+  assert.ok(error > 0 && error < retry && retry < sidebar);
+  for (const id of ['search-progress','search-progress-label','cancel-search','retry-panel','retry-search']) {
+    assert.equal(html.split(`id="${id}"`).length, 2, id);
+  }
+});
 test('tabs support arrows and Home/End, with explicit focus and resize notifications',()=>{
   const h=setup();const before=h.changes();
   assert.equal(h.node('workspace-tab-results').fire('keydown',{key:'ArrowRight'}).defaultPrevented,true);
