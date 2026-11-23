@@ -905,7 +905,6 @@
     ui.resultTools.hidden = false;
     ArchSearchWorkspace.activateResults({ focus: false });
     ui.copyLink.disabled = boundsRestoreError !== null;
-    ui.exportResults.disabled = boundsRestoreError !== null;
     ui.toolsFeedback.textContent = "";
     ui.shareLinkPanel.hidden = true;
     ui.shareLink.value = boundsRestoreError !== null ? currentLink : state.completedSearch.link;
@@ -975,19 +974,32 @@
       ui.toolsFeedback.textContent = "地图范围尚未恢复；先明确清除或重新捕获范围，再复制或导出研究视图。";
       return;
     }
-    if (state.selectedId && !currentSelectedSite()) {
-      ui.toolsFeedback.textContent = "请等待选中遗址资料读取完成，再导出完整来源附录。";
-      return;
-    }
     try {
       const exportedAt = new Date().toISOString();
       const map = historyView?.getView() ?? null;
+      const browse = explore?.getCommittedState() ?? null;
+      const coverage = explore?.getCoverageSummary() ?? null;
+      const areas = registeredAreas?.getSnapshot() ?? null;
+      const evidence = ArchSearchResearch.selectSearchExportEvidence({
+        search: completed.response, selection: { site: state.selectedId, phase: selectedPhaseId },
+        displayedSite: currentSelectedSite(), verifiedDetail,
+        catalogue: coverage && browse ? { corpusVersion: coverage.version, browse, getSpatial: exportSpatial } : null,
+      });
       const report = ArchSearchResearch.createExport(completed.request, completed.response, exportedAt, map,
-        { site: state.selectedId, phase: selectedPhaseId }, currentSelectedSite(), explore?.getCommittedState() ?? null,
-        exportSpatial(state.selectedSite), registeredAreas?.getSnapshot() ?? null, currentCorpusVersion,
+        evidence.selection, evidence.selectedSite, evidence.browse, evidence.spatial, areas, currentCorpusVersion,
         currentRegisteredAreasVersion, mapComparison?.snapshot(map) ?? null);
       downloadJson(`archsearch-${completed.request.mode}-${exportedAt.replace(/[:.]/g, "-")}.json`, report);
-      ui.toolsFeedback.textContent = `已生成 ${completed.response.results.length} 条结果的 JSON 文件，包含原文、检索条件、分数与来源。`;
+      const omitted: string[] = [];
+      if (evidence.selectionStatus === "omitted") omitted.push("选中遗址资料");
+      else if (evidence.phaseOmitted) omitted.push("选中阶段");
+      if (evidence.catalogueOmitted) omitted.push("目录和来源点");
+      else if (evidence.spatialOmitted) omitted.push("来源点");
+      if (areas && !report.registered_areas) omitted.push("登记范围");
+      ui.toolsFeedback.textContent = [
+        `已生成 ${completed.response.results.length} 条检索结果的 JSON 文件。`,
+        ...(evidence.selectionStatus === "ranked" ? ["遗址附录采用检索时的记录。"] : []),
+        ...(omitted.length ? [`已省略无法确认同版来源的${omitted.join("、")}。`] : []),
+      ].join(" ");
     } catch {
       ui.toolsFeedback.textContent = "结果文件未能生成，请重试或检查浏览器的下载设置。";
     }
@@ -1271,6 +1283,7 @@
   }
 
   function saveViewLink(): void {
+    ui.exportResults.disabled = state.completedSearch === null || boundsRestoreError !== null;
     if (initialStatePending || invalidLink || boundsRestoreError !== null || pendingSelectionRestore || unresolvedSearchLink) return;
     const link = ArchSearchResearch.buildLink(new URL(window.location.href), state.completedSearch?.request ?? null,
       historyView?.getView() ?? null, { site: state.selectedId, phase: selectedPhaseId }, explore?.getCommittedState() ?? null, mapComparison?.state() ?? null);
@@ -1280,7 +1293,6 @@
     ui.resultTools.hidden = !state.completedSearch && !state.selectedSite && historyView?.getView() == null
       && explore?.getCommittedState() == null;
     ui.copyLink.disabled = false;
-    ui.exportResults.disabled = state.completedSearch === null || (state.selectedId !== null && currentSelectedSite() === null);
     try { window.history.replaceState(null, "", link); } catch { /* Copy remains available. */ }
   }
 
@@ -1660,7 +1672,6 @@
     state.selectedId = id;
     state.selectedSite = known;
     resetSiteExport();
-    ui.exportResults.disabled = boundsRestoreError !== null || state.completedSearch === null || known === null;
     selectedPhaseId = null;
     markSelection(id);
     registeredAreas?.select(id, known ? displayTitle(known) : id);

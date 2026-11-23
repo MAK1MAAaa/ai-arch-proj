@@ -555,6 +555,17 @@ const ArchSearchResearch = (() => {
     } | null;
   }
 
+  function spatialMetadataVersion(spatial: SpatialSnapshot): unknown {
+    const metadata = spatial.metadata;
+    return metadata && typeof metadata === "object" && "version" in metadata ? metadata.version : null;
+  }
+
+  function matchesSpatialSelection(location: SpatialSnapshot["selected"], site: EvidenceSite | null): boolean {
+    if (!site) return location === null;
+    return location?.site_id === site.id
+      && JSON.stringify(location.representative_point) === JSON.stringify(site.repr_point);
+  }
+
   type RegisteredAreasSnapshot = NonNullable<ReturnType<ReturnType<typeof ArchSearchRegisteredAreas.create>["getSnapshot"]>>;
 
   function exportBrowse(browse: BrowseState | null): BrowseState | null {
@@ -684,6 +695,53 @@ const ArchSearchResearch = (() => {
     chronology?: { phases: readonly { id: string }[] };
   }
 
+  interface SearchExportEvidenceOptions<T extends EvidenceSite> {
+    search: Pick<SearchResponse<{ site: T }>, "corpus_version" | "results">;
+    selection: Selection;
+    displayedSite: T | null;
+    verifiedDetail: { site: T; corpusVersion: string } | null;
+    catalogue: {
+      corpusVersion: string;
+      browse: BrowseState;
+      getSpatial(site: T | null): SpatialSnapshot | null;
+    } | null;
+  }
+
+  function selectSearchExportEvidence<T extends EvidenceSite>({
+    search, selection, displayedSite, verifiedDetail, catalogue,
+  }: SearchExportEvidenceOptions<T>) {
+    const siteId = selection.site?.trim() ? selection.site : null;
+    const searchVersion = typeof search.corpus_version === "string" && search.corpus_version.trim() ? search.corpus_version : null;
+    const verifiedSite = siteId && searchVersion !== null && verifiedDetail?.corpusVersion === searchVersion
+      && verifiedDetail.site.id === siteId ? verifiedDetail.site : null;
+    const rankedSite = siteId ? search.results.find(({ site }) => site.id === siteId)?.site ?? null : null;
+    const selectedSite = verifiedSite ?? rankedSite;
+    const savedPhase = selectedSite?.chronology?.phases.find(({ id }) => id === selection.phase);
+    const displayedPhase = displayedSite?.id === siteId
+      ? displayedSite.chronology?.phases.find(({ id }) => id === selection.phase) : undefined;
+    const phase = savedPhase && (verifiedSite || JSON.stringify(savedPhase) === JSON.stringify(displayedPhase)) ? selection.phase : null;
+    const matchingCatalogue = searchVersion !== null && catalogue?.corpusVersion === searchVersion ? catalogue : null;
+    const browse = matchingCatalogue?.browse ?? null;
+    const catalogueSpatial = matchingCatalogue?.getSpatial(selectedSite) ?? null;
+    const spatialVersion = browse?.spatial_version;
+    const hasMatchingSpatial = catalogueSpatial && spatialVersion !== undefined && spatialVersion === spatialMetadataVersion(catalogueSpatial)
+      && matchesSpatialSelection(catalogueSpatial.selected, selectedSite)
+      && (spatialVersion !== null || (!catalogueSpatial.selected?.source_points.length
+        && !catalogueSpatial.selected?.records.length && !catalogueSpatial.selected?.source));
+    const spatial = hasMatchingSpatial ? catalogueSpatial : null;
+    return {
+      selection: { site: selectedSite?.id ?? null, phase },
+      selectedSite,
+      browse,
+      spatial,
+      selectionStatus: verifiedSite ? "verified" as const : rankedSite ? "ranked" as const
+        : siteId ? "omitted" as const : "none" as const,
+      phaseOmitted: selectedSite !== null && selection.phase !== null && phase === null,
+      catalogueOmitted: catalogue !== null && matchingCatalogue === null,
+      spatialOmitted: catalogueSpatial !== null && spatial === null,
+    };
+  }
+
   interface SiteExportOptions<T extends EvidenceSite> {
     exportedAt: string;
     corpusVersion: string | null;
@@ -709,15 +767,10 @@ const ArchSearchResearch = (() => {
       throw new Error("选中阶段不属于导出的资料。");
     }
     if (spatial) {
-      const point = selectedSite.repr_point;
-      const location = spatial.selected;
-      if (!location || location.site_id !== selectedSite.id
-        || JSON.stringify(location.representative_point) !== JSON.stringify(point)) {
+      if (!matchesSpatialSelection(spatial.selected, selectedSite)) {
         throw new Error("源定位快照与选中资料不一致。");
       }
-      const metadata = spatial.metadata;
-      const version = metadata && typeof metadata === "object" && "version" in metadata ? metadata.version : null;
-      if (browse?.spatial_version !== undefined && browse.spatial_version !== version) {
+      if (browse?.spatial_version !== undefined && browse.spatial_version !== spatialMetadataVersion(spatial)) {
         throw new Error("源定位快照与已应用目录版本不一致。");
       }
     }
@@ -749,5 +802,5 @@ const ArchSearchResearch = (() => {
     };
   }
 
-  return { parseLink, parseView, parseBrowse, parseComparison, buildLink, createExport, createSiteExport, descriptionLabel, createExampleIntent, validYear, automaticPhaseYear, normalizeBBox, parseBBox, normalizeSubdivision, validateSubdivisionResponse, validateEnhancement, parseMinasSource, minasSourceFields, parseMerimeeSource, merimeeSourceFields };
+  return { parseLink, parseView, parseBrowse, parseComparison, buildLink, createExport, createSiteExport, selectSearchExportEvidence, descriptionLabel, createExampleIntent, validYear, automaticPhaseYear, normalizeBBox, parseBBox, normalizeSubdivision, validateSubdivisionResponse, validateEnhancement, parseMinasSource, minasSourceFields, parseMerimeeSource, merimeeSourceFields };
 })();

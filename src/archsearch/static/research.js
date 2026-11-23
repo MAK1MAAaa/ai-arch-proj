@@ -521,6 +521,16 @@ const ArchSearchResearch = (() => {
         }
         return url.href;
     }
+    function spatialMetadataVersion(spatial) {
+        const metadata = spatial.metadata;
+        return metadata && typeof metadata === "object" && "version" in metadata ? metadata.version : null;
+    }
+    function matchesSpatialSelection(location, site) {
+        if (!site)
+            return location === null;
+        return location?.site_id === site.id
+            && JSON.stringify(location.representative_point) === JSON.stringify(site.repr_point);
+    }
     function exportBrowse(browse) {
         if (!browse)
             return null;
@@ -636,6 +646,38 @@ const ArchSearchResearch = (() => {
                 : "加拿大采用整体省区原字段；香港采用有明确整体／要素关联的来源要素地区；巴西Iepha-MG采用原登记行municipio全文值；Mérimée采用原记录Commune_forme_editoriale全文值，多地值不自动拆分。来源要素／原记录关联不表示整体或全部组成部分都属于该地区，不由坐标、省界或历史政权推断。request/response与browse各保存其独立成功条件；subdivision_version为各自实际应用的来源索引版本，未成功的待选条件不冒充已显示范围。",
         };
     }
+    function selectSearchExportEvidence({ search, selection, displayedSite, verifiedDetail, catalogue, }) {
+        const siteId = selection.site?.trim() ? selection.site : null;
+        const searchVersion = typeof search.corpus_version === "string" && search.corpus_version.trim() ? search.corpus_version : null;
+        const verifiedSite = siteId && searchVersion !== null && verifiedDetail?.corpusVersion === searchVersion
+            && verifiedDetail.site.id === siteId ? verifiedDetail.site : null;
+        const rankedSite = siteId ? search.results.find(({ site }) => site.id === siteId)?.site ?? null : null;
+        const selectedSite = verifiedSite ?? rankedSite;
+        const savedPhase = selectedSite?.chronology?.phases.find(({ id }) => id === selection.phase);
+        const displayedPhase = displayedSite?.id === siteId
+            ? displayedSite.chronology?.phases.find(({ id }) => id === selection.phase) : undefined;
+        const phase = savedPhase && (verifiedSite || JSON.stringify(savedPhase) === JSON.stringify(displayedPhase)) ? selection.phase : null;
+        const matchingCatalogue = searchVersion !== null && catalogue?.corpusVersion === searchVersion ? catalogue : null;
+        const browse = matchingCatalogue?.browse ?? null;
+        const catalogueSpatial = matchingCatalogue?.getSpatial(selectedSite) ?? null;
+        const spatialVersion = browse?.spatial_version;
+        const hasMatchingSpatial = catalogueSpatial && spatialVersion !== undefined && spatialVersion === spatialMetadataVersion(catalogueSpatial)
+            && matchesSpatialSelection(catalogueSpatial.selected, selectedSite)
+            && (spatialVersion !== null || (!catalogueSpatial.selected?.source_points.length
+                && !catalogueSpatial.selected?.records.length && !catalogueSpatial.selected?.source));
+        const spatial = hasMatchingSpatial ? catalogueSpatial : null;
+        return {
+            selection: { site: selectedSite?.id ?? null, phase },
+            selectedSite,
+            browse,
+            spatial,
+            selectionStatus: verifiedSite ? "verified" : rankedSite ? "ranked"
+                : siteId ? "omitted" : "none",
+            phaseOmitted: selectedSite !== null && selection.phase !== null && phase === null,
+            catalogueOmitted: catalogue !== null && matchingCatalogue === null,
+            spatialOmitted: catalogueSpatial !== null && spatial === null,
+        };
+    }
     function createSiteExport({ exportedAt, corpusVersion, selection, selectedSite, map = null, comparison = null, browse = null, spatial = null, registeredAreas = null, registeredAreasVersion = null, }) {
         if (typeof selectedSite?.id !== "string" || !selectedSite.id.trim() || selection.site !== selectedSite.id) {
             throw new Error("选中资料编号与导出快照不一致。");
@@ -646,15 +688,10 @@ const ArchSearchResearch = (() => {
             throw new Error("选中阶段不属于导出的资料。");
         }
         if (spatial) {
-            const point = selectedSite.repr_point;
-            const location = spatial.selected;
-            if (!location || location.site_id !== selectedSite.id
-                || JSON.stringify(location.representative_point) !== JSON.stringify(point)) {
+            if (!matchesSpatialSelection(spatial.selected, selectedSite)) {
                 throw new Error("源定位快照与选中资料不一致。");
             }
-            const metadata = spatial.metadata;
-            const version = metadata && typeof metadata === "object" && "version" in metadata ? metadata.version : null;
-            if (browse?.spatial_version !== undefined && browse.spatial_version !== version) {
+            if (browse?.spatial_version !== undefined && browse.spatial_version !== spatialMetadataVersion(spatial)) {
                 throw new Error("源定位快照与已应用目录版本不一致。");
             }
         }
@@ -690,6 +727,6 @@ const ArchSearchResearch = (() => {
             },
         };
     }
-    return { parseLink, parseView, parseBrowse, parseComparison, buildLink, createExport, createSiteExport, descriptionLabel, createExampleIntent, validYear, automaticPhaseYear, normalizeBBox, parseBBox, normalizeSubdivision, validateSubdivisionResponse, validateEnhancement, parseMinasSource, minasSourceFields, parseMerimeeSource, merimeeSourceFields };
+    return { parseLink, parseView, parseBrowse, parseComparison, buildLink, createExport, createSiteExport, selectSearchExportEvidence, descriptionLabel, createExampleIntent, validYear, automaticPhaseYear, normalizeBBox, parseBBox, normalizeSubdivision, validateSubdivisionResponse, validateEnhancement, parseMinasSource, minasSourceFields, parseMerimeeSource, merimeeSourceFields };
 })();
 //# sourceMappingURL=research.js.map
