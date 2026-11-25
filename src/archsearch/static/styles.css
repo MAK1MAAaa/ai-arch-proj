@@ -2401,17 +2401,159 @@ select {
 }
 
 .comparison-map-heading {
+  position: relative;
+  z-index: 20;
   grid-row: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  gap: 6px;
-  padding: 10px 14px;
+  gap: 8px 12px;
+  min-height: 44px;
+  padding: 8px 14px;
   border-bottom: 1px solid var(--border-subtle);
   background: var(--bg-surface);
 }
 
+.comparison-map-heading h3 {
+  min-width: 0;
+  font: 600 15.5px/1.3 var(--font-serif);
+  color: var(--ink-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.map-status-chip {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  max-width: 58%;
+  outline: none;
+}
+
+.map-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+  min-height: 26px;
+  padding: 3px 10px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-pill);
+  background: var(--bg-subtle-soft);
+  color: var(--ink-secondary);
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: default;
+  box-shadow: var(--shadow-xs);
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.map-status-pill::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  flex: 0 0 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.map-status-chip:hover .map-status-pill,
+.map-status-chip:focus-within .map-status-pill {
+  box-shadow: var(--shadow-sm);
+}
+
+.map-status-chip:focus-visible .map-status-pill {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.is-modern .map-status-pill[data-basemap="osm"] {
+  border-color: rgba(56, 78, 104, 0.24);
+  background: rgba(56, 78, 104, 0.08);
+  color: var(--slate);
+}
+
+.is-modern .map-status-pill[data-basemap="natural"] {
+  border-color: var(--sage-border);
+  background: var(--sage-soft);
+  color: var(--sage-deep);
+}
+
+.is-modern .map-status-pill[data-basemap="loading"] {
+  border-color: var(--border-default);
+  background: var(--bg-subtle-soft);
+  color: var(--ink-secondary);
+}
+
+.is-modern .map-status-pill[data-basemap="unavailable"] {
+  border-color: var(--accent-border);
+  background: var(--accent-soft);
+  color: var(--accent-deep);
+}
+
+/* Historical year pill: yellow when uncertain/reference, green when confirmed */
+.is-history .map-status-pill,
+.map-year-badge {
+  border-color: var(--ochre-border);
+  background: var(--ochre-soft);
+  color: var(--ochre);
+}
+
+.map-status-chip.is-history:has(#history-linkage-status[data-state="matched"]) .map-status-pill {
+  border-color: var(--sage-border);
+  background: var(--sage-soft);
+  color: var(--sage-deep);
+}
+
+.map-status-popover {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 12px;
+  z-index: 30;
+  display: grid;
+  gap: 6px;
+  width: min(340px, calc(100% - 24px));
+  padding: 10px 12px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  background: rgba(253, 251, 247, 0.98);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-6px) scale(0.97);
+  transform-origin: top right;
+  transition: opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1), transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 0.22s;
+}
+
+.map-status-popover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 10px;
+}
+
+.map-status-chip:hover .map-status-popover,
+.map-status-chip:focus-within .map-status-popover,
+.map-status-chip:has(#history-retry:not([hidden]), #modern-boundaries-retry:not([hidden])) .map-status-popover {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+  transition: opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1), transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 0s;
+}
+
 #comparison-modern-status {
+  margin: 0;
   padding: 5px 9px;
   border-left: 3px solid var(--slate);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
@@ -2419,57 +2561,28 @@ select {
   color: var(--slate);
   font-size: 12px;
   font-weight: 500;
-  line-height: 1.5;
-}
-
-.map-frame-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 6px 10px;
-  min-width: 0;
-}
-
-.comparison-map-heading h3 {
-  font: 600 16px/1.3 var(--font-serif);
-  color: var(--ink-primary);
-}
-
-.comparison-map-heading p {
-  font-size: 11px;
   line-height: 1.55;
-  color: var(--ink-muted);
   overflow-wrap: anywhere;
 }
 
-.map-year-badge {
-  display: inline-flex;
-  align-items: center;
-  max-width: 100%;
-  padding: 3px 10px;
-  border: 1px solid var(--ochre-border);
-  border-radius: var(--radius-pill);
-  background: var(--ochre-soft);
-  color: var(--ochre);
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 1.4;
+.comparison-map-heading p {
   overflow-wrap: anywhere;
 }
 
 .map-layer-alert {
+  margin: 0;
   color: var(--accent-deep) !important;
+  font-size: 12px;
   font-weight: 500;
+  line-height: 1.55;
 }
 
 .history-auto-status {
-  display: grid;
-  gap: 4px;
   min-width: 0;
 }
 
 .history-linkage-status {
+  margin: 0;
   padding: 5px 9px;
   border-left: 3px solid var(--ochre);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
@@ -2477,7 +2590,7 @@ select {
   color: var(--ochre);
   font-size: 12px !important;
   font-weight: 500;
-  line-height: 1.5 !important;
+  line-height: 1.55 !important;
 }
 
 .history-linkage-status[data-state="matched"] {
@@ -2494,17 +2607,22 @@ select {
 }
 
 .history-error {
+  margin: 0;
   color: var(--accent-deep) !important;
   font-size: 12px !important;
   font-weight: 600;
+  line-height: 1.55;
 }
 
-#history-retry {
+#history-retry,
+#modern-boundaries-retry {
   justify-self: start;
 }
 
 .comparison-frame .map-shell {
   position: relative;
+  z-index: 1;
+  isolation: isolate;
   grid-row: 2;
   min-height: 320px;
   overflow: hidden;
@@ -2794,70 +2912,95 @@ select {
 .leaflet-bottom.leaflet-right {
   bottom: 10px;
   right: 10px;
-  max-width: calc(100% - 68px);
+  left: 56px;
+  display: flex;
+  justify-content: flex-end;
+  pointer-events: none;
 }
 
-.leaflet-control-attribution {
+.map-attribution-shell {
+  display: inline-flex;
+  align-items: center;
+  pointer-events: auto;
+  outline: none;
+}
+
+.map-attribution-pill {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 0 !important;
-  max-width: 68px;
   min-height: 24px;
-  padding: 3px 9px !important;
+  padding: 3px 9px;
   border: 1px solid var(--border-default);
   border-radius: var(--radius-pill);
-  background: rgba(253, 251, 247, 0.9) !important;
+  background: rgba(253, 251, 247, 0.92);
   backdrop-filter: blur(6px);
-  color: var(--ink-muted) !important;
-  font: 0/1 var(--font-sans) !important;
+  color: var(--ink-secondary);
+  font: 500 10.5px/1.3 var(--font-sans);
+  letter-spacing: 0.02em;
   white-space: nowrap;
-  overflow: hidden;
   box-shadow: var(--shadow-xs);
   cursor: default;
-  transition: max-width 0.18s ease, padding 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease, border-radius 0.16s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.leaflet-control-attribution::before {
-  content: "© 来源";
-  font: 500 10.5px/1.3 var(--font-sans);
-  color: var(--ink-secondary);
-  letter-spacing: 0.02em;
+.map-attribution-shell:hover .map-attribution-pill,
+.map-attribution-shell:focus-within .map-attribution-pill {
+  border-color: var(--accent-border);
+  background: var(--bg-elevated);
+  color: var(--accent-deep);
+  box-shadow: var(--shadow-sm);
 }
 
-.leaflet-control-attribution a {
-  font-size: 0;
-  pointer-events: none;
-  color: var(--sage-deep) !important;
-}
-
-.leaflet-control-attribution:hover,
-.leaflet-control-attribution:focus-within {
-  display: block;
-  max-width: min(360px, 100%);
-  padding: 6px 10px !important;
-  border-color: var(--border-strong);
-  border-radius: var(--radius-sm);
-  background: rgba(253, 251, 247, 0.97) !important;
-  font: 10.5px/1.55 var(--font-sans) !important;
-  white-space: normal;
-  box-shadow: var(--shadow-md);
-}
-
-.leaflet-control-attribution:focus-visible {
+.map-attribution-shell:focus-visible .map-attribution-pill {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
-.leaflet-control-attribution:hover::before,
-.leaflet-control-attribution:focus-within::before {
-  display: none;
+.map-attribution-shell .leaflet-control-attribution {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 8px);
+  width: max-content;
+  max-width: min(320px, 100%);
+  margin: 0 !important;
+  padding: 8px 11px !important;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  background: rgba(253, 251, 247, 0.97) !important;
+  backdrop-filter: blur(10px);
+  color: var(--ink-secondary) !important;
+  font: 11px/1.6 var(--font-sans) !important;
+  white-space: normal;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(6px) scale(0.97);
+  transform-origin: bottom right;
+  transition: opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1), transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 0.22s;
 }
 
-.leaflet-control-attribution:hover a,
-.leaflet-control-attribution:focus-within a {
-  font-size: inherit;
+.map-attribution-shell .leaflet-control-attribution::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 10px;
+}
+
+.map-attribution-shell:hover .leaflet-control-attribution,
+.map-attribution-shell:focus-within .leaflet-control-attribution {
+  opacity: 1;
+  visibility: visible;
   pointer-events: auto;
+  transform: translateY(0) scale(1);
+  transition: opacity 0.22s cubic-bezier(0.22, 1, 0.36, 1), transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 0s;
+}
+
+.map-attribution-shell .leaflet-control-attribution a {
+  color: var(--sage-deep) !important;
 }
 
 .leaflet-bottom.leaflet-left {

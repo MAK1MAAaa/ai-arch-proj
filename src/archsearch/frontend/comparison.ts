@@ -43,6 +43,7 @@ const ArchSearchComparison = (() => {
     const ui = {
       osm: byId<HTMLButtonElement>("modern-basemap-osm"), natural: byId<HTMLButtonElement>("modern-basemap-natural"),
       sync: byId<HTMLInputElement>("comparison-sync"), modernStatus: byId<HTMLElement>("comparison-modern-status"),
+      modernBadge: optionalById<HTMLElement>("comparison-modern-badge"),
       warning: byId<HTMLElement>("tile-warning"), warningText: byId<HTMLElement>("tile-warning-text"),
       evidence: optionalById<HTMLElement>("comparison-evidence"), evidenceTitle: optionalById<HTMLElement>("comparison-evidence-title"),
       evidenceDate: optionalById<HTMLElement>("comparison-evidence-date"), evidenceQuote: optionalById<HTMLElement>("comparison-evidence-quote"),
@@ -104,6 +105,12 @@ const ArchSearchComparison = (() => {
         : displayed === "natural" ? failedTiles && requested === "osm" ? "OSM 不可用 · 已显示本地自然轮廓" : "本地自然轮廓 · 现代地理参照"
         : displayed === "loading" ? "正在加载现代底图；定位点可独立使用" : "现代底图暂不可用，定位点与资料仍保留";
       if (alignedLegacyZoom) ui.modernStatus.textContent += ` · 旧链接缩放已统一为 ${restoredZoom} 级，分别保留两图中心`;
+      if (ui.modernBadge) {
+        ui.modernBadge.textContent = displayed === "osm" ? "现代 OSM"
+          : displayed === "natural" ? "本地自然轮廓"
+          : displayed === "loading" ? "底图加载中" : "底图暂不可用";
+        ui.modernBadge.dataset.basemap = displayed;
+      }
       if (modern) modern.getContainer().dataset.basemap = displayed;
     }
     async function ensureLand(): Promise<void> {

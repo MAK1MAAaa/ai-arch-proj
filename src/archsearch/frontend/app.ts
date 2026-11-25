@@ -681,6 +681,21 @@
     syncSlider();
   }
 
+  function enhanceAttribution(map: L.Map): void {
+    const container = map.attributionControl?.getContainer();
+    const parent = container?.parentElement;
+    if (!container || !parent) return;
+    const shell = element("div", "map-attribution-shell");
+    shell.tabIndex = 0;
+    shell.setAttribute("aria-label", "地图数据来源与许可，悬停或聚焦展开");
+    const pill = element("span", "map-attribution-pill", "© 来源");
+    pill.setAttribute("aria-hidden", "true");
+    parent.insertBefore(shell, container);
+    shell.append(pill, container);
+    L.DomEvent.disableClickPropagation(shell);
+    L.DomEvent.disableScrollPropagation(shell);
+  }
+
   function initializeMap(): void {
     if (typeof L === "undefined") {
       byId("map", HTMLDivElement).append(element("div", "map-unavailable", "地图组件未能加载。你仍可检索并阅读候选资料的原文与坐标。"));
@@ -693,19 +708,11 @@
     const historicalZoom = L.control.zoom({ position: "bottomleft" }).addTo(historicalMap);
     attachZoomSlider(historicalMap, historicalZoom);
     historicalMap.attributionControl?.setPrefix(false);
-    const historicalAttribution = historicalMap.attributionControl?.getContainer();
-    if (historicalAttribution) {
-      historicalAttribution.tabIndex = 0;
-      historicalAttribution.setAttribute("aria-label", "地图数据来源与许可，悬停或聚焦展开");
-    }
+    enhanceAttribution(historicalMap);
     const modernZoom = L.control.zoom({ position: "bottomleft" }).addTo(state.map);
     attachZoomSlider(state.map, modernZoom);
     state.map.attributionControl?.setPrefix(false);
-    const modernAttribution = state.map.attributionControl?.getContainer();
-    if (modernAttribution) {
-      modernAttribution.tabIndex = 0;
-      modernAttribution.setAttribute("aria-label", "地图数据来源与许可，悬停或聚焦展开");
-    }
+    enhanceAttribution(state.map);
     state.tiles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       keepBuffer: 4,

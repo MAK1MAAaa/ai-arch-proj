@@ -7,17 +7,17 @@
     <meta name="description" content="通过中文研究问题探索全球历史遗址资料、独立年代证据与历史政权疆域概略。">
     <title>考古图志 · 全球历史遗址资料检索</title>
     <link rel="stylesheet" href="/static/vendor/leaflet/leaflet.css">
-    <link rel="stylesheet" href="/static/styles.css?v=20261125-8">
+    <link rel="stylesheet" href="/static/styles.css?v=20261125-9">
     <script defer src="/static/vendor/leaflet/leaflet.js"></script>
-    <script defer src="/static/research.js?v=20261125-8"></script>
-    <script defer src="/static/map-view.js?v=20261125-8"></script>
-    <script defer src="/static/history.js?v=20261125-8"></script>
-    <script defer src="/static/modern-boundaries.js?v=20261125-8"></script>
-    <script defer src="/static/registered-areas.js?v=20261125-8"></script>
-    <script defer src="/static/llm.js?v=20261125-8"></script>
-    <script defer src="/static/comparison.js?v=20261125-8"></script>
-    <script defer src="/static/workspace.js?v=20261125-8"></script>
-    <script defer src="/static/app.js?v=20261125-8"></script>
+    <script defer src="/static/research.js?v=20261125-9"></script>
+    <script defer src="/static/map-view.js?v=20261125-9"></script>
+    <script defer src="/static/history.js?v=20261125-9"></script>
+    <script defer src="/static/modern-boundaries.js?v=20261125-9"></script>
+    <script defer src="/static/registered-areas.js?v=20261125-9"></script>
+    <script defer src="/static/llm.js?v=20261125-9"></script>
+    <script defer src="/static/comparison.js?v=20261125-9"></script>
+    <script defer src="/static/workspace.js?v=20261125-9"></script>
+    <script defer src="/static/app.js?v=20261125-9"></script>
   </head>
   <body class="research-workbench"><nav class="skip-navigation" aria-label="快捷导航"><a class="skip-link" href="#query">跳到检索</a><a class="skip-link" href="#workspace-toggle-sidebar">跳到资料面板</a><a class="skip-link" href="#map">跳到地图</a></nav><div class="page-shell"><header class="masthead">
         <a class="brand" href="/" aria-label="考古图志首页">
@@ -169,7 +169,7 @@
             <p id="map-keyboard-help" class="map-keyboard-help visually-hidden">方向键平移，+ / − 缩放；编号标记 Enter / 空格打开详情；悬停仅预览。</p>
             <div id="tile-warning" class="tile-warning" role="status" hidden><span id="tile-warning-text">底图暂未加载；检索结果与遗址标记仍可使用。</span><button id="retry-tiles" type="button">重试底图</button></div>
             <div id="map-comparison" class="comparison-columns">
-              <section class="comparison-frame modern-frame" aria-labelledby="modern-map-title"><header class="comparison-map-heading"><div class="map-frame-title"><h3 id="modern-map-title">现代位置与国界参考</h3></div><p id="comparison-modern-status" role="status" aria-live="polite">正在加载现代底图</p><p id="modern-boundaries-alert" class="map-layer-alert" role="alert" hidden></p><button id="modern-boundaries-retry" class="interaction-button" type="button" hidden>重试国界线</button></header>
+              <section class="comparison-frame modern-frame" aria-labelledby="modern-map-title"><header class="comparison-map-heading"><h3 id="modern-map-title">现代位置与国界参考</h3><div class="map-status-chip is-modern" tabindex="0" aria-label="现代底图状态，悬停或聚焦查看详情"><span id="comparison-modern-badge" class="map-status-pill" data-basemap="loading">底图加载中</span><div class="map-status-popover"><p id="comparison-modern-status" role="status" aria-live="polite">正在加载现代底图</p><p id="modern-boundaries-alert" class="map-layer-alert" role="alert" hidden></p><button id="modern-boundaries-retry" class="interaction-button" type="button" hidden>重试国界线</button></div></div></header>
                 <div class="map-shell comparison-modern-shell">
               <div id="map" tabindex="0" aria-label="现代遗址位置地图" aria-describedby="map-keyboard-help"></div>
               <div class="map-caption"><span class="map-caption-dot"></span><span>现代位置参照 · 来源代表点</span></div>
@@ -178,7 +178,7 @@
 
             </div>
               </section>
-              <section class="comparison-frame historical-frame" aria-labelledby="historical-map-title"><header class="comparison-map-heading"><div class="map-frame-title"><h3 id="historical-map-title">历史政权疆域概略</h3><p id="comparison-history-year" class="map-year-badge" role="status" aria-live="polite">等待成功历史视图</p></div><section id="history-controls" class="history-auto-status" aria-label="选中遗址年代与历史地图状态"><p id="history-linkage-status" class="history-linkage-status" role="status" aria-live="polite">正在核对历史背景与所选资料的关联。</p><p id="history-applied-year" class="history-applied-year visually-hidden" role="status" aria-live="polite">历史地图尚未加载</p><p id="history-feedback" class="history-feedback visually-hidden" role="status" aria-live="polite">选择遗址后自动对照已核验阶段；未知与区间年代保留其证据状态。</p><p id="history-error" class="history-error" role="alert" hidden></p><button id="history-retry" class="interaction-button" type="button" hidden>重试地图视图</button></section></header><div class="map-shell comparison-history-shell"><div id="history-map" tabindex="0" aria-label="独立历史政权疆域地图" aria-describedby="history-limit-note"></div><div class="map-caption"><span class="map-caption-dot"></span><span id="history-map-caption">等待历史政权资料</span></div></div></section>
+              <section class="comparison-frame historical-frame" aria-labelledby="historical-map-title"><header class="comparison-map-heading"><h3 id="historical-map-title">历史政权疆域概略</h3><div class="map-status-chip is-history" tabindex="0" aria-label="历史年份与联动状态，悬停或聚焦查看详情"><p id="comparison-history-year" class="map-status-pill map-year-badge" role="status" aria-live="polite">等待成功历史视图</p><section id="history-controls" class="map-status-popover history-auto-status" aria-label="选中遗址年代与历史地图状态"><p id="history-linkage-status" class="history-linkage-status" role="status" aria-live="polite">正在核对历史背景与所选资料的关联。</p><p id="history-applied-year" class="history-applied-year visually-hidden" role="status" aria-live="polite">历史地图尚未加载</p><p id="history-feedback" class="history-feedback visually-hidden" role="status" aria-live="polite">选择遗址后自动对照已核验阶段；未知与区间年代保留其证据状态。</p><p id="history-error" class="history-error" role="alert" hidden></p><button id="history-retry" class="interaction-button" type="button" hidden>重试地图视图</button></section></div></header><div class="map-shell comparison-history-shell"><div id="history-map" tabindex="0" aria-label="独立历史政权疆域地图" aria-describedby="history-limit-note"></div><div class="map-caption"><span class="map-caption-dot"></span><span id="history-map-caption">等待历史政权资料</span></div></div></section>
             </div>
 
             <footer class="map-footnote"><span><span class="legend-dot"></span>圆形编号：检索排名</span><span id="viewport-count" class="viewport-count" title="仅按本次返回候选的代表点中心统计，不改变检索与排序。" hidden>当前地图范围内 0 / 本次返回 0</span><span>定位点，非精确发掘坐标</span></footer>

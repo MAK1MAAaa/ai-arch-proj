@@ -25,6 +25,7 @@ const ArchSearchComparison = (() => {
         const ui = {
             osm: byId("modern-basemap-osm"), natural: byId("modern-basemap-natural"),
             sync: byId("comparison-sync"), modernStatus: byId("comparison-modern-status"),
+            modernBadge: optionalById("comparison-modern-badge"),
             warning: byId("tile-warning"), warningText: byId("tile-warning-text"),
             evidence: optionalById("comparison-evidence"), evidenceTitle: optionalById("comparison-evidence-title"),
             evidenceDate: optionalById("comparison-evidence-date"), evidenceQuote: optionalById("comparison-evidence-quote"),
@@ -91,6 +92,12 @@ const ArchSearchComparison = (() => {
                     : displayed === "loading" ? "正在加载现代底图；定位点可独立使用" : "现代底图暂不可用，定位点与资料仍保留";
             if (alignedLegacyZoom)
                 ui.modernStatus.textContent += ` · 旧链接缩放已统一为 ${restoredZoom} 级，分别保留两图中心`;
+            if (ui.modernBadge) {
+                ui.modernBadge.textContent = displayed === "osm" ? "现代 OSM"
+                    : displayed === "natural" ? "本地自然轮廓"
+                        : displayed === "loading" ? "底图加载中" : "底图暂不可用";
+                ui.modernBadge.dataset.basemap = displayed;
+            }
             if (modern)
                 modern.getContainer().dataset.basemap = displayed;
         }

@@ -536,3 +536,31 @@ test('comparison runs without error when #comparison-evidence elements are omitt
   assert.equal(modern.getZoom(), 4);
   assert.equal(historical.getZoom(), 4);
 });
+
+test('comparison updates modern reference badge text and state across basemap transitions', async () => {
+  const requiredIds = ['modern-basemap-osm', 'modern-basemap-natural', 'comparison-sync', 'comparison-modern-status', 'comparison-modern-badge', 'tile-warning', 'tile-warning-text'];
+  const nodes = new Map(requiredIds.map(id => [id, new Element()]));
+  nodes.get('tile-warning')!.hidden = true;
+  const pending: ((value: { ok: boolean; json(): Promise<unknown> }) => void)[] = [];
+  const context = createContext({ URL, Error, window: { matchMedia: () => ({ matches: false }) }, requestAnimationFrame: (fn: () => void) => fn(), setTimeout, clearTimeout,
+    ResizeObserver: class { observe(): void {} },
+    document: { getElementById: (id: string) => nodes.get(id), createElement: () => new Element() },
+    fetch: () => new Promise(resolve => pending.push(resolve)),
+    L: { canvas: (options: object) => ({ ...options }), geoJSON: (_value: unknown, options: Record<string, unknown>) => new Layer(options), layerGroup: () => new Layer(),
+      marker: (coordinate: [number, number]|{lat:number;lng:number}, options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate), divIcon: (value: unknown) => value,
+      circleMarker: (coordinate: [number, number], options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate),
+      latLngBounds: (points: [number, number][]) => ({points}), point: (x: number, y: number) => ({x,y}) },
+  });
+  const helper = runInContext(scripts + '\nArchSearchComparison;', context) as Helpers;
+  const modern = new MapView(), historical = new MapView(), tiles = new Layer(); tiles.addTo(modern);
+  const controller = helper.create({ modern, historical, tiles, initial: { modern_basemap: 'osm', sync_centers: true, modern_view: null, history_view: null }, onSelect: () => undefined, onChanged: () => undefined, onEvidence: () => undefined });
+  assert.equal(nodes.get('comparison-modern-badge')!.textContent, '底图加载中');
+  assert.equal(nodes.get('comparison-modern-badge')!.dataset.basemap, 'loading');
+  tiles.fire('tileload');
+  assert.equal(nodes.get('comparison-modern-badge')!.textContent, '现代 OSM');
+  assert.equal(nodes.get('comparison-modern-badge')!.dataset.basemap, 'osm');
+  controller.setModernBasemap('natural');
+  pending[0]({ ok: true, json: async () => land }); await tick();
+  assert.equal(nodes.get('comparison-modern-badge')!.textContent, '本地自然轮廓');
+  assert.equal(nodes.get('comparison-modern-badge')!.dataset.basemap, 'natural');
+});
