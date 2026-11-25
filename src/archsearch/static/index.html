@@ -7,20 +7,17 @@
     <meta name="description" content="通过中文研究问题探索全球历史遗址资料、独立年代证据与历史政权疆域概略。">
     <title>考古图志 · 全球历史遗址资料检索</title>
     <link rel="stylesheet" href="/static/vendor/leaflet/leaflet.css">
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/styles.css?v=20261125-3">
     <script defer src="/static/vendor/leaflet/leaflet.js"></script>
-    <script defer src="/static/research.js"></script>
-    <script defer src="/static/map-view.js"></script>
-    <script defer src="/static/history.js"></script>
-    <script defer src="/static/modern-boundaries.js"></script>
-    <script defer src="/static/density.js"></script>
-    <script defer src="/static/explore.js"></script>
-    <script defer src="/static/polar-view.js"></script>
-    <script defer src="/static/registered-areas.js"></script>
-    <script defer src="/static/llm.js"></script>
-    <script defer src="/static/comparison.js"></script>
-    <script defer src="/static/workspace.js"></script>
-    <script defer src="/static/app.js"></script>
+    <script defer src="/static/research.js?v=20261125-3"></script>
+    <script defer src="/static/map-view.js?v=20261125-3"></script>
+    <script defer src="/static/history.js?v=20261125-3"></script>
+    <script defer src="/static/modern-boundaries.js?v=20261125-3"></script>
+    <script defer src="/static/registered-areas.js?v=20261125-3"></script>
+    <script defer src="/static/llm.js?v=20261125-3"></script>
+    <script defer src="/static/comparison.js?v=20261125-3"></script>
+    <script defer src="/static/workspace.js?v=20261125-3"></script>
+    <script defer src="/static/app.js?v=20261125-3"></script>
   </head>
   <body class="research-workbench"><nav class="skip-navigation" aria-label="快捷导航"><a class="skip-link" href="#query">跳到检索</a><a class="skip-link" href="#workspace-toggle-sidebar">跳到资料面板</a><a class="skip-link" href="#map">跳到地图</a></nav><div class="page-shell"><header class="masthead">
         <a class="brand" href="/" aria-label="考古图志首页">
@@ -41,7 +38,6 @@
               <button id="search-button" class="primary-button" type="submit" disabled><span id="search-button-label">开始检索</span><span class="button-arrow" aria-hidden="true">↗</span></button>
             </div>
             <div class="search-options search-toolbar">
-              <fieldset class="mode-switch"><legend class="visually-hidden">检索方式</legend><label><input type="radio" name="mode" value="semantic" checked><span><span class="mode-short-label" aria-hidden="true">语义</span><span class="mode-full-label">语义检索<span class="mode-label-en">SEMANTIC</span></span></span></label><label><input type="radio" name="mode" value="bm25"><span><span class="mode-short-label" aria-hidden="true">关键词</span><span class="mode-full-label">关键词基线<span class="mode-label-en">BM25</span></span></span></label></fieldset>
               <details id="search-filters" class="search-filters">
                 <summary><span>筛选</span><span id="search-filter-summary" class="search-filter-summary">全部类型 · 10 条</span></summary>
                 <div class="search-filters-body">
@@ -57,15 +53,14 @@
               <button type="button" data-label="乡村别墅" data-query-zh="寻找罗马乡村别墅" data-query-en="villa" data-type="villa"><span class="example-label">乡村别墅</span><span aria-hidden="true">↗</span></button>
               <button type="button" data-label="古代剧场" data-query-zh="寻找古代剧场" data-query-en="theater" data-type="theatre"><span class="example-label">古代剧场</span><span aria-hidden="true">↗</span></button>
               <button type="button" data-label="佛教石窟" data-query-zh="寻找佛教石窟遗址" data-query-en="Mogao" data-type="historic-site"><span class="example-label">佛教石窟</span><span aria-hidden="true">↗</span></button>
-              <button type="button" data-label="莎士比亚墓 · 全库" data-query-zh="寻找莎士比亚的坟墓" data-query-en="William Shakespeare grave" data-type="historic-site" data-full-corpus="true"><span class="example-label">莎士比亚墓 · 全库</span><span aria-hidden="true">↗</span></button>
+              <button type="button" data-label="莎士比亚墓" data-query-zh="寻找莎士比亚的坟墓" data-query-en="William Shakespeare grave" data-type="historic-site"><span class="example-label">莎士比亚墓</span><span aria-hidden="true">↗</span></button>
               <button type="button" data-label="工业遗产" data-query-zh="寻找近现代工业遗产" data-query-en="industrial heritage" data-type="historic-site"><span class="example-label">工业遗产</span><span aria-hidden="true">↗</span></button>
               <button type="button" data-label="南美考古" data-query-zh="寻找 Monte Verde 考古遗址" data-query-en="Monte Verde" data-type="historic-site"><span class="example-label">南美考古</span><span aria-hidden="true">↗</span></button>
-              <button type="button" data-label="Menjez 原名 · BM25" data-query-zh="Megalithic Tombs of Menjez" data-query-en="Megalithic Tombs of Menjez" data-example-mode="bm25" data-type="historic-site"><span class="example-label">Menjez 原名 · BM25</span><span aria-hidden="true">↗</span></button>
-              <button type="button" data-label="李鄭屋漢墓 · 原名" data-query-zh="李鄭屋漢墓" data-query-en="Lei Cheng Uk Han Tomb" data-example-mode="bm25" data-type="historic-site"><span class="example-label">李鄭屋漢墓 · 原名</span><span aria-hidden="true">↗</span></button>
+              <button type="button" data-label="李鄭屋漢墓" data-query-zh="李鄭屋漢墓" data-query-en="Lei Cheng Uk Han Tomb" data-type="historic-site"><span class="example-label">李鄭屋漢墓</span><span aria-hidden="true">↗</span></button>
               <button type="button" data-label="新加坡古迹" data-query-zh="寻找新加坡的历史清真寺和寺庙" data-query-en="Singapore mosque temple" data-type="historic-site"><span class="example-label">新加坡古迹</span><span aria-hidden="true">↗</span></button>
               <button type="button" data-label="巴西文化遗址" data-query-zh="寻找巴西的历史教堂和修道院" data-query-en="historic churches and monasteries in Minas Gerais Brazil" data-type="historic-site"><span class="example-label">巴西文化遗址</span><span aria-hidden="true">↗</span></button>
             </div>
-            <p id="example-hint" class="example-hint">语义检索可用中文问题，专名可保留原文；示例同步地点类型并保留当前地域条件。</p>
+            <p id="example-hint" class="example-hint">语义检索可用中文问题，专名可保留原文；点击示例同步地点类型并开始检索。</p>
           </div></details>
               <button id="llm-open-settings" class="llm-settings-trigger" type="button" aria-haspopup="dialog" aria-controls="llm-settings"><span>模型</span><span id="llm-active-model">未配置</span><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m6 3 5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
             </div>
@@ -97,7 +92,7 @@
               <div class="llm-actions"><button id="llm-refresh-models" class="interaction-button" type="button">刷新模型列表</button><button id="llm-apply" class="interaction-button llm-apply" type="submit" disabled>应用所选模型</button><button id="llm-clear-config" class="interaction-button" type="button" disabled>清除已应用模型与密钥</button></div>
             </form>
           </dialog>
-          <div id="preparation-note" class="notice preparation-note" hidden><span class="notice-label">语义检索待准备</span><div><p id="preparation-reason">请按 README 完成本地模型与索引准备，然后刷新运行状态。</p><p>你也可以选择“关键词基线”检索现有原文资料。</p></div></div>
+          <div id="preparation-note" class="notice preparation-note" hidden><span class="notice-label">语义检索待准备</span><div><p id="preparation-reason">请按 README 完成本地模型与索引准备，然后刷新运行状态。</p></div></div>
           <div id="request-error" class="notice error-notice" role="alert" hidden></div>
           <div id="retry-panel" class="retry-panel" hidden><button id="retry-search" class="interaction-button" type="button" disabled>按原条件重试</button></div>
           <div id="service-error" class="notice error-notice" role="alert" hidden></div>
@@ -105,8 +100,7 @@
         </section><section id="workspace" class="workspace" aria-label="资料与双图工作台">
 <button id="workspace-toggle-sidebar" class="workspace-sidebar-toggle" type="button" aria-controls="workspace-sidebar" aria-expanded="true" aria-label="收起资料面板，扩大双图区域"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M12.5 5 7.5 10l5 5M3 4v12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span id="workspace-toggle-sidebar-label">收起资料</span></button>
 <aside id="workspace-sidebar" class="workspace-sidebar" aria-label="可收起的资料面板"><div class="workspace-sidebar-heading"><span>研究资料</span></div>
-<div class="workspace-tabs" role="tablist" aria-label="资料面板"><button id="workspace-tab-results" type="button" role="tab" aria-selected="true" aria-controls="workspace-results-view" tabindex="0">检索结果</button><button id="workspace-tab-catalogue" type="button" role="tab" aria-selected="false" aria-controls="workspace-catalogue-view" tabindex="-1">全库浏览</button></div>
-<section id="workspace-results-view" class="workspace-tabpanel" role="tabpanel" aria-labelledby="workspace-tab-results"><div id="results-panel" class="results-panel" aria-busy="false">
+<section id="workspace-results-view" class="workspace-tabpanel" aria-label="检索结果"><div id="results-panel" class="results-panel" aria-busy="false">
             <header class="panel-heading"><div><span class="eyebrow small-eyebrow">RESULTS / 候选资料</span><h2>检索结果 <span id="result-count" class="result-count">00</span></h2></div><span id="active-mode" class="small-tag">SEMANTIC</span></header>
             <section id="llm-result-note" class="llm-result-note" aria-label="本次查询增强" hidden><p id="llm-result-summary"></p><details id="llm-result-queries"><summary>查看本次实际检索查询</summary><ol id="llm-result-query-list"></ol></details><p class="llm-hint">模型改写可能误译专名，请核对原文证据。分享只保存增强开关，接收端需有已应用模型；导出保留本次实际模型与改写。</p></section>
             <p id="result-summary" class="result-summary" tabindex="-1">从一个问题开始，探索遗址与它的历史语境。</p>
@@ -127,62 +121,14 @@
             <ol id="results-list" class="results-list" aria-label="遗址候选结果"></ol>
             <div id="loading-state" class="loading-state" hidden aria-hidden="true"><div></div><div></div><div></div></div>
             <footer class="result-footnote">检索结果用于资料发现，历史关联仍需人工核验。</footer>
-          </div></section>
-<section id="workspace-catalogue-view" class="workspace-tabpanel" role="tabpanel" aria-labelledby="workspace-tab-catalogue" hidden><section id="explore-panel" class="explore-panel" aria-labelledby="explore-title" aria-busy="false">
-          <div class="explore-heading"><div><span class="eyebrow small-eyebrow">GLOBAL CATALOGUE / 全库探索</span><h2 id="explore-title">从全球目录开始</h2></div><p id="explore-summary" class="explore-summary">正在核对本地资料覆盖范围</p></div>
-          <p id="explore-authority" class="explore-authority" hidden></p>
-          <p id="explore-polar-authority" class="explore-authority" hidden></p>
-          <p id="explore-spatial-source" class="explore-authority" hidden></p>
-          <div class="explore-controls">
-            <div class="explore-filter"><label for="explore-region">来源分区</label><select id="explore-region" aria-describedby="explore-filter-note" disabled><option value="">全部分区</option></select></div>
-            <div class="explore-filter"><label for="explore-country">国家／地区</label><select id="explore-country" aria-describedby="explore-filter-note" disabled><option value="">全部国家／地区</option></select></div>
-            <div id="explore-subdivision-filter" class="explore-filter explore-subdivision-filter" hidden><label for="explore-subdivision">来源省／地区</label><select id="explore-subdivision" aria-describedby="explore-subdivision-note explore-filter-note" disabled><option value="">全部来源省／地区</option></select></div>
-            <div class="explore-filter"><label for="explore-chronology">断代状态</label><select id="explore-chronology" aria-describedby="explore-filter-note" disabled><option value="">全部断代状态</option><option value="reviewed">已有来源阶段</option><option value="insufficient">断代未确定</option><option value="not_reviewed">尚未核验</option></select></div>
-            <button id="explore-clear" class="interaction-button" type="button" disabled>清除地域</button>
-            <label class="explore-points-toggle"><input id="explore-points" type="checkbox" disabled><span>显示全库点位</span></label>
-            <button id="explore-fit" class="interaction-button" type="button" disabled>定位主图范围</button>
-          </div>
-          <div id="explore-subdivision-feedback" class="explore-subdivision-feedback" hidden><p id="explore-subdivision-note" class="explore-note" role="status" aria-live="polite" tabindex="-1" hidden></p><button id="explore-subdivision-retry" class="interaction-button" type="button" hidden>重试省区资料</button></div>
-          <div class="explore-bounds-controls" role="group" aria-label="固定地图浏览范围">
-            <button id="explore-capture-bounds" class="interaction-button" type="button" disabled aria-describedby="explore-bounds-status">按当前地图范围浏览</button>
-            <button id="explore-clear-bounds" class="interaction-button" type="button" disabled>清除地图范围</button>
-            <p id="explore-bounds-status" class="explore-note" role="status" aria-live="polite" tabindex="-1">尚未限定地图范围。仅影响目录与全库点层；拖动地图不会更新范围。</p>
-          </div>
-          <details class="workspace-catalogue-note"><summary>筛选与范围规则</summary><p id="explore-filter-note" class="explore-note">选定国家／地区或来源分区后，另一项按共有资料缩小选项，数字包含未采用代表点的资料。地域选择也用于下一次主动检索。断代状态和固定地图范围只筛选目录及双图的全库点层。已有来源阶段包括单年、约略年份、区间和时期描述，只有明确单年会在选中遗址时自动切年。跨国遗产按来源成员筛选；未限定地图范围时显示整条遗产的源点，限定后仅绘框内定位点。没有逐点国别依据，不按坐标推定归属。</p></details>
-          <div class="explore-feedback-row"><p id="explore-feedback" class="explore-feedback" role="status" aria-live="polite">无需输入问题或准备模型，也可浏览本地目录。</p><button id="explore-retry" class="interaction-button" type="button" hidden>重试目录</button></div>
-          <details id="explore-directory" class="explore-directory" open>
-            <summary>浏览完整目录 <span id="explore-count">等待资料</span></summary>
-            <div class="explore-directory-heading"><p id="explore-page" class="explore-page" tabindex="-1">目录按来源标题排序，不是相关性排名。</p><div class="explore-pagination"><button id="explore-previous" class="interaction-button" type="button" disabled>上一页</button><button id="explore-next" class="interaction-button" type="button" disabled>下一页</button></div></div>
-            <ol id="explore-list" class="explore-list" aria-label="全球遗址目录，本页可用键盘选择" tabindex="-1"></ol>
-          </details>
-          <details class="workspace-catalogue-note"><summary>来源与定位限制</summary><p id="explore-limit-note" class="explore-note explore-limit-note">全库圆点显示来源定位点及必要代表点，带编号的标记为检索候选；多点遗产在目录仍是一条资料，定位点不等于遗址数量或精确发掘坐标。点击圆点选中所属遗产，再由“查看详情”阅读来源；保留地图视角；来源名称只作原文标签，不猜组成地点身份。目录不提供相关性分数。极区点保留原坐标并使用南极定位示意；暂无可用代表点的资料保留在目录；未采用公开来源代表点不表示原址实际未知，来源公开范围如有提供按来源类型另列，未补造代表点。范围预览不改变目录按代表点／来源点匹配。国家／地区及分区来自来源标签，不代表历史政治归属；跨国遗产计数存在交叠。覆盖以当前来源版本为限，未声称收录全球全部遗址。</p></details>
-        </section><details id="polar-panel" class="polar-panel" hidden>
-          <summary id="polar-summary"><span>POLAR REFERENCE / 南极定位示意</span><span id="polar-count">等待南极资料</span></summary>
-          <div class="polar-body">
-            <figure class="polar-figure">
-              <div id="polar-map" class="polar-map" tabindex="-1" aria-label="南纬60度以内的南极定位示意" aria-describedby="polar-method polar-keyboard-help">
-                <svg id="polar-svg" viewBox="0 0 500 500" role="img" aria-labelledby="polar-map-title polar-map-description">
-                  <title id="polar-map-title">以南极点为中心的定位示意</title><desc id="polar-map-description">源WGS84经纬度使用球面近似方位等距投影，南极点位于中心；不是测绘图或历史疆域图。</desc>
-                  <defs><clipPath id="polar-cap-clip"><circle cx="250" cy="250" r="200"/></clipPath></defs>
-                  <circle class="polar-ocean" cx="250" cy="250" r="200"/>
-                  <g id="polar-land" clip-path="url(#polar-cap-clip)" fill-rule="evenodd"></g>
-                  <g class="polar-graticule"><circle cx="250" cy="250" r="200"/><circle cx="250" cy="250" r="133.333"/><circle cx="250" cy="250" r="66.667"/><path d="M250 50V450M50 250H450M108.579 108.579L391.421 391.421M108.579 391.421L391.421 108.579"/></g>
-                  <g class="polar-coordinate-labels"><text x="250" y="32" text-anchor="middle">0°</text><text x="469" y="254">90°E</text><text x="250" y="479" text-anchor="middle">180°</text><text x="31" y="254" text-anchor="end">90°W</text><text x="260" y="77">60°S</text><text x="260" y="144">70°S</text><text x="260" y="211">80°S</text><text x="260" y="269">南极点</text></g>
-                  <circle class="polar-pole" cx="250" cy="250" r="2"/>
-                </svg>
-                <div id="polar-points" class="polar-points" role="group" aria-label="南极遗址代表点，方向键可逐点浏览"></div>
-              </div>
-              <figcaption id="polar-method">南极点中心的球面近似方位等距定位示意，显示南纬60°以内源坐标；陆地轮廓为本地 Natural Earth 现代自然地理参照，未重建古海岸或国界。</figcaption>
-            </figure>
-            <div class="polar-notes"><p class="eyebrow small-eyebrow">源坐标 · 独立视图</p><h2>以南极点为中心</h2><p>南极点及超出主图投影范围的遗址保持真实纬度。此处选点只打开来源资料，保留检索排名和主历史地图。</p><p id="polar-selection" class="polar-selection" role="status" aria-live="polite">选择目录条目或图上圆点，查看来源。</p><p id="polar-keyboard-help" class="polar-note">方向键在有位置的点之间移动焦点，Home / End 到首末点，Enter / 空格打开详情。重合点保留独立身份，也可从完整目录逐条选择。</p><div id="polar-unknown" class="polar-unknown"></div><p id="polar-feedback" class="polar-note" role="status" aria-live="polite">打开示意后从本地读取现代陆地轮廓；点位与网格无需外网。</p><button id="polar-retry" class="interaction-button" type="button" hidden>重试本地轮廓</button><p class="polar-note">本示意显示已收录的南极资料，不随目录地域条件删去记录；资料定位状态与来源覆盖数量分别统计。</p></div>
-          </div>
-        </details></section></aside><div id="workspace-divider" class="workspace-divider" role="separator" aria-label="调整资料侧栏宽度" aria-orientation="vertical" aria-controls="workspace-sidebar" aria-valuemin="280" aria-valuemax="580" aria-valuenow="350" tabindex="0"></div><div class="map-panel">
+          </div></section></aside><div id="workspace-divider" class="workspace-divider" role="separator" aria-label="调整资料侧栏宽度" aria-orientation="vertical" aria-controls="workspace-sidebar" aria-valuemin="280" aria-valuemax="580" aria-valuenow="350" tabindex="0"></div><div class="map-panel">
             <header class="panel-heading map-heading"><div><span class="eyebrow small-eyebrow">MAP WORKSPACE / 研究地图</span><h2>双图对照</h2></div><button id="fit-map" class="text-button" type="button" title="显示全部检索结果"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 7V3h4m6 0h4v4m0 6v4h-4M7 17H3v-4" stroke="currentColor" stroke-width="1.4"/></svg>全部点位</button>
+            <label class="comparison-sync-toggle"><input id="comparison-sync" type="checkbox" checked><span>双图同步</span></label>
             <details id="map-tools" class="map-tools">
-              <summary><span>图层与说明</span><span class="map-tools-summary-note">底图 · 同步 · 图例与来源</span></summary>
+              <summary><span>图层与说明</span><span class="map-tools-summary-note">底图 · 图例与来源</span></summary>
               <div class="map-tools-body">
-                <div class="comparison-toolbar"><p>现代位置与来源年份的政权疆域概略对照。</p><label><input id="comparison-sync" type="checkbox" checked><span>同步双图缩放与平移</span></label></div>
-                <p class="map-density-note">全库定位点默认隐藏，可在“全库浏览”勾选“显示全库点位”以小圆点方式展示；不绘制聚合方框，点位仅作位置参考。圆形编号保留检索排名，背景年不用于筛选遗址。</p>
+                <div class="comparison-toolbar"><p>现代位置与来源年份的政权疆域概略对照。</p></div>
+                <p class="map-density-note">双图同步开启时，拖拽或缩放任一地图都会实时带动另一张地图平移和缩放；圆形编号保留检索排名，背景年不用于筛选遗址。</p>
                 <section class="map-tools-section" aria-labelledby="modern-tools-title"><h4 id="modern-tools-title">现代底图与国界</h4><div class="comparison-basemap-controls"><button id="modern-basemap-osm" class="interaction-button" type="button" aria-pressed="true">现代 OSM</button><button id="modern-basemap-natural" class="interaction-button" type="button" aria-pressed="false">本地自然轮廓</button></div><div class="modern-boundaries-feedback"><p id="modern-boundaries-status" role="status" aria-live="polite">正在加载本地现代国界参考。</p></div><p class="comparison-modern-legend"><span class="modern-border-swatch"></span>现代陆地国界参考 <span class="modern-border-swatch is-disputed"></span>虚线：来源争议／控制等线；不含海洋划界。</p></section>
                 <section class="map-tools-section" aria-labelledby="historical-tools-title"><h4 id="historical-tools-title">历史疆域与适用范围</h4><p class="comparison-history-legend"><span class="polity-fill-swatch"></span>实线与填色：来源政权范围 <span class="polity-composite-swatch"></span>虚线：复合政体；常驻名称按可用空间择显，点击疆域查看完整名称与来源。</p><p id="history-source" class="history-source">来源信息在地图视图成功加载后显示。</p><p id="history-limit-note">历史政权疆域概略来自Cliopatria，现代自然轮廓来自Natural Earth；不复原古海岸，不据代表点推断历史政治归属。</p></section>
               </div>
@@ -190,23 +136,23 @@
             </header>
 
             <div class="map-selection-bar" role="group" aria-label="候选浏览"><p id="selection-summary" class="selection-summary">选择候选，查看地图与原始资料</p><div id="selection-actions" class="selection-actions" hidden><button id="open-selected-detail" class="interaction-button" type="button" disabled>查看详情</button><button id="previous-result" class="interaction-button" type="button" disabled>上一条</button><button id="next-result" class="interaction-button" type="button" disabled>下一条</button><button id="locate-selected" class="interaction-button" type="button" disabled>定位选中</button></div></div>
-            <p id="map-keyboard-help" class="map-keyboard-help visually-hidden">方向键平移，+ / − 缩放；编号标记 Enter / 空格打开详情。聚合方框 Enter / 空格查看成员，也可通过全库目录用键盘选择真实资料；悬停仅预览。</p>
+            <p id="map-keyboard-help" class="map-keyboard-help visually-hidden">方向键平移，+ / − 缩放；编号标记 Enter / 空格打开详情；悬停仅预览。</p>
             <div id="tile-warning" class="tile-warning" role="status" hidden><span id="tile-warning-text">底图暂未加载；检索结果与遗址标记仍可使用。</span><button id="retry-tiles" type="button">重试底图</button></div>
             <section id="comparison-evidence" class="comparison-evidence" aria-label="选中资料与年代证据" hidden><div><strong id="comparison-evidence-title"></strong><p id="comparison-evidence-date"></p></div><details class="comparison-evidence-more"><summary>查看来源摘录</summary><blockquote id="comparison-evidence-quote"></blockquote><div id="comparison-evidence-sources" class="comparison-evidence-sources"></div></details><button id="comparison-evidence-open" class="interaction-button" type="button">查看完整年代证据</button></section>
             <div id="map-comparison" class="comparison-columns">
               <section class="comparison-frame modern-frame" aria-labelledby="modern-map-title"><header class="comparison-map-heading"><div class="map-frame-title"><h3 id="modern-map-title">现代位置与国界参考</h3></div><p id="comparison-modern-status" role="status" aria-live="polite">正在加载现代底图</p><p id="modern-boundaries-alert" class="map-layer-alert" role="alert" hidden></p><button id="modern-boundaries-retry" class="interaction-button" type="button" hidden>重试国界线</button></header>
                 <div class="map-shell comparison-modern-shell">
-              <div id="map" tabindex="0" aria-label="现代遗址位置地图；只有此图可明确捕获目录矩形范围" aria-describedby="map-keyboard-help"></div>
+              <div id="map" tabindex="0" aria-label="现代遗址位置地图" aria-describedby="map-keyboard-help"></div>
               <div class="map-caption"><span class="map-caption-dot"></span><span>现代位置参照 · 来源代表点</span></div>
               <div class="map-compass" aria-hidden="true"><span>N</span><svg viewBox="0 0 20 40"><path d="m10 3 5.5 26-5.5-6-5.5 6Z" fill="currentColor"/><path d="m10 3 0 20-5.5 6Z" fill="#fdfbf7"/></svg></div>
               <div id="map-empty-label" class="map-empty-label" aria-hidden="true"><span>MODERN REFERENCE</span><span>全球遗址 · 现代地理参照</span></div>
 
             </div>
               </section>
-              <section class="comparison-frame historical-frame" aria-labelledby="historical-map-title"><header class="comparison-map-heading"><div class="map-frame-title"><h3 id="historical-map-title">历史政权疆域概略</h3><p id="comparison-history-year" class="map-year-badge" role="status" aria-live="polite">等待成功历史视图</p></div><section id="history-controls" class="history-auto-status" aria-label="选中遗址年代与历史地图状态"><p id="history-linkage-status" class="history-linkage-status" role="status" aria-live="polite">正在核对历史背景与所选资料的关联。</p><p id="history-applied-year" class="history-applied-year visually-hidden" role="status" aria-live="polite">历史地图尚未加载</p><p id="history-feedback" class="history-feedback visually-hidden" role="status" aria-live="polite">选择遗址后自动对照已核验阶段；未知与区间年代保留其证据状态。</p><p id="history-error" class="history-error" role="alert" hidden></p><button id="history-retry" class="interaction-button" type="button" hidden>重试地图视图</button></section></header><div class="map-shell comparison-history-shell"><div id="history-map" tabindex="0" aria-label="独立历史政权疆域地图；不用于目录矩形筛选" aria-describedby="history-limit-note"></div><div class="map-caption"><span class="map-caption-dot"></span><span id="history-map-caption">等待历史政权资料</span></div></div></section>
+              <section class="comparison-frame historical-frame" aria-labelledby="historical-map-title"><header class="comparison-map-heading"><div class="map-frame-title"><h3 id="historical-map-title">历史政权疆域概略</h3><p id="comparison-history-year" class="map-year-badge" role="status" aria-live="polite">等待成功历史视图</p></div><section id="history-controls" class="history-auto-status" aria-label="选中遗址年代与历史地图状态"><p id="history-linkage-status" class="history-linkage-status" role="status" aria-live="polite">正在核对历史背景与所选资料的关联。</p><p id="history-applied-year" class="history-applied-year visually-hidden" role="status" aria-live="polite">历史地图尚未加载</p><p id="history-feedback" class="history-feedback visually-hidden" role="status" aria-live="polite">选择遗址后自动对照已核验阶段；未知与区间年代保留其证据状态。</p><p id="history-error" class="history-error" role="alert" hidden></p><button id="history-retry" class="interaction-button" type="button" hidden>重试地图视图</button></section></header><div class="map-shell comparison-history-shell"><div id="history-map" tabindex="0" aria-label="独立历史政权疆域地图" aria-describedby="history-limit-note"></div><div class="map-caption"><span class="map-caption-dot"></span><span id="history-map-caption">等待历史政权资料</span></div></div></section>
             </div>
 
-            <footer class="map-footnote"><span><span class="legend-dot"></span>圆形编号：检索排名 <span class="catalogue-legend-dot"></span>小点：真实定位点（默认隐藏，全库浏览可开启）</span><span id="viewport-count" class="viewport-count" title="仅按本次返回候选的代表点中心统计；不包括全库底层圆点，不改变检索与排序。" hidden>当前地图范围内 0 / 本次返回 0</span><span>定位点，非精确发掘坐标</span></footer>
+            <footer class="map-footnote"><span><span class="legend-dot"></span>圆形编号：检索排名</span><span id="viewport-count" class="viewport-count" title="仅按本次返回候选的代表点中心统计，不改变检索与排序。" hidden>当前地图范围内 0 / 本次返回 0</span><span>定位点，非精确发掘坐标</span></footer>
           </div></section><details id="workspace-reference" class="workspace-reference">
             <summary><span class="reference-title">使用说明与来源许可</span><span class="reference-summary-meta">操作指南 · 阅读边界 · 数据署名</span></summary>
             <div class="reference-body">
@@ -215,11 +161,11 @@
                 <div class="reference-content">
                   <p class="reference-intro"><strong>先发现，再核验。</strong>用问题找到候选，阅读来源原文，再核对地图位置与来源记录。</p>
                   <ol class="reference-steps">
-                  <li><strong>提出问题。</strong>用中文问题尝试语义检索，或在关键词基线中输入英文原词与地名。要限定地点类型，请使用类型筛选。</li>
+                  <li><strong>提出问题。</strong>输入中文问题进行语义检索，专名可保留原文。要限定地点类型，请使用类型筛选。</li>
                   <li><strong>阅读候选。</strong>对照名称、类型和原始描述；打开详情，查看时期记录、资料贡献者与原始来源。</li>
                   <li><strong>核验位置。</strong>选择结果或地图标记，结合来源中的位置精度与记录范围判断候选是否适合研究问题。</li>
                 </ol>
-                  <p class="reference-tip">资料面板可收起，桌面可拖动右缘调宽；两图始终同级缩放。点击结果定位，点击“资料详情”打开弹窗。区间或未知年代保留参考背景，不据此补造遗址年份。</p>
+                  <p class="reference-tip">资料面板可收起，桌面可拖动右缘调宽；两图默认同步平移与同级缩放。点击结果定位，点击“资料详情”打开弹窗。区间或未知年代保留参考背景，不据此补造遗址年份。</p>
                 </div>
               </details>
               <details class="reference-panel" id="reference-limits">
@@ -230,8 +176,8 @@
                   <div><dt>断代状态</dt><dd>断代分为“有来源支持的阶段”“已核验，断代未确定”和“断代尚未核验”。选择有明确单年事件的资料时，历史图可对照该年份。列入世界遗产的年份不视为遗址建造年。</dd></div>
                   <div><dt>时期含义</dt><dd>原500条资料因名称或位置记录具有 roman 分期关联而入选；该条件不适用于新增全球资料，也不表示地点始建于该时期。独立历史阶段保留事件、精度与原文依据，不补齐时期缺口。</dd></div>
                   <div><dt>类型计数</dt><dd>同一地点可同时具有多个类型。各类型的资料数量存在交叠，不可相加作为遗址总数。</dd></div>
-                  <div><dt>位置与底图</dt><dd>标记为地点代表点，precise / rough 不承诺米级精度或发掘坐标。南极点及主图投影范围以外的真实纬度保留在独立定位示意；未知位置保留在目录，不补造坐标。Natural Earth 为现代海岸线与自然地理参照；Cliopatria 历史政权疆域概略存在概略范围与争议，不能据代表点自动判定政治归属。</dd></div>
-                  <div><dt>分数与匹配</dt><dd>BM25 按字词匹配，支持省略常见拉丁变音符号。语义检索按文本相近度排序。问题中的年代与空间表述仍需核验，两种分值不宜直接比较。</dd></div>
+                  <div><dt>位置与底图</dt><dd>标记为地点代表点，precise / rough 不承诺米级精度或发掘坐标；未知或极区位置保留来源坐标，不在主图上伪造代表点。Natural Earth 为现代海岸线与自然地理参照；Cliopatria 历史政权疆域概略存在概略范围与争议，不能据代表点自动判定政治归属。</dd></div>
+                  <div><dt>分数与匹配</dt><dd>语义检索按文本相近度排序；问题中的年代与空间表述仍需人工核验原始来源。</dd></div>
                 </dl>
                 </div>
               </details>

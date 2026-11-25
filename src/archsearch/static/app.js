@@ -52,24 +52,11 @@
     const initialUrl = new URL(window.location.href);
     const initialLink = ArchSearchResearch.parseLink(initialUrl);
     const initialView = ArchSearchResearch.parseView(initialUrl);
-    const initialBrowse = ArchSearchResearch.parseBrowse(initialUrl);
     const initialComparison = ArchSearchResearch.parseComparison(initialUrl);
-    const nonBoundsUrl = new URL(initialUrl);
-    nonBoundsUrl.searchParams.delete("browse_bbox");
-    const initialNonBoundsBrowse = ArchSearchResearch.parseBrowse(nonBoundsUrl);
-    let boundsRestoreError = null;
-    try {
-        if (initialUrl.searchParams.getAll("browse_bbox").length > 1)
-            throw new Error("链接中的 browse_bbox 参数不能重复。");
-        ArchSearchResearch.parseBBox(initialUrl.searchParams.get("browse_bbox"));
-    }
-    catch (error) {
-        boundsRestoreError = error instanceof Error ? error.message : "地图范围无效。";
-    }
-    let pendingLink = initialView.error || initialNonBoundsBrowse.error || initialComparison.error ? null : initialLink.request;
+    let pendingLink = initialView.error || initialComparison.error ? null : initialLink.request;
     let unresolvedSearchLink = pendingLink;
     let restoringSearchController = null;
-    let linkError = initialLink.error ?? initialView.error ?? initialNonBoundsBrowse.error ?? initialComparison.error;
+    let linkError = initialLink.error ?? initialView.error ?? initialComparison.error;
     let invalidLink = linkError !== null;
     let pendingSelectionRestore = !invalidLink && initialView.selection.site !== null;
     let currentLink = window.location.href;
@@ -77,15 +64,12 @@
     let mapView = null;
     let registeredAreas = null;
     let currentCorpusVersion = null;
+    let coverageSummary = null;
     let verifiedDetail = null;
     let currentRegisteredAreasVersion = null;
     let historyView = null;
-    let explore = null;
-    let polarView = null;
     let selectedPhaseId = null;
     let restoringView = true;
-    let browseRestored = false;
-    let browseRestoreError = null;
     let initialStatePending = true;
     let llmView = null;
     let historicalMap = null;
@@ -178,10 +162,7 @@
         return value < 0 ? `公元前 ${Math.abs(value)} 年` : `公元 ${value} 年`;
     }
     function currentMode() {
-        const value = ui.form.querySelector('input[name="mode"]:checked')?.value;
-        if (value !== "semantic" && value !== "bm25")
-            throw new Error("页面检索方式无效。");
-        return value;
+        return "semantic";
     }
     function announce(message) {
         ui.announcement.textContent = message;
@@ -206,10 +187,10 @@
         ui.serviceError.hidden = !message;
     }
     function formRequest() {
-        const scope = explore?.getState();
-        return { query: ui.query.value.trim(), mode: currentMode(), type: ui.typeFilter.value || null,
-            limit: Number(ui.limitFilter.value), country: scope?.country ?? null, region: scope?.region ?? null,
-            ...(scope?.subdivision ? { subdivision: scope.subdivision } : {}), ...llmView?.requestOptions() };
+        return {
+            query: ui.query.value.trim(), mode: currentMode(), type: ui.typeFilter.value || null,
+            limit: Number(ui.limitFilter.value), ...llmView?.requestOptions(),
+        };
     }
     function sameRequest(left, right) {
         return left.query === right.query && left.mode === right.mode && left.type === right.type && left.limit === right.limit
@@ -219,7 +200,7 @@
             && (!left.enhance || left.llm_revision === right.llm_revision);
     }
     function modeAvailable(mode) {
-        return !state.restoringLink && state.corpusReady && (mode === "bm25" || state.semanticReady);
+        return !state.restoringLink && state.corpusReady && mode === "semantic" && state.semanticReady;
     }
     function safeLink(value, label, className) {
         try {
@@ -275,19 +256,17 @@
         return (await readApi(path, options)).data;
     }
     function updateSearchAvailability() {
-        const mode = currentMode();
-        const available = modeAvailable(mode);
+        const available = modeAvailable("semantic");
         const enhancementReady = !llmView?.enabled() || llmView.ready();
-        const subdivisionReady = explore?.subdivisionReady() ?? true;
         const samePending = state.searching && state.activeSearch !== null && sameRequest(state.activeSearch, formRequest());
-        ui.searchButton.disabled = !available || !subdivisionReady || !enhancementReady || samePending;
+        ui.searchButton.disabled = !available || !enhancementReady || samePending;
         ui.buttonLabel.textContent = state.searching ? samePending ? "检索中" : "更新检索" : "开始检索";
         ui.cancelSearch.disabled = !state.searching;
         ui.cancelSearch.hidden = !state.searching;
         ui.searchProgress.hidden = !state.searching && !state.searchFeedback;
         if (state.searching) {
             const status = state.activeSearch?.enhance ? "正在扩展查询并检索本地资料。" : "正在检索本地资料。";
-            const model = state.activeSearch?.mode === "semantic" ? "首次语义检索可能需要加载本地模型。" : "";
+            const model = "首次语义检索可能需要加载本地模型。";
             const retained = state.completedSearch ? "上次结果仍可查看。" : "";
             ui.progressLabel.textContent = status + model + retained;
         }
@@ -299,40 +278,42 @@
         ui.retrySearch.title = state.failedSearch ? `恢复并重试：${state.failedSearch.query}` : "";
         ui.clearType.disabled = !ui.typeFilter.value || ui.typeFilter.disabled;
         ui.emptyClearType.hidden = !state.hasSearched || state.results.length > 0 || !ui.typeFilter.value || state.searching || ui.typeFilter.disabled;
-        ui.activeMode.textContent = state.completedSearch?.response.enhancement?.applied ? "LLM · RRF"
-            : (state.displayedMode || mode) === "semantic" ? "SEMANTIC" : "BM25";
-        ui.preparationNote.hidden = mode !== "semantic" || !state.statusLoaded || state.semanticReady;
-        ui.modeExplanation.textContent = mode === "semantic"
-            ? "用中文描述问题，专名可保留原文，在多语种源资料中寻找相近候选；排序分数不是相关概率，仍需核验来源。"
-            : "匹配资料原词和已有中文描述。拉丁地名可省略常见变音符号，如用 Goree 查找 Gorée；中文关键词建议至少两个字。开启 LLM 增强后会另用改写查询融合排名。";
-        ui.exampleHint.textContent = mode === "semantic"
-            ? "中文问题示例，专名可保留原文；示例同步地点类型并保留当前地域条件。"
-            : "英文原词示例；示例同步地点类型并保留当前地域条件。";
+        ui.activeMode.textContent = state.completedSearch?.response.enhancement?.applied ? "LLM · RRF" : "SEMANTIC";
+        ui.preparationNote.hidden = !state.statusLoaded || state.semanticReady;
+        ui.modeExplanation.textContent = "用中文描述问题，专名可保留原文，在多语种源资料中寻找相近候选；排序分数不是相关概率，仍需核验来源。";
+        ui.exampleHint.textContent = "中文问题示例，专名可保留原文；示例同步地点类型并开始检索。";
         document.querySelectorAll("[data-query-zh]").forEach((button) => {
-            const exampleMode = button.dataset.exampleMode === "bm25" ? "bm25" : mode;
-            const query = exampleMode === "semantic" ? button.dataset.queryZh : button.dataset.queryEn;
+            const query = button.dataset.queryZh;
             const label = button.querySelector(".example-label");
             if (label)
-                label.textContent = button.dataset.exampleMode === "bm25" || mode === "semantic" ? button.dataset.label || query || "示例" : query || "示例";
-            button.disabled = !modeAvailable(exampleMode) || !subdivisionReady || !enhancementReady || ui.typeFilter.disabled || !Array.from(ui.typeFilter.options).some((option) => option.value === button.dataset.type);
-            button.setAttribute("aria-label", `${button.dataset.exampleMode === "bm25" ? "关键词基线 BM25 原名检索" : "检索示例"}：${query || ""}；类型：${typeLabel(button.dataset.type || "")}`);
-            button.lang = exampleMode === "semantic" || button.dataset.exampleMode === "bm25" ? "zh-CN" : "en";
+                label.textContent = button.dataset.label || query || "示例";
+            button.disabled = !available || !enhancementReady || ui.typeFilter.disabled || !Array.from(ui.typeFilter.options).some((option) => option.value === button.dataset.type);
+            button.setAttribute("aria-label", `检索示例：${query || ""}；类型：${typeLabel(button.dataset.type || "")}`);
+            button.lang = "zh-CN";
         });
         ArchSearchWorkspace.refreshSearchSummary();
     }
     function updateScopeHeader() {
-        const coverage = explore?.getCoverageSummary();
-        ui.coverage.textContent = coverage && coverage.version === currentCorpusVersion
-            ? `${coverage.countries} 个国家／地区 · ${coverage.regions} 个资料分组`
+        ui.coverage.textContent = coverageSummary && coverageSummary.version === currentCorpusVersion
+            ? `${coverageSummary.countries} 个国家／地区 · ${coverageSummary.regions} 个资料分组`
             : "全球文化遗址 · 覆盖统计加载中";
         ui.coverage.title = currentCorpusVersion ? `当前语料 ${currentCorpusVersion}；来源覆盖不代表全球完整清单。` : "正在核对本地语料版本。";
+    }
+    async function loadCoverageSummary() {
+        try {
+            const data = await api("/api/coverage");
+            if (typeof data.corpus_version === "string" && Array.isArray(data.countries) && Array.isArray(data.regions)) {
+                coverageSummary = { version: data.corpus_version, countries: data.countries.length, regions: data.regions.length };
+                updateScopeHeader();
+            }
+        }
+        catch { /* Coverage metadata is optional in the header summary. */ }
     }
     async function loadStatus() {
         ui.runtimeLabel.textContent = "检查本地服务";
         try {
             const status = await api("/api/status");
             historyView?.configure(status.history);
-            explore?.configureSubdivisions(status.subdivisions);
             if (restoringView) {
                 restoringView = false;
                 if (initialView.view) {
@@ -352,11 +333,11 @@
                 ui.corpusPeriod.textContent = status.corpus.period;
             updateScopeHeader();
             ui.statusDot.className = `status-dot ${state.semanticReady ? "is-ready" : "is-warning"}`;
-            ui.runtimeLabel.textContent = state.semanticReady ? "本地检索已就绪" : state.corpusReady ? "关键词检索可用" : "等待资料准备";
+            ui.runtimeLabel.textContent = state.semanticReady ? "本地语义检索就绪" : state.corpusReady ? "语义模型待准备" : "等待资料准备";
             const reason = typeof status.semantic?.reason === "string" ? status.semantic.reason : "";
             ui.preparationReason.textContent = `${reason ? `${reason}。` : ""}请按 README 完成本地模型与索引准备，然后点击右上角刷新运行状态。`;
             state.statusError = state.corpusReady ? null : "本地资料集尚未准备。请先按 README 导入资料，再刷新运行状态。";
-            announce(state.semanticReady ? "本地语义检索已就绪。" : "本地模型尚未就绪，可以选择关键词基线。");
+            announce(state.semanticReady ? "本地语义检索已就绪。" : "本地语义模型尚未就绪，请按 README 准备。");
         }
         catch (error) {
             state.statusLoaded = true;
@@ -425,29 +406,12 @@
             return runtimeRefresh;
         const refreshButton = byId("refresh-status", HTMLButtonElement);
         refreshButton.disabled = true;
-        runtimeRefresh = Promise.allSettled([loadStatus(), loadFacets(), explore?.load(), llmView?.load()]).then(async (loaded) => {
-            if (!browseRestored && !invalidLink && boundsRestoreError === null) {
-                browseRestored = true;
-                const explicit = ["browse_country", "browse_region", "browse_subdivision", "browse_chronology", "browse_offset", "points", "browse_bbox"].some((name) => initialUrl.searchParams.has(name));
-                const browse = explicit ? initialBrowse.state : { ...initialBrowse.state,
-                    country: initialLink.request?.country ?? null, region: initialLink.request?.region ?? null,
-                    ...(initialLink.request?.subdivision ? { subdivision: initialLink.request.subdivision } : {}) };
-                if (loaded[2].status === "rejected" && !browse.country && !browse.region && !browse.bbox && !browse.chronology && browse.offset === 0)
-                    return;
-                try {
-                    await explore?.setState({ ...browse, chronology: browse.chronology ?? null });
-                }
-                catch (error) {
-                    invalidLink = true;
-                    linkError = `目录条件无法恢复：${errorMessage(error)}`;
-                    browseRestoreError = linkError;
-                }
-            }
-        }).finally(() => {
+        const job = Promise.allSettled([loadStatus(), loadFacets(), loadCoverageSummary(), llmView?.load()]).then(() => undefined).finally(() => {
             runtimeRefresh = null;
             refreshButton.disabled = false;
         });
-        return runtimeRefresh;
+        runtimeRefresh = job;
+        return job;
     }
     function sourcePoint(site) {
         const coordinate = site.repr_point;
@@ -474,8 +438,8 @@
             byId("fit-map", HTMLButtonElement).disabled = true;
             return;
         }
-        state.map = L.map("map", { zoomControl: false, zoomAnimation: false, minZoom: 1, maxZoom: 9, worldCopyJump: true }).setView([20, 0], 1);
-        historicalMap = L.map("history-map", { zoomControl: false, zoomAnimation: false, minZoom: 1, maxZoom: 9, worldCopyJump: true }).setView([20, 0], 1);
+        state.map = L.map("map", { zoomControl: false, zoomAnimation: false, inertia: false, minZoom: 1, maxZoom: 9, worldCopyJump: true }).setView([20, 0], 1);
+        historicalMap = L.map("history-map", { zoomControl: false, zoomAnimation: false, inertia: false, minZoom: 1, maxZoom: 9, worldCopyJump: true }).setView([20, 0], 1);
         L.control.zoom({ position: "bottomleft" }).addTo(historicalMap);
         historicalMap.attributionControl?.setPrefix(false);
         L.control.zoom({ position: "bottomleft" }).addTo(state.map);
@@ -493,11 +457,6 @@
                 marker.setLatLng([location.lat, ArchSearchMapView.wrapLongitude(location.lng, center)]);
             }
         });
-        if (typeof ResizeObserver !== "undefined") {
-            new ResizeObserver(() => {
-                state.map?.invalidateSize({ pan: true, animate: false });
-            }).observe(byId("map", HTMLDivElement));
-        }
     }
     function fitMap() {
         if (!state.map)
@@ -521,8 +480,7 @@
         return state.selectedSite?.id === state.selectedId ? state.selectedSite : selectedResult()?.site ?? null;
     }
     function exportableDetail() {
-        return boundsRestoreError === null && verifiedDetail?.site.id === state.selectedId
-            && verifiedDetail.corpusVersion === currentCorpusVersion ? verifiedDetail : null;
+        return verifiedDetail?.site.id === state.selectedId && verifiedDetail.corpusVersion === currentCorpusVersion ? verifiedDetail : null;
     }
     function setSiteExportFeedback(message) {
         ui.siteExportFeedback.textContent = message;
@@ -531,10 +489,7 @@
     function updateSiteExportControl() {
         const wasDisabled = ui.exportSiteEvidence.disabled;
         ui.exportSiteEvidence.disabled = exportableDetail() === null;
-        if (boundsRestoreError !== null) {
-            setSiteExportFeedback("地图范围尚未恢复。请清除或重新捕获范围后再导出。");
-        }
-        else if (verifiedDetail && currentCorpusVersion === null) {
+        if (verifiedDetail && currentCorpusVersion === null) {
             setSiteExportFeedback("工作区语料版本尚未确认。请刷新运行状态后再试。");
         }
         else if (verifiedDetail && verifiedDetail.corpusVersion !== currentCorpusVersion) {
@@ -553,7 +508,7 @@
         const index = state.results.findIndex((result) => result.site.id === state.selectedId);
         const selected = currentSelectedSite();
         ui.selectionSummary.textContent = selected
-            ? index >= 0 ? `第 ${index + 1} / ${state.results.length} 条 · ${displayTitle(selected)}` : `全库目录 · ${displayTitle(selected)}`
+            ? index >= 0 ? `第 ${index + 1} / ${state.results.length} 条 · ${displayTitle(selected)}` : `已选遗址 · ${displayTitle(selected)}`
             : state.results.length ? `${state.results.length} 条候选，可逐条浏览或选择地图标记。` : "选择候选，查看地图与原始资料。";
         ui.selectionSummary.title = ui.selectionSummary.textContent;
         const hideActions = state.results.length === 0 && selected === null;
@@ -602,12 +557,7 @@
             return;
         if (ArchSearchMapView.locationStatus(site.repr_point) === "polar") {
             closeDetail(false);
-            ArchSearchWorkspace.setSidebarCollapsed(false, { focus: false });
-            ArchSearchWorkspace.activateCatalogue({ focus: false });
-            if (polarView?.locate(site.id))
-                announce(`已在独立极区示意定位 ${displayTitle(site)}，主地图不夹取原始纬度。`);
-            else
-                announce("极区定位暂未就绪，已保留来源详情中的原始坐标。请刷新资料目录后重试。");
+            announce(`该遗址坐标超出主地图 Web Mercator 投影范围（${coordinateLabel(site)}），主地图不夹取纬度。`);
             return;
         }
         if (!state.map || !point(site))
@@ -656,15 +606,13 @@
             state.markers.set(String(result.site.id), marker);
         }
         mapComparison?.setCandidates(state.results.map((result, index) => ({ id: result.site.id, title: displayTitle(result.site), repr_point: result.site.repr_point, rank: index + 1 })), false);
-        ui.mapEmptyLabel.hidden = state.results.length > 0 || explore !== null;
+        ui.mapEmptyLabel.hidden = true;
         fitMap();
     }
-    function scoreLabel(score, mode, fused = false) {
+    function scoreLabel(score, _mode, fused = false) {
         if (!Number.isFinite(score))
             return "未提供分数";
-        if (fused)
-            return `RRF 分数 ${score.toFixed(5)}`;
-        return mode === "semantic" ? `语义分数 ${score.toFixed(3)}` : `BM25 ${score.toFixed(2)}`;
+        return fused ? `RRF 分数 ${score.toFixed(5)}` : `语义分数 ${score.toFixed(3)}`;
     }
     function renderResults(data, context) {
         const previousFocus = document.activeElement;
@@ -682,15 +630,13 @@
         state.selectionMarker?.remove();
         state.selectionMarker = null;
         mapComparison?.setSelection(null);
-        explore?.select(null);
-        polarView?.select(null);
         selectedPhaseId = null;
         state.hasSearched = true;
         state.displayedMode = data.mode;
         ui.list.replaceChildren();
         ui.resultCount.textContent = String(state.results.length).padStart(2, "0");
         ArchSearchWorkspace.setSearchResultCount(state.results.length);
-        ui.activeMode.textContent = data.enhancement?.applied ? "LLM · RRF" : data.mode === "bm25" ? "BM25" : "SEMANTIC";
+        ui.activeMode.textContent = data.enhancement?.applied ? "LLM · RRF" : "SEMANTIC";
         ui.enhancementNote.hidden = !data.enhancement;
         ui.enhancementQueries.replaceChildren();
         if (data.enhancement) {
@@ -705,17 +651,15 @@
         const elapsed = Number.isFinite(data.elapsed_ms) ? `${Math.round(data.elapsed_ms)} ms` : "耗时未提供";
         const candidates = Number.isFinite(data.total_candidates)
             ? data.enhancement?.applied ? `合并原查询与改写后，在 ${data.total_candidates} 条候选资料中，`
-                : data.mode === "semantic" ? `在当前范围的 ${data.total_candidates} 条资料中，` : `${data.total_candidates} 条资料有字词匹配，`
+                : `在当前范围的 ${data.total_candidates} 条资料中，`
             : "";
         ui.resultSummary.textContent = `${candidates}展示 ${state.results.length} 条 · ${elapsed}`;
-        ui.resultContext.textContent = `本次查询：“${data.query}” · ${data.mode === "semantic" ? "语义检索" : "关键词基线"} · ${context.type ? typeLabel(context.type) : "全部类型"}${context.country ? ` · 国家／地区 ${context.country}` : ""}${context.region ? ` · 来源分区 ${context.region}` : ""}${context.subdivision ? ` · 来源省／地区 ${explore?.subdivisionLabel(context.subdivision) ?? "已选来源省区"}` : ""} · 最多 ${context.limit} 条 · 语料 ${data.corpus_version}`;
+        ui.resultContext.textContent = `本次查询：“${data.query}” · 语义检索 · ${context.type ? typeLabel(context.type) : "全部类型"} · 最多 ${context.limit} 条 · 语料 ${data.corpus_version}`;
         ui.resultContext.hidden = false;
         ui.empty.hidden = state.results.length > 0;
         if (state.results.length === 0) {
             ui.emptyTitle.textContent = "没有找到候选资料";
-            ui.emptyDescription.textContent = data.mode === "bm25"
-                ? "尝试英文关键词或古地名，放宽类型筛选；也可切换语义检索使用中文研究问题。"
-                : "尝试调整问题或放宽类型筛选。当前语料为地中海罗马资料与全球历史遗址的策展样本。";
+            ui.emptyDescription.textContent = "尝试调整问题或放宽类型筛选。当前语料为地中海罗马资料与全球历史遗址的策展样本。";
         }
         const viewCandidates = [];
         for (const [index, result] of state.results.entries()) {
@@ -771,23 +715,17 @@
         saveViewLink();
         ui.resultTools.hidden = false;
         ArchSearchWorkspace.activateResults({ focus: false });
-        ui.copyLink.disabled = boundsRestoreError !== null;
+        ui.copyLink.disabled = false;
         ui.toolsFeedback.textContent = "";
         ui.shareLinkPanel.hidden = true;
-        ui.shareLink.value = boundsRestoreError !== null ? currentLink : state.completedSearch.link;
-        if (boundsRestoreError !== null)
-            ui.toolsFeedback.textContent = "地图范围恢复失败；先明确清除或重新捕获范围，再复制或导出研究视图。";
+        ui.shareLink.value = state.completedSearch.link;
         if (removedFocus || (previousFocus instanceof HTMLButtonElement && previousFocus.disabled
             && [ui.previousResult, ui.nextResult, ui.locateSelected].includes(previousFocus))) {
             focusWithinView(ui.resultSummary);
         }
-        announce(`检索完成，返回 ${state.results.length} 条候选资料。${data.mode === "semantic" ? "相似度分数并非相关概率，请核验来源。" : ""}`);
+        announce(`检索完成，返回 ${state.results.length} 条候选资料。相似度分数并非相关概率，请核验来源。`);
     }
     async function copySearchLink() {
-        if (boundsRestoreError !== null) {
-            ui.toolsFeedback.textContent = "地图范围尚未恢复；先明确清除或重新捕获范围，再复制或导出研究视图。原链接仍保留在地址栏。";
-            return;
-        }
         saveViewLink();
         const copiedLink = currentLink;
         try {
@@ -809,18 +747,6 @@
             ui.shareLink.select();
         }
     }
-    function exportSpatial(site) {
-        return {
-            metadata: explore?.getSpatialMetadata() ?? null,
-            selected: site ? {
-                site_id: site.id,
-                representative_point: site.repr_point,
-                source_points: explore?.getSourcePoints(site.id) ?? [],
-                records: explore?.getSourceLocationRecords(site.id) ?? [],
-                source: explore?.getSpatialSource(site.id) ?? null,
-            } : null,
-        };
-    }
     function downloadJson(filename, report) {
         const download = element("a");
         const objectUrl = URL.createObjectURL(new Blob([JSON.stringify(report, null, 2)], { type: "application/json;charset=utf-8" }));
@@ -840,20 +766,14 @@
         const completed = state.completedSearch;
         if (!completed)
             return;
-        if (boundsRestoreError !== null) {
-            ui.toolsFeedback.textContent = "地图范围尚未恢复；先明确清除或重新捕获范围，再复制或导出研究视图。";
-            return;
-        }
         try {
             const exportedAt = new Date().toISOString();
             const map = historyView?.getView() ?? null;
-            const browse = explore?.getCommittedState() ?? null;
-            const coverage = explore?.getCoverageSummary() ?? null;
             const areas = registeredAreas?.getSnapshot() ?? null;
             const evidence = ArchSearchResearch.selectSearchExportEvidence({
                 search: completed.response, selection: { site: state.selectedId, phase: selectedPhaseId },
                 displayedSite: currentSelectedSite(), verifiedDetail,
-                catalogue: coverage && browse ? { corpusVersion: coverage.version, browse, getSpatial: exportSpatial } : null,
+                catalogue: null,
             });
             const report = ArchSearchResearch.createExport(completed.request, completed.response, exportedAt, map, evidence.selection, evidence.selectedSite, evidence.browse, evidence.spatial, areas, currentCorpusVersion, currentRegisteredAreasVersion, mapComparison?.snapshot(map) ?? null);
             downloadJson(`archsearch-${completed.request.mode}-${exportedAt.replace(/[:.]/g, "-")}.json`, report);
@@ -862,10 +782,6 @@
                 omitted.push("选中遗址资料");
             else if (evidence.phaseOmitted)
                 omitted.push("选中阶段");
-            if (evidence.catalogueOmitted)
-                omitted.push("目录和来源点");
-            else if (evidence.spatialOmitted)
-                omitted.push("来源点");
             if (areas && !report.registered_areas)
                 omitted.push("登记范围");
             ui.toolsFeedback.textContent = [
@@ -886,11 +802,10 @@
             const { site, corpusVersion } = evidence;
             const exportedAt = new Date().toISOString();
             const map = historyView?.getView() ?? null;
-            const catalogueMatches = explore?.getCoverageSummary()?.version === corpusVersion;
             const report = ArchSearchResearch.createSiteExport({
                 exportedAt, corpusVersion, selection: { site: site.id, phase: selectedPhaseId }, selectedSite: site,
-                map, comparison: mapComparison?.snapshot(map) ?? null, browse: catalogueMatches ? explore?.getCommittedState() ?? null : null,
-                spatial: catalogueMatches ? exportSpatial(site) : null, registeredAreas: registeredAreas?.getSnapshot() ?? null,
+                map, comparison: mapComparison?.snapshot(map) ?? null, browse: null,
+                spatial: null, registeredAreas: registeredAreas?.getSnapshot() ?? null,
                 registeredAreasVersion: currentRegisteredAreasVersion,
             });
             const filenameId = site.id.replace(/[^a-zA-Z0-9_-]/g, "-");
@@ -905,7 +820,6 @@
         pendingLink = null;
         unresolvedSearchLink = null;
         linkError = null;
-        browseRestoreError = null;
         invalidLink = false;
         pendingSelectionRestore = false;
         state.restoringLink = false;
@@ -914,6 +828,10 @@
         updateSearchAvailability();
     }
     function prepareLinkedSearch(request) {
+        if (request.mode !== "semantic") {
+            showError("当前网页仅支持语义检索，已移除关键词基线；请改用语义检索重新查询。");
+            return false;
+        }
         if (request.type && (ui.typeFilter.disabled || !Array.from(ui.typeFilter.options).some((option) => option.value === request.type))) {
             showError("链接中的地点类型无法确认。请检查类型是否有效，或重新选择后手动检索；本次未自动扩大检索范围。");
             return false;
@@ -929,8 +847,8 @@
             }
             request.llm_revision = config.revision;
         }
-        if (!state.corpusReady || (request.mode === "semantic" && !state.semanticReady)) {
-            showError("链接中的检索条件已恢复；当前服务或所选模型尚未就绪。请查看运行状态，准备后手动检索。");
+        if (!state.corpusReady || !state.semanticReady) {
+            showError("链接中的检索条件已恢复；当前服务或语义模型尚未就绪。请查看运行状态，准备后手动检索。");
             return false;
         }
         return true;
@@ -943,8 +861,7 @@
         if (linkError) {
             showError(`分享链接未能恢复：${linkError}`);
             linkError = null;
-            if (!browseRestoreError || request)
-                pendingSelectionRestore = false;
+            pendingSelectionRestore = false;
         }
         else if (request && prepareLinkedSearch(request)) {
             const search = runSearch(request);
@@ -1066,11 +983,6 @@
         }
         announce(ui.progressLabel.textContent ?? "");
         try {
-            const expectedSubdivisionVersion = request.subdivision ? await explore?.validateSearchScope(request, controller.signal) : null;
-            if (request.subdivision && !expectedSubdivisionVersion)
-                throw new Error("来源省区尚未确认，未放宽检索范围。");
-            if (sequence !== state.searchSequence)
-                return;
             const data = await api("/api/search", {
                 method: "POST", signal: controller.signal,
                 headers: { "Content-Type": "application/json" },
@@ -1083,11 +995,6 @@
             const enhancement = ArchSearchResearch.validateEnhancement(request, data.enhancement);
             if (enhancement)
                 data.enhancement = enhancement;
-            if (request.subdivision) {
-                ArchSearchResearch.validateSubdivisionResponse(request, data, expectedSubdivisionVersion);
-                if (explore?.subdivisionVersion() !== expectedSubdivisionVersion)
-                    throw new Error("来源省区版本已改变，保留原成功检索，请刷新后重试。");
-            }
             renderResults(data, { type: request.type, limit: request.limit, country: request.country, region: request.region,
                 ...(request.subdivision ? { subdivision: request.subdivision } : {}),
                 ...(request.enhance ? { enhance: true, llm_revision: request.llm_revision } : {}) });
@@ -1101,7 +1008,7 @@
             announce("本次检索失败，请查看错误说明。");
             if (!state.completedSearch) {
                 ui.emptyTitle.textContent = "本次检索未完成";
-                ui.emptyDescription.textContent = "上方保留了错误说明。检查本地模型与服务后，可以重试或选择关键词基线。";
+                ui.emptyDescription.textContent = "上方保留了错误说明。检查本地语义模型与服务后可点击重试。";
             }
         }
         finally {
@@ -1114,7 +1021,7 @@
     }
     function retryFailedSearch() {
         const request = state.failedSearch;
-        if (!request || state.searching)
+        if (!request || state.searching || request.mode !== "semantic")
             return;
         if (request.type && !state.typeLabels.has(request.type)) {
             showError("上次失败请求的类型已不可用，未放宽原条件。请刷新类型或重新选择后检索。");
@@ -1123,7 +1030,6 @@
         ui.query.value = request.query;
         ui.typeFilter.value = request.type || "";
         ui.limitFilter.value = String(request.limit);
-        ui.form.querySelectorAll('input[name="mode"]').forEach((radio) => { radio.checked = radio.value === request.mode; });
         llmView?.setRequested(request.enhance === true);
         void runSearch(request);
     }
@@ -1170,16 +1076,15 @@
         return list;
     }
     function saveViewLink() {
-        ui.exportResults.disabled = state.completedSearch === null || boundsRestoreError !== null;
-        if (initialStatePending || invalidLink || boundsRestoreError !== null || pendingSelectionRestore || unresolvedSearchLink)
+        ui.exportResults.disabled = state.completedSearch === null;
+        if (initialStatePending || invalidLink || pendingSelectionRestore || unresolvedSearchLink)
             return;
-        const link = ArchSearchResearch.buildLink(new URL(window.location.href), state.completedSearch?.request ?? null, historyView?.getView() ?? null, { site: state.selectedId, phase: selectedPhaseId }, explore?.getCommittedState() ?? null, mapComparison?.state() ?? null);
+        const link = ArchSearchResearch.buildLink(new URL(window.location.href), state.completedSearch?.request ?? null, historyView?.getView() ?? null, { site: state.selectedId, phase: selectedPhaseId }, null, mapComparison?.state() ?? null);
         currentLink = link;
         if (state.completedSearch && state.completedSearch.link !== link)
             state.completedSearch = { ...state.completedSearch, link };
         ui.shareLink.value = link;
-        ui.resultTools.hidden = !state.completedSearch && !state.selectedSite && historyView?.getView() == null
-            && explore?.getCommittedState() == null;
+        ui.resultTools.hidden = !state.completedSearch && !state.selectedSite && historyView?.getView() == null;
         ui.copyLink.disabled = false;
         try {
             window.history.replaceState(null, "", link);
@@ -1233,45 +1138,6 @@
         const site = currentSelectedSite();
         if (site)
             updateComparisonSelection(site, false);
-    }
-    function sourceLocationsSection(site) {
-        const points = explore?.getSourcePoints(site.id) ?? [];
-        const metadata = explore?.getSpatialMetadata();
-        if (!points.length) {
-            if (!metadata || !site.geography?.authority_id || (!/^[1-9]\d*$/u.test(site.geography.authority_id) && !site.id.startsWith("auth:unesco-chp:")))
-                return null;
-            const section = detailSection("来源组成定位记录", metadata.ready
-                ? "固定名录未提供源定位记录；原代表点来自独立证据，不插入DataHub源数组。"
-                : "源定位数据尚未就绪，当前保留原代表点，不补造源点。请按全库定位状态的准备指引修复。");
-            section.id = "site-source-locations";
-            return section;
-        }
-        const records = explore?.getSourceLocationRecords(site.id) ?? [];
-        const section = detailSection("来源定位记录", `${points.length} 条来源记录。它们属于同一文化资料条目，不作为新增遗址计数，也不表示精确发掘位置。`);
-        section.id = "site-source-locations";
-        section.append(element("p", "detail-note", "原代表点保持不变；全库点层另展示源定位记录，同一遗产的重合圆点可合并显示。名称与编号仅为来源标签，不作为唯一身份或精确发掘位置。"));
-        const details = element("details", "evidence-more");
-        details.append(element("summary", null, "查看已核定位的来源顺序、名称与坐标"));
-        const list = element("ol", "source-location-list");
-        list.tabIndex = 0;
-        list.setAttribute("aria-label", "按原始顺序排列的来源定位记录，可滚动阅读");
-        for (const [index, point] of points.entries()) {
-            const record = records[index];
-            const row = element("li", "evidence-item");
-            row.dataset.sourceIndex = String(index);
-            row.append(element("p", null, record?.name || `来源定位记录 ${index + 1}`));
-            const [longitude, latitude] = point;
-            row.append(element("p", "detail-note", `定位序号 ${index + 1}${record?.ref ? ` · 来源编号 ${record.ref}` : ""} · WGS84 [${longitude}, ${latitude}]`));
-            list.append(row);
-        }
-        details.append(list);
-        section.append(details);
-        const source = explore?.getSpatialSource(site.id);
-        if (source)
-            section.append(safeLink(source.uri, `${source.name} · ${source.license} · ${source.version}`));
-        if (site.id.startsWith("auth:unesco-chp:"))
-            section.append(element("p", "detail-note", "海牙名录定位只绘制经审核的文化原址点；仓储或标签冲突等排除记录保留在来源审计中。来源编号保留原始序号，保护列入年不作为历史阶段。"));
-        return section;
     }
     function minasSourceContent(rows) {
         const content = element("div", "minas-source-records");
@@ -1431,7 +1297,7 @@
         space.append(element("p", "detail-note", "精度按来源标签展示，不承诺米级误差；代表点不等同于实测发掘坐标。"));
         const positionStatus = ArchSearchMapView.locationStatus(site.repr_point);
         if (positionStatus === "polar") {
-            space.append(element("p", "detail-note", "原坐标超出主地图Web Mercator投影范围；主地图不夹取纬度，请使用“查看极区位置”。极区定位为独立现代自然地理示意。"));
+            space.append(element("p", "detail-note", "原坐标超出主地图Web Mercator投影范围；主地图不夹取纬度。"));
         }
         else if (positionStatus === "unknown") {
             space.append(element("p", "detail-note", site.source_kind === "supplement"
@@ -1442,9 +1308,6 @@
             space.append(element("p", "detail-note", "rough 表示应在某个范围内寻找地点；代表点可能只是该范围的中心。"));
         }
         nodes.push(space);
-        const sourceLocations = sourceLocationsSection(site);
-        if (sourceLocations)
-            nodes.push(sourceLocations);
         if (site.geography) {
             const geography = site.geography;
             const scope = detailSection("来源名录中的国家／地区与分区", `国家／地区：${site.source_kind === "ats" ? "不作主权归属标注" : geography.countries.join(" · ") || "来源未明确"}；分区：${geography.regions.map((region) => region === "antarctica" ? "南极洲（独立区域分类）" : region).join(" · ") || "来源未提供"}。`);
@@ -1458,7 +1321,7 @@
             nodes.push(matches);
         }
         else
-            nodes.push(detailSection("选择方式", "从全库目录直接选择；此处没有附加检索分数或排名，不将目录选择解释为查询命中。"));
+            nodes.push(detailSection("选择方式", "通过研究链接直接打开；未附带本次语义检索排序分数。"));
         const evidence = Array.isArray(site.period_evidence) ? site.period_evidence : [];
         if (evidence.length) {
             const roman = evidence.filter((item) => item.period_id === "roman");
@@ -1514,8 +1377,6 @@
             marker.getElement()?.setAttribute("aria-pressed", String(selected));
             marker.setZIndexOffset(selected ? 1000 : 0);
         }
-        explore?.select(id);
-        polarView?.select(id);
     }
     function presentSelection(site, matchedFields, fresh, moveMap = true) {
         state.selectedSite = site;
@@ -1537,7 +1398,7 @@
             const icon = marker.getElement();
             if (markerOpenedDetail)
                 state.detailOpener = icon ?? null;
-            icon?.setAttribute("aria-label", `全库选中：${displayTitle(site)}，打开资料详情`);
+            icon?.setAttribute("aria-label", `已选遗址：${displayTitle(site)}，打开资料详情`);
             icon?.addEventListener("keydown", (event) => {
                 if (event.key === " " || event.key === "Enter") {
                     event.preventDefault();
@@ -1549,13 +1410,6 @@
         }
         renderDetail(site, matchedFields);
         registeredAreas?.select(site.id, displayTitle(site));
-        if (site.source_kind === "ats")
-            polarView?.ensureSite({
-                id: site.id, title: displayTitle(site), repr_point: site.repr_point,
-                location_status: ArchSearchMapView.locationStatus(site.repr_point),
-                regions: site.geography?.regions ?? [], source_kind: site.source_kind,
-            });
-        polarView?.select(site.id);
         updateComparisonSelection(site, fresh && moveMap);
         updateSelectionControls();
         if (fresh) {
@@ -1564,7 +1418,7 @@
                 positionSelectedSite(site);
             }
             const rank = state.results.findIndex((item) => item.site.id === site.id);
-            announce(`${rank < 0 ? "已选择全库目录地点" : `已选择第 ${rank + 1} / ${state.results.length} 条`}：${displayTitle(site)}，可打开资料详情核验来源。`);
+            announce(`${rank < 0 ? "已选择遗址" : `已选择第 ${rank + 1} / ${state.results.length} 条`}：${displayTitle(site)}，可打开资料详情核验来源。`);
         }
         saveViewLink();
     }
@@ -1670,18 +1524,14 @@
                 state.selectedId = null;
                 state.selectedSite = null;
                 selectedPhaseId = null;
-                explore?.select(null);
-                polarView?.select(null);
                 historyView?.setSelectionContext(null);
                 mapComparison?.setSelection(null);
                 const failedTitle = element("h3", null, "资料未能读取");
                 failedTitle.id = "detail-title";
                 ui.detailContent.replaceChildren(failedTitle, element("p", "detail-note", errorMessage(error)));
                 showError(`遗址资料未能恢复：${errorMessage(error)}。地图与检索快照保持不变。`);
-                if (restoring) {
+                if (restoring)
                     invalidLink = true;
-                    browseRestoreError = null;
-                }
                 updateSelectionControls();
                 saveViewLink();
             }
@@ -1728,37 +1578,20 @@
         exampleIntent.invalidate();
         cancelLinkRestore();
     });
-    ui.form.querySelectorAll('input[name="mode"]').forEach((radio) => radio.addEventListener("change", applyChangedFilter));
     ui.typeFilter.addEventListener("change", applyChangedFilter);
     ui.limitFilter.addEventListener("change", applyChangedFilter);
     document.querySelectorAll("[data-query-zh]").forEach((button) => {
-        button.addEventListener("click", async () => {
-            const fullCorpus = button.dataset.fullCorpus === "true";
-            const visible = explore?.getState().visible ?? false;
-            const globalScope = (scope) => scope !== null && !scope.country && !scope.region && !scope.subdivision && !scope.bbox && scope.offset === 0 && scope.visible === visible;
-            await exampleIntent.run(async () => {
-                if (fullCorpus) {
-                    if (!explore)
-                        throw new Error("目录尚未就绪。");
-                    await explore.setState({ country: null, region: null, subdivision: null, bbox: null, offset: 0, visible });
-                }
-            }, () => !fullCorpus || globalScope(explore?.getCommittedState() ?? null) && globalScope(explore?.getState() ?? null), () => {
-                if (fullCorpus)
-                    announce("已明确清除地区与矩形条件，将从全库检索这个示例。");
-                if (button.dataset.exampleMode === "bm25") {
-                    ui.form.querySelectorAll('input[name="mode"]').forEach((radio) => { radio.checked = radio.value === "bm25"; });
-                    announce("已选择关键词基线 BM25，按来源原名检索。");
-                }
-                ui.query.value = (currentMode() === "semantic" ? button.dataset.queryZh : button.dataset.queryEn) || "";
-                const type = button.dataset.type || "";
-                ui.typeFilter.value = Array.from(ui.typeFilter.options).some((option) => option.value === type) ? type : "";
-                updateSearchAvailability();
-                const examplesMenu = document.getElementById("workspace-examples");
-                if (examplesMenu instanceof HTMLDetailsElement)
-                    examplesMenu.open = false;
-                ui.query.focus();
-                search();
-            }, (error) => { showError(`示例未提交：${errorMessage(error)} 已显示检索结果保持原样。`); });
+        button.addEventListener("click", () => {
+            exampleIntent.invalidate();
+            ui.query.value = button.dataset.queryZh || "";
+            const type = button.dataset.type || "";
+            ui.typeFilter.value = Array.from(ui.typeFilter.options).some((option) => option.value === type) ? type : "";
+            updateSearchAvailability();
+            const examplesMenu = document.getElementById("workspace-examples");
+            if (examplesMenu instanceof HTMLDetailsElement)
+                examplesMenu.open = false;
+            ui.query.focus();
+            void search();
         });
     });
     byId("refresh-status", HTMLButtonElement).addEventListener("click", refreshRuntime);
@@ -1781,14 +1614,12 @@
         ui.detailPanel.hidden = true;
     });
     window.addEventListener("archsearch:workspacechange", () => {
-        state.map?.invalidateSize({ pan: true, animate: false });
-        historicalMap?.invalidateSize({ pan: true, animate: false });
+        mapComparison?.invalidateSizes();
     });
     if (pendingLink) {
         state.restoringLink = true;
         ui.query.value = pendingLink.query;
         ui.limitFilter.value = String(pendingLink.limit);
-        ui.form.querySelectorAll('input[name="mode"]').forEach((radio) => { radio.checked = radio.value === pendingLink?.mode; });
     }
     llmView = ArchSearchLlm.create({ onChange: () => { updateSearchAvailability(); } });
     llmView.setRequested(pendingLink?.enhance === true);
@@ -1828,70 +1659,6 @@
             }
         },
     });
-    polarView = ArchSearchPolarView.create({ onSelect: (id, opener) => { void selectSite(id, { opener, moveMap: false, showDetail: true }); } });
-    explore = ArchSearchExplore.create({
-        map: state.map,
-        initialBoundsError: boundsRestoreError,
-        initialState: boundsRestoreError !== null ? initialNonBoundsBrowse.state : undefined,
-        onBoundsAction: () => {
-            boundsRestoreError = null;
-            browseRestored = true;
-            setSiteExportFeedback("");
-            updateSiteExportControl();
-        },
-        onSubdivisionChange: () => { updateSearchAvailability(); },
-        onSelect: (id, opener, options) => { void selectSite(id, { opener, ...options }); },
-        onFilterChange: () => {
-            exampleIntent.invalidate();
-            cancelLinkRestore();
-            updateSearchAvailability();
-            announce("目录筛选已更新；下一次检索将使用当前地区，已显示排名保持原条件。");
-        },
-        onStateChange: () => { exampleIntent.invalidate(); browseRestored = true; invalidLink = false; pendingSelectionRestore = false; saveViewLink(); },
-        onCommittedState: () => {
-            updateScopeHeader();
-            mapComparison?.setCatalogue(explore?.getDisplayedPlacements() ?? [], explore?.getCommittedState()?.visible ?? false);
-            if (browseRestoreError) {
-                if (ui.requestError.textContent === `分享链接未能恢复：${browseRestoreError}`)
-                    showError("");
-                browseRestoreError = null;
-                invalidLink = false;
-                linkError = null;
-            }
-            saveViewLink();
-        },
-        onCatalogue: (points) => {
-            polarView?.setSites(points);
-            const selected = currentSelectedSite();
-            if (selected && !ui.detailPanel.hidden) {
-                const previous = document.getElementById("site-source-locations");
-                const section = sourceLocationsSection(selected);
-                const active = document.activeElement;
-                const ownedFocus = previous?.contains(active) ?? false;
-                const oldDetails = previous?.querySelector("details");
-                const oldList = previous?.querySelector("ol");
-                const previousScroll = oldList?.scrollTop ?? 0;
-                if (previous && section) {
-                    const details = section.querySelector("details");
-                    if (details && oldDetails)
-                        details.open = oldDetails.open;
-                    previous.replaceWith(section);
-                    const list = section.querySelector("ol");
-                    if (list && oldList)
-                        list.scrollTop = previousScroll;
-                }
-                else if (section)
-                    ui.detailContent.append(section);
-                else
-                    previous?.remove();
-                if (ownedFocus)
-                    focusWithinView(active === oldList
-                        ? section?.querySelector("ol") ?? ui.detailPanel
-                        : section?.querySelector("summary") ?? ui.detailPanel);
-            }
-        },
-        onFeedback: () => { ui.mapEmptyLabel.hidden = true; },
-    });
     mapView = ArchSearchMapView.create({ map: state.map, countLabel: ui.viewportCount, scopeLabel: "现代图范围内" });
     registeredAreas = ArchSearchRegisteredAreas.create({
         map: state.map,
@@ -1907,6 +1674,7 @@
             return { topLeft: [24, 24], bottomRight: [24, 24] };
         },
     });
+    ui.mapEmptyLabel.hidden = true;
     registeredAreas.setCorpusVersion(currentCorpusVersion, currentRegisteredAreasVersion);
     updateSelectionControls();
     updateSearchAvailability();

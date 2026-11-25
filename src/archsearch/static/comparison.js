@@ -34,6 +34,8 @@ const ArchSearchComparison = (() => {
         let sync = initial.sync_centers;
         let syncing = false;
         let restoringCameras = false;
+        let resizing = false;
+        let activeDrag = null;
         const restoredZoom = sharedZoom(initial.history_view?.zoom ?? initial.modern_view?.zoom ?? historical?.getZoom() ?? modern?.getZoom() ?? 1);
         let alignedLegacyZoom = [initial.modern_view, initial.history_view].some(view => view !== null && view.zoom !== restoredZoom);
         let failedTiles = false;
@@ -46,11 +48,14 @@ const ArchSearchComparison = (() => {
         let catalogueSignature = "";
         let candidateValues = [];
         const mapSizes = new Map();
-        for (const map of [modern, historical])
-            if (map) {
-                const size = map.getSize();
-                mapSizes.set(map, { x: size.x, y: size.y });
-            }
+        function recordMapSizes() {
+            for (const map of [modern, historical])
+                if (map) {
+                    const size = map.getSize();
+                    mapSizes.set(map, { x: size.x, y: size.y });
+                }
+        }
+        recordMapSizes();
         const markers = new Map();
         const candidateLayer = historical && typeof L !== "undefined" ? L.layerGroup().addTo(historical) : null;
         let sourceRenderer = null;
@@ -59,8 +64,10 @@ const ArchSearchComparison = (() => {
             pane.style.zIndex = "350";
             sourceRenderer = L.canvas({ pane: "history-boundaries" });
         }
-        const density = historical && sourceRenderer ? ArchSearchDensity.create({ map: historical, pane: "history-boundaries", renderer: sourceRenderer, cellSize: 128, cluster: false,
-            onSelect: (id, opener) => onSelect(id, opener, { moveMap: false }) }) : null;
+        const density = historical && sourceRenderer && typeof ArchSearchDensity !== "undefined"
+            ? ArchSearchDensity.create({ map: historical, pane: "history-boundaries", renderer: sourceRenderer, cellSize: 128, cluster: false,
+                onSelect: (id, opener) => onSelect(id, opener, { moveMap: false }) })
+            : null;
         const catalogueLayer = density?.layer.addTo(historical) ?? null;
         if (modern) {
             const pane = modern.getPane("comparison-modern-land") ?? modern.createPane("comparison-modern-land");
@@ -178,20 +185,32 @@ const ArchSearchComparison = (() => {
             mapSizes.set(map, { x: next.x, y: next.y });
             return changed;
         }
+        function invalidateSizes() {
+            resizing = true;
+            try {
+                modern?.invalidateSize({ pan: true, animate: false });
+                historical?.invalidateSize({ pan: true, animate: false });
+            }
+            finally {
+                recordMapSizes();
+                resizing = false;
+            }
+        }
         function syncLive(source, destination) {
-            if (syncing || restoringCameras || !destination)
+            if (syncing || restoringCameras || resizing || !destination)
                 return;
-            const resized = hasSizeChanged(source);
+            if (activeDrag !== source && hasSizeChanged(source)) {
+                sizeChanged(source);
+                return;
+            }
             const actual = source.getCenter();
             const zoom = sharedZoom(source.getZoom());
-            const copyCenter = sync && !resized;
             const other = destination.getCenter();
-            const targetCenter = copyCenter
+            const targetCenter = sync
                 ? [Math.max(-latitudeLimit, Math.min(latitudeLimit, actual.lat)), actual.lng]
                 : [other.lat, other.lng];
             syncing = true;
             try {
-                destination.stop();
                 applyCamera(destination, targetCenter, zoom);
             }
             finally {
@@ -201,7 +220,11 @@ const ArchSearchComparison = (() => {
         function finishMove(source, destination) {
             if (syncing || restoringCameras)
                 return;
-            const resized = sizeChanged(source);
+            if (resizing) {
+                sizeChanged(source);
+                return;
+            }
+            const resized = activeDrag !== source && sizeChanged(source);
             syncFrom(source, destination, sync && !resized);
             onChanged();
         }
@@ -393,11 +416,13 @@ const ArchSearchComparison = (() => {
             return modern !== null || historical !== null;
         }
         if (modern) {
-            modern.on("move zoom", () => syncLive(modern, historical));
+            modern.on("drag move zoom", () => syncLive(modern, historical));
+            modern.on("resize", () => { sizeChanged(modern); });
             modern.on("moveend", () => finishMove(modern, historical));
         }
         if (historical) {
-            historical.on("move zoom", () => syncLive(historical, modern));
+            historical.on("drag move zoom", () => syncLive(historical, modern));
+            historical.on("resize", () => { sizeChanged(historical); });
             historical.on("moveend", () => {
                 for (const marker of [...markers.values(), ...(selectedMarker ? [selectedMarker] : [])]) {
                     const value = marker.getLatLng();
@@ -408,10 +433,22 @@ const ArchSearchComparison = (() => {
                 finishMove(historical, modern);
             });
         }
-        for (const [map, touch] of [[modern, () => { modernTouched = true; cameraActions++; alignedLegacyZoom = false; render(); }], [historical, () => { historicalTouched = true; cameraActions++; alignedLegacyZoom = false; render(); }]]) {
+        for (const [map, other, touch] of [
+            [modern, historical, () => { modernTouched = true; cameraActions++; alignedLegacyZoom = false; render(); }],
+            [historical, modern, () => { historicalTouched = true; cameraActions++; alignedLegacyZoom = false; render(); }],
+        ]) {
             if (!map)
                 continue;
-            map.on("dragstart", touch);
+            map.on("dragstart", () => {
+                activeDrag = map;
+                recordMapSizes();
+                other?.stop();
+                touch();
+            });
+            map.on("dragend", () => {
+                if (activeDrag === map)
+                    activeDrag = null;
+            });
             for (const event of ["pointerdown", "wheel", "keydown"])
                 map.getContainer().addEventListener(event, touch, { passive: true });
         }
@@ -436,7 +473,7 @@ const ArchSearchComparison = (() => {
         ui.evidenceOpen.addEventListener("click", onEvidence);
         restoreViews();
         if (typeof ResizeObserver !== "undefined") {
-            const observer = new ResizeObserver(() => { modern?.invalidateSize({ pan: true, animate: false }); historical?.invalidateSize({ pan: true, animate: false }); });
+            const observer = new ResizeObserver(() => { invalidateSizes(); });
             if (modern)
                 observer.observe(modern.getContainer());
             if (historical)
@@ -448,7 +485,7 @@ const ArchSearchComparison = (() => {
         else
             void ensureLand().catch(() => undefined);
         return {
-            setCandidates, fitCandidates, setCatalogue, setSelection, focusSelected, setModernBasemap,
+            setCandidates, fitCandidates, setCatalogue, setSelection, focusSelected, setModernBasemap, invalidateSizes,
             getHistoricalRenderer: () => sourceRenderer,
             noteInteraction() { modernTouched = true; historicalTouched = true; cameraActions++; alignedLegacyZoom = false; render(); },
             actionVersion: () => cameraActions,

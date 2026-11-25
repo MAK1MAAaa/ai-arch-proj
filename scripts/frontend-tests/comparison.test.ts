@@ -88,7 +88,7 @@ interface Controller {
   setSelection(value: Selected | null, focus?: boolean): void; setModernBasemap(value: 'osm' | 'natural'): void;
   focusSelected(options?: { preserveCamera?: boolean }): boolean;
   getMarker(id: string): Layer | null; restoreInitialViews(): void; noteInteraction(): void; actionVersion(): number;
-  getHistoricalRenderer(): object | null;
+  getHistoricalRenderer(): object | null; invalidateSizes(): void;
   state(): State; snapshot(value: Frame | null): { layout: string; modern: { role: string; basemap: string }; historical: { role: string; year: number | null; source_version: string | null } };
 }
 interface Helpers { create(options: { modern: MapView; historical: MapView; tiles: Layer; initial: State; onSelect(id: string, opener: Element | null, options?: { moveMap?: boolean }): void; onChanged(): void; onEvidence(): void }): Controller }
@@ -406,4 +406,50 @@ test('live move and zoom events synchronize modern and historical maps in both d
 
   h.historical.fire('moveend');
   assert.equal(h.changes(),1);
+});
+
+test('invalidateSizes preserves separate saved centers during layout resize and allows immediate bidirectional drag sync', () => {
+  const h=harness({sync_centers:true,modern_view:{center:[12,48],zoom:4},history_view:{center:[30,20],zoom:4}});
+  h.modern.width=840; h.historical.width=840;
+  h.controller.invalidateSizes();
+  assert.deepEqual(h.modern.getCenter(),{lat:48,lng:12});
+  assert.deepEqual(h.historical.getCenter(),{lat:20,lng:30});
+
+  h.modern.fire('dragstart');
+  h.modern.center={lat:49.5,lng:14.2};
+  h.modern.fire('drag');
+  h.modern.fire('move');
+  assert.deepEqual(h.historical.getCenter(),{lat:49.5,lng:14.2});
+  h.modern.fire('dragend');
+  h.modern.fire('moveend');
+  assert.deepEqual(h.historical.getCenter(),{lat:49.5,lng:14.2});
+
+  h.historical.fire('dragstart');
+  h.historical.center={lat:35.1,lng:139.7};
+  h.historical.fire('drag');
+  h.historical.fire('move');
+  assert.deepEqual(h.modern.getCenter(),{lat:35.1,lng:139.7});
+  h.historical.fire('dragend');
+  h.historical.fire('moveend');
+  assert.deepEqual(h.modern.getCenter(),{lat:35.1,lng:139.7});
+});
+
+test('comparison initializes cleanly even when ArchSearchDensity is not loaded', () => {
+  const noDensityScripts = ['map-view', 'history', 'comparison'].map(name => ts.transpileModule(readFileSync(`src/archsearch/frontend/${name}.ts`, 'utf8'), { compilerOptions: { module: ts.ModuleKind.None, target: ts.ScriptTarget.ES2022 } }).outputText).join('\n');
+  const ids = ['modern-basemap-osm', 'modern-basemap-natural', 'comparison-sync', 'comparison-modern-status', 'tile-warning', 'tile-warning-text', 'comparison-evidence', 'comparison-evidence-title', 'comparison-evidence-date', 'comparison-evidence-quote', 'comparison-evidence-sources', 'comparison-evidence-open'];
+  const nodes = new Map(ids.map(id => [id, new Element()]));
+  const context = createContext({ URL, Error, window: { matchMedia: () => ({ matches: false }) }, requestAnimationFrame: (fn: () => void) => fn(),
+    ResizeObserver: class { observe(): void {} },
+    document: { getElementById: (id: string) => nodes.get(id), createElement: () => new Element() },
+    fetch: () => new Promise(() => undefined),
+    L: { canvas: (options: object) => ({ ...options }), geoJSON: (_value: unknown, options: Record<string, unknown>) => new Layer(options), layerGroup: () => new Layer(),
+      marker: (coordinate: [number, number]|{lat:number;lng:number}, options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate), divIcon: (value: unknown) => value,
+      circleMarker: (coordinate: [number, number], options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate),
+      latLngBounds: (points: [number, number][]) => ({points}), point: (x: number, y: number) => ({x,y}) },
+  });
+  const helper = runInContext(noDensityScripts+'\nArchSearchComparison;', context) as Helpers;
+  const modern = new MapView(), historical = new MapView(), tiles = new Layer();
+  const controller = helper.create({ modern, historical, tiles, initial: { modern_basemap: 'osm', sync_centers: true, modern_view: null, history_view: null }, onSelect: () => undefined, onChanged: () => undefined, onEvidence: () => undefined });
+  controller.setCandidates([selectedSite].map((site, index) => ({ id: site.id, title: site.title, repr_point: site.repr_point, rank: index + 1 })));
+  assert.equal(controller.state().sync_centers, true);
 });

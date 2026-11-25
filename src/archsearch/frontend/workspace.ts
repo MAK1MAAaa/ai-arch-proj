@@ -24,8 +24,7 @@ const ArchSearchWorkspace = (() => {
     const grid = node("workspace"), divider = node("workspace-divider");
     const toggle = node<HTMLButtonElement>("workspace-toggle-sidebar"), toggleLabel = node("workspace-toggle-sidebar-label");
     const sidebar = node("workspace-sidebar"), search = document.querySelector<HTMLElement>(".search-section");
-    const resultTab = node<HTMLButtonElement>("workspace-tab-results"), catalogueTab = node<HTMLButtonElement>("workspace-tab-catalogue");
-    const resultPanel = node("workspace-results-view"), cataloguePanel = node("workspace-catalogue-view");
+    const resultPanel = node("workspace-results-view");
     const dialog = node<HTMLDialogElement>("detail-dialog"), detail = node("detail-panel"), close = node<HTMLButtonElement>("close-detail");
     const modelDialog = node<HTMLDialogElement>("llm-settings");
     const typeFilter = node<HTMLSelectElement>("type-filter"), limitFilter = node<HTMLSelectElement>("limit-filter");
@@ -44,11 +43,8 @@ const ArchSearchWorkspace = (() => {
       try { localStorage.setItem(storageKey, JSON.stringify({ sidebar_width: preferredWidth, sidebar_collapsed: collapsed })); }
       catch { /* Layout remains usable when storage is unavailable. */ }
     }
-    function activeTab(): HTMLButtonElement {
-      return sidebar.dataset.activeTab === "catalogue" ? catalogueTab : resultTab;
-    }
     function focusTarget(): HTMLButtonElement {
-      return collapsed ? toggle : activeTab();
+      return toggle;
     }
     function stopDrag(save = false): void {
       const captured = drag;
@@ -69,9 +65,9 @@ const ArchSearchWorkspace = (() => {
       updateToggleLabel();
     }
     function updateToggleLabel(): void {
-      const count = collapsed && resultCount !== null && activeTab() === resultTab ? resultCount.toLocaleString("zh-CN") : null;
+      const count = collapsed && resultCount !== null ? resultCount.toLocaleString("zh-CN") : null;
       toggle.setAttribute("aria-label", count !== null ? `查看检索结果，共 ${count} 条`
-        : collapsed ? "展开资料面板，查看检索结果与全库目录" : "收起资料面板，扩大双图区域");
+        : collapsed ? "展开资料面板，查看检索结果" : "收起资料面板，扩大双图区域");
       toggle.title = count !== null ? "查看检索结果" : collapsed ? "展开资料面板" : "收起资料面板";
       toggleLabel.textContent = count !== null ? `结果 ${count}` : collapsed ? "展开资料" : "收起资料";
     }
@@ -114,26 +110,13 @@ const ArchSearchWorkspace = (() => {
       }
     } catch { /* A stale or malformed preference never blocks the maps. */ }
 
-    function activate(which: "results" | "catalogue", options: TabOptions = {}): void {
-      const results = which === "results";
-      const hidesFocusedControl = (results ? cataloguePanel : resultPanel).contains(document.activeElement);
-      resultPanel.hidden = !results; cataloguePanel.hidden = results;
-      for (const [tab, selected] of [[resultTab, results], [catalogueTab, !results]] as const) {
-        tab.setAttribute("aria-selected", String(selected)); tab.tabIndex = selected ? 0 : -1;
-      }
-      sidebar.dataset.activeTab = which;
+    function activateResults(options: TabOptions = {}): void {
+      resultPanel.hidden = false;
       updateToggleLabel();
-      if (options.focus || hidesFocusedControl) focusTarget().focus({ preventScroll: true });
+      if (options.focus) focusTarget().focus({ preventScroll: true });
       changed();
     }
     toggle.addEventListener("click", () => setSidebarCollapsed(!collapsed));
-    resultTab.addEventListener("click", () => activate("results"));
-    catalogueTab.addEventListener("click", () => activate("catalogue"));
-    for (const tab of [resultTab, catalogueTab]) tab.addEventListener("keydown", (event) => {
-      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
-      event.preventDefault();
-      activate(event.key === "Home" ? "results" : event.key === "End" ? "catalogue" : tab === resultTab ? "catalogue" : "results", { focus: true });
-    });
     divider.addEventListener("keydown", (event) => {
       if (collapsed || narrow() || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
       event.preventDefault();
@@ -231,14 +214,13 @@ const ArchSearchWorkspace = (() => {
     });
     window.addEventListener("resize", measure);
     if (typeof ResizeObserver !== "undefined" && search) new ResizeObserver(measure).observe(search);
-    activate("results"); measure(); refreshSearchSummary();
+    activateResults(); measure(); refreshSearchSummary();
     return {
       openDetail, closeDetail, setSidebarCollapsed, refreshSearchSummary,
       isSidebarCollapsed: (): boolean => collapsed,
       setSearchResultCount: (count: number): void => { resultCount = count; updateToggleLabel(); },
       revealMaps: (): void => { if (narrow() && !collapsed) setSidebarCollapsed(true); },
-      activateResults: (options: TabOptions = {}) => activate("results", options),
-      activateCatalogue: (options: TabOptions = {}) => activate("catalogue", options),
+      activateResults,
     };
   }
 
