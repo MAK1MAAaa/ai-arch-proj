@@ -166,6 +166,9 @@ const ArchSearchWorkspace = (() => {
                 dialog.showModal();
                 dialog.scrollTop = 0;
                 detail.scrollTop = 0;
+                const detailBody = document.getElementById("detail-body");
+                if (detailBody)
+                    detailBody.scrollTop = 0;
             }
             close.focus({ preventScroll: true });
         }

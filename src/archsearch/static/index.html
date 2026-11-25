@@ -7,17 +7,17 @@
     <meta name="description" content="通过中文研究问题探索全球历史遗址资料、独立年代证据与历史政权疆域概略。">
     <title>考古图志 · 全球历史遗址资料检索</title>
     <link rel="stylesheet" href="/static/vendor/leaflet/leaflet.css">
-    <link rel="stylesheet" href="/static/styles.css?v=20261125-5">
+    <link rel="stylesheet" href="/static/styles.css?v=20261125-6">
     <script defer src="/static/vendor/leaflet/leaflet.js"></script>
-    <script defer src="/static/research.js?v=20261125-5"></script>
-    <script defer src="/static/map-view.js?v=20261125-5"></script>
-    <script defer src="/static/history.js?v=20261125-5"></script>
-    <script defer src="/static/modern-boundaries.js?v=20261125-5"></script>
-    <script defer src="/static/registered-areas.js?v=20261125-5"></script>
-    <script defer src="/static/llm.js?v=20261125-5"></script>
-    <script defer src="/static/comparison.js?v=20261125-5"></script>
-    <script defer src="/static/workspace.js?v=20261125-5"></script>
-    <script defer src="/static/app.js?v=20261125-5"></script>
+    <script defer src="/static/research.js?v=20261125-6"></script>
+    <script defer src="/static/map-view.js?v=20261125-6"></script>
+    <script defer src="/static/history.js?v=20261125-6"></script>
+    <script defer src="/static/modern-boundaries.js?v=20261125-6"></script>
+    <script defer src="/static/registered-areas.js?v=20261125-6"></script>
+    <script defer src="/static/llm.js?v=20261125-6"></script>
+    <script defer src="/static/comparison.js?v=20261125-6"></script>
+    <script defer src="/static/workspace.js?v=20261125-6"></script>
+    <script defer src="/static/app.js?v=20261125-6"></script>
   </head>
   <body class="research-workbench"><nav class="skip-navigation" aria-label="快捷导航"><a class="skip-link" href="#query">跳到检索</a><a class="skip-link" href="#workspace-toggle-sidebar">跳到资料面板</a><a class="skip-link" href="#map">跳到地图</a></nav><div class="page-shell"><header class="masthead">
         <a class="brand" href="/" aria-label="考古图志首页">
@@ -70,26 +70,56 @@
             </div>
           </form>
           <dialog id="llm-settings" class="llm-settings-dialog" aria-labelledby="llm-settings-title">
-            <header class="llm-settings-heading"><div><span class="eyebrow">查询增强</span><h2 id="llm-settings-title">模型配置</h2></div><button id="llm-close-settings" class="interaction-button" type="button">关闭<span class="visually-hidden">模型配置</span></button></header>
-            <p id="llm-config-summary" class="llm-config-summary">LLM 未配置</p>
-            <div class="llm-dialog-toggle"><label class="llm-enhance-toggle"><input id="llm-enhance" type="checkbox" disabled><span>在检索中启用 LLM 增强</span></label></div>
+            <header class="llm-settings-heading">
+              <div>
+                <span class="eyebrow small-eyebrow">QUERY ENHANCEMENT / 查询增强</span>
+                <h2 id="llm-settings-title">模型配置</h2>
+              </div>
+              <button id="llm-close-settings" class="modal-close-button" type="button" aria-label="关闭模型配置" title="关闭"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5.75 5.75 14.25 14.25M14.25 5.75l-8.5 8.5" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg></button>
+            </header>
+            <div class="llm-overview-bar">
+              <div class="llm-status-block">
+                <span class="llm-status-label">当前状态</span>
+                <p id="llm-config-summary" class="llm-config-summary">LLM 未配置</p>
+              </div>
+              <div class="llm-dialog-toggle">
+                <label class="llm-enhance-toggle">
+                  <input id="llm-enhance" class="llm-switch-input" type="checkbox" disabled>
+                  <span class="llm-switch-label">启用 LLM 增强</span>
+                </label>
+              </div>
+            </div>
             <form id="llm-settings-form" class="llm-settings-form" autocomplete="off" aria-busy="false">
               <div class="llm-settings-body">
-              <p id="llm-startup-warning" class="llm-error" role="status" hidden>LLM 启动配置有误，基础检索与地图仍可使用。可在这里应用当前会话的模型，或检查 .env 和启动环境变量，修正后重启服务。</p>
-              <p class="llm-method-note">让模型改写与扩展检索词，再从本地语料检索并融合排名。改写仅用于发现资料，不能替代来源证据。</p>
-              <div class="llm-config-grid">
-                <div class="llm-field"><label for="llm-provider">模型服务</label><select id="llm-provider"><option value="ollama">本地 Ollama</option><option value="openai">OpenAI 兼容 API</option></select></div>
-                <div class="llm-field llm-endpoint-field"><label for="llm-base-url">Base URL</label><input id="llm-base-url" type="url" maxlength="2048" value="http://127.0.0.1:11434" placeholder="https://api.example.com/v1" spellcheck="false" autocomplete="off" aria-describedby="llm-provider-note"></div>
-                <div id="llm-api-key-group" class="llm-field llm-secret-field" hidden><label for="llm-api-key">API Key</label><input id="llm-api-key" type="password" maxlength="8192" autocomplete="off" spellcheck="false" placeholder="可留空" aria-describedby="llm-key-hint"><p id="llm-key-hint" class="llm-hint">密钥仅在本次服务内存中使用。</p></div>
-                <div class="llm-field llm-model-field"><label for="llm-model">可选模型</label><select id="llm-model" disabled><option value="">先获取模型列表</option></select></div>
+                <p id="llm-startup-warning" class="llm-error" role="status" hidden>LLM 启动配置有误，基础检索与地图仍可使用。可在这里应用当前会话的模型，或检查 .env 和启动环境变量，修正后重启服务。</p>
+                <p class="llm-method-note">让模型改写与扩展检索词，再从本地语料检索并融合排名。改写仅用于发现资料，不能替代来源证据。</p>
+                <section class="llm-section-card" aria-labelledby="llm-connection-heading">
+                  <div class="llm-section-header">
+                    <h3 id="llm-connection-heading">服务连接</h3>
+                    <span class="llm-section-tag">ENDPOINT</span>
+                  </div>
+                  <div class="llm-config-grid">
+                    <div class="llm-field"><label for="llm-provider">模型服务</label><select id="llm-provider"><option value="ollama">本地 Ollama</option><option value="openai">OpenAI 兼容 API</option></select></div>
+                    <div class="llm-field llm-endpoint-field"><label for="llm-base-url">Base URL</label><input id="llm-base-url" type="url" maxlength="2048" value="http://127.0.0.1:11434" placeholder="https://api.example.com/v1" spellcheck="false" autocomplete="off" aria-describedby="llm-provider-note"></div>
+                    <div id="llm-api-key-group" class="llm-field llm-secret-field" hidden><label for="llm-api-key">API Key</label><input id="llm-api-key" type="password" maxlength="8192" autocomplete="off" spellcheck="false" placeholder="可留空" aria-describedby="llm-key-hint"><p id="llm-key-hint" class="llm-hint">密钥仅在本次服务内存中使用。</p></div>
+                  </div>
+                  <p id="llm-provider-note" class="llm-hint">从 Windows 后端连接本机 Ollama，仅获取已有模型。</p>
+                </section>
+                <section class="llm-section-card" aria-labelledby="llm-model-heading">
+                  <div class="llm-section-header">
+                    <h3 id="llm-model-heading">模型选择</h3>
+                    <button id="llm-refresh-models" class="interaction-button llm-refresh-button" type="button">刷新模型列表</button>
+                  </div>
+                  <div class="llm-field llm-model-field"><label class="visually-hidden" for="llm-model">可选模型</label><select id="llm-model" disabled><option value="">先获取模型列表</option></select></div>
+                  <p id="llm-feedback" class="llm-feedback" role="status" aria-live="polite">正在检查模型配置；基础检索继续可用。</p>
+                  <p id="llm-error" class="llm-error" role="alert" hidden></p>
+                </section>
+                <p class="llm-security-note">.env 启动配置可自动加载，页面修改只保留当前服务会话；密钥不写入浏览器存储、分享链接或导出。</p>
               </div>
-              <p id="llm-provider-note" class="llm-hint">从 Windows 后端连接本机 Ollama，仅获取已有模型。</p>
-
-              <p id="llm-feedback" class="llm-feedback" role="status" aria-live="polite">正在检查模型配置；基础检索继续可用。</p>
-              <p id="llm-error" class="llm-error" role="alert" hidden></p>
-              <p class="llm-hint">.env 启动配置可自动加载，页面修改只保留当前服务会话；密钥不写入浏览器存储、分享链接或导出。</p>
-              </div>
-              <div class="llm-actions"><button id="llm-refresh-models" class="interaction-button" type="button">刷新模型列表</button><button id="llm-apply" class="interaction-button llm-apply" type="submit" disabled>应用所选模型</button><button id="llm-clear-config" class="interaction-button" type="button" disabled>清除已应用模型与密钥</button></div>
+              <footer class="llm-actions">
+                <button id="llm-clear-config" class="interaction-button llm-clear-button" type="button" disabled>清除已应用模型与密钥</button>
+                <button id="llm-apply" class="interaction-button llm-apply" type="submit" disabled>应用所选模型</button>
+              </footer>
             </form>
           </dialog>
           <div id="preparation-note" class="notice preparation-note" hidden><span class="notice-label">语义检索待准备</span><div><p id="preparation-reason">请按 README 完成本地模型与索引准备，然后刷新运行状态。</p></div></div>
@@ -127,7 +157,7 @@
             <details id="map-tools" class="map-tools">
               <summary><span>图层与说明</span><span class="map-tools-summary-note">底图 · 图例与来源</span></summary>
               <div class="map-tools-body">
-                <div class="map-tools-popover-header"><div><strong>图层与说明</strong><p>现代位置与来源年份的政权疆域概略对照。</p></div><button id="close-map-tools" class="icon-button map-tools-close" type="button" aria-label="关闭图层与说明"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.4"/></svg></button></div>
+                <div class="map-tools-popover-header"><div><strong>图层与说明</strong><p>现代位置与来源年份的政权疆域概略对照。</p></div><button id="close-map-tools" class="modal-close-button" type="button" aria-label="关闭图层与说明" title="关闭"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5.75 5.75 14.25 14.25M14.25 5.75l-8.5 8.5" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg></button></div>
                 <p class="map-density-note">双图同步开启时，拖拽或缩放任一地图都会实时带动另一张地图平移和缩放；圆形编号保留检索排名，背景年不用于筛选遗址。</p>
                 <section class="map-tools-section" aria-labelledby="modern-tools-title"><h4 id="modern-tools-title">现代底图与国界</h4><div class="comparison-basemap-controls"><button id="modern-basemap-osm" class="interaction-button" type="button" aria-pressed="true">现代 OSM</button><button id="modern-basemap-natural" class="interaction-button" type="button" aria-pressed="false">本地自然轮廓</button></div><div class="modern-boundaries-feedback"><p id="modern-boundaries-status" role="status" aria-live="polite">正在加载本地现代国界参考。</p></div><p class="comparison-modern-legend"><span class="modern-border-swatch"></span>现代陆地国界参考 <span class="modern-border-swatch is-disputed"></span>虚线：来源争议／控制等线；不含海洋划界。</p></section>
                 <section class="map-tools-section" aria-labelledby="historical-tools-title"><h4 id="historical-tools-title">历史疆域与适用范围</h4><p class="comparison-history-legend"><span class="polity-fill-swatch"></span>实线与填色：来源政权范围 <span class="polity-composite-swatch"></span>虚线：复合政体；常驻名称按可用空间择显，点击疆域查看完整名称与来源。</p><p id="history-source" class="history-source">来源信息在地图视图成功加载后显示。</p><p id="history-limit-note">历史政权疆域概略来自Cliopatria，现代自然轮廓来自Natural Earth；不复原古海岸，不据代表点推断历史政治归属。</p></section>
@@ -220,21 +250,23 @@
                   <span class="eyebrow small-eyebrow">SOURCE NOTE / 资料详情</span>
                   <div class="detail-topline-actions">
                     <button id="export-site-evidence" class="interaction-button" type="button" aria-describedby="site-export-feedback" disabled>导出资料 JSON</button>
-                    <button id="close-detail" class="icon-button" type="button" aria-label="关闭资料详情"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.4"/></svg></button>
+                    <button id="close-detail" class="modal-close-button" type="button" aria-label="关闭资料详情" title="关闭"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5.75 5.75 14.25 14.25M14.25 5.75l-8.5 8.5" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg></button>
                   </div>
                   <p id="site-export-feedback" class="site-export-feedback" role="status" aria-live="polite" hidden></p>
                 </div>
-                <div id="detail-content"></div>
-                <section id="registered-areas" class="detail-section registered-areas" aria-labelledby="registered-areas-title" aria-busy="false" hidden>
-                  <h4 id="registered-areas-title"><span class="registered-area-swatch" aria-hidden="true"></span><span id="registered-areas-label">来源公开范围</span></h4>
-                  <p id="registered-areas-status" class="registered-areas-status" role="status" aria-live="polite" tabindex="-1"></p>
-                  <p id="registered-areas-note" class="detail-note"></p>
-                  <div class="registered-area-actions">
-                    <button id="registered-areas-show" class="interaction-button" type="button" hidden disabled>查看登记范围</button>
-                    <button id="registered-areas-hide" class="interaction-button" type="button" hidden>隐藏登记范围</button>
-                    <button id="registered-areas-retry" class="interaction-button" type="button" hidden>重试读取范围</button>
-                  </div>
-                  <div id="registered-areas-sources" class="registered-area-sources"></div>
-                </section>
+                <div id="detail-body" class="detail-body">
+                  <div id="detail-content"></div>
+                  <section id="registered-areas" class="detail-section registered-areas" aria-labelledby="registered-areas-title" aria-busy="false" hidden>
+                    <h4 id="registered-areas-title"><span class="registered-area-swatch" aria-hidden="true"></span><span id="registered-areas-label">来源公开范围</span></h4>
+                    <p id="registered-areas-status" class="registered-areas-status" role="status" aria-live="polite" tabindex="-1"></p>
+                    <p id="registered-areas-note" class="detail-note"></p>
+                    <div class="registered-area-actions">
+                      <button id="registered-areas-show" class="interaction-button" type="button" hidden disabled>查看登记范围</button>
+                      <button id="registered-areas-hide" class="interaction-button" type="button" hidden>隐藏登记范围</button>
+                      <button id="registered-areas-retry" class="interaction-button" type="button" hidden>重试读取范围</button>
+                    </div>
+                    <div id="registered-areas-sources" class="registered-area-sources"></div>
+                  </section>
+                </div>
               </aside></dialog><noscript><p class="noscript-message">请启用 JavaScript 以使用检索与交互地图。</p></noscript></body>
 </html>
