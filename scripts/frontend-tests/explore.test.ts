@@ -52,7 +52,7 @@ const densityCompiled = ts.transpileModule(readFileSync(new URL('../../src/archs
 const plain = <T>(value: T): T => JSON.parse(JSON.stringify(value)) as T;
 
 test('global exploration defaults are independent of a query, model or historical year', () => {
-  assert.deepEqual(plain(helpers.normalizeState({})), { country: null, region: null, offset: 0, visible: true, bbox: null });
+  assert.deepEqual(plain(helpers.normalizeState({})), { country: null, region: null, offset: 0, visible: false, bbox: null });
   assert.deepEqual(plain(helpers.normalizeState({ country: 'NZ', region: 'asia-pacific', offset: 50, visible: false, bbox: null })), { country: 'NZ', region: 'asia-pacific', offset: 50, visible: false, bbox: null });
 });
 
@@ -210,7 +210,7 @@ function pageFor(state: Partial<State> = {}, points = fixture) {
       geography: point.countries.length || point.regions.length ? { countries: point.countries, regions: point.regions } : null, chronology: { status: point.chronology_status } })) };
 }
 
-function setup(withMap = true, initialBoundsError: string | null = null) {
+function setup(withMap = true, initialBoundsError: string | null = null, initialState: Partial<State> | undefined = { visible: true }) {
   const ids = ['explore-panel', 'explore-summary', 'explore-authority', 'explore-polar-authority', 'explore-spatial-source', 'explore-country', 'explore-region', 'explore-clear', 'explore-points', 'explore-fit', 'explore-count', 'explore-list', 'explore-previous', 'explore-next', 'explore-page', 'explore-feedback', 'explore-retry', 'explore-limit-note', 'explore-capture-bounds', 'explore-clear-bounds', 'explore-bounds-status'];
   ids.push('explore-subdivision-filter', 'explore-subdivision', 'explore-subdivision-note', 'explore-subdivision-feedback', 'explore-subdivision-retry');
   ids.push('explore-chronology');
@@ -237,7 +237,7 @@ function setup(withMap = true, initialBoundsError: string | null = null) {
     ArchSearchMapView: mapHelpers,
   });
   const api = runInContext(`${densityCompiled.outputText}\n${compiled.outputText}\nArchSearchExplore;`, context) as Helpers;
-  const controller = api.create({ map, initialBoundsError, onBoundsAction: () => boundsActions.push(1), onSelect: (id, opener, options) => selects.push({ id, opener, options: options ? plain(options) : undefined }), onFilterChange: state => filters.push(plain(state)), onStateChange: state => changes.push(plain(state)), onCommittedState: state => commits.push(plain(state)), onCatalogue: points => catalogues.push(points) });
+  const controller = api.create({ map, initialState, initialBoundsError, onBoundsAction: () => boundsActions.push(1), onSelect: (id, opener, options) => selects.push({ id, opener, options: options ? plain(options) : undefined }), onFilterChange: state => filters.push(plain(state)), onStateChange: state => changes.push(plain(state)), onCommittedState: state => commits.push(plain(state)), onCatalogue: points => catalogues.push(points) });
   const node = (id: string) => { const found = nodes.get(id); assert.ok(found); return found; };
   const response = (request: Pending, value: unknown, status = 200) => { request.done = true; request.resolve({ ok: status < 400, status, json: async () => value }); };
   const find = (path: string) => { const found = pending.find(item => !item.done && item.url.startsWith(path)); assert.ok(found, path); return found; };
@@ -723,14 +723,14 @@ test('different heritage identities at a shared source coordinate remain indepen
   shared[1].source_location_records = [{ source_index: 0, coordinate: [179, -18], name: 'Different heritage record', ref: '' }];
   const app = setup(); await app.boot(shared, { ...spatial, points: 4, distinct_points: 3, duplicate_points: 1, display_points: 5 });
   assert.equal(app.map!.container.dataset.densityLogicalPoints, '5');
-  const cluster=[...app.map!.layers][0].members.find(marker=>marker.options.pane==='catalogue-density-clusters');assert.ok(cluster);
-  cluster.handlers.get('click')?.();assert.ok(app.map!.popup);
-  const descendants=(element:FakeElement):FakeElement[]=>[element,...element.children.flatMap(descendants)];
-  const buttons=descendants(app.map!.popup!.content).filter(element=>element.dataset.siteId);
-  const first=buttons.find(button=>button.dataset.siteId==='whc:1'),second=buttons.find(button=>button.dataset.siteId==='wd:Q2');assert.ok(first);assert.ok(second);
-  first.fire('click');second.fire('click');
-  assert.deepEqual(app.selects.map(selection => selection.id), ['whc:1', 'wd:Q2']);
-  app.controller.select('wd:Q2');assert.equal(second.attributes.get('aria-pressed'),'true');
+  assert.equal(app.map!.container.dataset.densityClusters, '0');
+  const cluster=[...app.map!.layers][0].members.find(marker=>marker.options.pane==='catalogue-density-clusters');assert.equal(cluster,undefined);
+  const sharedCircles=[...app.map!.layers][0].members.filter(marker=>marker.location[0]===-18&&marker.location[1]===179);
+  assert.equal(sharedCircles.length,2);
+  sharedCircles[0].handlers.get('click')?.();
+  sharedCircles[1].handlers.get('click')?.();
+  assert.deepEqual(app.selects.map(selection => selection.id).sort(), ['wd:Q2', 'whc:1']);
+  app.controller.select('wd:Q2');
   assert.ok([...app.map!.layers][0].members.some(marker=>marker.options.radius===5));
 });
 
@@ -783,11 +783,11 @@ test('unprepared source locations explicitly fall back to existing representativ
 test('pagination counts heritage records rather than source points and does not rebuild the shared layer', async () => {
   const many = Array.from({ length: 60 }, (_, index): Point => ({ ...plain(multiPoints[0]), id: `whc:${index + 1}`, title: `Site ${String(index + 1).padStart(3, '0')}` }));
   const app = setup(); await app.boot(many, { ...spatial, records: 60, points: 180, distinct_points: 120, duplicate_points: 60, display_points: 120 });
-  assert.equal(app.node('explore-list').children.length, 50);assert.equal(app.map!.container.dataset.densityLogicalPoints,'120');
-  assert.equal(app.circles.length,0);assert.match(app.node('explore-feedback').textContent,/主图 120 个源定位点/u);
-  const layer = [...app.map!.layers][0]; const next = app.controller.setState({ offset: 50 }); app.respondAll(many, { offset: 50 }); await next;
+  assert.equal(app.node('explore-list').children.length, 50);assert.equal(app.map!.container.dataset.densityLogicalPoints,'120');assert.equal(app.map!.container.dataset.densityClusters,'0');
+  assert.ok(app.circles.length>0);assert.match(app.node('explore-feedback').textContent,/主图 120 个源定位点/u);
+  const layer = [...app.map!.layers][0]; const countBefore = app.circles.length; const next = app.controller.setState({ offset: 50 }); app.respondAll(many, { offset: 50 }); await next;
   assert.equal(app.node('explore-list').children.length, 10); assert.match(app.node('explore-page').textContent, /51—60.*共 60 条/u);
-  assert.equal([...app.map!.layers][0], layer); assert.equal(app.circles.length,0);assert.equal(app.map!.container.dataset.densityLogicalPoints,'120');
+  assert.equal([...app.map!.layers][0], layer); assert.equal(app.circles.length,countBefore);assert.equal(app.map!.container.dataset.densityLogicalPoints,'120');
 });
 
 test('a source-qualified supplement with unknown position remains in the directory and country facets', async () => {
@@ -1217,4 +1217,20 @@ test('source province membership retains the complete original multi-point objec
     assert.equal(app.controller.getCommittedState()?.subdivision, 'CA:ontario');
     assert.match(app.node('explore-count').textContent, bbox ? /1 条/u : /2 条/u);
   }
+});
+
+test('catalogue points are hidden by default until explicitly toggled on without clustering', async () => {
+  const app = setup(true, null, {});
+  await app.boot(multiPoints, spatial);
+  assert.equal(app.controller.getState().visible, false);
+  assert.equal(app.node('explore-points').checked, false);
+  assert.equal(app.map!.layers.size, 0);
+  assert.equal(app.controller.getDisplayedPlacements().length, 0);
+
+  await app.controller.setState({ visible: true });
+  assert.equal(app.node('explore-points').checked, true);
+  assert.equal(app.map!.layers.size, 1);
+  assert.equal(app.map!.container.dataset.densityClusters, '0');
+  assert.ok(app.controller.getDisplayedPlacements().length > 0);
+  assert.ok(app.circles.length > 0);
 });

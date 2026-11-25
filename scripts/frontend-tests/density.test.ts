@@ -10,7 +10,7 @@ interface Item {value:Placement;coordinate:[number,number];pixel:Pixel;copy:numb
 interface Group {key:string;items:Item[];pixel:Pixel;focusPixel:Pixel;badge:boolean}
 interface Viewport {origin:Pixel;width:number;height:number;worldWidth:number;cellSize?:number;selectedId?:string|null}
 interface Controller {layer:Layer;setData(values:Placement[]):void;select(id:string|null):void;refresh():void;destroy():void;stats():{logicalPoints:number;visiblePoints:number;clusters:number;symbols:number}}
-interface Helpers {valid(value:unknown):boolean;plan(values:Placement[],project:(coordinate:[number,number])=>Pixel,viewport:Viewport):Group[];members(group:Group):Placement[];create(options:{map:MapView;pane:string;renderer:object;cellSize?:number;onSelect(id:string,opener:Element):void}):Controller}
+interface Helpers {valid(value:unknown):boolean;plan(values:Placement[],project:(coordinate:[number,number])=>Pixel,viewport:Viewport):Group[];planPoints(values:Placement[],project:(coordinate:[number,number])=>Pixel,viewport:Viewport):Group[];members(group:Group):Placement[];create(options:{map:MapView;pane:string;renderer:object;cellSize?:number;cluster?:boolean;onSelect(id:string,opener:Element):void}):Controller}
 class Element extends EventTarget {
   textContent='';className='';tabIndex=0;disabled=false;type='';isConnected=true;
   style:Record<string,string>={};dataset:Record<string,string>={};attributes=new Map<string,string>();children:Element[]=[];
@@ -55,7 +55,7 @@ class MapView extends Events {
   stop(){}setView(value:{lat:number;lng:number},zoom:number){this.center={...value};this.zoom=zoom;this.cameraChanges++;this.fire('zoomend').fire('moveend');return this;}
 }
 const script=ts.transpileModule(readFileSync('src/archsearch/frontend/density.ts','utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.None}}).outputText;
-function harness(cellSize=48){
+function harness(cellSize=48,cluster=true){
   const doc={activeElement:null as Element|null,querySelector:()=>null,createElement:()=>{const element=new Element();element.onFocus=()=>{doc.activeElement=element;};return element;}};
   const viewport=Object.assign(new EventTarget(),{innerWidth:600,innerHeight:400});
   const frames:(()=>void)[]=[];const map=new MapView();map.container.onFocus=()=>{doc.activeElement=map.container;};
@@ -64,7 +64,7 @@ function harness(cellSize=48){
     L:{layerGroup:()=>new Layer(),circleMarker:(coordinate:[number,number],options:Record<string,unknown>)=>{const circle=new Layer().setLatLng(coordinate);circle.options={...options};circles.push(circle);return circle;},
       marker:(coordinate:{lat:number;lng:number},options:Record<string,unknown>)=>{const marker=new Layer().setLatLng(coordinate);marker.options={...options};marker.element.onFocus=()=>{doc.activeElement=marker.element;};markers.push(marker);return marker;},
       divIcon:(options:object)=>options,popup:()=>{const popup=new Popup();popups.push(popup);return popup;}}})) as Helpers;
-  const selected:{id:string;opener:Element}[]=[];const controller=helpers.create({map,pane:'source-points',renderer:{source:true},cellSize,onSelect:(id,opener)=>selected.push({id,opener})});controller.layer.addTo(map);
+  const selected:{id:string;opener:Element}[]=[];const controller=helpers.create({map,pane:'source-points',renderer:{source:true},cellSize,cluster,onSelect:(id,opener)=>selected.push({id,opener})});controller.layer.addTo(map);
   return{helpers,controller,map,doc,viewport,frames,popups,markers,circles,selected,flush:()=>{const callbacks=frames.splice(0);callbacks.forEach(fn=>fn());}};
 }
 const value=(id:string,x=0,y=0):Placement=>({id,title:id,coordinate:[x,y],representative:false});
@@ -323,4 +323,21 @@ test('popup pane escapes the map-pane stacking context and tracks public pane of
   h.map.paneOffset={x:-8,y:22};h.map.fire('zoomanim');assert.equal(pane.style.transform,'translate3d(-8px, 22px, 0)');assert.equal(h.map.cameraChanges,0);
   h.controller.destroy();h.map.paneOffset={x:50,y:50};h.map.fire('move').fire('resize');assert.equal(pane.style.transform,'translate3d(-8px, 22px, 0)');
   assert.equal(h.map.listeners.get('move')?.length,0);assert.equal(h.map.popup,null);assert.equal(h.map.layers.size,0);
+});
+
+test('cluster disabled mode renders individual circle markers, culls outside viewport, and supports selection',()=>{
+  const h=harness(48,false);
+  h.controller.setData([
+    {id:'a',title:'Coincident Alpha',coordinate:[10,20],representative:true},
+    {id:'b',title:'Coincident Beta',coordinate:[10,20],representative:false},
+    {id:'c',title:'Outside Viewport',coordinate:[10,-85],representative:false},
+  ]);
+  assert.deepEqual(JSON.parse(JSON.stringify(h.controller.stats())),{logicalPoints:3,visiblePoints:2,clusters:0,symbols:2});
+  assert.equal(h.markers.length,0);
+  assert.equal(h.circles.length,2);
+  h.circles[1].fire('click');
+  assert.deepEqual(h.selected.map(item=>item.id),['b']);
+  h.controller.select('b');
+  assert.equal(h.circles[1].options.radius,5);
+  assert.equal(h.circles[0].options.radius,3.2);
 });

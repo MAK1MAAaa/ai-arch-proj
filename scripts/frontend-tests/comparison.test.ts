@@ -17,10 +17,10 @@ class Element extends EventTarget {
   set innerHTML(_value: string) { throw new Error('Unsafe innerHTML'); }
 }
 class Events {
-  listeners = new Map<string, (() => void)[]>();
-  on(names: string, callback: () => void): this { for (const name of names.split(' ')) this.listeners.set(name, [...(this.listeners.get(name) ?? []), callback]); return this; }
-  fire(name: string): this { for (const callback of this.listeners.get(name) ?? []) callback(); return this; }
-  off(names:string,callback:()=>void):this {for(const name of names.split(' '))this.listeners.set(name,(this.listeners.get(name)??[]).filter(item=>item!==callback));return this;}
+  listeners = new Map<string, ((payload?: unknown) => void)[]>();
+  on(names: string, callback: (payload?: unknown) => void): this { for (const name of names.split(' ')) this.listeners.set(name, [...(this.listeners.get(name) ?? []), callback]); return this; }
+  fire(name: string, payload?: unknown): this { for (const callback of this.listeners.get(name) ?? []) callback(payload); return this; }
+  off(names:string,callback:(payload?: unknown)=>void):this {for(const name of names.split(' '))this.listeners.set(name,(this.listeners.get(name)??[]).filter(item=>item!==callback));return this;}
 }
 class Layer extends Events {
   layers = new Set<Layer>(); parent: { layers: Set<Layer> } | null = null; element = new Element(); tooltip: Element | null = null;
@@ -88,7 +88,7 @@ interface Controller {
   setSelection(value: Selected | null, focus?: boolean): void; setModernBasemap(value: 'osm' | 'natural'): void;
   focusSelected(options?: { preserveCamera?: boolean }): boolean;
   getMarker(id: string): Layer | null; restoreInitialViews(): void; noteInteraction(): void; actionVersion(): number;
-  getHistoricalRenderer(): object | null;
+  getHistoricalRenderer(): object | null; invalidateSizes(): void;
   state(): State; snapshot(value: Frame | null): { layout: string; modern: { role: string; basemap: string }; historical: { role: string; year: number | null; source_version: string | null } };
 }
 interface Helpers { create(options: { modern: MapView; historical: MapView; tiles: Layer; initial: State; onSelect(id: string, opener: Element | null, options?: { moveMap?: boolean }): void; onChanged(): void; onEvidence(): void }): Controller }
@@ -96,10 +96,11 @@ const scripts = ['map-view', 'density', 'history', 'comparison'].map(name => ts.
 const land = { type: 'FeatureCollection', features: [{ type: 'Feature', properties: {}, geometry: { type: 'Polygon', coordinates: [[[0, 0], [10, 0], [10, 10], [0, 0]]] } }] };
 function harness(initial: Partial<State> = {}, small = false) {
   const ids = ['modern-basemap-osm', 'modern-basemap-natural', 'comparison-sync', 'comparison-modern-status', 'tile-warning', 'tile-warning-text', 'comparison-evidence', 'comparison-evidence-title', 'comparison-evidence-date', 'comparison-evidence-quote', 'comparison-evidence-sources', 'comparison-evidence-open'];
-  const nodes = new Map(ids.map(id => [id, new Element()])); const pending: ((value: { ok: boolean; json(): Promise<unknown> }) => void)[] = [];
+  const nodes = new Map(ids.map(id => [id, new Element()]));
+  nodes.get('tile-warning')!.hidden = true; const pending: ((value: { ok: boolean; json(): Promise<unknown> }) => void)[] = [];
   const circles: Layer[] = []; const selected: string[] = []; const selectionOptions: ({ moveMap?: boolean } | undefined)[] = []; let changes = 0;
   const resizeCallbacks: (() => void)[] = [];
-  const context = createContext({ URL, Error, window: { matchMedia: () => ({ matches: small }) },requestAnimationFrame:(fn:()=>void)=>fn(),
+  const context = createContext({ URL, Error, window: { matchMedia: () => ({ matches: small }) },requestAnimationFrame:(fn:()=>void)=>fn(), setTimeout, clearTimeout,
     ResizeObserver: class { constructor(callback: () => void) { resizeCallbacks.push(callback); } observe(_element: Element): void {} },
     document: { getElementById: (id: string) => nodes.get(id), createElement: () => new Element() },
     fetch: () => new Promise(resolve => pending.push(resolve)),
@@ -368,4 +369,214 @@ test('source phase evidence does not claim a retained or linked background match
   assert.equal(snapshot.historical.year,1930);
   assert.match(h.node('comparison-evidence-date').textContent,/来源阶段.*1616.*明确单年事件.*实际背景见右图/u);
   assert.doesNotMatch(h.node('comparison-evidence-date').textContent,/自动联动/u);
+});
+
+test('source placements do not cluster coincident points on the historical map', () => {
+  const h=harness();
+  const values=[
+    {id:'auth:fixture:alpha',title:'Alpha',coordinate:[10,20] as [number,number],representative:true},
+    {id:'auth:fixture:beta',title:'Beta',coordinate:[10,20] as [number,number],representative:false},
+    {id:'auth:fixture:gamma',title:'Gamma',coordinate:[10.01,20.01] as [number,number],representative:false},
+  ];
+  h.controller.setCatalogue(values,true);
+  assert.equal(h.historical.container.dataset.densityClusters,'0');
+  assert.equal(h.circles.length,3);
+  h.circles[1].fire('click');
+  assert.deepEqual(h.selected,['auth:fixture:beta']);
+});
+
+test('live move and zoom events synchronize modern and historical maps in both directions before moveend', () => {
+  const h=harness({sync_centers:true});
+  h.modern.center={lat:34.2,lng:108.9};
+  h.modern.zoom=6;
+  h.modern.fire('zoom');
+  h.modern.fire('move');
+  assert.equal(h.historical.getCenter().lat,34.2);
+  assert.equal(h.historical.getCenter().lng,108.9);
+  assert.equal(h.historical.getZoom(),6);
+  assert.equal(h.changes(),0);
+
+  h.historical.center={lat:41.9,lng:12.5};
+  h.historical.zoom=8;
+  h.historical.fire('zoom');
+  h.historical.fire('move');
+  assert.equal(h.modern.getCenter().lat,41.9);
+  assert.equal(h.modern.getCenter().lng,12.5);
+  assert.equal(h.modern.getZoom(),8);
+  assert.equal(h.changes(),0);
+
+  h.historical.fire('moveend');
+  assert.equal(h.changes(),1);
+});
+
+test('invalidateSizes preserves separate saved centers during layout resize and allows immediate bidirectional drag sync', () => {
+  const h=harness({sync_centers:true,modern_view:{center:[12,48],zoom:4},history_view:{center:[30,20],zoom:4}});
+  h.modern.width=840; h.historical.width=840;
+  h.controller.invalidateSizes();
+  assert.deepEqual(h.modern.getCenter(),{lat:48,lng:12});
+  assert.deepEqual(h.historical.getCenter(),{lat:20,lng:30});
+
+  h.modern.fire('dragstart');
+  h.modern.center={lat:49.5,lng:14.2};
+  h.modern.fire('drag');
+  h.modern.fire('move');
+  assert.deepEqual(h.historical.getCenter(),{lat:49.5,lng:14.2});
+  h.modern.fire('dragend');
+  h.modern.fire('moveend');
+  assert.deepEqual(h.historical.getCenter(),{lat:49.5,lng:14.2});
+
+  h.historical.fire('dragstart');
+  h.historical.center={lat:35.1,lng:139.7};
+  h.historical.fire('drag');
+  h.historical.fire('move');
+  assert.deepEqual(h.modern.getCenter(),{lat:35.1,lng:139.7});
+  h.historical.fire('dragend');
+  h.historical.fire('moveend');
+  assert.deepEqual(h.modern.getCenter(),{lat:35.1,lng:139.7});
+});
+
+test('comparison initializes cleanly even when ArchSearchDensity is not loaded', () => {
+  const noDensityScripts = ['map-view', 'history', 'comparison'].map(name => ts.transpileModule(readFileSync(`src/archsearch/frontend/${name}.ts`, 'utf8'), { compilerOptions: { module: ts.ModuleKind.None, target: ts.ScriptTarget.ES2022 } }).outputText).join('\n');
+  const ids = ['modern-basemap-osm', 'modern-basemap-natural', 'comparison-sync', 'comparison-modern-status', 'tile-warning', 'tile-warning-text', 'comparison-evidence', 'comparison-evidence-title', 'comparison-evidence-date', 'comparison-evidence-quote', 'comparison-evidence-sources', 'comparison-evidence-open'];
+  const nodes = new Map(ids.map(id => [id, new Element()]));
+  nodes.get('tile-warning')!.hidden = true;
+  const context = createContext({ URL, Error, window: { matchMedia: () => ({ matches: false }) }, requestAnimationFrame: (fn: () => void) => fn(),
+    ResizeObserver: class { observe(): void {} },
+    document: { getElementById: (id: string) => nodes.get(id), createElement: () => new Element() },
+    fetch: () => new Promise(() => undefined),
+    L: { canvas: (options: object) => ({ ...options }), geoJSON: (_value: unknown, options: Record<string, unknown>) => new Layer(options), layerGroup: () => new Layer(),
+      marker: (coordinate: [number, number]|{lat:number;lng:number}, options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate), divIcon: (value: unknown) => value,
+      circleMarker: (coordinate: [number, number], options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate),
+      latLngBounds: (points: [number, number][]) => ({points}), point: (x: number, y: number) => ({x,y}) },
+  });
+  const helper = runInContext(noDensityScripts+'\nArchSearchComparison;', context) as Helpers;
+  const modern = new MapView(), historical = new MapView(), tiles = new Layer();
+  const controller = helper.create({ modern, historical, tiles, initial: { modern_basemap: 'osm', sync_centers: true, modern_view: null, history_view: null }, onSelect: () => undefined, onChanged: () => undefined, onEvidence: () => undefined });
+  controller.setCandidates([selectedSite].map((site, index) => ({ id: site.id, title: site.title, repr_point: site.repr_point, rank: index + 1 })));
+  assert.equal(controller.state().sync_centers, true);
+});
+
+test('transient OSM tile errors do not drop OSM basemap once tiles have loaded', async () => {
+  const h = harness();
+  h.tiles.fire('tileload');
+  assert.equal(h.controller.state().modern_basemap, 'osm');
+  const changesAfterFirstLoad = h.changes();
+  h.tiles.fire('tileload');
+  assert.equal(h.changes(), changesAfterFirstLoad);
+
+  for (let i = 0; i < 3; i++) h.tiles.fire('tileerror');
+  assert.equal(h.controller.snapshot(null).modern.basemap, 'osm');
+  assert.equal(h.node('tile-warning').hidden, true);
+  assert.equal(h.modern.hasLayer(h.tiles), true);
+
+  h.tiles.fire('tileload');
+  for (let i = 0; i < 3; i++) h.tiles.fire('tileerror');
+  assert.equal(h.controller.snapshot(null).modern.basemap, 'osm');
+  assert.equal(h.node('tile-warning').hidden, true);
+
+  h.tiles.fire('tileerror');
+  await completeLand(h);
+  assert.equal(h.controller.state().modern_basemap, 'natural');
+  assert.equal(h.node('tile-warning').hidden, false);
+});
+
+test('tileerror retries live OSM tiles across subdomains and ignores detached aborted tiles', async () => {
+  const timers: (() => void)[] = [];
+  const scriptsLocal = ['map-view', 'density', 'history', 'comparison'].map(name => ts.transpileModule(readFileSync(`src/archsearch/frontend/${name}.ts`, 'utf8'), { compilerOptions: { module: ts.ModuleKind.None, target: ts.ScriptTarget.ES2022 } }).outputText).join('\n');
+  const ids = ['modern-basemap-osm', 'modern-basemap-natural', 'comparison-sync', 'comparison-modern-status', 'tile-warning', 'tile-warning-text', 'comparison-evidence', 'comparison-evidence-title', 'comparison-evidence-date', 'comparison-evidence-quote', 'comparison-evidence-sources', 'comparison-evidence-open'];
+  const nodes = new Map(ids.map(id => [id, new Element()]));
+  nodes.get('tile-warning')!.hidden = true;
+  const context = createContext({ URL, Error, window: { matchMedia: () => ({ matches: false }) }, requestAnimationFrame: (fn: () => void) => fn(),
+    setTimeout: (fn: () => void) => { timers.push(fn); return timers.length; },
+    ResizeObserver: class { observe(): void {} },
+    document: { getElementById: (id: string) => nodes.get(id), createElement: () => new Element() },
+    fetch: () => new Promise(() => undefined),
+    L: { canvas: (options: object) => ({ ...options }), geoJSON: (_value: unknown, options: Record<string, unknown>) => new Layer(options), layerGroup: () => new Layer(),
+      marker: (coordinate: [number, number]|{lat:number;lng:number}, options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate), divIcon: (value: unknown) => value,
+      circleMarker: (coordinate: [number, number], options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate),
+      latLngBounds: (points: [number, number][]) => ({points}), point: (x: number, y: number) => ({x,y}) },
+  });
+  const helper = runInContext(scriptsLocal + '\nArchSearchComparison;', context) as Helpers;
+  const modern = new MapView(), historical = new MapView(), tiles = new Layer(); tiles.addTo(modern);
+  const controller = helper.create({ modern, historical, tiles, initial: { modern_basemap: 'osm', sync_centers: true, modern_view: null, history_view: null }, onSelect: () => undefined, onChanged: () => undefined, onEvidence: () => undefined });
+
+  const abortedTile = { isConnected: false, src: 'https://a.tile.openstreetmap.org/2/1/0.png', dataset: {} as Record<string, string> };
+  tiles.fire('tileerror', { tile: abortedTile });
+  assert.equal(timers.length, 0);
+  assert.equal(controller.snapshot(null).modern.basemap, 'loading');
+
+  const liveTile = { isConnected: true, src: 'https://a.tile.openstreetmap.org/3/4/2.png', dataset: {} as Record<string, string> };
+  tiles.fire('tileerror', { tile: liveTile });
+  assert.equal(timers.length, 1);
+  assert.equal(nodes.get('tile-warning')!.hidden, true);
+  timers[0]();
+  assert.equal(liveTile.src, 'https://b.tile.openstreetmap.org/3/4/2.png');
+  assert.equal(liveTile.dataset.archsearchRetry, '1');
+});
+
+test('comparison runs without error when #comparison-evidence elements are omitted from the DOM', () => {
+  const requiredIds = ['modern-basemap-osm', 'modern-basemap-natural', 'comparison-sync', 'comparison-modern-status', 'tile-warning', 'tile-warning-text'];
+  const nodes = new Map(requiredIds.map(id => [id, new Element()]));
+  nodes.get('tile-warning')!.hidden = true;
+  const context = createContext({ URL, Error, window: { matchMedia: () => ({ matches: false }) }, requestAnimationFrame: (fn: () => void) => fn(), setTimeout, clearTimeout,
+    ResizeObserver: class { observe(): void {} },
+    document: { getElementById: (id: string) => nodes.get(id), createElement: () => new Element() },
+    fetch: () => new Promise(() => undefined),
+    L: { canvas: (options: object) => ({ ...options }), geoJSON: (_value: unknown, options: Record<string, unknown>) => new Layer(options), layerGroup: () => new Layer(),
+      marker: (coordinate: [number, number]|{lat:number;lng:number}, options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate), divIcon: (value: unknown) => value,
+      circleMarker: (coordinate: [number, number], options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate),
+      latLngBounds: (points: [number, number][]) => ({points}), point: (x: number, y: number) => ({x,y}) },
+  });
+  const helper = runInContext(scripts + '\nArchSearchComparison;', context) as Helpers;
+  const modern = new MapView(), historical = new MapView(), tiles = new Layer(); tiles.addTo(modern);
+  const controller = helper.create({ modern, historical, tiles, initial: { modern_basemap: 'osm', sync_centers: true, modern_view: null, history_view: null }, onSelect: () => undefined, onChanged: () => undefined, onEvidence: () => undefined });
+  controller.setCandidates([{ id: selectedSite.id, title: selectedSite.title, repr_point: selectedSite.repr_point, rank: 1 }]);
+  controller.setSelection(selectedSite, true);
+  assert.equal(controller.getMarker(selectedSite.id)?.getLatLng().lat, 52.18);
+  assert.equal(modern.getZoom(), 4);
+  assert.equal(historical.getZoom(), 4);
+});
+
+test('comparison updates modern reference badge text and state across basemap transitions', async () => {
+  const requiredIds = ['modern-basemap-osm', 'modern-basemap-natural', 'comparison-sync', 'comparison-modern-status', 'comparison-modern-badge', 'tile-warning', 'tile-warning-text'];
+  const nodes = new Map(requiredIds.map(id => [id, new Element()]));
+  nodes.get('tile-warning')!.hidden = true;
+  const pending: ((value: { ok: boolean; json(): Promise<unknown> }) => void)[] = [];
+  const context = createContext({ URL, Error, window: { matchMedia: () => ({ matches: false }) }, requestAnimationFrame: (fn: () => void) => fn(), setTimeout, clearTimeout,
+    ResizeObserver: class { observe(): void {} },
+    document: { getElementById: (id: string) => nodes.get(id), createElement: () => new Element() },
+    fetch: () => new Promise(resolve => pending.push(resolve)),
+    L: { canvas: (options: object) => ({ ...options }), geoJSON: (_value: unknown, options: Record<string, unknown>) => new Layer(options), layerGroup: () => new Layer(),
+      marker: (coordinate: [number, number]|{lat:number;lng:number}, options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate), divIcon: (value: unknown) => value,
+      circleMarker: (coordinate: [number, number], options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate),
+      latLngBounds: (points: [number, number][]) => ({points}), point: (x: number, y: number) => ({x,y}) },
+  });
+  const helper = runInContext(scripts + '\nArchSearchComparison;', context) as Helpers;
+  const modern = new MapView(), historical = new MapView(), tiles = new Layer(); tiles.addTo(modern);
+  const controller = helper.create({ modern, historical, tiles, initial: { modern_basemap: 'osm', sync_centers: true, modern_view: null, history_view: null }, onSelect: () => undefined, onChanged: () => undefined, onEvidence: () => undefined });
+  assert.equal(nodes.get('comparison-modern-badge')!.textContent, '底图加载中');
+  assert.equal(nodes.get('comparison-modern-badge')!.dataset.basemap, 'loading');
+  tiles.fire('tileload');
+  assert.equal(nodes.get('comparison-modern-badge')!.textContent, '现代 OSM');
+  assert.equal(nodes.get('comparison-modern-badge')!.dataset.basemap, 'osm');
+  controller.setModernBasemap('natural');
+  pending[0]({ ok: true, json: async () => land }); await tick();
+  assert.equal(nodes.get('comparison-modern-badge')!.textContent, '本地自然轮廓');
+  assert.equal(nodes.get('comparison-modern-badge')!.dataset.basemap, 'natural');
+});
+
+test('zoomanim synchronizes partner zoom transition smoothly without bounce-back feedback loops', () => {
+  const h = harness({ sync_centers: true });
+  h.modern.viewOptions.length = 0;
+  h.historical.viewOptions.length = 0;
+  h.modern.center = { lat: 48.85, lng: 2.35 };
+  h.modern.zoom = 6;
+  h.modern.fire('zoomanim', { center: { lat: 48.85, lng: 2.35 }, zoom: 6 });
+  assert.equal(h.historical.getZoom(), 6);
+  assert.deepEqual(h.historical.getCenter(), { lat: 48.85, lng: 2.35 });
+  assert.equal(h.historical.viewOptions.at(-1)?.animate, true);
+  h.historical.fire('zoomanim', { center: { lat: 48.85, lng: 2.35 }, zoom: 6 });
+  assert.equal(h.modern.viewOptions.length, 0);
+  h.modern.fire('moveend');
+  assert.equal(h.changes(), 1);
 });

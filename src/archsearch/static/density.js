@@ -144,6 +144,43 @@ const ArchSearchDensity = (() => {
         }
         return [...layout.values(), ...selected];
     }
+    function planPoints(values, project, viewport) {
+        const { origin, width, height, worldWidth } = viewport;
+        if (![origin.x, origin.y, width, height, worldWidth].every(Number.isFinite)
+            || width <= 0 || height <= 0 || worldWidth <= 0)
+            return [];
+        const margin = 16;
+        const seen = new Set();
+        const groups = [];
+        for (const value of values) {
+            if (!valid(value.coordinate))
+                continue;
+            const identity = JSON.stringify([value.id, ...value.coordinate]);
+            if (seen.has(identity))
+                continue;
+            seen.add(identity);
+            const point = project(value.coordinate);
+            if (!Number.isFinite(point.x) || !Number.isFinite(point.y))
+                continue;
+            if (point.y < origin.y - margin || point.y > origin.y + height + margin)
+                continue;
+            const firstCopy = Math.ceil((origin.x - margin - point.x) / worldWidth);
+            const lastCopy = Math.floor((origin.x + width + margin - point.x) / worldWidth);
+            for (let copy = firstCopy; copy <= lastCopy; copy++) {
+                const pixel = { x: point.x + copy * worldWidth, y: point.y };
+                if (pixel.x < origin.x - margin || pixel.x > origin.x + width + margin)
+                    continue;
+                groups.push({
+                    key: `point:${identity}:${copy}`,
+                    items: [{ value, coordinate: [value.coordinate[0] + copy * 360, value.coordinate[1]], pixel, copy }],
+                    pixel,
+                    focusPixel: pixel,
+                    badge: false,
+                });
+            }
+        }
+        return groups;
+    }
     function members(group) {
         const unique = new Map();
         for (const item of group.items)
@@ -151,7 +188,7 @@ const ArchSearchDensity = (() => {
                 unique.set(item.value.id, item.value);
         return [...unique.values()].sort((left, right) => left.id < right.id ? -1 : left.id > right.id ? 1 : 0);
     }
-    function create({ map, pane, renderer, cellSize = 48, onSelect }) {
+    function create({ map, pane, renderer, cellSize = 48, cluster = true, onSelect }) {
         const layer = L.layerGroup();
         const clusterPane = map.getPane("catalogue-density-clusters") ?? map.createPane("catalogue-density-clusters");
         clusterPane.style.zIndex = "460";
@@ -379,7 +416,7 @@ const ArchSearchDensity = (() => {
             prepared = true;
             const origin = { x: center.x - size.x / 2, y: center.y - size.y / 2 };
             const worldWidth = map.project([0, 180], zoom).x - map.project([0, -180], zoom).x;
-            const groups = plan(values, coordinate => map.project([coordinate[1], coordinate[0]], zoom), { origin, width: size.x, height: size.y, worldWidth, cellSize, selectedId });
+            const groups = (cluster ? plan : planPoints)(values, coordinate => map.project([coordinate[1], coordinate[0]], zoom), { origin, width: size.x, height: size.y, worldWidth, cellSize, selectedId });
             clusterMarkers = [];
             clusterByKey.clear();
             groupsByKey.clear();
@@ -535,6 +572,6 @@ const ArchSearchDensity = (() => {
             },
         };
     }
-    return { plan, members, valid, create };
+    return { plan, planPoints, members, valid, create };
 })();
 //# sourceMappingURL=density.js.map

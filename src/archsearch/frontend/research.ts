@@ -61,7 +61,7 @@ const ArchSearchResearch = (() => {
   }
 
   function parseComparison(url: URL): { state: ComparisonState; error: string | null } {
-    const empty: ComparisonState = { modern_basemap: "osm", sync_centers: false, modern_view: null, history_view: null };
+    const empty: ComparisonState = { modern_basemap: "osm", sync_centers: true, modern_view: null, history_view: null };
     try {
       for (const name of ["maps", "modern_base", "sync_centers", "modern_view", "history_view"]) {
         if (url.searchParams.getAll(name).length > 1) throw new Error(`链接中的 ${name} 参数不能重复。`);
@@ -69,7 +69,7 @@ const ArchSearchResearch = (() => {
       const layout = url.searchParams.get("maps");
       if (layout !== null && layout !== "compare") throw new Error("对照地图链接中的 maps 仅支持 compare。");
       const base = url.searchParams.get("modern_base") ?? "osm";
-      const sync = url.searchParams.get("sync_centers") ?? "0";
+      const sync = url.searchParams.get("sync_centers") ?? "1";
       if (base !== "osm" && base !== "natural") throw new Error("现代地图底图参数无效。");
       if (sync !== "0" && sync !== "1") throw new Error("地图同步参数须为 0 或 1。");
       const read = (name: string, maximum: number): Camera | null => {
@@ -331,7 +331,7 @@ const ArchSearchResearch = (() => {
   }
 
   function parseBrowse(url: URL): { state: BrowseState; error: string | null } {
-    const empty = { country: null, region: null, offset: 0, visible: true, bbox: null };
+    const empty = { country: null, region: null, offset: 0, visible: false, bbox: null };
     try {
       for (const name of ["browse_country", "browse_region", "browse_subdivision", "browse_offset", "points", "browse_bbox", "browse_chronology"]) {
         if (url.searchParams.getAll(name).length > 1) throw new Error(`链接中的 ${name} 参数不能重复。`);
@@ -340,7 +340,7 @@ const ArchSearchResearch = (() => {
       const subdivision = normalizeSubdivision(scope.country, url.searchParams.get("browse_subdivision"));
       const chronology = normalizeChronology(url.searchParams.get("browse_chronology"));
       const rawOffset = url.searchParams.get("browse_offset") ?? "0";
-      const points = url.searchParams.get("points") ?? "1";
+      const points = url.searchParams.get("points") ?? "0";
       if (!/^(?:0|[1-9]\d{0,6})$/u.test(rawOffset) || Number(rawOffset) > 1_000_000) throw new Error("目录页码无效。");
       if (points !== "0" && points !== "1") throw new Error("全库点图层参数无效。");
       return {
@@ -530,7 +530,7 @@ const ArchSearchResearch = (() => {
       if (subdivision) url.searchParams.set("browse_subdivision", subdivision);
       if (chronology) url.searchParams.set("browse_chronology", chronology);
       if (browse.offset) url.searchParams.set("browse_offset", String(browse.offset));
-      if (!browse.visible) url.searchParams.set("points", "0");
+      if (browse.visible) url.searchParams.set("points", "1");
       if (bbox !== null) url.searchParams.set("browse_bbox", bbox.join(","));
     }
     if (comparison) {
@@ -676,7 +676,7 @@ const ArchSearchResearch = (() => {
         periods: "分期来自名称或位置记录的来源关联；不等同于建造年代或连续使用证明，start/end 保留原始记录时间范围。",
         chronology: "历史阶段独立记录事件类型、精度、证据和代理核验方式；仅明确单年事件自动联动历史背景，界面不提供任意年份选择。约略、区间、时期或未知年代不推断年份，保留最后成功的背景；旧分享链接的year仅兼容恢复已保存背景。区间或时期不证明连续存在，未标成人工专家确认。",
         map: "map保存最后成功显示的年份与疆域版本；null表示尚无成功地图快照，待加载或失败年份不冒充已显示年份。",
-        comparison: "comparison区分现代位置与历史政权两张地图，保存实际底图、视野及成功历史年/版本；历史图使用Cliopatria与现代自然地理参照，不是古海岸或街道复原。同步中心须用户明确打开，目录bbox始终只由现代图显式捕获；历史拖图不重筛资料，也不据代表点判定历史政治归属。",
+        comparison: "comparison区分现代位置与历史政权两张地图，保存实际底图、视野及成功历史年/版本；历史图使用Cliopatria与现代自然地理参照，不是古海岸或街道复原。两图默认同步缩放与平移（可在图层与说明中关闭），目录bbox始终只由现代图显式捕获；历史拖图不重筛资料，也不据代表点判定历史政治归属。",
         locations: "repr_point为null表示本记录无可用代表点：可能真实位置不明，也可能尚未取得可信公开数字坐标，来源说明保留区别；不等于零坐标。有效极区坐标超出Web Mercator时使用独立极区示意，不截断或伪造纬度。极区底图为现代自然地理参照，不生成历史国界。",
         source_points: "spatial保留最后成功目录的组合源点版本、source_groups对应的来源／版本／许可与地点身份，以及独立选中资料经审核纳入地图的定位序列、重复记录与来源标签。原代表点单独保存；多个定位记录不增加遗址条目数或承诺发掘精度。世界遗产原始序列保持不变；海牙名录排除的仓储、标签冲突等原记录仍保留在来源审计中，不混作考古原址点。",
         registered_areas: siteOnly
