@@ -584,6 +584,103 @@
     return `${Math.abs(lat).toFixed(3)}° ${lat >= 0 ? "N" : "S"} / ${Math.abs(lon).toFixed(3)}° ${lon >= 0 ? "E" : "W"}`;
   }
 
+  function attachZoomSlider(map: L.Map, zoomControl: L.Control.Zoom): void {
+    const container = zoomControl.getContainer();
+    const zoomOut = container?.querySelector(".leaflet-control-zoom-out");
+    if (!container || !zoomOut) return;
+    const wrap = element("div", "map-zoom-slider-wrap");
+    const slider = element("div", "map-zoom-slider");
+    slider.setAttribute("role", "slider");
+    slider.tabIndex = 0;
+    slider.setAttribute("aria-label", "地图缩放级别");
+    slider.setAttribute("aria-orientation", "vertical");
+    const track = element("div", "map-zoom-slider-track");
+    const fill = element("div", "map-zoom-slider-fill");
+    const thumb = element("span", "map-zoom-slider-thumb");
+    thumb.setAttribute("aria-hidden", "true");
+    track.append(fill, thumb);
+    slider.append(track);
+    wrap.append(slider);
+    container.insertBefore(wrap, zoomOut);
+    L.DomEvent.disableClickPropagation(wrap);
+    L.DomEvent.disableScrollPropagation(wrap);
+
+    const syncSlider = (): void => {
+      const min = map.getMinZoom();
+      const max = map.getMaxZoom();
+      const current = Math.max(min, Math.min(max, Math.round(map.getZoom())));
+      const percent = max > min ? ((current - min) / (max - min)) * 100 : 0;
+      slider.style.setProperty("--zoom-percent", `${percent.toFixed(2)}%`);
+      slider.setAttribute("aria-valuemin", String(min));
+      slider.setAttribute("aria-valuemax", String(max));
+      slider.setAttribute("aria-valuenow", String(current));
+      slider.setAttribute("aria-valuetext", `缩放级别 ${current} / ${max}`);
+      slider.title = `拖动或按方向键调整缩放（当前 ${current} / ${max} 级）`;
+    };
+
+    const applyZoom = (targetZoom: number): void => {
+      const min = map.getMinZoom();
+      const max = map.getMaxZoom();
+      const next = Math.max(min, Math.min(max, Math.round(targetZoom)));
+      if (next === map.getZoom()) return;
+      mapComparison?.noteInteraction();
+      map.setZoom(next, { animate: false });
+    };
+
+    const applyFromClientY = (clientY: number): void => {
+      const rect = track.getBoundingClientRect();
+      if (rect.height <= 0) return;
+      const ratio = 1 - Math.max(0, Math.min(1, (clientY - rect.top) / rect.height));
+      const min = map.getMinZoom();
+      const max = map.getMaxZoom();
+      applyZoom(min + ratio * (max - min));
+    };
+
+    let activePointerId: number | null = null;
+    const stopDrag = (pointerId: number): void => {
+      if (activePointerId !== pointerId) return;
+      activePointerId = null;
+      slider.classList.remove("is-dragging");
+      if (slider.hasPointerCapture(pointerId)) slider.releasePointerCapture(pointerId);
+    };
+
+    slider.addEventListener("pointerdown", (event) => {
+      if (event.pointerType === "mouse" && event.button !== 0) return;
+      event.preventDefault();
+      event.stopPropagation();
+      activePointerId = event.pointerId;
+      slider.setPointerCapture(event.pointerId);
+      slider.classList.add("is-dragging");
+      applyFromClientY(event.clientY);
+    });
+    slider.addEventListener("pointermove", (event) => {
+      if (activePointerId !== event.pointerId) return;
+      event.preventDefault();
+      applyFromClientY(event.clientY);
+    });
+    slider.addEventListener("pointerup", (event) => stopDrag(event.pointerId));
+    slider.addEventListener("pointercancel", (event) => stopDrag(event.pointerId));
+    slider.addEventListener("lostpointercapture", (event) => stopDrag(event.pointerId));
+    slider.addEventListener("keydown", (event) => {
+      if (["ArrowUp", "ArrowRight", "+", "="].includes(event.key)) {
+        event.preventDefault();
+        applyZoom(map.getZoom() + 1);
+      } else if (["ArrowDown", "ArrowLeft", "-", "_"].includes(event.key)) {
+        event.preventDefault();
+        applyZoom(map.getZoom() - 1);
+      } else if (event.key === "Home") {
+        event.preventDefault();
+        applyZoom(map.getMinZoom());
+      } else if (event.key === "End") {
+        event.preventDefault();
+        applyZoom(map.getMaxZoom());
+      }
+    });
+
+    map.on("zoom zoomend load", syncSlider);
+    syncSlider();
+  }
+
   function initializeMap(): void {
     if (typeof L === "undefined") {
       byId("map", HTMLDivElement).append(element("div", "map-unavailable", "地图组件未能加载。你仍可检索并阅读候选资料的原文与坐标。"));
@@ -593,10 +690,22 @@
     }
     state.map = L.map("map", { zoomControl: false, zoomAnimation: false, inertia: false, minZoom: 1, maxZoom: 9, worldCopyJump: true }).setView([20, 0], 1);
     historicalMap = L.map("history-map", { zoomControl: false, zoomAnimation: false, inertia: false, minZoom: 1, maxZoom: 9, worldCopyJump: true }).setView([20, 0], 1);
-    L.control.zoom({ position: "bottomleft" }).addTo(historicalMap);
+    const historicalZoom = L.control.zoom({ position: "bottomleft" }).addTo(historicalMap);
+    attachZoomSlider(historicalMap, historicalZoom);
     historicalMap.attributionControl?.setPrefix(false);
-    L.control.zoom({ position: "bottomleft" }).addTo(state.map);
+    const historicalAttribution = historicalMap.attributionControl?.getContainer();
+    if (historicalAttribution) {
+      historicalAttribution.tabIndex = 0;
+      historicalAttribution.setAttribute("aria-label", "地图数据来源与许可，悬停或聚焦展开");
+    }
+    const modernZoom = L.control.zoom({ position: "bottomleft" }).addTo(state.map);
+    attachZoomSlider(state.map, modernZoom);
     state.map.attributionControl?.setPrefix(false);
+    const modernAttribution = state.map.attributionControl?.getContainer();
+    if (modernAttribution) {
+      modernAttribution.tabIndex = 0;
+      modernAttribution.setAttribute("aria-label", "地图数据来源与许可，悬停或聚焦展开");
+    }
     state.tiles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
       keepBuffer: 4,

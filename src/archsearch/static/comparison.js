@@ -21,13 +21,14 @@ const ArchSearchComparison = (() => {
                 throw new Error(`对照地图控件不存在：${id}`);
             return node;
         };
+        const optionalById = (id) => document.getElementById(id);
         const ui = {
             osm: byId("modern-basemap-osm"), natural: byId("modern-basemap-natural"),
             sync: byId("comparison-sync"), modernStatus: byId("comparison-modern-status"),
             warning: byId("tile-warning"), warningText: byId("tile-warning-text"),
-            evidence: byId("comparison-evidence"), evidenceTitle: byId("comparison-evidence-title"),
-            evidenceDate: byId("comparison-evidence-date"), evidenceQuote: byId("comparison-evidence-quote"),
-            evidenceSources: byId("comparison-evidence-sources"), evidenceOpen: byId("comparison-evidence-open"),
+            evidence: optionalById("comparison-evidence"), evidenceTitle: optionalById("comparison-evidence-title"),
+            evidenceDate: optionalById("comparison-evidence-date"), evidenceQuote: optionalById("comparison-evidence-quote"),
+            evidenceSources: optionalById("comparison-evidence-sources"), evidenceOpen: optionalById("comparison-evidence-open"),
         };
         let requested = initial.modern_basemap;
         let displayed = modern ? "loading" : "unavailable";
@@ -372,14 +373,17 @@ const ArchSearchComparison = (() => {
             selectedMarker?.remove();
             selectedMarker = null;
             selected = value;
-            ui.evidence.hidden = value === null;
-            ui.evidenceSources.replaceChildren();
-            ui.evidenceQuote.textContent = "";
+            if (ui.evidence)
+                ui.evidence.hidden = value === null;
+            ui.evidenceSources?.replaceChildren();
+            if (ui.evidenceQuote)
+                ui.evidenceQuote.textContent = "";
             if (!value) {
                 renderSelection();
                 return;
             }
-            ui.evidenceTitle.textContent = value.title;
+            if (ui.evidenceTitle)
+                ui.evidenceTitle.textContent = value.title;
             const phase = value.phase;
             if (phase) {
                 const date = (year) => year === null ? "未提供" : ArchSearchHistory.formatYear(year);
@@ -387,26 +391,32 @@ const ArchSearchComparison = (() => {
                 const exact = phase.precision === "exact_year" && phase.start_year !== null && phase.start_year !== 0 && phase.start_year === phase.end_year;
                 const precision = exact ? "明确单年事件" : phase.precision === "approximate_year" ? "约略年份，不推断单年"
                     : phase.precision === "range" ? "区间年代，不选取任意一年" : phase.precision === "period" ? "时期描述，未确定单年" : "来源日期未明确单年";
-                ui.evidenceDate.textContent = `来源阶段：${phase.label} · ${dates} · ${precision}；实际背景见右图年份与联动状态。定位点不代表历史政治归属。`;
-                ui.evidenceQuote.textContent = phase.sources[0]?.excerpt ?? "";
-                for (const source of phase.sources) {
-                    try {
-                        const url = new URL(source.uri);
-                        if (!["http:", "https:"].includes(url.protocol))
-                            continue;
-                        const link = document.createElement("a");
-                        link.href = url.href;
-                        link.textContent = source.title;
-                        link.target = "_blank";
-                        link.rel = "noopener noreferrer";
-                        ui.evidenceSources.append(link);
+                if (ui.evidenceDate)
+                    ui.evidenceDate.textContent = `来源阶段：${phase.label} · ${dates} · ${precision}；实际背景见右图年份与联动状态。定位点不代表历史政治归属。`;
+                if (ui.evidenceQuote)
+                    ui.evidenceQuote.textContent = phase.sources[0]?.excerpt ?? "";
+                if (ui.evidenceSources) {
+                    for (const source of phase.sources) {
+                        try {
+                            const url = new URL(source.uri);
+                            if (!["http:", "https:"].includes(url.protocol))
+                                continue;
+                            const link = document.createElement("a");
+                            link.href = url.href;
+                            link.textContent = source.title;
+                            link.target = "_blank";
+                            link.rel = "noopener noreferrer";
+                            ui.evidenceSources.append(link);
+                        }
+                        catch { /* Invalid source links remain available in the original record. */ }
                     }
-                    catch { /* Invalid source links remain available in the original record. */ }
                 }
             }
-            else
+            else if (ui.evidenceDate) {
                 ui.evidenceDate.textContent = `${value.status === "insufficient" ? "已核验但断代未确定" : "尚无经过核验的历史阶段"}；当前资料没有明确单年，实际背景见右图年份与联动状态。定位点不代表历史政治归属。`;
-            ui.evidenceQuote.hidden = !ui.evidenceQuote.textContent;
+            }
+            if (ui.evidenceQuote)
+                ui.evidenceQuote.hidden = !ui.evidenceQuote.textContent;
             if (value.repr_point && ArchSearchMapView.locationStatus(value.repr_point) === "mapped") {
                 if (!markers.has(value.id))
                     selectedMarker = attachMarker(value.id, value.title, value.repr_point, null);
@@ -517,7 +527,7 @@ const ArchSearchComparison = (() => {
                 syncFrom(modern, historical);
             changed();
         });
-        ui.evidenceOpen.addEventListener("click", onEvidence);
+        ui.evidenceOpen?.addEventListener("click", onEvidence);
         restoreViews();
         if (typeof ResizeObserver !== "undefined") {
             const observer = new ResizeObserver(() => { invalidateSizes(); });

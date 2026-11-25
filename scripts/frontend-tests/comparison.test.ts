@@ -513,3 +513,26 @@ test('tileerror retries live OSM tiles across subdomains and ignores detached ab
   assert.equal(liveTile.src, 'https://b.tile.openstreetmap.org/3/4/2.png');
   assert.equal(liveTile.dataset.archsearchRetry, '1');
 });
+
+test('comparison runs without error when #comparison-evidence elements are omitted from the DOM', () => {
+  const requiredIds = ['modern-basemap-osm', 'modern-basemap-natural', 'comparison-sync', 'comparison-modern-status', 'tile-warning', 'tile-warning-text'];
+  const nodes = new Map(requiredIds.map(id => [id, new Element()]));
+  nodes.get('tile-warning')!.hidden = true;
+  const context = createContext({ URL, Error, window: { matchMedia: () => ({ matches: false }) }, requestAnimationFrame: (fn: () => void) => fn(), setTimeout, clearTimeout,
+    ResizeObserver: class { observe(): void {} },
+    document: { getElementById: (id: string) => nodes.get(id), createElement: () => new Element() },
+    fetch: () => new Promise(() => undefined),
+    L: { canvas: (options: object) => ({ ...options }), geoJSON: (_value: unknown, options: Record<string, unknown>) => new Layer(options), layerGroup: () => new Layer(),
+      marker: (coordinate: [number, number]|{lat:number;lng:number}, options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate), divIcon: (value: unknown) => value,
+      circleMarker: (coordinate: [number, number], options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate),
+      latLngBounds: (points: [number, number][]) => ({points}), point: (x: number, y: number) => ({x,y}) },
+  });
+  const helper = runInContext(scripts + '\nArchSearchComparison;', context) as Helpers;
+  const modern = new MapView(), historical = new MapView(), tiles = new Layer(); tiles.addTo(modern);
+  const controller = helper.create({ modern, historical, tiles, initial: { modern_basemap: 'osm', sync_centers: true, modern_view: null, history_view: null }, onSelect: () => undefined, onChanged: () => undefined, onEvidence: () => undefined });
+  controller.setCandidates([{ id: selectedSite.id, title: selectedSite.title, repr_point: selectedSite.repr_point, rank: 1 }]);
+  controller.setSelection(selectedSite, true);
+  assert.equal(controller.getMarker(selectedSite.id)?.getLatLng().lat, 52.18);
+  assert.equal(modern.getZoom(), 4);
+  assert.equal(historical.getZoom(), 4);
+});
