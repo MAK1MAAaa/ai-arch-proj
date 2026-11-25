@@ -17,10 +17,10 @@ class Element extends EventTarget {
   set innerHTML(_value: string) { throw new Error('Unsafe innerHTML'); }
 }
 class Events {
-  listeners = new Map<string, (() => void)[]>();
-  on(names: string, callback: () => void): this { for (const name of names.split(' ')) this.listeners.set(name, [...(this.listeners.get(name) ?? []), callback]); return this; }
-  fire(name: string): this { for (const callback of this.listeners.get(name) ?? []) callback(); return this; }
-  off(names:string,callback:()=>void):this {for(const name of names.split(' '))this.listeners.set(name,(this.listeners.get(name)??[]).filter(item=>item!==callback));return this;}
+  listeners = new Map<string, ((payload?: unknown) => void)[]>();
+  on(names: string, callback: (payload?: unknown) => void): this { for (const name of names.split(' ')) this.listeners.set(name, [...(this.listeners.get(name) ?? []), callback]); return this; }
+  fire(name: string, payload?: unknown): this { for (const callback of this.listeners.get(name) ?? []) callback(payload); return this; }
+  off(names:string,callback:(payload?: unknown)=>void):this {for(const name of names.split(' '))this.listeners.set(name,(this.listeners.get(name)??[]).filter(item=>item!==callback));return this;}
 }
 class Layer extends Events {
   layers = new Set<Layer>(); parent: { layers: Set<Layer> } | null = null; element = new Element(); tooltip: Element | null = null;
@@ -96,10 +96,11 @@ const scripts = ['map-view', 'density', 'history', 'comparison'].map(name => ts.
 const land = { type: 'FeatureCollection', features: [{ type: 'Feature', properties: {}, geometry: { type: 'Polygon', coordinates: [[[0, 0], [10, 0], [10, 10], [0, 0]]] } }] };
 function harness(initial: Partial<State> = {}, small = false) {
   const ids = ['modern-basemap-osm', 'modern-basemap-natural', 'comparison-sync', 'comparison-modern-status', 'tile-warning', 'tile-warning-text', 'comparison-evidence', 'comparison-evidence-title', 'comparison-evidence-date', 'comparison-evidence-quote', 'comparison-evidence-sources', 'comparison-evidence-open'];
-  const nodes = new Map(ids.map(id => [id, new Element()])); const pending: ((value: { ok: boolean; json(): Promise<unknown> }) => void)[] = [];
+  const nodes = new Map(ids.map(id => [id, new Element()]));
+  nodes.get('tile-warning')!.hidden = true; const pending: ((value: { ok: boolean; json(): Promise<unknown> }) => void)[] = [];
   const circles: Layer[] = []; const selected: string[] = []; const selectionOptions: ({ moveMap?: boolean } | undefined)[] = []; let changes = 0;
   const resizeCallbacks: (() => void)[] = [];
-  const context = createContext({ URL, Error, window: { matchMedia: () => ({ matches: small }) },requestAnimationFrame:(fn:()=>void)=>fn(),
+  const context = createContext({ URL, Error, window: { matchMedia: () => ({ matches: small }) },requestAnimationFrame:(fn:()=>void)=>fn(), setTimeout, clearTimeout,
     ResizeObserver: class { constructor(callback: () => void) { resizeCallbacks.push(callback); } observe(_element: Element): void {} },
     document: { getElementById: (id: string) => nodes.get(id), createElement: () => new Element() },
     fetch: () => new Promise(resolve => pending.push(resolve)),
@@ -438,6 +439,7 @@ test('comparison initializes cleanly even when ArchSearchDensity is not loaded',
   const noDensityScripts = ['map-view', 'history', 'comparison'].map(name => ts.transpileModule(readFileSync(`src/archsearch/frontend/${name}.ts`, 'utf8'), { compilerOptions: { module: ts.ModuleKind.None, target: ts.ScriptTarget.ES2022 } }).outputText).join('\n');
   const ids = ['modern-basemap-osm', 'modern-basemap-natural', 'comparison-sync', 'comparison-modern-status', 'tile-warning', 'tile-warning-text', 'comparison-evidence', 'comparison-evidence-title', 'comparison-evidence-date', 'comparison-evidence-quote', 'comparison-evidence-sources', 'comparison-evidence-open'];
   const nodes = new Map(ids.map(id => [id, new Element()]));
+  nodes.get('tile-warning')!.hidden = true;
   const context = createContext({ URL, Error, window: { matchMedia: () => ({ matches: false }) }, requestAnimationFrame: (fn: () => void) => fn(),
     ResizeObserver: class { observe(): void {} },
     document: { getElementById: (id: string) => nodes.get(id), createElement: () => new Element() },
@@ -452,4 +454,62 @@ test('comparison initializes cleanly even when ArchSearchDensity is not loaded',
   const controller = helper.create({ modern, historical, tiles, initial: { modern_basemap: 'osm', sync_centers: true, modern_view: null, history_view: null }, onSelect: () => undefined, onChanged: () => undefined, onEvidence: () => undefined });
   controller.setCandidates([selectedSite].map((site, index) => ({ id: site.id, title: site.title, repr_point: site.repr_point, rank: index + 1 })));
   assert.equal(controller.state().sync_centers, true);
+});
+
+test('transient OSM tile errors do not drop OSM basemap once tiles have loaded', async () => {
+  const h = harness();
+  h.tiles.fire('tileload');
+  assert.equal(h.controller.state().modern_basemap, 'osm');
+  const changesAfterFirstLoad = h.changes();
+  h.tiles.fire('tileload');
+  assert.equal(h.changes(), changesAfterFirstLoad);
+
+  for (let i = 0; i < 3; i++) h.tiles.fire('tileerror');
+  assert.equal(h.controller.snapshot(null).modern.basemap, 'osm');
+  assert.equal(h.node('tile-warning').hidden, true);
+  assert.equal(h.modern.hasLayer(h.tiles), true);
+
+  h.tiles.fire('tileload');
+  for (let i = 0; i < 3; i++) h.tiles.fire('tileerror');
+  assert.equal(h.controller.snapshot(null).modern.basemap, 'osm');
+  assert.equal(h.node('tile-warning').hidden, true);
+
+  h.tiles.fire('tileerror');
+  await completeLand(h);
+  assert.equal(h.controller.state().modern_basemap, 'natural');
+  assert.equal(h.node('tile-warning').hidden, false);
+});
+
+test('tileerror retries live OSM tiles across subdomains and ignores detached aborted tiles', async () => {
+  const timers: (() => void)[] = [];
+  const scriptsLocal = ['map-view', 'density', 'history', 'comparison'].map(name => ts.transpileModule(readFileSync(`src/archsearch/frontend/${name}.ts`, 'utf8'), { compilerOptions: { module: ts.ModuleKind.None, target: ts.ScriptTarget.ES2022 } }).outputText).join('\n');
+  const ids = ['modern-basemap-osm', 'modern-basemap-natural', 'comparison-sync', 'comparison-modern-status', 'tile-warning', 'tile-warning-text', 'comparison-evidence', 'comparison-evidence-title', 'comparison-evidence-date', 'comparison-evidence-quote', 'comparison-evidence-sources', 'comparison-evidence-open'];
+  const nodes = new Map(ids.map(id => [id, new Element()]));
+  nodes.get('tile-warning')!.hidden = true;
+  const context = createContext({ URL, Error, window: { matchMedia: () => ({ matches: false }) }, requestAnimationFrame: (fn: () => void) => fn(),
+    setTimeout: (fn: () => void) => { timers.push(fn); return timers.length; },
+    ResizeObserver: class { observe(): void {} },
+    document: { getElementById: (id: string) => nodes.get(id), createElement: () => new Element() },
+    fetch: () => new Promise(() => undefined),
+    L: { canvas: (options: object) => ({ ...options }), geoJSON: (_value: unknown, options: Record<string, unknown>) => new Layer(options), layerGroup: () => new Layer(),
+      marker: (coordinate: [number, number]|{lat:number;lng:number}, options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate), divIcon: (value: unknown) => value,
+      circleMarker: (coordinate: [number, number], options: Record<string, unknown>) => new Layer(options).setLatLng(coordinate),
+      latLngBounds: (points: [number, number][]) => ({points}), point: (x: number, y: number) => ({x,y}) },
+  });
+  const helper = runInContext(scriptsLocal + '\nArchSearchComparison;', context) as Helpers;
+  const modern = new MapView(), historical = new MapView(), tiles = new Layer(); tiles.addTo(modern);
+  const controller = helper.create({ modern, historical, tiles, initial: { modern_basemap: 'osm', sync_centers: true, modern_view: null, history_view: null }, onSelect: () => undefined, onChanged: () => undefined, onEvidence: () => undefined });
+
+  const abortedTile = { isConnected: false, src: 'https://a.tile.openstreetmap.org/2/1/0.png', dataset: {} as Record<string, string> };
+  tiles.fire('tileerror', { tile: abortedTile });
+  assert.equal(timers.length, 0);
+  assert.equal(controller.snapshot(null).modern.basemap, 'loading');
+
+  const liveTile = { isConnected: true, src: 'https://a.tile.openstreetmap.org/3/4/2.png', dataset: {} as Record<string, string> };
+  tiles.fire('tileerror', { tile: liveTile });
+  assert.equal(timers.length, 1);
+  assert.equal(nodes.get('tile-warning')!.hidden, true);
+  timers[0]();
+  assert.equal(liveTile.src, 'https://b.tile.openstreetmap.org/3/4/2.png');
+  assert.equal(liveTile.dataset.archsearchRetry, '1');
 });

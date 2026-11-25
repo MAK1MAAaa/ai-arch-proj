@@ -599,6 +599,8 @@
     state.map.attributionControl?.setPrefix(false);
     state.tiles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       maxZoom: 19,
+      keepBuffer: 4,
+      updateInterval: 250,
       attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors',
     }).addTo(state.map);
     state.markerLayer = L.layerGroup().addTo(state.map);

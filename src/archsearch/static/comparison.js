@@ -39,6 +39,9 @@ const ArchSearchComparison = (() => {
         const restoredZoom = sharedZoom(initial.history_view?.zoom ?? initial.modern_view?.zoom ?? historical?.getZoom() ?? modern?.getZoom() ?? 1);
         let alignedLegacyZoom = [initial.modern_view, initial.history_view].some(view => view !== null && view.zoom !== restoredZoom);
         let failedTiles = false;
+        let loadedTiles = 0;
+        let consecutiveTileErrors = 0;
+        let tileGeneration = 0;
         let land = null;
         let landPromise = null;
         let selected = null;
@@ -131,8 +134,18 @@ const ArchSearchComparison = (() => {
                 changed();
             }
         }
+        function rotateOsmSubdomain(src) {
+            const order = ["a", "b", "c"];
+            return src.replace(/^(https:\/\/)([abc])(\.tile\.openstreetmap\.org\/)/u, (_match, prefix, host, suffix) => {
+                const next = order[(order.indexOf(host) + 1) % order.length];
+                return `${prefix}${next}${suffix}`;
+            });
+        }
         function setModernBasemap(value) {
             requested = value;
+            tileGeneration++;
+            loadedTiles = 0;
+            consecutiveTileErrors = 0;
             if (value === "natural") {
                 ui.warning.hidden = true;
                 void naturalFallback();
@@ -452,12 +465,46 @@ const ArchSearchComparison = (() => {
             for (const event of ["pointerdown", "wheel", "keydown"])
                 map.getContainer().addEventListener(event, touch, { passive: true });
         }
-        tiles?.on("tileerror", () => { if (requested !== "osm")
-            return; failedTiles = true; ui.warning.hidden = false; ui.warningText.textContent = "现代 OSM 瓦片未能加载，正在切换本地自然轮廓；历史疆域独立保留。"; void naturalFallback(); });
-        tiles?.on("tileload", () => { if (requested === "osm" && !failedTiles) {
+        tiles?.on("tileerror", (event) => {
+            if (requested !== "osm" || (modern && !modern.hasLayer(tiles)))
+                return;
+            const tile = event?.tile;
+            if (tile && tile.isConnected === false)
+                return;
+            if (tile && tile.dataset && tile.dataset.archsearchRetry !== "1" && typeof tile.src === "string" && /^https:\/\/[abc]\.tile\.openstreetmap\.org\//u.test(tile.src)) {
+                tile.dataset.archsearchRetry = "1";
+                const generation = tileGeneration;
+                const nextSrc = rotateOsmSubdomain(tile.src);
+                if (typeof setTimeout === "function") {
+                    setTimeout(() => {
+                        if (generation === tileGeneration && requested === "osm" && (!modern || modern.hasLayer(tiles)) && tile.isConnected !== false) {
+                            tile.src = nextSrc;
+                        }
+                    }, 500);
+                }
+                return;
+            }
+            consecutiveTileErrors++;
+            const threshold = loadedTiles > 0 ? 4 : tile ? 2 : 1;
+            if (consecutiveTileErrors < threshold)
+                return;
+            failedTiles = true;
+            ui.warning.hidden = false;
+            ui.warningText.textContent = "现代 OSM 瓦片未能加载，正在切换本地自然轮廓；历史疆域独立保留。";
+            void naturalFallback();
+        });
+        tiles?.on("tileload", () => {
+            loadedTiles++;
+            consecutiveTileErrors = 0;
+            if (requested !== "osm")
+                return;
+            const alreadyDisplayed = displayed === "osm" && !failedTiles && ui.warning.hidden;
+            failedTiles = false;
             displayed = "osm";
-            changed();
-        } });
+            ui.warning.hidden = true;
+            if (!alreadyDisplayed)
+                changed();
+        });
         ui.osm.addEventListener("click", () => setModernBasemap("osm"));
         ui.natural.addEventListener("click", () => setModernBasemap("natural"));
         ui.sync.addEventListener("change", () => {

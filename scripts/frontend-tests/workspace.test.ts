@@ -44,9 +44,10 @@ interface Helper {
 }
 const compiled=ts.transpileModule(readFileSync('src/archsearch/frontend/workspace.ts','utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.None}}).outputText;
 function setup(options:{saved?:string;small?:boolean;storageFails?:boolean}={}) {
-  const ids=['workspace','workspace-divider','workspace-sidebar','workspace-toggle-sidebar','workspace-toggle-sidebar-label','workspace-results-view','detail-dialog','detail-panel','close-detail','workspace-examples','llm-settings','search-filters','search-filter-summary','type-filter','limit-filter','map-tools'];
+  const ids=['workspace','workspace-divider','workspace-sidebar','workspace-toggle-sidebar','workspace-toggle-sidebar-label','workspace-results-view','detail-dialog','detail-panel','close-detail','workspace-examples','llm-settings','search-filters','search-filter-summary','type-filter','limit-filter','map-tools','close-map-tools'];
   const nodes=new Map(ids.map(id=>[id,new Element()]));
   nodes.get('workspace-sidebar')!.contained.add(nodes.get('workspace-results-view')!);
+  nodes.get('map-tools')!.contained.add(nodes.get('close-map-tools')!);
   const document=new EventTarget() as EventTarget&{activeElement:Element|null;getElementById(id:string):Element|undefined;querySelector(selector:string):Element};
   const search=new Element();search.bounds={left:0,top:0,width:1400,right:1400,bottom:111,height:111};
   document.activeElement=null; document.getElementById=id=>nodes.get(id); document.querySelector=()=>search;
@@ -281,6 +282,23 @@ test('modal Escape and handled keyboard events do not close background map tools
   h.node('llm-settings').open=false;h.helper.openDetail();assert.equal(escape().defaultPrevented,false);assert.equal(tools.open,true);
   h.helper.closeDetail();h.document.activeElement=tools.summary;escape(true);assert.equal(tools.open,true);
   assert.equal(h.helper.isSidebarCollapsed(),false);assert.equal(h.writes.length,0);
+});
+
+test('floating map tools close button restores summary focus and outside pointerdown dismisses popover',()=>{
+  const h=setup(),tools=h.node('map-tools'),close=h.node('close-map-tools');
+  tools.open=true;
+  const insideEvent=new Event('pointerdown');
+  Object.defineProperty(insideEvent,'target',{value:close});
+  h.document.dispatchEvent(insideEvent);
+  assert.equal(tools.open,true);
+  close.fire('click');
+  assert.equal(tools.open,false);
+  assert.equal(h.document.activeElement,tools.summary);
+  tools.open=true;
+  const outsideEvent=new Event('pointerdown');
+  Object.defineProperty(outsideEvent,'target',{value:new Element()});
+  h.document.dispatchEvent(outsideEvent);
+  assert.equal(tools.open,false);
 });
 
 test('the floating panel toggle hides controls and divider while preserving collapsed state',()=>{

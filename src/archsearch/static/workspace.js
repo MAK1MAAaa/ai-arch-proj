@@ -26,6 +26,7 @@ const ArchSearchWorkspace = (() => {
         const typeFilter = node("type-filter"), limitFilter = node("limit-filter");
         const filterSummary = node("search-filter-summary"), filterMenu = node("search-filters");
         const mapTools = node("map-tools");
+        const closeMapTools = document.getElementById("close-map-tools");
         let width = defaultWidth, preferredWidth = defaultWidth;
         let drag = null;
         let returnFocus = null;
@@ -231,6 +232,15 @@ const ArchSearchWorkspace = (() => {
             if (!mapTools.open && mapTools.contains(document.activeElement))
                 focusMapToolsSummary();
             changed();
+        });
+        closeMapTools?.addEventListener("click", () => {
+            mapTools.open = false;
+            focusMapToolsSummary();
+        });
+        document.addEventListener("pointerdown", (event) => {
+            if (mapTools.open && event.target && !mapTools.contains(event.target)) {
+                mapTools.open = false;
+            }
         });
         window.addEventListener("archsearch:modelsettingsopen", () => { for (const menu of menus)
             closeMenu(menu); });

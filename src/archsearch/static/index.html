@@ -7,17 +7,17 @@
     <meta name="description" content="通过中文研究问题探索全球历史遗址资料、独立年代证据与历史政权疆域概略。">
     <title>考古图志 · 全球历史遗址资料检索</title>
     <link rel="stylesheet" href="/static/vendor/leaflet/leaflet.css">
-    <link rel="stylesheet" href="/static/styles.css?v=20261125-3">
+    <link rel="stylesheet" href="/static/styles.css?v=20261125-4">
     <script defer src="/static/vendor/leaflet/leaflet.js"></script>
-    <script defer src="/static/research.js?v=20261125-3"></script>
-    <script defer src="/static/map-view.js?v=20261125-3"></script>
-    <script defer src="/static/history.js?v=20261125-3"></script>
-    <script defer src="/static/modern-boundaries.js?v=20261125-3"></script>
-    <script defer src="/static/registered-areas.js?v=20261125-3"></script>
-    <script defer src="/static/llm.js?v=20261125-3"></script>
-    <script defer src="/static/comparison.js?v=20261125-3"></script>
-    <script defer src="/static/workspace.js?v=20261125-3"></script>
-    <script defer src="/static/app.js?v=20261125-3"></script>
+    <script defer src="/static/research.js?v=20261125-4"></script>
+    <script defer src="/static/map-view.js?v=20261125-4"></script>
+    <script defer src="/static/history.js?v=20261125-4"></script>
+    <script defer src="/static/modern-boundaries.js?v=20261125-4"></script>
+    <script defer src="/static/registered-areas.js?v=20261125-4"></script>
+    <script defer src="/static/llm.js?v=20261125-4"></script>
+    <script defer src="/static/comparison.js?v=20261125-4"></script>
+    <script defer src="/static/workspace.js?v=20261125-4"></script>
+    <script defer src="/static/app.js?v=20261125-4"></script>
   </head>
   <body class="research-workbench"><nav class="skip-navigation" aria-label="快捷导航"><a class="skip-link" href="#query">跳到检索</a><a class="skip-link" href="#workspace-toggle-sidebar">跳到资料面板</a><a class="skip-link" href="#map">跳到地图</a></nav><div class="page-shell"><header class="masthead">
         <a class="brand" href="/" aria-label="考古图志首页">
@@ -127,7 +127,7 @@
             <details id="map-tools" class="map-tools">
               <summary><span>图层与说明</span><span class="map-tools-summary-note">底图 · 图例与来源</span></summary>
               <div class="map-tools-body">
-                <div class="comparison-toolbar"><p>现代位置与来源年份的政权疆域概略对照。</p></div>
+                <div class="map-tools-popover-header"><div><strong>图层与说明</strong><p>现代位置与来源年份的政权疆域概略对照。</p></div><button id="close-map-tools" class="icon-button map-tools-close" type="button" aria-label="关闭图层与说明"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.4"/></svg></button></div>
                 <p class="map-density-note">双图同步开启时，拖拽或缩放任一地图都会实时带动另一张地图平移和缩放；圆形编号保留检索排名，背景年不用于筛选遗址。</p>
                 <section class="map-tools-section" aria-labelledby="modern-tools-title"><h4 id="modern-tools-title">现代底图与国界</h4><div class="comparison-basemap-controls"><button id="modern-basemap-osm" class="interaction-button" type="button" aria-pressed="true">现代 OSM</button><button id="modern-basemap-natural" class="interaction-button" type="button" aria-pressed="false">本地自然轮廓</button></div><div class="modern-boundaries-feedback"><p id="modern-boundaries-status" role="status" aria-live="polite">正在加载本地现代国界参考。</p></div><p class="comparison-modern-legend"><span class="modern-border-swatch"></span>现代陆地国界参考 <span class="modern-border-swatch is-disputed"></span>虚线：来源争议／控制等线；不含海洋划界。</p></section>
                 <section class="map-tools-section" aria-labelledby="historical-tools-title"><h4 id="historical-tools-title">历史疆域与适用范围</h4><p class="comparison-history-legend"><span class="polity-fill-swatch"></span>实线与填色：来源政权范围 <span class="polity-composite-swatch"></span>虚线：复合政体；常驻名称按可用空间择显，点击疆域查看完整名称与来源。</p><p id="history-source" class="history-source">来源信息在地图视图成功加载后显示。</p><p id="history-limit-note">历史政权疆域概略来自Cliopatria，现代自然轮廓来自Natural Earth；不复原古海岸，不据代表点推断历史政治归属。</p></section>

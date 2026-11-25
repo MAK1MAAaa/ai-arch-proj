@@ -30,6 +30,7 @@ const ArchSearchWorkspace = (() => {
     const typeFilter = node<HTMLSelectElement>("type-filter"), limitFilter = node<HTMLSelectElement>("limit-filter");
     const filterSummary = node("search-filter-summary"), filterMenu = node<HTMLDetailsElement>("search-filters");
     const mapTools = node<HTMLDetailsElement>("map-tools");
+    const closeMapTools = document.getElementById("close-map-tools");
     let width = defaultWidth, preferredWidth = defaultWidth;
     let drag: number | null = null;
     let returnFocus: HTMLElement | null = null;
@@ -194,6 +195,15 @@ const ArchSearchWorkspace = (() => {
     mapTools.addEventListener("toggle", () => {
       if (!mapTools.open && mapTools.contains(document.activeElement)) focusMapToolsSummary();
       changed();
+    });
+    closeMapTools?.addEventListener("click", () => {
+      mapTools.open = false;
+      focusMapToolsSummary();
+    });
+    document.addEventListener("pointerdown", (event) => {
+      if (mapTools.open && event.target && !mapTools.contains(event.target as Node)) {
+        mapTools.open = false;
+      }
     });
     window.addEventListener("archsearch:modelsettingsopen", () => { for (const menu of menus) closeMenu(menu); });
     document.addEventListener("keydown", (event) => {
