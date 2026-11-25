@@ -1951,6 +1951,9 @@ select {
    ========================================================================== */
 
 .map-panel {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
   grid-column: 3;
   display: flex;
   flex-direction: column;
@@ -1989,7 +1992,7 @@ select {
 }
 
 .workspace.is-sidebar-collapsed .map-heading > div {
-  margin-left: 116px;
+  margin-left: 122px;
 }
 
 .map-heading .small-eyebrow {
@@ -2369,79 +2372,36 @@ select {
 }
 
 .comparison-evidence {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: start;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   flex-shrink: 0;
-  gap: 4px 14px;
-  padding: 10px 14px;
+  gap: 8px 14px;
+  padding: 8px 14px;
   border-bottom: 1px solid var(--border-subtle);
   border-left: 3px solid var(--accent);
   background: rgba(159, 71, 45, 0.045);
 }
 
 .comparison-evidence strong {
-  display: block;
-  font: 600 16px/1.35 var(--font-serif);
+  flex: 1 1 auto;
+  min-width: 0;
+  font: 600 15px/1.35 var(--font-serif);
   color: var(--ink-primary);
   overflow-wrap: anywhere;
 }
 
-.comparison-evidence p,
-.comparison-evidence blockquote {
-  font-size: 12px;
-  line-height: 1.65;
-  color: var(--ink-secondary);
-  overflow-wrap: anywhere;
-}
-
 .comparison-evidence > button {
-  grid-column: 2;
-  grid-row: 1;
-  min-height: 36px;
-}
-
-.comparison-evidence-more {
-  grid-column: 1 / -1;
-}
-
-.comparison-evidence-more > summary {
-  min-height: 28px;
-  padding: 4px 0;
-  color: var(--accent-deep);
-  font-size: 12px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.comparison-evidence-more[open] {
-  max-height: 180px;
-  overflow: auto;
-}
-
-.comparison-evidence blockquote {
-  margin: 6px 0;
-  max-height: 90px;
-  overflow: auto;
-  padding: 6px 10px;
-  border-left: 2px solid var(--accent);
-  background: var(--bg-surface);
-  white-space: pre-line;
-}
-
-.comparison-evidence-sources {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px 14px;
-  min-width: 0;
-}
-
-.comparison-evidence-sources a {
-  display: inline-flex;
-  align-items: center;
+  flex-shrink: 0;
   min-height: 32px;
+  padding: 4px 12px;
   font-size: 12px;
-  color: var(--accent-deep);
+  white-space: nowrap;
+}
+
+#comparison-evidence-date,
+.comparison-evidence-more {
+  display: none !important;
 }
 
 /* Dual Map Columns */
@@ -4765,7 +4725,7 @@ select {
   }
 
   .map-heading > div {
-    margin-left: 116px;
+    margin-left: 122px;
   }
 
   .comparison-frame .map-shell {
@@ -5047,14 +5007,8 @@ select {
   }
 
   .comparison-evidence {
-    grid-template-columns: minmax(0, 1fr);
+    flex-wrap: wrap;
     padding: 8px 10px;
-  }
-
-  .comparison-evidence > button {
-    grid-column: 1;
-    grid-row: auto;
-    justify-self: start;
   }
 
   .comparison-columns {
