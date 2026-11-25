@@ -1322,7 +1322,37 @@ test('comparison links keep independent modern street and historical region view
 test('old historical links remain valid alongside default comparison roles', () => {
   const url = new URL('http://localhost/?year=117&basemap=modern');
   assert.equal(helpers.parseView(url).error, null);
-  assert.deepEqual(plain(helpers.parseComparison(url)), { state: { modern_basemap: 'osm', sync_centers: false, modern_view: null, history_view: null }, error: null });
+  assert.deepEqual(plain(helpers.parseComparison(url)), { state: { modern_basemap: 'osm', sync_centers: true, modern_view: null, history_view: null }, error: null });
+});
+
+test('browse visible and comparison sync defaults parse and round-trip explicitly', () => {
+  const defaultUrl = new URL('http://localhost/?q=harbor&mode=bm25');
+  assert.equal(helpers.parseBrowse(defaultUrl).state.visible, false);
+  assert.equal(helpers.parseComparison(defaultUrl).state.sync_centers, true);
+
+  const visibleLink = helpers.buildLink(
+    base,
+    request,
+    null,
+    { site: null, phase: null },
+    { country: null, region: null, offset: 0, visible: true, bbox: null },
+    { modern_basemap: 'osm', sync_centers: false, modern_view: null, history_view: null },
+  );
+  const parsedVisible = new URL(visibleLink);
+  assert.equal(parsedVisible.searchParams.get('points'), '1');
+  assert.equal(parsedVisible.searchParams.get('sync_centers'), '0');
+  assert.equal(helpers.parseBrowse(parsedVisible).state.visible, true);
+  assert.equal(helpers.parseComparison(parsedVisible).state.sync_centers, false);
+
+  const hiddenLink = helpers.buildLink(
+    base,
+    request,
+    null,
+    { site: null, phase: null },
+    { country: null, region: null, offset: 0, visible: false, bbox: null },
+    { modern_basemap: 'osm', sync_centers: true, modern_view: null, history_view: null },
+  );
+  assert.equal(new URL(hiddenLink).searchParams.get('points'), null);
 });
 
 test('invalid comparison camera, sync and duplicate fields never silently broaden a restored view', () => {

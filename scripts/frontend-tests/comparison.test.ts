@@ -369,3 +369,41 @@ test('source phase evidence does not claim a retained or linked background match
   assert.match(h.node('comparison-evidence-date').textContent,/来源阶段.*1616.*明确单年事件.*实际背景见右图/u);
   assert.doesNotMatch(h.node('comparison-evidence-date').textContent,/自动联动/u);
 });
+
+test('source placements do not cluster coincident points on the historical map', () => {
+  const h=harness();
+  const values=[
+    {id:'auth:fixture:alpha',title:'Alpha',coordinate:[10,20] as [number,number],representative:true},
+    {id:'auth:fixture:beta',title:'Beta',coordinate:[10,20] as [number,number],representative:false},
+    {id:'auth:fixture:gamma',title:'Gamma',coordinate:[10.01,20.01] as [number,number],representative:false},
+  ];
+  h.controller.setCatalogue(values,true);
+  assert.equal(h.historical.container.dataset.densityClusters,'0');
+  assert.equal(h.circles.length,3);
+  h.circles[1].fire('click');
+  assert.deepEqual(h.selected,['auth:fixture:beta']);
+});
+
+test('live move and zoom events synchronize modern and historical maps in both directions before moveend', () => {
+  const h=harness({sync_centers:true});
+  h.modern.center={lat:34.2,lng:108.9};
+  h.modern.zoom=6;
+  h.modern.fire('zoom');
+  h.modern.fire('move');
+  assert.equal(h.historical.getCenter().lat,34.2);
+  assert.equal(h.historical.getCenter().lng,108.9);
+  assert.equal(h.historical.getZoom(),6);
+  assert.equal(h.changes(),0);
+
+  h.historical.center={lat:41.9,lng:12.5};
+  h.historical.zoom=8;
+  h.historical.fire('zoom');
+  h.historical.fire('move');
+  assert.equal(h.modern.getCenter().lat,41.9);
+  assert.equal(h.modern.getCenter().lng,12.5);
+  assert.equal(h.modern.getZoom(),8);
+  assert.equal(h.changes(),0);
+
+  h.historical.fire('moveend');
+  assert.equal(h.changes(),1);
+});

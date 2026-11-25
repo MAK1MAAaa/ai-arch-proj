@@ -618,8 +618,8 @@
       byId("fit-map", HTMLButtonElement).disabled = true;
       return;
     }
-    state.map = L.map("map", { zoomControl: false, minZoom: 1, maxZoom: 9, worldCopyJump: true }).setView([20, 0], 1);
-    historicalMap = L.map("history-map", { zoomControl: false, minZoom: 1, maxZoom: 9, worldCopyJump: true }).setView([20, 0], 1);
+    state.map = L.map("map", { zoomControl: false, zoomAnimation: false, minZoom: 1, maxZoom: 9, worldCopyJump: true }).setView([20, 0], 1);
+    historicalMap = L.map("history-map", { zoomControl: false, zoomAnimation: false, minZoom: 1, maxZoom: 9, worldCopyJump: true }).setView([20, 0], 1);
     L.control.zoom({ position: "bottomleft" }).addTo(historicalMap);
     historicalMap.attributionControl?.setPrefix(false);
     L.control.zoom({ position: "bottomleft" }).addTo(state.map);
@@ -1784,7 +1784,7 @@
   document.querySelectorAll<HTMLButtonElement>("[data-query-zh]").forEach((button) => {
     button.addEventListener("click", async () => {
       const fullCorpus = button.dataset.fullCorpus === "true";
-      const visible = explore?.getState().visible ?? true;
+      const visible = explore?.getState().visible ?? false;
       const globalScope = (scope: ReturnType<NonNullable<typeof explore>["getState"]> | null): boolean => scope !== null && !scope.country && !scope.region && !scope.subdivision && !scope.bbox && scope.offset === 0 && scope.visible === visible;
       await exampleIntent.run(async () => {
         if (fullCorpus) {
@@ -1894,7 +1894,7 @@
     onStateChange: () => { exampleIntent.invalidate(); browseRestored = true; invalidLink = false; pendingSelectionRestore = false; saveViewLink(); },
     onCommittedState: () => {
       updateScopeHeader();
-      mapComparison?.setCatalogue(explore?.getDisplayedPlacements() ?? [], explore?.getCommittedState()?.visible ?? true);
+      mapComparison?.setCatalogue(explore?.getDisplayedPlacements() ?? [], explore?.getCommittedState()?.visible ?? false);
       if (browseRestoreError) {
         if (ui.requestError.textContent === `分享链接未能恢复：${browseRestoreError}`) showError("");
         browseRestoreError = null; invalidLink = false; linkError = null;

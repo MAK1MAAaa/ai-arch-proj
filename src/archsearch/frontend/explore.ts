@@ -104,7 +104,7 @@ const ArchSearchExplore = (() => {
     const country = value.country ?? null;
     const region = value.region ?? null;
     const offset = value.offset ?? 0;
-    const visible = value.visible ?? true;
+    const visible = value.visible ?? false;
     const chronology = value.chronology ?? null;
     if (country !== null && (typeof country !== "string" || !/^[A-Z]{2}$/u.test(country))) throw new Error("目录国家／地区代码应为来源中的大写双字母代码。");
     if (region !== null && (typeof region !== "string" || !Object.hasOwn(regionLabels, region))) throw new Error("目录分区代码不在来源分区中。");
@@ -511,7 +511,7 @@ const ArchSearchExplore = (() => {
       const pane = map.getPane("catalogue-points") ?? map.createPane("catalogue-points");
       pane.style.zIndex = "450";
       renderer = L.canvas({ pane: "catalogue-points", padding: 0.5 });
-      density = ArchSearchDensity.create({ map, pane: "catalogue-points", renderer,
+      density = ArchSearchDensity.create({ map, pane: "catalogue-points", renderer, cluster: false,
         onSelect: (id, opener) => onSelect(id, opener, { moveMap: false }) });
       layer = density.layer;
     }

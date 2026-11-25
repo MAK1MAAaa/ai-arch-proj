@@ -75,7 +75,7 @@ const ArchSearchComparison = (() => {
       pane.style.zIndex = "350";
       sourceRenderer = L.canvas({ pane: "history-boundaries" });
     }
-    const density = historical && sourceRenderer ? ArchSearchDensity.create({ map: historical, pane: "history-boundaries", renderer: sourceRenderer, cellSize: 128,
+    const density = historical && sourceRenderer ? ArchSearchDensity.create({ map: historical, pane: "history-boundaries", renderer: sourceRenderer, cellSize: 128, cluster: false,
       onSelect: (id, opener) => onSelect(id, opener, { moveMap: false }) }) : null;
     const catalogueLayer = density?.layer.addTo(historical!) ?? null;
     if (modern) {
@@ -155,10 +155,31 @@ const ArchSearchComparison = (() => {
       }
       finally { syncing = false; }
     }
-    function sizeChanged(map: L.Map): boolean {
+    function hasSizeChanged(map: L.Map): boolean {
       const next = map.getSize(), previous = mapSizes.get(map);
-      mapSizes.set(map, { x: next.x, y: next.y });
       return previous !== undefined && (previous.x !== next.x || previous.y !== next.y);
+    }
+    function sizeChanged(map: L.Map): boolean {
+      const changed = hasSizeChanged(map);
+      const next = map.getSize();
+      mapSizes.set(map, { x: next.x, y: next.y });
+      return changed;
+    }
+    function syncLive(source: L.Map, destination: L.Map | null): void {
+      if (syncing || restoringCameras || !destination) return;
+      const resized = hasSizeChanged(source);
+      const actual = source.getCenter();
+      const zoom = sharedZoom(source.getZoom());
+      const copyCenter = sync && !resized;
+      const other = destination.getCenter();
+      const targetCenter: L.LatLngTuple = copyCenter
+        ? [Math.max(-latitudeLimit, Math.min(latitudeLimit, actual.lat)), actual.lng]
+        : [other.lat, other.lng];
+      syncing = true;
+      try {
+        destination.stop();
+        applyCamera(destination, targetCenter, zoom);
+      } finally { syncing = false; }
     }
     function finishMove(source: L.Map, destination: L.Map | null): void {
       if (syncing || restoringCameras) return;
@@ -289,8 +310,12 @@ const ArchSearchComparison = (() => {
       positionSelection(coordinate);
       return modern !== null || historical !== null;
     }
-    if (modern) modern.on("moveend", () => finishMove(modern, historical));
+    if (modern) {
+      modern.on("move zoom", () => syncLive(modern, historical));
+      modern.on("moveend", () => finishMove(modern, historical));
+    }
     if (historical) {
+      historical.on("move zoom", () => syncLive(historical, modern));
       historical.on("moveend", () => {
         for (const marker of [...markers.values(), ...(selectedMarker ? [selectedMarker] : [])]) {
           const value = marker.getLatLng(); const longitude = ArchSearchMapView.wrapLongitude(value.lng, historical.getCenter().lng);
