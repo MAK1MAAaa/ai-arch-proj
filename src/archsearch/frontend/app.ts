@@ -1801,6 +1801,8 @@
       const type = button.dataset.type || "";
       ui.typeFilter.value = Array.from(ui.typeFilter.options).some((option) => option.value === type) ? type : "";
       updateSearchAvailability();
+      const examplesMenu = document.getElementById("workspace-examples");
+      if (examplesMenu instanceof HTMLDetailsElement) examplesMenu.open = false;
       ui.query.focus();
       search();
       }, (error) => { showError(`示例未提交：${errorMessage(error)} 已显示检索结果保持原样。`); });
