@@ -1047,8 +1047,8 @@
                 focusWithinView(ui.query);
         }
     }
-    function detailSection(title, content) {
-        const section = element("section", "detail-section");
+    function detailSection(title, content, className = "detail-section") {
+        const section = element("section", className);
         section.append(element("h4", null, title));
         if (typeof content === "string")
             section.append(element("p", null, content));
@@ -1056,23 +1056,30 @@
             section.append(content);
         return section;
     }
+    function chipList(values, fallback) {
+        if (!values.length)
+            return element("p", "detail-empty-text", fallback);
+        const list = element("ul", "detail-chips");
+        for (const value of values)
+            list.append(element("li", "detail-chip", value));
+        return list;
+    }
     function fact(label, value) {
         const row = element("div", "detail-fact");
         row.append(element("dt", null, label), element("dd", null, value));
         return row;
     }
     function evidenceList(evidence) {
-        const list = element("div");
+        const list = element("div", "evidence-list");
         for (const item of evidence) {
-            const row = element("div", "evidence-item");
+            const row = element("article", "evidence-item");
             const resource = item.resource_type === "Name" ? "名称记录" : "位置记录";
-            row.append(element("p", null, `${resource} · ${periodLabel(item.period_id)}`));
-            row.append(element("p", "evidence-meta", `分期标注把握：${sourceLabel(item.confidence, confidenceLabels)}`));
-            row.append(element("p", "evidence-meta", `记录与地点的关联：${sourceLabel(item.association_certainty, certaintyLabels)}`));
-            row.append(element("p", "evidence-meta", `原始记录时间范围：${sourceYear(item.start)} — ${sourceYear(item.end)}`));
+            row.append(element("p", "evidence-title", `${resource} · ${periodLabel(item.period_id)}`));
+            const meta = element("dl", "evidence-meta-grid");
+            meta.append(fact("分期标注把握", sourceLabel(item.confidence, confidenceLabels)), fact("记录与地点关联", sourceLabel(item.association_certainty, certaintyLabels)), fact("原始记录时间", `${sourceYear(item.start)} — ${sourceYear(item.end)}`));
             const links = element("div", "evidence-links");
             links.append(safeLink(item.resource_uri, "原始记录 ↗"), safeLink(item.period_uri, "时期定义 ↗"));
-            row.append(links);
+            row.append(meta, links);
             list.append(row);
         }
         return list;
@@ -1103,32 +1110,50 @@
         const reviewLabel = {
             reviewed: "已有来源支持的阶段", insufficient: "已核验，断代未确定", not_reviewed: "断代尚未核验",
         };
-        content.append(element("p", "detail-note", `${reviewLabel[review.status]}${review.reviewed_at ? ` · ${review.reviewed_at}` : ""}`));
-        content.append(element("p", null, review.note));
-        const audit = element("details");
-        audit.append(element("summary", null, "查看核验方式"), element("p", "detail-note", review.method));
-        content.append(audit);
+        const header = element("div", "chronology-header");
+        header.append(element("span", `chronology-status-badge is-${review.status}`, reviewLabel[review.status]));
+        if (review.reviewed_at)
+            header.append(element("span", "chronology-reviewed-at", `核验日期 ${review.reviewed_at}`));
+        const audit = element("details", "chronology-audit");
+        audit.append(element("summary", null, "核验方式"), element("p", "detail-note", review.method));
+        header.append(audit);
+        content.append(header);
+        if (review.note)
+            content.append(element("p", "chronology-lead", review.note));
         if (!review.phases.length)
             return content;
         const kinds = { construction: "建造", use: "使用", rebuild: "改建", destruction: "毁损", other: "其他事件" };
         const precision = { exact_year: "明确单年", approximate_year: "约略年份", range: "区间年代", period: "时期描述" };
         content.append(element("p", "detail-note", "年代仅依据来源自动联动。区间、约略或未知年代保留最后成功背景，不提供任意年或手选时间点；各阶段不视为连续生命周期。"));
+        const phaseList = element("div", "phase-list");
         for (const phase of review.phases) {
-            const section = element("section", "phase-record");
             const current = phase.id === (selectedPhaseId ?? review.default_phase_id);
-            section.append(element("h5", null, `${kinds[phase.kind]} · ${phase.label}${current ? " · 当前资料阶段" : ""}`));
+            const section = element("section", current ? "phase-record is-current" : "phase-record");
+            const phaseHeader = element("div", "phase-header");
+            const phaseMain = element("div", "phase-header-main");
+            phaseMain.append(element("span", "phase-kind-badge", kinds[phase.kind]), element("h5", null, phase.label));
+            if (current)
+                phaseMain.append(element("span", "phase-current-badge", "当前资料阶段"));
             const dates = phase.start_year === null && phase.end_year === null ? "来源未给出可换算的年份" : phase.start_year === phase.end_year
                 ? sourceYear(phase.start_year) : `${sourceYear(phase.start_year)} — ${sourceYear(phase.end_year)}`;
-            section.append(element("p", "phase-dates", `${precision[phase.precision]} · ${dates}`));
+            phaseHeader.append(phaseMain, element("span", "phase-dates", `${precision[phase.precision]} · ${dates}`));
+            section.append(phaseHeader);
             if (phase.note)
                 section.append(element("p", "detail-note", phase.note));
-            for (const source of phase.sources) {
-                const evidence = element("blockquote", "phase-evidence", source.excerpt);
-                evidence.lang = "en";
-                section.append(evidence, safeLink(source.uri, source.title), element("p", "detail-note", `${source.publisher} · ${source.license ?? "许可见原始来源"} · ${source.revision ?? "版本未提供"}`));
+            if (phase.sources.length) {
+                const sources = element("div", "phase-sources");
+                for (const source of phase.sources) {
+                    const card = element("div", "phase-source-card");
+                    const evidence = element("blockquote", "phase-evidence", source.excerpt);
+                    evidence.lang = "en";
+                    card.append(evidence, safeLink(source.uri, source.title, "phase-source-link"), element("p", "phase-source-meta", `${source.publisher} · ${source.license ?? "许可见原始来源"} · ${source.revision ?? "版本未提供"}`));
+                    sources.append(card);
+                }
+                section.append(sources);
             }
-            content.append(section);
+            phaseList.append(section);
         }
+        content.append(phaseList);
         return content;
     }
     function followPhase(phase) {
@@ -1251,51 +1276,82 @@
         const focusWasInContent = ui.detailContent.contains(document.activeElement);
         const minas = ArchSearchResearch.parseMinasSource(site);
         const merimee = ArchSearchResearch.parseMerimeeSource(site);
+        const sourceNames = {
+            pleiades: "PLEIADES", global: "CURATED", unesco: "UNESCO DATAHUB", ats: "ATS HSM", supplement: "CULTURAL SUPPLEMENT",
+        };
+        const reviewStatus = site.chronology?.status ?? "not_reviewed";
+        const reviewBadges = {
+            reviewed: "已有来源阶段", insufficient: "断代未确定", not_reviewed: "尚未核验",
+        };
+        const hero = element("header", "detail-hero");
+        const badges = element("div", "detail-badges");
+        badges.append(element("span", "detail-badge is-source", sourceNames[site.source_kind] ?? "SOURCE"), element("code", "detail-id-chip", site.id), element("span", `detail-badge is-chronology is-${reviewStatus}`, reviewBadges[reviewStatus]));
         const title = element("h3", null, displayTitle(site));
         title.id = "detail-title";
         if (minas)
             title.lang = "pt-BR";
         else if (merimee)
             title.lang = "fr";
-        const sourceId = element("p", "detail-id", `${{ pleiades: "PLEIADES", global: "CURATED", unesco: "UNESCO DATAHUB", ats: "ATS HSM", supplement: "CULTURAL SUPPLEMENT" }[site.source_kind] ?? "SOURCE"} / ${site.id}`);
-        const description = element("p", "detail-description", hasSourceText(site.description) ? site.description : "当前导出未提供描述。");
-        description.lang = hasSourceText(site.description) ? (minas ? "pt-BR" : merimee ? "fr" : "en") : "zh-CN";
-        const nodes = [title, sourceId];
+        hero.append(badges, title);
         if (displayTitle(site) !== site.title) {
-            nodes.push(element("p", "detail-source-title", `来源标题原文：${site.title || "未提供"}`));
+            hero.append(element("p", "detail-source-title", `来源标题原文：${site.title || "未提供"}`));
         }
+        const phases = site.chronology?.phases ?? [];
+        const activePhase = phases.find((phase) => phase.id === (selectedPhaseId ?? site.chronology?.default_phase_id)) ?? null;
+        const quickDate = activePhase && (activePhase.start_year !== null || activePhase.end_year !== null)
+            ? activePhase.start_year === activePhase.end_year ? sourceYear(activePhase.start_year) : `${sourceYear(activePhase.start_year)} — ${sourceYear(activePhase.end_year)}`
+            : reviewBadges[reviewStatus];
+        const quickFacts = element("dl", "detail-quick-facts");
+        quickFacts.append(fact("代表坐标", coordinateLabel(site)), fact("断代阶段", quickDate), fact("地点类型", strings(site.types).slice(0, 3).map(typeLabel).join(" · ") || "未提供"));
+        if (site.geography) {
+            const regionSummary = site.source_kind === "ats"
+                ? "南极洲（不作主权归属标注）"
+                : site.geography.countries.join(" · ") || site.geography.regions.join(" · ") || "来源未明确";
+            quickFacts.append(fact("来源地区", regionSummary));
+        }
+        hero.append(quickFacts);
         const editorial = site.source_kind === "supplement" && !site.id.startsWith("wd:") && !site.id.startsWith("auth:sg-nhb:") && !minas && !merimee;
-        nodes.push(element("p", "detail-note", minas ? "以下为葡萄牙语原登记字段；未生成历史摘要或中文别名。" : merimee ? "以下为法文原名录记录与保护范围；未生成历史摘要或中文别名。" : editorial ? "描述和摘要依据所列来源整理，不冒充官方原文；逐条原文见来源摘录，历史阶段另据证据核验。" : "来源原文保留原语言；未生成历史摘要。"));
-        if (editorial)
-            nodes.push(element("p", "detail-source-title", ArchSearchResearch.descriptionLabel(site, "en")));
-        if (!merimee && (!minas || hasSourceText(site.description)))
-            nodes.push(description);
-        if (site.description_zh && hasSourceText(site.description_zh)) {
-            const chinese = element("p", "detail-description", site.description_zh);
-            chinese.lang = "zh-CN";
-            nodes.push(detailSection(chineseDescriptionLabel(site), chinese));
+        hero.append(element("p", "detail-hero-note", minas ? "以下为葡萄牙语原登记字段；未生成历史摘要或中文别名。" : merimee ? "以下为法文原名录记录与保护范围；未生成历史摘要或中文别名。" : editorial ? "描述和摘要依据所列来源整理，不冒充官方原文；逐条原文见来源摘录，历史阶段另据证据核验。" : "来源原文保留原语言；未生成历史摘要。"));
+        const nodes = [hero];
+        const showOriginalDesc = !merimee && (!minas || hasSourceText(site.description));
+        const showChineseDesc = Boolean(site.description_zh && hasSourceText(site.description_zh));
+        if (showOriginalDesc || showChineseDesc) {
+            const overview = element("section", "detail-section detail-overview");
+            const buildBlock = (heading, textValue, lang) => {
+                const block = element("div", "detail-lang-block");
+                block.append(element("h4", null, heading));
+                const body = element("p", "detail-description", textValue);
+                body.lang = lang;
+                block.append(body);
+                return block;
+            };
+            const container = showOriginalDesc && showChineseDesc ? element("div", "detail-bilingual") : overview;
+            if (showChineseDesc)
+                container.append(buildBlock(chineseDescriptionLabel(site), site.description_zh, "zh-CN"));
+            if (showOriginalDesc) {
+                const descText = hasSourceText(site.description) ? site.description : "当前导出未提供描述。";
+                const descLang = hasSourceText(site.description) ? (minas ? "pt-BR" : "en") : "zh-CN";
+                const descTitle = editorial ? ArchSearchResearch.descriptionLabel(site, "en") : "来源描述原文";
+                container.append(buildBlock(descTitle, descText, descLang));
+            }
+            if (container !== overview)
+                overview.append(container);
+            nodes.push(overview);
         }
         const details = merimee ? merimeeSourceContent(site, merimee) : minas ? minasSourceContent(minas) : element("p", null, hasSourceText(site.details)
             ? site.details : `当前导出未提供补充内容${site.details.trim() ? `（原始值：${site.details}）` : ""}。`);
         if (!minas && !merimee && hasSourceText(site.details))
             details.lang = site.id.startsWith("auth:fr-merimee:") ? "fr" : "en";
-        const sourceSection = detailSection(site.source_kind === "supplement" ? "来源结构化信息与范围说明" : "原始补充记录", details);
+        const sourceSection = detailSection(site.source_kind === "supplement" ? "来源结构化信息与范围说明" : "原始补充记录", details, "detail-section detail-card");
         if (merimee)
             nodes.push(sourceSection);
-        nodes.push(detailSection("年代证据与地图联动", phaseContent(site)));
-        if (registeredAreas)
-            nodes.push(registeredAreas.element);
+        nodes.push(detailSection("年代证据与地图联动", phaseContent(site), "detail-section detail-card"));
         if (!merimee)
             nodes.push(sourceSection);
-        nodes.push(detailSection("名称与别名", strings(site.names).join(" · ") || "原始资料未提供其他名称。"));
-        nodes.push(detailSection("来源类型标签", strings(site.types).map((value) => primaryTypeLabels[value]
-            ? `${typeLabel(value)}（${value}）` : value).join(" · ") || "原始资料未提供类型。"));
-        const periods = detailSection("原始时期标签", strings(site.periods).map(periodLabel).join(" · ") || "原始资料未提供时期标签。");
-        periods.append(element("p", "detail-note", "标签来自名称或位置记录；多个时期标签不能证明地点持续使用，也不能直接视为建造年代。"));
-        nodes.push(periods);
-        const facts = element("dl");
+        const metaGrid = element("div", "detail-meta-grid");
+        const facts = element("dl", "detail-facts");
         facts.append(fact("代表点", coordinateLabel(site)), fact(site.source_kind === "pleiades" ? "原始精度" : "定位精度分类", sourceLabel(site.location_precision, { precise: "精确", rough: "概略" })));
-        const space = detailSection("空间信息 · WGS84", facts);
+        const space = detailSection("空间信息 · WGS84", facts, "detail-section detail-meta-card");
         space.append(element("p", "detail-note", "精度按来源标签展示，不承诺米级误差；代表点不等同于实测发掘坐标。"));
         const positionStatus = ArchSearchMapView.locationStatus(site.repr_point);
         if (positionStatus === "polar") {
@@ -1309,26 +1365,38 @@
         if (site.location_precision === "rough") {
             space.append(element("p", "detail-note", "rough 表示应在某个范围内寻找地点；代表点可能只是该范围的中心。"));
         }
-        nodes.push(space);
+        metaGrid.append(space);
         if (site.geography) {
             const geography = site.geography;
-            const scope = detailSection("来源名录中的国家／地区与分区", `国家／地区：${site.source_kind === "ats" ? "不作主权归属标注" : geography.countries.join(" · ") || "来源未明确"}；分区：${geography.regions.map((region) => region === "antarctica" ? "南极洲（独立区域分类）" : region).join(" · ") || "来源未提供"}。`);
-            scope.append(element("p", "detail-note", geography.note), element("p", "detail-note", `名录可用定位点记录：${geography.point_count}。${geography.point_count ? "可定位时只展示一个代表点，不表示全部组成地点。" : "未采用可用代表点，不绘制遗址标记；来源公开范围如有提供另列。"}此处是来源名录标签，不代表历史政治归属。`), safeLink(geography.source.uri, geography.source.title));
-            nodes.push(scope);
+            const geoFacts = element("dl", "detail-facts");
+            geoFacts.append(fact("国家／地区", site.source_kind === "ats" ? "不作主权归属标注" : geography.countries.join(" · ") || "来源未明确"), fact("分区", geography.regions.map((region) => region === "antarctica" ? "南极洲（独立区域分类）" : region).join(" · ") || "来源未提供"));
+            const scope = detailSection("来源名录中的国家／地区与分区", geoFacts, "detail-section detail-meta-card");
+            scope.append(element("p", "detail-note", geography.note), element("p", "detail-note", `名录可用定位点记录：${geography.point_count}。${geography.point_count ? "可定位时只展示一个代表点，不表示全部组成地点。" : "未采用可用代表点，不绘制遗址标记；来源公开范围如有提供另列。"}此处是来源名录标签，不代表历史政治归属。`), safeLink(geography.source.uri, geography.source.title, "detail-inline-link"));
+            metaGrid.append(scope);
         }
+        metaGrid.append(detailSection("名称与别名", chipList(strings(site.names), "原始资料未提供其他名称。"), "detail-section detail-meta-card"));
+        metaGrid.append(detailSection("来源类型标签", chipList(strings(site.types).map((value) => primaryTypeLabels[value]
+            ? `${typeLabel(value)}（${value}）` : value), "原始资料未提供类型。"), "detail-section detail-meta-card"));
+        const periods = detailSection("原始时期标签", chipList(strings(site.periods).map(periodLabel), "原始资料未提供时期标签。"), "detail-section detail-meta-card");
+        periods.append(element("p", "detail-note", "标签来自名称或位置记录；多个时期标签不能证明地点持续使用，也不能直接视为建造年代。"));
+        metaGrid.append(periods);
         const fields = strings(matchedFields).map((field) => fieldLabels[field] || field);
         if (state.results.some((result) => result.site.id === site.id)) {
-            const matches = detailSection("字词片段匹配字段", fields.join(" · ") || "未发现查询与检索字段的字词片段重叠。");
+            const matches = detailSection("字词片段匹配字段", chipList(fields, "未发现查询与检索字段的字词片段重叠。"), "detail-section detail-meta-card");
             matches.append(element("p", "detail-note", "仅展示成功检索的字词重叠，不解释语义模型的排序依据；中文问题仍可能检索到英文候选。"));
-            nodes.push(matches);
+            metaGrid.append(matches);
         }
         else
-            nodes.push(detailSection("选择方式", "通过研究链接直接打开；未附带本次语义检索排序分数。"));
+            metaGrid.append(detailSection("选择方式", "通过研究链接直接打开；未附带本次语义检索排序分数。", "detail-section detail-meta-card"));
+        metaGrid.append(detailSection("资料贡献者", chipList(strings(site.contributors), "当前导出未提供贡献者信息，请在原始来源中核验。"), "detail-section detail-meta-card"));
+        nodes.push(metaGrid);
+        if (registeredAreas)
+            nodes.push(registeredAreas.element);
         const evidence = Array.isArray(site.period_evidence) ? site.period_evidence : [];
         if (evidence.length) {
             const roman = evidence.filter((item) => item.period_id === "roman");
             const other = evidence.filter((item) => item.period_id !== "roman");
-            const section = detailSection("入选分期依据", element("p", "evidence-summary", `名称或位置记录中有 ${roman.length} 条 roman 分期关联。`));
+            const section = detailSection("入选分期依据", element("p", "evidence-summary", `名称或位置记录中有 ${roman.length} 条 roman 分期关联。`), "detail-section detail-card");
             section.append(element("p", "detail-note", "本语料以 roman（前30—公元300年）筛选。下方起止年份属于整条原始记录，可能跨越多个分期，不是该分期的起止或遗址的确切断代。"));
             section.append(evidenceList(roman));
             if (other.length) {
@@ -1339,19 +1407,23 @@
             nodes.push(section);
         }
         else {
-            nodes.push(detailSection("时期证据与来源", "原始资料未提供可展示的时期证据。"));
+            nodes.push(detailSection("时期证据与来源", "原始资料未提供可展示的时期证据。", "detail-section detail-card"));
         }
-        nodes.push(detailSection("资料贡献者", strings(site.contributors).join(" · ") || "当前导出未提供贡献者信息，请在原始来源中核验。"));
-        const sources = element("div");
+        const sources = element("div", "detail-sources-list");
         for (const source of site.source_refs ?? []) {
-            sources.append(safeLink(source.uri, source.title), element("p", "detail-note", `${source.publisher} · ${source.license ?? "许可见原始来源"} · ${source.revision ?? "版本未提供"}`));
+            const card = element("article", "detail-source-card");
+            card.append(safeLink(source.uri, source.title, "detail-source-card-link"), element("p", "detail-source-meta", `${source.publisher} · ${source.license ?? "许可见原始来源"} · ${source.revision ?? "版本未提供"}`));
             if (site.source_kind === "supplement" && source.excerpt.trim()) {
-                sources.append(element("p", "detail-source-excerpt", source.excerpt));
+                const excerpt = element("blockquote", "detail-source-excerpt", source.excerpt);
+                excerpt.lang = "en";
+                card.append(excerpt);
             }
+            sources.append(card);
         }
-        sources.append(element("p", "detail-note", "引用时保留地点编号、原始链接、版本与贡献者；不同来源遵循各自许可。"));
-        nodes.push(detailSection("来源与许可", sources));
-        nodes.push(safeLink(site.source_uri, "查看原始资料 ↗", "detail-source-link"));
+        nodes.push(detailSection("来源与许可", sources, "detail-section detail-card"));
+        const footer = element("footer", "detail-footer");
+        footer.append(element("p", "detail-note", "引用时保留地点编号、原始链接、版本与贡献者；不同来源遵循各自许可。"), safeLink(site.source_uri, "查看原始资料 ↗", "detail-source-link"));
+        nodes.push(footer);
         ui.detailContent.replaceChildren(...nodes);
         if (focusWasInContent && !ui.detailPanel.hidden)
             ui.detailPanel.focus({ preventScroll: true });
@@ -1415,6 +1487,7 @@
         updateComparisonSelection(site, fresh && moveMap);
         updateSelectionControls();
         if (fresh) {
+            ui.detailDialog.scrollTop = 0;
             ui.detailPanel.scrollTop = 0;
             if (moveMap) {
                 positionSelectedSite(site);

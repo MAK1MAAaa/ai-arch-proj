@@ -164,6 +164,8 @@ const ArchSearchWorkspace = (() => {
                 restoreFocus = true;
                 detail.hidden = false;
                 dialog.showModal();
+                dialog.scrollTop = 0;
+                detail.scrollTop = 0;
             }
             close.focus({ preventScroll: true });
         }
