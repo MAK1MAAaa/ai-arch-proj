@@ -209,8 +209,45 @@ const ArchSearchComparison = (() => {
         resizing = false;
       }
     }
+    function prefersReducedMotion(): boolean {
+      return typeof window !== "undefined" && typeof window.matchMedia === "function"
+        && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    }
+    function shouldAnimateZoom(map: L.Map | null): boolean {
+      return map !== null && !prefersReducedMotion() && !Boolean((map as unknown as { _animatingZoom?: boolean })._animatingZoom);
+    }
+    const animatingPartners = new Set<L.Map>();
+    const partnerTimers = new Map<L.Map, ReturnType<typeof setTimeout>>();
+    function clearPartnerAnimating(map: L.Map): void {
+      animatingPartners.delete(map);
+      const timer = partnerTimers.get(map);
+      if (timer !== undefined) {
+        clearTimeout(timer);
+        partnerTimers.delete(map);
+      }
+    }
+    function markPartnerAnimating(map: L.Map): void {
+      clearPartnerAnimating(map);
+      animatingPartners.add(map);
+      partnerTimers.set(map, setTimeout(() => clearPartnerAnimating(map), 350));
+    }
+    function syncZoomAnim(source: L.Map, destination: L.Map | null, event: L.ZoomAnimEvent): void {
+      if (syncing || restoringCameras || resizing || !destination || animatingPartners.has(source)) return;
+      const targetZoom = sharedZoom(event.zoom);
+      const other = destination.getCenter();
+      const targetCenter = sync ? settledCenter(event.center.lat, event.center.lng) : settledCenter(other.lat, other.lng);
+      const longitudeDelta = Math.abs(targetCenter[1] - other.lng);
+      if (Math.abs(targetCenter[0] - other.lat) < cameraTolerance && longitudeDelta < cameraTolerance && targetZoom === destination.getZoom()) return;
+      syncing = true;
+      markPartnerAnimating(destination);
+      try {
+        destination.setView(targetCenter, targetZoom, { animate: shouldAnimateZoom(destination) });
+      } finally {
+        syncing = false;
+      }
+    }
     function syncLive(source: L.Map, destination: L.Map | null): void {
-      if (syncing || restoringCameras || resizing || !destination) return;
+      if (syncing || restoringCameras || resizing || !destination || animatingPartners.has(source) || animatingPartners.has(destination)) return;
       if (activeDrag !== source && hasSizeChanged(source)) {
         sizeChanged(source);
         return;
@@ -227,6 +264,10 @@ const ArchSearchComparison = (() => {
       } finally { syncing = false; }
     }
     function finishMove(source: L.Map, destination: L.Map | null): void {
+      if (animatingPartners.has(source)) {
+        clearPartnerAnimating(source);
+        return;
+      }
       if (syncing || restoringCameras) return;
       if (resizing) {
         sizeChanged(source);
@@ -240,7 +281,7 @@ const ArchSearchComparison = (() => {
       syncing = true;
       try {
         for (const map of [modern, historical]) if (map) {
-          map.stop(); map.setView(settledCenter(coordinate[1], coordinate[0]), 4, { animate: false });
+          map.stop(); map.setView(settledCenter(coordinate[1], coordinate[0]), 4, { animate: shouldAnimateZoom(map) });
         }
       } finally { syncing = false; }
       for (const map of [modern, historical]) if (map) sizeChanged(map);
@@ -365,11 +406,13 @@ const ArchSearchComparison = (() => {
       return modern !== null || historical !== null;
     }
     if (modern) {
+      modern.on("zoomanim", (event: L.ZoomAnimEvent) => syncZoomAnim(modern, historical, event));
       modern.on("drag move zoom", () => syncLive(modern, historical));
       modern.on("resize", () => { sizeChanged(modern); });
       modern.on("moveend", () => finishMove(modern, historical));
     }
     if (historical) {
+      historical.on("zoomanim", (event: L.ZoomAnimEvent) => syncZoomAnim(historical, modern, event));
       historical.on("drag move zoom", () => syncLive(historical, modern));
       historical.on("resize", () => { sizeChanged(historical); });
       historical.on("moveend", () => {
@@ -386,6 +429,7 @@ const ArchSearchComparison = (() => {
     ] as const) {
       if (!map) continue;
       map.on("dragstart", () => {
+        clearPartnerAnimating(map);
         activeDrag = map;
         recordMapSizes();
         other?.stop();

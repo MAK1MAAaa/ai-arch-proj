@@ -585,6 +585,10 @@
     return `${Math.abs(lat).toFixed(3)}° ${lat >= 0 ? "N" : "S"} / ${Math.abs(lon).toFixed(3)}° ${lon >= 0 ? "E" : "W"}`;
   }
 
+  function prefersReducedMotion(): boolean {
+    return typeof window.matchMedia === "function" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+
   function attachZoomSlider(map: L.Map, zoomControl: L.Control.Zoom): void {
     const container = zoomControl.getContainer();
     const zoomOut = container?.querySelector(".leaflet-control-zoom-out");
@@ -606,10 +610,11 @@
     L.DomEvent.disableClickPropagation(wrap);
     L.DomEvent.disableScrollPropagation(wrap);
 
-    const syncSlider = (): void => {
+    const syncSlider = (targetZoom?: number): void => {
       const min = map.getMinZoom();
       const max = map.getMaxZoom();
-      const current = Math.max(min, Math.min(max, Math.round(map.getZoom())));
+      const raw = typeof targetZoom === "number" && Number.isFinite(targetZoom) ? targetZoom : map.getZoom();
+      const current = Math.max(min, Math.min(max, Math.round(raw)));
       const percent = max > min ? ((current - min) / (max - min)) * 100 : 0;
       slider.style.setProperty("--zoom-percent", `${percent.toFixed(2)}%`);
       slider.setAttribute("aria-valuemin", String(min));
@@ -619,22 +624,23 @@
       slider.title = `拖动或按方向键调整缩放（当前 ${current} / ${max} 级）`;
     };
 
-    const applyZoom = (targetZoom: number): void => {
+    const applyZoom = (targetZoom: number, animate = true): void => {
       const min = map.getMinZoom();
       const max = map.getMaxZoom();
       const next = Math.max(min, Math.min(max, Math.round(targetZoom)));
       if (next === map.getZoom()) return;
       mapComparison?.noteInteraction();
-      map.setZoom(next, { animate: false });
+      const isAnimating = Boolean((map as unknown as { _animatingZoom?: boolean })._animatingZoom);
+      map.setZoom(next, { animate: animate && !prefersReducedMotion() && !isAnimating });
     };
 
-    const applyFromClientY = (clientY: number): void => {
+    const applyFromClientY = (clientY: number, animate: boolean): void => {
       const rect = track.getBoundingClientRect();
       if (rect.height <= 0) return;
       const ratio = 1 - Math.max(0, Math.min(1, (clientY - rect.top) / rect.height));
       const min = map.getMinZoom();
       const max = map.getMaxZoom();
-      applyZoom(min + ratio * (max - min));
+      applyZoom(min + ratio * (max - min), animate);
     };
 
     let activePointerId: number | null = null;
@@ -652,12 +658,12 @@
       activePointerId = event.pointerId;
       slider.setPointerCapture(event.pointerId);
       slider.classList.add("is-dragging");
-      applyFromClientY(event.clientY);
+      applyFromClientY(event.clientY, true);
     });
     slider.addEventListener("pointermove", (event) => {
       if (activePointerId !== event.pointerId) return;
       event.preventDefault();
-      applyFromClientY(event.clientY);
+      applyFromClientY(event.clientY, false);
     });
     slider.addEventListener("pointerup", (event) => stopDrag(event.pointerId));
     slider.addEventListener("pointercancel", (event) => stopDrag(event.pointerId));
@@ -665,20 +671,21 @@
     slider.addEventListener("keydown", (event) => {
       if (["ArrowUp", "ArrowRight", "+", "="].includes(event.key)) {
         event.preventDefault();
-        applyZoom(map.getZoom() + 1);
+        applyZoom(map.getZoom() + 1, true);
       } else if (["ArrowDown", "ArrowLeft", "-", "_"].includes(event.key)) {
         event.preventDefault();
-        applyZoom(map.getZoom() - 1);
+        applyZoom(map.getZoom() - 1, true);
       } else if (event.key === "Home") {
         event.preventDefault();
-        applyZoom(map.getMinZoom());
+        applyZoom(map.getMinZoom(), true);
       } else if (event.key === "End") {
         event.preventDefault();
-        applyZoom(map.getMaxZoom());
+        applyZoom(map.getMaxZoom(), true);
       }
     });
 
-    map.on("zoom zoomend load", syncSlider);
+    map.on("zoomanim", (event: L.ZoomAnimEvent) => syncSlider(event.zoom));
+    map.on("zoom zoomend load", () => syncSlider());
     syncSlider();
   }
 
@@ -704,8 +711,18 @@
       byId("fit-map", HTMLButtonElement).disabled = true;
       return;
     }
-    state.map = L.map("map", { zoomControl: false, zoomAnimation: false, inertia: false, minZoom: 1, maxZoom: 9, worldCopyJump: true }).setView([20, 0], 1);
-    historicalMap = L.map("history-map", { zoomControl: false, zoomAnimation: false, inertia: false, minZoom: 1, maxZoom: 9, worldCopyJump: true }).setView([20, 0], 1);
+    const animateZoom = !prefersReducedMotion();
+    const mapOptions: L.MapOptions = {
+      zoomControl: false,
+      zoomAnimation: animateZoom,
+      zoomAnimationThreshold: 8,
+      inertia: false,
+      minZoom: 1,
+      maxZoom: 9,
+      worldCopyJump: true,
+    };
+    state.map = L.map("map", mapOptions).setView([20, 0], 1);
+    historicalMap = L.map("history-map", mapOptions).setView([20, 0], 1);
     const historicalZoom = L.control.zoom({ position: "bottomleft" }).addTo(historicalMap);
     attachZoomSlider(historicalMap, historicalZoom);
     historicalMap.attributionControl?.setPrefix(false);

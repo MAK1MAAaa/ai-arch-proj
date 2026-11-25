@@ -564,3 +564,19 @@ test('comparison updates modern reference badge text and state across basemap tr
   assert.equal(nodes.get('comparison-modern-badge')!.textContent, '本地自然轮廓');
   assert.equal(nodes.get('comparison-modern-badge')!.dataset.basemap, 'natural');
 });
+
+test('zoomanim synchronizes partner zoom transition smoothly without bounce-back feedback loops', () => {
+  const h = harness({ sync_centers: true });
+  h.modern.viewOptions.length = 0;
+  h.historical.viewOptions.length = 0;
+  h.modern.center = { lat: 48.85, lng: 2.35 };
+  h.modern.zoom = 6;
+  h.modern.fire('zoomanim', { center: { lat: 48.85, lng: 2.35 }, zoom: 6 });
+  assert.equal(h.historical.getZoom(), 6);
+  assert.deepEqual(h.historical.getCenter(), { lat: 48.85, lng: 2.35 });
+  assert.equal(h.historical.viewOptions.at(-1)?.animate, true);
+  h.historical.fire('zoomanim', { center: { lat: 48.85, lng: 2.35 }, zoom: 6 });
+  assert.equal(h.modern.viewOptions.length, 0);
+  h.modern.fire('moveend');
+  assert.equal(h.changes(), 1);
+});

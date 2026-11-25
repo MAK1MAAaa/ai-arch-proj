@@ -2885,6 +2885,7 @@ select {
   height: var(--zoom-percent, 0%);
   border-radius: var(--radius-pill);
   background: var(--accent);
+  transition: height 0.24s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .map-zoom-slider-thumb {
@@ -2898,7 +2899,16 @@ select {
   background: var(--bg-elevated);
   box-shadow: 0 1px 4px rgba(31, 36, 33, 0.24);
   transform: translate(-50%, 50%);
-  transition: transform 0.12s ease, border-color 0.12s ease, box-shadow 0.12s ease;
+  transition: bottom 0.24s cubic-bezier(0.22, 1, 0.36, 1), transform 0.14s ease, border-color 0.14s ease, box-shadow 0.14s ease;
+}
+
+.map-zoom-slider.is-dragging .map-zoom-slider-fill,
+.map-zoom-slider.is-dragging .map-zoom-slider-thumb {
+  transition: none;
+}
+
+.leaflet-zoom-anim .leaflet-zoom-animated {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .map-zoom-slider:hover .map-zoom-slider-thumb,
