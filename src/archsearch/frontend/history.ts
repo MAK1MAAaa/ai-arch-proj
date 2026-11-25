@@ -35,6 +35,7 @@ const ArchSearchHistory = (() => {
     fixedHistorical?: boolean;
     sharedRenderer?: L.Canvas | null;
     automaticOnly?: boolean;
+    hoverDelayMs?: number;
   }
   interface SelectionContext {
     title: string;
@@ -205,7 +206,7 @@ const ArchSearchHistory = (() => {
     return { data: value as Parameters<typeof L.geoJSON>[0], validFrom: metadata.valid_from, validTo: metadata.valid_to, id: metadata.frame_id, source, version, featureCount: value.features.length };
   }
 
-  function create({ map, tiles, onCommittedView, onUserAction, fixedHistorical = false, sharedRenderer = null, automaticOnly = false }: Options) {
+  function create({ map, tiles, onCommittedView, onUserAction, fixedHistorical = false, sharedRenderer = null, automaticOnly = false, hoverDelayMs = 5000 }: Options) {
     fixedHistorical ||= automaticOnly;
     const byId = <T extends HTMLElement>(id: string): T => {
       const node = document.getElementById(id);
@@ -257,6 +258,26 @@ const ArchSearchHistory = (() => {
     let labelsMoving = false;
     let labelsZooming = false;
     let renderer: L.Canvas | null = sharedRenderer;
+    let hoverTimer: ReturnType<typeof setTimeout> | null = null;
+    let hoveredKey = "";
+    let hoverLatLng: L.LatLng | null = null;
+    let hoverOpen = false;
+    const hoverTooltip = map && typeof L !== "undefined" && typeof L.tooltip === "function"
+      ? L.tooltip({ className: "map-hover-name-preview", direction: "top", offset: [0, -10], interactive: false })
+      : null;
+
+    function clearHoverPreview(): void {
+      if (hoverTimer !== null) {
+        clearTimeout(hoverTimer);
+        hoverTimer = null;
+      }
+      hoveredKey = "";
+      hoverLatLng = null;
+      if (hoverOpen && hoverTooltip && map) {
+        map.removeLayer(hoverTooltip);
+        hoverOpen = false;
+      }
+    }
     if (map && typeof L !== "undefined") {
       const historyPane = map.getPane("history-boundaries") ?? map.createPane("history-boundaries");
       historyPane.style.zIndex = "350";
@@ -570,9 +591,36 @@ const ArchSearchHistory = (() => {
             onEachFeature: (feature, layer) => {
               const properties = record(feature.properties) ? feature.properties : {};
               layer.bindPopup(() => popup(properties, source), { maxWidth: 310 });
-              if (fixedHistorical) {
-                const name = typeof properties.Name === "string" ? properties.Name.trim() : "";
-                if (!name) return;
+              const name = typeof properties.Name === "string" ? properties.Name.trim() : "";
+              if (name) {
+                const key = `${feature.id ?? ""}:${name}`;
+                layer.on("mouseover", (event: L.LeafletMouseEvent) => {
+                  if (hoveredKey === key) return;
+                  clearHoverPreview();
+                  hoveredKey = key;
+                  hoverLatLng = event?.latlng ?? (layer as L.Polygon).getCenter?.() ?? null;
+                  hoverTimer = setTimeout(() => {
+                    hoverTimer = null;
+                    if (!map || !hoverTooltip || hoveredKey !== key || !hoverLatLng) return;
+                    const label = element("span", "");
+                    label.className = "map-hover-name-main";
+                    label.textContent = name;
+                    hoverTooltip.setLatLng(hoverLatLng).setContent(label).addTo(map);
+                    hoverOpen = true;
+                  }, hoverDelayMs);
+                });
+                layer.on("mousemove", (event: L.LeafletMouseEvent) => {
+                  if (hoveredKey === key && event?.latlng) {
+                    hoverLatLng = event.latlng;
+                    if (hoverOpen && hoverTooltip) hoverTooltip.setLatLng(hoverLatLng);
+                  }
+                });
+                layer.on("mouseout", () => {
+                  if (hoveredKey === key) clearHoverPreview();
+                });
+                layer.on("click", clearHoverPreview);
+              }
+              if (fixedHistorical && name) {
                 const content = element("span", name);
                 content.className = "history-polity-label-text"; content.title = name;
                 labelMetadata.set(layer, { name, composite: properties.composite === true, content });
@@ -594,6 +642,7 @@ const ArchSearchHistory = (() => {
           if (tiles && !map.hasLayer(tiles)) tiles.addTo(map);
           if (landLayer && map.hasLayer(landLayer)) map.removeLayer(landLayer);
         }
+        clearHoverPreview();
         if (previousBoundary) map.removeLayer(previousBoundary);
       } catch (error) {
         if (abort.signal.aborted || current !== sequence) return;
@@ -758,6 +807,10 @@ const ArchSearchHistory = (() => {
       controls.boundaries.addEventListener("change", () => setBoundaries(controls.boundaries.checked));
     }
     ui.retry.addEventListener("click", () => { userAction("user"); schedule(); });
+    if (map) {
+      map.on("movestart zoomstart popupopen", clearHoverPreview);
+      map.getContainer()?.addEventListener("mouseleave", clearHoverPreview);
+    }
     if (fixedHistorical && map) {
       map.on("resize archsearch:markerschange popupopen popupclose", schedulePolityLabels);
       map.on("movestart", () => { labelsMoving = true; hidePolityLabels(); });

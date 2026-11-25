@@ -95,7 +95,7 @@ class FakeLayer {
   sentToBack = 0;
   members: FakeLayer[] = [];
   tooltipAnchor: { lat: number; lng: number } | null = null;
-  listeners = new Map<string, (() => void)[]>();
+  listeners = new Map<string, ((payload?: unknown) => void)[]>();
   constructor(data: unknown = null, options: GeoOptions = {}) { this.data = data; this.options = options; }
   addTo(map: FakeMap): this { map.layers.add(this); return this; }
   bindPopup(node: FakeElement | (() => FakeElement)): this { this.popups.push(node); return this; }
@@ -105,14 +105,16 @@ class FakeLayer {
     return this;
   }
   unbindTooltip(): this { this.closeTooltip(); this.tooltip = null; return this; }
-  on(name: string, callback: () => void): this { this.listeners.set(name, [...this.listeners.get(name) ?? [], callback]); return this; }
-  fire(name: string): void {
+  on(name: string, callback: (payload?: unknown) => void): this { this.listeners.set(name, [...this.listeners.get(name) ?? [], callback]); return this; }
+  fire(name: string, payload?: unknown): void {
     if (this.tooltip && !this.tooltip.options.permanent) {
       if (name === 'mouseover') this.openTooltip();
       if (name === 'mouseout') this.closeTooltip();
     }
-    for (const callback of this.listeners.get(name) ?? []) callback();
+    for (const callback of this.listeners.get(name) ?? []) callback(payload);
   }
+  setLatLng(): this { return this; }
+  setContent(node: FakeElement): this { this.popups.push(node); return this; }
   getTooltip() { return this.tooltip; }
   openTooltip(anchor?: { lat: number; lng: number }): this {
     if (this.tooltip) { this.tooltipOpen = true; this.tooltipAnchor = anchor ?? null; }
@@ -148,7 +150,7 @@ class FakeMap {
   panes = new Map<string, FakeElement>();
   container = new FakeElement();
   zoom = 4; center = { lat: 30.5, lng: 10.5 }; width = 600; height = 400;
-  listeners = new Map<string, (() => void)[]>();
+  listeners = new Map<string, ((payload?: unknown) => void)[]>();
   getZoom(): number { return this.zoom; }
   getSize() { return { x: this.width, y: this.height }; }
   latLngToContainerPoint(value: { lat: number; lng: number }) {
@@ -156,13 +158,13 @@ class FakeMap {
     return { x: this.width / 2 + (value.lng - this.center.lng) * scale, y: this.height / 2 - (value.lat - this.center.lat) * scale };
   }
   getBounds(): FakeBounds { const scale = 256 * 2 ** this.zoom / 360; return new FakeBounds(this.center.lng - this.width / scale / 2, this.center.lat - this.height / scale / 2, this.center.lng + this.width / scale / 2, this.center.lat + this.height / scale / 2); }
-  on(names: string, callback: () => void): this { for (const name of names.split(' ')) this.listeners.set(name, [...this.listeners.get(name) ?? [], callback]); return this; }
-  fire(name: string): void { for (const callback of this.listeners.get(name) ?? []) callback(); }
+  on(names: string, callback: (payload?: unknown) => void): this { for (const name of names.split(' ')) this.listeners.set(name, [...this.listeners.get(name) ?? [], callback]); return this; }
+  fire(name: string, payload?: unknown): void { for (const callback of this.listeners.get(name) ?? []) callback(payload); }
   getPane(name: string): FakeElement | undefined { return this.panes.get(name); }
   createPane(name: string): FakeElement { const pane = new FakeElement(); this.panes.set(name, pane); return pane; }
   getContainer(): FakeElement { return this.container; }
   hasLayer(layer: FakeLayer): boolean { return this.layers.has(layer); }
-  removeLayer(layer: FakeLayer): this { this.layers.delete(layer); layer.eachLayer(child => child.closeTooltip()); return this; }
+  removeLayer(layer: FakeLayer): this { this.layers.delete(layer); if (typeof layer.eachLayer === 'function') layer.eachLayer(child => child.closeTooltip()); return this; }
 }
 
 interface Pending {
@@ -220,6 +222,7 @@ function setup(withMap = true, fixedHistorical = false, sharedRenderer: object |
     },
     L: {
       canvas: (options: object) => ({ ...options }),
+      tooltip: () => new FakeLayer(),
       geoJSON(data: unknown, options: GeoOptions) {
         const layer = new FakeLayer(data, options);
         if (typeof data === 'object' && data !== null && 'features' in data && Array.isArray(data.features)) {
@@ -983,4 +986,22 @@ test('unrelated failed site details cannot erase an independent background failu
   assert.equal(env.view.getView()?.year,1930); assert.equal(env.node('history-error').hidden,true);
   assert.equal(env.node('history-retry').hidden,true);
   assert.match(env.node('history-linkage-status').textContent,/未选遗址.*1930.*仅为参考背景/u);
+});
+
+test('hovering over a historical polity shows concise name preview after 5000ms without disturbing permanent labels', async () => {
+  const env = setup(true, true, null, true);
+  env.map.zoom = 8;
+  await env.finishInitial({ name: 'Roman Empire' });
+  const boundaryLayer = env.layers.find(layer => layer.members.length > 0 && layer.members[0].popups.length > 0)!;
+  const featureLayer = boundaryLayer.members[1];
+  featureLayer.fire('mouseover', { latlng: { lat: 41.9, lng: 12.5 } });
+  assert.equal(env.delays.at(-1), 5000);
+  const layersBefore = env.map.layers.size;
+  env.runTimers();
+  assert.equal(env.map.layers.size, layersBefore + 1);
+  const preview = [...env.map.layers].at(-1)!;
+  assert.equal((preview.popups[0] as FakeElement).textContent, 'Roman Empire');
+  assert.equal(featureLayer.tooltipOpen, true);
+  featureLayer.fire('mouseout');
+  assert.equal(env.map.hasLayer(preview), false);
 });

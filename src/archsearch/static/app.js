@@ -75,6 +75,7 @@
     let historicalMap = null;
     let mapComparison = null;
     let modernBoundaries = null;
+    let modernCountries = null;
     const fieldLabels = {
         title: "地点名称", names: "别名", description: "原始描述", description_zh: "中文描述／译文", source_refs: "来源资格片段", types: "地点类型",
         periods: "原始时期", details: "原始补充记录", search_text: "检索文本",
@@ -1842,6 +1843,8 @@
         onChanged: saveViewLink,
         onEvidence: openCurrentDetail,
     });
+    modernCountries = ArchSearchModernCountries.create({ map: state.map });
+    if (modernCountries) { /* Country hover preview and natural-mode click handler attached to modern map. */ }
     historyView = ArchSearchHistory.create({
         map: historicalMap, tiles: null, fixedHistorical: true, automaticOnly: true, sharedRenderer: mapComparison.getHistoricalRenderer(),
         onCommittedView: saveViewLink,

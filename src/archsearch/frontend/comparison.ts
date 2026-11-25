@@ -111,7 +111,12 @@ const ArchSearchComparison = (() => {
           : displayed === "loading" ? "底图加载中" : "底图暂不可用";
         ui.modernBadge.dataset.basemap = displayed;
       }
-      if (modern) modern.getContainer().dataset.basemap = displayed;
+      if (modern) {
+        const container = modern.getContainer();
+        const changedBasemap = container.dataset.basemap !== displayed;
+        container.dataset.basemap = displayed;
+        if (changedBasemap) modern.fire("archsearch:basemapchange", { basemap: displayed });
+      }
     }
     async function ensureLand(): Promise<void> {
       if (land) return;

@@ -221,6 +221,7 @@
   let historicalMap: L.Map | null = null;
   let mapComparison: ReturnType<typeof ArchSearchComparison.create> | null = null;
   let modernBoundaries: ReturnType<typeof ArchSearchModernBoundaries.create> | null = null;
+  let modernCountries: ReturnType<typeof ArchSearchModernCountries.create> | null = null;
 
   const fieldLabels: Readonly<Record<string, string>> = {
     title: "地点名称", names: "别名", description: "原始描述", description_zh: "中文描述／译文", source_refs: "来源资格片段", types: "地点类型",
@@ -1953,6 +1954,8 @@
     onChanged: saveViewLink,
     onEvidence: openCurrentDetail,
   });
+  modernCountries = ArchSearchModernCountries.create({ map: state.map });
+  if (modernCountries) { /* Country hover preview and natural-mode click handler attached to modern map. */ }
   historyView = ArchSearchHistory.create({
     map: historicalMap, tiles: null, fixedHistorical: true, automaticOnly: true, sharedRenderer: mapComparison.getHistoricalRenderer(),
     onCommittedView: saveViewLink,

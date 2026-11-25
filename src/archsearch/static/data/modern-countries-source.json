@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "feature_count": 177,
+  "distinct_source_ids": 177,
+  "source": {
+    "name": "Natural Earth 1:110m Admin 0 countries",
+    "version": "5.1.1",
+    "distribution_tag": "v5.1.2",
+    "commit": "f1890d9f152c896d250a77557a5751a93d494776",
+    "uri": "https://www.naturalearthdata.com/downloads/110m-cultural-vectors/110m-admin-0-countries/",
+    "geojson_uri": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/f1890d9f152c896d250a77557a5751a93d494776/geojson/ne_110m_admin_0_countries.geojson",
+    "geojson_sha256": "6866c877d39cba9c357620878839b336d569f8c662d3cfab4cb1dbe2d39c977f",
+    "version_uri": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/f1890d9f152c896d250a77557a5751a93d494776/110m_cultural/ne_110m_admin_0_countries.VERSION.txt",
+    "version_sha256": "f9893302cd3158f3b5aea394dcd2a91574869e9e6ff69e9235b10a3bf8c983fb",
+    "license": "Public domain",
+    "license_uri": "https://www.naturalearthdata.com/about/terms-of-use/"
+  },
+  "processing": "Preserve all 177 source country/territory polygons and minimal reference attributes (NE_ID, NAME, NAME_ZH, FORMAL_EN, ISO_A2_EH, CONTINENT, SUBREGION, TYPE, WIKIDATAID) from Natural Earth 1:110m Admin 0 Countries v5.1.1 without geometry simplification or sovereignty inference.",
+  "sha256": "70eebf8a17c740e186f819a3fbd4dfc330f5c256831f0f42268d8159171ebb33",
+  "artifact": "modern-countries.geojson",
+  "rebuild": "node --experimental-strip-types scripts/build-modern-countries.ts --download"
+}
