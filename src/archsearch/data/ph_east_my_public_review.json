@@ -1,0 +1,2710 @@
+{
+  "base_count": 4853,
+  "base_ids_sha256": "46266dcabc3c995182185f79e1b86705ca50ed5af6a7a832793e92ce0fa41493",
+  "base_sites_sha256": "9a18c2887578312d29ab47a9bfdd46549afb8f0625987a789f7e286d9b4370d2",
+  "cohort_version": "philippines-east-malaysia-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "WGS84 representative point from the CC BY-SA 4.0 Wikimedia Commons heritage list, entry 13-SWK/21.",
+        "point": [
+          114.324739,
+          4.177099
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://commons.wikimedia.org/w/index.php?title=Commons%3AWiki_Loves_Monuments_in_Malaysia%2FMonuments&oldid=1270866590",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Publicly described museum precinct on the original Royal Hill fort site, subject to the Sarawak Museum Department’s opening and phased conservation notices.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Sarawak Tourism Board",
+          "Wikimedia Commons contributors",
+          "Sarawak Inbound"
+        ],
+        "description": "Historic fort site in Marudi, reconstructed in place after a fire and operated as the Baram Regional Museum. Visitor access follows the museum’s current arrangements.",
+        "description_zh": "砂拉越马鲁迪的霍斯堡原址。旧堡火灾后原址重建，现实行巴拉姆地区博物馆公布的参观安排。",
+        "details": "Historic fort site in Marudi, reconstructed in place after a fire and operated as the Baram Regional Museum. Visitor access follows the museum’s current arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:my-public:Q131293228",
+          "countries": [
+            "MY"
+          ],
+          "note": "Representative point for the named site in Sarawak.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board identifies the fire, reconstruction, and the Baram Regional Museum use.",
+            "id": "auth:my-public:Q131293228:evidence:1",
+            "license": null,
+            "publisher": "Sarawak Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 3e9ef1d314a56803f9ca32476f3e63743a8ec02665ed2b6d41b56d3027421123.",
+            "title": "Visitor and historical notes on the Sarawak forts",
+            "uri": "https://www.sarawaktourism.com/web/stories/story-view/a-look-at-sarawak-forts"
+          }
+        },
+        "id": "auth:my-public:Q131293228",
+        "location_precision": null,
+        "names": [
+          "霍斯堡",
+          "Fort Hose",
+          "Baram Regional Museum",
+          "Kubu Hose"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          114.324739,
+          4.177099
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board identifies the fire, reconstruction, and the Baram Regional Museum use.",
+            "id": "auth:my-public:Q131293228:evidence:1",
+            "license": null,
+            "publisher": "Sarawak Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 3e9ef1d314a56803f9ca32476f3e63743a8ec02665ed2b6d41b56d3027421123.",
+            "title": "Visitor and historical notes on the Sarawak forts",
+            "uri": "https://www.sarawaktourism.com/web/stories/story-view/a-look-at-sarawak-forts"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 114.324739, latitude 4.177099. Attribution: Wikimedia Commons contributors.",
+            "id": "auth:my-public:Q131293228:commons-wlm:13-SWK-21",
+            "license": "CC BY-SA 4.0",
+            "publisher": "Wikimedia Commons contributors",
+            "revision": "Permanent Commons page revision 1270866590; named list entry 13-SWK/21. Coordinates preserved.",
+            "title": "Fort Hose representative point",
+            "uri": "https://commons.wikimedia.org/w/index.php?title=Commons%3AWiki_Loves_Monuments_in_Malaysia%2FMonuments&oldid=1270866590"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The named Royal Hill visitor museum is separately mapped a few metres from the openly licensed heritage point.",
+            "id": "auth:my-public:Q131293228:independent:independent-hose-coordinate-comparison.pdf",
+            "license": null,
+            "publisher": "Sarawak Inbound",
+            "revision": "Retrieved 2026-11-28; SHA-256 0748cdbf7fb70c6c8022d21636a68bbdf474f32db35159ef4673ad0c289cff3a.",
+            "title": "Fort Hose independent public-scope evidence",
+            "uri": "https://sarawakinbound.com/wp-content/uploads/2025/01/Guide-Sarawak-Road-Trip-pdf.io_.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The regional visitor guide identifies the original fort site and the route to the museum on Jalan Fort.",
+            "id": "auth:my-public:Q131293228:independent:independent-hose-region.pdf",
+            "license": null,
+            "publisher": "Sarawak Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 651f9a4d581075f78951b558e2834b44894bfc601981325a9c5a31eb55a64f9c.",
+            "title": "Fort Hose independent public-scope evidence",
+            "uri": "https://www.sarawaktourism.com/web/attachment/show/?docid=aWl6ODJvN2djUkNudEpmMXFzVzN1QT09OjofCIpbOdxAxBzBBGyCXyLp"
+          }
+        ],
+        "source_uri": "https://www.sarawaktourism.com/web/stories/story-view/a-look-at-sarawak-forts",
+        "title": "Fort Hose",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/my-sarawak-promoted-forts.html",
+          "sha256": "3e9ef1d314a56803f9ca32476f3e63743a8ec02665ed2b6d41b56d3027421123",
+          "uri": "https://www.sarawaktourism.com/web/stories/story-view/a-look-at-sarawak-forts"
+        },
+        {
+          "filename": "source/Q131293228.json",
+          "sha256": "ea3c59c3153c3c1f5940e8b67ee6f1c283975ff5e029a6b0af2331217ce87162",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q131293228.json"
+        },
+        {
+          "filename": "independent-hose-open-coordinates.html",
+          "sha256": "0ef13560d7dbe6391e275a78db3c08a19f271933c540c0bfd27e0948d15efaa5",
+          "uri": "https://commons.wikimedia.org/w/index.php?title=Commons%3AWiki_Loves_Monuments_in_Malaysia%2FMonuments&oldid=1270866590"
+        },
+        {
+          "filename": "independent-hose-coordinate-comparison.pdf",
+          "sha256": "0748cdbf7fb70c6c8022d21636a68bbdf474f32db35159ef4673ad0c289cff3a",
+          "uri": "https://sarawakinbound.com/wp-content/uploads/2025/01/Guide-Sarawak-Road-Trip-pdf.io_.pdf"
+        },
+        {
+          "filename": "independent-hose-region.pdf",
+          "sha256": "651f9a4d581075f78951b558e2834b44894bfc601981325a9c5a31eb55a64f9c",
+          "uri": "https://www.sarawaktourism.com/web/attachment/show/?docid=aWl6ODJvN2djUkNudEpmMXFzVzN1QT09OjofCIpbOdxAxBzBBGyCXyLp"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The selected published coordinate represents the memorial garden. It is nearer the independently mapped precinct centre than the other active claim.",
+        "point": [
+          116.054581,
+          5.921116
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1786431.json",
+        "statement_id": "Q1786431$1A3276D7-014C-4699-B221-A58AD0D368D9"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The submitted active Wikidata point falls in the public memorial garden and is closer to the mapped precinct centre than the other active claim.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Sabah Tourism Board",
+          "Wikidata contributors"
+        ],
+        "description": "Public memorial garden at the original Petagas wartime site near Kota Kinabalu.",
+        "description_zh": "佩塔加斯战争纪念园位于马来西亚。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Public memorial garden at the original Petagas wartime site near Kota Kinabalu.",
+        "geography": {
+          "authority_id": "supplement:auth:my-public:Q1786431",
+          "countries": [
+            "MY"
+          ],
+          "note": "Representative point for the named site in Sabah.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board documents the memorial’s original location, grounds and public commemorations.",
+            "id": "auth:my-public:Q1786431:evidence:1",
+            "license": null,
+            "publisher": "Sabah Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 135e897acc0afa40ca2e9ef85e111ab90207fa543f6a187726f642b2a9d8de9c.",
+            "title": "Petagas War Memorial public visitor listing",
+            "uri": "https://sabahtourism.com/destination/petagas-war-memorial/"
+          }
+        },
+        "id": "auth:my-public:Q1786431",
+        "location_precision": null,
+        "names": [
+          "佩塔加斯战争纪念园",
+          "Petagas War Memorial",
+          "Petagas War Memorial Park",
+          "Taman Peringatan Perang Petagas"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          116.054581,
+          5.921116
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board documents the memorial’s original location, grounds and public commemorations.",
+            "id": "auth:my-public:Q1786431:evidence:1",
+            "license": null,
+            "publisher": "Sabah Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 135e897acc0afa40ca2e9ef85e111ab90207fa543f6a187726f642b2a9d8de9c.",
+            "title": "Petagas War Memorial public visitor listing",
+            "uri": "https://sabahtourism.com/destination/petagas-war-memorial/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 116.054581, latitude 5.921116.",
+            "id": "wikidata:Q1786431",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2463907646; P625 Q1786431$1A3276D7-014C-4699-B221-A58AD0D368D9.",
+            "title": "Petagas War Memorial representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1786431.json"
+          }
+        ],
+        "source_uri": "https://sabahtourism.com/destination/petagas-war-memorial/",
+        "title": "Petagas War Memorial",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/my-sabah-petagas-tourism.html",
+          "sha256": "135e897acc0afa40ca2e9ef85e111ab90207fa543f6a187726f642b2a9d8de9c",
+          "uri": "https://sabahtourism.com/destination/petagas-war-memorial/"
+        },
+        {
+          "filename": "source/Q1786431.json",
+          "sha256": "df29147471655b0bbee3c8f05c3f9f3bc06105299e788f28f38896cabd74a103",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1786431.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Point marks the physical fort. The Old Court House and its exhibitions are across the river and separately managed as a place.",
+        "point": [
+          110.34944444,
+          1.56055556
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2007681.json",
+        "statement_id": "Q2007681$21E48F93-7BFA-4D0A-86EC-97E39E62A133"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point denotes the physical Fort Margherita and the Brooke Gallery in it. The operator also presents a distinct exhibition at the Old Court House across the river.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Brooke Museums",
+          "Sarawak Tourism Board",
+          "Wikidata contributors"
+        ],
+        "description": "Historic fort overlooking the Sarawak River in Kuching, housing the public Brooke Gallery at this distinct fort site.",
+        "description_zh": "玛格丽塔堡位于马来西亚。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Historic fort overlooking the Sarawak River in Kuching, housing the public Brooke Gallery at this distinct fort site.",
+        "geography": {
+          "authority_id": "supplement:auth:my-public:Q2007681",
+          "countries": [
+            "MY"
+          ],
+          "note": "Representative point for the named site in Sarawak.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum operator identifies the Brooke Gallery inside Fort Margherita and publishes visiting information.",
+            "id": "auth:my-public:Q2007681:evidence:1",
+            "license": null,
+            "publisher": "Brooke Museums",
+            "revision": "Retrieved 2026-11-28; SHA-256 053ca3216a321992e6d36fbb7915e16077550c8a626b27416890e8ad6c06c483.",
+            "title": "Brooke Gallery at Fort Margherita visitor information",
+            "uri": "https://www.brookegallery.org/"
+          }
+        },
+        "id": "auth:my-public:Q2007681",
+        "location_precision": null,
+        "names": [
+          "玛格丽塔堡",
+          "Fort Margherita",
+          "Brooke Gallery at Fort Margherita",
+          "Kubu Margherita"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          110.34944444,
+          1.56055556
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum operator identifies the Brooke Gallery inside Fort Margherita and publishes visiting information.",
+            "id": "auth:my-public:Q2007681:evidence:1",
+            "license": null,
+            "publisher": "Brooke Museums",
+            "revision": "Retrieved 2026-11-28; SHA-256 053ca3216a321992e6d36fbb7915e16077550c8a626b27416890e8ad6c06c483.",
+            "title": "Brooke Gallery at Fort Margherita visitor information",
+            "uri": "https://www.brookegallery.org/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board locates the public riverfront fort in Kuching.",
+            "id": "auth:my-public:Q2007681:evidence:2",
+            "license": null,
+            "publisher": "Sarawak Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 3e9ef1d314a56803f9ca32476f3e63743a8ec02665ed2b6d41b56d3027421123.",
+            "title": "Visitor and historical notes on the Sarawak forts",
+            "uri": "https://www.sarawaktourism.com/web/stories/story-view/a-look-at-sarawak-forts"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 110.34944444, latitude 1.56055556.",
+            "id": "wikidata:Q2007681",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2516989933; P625 Q2007681$21E48F93-7BFA-4D0A-86EC-97E39E62A133.",
+            "title": "Fort Margherita representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2007681.json"
+          }
+        ],
+        "source_uri": "https://www.brookegallery.org/",
+        "title": "Fort Margherita",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/my-sarawak-brooke-operator.html",
+          "sha256": "053ca3216a321992e6d36fbb7915e16077550c8a626b27416890e8ad6c06c483",
+          "uri": "https://www.brookegallery.org/"
+        },
+        {
+          "filename": "source/my-sarawak-promoted-forts.html",
+          "sha256": "3e9ef1d314a56803f9ca32476f3e63743a8ec02665ed2b6d41b56d3027421123",
+          "uri": "https://www.sarawaktourism.com/web/stories/story-view/a-look-at-sarawak-forts"
+        },
+        {
+          "filename": "source/Q2007681.json",
+          "sha256": "9a4e935b5dcabc64217c49fd5b43de5404f8183c89ade264d961e9c238a4a454",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2007681.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Representative point of the historic fort in Sri Aman, also called Simanggang.",
+        "point": [
+          111.46188889,
+          1.23975
+        ],
+        "precision": 0.0089852561667199,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q27866040.json",
+        "statement_id": "Q27866040$979D0116-AAC5-4FDF-B858-1D92E2AF824E"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic ironwood fort in Sri Aman, conserved and presented as the public Sri Aman Heritage Museum.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Sarawak Tourism Board",
+          "Wikidata contributors"
+        ],
+        "description": "Historic ironwood fort in Sri Aman, conserved and presented as the public Sri Aman Heritage Museum.",
+        "description_zh": "爱丽丝堡位于马来西亚。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Historic ironwood fort in Sri Aman, conserved and presented as the public Sri Aman Heritage Museum.",
+        "geography": {
+          "authority_id": "supplement:auth:my-public:Q27866040",
+          "countries": [
+            "MY"
+          ],
+          "note": "Representative point for the named site in Sarawak.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board lists the heritage museum in the conserved Fort Alice.",
+            "id": "auth:my-public:Q27866040:evidence:1",
+            "license": null,
+            "publisher": "Sarawak Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 97ddd77747e2cbcc61490429616413091e94f9f98dc1fcfcdbedfa46db7d852f.",
+            "title": "Fort Alice public museum visitor listing",
+            "uri": "https://www.sarawaktourism.com/web/things-to-do/thing-view/culture/museums/fort-alice"
+          }
+        },
+        "id": "auth:my-public:Q27866040",
+        "location_precision": null,
+        "names": [
+          "爱丽丝堡",
+          "Fort Alice",
+          "Fort Alice Heritage Museum",
+          "Sri Aman Heritage Museum",
+          "Kubu Alice"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          111.46188889,
+          1.23975
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board lists the heritage museum in the conserved Fort Alice.",
+            "id": "auth:my-public:Q27866040:evidence:1",
+            "license": null,
+            "publisher": "Sarawak Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 97ddd77747e2cbcc61490429616413091e94f9f98dc1fcfcdbedfa46db7d852f.",
+            "title": "Fort Alice public museum visitor listing",
+            "uri": "https://www.sarawaktourism.com/web/things-to-do/thing-view/culture/museums/fort-alice"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 111.46188889, latitude 1.23975.",
+            "id": "wikidata:Q27866040",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2468721433; P625 Q27866040$979D0116-AAC5-4FDF-B858-1D92E2AF824E.",
+            "title": "Fort Alice representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q27866040.json"
+          }
+        ],
+        "source_uri": "https://www.sarawaktourism.com/web/things-to-do/thing-view/culture/museums/fort-alice",
+        "title": "Fort Alice",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/my-sarawak-fort-alice-tourism.html",
+          "sha256": "97ddd77747e2cbcc61490429616413091e94f9f98dc1fcfcdbedfa46db7d852f",
+          "uri": "https://www.sarawaktourism.com/web/things-to-do/thing-view/culture/museums/fort-alice"
+        },
+        {
+          "filename": "source/Q27866040.json",
+          "sha256": "89a3080610bbccfd01a892671b34493f526356ef123b7b75983a3d2526506204",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q27866040.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Point denotes the public memorial property on the camp site, not any individual memorial or burial.",
+        "point": [
+          118.047183,
+          5.88854
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2799368.json",
+        "statement_id": "Q2799368$684CB5C2-9E00-418A-A9B8-BFD71FCD6775"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public memorial park and interpretive grounds on the former prisoner-of-war camp site at Sandakan.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Sabah Tourism Board",
+          "Wikidata contributors"
+        ],
+        "description": "Public memorial park and interpretive grounds on the former prisoner-of-war camp site at Sandakan.",
+        "description_zh": "山打根纪念公园位于马来西亚。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Public memorial park and interpretive grounds on the former prisoner-of-war camp site at Sandakan.",
+        "geography": {
+          "authority_id": "supplement:auth:my-public:Q2799368",
+          "countries": [
+            "MY"
+          ],
+          "note": "Representative point for the named site in Sabah.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board identifies the memorial park, its historic camp setting and public access.",
+            "id": "auth:my-public:Q2799368:evidence:1",
+            "license": null,
+            "publisher": "Sabah Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 2fca8614ff6755ebdfe832c9b6784cae2933c6ea45dc0cedbf7d958f9112ca10.",
+            "title": "Sandakan Memorial Park visitor information",
+            "uri": "https://sabahtourism.com/destination/sandakan-memorial-park/?locale=en"
+          }
+        },
+        "id": "auth:my-public:Q2799368",
+        "location_precision": null,
+        "names": [
+          "山打根纪念公园",
+          "Sandakan Memorial Park",
+          "Taman Peringatan Sandakan",
+          "Sandakan Camp Memorial"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          118.047183,
+          5.88854
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board identifies the memorial park, its historic camp setting and public access.",
+            "id": "auth:my-public:Q2799368:evidence:1",
+            "license": null,
+            "publisher": "Sabah Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 2fca8614ff6755ebdfe832c9b6784cae2933c6ea45dc0cedbf7d958f9112ca10.",
+            "title": "Sandakan Memorial Park visitor information",
+            "uri": "https://sabahtourism.com/destination/sandakan-memorial-park/?locale=en"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 118.047183, latitude 5.88854.",
+            "id": "wikidata:Q2799368",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2538580171; P625 Q2799368$684CB5C2-9E00-418A-A9B8-BFD71FCD6775.",
+            "title": "Sandakan Memorial Park representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2799368.json"
+          }
+        ],
+        "source_uri": "https://sabahtourism.com/destination/sandakan-memorial-park/?locale=en",
+        "title": "Sandakan Memorial Park",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/my-sabah-sandakan-tourism.html",
+          "sha256": "2fca8614ff6755ebdfe832c9b6784cae2933c6ea45dc0cedbf7d958f9112ca10",
+          "uri": "https://sabahtourism.com/destination/sandakan-memorial-park/?locale=en"
+        },
+        {
+          "filename": "source/Q2799368.json",
+          "sha256": "dcb82f820c1be5e8acc0b661342ed9d4d0f5e94fb03f9b8dec0f3eda32a1dfdd",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2799368.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "One point for the public courthouse complex. It is a separate building from the former Chinese court.",
+        "point": [
+          110.34491667,
+          1.55952778
+        ],
+        "precision": 0.008986481534966,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q28043591.json",
+        "statement_id": "Q28043591$69E3AB8B-B7FF-4971-9AA5-825E4701FD90"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point denotes the visitor and exhibition sections of the physical Old Court House complex, distinct from the Chinese History Museum and Fort Margherita.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Sarawak Tourism Board",
+          "Wikidata contributors",
+          "Sarawak Courts"
+        ],
+        "description": "Historic courthouse complex in Kuching, now used for public cultural and visitor activities.",
+        "description_zh": "古晋旧法院位于马来西亚。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Historic courthouse complex in Kuching, now used for public cultural and visitor activities.",
+        "geography": {
+          "authority_id": "supplement:auth:my-public:Q28043591",
+          "countries": [
+            "MY"
+          ],
+          "note": "Representative point for the named site in Sarawak.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board identifies the old courthouse and its current public uses.",
+            "id": "auth:my-public:Q28043591:evidence:1",
+            "license": null,
+            "publisher": "Sarawak Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 dc2cdfa3677493b5b8fcb57476bd5df4519e4347581066715c24350b01ab0178.",
+            "title": "Old Court House, Kuching",
+            "uri": "https://www.sarawaktourism.com/web/things-to-do/thing-view/culture/historical-sites/old-court-house"
+          }
+        },
+        "id": "auth:my-public:Q28043591",
+        "location_precision": null,
+        "names": [
+          "古晋旧法院",
+          "Kuching Old Court House",
+          "Kuching Old Courthouse",
+          "Old Court House, Kuching"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          110.34491667,
+          1.55952778
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board identifies the old courthouse and its current public uses.",
+            "id": "auth:my-public:Q28043591:evidence:1",
+            "license": null,
+            "publisher": "Sarawak Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 dc2cdfa3677493b5b8fcb57476bd5df4519e4347581066715c24350b01ab0178.",
+            "title": "Old Court House, Kuching",
+            "uri": "https://www.sarawaktourism.com/web/things-to-do/thing-view/culture/historical-sites/old-court-house"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 110.34491667, latitude 1.55952778.",
+            "id": "wikidata:Q28043591",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2319199077; P625 Q28043591$69E3AB8B-B7FF-4971-9AA5-825E4701FD90.",
+            "title": "Kuching Old Court House representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q28043591.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official courts’ history describes the colonial courthouse complex in Kuching, a distinct building from the historic Chinese court.",
+            "id": "auth:my-public:Q28043591:independent:independent-court-justice.html",
+            "license": null,
+            "publisher": "Sarawak Courts",
+            "revision": "Retrieved 2026-11-28; SHA-256 751ec33a0f95a8fdfaf556e9bb184472946fc9b229388052c8871a18f3465613.",
+            "title": "Kuching Old Court House independent public-scope evidence",
+            "uri": "https://sarawak.kehakiman.gov.my/index.php/en/about-us/sarawak-court-history"
+          }
+        ],
+        "source_uri": "https://www.sarawaktourism.com/web/things-to-do/thing-view/culture/historical-sites/old-court-house",
+        "title": "Kuching Old Court House",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/my-sarawak-old-court.html",
+          "sha256": "dc2cdfa3677493b5b8fcb57476bd5df4519e4347581066715c24350b01ab0178",
+          "uri": "https://www.sarawaktourism.com/web/things-to-do/thing-view/culture/historical-sites/old-court-house"
+        },
+        {
+          "filename": "source/Q28043591.json",
+          "sha256": "0a259cb91a71f0a5f7abbbf25dd16e8eaa6881d3385bd1bc70834ce11eccd45f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q28043591.json"
+        },
+        {
+          "filename": "independent-court-justice.html",
+          "sha256": "751ec33a0f95a8fdfaf556e9bb184472946fc9b229388052c8871a18f3465613",
+          "uri": "https://sarawak.kehakiman.gov.my/index.php/en/about-us/sarawak-court-history"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "One representative point for the public site established by Sabah Museum. Burial features are not separately mapped.",
+        "point": [
+          117.942159,
+          5.416176
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q395334.json",
+        "statement_id": "Q395334$F91E5D99-84CC-4DAD-A430-FEEB892338BE"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Managed archaeological cave site near Batu Putih with an interpretive centre and designated visitor steps.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Sabah Tourism Board",
+          "Wikidata contributors"
+        ],
+        "description": "Managed archaeological cave site near Batu Putih with an interpretive centre and designated visitor steps.",
+        "description_zh": "阿戈普巴图图卢格考古遗址位于马来西亚。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Managed archaeological cave site near Batu Putih with an interpretive centre and designated visitor steps.",
+        "geography": {
+          "authority_id": "supplement:auth:my-public:Q395334",
+          "countries": [
+            "MY"
+          ],
+          "note": "Representative point for the named site in Sabah.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism board describes the museum site and its public approach to the caves.",
+            "id": "auth:my-public:Q395334:evidence:1",
+            "license": null,
+            "publisher": "Sabah Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 63258bc3bcbc0e01991f9937081f7096739f2c3554330cc9077f41148400e59c.",
+            "title": "Agop Batu Tulug cave visitor facilities",
+            "uri": "https://sabahtourism.com/destination/batu-tulug/?locale=en"
+          }
+        },
+        "id": "auth:my-public:Q395334",
+        "location_precision": null,
+        "names": [
+          "阿戈普巴图图卢格考古遗址",
+          "Agop Batu Tulug Archaeological Site",
+          "Agop Batu Tulug Caves",
+          "Batu Tulug Archaeological Museum"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          117.942159,
+          5.416176
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism board describes the museum site and its public approach to the caves.",
+            "id": "auth:my-public:Q395334:evidence:1",
+            "license": null,
+            "publisher": "Sabah Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 63258bc3bcbc0e01991f9937081f7096739f2c3554330cc9077f41148400e59c.",
+            "title": "Agop Batu Tulug cave visitor facilities",
+            "uri": "https://sabahtourism.com/destination/batu-tulug/?locale=en"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 117.942159, latitude 5.416176.",
+            "id": "wikidata:Q395334",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2339175595; P625 Q395334$F91E5D99-84CC-4DAD-A430-FEEB892338BE.",
+            "title": "Agop Batu Tulug Archaeological Site representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q395334.json"
+          }
+        ],
+        "source_uri": "https://sabahtourism.com/destination/batu-tulug/?locale=en",
+        "title": "Agop Batu Tulug Archaeological Site",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/my-sabah-agop-tourism.html",
+          "sha256": "63258bc3bcbc0e01991f9937081f7096739f2c3554330cc9077f41148400e59c",
+          "uri": "https://sabahtourism.com/destination/batu-tulug/?locale=en"
+        },
+        {
+          "filename": "source/Q395334.json",
+          "sha256": "122ec18c5e6478f6c64615cbd268ce0aad1e12eac1276f319ed7c7d0ba917eab",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q395334.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The coordinate represents the standing Kapit fort, separate from the site of its predecessor.",
+        "point": [
+          112.94194444,
+          2.01722222
+        ],
+        "precision": 0.0089887232282561,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5472160.json",
+        "statement_id": "Q5472160$3e2eb03e-66f2-4894-be25-33525091aff7"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Former riverfront fort in Kapit, now interpreted as a museum of regional cultural history.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Sarawak Tourism Board",
+          "Wikidata contributors"
+        ],
+        "description": "Former riverfront fort in Kapit, now interpreted as a museum of regional cultural history.",
+        "description_zh": "西尔维娅堡位于马来西亚。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Former riverfront fort in Kapit, now interpreted as a museum of regional cultural history.",
+        "geography": {
+          "authority_id": "supplement:auth:my-public:Q5472160",
+          "countries": [
+            "MY"
+          ],
+          "note": "Representative point for the named site in Sarawak.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board identifies the museum in Fort Sylvia at Kapit.",
+            "id": "auth:my-public:Q5472160:evidence:1",
+            "license": null,
+            "publisher": "Sarawak Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 dacfbfba588f6061a34450dc4dab256d7824b98e91ec5a7e02274e18e29be4e5.",
+            "title": "Fort Sylvia public museum visitor listing",
+            "uri": "https://www.sarawaktourism.com/web/things-to-do/thing-view/culture/museums/fort-slyvia"
+          }
+        },
+        "id": "auth:my-public:Q5472160",
+        "location_precision": null,
+        "names": [
+          "西尔维娅堡",
+          "Fort Sylvia",
+          "Kubu Sylvia",
+          "Fort Slyvia"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          112.94194444,
+          2.01722222
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board identifies the museum in Fort Sylvia at Kapit.",
+            "id": "auth:my-public:Q5472160:evidence:1",
+            "license": null,
+            "publisher": "Sarawak Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 dacfbfba588f6061a34450dc4dab256d7824b98e91ec5a7e02274e18e29be4e5.",
+            "title": "Fort Sylvia public museum visitor listing",
+            "uri": "https://www.sarawaktourism.com/web/things-to-do/thing-view/culture/museums/fort-slyvia"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism board describes the fort’s present museum use.",
+            "id": "auth:my-public:Q5472160:evidence:2",
+            "license": null,
+            "publisher": "Sarawak Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 3e9ef1d314a56803f9ca32476f3e63743a8ec02665ed2b6d41b56d3027421123.",
+            "title": "Visitor and historical notes on the Sarawak forts",
+            "uri": "https://www.sarawaktourism.com/web/stories/story-view/a-look-at-sarawak-forts"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 112.94194444, latitude 2.01722222.",
+            "id": "wikidata:Q5472160",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2512676049; P625 Q5472160$3e2eb03e-66f2-4894-be25-33525091aff7.",
+            "title": "Fort Sylvia representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5472160.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official Kapit visitor brochure identifies the open museum at Fort Sylvia and its operator.",
+            "id": "auth:my-public:Q5472160:independent:independent-sylvia-region.pdf",
+            "license": null,
+            "publisher": "Sarawak Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 0de5b1e68de71c87999ffa0aa2b3c4e67e674f2d2ac47a52de3245fc6c905644.",
+            "title": "Fort Sylvia independent public-scope evidence",
+            "uri": "https://www.sarawaktourism.com/web/attachment/show/?docid=OEZBVWZOUzg2am5uUU1TY08vSXRldz09Ojq38ziPejP9XSiF0oZ7j1RG"
+          }
+        ],
+        "source_uri": "https://www.sarawaktourism.com/web/things-to-do/thing-view/culture/museums/fort-slyvia",
+        "title": "Fort Sylvia",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/my-sarawak-fort-sylvia-tourism.html",
+          "sha256": "dacfbfba588f6061a34450dc4dab256d7824b98e91ec5a7e02274e18e29be4e5",
+          "uri": "https://www.sarawaktourism.com/web/things-to-do/thing-view/culture/museums/fort-slyvia"
+        },
+        {
+          "filename": "source/my-sarawak-promoted-forts.html",
+          "sha256": "3e9ef1d314a56803f9ca32476f3e63743a8ec02665ed2b6d41b56d3027421123",
+          "uri": "https://www.sarawaktourism.com/web/stories/story-view/a-look-at-sarawak-forts"
+        },
+        {
+          "filename": "source/Q5472160.json",
+          "sha256": "7f65ace869a8dfb431b7efbe2ab38e981b1c998663fc3505f9072c83f7d2492a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5472160.json"
+        },
+        {
+          "filename": "independent-sylvia-region.pdf",
+          "sha256": "0de5b1e68de71c87999ffa0aa2b3c4e67e674f2d2ac47a52de3245fc6c905644",
+          "uri": "https://www.sarawaktourism.com/web/attachment/show/?docid=OEZBVWZOUzg2am5uUU1TY08vSXRldz09Ojq38ziPejP9XSiF0oZ7j1RG"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Point denotes the restored historic house and its visitor property, separate from the Sandakan camp memorial.",
+        "point": [
+          118.11633888889,
+          5.8427138888889
+        ],
+        "precision": 2.7777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q64615217.json",
+        "statement_id": "Q64615217$c341d673-4d29-0a08-10e4-2924b36d086e"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point represents the hilltop house and museum visitor property on Jalan Istana. The separately linked Sabah Tourism Board pin confirms the WD point at site scale.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Sabah Tourism Board",
+          "Wikidata contributors"
+        ],
+        "description": "Historic timber residence on Jalan Istana hill, Sandakan. The post-war house is restored and open as a museum.",
+        "description_zh": "阿格妮丝·基思故居位于马来西亚。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Historic timber residence on Jalan Istana hill, Sandakan. The post-war house is restored and open as a museum.",
+        "geography": {
+          "authority_id": "supplement:auth:my-public:Q64615217",
+          "countries": [
+            "MY"
+          ],
+          "note": "Representative point for the named site in Sabah.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board locates the house museum and lists public operating hours.",
+            "id": "auth:my-public:Q64615217:evidence:1",
+            "license": null,
+            "publisher": "Sabah Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 75977ae18b13aac7775ebb1cfeeaba0f1ca957e86d53899a6c59226e60a73ab9.",
+            "title": "Agnes Keith House visitor information",
+            "uri": "https://sabahtourism.com/destination/agnes-keith-house/"
+          }
+        },
+        "id": "auth:my-public:Q64615217",
+        "location_precision": null,
+        "names": [
+          "阿格妮丝·基思故居",
+          "Agnes Keith House",
+          "Rumah Agnes Keith",
+          "Agnes Keith House Museum"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          118.11633888889,
+          5.8427138888889
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board locates the house museum and lists public operating hours.",
+            "id": "auth:my-public:Q64615217:evidence:1",
+            "license": null,
+            "publisher": "Sabah Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 75977ae18b13aac7775ebb1cfeeaba0f1ca957e86d53899a6c59226e60a73ab9.",
+            "title": "Agnes Keith House visitor information",
+            "uri": "https://sabahtourism.com/destination/agnes-keith-house/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 118.11633888889, latitude 5.8427138888889.",
+            "id": "wikidata:Q64615217",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2535694654; P625 Q64615217$c341d673-4d29-0a08-10e4-2924b36d086e.",
+            "title": "Agnes Keith House representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q64615217.json"
+          }
+        ],
+        "source_uri": "https://sabahtourism.com/destination/agnes-keith-house/",
+        "title": "Agnes Keith House",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/my-sabah-agnes-tourism.html",
+          "sha256": "75977ae18b13aac7775ebb1cfeeaba0f1ca957e86d53899a6c59226e60a73ab9",
+          "uri": "https://sabahtourism.com/destination/agnes-keith-house/"
+        },
+        {
+          "filename": "source/Q64615217.json",
+          "sha256": "ee7c29878a30ca0d4f98a96bc38f431821aa7986fc24ba67d5ccac8a78da6401",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q64615217.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The point represents the museum property. No constituent archaeological context is separately mapped.",
+        "point": [
+          116.145,
+          5.9133333333333
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q64819591.json",
+        "statement_id": "Q64819591$7f889417-4927-79a6-7b14-3d70bae23ec6"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Community museum on the publicly interpreted archaeological site in Pogunon Village, Penampang.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Sabah Tourism Board",
+          "Wikidata contributors"
+        ],
+        "description": "Community museum on the publicly interpreted archaeological site in Pogunon Village, Penampang.",
+        "description_zh": "波古农社区博物馆位于马来西亚。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Community museum on the publicly interpreted archaeological site in Pogunon Village, Penampang.",
+        "geography": {
+          "authority_id": "supplement:auth:my-public:Q64819591",
+          "countries": [
+            "MY"
+          ],
+          "note": "Representative point for the named site in Sabah.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board identifies the on-site museum and gives public access directions.",
+            "id": "auth:my-public:Q64819591:evidence:1",
+            "license": null,
+            "publisher": "Sabah Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 c6b9326799453bae961a06b7e315e2c2c99c2194aa883b09b31db174d43a6fc8.",
+            "title": "Pogunon Community Museum visitor information",
+            "uri": "https://sabahtourism.com/destination/pogunon-community-museum/"
+          }
+        },
+        "id": "auth:my-public:Q64819591",
+        "location_precision": null,
+        "names": [
+          "波古农社区博物馆",
+          "Pogunon Community Museum",
+          "Muzium Komuniti Pogunon",
+          "Pogunon Archaeological Site"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          116.145,
+          5.9133333333333
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board identifies the on-site museum and gives public access directions.",
+            "id": "auth:my-public:Q64819591:evidence:1",
+            "license": null,
+            "publisher": "Sabah Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 c6b9326799453bae961a06b7e315e2c2c99c2194aa883b09b31db174d43a6fc8.",
+            "title": "Pogunon Community Museum visitor information",
+            "uri": "https://sabahtourism.com/destination/pogunon-community-museum/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 116.145, latitude 5.9133333333333.",
+            "id": "wikidata:Q64819591",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2245680710; P625 Q64819591$7f889417-4927-79a6-7b14-3d70bae23ec6.",
+            "title": "Pogunon Community Museum representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q64819591.json"
+          }
+        ],
+        "source_uri": "https://sabahtourism.com/destination/pogunon-community-museum/",
+        "title": "Pogunon Community Museum",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/my-sabah-pogunon-tourism.html",
+          "sha256": "c6b9326799453bae961a06b7e315e2c2c99c2194aa883b09b31db174d43a6fc8",
+          "uri": "https://sabahtourism.com/destination/pogunon-community-museum/"
+        },
+        {
+          "filename": "source/Q64819591.json",
+          "sha256": "37e6149c879ad752eac24e90b164b275f363c6a2b855d10cdce4b3a6997d1434",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q64819591.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Representative point for the heritage building on the south bank. The Old Court House is a separate building.",
+        "point": [
+          110.34875,
+          1.55766667
+        ],
+        "precision": 0.0089864735924644,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7393554.json",
+        "statement_id": "Q7393554$85C9A039-F9FD-41E6-B3F0-60E6A34BAC9C"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic former Chinese court in Kuching, now a public museum on the waterfront.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Sarawak Tourism Board",
+          "Wikidata contributors"
+        ],
+        "description": "Historic former Chinese court in Kuching, now a public museum on the waterfront.",
+        "description_zh": "古晋华人历史博物馆位于马来西亚。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Historic former Chinese court in Kuching, now a public museum on the waterfront.",
+        "geography": {
+          "authority_id": "supplement:auth:my-public:Q7393554",
+          "countries": [
+            "MY"
+          ],
+          "note": "Representative point for the named site in Sarawak.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board identifies the former Chinese court and its public museum use.",
+            "id": "auth:my-public:Q7393554:evidence:1",
+            "license": null,
+            "publisher": "Sarawak Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 ba8e160ed7304375b8a506a9ba017529bf1ddc271fb5cb1b830596ae3b91e258.",
+            "title": "Chinese History Museum, Kuching",
+            "uri": "https://www.sarawaktourism.com/web/things-to-do/thing-view/culture/museums/chinese-history-museum"
+          }
+        },
+        "id": "auth:my-public:Q7393554",
+        "location_precision": null,
+        "names": [
+          "古晋华人历史博物馆",
+          "Chinese History Museum, Kuching",
+          "Chinese History Museum",
+          "Old Chinese Court",
+          "Muzium Sejarah Cina"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          110.34875,
+          1.55766667
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism board identifies the former Chinese court and its public museum use.",
+            "id": "auth:my-public:Q7393554:evidence:1",
+            "license": null,
+            "publisher": "Sarawak Tourism Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 ba8e160ed7304375b8a506a9ba017529bf1ddc271fb5cb1b830596ae3b91e258.",
+            "title": "Chinese History Museum, Kuching",
+            "uri": "https://www.sarawaktourism.com/web/things-to-do/thing-view/culture/museums/chinese-history-museum"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 110.34875, latitude 1.55766667.",
+            "id": "wikidata:Q7393554",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2527034611; P625 Q7393554$85C9A039-F9FD-41E6-B3F0-60E6A34BAC9C.",
+            "title": "Chinese History Museum, Kuching representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7393554.json"
+          }
+        ],
+        "source_uri": "https://www.sarawaktourism.com/web/things-to-do/thing-view/culture/museums/chinese-history-museum",
+        "title": "Chinese History Museum, Kuching",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/my-sarawak-chinese-tourism.html",
+          "sha256": "ba8e160ed7304375b8a506a9ba017529bf1ddc271fb5cb1b830596ae3b91e258",
+          "uri": "https://www.sarawaktourism.com/web/things-to-do/thing-view/culture/museums/chinese-history-museum"
+        },
+        {
+          "filename": "source/Q7393554.json",
+          "sha256": "2a60a52bf0a0c2c690605c70ff6c0e71fdbf14456430ca49b56e371f08936372",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7393554.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The subject is the former capitol building in Tagbilaran, distinct from the current provincial offices.",
+        "point": [
+          123.8566,
+          9.6403
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q134581606.json",
+        "statement_id": "Q134581606$20198920-a970-4790-acf9-3733d4e18622"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Former provincial capitol in Tagbilaran, restored after the 2013 earthquake and reused as the National Museum’s public Bohol branch.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Museum of the Philippines",
+          "Wikidata contributors"
+        ],
+        "description": "Former provincial capitol in Tagbilaran, restored after the 2013 earthquake and reused as the National Museum’s public Bohol branch.",
+        "description_zh": "薄荷省旧省政厅位于菲律宾。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Former provincial capitol in Tagbilaran, restored after the 2013 earthquake and reused as the National Museum’s public Bohol branch.",
+        "geography": {
+          "authority_id": "supplement:auth:ph-public:Q134581606",
+          "countries": [
+            "PH"
+          ],
+          "note": "Representative point for the named site in Bohol.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum identifies this former capitol as the location of its exhibits open to the public.",
+            "id": "auth:ph-public:Q134581606:evidence:1",
+            "license": null,
+            "publisher": "National Museum of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 66063c1460c15de41a63c1c34f315c0b86f6271346fb7f8368ba27d3fa043528.",
+            "title": "Visitor galleries at the former Bohol Provincial Capitol",
+            "uri": "https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/bohol/"
+          }
+        },
+        "id": "auth:ph-public:Q134581606",
+        "location_precision": null,
+        "names": [
+          "薄荷省旧省政厅",
+          "Old Bohol Provincial Capitol",
+          "National Museum of the Philippines – Bohol",
+          "National Museum Bohol"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          123.8566,
+          9.6403
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum identifies this former capitol as the location of its exhibits open to the public.",
+            "id": "auth:ph-public:Q134581606:evidence:1",
+            "license": null,
+            "publisher": "National Museum of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 66063c1460c15de41a63c1c34f315c0b86f6271346fb7f8368ba27d3fa043528.",
+            "title": "Visitor galleries at the former Bohol Provincial Capitol",
+            "uri": "https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/bohol/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official portal lists Bohol among its regional visitor museums.",
+            "id": "auth:ph-public:Q134581606:evidence:2",
+            "license": null,
+            "publisher": "National Museum of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 edddf3d66cdcaaf9ce9d5bacd83f9de8d598e7dba8a677b0ff0f7acccca77555.",
+            "title": "Regional museum visitor and booking guidance",
+            "uri": "https://reservation.nationalmuseum.gov.ph/reservation/book/region-museum"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 123.8566, latitude 9.6403.",
+            "id": "wikidata:Q134581606",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2548947325; P625 Q134581606$20198920-a970-4790-acf9-3733d4e18622.",
+            "title": "Old Bohol Provincial Capitol representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q134581606.json"
+          }
+        ],
+        "source_uri": "https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/bohol/",
+        "title": "Old Bohol Provincial Capitol",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ph-bohol.html",
+          "sha256": "66063c1460c15de41a63c1c34f315c0b86f6271346fb7f8368ba27d3fa043528",
+          "uri": "https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/bohol/"
+        },
+        {
+          "filename": "source/ph-nmp-book.html",
+          "sha256": "edddf3d66cdcaaf9ce9d5bacd83f9de8d598e7dba8a677b0ff0f7acccca77555",
+          "uri": "https://reservation.nationalmuseum.gov.ph/reservation/book/region-museum"
+        },
+        {
+          "filename": "source/Q134581606.json",
+          "sha256": "596a628432bb685a727c0f4ee046dec7f2c44e99d31f5f7386a89c1be3d78b4e",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q134581606.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The point is for the named historic fort on Valderosa Street. Internal shrines and structures are not separate records.",
+        "point": [
+          122.08222222222,
+          6.9011111111111
+        ],
+        "precision": null,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1438657.json",
+        "statement_id": "q1438657$F40BE1DE-8775-46FD-BE61-CCEBF0797E3B"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic fort in Zamboanga City housing the regional National Museum. The public entry represents the fort and museum grounds together.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Museum of the Philippines",
+          "Wikidata contributors"
+        ],
+        "description": "Historic fort in Zamboanga City housing the regional National Museum. The public entry represents the fort and museum grounds together.",
+        "description_zh": "皮拉尔堡位于菲律宾。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Historic fort in Zamboanga City housing the regional National Museum. The public entry represents the fort and museum grounds together.",
+        "geography": {
+          "authority_id": "supplement:auth:ph-public:Q1438657",
+          "countries": [
+            "PH"
+          ],
+          "note": "Representative point for the named site in Zamboanga.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The National Museum documents the original fort, its restoration and the reopening of the regional museum.",
+            "id": "auth:ph-public:Q1438657:evidence:1",
+            "license": null,
+            "publisher": "National Museum of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 d27866da5f528c340052a3b20e0e9388e73525d20dd53c6587b42cff3ea3486a.",
+            "title": "National Museum of the Philippines – Zamboanga at Fort Pilar",
+            "uri": "https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/western-southern-mindanao/"
+          }
+        },
+        "id": "auth:ph-public:Q1438657",
+        "location_precision": null,
+        "names": [
+          "皮拉尔堡",
+          "Fort Pilar",
+          "Real Fuerza de Nuestra Señora del Pilar de Zaragoza",
+          "National Museum of the Philippines – Zamboanga"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          122.08222222222,
+          6.9011111111111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The National Museum documents the original fort, its restoration and the reopening of the regional museum.",
+            "id": "auth:ph-public:Q1438657:evidence:1",
+            "license": null,
+            "publisher": "National Museum of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 d27866da5f528c340052a3b20e0e9388e73525d20dd53c6587b42cff3ea3486a.",
+            "title": "National Museum of the Philippines – Zamboanga at Fort Pilar",
+            "uri": "https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/western-southern-mindanao/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official booking platform lists a regional visitor entry for Zamboanga.",
+            "id": "auth:ph-public:Q1438657:evidence:2",
+            "license": null,
+            "publisher": "National Museum of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 edddf3d66cdcaaf9ce9d5bacd83f9de8d598e7dba8a677b0ff0f7acccca77555.",
+            "title": "Regional museum visitor and booking guidance",
+            "uri": "https://reservation.nationalmuseum.gov.ph/reservation/book/region-museum"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 122.08222222222, latitude 6.9011111111111.",
+            "id": "wikidata:Q1438657",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2512673103; P625 q1438657$F40BE1DE-8775-46FD-BE61-CCEBF0797E3B.",
+            "title": "Fort Pilar representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1438657.json"
+          }
+        ],
+        "source_uri": "https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/western-southern-mindanao/",
+        "title": "Fort Pilar",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ph-fort-pilar.html",
+          "sha256": "d27866da5f528c340052a3b20e0e9388e73525d20dd53c6587b42cff3ea3486a",
+          "uri": "https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/western-southern-mindanao/"
+        },
+        {
+          "filename": "source/ph-nmp-book.html",
+          "sha256": "edddf3d66cdcaaf9ce9d5bacd83f9de8d598e7dba8a677b0ff0f7acccca77555",
+          "uri": "https://reservation.nationalmuseum.gov.ph/reservation/book/region-museum"
+        },
+        {
+          "filename": "source/Q1438657.json",
+          "sha256": "e8788a41dfa0308df85d782982b408cec10afca70424e35052451fa205d7d958",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1438657.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Representative point for Fort San Pedro in Cebu, distinct from the fort remains of the same name in Iloilo.",
+        "point": [
+          123.90586,
+          10.29253
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1472845.json",
+        "statement_id": "Q1472845$D57CEB7A-CDE2-4E22-BD6A-5D56B216E7AA"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic coastal fort in Cebu City with a preserved enclosure and public interpretation. This is the Cebu fort.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Provincial Government of Cebu",
+          "Department of Tourism of the Philippines",
+          "Wikidata contributors"
+        ],
+        "description": "Historic coastal fort in Cebu City with a preserved enclosure and public interpretation. This is the Cebu fort.",
+        "description_zh": "圣佩德罗堡（宿务）位于菲律宾。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Historic coastal fort in Cebu City with a preserved enclosure and public interpretation. This is the Cebu fort.",
+        "geography": {
+          "authority_id": "supplement:auth:ph-public:Q1472845",
+          "countries": [
+            "PH"
+          ],
+          "note": "Representative point for the named site in Cebu.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Cebu’s provincial government documents recent visits to Fort San Pedro.",
+            "id": "auth:ph-public:Q1472845:evidence:1",
+            "license": null,
+            "publisher": "Provincial Government of Cebu",
+            "revision": "Retrieved 2026-11-28; SHA-256 5fe73cd6569583d078eff542af1f422c3f1dbf5d3423a1d4d4890d9e3dba5e54.",
+            "title": "Fort San Pedro and current heritage programming",
+            "uri": "https://www.cebu.gov.ph/2300/palace-social-secretary-visits-cebu-for-asean-summit-2026-preparations/"
+          }
+        },
+        "id": "auth:ph-public:Q1472845",
+        "location_precision": null,
+        "names": [
+          "圣佩德罗堡（宿务）",
+          "Fort San Pedro",
+          "Fuerte de San Pedro",
+          "Fort San Pedro, Cebu"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          123.90586,
+          10.29253
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Cebu’s provincial government documents recent visits to Fort San Pedro.",
+            "id": "auth:ph-public:Q1472845:evidence:1",
+            "license": null,
+            "publisher": "Provincial Government of Cebu",
+            "revision": "Retrieved 2026-11-28; SHA-256 5fe73cd6569583d078eff542af1f422c3f1dbf5d3423a1d4d4890d9e3dba5e54.",
+            "title": "Fort San Pedro and current heritage programming",
+            "uri": "https://www.cebu.gov.ph/2300/palace-social-secretary-visits-cebu-for-asean-summit-2026-preparations/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The Philippine tourism office includes the Cebu fort in its visitor guide.",
+            "id": "auth:ph-public:Q1472845:evidence:2",
+            "license": null,
+            "publisher": "Department of Tourism of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 7149b1ee66e97999226f071e9d55b169c728ba7005ddee26b4dce1d910557ee5.",
+            "title": "Cebu destination guide with Fort San Pedro and Mactan Shrine",
+            "uri": "https://philippinetourism.co.kr/pdf/Destination_Brochures/CEBU%20BROCHURE2022113_11426.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 123.90586, latitude 10.29253.",
+            "id": "wikidata:Q1472845",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2572271132; P625 Q1472845$D57CEB7A-CDE2-4E22-BD6A-5D56B216E7AA.",
+            "title": "Fort San Pedro representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1472845.json"
+          }
+        ],
+        "source_uri": "https://www.cebu.gov.ph/2300/palace-social-secretary-visits-cebu-for-asean-summit-2026-preparations/",
+        "title": "Fort San Pedro",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ph-cebu-asean.html",
+          "sha256": "5fe73cd6569583d078eff542af1f422c3f1dbf5d3423a1d4d4890d9e3dba5e54",
+          "uri": "https://www.cebu.gov.ph/2300/palace-social-secretary-visits-cebu-for-asean-summit-2026-preparations/"
+        },
+        {
+          "filename": "source/ph-cebu-dot-brochure.pdf",
+          "sha256": "7149b1ee66e97999226f071e9d55b169c728ba7005ddee26b4dce1d910557ee5",
+          "uri": "https://philippinetourism.co.kr/pdf/Destination_Brochures/CEBU%20BROCHURE2022113_11426.pdf"
+        },
+        {
+          "filename": "source/Q1472845.json",
+          "sha256": "4a1bb3591a6c988888a1442f7ca9438db75efc626204574b31bd156cb85adcf8",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1472845.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "One church-complex point for the historic building and its attached visitor museum.",
+        "point": [
+          123.91225,
+          9.62271
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q18216785.json",
+        "statement_id": "Q18216785$4074EFBA-38B3-49C9-B79D-02367147CBDC"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The parish church reopened after restoration and has designated public visit and worship arrangements. Interior access and parish museum admission follow parish rules.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Municipality of Baclayon",
+          "Bohol Provincial Tourism Office",
+          "Wikidata contributors",
+          "Province of Bohol"
+        ],
+        "description": "Historic church at Baclayon with a public parish museum in the adjoining part of the same complex. Church access follows parish rules.",
+        "description_zh": "巴克拉永教堂位于菲律宾。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Historic church at Baclayon with a public parish museum in the adjoining part of the same complex. Church access follows parish rules.",
+        "geography": {
+          "authority_id": "supplement:auth:ph-public:Q18216785",
+          "countries": [
+            "PH"
+          ],
+          "note": "Representative point for the named site in Bohol.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipality identifies the historic parish museum at the church and describes its visitor exhibits.",
+            "id": "auth:ph-public:Q18216785:evidence:1",
+            "license": null,
+            "publisher": "Municipality of Baclayon",
+            "revision": "Retrieved 2026-11-28; SHA-256 485b4d426c8fe490962f2fdd8b299867d834f696748ce760583c094d54ed7ace.",
+            "title": "Public Parish Museum at Baclayon Church",
+            "uri": "https://baclayon.bohol.gov.ph/museo-parroquial-de-baclayon/"
+          }
+        },
+        "id": "auth:ph-public:Q18216785",
+        "location_precision": null,
+        "names": [
+          "巴克拉永教堂",
+          "Baclayon Church",
+          "Church of La Purisima Concepcion",
+          "Baclayon Parish Museum",
+          "Museo Parroquial de Baclayon"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          123.91225,
+          9.62271
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipality identifies the historic parish museum at the church and describes its visitor exhibits.",
+            "id": "auth:ph-public:Q18216785:evidence:1",
+            "license": null,
+            "publisher": "Municipality of Baclayon",
+            "revision": "Retrieved 2026-11-28; SHA-256 485b4d426c8fe490962f2fdd8b299867d834f696748ce760583c094d54ed7ace.",
+            "title": "Public Parish Museum at Baclayon Church",
+            "uri": "https://baclayon.bohol.gov.ph/museo-parroquial-de-baclayon/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial tourism office lists the church precinct and parish museum.",
+            "id": "auth:ph-public:Q18216785:evidence:2",
+            "license": null,
+            "publisher": "Bohol Provincial Tourism Office",
+            "revision": "Retrieved 2026-11-28; SHA-256 98e117d562c4b33ed7068e75f4aef589585f7c697ba06329e775c9d0061ee9ea.",
+            "title": "Baclayon Church and museum visitor listing",
+            "uri": "https://tourism.bohol.gov.ph/visitbohol-baclayon/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 123.91225, latitude 9.62271.",
+            "id": "wikidata:Q18216785",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2399875962; P625 Q18216785$4074EFBA-38B3-49C9-B79D-02367147CBDC.",
+            "title": "Baclayon Church representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q18216785.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial heritage office records restoration and the handover of Baclayon Church in 2018.",
+            "id": "auth:ph-public:Q18216785:independent:independent-bohol-province.pdf",
+            "license": null,
+            "publisher": "Province of Bohol",
+            "revision": "Retrieved 2026-11-28; SHA-256 3a77c446c167a8658199d8beeb449723e05468b73a80492afda456491afe16e1.",
+            "title": "Baclayon Church independent public-scope evidence",
+            "uri": "https://ppdo.bohol.gov.ph/ppdofiles/Profile/SocioEconomicProfile/SocialDevelopment/CultureArtsHeritage.pdf"
+          }
+        ],
+        "source_uri": "https://baclayon.bohol.gov.ph/museo-parroquial-de-baclayon/",
+        "title": "Baclayon Church",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ph-baclayon-municipality.html",
+          "sha256": "485b4d426c8fe490962f2fdd8b299867d834f696748ce760583c094d54ed7ace",
+          "uri": "https://baclayon.bohol.gov.ph/museo-parroquial-de-baclayon/"
+        },
+        {
+          "filename": "source/ph-baclayon-bohol-tourism.html",
+          "sha256": "98e117d562c4b33ed7068e75f4aef589585f7c697ba06329e775c9d0061ee9ea",
+          "uri": "https://tourism.bohol.gov.ph/visitbohol-baclayon/"
+        },
+        {
+          "filename": "source/Q18216785.json",
+          "sha256": "0c9296c8894c1aa1316c00b19fbed53d6d29b927a15ca1fe76369a0ce5c0b1ff",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q18216785.json"
+        },
+        {
+          "filename": "independent-bohol-province.pdf",
+          "sha256": "3a77c446c167a8658199d8beeb449723e05468b73a80492afda456491afe16e1",
+          "uri": "https://ppdo.bohol.gov.ph/ppdofiles/Profile/SocioEconomicProfile/SocialDevelopment/CultureArtsHeritage.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Point represents the historical Loboc parish church, not its plaza, bell tower as a separate item, or river-tour facilities.",
+        "point": [
+          124.031,
+          9.6361
+        ],
+        "precision": 0.0091117121158739,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q18331156.json",
+        "statement_id": "Q18331156$AF40778C-E560-4254-BC1E-8CE2587133B3"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original San Pedro Apostol church at Loboc is a current parish and religious heritage stop. Admission to the church follows local worship and conservation rules.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Bohol Provincial Tourism Office",
+          "Wikidata contributors",
+          "Province of Bohol"
+        ],
+        "description": "Historic parish church compound in Loboc, included in the provincial visitor listings. The building remains subject to parish and conservation access rules.",
+        "description_zh": "洛博克教堂位于菲律宾。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Historic parish church compound in Loboc, included in the provincial visitor listings. The building remains subject to parish and conservation access rules.",
+        "geography": {
+          "authority_id": "supplement:auth:ph-public:Q18331156",
+          "countries": [
+            "PH"
+          ],
+          "note": "Representative point for the named site in Bohol.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial tourism office presents the historic Loboc church among the places to visit.",
+            "id": "auth:ph-public:Q18331156:evidence:1",
+            "license": null,
+            "publisher": "Bohol Provincial Tourism Office",
+            "revision": "Retrieved 2026-11-28; SHA-256 5f6ea68453165e4a6c5a17f2358b75fa95d24054d5616eb88e088d4341ebd68c.",
+            "title": "Loboc heritage visitor listings",
+            "uri": "https://tourism.bohol.gov.ph/visitbohol-loboc/"
+          }
+        },
+        "id": "auth:ph-public:Q18331156",
+        "location_precision": null,
+        "names": [
+          "洛博克教堂",
+          "Loboc Church",
+          "San Pedro Apostol Parish Church",
+          "Church of San Pedro Apostol"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          124.031,
+          9.6361
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial tourism office presents the historic Loboc church among the places to visit.",
+            "id": "auth:ph-public:Q18331156:evidence:1",
+            "license": null,
+            "publisher": "Bohol Provincial Tourism Office",
+            "revision": "Retrieved 2026-11-28; SHA-256 5f6ea68453165e4a6c5a17f2358b75fa95d24054d5616eb88e088d4341ebd68c.",
+            "title": "Loboc heritage visitor listings",
+            "uri": "https://tourism.bohol.gov.ph/visitbohol-loboc/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 124.031, latitude 9.6361.",
+            "id": "wikidata:Q18331156",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2505038036; P625 Q18331156$AF40778C-E560-4254-BC1E-8CE2587133B3.",
+            "title": "Loboc Church representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q18331156.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial heritage office records restoration and handover of the historic Loboc church by 2021.",
+            "id": "auth:ph-public:Q18331156:independent:independent-bohol-province.pdf",
+            "license": null,
+            "publisher": "Province of Bohol",
+            "revision": "Retrieved 2026-11-28; SHA-256 3a77c446c167a8658199d8beeb449723e05468b73a80492afda456491afe16e1.",
+            "title": "Loboc Church independent public-scope evidence",
+            "uri": "https://ppdo.bohol.gov.ph/ppdofiles/Profile/SocioEconomicProfile/SocialDevelopment/CultureArtsHeritage.pdf"
+          }
+        ],
+        "source_uri": "https://tourism.bohol.gov.ph/visitbohol-loboc/",
+        "title": "Loboc Church",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ph-loboc-bohol-tourism.html",
+          "sha256": "5f6ea68453165e4a6c5a17f2358b75fa95d24054d5616eb88e088d4341ebd68c",
+          "uri": "https://tourism.bohol.gov.ph/visitbohol-loboc/"
+        },
+        {
+          "filename": "source/Q18331156.json",
+          "sha256": "f29e5317eae2dac8ee717d17f6cb708995e4cea2da6fbe7035a145cdf651dbc5",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q18331156.json"
+        },
+        {
+          "filename": "independent-bohol-province.pdf",
+          "sha256": "3a77c446c167a8658199d8beeb449723e05468b73a80492afda456491afe16e1",
+          "uri": "https://ppdo.bohol.gov.ph/ppdofiles/Profile/SocioEconomicProfile/SocialDevelopment/CultureArtsHeritage.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "One representative point for the memorial property as a whole, including its monuments.",
+        "point": [
+          124.01527,
+          10.31096
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q46509377.json",
+        "statement_id": "Q46509377$54fca6e1-4a74-53f5-6a5b-720b3dfc8cd4"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point denotes the standing designated Liberty Shrine memorial grounds. The representative point does not date or locate the battle itself.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Department of Tourism of the Philippines",
+          "Provincial Government of Cebu",
+          "Wikidata contributors",
+          "Province of Cebu"
+        ],
+        "description": "Public memorial grounds in Lapu-Lapu City commemorating the Battle of Mactan, including the historic marker and visitor plaza.",
+        "description_zh": "麦克坦战役纪念地位于菲律宾。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Public memorial grounds in Lapu-Lapu City commemorating the Battle of Mactan, including the historic marker and visitor plaza.",
+        "geography": {
+          "authority_id": "supplement:auth:ph-public:Q46509377",
+          "countries": [
+            "PH"
+          ],
+          "note": "Representative point for the named site in Cebu.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism office identifies the Mactan Shrine and its commemorative site as visitor landmarks.",
+            "id": "auth:ph-public:Q46509377:evidence:1",
+            "license": null,
+            "publisher": "Department of Tourism of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 7149b1ee66e97999226f071e9d55b169c728ba7005ddee26b4dce1d910557ee5.",
+            "title": "Cebu destination guide with Fort San Pedro and Mactan Shrine",
+            "uri": "https://philippinetourism.co.kr/pdf/Destination_Brochures/CEBU%20BROCHURE2022113_11426.pdf"
+          }
+        },
+        "id": "auth:ph-public:Q46509377",
+        "location_precision": null,
+        "names": [
+          "麦克坦战役纪念地",
+          "Mactan Shrine",
+          "Liberty Shrine",
+          "Lapu-Lapu Shrine",
+          "Site of the Battle of Mactan"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          124.01527,
+          10.31096
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism office identifies the Mactan Shrine and its commemorative site as visitor landmarks.",
+            "id": "auth:ph-public:Q46509377:evidence:1",
+            "license": null,
+            "publisher": "Department of Tourism of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 7149b1ee66e97999226f071e9d55b169c728ba7005ddee26b4dce1d910557ee5.",
+            "title": "Cebu destination guide with Fort San Pedro and Mactan Shrine",
+            "uri": "https://philippinetourism.co.kr/pdf/Destination_Brochures/CEBU%20BROCHURE2022113_11426.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Cebu’s provincial visitor guide describes the annual public commemoration of the Battle of Mactan.",
+            "id": "auth:ph-public:Q46509377:evidence:2",
+            "license": null,
+            "publisher": "Provincial Government of Cebu",
+            "revision": "Retrieved 2026-11-28; SHA-256 d6a8bd68617e88affc24a4edfa0e709e17199872856243fc1a77729deed8434d.",
+            "title": "Cebu history, heritage and festival visitor information",
+            "uri": "https://www.cebu.gov.ph/about/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 124.01527, latitude 10.31096.",
+            "id": "wikidata:Q46509377",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2571122483; P625 Q46509377$54fca6e1-4a74-53f5-6a5b-720b3dfc8cd4.",
+            "title": "Mactan Shrine representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q46509377.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial government lists the named shrine precinct among its public visitor stops in July 2026.",
+            "id": "auth:ph-public:Q46509377:independent:independent-mactan-province.html",
+            "license": null,
+            "publisher": "Province of Cebu",
+            "revision": "Retrieved 2026-11-28; SHA-256 04a1678f2a3f4020d60274067f633a0e67f193e538e5f42cd35b5620d6c97708.",
+            "title": "Mactan Shrine independent public-scope evidence",
+            "uri": "https://www.cebu.gov.ph/13528/cebu-opens-17-accredited-clean-toilet-stops-along-major-tourism-routes/"
+          }
+        ],
+        "source_uri": "https://philippinetourism.co.kr/pdf/Destination_Brochures/CEBU%20BROCHURE2022113_11426.pdf",
+        "title": "Mactan Shrine",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ph-cebu-dot-brochure.pdf",
+          "sha256": "7149b1ee66e97999226f071e9d55b169c728ba7005ddee26b4dce1d910557ee5",
+          "uri": "https://philippinetourism.co.kr/pdf/Destination_Brochures/CEBU%20BROCHURE2022113_11426.pdf"
+        },
+        {
+          "filename": "source/ph-cebu-heritage.html",
+          "sha256": "d6a8bd68617e88affc24a4edfa0e709e17199872856243fc1a77729deed8434d",
+          "uri": "https://www.cebu.gov.ph/about/"
+        },
+        {
+          "filename": "source/Q46509377.json",
+          "sha256": "179b35a3b5b0e76af9044aa4d05409d5ea1c8cc38f40a14df1ff25f4640ce953",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q46509377.json"
+        },
+        {
+          "filename": "independent-mactan-province.html",
+          "sha256": "04a1678f2a3f4020d60274067f633a0e67f193e538e5f42cd35b5620d6c97708",
+          "uri": "https://www.cebu.gov.ph/13528/cebu-opens-17-accredited-clean-toilet-stops-along-major-tourism-routes/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The published representative point refers to the visitor archaeological complex, whose individual caves are recorded together.",
+        "point": [
+          117.981,
+          9.27988
+        ],
+        "precision": 0.009102279798262,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q477329.json",
+        "statement_id": "Q477329$E3CF8DF5-2A75-49FA-A93D-F13387C4D050"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Visitor point within the named publicly operated Lipuun complex. Its recognised cave route is appointment-only; use the general visitor precinct scope, without publishing individual burial sites.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Museum of the Philippines",
+          "Philippines national submission, UNESCO World Heritage Centre",
+          "Wikidata contributors"
+        ],
+        "description": "Protected archaeological cave complex on Lipuun Point. The museum galleries and boardwalk accept public visitors. Entry to the designated cave network requires an appointment.",
+        "description_zh": "塔邦洞穴群位于菲律宾。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Protected archaeological cave complex on Lipuun Point. The museum galleries and boardwalk accept public visitors. Entry to the designated cave network requires an appointment.",
+        "geography": {
+          "authority_id": "supplement:auth:ph-public:Q477329",
+          "countries": [
+            "PH"
+          ],
+          "note": "Representative point for the named site in Palawan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum identifies the archaeological cave complex and gives permit and approach instructions for public visits.",
+            "id": "auth:ph-public:Q477329:evidence:1",
+            "license": null,
+            "publisher": "National Museum of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 296f61b482bbf757ac4b4ef09df8f39bc5c5f516d85e9fb356d568a019da947a.",
+            "title": "Visitor access to the Tabon Cave Complex",
+            "uri": "https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/tabon-cave-complex/"
+          }
+        },
+        "id": "auth:ph-public:Q477329",
+        "location_precision": null,
+        "names": [
+          "塔邦洞穴群",
+          "Tabon Cave Complex",
+          "Tabon Caves",
+          "Lipuun Point"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          117.981,
+          9.27988
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum identifies the archaeological cave complex and gives permit and approach instructions for public visits.",
+            "id": "auth:ph-public:Q477329:evidence:1",
+            "license": null,
+            "publisher": "National Museum of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 296f61b482bbf757ac4b4ef09df8f39bc5c5f516d85e9fb356d568a019da947a.",
+            "title": "Visitor access to the Tabon Cave Complex",
+            "uri": "https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/tabon-cave-complex/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The visitor guidelines distinguish walk-in galleries and boardwalk access from the appointment-only cave network.",
+            "id": "auth:ph-public:Q477329:evidence:2",
+            "license": null,
+            "publisher": "National Museum of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 560c80bb6095639bf731f6985aab2952ececdc0b1771a8349677a3eba6e1b4b0.",
+            "title": "Tabon Cave Complex visitor guidelines",
+            "uri": "https://d6ln97o9ufq72.cloudfront.net/Book+A+Tour/visitor-guidelines/Tabon%20-%20Visitor%20Guidelines.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national submission lists the complex and Lipuun as a tentative property.",
+            "id": "auth:ph-public:Q477329:evidence:3",
+            "license": null,
+            "publisher": "Philippines national submission, UNESCO World Heritage Centre",
+            "revision": "Retrieved 2026-11-28; SHA-256 b8a0c55f3a090db5e402f4029e7041bc7f6d13bbeddae16bffbe283baffc9021.",
+            "title": "Tabon Cave Complex and Lipuun tentative submission",
+            "uri": "https://whc.unesco.org/en/tentativelists/1860/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 117.981, latitude 9.27988.",
+            "id": "wikidata:Q477329",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2535657663; P625 Q477329$E3CF8DF5-2A75-49FA-A93D-F13387C4D050.",
+            "title": "Tabon Cave Complex representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q477329.json"
+          }
+        ],
+        "source_uri": "https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/tabon-cave-complex/",
+        "title": "Tabon Cave Complex",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ph-tabon.html",
+          "sha256": "296f61b482bbf757ac4b4ef09df8f39bc5c5f516d85e9fb356d568a019da947a",
+          "uri": "https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/tabon-cave-complex/"
+        },
+        {
+          "filename": "source/ph-tabon-visitor.pdf",
+          "sha256": "560c80bb6095639bf731f6985aab2952ececdc0b1771a8349677a3eba6e1b4b0",
+          "uri": "https://d6ln97o9ufq72.cloudfront.net/Book+A+Tour/visitor-guidelines/Tabon%20-%20Visitor%20Guidelines.pdf"
+        },
+        {
+          "filename": "source/unesco-tabon-tentative.html",
+          "sha256": "b8a0c55f3a090db5e402f4029e7041bc7f6d13bbeddae16bffbe283baffc9021",
+          "uri": "https://whc.unesco.org/en/tentativelists/1860/"
+        },
+        {
+          "filename": "source/Q477329.json",
+          "sha256": "74a4cda2df2025ba49d83491c1a520979347f3f11732278a482cb7473472ca10",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q477329.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The representative point marks the historic church ruins in the public park, not the volcano or the nearby national museum branch.",
+        "point": [
+          123.70111111,
+          13.16611111
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5017375.json",
+        "statement_id": "Q5017375$68976A07-181F-4FE0-865F-83041D83CB70"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public heritage park around the remains of the former Cagsawa church in Daraga. Access follows official volcanic and weather advisories.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Municipality of Daraga",
+          "Wikidata contributors"
+        ],
+        "description": "Public heritage park around the remains of the former Cagsawa church in Daraga. Access follows official volcanic and weather advisories.",
+        "description_zh": "卡格萨瓦教堂遗址位于菲律宾。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Public heritage park around the remains of the former Cagsawa church in Daraga. Access follows official volcanic and weather advisories.",
+        "geography": {
+          "authority_id": "supplement:auth:ph-public:Q5017375",
+          "countries": [
+            "PH"
+          ],
+          "note": "Representative point for the named site in Bicol.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal tourism page identifies the church remains and the Cagsawa visitor site.",
+            "id": "auth:ph-public:Q5017375:evidence:1",
+            "license": null,
+            "publisher": "Municipality of Daraga",
+            "revision": "Retrieved 2026-11-28; SHA-256 8cd52b4bd88581c2ce5b2ae197ab0cd57a0bb86e42d83ca82470da45e52e624b.",
+            "title": "Cagsawa Ruins visitor site",
+            "uri": "https://daraga.gov.ph/tourism-daraga/"
+          }
+        },
+        "id": "auth:ph-public:Q5017375",
+        "location_precision": null,
+        "names": [
+          "卡格萨瓦教堂遗址",
+          "Cagsawa Ruins",
+          "Cagsaua Church Ruins",
+          "Cagsawa Ruins Park"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          123.70111111,
+          13.16611111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal tourism page identifies the church remains and the Cagsawa visitor site.",
+            "id": "auth:ph-public:Q5017375:evidence:1",
+            "license": null,
+            "publisher": "Municipality of Daraga",
+            "revision": "Retrieved 2026-11-28; SHA-256 8cd52b4bd88581c2ce5b2ae197ab0cd57a0bb86e42d83ca82470da45e52e624b.",
+            "title": "Cagsawa Ruins visitor site",
+            "uri": "https://daraga.gov.ph/tourism-daraga/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipality names the ruins park in its visitor-management materials.",
+            "id": "auth:ph-public:Q5017375:evidence:2",
+            "license": null,
+            "publisher": "Municipality of Daraga",
+            "revision": "Retrieved 2026-11-28; SHA-256 6b05d19da0e6e7cdf08a0bb56c88bf5dff19f7b4851d654466b349913ea5f8c4.",
+            "title": "Cagsawa Ruins Park municipal visitor services",
+            "uri": "https://daraga.gov.ph/wp-content/uploads/2024/11/CAGSAWA-RUINS-PARK-AND-RESORT.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 123.70111111, latitude 13.16611111.",
+            "id": "wikidata:Q5017375",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2478539500; P625 Q5017375$68976A07-181F-4FE0-865F-83041D83CB70.",
+            "title": "Cagsawa Ruins representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5017375.json"
+          }
+        ],
+        "source_uri": "https://daraga.gov.ph/tourism-daraga/",
+        "title": "Cagsawa Ruins",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ph-cagsawa-daraga.html",
+          "sha256": "8cd52b4bd88581c2ce5b2ae197ab0cd57a0bb86e42d83ca82470da45e52e624b",
+          "uri": "https://daraga.gov.ph/tourism-daraga/"
+        },
+        {
+          "filename": "source/ph-cagsawa-park-spec.pdf",
+          "sha256": "6b05d19da0e6e7cdf08a0bb56c88bf5dff19f7b4851d654466b349913ea5f8c4",
+          "uri": "https://daraga.gov.ph/wp-content/uploads/2024/11/CAGSAWA-RUINS-PARK-AND-RESORT.pdf"
+        },
+        {
+          "filename": "source/Q5017375.json",
+          "sha256": "4e1d46fdca94120333526031ba95c147bc593b1c9ea2310902d7769be13a31c8",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5017375.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata point of the original building in the provincial capitol complex, distinct from the museum’s former Old Jaro site.",
+        "point": [
+          122.568775,
+          10.703283
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q56599033.json",
+        "statement_id": "Q56599033$bcb1a745-4ffd-e8e5-b43f-4da99a9ea755"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Former provincial jail in Iloilo City, now a public site of the National Museum in the historic building.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Museum of the Philippines",
+          "Wikidata contributors"
+        ],
+        "description": "Former provincial jail in Iloilo City, now a public site of the National Museum in the historic building.",
+        "description_zh": "伊洛伊洛旧省监狱位于菲律宾。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Former provincial jail in Iloilo City, now a public site of the National Museum in the historic building.",
+        "geography": {
+          "authority_id": "supplement:auth:ph-public:Q56599033",
+          "countries": [
+            "PH"
+          ],
+          "note": "Representative point for the named site in Panay.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national museum identifies the old jail at the provincial capitol complex and documents its public galleries.",
+            "id": "auth:ph-public:Q56599033:evidence:1",
+            "license": null,
+            "publisher": "National Museum of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 e6b96e16a1212e88ecc5c355b169f92fbeb5da2b6fa448e17c272f26f21c563b.",
+            "title": "Public museum in the former Iloilo Provincial Jail",
+            "uri": "https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/western-visayas/"
+          }
+        },
+        "id": "auth:ph-public:Q56599033",
+        "location_precision": null,
+        "names": [
+          "伊洛伊洛旧省监狱",
+          "Old Iloilo Provincial Jail",
+          "Old Iloilo Prison Building",
+          "Iloilo Rehabilitation Center",
+          "National Museum of the Philippines – Iloilo"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          122.568775,
+          10.703283
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national museum identifies the old jail at the provincial capitol complex and documents its public galleries.",
+            "id": "auth:ph-public:Q56599033:evidence:1",
+            "license": null,
+            "publisher": "National Museum of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 e6b96e16a1212e88ecc5c355b169f92fbeb5da2b6fa448e17c272f26f21c563b.",
+            "title": "Public museum in the former Iloilo Provincial Jail",
+            "uri": "https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/western-visayas/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The booking portal publishes a visitor entry for the Iloilo regional museum.",
+            "id": "auth:ph-public:Q56599033:evidence:2",
+            "license": null,
+            "publisher": "National Museum of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 edddf3d66cdcaaf9ce9d5bacd83f9de8d598e7dba8a677b0ff0f7acccca77555.",
+            "title": "Regional museum visitor and booking guidance",
+            "uri": "https://reservation.nationalmuseum.gov.ph/reservation/book/region-museum"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 122.568775, latitude 10.703283.",
+            "id": "wikidata:Q56599033",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2457623260; P625 Q56599033$bcb1a745-4ffd-e8e5-b43f-4da99a9ea755.",
+            "title": "Old Iloilo Provincial Jail representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q56599033.json"
+          }
+        ],
+        "source_uri": "https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/western-visayas/",
+        "title": "Old Iloilo Provincial Jail",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ph-iloilo.html",
+          "sha256": "e6b96e16a1212e88ecc5c355b169f92fbeb5da2b6fa448e17c272f26f21c563b",
+          "uri": "https://www.nationalmuseum.gov.ph/our-museums/regional-area-and-site-museums/western-visayas/"
+        },
+        {
+          "filename": "source/ph-nmp-book.html",
+          "sha256": "edddf3d66cdcaaf9ce9d5bacd83f9de8d598e7dba8a677b0ff0f7acccca77555",
+          "uri": "https://reservation.nationalmuseum.gov.ph/reservation/book/region-museum"
+        },
+        {
+          "filename": "source/Q56599033.json",
+          "sha256": "e18093c4bb71359ec2ea28de2cb4658ed25cdc20fbd8e4048c73b82b0ff1510d",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q56599033.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Point is the historic Presidencia on the city-hall grounds, distinct from other religious or civic structures nearby.",
+        "point": [
+          123.30948,
+          9.30517
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q66155143.json",
+        "statement_id": "Q66155143$001aab57-45a9-3f1a-77ba-d8a2375b932e"
+      },
+      "independent_review": {
+        "method": "Independently checked the original source files and current operator scope, original Wikidata or Commons fixed-coordinate license, public property footprints, multiple source points and existing corpus components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Dumaguete’s former municipal hall, preserved as the city’s public National Museum venue.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to primary visitor and coordinate evidence.",
+          "note": "No dated phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Museum of the Philippines",
+          "Wikidata contributors"
+        ],
+        "description": "Dumaguete’s former municipal hall, preserved as the city’s public National Museum venue.",
+        "description_zh": "杜马盖地旧市政厅位于菲律宾。其主管方提供了该原址或现场展馆的公众访问依据。地图标注遗址代表点。",
+        "details": "Dumaguete’s former municipal hall, preserved as the city’s public National Museum venue.",
+        "geography": {
+          "authority_id": "supplement:auth:ph-public:Q66155143",
+          "countries": [
+            "PH"
+          ],
+          "note": "Representative point for the named site in Negros.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national museum locates its current venue in the historic Old Presidencia building.",
+            "id": "auth:ph-public:Q66155143:evidence:1",
+            "license": null,
+            "publisher": "National Museum of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 a50af1d7420bbaa92d9610a3a47320197c7585e53f0cbb94798ad28a97cce7ee.",
+            "title": "National Museum at the Old Presidencia, Dumaguete",
+            "uri": "https://www.nationalmuseum.gov.ph/dumaguete/"
+          }
+        },
+        "id": "auth:ph-public:Q66155143",
+        "location_precision": null,
+        "names": [
+          "杜马盖地旧市政厅",
+          "Dumaguete Presidencia",
+          "Old Presidencia Building",
+          "National Museum of the Philippines – Dumaguete"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          123.30948,
+          9.30517
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national museum locates its current venue in the historic Old Presidencia building.",
+            "id": "auth:ph-public:Q66155143:evidence:1",
+            "license": null,
+            "publisher": "National Museum of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 a50af1d7420bbaa92d9610a3a47320197c7585e53f0cbb94798ad28a97cce7ee.",
+            "title": "National Museum at the Old Presidencia, Dumaguete",
+            "uri": "https://www.nationalmuseum.gov.ph/dumaguete/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official platform publishes a visitor entry for Dumaguete.",
+            "id": "auth:ph-public:Q66155143:evidence:2",
+            "license": null,
+            "publisher": "National Museum of the Philippines",
+            "revision": "Retrieved 2026-11-28; SHA-256 edddf3d66cdcaaf9ce9d5bacd83f9de8d598e7dba8a677b0ff0f7acccca77555.",
+            "title": "Regional museum visitor and booking guidance",
+            "uri": "https://reservation.nationalmuseum.gov.ph/reservation/book/region-museum"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 123.30948, latitude 9.30517.",
+            "id": "wikidata:Q66155143",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2474941315; P625 Q66155143$001aab57-45a9-3f1a-77ba-d8a2375b932e.",
+            "title": "Dumaguete Presidencia representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q66155143.json"
+          }
+        ],
+        "source_uri": "https://www.nationalmuseum.gov.ph/dumaguete/",
+        "title": "Dumaguete Presidencia",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ph-dumaguete.html",
+          "sha256": "a50af1d7420bbaa92d9610a3a47320197c7585e53f0cbb94798ad28a97cce7ee",
+          "uri": "https://www.nationalmuseum.gov.ph/dumaguete/"
+        },
+        {
+          "filename": "source/ph-nmp-book.html",
+          "sha256": "edddf3d66cdcaaf9ce9d5bacd83f9de8d598e7dba8a677b0ff0f7acccca77555",
+          "uri": "https://reservation.nationalmuseum.gov.ph/reservation/book/region-museum"
+        },
+        {
+          "filename": "source/Q66155143.json",
+          "sha256": "58bfda91f813d829dd3a9e2715e6179220612838548aef097aca0cfc55f1a9a9",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q66155143.json"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Public Philippine and East Malaysian archaeological and historic properties, using locally confirmed visitor scope, an exact reusable coordinate for each site, and independent World Heritage and older corpus overlap checks."
+}

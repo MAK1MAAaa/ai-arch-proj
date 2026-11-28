@@ -1,0 +1,869 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Coordinate and publicly interpreted original location verified from frozen published records.",
+      "note": "No independently reviewed historical stage has been assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Kwame Nkrumah Memorial Park",
+      "Ghana Tourism Authority",
+      "Wikidata contributors"
+    ],
+    "description": "The mausoleum within the publicly operated Kwame Nkrumah Memorial Park. The point identifies the reused coordinates for the mausoleum and its visitor precinct.",
+    "description_zh": "阿克拉夸梅·恩克鲁玛纪念公园内的陵墓与相应公众参观区。",
+    "details": "The mausoleum within the publicly operated Kwame Nkrumah Memorial Park. The point identifies the reused coordinates for the mausoleum and its visitor precinct.",
+    "geography": {
+      "authority_id": "supplement:auth:gh-public:Q13848097",
+      "countries": [
+        "GH"
+      ],
+      "note": "Named public cultural site in Accra.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The mausoleum within the publicly operated Kwame Nkrumah Memorial Park. The point identifies the reused coordinates for the mausoleum and its visitor precinct.",
+        "id": "auth:gh-public:Q13848097:public-0",
+        "license": null,
+        "publisher": "Kwame Nkrumah Memorial Park",
+        "revision": "Retrieved 2026-11-28; SHA-256 0753c28c6f194ad9e5014543b149481b3c4d6d15e515511acd32e087ce74074c.",
+        "title": "Kwame Nkrumah Mausoleum public heritage source",
+        "uri": "https://knmp.gov.gh/visiting-hours-rates/"
+      }
+    },
+    "id": "auth:gh-public:Q13848097",
+    "location_precision": null,
+    "names": [
+      "夸梅·恩克鲁玛陵墓",
+      "Kwame Nkrumah Mausoleum"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -0.202778,
+      5.54444
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The mausoleum within the publicly operated Kwame Nkrumah Memorial Park. The point identifies the reused coordinates for the mausoleum and its visitor precinct.",
+        "id": "auth:gh-public:Q13848097:public-0",
+        "license": null,
+        "publisher": "Kwame Nkrumah Memorial Park",
+        "revision": "Retrieved 2026-11-28; SHA-256 0753c28c6f194ad9e5014543b149481b3c4d6d15e515511acd32e087ce74074c.",
+        "title": "Kwame Nkrumah Mausoleum public heritage source",
+        "uri": "https://knmp.gov.gh/visiting-hours-rates/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The mausoleum within the publicly operated Kwame Nkrumah Memorial Park. The point identifies the reused coordinates for the mausoleum and its visitor precinct.",
+        "id": "auth:gh-public:Q13848097:public-1",
+        "license": null,
+        "publisher": "Ghana Tourism Authority",
+        "revision": "Retrieved 2026-11-28; SHA-256 1cccbf4b6641c9c344db795d9a38b190cb19843c8f43c5a83d313409b61b7138.",
+        "title": "Kwame Nkrumah Mausoleum public heritage source",
+        "uri": "https://visitghana.com/kwame-nkrumah-memorial-park/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -0.202778, latitude 5.54444.",
+        "id": "wikidata:Q13848097",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2567058289, statement Q13848097$FF854176-A35E-41B1-A607-D386285FBF70.",
+        "title": "Kwame Nkrumah Mausoleum representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q13848097.json"
+      }
+    ],
+    "source_uri": "https://knmp.gov.gh/visiting-hours-rates/",
+    "title": "Kwame Nkrumah Mausoleum",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Coordinate and publicly interpreted original location verified from frozen published records.",
+      "note": "No independently reviewed historical stage has been assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ghana Tourism Authority",
+      "Wikivoyage contributors"
+    ],
+    "description": "The historic Independence Square in Accra, a public national ceremonial space. The marker refers to the square.",
+    "description_zh": "阿克拉独立广场，又称黑星广场，为公开国家纪念和仪式空间。",
+    "details": "The historic Independence Square in Accra, a public national ceremonial space. The marker refers to the square.",
+    "geography": {
+      "authority_id": "supplement:auth:gh-public:black-star-square",
+      "countries": [
+        "GH"
+      ],
+      "note": "Named public cultural site in Accra.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The historic Independence Square in Accra, a public national ceremonial space. The marker refers to the square.",
+        "id": "auth:gh-public:black-star-square:public-0",
+        "license": null,
+        "publisher": "Ghana Tourism Authority",
+        "revision": "Retrieved 2026-11-28; SHA-256 02772666c7b0e0eb690d68a011061aac15f8c0ca29053c244bde8cc62b99b7d9.",
+        "title": "Black Star Square public heritage source",
+        "uri": "https://visitghana.com/independence-square/"
+      }
+    },
+    "id": "auth:gh-public:black-star-square",
+    "location_precision": null,
+    "names": [
+      "黑星广场",
+      "Black Star Square"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -0.1926,
+      5.5476
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The historic Independence Square in Accra, a public national ceremonial space. The marker refers to the square.",
+        "id": "auth:gh-public:black-star-square:public-0",
+        "license": null,
+        "publisher": "Ghana Tourism Authority",
+        "revision": "Retrieved 2026-11-28; SHA-256 02772666c7b0e0eb690d68a011061aac15f8c0ca29053c244bde8cc62b99b7d9.",
+        "title": "Black Star Square public heritage source",
+        "uri": "https://visitghana.com/independence-square/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -0.1926, latitude 5.5476.",
+        "id": "wikivoyage:5442534:black-star-square",
+        "license": "CC BY-SA 4.0",
+        "publisher": "Wikivoyage contributors",
+        "revision": "Permanent Accra revision 5442534; one named marker extracted.",
+        "title": "Black Star Square representative point",
+        "uri": "https://en.wikivoyage.org/w/index.php?title=Accra&oldid=5442534"
+      }
+    ],
+    "source_uri": "https://visitghana.com/independence-square/",
+    "title": "Black Star Square",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Coordinate and publicly interpreted original location verified from frozen published records.",
+      "note": "No independently reviewed historical stage has been assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ghana Tourism Authority",
+      "W. E. B. Du Bois Memorial Centre",
+      "Wikivoyage contributors"
+    ],
+    "description": "The public memorial complex in the Accra property where W.E.B. Du Bois lived. It includes the former residence museum and memorial grounds.",
+    "description_zh": "杜波依斯在阿克拉居住的原址，现设面向公众的纪念馆与纪念园。",
+    "details": "The public memorial complex in the Accra property where W.E.B. Du Bois lived. It includes the former residence museum and memorial grounds.",
+    "geography": {
+      "authority_id": "supplement:auth:gh-public:dubois-centre",
+      "countries": [
+        "GH"
+      ],
+      "note": "Named public cultural site in Accra.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The public memorial complex in the Accra property where W.E.B. Du Bois lived. It includes the former residence museum and memorial grounds.",
+        "id": "auth:gh-public:dubois-centre:public-0",
+        "license": null,
+        "publisher": "Ghana Tourism Authority",
+        "revision": "Retrieved 2026-11-28; SHA-256 e0bad20d5e32a7be856820cf3ba41722a5b6437c365a466873a45a32ca1e8980.",
+        "title": "W.E.B. Du Bois Memorial Centre public heritage source",
+        "uri": "https://visitghana.com/w-e-b-dubois-centre/"
+      }
+    },
+    "id": "auth:gh-public:dubois-centre",
+    "location_precision": null,
+    "names": [
+      "杜波依斯纪念中心",
+      "W.E.B. Du Bois Memorial Centre"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -0.17098,
+      5.58231
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The public memorial complex in the Accra property where W.E.B. Du Bois lived. It includes the former residence museum and memorial grounds.",
+        "id": "auth:gh-public:dubois-centre:public-0",
+        "license": null,
+        "publisher": "Ghana Tourism Authority",
+        "revision": "Retrieved 2026-11-28; SHA-256 e0bad20d5e32a7be856820cf3ba41722a5b6437c365a466873a45a32ca1e8980.",
+        "title": "W.E.B. Du Bois Memorial Centre public heritage source",
+        "uri": "https://visitghana.com/w-e-b-dubois-centre/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The public memorial complex in the Accra property where W.E.B. Du Bois lived. It includes the former residence museum and memorial grounds.",
+        "id": "auth:gh-public:dubois-centre:public-1",
+        "license": null,
+        "publisher": "W. E. B. Du Bois Memorial Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 4cfba7e05fbf46f6004a433e1f97a4517f323b65073659ab9ca15356a2cf074e.",
+        "title": "W.E.B. Du Bois Memorial Centre public heritage source",
+        "uri": "https://www.duboiscentreghana.com/visit"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -0.17098, latitude 5.58231.",
+        "id": "wikivoyage:5442534:dubois-centre",
+        "license": "CC BY-SA 4.0",
+        "publisher": "Wikivoyage contributors",
+        "revision": "Permanent Accra revision 5442534; one named marker extracted.",
+        "title": "W.E.B. Du Bois Memorial Centre representative point",
+        "uri": "https://en.wikivoyage.org/w/index.php?title=Accra&oldid=5442534"
+      }
+    ],
+    "source_uri": "https://visitghana.com/w-e-b-dubois-centre/",
+    "title": "W.E.B. Du Bois Memorial Centre",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Coordinate and publicly interpreted original location verified from frozen published records.",
+      "note": "No independently reviewed historical stage has been assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ghana Tourism Authority",
+      "Manhyia Palace Museum",
+      "Wikivoyage contributors"
+    ],
+    "description": "The historical palace museum visitor precinct within the Manhyia grounds in Kumasi. The point refers to the named museum listing at precinct scale.",
+    "description_zh": "库马西曼希亚王宫内的历史馆舍和公众展区，使用场所范围的代表点。",
+    "details": "The historical palace museum visitor precinct within the Manhyia grounds in Kumasi. The point refers to the named museum listing at precinct scale.",
+    "geography": {
+      "authority_id": "supplement:auth:gh-public:manhyia-museum",
+      "countries": [
+        "GH"
+      ],
+      "note": "Named public cultural site in Kumasi.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The historical palace museum visitor precinct within the Manhyia grounds in Kumasi. The point refers to the named museum listing at precinct scale.",
+        "id": "auth:gh-public:manhyia-museum:public-0",
+        "license": null,
+        "publisher": "Ghana Tourism Authority",
+        "revision": "Retrieved 2026-11-28; SHA-256 ff9e3d0f37ab31b941ba30f3c893078978916b304af3a23ed1c29da0d5600cb8.",
+        "title": "Manhyia Palace Museum public heritage source",
+        "uri": "https://visitghana.com/manhyia-palace-museum/"
+      }
+    },
+    "id": "auth:gh-public:manhyia-museum",
+    "location_precision": null,
+    "names": [
+      "曼希亚王宫博物馆",
+      "Manhyia Palace Museum"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.61579,
+      6.70348
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The historical palace museum visitor precinct within the Manhyia grounds in Kumasi. The point refers to the named museum listing at precinct scale.",
+        "id": "auth:gh-public:manhyia-museum:public-0",
+        "license": null,
+        "publisher": "Ghana Tourism Authority",
+        "revision": "Retrieved 2026-11-28; SHA-256 ff9e3d0f37ab31b941ba30f3c893078978916b304af3a23ed1c29da0d5600cb8.",
+        "title": "Manhyia Palace Museum public heritage source",
+        "uri": "https://visitghana.com/manhyia-palace-museum/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The historical palace museum visitor precinct within the Manhyia grounds in Kumasi. The point refers to the named museum listing at precinct scale.",
+        "id": "auth:gh-public:manhyia-museum:public-1",
+        "license": null,
+        "publisher": "Manhyia Palace Museum",
+        "revision": "Retrieved 2026-11-28; SHA-256 cb164c3152a2eb586f7071ce67c6bb04050d52e931c5e6f65df337668893b924.",
+        "title": "Manhyia Palace Museum public heritage source",
+        "uri": "https://manhyiapalacemuseum.org/what-to-expect-when-manhyia-museum-reopens-tomorrow-2/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -1.61579, latitude 6.70348.",
+        "id": "wikivoyage:5423285:manhyia-museum",
+        "license": "CC BY-SA 4.0",
+        "publisher": "Wikivoyage contributors",
+        "revision": "Permanent Kumasi revision 5423285; one named marker extracted.",
+        "title": "Manhyia Palace Museum representative point",
+        "uri": "https://en.wikivoyage.org/w/index.php?title=Kumasi&oldid=5423285"
+      }
+    ],
+    "source_uri": "https://visitghana.com/manhyia-palace-museum/",
+    "title": "Manhyia Palace Museum",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Coordinate and publicly interpreted original location verified from frozen published records.",
+      "note": "No independently reviewed historical stage has been assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ghana Tourism Authority",
+      "Wikivoyage contributors"
+    ],
+    "description": "The designated cultural visitor area of the Okomfo Anokye Sword Site. The Ghana Tourism Authority identifies the place within the hospital grounds.",
+    "description_zh": "库马西奥孔福·阿诺基佩剑纪念地。加纳旅游局公布的是院内指定文化参观区。",
+    "details": "The designated cultural visitor area of the Okomfo Anokye Sword Site. The Ghana Tourism Authority identifies the place within the hospital grounds.",
+    "geography": {
+      "authority_id": "supplement:auth:gh-public:okomfo-anokye-sword",
+      "countries": [
+        "GH"
+      ],
+      "note": "Named public cultural site in Kumasi.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The designated cultural visitor area of the Okomfo Anokye Sword Site. The Ghana Tourism Authority identifies the place within the hospital grounds.",
+        "id": "auth:gh-public:okomfo-anokye-sword:public-0",
+        "license": null,
+        "publisher": "Ghana Tourism Authority",
+        "revision": "Retrieved 2026-11-28; SHA-256 4c1cd367e0d34f66cb30522731efee90d0e008de434d7a69195a35bfa0d4decb.",
+        "title": "Okomfo Anokye Sword Site public heritage source",
+        "uri": "https://visitghana.com/komfo-anokye-sword-site/"
+      }
+    },
+    "id": "auth:gh-public:okomfo-anokye-sword",
+    "location_precision": null,
+    "names": [
+      "奥孔福·阿诺基佩剑纪念地",
+      "Okomfo Anokye Sword Site"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.629,
+      6.6963
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The designated cultural visitor area of the Okomfo Anokye Sword Site. The Ghana Tourism Authority identifies the place within the hospital grounds.",
+        "id": "auth:gh-public:okomfo-anokye-sword:public-0",
+        "license": null,
+        "publisher": "Ghana Tourism Authority",
+        "revision": "Retrieved 2026-11-28; SHA-256 4c1cd367e0d34f66cb30522731efee90d0e008de434d7a69195a35bfa0d4decb.",
+        "title": "Okomfo Anokye Sword Site public heritage source",
+        "uri": "https://visitghana.com/komfo-anokye-sword-site/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -1.629, latitude 6.6963.",
+        "id": "wikivoyage:5423285:okomfo-anokye-sword",
+        "license": "CC BY-SA 4.0",
+        "publisher": "Wikivoyage contributors",
+        "revision": "Permanent Kumasi revision 5423285; one named marker extracted.",
+        "title": "Okomfo Anokye Sword Site representative point",
+        "uri": "https://en.wikivoyage.org/w/index.php?title=Kumasi&oldid=5423285"
+      }
+    ],
+    "source_uri": "https://visitghana.com/komfo-anokye-sword-site/",
+    "title": "Okomfo Anokye Sword Site",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Coordinate and publicly interpreted original location verified from frozen published records.",
+      "note": "No independently reviewed historical stage has been assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Badagry Local Government",
+      "VisitBadagry local heritage tour operator",
+      "Wikidata contributors"
+    ],
+    "description": "The surviving barracoon in the Seriki Abass compound, now a small public museum about enslavement and the transatlantic trade.",
+    "description_zh": "巴达格里塞里基·阿巴斯建筑群内的原存拘禁建筑，面向公众展示跨大西洋奴隶贸易历史。",
+    "details": "The surviving barracoon in the Seriki Abass compound, now a small public museum about enslavement and the transatlantic trade.",
+    "geography": {
+      "authority_id": "supplement:auth:ng-public:Q132730791",
+      "countries": [
+        "NG"
+      ],
+      "note": "Named public cultural site in Badagry, Lagos State.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The surviving barracoon in the Seriki Abass compound, now a small public museum about enslavement and the transatlantic trade.",
+        "id": "auth:ng-public:Q132730791:public-0",
+        "license": null,
+        "publisher": "Badagry Local Government",
+        "revision": "Retrieved 2026-11-28; SHA-256 fc8b678db7df123494d4e5175ca4a25c06117b5deab0b5b91d46b5c9721c1515.",
+        "title": "Seriki Faremi Abass Barracoon and Museum public heritage source",
+        "uri": "https://badagry.lg.gov.ng/historical-monuments/"
+      }
+    },
+    "id": "auth:ng-public:Q132730791",
+    "location_precision": null,
+    "names": [
+      "塞里基·法雷米·阿巴斯旧址博物馆",
+      "Seriki Faremi Abass Barracoon and Museum"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      2.8841,
+      6.412
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The surviving barracoon in the Seriki Abass compound, now a small public museum about enslavement and the transatlantic trade.",
+        "id": "auth:ng-public:Q132730791:public-0",
+        "license": null,
+        "publisher": "Badagry Local Government",
+        "revision": "Retrieved 2026-11-28; SHA-256 fc8b678db7df123494d4e5175ca4a25c06117b5deab0b5b91d46b5c9721c1515.",
+        "title": "Seriki Faremi Abass Barracoon and Museum public heritage source",
+        "uri": "https://badagry.lg.gov.ng/historical-monuments/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The surviving barracoon in the Seriki Abass compound, now a small public museum about enslavement and the transatlantic trade.",
+        "id": "auth:ng-public:Q132730791:public-1",
+        "license": null,
+        "publisher": "VisitBadagry local heritage tour operator",
+        "revision": "Retrieved 2026-11-28; SHA-256 dfaf527a4a2577ada80b26f800008e144490a18c797c167229ede464a62a926a.",
+        "title": "Seriki Faremi Abass Barracoon and Museum public heritage source",
+        "uri": "https://visitbadagry.com/tours/badagry-heritage-day-tour/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 2.8841, latitude 6.412.",
+        "id": "wikidata:Q132730791",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2524193698, statement Q132730791$09742109-3236-49e9-9345-8b0a75277d70.",
+        "title": "Seriki Faremi Abass Barracoon and Museum representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q132730791.json"
+      }
+    ],
+    "source_uri": "https://badagry.lg.gov.ng/historical-monuments/",
+    "title": "Seriki Faremi Abass Barracoon and Museum",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Coordinate and publicly interpreted original location verified from frozen published records.",
+      "note": "No independently reviewed historical stage has been assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Freedom Park Lagos",
+      "Wikidata contributors"
+    ],
+    "description": "A public remembrance park and exhibition area at the former Broad Street Prison site. The cultural park incorporates interpretation and reconstructions of the old prison.",
+    "description_zh": "拉各斯旧布罗德街监狱原址改建的纪念公园和公众展区，包含历史解说与复原展示。",
+    "details": "A public remembrance park and exhibition area at the former Broad Street Prison site. The cultural park incorporates interpretation and reconstructions of the old prison.",
+    "geography": {
+      "authority_id": "supplement:auth:ng-public:Q25203190",
+      "countries": [
+        "NG"
+      ],
+      "note": "Named public cultural site in Lagos Island.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "A public remembrance park and exhibition area at the former Broad Street Prison site. The cultural park incorporates interpretation and reconstructions of the old prison.",
+        "id": "auth:ng-public:Q25203190:public-0",
+        "license": null,
+        "publisher": "Freedom Park Lagos",
+        "revision": "Retrieved 2026-11-28; SHA-256 8f304f450733c84a8528b3342af87997c449141c4ecfad87544e377b888fdc57.",
+        "title": "Freedom Park Lagos public heritage source",
+        "uri": "https://www.freedomparklagos.com/about.php"
+      }
+    },
+    "id": "auth:ng-public:Q25203190",
+    "location_precision": null,
+    "names": [
+      "拉各斯自由公园",
+      "Freedom Park Lagos"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      3.396512,
+      6.448902
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "A public remembrance park and exhibition area at the former Broad Street Prison site. The cultural park incorporates interpretation and reconstructions of the old prison.",
+        "id": "auth:ng-public:Q25203190:public-0",
+        "license": null,
+        "publisher": "Freedom Park Lagos",
+        "revision": "Retrieved 2026-11-28; SHA-256 8f304f450733c84a8528b3342af87997c449141c4ecfad87544e377b888fdc57.",
+        "title": "Freedom Park Lagos public heritage source",
+        "uri": "https://www.freedomparklagos.com/about.php"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "A public remembrance park and exhibition area at the former Broad Street Prison site. The cultural park incorporates interpretation and reconstructions of the old prison.",
+        "id": "auth:ng-public:Q25203190:public-1",
+        "license": null,
+        "publisher": "Freedom Park Lagos",
+        "revision": "Retrieved 2026-11-28; SHA-256 d7b60c1dfda1462f92e65ca497c9111f9b42ebe49291093d48f5166264a18fb0.",
+        "title": "Freedom Park Lagos public heritage source",
+        "uri": "https://freedomparklagos.com/visit.php"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 3.396512, latitude 6.448902.",
+        "id": "wikidata:Q25203190",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2571887050, statement Q25203190$4694E61C-E408-444A-A630-F2EAB5D1E90D.",
+        "title": "Freedom Park Lagos representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q25203190.json"
+      }
+    ],
+    "source_uri": "https://www.freedomparklagos.com/about.php",
+    "title": "Freedom Park Lagos",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Coordinate and publicly interpreted original location verified from frozen published records.",
+      "note": "No independently reviewed historical stage has been assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "African International Documentary Festival Foundation",
+      "UNESCO World Heritage Centre",
+      "Wikidata contributors"
+    ],
+    "description": "The western public museum section of the protected Gidan Makama complex in old Kano. The institution occupies its historic premises.",
+    "description_zh": "卡诺老城吉丹·马卡马历史建筑群西侧的公众博物馆，保留原址馆舍。",
+    "details": "The western public museum section of the protected Gidan Makama complex in old Kano. The institution occupies its historic premises.",
+    "geography": {
+      "authority_id": "supplement:auth:ng-public:Q5559489",
+      "countries": [
+        "NG"
+      ],
+      "note": "Named public cultural site in Kano.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The western public museum section of the protected Gidan Makama complex in old Kano. The institution occupies its historic premises.",
+        "id": "auth:ng-public:Q5559489:public-0",
+        "license": null,
+        "publisher": "African International Documentary Festival Foundation",
+        "revision": "Retrieved 2026-11-28; SHA-256 3b6a025a8cf86a133929b102212bfabf400ea937bc3adae8524b8a046461908f.",
+        "title": "Gidan Makama Museum public heritage source",
+        "uri": "https://afidff.org/en/news/afidff/120-afidff-strengthens-cultural-preservation-efforts-with-successful-completion-of-unesco-whv-2025-campaign-in-kano"
+      }
+    },
+    "id": "auth:ng-public:Q5559489",
+    "location_precision": null,
+    "names": [
+      "吉丹·马卡马历史博物馆",
+      "Gidan Makama Museum"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      8.521058,
+      11.988802
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The western public museum section of the protected Gidan Makama complex in old Kano. The institution occupies its historic premises.",
+        "id": "auth:ng-public:Q5559489:public-0",
+        "license": null,
+        "publisher": "African International Documentary Festival Foundation",
+        "revision": "Retrieved 2026-11-28; SHA-256 3b6a025a8cf86a133929b102212bfabf400ea937bc3adae8524b8a046461908f.",
+        "title": "Gidan Makama Museum public heritage source",
+        "uri": "https://afidff.org/en/news/afidff/120-afidff-strengthens-cultural-preservation-efforts-with-successful-completion-of-unesco-whv-2025-campaign-in-kano"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The western public museum section of the protected Gidan Makama complex in old Kano. The institution occupies its historic premises.",
+        "id": "auth:ng-public:Q5559489:public-1",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 9e93d22649d64b0c25790184e193279a48373fbd7ebe1f1e8f90240f099dc6f1.",
+        "title": "Gidan Makama Museum public heritage source",
+        "uri": "https://whc.unesco.org/document/225939"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 8.521058, latitude 11.988802.",
+        "id": "wikidata:Q5559489",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2515944502, statement Q5559489$12d0dbb6-44be-b76c-730a-04fc04a2d9f9.",
+        "title": "Gidan Makama Museum representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5559489.json"
+      }
+    ],
+    "source_uri": "https://afidff.org/en/news/afidff/120-afidff-strengthens-cultural-preservation-efforts-with-successful-completion-of-unesco-whv-2025-campaign-in-kano",
+    "title": "Gidan Makama Museum",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Coordinate and publicly interpreted original location verified from frozen published records.",
+      "note": "No independently reviewed historical stage has been assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Anambra State Government",
+      "UNESCO World Heritage Centre",
+      "Wikidata contributors"
+    ],
+    "description": "The Ogbunike cave landscape under the state visitor programme. The released representative point describes the overall site and public visitor scope.",
+    "description_zh": "阿南布拉州公布的奥格布尼凯洞穴文化遗址，保留整体遗产地代表点与指定参观范围。",
+    "details": "The Ogbunike cave landscape under the state visitor programme. The released representative point describes the overall site and public visitor scope.",
+    "geography": {
+      "authority_id": "supplement:auth:ng-public:Q8352506",
+      "countries": [
+        "NG"
+      ],
+      "note": "Named public cultural site in Anambra State.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ogbunike cave landscape under the state visitor programme. The released representative point describes the overall site and public visitor scope.",
+        "id": "auth:ng-public:Q8352506:public-0",
+        "license": null,
+        "publisher": "Anambra State Government",
+        "revision": "Retrieved 2026-11-28; SHA-256 3bca26d829e25b57cafe9d81031f09cc01b9ecc0ba1d996aaab90c235d3fef56.",
+        "title": "Ogbunike Caves Heritage Site public heritage source",
+        "uri": "https://anambrastate.gov.ng/visit_anambra/ogbunike-caves/"
+      }
+    },
+    "id": "auth:ng-public:Q8352506",
+    "location_precision": null,
+    "names": [
+      "奥格布尼凯洞穴遗址",
+      "Ogbunike Caves Heritage Site"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      6.90607,
+      6.18587
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ogbunike cave landscape under the state visitor programme. The released representative point describes the overall site and public visitor scope.",
+        "id": "auth:ng-public:Q8352506:public-0",
+        "license": null,
+        "publisher": "Anambra State Government",
+        "revision": "Retrieved 2026-11-28; SHA-256 3bca26d829e25b57cafe9d81031f09cc01b9ecc0ba1d996aaab90c235d3fef56.",
+        "title": "Ogbunike Caves Heritage Site public heritage source",
+        "uri": "https://anambrastate.gov.ng/visit_anambra/ogbunike-caves/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ogbunike cave landscape under the state visitor programme. The released representative point describes the overall site and public visitor scope.",
+        "id": "auth:ng-public:Q8352506:public-1",
+        "license": null,
+        "publisher": "UNESCO World Heritage Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 b70bf81774c8d8ccb21576ca95ca336aacd1f51cd6f77b5efe9bdc95d5b6e8e5.",
+        "title": "Ogbunike Caves Heritage Site public heritage source",
+        "uri": "https://whc.unesco.org/en/tentativelists/5174"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 6.90607, latitude 6.18587.",
+        "id": "wikidata:Q8352506",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2494864852, statement Q8352506$CCE00C7F-62CD-4F17-80EE-80C24E537E73.",
+        "title": "Ogbunike Caves Heritage Site representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q8352506.json"
+      }
+    ],
+    "source_uri": "https://anambrastate.gov.ng/visit_anambra/ogbunike-caves/",
+    "title": "Ogbunike Caves Heritage Site",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Coordinate and publicly interpreted original location verified from frozen published records.",
+      "note": "No independently reviewed historical stage has been assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Open University of Nigeria",
+      "VisitBadagry local heritage tour operator",
+      "Wikivoyage contributors"
+    ],
+    "description": "The former district administration building on the historical Badagry waterfront, presented as a heritage museum. The naming and coordinate represent its visitor campus.",
+    "description_zh": "巴达格里水岸历史区的旧行政馆舍现作遗产博物馆，代表点用于该公众馆区。",
+    "details": "The former district administration building on the historical Badagry waterfront, presented as a heritage museum. The naming and coordinate represent its visitor campus.",
+    "geography": {
+      "authority_id": "supplement:auth:ng-public:badagry-heritage-museum",
+      "countries": [
+        "NG"
+      ],
+      "note": "Named public cultural site in Badagry, Lagos State.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The former district administration building on the historical Badagry waterfront, presented as a heritage museum. The naming and coordinate represent its visitor campus.",
+        "id": "auth:ng-public:badagry-heritage-museum:public-0",
+        "license": null,
+        "publisher": "National Open University of Nigeria",
+        "revision": "Retrieved 2026-11-28; SHA-256 fdce50db2d007ee92a05bf7b3950ca36982f4e6fb633c8c860b6a6c9b9238948.",
+        "title": "Badagry Heritage Museum public heritage source",
+        "uri": "https://nou.edu.ng/coursewarecontent/HCM243.pdf"
+      }
+    },
+    "id": "auth:ng-public:badagry-heritage-museum",
+    "location_precision": null,
+    "names": [
+      "巴达格里遗产博物馆",
+      "Badagry Heritage Museum"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      2.889252,
+      6.412022
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The former district administration building on the historical Badagry waterfront, presented as a heritage museum. The naming and coordinate represent its visitor campus.",
+        "id": "auth:ng-public:badagry-heritage-museum:public-0",
+        "license": null,
+        "publisher": "National Open University of Nigeria",
+        "revision": "Retrieved 2026-11-28; SHA-256 fdce50db2d007ee92a05bf7b3950ca36982f4e6fb633c8c860b6a6c9b9238948.",
+        "title": "Badagry Heritage Museum public heritage source",
+        "uri": "https://nou.edu.ng/coursewarecontent/HCM243.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The former district administration building on the historical Badagry waterfront, presented as a heritage museum. The naming and coordinate represent its visitor campus.",
+        "id": "auth:ng-public:badagry-heritage-museum:public-1",
+        "license": null,
+        "publisher": "VisitBadagry local heritage tour operator",
+        "revision": "Retrieved 2026-11-28; SHA-256 9bde4f81db7545c15f92d53539c08452e09b05c5b8534fa0732b651c93886c00.",
+        "title": "Badagry Heritage Museum public heritage source",
+        "uri": "https://visitbadagry.com/tours/badagry-heritage-day-tour/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 2.889252, latitude 6.412022.",
+        "id": "wikivoyage:5394172:badagry-heritage-museum",
+        "license": "CC BY-SA 4.0",
+        "publisher": "Wikivoyage contributors",
+        "revision": "Permanent Badagry revision 5394172; one named marker extracted.",
+        "title": "Badagry Heritage Museum representative point",
+        "uri": "https://en.wikivoyage.org/w/index.php?title=Badagry&oldid=5394172"
+      }
+    ],
+    "source_uri": "https://nou.edu.ng/coursewarecontent/HCM243.pdf",
+    "title": "Badagry Heritage Museum",
+    "types": [
+      "historic-site"
+    ]
+  }
+]

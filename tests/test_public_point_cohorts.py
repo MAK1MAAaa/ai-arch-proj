@@ -147,6 +147,13 @@ def test_public_point_search_catalogue_and_provenance(
             ("KG", "auth:kg-public:", 6),
             ("TJ", "auth:tj-public:", 2),
             ("GB", "auth:gb-dfc-hed:", 60),
+            ("SN", "auth:sn-public:", 5),
+            ("BJ", "auth:bj-public:", 4),
+            ("TG", "auth:tg-public:", 4),
+            ("GH", "auth:gh-public:", 5),
+            ("NG", "auth:ng-public:", 5),
+            ("PH", "auth:ph-public:", 10),
+            ("MY", "auth:my-public:", 11),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -283,4 +290,23 @@ def test_public_point_search_catalogue_and_provenance(
             and ref["license"] == "UK Open Government Licence v3.0"
             and "Crown copyright" in ref["excerpt"]
             for ref in tynan["source_refs"]
+        )
+        maison_wood = client.get("/api/sites/auth:tg-public:Q3279064").json()
+        assert maison_wood["repr_point"] == [1.4769309198181217, 6.203787080144058]
+        assert "visitor museum" in maison_wood["details"]
+        badagry = client.get("/api/sites/auth:ng-public:badagry-heritage-museum").json()
+        assert badagry["repr_point"] == [2.889252, 6.412022]
+        assert any(
+            ref["license"] == "CC BY-SA 4.0" and "oldid=5394172" in ref["uri"]
+            for ref in badagry["source_refs"]
+        )
+        assert client.get("/api/sites/auth:ng-public:Q107036407").status_code == 404
+        tabon = client.get("/api/sites/auth:ph-public:Q477329").json()
+        assert tabon["repr_point"] == [117.981, 9.27988]
+        assert "appointment" in tabon["details"]
+        hose = client.get("/api/sites/auth:my-public:Q131293228").json()
+        assert hose["repr_point"] == [114.324739, 4.177099]
+        assert any(
+            ref["license"] == "CC BY-SA 4.0" and "oldid=1270866590" in ref["uri"]
+            for ref in hose["source_refs"]
         )

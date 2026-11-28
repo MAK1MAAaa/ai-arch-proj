@@ -1,0 +1,22 @@
+{
+  "base_count": 4843,
+  "base_ids_sha256": "1d0cd639fd57e56e951758288cbbb949bb20a9d796de1914270199a7bd510b9a",
+  "base_sites_sha256": "cfd27b1b15cc79cd86c87cd72175255c026fd5a4206c62d39379e676013fcd61",
+  "cohort_version": "ghana-nigeria-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 10,
+    "total": 4853
+  },
+  "files": {
+    "ghana_nigeria_public_review.json": {
+      "sha256": "5669e6e1c43ee5acd492f18d231a8e93f4123ffca73421da5b282041b7a8ec2e"
+    },
+    "ghana_nigeria_public_sites.json": {
+      "sha256": "03baa8015832255190176f1b87e9032dc60f0488e48603840e0c2e1cb70f56b2"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Ten official or operator-confirmed public heritage precincts in Ghana and Nigeria, matched independently with current public scope, exact reuse-licensed points and older corpus components."
+}
