@@ -1,0 +1,22 @@
+{
+  "base_count": 4408,
+  "base_ids_sha256": "852118a5ae0d0aa07cd4ab903454caff643b6c33203882061f745e6d70286cbe",
+  "base_sites_sha256": "80e9721eadcae27cb0831f8de705d88291a528aa9c96c0ca10a11a528765128a",
+  "cohort_version": "india-asi-public-v2",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 28,
+    "total": 4436
+  },
+  "files": {
+    "india_asi_next_review.json": {
+      "sha256": "71a5d01e639267be7c014e654d14a0e290dc16a765a10a8012049e3d45d1dbd8"
+    },
+    "india_asi_next_sites.json": {
+      "sha256": "5fc2ecb2d575c6b6ae51fbab98cc03f5b250bda39589751363ff71d31f66c7a6"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Twenty-eight more ASI ticketed cultural properties with independently verified identities, public visitor evidence and retained Wikidata Earth representative points."
+}

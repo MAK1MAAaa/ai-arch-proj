@@ -1,0 +1,2474 @@
+{
+  "base_count": 5121,
+  "base_ids_sha256": "3ffb7306a9359b680e990c738648c1e792278ac82549b19a81c3a740053d07a7",
+  "base_sites_sha256": "33f51898cf379f653d8810e6f18a8ee987d5078f065d59e0713c5cf2744b4ced",
+  "cohort_version": "poland-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Coordinate is within the named mosque building, independently checked in the Polish historical monuments layer and distinct from the wider village and the separate burial grounds.",
+        "point": [
+          23.591517393084,
+          53.390624971703566
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11243005.json",
+        "statement_id": "Q11243005$40AB21C4-1EDC-4B7F-AE67-AEBD86057233"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic wooden mosque in Bohoniki. The municipal visitor office publishes seasonal guided access to the mosque, coordinated with the community and worship. The separate mizar cemetery is outside the recorded precinct.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Punkt Informacji Turystycznej w Sokółce",
+          "Wikidata contributors"
+        ],
+        "description": "The historic wooden mosque in Bohoniki. The municipal visitor office publishes seasonal guided access to the mosque, coordinated with the community and worship. The separate mizar cemetery is outside the recorded precinct.",
+        "description_zh": "博霍尼基木构清真寺位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "The historic wooden mosque in Bohoniki. The municipal visitor office publishes seasonal guided access to the mosque, coordinated with the community and worship. The separate mizar cemetery is outside the recorded precinct.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q11243005",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Podlaskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal visitor office identifies the historic wooden mosque and gives conditions for guided visits.",
+            "id": "auth:pl-public:Q11243005:access",
+            "license": null,
+            "publisher": "Punkt Informacji Turystycznej w Sokółce",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 149efd2ae18868da8e7705501bf661467313720f7a65352cd571589c42dd0c7f.",
+            "title": "Meczet w Bohonikach visitor information",
+            "uri": "https://it.sokolka.pl/w-okolicy/"
+          }
+        },
+        "id": "auth:pl-public:Q11243005",
+        "location_precision": null,
+        "names": [
+          "Meczet w Bohonikach",
+          "博霍尼基木构清真寺"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          23.591517393084,
+          53.390624971703566
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal visitor office identifies the historic wooden mosque and gives conditions for guided visits.",
+            "id": "auth:pl-public:Q11243005:access",
+            "license": null,
+            "publisher": "Punkt Informacji Turystycznej w Sokółce",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 149efd2ae18868da8e7705501bf661467313720f7a65352cd571589c42dd0c7f.",
+            "title": "Meczet w Bohonikach visitor information",
+            "uri": "https://it.sokolka.pl/w-okolicy/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 23.591517393084, latitude 53.390624971703566.",
+            "id": "wikidata:Q11243005",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2516146057; P625 Q11243005$40AB21C4-1EDC-4B7F-AE67-AEBD86057233, rank normal.",
+            "title": "Meczet w Bohonikach original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11243005.json"
+          }
+        ],
+        "source_uri": "https://it.sokolka.pl/w-okolicy/",
+        "title": "Meczet w Bohonikach",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visitor-bohoniki.html",
+          "sha256": "149efd2ae18868da8e7705501bf661467313720f7a65352cd571589c42dd0c7f",
+          "uri": "https://it.sokolka.pl/w-okolicy/"
+        },
+        {
+          "filename": "source/Q11243005.json",
+          "sha256": "0cb899f35567bd2745e42683f48c8d15e76c0b0bacbcd8bf438aed068d76626c",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11243005.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The original source point lies within the named mosque footprint. The national designation also includes distant properties and burial grounds, which are outside this entry’s scope.",
+        "point": [
+          23.81377,
+          53.17774
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11772931.json",
+        "statement_id": "Q11772931$7C9EF72C-0580-4061-B813-CC038D074BD6"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic wooden mosque in Kruszyniany. Custodian-guided interior visits follow the published May to September schedule. Outside those months they require advance arrangement, and worship takes precedence. The separate mizar cemetery is outside the recorded precinct.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Muzułmańska Gmina Wyznaniowa w Kruszynianach",
+          "Punkt Informacji Turystycznej w Sokółce",
+          "Wikidata contributors"
+        ],
+        "description": "The historic wooden mosque in Kruszyniany. Custodian-guided interior visits follow the published May to September schedule. Outside those months they require advance arrangement, and worship takes precedence. The separate mizar cemetery is outside the recorded precinct.",
+        "description_zh": "克鲁希尼亚内木构清真寺位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "The historic wooden mosque in Kruszyniany. Custodian-guided interior visits follow the published May to September schedule. Outside those months they require advance arrangement, and worship takes precedence. The separate mizar cemetery is outside the recorded precinct.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q11772931",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Podlaskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The community’s site identifies its mosque and the visiting contact for the original building.",
+            "id": "auth:pl-public:Q11772931:access",
+            "license": null,
+            "publisher": "Muzułmańska Gmina Wyznaniowa w Kruszynianach",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 01fdfd25ff5a5bf3890222e21a38ce46ba8eca237d2eadecba1e0e104421e44a.",
+            "title": "Meczet w Kruszynianach visitor information",
+            "uri": "https://kruszyniany.com.pl/kontakt/"
+          }
+        },
+        "id": "auth:pl-public:Q11772931",
+        "location_precision": null,
+        "names": [
+          "Meczet w Kruszynianach",
+          "克鲁希尼亚内木构清真寺",
+          "meczet w Kruszynianach"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          23.81377,
+          53.17774
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The community’s site identifies its mosque and the visiting contact for the original building.",
+            "id": "auth:pl-public:Q11772931:access",
+            "license": null,
+            "publisher": "Muzułmańska Gmina Wyznaniowa w Kruszynianach",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 01fdfd25ff5a5bf3890222e21a38ce46ba8eca237d2eadecba1e0e104421e44a.",
+            "title": "Meczet w Kruszynianach visitor information",
+            "uri": "https://kruszyniany.com.pl/kontakt/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal visitor guide specifies public summer and advance-booked off-season visits.",
+            "id": "auth:pl-public:Q11772931:other-visit",
+            "license": null,
+            "publisher": "Punkt Informacji Turystycznej w Sokółce",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 149efd2ae18868da8e7705501bf661467313720f7a65352cd571589c42dd0c7f.",
+            "title": "Meczet w Kruszynianach public visit confirmation",
+            "uri": "https://it.sokolka.pl/w-okolicy/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 23.81377, latitude 53.17774.",
+            "id": "wikidata:Q11772931",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2516145781; P625 Q11772931$7C9EF72C-0580-4061-B813-CC038D074BD6, rank normal.",
+            "title": "Meczet w Kruszynianach original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11772931.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The mosque custodian publishes guided interior visits, seasonal scheduling and advance booking outside the usual season.",
+            "id": "auth:pl-public:Q11772931:independent-visitor",
+            "license": null,
+            "publisher": "Muzułmańska Gmina Wyznaniowa w Kruszynianach",
+            "revision": "Frozen 2026-11-28. SHA-256 fb32266eaa04e0ac463e62ff2067c96ed3595d2edec98a9335c2c4dda8ace357.",
+            "title": "Meczet w Kruszynianach access evidence",
+            "uri": "https://kruszyniany.com.pl/zwiedzanie/"
+          }
+        ],
+        "source_uri": "https://kruszyniany.com.pl/kontakt/",
+        "title": "Meczet w Kruszynianach",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visitor-kruszyniany.html",
+          "sha256": "01fdfd25ff5a5bf3890222e21a38ce46ba8eca237d2eadecba1e0e104421e44a",
+          "uri": "https://kruszyniany.com.pl/kontakt/"
+        },
+        {
+          "filename": "source/kruszyniany-access.html",
+          "sha256": "149efd2ae18868da8e7705501bf661467313720f7a65352cd571589c42dd0c7f",
+          "uri": "https://it.sokolka.pl/w-okolicy/"
+        },
+        {
+          "filename": "source/Q11772931.json",
+          "sha256": "149fba434c0489cc5eea9ddb46154d9c1a1ec8319ffcf97c40e4fc7d7afe04e5",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11772931.json"
+        },
+        {
+          "filename": "source/independent-kruszyniany-visit.html",
+          "sha256": "fb32266eaa04e0ac463e62ff2067c96ed3595d2edec98a9335c2c4dda8ace357",
+          "uri": "https://kruszyniany.com.pl/zwiedzanie/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The source point is approximately six metres from the tower footprint and falls within the mapped castle ruins. The tower and associated ruins form one visitor site.",
+        "point": [
+          18.3272,
+          52.6721
+        ],
+        "precision": 0.14814500501923,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11787647.json",
+        "statement_id": "Q11787647$DBB4F199-CED7-4EBD-8496-2F9B7FC6CC48"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Standing brick tower and original castle remains on the same historic peninsula in Kruszwica. The tower receives seasonal visitors.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Gmina Kruszwica",
+          "Kujawsko-Pomorska Organizacja Turystyczna",
+          "Wikidata contributors"
+        ],
+        "description": "Standing brick tower and original castle remains on the same historic peninsula in Kruszwica. The tower receives seasonal visitors.",
+        "description_zh": "克鲁什维察鼠塔与城堡遗址位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "Standing brick tower and original castle remains on the same historic peninsula in Kruszwica. The tower receives seasonal visitors.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q11787647",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Kujawsko-Pomorskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The city identifies Mysia Wieża as the historic tower of the castle peninsula and describes public access.",
+            "id": "auth:pl-public:Q11787647:access",
+            "license": null,
+            "publisher": "Gmina Kruszwica",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 d218cb4eef4847fc700d25a88415cfb16283e5751301bfae56b0336f4fcd35e2.",
+            "title": "Mysia Wieża i ruiny zamku w Kruszwicy visitor information",
+            "uri": "https://www.gminakruszwica.pl/page/mysia-wieza"
+          }
+        },
+        "id": "auth:pl-public:Q11787647",
+        "location_precision": null,
+        "names": [
+          "Mysia Wieża i ruiny zamku w Kruszwicy",
+          "克鲁什维察鼠塔与城堡遗址",
+          "Mysia Wieża"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          18.3272,
+          52.6721
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The city identifies Mysia Wieża as the historic tower of the castle peninsula and describes public access.",
+            "id": "auth:pl-public:Q11787647:access",
+            "license": null,
+            "publisher": "Gmina Kruszwica",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 d218cb4eef4847fc700d25a88415cfb16283e5751301bfae56b0336f4fcd35e2.",
+            "title": "Mysia Wieża i ruiny zamku w Kruszwicy visitor information",
+            "uri": "https://www.gminakruszwica.pl/page/mysia-wieza"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The regional authority describes seasonal tower tours on the named castle headland.",
+            "id": "auth:pl-public:Q11787647:other-visit",
+            "license": null,
+            "publisher": "Kujawsko-Pomorska Organizacja Turystyczna",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 67e1d52dad9a96bef9abf330604dc26e98abfc466499a779128730f49b31d55a.",
+            "title": "Mysia Wieża i ruiny zamku w Kruszwicy public visit confirmation",
+            "uri": "https://kujawsko-pomorskie.travel/atrakcje/mysia-wieza-w-kruszwicy/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 18.3272, latitude 52.6721.",
+            "id": "wikidata:Q11787647",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2497671729; P625 Q11787647$DBB4F199-CED7-4EBD-8496-2F9B7FC6CC48, rank normal.",
+            "title": "Mysia Wieża i ruiny zamku w Kruszwicy original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11787647.json"
+          }
+        ],
+        "source_uri": "https://www.gminakruszwica.pl/page/mysia-wieza",
+        "title": "Mysia Wieża i ruiny zamku w Kruszwicy",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visitor-kruszwica.html",
+          "sha256": "d218cb4eef4847fc700d25a88415cfb16283e5751301bfae56b0336f4fcd35e2",
+          "uri": "https://www.gminakruszwica.pl/page/mysia-wieza"
+        },
+        {
+          "filename": "source/kruszwica-regional.html",
+          "sha256": "67e1d52dad9a96bef9abf330604dc26e98abfc466499a779128730f49b31d55a",
+          "uri": "https://kujawsko-pomorskie.travel/atrakcje/mysia-wieza-w-kruszwicy/"
+        },
+        {
+          "filename": "source/Q11787647.json",
+          "sha256": "15a7b6cadb4915821a61f6ecb903d206b13475340433000089ce576edfff2fdb",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11787647.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Point lies within the national protected fortification area and is distinct from Westerplatte across the water and other Gdańsk landmarks.",
+        "point": [
+          18.679138888889,
+          54.395861111111
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1409002.json",
+        "statement_id": "Q1409002$8280C271-F204-496D-B039-9AC3D37C2F1F"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic fortification at the former mouth of the Vistula. Public visits follow the Museum of Gdańsk's designated visitor route and conservation conditions.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Muzeum Gdańska",
+          "Wikidata contributors"
+        ],
+        "description": "Historic fortification at the former mouth of the Vistula. Public visits follow the Museum of Gdańsk's designated visitor route and conservation conditions.",
+        "description_zh": "维斯沃乌伊希切堡垒位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "Historic fortification at the former mouth of the Vistula. Public visits follow the Museum of Gdańsk's designated visitor route and conservation conditions.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q1409002",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Pomorskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal museum identifies the historic fort and describes the limits of public access during conservation.",
+            "id": "auth:pl-public:Q1409002:access",
+            "license": null,
+            "publisher": "Muzeum Gdańska",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 6d24ae47546b9c8dd3748619c87b866be90ae246fdb848d4c73ab9caf6a4c978.",
+            "title": "Twierdza Wisłoujście visitor information",
+            "uri": "https://muzeumgdansk.pl/oddzialy-muzeum/twierdza-wisloujscie/"
+          }
+        },
+        "id": "auth:pl-public:Q1409002",
+        "location_precision": null,
+        "names": [
+          "Twierdza Wisłoujście",
+          "维斯沃乌伊希切堡垒"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          18.679138888889,
+          54.395861111111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal museum identifies the historic fort and describes the limits of public access during conservation.",
+            "id": "auth:pl-public:Q1409002:access",
+            "license": null,
+            "publisher": "Muzeum Gdańska",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 6d24ae47546b9c8dd3748619c87b866be90ae246fdb848d4c73ab9caf6a4c978.",
+            "title": "Twierdza Wisłoujście visitor information",
+            "uri": "https://muzeumgdansk.pl/oddzialy-muzeum/twierdza-wisloujscie/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum publicises guided interpretive visits for November 2026.",
+            "id": "auth:pl-public:Q1409002:other-visit",
+            "license": null,
+            "publisher": "Muzeum Gdańska",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 4c27be88a07451b42ca6846a704cc3dd5c8e9fc89481ecef07df6ad3f3da9972.",
+            "title": "Twierdza Wisłoujście public visit confirmation",
+            "uri": "https://muzeumgdansk.pl/edukacja/strefa-studenta/szczegoly/news/sladami-powstancow-listopadowych/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 18.679138888889, latitude 54.395861111111.",
+            "id": "wikidata:Q1409002",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2549984640; P625 Q1409002$8280C271-F204-496D-B039-9AC3D37C2F1F, rank normal.",
+            "title": "Twierdza Wisłoujście original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1409002.json"
+          }
+        ],
+        "source_uri": "https://muzeumgdansk.pl/oddzialy-muzeum/twierdza-wisloujscie/",
+        "title": "Twierdza Wisłoujście",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visitor-wisloujscie.html",
+          "sha256": "6d24ae47546b9c8dd3748619c87b866be90ae246fdb848d4c73ab9caf6a4c978",
+          "uri": "https://muzeumgdansk.pl/oddzialy-muzeum/twierdza-wisloujscie/"
+        },
+        {
+          "filename": "source/wisloujscie-latest.html",
+          "sha256": "4c27be88a07451b42ca6846a704cc3dd5c8e9fc89481ecef07df6ad3f3da9972",
+          "uri": "https://muzeumgdansk.pl/edukacja/strefa-studenta/szczegoly/news/sladami-powstancow-listopadowych/"
+        },
+        {
+          "filename": "source/Q1409002.json",
+          "sha256": "b19991e6a89779f2654932422afa81bc93f7fb174d450d1c70567c26881822a2",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1409002.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The point is within the protected and independently named castle ruins; the point represents the site with current route restrictions.",
+        "point": [
+          21.310555555556,
+          50.713888888889
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1571728.json",
+        "statement_id": "q1571728$C1FA6417-ECDB-4932-8A93-21472D74B85A"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Standing ruins of the historic Krzyżtopór castle at Ujazd. Visits take place on the operator’s designated routes during phased conservation.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Instytucja Kultury Zamek Krzyżtopór w Ujeździe",
+          "Wikidata contributors"
+        ],
+        "description": "Standing ruins of the historic Krzyżtopór castle at Ujazd. Visits take place on the operator’s designated routes during phased conservation.",
+        "description_zh": "克日什托普尔城堡遗址位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "Standing ruins of the historic Krzyżtopór castle at Ujazd. Visits take place on the operator’s designated routes during phased conservation.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q1571728",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Świętokrzyskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The managing cultural institution documents current ticketing and identifies partial closures for conservation.",
+            "id": "auth:pl-public:Q1571728:access",
+            "license": null,
+            "publisher": "Instytucja Kultury Zamek Krzyżtopór w Ujeździe",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 ed23904da6ecdae3dc086937972e2c82369dd8144b83084176a1ef2a7aca64e2.",
+            "title": "Ruiny zamku Krzyżtopór visitor information",
+            "uri": "https://krzyztopor.org.pl/"
+          }
+        },
+        "id": "auth:pl-public:Q1571728",
+        "location_precision": null,
+        "names": [
+          "Ruiny zamku Krzyżtopór",
+          "克日什托普尔城堡遗址",
+          "Krzyżtopór"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          21.310555555556,
+          50.713888888889
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The managing cultural institution documents current ticketing and identifies partial closures for conservation.",
+            "id": "auth:pl-public:Q1571728:access",
+            "license": null,
+            "publisher": "Instytucja Kultury Zamek Krzyżtopór w Ujeździe",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 ed23904da6ecdae3dc086937972e2c82369dd8144b83084176a1ef2a7aca64e2.",
+            "title": "Ruiny zamku Krzyżtopór visitor information",
+            "uri": "https://krzyztopor.org.pl/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The 2026 admission schedule confirms continuing public visits.",
+            "id": "auth:pl-public:Q1571728:other-visit",
+            "license": null,
+            "publisher": "Instytucja Kultury Zamek Krzyżtopór w Ujeździe",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 5d744e9ece561b3f914cd08e82f6a2f4ddc59c91cd1dec6db6948d5e17da7072.",
+            "title": "Ruiny zamku Krzyżtopór public visit confirmation",
+            "uri": "https://krzyztopor.org.pl/strona-3405-cennik.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 21.310555555556, latitude 50.713888888889.",
+            "id": "wikidata:Q1571728",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2559571079; P625 q1571728$C1FA6417-ECDB-4932-8A93-21472D74B85A, rank normal.",
+            "title": "Ruiny zamku Krzyżtopór original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1571728.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The current museum visitor-hours page confirms the ongoing public castle route with exceptions and on-site rules.",
+            "id": "auth:pl-public:Q1571728:independent-visitor",
+            "license": null,
+            "publisher": "Instytucja Kultury Zamek Krzyżtopór w Ujeździe",
+            "revision": "Frozen 2026-11-28. SHA-256 8f063b7109cd332ac5205cb2d06db70a9af95b4fdf29d428bd98d9649201fdb3.",
+            "title": "Ruiny zamku Krzyżtopór access evidence",
+            "uri": "https://www.krzyztopor.org.pl/strona-3394-godziny_otwarcia.html"
+          }
+        ],
+        "source_uri": "https://krzyztopor.org.pl/",
+        "title": "Ruiny zamku Krzyżtopór",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visitor-krzyztopor.html",
+          "sha256": "ed23904da6ecdae3dc086937972e2c82369dd8144b83084176a1ef2a7aca64e2",
+          "uri": "https://krzyztopor.org.pl/"
+        },
+        {
+          "filename": "source/krzyztopor-2026.html",
+          "sha256": "5d744e9ece561b3f914cd08e82f6a2f4ddc59c91cd1dec6db6948d5e17da7072",
+          "uri": "https://krzyztopor.org.pl/strona-3405-cennik.html"
+        },
+        {
+          "filename": "source/Q1571728.json",
+          "sha256": "a4adcc17283aa1d3756e9d7e42adf5e89137adab3c86d63b72076796ccf7be6b",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1571728.json"
+        },
+        {
+          "filename": "source/independent-krzyztopor-hours.html",
+          "sha256": "8f063b7109cd332ac5205cb2d06db70a9af95b4fdf29d428bd98d9649201fdb3",
+          "uri": "https://www.krzyztopor.org.pl/strona-3394-godziny_otwarcia.html"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The coordinate falls within the national protected castle and park, next to the mapped original castle building and distinct from the village centre.",
+        "point": [
+          22.649366666667,
+          49.7764
+        ],
+        "precision": 2.7777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2969507.json",
+        "statement_id": "q2969507$3BA22978-DF92-4B51-A039-0266942649B0"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic Krasiczyn castle and park. The castle interior follows the operator's guided visit programme, with advance winter bookings. Park access has its own posted conditions.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Fundacja Pro Arte et Historia",
+          "Wikidata contributors"
+        ],
+        "description": "Historic Krasiczyn castle and park. The castle interior follows the operator's guided visit programme, with advance winter bookings. Park access has its own posted conditions.",
+        "description_zh": "克拉希琴城堡位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "Historic Krasiczyn castle and park. The castle interior follows the operator's guided visit programme, with advance winter bookings. Park access has its own posted conditions.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q2969507",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Podkarpackie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator confirms public guided visits in the original castle and defines winter bookings and designated park access.",
+            "id": "auth:pl-public:Q2969507:access",
+            "license": null,
+            "publisher": "Fundacja Pro Arte et Historia",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 e3e13cce88998afb11366588a552906f468cefe10d236f7e401c14e66c5c1879.",
+            "title": "Zamek w Krasiczynie visitor information",
+            "uri": "https://www.krasiczyn.com.pl/zamek/zwiedzanie"
+          }
+        },
+        "id": "auth:pl-public:Q2969507",
+        "location_precision": null,
+        "names": [
+          "Zamek w Krasiczynie",
+          "克拉希琴城堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          22.649366666667,
+          49.7764
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator confirms public guided visits in the original castle and defines winter bookings and designated park access.",
+            "id": "auth:pl-public:Q2969507:access",
+            "license": null,
+            "publisher": "Fundacja Pro Arte et Historia",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 e3e13cce88998afb11366588a552906f468cefe10d236f7e401c14e66c5c1879.",
+            "title": "Zamek w Krasiczynie visitor information",
+            "uri": "https://www.krasiczyn.com.pl/zamek/zwiedzanie"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 22.649366666667, latitude 49.7764.",
+            "id": "wikidata:Q2969507",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2528727716; P625 q2969507$3BA22978-DF92-4B51-A039-0266942649B0, rank normal.",
+            "title": "Zamek w Krasiczynie original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2969507.json"
+          }
+        ],
+        "source_uri": "https://www.krasiczyn.com.pl/zamek/zwiedzanie",
+        "title": "Zamek w Krasiczynie",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visitor-krasiczyn.html",
+          "sha256": "e3e13cce88998afb11366588a552906f468cefe10d236f7e401c14e66c5c1879",
+          "uri": "https://www.krasiczyn.com.pl/zamek/zwiedzanie"
+        },
+        {
+          "filename": "source/Q2969507.json",
+          "sha256": "d2f20ac7d702e44128a7db060f6886e31c5e6948fb304ff28c1b794ff0944763",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2969507.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The original point lies within the NID-protected monastery precinct at the reconstructed main church; the property is represented once.",
+        "point": [
+          23.337091666667,
+          53.210966666667
+        ],
+        "precision": 2.7777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2987314.json",
+        "statement_id": "q2987314$8AD6F408-98ED-4EC0-B6BC-2ECDD873EB60"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic monastic precinct with organised visits, the reconstructed Annunciation church and public icon museum areas.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Gmina Supraśl",
+          "Wikidata contributors"
+        ],
+        "description": "Historic monastic precinct with organised visits, the reconstructed Annunciation church and public icon museum areas.",
+        "description_zh": "苏普拉希尔圣母领报修道院位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "Historic monastic precinct with organised visits, the reconstructed Annunciation church and public icon museum areas.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q2987314",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Podlaskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal site identifies the monastic visitor precinct and its managed routes and icon museum.",
+            "id": "auth:pl-public:Q2987314:access",
+            "license": null,
+            "publisher": "Gmina Supraśl",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 29801dfe99bf1d961ae8e6dc2a18d5b07612a0d3f1c204fc1e1ede8dab69adeb.",
+            "title": "Monaster Zwiastowania w Supraślu visitor information",
+            "uri": "https://www.suprasl.podlasie.pl/index.php/polecamy-w-supraslu"
+          }
+        },
+        "id": "auth:pl-public:Q2987314",
+        "location_precision": null,
+        "names": [
+          "Monaster Zwiastowania w Supraślu",
+          "苏普拉希尔圣母领报修道院",
+          "Monaster Zwiastowania Przenajświętszej Bogurodzicy i św. Jana Teologa w Supraślu"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          23.337091666667,
+          53.210966666667
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal site identifies the monastic visitor precinct and its managed routes and icon museum.",
+            "id": "auth:pl-public:Q2987314:access",
+            "license": null,
+            "publisher": "Gmina Supraśl",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 29801dfe99bf1d961ae8e6dc2a18d5b07612a0d3f1c204fc1e1ede8dab69adeb.",
+            "title": "Monaster Zwiastowania w Supraślu visitor information",
+            "uri": "https://www.suprasl.podlasie.pl/index.php/polecamy-w-supraslu"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 23.337091666667, latitude 53.210966666667.",
+            "id": "wikidata:Q2987314",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2572179269; P625 q2987314$8AD6F408-98ED-4EC0-B6BC-2ECDD873EB60, rank normal.",
+            "title": "Monaster Zwiastowania w Supraślu original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2987314.json"
+          }
+        ],
+        "source_uri": "https://www.suprasl.podlasie.pl/index.php/polecamy-w-supraslu",
+        "title": "Monaster Zwiastowania w Supraślu",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visitor-suprasl.html",
+          "sha256": "29801dfe99bf1d961ae8e6dc2a18d5b07612a0d3f1c204fc1e1ede8dab69adeb",
+          "uri": "https://www.suprasl.podlasie.pl/index.php/polecamy-w-supraslu"
+        },
+        {
+          "filename": "source/Q2987314.json",
+          "sha256": "ac764ff985c1359b46b4a6cf2b72edcf7c7dda96b5e662f55b92494f5e84af0f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2987314.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The selected point lies on the named protected island. It denotes the managed island archaeological venue rather than the mainland museum.",
+        "point": [
+          17.3778,
+          52.526669444444
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4180580.json",
+        "statement_id": "q4180580$DF9BF241-491F-4D4D-93F9-903842065BFD"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic island stronghold and public archaeological reserve in Lake Lednica. Visits follow the museum's seasonal crossing schedule and specific announced off-season opening dates.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Muzeum Pierwszych Piastów na Lednicy",
+          "Wikidata contributors"
+        ],
+        "description": "Historic island stronghold and public archaeological reserve in Lake Lednica. Visits follow the museum's seasonal crossing schedule and specific announced off-season opening dates.",
+        "description_zh": "莱德尼察岛遗址位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "Historic island stronghold and public archaeological reserve in Lake Lednica. Visits follow the museum's seasonal crossing schedule and specific announced off-season opening dates.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q4180580",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Wielkopolskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum’s ticketing service lists Ostrów Lednicki island visits separately from its mainland museum facilities.",
+            "id": "auth:pl-public:Q4180580:access",
+            "license": null,
+            "publisher": "Muzeum Pierwszych Piastów na Lednicy",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 a1af202d427744ac36760bd61781e8af152d2bf32d1115517bd577080ad9da1f.",
+            "title": "Ostrów Lednicki visitor information",
+            "uri": "https://sklep.lednicamuzeum.pl/rezerwacja/wydarzenie.html"
+          }
+        },
+        "id": "auth:pl-public:Q4180580",
+        "location_precision": null,
+        "names": [
+          "Ostrów Lednicki",
+          "莱德尼察岛遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          17.3778,
+          52.526669444444
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum’s ticketing service lists Ostrów Lednicki island visits separately from its mainland museum facilities.",
+            "id": "auth:pl-public:Q4180580:access",
+            "license": null,
+            "publisher": "Muzeum Pierwszych Piastów na Lednicy",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 a1af202d427744ac36760bd61781e8af152d2bf32d1115517bd577080ad9da1f.",
+            "title": "Ostrów Lednicki visitor information",
+            "uri": "https://sklep.lednicamuzeum.pl/rezerwacja/wydarzenie.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Its 2026 operating order distinguishes the separate archaeological branches and visiting arrangements.",
+            "id": "auth:pl-public:Q4180580:other-visit",
+            "license": null,
+            "publisher": "Muzeum Pierwszych Piastów na Lednicy",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 6ad55ed4b6754f053e37c585aac9e7cff29f847c1f711f4efec1a9e67d09bdad.",
+            "title": "Ostrów Lednicki public visit confirmation",
+            "uri": "https://lednicamuzeum.pl/files/2026%20ceny%20bilet%C3%B3w%20-%20zarz%C4%85dzenie/Zarz%C4%85dzenie_sezon_2026.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 17.3778, latitude 52.526669444444.",
+            "id": "wikidata:Q4180580",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2550120993; P625 q4180580$DF9BF241-491F-4D4D-93F9-903842065BFD, rank normal.",
+            "title": "Ostrów Lednicki original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4180580.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator recorded selected November 2026 guided visits beyond the main ferry season.",
+            "id": "auth:pl-public:Q4180580:independent-visitor",
+            "license": null,
+            "publisher": "Muzeum Pierwszych Piastów na Lednicy",
+            "revision": "Frozen 2026-11-28. SHA-256 78b53dfccf0b98c374c15980f325324c76619ea99ca8a01c3d6252a8bee0d781.",
+            "title": "Ostrów Lednicki access evidence",
+            "uri": "https://lednicamuzeum.pl/wiadomosc%2Czapraszamy-na-listopadowe-spacery.html"
+          }
+        ],
+        "source_uri": "https://sklep.lednicamuzeum.pl/rezerwacja/wydarzenie.html",
+        "title": "Ostrów Lednicki",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visitor-ostrow-lednicki.html",
+          "sha256": "a1af202d427744ac36760bd61781e8af152d2bf32d1115517bd577080ad9da1f",
+          "uri": "https://sklep.lednicamuzeum.pl/rezerwacja/wydarzenie.html"
+        },
+        {
+          "filename": "source/lednica-director-2026.pdf",
+          "sha256": "6ad55ed4b6754f053e37c585aac9e7cff29f847c1f711f4efec1a9e67d09bdad",
+          "uri": "https://lednicamuzeum.pl/files/2026%20ceny%20bilet%C3%B3w%20-%20zarz%C4%85dzenie/Zarz%C4%85dzenie_sezon_2026.pdf"
+        },
+        {
+          "filename": "source/Q4180580.json",
+          "sha256": "13be23b1be9fff00bace2387495311a39494f7c446f571ee7ed068baaa42eb74",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4180580.json"
+        },
+        {
+          "filename": "source/independent-ostrow-november.html",
+          "sha256": "78b53dfccf0b98c374c15980f325324c76619ea99ca8a01c3d6252a8bee0d781",
+          "uri": "https://lednicamuzeum.pl/wiadomosc%2Czapraszamy-na-listopadowe-spacery.html"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The original point lies within the NID Cathedral Hill protected property, close to the basilica footprint. It is separate from the temporarily closed former bishop’s palace.",
+        "point": [
+          19.68166667,
+          54.35708333
+        ],
+        "precision": 2.777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q478321.json",
+        "statement_id": "Q478321$0D39F9C5-4AC3-4ACA-9516-46D10F3C3DA2"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic Frombork basilica and its designated cathedral visit, subject to worship and the cathedral museum schedule. The former Bishop's Palace and Copernicus Tower are separate buildings undergoing works.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Muzeum Pomnika Historii Frombork – Zespół Katedralny",
+          "Archidiecezja Warmińska",
+          "Wikidata contributors",
+          "Muzeum Mikołaja Kopernika we Fromborku"
+        ],
+        "description": "The historic Frombork basilica and its designated cathedral visit, subject to worship and the cathedral museum schedule. The former Bishop's Palace and Copernicus Tower are separate buildings undergoing works.",
+        "description_zh": "弗龙堡大教堂位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "The historic Frombork basilica and its designated cathedral visit, subject to worship and the cathedral museum schedule. The former Bishop's Palace and Copernicus Tower are separate buildings undergoing works.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q478321",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Warmińsko-Mazurskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The cathedral museum publishes visitor ticketing for the historic site at Katedralna 8, Frombork.",
+            "id": "auth:pl-public:Q478321:access",
+            "license": null,
+            "publisher": "Muzeum Pomnika Historii Frombork – Zespół Katedralny",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 17cdec7dfa268a1c971d2fb1ee80f1b085011a8efe1b586709e038786ee757a4.",
+            "title": "Bazylika archikatedralna we Fromborku visitor information",
+            "uri": "https://bilety.muzeumfrombork.pl/"
+          }
+        },
+        "id": "auth:pl-public:Q478321",
+        "location_precision": null,
+        "names": [
+          "Bazylika archikatedralna we Fromborku",
+          "弗龙堡大教堂",
+          "Bazylika Archikatedralna Wniebowzięcia Najświętszej Maryi Panny i św. Andrzeja we Fromborku"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          19.68166667,
+          54.35708333
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The cathedral museum publishes visitor ticketing for the historic site at Katedralna 8, Frombork.",
+            "id": "auth:pl-public:Q478321:access",
+            "license": null,
+            "publisher": "Muzeum Pomnika Historii Frombork – Zespół Katedralny",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 17cdec7dfa268a1c971d2fb1ee80f1b085011a8efe1b586709e038786ee757a4.",
+            "title": "Bazylika archikatedralna we Fromborku visitor information",
+            "uri": "https://bilety.muzeumfrombork.pl/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The diocese formally identifies the Frombork basilica among its named historic churches.",
+            "id": "auth:pl-public:Q478321:other-visit",
+            "license": null,
+            "publisher": "Archidiecezja Warmińska",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 28c32b532713ad9744f6b3b150eb1b60980730852cae31043b0e63ed37f986ad.",
+            "title": "Bazylika archikatedralna we Fromborku public visit confirmation",
+            "uri": "https://www.archwarmia.pl/archidiecezja/bazyliki-i-sanktuaria/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 19.68166667, latitude 54.35708333.",
+            "id": "wikidata:Q478321",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2522240256; P625 Q478321$0D39F9C5-4AC3-4ACA-9516-46D10F3C3DA2, rank normal.",
+            "title": "Bazylika archikatedralna we Fromborku original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q478321.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The director identifies the old Bishop's Palace as a separate museum building closed for works and separately names Copernicus Tower.",
+            "id": "auth:pl-public:Q478321:independent-visitor",
+            "license": null,
+            "publisher": "Muzeum Mikołaja Kopernika we Fromborku",
+            "revision": "Frozen 2026-11-28. SHA-256 9cf3d8430e09602234c5b473ba57e13a9593bbec1d1fc5bdb735527df07c8da8.",
+            "title": "Bazylika archikatedralna we Fromborku access evidence",
+            "uri": "https://muzeumkopernika.pl/komunikat-dyrektora-muzeum-mikolaja-kopernika-we-fromborku/"
+          }
+        ],
+        "source_uri": "https://bilety.muzeumfrombork.pl/",
+        "title": "Bazylika archikatedralna we Fromborku",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/frombork-ticket.html",
+          "sha256": "17cdec7dfa268a1c971d2fb1ee80f1b085011a8efe1b586709e038786ee757a4",
+          "uri": "https://bilety.muzeumfrombork.pl/"
+        },
+        {
+          "filename": "source/frombork-diocese.html",
+          "sha256": "28c32b532713ad9744f6b3b150eb1b60980730852cae31043b0e63ed37f986ad",
+          "uri": "https://www.archwarmia.pl/archidiecezja/bazyliki-i-sanktuaria/"
+        },
+        {
+          "filename": "source/Q478321.json",
+          "sha256": "f162e8785332d429491c83719054353d08ef6d9125f8efe3ef0f1c97498fde9a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q478321.json"
+        },
+        {
+          "filename": "source/independent-frombork-closure.html",
+          "sha256": "9cf3d8430e09602234c5b473ba57e13a9593bbec1d1fc5bdb735527df07c8da8",
+          "uri": "https://muzeumkopernika.pl/komunikat-dyrektora-muzeum-mikolaja-kopernika-we-fromborku/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The point is within the exact protected castle area and the separately named original castle footprint.",
+        "point": [
+          20.582856,
+          54.125761
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5420724.json",
+        "statement_id": "Q5420724$1B9AE061-8340-44F9-A851-1DC9A086373E"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic brick bishop’s castle with public exhibitions in the original property at Lidzbark Warmiński.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Muzeum Warmii i Mazur",
+          "Wikidata contributors"
+        ],
+        "description": "Historic brick bishop’s castle with public exhibitions in the original property at Lidzbark Warmiński.",
+        "description_zh": "利兹巴克瓦尔明斯基主教城堡位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "Historic brick bishop’s castle with public exhibitions in the original property at Lidzbark Warmiński.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q5420724",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Warmińsko-Mazurskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The castle museum publishes year-round visitor schedules and admits the public to the historic property.",
+            "id": "auth:pl-public:Q5420724:access",
+            "license": null,
+            "publisher": "Muzeum Warmii i Mazur",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 87ab02f274dbaf5ee680f644f0f868bc0d04717e5ac84f8825d08ba222d3d97b.",
+            "title": "Zamek biskupów warmińskich w Lidzbarku Warmińskim visitor information",
+            "uri": "https://lidzbark.muzeum.olsztyn.pl/1125,Muzeum-Warminskie-w-Lidzbarku-Warminskim.html"
+          }
+        },
+        "id": "auth:pl-public:Q5420724",
+        "location_precision": null,
+        "names": [
+          "Zamek biskupów warmińskich w Lidzbarku Warmińskim",
+          "利兹巴克瓦尔明斯基主教城堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          20.582856,
+          54.125761
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The castle museum publishes year-round visitor schedules and admits the public to the historic property.",
+            "id": "auth:pl-public:Q5420724:access",
+            "license": null,
+            "publisher": "Muzeum Warmii i Mazur",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 87ab02f274dbaf5ee680f644f0f868bc0d04717e5ac84f8825d08ba222d3d97b.",
+            "title": "Zamek biskupów warmińskich w Lidzbarku Warmińskim visitor information",
+            "uri": "https://lidzbark.muzeum.olsztyn.pl/1125,Muzeum-Warminskie-w-Lidzbarku-Warminskim.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 20.582856, latitude 54.125761.",
+            "id": "wikidata:Q5420724",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2559580792; P625 Q5420724$1B9AE061-8340-44F9-A851-1DC9A086373E, rank normal.",
+            "title": "Zamek biskupów warmińskich w Lidzbarku Warmińskim original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5420724.json"
+          }
+        ],
+        "source_uri": "https://lidzbark.muzeum.olsztyn.pl/1125,Muzeum-Warminskie-w-Lidzbarku-Warminskim.html",
+        "title": "Zamek biskupów warmińskich w Lidzbarku Warmińskim",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/lidzbark-visiting.html",
+          "sha256": "87ab02f274dbaf5ee680f644f0f868bc0d04717e5ac84f8825d08ba222d3d97b",
+          "uri": "https://lidzbark.muzeum.olsztyn.pl/1125,Muzeum-Warminskie-w-Lidzbarku-Warminskim.html"
+        },
+        {
+          "filename": "source/Q5420724.json",
+          "sha256": "5d35a387714b3380aa17413ff78c8833d55e80165a8038b870ee6c29378d7e43",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5420724.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The original position is within the shared historic property by the mapped castle’s main building and is distinct from the separate modern hotel block.",
+        "point": [
+          18.82800635,
+          53.834329766667
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5574254.json",
+        "statement_id": "Q5574254$798958B0-9704-4B09-A978-EC8988EA657F"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic castle at Gniew with managed public exhibition, chapel and defensive gallery visits in the old core.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Zamek Gniew visitor operator",
+          "Wikidata contributors"
+        ],
+        "description": "Historic castle at Gniew with managed public exhibition, chapel and defensive gallery visits in the old core.",
+        "description_zh": "格涅夫城堡位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "Historic castle at Gniew with managed public exhibition, chapel and defensive gallery visits in the old core.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q5574254",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Pomorskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The castle’s official tour information identifies the archaeological museum as guide operator and lists visits to the original historic core.",
+            "id": "auth:pl-public:Q5574254:access",
+            "license": null,
+            "publisher": "Zamek Gniew visitor operator",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 006b1272823d8cadc68d5627ae7b155542bc45920cc0b21aa4cf06a0c93e5bc7.",
+            "title": "Zamek w Gniewie visitor information",
+            "uri": "https://www.zamek-gniew.pl/atrakcje/zwiedzanie-zamku"
+          }
+        },
+        "id": "auth:pl-public:Q5574254",
+        "location_precision": null,
+        "names": [
+          "Zamek w Gniewie",
+          "格涅夫城堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          18.82800635,
+          53.834329766667
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The castle’s official tour information identifies the archaeological museum as guide operator and lists visits to the original historic core.",
+            "id": "auth:pl-public:Q5574254:access",
+            "license": null,
+            "publisher": "Zamek Gniew visitor operator",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 006b1272823d8cadc68d5627ae7b155542bc45920cc0b21aa4cf06a0c93e5bc7.",
+            "title": "Zamek w Gniewie visitor information",
+            "uri": "https://www.zamek-gniew.pl/atrakcje/zwiedzanie-zamku"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 18.82800635, latitude 53.834329766667.",
+            "id": "wikidata:Q5574254",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2512692884; P625 Q5574254$798958B0-9704-4B09-A978-EC8988EA657F, rank normal.",
+            "title": "Zamek w Gniewie original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5574254.json"
+          }
+        ],
+        "source_uri": "https://www.zamek-gniew.pl/atrakcje/zwiedzanie-zamku",
+        "title": "Zamek w Gniewie",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/gniew-tours.html",
+          "sha256": "006b1272823d8cadc68d5627ae7b155542bc45920cc0b21aa4cf06a0c93e5bc7",
+          "uri": "https://www.zamek-gniew.pl/atrakcje/zwiedzanie-zamku"
+        },
+        {
+          "filename": "source/Q5574254.json",
+          "sha256": "4006b61d418cf6f0ce0967b908ecd4d039622fb8316177c59654ceda63b716dc",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5574254.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The retained original point lies inside the exact Great Synagogue footprint within the historic town and preserves the source’s coarse precision value.",
+        "point": [
+          22.7672733545765,
+          53.20671665178951
+        ],
+        "precision": 0.014998425047948,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5735403.json",
+        "statement_id": "Q5735403$03DA1045-DE7F-44A7-8087-7277D50F7036"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic Great Synagogue used as a publicly accessible museum in its original building, with interpreted restored interiors.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Muzeum Podlaskie w Białymstoku",
+          "Wikidata contributors"
+        ],
+        "description": "Historic Great Synagogue used as a publicly accessible museum in its original building, with interpreted restored interiors.",
+        "description_zh": "蒂科钦大会堂位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "Historic Great Synagogue used as a publicly accessible museum in its original building, with interpreted restored interiors.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q5735403",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Podlaskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The current museum publishes opening information for its original synagogue branch and gives separate notices for the neighbouring Talmudic House.",
+            "id": "auth:pl-public:Q5735403:access",
+            "license": null,
+            "publisher": "Muzeum Podlaskie w Białymstoku",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 6acc5e560cecdfe27770fc2bda5533a7b6c94236460452e3b91c59ac8530eba7.",
+            "title": "Wielka Synagoga w Tykocinie visitor information",
+            "uri": "https://muzeumpodlaskie.pl/oddzialy/muzeum-w-tykocinie/"
+          }
+        },
+        "id": "auth:pl-public:Q5735403",
+        "location_precision": null,
+        "names": [
+          "Wielka Synagoga w Tykocinie",
+          "蒂科钦大会堂"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          22.7672733545765,
+          53.20671665178951
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The current museum publishes opening information for its original synagogue branch and gives separate notices for the neighbouring Talmudic House.",
+            "id": "auth:pl-public:Q5735403:access",
+            "license": null,
+            "publisher": "Muzeum Podlaskie w Białymstoku",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 6acc5e560cecdfe27770fc2bda5533a7b6c94236460452e3b91c59ac8530eba7.",
+            "title": "Wielka Synagoga w Tykocinie visitor information",
+            "uri": "https://muzeumpodlaskie.pl/oddzialy/muzeum-w-tykocinie/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum identifies the Great Synagogue’s historical and reconstructed interior features.",
+            "id": "auth:pl-public:Q5735403:other-visit",
+            "license": null,
+            "publisher": "Muzeum Podlaskie w Białymstoku",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 b94a3646e6fa16f6d83685a8f89b7e1f8c38410a3171c387cf9b0e9cec3a9aea.",
+            "title": "Wielka Synagoga w Tykocinie public visit confirmation",
+            "uri": "https://muzeumpodlaskie.pl/oddzialy/muzeum-w-tykocinie/wystawy/wystawy-stale/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 22.7672733545765, latitude 53.20671665178951.",
+            "id": "wikidata:Q5735403",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2564003166; P625 Q5735403$03DA1045-DE7F-44A7-8087-7277D50F7036, rank normal.",
+            "title": "Wielka Synagoga w Tykocinie original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5735403.json"
+          }
+        ],
+        "source_uri": "https://muzeumpodlaskie.pl/oddzialy/muzeum-w-tykocinie/",
+        "title": "Wielka Synagoga w Tykocinie",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visitor-tykocin.html",
+          "sha256": "6acc5e560cecdfe27770fc2bda5533a7b6c94236460452e3b91c59ac8530eba7",
+          "uri": "https://muzeumpodlaskie.pl/oddzialy/muzeum-w-tykocinie/"
+        },
+        {
+          "filename": "source/tykocin-identity.html",
+          "sha256": "b94a3646e6fa16f6d83685a8f89b7e1f8c38410a3171c387cf9b0e9cec3a9aea",
+          "uri": "https://muzeumpodlaskie.pl/oddzialy/muzeum-w-tykocinie/wystawy/wystawy-stale/"
+        },
+        {
+          "filename": "source/Q5735403.json",
+          "sha256": "4d075219b8158f2199306124a493e44b17c6c960a912b319cba6cd73a56f4129",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5735403.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The point lies inside the NID-protected estate and independently identified castle building. The neighbouring hotel, nature reserve and other features are separate.",
+        "point": [
+          16.291666666666668,
+          50.84222222222222
+        ],
+        "precision": 0.0002777777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q738109.json",
+        "statement_id": "Q738109$F26F5BAC-4830-4C23-86DE-5378CA9384B5"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic Książ castle with public tickets and visit routes in the original castle and its managed surroundings.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Zamek Książ w Wałbrzychu",
+          "Wikidata contributors"
+        ],
+        "description": "Historic Książ castle with public tickets and visit routes in the original castle and its managed surroundings.",
+        "description_zh": "克雄日城堡位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "Historic Książ castle with public tickets and visit routes in the original castle and its managed surroundings.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q738109",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Dolnośląskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The castle operator confirms visiting programmes in the historic building and associated heritage visitor areas.",
+            "id": "auth:pl-public:Q738109:access",
+            "license": null,
+            "publisher": "Zamek Książ w Wałbrzychu",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 951ba575075018a9f17d7cdb48aa6cf26395e0f1fbe3af6d42dbef729d4e36e1.",
+            "title": "Zamek Książ visitor information",
+            "uri": "https://www.ksiaz.walbrzych.pl/turystyka/zwiedzanie"
+          }
+        },
+        "id": "auth:pl-public:Q738109",
+        "location_precision": null,
+        "names": [
+          "Zamek Książ",
+          "克雄日城堡",
+          "Książ"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          16.291666666666668,
+          50.84222222222222
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The castle operator confirms visiting programmes in the historic building and associated heritage visitor areas.",
+            "id": "auth:pl-public:Q738109:access",
+            "license": null,
+            "publisher": "Zamek Książ w Wałbrzychu",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 951ba575075018a9f17d7cdb48aa6cf26395e0f1fbe3af6d42dbef729d4e36e1.",
+            "title": "Zamek Książ visitor information",
+            "uri": "https://www.ksiaz.walbrzych.pl/turystyka/zwiedzanie"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 16.291666666666668, latitude 50.84222222222222.",
+            "id": "wikidata:Q738109",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2523996589; P625 Q738109$F26F5BAC-4830-4C23-86DE-5378CA9384B5, rank normal.",
+            "title": "Zamek Książ original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q738109.json"
+          }
+        ],
+        "source_uri": "https://www.ksiaz.walbrzych.pl/turystyka/zwiedzanie",
+        "title": "Zamek Książ",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visitor-ksiaz.html",
+          "sha256": "951ba575075018a9f17d7cdb48aa6cf26395e0f1fbe3af6d42dbef729d4e36e1",
+          "uri": "https://www.ksiaz.walbrzych.pl/turystyka/zwiedzanie"
+        },
+        {
+          "filename": "source/Q738109.json",
+          "sha256": "59da3493851632795360096a8a6cfe7a6e861fae0cd9f1bb7a86a75d9cfce338",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q738109.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The original coordinates are within the public museum site and its Great Synagogue building, away from the separately named Small Synagogue.",
+        "point": [
+          23.553222222222,
+          51.544666666667
+        ],
+        "precision": 2.7777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q749652.json",
+        "statement_id": "q749652$DCEDB49C-2DD3-4BC9-80D0-A166FEDAF196"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic Great Synagogue in Włodawa, one part of a publicly accessible museum in the original synagogue complex.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Muzeum – Zespół Synagogalny we Włodawie",
+          "Wikidata contributors"
+        ],
+        "description": "Historic Great Synagogue in Włodawa, one part of a publicly accessible museum in the original synagogue complex.",
+        "description_zh": "弗沃达瓦大会堂位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "Historic Great Synagogue in Włodawa, one part of a publicly accessible museum in the original synagogue complex.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q749652",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Lubelskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The site operator publishes visiting regulations for the historic synagogue museum.",
+            "id": "auth:pl-public:Q749652:access",
+            "license": null,
+            "publisher": "Muzeum – Zespół Synagogalny we Włodawie",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 96f00364c0513d5730ce91c0bcefb4639f1c67fcce76e3e881ec70eb0998f176.",
+            "title": "Wielka Synagoga we Włodawie visitor information",
+            "uri": "https://muzeumwlodawa.eu/regulamin-zwiedzania-muzeum"
+          }
+        },
+        "id": "auth:pl-public:Q749652",
+        "location_precision": null,
+        "names": [
+          "Wielka Synagoga we Włodawie",
+          "弗沃达瓦大会堂"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          23.553222222222,
+          51.544666666667
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The site operator publishes visiting regulations for the historic synagogue museum.",
+            "id": "auth:pl-public:Q749652:access",
+            "license": null,
+            "publisher": "Muzeum – Zespół Synagogalny we Włodawie",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 96f00364c0513d5730ce91c0bcefb4639f1c67fcce76e3e881ec70eb0998f176.",
+            "title": "Wielka Synagoga we Włodawie visitor information",
+            "uri": "https://muzeumwlodawa.eu/regulamin-zwiedzania-muzeum"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum’s current calendar documents public programmes in the synagogue complex.",
+            "id": "auth:pl-public:Q749652:other-visit",
+            "license": null,
+            "publisher": "Muzeum – Zespół Synagogalny we Włodawie",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 db4e4c6688960f5bd7a37a6d592ae2ff43fd415c914c35bcb3ebc382cc2cf77c.",
+            "title": "Wielka Synagoga we Włodawie public visit confirmation",
+            "uri": "https://muzeumwlodawa.eu/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 23.553222222222, latitude 51.544666666667.",
+            "id": "wikidata:Q749652",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2497661458; P625 q749652$DCEDB49C-2DD3-4BC9-80D0-A166FEDAF196, rank normal.",
+            "title": "Wielka Synagoga we Włodawie original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q749652.json"
+          }
+        ],
+        "source_uri": "https://muzeumwlodawa.eu/regulamin-zwiedzania-muzeum",
+        "title": "Wielka Synagoga we Włodawie",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/wola-museum.html",
+          "sha256": "96f00364c0513d5730ce91c0bcefb4639f1c67fcce76e3e881ec70eb0998f176",
+          "uri": "https://muzeumwlodawa.eu/regulamin-zwiedzania-muzeum"
+        },
+        {
+          "filename": "source/wola-2026.html",
+          "sha256": "db4e4c6688960f5bd7a37a6d592ae2ff43fd415c914c35bcb3ebc382cc2cf77c",
+          "uri": "https://muzeumwlodawa.eu/"
+        },
+        {
+          "filename": "source/Q749652.json",
+          "sha256": "b9fb0d46c85602174a2fa9cba16fff92afb736c4d3f649de161f51c4b642eede",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q749652.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The original point is within the exact protected palace and park, near the independently named palace outline. Subsidiary venues form part of this visitor estate.",
+        "point": [
+          22.2345626,
+          50.0684554
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q773316.json",
+        "statement_id": "Q773316$E15F8D75-A158-4C8D-A9A8-CCB39F17C2AC"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic palace and managed heritage visitor estate, with public interpretation in original rooms and designated grounds.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Muzeum–Zamek w Łańcucie",
+          "Wikidata contributors"
+        ],
+        "description": "Historic palace and managed heritage visitor estate, with public interpretation in original rooms and designated grounds.",
+        "description_zh": "万楚特城堡位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "Historic palace and managed heritage visitor estate, with public interpretation in original rooms and designated grounds.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q773316",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Podkarpackie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official castle museum lists current public access and scheduled exhibits in its historic property.",
+            "id": "auth:pl-public:Q773316:access",
+            "license": null,
+            "publisher": "Muzeum–Zamek w Łańcucie",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 8f0b0b9751e5eb2fe723574fa2f0ee71ccc27639f249f4fbe9241e6d34fd4d19.",
+            "title": "Zamek w Łańcucie visitor information",
+            "uri": "https://www.zamek-lancut.pl/homepage"
+          }
+        },
+        "id": "auth:pl-public:Q773316",
+        "location_precision": null,
+        "names": [
+          "Zamek w Łańcucie",
+          "万楚特城堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          22.2345626,
+          50.0684554
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official castle museum lists current public access and scheduled exhibits in its historic property.",
+            "id": "auth:pl-public:Q773316:access",
+            "license": null,
+            "publisher": "Muzeum–Zamek w Łańcucie",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 8f0b0b9751e5eb2fe723574fa2f0ee71ccc27639f249f4fbe9241e6d34fd4d19.",
+            "title": "Zamek w Łańcucie visitor information",
+            "uri": "https://www.zamek-lancut.pl/homepage"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 22.2345626, latitude 50.0684554.",
+            "id": "wikidata:Q773316",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2571886210; P625 Q773316$E15F8D75-A158-4C8D-A9A8-CCB39F17C2AC, rank normal.",
+            "title": "Zamek w Łańcucie original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q773316.json"
+          }
+        ],
+        "source_uri": "https://www.zamek-lancut.pl/homepage",
+        "title": "Zamek w Łańcucie",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visitor-lancut.html",
+          "sha256": "8f0b0b9751e5eb2fe723574fa2f0ee71ccc27639f249f4fbe9241e6d34fd4d19",
+          "uri": "https://www.zamek-lancut.pl/homepage"
+        },
+        {
+          "filename": "source/Q773316.json",
+          "sha256": "2d67766fe1f9248077c7ef14f3ff4930be892d93fd5ed2dc451c74038c2344fe",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q773316.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The original source point lies inside the NID-defined archaeological reserve in the historical settlement peninsula, separate from Biskupin village.",
+        "point": [
+          17.744691,
+          52.788378
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q866393.json",
+        "statement_id": "Q866393$7DCEBDE5-5A14-4309-B38B-D46CB7AF3B57"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological reserve on Lake Biskupin, with the original settlement area and interpreted reconstructions.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Muzeum Archeologiczne w Biskupinie",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological reserve on Lake Biskupin, with the original settlement area and interpreted reconstructions.",
+        "description_zh": "比斯库平考古保护区位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "Public archaeological reserve on Lake Biskupin, with the original settlement area and interpreted reconstructions.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q866393",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Kujawsko-Pomorskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The managing museum gives visiting terms for the archaeological reserve and distinguishes it from the entrance and car park.",
+            "id": "auth:pl-public:Q866393:access",
+            "license": null,
+            "publisher": "Muzeum Archeologiczne w Biskupinie",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 83b24994ad535eaf0b8fa487d8edaa67b75b088ede1f5cf08d35b59f3b61f1e3.",
+            "title": "Rezerwat Archeologiczny w Biskupinie visitor information",
+            "uri": "https://biskupin.pl/zwiedzanie/"
+          }
+        },
+        "id": "auth:pl-public:Q866393",
+        "location_precision": null,
+        "names": [
+          "Rezerwat Archeologiczny w Biskupinie",
+          "比斯库平考古保护区",
+          "Stanowisko archeologiczne w Biskupinie"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          17.744691,
+          52.788378
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The managing museum gives visiting terms for the archaeological reserve and distinguishes it from the entrance and car park.",
+            "id": "auth:pl-public:Q866393:access",
+            "license": null,
+            "publisher": "Muzeum Archeologiczne w Biskupinie",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 83b24994ad535eaf0b8fa487d8edaa67b75b088ede1f5cf08d35b59f3b61f1e3.",
+            "title": "Rezerwat Archeologiczny w Biskupinie visitor information",
+            "uri": "https://biskupin.pl/zwiedzanie/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 17.744691, latitude 52.788378.",
+            "id": "wikidata:Q866393",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2575070427; P625 Q866393$7DCEBDE5-5A14-4309-B38B-D46CB7AF3B57, rank normal.",
+            "title": "Rezerwat Archeologiczny w Biskupinie original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q866393.json"
+          }
+        ],
+        "source_uri": "https://biskupin.pl/zwiedzanie/",
+        "title": "Rezerwat Archeologiczny w Biskupinie",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visitor-biskupin.html",
+          "sha256": "83b24994ad535eaf0b8fa487d8edaa67b75b088ede1f5cf08d35b59f3b61f1e3",
+          "uri": "https://biskupin.pl/zwiedzanie/"
+        },
+        {
+          "filename": "source/Q866393.json",
+          "sha256": "1745aba7a8ce5c2f4170daa1f9055d32bc7fc403ecb929104e7e92654b5ad16f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q866393.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The original point lies within the named historic castle by the visible tower. It represents the public historic castle property as a whole.",
+        "point": [
+          16.097819444444,
+          50.921577777778
+        ],
+        "precision": 2.7777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q891409.json",
+        "statement_id": "Q891409$FCEC190F-98F8-4BA3-ACBC-A068D7CD7CFB"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Standing remains of the original hilltop castle in Bolków, operated as a public historic property.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Muzeum Karkonoskie – Zamek Bolków",
+          "Wikidata contributors"
+        ],
+        "description": "Standing remains of the original hilltop castle in Bolków, operated as a public historic property.",
+        "description_zh": "博尔库夫城堡遗址位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "Standing remains of the original hilltop castle in Bolków, operated as a public historic property.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q891409",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Dolnośląskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The branch operator identifies the ruins and publishes public visiting arrangements.",
+            "id": "auth:pl-public:Q891409:access",
+            "license": null,
+            "publisher": "Muzeum Karkonoskie – Zamek Bolków",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 35da2236e2c46a38f3a1e6c1beab6c1abe1bda463aa4ec6b69065e6fbf7ee8b3.",
+            "title": "Zamek w Bolkowie visitor information",
+            "uri": "https://zamek-bolkow.info.pl/"
+          }
+        },
+        "id": "auth:pl-public:Q891409",
+        "location_precision": null,
+        "names": [
+          "Zamek w Bolkowie",
+          "博尔库夫城堡遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          16.097819444444,
+          50.921577777778
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The branch operator identifies the ruins and publishes public visiting arrangements.",
+            "id": "auth:pl-public:Q891409:access",
+            "license": null,
+            "publisher": "Muzeum Karkonoskie – Zamek Bolków",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 35da2236e2c46a38f3a1e6c1beab6c1abe1bda463aa4ec6b69065e6fbf7ee8b3.",
+            "title": "Zamek w Bolkowie visitor information",
+            "uri": "https://zamek-bolkow.info.pl/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 16.097819444444, latitude 50.921577777778.",
+            "id": "wikidata:Q891409",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2550117460; P625 Q891409$FCEC190F-98F8-4BA3-ACBC-A068D7CD7CFB, rank normal.",
+            "title": "Zamek w Bolkowie original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q891409.json"
+          }
+        ],
+        "source_uri": "https://zamek-bolkow.info.pl/",
+        "title": "Zamek w Bolkowie",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visitor-bolkow.html",
+          "sha256": "35da2236e2c46a38f3a1e6c1beab6c1abe1bda463aa4ec6b69065e6fbf7ee8b3",
+          "uri": "https://zamek-bolkow.info.pl/"
+        },
+        {
+          "filename": "source/Q891409.json",
+          "sha256": "7de9853735c3142a8e12ea0cd74549bd3548d1a91df8006b8b1c2fb1e80262b3",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q891409.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The source point lies within the mapped and separately named archaeological reserve; the village itself is a distinct place.",
+        "point": [
+          17.648972222222,
+          52.362111111111
+        ],
+        "precision": 2.7777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9282297.json",
+        "statement_id": "Q9282297$EDB37BF7-D87B-4B6F-A710-AD0BBAACE852"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological reserve on the historic fortified settlement at Grzybowo, near Września.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Muzeum Pierwszych Piastów na Lednicy",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological reserve on the historic fortified settlement at Grzybowo, near Września.",
+        "description_zh": "格日博沃城寨遗址位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "Public archaeological reserve on the historic fortified settlement at Grzybowo, near Września.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q9282297",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Wielkopolskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The regional museum identifies the original archaeological branch and its visitor accessibility.",
+            "id": "auth:pl-public:Q9282297:access",
+            "license": null,
+            "publisher": "Muzeum Pierwszych Piastów na Lednicy",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 37372a08ef7361173ce8fcff2c2cfb8fc53745549a581ee8b9a1be59eeae10d8.",
+            "title": "Gród w Grzybowie visitor information",
+            "uri": "https://lednicamuzeum.pl/strona%2Cdostepnosc.html"
+          }
+        },
+        "id": "auth:pl-public:Q9282297",
+        "location_precision": null,
+        "names": [
+          "Gród w Grzybowie",
+          "格日博沃城寨遗址",
+          "Grzybowo"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          17.648972222222,
+          52.362111111111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The regional museum identifies the original archaeological branch and its visitor accessibility.",
+            "id": "auth:pl-public:Q9282297:access",
+            "license": null,
+            "publisher": "Muzeum Pierwszych Piastów na Lednicy",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 37372a08ef7361173ce8fcff2c2cfb8fc53745549a581ee8b9a1be59eeae10d8.",
+            "title": "Gród w Grzybowie visitor information",
+            "uri": "https://lednicamuzeum.pl/strona%2Cdostepnosc.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum operating order lists the public Grzybowo reserve as a separate branch.",
+            "id": "auth:pl-public:Q9282297:other-visit",
+            "license": null,
+            "publisher": "Muzeum Pierwszych Piastów na Lednicy",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 6ad55ed4b6754f053e37c585aac9e7cff29f847c1f711f4efec1a9e67d09bdad.",
+            "title": "Gród w Grzybowie public visit confirmation",
+            "uri": "https://lednicamuzeum.pl/files/2026%20ceny%20bilet%C3%B3w%20-%20zarz%C4%85dzenie/Zarz%C4%85dzenie_sezon_2026.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 17.648972222222, latitude 52.362111111111.",
+            "id": "wikidata:Q9282297",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2520226895; P625 Q9282297$EDB37BF7-D87B-4B6F-A710-AD0BBAACE852, rank normal.",
+            "title": "Gród w Grzybowie original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9282297.json"
+          }
+        ],
+        "source_uri": "https://lednicamuzeum.pl/strona%2Cdostepnosc.html",
+        "title": "Gród w Grzybowie",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visitor-grzybowo.html",
+          "sha256": "37372a08ef7361173ce8fcff2c2cfb8fc53745549a581ee8b9a1be59eeae10d8",
+          "uri": "https://lednicamuzeum.pl/strona%2Cdostepnosc.html"
+        },
+        {
+          "filename": "source/lednica-director-2026.pdf",
+          "sha256": "6ad55ed4b6754f053e37c585aac9e7cff29f847c1f711f4efec1a9e67d09bdad",
+          "uri": "https://lednicamuzeum.pl/files/2026%20ceny%20bilet%C3%B3w%20-%20zarz%C4%85dzenie/Zarz%C4%85dzenie_sezon_2026.pdf"
+        },
+        {
+          "filename": "source/Q9282297.json",
+          "sha256": "755e140a64e5ad3e8949166f69a74256421ff73d704fd70cbc453f162c1ca9c5",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9282297.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The representative matches the publicly accessible castle complex and its courtyard, within ten metres of the named built outline.",
+        "point": [
+          17.49166667,
+          54.16861111
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9386613.json",
+        "statement_id": "Q9386613$76BA74A6-F154-4CF1-BDB7-38897DFA8BF3"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic Teutonic castle with the West Kashubian Museum in its original north wing. One point represents its historic visitor precinct.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Urząd Miejski w Bytowie",
+          "Muzeum Zachodniokaszubskie w Bytowie",
+          "Wikidata contributors"
+        ],
+        "description": "Historic Teutonic castle with the West Kashubian Museum in its original north wing. One point represents its historic visitor precinct.",
+        "description_zh": "比图夫城堡位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "Historic Teutonic castle with the West Kashubian Museum in its original north wing. One point represents its historic visitor precinct.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q9386613",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Pomorskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Bytów municipality identifies the original castle and the public museum in its north wing.",
+            "id": "auth:pl-public:Q9386613:access",
+            "license": null,
+            "publisher": "Urząd Miejski w Bytowie",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 eca5d6dfd0c9ca551f861fa1f824dca7083d6f17c432ba333afd6c5105122a48.",
+            "title": "Zamek w Bytowie visitor information",
+            "uri": "https://www.bytow.com.pl/bw/Zabytki%2C152"
+          }
+        },
+        "id": "auth:pl-public:Q9386613",
+        "location_precision": null,
+        "names": [
+          "Zamek w Bytowie",
+          "比图夫城堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          17.49166667,
+          54.16861111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Bytów municipality identifies the original castle and the public museum in its north wing.",
+            "id": "auth:pl-public:Q9386613:access",
+            "license": null,
+            "publisher": "Urząd Miejski w Bytowie",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 eca5d6dfd0c9ca551f861fa1f824dca7083d6f17c432ba333afd6c5105122a48.",
+            "title": "Zamek w Bytowie visitor information",
+            "uri": "https://www.bytow.com.pl/bw/Zabytki%2C152"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator confirms public exhibitions and identifies the original castle’s street address.",
+            "id": "auth:pl-public:Q9386613:other-visit",
+            "license": null,
+            "publisher": "Muzeum Zachodniokaszubskie w Bytowie",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 0dfa62c8f23c716f1be8057c5f9c1340ef622dd3fb68f19cf42d4955dfdf43d0.",
+            "title": "Zamek w Bytowie public visit confirmation",
+            "uri": "https://muzeumbytow.pl/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 17.49166667, latitude 54.16861111.",
+            "id": "wikidata:Q9386613",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2512694897; P625 Q9386613$76BA74A6-F154-4CF1-BDB7-38897DFA8BF3, rank normal.",
+            "title": "Zamek w Bytowie original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9386613.json"
+          }
+        ],
+        "source_uri": "https://www.bytow.com.pl/bw/Zabytki%2C152",
+        "title": "Zamek w Bytowie",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visitor-bytow.html",
+          "sha256": "eca5d6dfd0c9ca551f861fa1f824dca7083d6f17c432ba333afd6c5105122a48",
+          "uri": "https://www.bytow.com.pl/bw/Zabytki%2C152"
+        },
+        {
+          "filename": "source/bytow-museum.html",
+          "sha256": "0dfa62c8f23c716f1be8057c5f9c1340ef622dd3fb68f19cf42d4955dfdf43d0",
+          "uri": "https://muzeumbytow.pl/"
+        },
+        {
+          "filename": "source/Q9386613.json",
+          "sha256": "8c2436242bab296006e34d3104dbff5ec35a547a1812604f2f10548a7caa871d",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9386613.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The selected point falls within the named original castle precinct. It is reserved for the castle venue, so the nearby town walls and attractions are not added separately here.",
+        "point": [
+          20.99952,
+          50.59091
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9386751.json",
+        "statement_id": "Q9386751$A100A271-4532-484D-B257-6ADC4092F4E5"
+      },
+      "independent_review": {
+        "method": "Independent agent checked public visitor scope and identity with primary sources, exact CC0 Wikidata coordinates, National Heritage Board UNESCO overlay and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic castle precinct within Szydłów’s preserved medieval town, with public entry to its original castle venue.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched public visitor venue to independent original coordinates.",
+          "note": "Point-only addition. Separate historical phases are not assigned here.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Regionalna Organizacja Turystyczna Województwa Świętokrzyskiego",
+          "Wikidata contributors"
+        ],
+        "description": "Historic castle precinct within Szydłów’s preserved medieval town, with public entry to its original castle venue.",
+        "description_zh": "希德武夫城堡位于波兰。地图标注公开文化遗址的代表点。",
+        "details": "Historic castle precinct within Szydłów’s preserved medieval town, with public entry to its original castle venue.",
+        "geography": {
+          "authority_id": "supplement:auth:pl-public:Q9386751",
+          "countries": [
+            "PL"
+          ],
+          "note": "WGS84 representative point of the public heritage venue in Świętokrzyskie.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The regional tourism authority distinguishes ticketed castle visits from the synagogue and other listed town attractions.",
+            "id": "auth:pl-public:Q9386751:access",
+            "license": null,
+            "publisher": "Regionalna Organizacja Turystyczna Województwa Świętokrzyskiego",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 5c788a8b19a5c2a3fe208a9077c78cf42247b25349138ce57f4c382381c0b5a2.",
+            "title": "Zamek w Szydłowie visitor information",
+            "uri": "https://swietokrzyskie.travel/informator_turystyczny/zabytki/zamek_w_szydlowie"
+          }
+        },
+        "id": "auth:pl-public:Q9386751",
+        "location_precision": null,
+        "names": [
+          "Zamek w Szydłowie",
+          "希德武夫城堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          20.99952,
+          50.59091
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The regional tourism authority distinguishes ticketed castle visits from the synagogue and other listed town attractions.",
+            "id": "auth:pl-public:Q9386751:access",
+            "license": null,
+            "publisher": "Regionalna Organizacja Turystyczna Województwa Świętokrzyskiego",
+            "revision": "Snapshot retrieved 2026-11-28; SHA-256 5c788a8b19a5c2a3fe208a9077c78cf42247b25349138ce57f4c382381c0b5a2.",
+            "title": "Zamek w Szydłowie visitor information",
+            "uri": "https://swietokrzyskie.travel/informator_turystyczny/zabytki/zamek_w_szydlowie"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 20.99952, latitude 50.59091.",
+            "id": "wikidata:Q9386751",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2512695213; P625 Q9386751$A100A271-4532-484D-B257-6ADC4092F4E5, rank normal.",
+            "title": "Zamek w Szydłowie original representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9386751.json"
+          }
+        ],
+        "source_uri": "https://swietokrzyskie.travel/informator_turystyczny/zabytki/zamek_w_szydlowie",
+        "title": "Zamek w Szydłowie",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visitor-szydlow.html",
+          "sha256": "5c788a8b19a5c2a3fe208a9077c78cf42247b25349138ce57f4c382381c0b5a2",
+          "uri": "https://swietokrzyskie.travel/informator_turystyczny/zabytki/zamek_w_szydlowie"
+        },
+        {
+          "filename": "source/Q9386751.json",
+          "sha256": "9b9106edc9e1302fc368f04c724bb77d20d6489ae6473da6d543feabe88c62a8",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9386751.json"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Nineteen public historic places and one archaeological reservation across nine Polish provinces, with current access and source-overlap screening."
+}

@@ -1,0 +1,22 @@
+{
+  "base_count": 4853,
+  "base_ids_sha256": "46266dcabc3c995182185f79e1b86705ca50ed5af6a7a832793e92ce0fa41493",
+  "base_sites_sha256": "9a18c2887578312d29ab47a9bfdd46549afb8f0625987a789f7e286d9b4370d2",
+  "cohort_version": "philippines-east-malaysia-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 21,
+    "total": 4874
+  },
+  "files": {
+    "ph_east_my_public_review.json": {
+      "sha256": "dd068d8e93a0d60f76ab2c6cf85cc42037a370ab2087d9b6264250b656cbebb7"
+    },
+    "ph_east_my_public_sites.json": {
+      "sha256": "fdae60e4c406177db144c42b6cb1303747c9199e33c655e8db8890740a874f55"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Public Philippine and East Malaysian archaeological and historic properties, using locally confirmed visitor scope, an exact reusable coordinate for each site, and independent World Heritage and older corpus overlap checks."
+}

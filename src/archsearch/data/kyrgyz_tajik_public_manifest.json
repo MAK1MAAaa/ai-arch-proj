@@ -1,0 +1,22 @@
+{
+  "base_count": 4762,
+  "base_ids_sha256": "c7fbef845f20b68a4370484627efb7cc92084910daa72bd381a79711cd7dbe04",
+  "base_sites_sha256": "c33988c0d2180582c81c6fb7e81ef183611bc7bdb307d42067a1b9fc546861ed",
+  "cohort_version": "kyrgyzstan-tajikistan-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 8,
+    "total": 4770
+  },
+  "files": {
+    "kyrgyz_tajik_public_review.json": {
+      "sha256": "01fef86d0d9035655499f940f4854c8ca1f9ab0b7dd595c520e2e55d1e3f5c82"
+    },
+    "kyrgyz_tajik_public_sites.json": {
+      "sha256": "7b9298950ea930c358a1b30c161b41303cdcf04941531e0d900f7a5cc4c9608c"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Named publicly interpreted cultural sites in Kyrgyzstan and Tajikistan, each with an exact published representative point and official public-scope and World Heritage identity checks."
+}

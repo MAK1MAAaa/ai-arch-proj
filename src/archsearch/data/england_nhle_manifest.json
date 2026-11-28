@@ -1,0 +1,22 @@
+{
+  "base_count": 4665,
+  "base_ids_sha256": "9686552458d190ff7eda75d49add4730a680b85095f8c435400792a97defea38",
+  "base_sites_sha256": "4c8c0a3d844e0b43df7149628d91bb753a68c0d914d0c55122f3acf6fdd77888",
+  "cohort_version": "england-nhle-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 29,
+    "total": 4694
+  },
+  "files": {
+    "england_nhle_review.json": {
+      "sha256": "a5af2649aa2269dc224ee46e2e83740e2174221e0c709ec85699aa5a9c330b01"
+    },
+    "england_nhle_sites.json": {
+      "sha256": "cdbc62fa05de8df2b6e581202aa181995f12517ecfbc591c7a40e944fcd027d8"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Publicly viewable or visitable English Heritage properties with one matching Historic England listed-building point; excludes known World Heritage components, closed properties, and ambiguous multi-point listings."
+}

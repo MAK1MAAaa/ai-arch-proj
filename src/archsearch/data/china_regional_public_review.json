@@ -1,0 +1,566 @@
+{
+  "base_count": 5222,
+  "base_ids_sha256": "81c060f26cdd4eec98e66ccdddefa2bf0e65f442ef34dcab3352f1dcaa23f9b4",
+  "base_sites_sha256": "133b5417b1f7b3de99d3fdf120e4b7a5502619c9eafd00f086c457d39c441259",
+  "cohort_version": "china-regional-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original CC0 Chinese monument entity coordinate retained. It lies inside the named park exterior and outside the separately mapped museum hole. This is a public site representative point.",
+        "point": [
+          103.445959,
+          30.400709
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10883697.json",
+        "statement_id": "Q10883697$2f6605a9-463b-e8ad-2b6f-9b6fef1ff47d"
+      },
+      "independent_review": {
+        "method": "Independent agent verified authority and operator sources, twice retrieved exact licensed original points, recomputed full comparison geometry and reviewed candidate scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original Shifangtang kiln area of Qiong Kiln National Archaeological Park in Qionglai, Sichuan. Visitors are admitted on the designated interpretive route, including the protected displays of kiln mounds 1 and 5. This map point represents the visitor precinct.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "人民日报海外版，引述邛崃市文保中心",
+          "中国新闻网",
+          "四川在线，报道国家文物局公布考古遗址公园名单",
+          "Wikidata contributors"
+        ],
+        "description": "The original Shifangtang kiln area of Qiong Kiln National Archaeological Park in Qionglai, Sichuan. Visitors are admitted on the designated interpretive route, including the protected displays of kiln mounds 1 and 5. This map point represents the visitor precinct.",
+        "description_zh": "四川邛崃什邡堂邛窑原址的公众展示区，开放路线包括1号、5号窑包保护展示区。地图标示园区代表点。",
+        "details": "The original Shifangtang kiln area of Qiong Kiln National Archaeological Park in Qionglai, Sichuan. Visitors are admitted on the designated interpretive route, including the protected displays of kiln mounds 1 and 5. This map point represents the visitor precinct.",
+        "geography": {
+          "authority_id": "supplement:auth:cn-public:Q10883697",
+          "countries": [
+            "CN"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "邛崃市文保中心公开介绍十方堂窑址与一期开放范围，含1号、5号窑包保护展示区域。",
+            "id": "auth:cn-public:Q10883697:evidence:1",
+            "license": null,
+            "publisher": "人民日报海外版，引述邛崃市文保中心",
+            "revision": "Retrieved 2026-11-28; SHA-256 d8f81a96241be26cbc122c1f9c256c16093f72e74ff565759732ac48310b6e20.",
+            "title": "邛崃文保中心公开遗址参观与展示说明",
+            "uri": "https://paper.people.com.cn/rmrbhwb/html/2024-04/23/content_26054005.htm"
+          }
+        },
+        "id": "auth:cn-public:Q10883697",
+        "location_precision": null,
+        "names": [
+          "什邡堂邛窑遗址",
+          "十方堂邛窑遗址",
+          "邛窑国家考古遗址公园"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          103.445959,
+          30.400709
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "邛崃市文保中心公开介绍十方堂窑址与一期开放范围，含1号、5号窑包保护展示区域。",
+            "id": "auth:cn-public:Q10883697:evidence:1",
+            "license": null,
+            "publisher": "人民日报海外版，引述邛崃市文保中心",
+            "revision": "Retrieved 2026-11-28; SHA-256 d8f81a96241be26cbc122c1f9c256c16093f72e74ff565759732ac48310b6e20.",
+            "title": "邛崃文保中心公开遗址参观与展示说明",
+            "uri": "https://paper.people.com.cn/rmrbhwb/html/2024-04/23/content_26054005.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "2026年10月实地访问十方堂遗址园区及遗址博物馆，确认园区公开展示和参访运作。",
+            "id": "auth:cn-public:Q10883697:evidence:2",
+            "license": null,
+            "publisher": "中国新闻网",
+            "revision": "Retrieved 2026-11-28; SHA-256 aea51457ae6dbc58a90e4f6be944b0f1d016d2b122ad528d268aa139be3e0f7d.",
+            "title": "什邡堂邛窑遗址园区2026年参访",
+            "uri": "https://www.jwview.com/jingwei/html/m/10-15/692650.shtml"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "一期核心开放范围为19.6公顷，明确包括1号、5号窑包保护展示区。",
+            "id": "auth:cn-public:Q10883697:evidence:3",
+            "license": null,
+            "publisher": "四川在线，报道国家文物局公布考古遗址公园名单",
+            "revision": "Retrieved 2026-11-28; SHA-256 5bf759c3bfef8ef82aec2f6638a4853c067745d8423c01e58590c3ebb7e86e05.",
+            "title": "邛窑一期考古遗址保护展示区域",
+            "uri": "https://sichuan.scol.com.cn/ggxw/202212/58787511.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 statement P625. Longitude 103.445959, latitude 30.400709.",
+            "id": "auth:cn-public:Q10883697:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2372661050; P625 Q10883697$2f6605a9-463b-e8ad-2b6f-9b6fef1ff47d.",
+            "title": "什邡堂邛窑遗址代表坐标",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10883697.json"
+          }
+        ],
+        "source_uri": "https://paper.people.com.cn/rmrbhwb/html/2024-04/23/content_26054005.htm",
+        "title": "Shifangtang Qiong Kiln Archaeological Site visitor precinct",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/independent-qiong-public-custodian-print.html",
+          "sha256": "d8f81a96241be26cbc122c1f9c256c16093f72e74ff565759732ac48310b6e20",
+          "uri": "https://paper.people.com.cn/rmrbhwb/html/2024-04/23/content_26054005.htm"
+        },
+        {
+          "filename": "source/qionglai-public-2026.html",
+          "sha256": "aea51457ae6dbc58a90e4f6be944b0f1d016d2b122ad528d268aa139be3e0f7d",
+          "uri": "https://www.jwview.com/jingwei/html/m/10-15/692650.shtml"
+        },
+        {
+          "filename": "source/independent-qiong-open-kilns-sichuan.html",
+          "sha256": "5bf759c3bfef8ef82aec2f6638a4853c067745d8423c01e58590c3ebb7e86e05",
+          "uri": "https://sichuan.scol.com.cn/ggxw/202212/58787511.html"
+        },
+        {
+          "filename": "source/Q10883697.json",
+          "sha256": "17e6a901c449398d122297a437cea93b28fd3a47acd37045f9b704e480de6b75",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10883697.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          121.345725,
+          29.96259722
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11142035.json",
+        "statement_id": "Q11142035$B317BF8E-561D-4DA5-A81C-0F824DEA0447"
+      },
+      "independent_review": {
+        "method": "Independent agent verified authority and operator sources, twice retrieved exact licensed original points, recomputed full comparison geometry and reviewed candidate scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The source point represents the named archaeological visitor precinct and adjacent site museum, with access to specifically designated exhibits and signed routes.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "河姆渡考古遗址公园、余姚发布",
+          "余姚市河姆渡遗址博物馆",
+          "余姚市融媒体中心",
+          "Wikidata contributors"
+        ],
+        "description": "The original Hemudu settlement site and the designated public archaeological displays alongside the site museum in Yuyao.",
+        "description_zh": "浙江余姚河姆渡原址和同址博物馆的公共展示区域，按管理方公告开放。",
+        "details": "The source point represents the named archaeological visitor precinct and adjacent site museum, with access to specifically designated exhibits and signed routes.",
+        "geography": {
+          "authority_id": "supplement:auth:cn-public:Q11142035",
+          "countries": [
+            "CN"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "园区公告确认开放的是指定遗址展示区，开放区域随现场标识调整。",
+            "id": "auth:cn-public:Q11142035:evidence:1",
+            "license": null,
+            "publisher": "河姆渡考古遗址公园、余姚发布",
+            "revision": "Retrieved 2026-11-28; SHA-256 4421653d23ac62908d5061f0c378ee4d9e26d1e9b152c3b64d60abb94d4888ae.",
+            "title": "河姆渡考古遗址公园开放公告",
+            "uri": "https://www.yynews.com.cn/yy/202602/t20260201_6616438.shtml"
+          }
+        },
+        "id": "auth:cn-public:Q11142035",
+        "location_precision": null,
+        "names": [
+          "河姆渡考古遗址公园",
+          "Hemudu Archaeological Site visitor precinct",
+          "河姆渡遗址",
+          "河姆渡遗址博物馆",
+          "Hemudu Site",
+          "Hemudu Archaeological Park"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          121.345725,
+          29.96259722
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "园区公告确认开放的是指定遗址展示区，开放区域随现场标识调整。",
+            "id": "auth:cn-public:Q11142035:evidence:1",
+            "license": null,
+            "publisher": "河姆渡考古遗址公园、余姚发布",
+            "revision": "Retrieved 2026-11-28; SHA-256 4421653d23ac62908d5061f0c378ee4d9e26d1e9b152c3b64d60abb94d4888ae.",
+            "title": "河姆渡考古遗址公园开放公告",
+            "uri": "https://www.yynews.com.cn/yy/202602/t20260201_6616438.shtml"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "馆方说明短期工程停用展厅，2026年10月27日起恢复对外开放。",
+            "id": "auth:cn-public:Q11142035:evidence:2",
+            "license": null,
+            "publisher": "余姚市河姆渡遗址博物馆",
+            "revision": "Retrieved 2026-11-28; SHA-256 5bb5b3d9763fc1d4210e97f63de465e91ffbeedff7e94bb3b5b59c18cc62146d.",
+            "title": "河姆渡遗址博物馆恢复开放日期",
+            "uri": "https://www.yynews.com.cn/yy/202610/t20261005_7739406.shtml"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "2026年11月追踪记录原址公园和紧邻的同址博物馆共同接待访客。",
+            "id": "auth:cn-public:Q11142035:evidence:3",
+            "license": null,
+            "publisher": "余姚市融媒体中心",
+            "revision": "Retrieved 2026-11-28; SHA-256 0de133cfac985b10f0df7b9b1540f53f80234606a03380b6fcc65abafce9afaa.",
+            "title": "河姆渡遗址公园和同址馆对外参观",
+            "uri": "https://www.yynews.com.cn/yy/202611/t20261127_7856349.shtml"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 121.345725, latitude 29.96259722.",
+            "id": "auth:cn-public:Q11142035:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 5e75b2867046823bdc32d77f8c030317c90e6a066968a40ef26cf3c6ea327e8b.",
+            "title": "Hemudu Archaeological Site visitor precinct coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11142035.json"
+          }
+        ],
+        "source_uri": "https://www.yynews.com.cn/yy/202602/t20260201_6616438.shtml",
+        "title": "Hemudu Archaeological Site visitor precinct",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/hemudu-2026-opening.html",
+          "sha256": "4421653d23ac62908d5061f0c378ee4d9e26d1e9b152c3b64d60abb94d4888ae",
+          "uri": "https://www.yynews.com.cn/yy/202602/t20260201_6616438.shtml"
+        },
+        {
+          "filename": "source/hemudu-2026-reopening.html",
+          "sha256": "5bb5b3d9763fc1d4210e97f63de465e91ffbeedff7e94bb3b5b59c18cc62146d",
+          "uri": "https://www.yynews.com.cn/yy/202610/t20261005_7739406.shtml"
+        },
+        {
+          "filename": "source/hemudu-2026-managed-visit.html",
+          "sha256": "0de133cfac985b10f0df7b9b1540f53f80234606a03380b6fcc65abafce9afaa",
+          "uri": "https://www.yynews.com.cn/yy/202611/t20261127_7856349.shtml"
+        },
+        {
+          "filename": "source/Q11142035.json",
+          "sha256": "5e75b2867046823bdc32d77f8c030317c90e6a066968a40ef26cf3c6ea327e8b",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11142035.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          106.91611111,
+          27.69138889
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q15931369.json",
+        "statement_id": "Q15931369$19957E74-AA16-4B43-BD15-EA571968757B"
+      },
+      "independent_review": {
+        "method": "Independent agent verified authority and operator sources, twice retrieved exact licensed original points, recomputed full comparison geometry and reviewed candidate scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The representative point is inside the named original meeting-house precinct near the historic building. The visitor route has a managed entrance; the separate exhibition building is outside the point scope.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "遵义发布，经玉屏县政府网站转载",
+          "Wikidata contributors"
+        ],
+        "description": "The historic conference house and its public courtyard on Ziyin Road in Zunyi.",
+        "description_zh": "贵州遵义子尹路上的遵义会议原址及公众参观院区。",
+        "details": "The representative point is inside the named original meeting-house precinct near the historic building. The visitor route has a managed entrance; the separate exhibition building is outside the point scope.",
+        "geography": {
+          "authority_id": "supplement:auth:cn-public:Q15931369",
+          "countries": [
+            "CN"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "主管方公开资料区分会址原楼与陈列馆，说明统一入口与对外参观范围。",
+            "id": "auth:cn-public:Q15931369:evidence:1",
+            "license": null,
+            "publisher": "遵义发布，经玉屏县政府网站转载",
+            "revision": "Retrieved 2026-11-28; SHA-256 a569870378cfb4b0dc952455592a35dd25653e9ed6f8ddd74f4a6eba074ae989.",
+            "title": "遵义会议会址及地面参观进路",
+            "uri": "https://www.yp.gov.cn/contents/2024/11/04/receive-a64a99d7-65c4-4e3c-874e-bad89a367ce6.html"
+          }
+        },
+        "id": "auth:cn-public:Q15931369",
+        "location_precision": null,
+        "names": [
+          "遵义会议会址",
+          "Zunyi Conference Site visitor precinct",
+          "遵义会议纪念馆（会址院区）",
+          "Site of Zunyi Conference",
+          "Zunyi Conference Site"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          106.91611111,
+          27.69138889
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "主管方公开资料区分会址原楼与陈列馆，说明统一入口与对外参观范围。",
+            "id": "auth:cn-public:Q15931369:evidence:1",
+            "license": null,
+            "publisher": "遵义发布，经玉屏县政府网站转载",
+            "revision": "Retrieved 2026-11-28; SHA-256 a569870378cfb4b0dc952455592a35dd25653e9ed6f8ddd74f4a6eba074ae989.",
+            "title": "遵义会议会址及地面参观进路",
+            "uri": "https://www.yp.gov.cn/contents/2024/11/04/receive-a64a99d7-65c4-4e3c-874e-bad89a367ce6.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "2026年官方报道确认公开参观原址并介绍馆方开放安排。",
+            "id": "auth:cn-public:Q15931369:evidence:2",
+            "license": null,
+            "publisher": "遵义发布，经玉屏县政府网站转载",
+            "revision": "Retrieved 2026-11-28; SHA-256 5557c2a2311beab8c585a48d332d806c8370377d46c01c4b367bf7710fa30cb8.",
+            "title": "遵义会议原址与纪念馆公众访问",
+            "uri": "https://www.yp.gov.cn/contents/2026/08/27/receive-9a9dbc3c-828b-432a-bd52-ff4de7573dd3.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 106.91611111, latitude 27.69138889.",
+            "id": "auth:cn-public:Q15931369:evidence:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 2b0c13d7b7df52c6abbd71cea4c345a23e7ac5d976c342521aa54fca3ef46e5d.",
+            "title": "Zunyi Conference Site visitor precinct coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q15931369.json"
+          }
+        ],
+        "source_uri": "https://www.yp.gov.cn/contents/2024/11/04/receive-a64a99d7-65c4-4e3c-874e-bad89a367ce6.html",
+        "title": "Zunyi Conference Site visitor precinct",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/zunyi-government-route.html",
+          "sha256": "a569870378cfb4b0dc952455592a35dd25653e9ed6f8ddd74f4a6eba074ae989",
+          "uri": "https://www.yp.gov.cn/contents/2024/11/04/receive-a64a99d7-65c4-4e3c-874e-bad89a367ce6.html"
+        },
+        {
+          "filename": "source/zunyi-government-recent.html",
+          "sha256": "5557c2a2311beab8c585a48d332d806c8370377d46c01c4b367bf7710fa30cb8",
+          "uri": "https://www.yp.gov.cn/contents/2026/08/27/receive-9a9dbc3c-828b-432a-bd52-ff4de7573dd3.html"
+        },
+        {
+          "filename": "source/Q15931369.json",
+          "sha256": "2b0c13d7b7df52c6abbd71cea4c345a23e7ac5d976c342521aa54fca3ef46e5d",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q15931369.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          106.310431059374,
+          30.0056103878172
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q195821.json",
+        "statement_id": "Q195821$180E3B57-2211-4F28-A238-6D51D004C5C7"
+      },
+      "independent_review": {
+        "method": "Independent agent verified authority and operator sources, twice retrieved exact licensed original points, recomputed full comparison geometry and reviewed candidate scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The published source point is inside the named historic visitor park and represents the visitor grounds as a whole. Specific relic sectors follow the published site route.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "重庆市合川区文化和旅游发展委员会",
+          "重庆市文化和旅游发展委员会",
+          "Wikidata contributors"
+        ],
+        "description": "The original hill fortress and battlefield remains within the managed Diaoyu Fortress archaeological visitor park in Hechuan, Chongqing.",
+        "description_zh": "重庆合川钓鱼城原址的公共考古园区，展示山城遗迹和古战场。",
+        "details": "The published source point is inside the named historic visitor park and represents the visitor grounds as a whole. Specific relic sectors follow the published site route.",
+        "geography": {
+          "authority_id": "supplement:auth:cn-public:Q195821",
+          "countries": [
+            "CN"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "2026年官方名录列出钓鱼城景区、管理机构及实名预约要求。",
+            "id": "auth:cn-public:Q195821:evidence:1",
+            "license": null,
+            "publisher": "重庆市合川区文化和旅游发展委员会",
+            "revision": "Retrieved 2026-11-28; SHA-256 d9c1ad5b127792ee3f4330d7449be9e51af519bb75554df751c540105044c309.",
+            "title": "钓鱼城景区公开预约名录",
+            "uri": "https://www.hc.gov.cn/bmjd/bm_100475/whlyw/zwgk_101411/jczwgk/lylyxxgk/ggfw/gglyjgml/202605/t20260526_15703196.html"
+          }
+        },
+        "id": "auth:cn-public:Q195821",
+        "location_precision": null,
+        "names": [
+          "钓鱼城国家考古遗址公园",
+          "Diaoyu Fortress Archaeological Park",
+          "钓鱼城遗址",
+          "合川钓鱼城",
+          "Diaoyu Fortress",
+          "Diaoyucheng"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          106.310431059374,
+          30.0056103878172
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "2026年官方名录列出钓鱼城景区、管理机构及实名预约要求。",
+            "id": "auth:cn-public:Q195821:evidence:1",
+            "license": null,
+            "publisher": "重庆市合川区文化和旅游发展委员会",
+            "revision": "Retrieved 2026-11-28; SHA-256 d9c1ad5b127792ee3f4330d7449be9e51af519bb75554df751c540105044c309.",
+            "title": "钓鱼城景区公开预约名录",
+            "uri": "https://www.hc.gov.cn/bmjd/bm_100475/whlyw/zwgk_101411/jczwgk/lylyxxgk/ggfw/gglyjgml/202605/t20260526_15703196.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "主管部门确认钓鱼城国家重点保护遗址建成遗址公园，按指定公开场所展示。",
+            "id": "auth:cn-public:Q195821:evidence:2",
+            "license": null,
+            "publisher": "重庆市文化和旅游发展委员会",
+            "revision": "Retrieved 2026-11-28; SHA-256 8171859bd4437f082f4ab5d40da2c28e657e7cf933351d04e58ae40d5aba0010.",
+            "title": "钓鱼城遗址保护与公园",
+            "uri": "https://whlyw.cq.gov.cn/zjwl/yzq/cqwlzy/zqwwzy/202405/t20240507_13182059.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 106.310431059374, latitude 30.0056103878172.",
+            "id": "auth:cn-public:Q195821:evidence:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 5a885d85a241ffffbd3bb8ba26a7da41f740f03358978a815151704dd5d9d683.",
+            "title": "Diaoyu Fortress Archaeological Park coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q195821.json"
+          }
+        ],
+        "source_uri": "https://www.hc.gov.cn/bmjd/bm_100475/whlyw/zwgk_101411/jczwgk/lylyxxgk/ggfw/gglyjgml/202605/t20260526_15703196.html",
+        "title": "Diaoyu Fortress Archaeological Park",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/diaoyu-2026-government.html",
+          "sha256": "d9c1ad5b127792ee3f4330d7449be9e51af519bb75554df751c540105044c309",
+          "uri": "https://www.hc.gov.cn/bmjd/bm_100475/whlyw/zwgk_101411/jczwgk/lylyxxgk/ggfw/gglyjgml/202605/t20260526_15703196.html"
+        },
+        {
+          "filename": "source/diaoyu-culture-government.html",
+          "sha256": "8171859bd4437f082f4ab5d40da2c28e657e7cf933351d04e58ae40d5aba0010",
+          "uri": "https://whlyw.cq.gov.cn/zjwl/yzq/cqwlzy/zqwwzy/202405/t20240507_13182059.html"
+        },
+        {
+          "filename": "source/Q195821.json",
+          "sha256": "5a885d85a241ffffbd3bb8ba26a7da41f740f03358978a815151704dd5d9d683",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q195821.json"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Four verified public precincts at original Chinese heritage sites in Zhejiang, Chongqing, Guizhou and Sichuan."
+}

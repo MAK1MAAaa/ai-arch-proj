@@ -1,0 +1,186 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Primary sources identify the place and the original public coordinate.",
+      "note": "No individually verified dated stage is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Parliament of Sri Lanka",
+      "Army War College, Sri Lanka",
+      "Wikidata contributors"
+    ],
+    "description": "The restored standing stone Buddha in the historic Maligawila image-house remains in Monaragala District.",
+    "description_zh": "莫讷勒格勒区马利伽维拉遗址的立佛石雕，位于古代佛像殿遗存及其公开观览区。",
+    "details": "The point represents the named standing Buddha visitor area at Maligawila. The nearby Dambegoda Bodhisattva and the separate temple building are outside this point's identity.",
+    "geography": {
+      "authority_id": "supplement:auth:lk-public:Q6743492",
+      "countries": [
+        "LK"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The responsible minister names Maligawila among publicly open archaeological sites in Monaragala District.",
+        "id": "auth:lk-public:Q6743492:evidence:1",
+        "license": null,
+        "publisher": "Parliament of Sri Lanka",
+        "revision": "Original published source retrieved 2026-11-28; SHA-256 f8fe83349f64f6ae4aa4ed7d941f8d9e02fe6de07548abc79453f84caf6c7851.",
+        "title": "20 November 2026 visitor access statement",
+        "uri": "https://www.parliament.lk/en/home/parliament-news/view/5566"
+      }
+    },
+    "id": "auth:lk-public:Q6743492",
+    "location_precision": null,
+    "names": [
+      "Maligawila standing Buddha statue",
+      "Maligawila Buddha Statue",
+      "Maligawela Statue",
+      "මාළිගාවිල බුදු පිළිමය",
+      "马利伽维拉立佛"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      81.35228888888889,
+      6.728380555555556
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The responsible minister names Maligawila among publicly open archaeological sites in Monaragala District.",
+        "id": "auth:lk-public:Q6743492:evidence:1",
+        "license": null,
+        "publisher": "Parliament of Sri Lanka",
+        "revision": "Original published source retrieved 2026-11-28; SHA-256 f8fe83349f64f6ae4aa4ed7d941f8d9e02fe6de07548abc79453f84caf6c7851.",
+        "title": "20 November 2026 visitor access statement",
+        "uri": "https://www.parliament.lk/en/home/parliament-news/view/5566"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "A documented heritage visit distinguishes the Maligawila Buddha from the nearby Dambegoda figure.",
+        "id": "auth:lk-public:Q6743492:evidence:2",
+        "license": null,
+        "publisher": "Army War College, Sri Lanka",
+        "revision": "Original published source retrieved 2026-11-28; SHA-256 05befd9e61fda3fb97da560ef7e63f50340689272735af88ade80a1d8a0a53c5.",
+        "title": "Recorded visit to the Maligawila statue and neighbouring monument",
+        "uri": "https://alt.army.lk/awc/content/student-officers-explore-sites-during-exercise-history-watch"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native coordinate assertion at revision 2251827726; longitude 81.35228888888889, latitude 6.728380555555556.",
+        "id": "auth:lk-public:Q6743492:evidence:3",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Original published source retrieved 2026-11-28; SHA-256 0d5fc694366ad0e8f9a77223cc687566dbedaea3712e517f3436a66e7fbba02e.",
+        "title": "Original Wikidata WGS84 declaration",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6743492.json?revision=2251827726"
+      }
+    ],
+    "source_uri": "https://www.parliament.lk/en/home/parliament-news/view/5566",
+    "title": "Maligawila standing Buddha statue",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Primary sources identify the place and the original public coordinate.",
+      "note": "No individually verified dated stage is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Sabaragamuwa Provincial Tourism Department",
+      "Department of Census and Statistics, Sri Lanka",
+      "Kasun buddika senanayaka via Wikimedia Commons"
+    ],
+    "description": "The large surviving stupa at Dedigama, independently named in the provincial visitor route and national district handbook.",
+    "description_zh": "斯里兰卡德迪伽马的古佛塔遗存。省级旅游部门将原址列入公开游览信息。",
+    "details": "This point represents the original outdoor archaeological stupa. The present museum building and the separate named temple farther south are distinct locations.",
+    "geography": {
+      "authority_id": "supplement:auth:lk-public:dedigama-kotawehera",
+      "countries": [
+        "LK"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial visitor register identifies Soothighara Stupa in Dedigama and describes how to reach the original monument.",
+        "id": "auth:lk-public:dedigama-kotawehera:evidence:1",
+        "license": null,
+        "publisher": "Sabaragamuwa Provincial Tourism Department",
+        "revision": "Original published source retrieved 2026-11-28; SHA-256 fa5f89aad069d5295ed83a3cfd54d5ed13a74e5cd961be400773f88f7765afa3.",
+        "title": "Dedigama heritage visitor route and stupa identity",
+        "uri": "https://tourism.sg.gov.lk/dedigama-kotawehera/"
+      }
+    },
+    "id": "auth:lk-public:dedigama-kotawehera",
+    "location_precision": null,
+    "names": [
+      "Dedigama Kotawehera (Soothighara Stupa)",
+      "Dedigama Kota Vehera",
+      "Soothighara Stupa",
+      "Suthighara Chaitya",
+      "德迪伽马古佛塔"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      80.26273888888889,
+      7.208569444444445
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial visitor register identifies Soothighara Stupa in Dedigama and describes how to reach the original monument.",
+        "id": "auth:lk-public:dedigama-kotawehera:evidence:1",
+        "license": null,
+        "publisher": "Sabaragamuwa Provincial Tourism Department",
+        "revision": "Original published source retrieved 2026-11-28; SHA-256 fa5f89aad069d5295ed83a3cfd54d5ed13a74e5cd961be400773f88f7765afa3.",
+        "title": "Dedigama heritage visitor route and stupa identity",
+        "uri": "https://tourism.sg.gov.lk/dedigama-kotawehera/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Kegalle district handbook identifies the brick stupa as Suthigara Dagoba in Dedigama.",
+        "id": "auth:lk-public:dedigama-kotawehera:evidence:2",
+        "license": null,
+        "publisher": "Department of Census and Statistics, Sri Lanka",
+        "revision": "Original published source retrieved 2026-11-28; SHA-256 a4c6358f72023bd2bf9c84f8da54afed97dafa519e9686b5c87e37a8b27139cc.",
+        "title": "Dedigama Kotawehera district record",
+        "uri": "https://www.statistics.gov.lk/statistical%20Hbook/2017/Kegalle/Introduction.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Commons lists 7°12′30.85″N, 80°15′45.86″E as the depicted object location, converted here to decimal degrees.",
+        "id": "auth:lk-public:dedigama-kotawehera:evidence:3",
+        "license": "CC BY-SA 4.0",
+        "publisher": "Wikimedia Commons contributors; photograph by Kasun buddika senanayaka",
+        "revision": "Original published source retrieved 2026-11-28; SHA-256 9afd3d1b5f41bc89d728b7e51e769337fefb20078b891ae5c9372cb4c9285e87.",
+        "title": "Licensed depicted-object coordinates",
+        "uri": "https://commons.wikimedia.org/wiki/Special:PermanentLink/1198948042"
+      }
+    ],
+    "source_uri": "https://tourism.sg.gov.lk/dedigama-kotawehera/",
+    "title": "Dedigama Kotawehera (Soothighara Stupa)",
+    "types": [
+      "archaeological-site"
+    ]
+  }
+]

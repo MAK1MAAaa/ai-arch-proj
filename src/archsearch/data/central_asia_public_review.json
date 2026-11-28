@@ -1,0 +1,1607 @@
+{
+  "base_count": 4654,
+  "base_ids_sha256": "1c57848333496592a7c5c7b9edd7618fc007bd88104b2ce2507048d2fe2e78e5",
+  "base_sites_sha256": "586f9c1067ad9a62ec143837fc514ae901b8e0bfdcb19b910c7b4e35b3e21326",
+  "cohort_version": "kazakhstan-uzbekistan-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Archaeological complex representative point from P625 consistent with the excavators' minute-resolution site coordinates. The point represents the complex as a whole.",
+        "point": [
+          86.3747361111111,
+          49.340022222222224
+        ],
+        "precision": 2.777777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q25514691.json",
+        "statement_id": "Q25514691$789412e8-4f07-17cb-4ba4-4fb477c09248"
+      },
+      "independent_review": {
+        "method": "Independently audited primary visitor sources, exact Wikidata coordinate statements, known restoration boundaries, official UNESCO component identities and historical status, and older corpus locations.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Museum-reserve centered on a publicly interpreted ancient burial-mound complex southwest of Berel village.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity matched with the official visitor sources and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Kazakh Tourism",
+          "Kazakhstan e-Museum",
+          "Institute of Plant and Animal Ecology, Ural Branch of the Russian Academy of Sciences",
+          "Wikidata contributors",
+          "Visit East Qazaqstan"
+        ],
+        "description": "Museum-reserve centered on a publicly interpreted ancient burial-mound complex southwest of Berel village.",
+        "description_zh": "贝雷尔古墓群位于哈萨克斯坦，已核对官方公众参观依据。地图标注遗址代表点。",
+        "details": "Museum-reserve centered on a publicly interpreted ancient burial-mound complex southwest of Berel village.",
+        "geography": {
+          "authority_id": "supplement:auth:kz-public:Q25514691",
+          "countries": [
+            "KZ"
+          ],
+          "note": "Representative point of the documented public archaeological property in Katonkaragay District, East Kazakhstan Region.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism catalogue lists the mounds as a visitor destination.",
+            "id": "auth:kz-public:Q25514691:evidence:1",
+            "license": null,
+            "publisher": "Kazakh Tourism",
+            "revision": "Retrieved 2026-11-28. SHA-256 040483c4436fa7db824482cd5c86f945721652502f06f0d9cf467f524822b57c.",
+            "title": "Berel Mounds visitor listing",
+            "uri": "https://kazakhstan.travel/en/attractions/508"
+          }
+        },
+        "id": "auth:kz-public:Q25514691",
+        "location_precision": null,
+        "names": [
+          "贝雷尔古墓群",
+          "Berel Mounds",
+          "Berel kurgans",
+          "Берел қорымы",
+          "Берельские курганы"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          86.3747361111111,
+          49.340022222222224
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism catalogue lists the mounds as a visitor destination.",
+            "id": "auth:kz-public:Q25514691:evidence:1",
+            "license": null,
+            "publisher": "Kazakh Tourism",
+            "revision": "Retrieved 2026-11-28. SHA-256 040483c4436fa7db824482cd5c86f945721652502f06f0d9cf467f524822b57c.",
+            "title": "Berel Mounds visitor listing",
+            "uri": "https://kazakhstan.travel/en/attractions/508"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state museum catalogue distinguishes the archaeological complex from the village named Berel.",
+            "id": "auth:kz-public:Q25514691:evidence:2",
+            "license": null,
+            "publisher": "Kazakhstan e-Museum",
+            "revision": "Retrieved 2026-11-28. SHA-256 a4896ed16aa5a7c95444abbdedcdf20418a86deae69546305dbd2555b7199c0a.",
+            "title": "Berel state museum-reserve",
+            "uri": "https://e-museum.kz/en/museum/68da3799e9473e80a-en/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The archaeological monograph identifies the overall location of the Berel complex.",
+            "id": "auth:kz-public:Q25514691:evidence:3",
+            "license": null,
+            "publisher": "Institute of Plant and Animal Ecology, Ural Branch of the Russian Academy of Sciences",
+            "revision": "Retrieved 2026-11-28. SHA-256 7cd57f8f88c802e1204c3f94ce3b26f53cd4938eec7be7e0caa72838d24c1c3d.",
+            "title": "Archaeological monograph on Berel",
+            "uri": "https://ipae.uran.ru/sites/default/files/publications/ipae/0332_2014_Kosincev_Samascev.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 86.3747361111111, latitude 49.340022222222224",
+            "id": "wikidata:Q25514691",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2548446560. P625 Q25514691$789412e8-4f07-17cb-4ba4-4fb477c09248.",
+            "title": "Berel Mounds representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q25514691.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The regional visitor page describes the public interpretation at mound No. 2.",
+            "id": "auth:kz-public:Q25514691:independent:4",
+            "license": null,
+            "publisher": "Visit East Qazaqstan",
+            "revision": "Retrieved 2026-11-28. SHA-256 f011bb5f42ff74fcfcfe2580322e41a8e9effd2460bf0df1dac361ef9a00092f.",
+            "title": "Berel open-air museum visitor information",
+            "uri": "https://visiteast.kz/en/vazhno-znat/chto-posmotret/istoriya-i-kultura/muzei/muzej-pod-otkryityim-nebom.html"
+          }
+        ],
+        "source_uri": "https://kazakhstan.travel/en/attractions/508",
+        "title": "Berel Mounds",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/kz-berel.html",
+          "sha256": "040483c4436fa7db824482cd5c86f945721652502f06f0d9cf467f524822b57c",
+          "uri": "https://kazakhstan.travel/en/attractions/508"
+        },
+        {
+          "filename": "source/kz-berel-museum.html",
+          "sha256": "a4896ed16aa5a7c95444abbdedcdf20418a86deae69546305dbd2555b7199c0a",
+          "uri": "https://e-museum.kz/en/museum/68da3799e9473e80a-en/"
+        },
+        {
+          "filename": "source/kz-berel-academic.pdf",
+          "sha256": "7cd57f8f88c802e1204c3f94ce3b26f53cd4938eec7be7e0caa72838d24c1c3d",
+          "uri": "https://ipae.uran.ru/sites/default/files/publications/ipae/0332_2014_Kosincev_Samascev.pdf"
+        },
+        {
+          "filename": "source/Q25514691.json",
+          "sha256": "7973e55aaf87b256d0e4465a960676cbf55f578a1deb683e104fd7655618e0d7",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q25514691.json"
+        },
+        {
+          "filename": "source/independent-berel-public.html",
+          "sha256": "f011bb5f42ff74fcfcfe2580322e41a8e9effd2460bf0df1dac361ef9a00092f",
+          "uri": "https://visiteast.kz/en/vazhno-znat/chto-posmotret/istoriya-i-kultura/muzei/muzej-pod-otkryityim-nebom.html"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The P625 represents the later walled city of Sauran, a separate site from earlier Karatobe and the modern district.",
+        "point": [
+          67.76861111,
+          43.51527778
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4409147.json",
+        "statement_id": "Q4409147$1A16BED3-9382-4EF8-9671-CBCE465D45F5"
+      },
+      "independent_review": {
+        "method": "Independently audited primary visitor sources, exact Wikidata coordinate statements, known restoration boundaries, official UNESCO component identities and historical status, and older corpus locations.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Walled medieval city northwest of Turkistan. This point represents the publicly exhibited later settlement known as Sauran.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity matched with the official visitor sources and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Kazakh Tourism",
+          "Abai Institute",
+          "Wikidata contributors"
+        ],
+        "description": "Walled medieval city northwest of Turkistan. This point represents the publicly exhibited later settlement known as Sauran.",
+        "description_zh": "萨乌兰古城位于哈萨克斯坦，已核对官方公众参观依据。地图标注遗址代表点。",
+        "details": "Walled medieval city northwest of Turkistan. This point represents the publicly exhibited later settlement known as Sauran.",
+        "geography": {
+          "authority_id": "supplement:auth:kz-public:Q4409147",
+          "countries": [
+            "KZ"
+          ],
+          "note": "Representative point of the documented public archaeological property in Turkistan Region.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Kazakh Tourism lists and provides visitor routing to the archaeological city.",
+            "id": "auth:kz-public:Q4409147:evidence:1",
+            "license": null,
+            "publisher": "Kazakh Tourism",
+            "revision": "Retrieved 2026-11-28. SHA-256 d1d6b95173b40f9c8a23e519556894bc2961c37904ac36f0600b87bd01b5beb7.",
+            "title": "Sauran Settlement",
+            "uri": "https://kazakhstan.travel/en/attractions/367"
+          }
+        },
+        "id": "auth:kz-public:Q4409147",
+        "location_precision": null,
+        "names": [
+          "萨乌兰古城",
+          "Sauran",
+          "Sawran",
+          "Sauran Settlement",
+          "Сауран",
+          "Sabron"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          67.76861111,
+          43.51527778
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Kazakh Tourism lists and provides visitor routing to the archaeological city.",
+            "id": "auth:kz-public:Q4409147:evidence:1",
+            "license": null,
+            "publisher": "Kazakh Tourism",
+            "revision": "Retrieved 2026-11-28. SHA-256 d1d6b95173b40f9c8a23e519556894bc2961c37904ac36f0600b87bd01b5beb7.",
+            "title": "Sauran Settlement",
+            "uri": "https://kazakhstan.travel/en/attractions/367"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national heritage description identifies the walled archaeological site.",
+            "id": "auth:kz-public:Q4409147:evidence:2",
+            "license": null,
+            "publisher": "Abai Institute",
+            "revision": "Retrieved 2026-11-28. SHA-256 b565b022ad875ee214cdbafb76a5f590ec09347ec9b35fd48884b42167b3c768.",
+            "title": "Sauran national heritage record",
+            "uri": "https://oq.gov.kz/en/abai/sauran"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 67.76861111, latitude 43.51527778",
+            "id": "wikidata:Q4409147",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2551856077. P625 Q4409147$1A16BED3-9382-4EF8-9671-CBCE465D45F5.",
+            "title": "Sauran representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4409147.json"
+          }
+        ],
+        "source_uri": "https://kazakhstan.travel/en/attractions/367",
+        "title": "Sauran",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/kz-sauran.html",
+          "sha256": "d1d6b95173b40f9c8a23e519556894bc2961c37904ac36f0600b87bd01b5beb7",
+          "uri": "https://kazakhstan.travel/en/attractions/367"
+        },
+        {
+          "filename": "source/kz-sauran-abai.html",
+          "sha256": "b565b022ad875ee214cdbafb76a5f590ec09347ec9b35fd48884b42167b3c768",
+          "uri": "https://oq.gov.kz/en/abai/sauran"
+        },
+        {
+          "filename": "source/Q4409147.json",
+          "sha256": "0841bd19fe8dc34a86a859d5aa05c9093a5bc5958c729a1987a34d2980eb6731",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4409147.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "This P625 falls on the public archaeological settlement, close to the national visitor listing and separate from the museum in Shauildir.",
+        "point": [
+          68.3029696,
+          42.8514829
+        ],
+        "precision": 1e-07,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q956911.json",
+        "statement_id": "Q956911$0c50ab2e-4522-df10-04de-d588bddee46f"
+      },
+      "independent_review": {
+        "method": "Independently audited primary visitor sources, exact Wikidata coordinate statements, known restoration boundaries, official UNESCO component identities and historical status, and older corpus locations.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The public visitor site at Otrar Settlement covers the archaeological city ruins. The Ministry of Culture reports conservation work in selected sections.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity matched with the official visitor sources and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Kazakh Tourism",
+          "Turkistan regional administration",
+          "Ministry of Culture and Information, Kazakhstan",
+          "Wikidata contributors"
+        ],
+        "description": "The public visitor site at Otrar Settlement covers the archaeological city ruins. The Ministry of Culture reports conservation work in selected sections.",
+        "description_zh": "奥特拉尔古城位于哈萨克斯坦，已核对官方公众参观依据。地图标注遗址代表点。",
+        "details": "The public visitor site at Otrar Settlement covers the archaeological city ruins. The Ministry of Culture reports conservation work in selected sections.",
+        "geography": {
+          "authority_id": "supplement:auth:kz-public:Q956911",
+          "countries": [
+            "KZ"
+          ],
+          "note": "Representative point of the documented public archaeological property in Otrar District, Turkistan Region.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The settlement visitor entry identifies the archaeological ruins.",
+            "id": "auth:kz-public:Q956911:evidence:1",
+            "license": null,
+            "publisher": "Kazakh Tourism",
+            "revision": "Retrieved 2026-11-28. SHA-256 1cdfe7219c68370ea3a13ff1ce1224c5c8072cba1d4f28c0b8e3580cec88ec34.",
+            "title": "Otrar Settlement visitor and ticketing listing",
+            "uri": "https://kazakhstan.travel/en/attractions/368"
+          }
+        },
+        "id": "auth:kz-public:Q956911",
+        "location_precision": null,
+        "names": [
+          "奥特拉尔古城",
+          "Otrar",
+          "Otyrar",
+          "Otrartobe",
+          "Farab (Kazakhstan)",
+          "Отырар"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          68.3029696,
+          42.8514829
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The settlement visitor entry identifies the archaeological ruins.",
+            "id": "auth:kz-public:Q956911:evidence:1",
+            "license": null,
+            "publisher": "Kazakh Tourism",
+            "revision": "Retrieved 2026-11-28. SHA-256 1cdfe7219c68370ea3a13ff1ce1224c5c8072cba1d4f28c0b8e3580cec88ec34.",
+            "title": "Otrar Settlement visitor and ticketing listing",
+            "uri": "https://kazakhstan.travel/en/attractions/368"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The regional government reports tourists visiting Otrar Settlement in 2026.",
+            "id": "auth:kz-public:Q956911:evidence:2",
+            "license": null,
+            "publisher": "Turkistan regional administration",
+            "revision": "Retrieved 2026-11-28. SHA-256 f650740acdd967a51ee50c8c83d3711208132ab0fbc39239bc1ea547818e0fbd.",
+            "title": "2026 tourism at Otrar Settlement",
+            "uri": "https://www.gov.kz/org/ontustik/press/news/details/1269947?lang=ru"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies restoration work within selected sections of the archaeological site.",
+            "id": "auth:kz-public:Q956911:evidence:3",
+            "license": null,
+            "publisher": "Ministry of Culture and Information, Kazakhstan",
+            "revision": "Retrieved 2026-11-28. SHA-256 dba27ff206227d7966bde9da08d6d23a8eff9c012c6a270888df0205bb26b608.",
+            "title": "Conservation of selected sections at Otrar Settlement",
+            "uri": "https://www.gov.kz/org/culture/press/news/details/1271027?lang=ru"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 68.3029696, latitude 42.8514829",
+            "id": "wikidata:Q956911",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2575439450. P625 Q956911$0c50ab2e-4522-df10-04de-d588bddee46f.",
+            "title": "Otrar representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q956911.json"
+          }
+        ],
+        "source_uri": "https://kazakhstan.travel/en/attractions/368",
+        "title": "Otrar",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/kz-otrar.html",
+          "sha256": "1cdfe7219c68370ea3a13ff1ce1224c5c8072cba1d4f28c0b8e3580cec88ec34",
+          "uri": "https://kazakhstan.travel/en/attractions/368"
+        },
+        {
+          "filename": "source/kz-otrar-2026-visit.html",
+          "sha256": "f650740acdd967a51ee50c8c83d3711208132ab0fbc39239bc1ea547818e0fbd",
+          "uri": "https://www.gov.kz/org/ontustik/press/news/details/1269947?lang=ru"
+        },
+        {
+          "filename": "source/kz-otrar-restoration.html",
+          "sha256": "dba27ff206227d7966bde9da08d6d23a8eff9c012c6a270888df0205bb26b608",
+          "uri": "https://www.gov.kz/org/culture/press/news/details/1271027?lang=ru"
+        },
+        {
+          "filename": "source/Q956911.json",
+          "sha256": "a339ca13fffab782eed2f9ebf07b819e5aa449e7c411bbd27f84d14676850a36",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q956911.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata Earth coordinate for the archaeological property.",
+        "point": [
+          60.78411111111111,
+          41.93002777777778
+        ],
+        "precision": 2.777777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q100332243.json",
+        "statement_id": "Q100332243$d954356f-4051-c39f-5172-c339dccc9212"
+      },
+      "independent_review": {
+        "method": "Independently audited primary visitor sources, exact Wikidata coordinate statements, known restoration boundaries, official UNESCO component identities and historical status, and older corpus locations.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "A distinct fortified archaeological property west of Toprak-Kala on the same public visitor itinerary.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity matched with the official visitor sources and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National PR Centre, Tourism Committee of Uzbekistan",
+          "Cabinet of Ministers of Uzbekistan",
+          "Wikidata contributors",
+          "Bulgarian Astronomical Journal"
+        ],
+        "description": "A distinct fortified archaeological property west of Toprak-Kala on the same public visitor itinerary.",
+        "description_zh": "克孜勒卡拉堡位于乌兹别克斯坦，已核对官方公众参观依据。地图标注遗址代表点。",
+        "details": "A distinct fortified archaeological property west of Toprak-Kala on the same public visitor itinerary.",
+        "geography": {
+          "authority_id": "supplement:auth:uz-public:Q100332243",
+          "countries": [
+            "UZ"
+          ],
+          "note": "Representative point of the documented public archaeological property in Beruniy District, Karakalpakstan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The Khorezm itinerary treats Kyzyl-Kala and Toprak-Kala as separate visitor stops.",
+            "id": "auth:uz-public:Q100332243:evidence:1",
+            "license": null,
+            "publisher": "National PR Centre, Tourism Committee of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 c4f06e35e7a7c50777606156e8f4c0daf4e4ac96368dc3da6ae5b07400824ede.",
+            "title": "Pearls of ancient Khorezm tourist route 2025",
+            "uri": "https://app.uzbekistan.travel/en/o/Pearls-of-ancient-Khorezm-tourist-route-2025/"
+          }
+        },
+        "id": "auth:uz-public:Q100332243",
+        "location_precision": null,
+        "names": [
+          "克孜勒卡拉堡",
+          "Kyzyl-Kala",
+          "Qızıl qala",
+          "Kizil-Kala",
+          "Qizil qalʼa (Beruniy)",
+          "Қизилқалъа",
+          "Кызыл-Кала"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          60.78411111111111,
+          41.93002777777778
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The Khorezm itinerary treats Kyzyl-Kala and Toprak-Kala as separate visitor stops.",
+            "id": "auth:uz-public:Q100332243:evidence:1",
+            "license": null,
+            "publisher": "National PR Centre, Tourism Committee of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 c4f06e35e7a7c50777606156e8f4c0daf4e4ac96368dc3da6ae5b07400824ede.",
+            "title": "Pearls of ancient Khorezm tourist route 2025",
+            "uri": "https://app.uzbekistan.travel/en/o/Pearls-of-ancient-Khorezm-tourist-route-2025/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public excursion register lists the Qizilqal’a fort independently.",
+            "id": "auth:uz-public:Q100332243:evidence:2",
+            "license": null,
+            "publisher": "Cabinet of Ministers of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 1d074b81aa4a1fec18e467a3c28c7e8c50f960631815cb330d77f9084e3b2c4c.",
+            "title": "Public excursion-site register, decree No. 468 of 2026",
+            "uri": "https://www.lex.uz/Pages/GetPdf.aspx?file=LexUz_8548260.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 60.78411111111111, latitude 41.93002777777778",
+            "id": "wikidata:Q100332243",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2526108252. P625 Q100332243$d954356f-4051-c39f-5172-c339dccc9212.",
+            "title": "Kyzyl-Kala representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q100332243.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Survey table 1 locates Kyzyl-Kala and Toprak-Kala as separate monuments.",
+            "id": "auth:uz-public:Q100332243:independent:3",
+            "license": null,
+            "publisher": "Bulgarian Astronomical Journal",
+            "revision": "Retrieved 2026-11-28. SHA-256 a01c0c657c822ac103ce00e824bcda455b0e50520b3369839c5e1436e42e9ba6.",
+            "title": "Published survey coordinates of Khorezm fortifications",
+            "uri": "https://astro.bas.bg/AIJ/issues/n29/SBolelov.pdf"
+          }
+        ],
+        "source_uri": "https://app.uzbekistan.travel/en/o/Pearls-of-ancient-Khorezm-tourist-route-2025/",
+        "title": "Kyzyl-Kala",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/uz-khorezm-route.html",
+          "sha256": "c4f06e35e7a7c50777606156e8f4c0daf4e4ac96368dc3da6ae5b07400824ede",
+          "uri": "https://app.uzbekistan.travel/en/o/Pearls-of-ancient-Khorezm-tourist-route-2025/"
+        },
+        {
+          "filename": "source/uz-cabinet-2026.pdf",
+          "sha256": "1d074b81aa4a1fec18e467a3c28c7e8c50f960631815cb330d77f9084e3b2c4c",
+          "uri": "https://www.lex.uz/Pages/GetPdf.aspx?file=LexUz_8548260.pdf"
+        },
+        {
+          "filename": "source/Q100332243.json",
+          "sha256": "90a7a56d557ebd31b4d14b41edb30dcb968a86f4b860a5a0f6aec122e93304d0",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q100332243.json"
+        },
+        {
+          "filename": "source/independent-uz-forts-survey.pdf",
+          "sha256": "a01c0c657c822ac103ce00e824bcda455b0e50520b3369839c5e1436e42e9ba6",
+          "uri": "https://astro.bas.bg/AIJ/issues/n29/SBolelov.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The P625 locates the visitor site at 31 Moshtabib Street, separate from the inscribed nearby State Museum of Arts.",
+        "point": [
+          69.28598013644901,
+          41.29831008865522
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q122676365.json",
+        "statement_id": "Q122676365$fefc91a8-472c-5e9d-98b4-6d9a72a8a918"
+      },
+      "independent_review": {
+        "method": "Independently audited primary visitor sources, exact Wikidata coordinate statements, known restoration boundaries, official UNESCO component identities and historical status, and older corpus locations.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The public archaeological settlement and on-site museum in central Tashkent’s Mirobod District.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity matched with the official visitor sources and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National PR Centre, Tourism Committee of Uzbekistan",
+          "UNESCO World Heritage Centre",
+          "Wikidata contributors"
+        ],
+        "description": "The public archaeological settlement and on-site museum in central Tashkent’s Mirobod District.",
+        "description_zh": "明乌里克遗址位于乌兹别克斯坦，已核对官方公众参观依据。地图标注遗址代表点。",
+        "details": "The public archaeological settlement and on-site museum in central Tashkent’s Mirobod District.",
+        "geography": {
+          "authority_id": "supplement:auth:uz-public:Q122676365",
+          "countries": [
+            "UZ"
+          ],
+          "note": "Representative point of the documented public archaeological property in Mirobod District, Tashkent.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official visitor page gives the address and public opening hours for this settlement.",
+            "id": "auth:uz-public:Q122676365:evidence:1",
+            "license": null,
+            "publisher": "National PR Centre, Tourism Committee of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 73b1a135a291c7bf89d8788e67dcaa3871822ed4ee2510258beecdd5e85f172d.",
+            "title": "Ming Urik archaeological settlement public visitor information",
+            "uri": "https://app.uzbekistan.travel/en/o/ancient-settlement-of-ming-urik/"
+          }
+        },
+        "id": "auth:uz-public:Q122676365",
+        "location_precision": null,
+        "names": [
+          "明乌里克遗址",
+          "Ming Urik",
+          "Minguryuk Settlement",
+          "Ming Oʻrik",
+          "Mingoʻrik shahristoni"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          69.28598013644901,
+          41.29831008865522
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official visitor page gives the address and public opening hours for this settlement.",
+            "id": "auth:uz-public:Q122676365:evidence:1",
+            "license": null,
+            "publisher": "National PR Centre, Tourism Committee of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 73b1a135a291c7bf89d8788e67dcaa3871822ed4ee2510258beecdd5e85f172d.",
+            "title": "Ming Urik archaeological settlement public visitor information",
+            "uri": "https://app.uzbekistan.travel/en/o/ancient-settlement-of-ming-urik/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state nomination separately names the ancient settlement in Tashkent.",
+            "id": "auth:uz-public:Q122676365:evidence:2",
+            "license": null,
+            "publisher": "UNESCO World Heritage Centre",
+            "revision": "Retrieved 2026-11-28. SHA-256 d15c06c282c44b4aacddc317a1fda62dc2d272bf94c737e88e4642cf60444d29.",
+            "title": "Fergana–Syrdarya tentative nomination site identities",
+            "uri": "https://whc.unesco.org/en/tentativelists/6649/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 69.28598013644901, latitude 41.29831008865522",
+            "id": "wikidata:Q122676365",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2403237008. P625 Q122676365$fefc91a8-472c-5e9d-98b4-6d9a72a8a918.",
+            "title": "Ming Urik representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q122676365.json"
+          }
+        ],
+        "source_uri": "https://app.uzbekistan.travel/en/o/ancient-settlement-of-ming-urik/",
+        "title": "Ming Urik",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/uz-ming-urik.html",
+          "sha256": "73b1a135a291c7bf89d8788e67dcaa3871822ed4ee2510258beecdd5e85f172d",
+          "uri": "https://app.uzbekistan.travel/en/o/ancient-settlement-of-ming-urik/"
+        },
+        {
+          "filename": "source/whc-fergana-tentative.html",
+          "sha256": "d15c06c282c44b4aacddc317a1fda62dc2d272bf94c737e88e4642cf60444d29",
+          "uri": "https://whc.unesco.org/en/tentativelists/6649/"
+        },
+        {
+          "filename": "source/Q122676365.json",
+          "sha256": "f422858931ebd38631c8d2f8b779dbb264982da1b551d1d734684237d5b99eb5",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q122676365.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata Earth coordinate for the archaeological property.",
+        "point": [
+          60.069767642254064,
+          42.26425254851254
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12820857.json",
+        "statement_id": "Q12820857$8d3918bb-4b2c-04b4-3a83-5df481fb5426"
+      },
+      "independent_review": {
+        "method": "Independently audited primary visitor sources, exact Wikidata coordinate statements, known restoration boundaries, official UNESCO component identities and historical status, and older corpus locations.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "A circular Zoroastrian dakhma in Karakalpakstan included on the public Khorezm archaeological itinerary.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity matched with the official visitor sources and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National PR Centre, Tourism Committee of Uzbekistan",
+          "Cabinet of Ministers of Uzbekistan",
+          "Wikidata contributors",
+          "Uzbekistan National Commission for UNESCO"
+        ],
+        "description": "A circular Zoroastrian dakhma in Karakalpakstan included on the public Khorezm archaeological itinerary.",
+        "description_zh": "奇尔皮克寂静之塔位于乌兹别克斯坦，已核对官方公众参观依据。地图标注遗址代表点。",
+        "details": "A circular Zoroastrian dakhma in Karakalpakstan included on the public Khorezm archaeological itinerary.",
+        "geography": {
+          "authority_id": "supplement:auth:uz-public:Q12820857",
+          "countries": [
+            "UZ"
+          ],
+          "note": "Representative point of the documented public archaeological property in Amudarya District, Karakalpakstan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism itinerary lists the circular Chilpik dakhma.",
+            "id": "auth:uz-public:Q12820857:evidence:1",
+            "license": null,
+            "publisher": "National PR Centre, Tourism Committee of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 c4f06e35e7a7c50777606156e8f4c0daf4e4ac96368dc3da6ae5b07400824ede.",
+            "title": "Pearls of ancient Khorezm tourist route 2025",
+            "uri": "https://app.uzbekistan.travel/en/o/Pearls-of-ancient-Khorezm-tourist-route-2025/"
+          }
+        },
+        "id": "auth:uz-public:Q12820857",
+        "location_precision": null,
+        "names": [
+          "奇尔皮克寂静之塔",
+          "Chilpik Tower of Silence",
+          "Chilpik",
+          "Shilpik",
+          "Chilpik Kala",
+          "Shılpıq",
+          "Чилпиқ қалъаси"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          60.069767642254064,
+          42.26425254851254
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism itinerary lists the circular Chilpik dakhma.",
+            "id": "auth:uz-public:Q12820857:evidence:1",
+            "license": null,
+            "publisher": "National PR Centre, Tourism Committee of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 c4f06e35e7a7c50777606156e8f4c0daf4e4ac96368dc3da6ae5b07400824ede.",
+            "title": "Pearls of ancient Khorezm tourist route 2025",
+            "uri": "https://app.uzbekistan.travel/en/o/Pearls-of-ancient-Khorezm-tourist-route-2025/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The cabinet decree names the tower among public excursion destinations.",
+            "id": "auth:uz-public:Q12820857:evidence:2",
+            "license": null,
+            "publisher": "Cabinet of Ministers of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 1d074b81aa4a1fec18e467a3c28c7e8c50f960631815cb330d77f9084e3b2c4c.",
+            "title": "Public excursion-site register, decree No. 468 of 2026",
+            "uri": "https://www.lex.uz/Pages/GetPdf.aspx?file=LexUz_8548260.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 60.069767642254064, latitude 42.26425254851254",
+            "id": "wikidata:Q12820857",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2526110105. P625 Q12820857$8d3918bb-4b2c-04b4-3a83-5df481fb5426.",
+            "title": "Chilpik Tower of Silence representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12820857.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The tentative submission locates the circular dakhma in Karakalpakstan.",
+            "id": "auth:uz-public:Q12820857:independent:3",
+            "license": null,
+            "publisher": "Uzbekistan National Commission for UNESCO",
+            "revision": "Retrieved 2026-11-28. SHA-256 0b2fd071b7a428bbdbc4fd22fb7b4cf29912970a7bfb19c6d28b93f93d590e04.",
+            "title": "Chilpik Tower of Silence tentative submission",
+            "uri": "https://whc.unesco.org/en/tentativelists/6902/"
+          }
+        ],
+        "source_uri": "https://app.uzbekistan.travel/en/o/Pearls-of-ancient-Khorezm-tourist-route-2025/",
+        "title": "Chilpik Tower of Silence",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/uz-khorezm-route.html",
+          "sha256": "c4f06e35e7a7c50777606156e8f4c0daf4e4ac96368dc3da6ae5b07400824ede",
+          "uri": "https://app.uzbekistan.travel/en/o/Pearls-of-ancient-Khorezm-tourist-route-2025/"
+        },
+        {
+          "filename": "source/uz-cabinet-2026.pdf",
+          "sha256": "1d074b81aa4a1fec18e467a3c28c7e8c50f960631815cb330d77f9084e3b2c4c",
+          "uri": "https://www.lex.uz/Pages/GetPdf.aspx?file=LexUz_8548260.pdf"
+        },
+        {
+          "filename": "source/Q12820857.json",
+          "sha256": "b5717e1e603858ef876c0a31d54f0027a75d15e59dd356a9a7410b0268e4a2d2",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12820857.json"
+        },
+        {
+          "filename": "source/whc-chilpik-tentative.html",
+          "sha256": "0b2fd071b7a428bbdbc4fd22fb7b4cf29912970a7bfb19c6d28b93f93d590e04",
+          "uri": "https://whc.unesco.org/en/tentativelists/6902/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Published Wikidata coordinate for the publicly promoted archaeological complex. It is used as a whole-site representative point.",
+        "point": [
+          59.38918182244513,
+          42.40206940092113
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12827505.json",
+        "statement_id": "Q12827505$55564a51-4389-a510-093a-c5b619955366"
+      },
+      "independent_review": {
+        "method": "Independently audited primary visitor sources, exact Wikidata coordinate statements, known restoration boundaries, official UNESCO component identities and historical status, and older corpus locations.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological and pilgrimage complex on the hills near Khojeyli, encompassing ancient ruins and historic mausoleums.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity matched with the official visitor sources and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National PR Centre, Tourism Committee of Uzbekistan",
+          "Cabinet of Ministers of Uzbekistan",
+          "International Institute for Central Asian Studies",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological and pilgrimage complex on the hills near Khojeyli, encompassing ancient ruins and historic mausoleums.",
+        "description_zh": "米兹达汗遗址位于乌兹别克斯坦，已核对官方公众参观依据。地图标注遗址代表点。",
+        "details": "Public archaeological and pilgrimage complex on the hills near Khojeyli, encompassing ancient ruins and historic mausoleums.",
+        "geography": {
+          "authority_id": "supplement:auth:uz-public:Q12827505",
+          "countries": [
+            "UZ"
+          ],
+          "note": "Representative point of the documented public archaeological property in Xojeli District, Karakalpakstan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism office identifies and promotes the public archaeological complex near Khojeyli.",
+            "id": "auth:uz-public:Q12827505:evidence:1",
+            "license": null,
+            "publisher": "National PR Centre, Tourism Committee of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 12d9356026c25e267cd4bca7953325d2078fc1c77cf8b9fd3d88d5fe363eaeed.",
+            "title": "Ancient necropolis of Mizdakhan public visitor listing",
+            "uri": "https://uzbekistan.travel/en/o/ancient-necropolis-of-mizdakhan/"
+          }
+        },
+        "id": "auth:uz-public:Q12827505",
+        "location_precision": null,
+        "names": [
+          "米兹达汗遗址",
+          "Mizdahkan",
+          "Mizdakhan",
+          "Mizdaxqon",
+          "Mizdaxqan",
+          "Миздаҳқон мажмуаси"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          59.38918182244513,
+          42.40206940092113
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism office identifies and promotes the public archaeological complex near Khojeyli.",
+            "id": "auth:uz-public:Q12827505:evidence:1",
+            "license": null,
+            "publisher": "National PR Centre, Tourism Committee of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 12d9356026c25e267cd4bca7953325d2078fc1c77cf8b9fd3d88d5fe363eaeed.",
+            "title": "Ancient necropolis of Mizdakhan public visitor listing",
+            "uri": "https://uzbekistan.travel/en/o/ancient-necropolis-of-mizdakhan/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The cabinet decree lists the whole Mizdahkan complex as an excursion destination.",
+            "id": "auth:uz-public:Q12827505:evidence:2",
+            "license": null,
+            "publisher": "Cabinet of Ministers of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 1d074b81aa4a1fec18e467a3c28c7e8c50f960631815cb330d77f9084e3b2c4c.",
+            "title": "Public excursion-site register, decree No. 468 of 2026",
+            "uri": "https://www.lex.uz/Pages/GetPdf.aspx?file=LexUz_8548260.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The conservation project confirms the identity of the complex and links public interpretation of the restored monument.",
+            "id": "auth:uz-public:Q12827505:evidence:3",
+            "license": null,
+            "publisher": "International Institute for Central Asian Studies",
+            "revision": "Retrieved 2026-11-28. SHA-256 82ca354272362ac2d2320987f2b5da45fa0a9103781ae93ae4550b38031a002a.",
+            "title": "Conservation and visitor interpretation at Mizdahkan",
+            "uri": "https://iicas.int/ru/news/view?alias=Conservation+of+Khalifa+Erezhep+Mausoleum+Has+Been+Completed"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 59.38918182244513, latitude 42.40206940092113",
+            "id": "wikidata:Q12827505",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2516943025. P625 Q12827505$55564a51-4389-a510-093a-c5b619955366.",
+            "title": "Mizdahkan representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12827505.json"
+          }
+        ],
+        "source_uri": "https://uzbekistan.travel/en/o/ancient-necropolis-of-mizdakhan/",
+        "title": "Mizdahkan",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/uz-mizdakhan.html",
+          "sha256": "12d9356026c25e267cd4bca7953325d2078fc1c77cf8b9fd3d88d5fe363eaeed",
+          "uri": "https://uzbekistan.travel/en/o/ancient-necropolis-of-mizdakhan/"
+        },
+        {
+          "filename": "source/uz-cabinet-2026.pdf",
+          "sha256": "1d074b81aa4a1fec18e467a3c28c7e8c50f960631815cb330d77f9084e3b2c4c",
+          "uri": "https://www.lex.uz/Pages/GetPdf.aspx?file=LexUz_8548260.pdf"
+        },
+        {
+          "filename": "source/uz-mizdakhan-iicas.html",
+          "sha256": "82ca354272362ac2d2320987f2b5da45fa0a9103781ae93ae4550b38031a002a",
+          "uri": "https://iicas.int/ru/news/view?alias=Conservation+of+Khalifa+Erezhep+Mausoleum+Has+Been+Completed"
+        },
+        {
+          "filename": "source/Q12827505.json",
+          "sha256": "82f65a5a451ce045200490fc6cd82ba23dea2690d2efdea8d8431f666cc71a2a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12827505.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata Earth coordinate for the archaeological property.",
+        "point": [
+          60.820833333333,
+          41.928611111111
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2443559.json",
+        "statement_id": "Q2443559$2A1F6503-05B2-4786-B207-0C2E0AC61304"
+      },
+      "independent_review": {
+        "method": "Independently audited primary visitor sources, exact Wikidata coordinate statements, known restoration boundaries, official UNESCO component identities and historical status, and older corpus locations.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Ancient Khorezm fortified settlement with a raised palace, on a public archaeological itinerary.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity matched with the official visitor sources and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National PR Centre, Tourism Committee of Uzbekistan",
+          "Cabinet of Ministers of Uzbekistan",
+          "UNESCO World Heritage Centre",
+          "Wikidata contributors"
+        ],
+        "description": "Ancient Khorezm fortified settlement with a raised palace, on a public archaeological itinerary.",
+        "description_zh": "托普拉克卡拉遗址位于乌兹别克斯坦，已核对官方公众参观依据。地图标注遗址代表点。",
+        "details": "Ancient Khorezm fortified settlement with a raised palace, on a public archaeological itinerary.",
+        "geography": {
+          "authority_id": "supplement:auth:uz-public:Q2443559",
+          "countries": [
+            "UZ"
+          ],
+          "note": "Representative point of the documented public archaeological property in Ellikqala District, Karakalpakstan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The public Khorezm route visits the archaeological fortress at Toprak-Kala.",
+            "id": "auth:uz-public:Q2443559:evidence:1",
+            "license": null,
+            "publisher": "National PR Centre, Tourism Committee of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 c4f06e35e7a7c50777606156e8f4c0daf4e4ac96368dc3da6ae5b07400824ede.",
+            "title": "Pearls of ancient Khorezm tourist route 2025",
+            "uri": "https://app.uzbekistan.travel/en/o/Pearls-of-ancient-Khorezm-tourist-route-2025/"
+          }
+        },
+        "id": "auth:uz-public:Q2443559",
+        "location_precision": null,
+        "names": [
+          "托普拉克卡拉遗址",
+          "Toprak-Kala",
+          "Topraq Qalʼa",
+          "Toprakkala",
+          "Топрак-кала",
+          "Тупроққалъа"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          60.820833333333,
+          41.928611111111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public Khorezm route visits the archaeological fortress at Toprak-Kala.",
+            "id": "auth:uz-public:Q2443559:evidence:1",
+            "license": null,
+            "publisher": "National PR Centre, Tourism Committee of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 c4f06e35e7a7c50777606156e8f4c0daf4e4ac96368dc3da6ae5b07400824ede.",
+            "title": "Pearls of ancient Khorezm tourist route 2025",
+            "uri": "https://app.uzbekistan.travel/en/o/Pearls-of-ancient-Khorezm-tourist-route-2025/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The cabinet decree identifies Toprak-Kala as a public excursion destination.",
+            "id": "auth:uz-public:Q2443559:evidence:2",
+            "license": null,
+            "publisher": "Cabinet of Ministers of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 1d074b81aa4a1fec18e467a3c28c7e8c50f960631815cb330d77f9084e3b2c4c.",
+            "title": "Public excursion-site register, decree No. 468 of 2026",
+            "uri": "https://www.lex.uz/Pages/GetPdf.aspx?file=LexUz_8548260.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tentative nomination identifies this Ellikqala archaeological complex.",
+            "id": "auth:uz-public:Q2443559:evidence:3",
+            "license": null,
+            "publisher": "UNESCO World Heritage Centre",
+            "revision": "Retrieved 2026-11-28. SHA-256 beec77edbacd138fa82023604db79439cf00005a6cc70bffce830a54fedd3055.",
+            "title": "Aral Sea region tentative nomination site identities",
+            "uri": "https://whc.unesco.org/en/tentativelists/6903/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 60.820833333333, latitude 41.928611111111",
+            "id": "wikidata:Q2443559",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2569675605. P625 Q2443559$2A1F6503-05B2-4786-B207-0C2E0AC61304.",
+            "title": "Toprak-Kala representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2443559.json"
+          }
+        ],
+        "source_uri": "https://app.uzbekistan.travel/en/o/Pearls-of-ancient-Khorezm-tourist-route-2025/",
+        "title": "Toprak-Kala",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/uz-khorezm-route.html",
+          "sha256": "c4f06e35e7a7c50777606156e8f4c0daf4e4ac96368dc3da6ae5b07400824ede",
+          "uri": "https://app.uzbekistan.travel/en/o/Pearls-of-ancient-Khorezm-tourist-route-2025/"
+        },
+        {
+          "filename": "source/uz-cabinet-2026.pdf",
+          "sha256": "1d074b81aa4a1fec18e467a3c28c7e8c50f960631815cb330d77f9084e3b2c4c",
+          "uri": "https://www.lex.uz/Pages/GetPdf.aspx?file=LexUz_8548260.pdf"
+        },
+        {
+          "filename": "source/whc-aral-tentative.html",
+          "sha256": "beec77edbacd138fa82023604db79439cf00005a6cc70bffce830a54fedd3055",
+          "uri": "https://whc.unesco.org/en/tentativelists/6903/"
+        },
+        {
+          "filename": "source/Q2443559.json",
+          "sha256": "cd09a3a63745b00f0ea9bc2826f9b0568ad39decea53505dcc6f0954597f3b04",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2443559.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Two active Wikidata coordinates are 3.5 metres apart. The first has more significant digits and identifies the same archaeological ruins as the second.",
+        "point": [
+          71.450602,
+          40.886569
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2495429.json",
+        "statement_id": "Q2495429$396024bc-4795-fc82-040c-cd9f705e7268"
+      },
+      "independent_review": {
+        "method": "Independently audited primary visitor sources, exact Wikidata coordinate statements, known restoration boundaries, official UNESCO component identities and historical status, and older corpus locations.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Archaeological park at the historic settlement on the north bank of the Syr Darya.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity matched with the official visitor sources and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Namangan regional government",
+          "To‘raqo‘rg‘on district government",
+          "Cabinet of Ministers of Uzbekistan",
+          "Wikidata contributors"
+        ],
+        "description": "Archaeological park at the historic settlement on the north bank of the Syr Darya.",
+        "description_zh": "阿赫西肯特古城位于乌兹别克斯坦，已核对官方公众参观依据。地图标注遗址代表点。",
+        "details": "Archaeological park at the historic settlement on the north bank of the Syr Darya.",
+        "geography": {
+          "authority_id": "supplement:auth:uz-public:Q2495429",
+          "countries": [
+            "UZ"
+          ],
+          "note": "Representative point of the documented public archaeological property in To‘raqo‘rg‘on District, Namangan Region.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The province identifies the archaeological monument as a place for visitors.",
+            "id": "auth:uz-public:Q2495429:evidence:1",
+            "license": null,
+            "publisher": "Namangan regional government",
+            "revision": "Retrieved 2026-11-28. SHA-256 3797afb9955675f7b19ace1ce0b8db54008c493ee967d2dc7614d49f42e7ad1e.",
+            "title": "Akhsikent official place to visit",
+            "uri": "https://gov.uz/ru/namangan/news/view/133417"
+          }
+        },
+        "id": "auth:uz-public:Q2495429",
+        "location_precision": null,
+        "names": [
+          "阿赫西肯特古城",
+          "Akhsikent",
+          "Axsikent",
+          "Akhsikath",
+          "Ahsiket",
+          "Aksykent",
+          "Ахсикент"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          71.450602,
+          40.886569
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The province identifies the archaeological monument as a place for visitors.",
+            "id": "auth:uz-public:Q2495429:evidence:1",
+            "license": null,
+            "publisher": "Namangan regional government",
+            "revision": "Retrieved 2026-11-28. SHA-256 3797afb9955675f7b19ace1ce0b8db54008c493ee967d2dc7614d49f42e7ad1e.",
+            "title": "Akhsikent official place to visit",
+            "uri": "https://gov.uz/ru/namangan/news/view/133417"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The district records an organized visit to the archaeological park in 2026.",
+            "id": "auth:uz-public:Q2495429:evidence:2",
+            "license": null,
+            "publisher": "To‘raqo‘rg‘on district government",
+            "revision": "Retrieved 2026-11-28. SHA-256 a5ea11ccb6b4ed66fc19833c7fc46953f649b344295ead259acf0ae6c2144249.",
+            "title": "2026 visit to Akhsikent archaeological park",
+            "uri": "https://gov.uz/oz/turakurgan/news/view/132429"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The cabinet lists the archaeological monument as an excursion destination.",
+            "id": "auth:uz-public:Q2495429:evidence:3",
+            "license": null,
+            "publisher": "Cabinet of Ministers of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 1d074b81aa4a1fec18e467a3c28c7e8c50f960631815cb330d77f9084e3b2c4c.",
+            "title": "Public excursion-site register, decree No. 468 of 2026",
+            "uri": "https://www.lex.uz/Pages/GetPdf.aspx?file=LexUz_8548260.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 71.450602, latitude 40.886569",
+            "id": "wikidata:Q2495429",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2516915733. P625 Q2495429$396024bc-4795-fc82-040c-cd9f705e7268.",
+            "title": "Akhsikent representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2495429.json"
+          }
+        ],
+        "source_uri": "https://gov.uz/ru/namangan/news/view/133417",
+        "title": "Akhsikent",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/uz-akhsikent.html",
+          "sha256": "3797afb9955675f7b19ace1ce0b8db54008c493ee967d2dc7614d49f42e7ad1e",
+          "uri": "https://gov.uz/ru/namangan/news/view/133417"
+        },
+        {
+          "filename": "source/uz-akhsikent-visit.html",
+          "sha256": "a5ea11ccb6b4ed66fc19833c7fc46953f649b344295ead259acf0ae6c2144249",
+          "uri": "https://gov.uz/oz/turakurgan/news/view/132429"
+        },
+        {
+          "filename": "source/uz-cabinet-2026.pdf",
+          "sha256": "1d074b81aa4a1fec18e467a3c28c7e8c50f960631815cb330d77f9084e3b2c4c",
+          "uri": "https://www.lex.uz/Pages/GetPdf.aspx?file=LexUz_8548260.pdf"
+        },
+        {
+          "filename": "source/Q2495429.json",
+          "sha256": "00fee72cb5a8754a32a762e3ae4ffb89941cdf78a091e9fef7eb113ded1ff132",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2495429.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The active P625 matches the same archaeological site's coordinate in the nominated inventory. The point represents the visitor-listed settlement as a whole.",
+        "point": [
+          72.34829167,
+          40.50576389
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q25511328.json",
+        "statement_id": "Q25511328$5c2f14b6-4064-f233-3939-677767f757dd"
+      },
+      "independent_review": {
+        "method": "Independently audited primary visitor sources, exact Wikidata coordinate statements, known restoration boundaries, official UNESCO component identities and historical status, and older corpus locations.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Walled settlement in the Fergana Valley listed as a public archaeological excursion destination.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity matched with the official visitor sources and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Cabinet of Ministers of Uzbekistan",
+          "UNESCO World Heritage Centre",
+          "Wikidata contributors"
+        ],
+        "description": "Walled settlement in the Fergana Valley listed as a public archaeological excursion destination.",
+        "description_zh": "明特帕遗址位于乌兹别克斯坦，已核对官方公众参观依据。地图标注遗址代表点。",
+        "details": "Walled settlement in the Fergana Valley listed as a public archaeological excursion destination.",
+        "geography": {
+          "authority_id": "supplement:auth:uz-public:Q25511328",
+          "countries": [
+            "UZ"
+          ],
+          "note": "Representative point of the documented public archaeological property in Marhamat District, Andijan Region.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The cabinet lists Mingtepa in Andijan Region among public excursion destinations.",
+            "id": "auth:uz-public:Q25511328:evidence:1",
+            "license": null,
+            "publisher": "Cabinet of Ministers of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 1d074b81aa4a1fec18e467a3c28c7e8c50f960631815cb330d77f9084e3b2c4c.",
+            "title": "Public excursion-site register, decree No. 468 of 2026",
+            "uri": "https://www.lex.uz/Pages/GetPdf.aspx?file=LexUz_8548260.pdf"
+          }
+        },
+        "id": "auth:uz-public:Q25511328",
+        "location_precision": null,
+        "names": [
+          "明特帕遗址",
+          "Mingtepa Settlement",
+          "Mingtepa",
+          "Мингтепа (Андижан)",
+          "Marhamat Mingtepa"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          72.34829167,
+          40.50576389
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The cabinet lists Mingtepa in Andijan Region among public excursion destinations.",
+            "id": "auth:uz-public:Q25511328:evidence:1",
+            "license": null,
+            "publisher": "Cabinet of Ministers of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 1d074b81aa4a1fec18e467a3c28c7e8c50f960631815cb330d77f9084e3b2c4c.",
+            "title": "Public excursion-site register, decree No. 468 of 2026",
+            "uri": "https://www.lex.uz/Pages/GetPdf.aspx?file=LexUz_8548260.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state nomination links these coordinates to the archaeological settlement in Marhamat.",
+            "id": "auth:uz-public:Q25511328:evidence:2",
+            "license": null,
+            "publisher": "UNESCO World Heritage Centre",
+            "revision": "Retrieved 2026-11-28. SHA-256 d15c06c282c44b4aacddc317a1fda62dc2d272bf94c737e88e4642cf60444d29.",
+            "title": "Fergana–Syrdarya tentative nomination site identities",
+            "uri": "https://whc.unesco.org/en/tentativelists/6649/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 72.34829167, latitude 40.50576389",
+            "id": "wikidata:Q25511328",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2400289676. P625 Q25511328$5c2f14b6-4064-f233-3939-677767f757dd.",
+            "title": "Mingtepa Settlement representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q25511328.json"
+          }
+        ],
+        "source_uri": "https://www.lex.uz/Pages/GetPdf.aspx?file=LexUz_8548260.pdf",
+        "title": "Mingtepa Settlement",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/uz-cabinet-2026.pdf",
+          "sha256": "1d074b81aa4a1fec18e467a3c28c7e8c50f960631815cb330d77f9084e3b2c4c",
+          "uri": "https://www.lex.uz/Pages/GetPdf.aspx?file=LexUz_8548260.pdf"
+        },
+        {
+          "filename": "source/whc-fergana-tentative.html",
+          "sha256": "d15c06c282c44b4aacddc317a1fda62dc2d272bf94c737e88e4642cf60444d29",
+          "uri": "https://whc.unesco.org/en/tentativelists/6649/"
+        },
+        {
+          "filename": "source/Q25511328.json",
+          "sha256": "9bf7867f245aab426e4a4859cef3bc371b0e4c2d822d69106aadc58defd15e8c",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q25511328.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original whole-complex Wikidata marker near Ayaz-Kala II. The route and state nomination identify the three forts separately within this public complex.",
+        "point": [
+          61.02722222,
+          42.00972222
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q792827.json",
+        "statement_id": "Q792827$0DD03B84-32DF-4E2B-966F-D0D565F9C940"
+      },
+      "independent_review": {
+        "method": "Independently audited primary visitor sources, exact Wikidata coordinate statements, known restoration boundaries, official UNESCO component identities and historical status, and older corpus locations.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Publicly visited archaeological complex of three ancient fortifications in Karakalpakstan.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity matched with the official visitor sources and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National PR Centre, Tourism Committee of Uzbekistan",
+          "Cabinet of Ministers of Uzbekistan",
+          "UNESCO World Heritage Centre",
+          "Wikidata contributors"
+        ],
+        "description": "Publicly visited archaeological complex of three ancient fortifications in Karakalpakstan.",
+        "description_zh": "阿亚兹卡拉遗址位于乌兹别克斯坦，已核对官方公众参观依据。地图标注遗址代表点。",
+        "details": "Publicly visited archaeological complex of three ancient fortifications in Karakalpakstan.",
+        "geography": {
+          "authority_id": "supplement:auth:uz-public:Q792827",
+          "countries": [
+            "UZ"
+          ],
+          "note": "Representative point of the documented public archaeological property in Ellikqala and Beruniy districts, Karakalpakstan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The public Khorezm route identifies three forts at Ayaz-Kala.",
+            "id": "auth:uz-public:Q792827:evidence:1",
+            "license": null,
+            "publisher": "National PR Centre, Tourism Committee of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 c4f06e35e7a7c50777606156e8f4c0daf4e4ac96368dc3da6ae5b07400824ede.",
+            "title": "Pearls of ancient Khorezm tourist route 2025",
+            "uri": "https://app.uzbekistan.travel/en/o/Pearls-of-ancient-Khorezm-tourist-route-2025/"
+          }
+        },
+        "id": "auth:uz-public:Q792827",
+        "location_precision": null,
+        "names": [
+          "阿亚兹卡拉遗址",
+          "Ayaz-Kala",
+          "Ayaz Qala",
+          "Ayoz qalʼa",
+          "Аяз-Кала",
+          "Аяз қалъаси"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          61.02722222,
+          42.00972222
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public Khorezm route identifies three forts at Ayaz-Kala.",
+            "id": "auth:uz-public:Q792827:evidence:1",
+            "license": null,
+            "publisher": "National PR Centre, Tourism Committee of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 c4f06e35e7a7c50777606156e8f4c0daf4e4ac96368dc3da6ae5b07400824ede.",
+            "title": "Pearls of ancient Khorezm tourist route 2025",
+            "uri": "https://app.uzbekistan.travel/en/o/Pearls-of-ancient-Khorezm-tourist-route-2025/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The cabinet decree lists Ayaz-Kala as an excursion destination.",
+            "id": "auth:uz-public:Q792827:evidence:2",
+            "license": null,
+            "publisher": "Cabinet of Ministers of Uzbekistan",
+            "revision": "Retrieved 2026-11-28. SHA-256 1d074b81aa4a1fec18e467a3c28c7e8c50f960631815cb330d77f9084e3b2c4c.",
+            "title": "Public excursion-site register, decree No. 468 of 2026",
+            "uri": "https://www.lex.uz/Pages/GetPdf.aspx?file=LexUz_8548260.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tentative nomination distinguishes the three named forts.",
+            "id": "auth:uz-public:Q792827:evidence:3",
+            "license": null,
+            "publisher": "UNESCO World Heritage Centre",
+            "revision": "Retrieved 2026-11-28. SHA-256 beec77edbacd138fa82023604db79439cf00005a6cc70bffce830a54fedd3055.",
+            "title": "Aral Sea region tentative nomination site identities",
+            "uri": "https://whc.unesco.org/en/tentativelists/6903/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 61.02722222, latitude 42.00972222",
+            "id": "wikidata:Q792827",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2498034396. P625 Q792827$0DD03B84-32DF-4E2B-966F-D0D565F9C940.",
+            "title": "Ayaz-Kala representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q792827.json"
+          }
+        ],
+        "source_uri": "https://app.uzbekistan.travel/en/o/Pearls-of-ancient-Khorezm-tourist-route-2025/",
+        "title": "Ayaz-Kala",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/uz-khorezm-route.html",
+          "sha256": "c4f06e35e7a7c50777606156e8f4c0daf4e4ac96368dc3da6ae5b07400824ede",
+          "uri": "https://app.uzbekistan.travel/en/o/Pearls-of-ancient-Khorezm-tourist-route-2025/"
+        },
+        {
+          "filename": "source/uz-cabinet-2026.pdf",
+          "sha256": "1d074b81aa4a1fec18e467a3c28c7e8c50f960631815cb330d77f9084e3b2c4c",
+          "uri": "https://www.lex.uz/Pages/GetPdf.aspx?file=LexUz_8548260.pdf"
+        },
+        {
+          "filename": "source/whc-aral-tentative.html",
+          "sha256": "beec77edbacd138fa82023604db79439cf00005a6cc70bffce830a54fedd3055",
+          "uri": "https://whc.unesco.org/en/tentativelists/6903/"
+        },
+        {
+          "filename": "source/Q792827.json",
+          "sha256": "4314cd55943f5aad9ec1f766680da86b0ac850ee638ae202a406fee7ee9f17a1",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q792827.json"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Named archaeological sites in Kazakhstan and Uzbekistan with documented public visit areas, CC0 representative points, and independent checks of the authority record and existing corpus."
+}

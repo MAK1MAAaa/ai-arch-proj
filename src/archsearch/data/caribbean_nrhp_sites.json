@@ -1,0 +1,622 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the scope and date fields of the adopted public reference materials.",
+      "note": "This point batch does not pin a verified historical stage. Register listing dates do not date the property.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Park Service",
+      "Wikidata contributors",
+      "St. Thomas Historical Trust"
+    ],
+    "description": "Public museum at the historic fort.",
+    "description_zh": "圣托马斯岛夏洛特阿马利亚的历史堡垒及公众博物馆。",
+    "details": "National Register public point 77001329; retained as a general-reference representative point. The identically registered entity’s second public point agrees within 30 m.",
+    "geography": {
+      "authority_id": "supplement:auth:nps-caribbean:77001329",
+      "countries": [
+        "VI"
+      ],
+      "note": "The modern geographic code describes official catalogue coverage.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Fort Christian; Charlotte Amalie, St. Thomas; listed.",
+        "id": "nps:nrhp:77001329",
+        "license": "U.S. public domain (federal agency data)",
+        "publisher": "National Park Service",
+        "revision": "Frozen public NRHP point query; SHA-256 991af887e9b7869b7400ebcca7e2dd5dc892a8b7fd601527bfb50ac1bd318362",
+        "title": "National Register — Fort Christian (77001329)",
+        "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27PUERTO+RICO%27%2C%27VIRGIN+ISLANDS%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:nps-caribbean:77001329",
+    "location_precision": null,
+    "names": [
+      "Fort Christian",
+      "Fort Christian Museum"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -64.92973733599996,
+      18.340600092000045
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Fort Christian; Charlotte Amalie, St. Thomas; listed.",
+        "id": "nps:nrhp:77001329",
+        "license": "U.S. public domain (federal agency data)",
+        "publisher": "National Park Service",
+        "revision": "Frozen public NRHP point query; SHA-256 991af887e9b7869b7400ebcca7e2dd5dc892a8b7fd601527bfb50ac1bd318362",
+        "title": "National Register — Fort Christian (77001329)",
+        "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27PUERTO+RICO%27%2C%27VIRGIN+ISLANDS%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Fort Christian; National Register ID 77001329.",
+        "id": "wd:Q1773741",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2573751687; SHA-256 722d29dd5e84561cf8b73675b92f8448360fc9f89ca864f81c0cb99cc15f91f2",
+        "title": "Wikidata structured location — Fort Christian",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1773741.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Fort Christian; Charlotte Amalie, St. Thomas.",
+        "id": "sht:fort-christian",
+        "license": "Public reference; source content rights retained",
+        "publisher": "St. Thomas Historical Trust",
+        "revision": "SHA-256 7dfd8a3ca8f540f48f48706b787fc6a8144bdc4f852bab3f806a54a14b3a3620",
+        "title": "Fort Christian heritage interpretation",
+        "uri": "https://www.stthomashistoricaltrust.org/fort-christian-1"
+      }
+    ],
+    "source_uri": "https://npgallery.nps.gov/AssetDetail/NRIS/77001329",
+    "title": "Fort Christian",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the scope and date fields of the adopted public reference materials.",
+      "note": "This point batch does not pin a verified historical stage. Register listing dates do not date the property.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Park Service",
+      "United States Coast Guard",
+      "Arecibo Lighthouse and Historical Park"
+    ],
+    "description": "Historic lighthouse in the public visitor park at Punta Morrillos in Arecibo.",
+    "description_zh": "波多黎各阿雷西沃公共文化公园内的历史灯塔。",
+    "details": "Historic lighthouse representative point is the named tower position in the official U.S. Coast Guard Light List (WGS 84), with source degrees, minutes and seconds converted to decimal longitude and latitude.",
+    "geography": {
+      "authority_id": "supplement:auth:nps-caribbean:77001546",
+      "countries": [
+        "PR"
+      ],
+      "note": "The modern geographic code describes official catalogue coverage.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Faro de Arecibo; Arecibo, Puerto Rico; listed.",
+        "id": "nps:nrhp:77001546",
+        "license": "U.S. public domain (federal agency data)",
+        "publisher": "National Park Service",
+        "revision": "Frozen public NRHP point query; SHA-256 991af887e9b7869b7400ebcca7e2dd5dc892a8b7fd601527bfb50ac1bd318362",
+        "title": "National Register — Faro de Arecibo (77001546)",
+        "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27PUERTO+RICO%27%2C%27VIRGIN+ISLANDS%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:nps-caribbean:77001546",
+    "location_precision": null,
+    "names": [
+      "Faro de Arecibo",
+      "Arecibo Lighthouse",
+      "Arecibo Lighthouse and Historical Park"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -66.69870361111111,
+      18.48196944444444
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Faro de Arecibo; Arecibo, Puerto Rico; listed.",
+        "id": "nps:nrhp:77001546",
+        "license": "U.S. public domain (federal agency data)",
+        "publisher": "National Park Service",
+        "revision": "Frozen public NRHP point query; SHA-256 991af887e9b7869b7400ebcca7e2dd5dc892a8b7fd601527bfb50ac1bd318362",
+        "title": "National Register — Faro de Arecibo (77001546)",
+        "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27PUERTO+RICO%27%2C%27VIRGIN+ISLANDS%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "18-28-55.090N; 066-41-55.333W.",
+        "id": "uscg:light:30720",
+        "license": "U.S. public domain (federal agency data)",
+        "publisher": "United States Coast Guard",
+        "revision": "2024 Light List Volume III, corrected through week 52/23; SHA-256 6e5e00d54d012887c1bf1ca04ae0c07556c0ed0ee45b42893affe2ecda895927",
+        "title": "2024 Light List Volume III — Faro de Arecibo (30720)",
+        "uri": "https://www.navcen.uscg.gov/sites/default/files/pdf/lightLists/LightList_V3_2024.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "public-visitor:77001546",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Arecibo Lighthouse and Historical Park",
+        "revision": "SHA-256 c4e20da72bf86197911c2a330f8f8c6a44ccba04260bd556901530f54df338f9",
+        "title": "Faro de Arecibo public visitor information",
+        "uri": "https://www.arecibolighthouse.com/index.html"
+      }
+    ],
+    "source_uri": "https://npgallery.nps.gov/AssetDetail/NRIS/77001546",
+    "title": "Faro de Arecibo",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the scope and date fields of the adopted public reference materials.",
+      "note": "This point batch does not pin a verified historical stage. Register listing dates do not date the property.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Park Service",
+      "Wikidata contributors",
+      "Museo Castillo Serrallés"
+    ],
+    "description": "Historic property in Ponce, now a public museum with ticketed visits.",
+    "description_zh": "波多黎各蓬塞的历史建筑，现为可购票参观的博物馆。",
+    "details": "The retained Wikidata point matches the museum operator’s mapped destination within 15 m; the published register point is about 1.13 km away.",
+    "geography": {
+      "authority_id": "supplement:auth:nps-caribbean:80004494",
+      "countries": [
+        "PR"
+      ],
+      "note": "The modern geographic code describes official catalogue coverage.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Castillo de Serralles; Ponce, Puerto Rico; listed.",
+        "id": "nps:nrhp:80004494",
+        "license": "U.S. public domain (federal agency data)",
+        "publisher": "National Park Service",
+        "revision": "Frozen public NRHP point query; SHA-256 991af887e9b7869b7400ebcca7e2dd5dc892a8b7fd601527bfb50ac1bd318362",
+        "title": "National Register — Castillo de Serralles (80004494)",
+        "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27PUERTO+RICO%27%2C%27VIRGIN+ISLANDS%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:nps-caribbean:80004494",
+    "location_precision": null,
+    "names": [
+      "Castillo Serrallés",
+      "Castillo de Serrallés",
+      "Museo Castillo Serrallés",
+      "Castillo de Serralles"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -66.6193,
+      18.0187
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Castillo de Serralles; Ponce, Puerto Rico; listed.",
+        "id": "nps:nrhp:80004494",
+        "license": "U.S. public domain (federal agency data)",
+        "publisher": "National Park Service",
+        "revision": "Frozen public NRHP point query; SHA-256 991af887e9b7869b7400ebcca7e2dd5dc892a8b7fd601527bfb50ac1bd318362",
+        "title": "National Register — Castillo de Serralles (80004494)",
+        "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27PUERTO+RICO%27%2C%27VIRGIN+ISLANDS%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Castillo Serrallés; National Register ID 80004494.",
+        "id": "wd:Q5049939",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2563295370; SHA-256 e9f3f33aea1431c381727f8a2e5c11ce15ef945670ad6a77e3cbd5a5734142aa",
+        "title": "Wikidata structured location — Castillo Serrallés",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5049939.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "public-visitor:80004494",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Museo Castillo Serrallés",
+        "revision": "SHA-256 beb3344d98bcd9c51c1c0821ebb897ad5a777824b6f4c4a31e7cfb01eeb7cd18",
+        "title": "Castillo Serrallés public visitor information",
+        "uri": "https://museocastilloserrallespr.com/wpbc-booking/"
+      }
+    ],
+    "source_uri": "https://npgallery.nps.gov/AssetDetail/NRIS/80004494",
+    "title": "Castillo Serrallés",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the scope and date fields of the adopted public reference materials.",
+      "note": "This point batch does not pin a verified historical stage. Register listing dates do not date the property.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Park Service",
+      "United States Coast Guard",
+      "Oficina Estatal de Conservación Histórica de Puerto Rico"
+    ],
+    "description": "Historic lighthouse within the municipal public park; the grounds have visitor access.",
+    "description_zh": "波多黎各林孔市公园内的历史灯塔，开放证据对应公园外部区域。",
+    "details": "Historic lighthouse representative point is the named tower position in the official U.S. Coast Guard Light List (WGS 84), with source degrees, minutes and seconds converted to decimal longitude and latitude.",
+    "geography": {
+      "authority_id": "supplement:auth:nps-caribbean:81000560",
+      "countries": [
+        "PR"
+      ],
+      "note": "The modern geographic code describes official catalogue coverage.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Faro di Punta Higuero; Rincón, Puerto Rico; listed.",
+        "id": "nps:nrhp:81000560",
+        "license": "U.S. public domain (federal agency data)",
+        "publisher": "National Park Service",
+        "revision": "Frozen public NRHP point query; SHA-256 991af887e9b7869b7400ebcca7e2dd5dc892a8b7fd601527bfb50ac1bd318362",
+        "title": "National Register — Faro di Punta Higuero (81000560)",
+        "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27PUERTO+RICO%27%2C%27VIRGIN+ISLANDS%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:nps-caribbean:81000560",
+    "location_precision": null,
+    "names": [
+      "Faro de Punta Higüero",
+      "Punta Higüero Light",
+      "Punta Higüera Lighthouse",
+      "Faro di Punta Higuero"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -67.270805,
+      18.361977777777778
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Faro di Punta Higuero; Rincón, Puerto Rico; listed.",
+        "id": "nps:nrhp:81000560",
+        "license": "U.S. public domain (federal agency data)",
+        "publisher": "National Park Service",
+        "revision": "Frozen public NRHP point query; SHA-256 991af887e9b7869b7400ebcca7e2dd5dc892a8b7fd601527bfb50ac1bd318362",
+        "title": "National Register — Faro di Punta Higuero (81000560)",
+        "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27PUERTO+RICO%27%2C%27VIRGIN+ISLANDS%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "18-21-43.120N; 067-16-14.898W.",
+        "id": "uscg:light:32400",
+        "license": "U.S. public domain (federal agency data)",
+        "publisher": "United States Coast Guard",
+        "revision": "2024 Light List Volume III, corrected through week 52/23; SHA-256 6e5e00d54d012887c1bf1ca04ae0c07556c0ed0ee45b42893affe2ecda895927",
+        "title": "2024 Light List Volume III — Faro de Punta Higüero (32400)",
+        "uri": "https://www.navcen.uscg.gov/sites/default/files/pdf/lightLists/LightList_V3_2024.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "local-heritage:81000560",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Oficina Estatal de Conservación Histórica de Puerto Rico",
+        "revision": "SHA-256 6e3ab52ec0df30dfc643cb0d194a6d456cfc0dd22eab2539fcdc7f31bdbae5f9",
+        "title": "Faro de Punta Higuero municipal park",
+        "uri": "https://docs.pr.gov/files/OECH/Lugares%20Historicos/Fichas%20RNLH%20Santillana/Faro%20de%20Punta%20Higuero.pdf"
+      }
+    ],
+    "source_uri": "https://npgallery.nps.gov/AssetDetail/NRIS/81000560",
+    "title": "Faro de Punta Higüero",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the scope and date fields of the adopted public reference materials.",
+      "note": "This point batch does not pin a verified historical stage. Register listing dates do not date the property.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Park Service",
+      "United States Coast Guard",
+      "Municipio Autónomo de Cabo Rojo"
+    ],
+    "description": "Historic lighthouse visible from the public visitor grounds and trail at Los Morrillos.",
+    "description_zh": "波多黎各卡沃罗霍洛斯莫里约斯的历史灯塔，公众可从步道和外部区域观看。",
+    "details": "Historic lighthouse representative point is the named tower position in the official U.S. Coast Guard Light List (WGS 84), with source degrees, minutes and seconds converted to decimal longitude and latitude.",
+    "geography": {
+      "authority_id": "supplement:auth:nps-caribbean:81000685",
+      "countries": [
+        "PR"
+      ],
+      "note": "The modern geographic code describes official catalogue coverage.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Faro de los Morrillos de Cabo Rojo; Cabo Rojo, Puerto Rico; listed.",
+        "id": "nps:nrhp:81000685",
+        "license": "U.S. public domain (federal agency data)",
+        "publisher": "National Park Service",
+        "revision": "Frozen public NRHP point query; SHA-256 991af887e9b7869b7400ebcca7e2dd5dc892a8b7fd601527bfb50ac1bd318362",
+        "title": "National Register — Faro de los Morrillos de Cabo Rojo (81000685)",
+        "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27PUERTO+RICO%27%2C%27VIRGIN+ISLANDS%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:nps-caribbean:81000685",
+    "location_precision": null,
+    "names": [
+      "Faro de los Morrillos de Cabo Rojo",
+      "Cabo Rojo Light",
+      "Faro Los Morrillos"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -67.19222194444446,
+      17.933587222222222
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Faro de los Morrillos de Cabo Rojo; Cabo Rojo, Puerto Rico; listed.",
+        "id": "nps:nrhp:81000685",
+        "license": "U.S. public domain (federal agency data)",
+        "publisher": "National Park Service",
+        "revision": "Frozen public NRHP point query; SHA-256 991af887e9b7869b7400ebcca7e2dd5dc892a8b7fd601527bfb50ac1bd318362",
+        "title": "National Register — Faro de los Morrillos de Cabo Rojo (81000685)",
+        "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27PUERTO+RICO%27%2C%27VIRGIN+ISLANDS%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "17-56-00.914N; 067-11-31.999W.",
+        "id": "uscg:light:32290",
+        "license": "U.S. public domain (federal agency data)",
+        "publisher": "United States Coast Guard",
+        "revision": "2024 Light List Volume III, corrected through week 52/23; SHA-256 6e5e00d54d012887c1bf1ca04ae0c07556c0ed0ee45b42893affe2ecda895927",
+        "title": "2024 Light List Volume III — Faro de los Morrillos de Cabo Rojo (32290)",
+        "uri": "https://www.navcen.uscg.gov/sites/default/files/pdf/lightLists/LightList_V3_2024.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "local-heritage:81000685",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Municipio Autónomo de Cabo Rojo",
+        "revision": "SHA-256 98f26c1d0f7c5900f97e16e121f5b1902b1ed2ac9d55e7e5c701adfd75b91168",
+        "title": "La Playuela and Faro de los Morrillos",
+        "uri": "https://www.caborojopr.net/laplayuela.htm"
+      }
+    ],
+    "source_uri": "https://npgallery.nps.gov/AssetDetail/NRIS/81000685",
+    "title": "Faro de los Morrillos de Cabo Rojo",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the scope and date fields of the adopted public reference materials.",
+      "note": "This point batch does not pin a verified historical stage. Register listing dates do not date the property.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Park Service",
+      "ICOMOS / International Astronomical Union; UNESCO World Heritage Centre portal"
+    ],
+    "description": "Taíno archaeological site with ceremonial ball courts in a public interpretive park.",
+    "description_zh": "波多黎各乌图阿多的泰诺人仪式球场遗址，现为公开考古公园。",
+    "details": "The retained representative point comes from the published ICOMOS/IAU study shown on the UNESCO initiative portal; its coordinates denote the publicly interpreted site.",
+    "geography": {
+      "authority_id": "supplement:auth:nps-caribbean:92001671",
+      "countries": [
+        "PR"
+      ],
+      "note": "The modern geographic code describes official catalogue coverage.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Caguana Ceremonial Ball Courts Site; Utuado, Puerto Rico; listed.",
+        "id": "nps:nrhp:92001671",
+        "license": "U.S. public domain (federal agency data)",
+        "publisher": "National Park Service",
+        "revision": "Frozen public NRHP point query; SHA-256 991af887e9b7869b7400ebcca7e2dd5dc892a8b7fd601527bfb50ac1bd318362",
+        "title": "National Register — Caguana Ceremonial Ball Courts Site (92001671)",
+        "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27PUERTO+RICO%27%2C%27VIRGIN+ISLANDS%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:nps-caribbean:92001671",
+    "location_precision": null,
+    "names": [
+      "Centro Ceremonial Indígena de Caguana",
+      "Centro Ceremonial Indígena de Cagüana",
+      "Caguana Ceremonial Ball Courts Site"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -66.78111111111112,
+      18.294722222222223
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Caguana Ceremonial Ball Courts Site; Utuado, Puerto Rico; listed.",
+        "id": "nps:nrhp:92001671",
+        "license": "U.S. public domain (federal agency data)",
+        "publisher": "National Park Service",
+        "revision": "Frozen public NRHP point query; SHA-256 991af887e9b7869b7400ebcca7e2dd5dc892a8b7fd601527bfb50ac1bd318362",
+        "title": "National Register — Caguana Ceremonial Ball Courts Site (92001671)",
+        "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27PUERTO+RICO%27%2C%27VIRGIN+ISLANDS%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "18° 17′ 41″ N, 66° 46′ 52″ W. The site is open to visitors as an interpretative park.",
+        "id": "unesco-astronomy:caguana",
+        "license": "Public reference; source content rights retained",
+        "publisher": "ICOMOS / International Astronomical Union; UNESCO World Heritage Centre portal",
+        "revision": "SHA-256 49df8f673ef3ad8a6e49d59dde3097e6438852191fae2c1c8e76842d46598e0f",
+        "title": "Caguana ceremonial ball courts: published location and management",
+        "uri": "https://web.astronomicalheritage.net/show-entity?identity=10&idsubentity=1"
+      }
+    ],
+    "source_uri": "https://npgallery.nps.gov/AssetDetail/NRIS/92001671",
+    "title": "Centro Ceremonial Indígena de Caguana",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the scope and date fields of the adopted public reference materials.",
+      "note": "This point batch does not pin a verified historical stage. Register listing dates do not date the property.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Park Service",
+      "Wikidata contributors",
+      "U.S. Virgin Islands Department of Planning and Natural Resources"
+    ],
+    "description": "Historic fort and publicly interpreted museum in Frederiksted.",
+    "description_zh": "圣克罗伊岛弗雷德里克斯特德的历史堡垒及公众博物馆。",
+    "details": "National Register public point 96001073; retained as a general-reference representative point. The identically registered entity’s second public point agrees within 30 m.",
+    "geography": {
+      "authority_id": "supplement:auth:nps-caribbean:96001073",
+      "countries": [
+        "VI"
+      ],
+      "note": "The modern geographic code describes official catalogue coverage.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Fort Frederick; Frederiksted, St. Croix; listed.",
+        "id": "nps:nrhp:96001073",
+        "license": "U.S. public domain (federal agency data)",
+        "publisher": "National Park Service",
+        "revision": "Frozen public NRHP point query; SHA-256 991af887e9b7869b7400ebcca7e2dd5dc892a8b7fd601527bfb50ac1bd318362",
+        "title": "National Register — Fort Frederick (96001073)",
+        "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27PUERTO+RICO%27%2C%27VIRGIN+ISLANDS%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:nps-caribbean:96001073",
+    "location_precision": null,
+    "names": [
+      "Fort Frederik",
+      "Fort Frederick",
+      "Fort Frederik Museum"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -64.88330814399995,
+      17.715441146000046
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Fort Frederick; Frederiksted, St. Croix; listed.",
+        "id": "nps:nrhp:96001073",
+        "license": "U.S. public domain (federal agency data)",
+        "publisher": "National Park Service",
+        "revision": "Frozen public NRHP point query; SHA-256 991af887e9b7869b7400ebcca7e2dd5dc892a8b7fd601527bfb50ac1bd318362",
+        "title": "National Register — Fort Frederick (96001073)",
+        "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27PUERTO+RICO%27%2C%27VIRGIN+ISLANDS%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Fort Frederik; National Register ID 96001073.",
+        "id": "wd:Q4994594",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2573752272; SHA-256 41a972f16c675600b9b5d4fb02b55dde02677baa06ab712d7b973fc4d43ae1df",
+        "title": "Wikidata structured location — Fort Frederik",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4994594.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "public-visitor:96001073",
+        "license": "Public reference; source content rights retained",
+        "publisher": "U.S. Virgin Islands Department of Planning and Natural Resources",
+        "revision": "SHA-256 f22111a36a774124c9addda784656d29e93b4ec4751eec66dce84677a306f86e",
+        "title": "Fort Frederik public visitor information",
+        "uri": "https://dpnr.vi.gov/press_releases/fort-frederik-museum-to-host-vi-breast-cancer-projects-2026-art-of-healing-exhibition/"
+      }
+    ],
+    "source_uri": "https://npgallery.nps.gov/AssetDetail/NRIS/96001073",
+    "title": "Fort Frederik",
+    "types": [
+      "historic-site"
+    ]
+  }
+]

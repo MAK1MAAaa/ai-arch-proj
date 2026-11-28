@@ -1,6 +1,6 @@
 # LLM查询增强与模型配置
 
-日常启动见[README](../README.md)，双图与莎士比亚案例见[地图对照](map-comparison.md)，其他来源见[使用与维护指南](system-guide.md)。当前`global-v20`有3905项资料。遗址资料与年代来自可核验来源，LLM用于查询改写。
+遗址资料与年代来自可核验来源，LLM 用于查询改写。日常启动和当前资料数量见 [README](../README.md)。双图示例与资料来源见 [地图对照](map-comparison.md) 和 [使用与维护指南](system-guide.md)。
 
 ## 本地Ollama
 

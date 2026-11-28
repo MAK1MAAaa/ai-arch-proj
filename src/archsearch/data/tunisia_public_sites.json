@@ -1,0 +1,829 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked publicly documented site identity and visitor scope",
+      "note": "This batch establishes no independently verified historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+      "Wikidata contributors",
+      "Pleiades contributors"
+    ],
+    "description": "The archaeological area near Jendouba is the public property identified as Bulla Regia.",
+    "description_zh": "布拉雷吉亚考古遗址。主管机构提供公开参观资料。",
+    "details": "The point lies inside the published archaeological outline of Bulla Regia in Jendouba.",
+    "geography": {
+      "authority_id": "supplement:auth:tn-public:Q1004205",
+      "countries": [
+        "TN"
+      ],
+      "note": "Modern national geography follows the visitor catalogue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency publishes visitor opening hours for the named archaeological place.",
+        "id": "tn-amvppc:site-archeologique-de-bulla-regia",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+        "revision": "Official visitor listing frozen on access",
+        "title": "AMVPPC public visitor listing — Bulla Regia",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/site-archeologique-de-bulla-regia/"
+      }
+    },
+    "id": "auth:tn-public:Q1004205",
+    "location_precision": null,
+    "names": [
+      "Bulla Regia Archaeological Site",
+      "布拉雷吉亚考古遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      8.757016,
+      36.558893
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency publishes visitor opening hours for the named archaeological place.",
+        "id": "tn-amvppc:site-archeologique-de-bulla-regia",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+        "revision": "Official visitor listing frozen on access",
+        "title": "AMVPPC public visitor listing — Bulla Regia",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/site-archeologique-de-bulla-regia/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The retained Earth statement is the representative point of the archaeological record.",
+        "id": "wikidata:Q1004205",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2549816520",
+        "title": "Wikidata structured place — Bulla Regia",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1004205.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Scholarly identification of the named historical place.",
+        "id": "pleiades:314912",
+        "license": "CC BY 3.0",
+        "publisher": "Pleiades contributors",
+        "revision": "Frozen public scholarly place reference",
+        "title": "Pleiades place — Bulla Regia",
+        "uri": "https://pleiades.stoa.org/places/314912/json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The archived agency list confirms the identity of the public archaeological visit.",
+        "id": "limited:tn-visitor-schedule:Q1004205",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle",
+        "revision": "2022 authority schedule, PDF page 1",
+        "title": "Tunisian heritage site visitor list",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fileadmin/LISTE_Horaires_18-05-2022par_gouvernorat_.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The independent geographic names index locates the named archaeological ruins 187 m from the representative point.",
+        "id": "comparison:geonames:2472134",
+        "license": "CC BY 4.0",
+        "publisher": "GeoNames",
+        "revision": "GeoNames 2472134, S.RUIN, update 2018-08-05",
+        "title": "GeoNames named ruins: Bulla Regia",
+        "uri": "https://download.geonames.org/export/dump/TN.zip"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national inventory records the public Bulla Regia archaeological site extent and an independent GPS reference.",
+        "id": "comparison:tn-inp-024.142",
+        "license": null,
+        "publisher": "Institut National du Patrimoine, Tunisia",
+        "revision": "2012 inventory, PDF page 156, site 024.142",
+        "title": "Tunisia National Archaeological Sites Inventory",
+        "uri": "https://www.inp2020.tn/inventaire/Touslessites.pdf"
+      }
+    ],
+    "source_uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/site-archeologique-de-bulla-regia/",
+    "title": "Bulla Regia",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked publicly documented site identity and visitor scope",
+      "note": "This batch establishes no independently verified historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+      "Wikidata contributors",
+      "Pleiades contributors"
+    ],
+    "description": "The public archaeological site of Simitthus is the same named property as Chemtou.",
+    "description_zh": "谢姆图考古遗址。主管机构提供公开参观资料。",
+    "details": "The public archaeology grounds and the Chimtou museum have a joint site listing. The point represents the Simitthu archaeological site.",
+    "geography": {
+      "authority_id": "supplement:auth:tn-public:Q1493784",
+      "countries": [
+        "TN"
+      ],
+      "note": "Modern national geography follows the visitor catalogue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency publishes visitor opening hours for the named archaeological place.",
+        "id": "tn-amvppc:le-site-archeologique-de-chimtou",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+        "revision": "Official visitor listing frozen on access",
+        "title": "AMVPPC public visitor listing — Chemtou / Simitthus",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/le-site-archeologique-de-chimtou/"
+      }
+    },
+    "id": "auth:tn-public:Q1493784",
+    "location_precision": null,
+    "names": [
+      "Chimtou",
+      "Simitthus",
+      "谢姆图考古遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      8.57619,
+      36.4919
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency publishes visitor opening hours for the named archaeological place.",
+        "id": "tn-amvppc:le-site-archeologique-de-chimtou",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+        "revision": "Official visitor listing frozen on access",
+        "title": "AMVPPC public visitor listing — Chemtou / Simitthus",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/le-site-archeologique-de-chimtou/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The retained Earth statement is the representative point of the archaeological record.",
+        "id": "wikidata:Q1493784",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2516740168",
+        "title": "Wikidata structured place — Chemtou",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1493784.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Scholarly identification of the named historical place.",
+        "id": "pleiades:315174",
+        "license": "CC BY 3.0",
+        "publisher": "Pleiades contributors",
+        "revision": "Frozen public scholarly place reference",
+        "title": "Pleiades place — Simitthu",
+        "uri": "https://pleiades.stoa.org/places/315174/json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The archived agency list confirms the identity of the public archaeological visit.",
+        "id": "limited:tn-visitor-schedule:Q1493784",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle",
+        "revision": "2022 authority schedule, PDF page 1",
+        "title": "Tunisian heritage site visitor list",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fileadmin/LISTE_Horaires_18-05-2022par_gouvernorat_.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The independent geographic names index locates the named archaeological ruins 236 m from the representative point.",
+        "id": "comparison:geonames:2466919",
+        "license": "CC BY 4.0",
+        "publisher": "GeoNames",
+        "revision": "GeoNames 2466919, S.RUIN, update 2018-08-05",
+        "title": "GeoNames named ruins: Chemtou",
+        "uri": "https://download.geonames.org/export/dump/TN.zip"
+      }
+    ],
+    "source_uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/le-site-archeologique-de-chimtou/",
+    "title": "Chemtou / Simitthus",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked publicly documented site identity and visitor scope",
+      "note": "This batch establishes no independently verified historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+      "Wikidata contributors",
+      "Pleiades contributors"
+    ],
+    "description": "The public archaeological property is the site of Sufetula beside the modern town of Sbeïtla.",
+    "description_zh": "斯贝特拉的苏费图拉考古遗址。主管机构提供公开参观资料。",
+    "details": "The point lies within Sufetula archaeological grounds. The official site and museum have separately listed visitor entries.",
+    "geography": {
+      "authority_id": "supplement:auth:tn-public:Q1536583",
+      "countries": [
+        "TN"
+      ],
+      "note": "Modern national geography follows the visitor catalogue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency publishes visitor opening hours for the named archaeological place.",
+        "id": "tn-amvppc:site-archeologique-de-sbeitla",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+        "revision": "Official visitor listing frozen on access",
+        "title": "AMVPPC public visitor listing — Sufetula / Sbeïtla",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/site-archeologique-de-sbeitla/"
+      }
+    },
+    "id": "auth:tn-public:Q1536583",
+    "location_precision": null,
+    "names": [
+      "Sufetula",
+      "Site archéologique de Sbeïtla",
+      "斯贝特拉的苏费图拉考古遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      9.1203194444444,
+      35.240380555556
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency publishes visitor opening hours for the named archaeological place.",
+        "id": "tn-amvppc:site-archeologique-de-sbeitla",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+        "revision": "Official visitor listing frozen on access",
+        "title": "AMVPPC public visitor listing — Sufetula / Sbeïtla",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/site-archeologique-de-sbeitla/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The retained Earth statement is the representative point of the archaeological record.",
+        "id": "wikidata:Q1536583",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2531200711",
+        "title": "Wikidata structured place — Sufetula",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1536583.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Scholarly identification of the named historical place.",
+        "id": "pleiades:324816",
+        "license": "CC BY 3.0",
+        "publisher": "Pleiades contributors",
+        "revision": "Frozen public scholarly place reference",
+        "title": "Pleiades place — Sufetula",
+        "uri": "https://pleiades.stoa.org/places/324816/json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The archived agency list confirms the identity of the public archaeological visit.",
+        "id": "limited:tn-visitor-schedule:Q1536583",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle",
+        "revision": "2022 authority schedule, PDF page 1",
+        "title": "Tunisian heritage site visitor list",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fileadmin/LISTE_Horaires_18-05-2022par_gouvernorat_.pdf"
+      }
+    ],
+    "source_uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/site-archeologique-de-sbeitla/",
+    "title": "Sufetula / Sbeïtla",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked publicly documented site identity and visitor scope",
+      "note": "This batch establishes no independently verified historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+      "Wikidata contributors",
+      "Pleiades contributors"
+    ],
+    "description": "The ruins identified as Thuburbo Maius are listed for public visits.",
+    "description_zh": "图布尔博马尤斯考古遗址。主管机构提供公开参观资料。",
+    "details": "The point represents the named archaeological grounds of Thuburbo Maius.",
+    "geography": {
+      "authority_id": "supplement:auth:tn-public:Q1967945",
+      "countries": [
+        "TN"
+      ],
+      "note": "Modern national geography follows the visitor catalogue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency publishes visitor opening hours for the named archaeological place.",
+        "id": "tn-amvppc:site-archeologique-de-thuburbo-maius",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+        "revision": "Official visitor listing frozen on access",
+        "title": "AMVPPC public visitor listing — Thuburbo Maius",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/site-archeologique-de-thuburbo-maius/"
+      }
+    },
+    "id": "auth:tn-public:Q1967945",
+    "location_precision": null,
+    "names": [
+      "Thuburbo Majus",
+      "图布尔博马尤斯考古遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      9.90306,
+      36.4025
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency publishes visitor opening hours for the named archaeological place.",
+        "id": "tn-amvppc:site-archeologique-de-thuburbo-maius",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+        "revision": "Official visitor listing frozen on access",
+        "title": "AMVPPC public visitor listing — Thuburbo Maius",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/site-archeologique-de-thuburbo-maius/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The retained Earth statement is the representative point of the archaeological record.",
+        "id": "wikidata:Q1967945",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2325729353",
+        "title": "Wikidata structured place — Thuburbo Majus",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1967945.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Scholarly identification of the named historical place.",
+        "id": "pleiades:315220",
+        "license": "CC BY 3.0",
+        "publisher": "Pleiades contributors",
+        "revision": "Frozen public scholarly place reference",
+        "title": "Pleiades place — Thuburbo Maius",
+        "uri": "https://pleiades.stoa.org/places/315220/json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The archived agency list confirms the identity of the public archaeological visit.",
+        "id": "limited:tn-visitor-schedule:Q1967945",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle",
+        "revision": "2022 authority schedule, PDF page 1",
+        "title": "Tunisian heritage site visitor list",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fileadmin/LISTE_Horaires_18-05-2022par_gouvernorat_.pdf"
+      }
+    ],
+    "source_uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/site-archeologique-de-thuburbo-maius/",
+    "title": "Thuburbo Maius",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked publicly documented site identity and visitor scope",
+      "note": "This batch establishes no independently verified historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+      "Wikidata contributors",
+      "Pleiades contributors"
+    ],
+    "description": "The public site near Oudhna covers the ancient archaeological area of Uthina.",
+    "description_zh": "乌德纳考古遗址。主管机构提供公开参观资料。",
+    "details": "The point represents the named archaeological grounds of Oudhna / Uthina.",
+    "geography": {
+      "authority_id": "supplement:auth:tn-public:Q269424",
+      "countries": [
+        "TN"
+      ],
+      "note": "Modern national geography follows the visitor catalogue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency publishes visitor opening hours for the named archaeological place.",
+        "id": "tn-amvppc:site-archeologique-doudhna",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+        "revision": "Official visitor listing frozen on access",
+        "title": "AMVPPC public visitor listing — Oudhna / Uthina",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/site-archeologique-doudhna/"
+      }
+    },
+    "id": "auth:tn-public:Q269424",
+    "location_precision": null,
+    "names": [
+      "Oudhna",
+      "Uthina",
+      "乌德纳考古遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      10.171708,
+      36.608467
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency publishes visitor opening hours for the named archaeological place.",
+        "id": "tn-amvppc:site-archeologique-doudhna",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+        "revision": "Official visitor listing frozen on access",
+        "title": "AMVPPC public visitor listing — Oudhna / Uthina",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/site-archeologique-doudhna/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The retained Earth statement is the representative point of the archaeological record.",
+        "id": "wikidata:Q269424",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2548309153",
+        "title": "Wikidata structured place — Uthina",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q269424.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Scholarly identification of the named historical place.",
+        "id": "pleiades:315247",
+        "license": "CC BY 3.0",
+        "publisher": "Pleiades contributors",
+        "revision": "Frozen public scholarly place reference",
+        "title": "Pleiades place — Uthina",
+        "uri": "https://pleiades.stoa.org/places/315247/json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The archived agency list confirms the identity of the public archaeological visit.",
+        "id": "limited:tn-visitor-schedule:Q269424",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle",
+        "revision": "2022 authority schedule, PDF page 1",
+        "title": "Tunisian heritage site visitor list",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fileadmin/LISTE_Horaires_18-05-2022par_gouvernorat_.pdf"
+      }
+    ],
+    "source_uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/site-archeologique-doudhna/",
+    "title": "Oudhna / Uthina",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked publicly documented site identity and visitor scope",
+      "note": "This batch establishes no independently verified historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+      "Wikidata contributors",
+      "Pleiades contributors"
+    ],
+    "description": "This is the locally catalogued coastal archaeological site in Nabeul.",
+    "description_zh": "纳布勒的尼阿波利斯考古遗址。主管机构提供公开参观资料。",
+    "details": "The point represents the named archaeological grounds of Neapolis Archaeological Site.",
+    "geography": {
+      "authority_id": "supplement:auth:tn-public:Q3346808",
+      "countries": [
+        "TN"
+      ],
+      "note": "Modern national geography follows the visitor catalogue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency publishes visitor opening hours for the named archaeological place.",
+        "id": "tn-amvppc:neapolis",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+        "revision": "Official visitor listing frozen on access",
+        "title": "AMVPPC public visitor listing — Neapolis Archaeological Site",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/neapolis/"
+      }
+    },
+    "id": "auth:tn-public:Q3346808",
+    "location_precision": null,
+    "names": [
+      "Neapolis (Nabeul)",
+      "Néapolis",
+      "纳布勒的尼阿波利斯考古遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      10.7194,
+      36.4407
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency publishes visitor opening hours for the named archaeological place.",
+        "id": "tn-amvppc:neapolis",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+        "revision": "Official visitor listing frozen on access",
+        "title": "AMVPPC public visitor listing — Neapolis Archaeological Site",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/neapolis/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The retained Earth statement is the representative point of the archaeological record.",
+        "id": "wikidata:Q3346808",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2014114112",
+        "title": "Wikidata structured place — Neapolis",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3346808.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Scholarly identification of the named historical place.",
+        "id": "pleiades:315093",
+        "license": "CC BY 3.0",
+        "publisher": "Pleiades contributors",
+        "revision": "Frozen public scholarly place reference",
+        "title": "Pleiades place — Neapolis",
+        "uri": "https://pleiades.stoa.org/places/315093/json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The archived agency list confirms the identity of the public archaeological visit.",
+        "id": "limited:tn-visitor-schedule:Q3346808",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle",
+        "revision": "2022 authority schedule, PDF page 1",
+        "title": "Tunisian heritage site visitor list",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fileadmin/LISTE_Horaires_18-05-2022par_gouvernorat_.pdf"
+      }
+    ],
+    "source_uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/neapolis/",
+    "title": "Neapolis Archaeological Site",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked publicly documented site identity and visitor scope",
+      "note": "This batch establishes no independently verified historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+      "Wikidata contributors",
+      "Pleiades contributors"
+    ],
+    "description": "The public archaeological site is located near Hammamet in Tunisia.",
+    "description_zh": "普普特考古遗址。主管机构提供公开参观资料。",
+    "details": "The point represents the named archaeological grounds of Pupput Archaeological Site.",
+    "geography": {
+      "authority_id": "supplement:auth:tn-public:Q3410900",
+      "countries": [
+        "TN"
+      ],
+      "note": "Modern national geography follows the visitor catalogue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency publishes visitor opening hours for the named archaeological place.",
+        "id": "tn-amvppc:pupput",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+        "revision": "Official visitor listing frozen on access",
+        "title": "AMVPPC public visitor listing — Pupput Archaeological Site",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/pupput/"
+      }
+    },
+    "id": "auth:tn-public:Q3410900",
+    "location_precision": null,
+    "names": [
+      "Pupput",
+      "普普特考古遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      10.5625603,
+      36.3928758
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency publishes visitor opening hours for the named archaeological place.",
+        "id": "tn-amvppc:pupput",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+        "revision": "Official visitor listing frozen on access",
+        "title": "AMVPPC public visitor listing — Pupput Archaeological Site",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/pupput/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The retained Earth statement is the representative point of the archaeological record.",
+        "id": "wikidata:Q3410900",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2538937196",
+        "title": "Wikidata structured place — Pupput",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3410900.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Scholarly identification of the named historical place.",
+        "id": "pleiades:315121",
+        "license": "CC BY 3.0",
+        "publisher": "Pleiades contributors",
+        "revision": "Frozen public scholarly place reference",
+        "title": "Pleiades place — Pupput",
+        "uri": "https://pleiades.stoa.org/places/315121/json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The archived agency list confirms the identity of the public archaeological visit.",
+        "id": "limited:tn-visitor-schedule:Q3410900",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle",
+        "revision": "2022 authority schedule, PDF page 1",
+        "title": "Tunisian heritage site visitor list",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fileadmin/LISTE_Horaires_18-05-2022par_gouvernorat_.pdf"
+      }
+    ],
+    "source_uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/pupput/",
+    "title": "Pupput Archaeological Site",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked publicly documented site identity and visitor scope",
+      "note": "This batch establishes no independently verified historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+      "Wikidata contributors",
+      "Pleiades contributors"
+    ],
+    "description": "The archaeological property is at the edge of modern Makthar. Its coordinates refer to the ruins.",
+    "description_zh": "马克塔里斯考古遗址。主管机构提供公开参观资料。",
+    "details": "The government lists the Mactaris archaeological site and museum in one visitor entry.",
+    "geography": {
+      "authority_id": "supplement:auth:tn-public:Q3485394",
+      "countries": [
+        "TN"
+      ],
+      "note": "Modern national geography follows the visitor catalogue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency publishes visitor opening hours for the named archaeological place.",
+        "id": "tn-amvppc:makthar-mactaris",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+        "revision": "Official visitor listing frozen on access",
+        "title": "AMVPPC public visitor listing — Mactaris Archaeological Site",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/makthar-mactaris/"
+      }
+    },
+    "id": "auth:tn-public:Q3485394",
+    "location_precision": null,
+    "names": [
+      "Site archéologique de Makthar",
+      "Mactaris",
+      "马克塔里斯考古遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      9.20639,
+      35.8556
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency publishes visitor opening hours for the named archaeological place.",
+        "id": "tn-amvppc:makthar-mactaris",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle, Tunisia",
+        "revision": "Official visitor listing frozen on access",
+        "title": "AMVPPC public visitor listing — Mactaris Archaeological Site",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/makthar-mactaris/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The retained Earth statement is the representative point of the archaeological record.",
+        "id": "wikidata:Q3485394",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2279510009",
+        "title": "Wikidata structured place — Mactaris",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3485394.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Scholarly identification of the named historical place.",
+        "id": "pleiades:324774",
+        "license": "CC BY 3.0",
+        "publisher": "Pleiades contributors",
+        "revision": "Frozen public scholarly place reference",
+        "title": "Pleiades place — Mactaris",
+        "uri": "https://pleiades.stoa.org/places/324774/json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The archived agency list confirms the identity of the public archaeological visit.",
+        "id": "limited:tn-visitor-schedule:Q3485394",
+        "license": null,
+        "publisher": "Agence de Mise en Valeur du Patrimoine et de Promotion Culturelle",
+        "revision": "2022 authority schedule, PDF page 1",
+        "title": "Tunisian heritage site visitor list",
+        "uri": "https://www.patrimoinedetunisie.com.tn/fileadmin/LISTE_Horaires_18-05-2022par_gouvernorat_.pdf"
+      }
+    ],
+    "source_uri": "https://www.patrimoinedetunisie.com.tn/fr/sites/makthar-mactaris/",
+    "title": "Mactaris Archaeological Site",
+    "types": [
+      "archaeological-site"
+    ]
+  }
+]

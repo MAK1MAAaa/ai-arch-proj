@@ -1,0 +1,465 @@
+{
+  "base_count": 4436,
+  "base_ids_sha256": "8b4452dfafa576ad18e454c893e4209f7ca556bde768c70964114645863d51f2",
+  "base_sites_sha256": "2c4b9fd7116f2d3ddc5a6b34bdfcdc8269c9933c73561964663d84455492197f",
+  "cohort_version": "sri-lanka-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Exact frozen P625 fields on the same public heritage identity. Precision is the stored statement precision.",
+        "point": [
+          80.66461,
+          8.11834
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q126650014.json",
+        "statement_id": "Q126650014$973e7bb2-4ea7-6076-43d2-edcdcd38f2a9"
+      },
+      "independent_review": {
+        "method": "Matched individual entries in the original SLTDA national visitor report to official public scope and Wikidata Earth statements, including the Ritigala site limits and distinction from nearby previously published World Heritage components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point represents the named public heritage site in Anuradhapura District, Sri Lanka. It identifies the monastery on the mountain flank. The mountain summit has a distinct identity.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Identity and representative point review.",
+          "note": "The publication year and visitation statistics refer to modern administration. The point review records no historical phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Sri Lanka Tourism Development Authority",
+          "Central Cultural Fund",
+          "Wikidata contributors"
+        ],
+        "description": "Ritigala Forest Monastery is a public heritage site in Anuradhapura District, Sri Lanka.",
+        "description_zh": "里蒂加拉森林修道院遗址位于斯里兰卡。斯里兰卡旅游发展局官方报告记录了该处的公众参观。",
+        "details": "The point represents the named public heritage site in Anuradhapura District, Sri Lanka. It identifies the monastery on the mountain flank. The mountain summit has a distinct identity.",
+        "geography": {
+          "authority_id": "supplement:auth:lk-public:Q126650014",
+          "countries": [
+            "LK"
+          ],
+          "note": "Public site named in the Sri Lanka tourism report, locality Anuradhapura District.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism authority records public visits at this named heritage site.",
+            "id": "lk-sltda-2025-visitors:Q126650014",
+            "license": null,
+            "publisher": "Sri Lanka Tourism Development Authority",
+            "revision": "2025 report, page 58, Table 21, row Ritigala forest Monastery",
+            "title": "Sri Lanka Tourism Year in Review, 2025",
+            "uri": "https://www.sltda.gov.lk/storage/common_media/Year_in_Review_2025_Final_Report_23-03-2026.pdf"
+          }
+        },
+        "id": "auth:lk-public:Q126650014",
+        "location_precision": null,
+        "names": [
+          "里蒂加拉森林修道院遗址",
+          "Ritigala Forest Monastery",
+          "Ritigala Ancient Buddhist Monastery"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          80.66461,
+          8.11834
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism authority records public visits at this named heritage site.",
+            "id": "lk-sltda-2025-visitors:Q126650014",
+            "license": null,
+            "publisher": "Sri Lanka Tourism Development Authority",
+            "revision": "2025 report, page 58, Table 21, row Ritigala forest Monastery",
+            "title": "Sri Lanka Tourism Year in Review, 2025",
+            "uri": "https://www.sltda.gov.lk/storage/common_media/Year_in_Review_2025_Final_Report_23-03-2026.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 80.66461, latitude 8.11834",
+            "id": "wikidata:Q126650014",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2339943998; P625 statement Q126650014$973e7bb2-4ea7-6076-43d2-edcdcd38f2a9",
+            "title": "Ritigala Forest Monastery representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q126650014.json"
+          }
+        ],
+        "source_uri": "https://www.sltda.gov.lk/storage/common_media/Year_in_Review_2025_Final_Report_23-03-2026.pdf",
+        "title": "Ritigala Forest Monastery",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "lk-visitors-2025.pdf",
+          "sha256": "5a83562ae0fbe7d6970941b633b0e163d1791988823b27c6c97c27adc127b656",
+          "uri": "https://www.sltda.gov.lk/storage/common_media/Year_in_Review_2025_Final_Report_23-03-2026.pdf"
+        },
+        {
+          "filename": "Q126650014.json",
+          "sha256": "72c4aa934edf5b34f079c485d04bc62583b8eb7e7f05ca85078bd9d9e3fe6edd",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q126650014.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Exact frozen P625 fields on the same public heritage identity. Precision is the stored statement precision.",
+        "point": [
+          80.00830278,
+          9.66212444
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2756663.json",
+        "statement_id": "Q2756663$792A7983-E55E-4FC0-BE0E-33A2B74E70F6"
+      },
+      "independent_review": {
+        "method": "Matched individual entries in the original SLTDA national visitor report to official public scope and Wikidata Earth statements, including the Ritigala site limits and distinction from nearby previously published World Heritage components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point represents the named public heritage site in Jaffna, Sri Lanka.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Identity and representative point review.",
+          "note": "The publication year and visitation statistics refer to modern administration. The point review records no historical phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Sri Lanka Tourism Development Authority",
+          "Central Cultural Fund",
+          "Wikidata contributors"
+        ],
+        "description": "Jaffna Fort is a public heritage site in Jaffna, Sri Lanka.",
+        "description_zh": "贾夫纳堡位于斯里兰卡。斯里兰卡旅游发展局官方报告记录了该处的公众参观。",
+        "details": "The point represents the named public heritage site in Jaffna, Sri Lanka.",
+        "geography": {
+          "authority_id": "supplement:auth:lk-public:Q2756663",
+          "countries": [
+            "LK"
+          ],
+          "note": "Public site named in the Sri Lanka tourism report, locality Jaffna.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism authority records public visits at this named heritage site.",
+            "id": "lk-sltda-2025-visitors:Q2756663",
+            "license": null,
+            "publisher": "Sri Lanka Tourism Development Authority",
+            "revision": "2025 report, page 58, Table 21, row Jaffna Fort",
+            "title": "Sri Lanka Tourism Year in Review, 2025",
+            "uri": "https://www.sltda.gov.lk/storage/common_media/Year_in_Review_2025_Final_Report_23-03-2026.pdf"
+          }
+        },
+        "id": "auth:lk-public:Q2756663",
+        "location_precision": null,
+        "names": [
+          "贾夫纳堡",
+          "Jaffna Fort"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          80.00830278,
+          9.66212444
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism authority records public visits at this named heritage site.",
+            "id": "lk-sltda-2025-visitors:Q2756663",
+            "license": null,
+            "publisher": "Sri Lanka Tourism Development Authority",
+            "revision": "2025 report, page 58, Table 21, row Jaffna Fort",
+            "title": "Sri Lanka Tourism Year in Review, 2025",
+            "uri": "https://www.sltda.gov.lk/storage/common_media/Year_in_Review_2025_Final_Report_23-03-2026.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 80.00830278, latitude 9.66212444",
+            "id": "wikidata:Q2756663",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2512673898; P625 statement Q2756663$792A7983-E55E-4FC0-BE0E-33A2B74E70F6",
+            "title": "Jaffna Fort representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2756663.json"
+          }
+        ],
+        "source_uri": "https://www.sltda.gov.lk/storage/common_media/Year_in_Review_2025_Final_Report_23-03-2026.pdf",
+        "title": "Jaffna Fort",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "lk-visitors-2025.pdf",
+          "sha256": "5a83562ae0fbe7d6970941b633b0e163d1791988823b27c6c97c27adc127b656",
+          "uri": "https://www.sltda.gov.lk/storage/common_media/Year_in_Review_2025_Final_Report_23-03-2026.pdf"
+        },
+        {
+          "filename": "Q2756663.json",
+          "sha256": "7262785aba0713993e33caeadb6f4e364d94d23b31f651cdd4b625dfd4cbc089",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2756663.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Exact frozen P625 fields on the same public heritage identity. Precision is the stored statement precision.",
+        "point": [
+          80.62988888888889,
+          7.83725
+        ],
+        "precision": 2.777777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q28406819.json",
+        "statement_id": "Q28406819$df291e1b-5236-435e-b129-c6f675413294"
+      },
+      "independent_review": {
+        "method": "Matched individual entries in the original SLTDA national visitor report to official public scope and Wikidata Earth statements, including the Ritigala site limits and distinction from nearby previously published World Heritage components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point represents the named public heritage site in near Dambulla, Matale District, Sri Lanka. It identifies the burial site near Dambulla. The cave temple is a separate World Heritage property.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Identity and representative point review.",
+          "note": "The publication year and visitation statistics refer to modern administration. The point review records no historical phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Sri Lanka Tourism Development Authority",
+          "Central Cultural Fund",
+          "Wikidata contributors"
+        ],
+        "description": "Ibbankatuwa Megalithic Tombs is a public heritage site in near Dambulla, Matale District, Sri Lanka.",
+        "description_zh": "伊班卡图瓦巨石墓遗址位于斯里兰卡。斯里兰卡旅游发展局官方报告记录了该处的公众参观。",
+        "details": "The point represents the named public heritage site in near Dambulla, Matale District, Sri Lanka. It identifies the burial site near Dambulla. The cave temple is a separate World Heritage property.",
+        "geography": {
+          "authority_id": "supplement:auth:lk-public:Q28406819",
+          "countries": [
+            "LK"
+          ],
+          "note": "Public site named in the Sri Lanka tourism report, locality near Dambulla, Matale District.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism authority records public visits at this named heritage site.",
+            "id": "lk-sltda-2025-visitors:Q28406819",
+            "license": null,
+            "publisher": "Sri Lanka Tourism Development Authority",
+            "revision": "2025 report, page 58, Table 21, row Ibbankatuwa Ancient Bural Ground",
+            "title": "Sri Lanka Tourism Year in Review, 2025",
+            "uri": "https://www.sltda.gov.lk/storage/common_media/Year_in_Review_2025_Final_Report_23-03-2026.pdf"
+          }
+        },
+        "id": "auth:lk-public:Q28406819",
+        "location_precision": null,
+        "names": [
+          "伊班卡图瓦巨石墓遗址",
+          "Ibbankatuwa Megalithic Tombs"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          80.62988888888889,
+          7.83725
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism authority records public visits at this named heritage site.",
+            "id": "lk-sltda-2025-visitors:Q28406819",
+            "license": null,
+            "publisher": "Sri Lanka Tourism Development Authority",
+            "revision": "2025 report, page 58, Table 21, row Ibbankatuwa Ancient Bural Ground",
+            "title": "Sri Lanka Tourism Year in Review, 2025",
+            "uri": "https://www.sltda.gov.lk/storage/common_media/Year_in_Review_2025_Final_Report_23-03-2026.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 80.62988888888889, latitude 7.83725",
+            "id": "wikidata:Q28406819",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 1936250107; P625 statement Q28406819$df291e1b-5236-435e-b129-c6f675413294",
+            "title": "Ibbankatuwa Megalithic Tombs representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q28406819.json"
+          }
+        ],
+        "source_uri": "https://www.sltda.gov.lk/storage/common_media/Year_in_Review_2025_Final_Report_23-03-2026.pdf",
+        "title": "Ibbankatuwa Megalithic Tombs",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "lk-visitors-2025.pdf",
+          "sha256": "5a83562ae0fbe7d6970941b633b0e163d1791988823b27c6c97c27adc127b656",
+          "uri": "https://www.sltda.gov.lk/storage/common_media/Year_in_Review_2025_Final_Report_23-03-2026.pdf"
+        },
+        {
+          "filename": "Q28406819.json",
+          "sha256": "f4ac4c6293f59fbe3c9d8187401daa106e09b06b8843499b65c6262a45f52e2a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q28406819.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Exact frozen P625 fields on the same public heritage identity. Precision is the stored statement precision.",
+        "point": [
+          81.07838056,
+          6.68702222
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2927591.json",
+        "statement_id": "Q2927591$85433624-2712-4F74-9781-01928198FCF2"
+      },
+      "independent_review": {
+        "method": "Matched individual entries in the original SLTDA national visitor report to official public scope and Wikidata Earth statements, including the Ritigala site limits and distinction from nearby previously published World Heritage components.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point represents the named public heritage site in Monaragala District, Sri Lanka.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Identity and representative point review.",
+          "note": "The publication year and visitation statistics refer to modern administration. The point review records no historical phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Sri Lanka Tourism Development Authority",
+          "Central Cultural Fund",
+          "Wikidata contributors"
+        ],
+        "description": "Buduruwagala is a public heritage site in Monaragala District, Sri Lanka.",
+        "description_zh": "布杜鲁瓦加拉佛教石刻遗址位于斯里兰卡。斯里兰卡旅游发展局官方报告记录了该处的公众参观。",
+        "details": "The point represents the named public heritage site in Monaragala District, Sri Lanka.",
+        "geography": {
+          "authority_id": "supplement:auth:lk-public:Q2927591",
+          "countries": [
+            "LK"
+          ],
+          "note": "Public site named in the Sri Lanka tourism report, locality Monaragala District.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism authority records public visits at this named heritage site.",
+            "id": "lk-sltda-2025-visitors:Q2927591",
+            "license": null,
+            "publisher": "Sri Lanka Tourism Development Authority",
+            "revision": "2025 report, page 58, Table 21, row Buduruwagala (Monaragala)",
+            "title": "Sri Lanka Tourism Year in Review, 2025",
+            "uri": "https://www.sltda.gov.lk/storage/common_media/Year_in_Review_2025_Final_Report_23-03-2026.pdf"
+          }
+        },
+        "id": "auth:lk-public:Q2927591",
+        "location_precision": null,
+        "names": [
+          "布杜鲁瓦加拉佛教石刻遗址",
+          "Buduruwagala",
+          "Buduruvagala"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          81.07838056,
+          6.68702222
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism authority records public visits at this named heritage site.",
+            "id": "lk-sltda-2025-visitors:Q2927591",
+            "license": null,
+            "publisher": "Sri Lanka Tourism Development Authority",
+            "revision": "2025 report, page 58, Table 21, row Buduruwagala (Monaragala)",
+            "title": "Sri Lanka Tourism Year in Review, 2025",
+            "uri": "https://www.sltda.gov.lk/storage/common_media/Year_in_Review_2025_Final_Report_23-03-2026.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 81.07838056, latitude 6.68702222",
+            "id": "wikidata:Q2927591",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2491544843; P625 statement Q2927591$85433624-2712-4F74-9781-01928198FCF2",
+            "title": "Buduruwagala representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2927591.json"
+          }
+        ],
+        "source_uri": "https://www.sltda.gov.lk/storage/common_media/Year_in_Review_2025_Final_Report_23-03-2026.pdf",
+        "title": "Buduruwagala",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "lk-visitors-2025.pdf",
+          "sha256": "5a83562ae0fbe7d6970941b633b0e163d1791988823b27c6c97c27adc127b656",
+          "uri": "https://www.sltda.gov.lk/storage/common_media/Year_in_Review_2025_Final_Report_23-03-2026.pdf"
+        },
+        {
+          "filename": "Q2927591.json",
+          "sha256": "4818a9cbb42b434d28b4f978c20dfcdd4db1f34795a6a6f37067ced8d71f7ca9",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2927591.json"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Four Sri Lankan historical sites individually evidenced in the national public visitor report and matched to active structured coordinates."
+}

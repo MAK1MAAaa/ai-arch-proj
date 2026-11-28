@@ -1,0 +1,22 @@
+{
+  "base_count": 4335,
+  "base_ids_sha256": "c67f0edf42a78dc0387a772757a76dac9bb901fd0fdca6188560cfd9bfb48571",
+  "base_sites_sha256": "8f78edad80ddbd5332985c1515472ca60e88698a475df1a602d8c575dfb85867",
+  "cohort_version": "africa-public-visit-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 8,
+    "total": 4343
+  },
+  "files": {
+    "africa_visit_review.json": {
+      "sha256": "184d58133b5930819d4209057789071e0998c8a88b09434934403364a7fd3d76"
+    },
+    "africa_visit_sites.json": {
+      "sha256": "f16570a0fe066763579adadc8b440622378bce8cffa3bd23e4a7a10ab6788155"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Seven open historic places in South Africa and one public monument in Kenya, using active CC0 Wikidata coordinates with independently matched official visitor and identity evidence."
+}

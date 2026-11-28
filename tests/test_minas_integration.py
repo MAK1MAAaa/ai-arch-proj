@@ -79,9 +79,9 @@ def test_brazil_directory_paginates_and_unknown_points_do_not_match_bbox(
     client = minas_client
     pages = [client.get(f"/api/sites?country=BR&limit=50&offset={offset}").json()
              for offset in (0, 50, 100, 150)]
-    assert [len(page["sites"]) for page in pages] == [50, 50, 50, 4]
+    assert [len(page["sites"]) for page in pages] == [50, 50, 50, 7]
     sites = [site for page in pages for site in page["sites"]]
-    assert len({site["id"] for site in sites}) == 154
+    assert len({site["id"] for site in sites}) == 157
     new = {site["id"] for site in sites if site["id"].startswith("auth:br-iepha-mg:")}
     assert len(new) == 133
     assert all(site["repr_point"] is None for site in sites if site["id"] in new)
@@ -96,8 +96,8 @@ def test_original_municipality_facets_preserve_old_country_memberships(
     client = minas_client
     districts = client.get("/api/subdivisions?country=BR").json()
     assert districts["ready"] and districts["supported"]
-    assert districts["subdivision_version"] == "source-subdivisions-v8"
-    assert (districts["total"], districts["assigned"], districts["unassigned"]) == (154, 133, 21)
+    assert districts["subdivision_version"] == "source-subdivisions-v9"
+    assert (districts["total"], districts["assigned"], districts["unassigned"]) == (157, 133, 24)
     assert len(districts["subdivisions"]) == 67
     compound = next(row for row in districts["subdivisions"]
                     if row["label"] == "Belo Horizonte, Nova Lima e Sabará")
@@ -136,5 +136,5 @@ def test_paired_diagnostics_leave_unconfirmed_relevance_metrics_null(tmp_path: P
                                                          for number in range(1, 21)]
     result = evaluate_corpus(tmp_path / "missing-model", tmp_path / "rankings.json",
                              queries=queries)
-    assert result["corpus_count"] == 3905 and result["metrics"] is None
+    assert result["corpus_count"] == 5339 and result["metrics"] is None
     assert not result["qrels"]["confirmed"] and not result["runs_complete"]

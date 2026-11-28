@@ -25,7 +25,7 @@ from archsearch.domain import ChronologyReview, PeriodEvidence, Site, SourceRefe
 DATA_DIR = Path(__file__).with_name("data")
 DATASET_VERSION = "v4.1"
 CURATED_VERSION = "global-v2"
-CORPUS_VERSION = "global-v20"
+CORPUS_VERSION = "global-v21"
 GLOBAL_REGION_QUOTAS = {
     "east-asia": 20, "south-asia": 15, "west-central-asia": 15, "africa": 15,
     "europe": 10, "north-america": 10, "south-america": 10, "oceania": 5,
@@ -505,22 +505,38 @@ def load_named_places_v1_corpus(data_dir: Path | None = None) -> list[Site]:
         raise CorpusError(str(error)) from error
 
 
+def load_guyana_corpus(data_dir: Path | None = None) -> list[Site]:
+    """Load the 3905-record corpus through the Guyana supplement."""
+    from archsearch.target_data import GUYANA, TargetDataError, load_targets
+
+    base = load_named_places_v1_corpus(data_dir)
+    directory = Path(data_dir) if data_dir is not None else DATA_DIR
+    if data_dir is not None and not any((directory / name).exists() for name in GUYANA.filenames):
+        return base
+    try:
+        return load_targets(base, directory, cohort=GUYANA)
+    except TargetDataError as error:
+        raise CorpusError(str(error)) from error
+
+
 def load_corpus(data_dir: Path | None = None) -> list[Site]:
     """Load the current source-verified corpus for retrieval and catalogue browsing."""
     from archsearch.supplement_data import reuse_base_contract_fragments
-    from archsearch.target_data import GUYANA, TargetDataError, load_targets
+    from archsearch.target_data import POINT_COHORTS, TargetDataError, load_targets
 
     with reuse_base_contract_fragments():
-        base = load_named_places_v1_corpus(data_dir)
+        sites = load_guyana_corpus(data_dir)
         directory = Path(data_dir) if data_dir is not None else DATA_DIR
-        if data_dir is not None and not any(
-            (directory / name).exists() for name in GUYANA.filenames
-        ):
-            return base
-        try:
-            return load_targets(base, directory, cohort=GUYANA)
-        except TargetDataError as error:
-            raise CorpusError(str(error)) from error
+        for cohort in POINT_COHORTS:
+            if data_dir is not None and not any(
+                (directory / name).exists() for name in cohort.filenames
+            ):
+                continue
+            try:
+                sites = load_targets(sites, directory, cohort=cohort)
+            except TargetDataError as error:
+                raise CorpusError(str(error)) from error
+        return sites
 
 
 def _archive_members(archive_path: Path) -> Iterable[tuple[str, bytes]]:

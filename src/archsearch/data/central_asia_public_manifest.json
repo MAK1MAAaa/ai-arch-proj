@@ -1,0 +1,22 @@
+{
+  "base_count": 4654,
+  "base_ids_sha256": "1c57848333496592a7c5c7b9edd7618fc007bd88104b2ce2507048d2fe2e78e5",
+  "base_sites_sha256": "586f9c1067ad9a62ec143837fc514ae901b8e0bfdcb19b910c7b4e35b3e21326",
+  "cohort_version": "kazakhstan-uzbekistan-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 11,
+    "total": 4665
+  },
+  "files": {
+    "central_asia_public_review.json": {
+      "sha256": "ab9d4632b74b58889c197ce9a2a553409d6d6670afc83970f332f6da6084477b"
+    },
+    "central_asia_public_sites.json": {
+      "sha256": "e87bf1088d402513a9cf8102cdd475d25ff046e710a6d197414b63f25dba2a99"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Named archaeological sites in Kazakhstan and Uzbekistan with documented public visit areas, CC0 representative points, and independent checks of the authority record and existing corpus."
+}

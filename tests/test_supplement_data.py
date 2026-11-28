@@ -5,6 +5,7 @@ from __future__ import annotations
 import copy
 import hashlib
 import json
+from collections import Counter
 from collections.abc import Iterator
 from dataclasses import dataclass
 from pathlib import Path
@@ -20,6 +21,7 @@ from archsearch.catalogue_data import load_catalogue
 from archsearch.corpus import build_document, load_curated_corpus
 from archsearch.domain import Site
 from archsearch.polar_data import load_polar
+from archsearch.target_data import POINT_COHORTS
 
 
 def encoded(value: Any) -> bytes:
@@ -557,44 +559,49 @@ def test_real_api_preserves_source_country_labels_and_independent_supplement_cou
     response = bundled_client.get("/api/coverage")
     assert response.status_code == 200
     coverage = response.json()
-    assert coverage["corpus_version"] == "global-v20" and coverage["total"] == 3905
+    assert coverage["corpus_version"] == "global-v21" and coverage["total"] == 5339
     countries = {row["id"]: row for row in coverage["countries"]}
-    assert len(countries) == 211
+    assert len(countries) == 220
     labels = supplement.country_labels()
     expected_counts = {"CD": 5, "GY": 8}
+    added_counts: Counter[str] = Counter()
+    for cohort in POINT_COHORTS:
+        points = json.loads((supplement.DATA_DIR / cohort.filenames[1]).read_bytes())
+        for point in points:
+            added_counts.update(point["geography"]["countries"])
     assert all(countries[code]["label"] == label
-               and countries[code]["count"] == expected_counts.get(code, 1)
+               and countries[code]["count"] == expected_counts.get(code, 1) + added_counts[code]
                for code, label in labels.items())
     previous = json.loads((supplement.DATA_DIR / "catalogue_manifest.json").read_bytes())
     assert len(previous["countries"]) == 159
     assert all(countries[row["id"]]["label"] == row["label"] for row in previous["countries"])
     assert {row["id"]: row["count"] for row in coverage["sources"]} == {
-        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 2280,
+        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 3714,
     }
-    assert coverage["locations"] == {"mapped": 3509, "polar": 3, "unknown": 393}
+    assert coverage["locations"] == {"mapped": 4943, "polar": 3, "unknown": 393}
     assert coverage["authority"]["covered"] == coverage["authority"]["eligible_total"] == 1033
     assert coverage["polar_authority"]["covered"] == 91
     spatial = coverage["spatial_locations"]
     assert spatial["ready"] and spatial["records"] == 1239 and spatial["points"] == 5851
-    assert spatial["display_points"] == 7912
+    assert spatial["display_points"] == 9346
     status = bundled_client.get("/api/status").json()
-    assert status["corpus"]["count"] == 3905 and status["corpus"]["version"] == "global-v20"
+    assert status["corpus"]["count"] == 5339 and status["corpus"]["version"] == "global-v21"
     assert status["semantic"]["ready"] is False and status["history"]["ready"] is False
 
 
-@pytest.mark.parametrize(("code", "identifier"), [
-    ("KI", "auth:dva:betio-coast-watchers-memorial"),
-    ("NR", "auth:sprep:d6eab109-2e10-4654-b3c4-5bb94f6a8867"),
-    ("NU", "auth:commonwealth:67579"),
+@pytest.mark.parametrize(("code", "identifier", "country_count"), [
+    ("KI", "auth:dva:betio-coast-watchers-memorial", 1),
+    ("NR", "auth:sprep:d6eab109-2e10-4654-b3c4-5bb94f6a8867", 1),
+    ("NU", "auth:commonwealth:67579", 3),
 ])
 def test_real_unknown_authority_records_remain_browsable_searchable_and_unmapped(
-    bundled_client: TestClient, code: str, identifier: str,
+    bundled_client: TestClient, code: str, identifier: str, country_count: int,
 ) -> None:
     response = bundled_client.get("/api/catalogue", params={"country": code})
     assert response.status_code == 200
     catalogue = response.json()
-    assert catalogue["total"] == 1
-    point = catalogue["points"][0]
+    assert catalogue["total"] == country_count
+    point = next(row for row in catalogue["points"] if row["id"] == identifier)
     assert point["id"] == identifier and point["source_kind"] == "supplement"
     assert point["countries"] == [code] and point["chronology_status"] == "not_reviewed"
     assert point["repr_point"] is None and point["location_status"] == "unknown"
@@ -609,8 +616,8 @@ def test_real_unknown_authority_records_remain_browsable_searchable_and_unmapped
     assert detail["geography"]["point_count"] == 0
     assert detail["chronology"]["status"] == "not_reviewed" and not detail["chronology"]["phases"]
     assert detail["source_refs"] and detail["source_uri"].startswith("https://")
-    page = bundled_client.get("/api/sites", params={"country": code, "limit": 1}).json()
-    assert page["total"] == 1 and page["sites"] == [detail]
+    page = bundled_client.get("/api/sites", params={"country": code, "limit": country_count}).json()
+    assert page["total"] == country_count and detail in page["sites"]
 
     locations = bundled_client.get(uri + "/locations")
     assert locations.status_code == 200
@@ -622,6 +629,5 @@ def test_real_unknown_authority_records_remain_browsable_searchable_and_unmapped
         "query": detail["title"], "mode": "bm25", "country": code, "limit": 10,
     })
     assert result.status_code == 200
-    assert result.json()["total_candidates"] == 1
-    assert [hit["site"]["id"] for hit in result.json()["results"]] == [identifier]
-    assert result.json()["results"][0]["site"]["repr_point"] is None
+    matched = result.json()["results"][0]["site"]
+    assert matched["id"] == identifier and matched["repr_point"] is None

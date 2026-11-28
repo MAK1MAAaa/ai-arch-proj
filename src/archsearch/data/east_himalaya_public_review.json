@@ -1,0 +1,1084 @@
+{
+  "base_count": 5256,
+  "base_ids_sha256": "13ad542226d26b5e19aa1c3977a8a03e97c2e5afc86c03c79d36c23885458f30",
+  "base_sites_sha256": "4e30ba1061b7326da6e310b6d99c4a6f9ef20d892fab6ebffedde93589f61a55",
+  "cohort_version": "east-himalaya-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          89.89722222222223,
+          27.475
+        ],
+        "precision": 0.0002777777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16739736.json",
+        "statement_id": "Q16739736$AA570EBA-D5CF-4DFC-9ABF-C81B36C0D02B"
+      },
+      "independent_review": {
+        "method": "Independently checked fixed unmodified native Wikidata P625 claims, official operators and public access, mapped visitor-area diagnostics and WHC constituent lists, plus corpus duplicates; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The representative point lies within the reconstructed dzong shown in the government visitor ticket catalogue. Access follows the dzong admission procedures.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Bhutan National Monuments visitor ticketing system",
+          "UNESCO World Heritage Centre",
+          "Wikidata contributors"
+        ],
+        "description": "The restored Wangdue Phodrang fortress-monastery occupies its historic promontory above the river junction.",
+        "description_zh": "旺杜波德朗宗堡在两河交汇处上方的历史原址重建。",
+        "details": "The representative point lies within the reconstructed dzong shown in the government visitor ticket catalogue. Access follows the dzong admission procedures.",
+        "geography": {
+          "authority_id": "supplement:auth:bt-public:Q16739736",
+          "countries": [
+            "BT"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The current catalogue has a named visitor ticketing entry for Wangduephodrang Dzong.",
+            "id": "auth:bt-public:Q16739736:evidence:1",
+            "license": null,
+            "publisher": "Bhutan National Monuments visitor ticketing system",
+            "revision": "Retrieved 2026-11-28; SHA-256 511fec5f7a8dba9a6577fb9a2803a1777248fb557d13a9ddc1bedcab1df8d4a1.",
+            "title": "National Monuments visitor admission catalogue",
+            "uri": "https://nationalmonuments.gov.bt/api/v1/sites/"
+          }
+        },
+        "id": "auth:bt-public:Q16739736",
+        "location_precision": null,
+        "names": [
+          "旺杜波德朗宗",
+          "Wangdue Phodrang Dzong",
+          "Wangduephodrang Dzong",
+          "Wangdue Dzong"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          89.89722222222223,
+          27.475
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The current catalogue has a named visitor ticketing entry for Wangduephodrang Dzong.",
+            "id": "auth:bt-public:Q16739736:evidence:1",
+            "license": null,
+            "publisher": "Bhutan National Monuments visitor ticketing system",
+            "revision": "Retrieved 2026-11-28; SHA-256 511fec5f7a8dba9a6577fb9a2803a1777248fb557d13a9ddc1bedcab1df8d4a1.",
+            "title": "National Monuments visitor admission catalogue",
+            "uri": "https://nationalmonuments.gov.bt/api/v1/sites/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Wangdue Phodrang is named in the tentative serial submission 5695.",
+            "id": "auth:bt-public:Q16739736:evidence:2",
+            "license": null,
+            "publisher": "UNESCO World Heritage Centre",
+            "revision": "Retrieved 2026-11-28; SHA-256 4104507eaa6ccf1e688f2b2da795ad42eba0d222ae7f4e26774c5a7cda30ddcb.",
+            "title": "Bhutanese dzongs on the Tentative List",
+            "uri": "https://whc.unesco.org/en/tentativelists/5695/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 89.89722222222223, latitude 27.475.",
+            "id": "auth:bt-public:Q16739736:evidence:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 cdd327502f8276a31c1c720ae942fe7196ab37b96b77e3778026f1db0993ee3b.",
+            "title": "Wangdue Phodrang Dzong coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16739736.json"
+          }
+        ],
+        "source_uri": "https://nationalmonuments.gov.bt/api/v1/sites/",
+        "title": "Wangdue Phodrang Dzong",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/bt-ticket-sites.json",
+          "sha256": "511fec5f7a8dba9a6577fb9a2803a1777248fb557d13a9ddc1bedcab1df8d4a1",
+          "uri": "https://nationalmonuments.gov.bt/api/v1/sites/"
+        },
+        {
+          "filename": "source/bt-tentative-dzongs.html",
+          "sha256": "4104507eaa6ccf1e688f2b2da795ad42eba0d222ae7f4e26774c5a7cda30ddcb",
+          "uri": "https://whc.unesco.org/en/tentativelists/5695/"
+        },
+        {
+          "filename": "source/Q16739736.json",
+          "sha256": "cdd327502f8276a31c1c720ae942fe7196ab37b96b77e3778026f1db0993ee3b",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16739736.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          89.425485,
+          27.428731
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4315025.json",
+        "statement_id": "Q4315025$19f101a8-41a0-cba7-d4af-c833ff25a394"
+      },
+      "independent_review": {
+        "method": "Independently checked fixed unmodified native Wikidata P625 claims, official operators and public access, mapped visitor-area diagnostics and WHC constituent lists, plus corpus duplicates; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point represents the admission-controlled watchtower museum. The historic fort below and the museum have distinct visitor premises.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Department of Culture and Dzongkha Development, Bhutan",
+          "Wikidata contributors"
+        ],
+        "description": "Bhutan’s National Museum occupies the historic circular Ta Dzong watchtower in Paro.",
+        "description_zh": "不丹国家博物馆使用帕罗塔宗的历史圆形瞭望塔。",
+        "details": "The point represents the admission-controlled watchtower museum. The historic fort below and the museum have distinct visitor premises.",
+        "geography": {
+          "authority_id": "supplement:auth:bt-public:Q4315025",
+          "countries": [
+            "BT"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator identifies the Paro watchtower museum and publishes opening times and ticket arrangements.",
+            "id": "auth:bt-public:Q4315025:evidence:1",
+            "license": null,
+            "publisher": "Department of Culture and Dzongkha Development, Bhutan",
+            "revision": "Retrieved 2026-11-28; SHA-256 dde73a5130a66ea751d4319da35b0a12d9812c2fb48978999408bd9395649885.",
+            "title": "Museum opening and admission information",
+            "uri": "https://museums.gov.bt/our-museums"
+          }
+        },
+        "id": "auth:bt-public:Q4315025",
+        "location_precision": null,
+        "names": [
+          "帕罗塔宗与不丹国家博物馆",
+          "Paro Ta Dzong, National Museum of Bhutan",
+          "Paro Ta Dzong",
+          "National Museum of Bhutan",
+          "Ta-Dzong watchtower"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          89.425485,
+          27.428731
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator identifies the Paro watchtower museum and publishes opening times and ticket arrangements.",
+            "id": "auth:bt-public:Q4315025:evidence:1",
+            "license": null,
+            "publisher": "Department of Culture and Dzongkha Development, Bhutan",
+            "revision": "Retrieved 2026-11-28; SHA-256 dde73a5130a66ea751d4319da35b0a12d9812c2fb48978999408bd9395649885.",
+            "title": "Museum opening and admission information",
+            "uri": "https://museums.gov.bt/our-museums"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum documents its recent ticketed heritage event in the named watchtower.",
+            "id": "auth:bt-public:Q4315025:evidence:2",
+            "license": null,
+            "publisher": "Department of Culture and Dzongkha Development, Bhutan",
+            "revision": "Retrieved 2026-11-28; SHA-256 7dcbe5ac12162afc8c018dc2015729843688280c7feb94044e88709ad017a562.",
+            "title": "Paro Ta Dzong public museum event, November 2026",
+            "uri": "https://museums.gov.bt/news-events/national-museum-of-bhutan-launches-heritage-hues"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 89.425485, latitude 27.428731.",
+            "id": "auth:bt-public:Q4315025:evidence:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 425ff21cb922bc6b54dd543c475751576fe09ae514893822b87b3888994de357.",
+            "title": "Paro Ta Dzong, National Museum of Bhutan coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4315025.json"
+          }
+        ],
+        "source_uri": "https://museums.gov.bt/our-museums",
+        "title": "Paro Ta Dzong, National Museum of Bhutan",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/bt-museums.html",
+          "sha256": "dde73a5130a66ea751d4319da35b0a12d9812c2fb48978999408bd9395649885",
+          "uri": "https://museums.gov.bt/our-museums"
+        },
+        {
+          "filename": "source/bt-paro-museum-festival-2026.html",
+          "sha256": "7dcbe5ac12162afc8c018dc2015729843688280c7feb94044e88709ad017a562",
+          "uri": "https://museums.gov.bt/news-events/national-museum-of-bhutan-launches-heritage-hues"
+        },
+        {
+          "filename": "source/Q4315025.json",
+          "sha256": "425ff21cb922bc6b54dd543c475751576fe09ae514893822b87b3888994de357",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4315025.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          89.86305555555556,
+          27.581944444444446
+        ],
+        "precision": 0.0002777777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4383728.json",
+        "statement_id": "q4383728$82E105AD-3CC3-4DF8-B9BC-EDF5424CBF20"
+      },
+      "independent_review": {
+        "method": "Independently checked fixed unmodified native Wikidata P625 claims, official operators and public access, mapped visitor-area diagnostics and WHC constituent lists, plus corpus duplicates; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The representative point lies within the named dzong. Visitors use the admission process and follow their guide through authorised areas of the active complex.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Department of Tourism, Bhutan",
+          "Punakha Dzongkhag Administration",
+          "UNESCO World Heritage Centre",
+          "Wikidata contributors"
+        ],
+        "description": "The historic fortress-monastery at the Punakha river confluence serves administrative and religious functions.",
+        "description_zh": "普纳卡两河交汇处的历史宗堡兼有行政和宗教用途。",
+        "details": "The representative point lies within the named dzong. Visitors use the admission process and follow their guide through authorised areas of the active complex.",
+        "geography": {
+          "authority_id": "supplement:auth:bt-public:Q4383728",
+          "countries": [
+            "BT"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism department identifies Punakha Dzong as a visitor monument and describes the guide booking system.",
+            "id": "auth:bt-public:Q4383728:evidence:1",
+            "license": null,
+            "publisher": "Department of Tourism, Bhutan",
+            "revision": "Retrieved 2026-11-28; SHA-256 a2fcbc09df006103270569ea99253626c627aca582e534782a02c807b9ee1eb6.",
+            "title": "Punakha Dzong admission policy",
+            "uri": "https://a.storyblok.com/f/171618/x/3598a444f8/entry-fee-for-monument-sites.pdf"
+          }
+        },
+        "id": "auth:bt-public:Q4383728",
+        "location_precision": null,
+        "names": [
+          "普纳卡宗",
+          "Punakha Dzong",
+          "Pungthang Dechen Phodrang"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          89.86305555555556,
+          27.581944444444446
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism department identifies Punakha Dzong as a visitor monument and describes the guide booking system.",
+            "id": "auth:bt-public:Q4383728:evidence:1",
+            "license": null,
+            "publisher": "Department of Tourism, Bhutan",
+            "revision": "Retrieved 2026-11-28; SHA-256 a2fcbc09df006103270569ea99253626c627aca582e534782a02c807b9ee1eb6.",
+            "title": "Punakha Dzong admission policy",
+            "uri": "https://a.storyblok.com/f/171618/x/3598a444f8/entry-fee-for-monument-sites.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The district identifies the named fortress and its position at the river confluence.",
+            "id": "auth:bt-public:Q4383728:evidence:2",
+            "license": null,
+            "publisher": "Punakha Dzongkhag Administration",
+            "revision": "Retrieved 2026-11-28; SHA-256 46790c4a1149520974d4696e5e0ed57d60e84cd15a22e88e2aa15c7e8ce3bf2c.",
+            "title": "Punakha Dzong",
+            "uri": "https://punakha.gov.bt/punakha-dzong/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Punakha is named in the tentative serial submission 5695.",
+            "id": "auth:bt-public:Q4383728:evidence:3",
+            "license": null,
+            "publisher": "UNESCO World Heritage Centre",
+            "revision": "Retrieved 2026-11-28; SHA-256 4104507eaa6ccf1e688f2b2da795ad42eba0d222ae7f4e26774c5a7cda30ddcb.",
+            "title": "Bhutanese dzongs on the Tentative List",
+            "uri": "https://whc.unesco.org/en/tentativelists/5695/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 89.86305555555556, latitude 27.581944444444446.",
+            "id": "auth:bt-public:Q4383728:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 043c40626c53f5ba3b2dcd48761e2a773a9986fa3c011960e9740cdbe29bf53e.",
+            "title": "Punakha Dzong coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4383728.json"
+          }
+        ],
+        "source_uri": "https://a.storyblok.com/f/171618/x/3598a444f8/entry-fee-for-monument-sites.pdf",
+        "title": "Punakha Dzong",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/bt-tourism-ticket-policy.pdf",
+          "sha256": "a2fcbc09df006103270569ea99253626c627aca582e534782a02c807b9ee1eb6",
+          "uri": "https://a.storyblok.com/f/171618/x/3598a444f8/entry-fee-for-monument-sites.pdf"
+        },
+        {
+          "filename": "source/bt-punakha-district.html",
+          "sha256": "46790c4a1149520974d4696e5e0ed57d60e84cd15a22e88e2aa15c7e8ce3bf2c",
+          "uri": "https://punakha.gov.bt/punakha-dzong/"
+        },
+        {
+          "filename": "source/bt-tentative-dzongs.html",
+          "sha256": "4104507eaa6ccf1e688f2b2da795ad42eba0d222ae7f4e26774c5a7cda30ddcb",
+          "uri": "https://whc.unesco.org/en/tentativelists/5695/"
+        },
+        {
+          "filename": "source/Q4383728.json",
+          "sha256": "043c40626c53f5ba3b2dcd48761e2a773a9986fa3c011960e9740cdbe29bf53e",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4383728.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          88.25642976,
+          27.30192514
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1244570.json",
+        "statement_id": "q1244570$C188A059-9BBA-4E76-9738-4A8B70D450B9"
+      },
+      "independent_review": {
+        "method": "Independently checked fixed unmodified native Wikidata P625 claims, official operators and public access, mapped visitor-area diagnostics and WHC constituent lists, plus corpus duplicates; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The representative point identifies the ruins reached by the district’s signed visitor approach. It is separate from Pemayangtse Monastery and excludes the nearby bird park.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Gyalshing District Administration, Government of Sikkim",
+          "Wikidata contributors"
+        ],
+        "description": "The remains of the former Sikkimese capital include palace structures reached by a visitor path near Pelling.",
+        "description_zh": "拉布登策是锡金旧都，游客可从佩林附近沿开放步道到达王宫遗址。",
+        "details": "The representative point identifies the ruins reached by the district’s signed visitor approach. It is separate from Pemayangtse Monastery and excludes the nearby bird park.",
+        "geography": {
+          "authority_id": "supplement:auth:in-public:Q1244570",
+          "countries": [
+            "IN"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The district publishes access hours and explains the walk to the palace remains.",
+            "id": "auth:in-public:Q1244570:evidence:1",
+            "license": null,
+            "publisher": "Gyalshing District Administration, Government of Sikkim",
+            "revision": "Retrieved 2026-11-28; SHA-256 2079719d589ac704f0316b0d51fbcc5ed40d3554df027c4092dee95b85ca1950.",
+            "title": "Rabdentse Ruins visitor access",
+            "uri": "https://gyalshing.nic.in/primary-attraction/"
+          }
+        },
+        "id": "auth:in-public:Q1244570",
+        "location_precision": null,
+        "names": [
+          "拉布登策王宫遗址",
+          "Rabdentse Palace Ruins",
+          "Rabdentse",
+          "Rabdentse Ruins",
+          "Rabdentse Palace"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          88.25642976,
+          27.30192514
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The district publishes access hours and explains the walk to the palace remains.",
+            "id": "auth:in-public:Q1244570:evidence:1",
+            "license": null,
+            "publisher": "Gyalshing District Administration, Government of Sikkim",
+            "revision": "Retrieved 2026-11-28; SHA-256 2079719d589ac704f0316b0d51fbcc5ed40d3554df027c4092dee95b85ca1950.",
+            "title": "Rabdentse Ruins visitor access",
+            "uri": "https://gyalshing.nic.in/primary-attraction/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The district identifies the former capital and its ruins as a distinct place.",
+            "id": "auth:in-public:Q1244570:evidence:2",
+            "license": null,
+            "publisher": "Gyalshing District Administration, Government of Sikkim",
+            "revision": "Retrieved 2026-11-28; SHA-256 987b12421bf904f778d1f5fe494c6ae18f0190f7f493b4f1c442fee1d529404a.",
+            "title": "Rabdentse archaeological visitor site",
+            "uri": "https://gyalshing.nic.in/tourist-place/rabdentse/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 88.25642976, latitude 27.30192514.",
+            "id": "auth:in-public:Q1244570:evidence:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 77cfade8aa13ab76135020140d613b99555574c803260fbfa39b63b0a1aafb49.",
+            "title": "Rabdentse Palace Ruins coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1244570.json"
+          }
+        ],
+        "source_uri": "https://gyalshing.nic.in/primary-attraction/",
+        "title": "Rabdentse Palace Ruins",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/in-gyalshing-attractions.html",
+          "sha256": "2079719d589ac704f0316b0d51fbcc5ed40d3554df027c4092dee95b85ca1950",
+          "uri": "https://gyalshing.nic.in/primary-attraction/"
+        },
+        {
+          "filename": "source/in-rabdentse-district.html",
+          "sha256": "987b12421bf904f778d1f5fe494c6ae18f0190f7f493b4f1c442fee1d529404a",
+          "uri": "https://gyalshing.nic.in/tourist-place/rabdentse/"
+        },
+        {
+          "filename": "source/Q1244570.json",
+          "sha256": "77cfade8aa13ab76135020140d613b99555574c803260fbfa39b63b0a1aafb49",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1244570.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          88.12802887,
+          24.88288116
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q13058783.json",
+        "statement_id": "Q13058783$3A37E349-6228-45ED-8D23-475AB21D7374"
+      },
+      "independent_review": {
+        "method": "Independently checked fixed unmodified native Wikidata P625 claims, official operators and public access, mapped visitor-area diagnostics and WHC constituent lists, plus corpus duplicates; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The representative point is at the documented mosque perimeter in the publicly presented Gour monument grounds.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Malda District Administration, Government of West Bengal",
+          "Wikidata contributors"
+        ],
+        "description": "Baroduari is a monumental historic mosque ruin in Gour near Ramkeli.",
+        "description_zh": "巴罗杜阿里清真寺是拉姆凯利附近古尔的大型历史遗址。",
+        "details": "The representative point is at the documented mosque perimeter in the publicly presented Gour monument grounds.",
+        "geography": {
+          "authority_id": "supplement:auth:in-public:Q13058783",
+          "countries": [
+            "IN"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The district identifies the mosque, publishes photos of its visitor gate and gives travel directions.",
+            "id": "auth:in-public:Q13058783:evidence:1",
+            "license": null,
+            "publisher": "Malda District Administration, Government of West Bengal",
+            "revision": "Retrieved 2026-11-28; SHA-256 e7926fee730688862e510ab9ddf990b8c37b255656cba2ce6252b72005ce1f7a.",
+            "title": "Baroduari / Boro Sona Mosque public heritage destination",
+            "uri": "https://malda.gov.in/tourist-place/baroduari-boro-sona-mosque/"
+          }
+        },
+        "id": "auth:in-public:Q13058783",
+        "location_precision": null,
+        "names": [
+          "古尔大金清真寺遗址",
+          "Baroduari Mosque, Gour",
+          "Baro Shona Masjid",
+          "Boro Sona Mosque",
+          "Baroduari",
+          "Great Golden Mosque of Gour"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          88.12802887,
+          24.88288116
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The district identifies the mosque, publishes photos of its visitor gate and gives travel directions.",
+            "id": "auth:in-public:Q13058783:evidence:1",
+            "license": null,
+            "publisher": "Malda District Administration, Government of West Bengal",
+            "revision": "Retrieved 2026-11-28; SHA-256 e7926fee730688862e510ab9ddf990b8c37b255656cba2ce6252b72005ce1f7a.",
+            "title": "Baroduari / Boro Sona Mosque public heritage destination",
+            "uri": "https://malda.gov.in/tourist-place/baroduari-boro-sona-mosque/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The district lists Baroduari Mosque separately along its Gour heritage route.",
+            "id": "auth:in-public:Q13058783:evidence:2",
+            "license": null,
+            "publisher": "Malda District Administration, Government of West Bengal",
+            "revision": "Retrieved 2026-11-28; SHA-256 e98a4c990ca6b58b99b26f34850ad714c96c8d9ab0bfaa68ec31e46eec001f01.",
+            "title": "Malda district visitor destinations",
+            "uri": "https://malda.gov.in/tourism/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 88.12802887, latitude 24.88288116.",
+            "id": "auth:in-public:Q13058783:evidence:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 f2126ecc8da9f6ff7526c39db76e0a09f078a6d7523a7a85c409e4dca3a736d6.",
+            "title": "Baroduari Mosque, Gour coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q13058783.json"
+          }
+        ],
+        "source_uri": "https://malda.gov.in/tourist-place/baroduari-boro-sona-mosque/",
+        "title": "Baroduari Mosque, Gour",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/in-malda-baroduari.html",
+          "sha256": "e7926fee730688862e510ab9ddf990b8c37b255656cba2ce6252b72005ce1f7a",
+          "uri": "https://malda.gov.in/tourist-place/baroduari-boro-sona-mosque/"
+        },
+        {
+          "filename": "source/in-malda-tourism.html",
+          "sha256": "e98a4c990ca6b58b99b26f34850ad714c96c8d9ab0bfaa68ec31e46eec001f01",
+          "uri": "https://malda.gov.in/tourism/"
+        },
+        {
+          "filename": "source/Q13058783.json",
+          "sha256": "f2126ecc8da9f6ff7526c39db76e0a09f078a6d7523a7a85c409e4dca3a736d6",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q13058783.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          88.16423798,
+          25.15255737
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q357320.json",
+        "statement_id": "Q357320$bf9a7e5d-407e-bd48-4548-e063ab74e519"
+      },
+      "independent_review": {
+        "method": "Independently checked fixed unmodified native Wikidata P625 claims, official operators and public access, mapped visitor-area diagnostics and WHC constituent lists, plus corpus duplicates; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The representative point lies within the mosque ruins. Visitor access follows local heritage-site arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Malda District Administration, Government of West Bengal",
+          "Wikidata contributors"
+        ],
+        "description": "The Adina Mosque ruins form a distinct historic visitor site in Pandua in Malda district.",
+        "description_zh": "阿迪纳清真寺遗址坐落于马尔达县潘杜阿，是当地公布的历史参观地点。",
+        "details": "The representative point lies within the mosque ruins. Visitor access follows local heritage-site arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:in-public:Q357320",
+          "countries": [
+            "IN"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The district identifies the named monument at Pandua and gives visitor directions.",
+            "id": "auth:in-public:Q357320:evidence:1",
+            "license": null,
+            "publisher": "Malda District Administration, Government of West Bengal",
+            "revision": "Retrieved 2026-11-28; SHA-256 765c4a7a111c1a3378575f8b98faa4b0d30ed1004bc40c6d8edae633b2ae59b4.",
+            "title": "Adina Mosque public heritage destination",
+            "uri": "https://malda.gov.in/tourist-place/adina-mosque/"
+          }
+        },
+        "id": "auth:in-public:Q357320",
+        "location_precision": null,
+        "names": [
+          "潘杜阿阿迪纳清真寺遗址",
+          "Adina Mosque, Pandua",
+          "Adina Mosque",
+          "Adina Masjid, Pandua"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          88.16423798,
+          25.15255737
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The district identifies the named monument at Pandua and gives visitor directions.",
+            "id": "auth:in-public:Q357320:evidence:1",
+            "license": null,
+            "publisher": "Malda District Administration, Government of West Bengal",
+            "revision": "Retrieved 2026-11-28; SHA-256 765c4a7a111c1a3378575f8b98faa4b0d30ed1004bc40c6d8edae633b2ae59b4.",
+            "title": "Adina Mosque public heritage destination",
+            "uri": "https://malda.gov.in/tourist-place/adina-mosque/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The district lists Adina Mosque independently among the local visitor destinations.",
+            "id": "auth:in-public:Q357320:evidence:2",
+            "license": null,
+            "publisher": "Malda District Administration, Government of West Bengal",
+            "revision": "Retrieved 2026-11-28; SHA-256 e98a4c990ca6b58b99b26f34850ad714c96c8d9ab0bfaa68ec31e46eec001f01.",
+            "title": "Malda district visitor destinations",
+            "uri": "https://malda.gov.in/tourism/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 88.16423798, latitude 25.15255737.",
+            "id": "auth:in-public:Q357320:evidence:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 8d109846096fa96f83b37b767bebf706a9a0a75e6b154b3d5fda0387208e9f2a.",
+            "title": "Adina Mosque, Pandua coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q357320.json"
+          }
+        ],
+        "source_uri": "https://malda.gov.in/tourist-place/adina-mosque/",
+        "title": "Adina Mosque, Pandua",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/in-malda-adina.html",
+          "sha256": "765c4a7a111c1a3378575f8b98faa4b0d30ed1004bc40c6d8edae633b2ae59b4",
+          "uri": "https://malda.gov.in/tourist-place/adina-mosque/"
+        },
+        {
+          "filename": "source/in-malda-tourism.html",
+          "sha256": "e98a4c990ca6b58b99b26f34850ad714c96c8d9ab0bfaa68ec31e46eec001f01",
+          "uri": "https://malda.gov.in/tourism/"
+        },
+        {
+          "filename": "source/Q357320.json",
+          "sha256": "8d109846096fa96f83b37b767bebf706a9a0a75e6b154b3d5fda0387208e9f2a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q357320.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          88.2216874,
+          27.2977508
+        ],
+        "precision": 1e-07,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7417762.json",
+        "statement_id": "Q7417762$5EB7D8D6-69BC-46EB-B8A9-86206DEB52AE"
+      },
+      "independent_review": {
+        "method": "Independently checked fixed unmodified native Wikidata P625 claims, official operators and public access, mapped visitor-area diagnostics and WHC constituent lists, plus corpus duplicates; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point represents the old monastery compound. Visitor access follows the pilgrimage site rules and excludes a separate point for the modern skywalk and statue.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Department of Tourism and Civil Aviation, Government of Sikkim",
+          "Ministry of Tourism, Government of India",
+          "Information and Public Relations Department, Government of Sikkim",
+          "Wikidata contributors"
+        ],
+        "description": "The historic Sanga Choeling Monastery overlooks Pelling from a ridge opposite Pemayangtse.",
+        "description_zh": "历史上的桑阿却林寺位于佩林附近，与贝玛扬泽寺分处两边山脊。",
+        "details": "The point represents the old monastery compound. Visitor access follows the pilgrimage site rules and excludes a separate point for the modern skywalk and statue.",
+        "geography": {
+          "authority_id": "supplement:auth:in-public:Q7417762",
+          "countries": [
+            "IN"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism department identifies the monastery as a separate walk across the valley.",
+            "id": "auth:in-public:Q7417762:evidence:1",
+            "license": null,
+            "publisher": "Department of Tourism and Civil Aviation, Government of Sikkim",
+            "revision": "Retrieved 2026-11-28; SHA-256 fcfe49c1a0dc45d41d3680c9fd8b8042b8ef302b87999011faf8ab4f212837c1.",
+            "title": "Sanga Choling on the official Pelling walking itinerary",
+            "uri": "https://www.sikkim.gov.in/departments/tourism-civil-aviation-department/where-to-go"
+          }
+        },
+        "id": "auth:in-public:Q7417762",
+        "location_precision": null,
+        "names": [
+          "佩林桑阿却林寺",
+          "Sanga Choeling Monastery, Pelling",
+          "Sanga Choeling Monastery",
+          "Sang Ngag Choeling Monastery",
+          "Sanga Choling Gompa"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          88.2216874,
+          27.2977508
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state tourism department identifies the monastery as a separate walk across the valley.",
+            "id": "auth:in-public:Q7417762:evidence:1",
+            "license": null,
+            "publisher": "Department of Tourism and Civil Aviation, Government of Sikkim",
+            "revision": "Retrieved 2026-11-28; SHA-256 fcfe49c1a0dc45d41d3680c9fd8b8042b8ef302b87999011faf8ab4f212837c1.",
+            "title": "Sanga Choling on the official Pelling walking itinerary",
+            "uri": "https://www.sikkim.gov.in/departments/tourism-civil-aviation-department/where-to-go"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism programme identifies the historic monastery and describes public visiting experiences.",
+            "id": "auth:in-public:Q7417762:evidence:2",
+            "license": null,
+            "publisher": "Ministry of Tourism, Government of India",
+            "revision": "Retrieved 2026-11-28; SHA-256 7bc5e818b1236ee9640f9a0e053ff81ed481b61ee2f9f88ddb1acd3c56a8ff9f.",
+            "title": "Sanga Choeling Monastery visit",
+            "uri": "https://www.incredibleindia.gov.in/en/sikkim/pelling/spiritual-spots-in-pelling-a-journey-of-serenity-and-divinity"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The district announcement identifies the monastery and its recent public religious event.",
+            "id": "auth:in-public:Q7417762:evidence:3",
+            "license": null,
+            "publisher": "Information and Public Relations Department, Government of Sikkim",
+            "revision": "Retrieved 2026-11-28; SHA-256 d6ce041632b9a4aa5cb2502c0b31b0aa5057e44b6444f976813468cebd7e884d.",
+            "title": "Sanga Choeling Monastery event, September 2026",
+            "uri": "https://ipr.sikkim.gov.in/Home/News?slug=dc-gyalshing-chairs-coordination-meeting-for-4th-annual-mani-thungdub-ceremonial-ritual-at-chenrezig-shingkham-rewo-potala-sang-ngag-choeling-monastery-pelling"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 88.2216874, latitude 27.2977508.",
+            "id": "auth:in-public:Q7417762:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 9858d67511062df31fff9d242db6e60529ade07e99f168ef94b1451b3bcac3fc.",
+            "title": "Sanga Choeling Monastery, Pelling coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7417762.json"
+          }
+        ],
+        "source_uri": "https://www.sikkim.gov.in/departments/tourism-civil-aviation-department/where-to-go",
+        "title": "Sanga Choeling Monastery, Pelling",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/in-sikkim-where-to-go.html",
+          "sha256": "fcfe49c1a0dc45d41d3680c9fd8b8042b8ef302b87999011faf8ab4f212837c1",
+          "uri": "https://www.sikkim.gov.in/departments/tourism-civil-aviation-department/where-to-go"
+        },
+        {
+          "filename": "source/in-sanga-national-tourism.html",
+          "sha256": "7bc5e818b1236ee9640f9a0e053ff81ed481b61ee2f9f88ddb1acd3c56a8ff9f",
+          "uri": "https://www.incredibleindia.gov.in/en/sikkim/pelling/spiritual-spots-in-pelling-a-journey-of-serenity-and-divinity"
+        },
+        {
+          "filename": "source/in-sanga-sept-2026.html",
+          "sha256": "d6ce041632b9a4aa5cb2502c0b31b0aa5057e44b6444f976813468cebd7e884d",
+          "uri": "https://ipr.sikkim.gov.in/Home/News?slug=dc-gyalshing-chairs-coordination-meeting-for-4th-annual-mani-thungdub-ceremonial-ritual-at-chenrezig-shingkham-rewo-potala-sang-ngag-choeling-monastery-pelling"
+        },
+        {
+          "filename": "source/Q7417762.json",
+          "sha256": "9858d67511062df31fff9d242db6e60529ade07e99f168ef94b1451b3bcac3fc",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7417762.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          88.460833333333,
+          27.038055555556
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q8066156.json",
+        "statement_id": "Q8066156$3615499c-4378-24d4-7032-36b942d82c70"
+      },
+      "independent_review": {
+        "method": "Independently checked fixed unmodified native Wikidata P625 claims, official operators and public access, mapped visitor-area diagnostics and WHC constituent lists, plus corpus duplicates; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point represents the named monastery near the hill summit. Visits follow the designated access route and local controls.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministry of Tourism, Government of India",
+          "Kalimpong District Administration",
+          "Wikidata contributors"
+        ],
+        "description": "The Buddhist monastery on Durpin Hill is a public cultural visit destination in Kalimpong.",
+        "description_zh": "达尔平山上的佛寺是噶伦堡主管方公布的文化参访地点。",
+        "details": "The point represents the named monastery near the hill summit. Visits follow the designated access route and local controls.",
+        "geography": {
+          "authority_id": "supplement:auth:in-public:Q8066156",
+          "countries": [
+            "IN"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national destination page publishes visitor information and a named monastery map point.",
+            "id": "auth:in-public:Q8066156:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism, Government of India",
+            "revision": "Retrieved 2026-11-28; SHA-256 2d0c3745886befde6c8dcab6ef528c3b21c205343ca04b879d1feac2484af69b.",
+            "title": "Durpin Monastery visitor information and precise map anchor",
+            "uri": "https://www.incredibleindia.gov.in/en/west-bengal/kalimpong/durpin-monastery"
+          }
+        },
+        "id": "auth:in-public:Q8066156",
+        "location_precision": null,
+        "names": [
+          "噶伦堡达尔平寺",
+          "Zang Dhok Palri Phodang, Kalimpong",
+          "Zang Dhok Palri Phodang",
+          "Durpin Monastery",
+          "Zang Dhok Palri Monastery"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          88.460833333333,
+          27.038055555556
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national destination page publishes visitor information and a named monastery map point.",
+            "id": "auth:in-public:Q8066156:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism, Government of India",
+            "revision": "Retrieved 2026-11-28; SHA-256 2d0c3745886befde6c8dcab6ef528c3b21c205343ca04b879d1feac2484af69b.",
+            "title": "Durpin Monastery visitor information and precise map anchor",
+            "uri": "https://www.incredibleindia.gov.in/en/west-bengal/kalimpong/durpin-monastery"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The district identifies the monastery by its full name at the summit of Durpin Hill.",
+            "id": "auth:in-public:Q8066156:evidence:2",
+            "license": null,
+            "publisher": "Kalimpong District Administration",
+            "revision": "Retrieved 2026-11-28; SHA-256 13ae8ba00700b0e34dfb928a67b57dd5f90d4b207e6f2f180373b1549c919869.",
+            "title": "Durpin Dara and Zang Dhok Palri Monastery",
+            "uri": "https://kalimpong.gov.in/tourist-place/durpin-dara/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 88.460833333333, latitude 27.038055555556.",
+            "id": "auth:in-public:Q8066156:evidence:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 0bc1e0e059983af6389d0c91c8c76d07c48ae0be6d86d96a42df8ff43f255010.",
+            "title": "Zang Dhok Palri Phodang, Kalimpong coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q8066156.json"
+          }
+        ],
+        "source_uri": "https://www.incredibleindia.gov.in/en/west-bengal/kalimpong/durpin-monastery",
+        "title": "Zang Dhok Palri Phodang, Kalimpong",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/in-durpin-tourism.html",
+          "sha256": "2d0c3745886befde6c8dcab6ef528c3b21c205343ca04b879d1feac2484af69b",
+          "uri": "https://www.incredibleindia.gov.in/en/west-bengal/kalimpong/durpin-monastery"
+        },
+        {
+          "filename": "source/in-durpin-district.html",
+          "sha256": "13ae8ba00700b0e34dfb928a67b57dd5f90d4b207e6f2f180373b1549c919869",
+          "uri": "https://kalimpong.gov.in/tourist-place/durpin-dara/"
+        },
+        {
+          "filename": "source/Q8066156.json",
+          "sha256": "0bc1e0e059983af6389d0c91c8c76d07c48ae0be6d86d96a42df8ff43f255010",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q8066156.json"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Eight separate publicly documented fortresses, monuments and archaeological landscapes in Bhutan and eastern India, retaining original CC0 coordinate claims and explicitly managed visitor areas."
+}

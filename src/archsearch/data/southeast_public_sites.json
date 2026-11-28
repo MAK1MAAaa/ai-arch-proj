@@ -1,0 +1,2307 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism, Kingdom of Cambodia",
+      "Wikidata contributors",
+      "Tourism Cambodia editorial guide"
+    ],
+    "description": "Phnom Chisor is a documented public heritage place in Takeo Province, Cambodia.",
+    "description_zh": "金梭山寺位于柬埔寨，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The point represents the hilltop archaeological temple at Phnom Chisor in Takeo and the designated visitor approach.",
+    "geography": {
+      "authority_id": "supplement:auth:kh-public:Q1628273",
+      "countries": [
+        "KH"
+      ],
+      "note": "Locality identified in the public site evidence: Takeo Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry visitor map includes the named Khmer temple in Takeo.",
+        "id": "kh-visitor-handbook:Q1628273",
+        "license": null,
+        "publisher": "Ministry of Tourism, Kingdom of Cambodia",
+        "revision": "Published brochure, PDF page 4",
+        "title": "Official Tourism Handbook of the Kingdom of Cambodia",
+        "uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf"
+      }
+    },
+    "id": "auth:kh-public:Q1628273",
+    "location_precision": null,
+    "names": [
+      "金梭山寺",
+      "Phnom Chisor",
+      "ភ្នំជីសូរ"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      104.82333333333,
+      11.184444444444
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry visitor map includes the named Khmer temple in Takeo.",
+        "id": "kh-visitor-handbook:Q1628273",
+        "license": null,
+        "publisher": "Ministry of Tourism, Kingdom of Cambodia",
+        "revision": "Published brochure, PDF page 4",
+        "title": "Official Tourism Handbook of the Kingdom of Cambodia",
+        "uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The visitor guide separately names the temple and its public visit scope.",
+        "id": "kh-visitor-comparison:Q1628273",
+        "license": null,
+        "publisher": "Tourism Cambodia editorial guide",
+        "revision": "Public document retrieved 2026-11-28",
+        "title": "Takeo visitor guide",
+        "uri": "https://tourismcambodia.org/provinces/57/takeo"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 104.82333333333, latitude 11.184444444444",
+        "id": "wikidata:Q1628273",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2557314130. P625 statement q1628273$CF6D42C3-DD8B-4423-BEB7-0CEC4905778D.",
+        "title": "Phnom Chisor representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1628273.json"
+      }
+    ],
+    "source_uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf",
+    "title": "Phnom Chisor",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism, Kingdom of Cambodia",
+      "Wikidata contributors"
+    ],
+    "description": "Wat Phnom is a documented public heritage place in Phnom Penh, Cambodia.",
+    "description_zh": "塔仔山寺位于柬埔寨，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The record covers the named heritage place in Phnom Penh.",
+    "geography": {
+      "authority_id": "supplement:auth:kh-public:Q1818101",
+      "countries": [
+        "KH"
+      ],
+      "note": "Locality identified in the public site evidence: Phnom Penh.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry visitor handbook specifically lists access information for Wat Phnom.",
+        "id": "kh-visitor-handbook:Q1818101",
+        "license": null,
+        "publisher": "Ministry of Tourism, Kingdom of Cambodia",
+        "revision": "Published brochure, PDF page 13",
+        "title": "Official Tourism Handbook of the Kingdom of Cambodia",
+        "uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf"
+      }
+    },
+    "id": "auth:kh-public:Q1818101",
+    "location_precision": null,
+    "names": [
+      "塔仔山寺",
+      "Wat Phnom",
+      "វត្តភ្នំ"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      104.923067,
+      11.576036
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry visitor handbook specifically lists access information for Wat Phnom.",
+        "id": "kh-visitor-handbook:Q1818101",
+        "license": null,
+        "publisher": "Ministry of Tourism, Kingdom of Cambodia",
+        "revision": "Published brochure, PDF page 13",
+        "title": "Official Tourism Handbook of the Kingdom of Cambodia",
+        "uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 104.923067, latitude 11.576036",
+        "id": "wikidata:Q1818101",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2532651141. P625 statement q1818101$53E6FD5D-E7D9-4166-9A10-51F855732C92.",
+        "title": "Wat Phnom representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1818101.json"
+      }
+    ],
+    "source_uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf",
+    "title": "Wat Phnom",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism, Kingdom of Cambodia",
+      "Wikidata contributors"
+    ],
+    "description": "Wat Ek Phnom is a documented public heritage place in Battambang Province, Cambodia.",
+    "description_zh": "埃克普农寺遗址位于柬埔寨，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The point represents the historic Ek Phnom temple within the designated public religious compound in Battambang.",
+    "geography": {
+      "authority_id": "supplement:auth:kh-public:Q22704084",
+      "countries": [
+        "KH"
+      ],
+      "note": "Locality identified in the public site evidence: Battambang Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry visitor map lists the named historic temple near Battambang.",
+        "id": "kh-visitor-handbook:Q22704084",
+        "license": null,
+        "publisher": "Ministry of Tourism, Kingdom of Cambodia",
+        "revision": "Published brochure, PDF page 4",
+        "title": "Official Tourism Handbook of the Kingdom of Cambodia",
+        "uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf"
+      }
+    },
+    "id": "auth:kh-public:Q22704084",
+    "location_precision": null,
+    "names": [
+      "埃克普农寺遗址",
+      "Wat Ek Phnom",
+      "ប្រាសាទវត្តឯកភ្នំ"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      103.188218,
+      13.162745
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry visitor map lists the named historic temple near Battambang.",
+        "id": "kh-visitor-handbook:Q22704084",
+        "license": null,
+        "publisher": "Ministry of Tourism, Kingdom of Cambodia",
+        "revision": "Published brochure, PDF page 4",
+        "title": "Official Tourism Handbook of the Kingdom of Cambodia",
+        "uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 103.188218, latitude 13.162745",
+        "id": "wikidata:Q22704084",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2562955547. P625 statement Q22704084$43d37247-4ff3-9437-9ed6-059093908d37.",
+        "title": "Wat Ek Phnom representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q22704084.json"
+      }
+    ],
+    "source_uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf",
+    "title": "Wat Ek Phnom",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism, Kingdom of Cambodia",
+      "Wikidata contributors"
+    ],
+    "description": "Wat Banan is a documented public heritage place in Battambang Province, Cambodia.",
+    "description_zh": "巴南山寺位于柬埔寨，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The point represents the hilltop Prasat Banan ruins and the public visitor approach in Battambang.",
+    "geography": {
+      "authority_id": "supplement:auth:kh-public:Q4018495",
+      "countries": [
+        "KH"
+      ],
+      "note": "Locality identified in the public site evidence: Battambang Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry visitor map lists the named mountain temple near Battambang.",
+        "id": "kh-visitor-handbook:Q4018495",
+        "license": null,
+        "publisher": "Ministry of Tourism, Kingdom of Cambodia",
+        "revision": "Published brochure, PDF page 4",
+        "title": "Official Tourism Handbook of the Kingdom of Cambodia",
+        "uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf"
+      }
+    },
+    "id": "auth:kh-public:Q4018495",
+    "location_precision": null,
+    "names": [
+      "巴南山寺",
+      "Wat Banan",
+      "ភ្នំបាណន់"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      103.139777,
+      12.951092
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry visitor map lists the named mountain temple near Battambang.",
+        "id": "kh-visitor-handbook:Q4018495",
+        "license": null,
+        "publisher": "Ministry of Tourism, Kingdom of Cambodia",
+        "revision": "Published brochure, PDF page 4",
+        "title": "Official Tourism Handbook of the Kingdom of Cambodia",
+        "uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 103.139777, latitude 12.951092",
+        "id": "wikidata:Q4018495",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2532342842. P625 statement Q4018495$488E1D0D-B469-4ABC-B2A1-1AF825FF4979.",
+        "title": "Wat Banan representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4018495.json"
+      }
+    ],
+    "source_uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf",
+    "title": "Wat Banan",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism, Kingdom of Cambodia",
+      "Wikidata contributors"
+    ],
+    "description": "Royal Palace of Cambodia is a documented public heritage place in Phnom Penh, Cambodia.",
+    "description_zh": "金边王宫位于柬埔寨，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The point represents the Royal Palace and Silver Pagoda public visitor circuit in Phnom Penh. Public access follows the designated palace route.",
+    "geography": {
+      "authority_id": "supplement:auth:kh-public:Q420618",
+      "countries": [
+        "KH"
+      ],
+      "note": "Locality identified in the public site evidence: Phnom Penh.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry visitor handbook provides access information for the Royal Palace compound.",
+        "id": "kh-visitor-handbook:Q420618",
+        "license": null,
+        "publisher": "Ministry of Tourism, Kingdom of Cambodia",
+        "revision": "Published brochure, PDF page 14",
+        "title": "Official Tourism Handbook of the Kingdom of Cambodia",
+        "uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf"
+      }
+    },
+    "id": "auth:kh-public:Q420618",
+    "location_precision": null,
+    "names": [
+      "金边王宫",
+      "Royal Palace of Cambodia",
+      "Royal Palace",
+      "ព្រះបរមរាជវាំង"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      104.93111944444,
+      11.563680555556
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry visitor handbook provides access information for the Royal Palace compound.",
+        "id": "kh-visitor-handbook:Q420618",
+        "license": null,
+        "publisher": "Ministry of Tourism, Kingdom of Cambodia",
+        "revision": "Published brochure, PDF page 14",
+        "title": "Official Tourism Handbook of the Kingdom of Cambodia",
+        "uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 104.93111944444, latitude 11.563680555556",
+        "id": "wikidata:Q420618",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2474724539. P625 statement q420618$A3B3A852-EA22-44C9-BFE8-B785D29650DE.",
+        "title": "Royal Palace of Cambodia representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q420618.json"
+      }
+    ],
+    "source_uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf",
+    "title": "Royal Palace of Cambodia",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism, Kingdom of Cambodia",
+      "Multi-Purpose Special Economic Zone government portal",
+      "Wikidata contributors"
+    ],
+    "description": "Bokor Hill Station is a documented public heritage place in Kampot Province, Cambodia.",
+    "description_zh": "博科山历史山站位于柬埔寨，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The point represents the historical Bokor hill station area in Preah Monivong National Park, covering public plateau roads and publicly visible building exteriors.",
+    "geography": {
+      "authority_id": "supplement:auth:kh-public:Q559155",
+      "countries": [
+        "KH"
+      ],
+      "note": "Locality identified in the public site evidence: Kampot Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The government tourism guide identifies the historical hill station ruins within the public park.",
+        "id": "kh-visitor-handbook:Q559155",
+        "license": null,
+        "publisher": "Ministry of Tourism, Kingdom of Cambodia",
+        "revision": "Published brochure, PDF page 68",
+        "title": "Official Tourism Handbook of the Kingdom of Cambodia",
+        "uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf"
+      }
+    },
+    "id": "auth:kh-public:Q559155",
+    "location_precision": null,
+    "names": [
+      "博科山历史山站",
+      "Bokor Hill Station",
+      "ស្ថានីយភ្នំបូកគោ"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      104.01726667,
+      10.63040833
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The government tourism guide identifies the historical hill station ruins within the public park.",
+        "id": "kh-visitor-handbook:Q559155",
+        "license": null,
+        "publisher": "Ministry of Tourism, Kingdom of Cambodia",
+        "revision": "Published brochure, PDF page 68",
+        "title": "Official Tourism Handbook of the Kingdom of Cambodia",
+        "uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The government portal identifies the historical ruins as part of the public tourism route.",
+        "id": "kh-visitor-comparison:Q559155",
+        "license": null,
+        "publisher": "Multi-Purpose Special Economic Zone government portal",
+        "revision": "Public document retrieved 2026-11-28",
+        "title": "Kampot cultural and historical tourism",
+        "uri": "https://www.mpsez.gov.kh/coastal-industries/coastal-tourisim/tourisim-at-kampot-province"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 104.01726667, latitude 10.63040833",
+        "id": "wikidata:Q559155",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2570663820. P625 statement Q559155$E492794E-A54A-4951-9045-39AC97269E37.",
+        "title": "Bokor Hill Station representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q559155.json"
+      }
+    ],
+    "source_uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf",
+    "title": "Bokor Hill Station",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism, Kingdom of Cambodia",
+      "Wikidata contributors",
+      "Tourism Cambodia editorial guide"
+    ],
+    "description": "Ta Prohm of Tonle Bati is a documented public heritage place in Tonle Bati, Takeo Province, Cambodia.",
+    "description_zh": "洞里巴蒂塔布伦寺位于柬埔寨，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The record covers the named heritage place in Tonle Bati, Takeo Province. This temple is in Tonle Bati, Takeo. The Angkor temple with the same name belongs to a different complex.",
+    "geography": {
+      "authority_id": "supplement:auth:kh-public:Q75840976",
+      "countries": [
+        "KH"
+      ],
+      "note": "Locality identified in the public site evidence: Tonle Bati, Takeo Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry visitor map lists Tonle Bati. The visitor guide identifies the named temple in that area.",
+        "id": "kh-visitor-handbook:Q75840976",
+        "license": null,
+        "publisher": "Ministry of Tourism, Kingdom of Cambodia",
+        "revision": "Published brochure, PDF page 4",
+        "title": "Official Tourism Handbook of the Kingdom of Cambodia",
+        "uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf"
+      }
+    },
+    "id": "auth:kh-public:Q75840976",
+    "location_precision": null,
+    "names": [
+      "洞里巴蒂塔布伦寺",
+      "Ta Prohm of Tonle Bati",
+      "Ta Prohm Tonle Bati"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      104.84561,
+      11.335851
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry visitor map lists Tonle Bati. The visitor guide identifies the named temple in that area.",
+        "id": "kh-visitor-handbook:Q75840976",
+        "license": null,
+        "publisher": "Ministry of Tourism, Kingdom of Cambodia",
+        "revision": "Published brochure, PDF page 4",
+        "title": "Official Tourism Handbook of the Kingdom of Cambodia",
+        "uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The visitor guide separately names the temple and its public visit scope.",
+        "id": "kh-visitor-comparison:Q75840976",
+        "license": null,
+        "publisher": "Tourism Cambodia editorial guide",
+        "revision": "Public document retrieved 2026-11-28",
+        "title": "Takeo visitor guide",
+        "uri": "https://tourismcambodia.org/provinces/57/takeo"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 104.84561, latitude 11.335851",
+        "id": "wikidata:Q75840976",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 1686760617. P625 statement Q75840976$f18da80c-4f9a-3926-130c-196232b3e5f0.",
+        "title": "Ta Prohm of Tonle Bati representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q75840976.json"
+      }
+    ],
+    "source_uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf",
+    "title": "Ta Prohm of Tonle Bati",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Kampong Cham Provincial Administration",
+      "Ministry of Tourism, Kingdom of Cambodia",
+      "Wikidata contributors"
+    ],
+    "description": "Nokor Bachey Temple is a documented public heritage place in Kampong Cham Province, Cambodia.",
+    "description_zh": "诺戈巴切寺位于柬埔寨，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The point represents Wat Nokor Bachey in Ampil commune, Kampong Siem district, Kampong Cham Province, as named by the provincial government.",
+    "geography": {
+      "authority_id": "supplement:auth:kh-public:Q806972",
+      "countries": [
+        "KH"
+      ],
+      "note": "Locality identified in the public site evidence: Kampong Cham Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The province identifies the Nokor Bachey visitor site in Ampil commune, Kampong Siem district.",
+        "id": "kh-visitor-recheck:Q806972",
+        "license": null,
+        "publisher": "Kampong Cham Provincial Administration",
+        "revision": "Public visitor information retrieved 2026-11-28",
+        "title": "Nokor Bachey Temple cultural and historical visitor site",
+        "uri": "https://kampongcham.gov.kh/tourism-post-2/"
+      }
+    },
+    "id": "auth:kh-public:Q806972",
+    "location_precision": null,
+    "names": [
+      "诺戈巴切寺",
+      "Nokor Bachey Temple",
+      "Wat Nokor Bachey",
+      "ប្រាសាទនគរបាជ័យ"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      105.43906,
+      11.99991
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The province identifies the Nokor Bachey visitor site in Ampil commune, Kampong Siem district.",
+        "id": "kh-visitor-recheck:Q806972",
+        "license": null,
+        "publisher": "Kampong Cham Provincial Administration",
+        "revision": "Public visitor information retrieved 2026-11-28",
+        "title": "Nokor Bachey Temple cultural and historical visitor site",
+        "uri": "https://kampongcham.gov.kh/tourism-post-2/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry visitor map lists the named archaeological temple near Kampong Cham.",
+        "id": "kh-visitor-handbook:Q806972",
+        "license": null,
+        "publisher": "Ministry of Tourism, Kingdom of Cambodia",
+        "revision": "Published brochure, PDF page 4",
+        "title": "Official Tourism Handbook of the Kingdom of Cambodia",
+        "uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 105.43906, latitude 11.99991",
+        "id": "wikidata:Q806972",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2538545066. P625 statement Q806972$0ebd8d85-4c91-11fc-b171-82898983330f.",
+        "title": "Nokor Bachey Temple representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q806972.json"
+      }
+    ],
+    "source_uri": "https://kampongcham.gov.kh/tourism-post-2/",
+    "title": "Nokor Bachey Temple",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism, Kingdom of Cambodia",
+      "National Authority for Preah Vihear",
+      "Wikidata contributors"
+    ],
+    "description": "Preah Khan of Kampong Svay is a documented public heritage place in Preah Vihear Province, Cambodia.",
+    "description_zh": "磅斯外圣剑寺位于柬埔寨，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The record covers the named heritage place in Preah Vihear Province. This archaeological complex is the separate Prasat Bakan in Preah Vihear Province. The identically named temple at Angkor is a different property.",
+    "geography": {
+      "authority_id": "supplement:auth:kh-public:Q845513",
+      "countries": [
+        "KH"
+      ],
+      "note": "Locality identified in the public site evidence: Preah Vihear Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism map names the heritage site as Prasat Bakan. The managing national authority identifies the same Archaeological site as Preah Khan Kampong Svay.",
+        "id": "kh-visitor-handbook:Q845513",
+        "license": null,
+        "publisher": "Ministry of Tourism, Kingdom of Cambodia",
+        "revision": "Published brochure, PDF page 4",
+        "title": "Official Tourism Handbook of the Kingdom of Cambodia",
+        "uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf"
+      }
+    },
+    "id": "auth:kh-public:Q845513",
+    "location_precision": null,
+    "names": [
+      "磅斯外圣剑寺",
+      "Preah Khan of Kampong Svay",
+      "Preah Khan of Kompong Svay",
+      "ព្រះខ័នកំពង់ស្វាយ"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      104.74848,
+      13.407988
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism map names the heritage site as Prasat Bakan. The managing national authority identifies the same Archaeological site as Preah Khan Kampong Svay.",
+        "id": "kh-visitor-handbook:Q845513",
+        "license": null,
+        "publisher": "Ministry of Tourism, Kingdom of Cambodia",
+        "revision": "Published brochure, PDF page 4",
+        "title": "Official Tourism Handbook of the Kingdom of Cambodia",
+        "uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national authority separately documents the Kompong Svay temple complex.",
+        "id": "kh-visitor-comparison:Q845513",
+        "license": null,
+        "publisher": "National Authority for Preah Vihear",
+        "revision": "Public document retrieved 2026-11-28",
+        "title": "Preah Khan Kampong Svay Temple",
+        "uri": "https://napv.gov.kh/archaeological-sites/related-sites/Preah-Khan-Kampong-Svay-Temple.html?lang=en"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 104.74848, latitude 13.407988",
+        "id": "wikidata:Q845513",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2532352941. P625 statement Q845513$991D5AE0-5572-4E67-BD68-A9997E53BF29.",
+        "title": "Preah Khan of Kampong Svay representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q845513.json"
+      }
+    ],
+    "source_uri": "https://data.opendevelopmentcambodia.net/en/dataset/0c2e8a01-6757-425c-8c09-65591c9d3f55/resource/a1922480-017f-4931-8361-8a412a10d494/download/28bbea98-783d-4d20-8fb4-ecbe3f1d7f26-1.pdf",
+    "title": "Preah Khan of Kampong Svay",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Khánh Hòa official tourism portal",
+      "Wikidata contributors"
+    ],
+    "description": "Po Klong Garai Towers is a documented public heritage place in Phan Rang, Vietnam.",
+    "description_zh": "波克朗加莱占婆塔群位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The record covers the named heritage place in Phan Rang.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q1069757",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: Phan Rang.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial visitor portal identifies the Cham tower complex and provides destination information.",
+        "id": "vn-visitor:Q1069757",
+        "license": null,
+        "publisher": "Khánh Hòa official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Po Klong Garai Towers",
+        "uri": "https://dulichso.khanhhoa.gov.vn/en/explore/po-klong-garai-towers-0bc"
+      }
+    },
+    "id": "auth:vn-public:Q1069757",
+    "location_precision": null,
+    "names": [
+      "波克朗加莱占婆塔群",
+      "Po Klong Garai Towers",
+      "Po Klong Garai Temple",
+      "Tháp Po Klong Garai"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      108.946528,
+      11.601827
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial visitor portal identifies the Cham tower complex and provides destination information.",
+        "id": "vn-visitor:Q1069757",
+        "license": null,
+        "publisher": "Khánh Hòa official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Po Klong Garai Towers",
+        "uri": "https://dulichso.khanhhoa.gov.vn/en/explore/po-klong-garai-towers-0bc"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 108.946528, latitude 11.601827",
+        "id": "wikidata:Q1069757",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2562970506. P625 statement Q1069757$F937AD07-07A9-493B-B45D-D35BD744D54C.",
+        "title": "Po Klong Garai Towers representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1069757.json"
+      }
+    ],
+    "source_uri": "https://dulichso.khanhhoa.gov.vn/en/explore/po-klong-garai-towers-0bc",
+    "title": "Po Klong Garai Towers",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Hưng Yên official tourism portal",
+      "Wikidata contributors"
+    ],
+    "description": "Keo Pagoda, Thái Bình is a documented public heritage place in former Thái Bình province, Vietnam.",
+    "description_zh": "胶寺（太平）位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The record covers the named heritage place in former Thái Bình province. The point covers the Keo Pagoda in the Duy Nhất area. Other pagodas with the same name have separate identities.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q10748440",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: former Thái Bình province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial portal identifies the Duy Nhất pagoda as a nationally designated visitor attraction.",
+        "id": "vn-visitor:Q10748440",
+        "license": null,
+        "publisher": "Hưng Yên official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Public visiting information for Keo Pagoda",
+        "uri": "https://dulich.hungyen.gov.vn/vi/detailnews/?id=news_3981&t=tham-quan-di-tich-quoc-gia-dac-biet-chua-keo"
+      }
+    },
+    "id": "auth:vn-public:Q10748440",
+    "location_precision": null,
+    "names": [
+      "胶寺（太平）",
+      "Keo Pagoda, Thái Bình",
+      "Keo Temple",
+      "Chùa Keo (Thái Bình)"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      106.29722222,
+      20.36055556
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial portal identifies the Duy Nhất pagoda as a nationally designated visitor attraction.",
+        "id": "vn-visitor:Q10748440",
+        "license": null,
+        "publisher": "Hưng Yên official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Public visiting information for Keo Pagoda",
+        "uri": "https://dulich.hungyen.gov.vn/vi/detailnews/?id=news_3981&t=tham-quan-di-tich-quoc-gia-dac-biet-chua-keo"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 106.29722222, latitude 20.36055556",
+        "id": "wikidata:Q10748440",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2565373849. P625 statement Q10748440$1A9DD8BB-2BFD-4C5B-BC2B-6DF1017FD527.",
+        "title": "Keo Pagoda, Thái Bình representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10748440.json"
+      }
+    ],
+    "source_uri": "https://dulich.hungyen.gov.vn/vi/detailnews/?id=news_3981&t=tham-quan-di-tich-quoc-gia-dac-biet-chua-keo",
+    "title": "Keo Pagoda, Thái Bình",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Quảng Trị official tourism portal",
+      "Wikidata contributors"
+    ],
+    "description": "Quảng Trị Citadel is a documented public heritage place in Quảng Trị, Vietnam.",
+    "description_zh": "广治古城遗址位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The record covers the named heritage place in Quảng Trị. The point covers the citadel. The wider system of separately managed nearby memorials is outside the record scope.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q10825609",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: Quảng Trị.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial public visitor portal names the citadel as a separate registered historical destination.",
+        "id": "vn-visitor:Q10825609",
+        "license": null,
+        "publisher": "Quảng Trị official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "National heritage at Quảng Trị Citadel",
+        "uri": "https://dulich.quangtri.gov.vn/vi/ditichlichsuthanhcoquangtri"
+      }
+    },
+    "id": "auth:vn-public:Q10825609",
+    "location_precision": null,
+    "names": [
+      "广治古城遗址",
+      "Quảng Trị Citadel",
+      "Citadel of Quảng Trị",
+      "Thành cổ Quảng Trị"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      107.18951,
+      16.75392
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial public visitor portal names the citadel as a separate registered historical destination.",
+        "id": "vn-visitor:Q10825609",
+        "license": null,
+        "publisher": "Quảng Trị official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "National heritage at Quảng Trị Citadel",
+        "uri": "https://dulich.quangtri.gov.vn/vi/ditichlichsuthanhcoquangtri"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 107.18951, latitude 16.75392",
+        "id": "wikidata:Q10825609",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2556898617. P625 statement Q10825609$178fe6d4-42a2-ea0d-da7e-eb8f93b2e26e.",
+        "title": "Quảng Trị Citadel representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10825609.json"
+      }
+    ],
+    "source_uri": "https://dulich.quangtri.gov.vn/vi/ditichlichsuthanhcoquangtri",
+    "title": "Quảng Trị Citadel",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Vietnam Ministry of Culture, Sports and Tourism",
+      "Gia Lai provincial newspaper",
+      "Wikidata contributors"
+    ],
+    "description": "Bánh Ít Towers is a documented public heritage place in Tuy Phước, Bình Định historical province, Vietnam.",
+    "description_zh": "班伊特占婆塔群位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The record covers the Bánh Ít Cham tower group in the designated public visitor area.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q10825825",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: Tuy Phước, Bình Định historical province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The national ministry identifies the Bánh Ít tower group in its official visitor development account.",
+        "id": "vn-visitor:Q10825825",
+        "license": null,
+        "publisher": "Vietnam Ministry of Culture, Sports and Tourism",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Cham heritage towers and visitors in Bình Định",
+        "uri": "https://bvhttdl.gov.vn/binh-dinh-tu-bo-ton-tao-phat-huy-gia-tri-thap-champa-gan-voi-phat-trien-du-lich-20211015112439839.htm"
+      }
+    },
+    "id": "auth:vn-public:Q10825825",
+    "location_precision": null,
+    "names": [
+      "班伊特占婆塔群",
+      "Bánh Ít Towers",
+      "Banh It Cham Towers",
+      "Tháp Bánh Ít"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      109.1351822,
+      13.8684295
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national ministry identifies the Bánh Ít tower group in its official visitor development account.",
+        "id": "vn-visitor:Q10825825",
+        "license": null,
+        "publisher": "Vietnam Ministry of Culture, Sports and Tourism",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Cham heritage towers and visitors in Bình Định",
+        "uri": "https://bvhttdl.gov.vn/binh-dinh-tu-bo-ton-tao-phat-huy-gia-tri-thap-champa-gan-voi-phat-trien-du-lich-20211015112439839.htm"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial museum ran a shuttle pilot for visitors to the Bánh Ít tower group.",
+        "id": "vn-visitor-recheck:Q10825825",
+        "license": null,
+        "publisher": "Gia Lai provincial newspaper",
+        "revision": "Public visitor information retrieved 2026-11-28",
+        "title": "Bánh Ít Towers visitor shuttle pilot",
+        "uri": "https://baogialai.com.vn/thi-diem-xe-dien-dua-don-khach-tham-quan-thap-banh-it-post583249.html"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 109.1351822, latitude 13.8684295",
+        "id": "wikidata:Q10825825",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2568147779. P625 statement Q10825825$11598f56-42f2-2965-776c-8618eff3f782.",
+        "title": "Bánh Ít Towers representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10825825.json"
+      }
+    ],
+    "source_uri": "https://bvhttdl.gov.vn/binh-dinh-tu-bo-ton-tao-phat-huy-gia-tri-thap-champa-gan-voi-phat-trien-du-lich-20211015112439839.htm",
+    "title": "Bánh Ít Towers",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Quy Nhon municipal tourism portal",
+      "Vietnam Ministry of Culture, Sports and Tourism",
+      "Wikidata contributors"
+    ],
+    "description": "Cánh Tiên Tower is a documented public heritage place in An Nhơn, Bình Định historical province, Vietnam.",
+    "description_zh": "仙翼占婆塔位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The record covers Cánh Tiên Tower and its designated visitor area within the historic citadel precinct.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q10825837",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: An Nhơn, Bình Định historical province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The official visitor listing identifies the tower and lists visitor opening hours.",
+        "id": "vn-visitor-recheck:Q10825837",
+        "license": null,
+        "publisher": "Quy Nhon municipal tourism portal",
+        "revision": "Public visitor information retrieved 2026-11-28",
+        "title": "Cánh Tiên Tower visitor information",
+        "uri": "https://dulichquynhon.binhdinh.gov.vn/vi/thapcanhtien"
+      }
+    },
+    "id": "auth:vn-public:Q10825837",
+    "location_precision": null,
+    "names": [
+      "仙翼占婆塔",
+      "Cánh Tiên Tower",
+      "Canh Tien Cham Tower",
+      "Tháp Cánh Tiên"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      109.07534,
+      13.928807
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The official visitor listing identifies the tower and lists visitor opening hours.",
+        "id": "vn-visitor-recheck:Q10825837",
+        "license": null,
+        "publisher": "Quy Nhon municipal tourism portal",
+        "revision": "Public visitor information retrieved 2026-11-28",
+        "title": "Cánh Tiên Tower visitor information",
+        "uri": "https://dulichquynhon.binhdinh.gov.vn/vi/thapcanhtien"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national ministry lists the named Cánh Tiên tower in the regional cultural tourism account.",
+        "id": "vn-visitor:Q10825837",
+        "license": null,
+        "publisher": "Vietnam Ministry of Culture, Sports and Tourism",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Cham heritage towers and visitors in Bình Định",
+        "uri": "https://bvhttdl.gov.vn/binh-dinh-tu-bo-ton-tao-phat-huy-gia-tri-thap-champa-gan-voi-phat-trien-du-lich-20211015112439839.htm"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 109.07534, latitude 13.928807",
+        "id": "wikidata:Q10825837",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2568145145. P625 statement Q10825837$528a2783-456b-0c6a-614e-dcda28e2b85b.",
+        "title": "Cánh Tiên Tower representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10825837.json"
+      }
+    ],
+    "source_uri": "https://dulichquynhon.binhdinh.gov.vn/vi/thapcanhtien",
+    "title": "Cánh Tiên Tower",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Khánh Hòa official tourism portal",
+      "Wikidata contributors"
+    ],
+    "description": "Hòa Lai Towers is a documented public heritage place in near Phan Rang, Vietnam.",
+    "description_zh": "和莱占婆塔群位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The record covers the named heritage place in near Phan Rang.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q10825842",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: near Phan Rang.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial visitor portal identifies the surviving Cham towers as a cultural destination.",
+        "id": "vn-visitor:Q10825842",
+        "license": null,
+        "publisher": "Khánh Hòa official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Hòa Lai Towers",
+        "uri": "https://dulichso.khanhhoa.gov.vn/en/article/hoa-lai-towers-bf6"
+      }
+    },
+    "id": "auth:vn-public:Q10825842",
+    "location_precision": null,
+    "names": [
+      "和莱占婆塔群",
+      "Hòa Lai Towers",
+      "Thap Hoa Lai",
+      "Tháp Hòa Lai"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      109.036053,
+      11.676378
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial visitor portal identifies the surviving Cham towers as a cultural destination.",
+        "id": "vn-visitor:Q10825842",
+        "license": null,
+        "publisher": "Khánh Hòa official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Hòa Lai Towers",
+        "uri": "https://dulichso.khanhhoa.gov.vn/en/article/hoa-lai-towers-bf6"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 109.036053, latitude 11.676378",
+        "id": "wikidata:Q10825842",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2545541317. P625 statement Q10825842$7e69b769-4e2f-3a48-f0d9-29fac669697a.",
+        "title": "Hòa Lai Towers representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10825842.json"
+      }
+    ],
+    "source_uri": "https://dulichso.khanhhoa.gov.vn/en/article/hoa-lai-towers-bf6",
+    "title": "Hòa Lai Towers",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Đồng Nai Union of Friendship Organizations",
+      "Wikidata contributors"
+    ],
+    "description": "Trấn Biên Temple of Literature is a documented public heritage place in Biên Hòa, Đồng Nai, Vietnam.",
+    "description_zh": "镇边文庙位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The record covers the named heritage place in Biên Hòa, Đồng Nai. The named site is the reconstructed Trấn Biên complex.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q10833486",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: Biên Hòa, Đồng Nai.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial public institution identifies the reconstructed heritage complex and its public cultural use.",
+        "id": "vn-visitor:Q10833486",
+        "license": null,
+        "publisher": "Đồng Nai Union of Friendship Organizations",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Trấn Biên Temple of Literature",
+        "uri": "https://dufo.dongnai.gov.vn/en/pages/newsdetail.aspx?CatId=2&NewsId=538"
+      }
+    },
+    "id": "auth:vn-public:Q10833486",
+    "location_precision": null,
+    "names": [
+      "镇边文庙",
+      "Trấn Biên Temple of Literature",
+      "Văn miếu Trấn Biên"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      106.8015,
+      10.9648
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial public institution identifies the reconstructed heritage complex and its public cultural use.",
+        "id": "vn-visitor:Q10833486",
+        "license": null,
+        "publisher": "Đồng Nai Union of Friendship Organizations",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Trấn Biên Temple of Literature",
+        "uri": "https://dufo.dongnai.gov.vn/en/pages/newsdetail.aspx?CatId=2&NewsId=538"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 106.8015, latitude 10.9648",
+        "id": "wikidata:Q10833486",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2495460346. P625 statement Q10833486$BD585515-8D5F-435B-A207-BA3A1D9F42A9.",
+        "title": "Trấn Biên Temple of Literature representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10833486.json"
+      }
+    ],
+    "source_uri": "https://dufo.dongnai.gov.vn/en/pages/newsdetail.aspx?CatId=2&NewsId=538",
+    "title": "Trấn Biên Temple of Literature",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Bắc Ninh official tourism portal",
+      "Wikidata contributors"
+    ],
+    "description": "Bút Tháp Pagoda is a documented public heritage place in Bắc Ninh, Vietnam.",
+    "description_zh": "笔塔寺位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The record covers the named heritage place in Bắc Ninh.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q1091048",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: Bắc Ninh.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial tourism portal identifies the named pagoda as a national heritage visitor destination.",
+        "id": "vn-visitor:Q1091048",
+        "license": null,
+        "publisher": "Bắc Ninh official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Official Bút Tháp heritage visitor listing",
+        "uri": "https://dulichbacninh.gov.vn/kham-pha/di-tich-lich-su-van-hoa/diem-du-lich-di-tich-quoc-gia-dac-biet-chua-but-thap-1111.html"
+      }
+    },
+    "id": "auth:vn-public:Q1091048",
+    "location_precision": null,
+    "names": [
+      "笔塔寺",
+      "Bút Tháp Pagoda",
+      "Bút Tháp Temple",
+      "Chùa Bút Tháp"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      106.0222,
+      21.06083
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial tourism portal identifies the named pagoda as a national heritage visitor destination.",
+        "id": "vn-visitor:Q1091048",
+        "license": null,
+        "publisher": "Bắc Ninh official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Official Bút Tháp heritage visitor listing",
+        "uri": "https://dulichbacninh.gov.vn/kham-pha/di-tich-lich-su-van-hoa/diem-du-lich-di-tich-quoc-gia-dac-biet-chua-but-thap-1111.html"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 106.0222, latitude 21.06083",
+        "id": "wikidata:Q1091048",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2386658804. P625 statement Q1091048$AD394FA1-B3DB-478D-9B23-10BFB8B87156.",
+        "title": "Bút Tháp Pagoda representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1091048.json"
+      }
+    ],
+    "source_uri": "https://dulichbacninh.gov.vn/kham-pha/di-tich-lich-su-van-hoa/diem-du-lich-di-tich-quoc-gia-dac-biet-chua-but-thap-1111.html",
+    "title": "Bút Tháp Pagoda",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Hanoi official tourism portal",
+      "Wikidata contributors"
+    ],
+    "description": "Hanoi Opera House is a documented public heritage place in Hanoi, Vietnam.",
+    "description_zh": "河内大剧院位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The point represents the heritage opera house building. Public entry follows event and tour arrangements.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q1186043",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: Hanoi.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal visitor portal identifies the historic theatre and identifies it as a visitor destination.",
+        "id": "vn-visitor:Q1186043",
+        "license": null,
+        "publisher": "Hanoi official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Hanoi Opera House",
+        "uri": "https://hanoigo.hanoi.gov.vn/destination/nha-hat-lon-ha-noi"
+      }
+    },
+    "id": "auth:vn-public:Q1186043",
+    "location_precision": null,
+    "names": [
+      "河内大剧院",
+      "Hanoi Opera House",
+      "Nhà hát Lớn Hà Nội"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      105.85777777778,
+      21.024166666667
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal visitor portal identifies the historic theatre and identifies it as a visitor destination.",
+        "id": "vn-visitor:Q1186043",
+        "license": null,
+        "publisher": "Hanoi official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Hanoi Opera House",
+        "uri": "https://hanoigo.hanoi.gov.vn/destination/nha-hat-lon-ha-noi"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 105.85777777778, latitude 21.024166666667",
+        "id": "wikidata:Q1186043",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2515896370. P625 statement Q1186043$6B2061EC-61D3-41F7-B4A3-66F45BAA5565.",
+        "title": "Hanoi Opera House representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1186043.json"
+      }
+    ],
+    "source_uri": "https://hanoigo.hanoi.gov.vn/destination/nha-hat-lon-ha-noi",
+    "title": "Hanoi Opera House",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Van Mieu – Quoc Tu Giam Cultural and Scientific Activities Center",
+      "Wikidata contributors"
+    ],
+    "description": "Temple of Literature, Hanoi is a documented public heritage place in Hanoi, Vietnam.",
+    "description_zh": "河内文庙国子监位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The record covers the named heritage place in Hanoi. The Temple of Literature has a separate official heritage identity and visitor administration. The UNESCO Central Sector of the Imperial Citadel of Thang Long covers the distinct imperial site.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q1202019",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: Hanoi.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The heritage administration publishes visitor information for the Hanoi Temple of Literature.",
+        "id": "vn-visitor:Q1202019",
+        "license": null,
+        "publisher": "Van Mieu – Quoc Tu Giam Cultural and Scientific Activities Center",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Van Mieu – Quoc Tu Giam",
+        "uri": "https://www.vanmieu.gov.vn/en"
+      }
+    },
+    "id": "auth:vn-public:Q1202019",
+    "location_precision": null,
+    "names": [
+      "河内文庙国子监",
+      "Temple of Literature, Hanoi",
+      "Temple of Literature",
+      "Văn Miếu – Quốc Tử Giám"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      105.835556,
+      21.028611
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The heritage administration publishes visitor information for the Hanoi Temple of Literature.",
+        "id": "vn-visitor:Q1202019",
+        "license": null,
+        "publisher": "Van Mieu – Quoc Tu Giam Cultural and Scientific Activities Center",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Van Mieu – Quoc Tu Giam",
+        "uri": "https://www.vanmieu.gov.vn/en"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 105.835556, latitude 21.028611",
+        "id": "wikidata:Q1202019",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2575305140. P625 statement q1202019$7269CF2E-F2A4-4278-A679-3B86B5119D65.",
+        "title": "Temple of Literature, Hanoi representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1202019.json"
+      }
+    ],
+    "source_uri": "https://www.vanmieu.gov.vn/en",
+    "title": "Temple of Literature, Hanoi",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Hanoi official tourism portal",
+      "Wikidata contributors"
+    ],
+    "description": "Hỏa Lò Prison is a documented public heritage place in Hanoi, Vietnam.",
+    "description_zh": "火炉监狱遗址位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The point represents the surviving Hỏa Lò Prison section that is open to visitors as a museum.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q1359941",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: Hanoi.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal visitor portal lists the historic prison as a public site.",
+        "id": "vn-visitor:Q1359941",
+        "license": null,
+        "publisher": "Hanoi official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Hỏa Lò Prison",
+        "uri": "https://hanoigo.hanoi.gov.vn/en/place/nha-tu-hoa-lo-6vlhk"
+      }
+    },
+    "id": "auth:vn-public:Q1359941",
+    "location_precision": null,
+    "names": [
+      "火炉监狱遗址",
+      "Hỏa Lò Prison",
+      "Nhà tù Hỏa Lò"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      105.84638888889,
+      21.025277777778
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal visitor portal lists the historic prison as a public site.",
+        "id": "vn-visitor:Q1359941",
+        "license": null,
+        "publisher": "Hanoi official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Hỏa Lò Prison",
+        "uri": "https://hanoigo.hanoi.gov.vn/en/place/nha-tu-hoa-lo-6vlhk"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 105.84638888889, latitude 21.025277777778",
+        "id": "wikidata:Q1359941",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2515560700. P625 statement q1359941$588DD984-FD55-4A71-858D-4AA5A050BC9C.",
+        "title": "Hỏa Lò Prison representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1359941.json"
+      }
+    ],
+    "source_uri": "https://hanoigo.hanoi.gov.vn/en/place/nha-tu-hoa-lo-6vlhk",
+    "title": "Hỏa Lò Prison",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Bắc Ninh official tourism portal",
+      "Wikidata contributors"
+    ],
+    "description": "Đền Đô Temple is a documented public heritage place in Từ Sơn, Bắc Ninh, Vietnam.",
+    "description_zh": "都庙位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The record covers the named heritage place in Từ Sơn, Bắc Ninh.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q180566",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: Từ Sơn, Bắc Ninh.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial visitor portal identifies the nationally designated temple and gives public visit information.",
+        "id": "vn-visitor:Q180566",
+        "license": null,
+        "publisher": "Bắc Ninh official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Đền Đô visitor guide",
+        "uri": "https://dulichbacninh.gov.vn/kham-pha/di-tich-lich-su-van-hoa/tham-di-tich-quoc-gia-dac-biet-den-do-phuong-tu-son-1225.html"
+      }
+    },
+    "id": "auth:vn-public:Q180566",
+    "location_precision": null,
+    "names": [
+      "都庙",
+      "Đền Đô Temple",
+      "Lý Bát Đế Shrine",
+      "Đền Lý Bát Đế"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      105.960198,
+      21.107172
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial visitor portal identifies the nationally designated temple and gives public visit information.",
+        "id": "vn-visitor:Q180566",
+        "license": null,
+        "publisher": "Bắc Ninh official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Đền Đô visitor guide",
+        "uri": "https://dulichbacninh.gov.vn/kham-pha/di-tich-lich-su-van-hoa/tham-di-tich-quoc-gia-dac-biet-den-do-phuong-tu-son-1225.html"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 105.960198, latitude 21.107172",
+        "id": "wikidata:Q180566",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2460448400. P625 statement Q180566$4DAF23E7-F2EE-49BC-97D9-2200E423B71B.",
+        "title": "Đền Đô Temple representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q180566.json"
+      }
+    ],
+    "source_uri": "https://dulichbacninh.gov.vn/kham-pha/di-tich-lich-su-van-hoa/tham-di-tich-quoc-gia-dac-biet-den-do-phuong-tu-son-1225.html",
+    "title": "Đền Đô Temple",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ho Chi Minh City official tourism portal",
+      "Wikidata contributors"
+    ],
+    "description": "Saigon Central Post Office is a documented public heritage place in Ho Chi Minh City, Vietnam.",
+    "description_zh": "西贡中央邮局位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The point represents the working public post office within the original historic building footprint.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q2227270",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: Ho Chi Minh City.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal tourism portal lists the public post office building as a historical visitor landmark.",
+        "id": "vn-visitor:Q2227270",
+        "license": null,
+        "publisher": "Ho Chi Minh City official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Saigon Central Post Office",
+        "uri": "https://hello.hochiminhcity.gov.vn/en/discover/buu-dien-thanh-pho"
+      }
+    },
+    "id": "auth:vn-public:Q2227270",
+    "location_precision": null,
+    "names": [
+      "西贡中央邮局",
+      "Saigon Central Post Office",
+      "Bưu điện trung tâm Sài Gòn"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      106.7,
+      10.78
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal tourism portal lists the public post office building as a historical visitor landmark.",
+        "id": "vn-visitor:Q2227270",
+        "license": null,
+        "publisher": "Ho Chi Minh City official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Saigon Central Post Office",
+        "uri": "https://hello.hochiminhcity.gov.vn/en/discover/buu-dien-thanh-pho"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 106.7, latitude 10.78",
+        "id": "wikidata:Q2227270",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2549563005. P625 statement Q2227270$F29F387E-F390-47CF-B866-B13AA53D0C1C.",
+        "title": "Saigon Central Post Office representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2227270.json"
+      }
+    ],
+    "source_uri": "https://hello.hochiminhcity.gov.vn/en/discover/buu-dien-thanh-pho",
+    "title": "Saigon Central Post Office",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Hanoi official tourism portal",
+      "Wikidata contributors"
+    ],
+    "description": "Sơn Tây Citadel is a documented public heritage place in Sơn Tây, Hanoi, Vietnam.",
+    "description_zh": "山西古城遗址位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The record covers the named heritage place in Sơn Tây, Hanoi. This entry is the separately named citadel in Sơn Tây.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q4240280",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: Sơn Tây, Hanoi.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal visitor itinerary includes entry at the named Sơn Tây Citadel.",
+        "id": "vn-visitor:Q4240280",
+        "license": null,
+        "publisher": "Hanoi official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Sơn Tây heritage visitor itinerary",
+        "uri": "https://hanoigo.hanoi.gov.vn/en/tours/hanh-trinh-kham-pha-di-san-son-tay-tinh-hoa-nghe-viet"
+      }
+    },
+    "id": "auth:vn-public:Q4240280",
+    "location_precision": null,
+    "names": [
+      "山西古城遗址",
+      "Sơn Tây Citadel",
+      "Son Tay Ancient Citadel",
+      "Thành cổ Sơn Tây"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      105.5042,
+      21.1388
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal visitor itinerary includes entry at the named Sơn Tây Citadel.",
+        "id": "vn-visitor:Q4240280",
+        "license": null,
+        "publisher": "Hanoi official tourism portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Sơn Tây heritage visitor itinerary",
+        "uri": "https://hanoigo.hanoi.gov.vn/en/tours/hanh-trinh-kham-pha-di-san-son-tay-tinh-hoa-nghe-viet"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 105.5042, latitude 21.1388",
+        "id": "wikidata:Q4240280",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2094526292. P625 statement Q4240280$23453305-4e3a-3fdd-f684-d507755b5640.",
+        "title": "Sơn Tây Citadel representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4240280.json"
+      }
+    ],
+    "source_uri": "https://hanoigo.hanoi.gov.vn/en/tours/hanh-trinh-kham-pha-di-san-son-tay-tinh-hoa-nghe-viet",
+    "title": "Sơn Tây Citadel",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Khánh Hòa Tourism Coordination Authority",
+      "Wikidata contributors"
+    ],
+    "description": "Po Nagar Towers is a documented public heritage place in Nha Trang, Vietnam.",
+    "description_zh": "婆那加占婆塔群位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The record covers the named heritage place in Nha Trang.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q600269",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: Nha Trang.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial visitor directory identifies the named Cham temple complex as a public cultural site.",
+        "id": "vn-visitor:Q600269",
+        "license": null,
+        "publisher": "Khánh Hòa Tourism Coordination Authority",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Po Nagar heritage site",
+        "uri": "https://ttdhsdl.khanhhoa.gov.vn/TourismResources/Detail/VanHoa-2"
+      }
+    },
+    "id": "auth:vn-public:Q600269",
+    "location_precision": null,
+    "names": [
+      "婆那加占婆塔群",
+      "Po Nagar Towers",
+      "Po Nagar",
+      "Tháp Po Nagar"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      109.19555556,
+      12.26527778
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial visitor directory identifies the named Cham temple complex as a public cultural site.",
+        "id": "vn-visitor:Q600269",
+        "license": null,
+        "publisher": "Khánh Hòa Tourism Coordination Authority",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Po Nagar heritage site",
+        "uri": "https://ttdhsdl.khanhhoa.gov.vn/TourismResources/Detail/VanHoa-2"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 109.19555556, latitude 12.26527778",
+        "id": "wikidata:Q600269",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2424864625. P625 statement Q600269$76104BAE-5854-4FB3-AC1C-0BAC93C42A9D.",
+        "title": "Po Nagar Towers representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q600269.json"
+      }
+    ],
+    "source_uri": "https://ttdhsdl.khanhhoa.gov.vn/TourismResources/Detail/VanHoa-2",
+    "title": "Po Nagar Towers",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Da Nang municipal government portal",
+      "Wikidata contributors"
+    ],
+    "description": "Museum of Cham Sculpture, Da Nang is a documented public heritage place in Da Nang, Vietnam.",
+    "description_zh": "岘港占婆雕刻博物馆位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The record covers the named heritage place in Da Nang. The point covers the heritage museum building with its public exhibition access.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q6940790",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: Da Nang.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal history and visit guide identifies the original museum building and describes public access.",
+        "id": "vn-visitor:Q6940790",
+        "license": null,
+        "publisher": "Da Nang municipal government portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Museum of Cham Sculpture",
+        "uri": "https://cttdt.danangportal.gov.vn/vi/web/dng/w/bao-tang-dieu-khac-champa-da-nang-i"
+      }
+    },
+    "id": "auth:vn-public:Q6940790",
+    "location_precision": null,
+    "names": [
+      "岘港占婆雕刻博物馆",
+      "Museum of Cham Sculpture, Da Nang",
+      "Museum of Cham Sculpture",
+      "Bảo tàng Nghệ thuật điêu khắc Chăm Đà Nẵng"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      108.222641,
+      16.059894
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal history and visit guide identifies the original museum building and describes public access.",
+        "id": "vn-visitor:Q6940790",
+        "license": null,
+        "publisher": "Da Nang municipal government portal",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Museum of Cham Sculpture",
+        "uri": "https://cttdt.danangportal.gov.vn/vi/web/dng/w/bao-tang-dieu-khac-champa-da-nang-i"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 108.222641, latitude 16.059894",
+        "id": "wikidata:Q6940790",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2563795562. P625 statement Q6940790$CC3F1F10-CE92-4454-A9BD-DC3EA2CB71B0.",
+        "title": "Museum of Cham Sculpture, Da Nang representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6940790.json"
+      }
+    ],
+    "source_uri": "https://cttdt.danangportal.gov.vn/vi/web/dng/w/bao-tang-dieu-khac-champa-da-nang-i",
+    "title": "Museum of Cham Sculpture, Da Nang",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ninh Bình Department of Tourism",
+      "Wikidata contributors"
+    ],
+    "description": "Phát Diệm Cathedral is a documented public heritage place in Kim Sơn, Ninh Bình, Vietnam.",
+    "description_zh": "发艳石教堂位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The point represents the Phát Diệm Cathedral grounds in Kim Sơn. Public entry follows religious use and visitor arrangements.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q782099",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: Kim Sơn, Ninh Bình.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial tourism department lists the cathedral and its historic stone architecture as a visitor destination.",
+        "id": "vn-visitor:Q782099",
+        "license": null,
+        "publisher": "Ninh Bình Department of Tourism",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Phát Diệm Cathedral",
+        "uri": "https://sodulich.ninhbinh.gov.vn/en/culture-heritage/phat-diem-cathedral-381.html"
+      }
+    },
+    "id": "auth:vn-public:Q782099",
+    "location_precision": null,
+    "names": [
+      "发艳石教堂",
+      "Phát Diệm Cathedral",
+      "Nhà thờ chính tòa Phát Diệm"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      106.07972222222222,
+      20.092777777777776
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial tourism department lists the cathedral and its historic stone architecture as a visitor destination.",
+        "id": "vn-visitor:Q782099",
+        "license": null,
+        "publisher": "Ninh Bình Department of Tourism",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Phát Diệm Cathedral",
+        "uri": "https://sodulich.ninhbinh.gov.vn/en/culture-heritage/phat-diem-cathedral-381.html"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 106.07972222222222, latitude 20.092777777777776",
+        "id": "wikidata:Q782099",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2561410966. P625 statement Q782099$497AEEC5-DCB1-4293-A7D9-16E1ACAAC440.",
+        "title": "Phát Diệm Cathedral representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q782099.json"
+      }
+    ],
+    "source_uri": "https://sodulich.ninhbinh.gov.vn/en/culture-heritage/phat-diem-cathedral-381.html",
+    "title": "Phát Diệm Cathedral",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Cổ Loa Relic Site Administration",
+      "Wikidata contributors"
+    ],
+    "description": "Cổ Loa Citadel is a documented public heritage place in Cổ Loa, Hanoi, Vietnam.",
+    "description_zh": "古螺城遗址位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The record covers the Cổ Loa citadel remains on the public route designated by the site administration.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q798059",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: Cổ Loa, Hanoi.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The site administration publishes the pedestrian route for public visits to the named citadel.",
+        "id": "vn-visitor:Q798059",
+        "license": null,
+        "publisher": "Cổ Loa Relic Site Administration",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Visitor route at the Cổ Loa Relic Site",
+        "uri": "https://thanhcoloa.vn/en/notice-visitor-route-at-the-co-loa-relic-site"
+      }
+    },
+    "id": "auth:vn-public:Q798059",
+    "location_precision": null,
+    "names": [
+      "古螺城遗址",
+      "Cổ Loa Citadel",
+      "Co Loa Citadel",
+      "Cổ Loa"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      105.873206,
+      21.113408
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The site administration publishes the pedestrian route for public visits to the named citadel.",
+        "id": "vn-visitor:Q798059",
+        "license": null,
+        "publisher": "Cổ Loa Relic Site Administration",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Visitor route at the Cổ Loa Relic Site",
+        "uri": "https://thanhcoloa.vn/en/notice-visitor-route-at-the-co-loa-relic-site"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 105.873206, latitude 21.113408",
+        "id": "wikidata:Q798059",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2563883228. P625 statement Q798059$721786FF-E980-47D9-BEF4-5BD61814895F.",
+        "title": "Cổ Loa Citadel representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q798059.json"
+      }
+    ],
+    "source_uri": "https://thanhcoloa.vn/en/notice-visitor-route-at-the-co-loa-relic-site",
+    "title": "Cổ Loa Citadel",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named identity, public visitation and representative point reviewed.",
+      "note": "The candidate provides no reviewed date or historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Independence Palace Historic Site Administration",
+      "Wikidata contributors"
+    ],
+    "description": "Independence Palace is a documented public heritage place in Ho Chi Minh City, Vietnam.",
+    "description_zh": "统一宫位于越南，收录于公开遗产访问资料。地图使用有来源的代表点。",
+    "details": "The point represents the original palace building and its designated public visitor route.",
+    "geography": {
+      "authority_id": "supplement:auth:vn-public:Q933384",
+      "countries": [
+        "VN"
+      ],
+      "note": "Locality identified in the public site evidence: Ho Chi Minh City.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The site administration provides a public admission service for the Independence Palace grounds.",
+        "id": "vn-visitor:Q933384",
+        "license": null,
+        "publisher": "Independence Palace Historic Site Administration",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Independence Palace e-ticket portal",
+        "uri": "https://ticket.dinhdoclap.gov.vn/"
+      }
+    },
+    "id": "auth:vn-public:Q933384",
+    "location_precision": null,
+    "names": [
+      "统一宫",
+      "Independence Palace",
+      "Dinh Độc Lập"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      106.69537,
+      10.77705
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The site administration provides a public admission service for the Independence Palace grounds.",
+        "id": "vn-visitor:Q933384",
+        "license": null,
+        "publisher": "Independence Palace Historic Site Administration",
+        "revision": "Public authority document retrieved 2026-11-28",
+        "title": "Independence Palace e-ticket portal",
+        "uri": "https://ticket.dinhdoclap.gov.vn/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 106.69537, latitude 10.77705",
+        "id": "wikidata:Q933384",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2527489480. P625 statement Q933384$2355F651-03CF-4450-90AA-B7094E3AA15C.",
+        "title": "Independence Palace representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q933384.json"
+      }
+    ],
+    "source_uri": "https://ticket.dinhdoclap.gov.vn/",
+    "title": "Independence Palace",
+    "types": [
+      "historic-site"
+    ]
+  }
+]

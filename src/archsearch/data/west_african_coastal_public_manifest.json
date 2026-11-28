@@ -1,0 +1,22 @@
+{
+  "base_count": 5213,
+  "base_ids_sha256": "3b8a09c5590a095e577f9142d969293f2889e167f28e85da49b5ac5113164aa5",
+  "base_sites_sha256": "09d9b0a086d15e382108dd59f05c7000d00fbf5fb16c5ee823a82d5a77e4c3b9",
+  "cohort_version": "west-african-coastal-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 9,
+    "total": 5222
+  },
+  "files": {
+    "west_african_coastal_public_review.json": {
+      "sha256": "6d59ebc2cb04cf9a9da689a92d6c397966c253397af8f704011de756eeeda487"
+    },
+    "west_african_coastal_public_sites.json": {
+      "sha256": "5568c062da59a16c5df39f5c66fd0c97855d2ff7a66f285700b9f5973f4c9453"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Nine named public heritage places in Sierra Leone, Liberia, The Gambia and Senegal."
+}

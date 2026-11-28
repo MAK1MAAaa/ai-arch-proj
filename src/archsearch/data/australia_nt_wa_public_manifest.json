@@ -1,0 +1,22 @@
+{
+  "base_count": 5236,
+  "base_ids_sha256": "4f20996516d301eb1f6c8d922e8ceb5a82833951d3ca0956ec1dcc9799d417f6",
+  "base_sites_sha256": "3efa619fa136f02f12ed971e01581fa237e3524d7274a9e61280e9ab5c429fb3",
+  "cohort_version": "australia-nt-wa-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 17,
+    "total": 5253
+  },
+  "files": {
+    "australia_nt_wa_public_review.json": {
+      "sha256": "b45ef5b480c407129dd280f5f81085ca3f5223abaa54e018d2c84cae11d2dc8c"
+    },
+    "australia_nt_wa_public_sites.json": {
+      "sha256": "928ad6a553d1ec8ee19924a508b552bdac24585434c89116352e2fcabf513dd9"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Nine public heritage places in Northern Territory and eight in Western Australia, with current scope and reuse coordinates."
+}

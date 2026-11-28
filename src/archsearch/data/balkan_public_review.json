@@ -1,0 +1,2188 @@
+{
+  "base_count": 4899,
+  "base_ids_sha256": "6ff4f0902b08c15cd4230fdac89bcb4da99a751e28bce1264755e2660942eaae",
+  "base_sites_sha256": "44de7dee024028e146161cbe6fc8b5cf2780c9b14b190e9860967a8e464ef6fb",
+  "cohort_version": "albania-north-macedonia-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth point for the official named visitor property.",
+        "point": [
+          19.79071,
+          40.06214
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1021796.json",
+        "statement_id": "Q1021796$E71C7DAC-D4F2-4D7D-A0D1-B0BE6FA662DE"
+      },
+      "independent_review": {
+        "method": "An independent agent checked original Wikidata statements and exact Pleiades v4.1 coordinates, source attribution, published park or gallery visitor scope, and the previous corpus identities; the disputed Himare point was excluded.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic coastal fortress at Porto Palermo within the area included in the official public visitor schedule.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Published identity, representative point and visitor scope audited.",
+          "note": "No independently reviewed site phases assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Albanian National Tourism Agency",
+          "Wikidata contributors",
+          "Regional Directorate of Cultural Heritage Vlorë"
+        ],
+        "description": "The historic coastal fortress at Porto Palermo within the area included in the official public visitor schedule.",
+        "description_zh": "波尔图巴勒莫海湾的历史城堡，公众开放区域以主管部门资料为准。",
+        "details": "The historic coastal fortress at Porto Palermo within the area included in the official public visitor schedule.",
+        "geography": {
+          "authority_id": "supplement:auth:al-public:Q1021796",
+          "countries": [
+            "AL"
+          ],
+          "note": "The country label follows the documented public heritage property.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The historic coastal fortress at Porto Palermo within the area included in the official public visitor schedule.",
+            "id": "auth:al-public:Q1021796:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 b2dbfba09aff7e2381c7cd57d6db91d831952dd6424b6e89401426504ef68521.",
+            "title": "Porto Palermo Castle public source",
+            "uri": "https://akt.gov.al/kala/kalaja-e-porto-palermos/"
+          }
+        },
+        "id": "auth:al-public:Q1021796",
+        "location_precision": null,
+        "names": [
+          "Kalaja e Porto Palermos",
+          "波尔图巴勒莫城堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          19.79071,
+          40.06214
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The historic coastal fortress at Porto Palermo within the area included in the official public visitor schedule.",
+            "id": "auth:al-public:Q1021796:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 b2dbfba09aff7e2381c7cd57d6db91d831952dd6424b6e89401426504ef68521.",
+            "title": "Porto Palermo Castle public source",
+            "uri": "https://akt.gov.al/kala/kalaja-e-porto-palermos/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 19.79071, latitude 40.06214.",
+            "id": "wikidata:Q1021796",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2531667437, statement Q1021796$E71C7DAC-D4F2-4D7D-A0D1-B0BE6FA662DE.",
+            "title": "Porto Palermo Castle location evidence",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1021796.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The managing authority publishes seasonal visitor arrangements specifically for Porto Palermo Castle.",
+            "id": "auth:al-public:Q1021796:independent-visitor",
+            "license": null,
+            "publisher": "Regional Directorate of Cultural Heritage Vlorë",
+            "revision": "Retrieved 2026-11-28; SHA-256 906294bb504704fd66627b3f8889d36cb6401dcd30d1ffb31b44f61fb3d3df1e.",
+            "title": "Porto Palermo Castle independent visitor confirmation",
+            "uri": "https://drtkvlore.com/en/kalaja-e-porto-palermos/"
+          }
+        ],
+        "source_uri": "https://akt.gov.al/kala/kalaja-e-porto-palermos/",
+        "title": "Porto Palermo Castle",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1021796-source-0.html",
+          "sha256": "b2dbfba09aff7e2381c7cd57d6db91d831952dd6424b6e89401426504ef68521",
+          "uri": "https://akt.gov.al/kala/kalaja-e-porto-palermos/"
+        },
+        {
+          "filename": "Q1021796.json",
+          "sha256": "ccb0eef90a9dd6c1e43d213994d2b640f7d06a89f6983b623c9dd11526cee84c",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1021796.json"
+        },
+        {
+          "filename": "independent-portopalermo-operator.html",
+          "sha256": "906294bb504704fd66627b3f8889d36cb6401dcd30d1ffb31b44f61fb3d3df1e",
+          "uri": "https://drtkvlore.com/en/kalaja-e-porto-palermos/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth point for the official named visitor property.",
+        "point": [
+          19.79410833,
+          41.50699722
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1409023.json",
+        "statement_id": "Q1409023$DC2FEFD0-4B99-4C97-8AF1-42FB36D83AE5"
+      },
+      "independent_review": {
+        "method": "An independent agent checked original Wikidata statements and exact Pleiades v4.1 coordinates, source attribution, published park or gallery visitor scope, and the previous corpus identities; the disputed Himare point was excluded.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic fortified precinct in Krujë, with public heritage and museum areas on the castle grounds.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Published identity, representative point and visitor scope audited.",
+          "note": "No independently reviewed site phases assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Albanian National Tourism Agency",
+          "Albanian Telegraphic Agency",
+          "Wikidata contributors"
+        ],
+        "description": "Historic fortified precinct in Krujë, with public heritage and museum areas on the castle grounds.",
+        "description_zh": "克鲁亚古城堡范围内的公开历史建筑和博物馆区域。",
+        "details": "Historic fortified precinct in Krujë, with public heritage and museum areas on the castle grounds.",
+        "geography": {
+          "authority_id": "supplement:auth:al-public:Q1409023",
+          "countries": [
+            "AL"
+          ],
+          "note": "The country label follows the documented public heritage property.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Historic fortified precinct in Krujë, with public heritage and museum areas on the castle grounds.",
+            "id": "auth:al-public:Q1409023:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 d1d456a1f4e3bf5c2cce421c94ae0f45e8be66acb5eedf73e669e073d6bdc8a9.",
+            "title": "Krujë Castle public source",
+            "uri": "https://akt.gov.al/trashegimia/kalaja-e-krujes/"
+          }
+        },
+        "id": "auth:al-public:Q1409023",
+        "location_precision": null,
+        "names": [
+          "Kalaja e Krujës",
+          "克鲁亚城堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          19.79410833,
+          41.50699722
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Historic fortified precinct in Krujë, with public heritage and museum areas on the castle grounds.",
+            "id": "auth:al-public:Q1409023:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 d1d456a1f4e3bf5c2cce421c94ae0f45e8be66acb5eedf73e669e073d6bdc8a9.",
+            "title": "Krujë Castle public source",
+            "uri": "https://akt.gov.al/trashegimia/kalaja-e-krujes/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Historic fortified precinct in Krujë, with public heritage and museum areas on the castle grounds.",
+            "id": "auth:al-public:Q1409023:visit-1",
+            "license": null,
+            "publisher": "Albanian Telegraphic Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 59f191c76c1b33ef68a5fcf6bddc5db47556bc6aacd6911baa760a9f955b000f.",
+            "title": "Krujë Castle public source",
+            "uri": "https://ata.gov.al/2026/11/08/muzete-e-krujes-presin-rreth-200-mije-vizitore-ne-vit/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 19.79410833, latitude 41.50699722.",
+            "id": "wikidata:Q1409023",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2539484263, statement Q1409023$DC2FEFD0-4B99-4C97-8AF1-42FB36D83AE5.",
+            "title": "Krujë Castle location evidence",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1409023.json"
+          }
+        ],
+        "source_uri": "https://akt.gov.al/trashegimia/kalaja-e-krujes/",
+        "title": "Krujë Castle",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1409023-source-0.html",
+          "sha256": "d1d456a1f4e3bf5c2cce421c94ae0f45e8be66acb5eedf73e669e073d6bdc8a9",
+          "uri": "https://akt.gov.al/trashegimia/kalaja-e-krujes/"
+        },
+        {
+          "filename": "Q1409023-source-1.html",
+          "sha256": "59f191c76c1b33ef68a5fcf6bddc5db47556bc6aacd6911baa760a9f955b000f",
+          "uri": "https://ata.gov.al/2026/11/08/muzete-e-krujes-presin-rreth-200-mije-vizitore-ne-vit/"
+        },
+        {
+          "filename": "Q1409023.json",
+          "sha256": "47924a0f020fbb0ce8c8424fec4c87b02e10e5732b01a3935e7062d80bc53fe0",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1409023.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth point for the official named visitor property.",
+        "point": [
+          19.854,
+          41.255
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2741891.json",
+        "statement_id": "q2741891$AAD1EF96-5DBA-4E4F-9611-985F3F26041F"
+      },
+      "independent_review": {
+        "method": "An independent agent checked original Wikidata statements and exact Pleiades v4.1 coordinates, source attribution, published park or gallery visitor scope, and the previous corpus identities; the disputed Himare point was excluded.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The surviving hilltop fortress at Petrelë. The tourism agency identifies this named property as a visitor destination.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Published identity, representative point and visitor scope audited.",
+          "note": "No independently reviewed site phases assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Albanian National Tourism Agency",
+          "Wikidata contributors"
+        ],
+        "description": "The surviving hilltop fortress at Petrelë. The tourism agency identifies this named property as a visitor destination.",
+        "description_zh": "佩特雷莱高地上现存的历史堡垒，国家旅游局有逐址参观资料。",
+        "details": "The surviving hilltop fortress at Petrelë. The tourism agency identifies this named property as a visitor destination.",
+        "geography": {
+          "authority_id": "supplement:auth:al-public:Q2741891",
+          "countries": [
+            "AL"
+          ],
+          "note": "The country label follows the documented public heritage property.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The surviving hilltop fortress at Petrelë. The tourism agency identifies this named property as a visitor destination.",
+            "id": "auth:al-public:Q2741891:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 ac9754841e83941d7d2544d272dfd848847efef203c27684262fc546ec5d25b3.",
+            "title": "Petrelë Castle public source",
+            "uri": "https://akt.gov.al/atraksionet/kalaja-e-petreles/"
+          }
+        },
+        "id": "auth:al-public:Q2741891",
+        "location_precision": null,
+        "names": [
+          "Kalaja e Petrelës",
+          "佩特雷莱城堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          19.854,
+          41.255
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The surviving hilltop fortress at Petrelë. The tourism agency identifies this named property as a visitor destination.",
+            "id": "auth:al-public:Q2741891:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 ac9754841e83941d7d2544d272dfd848847efef203c27684262fc546ec5d25b3.",
+            "title": "Petrelë Castle public source",
+            "uri": "https://akt.gov.al/atraksionet/kalaja-e-petreles/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 19.854, latitude 41.255.",
+            "id": "wikidata:Q2741891",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2497871450, statement q2741891$AAD1EF96-5DBA-4E4F-9611-985F3F26041F.",
+            "title": "Petrelë Castle location evidence",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2741891.json"
+          }
+        ],
+        "source_uri": "https://akt.gov.al/atraksionet/kalaja-e-petreles/",
+        "title": "Petrelë Castle",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q2741891-source-0.html",
+          "sha256": "ac9754841e83941d7d2544d272dfd848847efef203c27684262fc546ec5d25b3",
+          "uri": "https://akt.gov.al/atraksionet/kalaja-e-petreles/"
+        },
+        {
+          "filename": "Q2741891.json",
+          "sha256": "78d996ebdde0e0733196d8a06a89131ac6b406b7f8637dbcff5aa1b3c4af950e",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2741891.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Pleiades v4.1 place 481715 original representative point, checked within the named archaeological park.",
+        "point": [
+          19.70013984739374,
+          40.379004524474105
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://pleiades.stoa.org/places/481715",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "An independent agent checked original Wikidata statements and exact Pleiades v4.1 coordinates, source attribution, published park or gallery visitor scope, and the previous corpus identities; the disputed Himare point was excluded.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Ancient Amantia hill settlement near Ploçë. The public park interprets the old civic and fortification remains.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Published identity, representative point and visitor scope audited.",
+          "note": "No independently reviewed site phases assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Albanian National Tourism Agency",
+          "Pleiades",
+          "J.J. Wilkes",
+          "DARMC",
+          "R. Talbert",
+          "Jeffrey Becker",
+          "Sean Gillies",
+          "Maxime Guénette",
+          "Tom Elliott",
+          "Regional Directorate of Cultural Heritage Vlorë"
+        ],
+        "description": "Ancient Amantia hill settlement near Ploçë. The public park interprets the old civic and fortification remains.",
+        "description_zh": "普洛切附近的阿曼提亚古城，公开考古公园展示城市与防御遗存。",
+        "details": "Ancient Amantia hill settlement near Ploçë. The public park interprets the old civic and fortification remains.",
+        "geography": {
+          "authority_id": "supplement:auth:al-public:Q454510",
+          "countries": [
+            "AL"
+          ],
+          "note": "The country label follows the documented public heritage property.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Ancient Amantia hill settlement near Ploçë. The public park interprets the old civic and fortification remains.",
+            "id": "auth:al-public:Q454510:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 25fef7a73a4eed0689de09d0041b27ab2ec98ffa3c2cab455472573091ffdda1.",
+            "title": "Amantia Archaeological Park public source",
+            "uri": "https://akt.gov.al/en/attractions/Amantia-Archaeological-Park/"
+          }
+        },
+        "id": "auth:al-public:Q454510",
+        "location_precision": null,
+        "names": [
+          "Parku Arkeologjik i Amantias",
+          "阿曼提亚考古公园"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          19.70013984739374,
+          40.379004524474105
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Ancient Amantia hill settlement near Ploçë. The public park interprets the old civic and fortification remains.",
+            "id": "auth:al-public:Q454510:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 25fef7a73a4eed0689de09d0041b27ab2ec98ffa3c2cab455472573091ffdda1.",
+            "title": "Amantia Archaeological Park public source",
+            "uri": "https://akt.gov.al/en/attractions/Amantia-Archaeological-Park/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 19.70013984739374, latitude 40.379004524474105.",
+            "id": "pleiades-481715",
+            "license": "CC BY 3.0",
+            "publisher": "Pleiades",
+            "revision": "Pinned Pleiades v4.1 place JSON and representative point; original contributors retained.",
+            "title": "Amantia Archaeological Park location evidence",
+            "uri": "https://pleiades.stoa.org/places/481715"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The managing authority publishes the timetable and visitor access for the historic archaeological park of Amantia.",
+            "id": "auth:al-public:Q454510:independent-visitor",
+            "license": null,
+            "publisher": "Regional Directorate of Cultural Heritage Vlorë",
+            "revision": "Retrieved 2026-11-28; SHA-256 365f91381cdd88d8946a99245c41dcb3db6d25b0b35ae903ce349f7c40371ae2.",
+            "title": "Amantia Archaeological Park independent visitor confirmation",
+            "uri": "https://drtkvlore.com/en/parku-arkeologjik-amantia/"
+          }
+        ],
+        "source_uri": "https://akt.gov.al/en/attractions/Amantia-Archaeological-Park/",
+        "title": "Amantia Archaeological Park",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q454510-source-0.html",
+          "sha256": "25fef7a73a4eed0689de09d0041b27ab2ec98ffa3c2cab455472573091ffdda1",
+          "uri": "https://akt.gov.al/en/attractions/Amantia-Archaeological-Park/"
+        },
+        {
+          "filename": "Q454510.json",
+          "sha256": "93cd95db30ec7b4b3c64770d13f231221ca53a6b1df31cc81cc8eeb7039f7fd5",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q454510.json"
+        },
+        {
+          "filename": "pleiades-481715.json",
+          "sha256": "3c5369f3b357360c833a85b576fc8469cfc5ba46fb7890ef322db718fb831865",
+          "uri": "https://pleiades.stoa.org/places/481715"
+        },
+        {
+          "filename": "independent-amantia-operator.html",
+          "sha256": "365f91381cdd88d8946a99245c41dcb3db6d25b0b35ae903ce349f7c40371ae2",
+          "uri": "https://drtkvlore.com/en/parku-arkeologjik-amantia/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The first published claim falls in the mapped park's developed monument and interpretation area.",
+        "point": [
+          19.472658,
+          40.721672
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q505703.json",
+        "statement_id": "Q505703$1579D561-B47A-49A0-B363-E445B4E5ABCA"
+      },
+      "independent_review": {
+        "method": "An independent agent checked original Wikidata statements and exact Pleiades v4.1 coordinates, source attribution, published park or gallery visitor scope, and the previous corpus identities; the disputed Himare point was excluded.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological park of ancient Apollonia near Fier, with the excavated civic and religious remains described in the visitor guide.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Published identity, representative point and visitor scope audited.",
+          "note": "No independently reviewed site phases assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Albanian National Tourism Agency",
+          "Embassy of Albania in Türkiye",
+          "Wikidata contributors",
+          "Apollonia and Byllis Archaeological Parks"
+        ],
+        "description": "Public archaeological park of ancient Apollonia near Fier, with the excavated civic and religious remains described in the visitor guide.",
+        "description_zh": "费里附近古城阿波罗尼亚的公共考古公园，访客资料介绍已发掘的公共与宗教遗存。",
+        "details": "Public archaeological park of ancient Apollonia near Fier, with the excavated civic and religious remains described in the visitor guide.",
+        "geography": {
+          "authority_id": "supplement:auth:al-public:Q505703",
+          "countries": [
+            "AL"
+          ],
+          "note": "The country label follows the documented public heritage property.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public archaeological park of ancient Apollonia near Fier, with the excavated civic and religious remains described in the visitor guide.",
+            "id": "auth:al-public:Q505703:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 20dc9dbe79702ab1467158c7b5c7e618599fec75e41200441802194d6b154b78.",
+            "title": "Apollonia Archaeological Park public source",
+            "uri": "https://akt.gov.al/en/archaeological-site/apollonia/"
+          }
+        },
+        "id": "auth:al-public:Q505703",
+        "location_precision": null,
+        "names": [
+          "Parku Arkeologjik Apoloni",
+          "阿波罗尼亚考古公园"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          19.472658,
+          40.721672
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public archaeological park of ancient Apollonia near Fier, with the excavated civic and religious remains described in the visitor guide.",
+            "id": "auth:al-public:Q505703:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 20dc9dbe79702ab1467158c7b5c7e618599fec75e41200441802194d6b154b78.",
+            "title": "Apollonia Archaeological Park public source",
+            "uri": "https://akt.gov.al/en/archaeological-site/apollonia/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public archaeological park of ancient Apollonia near Fier, with the excavated civic and religious remains described in the visitor guide.",
+            "id": "auth:al-public:Q505703:visit-1",
+            "license": null,
+            "publisher": "Embassy of Albania in Türkiye",
+            "revision": "Retrieved 2026-11-28; SHA-256 600ac7fe82049b74b331512097d8da47148805995ff8a8791aa55afb95965bf7.",
+            "title": "Apollonia Archaeological Park public source",
+            "uri": "https://ambasadat.gov.al/turkey/parqet/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 19.472658, latitude 40.721672.",
+            "id": "wikidata:Q505703",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2575414593, statement Q505703$1579D561-B47A-49A0-B363-E445B4E5ABCA.",
+            "title": "Apollonia Archaeological Park location evidence",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q505703.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The current park operator publishes the identity and visitor information of Apollonia near Fier.",
+            "id": "auth:al-public:Q505703:independent-visitor",
+            "license": null,
+            "publisher": "Apollonia and Byllis Archaeological Parks",
+            "revision": "Retrieved 2026-11-28; SHA-256 a9e85c5e32edb7dad971f0949491358dd06326ce1a4baf89477a92514fb7b893.",
+            "title": "Apollonia Archaeological Park independent visitor confirmation",
+            "uri": "https://apolloniaarchaeologicalpark.al/en/home/"
+          }
+        ],
+        "source_uri": "https://akt.gov.al/en/archaeological-site/apollonia/",
+        "title": "Apollonia Archaeological Park",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q505703-source-0.html",
+          "sha256": "20dc9dbe79702ab1467158c7b5c7e618599fec75e41200441802194d6b154b78",
+          "uri": "https://akt.gov.al/en/archaeological-site/apollonia/"
+        },
+        {
+          "filename": "Q505703-source-1.html",
+          "sha256": "600ac7fe82049b74b331512097d8da47148805995ff8a8791aa55afb95965bf7",
+          "uri": "https://ambasadat.gov.al/turkey/parqet/"
+        },
+        {
+          "filename": "Q505703.json",
+          "sha256": "c1fdd62ddf65c73c0b51b79e1bfb9c5aba4e458e7b98c7f0ff9748f690f4f7dd",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q505703.json"
+        },
+        {
+          "filename": "independent-apollonia-operator.html",
+          "sha256": "a9e85c5e32edb7dad971f0949491358dd06326ce1a4baf89477a92514fb7b893",
+          "uri": "https://apolloniaarchaeologicalpark.al/en/home/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth point for the official named visitor property.",
+        "point": [
+          19.493,
+          42.0463319
+        ],
+        "precision": 1e-07,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q60491.json",
+        "statement_id": "q60491$0015CFA4-18A9-411E-AF54-9AB11BAA177C"
+      },
+      "independent_review": {
+        "method": "An independent agent checked original Wikidata statements and exact Pleiades v4.1 coordinates, source attribution, published park or gallery visitor scope, and the previous corpus identities; the disputed Himare point was excluded.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The publicly interpreted historic fortress near Shkodër, with visible surviving structures within the castle grounds.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Published identity, representative point and visitor scope audited.",
+          "note": "No independently reviewed site phases assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Albanian National Tourism Agency",
+          "Wikidata contributors"
+        ],
+        "description": "The publicly interpreted historic fortress near Shkodër, with visible surviving structures within the castle grounds.",
+        "description_zh": "斯库台附近的罗扎法城堡，公开遗址区保存历代防御建筑。",
+        "details": "The publicly interpreted historic fortress near Shkodër, with visible surviving structures within the castle grounds.",
+        "geography": {
+          "authority_id": "supplement:auth:al-public:Q60491",
+          "countries": [
+            "AL"
+          ],
+          "note": "The country label follows the documented public heritage property.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The publicly interpreted historic fortress near Shkodër, with visible surviving structures within the castle grounds.",
+            "id": "auth:al-public:Q60491:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 9bfccddc76430221a8b46201023d0e4bc919a39f077de8b460274b8054df37e1.",
+            "title": "Rozafa Castle public source",
+            "uri": "https://akt.gov.al/trashegimia/kalaja-e-rozafes/"
+          }
+        },
+        "id": "auth:al-public:Q60491",
+        "location_precision": null,
+        "names": [
+          "Kalaja e Rozafës",
+          "罗扎法城堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          19.493,
+          42.0463319
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The publicly interpreted historic fortress near Shkodër, with visible surviving structures within the castle grounds.",
+            "id": "auth:al-public:Q60491:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 9bfccddc76430221a8b46201023d0e4bc919a39f077de8b460274b8054df37e1.",
+            "title": "Rozafa Castle public source",
+            "uri": "https://akt.gov.al/trashegimia/kalaja-e-rozafes/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 19.493, latitude 42.0463319.",
+            "id": "wikidata:Q60491",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2559869928, statement q60491$0015CFA4-18A9-411E-AF54-9AB11BAA177C.",
+            "title": "Rozafa Castle location evidence",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q60491.json"
+          }
+        ],
+        "source_uri": "https://akt.gov.al/trashegimia/kalaja-e-rozafes/",
+        "title": "Rozafa Castle",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q60491-source-0.html",
+          "sha256": "9bfccddc76430221a8b46201023d0e4bc919a39f077de8b460274b8054df37e1",
+          "uri": "https://akt.gov.al/trashegimia/kalaja-e-rozafes/"
+        },
+        {
+          "filename": "Q60491.json",
+          "sha256": "572d0607f61272f301fbf783b8b3e52cef4a76b0f9cdf062c2ddb51901213194",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q60491.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth point for the official named visitor property.",
+        "point": [
+          19.64972222,
+          41.78361111
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q60529.json",
+        "statement_id": "Q60529$29105BF7-8D94-4E46-B9EC-90E913F11684"
+      },
+      "independent_review": {
+        "method": "An independent agent checked original Wikidata statements and exact Pleiades v4.1 coordinates, source attribution, published park or gallery visitor scope, and the previous corpus identities; the disputed Himare point was excluded.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic castle above Lezhë with public surviving ruins and paths documented by the tourism agency.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Published identity, representative point and visitor scope audited.",
+          "note": "No independently reviewed site phases assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Albanian National Tourism Agency",
+          "Wikidata contributors"
+        ],
+        "description": "Historic castle above Lezhë with public surviving ruins and paths documented by the tourism agency.",
+        "description_zh": "莱什城区上方的历史堡垒，保存国家旅游局公布的公开遗存和参观路线。",
+        "details": "Historic castle above Lezhë with public surviving ruins and paths documented by the tourism agency.",
+        "geography": {
+          "authority_id": "supplement:auth:al-public:Q60529",
+          "countries": [
+            "AL"
+          ],
+          "note": "The country label follows the documented public heritage property.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Historic castle above Lezhë with public surviving ruins and paths documented by the tourism agency.",
+            "id": "auth:al-public:Q60529:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 4700c775ff0da9167e4f2101b75c8734d6e36fb3f835fed0cf433c25c5d674c1.",
+            "title": "Lezhë Castle public source",
+            "uri": "https://akt.gov.al/kala/kalaja-e-lezhes/"
+          }
+        },
+        "id": "auth:al-public:Q60529",
+        "location_precision": null,
+        "names": [
+          "Kalaja e Lezhës",
+          "莱什城堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          19.64972222,
+          41.78361111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Historic castle above Lezhë with public surviving ruins and paths documented by the tourism agency.",
+            "id": "auth:al-public:Q60529:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 4700c775ff0da9167e4f2101b75c8734d6e36fb3f835fed0cf433c25c5d674c1.",
+            "title": "Lezhë Castle public source",
+            "uri": "https://akt.gov.al/kala/kalaja-e-lezhes/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Historic castle above Lezhë with public surviving ruins and paths documented by the tourism agency.",
+            "id": "auth:al-public:Q60529:visit-1",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 161526029681c24c4c6c03bf9098fa540a141f900d5d4d1cc21bacbe2e9c1d67.",
+            "title": "Lezhë Castle public source",
+            "uri": "https://akt.gov.al/itinerare/tur-2-ditor-tirane-lezhe/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 19.64972222, latitude 41.78361111.",
+            "id": "wikidata:Q60529",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2516874203, statement Q60529$29105BF7-8D94-4E46-B9EC-90E913F11684.",
+            "title": "Lezhë Castle location evidence",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q60529.json"
+          }
+        ],
+        "source_uri": "https://akt.gov.al/kala/kalaja-e-lezhes/",
+        "title": "Lezhë Castle",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q60529-source-0.html",
+          "sha256": "4700c775ff0da9167e4f2101b75c8734d6e36fb3f835fed0cf433c25c5d674c1",
+          "uri": "https://akt.gov.al/kala/kalaja-e-lezhes/"
+        },
+        {
+          "filename": "Q60529-source-1.html",
+          "sha256": "161526029681c24c4c6c03bf9098fa540a141f900d5d4d1cc21bacbe2e9c1d67",
+          "uri": "https://akt.gov.al/itinerare/tur-2-ditor-tirane-lezhe/"
+        },
+        {
+          "filename": "Q60529.json",
+          "sha256": "b62a26dd990832e7626bfc9ef48f28c9273e09077516a3ccf19c12dbc868b9b5",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q60529.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth point for the official named visitor property.",
+        "point": [
+          19.4967,
+          41.047
+        ],
+        "precision": 0.011911291946946,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q65349.json",
+        "statement_id": "Q65349$24FE3DF7-808B-4447-A60D-41F51ABBBFA9"
+      },
+      "independent_review": {
+        "method": "An independent agent checked original Wikidata statements and exact Pleiades v4.1 coordinates, source attribution, published park or gallery visitor scope, and the previous corpus identities; the disputed Himare point was excluded.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The restored historic fortress and precinct returned to public use by the ministry.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Published identity, representative point and visitor scope audited.",
+          "note": "No independently reviewed site phases assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Albanian National Tourism Agency",
+          "Wikidata contributors",
+          "United Nations Office for Project Services"
+        ],
+        "description": "The restored historic fortress and precinct returned to public use by the ministry.",
+        "description_zh": "阿尔巴尼亚文化部门修复后启用的巴什托韦历史城堡与公众遗产区。",
+        "details": "The restored historic fortress and precinct returned to public use by the ministry.",
+        "geography": {
+          "authority_id": "supplement:auth:al-public:Q65349",
+          "countries": [
+            "AL"
+          ],
+          "note": "The country label follows the documented public heritage property.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The restored historic fortress and precinct returned to public use by the ministry.",
+            "id": "auth:al-public:Q65349:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 82d70b4dec4def9c43735462d517baefbb69dac527194b706cceadee295a4d13.",
+            "title": "Bashtovë Fortress public source",
+            "uri": "https://akt.gov.al/kulture/kalaja-e-bashtoves/"
+          }
+        },
+        "id": "auth:al-public:Q65349",
+        "location_precision": null,
+        "names": [
+          "Kalaja e Bashtovës",
+          "巴什托韦城堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          19.4967,
+          41.047
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The restored historic fortress and precinct returned to public use by the ministry.",
+            "id": "auth:al-public:Q65349:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 82d70b4dec4def9c43735462d517baefbb69dac527194b706cceadee295a4d13.",
+            "title": "Bashtovë Fortress public source",
+            "uri": "https://akt.gov.al/kulture/kalaja-e-bashtoves/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 19.4967, latitude 41.047.",
+            "id": "wikidata:Q65349",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2538856242, statement Q65349$24FE3DF7-808B-4447-A60D-41F51ABBBFA9.",
+            "title": "Bashtovë Fortress location evidence",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q65349.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The restoration project operator confirms that the existing Bashtovë fortress reopened as a public cultural site.",
+            "id": "auth:al-public:Q65349:independent-visitor",
+            "license": null,
+            "publisher": "United Nations Office for Project Services",
+            "revision": "Retrieved 2026-11-28; SHA-256 55ab409f06ff58049da85852f7c9bec820d7ba8e9f67be186312af3dcf9795b2.",
+            "title": "Bashtovë Fortress independent visitor confirmation",
+            "uri": "https://www.unops.org/news-and-stories/news/restoring-the-rich-history-of-albanias-cultural-heritage-sites"
+          }
+        ],
+        "source_uri": "https://akt.gov.al/kulture/kalaja-e-bashtoves/",
+        "title": "Bashtovë Fortress",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q65349-source-1.html",
+          "sha256": "82d70b4dec4def9c43735462d517baefbb69dac527194b706cceadee295a4d13",
+          "uri": "https://akt.gov.al/kulture/kalaja-e-bashtoves/"
+        },
+        {
+          "filename": "Q65349.json",
+          "sha256": "0e9d2f53f84ce75fd25d0d8f28bec9abfe2eb56eb97f819cd1479025acfb42ae",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q65349.json"
+        },
+        {
+          "filename": "independent-bashtove-reopened.html",
+          "sha256": "55ab409f06ff58049da85852f7c9bec820d7ba8e9f67be186312af3dcf9795b2",
+          "uri": "https://www.unops.org/news-and-stories/news/restoring-the-rich-history-of-albanias-cultural-heritage-sites"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "This claim identifies the public ancient ruins; the other statement points near the modern settlement.",
+        "point": [
+          19.430555555556,
+          40.317777777778
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q728519.json",
+        "statement_id": "Q728519$5B37FD97-BCB3-4517-9428-3E04176D1F02"
+      },
+      "independent_review": {
+        "method": "An independent agent checked original Wikidata statements and exact Pleiades v4.1 coordinates, source attribution, published park or gallery visitor scope, and the previous corpus identities; the disputed Himare point was excluded.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "State-listed ancient Oricum archaeological park and its designated visitor area near the historical coastal ruins. Visits follow the site operator’s current access controls.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Published identity, representative point and visitor scope audited.",
+          "note": "No independently reviewed site phases assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Albanian National Tourism Agency",
+          "Wikidata contributors",
+          "Shqiptarja.com, interviewing the manager of the archaeological park"
+        ],
+        "description": "State-listed ancient Oricum archaeological park and its designated visitor area near the historical coastal ruins. Visits follow the site operator’s current access controls.",
+        "description_zh": "阿尔巴尼亚国家名录列出的古奥里库姆海滨遗址，公众参观仅限管理方当前开放范围。",
+        "details": "State-listed ancient Oricum archaeological park and its designated visitor area near the historical coastal ruins. Visits follow the site operator’s current access controls.",
+        "geography": {
+          "authority_id": "supplement:auth:al-public:Q728519",
+          "countries": [
+            "AL"
+          ],
+          "note": "The country label follows the documented public heritage property.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "State-listed ancient Oricum archaeological park and its designated visitor area near the historical coastal ruins.",
+            "id": "auth:al-public:Q728519:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 e2f4b92166b9cb6f6626a3f9d02ad1ad0b6d9e816ec6c034008cde852a8729cf.",
+            "title": "Oricum Archaeological Park public source",
+            "uri": "https://akt.gov.al/site-arkeologjike/parku-arkeologjik-i-orikut/"
+          }
+        },
+        "id": "auth:al-public:Q728519",
+        "location_precision": null,
+        "names": [
+          "Parku Arkeologjik Kombëtar i Orikumit",
+          "奥里库姆考古公园"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          19.430555555556,
+          40.317777777778
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "State-listed ancient Oricum archaeological park and its designated visitor area near the historical coastal ruins.",
+            "id": "auth:al-public:Q728519:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 e2f4b92166b9cb6f6626a3f9d02ad1ad0b6d9e816ec6c034008cde852a8729cf.",
+            "title": "Oricum Archaeological Park public source",
+            "uri": "https://akt.gov.al/site-arkeologjike/parku-arkeologjik-i-orikut/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 19.430555555556, latitude 40.317777777778.",
+            "id": "wikidata:Q728519",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2569580268, statement Q728519$5B37FD97-BCB3-4517-9428-3E04176D1F02.",
+            "title": "Oricum Archaeological Park location evidence",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q728519.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The site manager documents actual recent public visits to the historic park in October 2026.",
+            "id": "auth:al-public:Q728519:independent-visitor",
+            "license": null,
+            "publisher": "Shqiptarja.com, interviewing the manager of the archaeological park",
+            "revision": "Retrieved 2026-11-28; SHA-256 d3315f98a35e0e6421d1827e8b6aadd5cc973aea71d3895305bd8b9443c4ab0e.",
+            "title": "Oricum Archaeological Park independent visitor confirmation",
+            "uri": "https://shqiptarja.com/lajm/dikur-fushebeteje-e-jul-cezarit-dhe-pompeut-sot-destinacion-turistik-parku-arkeologjik-i-orikut-terheq-vizitore-nga-e-gjithe-bota?r=pop5s"
+          }
+        ],
+        "source_uri": "https://akt.gov.al/site-arkeologjike/parku-arkeologjik-i-orikut/",
+        "title": "Oricum Archaeological Park",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q728519-source-0.html",
+          "sha256": "e2f4b92166b9cb6f6626a3f9d02ad1ad0b6d9e816ec6c034008cde852a8729cf",
+          "uri": "https://akt.gov.al/site-arkeologjike/parku-arkeologjik-i-orikut/"
+        },
+        {
+          "filename": "Q728519.json",
+          "sha256": "371d2abeeff52ce4f4ac57abca71c54fcc39800c47df4ae704864a90735f06af",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q728519.json"
+        },
+        {
+          "filename": "independent-oricum-visit.html",
+          "sha256": "d3315f98a35e0e6421d1827e8b6aadd5cc973aea71d3895305bd8b9443c4ab0e",
+          "uri": "https://shqiptarja.com/lajm/dikur-fushebeteje-e-jul-cezarit-dhe-pompeut-sot-destinacion-turistik-parku-arkeologjik-i-orikut-terheq-vizitore-nga-e-gjithe-bota?r=pop5s"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth point for the official named visitor property.",
+        "point": [
+          19.445263,
+          41.312191
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q779868.json",
+        "statement_id": "Q779868$A4FD5908-C017-40F2-8B2C-18475F0BDD69"
+      },
+      "independent_review": {
+        "method": "An independent agent checked original Wikidata statements and exact Pleiades v4.1 coordinates, source attribution, published park or gallery visitor scope, and the previous corpus identities; the disputed Himare point was excluded.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public Roman amphitheatre in central Durrës. The visitor route follows the areas designated by the site during conservation works.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Published identity, representative point and visitor scope audited.",
+          "note": "No independently reviewed site phases assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Albanian National Tourism Agency",
+          "Wikidata contributors",
+          "Albanian Telegraphic Agency"
+        ],
+        "description": "Public Roman amphitheatre in central Durrës. The visitor route follows the areas designated by the site during conservation works.",
+        "description_zh": "都拉斯城区的罗马圆形剧场，公众参观以保护工程期间划定的开放区域为准。",
+        "details": "Public Roman amphitheatre in central Durrës. The visitor route follows the areas designated by the site during conservation works.",
+        "geography": {
+          "authority_id": "supplement:auth:al-public:Q779868",
+          "countries": [
+            "AL"
+          ],
+          "note": "The country label follows the documented public heritage property.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Roman amphitheatre in central Durrës, retained as the individually documented archaeological property.",
+            "id": "auth:al-public:Q779868:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 fee1fd53530ea0a950cbd98902b4e528e8bdc4a2f6dbf6df80213c67247468a9.",
+            "title": "Durrës Amphitheatre public source",
+            "uri": "https://akt.gov.al/atraksionet/amfiteatri-durres/"
+          }
+        },
+        "id": "auth:al-public:Q779868",
+        "location_precision": null,
+        "names": [
+          "Amfiteatri i Durrësit",
+          "都拉斯罗马圆形剧场"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          19.445263,
+          41.312191
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Roman amphitheatre in central Durrës, retained as the individually documented archaeological property.",
+            "id": "auth:al-public:Q779868:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 fee1fd53530ea0a950cbd98902b4e528e8bdc4a2f6dbf6df80213c67247468a9.",
+            "title": "Durrës Amphitheatre public source",
+            "uri": "https://akt.gov.al/atraksionet/amfiteatri-durres/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 19.445263, latitude 41.312191.",
+            "id": "wikidata:Q779868",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2491551653, statement Q779868$A4FD5908-C017-40F2-8B2C-18475F0BDD69.",
+            "title": "Durrës Amphitheatre location evidence",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q779868.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The 2026 statement records recent visitors and the continuing conservation work at the historic amphitheatre.",
+            "id": "auth:al-public:Q779868:independent-visitor",
+            "license": null,
+            "publisher": "Albanian Telegraphic Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 c7f5a3695943799d25ae57f5b99c614b79b81dd881e948d6f7f63c84a51b9d6a.",
+            "title": "Durrës Amphitheatre independent visitor confirmation",
+            "uri": "https://ata.gov.al/2026/09/29/amfiteatri-antik-i-durresit-ne-etape-te-re-ruajtjeje-dhe-studimi/"
+          }
+        ],
+        "source_uri": "https://akt.gov.al/atraksionet/amfiteatri-durres/",
+        "title": "Durrës Amphitheatre",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q779868-source-0.html",
+          "sha256": "fee1fd53530ea0a950cbd98902b4e528e8bdc4a2f6dbf6df80213c67247468a9",
+          "uri": "https://akt.gov.al/atraksionet/amfiteatri-durres/"
+        },
+        {
+          "filename": "Q779868.json",
+          "sha256": "f226b68a0aa421898f8c04311e8b343a8a2dbf3c1e6456a2f589ff9d3828b071",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q779868.json"
+        },
+        {
+          "filename": "independent-durres-2026.html",
+          "sha256": "c7f5a3695943799d25ae57f5b99c614b79b81dd881e948d6f7f63c84a51b9d6a",
+          "uri": "https://ata.gov.al/2026/09/29/amfiteatri-antik-i-durresit-ne-etape-te-re-ruajtjeje-dhe-studimi/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth point for the official named visitor property.",
+        "point": [
+          20.222267,
+          40.087299
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q959799.json",
+        "statement_id": "Q959799$AF02D6C5-3A09-427F-88A9-89E08744922C"
+      },
+      "independent_review": {
+        "method": "An independent agent checked original Wikidata statements and exact Pleiades v4.1 coordinates, source attribution, published park or gallery visitor scope, and the previous corpus identities; the disputed Himare point was excluded.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original Antigonea hill settlement in southern Albania, with designated public ruins documented by the ministry.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Published identity, representative point and visitor scope audited.",
+          "note": "No independently reviewed site phases assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Albanian National Tourism Agency",
+          "Wikidata contributors"
+        ],
+        "description": "The original Antigonea hill settlement in southern Albania, with designated public ruins documented by the ministry.",
+        "description_zh": "阿尔巴尼亚南部山地的安提戈尼亚聚落原址，文化部门公开遗址游览范围。",
+        "details": "The original Antigonea hill settlement in southern Albania, with designated public ruins documented by the ministry.",
+        "geography": {
+          "authority_id": "supplement:auth:al-public:Q959799",
+          "countries": [
+            "AL"
+          ],
+          "note": "The country label follows the documented public heritage property.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The original Antigonea hill settlement in southern Albania, with designated public ruins documented by the ministry.",
+            "id": "auth:al-public:Q959799:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 c4bc06e3e2b9fb1b424b6014b5d137a853271b38f2b13437b068f828a0905fa6.",
+            "title": "Antigonea Archaeological Park public source",
+            "uri": "https://akt.gov.al/en/attractions/archaeological-antigoneia/"
+          }
+        },
+        "id": "auth:al-public:Q959799",
+        "location_precision": null,
+        "names": [
+          "Parku Arkeologjik i Antigonesë",
+          "安提戈尼亚考古公园"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          20.222267,
+          40.087299
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The original Antigonea hill settlement in southern Albania, with designated public ruins documented by the ministry.",
+            "id": "auth:al-public:Q959799:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 c4bc06e3e2b9fb1b424b6014b5d137a853271b38f2b13437b068f828a0905fa6.",
+            "title": "Antigonea Archaeological Park public source",
+            "uri": "https://akt.gov.al/en/attractions/archaeological-antigoneia/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 20.222267, latitude 40.087299.",
+            "id": "wikidata:Q959799",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2522091979, statement Q959799$AF02D6C5-3A09-427F-88A9-89E08744922C.",
+            "title": "Antigonea Archaeological Park location evidence",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q959799.json"
+          }
+        ],
+        "source_uri": "https://akt.gov.al/en/attractions/archaeological-antigoneia/",
+        "title": "Antigonea Archaeological Park",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q959799-source-0.html",
+          "sha256": "c4bc06e3e2b9fb1b424b6014b5d137a853271b38f2b13437b068f828a0905fa6",
+          "uri": "https://akt.gov.al/en/attractions/archaeological-antigoneia/"
+        },
+        {
+          "filename": "Q959799.json",
+          "sha256": "8557c43d8c149e42ad31b4b7d9312ce36d0d28126e61884ba55f73ad3e79f10b",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q959799.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Original Pleiades v4.1 place representative point, verified against the named public archaeological park.",
+        "point": [
+          19.7380417218602,
+          40.541322684188486
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://pleiades.stoa.org/places/481777",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "An independent agent checked original Wikidata statements and exact Pleiades v4.1 coordinates, source attribution, published park or gallery visitor scope, and the previous corpus identities; the disputed Himare point was excluded.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The protected ancient city on the plateau near Hekal, interpreted through the publicly accessible archaeological park.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Published identity, representative point and visitor scope audited.",
+          "note": "No independently reviewed site phases assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Albanian National Tourism Agency",
+          "Pleiades",
+          "J.J. Wilkes",
+          "DARMC",
+          "R. Talbert",
+          "Brady Kiesling",
+          "Sean Gillies",
+          "Johan Åhlfeldt",
+          "Jeffrey Becker",
+          "Tom Elliott",
+          "Apollonia and Byllis Archaeological Parks"
+        ],
+        "description": "The protected ancient city on the plateau near Hekal, interpreted through the publicly accessible archaeological park.",
+        "description_zh": "赫卡尔附近高地上的比利斯古城遗址，以公开考古公园展示的遗存为范围。",
+        "details": "The protected ancient city on the plateau near Hekal, interpreted through the publicly accessible archaeological park.",
+        "geography": {
+          "authority_id": "supplement:auth:al-public:pleiades-481777",
+          "countries": [
+            "AL"
+          ],
+          "note": "The country label follows the documented public heritage property.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The protected ancient city on the plateau near Hekal, interpreted through the publicly accessible archaeological park.",
+            "id": "auth:al-public:pleiades-481777:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 ad8a6410fb7d564b87a6d32fcbd2df0b90ff92773b514f7ec0c1ff55723b01be.",
+            "title": "Byllis Archaeological Park public source",
+            "uri": "https://akt.gov.al/kulture/parku-arkeologjik-i-bylisit/"
+          }
+        },
+        "id": "auth:al-public:pleiades-481777",
+        "location_precision": null,
+        "names": [
+          "Parku Arkeologjik i Bylisit",
+          "比利斯考古公园"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          19.7380417218602,
+          40.541322684188486
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The protected ancient city on the plateau near Hekal, interpreted through the publicly accessible archaeological park.",
+            "id": "auth:al-public:pleiades-481777:visit-0",
+            "license": null,
+            "publisher": "Albanian National Tourism Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 ad8a6410fb7d564b87a6d32fcbd2df0b90ff92773b514f7ec0c1ff55723b01be.",
+            "title": "Byllis Archaeological Park public source",
+            "uri": "https://akt.gov.al/kulture/parku-arkeologjik-i-bylisit/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 19.7380417218602, latitude 40.541322684188486.",
+            "id": "pleiades-481777",
+            "license": "CC BY 3.0",
+            "publisher": "Pleiades",
+            "revision": "Pinned Pleiades v4.1 place JSON, representative point; original contributors retained.",
+            "title": "Byllis Archaeological Park location evidence",
+            "uri": "https://pleiades.stoa.org/places/481777"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The current park operator lists Byllis as a separate publicly operated archaeological park.",
+            "id": "auth:al-public:pleiades-481777:independent-visitor",
+            "license": null,
+            "publisher": "Apollonia and Byllis Archaeological Parks",
+            "revision": "Retrieved 2026-11-28; SHA-256 a9e85c5e32edb7dad971f0949491358dd06326ce1a4baf89477a92514fb7b893.",
+            "title": "Byllis Archaeological Park independent visitor confirmation",
+            "uri": "https://apolloniaarchaeologicalpark.al/en/home/"
+          }
+        ],
+        "source_uri": "https://akt.gov.al/kulture/parku-arkeologjik-i-bylisit/",
+        "title": "Byllis Archaeological Park",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "pleiades-481777-source-0.html",
+          "sha256": "ad8a6410fb7d564b87a6d32fcbd2df0b90ff92773b514f7ec0c1ff55723b01be",
+          "uri": "https://akt.gov.al/kulture/parku-arkeologjik-i-bylisit/"
+        },
+        {
+          "filename": "pleiades-481777.json",
+          "sha256": "0fcc1d93cb5137c513bdc6d725b8c1a70976ff25306ffa0d7e38cd68cc2099b4",
+          "uri": "https://pleiades.stoa.org/places/481777"
+        },
+        {
+          "filename": "independent-apollonia-operator.html",
+          "sha256": "a9e85c5e32edb7dad971f0949491358dd06326ce1a4baf89477a92514fb7b893",
+          "uri": "https://apolloniaarchaeologicalpark.al/en/home/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth point for the official named visitor property.",
+        "point": [
+          21.437222222222,
+          42.001111111111
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1271865.json",
+        "statement_id": "Q1271865$2a2298a2-407a-63d1-8a05-de67f73f0ee5"
+      },
+      "independent_review": {
+        "method": "An independent agent checked original Wikidata statements and exact Pleiades v4.1 coordinates, source attribution, published park or gallery visitor scope, and the previous corpus identities; the disputed Himare point was excluded.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic double bathhouse in Skopje's Old Bazaar, used separately as a public National Gallery venue.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Published identity, representative point and visitor scope audited.",
+          "note": "No independently reviewed site phases assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Gallery of North Macedonia",
+          "Wikidata contributors"
+        ],
+        "description": "The historic double bathhouse in Skopje's Old Bazaar, used separately as a public National Gallery venue.",
+        "description_zh": "斯科普里老市集内的奇夫特历史双浴场，现作为独立的国家美术馆公共展馆。",
+        "details": "The historic double bathhouse in Skopje's Old Bazaar, used separately as a public National Gallery venue.",
+        "geography": {
+          "authority_id": "supplement:auth:mk-public:Q1271865",
+          "countries": [
+            "MK"
+          ],
+          "note": "The country label follows the documented public heritage property.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The historic double bathhouse in Skopje's Old Bazaar, used separately as a public National Gallery venue.",
+            "id": "auth:mk-public:Q1271865:visit-0",
+            "license": null,
+            "publisher": "National Gallery of North Macedonia",
+            "revision": "Retrieved 2026-11-28; SHA-256 3b5c73668845b0a7b29abdbdabed3b8a2a238a999dae5d204f906fe05bbc6d69.",
+            "title": "Čifte Hamam public source",
+            "uri": "https://nationalgallery.mk/cifte-hamami/?lang=sq"
+          }
+        },
+        "id": "auth:mk-public:Q1271865",
+        "location_precision": null,
+        "names": [
+          "Чифте амам",
+          "奇夫特浴场"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          21.437222222222,
+          42.001111111111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The historic double bathhouse in Skopje's Old Bazaar, used separately as a public National Gallery venue.",
+            "id": "auth:mk-public:Q1271865:visit-0",
+            "license": null,
+            "publisher": "National Gallery of North Macedonia",
+            "revision": "Retrieved 2026-11-28; SHA-256 3b5c73668845b0a7b29abdbdabed3b8a2a238a999dae5d204f906fe05bbc6d69.",
+            "title": "Čifte Hamam public source",
+            "uri": "https://nationalgallery.mk/cifte-hamami/?lang=sq"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The historic double bathhouse in Skopje's Old Bazaar, used separately as a public National Gallery venue.",
+            "id": "auth:mk-public:Q1271865:visit-1",
+            "license": null,
+            "publisher": "National Gallery of North Macedonia",
+            "revision": "Retrieved 2026-11-28; SHA-256 9d4b18c79cb967f7a67e647a3aa3ff9a1f1e909967482acfd0a43fd27a5ab063.",
+            "title": "Čifte Hamam public source",
+            "uri": "https://nationalgallery.mk/exhibition-poi-piovve-dentro-a-l-alta-fantasia-or-and-then-it-rained-in-the-deep-fantasy-in-chifte-hamam/?lang=en"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 21.437222222222, latitude 42.001111111111.",
+            "id": "wikidata:Q1271865",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2482681071, statement Q1271865$2a2298a2-407a-63d1-8a05-de67f73f0ee5.",
+            "title": "Čifte Hamam location evidence",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1271865.json"
+          }
+        ],
+        "source_uri": "https://nationalgallery.mk/cifte-hamami/?lang=sq",
+        "title": "Čifte Hamam",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1271865-source-0.html",
+          "sha256": "3b5c73668845b0a7b29abdbdabed3b8a2a238a999dae5d204f906fe05bbc6d69",
+          "uri": "https://nationalgallery.mk/cifte-hamami/?lang=sq"
+        },
+        {
+          "filename": "Q1271865-source-1.html",
+          "sha256": "9d4b18c79cb967f7a67e647a3aa3ff9a1f1e909967482acfd0a43fd27a5ab063",
+          "uri": "https://nationalgallery.mk/exhibition-poi-piovve-dentro-a-l-alta-fantasia-or-and-then-it-rained-in-the-deep-fantasy-in-chifte-hamam/?lang=en"
+        },
+        {
+          "filename": "Q1271865.json",
+          "sha256": "fee43184d20091ba2c3db14a63fb4d65fa54b108123692ddc23f0a70d3a6c229",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1271865.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth point for the official named visitor property.",
+        "point": [
+          21.435833333333,
+          41.998611111111
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1283985.json",
+        "statement_id": "Q1283985$c8ae6e23-4318-3b75-3249-11ad543b093f"
+      },
+      "independent_review": {
+        "method": "An independent agent checked original Wikidata statements and exact Pleiades v4.1 coordinates, source attribution, published park or gallery visitor scope, and the previous corpus identities; the disputed Himare point was excluded.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic Daut Pasha bathhouse in Skopje, used as a public exhibition venue by the National Gallery.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Published identity, representative point and visitor scope audited.",
+          "note": "No independently reviewed site phases assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Gallery of North Macedonia",
+          "Wikidata contributors"
+        ],
+        "description": "Historic Daut Pasha bathhouse in Skopje, used as a public exhibition venue by the National Gallery.",
+        "description_zh": "斯科普里的达乌特帕夏历史浴场，现为北马其顿国家美术馆公众展馆。",
+        "details": "Historic Daut Pasha bathhouse in Skopje, used as a public exhibition venue by the National Gallery.",
+        "geography": {
+          "authority_id": "supplement:auth:mk-public:Q1283985",
+          "countries": [
+            "MK"
+          ],
+          "note": "The country label follows the documented public heritage property.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Historic Daut Pasha bathhouse in Skopje, used as a public exhibition venue by the National Gallery.",
+            "id": "auth:mk-public:Q1283985:visit-0",
+            "license": null,
+            "publisher": "National Gallery of North Macedonia",
+            "revision": "Retrieved 2026-11-28; SHA-256 9d4f7be86085015f663f4e5cbc6a26d87087f298e1e4e79f74836b1eabf476d4.",
+            "title": "Daut Pasha Hamam public source",
+            "uri": "https://nationalgallery.mk/daut-pasha-hamam/?lang=en"
+          }
+        },
+        "id": "auth:mk-public:Q1283985",
+        "location_precision": null,
+        "names": [
+          "Даут пашин амам",
+          "达乌特帕夏浴场"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          21.435833333333,
+          41.998611111111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Historic Daut Pasha bathhouse in Skopje, used as a public exhibition venue by the National Gallery.",
+            "id": "auth:mk-public:Q1283985:visit-0",
+            "license": null,
+            "publisher": "National Gallery of North Macedonia",
+            "revision": "Retrieved 2026-11-28; SHA-256 9d4f7be86085015f663f4e5cbc6a26d87087f298e1e4e79f74836b1eabf476d4.",
+            "title": "Daut Pasha Hamam public source",
+            "uri": "https://nationalgallery.mk/daut-pasha-hamam/?lang=en"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 21.435833333333, latitude 41.998611111111.",
+            "id": "wikidata:Q1283985",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2482679780, statement Q1283985$c8ae6e23-4318-3b75-3249-11ad543b093f.",
+            "title": "Daut Pasha Hamam location evidence",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1283985.json"
+          }
+        ],
+        "source_uri": "https://nationalgallery.mk/daut-pasha-hamam/?lang=en",
+        "title": "Daut Pasha Hamam",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1283985-source-0.html",
+          "sha256": "9d4f7be86085015f663f4e5cbc6a26d87087f298e1e4e79f74836b1eabf476d4",
+          "uri": "https://nationalgallery.mk/daut-pasha-hamam/?lang=en"
+        },
+        {
+          "filename": "Q1283985.json",
+          "sha256": "6c98e002a07e0004928bda6ecb9dd10c1966df1406ba673cd677bb037897ab83",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1283985.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth point for the official named visitor property.",
+        "point": [
+          21.95361111,
+          42.26361111
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1326977.json",
+        "statement_id": "Q1326977$62CC7D6A-806E-4691-8282-6F70E0D3D5A4"
+      },
+      "independent_review": {
+        "method": "An independent agent checked original Wikidata statements and exact Pleiades v4.1 coordinates, source attribution, published park or gallery visitor scope, and the previous corpus identities; the disputed Himare point was excluded.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The publicly visited megalithic archaeological area on the hill above Kokino. A guided visit can be arranged through the site museum.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Published identity, representative point and visitor scope audited.",
+          "note": "No independently reviewed site phases assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Museum Kumanovo",
+          "UNESCO World Heritage Centre",
+          "North Macedonia Film Agency",
+          "Wikidata contributors",
+          "Kokino Observatory Guide"
+        ],
+        "description": "The publicly visited megalithic archaeological area on the hill above Kokino. A guided visit can be arranged through the site museum.",
+        "description_zh": "科基诺村上方丘陵的公开巨石考古遗址，可通过主管博物馆联系导览。",
+        "details": "The publicly visited megalithic archaeological area on the hill above Kokino. A guided visit can be arranged through the site museum.",
+        "geography": {
+          "authority_id": "supplement:auth:mk-public:Q1326977",
+          "countries": [
+            "MK"
+          ],
+          "note": "The country label follows the documented public heritage property.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The named Kokino heritage landscape documented by the municipality. The marker identifies the publicly interpreted archaeological area.",
+            "id": "auth:mk-public:Q1326977:visit-0",
+            "license": null,
+            "publisher": "Museum Kumanovo",
+            "revision": "Retrieved 2026-11-28; SHA-256 cdcd5ae51044da1501fb7ddc87aa94c820700ae47c283305162b54f675741a74.",
+            "title": "Kokino Archaeological Site public source",
+            "uri": "https://www.kumanovomuseum.com/post/megjunarodna-naucna-konferencija-kokino-2026konference-shkencore-nderkombetare-kokino-2026"
+          }
+        },
+        "id": "auth:mk-public:Q1326977",
+        "location_precision": null,
+        "names": [
+          "Кокино",
+          "科基诺考古遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          21.95361111,
+          42.26361111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The named Kokino heritage landscape documented by the municipality. The marker identifies the publicly interpreted archaeological area.",
+            "id": "auth:mk-public:Q1326977:visit-0",
+            "license": null,
+            "publisher": "Museum Kumanovo",
+            "revision": "Retrieved 2026-11-28; SHA-256 cdcd5ae51044da1501fb7ddc87aa94c820700ae47c283305162b54f675741a74.",
+            "title": "Kokino Archaeological Site public source",
+            "uri": "https://www.kumanovomuseum.com/post/megjunarodna-naucna-konferencija-kokino-2026konference-shkencore-nderkombetare-kokino-2026"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The named Kokino heritage landscape documented by the municipality. The marker identifies the publicly interpreted archaeological area.",
+            "id": "auth:mk-public:Q1326977:visit-1",
+            "license": null,
+            "publisher": "UNESCO World Heritage Centre",
+            "revision": "Retrieved 2026-11-28; SHA-256 4ce3804233565dd2bf2c9e8ef19e91cf7409a11dba7b9fb182fd74a4ca600620.",
+            "title": "Kokino Archaeological Site public source",
+            "uri": "https://whc.unesco.org/en/tentativelists/5413/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The named Kokino heritage landscape documented by the municipality. The marker identifies the publicly interpreted archaeological area.",
+            "id": "auth:mk-public:Q1326977:visit-2",
+            "license": null,
+            "publisher": "North Macedonia Film Agency",
+            "revision": "Retrieved 2026-11-28; SHA-256 1964a1263ac5f8581f7c243dac0d6244c6dcbfd3ef78343097b7fe4072415928.",
+            "title": "Kokino Archaeological Site public source",
+            "uri": "https://filmfund.gov.mk/wp-content/uploads/2020/04/Macedonia_ProductionLocationGuide.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 21.95361111, latitude 42.26361111.",
+            "id": "wikidata:Q1326977",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2550033936, statement Q1326977$62CC7D6A-806E-4691-8282-6F70E0D3D5A4.",
+            "title": "Kokino Archaeological Site location evidence",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1326977.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The site guide lists an organised guided-tour request channel for the archaeological area.",
+            "id": "auth:mk-public:Q1326977:independent-visitor",
+            "license": null,
+            "publisher": "Kokino Observatory Guide",
+            "revision": "Retrieved 2026-11-28; SHA-256 5a65cf31c108e83730bde2d09dd451625a71191facc3240bb2de46bb5164c692.",
+            "title": "Kokino Archaeological Site independent visitor confirmation",
+            "uri": "https://play.google.com/store/apps/details?id=com.kokino.android"
+          }
+        ],
+        "source_uri": "https://www.kumanovomuseum.com/post/megjunarodna-naucna-konferencija-kokino-2026konference-shkencore-nderkombetare-kokino-2026",
+        "title": "Kokino Archaeological Site",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1326977-source-0.html",
+          "sha256": "cdcd5ae51044da1501fb7ddc87aa94c820700ae47c283305162b54f675741a74",
+          "uri": "https://www.kumanovomuseum.com/post/megjunarodna-naucna-konferencija-kokino-2026konference-shkencore-nderkombetare-kokino-2026"
+        },
+        {
+          "filename": "Q1326977-source-1.html",
+          "sha256": "4ce3804233565dd2bf2c9e8ef19e91cf7409a11dba7b9fb182fd74a4ca600620",
+          "uri": "https://whc.unesco.org/en/tentativelists/5413/"
+        },
+        {
+          "filename": "Q1326977-source-2.pdf",
+          "sha256": "1964a1263ac5f8581f7c243dac0d6244c6dcbfd3ef78343097b7fe4072415928",
+          "uri": "https://filmfund.gov.mk/wp-content/uploads/2020/04/Macedonia_ProductionLocationGuide.pdf"
+        },
+        {
+          "filename": "Q1326977.json",
+          "sha256": "170ab6c5bf1300e4d71363e2cd7e7a1c80b1148d166aacf6314076468a6df3df",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1326977.json"
+        },
+        {
+          "filename": "independent-kokino-tour.html",
+          "sha256": "5a65cf31c108e83730bde2d09dd451625a71191facc3240bb2de46bb5164c692",
+          "uri": "https://play.google.com/store/apps/details?id=com.kokino.android"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The retained statement lies within the documented archaeological park. The distant statement is outside the named heritage area.",
+        "point": [
+          21.97497222,
+          41.55173889
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1371168.json",
+        "statement_id": "Q1371168$EFCEA528-BFC2-471B-8324-9CB32C5FF7D9"
+      },
+      "independent_review": {
+        "method": "An independent agent checked original Wikidata statements and exact Pleiades v4.1 coordinates, source attribution, published park or gallery visitor scope, and the previous corpus identities; the disputed Himare point was excluded.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The national institution presents the ancient urban site of Stobi through designated public remains and its visitor facilities.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Published identity, representative point and visitor scope audited.",
+          "note": "No independently reviewed site phases assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Institution Stobi",
+          "Wikidata contributors"
+        ],
+        "description": "The national institution presents the ancient urban site of Stobi through designated public remains and its visitor facilities.",
+        "description_zh": "北马其顿斯托比古城由国家机构管理，公众可参观指定遗存与访客展区。",
+        "details": "The national institution presents the ancient urban site of Stobi through designated public remains and its visitor facilities.",
+        "geography": {
+          "authority_id": "supplement:auth:mk-public:Q1371168",
+          "countries": [
+            "MK"
+          ],
+          "note": "The country label follows the documented public heritage property.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national institution presents the ancient urban site of Stobi through designated public remains and its visitor facilities.",
+            "id": "auth:mk-public:Q1371168:visit-0",
+            "license": null,
+            "publisher": "National Institution Stobi",
+            "revision": "Retrieved 2026-11-28; SHA-256 ed9c8f6df4385a3b134cec92925cff9b22c913cfe4ab0989d3eb8888b2e85cda.",
+            "title": "Stobi Archaeological Site public source",
+            "uri": "https://stobi.mk/en/visit-us/tickets-working-hours/"
+          }
+        },
+        "id": "auth:mk-public:Q1371168",
+        "location_precision": null,
+        "names": [
+          "Стоби",
+          "斯托比考古遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          21.97497222,
+          41.55173889
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national institution presents the ancient urban site of Stobi through designated public remains and its visitor facilities.",
+            "id": "auth:mk-public:Q1371168:visit-0",
+            "license": null,
+            "publisher": "National Institution Stobi",
+            "revision": "Retrieved 2026-11-28; SHA-256 ed9c8f6df4385a3b134cec92925cff9b22c913cfe4ab0989d3eb8888b2e85cda.",
+            "title": "Stobi Archaeological Site public source",
+            "uri": "https://stobi.mk/en/visit-us/tickets-working-hours/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national institution presents the ancient urban site of Stobi through designated public remains and its visitor facilities.",
+            "id": "auth:mk-public:Q1371168:visit-1",
+            "license": null,
+            "publisher": "National Institution Stobi",
+            "revision": "Retrieved 2026-11-28; SHA-256 8ea4123c34872fb724221777d392c53ff417146e667d1b641c851630a29f8d5a.",
+            "title": "Stobi Archaeological Site public source",
+            "uri": "https://stobi.mk/en/stobi-2/the-city/the-fortification-of-stobi/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 21.97497222, latitude 41.55173889.",
+            "id": "wikidata:Q1371168",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2516739424, statement Q1371168$EFCEA528-BFC2-471B-8324-9CB32C5FF7D9.",
+            "title": "Stobi Archaeological Site location evidence",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1371168.json"
+          }
+        ],
+        "source_uri": "https://stobi.mk/en/visit-us/tickets-working-hours/",
+        "title": "Stobi Archaeological Site",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1371168-source-0.html",
+          "sha256": "ed9c8f6df4385a3b134cec92925cff9b22c913cfe4ab0989d3eb8888b2e85cda",
+          "uri": "https://stobi.mk/en/visit-us/tickets-working-hours/"
+        },
+        {
+          "filename": "Q1371168-source-1.html",
+          "sha256": "8ea4123c34872fb724221777d392c53ff417146e667d1b641c851630a29f8d5a",
+          "uri": "https://stobi.mk/en/stobi-2/the-city/the-fortification-of-stobi/"
+        },
+        {
+          "filename": "Q1371168.json",
+          "sha256": "32840901daf0577069cbb5d5986d497bbdef4b02f90167047a7b818391970d9f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1371168.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth point for the official named visitor property.",
+        "point": [
+          22.29,
+          41.798888888889
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2884464.json",
+        "statement_id": "Q2884464$4C657300-7D0B-44E1-881D-11C11DD04894"
+      },
+      "independent_review": {
+        "method": "An independent agent checked original Wikidata statements and exact Pleiades v4.1 coordinates, source attribution, published park or gallery visitor scope, and the previous corpus identities; the disputed Himare point was excluded.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The surviving ancient Bargala ruins near Štip. Recent on-site guided visits covered the original remains.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Published identity, representative point and visitor scope audited.",
+          "note": "No independently reviewed site phases assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Institute for Protection of Cultural Monuments and Museum Štip",
+          "Wikidata contributors",
+          "Erasmus Impulse Štip"
+        ],
+        "description": "The surviving ancient Bargala ruins near Štip. Recent on-site guided visits covered the original remains.",
+        "description_zh": "什蒂普附近现存的巴尔加拉考古遗址，近期有组织的导览进入原址开放区域。",
+        "details": "The surviving ancient Bargala ruins near Štip. Recent on-site guided visits covered the original remains.",
+        "geography": {
+          "authority_id": "supplement:auth:mk-public:Q2884464",
+          "countries": [
+            "MK"
+          ],
+          "note": "The country label follows the documented public heritage property.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "An archaeological park near Štip displaying the original ancient urban and ecclesiastical remains.",
+            "id": "auth:mk-public:Q2884464:visit-0",
+            "license": null,
+            "publisher": "Institute for Protection of Cultural Monuments and Museum Štip",
+            "revision": "Retrieved 2026-11-28; SHA-256 4e724fe7210e938745784b4ffc47eadef7e6f2aabd6ded3180f75987878bea4b.",
+            "title": "Bargala Archaeological Site public source",
+            "uri": "https://zavodimuzejstip.mk/en/bargala/"
+          }
+        },
+        "id": "auth:mk-public:Q2884464",
+        "location_precision": null,
+        "names": [
+          "Баргала",
+          "巴尔加拉考古遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          22.29,
+          41.798888888889
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "An archaeological park near Štip displaying the original ancient urban and ecclesiastical remains.",
+            "id": "auth:mk-public:Q2884464:visit-0",
+            "license": null,
+            "publisher": "Institute for Protection of Cultural Monuments and Museum Štip",
+            "revision": "Retrieved 2026-11-28; SHA-256 4e724fe7210e938745784b4ffc47eadef7e6f2aabd6ded3180f75987878bea4b.",
+            "title": "Bargala Archaeological Site public source",
+            "uri": "https://zavodimuzejstip.mk/en/bargala/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 22.29, latitude 41.798888888889.",
+            "id": "wikidata:Q2884464",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2516921971, statement Q2884464$4C657300-7D0B-44E1-881D-11C11DD04894.",
+            "title": "Bargala Archaeological Site location evidence",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2884464.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The local event organiser specifies a March 2026 public guided visit to the original Bargala ruins.",
+            "id": "auth:mk-public:Q2884464:independent-visitor",
+            "license": null,
+            "publisher": "Erasmus Impulse Štip",
+            "revision": "Retrieved 2026-11-28; SHA-256 acabbc889066e70d9e7498deb893736fb836e1bd3468777b0037abf13f9ef8cd.",
+            "title": "Bargala Archaeological Site independent visitor confirmation",
+            "uri": "https://www.erasmusimpulse.com/event/shtip-museum-bargala/"
+          }
+        ],
+        "source_uri": "https://zavodimuzejstip.mk/en/bargala/",
+        "title": "Bargala Archaeological Site",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q2884464-source-0.html",
+          "sha256": "4e724fe7210e938745784b4ffc47eadef7e6f2aabd6ded3180f75987878bea4b",
+          "uri": "https://zavodimuzejstip.mk/en/bargala/"
+        },
+        {
+          "filename": "Q2884464.json",
+          "sha256": "1c84188f135975bc36adc771843df05b06bb0e88e53baca254de6f0c50ce6676",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2884464.json"
+        },
+        {
+          "filename": "independent-bargala-visit.html",
+          "sha256": "acabbc889066e70d9e7498deb893736fb836e1bd3468777b0037abf13f9ef8cd",
+          "uri": "https://www.erasmusimpulse.com/event/shtip-museum-bargala/"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Public Albanian and North Macedonian archaeological and historic properties with exact licensed source coordinates and independent official scope checks."
+}

@@ -1,0 +1,22 @@
+{
+  "base_count": 3995,
+  "base_ids_sha256": "a0d4f7a13fb8b906af0c642d0252b8aa60f06c1c069e70db0f2261b43878ac8b",
+  "base_sites_sha256": "b38eeddc68c6643d792d364d697389a032e097aabf11f1cb6698edb0f30ebf20",
+  "cohort_version": "andalucia-reca-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 23,
+    "total": 4018
+  },
+  "files": {
+    "andalucia_reca_review.json": {
+      "sha256": "b518958cec6782751bb246d32979c06b9186c493171bcc783defc73e2c6bdc75"
+    },
+    "andalucia_reca_sites.json": {
+      "sha256": "35fff33b680ce7a40991976fee121bd0beeeba1800d09c82b8be04984c87f321"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "23 of 31 official public RECA records in the singleton-point WFS snapshot. Excludes the same or potentially overlapping UNESCO places; retains exact publisher coordinates."
+}

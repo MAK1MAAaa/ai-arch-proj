@@ -1,0 +1,1370 @@
+{
+  "base_count": 4694,
+  "base_ids_sha256": "1443591066162636f3d136a5984eaf38f3286ad877163caf19a04c57bfd77f5c",
+  "base_sites_sha256": "457a493d3a8a6057bfd0dd6836242be55f88aa336b41c598ecae4f5b165f5715",
+  "cohort_version": "ecuador-bolivia-brazil-guyana-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata WGS84 representative point matched to the named visitor site.",
+        "point": [
+          -69.14425,
+          -16.04863888888889
+        ],
+        "precision": 2.777777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q18388603.json",
+        "statement_id": "Q18388603$ab5e61f7-40e5-4695-db4f-d28b13bcfb79"
+      },
+      "independent_review": {
+        "method": "Independently checked active exact coordinate claims, frozen source hashes, authority-confirmed public and restoration scope, and compared points with known World Heritage components and existing sites.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The surviving historic Pilkokaina structure on Isla del Sol, with visitation subject to the arrangements of the community of Yumani.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and public designation were verified against frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Gobierno Autónomo Departamental de La Paz",
+          "Wikidata contributors"
+        ],
+        "description": "The surviving historic Pilkokaina structure on Isla del Sol, with visitation subject to the arrangements of the community of Yumani.",
+        "description_zh": "皮尔科凯纳古宫遗址位于玻利维亚，记录官方公众访问范围与地图代表点。",
+        "details": "The surviving historic Pilkokaina structure on Isla del Sol, with visitation subject to the arrangements of the community of Yumani.",
+        "geography": {
+          "authority_id": "supplement:auth:bo-public:Q18388603",
+          "countries": [
+            "BO"
+          ],
+          "note": "Named public heritage place in Yumani, Isla del Sol, La Paz.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The department identifies Pilkokaina as a visitor attraction and distinguishes it from other named ruins.",
+            "id": "auth:bo-public:Q18388603:bo-titicaca-plan.pdf",
+            "license": null,
+            "publisher": "Gobierno Autónomo Departamental de La Paz",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 67756891bb00c24b16987fe9c5bd84e9892da53067ba603018a6a9b7ba7c6808.",
+            "title": "Palacio de Pilkokaina visitor and heritage evidence",
+            "uri": "https://autonomias.lapaz.gob.bo/api/uploads/normativa/650217a270a9c396e680b1b4/6508c10570a9c396e680ba48"
+          }
+        },
+        "id": "auth:bo-public:Q18388603",
+        "location_precision": null,
+        "names": [
+          "皮尔科凯纳古宫遗址",
+          "Palacio de Pilkokaina"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -69.14425,
+          -16.04863888888889
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The department identifies Pilkokaina as a visitor attraction and distinguishes it from other named ruins.",
+            "id": "auth:bo-public:Q18388603:bo-titicaca-plan.pdf",
+            "license": null,
+            "publisher": "Gobierno Autónomo Departamental de La Paz",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 67756891bb00c24b16987fe9c5bd84e9892da53067ba603018a6a9b7ba7c6808.",
+            "title": "Palacio de Pilkokaina visitor and heritage evidence",
+            "uri": "https://autonomias.lapaz.gob.bo/api/uploads/normativa/650217a270a9c396e680b1b4/6508c10570a9c396e680ba48"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -69.14425, latitude -16.04863888888889.",
+            "id": "wikidata:Q18388603",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2530011854, statement Q18388603$ab5e61f7-40e5-4695-db4f-d28b13bcfb79.",
+            "title": "Palacio de Pilkokaina representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q18388603.json"
+          }
+        ],
+        "source_uri": "https://autonomias.lapaz.gob.bo/api/uploads/normativa/650217a270a9c396e680b1b4/6508c10570a9c396e680ba48",
+        "title": "Palacio de Pilkokaina",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q18388603.json",
+          "sha256": "21936ff66b1051d5e077b5d5bbd0f137f0bffd5f60d9bf5105ad0d34a8c2bffd",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q18388603.json"
+        },
+        {
+          "filename": "bo-titicaca-plan.pdf",
+          "sha256": "67756891bb00c24b16987fe9c5bd84e9892da53067ba603018a6a9b7ba7c6808",
+          "uri": "https://autonomias.lapaz.gob.bo/api/uploads/normativa/650217a270a9c396e680b1b4/6508c10570a9c396e680ba48"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata WGS84 representative point matched to the named visitor site.",
+        "point": [
+          -65.26861,
+          -19.08466
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q42799889.json",
+        "statement_id": "Q42799889$E5ECE956-8E0A-45CF-8225-112E36C3861C"
+      },
+      "independent_review": {
+        "method": "Independently checked active exact coordinate claims, frozen source hashes, authority-confirmed public and restoration scope, and compared points with known World Heritage components and existing sites.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic La Glorieta castle outside the historic urban centre of Sucre. Public visits concern designated castle areas.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and public designation were verified against frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tribunal Constitucional Plurinacional de Bolivia",
+          "Gobierno Autónomo Municipal de Sucre",
+          "Wikidata contributors"
+        ],
+        "description": "The historic La Glorieta castle outside the historic urban centre of Sucre. Public visits concern designated castle areas.",
+        "description_zh": "拉格洛列塔城堡位于玻利维亚，记录官方公众访问范围与地图代表点。",
+        "details": "The historic La Glorieta castle outside the historic urban centre of Sucre. Public visits concern designated castle areas.",
+        "geography": {
+          "authority_id": "supplement:auth:bo-public:Q42799889",
+          "countries": [
+            "BO"
+          ],
+          "note": "Named public heritage place in La Glorieta, Sucre.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official bicentennial guide identifies the original castle and gives public visit arrangements.",
+            "id": "auth:bo-public:Q42799889:bo-glorieta.html",
+            "license": null,
+            "publisher": "Tribunal Constitucional Plurinacional de Bolivia",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 29fb72bb2b5baf564bf423593e7e74f0aa0f9a6707471166d84a745a4608c509.",
+            "title": "Castillo de La Glorieta visitor and heritage evidence",
+            "uri": "https://bicentenariocpe.tcpbolivia.bo/guia-turistica/lugar/castillo-de-la-glorieta"
+          }
+        },
+        "id": "auth:bo-public:Q42799889",
+        "location_precision": null,
+        "names": [
+          "拉格洛列塔城堡",
+          "Castillo de La Glorieta"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -65.26861,
+          -19.08466
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official bicentennial guide identifies the original castle and gives public visit arrangements.",
+            "id": "auth:bo-public:Q42799889:bo-glorieta.html",
+            "license": null,
+            "publisher": "Tribunal Constitucional Plurinacional de Bolivia",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 29fb72bb2b5baf564bf423593e7e74f0aa0f9a6707471166d84a745a4608c509.",
+            "title": "Castillo de La Glorieta visitor and heritage evidence",
+            "uri": "https://bicentenariocpe.tcpbolivia.bo/guia-turistica/lugar/castillo-de-la-glorieta"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal record identifies the historic castle and restoration work.",
+            "id": "auth:bo-public:Q42799889:bo-glorieta-protected.pdf",
+            "license": null,
+            "publisher": "Gobierno Autónomo Municipal de Sucre",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 bab28fa06ed766d161fc87cc422667fc566510a4dcb6a27a15d52ab3b055c122.",
+            "title": "Castillo de La Glorieta visitor and heritage evidence",
+            "uri": "https://gacetamunicipalsucre.gob.bo/docs/normas/resolucion/3745/rm-255-02.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -65.26861, latitude -19.08466.",
+            "id": "wikidata:Q42799889",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2548517254, statement Q42799889$E5ECE956-8E0A-45CF-8225-112E36C3861C.",
+            "title": "Castillo de La Glorieta representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q42799889.json"
+          }
+        ],
+        "source_uri": "https://bicentenariocpe.tcpbolivia.bo/guia-turistica/lugar/castillo-de-la-glorieta",
+        "title": "Castillo de La Glorieta",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q42799889.json",
+          "sha256": "7d34c8fb0efd9d3eb1311c35175737bd7eae0fa52bcba72379cc1a84c7f6c351",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q42799889.json"
+        },
+        {
+          "filename": "bo-glorieta.html",
+          "sha256": "29fb72bb2b5baf564bf423593e7e74f0aa0f9a6707471166d84a745a4608c509",
+          "uri": "https://bicentenariocpe.tcpbolivia.bo/guia-turistica/lugar/castillo-de-la-glorieta"
+        },
+        {
+          "filename": "bo-glorieta-protected.pdf",
+          "sha256": "bab28fa06ed766d161fc87cc422667fc566510a4dcb6a27a15d52ab3b055c122",
+          "uri": "https://gacetamunicipalsucre.gob.bo/docs/normas/resolucion/3745/rm-255-02.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata WGS84 representative point matched to the named visitor site.",
+        "point": [
+          -68.135136,
+          -16.494376
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6033596.json",
+        "statement_id": "Q6033596$ED2EF541-988A-4455-8914-A5D54A7C2E34"
+      },
+      "independent_review": {
+        "method": "Independently checked active exact coordinate claims, frozen source hashes, authority-confirmed public and restoration scope, and compared points with known World Heritage components and existing sites.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic Villaverde palace on Calle Ingavi housing the public National Museum of Ethnography and Folklore in La Paz.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and public designation were verified against frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Museo Nacional de Etnografía y Folklore",
+          "Wikidata contributors"
+        ],
+        "description": "The historic Villaverde palace on Calle Ingavi housing the public National Museum of Ethnography and Folklore in La Paz.",
+        "description_zh": "比利亚韦尔德侯爵宫旧址位于玻利维亚，记录官方公众访问范围与地图代表点。",
+        "details": "The historic Villaverde palace on Calle Ingavi housing the public National Museum of Ethnography and Folklore in La Paz.",
+        "geography": {
+          "authority_id": "supplement:auth:bo-public:Q6033596",
+          "countries": [
+            "BO"
+          ],
+          "note": "Named public heritage place in La Paz.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum identifies its La Paz location as the former palace of the Marquesses of Villaverde.",
+            "id": "auth:bo-public:Q6033596:bo-musef.html",
+            "license": null,
+            "publisher": "Museo Nacional de Etnografía y Folklore",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 1d251388b43e6ad3939595c5c7b08fa3a7036bae7f60c1d4ca5033a32587d8da.",
+            "title": "Palacio de los Marqueses de Villaverde visitor and heritage evidence",
+            "uri": "https://www.musef.gob.bo/quienes-somos"
+          }
+        },
+        "id": "auth:bo-public:Q6033596",
+        "location_precision": null,
+        "names": [
+          "比利亚韦尔德侯爵宫旧址",
+          "Palacio de los Marqueses de Villaverde"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -68.135136,
+          -16.494376
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum identifies its La Paz location as the former palace of the Marquesses of Villaverde.",
+            "id": "auth:bo-public:Q6033596:bo-musef.html",
+            "license": null,
+            "publisher": "Museo Nacional de Etnografía y Folklore",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 1d251388b43e6ad3939595c5c7b08fa3a7036bae7f60c1d4ca5033a32587d8da.",
+            "title": "Palacio de los Marqueses de Villaverde visitor and heritage evidence",
+            "uri": "https://www.musef.gob.bo/quienes-somos"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum publishes its La Paz visitor opening times.",
+            "id": "auth:bo-public:Q6033596:bo-musef-hours.html",
+            "license": null,
+            "publisher": "Museo Nacional de Etnografía y Folklore",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 d173a5c193e7741693323a30670752e6a9115148887f32702d9ba3487b7dbd2a.",
+            "title": "Palacio de los Marqueses de Villaverde visitor and heritage evidence",
+            "uri": "https://www.musef.gob.bo/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -68.135136, latitude -16.494376.",
+            "id": "wikidata:Q6033596",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2548520282, statement Q6033596$ED2EF541-988A-4455-8914-A5D54A7C2E34.",
+            "title": "Palacio de los Marqueses de Villaverde representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6033596.json"
+          }
+        ],
+        "source_uri": "https://www.musef.gob.bo/quienes-somos",
+        "title": "Palacio de los Marqueses de Villaverde",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q6033596.json",
+          "sha256": "b67ba979c6c0403b7ee4b0c41806c436274d7e4d628f35498c096167bc12af57",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6033596.json"
+        },
+        {
+          "filename": "bo-musef.html",
+          "sha256": "1d251388b43e6ad3939595c5c7b08fa3a7036bae7f60c1d4ca5033a32587d8da",
+          "uri": "https://www.musef.gob.bo/quienes-somos"
+        },
+        {
+          "filename": "bo-musef-hours.html",
+          "sha256": "d173a5c193e7741693323a30670752e6a9115148887f32702d9ba3487b7dbd2a",
+          "uri": "https://www.musef.gob.bo/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata WGS84 representative point matched to the named visitor site.",
+        "point": [
+          -51.04913333,
+          0.03105833
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10283640.json",
+        "statement_id": "Q10283640$BD92D7C3-9F4C-4669-8FA1-89136E4FB1F1"
+      },
+      "independent_review": {
+        "method": "Independently checked active exact coordinate claims, frozen source hashes, authority-confirmed public and restoration scope, and compared points with known World Heritage components and existing sites.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The eighteenth-century fort and museum in Macapá. Visitor access is subject to designated areas and ongoing conservation work.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and public designation were verified against frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Instituto Brasileiro de Museus",
+          "Ministério do Turismo, Brasil",
+          "Wikidata contributors"
+        ],
+        "description": "The eighteenth-century fort and museum in Macapá. Visitor access is subject to designated areas and ongoing conservation work.",
+        "description_zh": "马卡帕圣若泽堡垒位于巴西，记录官方公众访问范围与地图代表点。",
+        "details": "The eighteenth-century fort and museum in Macapá. Visitor access is subject to designated areas and ongoing conservation work.",
+        "geography": {
+          "authority_id": "supplement:auth:br-public:Q10283640",
+          "countries": [
+            "BR"
+          ],
+          "note": "Named public heritage place in Macapá, Amapá.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The federal museum directory describes the original fort and publishes visitor times for the site museum.",
+            "id": "auth:br-public:Q10283640:br-macapa-museu.html",
+            "license": null,
+            "publisher": "Instituto Brasileiro de Museus",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 aff3f48e88d280a1fa2fa1ddec4efc6609aeae192f057d38ec65290201fffb5f.",
+            "title": "Fortaleza de São José de Macapá visitor and heritage evidence",
+            "uri": "https://visite.museus.gov.br/instituicoes/museu-fortaleza-de-sao-jose-de-macapa/"
+          }
+        },
+        "id": "auth:br-public:Q10283640",
+        "location_precision": null,
+        "names": [
+          "马卡帕圣若泽堡垒",
+          "Fortaleza de São José de Macapá"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -51.04913333,
+          0.03105833
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The federal museum directory describes the original fort and publishes visitor times for the site museum.",
+            "id": "auth:br-public:Q10283640:br-macapa-museu.html",
+            "license": null,
+            "publisher": "Instituto Brasileiro de Museus",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 aff3f48e88d280a1fa2fa1ddec4efc6609aeae192f057d38ec65290201fffb5f.",
+            "title": "Fortaleza de São José de Macapá visitor and heritage evidence",
+            "uri": "https://visite.museus.gov.br/instituicoes/museu-fortaleza-de-sao-jose-de-macapa/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The federal register identifies the protected fort and its collection.",
+            "id": "auth:br-public:Q10283640:br-macapa-federal.html",
+            "license": null,
+            "publisher": "Ministério do Turismo, Brasil",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 9ad5d711b61db28dd1e7d090d8a7c8957920ce5e339f54ae1fe71805bad682c6.",
+            "title": "Fortaleza de São José de Macapá visitor and heritage evidence",
+            "uri": "https://www.gov.br/turismo/pt-br/centrais-de-conteudo-/publicacoes/atos-normativos-2/2022/portaria-mtur-no-6-de-1o-de-fevereiro-de-2022"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -51.04913333, latitude 0.03105833.",
+            "id": "wikidata:Q10283640",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2574340983, statement Q10283640$BD92D7C3-9F4C-4669-8FA1-89136E4FB1F1.",
+            "title": "Fortaleza de São José de Macapá representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10283640.json"
+          }
+        ],
+        "source_uri": "https://visite.museus.gov.br/instituicoes/museu-fortaleza-de-sao-jose-de-macapa/",
+        "title": "Fortaleza de São José de Macapá",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q10283640.json",
+          "sha256": "120040f899aae74b82a239aacc0f05f23d646b6f6fec05b3aea9e0b516de2c7e",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10283640.json"
+        },
+        {
+          "filename": "br-macapa-museu.html",
+          "sha256": "aff3f48e88d280a1fa2fa1ddec4efc6609aeae192f057d38ec65290201fffb5f",
+          "uri": "https://visite.museus.gov.br/instituicoes/museu-fortaleza-de-sao-jose-de-macapa/"
+        },
+        {
+          "filename": "br-macapa-federal.html",
+          "sha256": "9ad5d711b61db28dd1e7d090d8a7c8957920ce5e339f54ae1fe71805bad682c6",
+          "uri": "https://www.gov.br/turismo/pt-br/centrais-de-conteudo-/publicacoes/atos-normativos-2/2022/portaria-mtur-no-6-de-1o-de-fevereiro-de-2022"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata WGS84 representative point matched to the named visitor site.",
+        "point": [
+          -56.0905,
+          -15.624944444444445
+        ],
+        "precision": 2.777777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q123204125.json",
+        "statement_id": "Q123204125$cf86243e-40ed-e1f1-4c8f-eb640b992dfa"
+      },
+      "independent_review": {
+        "method": "Independently checked active exact coordinate claims, frozen source hashes, authority-confirmed public and restoration scope, and compared points with known World Heritage components and existing sites.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Protected historic Casa Dom Aquino in Cuiabá, occupied by the Mato Grosso Natural History Museum and its public exhibitions.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and public designation were verified against frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Secretaria de Estado de Cultura, Esporte e Lazer de Mato Grosso",
+          "Wikidata contributors"
+        ],
+        "description": "Protected historic Casa Dom Aquino in Cuiabá, occupied by the Mato Grosso Natural History Museum and its public exhibitions.",
+        "description_zh": "多姆阿基诺历史故居位于巴西，记录官方公众访问范围与地图代表点。",
+        "details": "Protected historic Casa Dom Aquino in Cuiabá, occupied by the Mato Grosso Natural History Museum and its public exhibitions.",
+        "geography": {
+          "authority_id": "supplement:auth:br-public:Q123204125",
+          "countries": [
+            "BR"
+          ],
+          "note": "Named public heritage place in Cuiabá, Mato Grosso.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The state describes the museum in the protected original house and announces public programming in November 2026.",
+            "id": "auth:br-public:Q123204125:br-dom-aquino-public.html",
+            "license": null,
+            "publisher": "Secretaria de Estado de Cultura, Esporte e Lazer de Mato Grosso",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 7dce0f4f9958c289967191b6e488d4e126baf70f1f465260eff5ac5d7203fbdc.",
+            "title": "Casa Dom Aquino visitor and heritage evidence",
+            "uri": "https://www.detran.mt.gov.br/web/sec/-/museu-de-hist%C3%B3ria-natural-de-mato-grosso-traz-diversas-atra%C3%A7%C3%B5es-art%C3%ADsticas-em-programa%C3%A7%C3%A3o-de-novembro"
+          }
+        },
+        "id": "auth:br-public:Q123204125",
+        "location_precision": null,
+        "names": [
+          "多姆阿基诺历史故居",
+          "Casa Dom Aquino"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -56.0905,
+          -15.624944444444445
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state describes the museum in the protected original house and announces public programming in November 2026.",
+            "id": "auth:br-public:Q123204125:br-dom-aquino-public.html",
+            "license": null,
+            "publisher": "Secretaria de Estado de Cultura, Esporte e Lazer de Mato Grosso",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 7dce0f4f9958c289967191b6e488d4e126baf70f1f465260eff5ac5d7203fbdc.",
+            "title": "Casa Dom Aquino visitor and heritage evidence",
+            "uri": "https://www.detran.mt.gov.br/web/sec/-/museu-de-hist%C3%B3ria-natural-de-mato-grosso-traz-diversas-atra%C3%A7%C3%B5es-art%C3%ADsticas-em-programa%C3%A7%C3%A3o-de-novembro"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -56.0905, latitude -15.624944444444445.",
+            "id": "wikidata:Q123204125",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2523784522, statement Q123204125$cf86243e-40ed-e1f1-4c8f-eb640b992dfa.",
+            "title": "Casa Dom Aquino representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q123204125.json"
+          }
+        ],
+        "source_uri": "https://www.detran.mt.gov.br/web/sec/-/museu-de-hist%C3%B3ria-natural-de-mato-grosso-traz-diversas-atra%C3%A7%C3%B5es-art%C3%ADsticas-em-programa%C3%A7%C3%A3o-de-novembro",
+        "title": "Casa Dom Aquino",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q123204125.json",
+          "sha256": "080eb5cad5841412254d963107cd90cd6d2a16b4b777eb784f133ac81d8578c9",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q123204125.json"
+        },
+        {
+          "filename": "br-dom-aquino-public.html",
+          "sha256": "7dce0f4f9958c289967191b6e488d4e126baf70f1f465260eff5ac5d7203fbdc",
+          "uri": "https://www.detran.mt.gov.br/web/sec/-/museu-de-hist%C3%B3ria-natural-de-mato-grosso-traz-diversas-atra%C3%A7%C3%B5es-art%C3%ADsticas-em-programa%C3%A7%C3%A3o-de-novembro"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata WGS84 representative point matched to the named visitor site.",
+        "point": [
+          -57.792132258503706,
+          -19.92041179864928
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q8962997.json",
+        "statement_id": "Q8962997$72063E5A-E79B-4759-AD35-0FF74F654300"
+      },
+      "independent_review": {
+        "method": "Independently checked active exact coordinate claims, frozen source hashes, authority-confirmed public and restoration scope, and compared points with known World Heritage components and existing sites.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic fort on the Paraguay River. The marker refers to the old fort; visits are limited to areas designated by its operator.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and public designation were verified against frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Instituto do Patrimônio Histórico e Artístico Nacional",
+          "Governo de Mato Grosso do Sul",
+          "Wikidata contributors"
+        ],
+        "description": "The historic fort on the Paraguay River. The marker refers to the old fort; visits are limited to areas designated by its operator.",
+        "description_zh": "科英布拉堡垒位于巴西，记录官方公众访问范围与地图代表点。",
+        "details": "The historic fort on the Paraguay River. The marker refers to the old fort; visits are limited to areas designated by its operator.",
+        "geography": {
+          "authority_id": "supplement:auth:br-public:Q8962997",
+          "countries": [
+            "BR"
+          ],
+          "note": "Named public heritage place in Corumbá, Mato Grosso do Sul.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Iphan names the historic fort and describes the parts included in the public visitor programme.",
+            "id": "auth:br-public:Q8962997:br-coimbra.html",
+            "license": null,
+            "publisher": "Instituto do Patrimônio Histórico e Artístico Nacional",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 07a164ef8ca9f4e16fb3320238d902af0d48bc2701b5df9c9d812f36f2d72f90.",
+            "title": "Forte de Coimbra visitor and heritage evidence",
+            "uri": "https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-material/fortificacoes-brasileiras/fortes-incluidos-na-lista-indicativa-a-patrimonio-mundial"
+          }
+        },
+        "id": "auth:br-public:Q8962997",
+        "location_precision": null,
+        "names": [
+          "科英布拉堡垒",
+          "Forte de Coimbra"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -57.792132258503706,
+          -19.92041179864928
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Iphan names the historic fort and describes the parts included in the public visitor programme.",
+            "id": "auth:br-public:Q8962997:br-coimbra.html",
+            "license": null,
+            "publisher": "Instituto do Patrimônio Histórico e Artístico Nacional",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 07a164ef8ca9f4e16fb3320238d902af0d48bc2701b5df9c9d812f36f2d72f90.",
+            "title": "Forte de Coimbra visitor and heritage evidence",
+            "uri": "https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-material/fortificacoes-brasileiras/fortes-incluidos-na-lista-indicativa-a-patrimonio-mundial"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state describes conservation work at the historic fort.",
+            "id": "auth:br-public:Q8962997:br-coimbra-works.html",
+            "license": null,
+            "publisher": "Governo de Mato Grosso do Sul",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 08f7c7f9e15caad91f5af679d7f4c0bd72915a8bb65df6dbc8bfa0298fce38b1.",
+            "title": "Forte de Coimbra visitor and heritage evidence",
+            "uri": "https://agenciadenoticias.ms.gov.br/simbolo-da-historia-do-brasil-e-de-ms-forte-coimbra-completa-250-anos-e-sera-restaurado/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -57.792132258503706, latitude -19.92041179864928.",
+            "id": "wikidata:Q8962997",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2574340889, statement Q8962997$72063E5A-E79B-4759-AD35-0FF74F654300.",
+            "title": "Forte de Coimbra representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q8962997.json"
+          }
+        ],
+        "source_uri": "https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-material/fortificacoes-brasileiras/fortes-incluidos-na-lista-indicativa-a-patrimonio-mundial",
+        "title": "Forte de Coimbra",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q8962997.json",
+          "sha256": "147d69195aaf70a8aab0a482b5ac17a1f4913623a68c4a152ebf12e43c3c3572",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q8962997.json"
+        },
+        {
+          "filename": "br-coimbra.html",
+          "sha256": "07a164ef8ca9f4e16fb3320238d902af0d48bc2701b5df9c9d812f36f2d72f90",
+          "uri": "https://www.gov.br/iphan/pt-br/patrimonio-cultural/patrimonio-material/fortificacoes-brasileiras/fortes-incluidos-na-lista-indicativa-a-patrimonio-mundial"
+        },
+        {
+          "filename": "br-coimbra-works.html",
+          "sha256": "08f7c7f9e15caad91f5af679d7f4c0bd72915a8bb65df6dbc8bfa0298fce38b1",
+          "uri": "https://agenciadenoticias.ms.gov.br/simbolo-da-historia-do-brasil-e-de-ms-forte-coimbra-completa-250-anos-e-sera-restaurado/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata WGS84 representative point matched to the named visitor site.",
+        "point": [
+          -78.50736107920429,
+          -0.14696625626572288
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q122840060.json",
+        "statement_id": "Q122840060$cef66038-4e25-f0ed-aa23-3d2594bb2f07"
+      },
+      "independent_review": {
+        "method": "Independently checked active exact coordinate claims, frozen source hashes, authority-confirmed public and restoration scope, and compared points with known World Heritage components and existing sites.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Archaeological cemetery and visitor interpretation area in northwestern Quito. Public access follows site-museum arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and public designation were verified against frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Sistema de Museos y Espacios Culturales Quito",
+          "Instituto Metropolitano de Patrimonio, Quito",
+          "Wikidata contributors"
+        ],
+        "description": "Archaeological cemetery and visitor interpretation area in northwestern Quito. Public access follows site-museum arrangements.",
+        "description_zh": "基多拉佛罗里达墓葬遗址位于厄瓜多尔，记录官方公众访问范围与地图代表点。",
+        "details": "Archaeological cemetery and visitor interpretation area in northwestern Quito. Public access follows site-museum arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:ec-public:Q122840060",
+          "countries": [
+            "EC"
+          ],
+          "note": "Named public heritage place in La Florida Alta, Quito.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal museum network identifies the cemetery and the public site museum at Antonio Costas.",
+            "id": "auth:ec-public:Q122840060:ec-la-florida.html",
+            "license": null,
+            "publisher": "Sistema de Museos y Espacios Culturales Quito",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 900bb6a22cf03dd308465966fa78b6083549dfd6eee645440262e3126be5cd68.",
+            "title": "Museo de Sitio La Florida visitor and heritage evidence",
+            "uri": "https://museosquito.gob.ec/espacios/museo-de-sitio-la-florida/"
+          }
+        },
+        "id": "auth:ec-public:Q122840060",
+        "location_precision": null,
+        "names": [
+          "基多拉佛罗里达墓葬遗址",
+          "Museo de Sitio La Florida"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -78.50736107920429,
+          -0.14696625626572288
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal museum network identifies the cemetery and the public site museum at Antonio Costas.",
+            "id": "auth:ec-public:Q122840060:ec-la-florida.html",
+            "license": null,
+            "publisher": "Sistema de Museos y Espacios Culturales Quito",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 900bb6a22cf03dd308465966fa78b6083549dfd6eee645440262e3126be5cd68.",
+            "title": "Museo de Sitio La Florida visitor and heritage evidence",
+            "uri": "https://museosquito.gob.ec/espacios/museo-de-sitio-la-florida/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipality publishes visitor arrangements for the original archaeological site.",
+            "id": "auth:ec-public:Q122840060:ec-quito-visits.html",
+            "license": null,
+            "publisher": "Instituto Metropolitano de Patrimonio, Quito",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 19f844b3b01570ef97780ffbdb8b866fa386c4d14423cb36c72ef9cfaaf40b80.",
+            "title": "Museo de Sitio La Florida visitor and heritage evidence",
+            "uri": "https://quitoinforma.quito.gob.ec/2021/03/29/visite-los-museos-de-sitio-del-instituto-metropolitano-de-patrimonio/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -78.50736107920429, latitude -0.14696625626572288.",
+            "id": "wikidata:Q122840060",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2404626821, statement Q122840060$cef66038-4e25-f0ed-aa23-3d2594bb2f07.",
+            "title": "Museo de Sitio La Florida representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q122840060.json"
+          }
+        ],
+        "source_uri": "https://museosquito.gob.ec/espacios/museo-de-sitio-la-florida/",
+        "title": "Museo de Sitio La Florida",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q122840060.json",
+          "sha256": "a2d331d10b624ec9499f85bf44381e766577062ae224dc46633b5213e42497e0",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q122840060.json"
+        },
+        {
+          "filename": "ec-la-florida.html",
+          "sha256": "900bb6a22cf03dd308465966fa78b6083549dfd6eee645440262e3126be5cd68",
+          "uri": "https://museosquito.gob.ec/espacios/museo-de-sitio-la-florida/"
+        },
+        {
+          "filename": "ec-quito-visits.html",
+          "sha256": "19f844b3b01570ef97780ffbdb8b866fa386c4d14423cb36c72ef9cfaaf40b80",
+          "uri": "https://quitoinforma.quito.gob.ec/2021/03/29/visite-los-museos-de-sitio-del-instituto-metropolitano-de-patrimonio/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata WGS84 representative point matched to the named visitor site.",
+        "point": [
+          -78.30408333,
+          0.05505556
+        ],
+        "precision": 2.777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5103621.json",
+        "statement_id": "Q5103621$85DC1E73-692B-4285-B1F2-17C6DA40DF90"
+      },
+      "independent_review": {
+        "method": "Independently checked active exact coordinate claims, frozen source hashes, authority-confirmed public and restoration scope, and compared points with known World Heritage components and existing sites.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Pre-Hispanic earth pyramids and mounds in the archaeological park at Cochasquí. The representative point denotes the publicly interpreted monument area.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and public designation were verified against frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Prefectura de Pichincha, Parque Arqueológico Cochasquí",
+          "Wikidata contributors"
+        ],
+        "description": "Pre-Hispanic earth pyramids and mounds in the archaeological park at Cochasquí. The representative point denotes the publicly interpreted monument area.",
+        "description_zh": "科查斯基考古公园位于厄瓜多尔，记录官方公众访问范围与地图代表点。",
+        "details": "Pre-Hispanic earth pyramids and mounds in the archaeological park at Cochasquí. The representative point denotes the publicly interpreted monument area.",
+        "geography": {
+          "authority_id": "supplement:auth:ec-public:Q5103621",
+          "countries": [
+            "EC"
+          ],
+          "note": "Named public heritage place in Pedro Moncayo, Pichincha.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The site operator describes the original monumental structures and the public archaeological visit.",
+            "id": "auth:ec-public:Q5103621:ec-cochasqui.html",
+            "license": null,
+            "publisher": "Prefectura de Pichincha, Parque Arqueológico Cochasquí",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 b3ff7a6cce511c4c047c3d08a93f951ff936b77b3268073487ab9297af782222.",
+            "title": "Parque Arqueológico Cochasquí visitor and heritage evidence",
+            "uri": "https://parquecochasqui.mitaddelmundo.gob.ec/"
+          }
+        },
+        "id": "auth:ec-public:Q5103621",
+        "location_precision": null,
+        "names": [
+          "科查斯基考古公园",
+          "Parque Arqueológico Cochasquí"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -78.30408333,
+          0.05505556
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The site operator describes the original monumental structures and the public archaeological visit.",
+            "id": "auth:ec-public:Q5103621:ec-cochasqui.html",
+            "license": null,
+            "publisher": "Prefectura de Pichincha, Parque Arqueológico Cochasquí",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 b3ff7a6cce511c4c047c3d08a93f951ff936b77b3268073487ab9297af782222.",
+            "title": "Parque Arqueológico Cochasquí visitor and heritage evidence",
+            "uri": "https://parquecochasqui.mitaddelmundo.gob.ec/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -78.30408333, latitude 0.05505556.",
+            "id": "wikidata:Q5103621",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2558337960, statement Q5103621$85DC1E73-692B-4285-B1F2-17C6DA40DF90.",
+            "title": "Parque Arqueológico Cochasquí representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5103621.json"
+          }
+        ],
+        "source_uri": "https://parquecochasqui.mitaddelmundo.gob.ec/",
+        "title": "Parque Arqueológico Cochasquí",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q5103621.json",
+          "sha256": "756a257f48d904b0374dcea442c4749498a1cfabfbd5ca5c1e3578b1c5d4a952",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5103621.json"
+        },
+        {
+          "filename": "ec-cochasqui.html",
+          "sha256": "b3ff7a6cce511c4c047c3d08a93f951ff936b77b3268073487ab9297af782222",
+          "uri": "https://parquecochasqui.mitaddelmundo.gob.ec/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata WGS84 representative point matched to the named visitor site.",
+        "point": [
+          -58.14992,
+          6.80604
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5049685.json",
+        "statement_id": "Q5049685$CED85A8C-1D3C-45D4-A78F-10407DC9FB2B"
+      },
+      "independent_review": {
+        "method": "Independently checked active exact coordinate claims, frozen source hashes, authority-confirmed public and restoration scope, and compared points with known World Heritage components and existing sites.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original historic Castellani House, now housing public exhibitions of Guyana’s National Gallery of Art.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and public designation were verified against frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Trust of Guyana",
+          "Ministry of Education, Guyana",
+          "Wikidata contributors"
+        ],
+        "description": "The original historic Castellani House, now housing public exhibitions of Guyana’s National Gallery of Art.",
+        "description_zh": "卡斯泰拉尼历史宅邸位于圭亚那，记录官方公众访问范围与地图代表点。",
+        "details": "The original historic Castellani House, now housing public exhibitions of Guyana’s National Gallery of Art.",
+        "geography": {
+          "authority_id": "supplement:auth:gy-public:Q5049685",
+          "countries": [
+            "GY"
+          ],
+          "note": "Named public heritage place in Vlissengen Road, Georgetown.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The National Trust identifies the former residence and the National Gallery at this location.",
+            "id": "auth:gy-public:Q5049685:gy-castellani.html",
+            "license": null,
+            "publisher": "National Trust of Guyana",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 88406f31df36477048b68bf7c6919a144533855a0879a95408a41bf233bd2abd.",
+            "title": "Castellani House visitor and heritage evidence",
+            "uri": "https://ntg.gov.gy/monument/castellani-house-national-gallery-of-art/"
+          }
+        },
+        "id": "auth:gy-public:Q5049685",
+        "location_precision": null,
+        "names": [
+          "卡斯泰拉尼历史宅邸",
+          "Castellani House"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -58.14992,
+          6.80604
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The National Trust identifies the former residence and the National Gallery at this location.",
+            "id": "auth:gy-public:Q5049685:gy-castellani.html",
+            "license": null,
+            "publisher": "National Trust of Guyana",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 88406f31df36477048b68bf7c6919a144533855a0879a95408a41bf233bd2abd.",
+            "title": "Castellani House visitor and heritage evidence",
+            "uri": "https://ntg.gov.gy/monument/castellani-house-national-gallery-of-art/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official account identifies a 2026 public exhibition in the gallery at Castellani House.",
+            "id": "auth:gy-public:Q5049685:gy-castellani-moe.html",
+            "license": null,
+            "publisher": "Ministry of Education, Guyana",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 e460ba3e0fc7b871244f50371e6418381850e4c1360b1784f863629f8fa6a930.",
+            "title": "Castellani House visitor and heritage evidence",
+            "uri": "https://education.gov.gy/en/index.php/media2/news-events/10069-national-cxc-visual-arts-exhibition-showcases-student-talent"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -58.14992, latitude 6.80604.",
+            "id": "wikidata:Q5049685",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2484635092, statement Q5049685$CED85A8C-1D3C-45D4-A78F-10407DC9FB2B.",
+            "title": "Castellani House representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5049685.json"
+          }
+        ],
+        "source_uri": "https://ntg.gov.gy/monument/castellani-house-national-gallery-of-art/",
+        "title": "Castellani House",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q5049685.json",
+          "sha256": "f3dea0c5dc50ee8c1c45a5e9088ced4b8505a4d18887767ca9622fefe01461ea",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5049685.json"
+        },
+        {
+          "filename": "gy-castellani.html",
+          "sha256": "88406f31df36477048b68bf7c6919a144533855a0879a95408a41bf233bd2abd",
+          "uri": "https://ntg.gov.gy/monument/castellani-house-national-gallery-of-art/"
+        },
+        {
+          "filename": "gy-castellani-moe.html",
+          "sha256": "e460ba3e0fc7b871244f50371e6418381850e4c1360b1784f863629f8fa6a930",
+          "uri": "https://education.gov.gy/en/index.php/media2/news-events/10069-national-cxc-visual-arts-exhibition-showcases-student-talent"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata WGS84 representative point matched to the named visitor site.",
+        "point": [
+          -58.1643569,
+          6.8236966
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5547025.json",
+        "statement_id": "Q5547025$8C9C990D-5E81-44FE-8944-6B83246612A0"
+      },
+      "independent_review": {
+        "method": "Independently checked active exact coordinate claims, frozen source hashes, authority-confirmed public and restoration scope, and compared points with known World Heritage components and existing sites.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The nineteenth-century Georgetown Lighthouse. Public visits to the historic structure follow the official booking arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and public designation were verified against frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Trust of Guyana",
+          "Government of Guyana",
+          "Wikidata contributors"
+        ],
+        "description": "The nineteenth-century Georgetown Lighthouse. Public visits to the historic structure follow the official booking arrangements.",
+        "description_zh": "乔治敦灯塔位于圭亚那，记录官方公众访问范围与地图代表点。",
+        "details": "The nineteenth-century Georgetown Lighthouse. Public visits to the historic structure follow the official booking arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:gy-public:Q5547025",
+          "countries": [
+            "GY"
+          ],
+          "note": "Named public heritage place in Kingston, Georgetown.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The National Trust identifies the historic lighthouse in Georgetown.",
+            "id": "auth:gy-public:Q5547025:gy-light.html",
+            "license": null,
+            "publisher": "National Trust of Guyana",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 9d76c5de2f6aaf1f9d4552418c43caa03759eded2c59a69b16709a49d2c6a3da.",
+            "title": "Georgetown Lighthouse visitor and heritage evidence",
+            "uri": "https://ntg.gov.gy/monument/lighthouse/"
+          }
+        },
+        "id": "auth:gy-public:Q5547025",
+        "location_precision": null,
+        "names": [
+          "乔治敦灯塔",
+          "Georgetown Lighthouse"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -58.1643569,
+          6.8236966
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The National Trust identifies the historic lighthouse in Georgetown.",
+            "id": "auth:gy-public:Q5547025:gy-light.html",
+            "license": null,
+            "publisher": "National Trust of Guyana",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 9d76c5de2f6aaf1f9d4552418c43caa03759eded2c59a69b16709a49d2c6a3da.",
+            "title": "Georgetown Lighthouse visitor and heritage evidence",
+            "uri": "https://ntg.gov.gy/monument/lighthouse/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The government accepts public visitor bookings for the lighthouse.",
+            "id": "auth:gy-public:Q5547025:gy-light-public.html",
+            "license": null,
+            "publisher": "Government of Guyana",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 c958224f41cf47d8c3693a18ccc810945d62f5ebb6530cde195af45f86eee855.",
+            "title": "Georgetown Lighthouse visitor and heritage evidence",
+            "uri": "https://portal.gov.gy/services/lighthouse-visit-booking"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -58.1643569, latitude 6.8236966.",
+            "id": "wikidata:Q5547025",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 1967652990, statement Q5547025$8C9C990D-5E81-44FE-8944-6B83246612A0.",
+            "title": "Georgetown Lighthouse representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5547025.json"
+          }
+        ],
+        "source_uri": "https://ntg.gov.gy/monument/lighthouse/",
+        "title": "Georgetown Lighthouse",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q5547025.json",
+          "sha256": "f83ce89d6d97e9fef1d4a4eddf601fb507a279d1568cd1a84d232e8f589bcaf5",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5547025.json"
+        },
+        {
+          "filename": "gy-light.html",
+          "sha256": "9d76c5de2f6aaf1f9d4552418c43caa03759eded2c59a69b16709a49d2c6a3da",
+          "uri": "https://ntg.gov.gy/monument/lighthouse/"
+        },
+        {
+          "filename": "gy-light-public.html",
+          "sha256": "c958224f41cf47d8c3693a18ccc810945d62f5ebb6530cde195af45f86eee855",
+          "uri": "https://portal.gov.gy/services/lighthouse-visit-booking"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata WGS84 representative point matched to the named visitor site.",
+        "point": [
+          -58.16667,
+          6.80859
+        ],
+        "precision": null,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7138904.json",
+        "statement_id": "q7138904$E15CC571-BDE8-4D14-8DBC-AF79EDDA7E0C"
+      },
+      "independent_review": {
+        "method": "Independently checked active exact coordinate claims, frozen source hashes, authority-confirmed public and restoration scope, and compared points with known World Heritage components and existing sites.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic Public Buildings of Georgetown. Access to the parts named by Parliament is available on pre-arranged guided visits.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and public designation were verified against frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Trust of Guyana",
+          "Parliament of Guyana",
+          "Wikidata contributors"
+        ],
+        "description": "The historic Public Buildings of Georgetown. Access to the parts named by Parliament is available on pre-arranged guided visits.",
+        "description_zh": "乔治敦议会历史大楼位于圭亚那，记录官方公众访问范围与地图代表点。",
+        "details": "The historic Public Buildings of Georgetown. Access to the parts named by Parliament is available on pre-arranged guided visits.",
+        "geography": {
+          "authority_id": "supplement:auth:gy-public:Q7138904",
+          "countries": [
+            "GY"
+          ],
+          "note": "Named public heritage place in Brickdam, Georgetown.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The National Trust identifies the historic Public Buildings and their use as Parliament.",
+            "id": "auth:gy-public:Q7138904:gy-parliament-trust.html",
+            "license": null,
+            "publisher": "National Trust of Guyana",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 af2ed51ad33ff49cc1d9a00bc3ccf34338f75f117be1724035b35ff0bae47dbc.",
+            "title": "Historic Public Buildings of Georgetown visitor and heritage evidence",
+            "uri": "https://ntg.gov.gy/monument/parliament-building/"
+          }
+        },
+        "id": "auth:gy-public:Q7138904",
+        "location_precision": null,
+        "names": [
+          "乔治敦议会历史大楼",
+          "Historic Public Buildings of Georgetown"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -58.16667,
+          6.80859
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The National Trust identifies the historic Public Buildings and their use as Parliament.",
+            "id": "auth:gy-public:Q7138904:gy-parliament-trust.html",
+            "license": null,
+            "publisher": "National Trust of Guyana",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 af2ed51ad33ff49cc1d9a00bc3ccf34338f75f117be1724035b35ff0bae47dbc.",
+            "title": "Historic Public Buildings of Georgetown visitor and heritage evidence",
+            "uri": "https://ntg.gov.gy/monument/parliament-building/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Parliament describes conditions and arrangements for public guided visits to the building.",
+            "id": "auth:gy-public:Q7138904:gy-parliament.html",
+            "license": null,
+            "publisher": "Parliament of Guyana",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 caca1275d36d721419467e06026d5e71b3398c4ac60156e0eb2b870a0b32d2fe.",
+            "title": "Historic Public Buildings of Georgetown visitor and heritage evidence",
+            "uri": "https://parliament.gov.gy/about-parliament/access-to-the-public-buildings/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -58.16667, latitude 6.80859.",
+            "id": "wikidata:Q7138904",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2402112242, statement q7138904$E15CC571-BDE8-4D14-8DBC-AF79EDDA7E0C.",
+            "title": "Historic Public Buildings of Georgetown representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7138904.json"
+          }
+        ],
+        "source_uri": "https://ntg.gov.gy/monument/parliament-building/",
+        "title": "Historic Public Buildings of Georgetown",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q7138904.json",
+          "sha256": "136f382f563625e5987ea47dc4821f50891324d90ce1b1eb0722c2bf7bb35d0a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7138904.json"
+        },
+        {
+          "filename": "gy-parliament-trust.html",
+          "sha256": "af2ed51ad33ff49cc1d9a00bc3ccf34338f75f117be1724035b35ff0bae47dbc",
+          "uri": "https://ntg.gov.gy/monument/parliament-building/"
+        },
+        {
+          "filename": "gy-parliament.html",
+          "sha256": "caca1275d36d721419467e06026d5e71b3398c4ac60156e0eb2b870a0b32d2fe",
+          "uri": "https://parliament.gov.gy/about-parliament/access-to-the-public-buildings/"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Public historic and archaeological landmarks in Ecuador, Bolivia, Brazil and Guyana with official place and visitor scope, verified coordinates and independent checks against existing mapped properties."
+}

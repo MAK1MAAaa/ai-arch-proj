@@ -1,0 +1,22 @@
+{
+  "base_count": 4830,
+  "base_ids_sha256": "602e3f3834deac8840dd4d5182145c32b38946c782bc9741131368ca06e3ea73",
+  "base_sites_sha256": "90ee2bf62bb0a3de7be4ec1a6eb1339e0283949de2c364b615759a9c5cb6fe54",
+  "cohort_version": "senegal-benin-togo-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 13,
+    "total": 4843
+  },
+  "files": {
+    "francophone_west_public_review.json": {
+      "sha256": "33b563ba60fae8ad9b851f70de2482e2c8c01bb29841e176d795440d4b96a90d"
+    },
+    "francophone_west_public_sites.json": {
+      "sha256": "7e46fa2d6d63700a0caf1ebc56ab20bacf367e01050e7c7f2a0b87568e1e19a9"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Three-country West African additions with recognized historic fabric or heritage visitor precincts, published public scope, exact coordinate claims and independent overlap checks."
+}

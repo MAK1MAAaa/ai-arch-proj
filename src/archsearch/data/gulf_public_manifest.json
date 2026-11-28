@@ -1,0 +1,22 @@
+{
+  "base_count": 4916,
+  "base_ids_sha256": "e3cccd98da4b215993f910af0356c84261e261406dac986c877a5177651a262b",
+  "base_sites_sha256": "4f0f9179950a83177b2db5dea00707a8e46a074532d1e058ad8ca208a2acdf93",
+  "cohort_version": "oman-bahrain-qatar-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 11,
+    "total": 4927
+  },
+  "files": {
+    "gulf_public_review.json": {
+      "sha256": "2ad6a4595462a3fe590ac2b0d9c439d054c6a432cf708c65e516ebb37e330133"
+    },
+    "gulf_public_sites.json": {
+      "sha256": "dc702c78fa34f1f9474c339b413622f74a121e617a7c7b880103bf9cf3a6b88d"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Distinct public forts, archaeological precincts and the Old Amiri Palace, with visitor scope verified at the operating authorities and reusable representative points."
+}

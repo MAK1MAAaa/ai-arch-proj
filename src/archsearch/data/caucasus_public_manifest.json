@@ -1,0 +1,22 @@
+{
+  "base_count": 4927,
+  "base_ids_sha256": "46ebca6422f90d6152ab2d86d65055043deb7ae28d156da28dc577947417bdb2",
+  "base_sites_sha256": "bdbdaf2eb6564259b1cb5ff9c227474234892ea46badf043f3cec58d465c850e",
+  "cohort_version": "georgia-armenia-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 20,
+    "total": 4947
+  },
+  "files": {
+    "caucasus_public_review.json": {
+      "sha256": "26bb7af9b0c2fe4fca71b9439b892e116f96fb0144a7b95255af3ef1331b30f2"
+    },
+    "caucasus_public_sites.json": {
+      "sha256": "69794e6d8fdc74545310257e5cda49a0851998073c99278439143755a8678236"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Twenty distinct public archaeological and historic locations in Georgia and Armenia, preserving locally managed routes and access limits."
+}

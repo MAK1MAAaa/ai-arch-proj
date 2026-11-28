@@ -1,0 +1,2420 @@
+{
+  "base_count": 4743,
+  "base_ids_sha256": "c404813c220c651b0110b1707ebb6a57221f4ee1775f6c9c1adb04cb00d4b4b4",
+  "base_sites_sha256": "4ce1f1cdae35739d5e7c69afb9d7066b84c6aca098f7f9fa597f7f940a2335bf",
+  "cohort_version": "indonesia-islands-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Marker denotes the historical fort grounds in Gowa, separated from Fort Rotterdam in Makassar.",
+        "point": [
+          119.40197,
+          -5.189348
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q113861919.json",
+        "statement_id": "Q113861919$b8084abd-8441-402a-bcbc-d34115059def"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic fortified centre of the Sultanate of Gowa. The public site contains archaeological remains and reconstructed sections.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Government of Gowa Regency",
+          "Wikidata contributors"
+        ],
+        "description": "Historic fortified centre of the Sultanate of Gowa. The public site contains archaeological remains and reconstructed sections.",
+        "description_zh": "松巴奥普堡位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "Historic fortified centre of the Sultanate of Gowa. The public site contains archaeological remains and reconstructed sections.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q113861919",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Gowa Regency.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The local government presents the excavated and partly reconstructed fort as a historic visitor destination.",
+            "id": "auth:id-public:Q113861919:evidence:1",
+            "license": null,
+            "publisher": "Government of Gowa Regency",
+            "revision": "Retrieved 2026-11-28. SHA-256 df704c8062ded23346a8fb7c14234d550b4f6814a4bada9adf18f75b8cfa2c4e.",
+            "title": "Public listing for Fort Somba Opu",
+            "uri": "https://smartcity.gowakab.go.id/wisata_sejarah/benteng-somba-opu/3"
+          }
+        },
+        "id": "auth:id-public:Q113861919",
+        "location_precision": null,
+        "names": [
+          "松巴奥普堡",
+          "Fort Somba Opu",
+          "Benteng Somba Opu",
+          "松巴乌普堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          119.40197,
+          -5.189348
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The local government presents the excavated and partly reconstructed fort as a historic visitor destination.",
+            "id": "auth:id-public:Q113861919:evidence:1",
+            "license": null,
+            "publisher": "Government of Gowa Regency",
+            "revision": "Retrieved 2026-11-28. SHA-256 df704c8062ded23346a8fb7c14234d550b4f6814a4bada9adf18f75b8cfa2c4e.",
+            "title": "Public listing for Fort Somba Opu",
+            "uri": "https://smartcity.gowakab.go.id/wisata_sejarah/benteng-somba-opu/3"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 119.40197, latitude -5.189348",
+            "id": "wikidata:Q113861919",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2562782095. P625 Q113861919$b8084abd-8441-402a-bcbc-d34115059def.",
+            "title": "Fort Somba Opu representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q113861919.json"
+          }
+        ],
+        "source_uri": "https://smartcity.gowakab.go.id/wisata_sejarah/benteng-somba-opu/3",
+        "title": "Fort Somba Opu",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/somba-opu-gowa.html",
+          "sha256": "df704c8062ded23346a8fb7c14234d550b4f6814a4bada9adf18f75b8cfa2c4e",
+          "uri": "https://smartcity.gowakab.go.id/wisata_sejarah/benteng-somba-opu/3"
+        },
+        {
+          "filename": "source/Q113861919.json",
+          "sha256": "9f1169503094991013fa80ffcaa7032d4fe4ae890ed0afb22b67154f2735161e",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q113861919.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Marker is the clock tower on the public square, with no inference about access to the tower interior.",
+        "point": [
+          100.36955555555555,
+          -0.30519444444444443
+        ],
+        "precision": 2.777777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q146009.json",
+        "statement_id": "Q146009$EF4BE54B-1D4D-4C7F-B70F-21701EEB5AEA"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic clock tower on the public square in central Bukittinggi. The visitor listing is for viewing the exterior.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Bukittinggi Tourism Office",
+          "Wikidata contributors"
+        ],
+        "description": "Historic clock tower on the public square in central Bukittinggi. The visitor listing is for viewing the exterior.",
+        "description_zh": "加当钟楼位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "Historic clock tower on the public square in central Bukittinggi. The visitor listing is for viewing the exterior.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q146009",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Bukittinggi.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The city describes the clock tower as a public heritage attraction in central Bukittinggi.",
+            "id": "auth:id-public:Q146009:evidence:1",
+            "license": null,
+            "publisher": "Bukittinggi Tourism Office",
+            "revision": "Retrieved 2026-11-28. SHA-256 f9988fc53ef9177b336f10c740f6e7edff49810c4ba9a4ef3b499809bd5519fb.",
+            "title": "Jam Gadang, Bukittinggi",
+            "uri": "https://visit.bukittinggikota.go.id/wisata?type_wisata=Object+Wisata"
+          }
+        },
+        "id": "auth:id-public:Q146009",
+        "location_precision": null,
+        "names": [
+          "加当钟楼",
+          "Jam Gadang",
+          "Menara Jam Gadang",
+          "武吉丁宜大钟楼"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          100.36955555555555,
+          -0.30519444444444443
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The city describes the clock tower as a public heritage attraction in central Bukittinggi.",
+            "id": "auth:id-public:Q146009:evidence:1",
+            "license": null,
+            "publisher": "Bukittinggi Tourism Office",
+            "revision": "Retrieved 2026-11-28. SHA-256 f9988fc53ef9177b336f10c740f6e7edff49810c4ba9a4ef3b499809bd5519fb.",
+            "title": "Jam Gadang, Bukittinggi",
+            "uri": "https://visit.bukittinggikota.go.id/wisata?type_wisata=Object+Wisata"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 100.36955555555555, latitude -0.30519444444444443",
+            "id": "wikidata:Q146009",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2564870660. P625 Q146009$EF4BE54B-1D4D-4C7F-B70F-21701EEB5AEA.",
+            "title": "Jam Gadang representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q146009.json"
+          }
+        ],
+        "source_uri": "https://visit.bukittinggikota.go.id/wisata?type_wisata=Object+Wisata",
+        "title": "Jam Gadang",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/jam-gadang-tourism.html",
+          "sha256": "f9988fc53ef9177b336f10c740f6e7edff49810c4ba9a4ef3b499809bd5519fb",
+          "uri": "https://visit.bukittinggikota.go.id/wisata?type_wisata=Object+Wisata"
+        },
+        {
+          "filename": "source/Q146009.json",
+          "sha256": "50c08350c30c8e7f23e6f389efa0982398802dea527f1426eb97c40b5806ec60",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q146009.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Representative point denotes the mosque precinct in Banda Aceh. Interior entry is subject to worship and visitor rules.",
+        "point": [
+          95.317194444444,
+          5.5536111111111
+        ],
+        "precision": 2.7777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1548318.json",
+        "statement_id": "q1548318$DB4CDB1E-6260-4F81-BA4E-9BBE08C94FF1"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic mosque and landmark of Banda Aceh. Visitors can view the mosque and its precinct under the site’s visitor rules.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Government of Aceh",
+          "Ministry of Religious Affairs of Indonesia",
+          "Wikidata contributors"
+        ],
+        "description": "Historic mosque and landmark of Banda Aceh. Visitors can view the mosque and its precinct under the site’s visitor rules.",
+        "description_zh": "拜图拉赫曼大清真寺位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "Historic mosque and landmark of Banda Aceh. Visitors can view the mosque and its precinct under the site’s visitor rules.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q1548318",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Banda Aceh.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial site describes this historic mosque as a visitor destination.",
+            "id": "auth:id-public:Q1548318:evidence:1",
+            "license": null,
+            "publisher": "Government of Aceh",
+            "revision": "Retrieved 2026-11-28. SHA-256 b20cdfcd9eaf191d540179b7e4b92b931a6433abf6d0b1c4e9b4742281d7e132.",
+            "title": "Baiturrahman Grand Mosque visitor account",
+            "uri": "https://www.acehprov.go.id/berita/kategori/jelajah/masjid-baiturrahman-ikon-aceh-yang-jadi-perhatian-dunia"
+          }
+        },
+        "id": "auth:id-public:Q1548318",
+        "location_precision": null,
+        "names": [
+          "拜图拉赫曼大清真寺",
+          "Baiturrahman Grand Mosque",
+          "Masjid Raya Baiturrahman",
+          "亚齐大清真寺"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          95.317194444444,
+          5.5536111111111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial site describes this historic mosque as a visitor destination.",
+            "id": "auth:id-public:Q1548318:evidence:1",
+            "license": null,
+            "publisher": "Government of Aceh",
+            "revision": "Retrieved 2026-11-28. SHA-256 b20cdfcd9eaf191d540179b7e4b92b931a6433abf6d0b1c4e9b4742281d7e132.",
+            "title": "Baiturrahman Grand Mosque visitor account",
+            "uri": "https://www.acehprov.go.id/berita/kategori/jelajah/masjid-baiturrahman-ikon-aceh-yang-jadi-perhatian-dunia"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national mosque register confirms the identity and map location in Banda Aceh.",
+            "id": "auth:id-public:Q1548318:evidence:2",
+            "license": null,
+            "publisher": "Ministry of Religious Affairs of Indonesia",
+            "revision": "Retrieved 2026-11-28. SHA-256 8f33c3f09782c3f14537d733b89115dcc70372207c54a92f7bae2448f67d717b.",
+            "title": "Baiturrahman mosque record and map",
+            "uri": "https://simas.kemenag.go.id/profil/masjid/01.1.01.19.01.000001"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 95.317194444444, latitude 5.5536111111111",
+            "id": "wikidata:Q1548318",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2575300882. P625 q1548318$DB4CDB1E-6260-4F81-BA4E-9BBE08C94FF1.",
+            "title": "Baiturrahman Grand Mosque representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1548318.json"
+          }
+        ],
+        "source_uri": "https://www.acehprov.go.id/berita/kategori/jelajah/masjid-baiturrahman-ikon-aceh-yang-jadi-perhatian-dunia",
+        "title": "Baiturrahman Grand Mosque",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/baiturrahman-province.html",
+          "sha256": "b20cdfcd9eaf191d540179b7e4b92b931a6433abf6d0b1c4e9b4742281d7e132",
+          "uri": "https://www.acehprov.go.id/berita/kategori/jelajah/masjid-baiturrahman-ikon-aceh-yang-jadi-perhatian-dunia"
+        },
+        {
+          "filename": "source/baiturrahman-ministry.html",
+          "sha256": "8f33c3f09782c3f14537d733b89115dcc70372207c54a92f7bae2448f67d717b",
+          "uri": "https://simas.kemenag.go.id/profil/masjid/01.1.01.19.01.000001"
+        },
+        {
+          "filename": "source/Q1548318.json",
+          "sha256": "047cb37e8ab052bcc97fd914bc3504be4e62c332f5b6f32763ecb567b3f678bc",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1548318.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Representative point for the palace, with public scope limited to the front hall and grounds.",
+        "point": [
+          98.68381,
+          3.5752
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1674833.json",
+        "statement_id": "Q1674833$B6F3339E-CD65-4C67-8588-D1A19FD44C2B"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic palace of the Sultanate of Deli in Medan. The authority identifies the front hall and grounds as the visitor areas.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Inspectorate General, Ministry of Primary and Secondary Education",
+          "Wikidata contributors"
+        ],
+        "description": "Historic palace of the Sultanate of Deli in Medan. The authority identifies the front hall and grounds as the visitor areas.",
+        "description_zh": "迈蒙宫位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "Historic palace of the Sultanate of Deli in Medan. The authority identifies the front hall and grounds as the visitor areas.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q1674833",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Medan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies the front hall and courtyard as the publicly accessible areas.",
+            "id": "auth:id-public:Q1674833:evidence:1",
+            "license": null,
+            "publisher": "Inspectorate General, Ministry of Primary and Secondary Education",
+            "revision": "Retrieved 2026-11-28. SHA-256 8602d6be809ab6908498d732f60e41f27083552eebfe15daa86aafb5e169dec7.",
+            "title": "Tourism and public scope at Maimun Palace",
+            "uri": "https://itjen.kemendikdasmen.go.id/web/?p=9413"
+          }
+        },
+        "id": "auth:id-public:Q1674833",
+        "location_precision": null,
+        "names": [
+          "迈蒙宫",
+          "Maimun Palace",
+          "Istana Maimun",
+          "Istana Maimoon",
+          "麦蒙王宫"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          98.68381,
+          3.5752
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies the front hall and courtyard as the publicly accessible areas.",
+            "id": "auth:id-public:Q1674833:evidence:1",
+            "license": null,
+            "publisher": "Inspectorate General, Ministry of Primary and Secondary Education",
+            "revision": "Retrieved 2026-11-28. SHA-256 8602d6be809ab6908498d732f60e41f27083552eebfe15daa86aafb5e169dec7.",
+            "title": "Tourism and public scope at Maimun Palace",
+            "uri": "https://itjen.kemendikdasmen.go.id/web/?p=9413"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 98.68381, latitude 3.5752",
+            "id": "wikidata:Q1674833",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2548094113. P625 Q1674833$B6F3339E-CD65-4C67-8588-D1A19FD44C2B.",
+            "title": "Maimun Palace representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1674833.json"
+          }
+        ],
+        "source_uri": "https://itjen.kemendikdasmen.go.id/web/?p=9413",
+        "title": "Maimun Palace",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/maimun-ministry.html",
+          "sha256": "8602d6be809ab6908498d732f60e41f27083552eebfe15daa86aafb5e169dec7",
+          "uri": "https://itjen.kemendikdasmen.go.id/web/?p=9413"
+        },
+        {
+          "filename": "source/Q1674833.json",
+          "sha256": "cc4564656c2f0245cf204571b21ce793feac77d39349d42ddd83ca2c3804586a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1674833.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Marker denotes the historic house at Anggut Atas in Bengkulu, separate from other Sukarno residences.",
+        "point": [
+          102.26128877659016,
+          -3.7992447080848337
+        ],
+        "precision": 2.77778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16878966.json",
+        "statement_id": "Q16878966$95871047-4ab3-c1aa-5c86-bccdead2c921"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The preserved house in Bengkulu where Sukarno lived in exile, with rooms and objects interpreted for visitors.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministry of Tourism of Indonesia, SISPARNAS",
+          "Wikidata contributors"
+        ],
+        "description": "The preserved house in Bengkulu where Sukarno lived in exile, with rooms and objects interpreted for visitors.",
+        "description_zh": "苏加诺流放故居位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "The preserved house in Bengkulu where Sukarno lived in exile, with rooms and objects interpreted for visitors.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q16878966",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Bengkulu.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism register names the exile house and describes museum exhibits and visitor access.",
+            "id": "auth:id-public:Q16878966:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia, SISPARNAS",
+            "revision": "Retrieved 2026-11-28. SHA-256 10225ee70ca397484002717ffd82c41752ed7497474c07cd3d362b175f4773f6.",
+            "title": "Bung Karno’s Exile House visitor listing",
+            "uri": "https://sisparnas.kemenpar.go.id/sites?id=21"
+          }
+        },
+        "id": "auth:id-public:Q16878966",
+        "location_precision": null,
+        "names": [
+          "苏加诺流放故居",
+          "Bung Karno’s Exile House",
+          "Rumah Pengasingan Bung Karno",
+          "Bung Karno Seclusion House"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          102.26128877659016,
+          -3.7992447080848337
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism register names the exile house and describes museum exhibits and visitor access.",
+            "id": "auth:id-public:Q16878966:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia, SISPARNAS",
+            "revision": "Retrieved 2026-11-28. SHA-256 10225ee70ca397484002717ffd82c41752ed7497474c07cd3d362b175f4773f6.",
+            "title": "Bung Karno’s Exile House visitor listing",
+            "uri": "https://sisparnas.kemenpar.go.id/sites?id=21"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 102.26128877659016, latitude -3.7992447080848337",
+            "id": "wikidata:Q16878966",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2520217658. P625 Q16878966$95871047-4ab3-c1aa-5c86-bccdead2c921.",
+            "title": "Bung Karno’s Exile House representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16878966.json"
+          }
+        ],
+        "source_uri": "https://sisparnas.kemenpar.go.id/sites?id=21",
+        "title": "Bung Karno’s Exile House",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/id-sisparnas-21.html",
+          "sha256": "10225ee70ca397484002717ffd82c41752ed7497474c07cd3d362b175f4773f6",
+          "uri": "https://sisparnas.kemenpar.go.id/sites?id=21"
+        },
+        {
+          "filename": "source/Q16878966.json",
+          "sha256": "6ed79c7942de9c4b5e38813b328b57d09b737ca59f0c943e869cb3b39bf5308c",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16878966.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata point falls inside the fort grounds near the city’s official visitor map marker. Source precision is retained.",
+        "point": [
+          127.387,
+          0.792878
+        ],
+        "precision": 0.0089840130441262,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1954949.json",
+        "statement_id": "Q1954949$DBE77C53-1E1C-498B-90F8-CEDB076512E0"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic fort in central Ternate, used for public heritage displays and events.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Government of Ternate City",
+          "Wikidata contributors"
+        ],
+        "description": "Historic fort in central Ternate, used for public heritage displays and events.",
+        "description_zh": "奥兰治堡位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "Historic fort in central Ternate, used for public heritage displays and events.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q1954949",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Ternate.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The city identifies the fort as open to the public and publishes a visitor map reference.",
+            "id": "auth:id-public:Q1954949:evidence:1",
+            "license": null,
+            "publisher": "Government of Ternate City",
+            "revision": "Retrieved 2026-11-28. SHA-256 987fa42a297cd3ef19a891bc399ec15436646a84e40cfc4ea80938c9c1a59f86.",
+            "title": "Fort Oranje visitor destination and coordinates",
+            "uri": "https://wonderful.ternatekota.go.id/destinasi/fort-oranje-ternate"
+          }
+        },
+        "id": "auth:id-public:Q1954949",
+        "location_precision": null,
+        "names": [
+          "奥兰治堡",
+          "Fort Oranje",
+          "Benteng Oranje",
+          "Fort Oranje, Ternate"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          127.387,
+          0.792878
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The city identifies the fort as open to the public and publishes a visitor map reference.",
+            "id": "auth:id-public:Q1954949:evidence:1",
+            "license": null,
+            "publisher": "Government of Ternate City",
+            "revision": "Retrieved 2026-11-28. SHA-256 987fa42a297cd3ef19a891bc399ec15436646a84e40cfc4ea80938c9c1a59f86.",
+            "title": "Fort Oranje visitor destination and coordinates",
+            "uri": "https://wonderful.ternatekota.go.id/destinasi/fort-oranje-ternate"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 127.387, latitude 0.792878",
+            "id": "wikidata:Q1954949",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2556838695. P625 Q1954949$DBE77C53-1E1C-498B-90F8-CEDB076512E0.",
+            "title": "Fort Oranje representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1954949.json"
+          }
+        ],
+        "source_uri": "https://wonderful.ternatekota.go.id/destinasi/fort-oranje-ternate",
+        "title": "Fort Oranje",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/oranje-ternate.html",
+          "sha256": "987fa42a297cd3ef19a891bc399ec15436646a84e40cfc4ea80938c9c1a59f86",
+          "uri": "https://wonderful.ternatekota.go.id/destinasi/fort-oranje-ternate"
+        },
+        {
+          "filename": "source/Q1954949.json",
+          "sha256": "a6976995f1107e01781ffa7fb28d60daec8fc75b0e0989aae13833d6dc4cb188",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1954949.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Point denotes the independently named hilltop fort north of Fort Oranje.",
+        "point": [
+          127.3880932,
+          0.8138856
+        ],
+        "precision": 2.777777777777778e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1955002.json",
+        "statement_id": "Q1955002$0609319d-43d0-21d3-e29b-59c837969fdc"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public heritage areas of the original Tolukko fort included in the municipal visitor route. Access follows arrangements of the operator.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Government of Ternate City",
+          "Ministry of Tourism of Indonesia, SISPARNAS",
+          "Wikidata contributors"
+        ],
+        "description": "Historic hilltop fort in Ternate, visited on the city heritage tour.",
+        "description_zh": "托卢科堡位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "Public heritage areas of the original Tolukko fort included in the municipal visitor route. Access follows arrangements of the operator.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q1955002",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Ternate.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The city describes a heritage itinerary that includes an in-person stop at Fort Tolukko.",
+            "id": "auth:id-public:Q1955002:evidence:1",
+            "license": null,
+            "publisher": "Government of Ternate City",
+            "revision": "Retrieved 2026-11-28. SHA-256 fba12a254125d7dbe2aa15d0d55ec36d09156b26b6bc01f20084fe172b524758.",
+            "title": "Heritage City Tour visiting Fort Tolukko",
+            "uri": "https://migrasi.ternatekota.go.id/berita/heritage-city-tour-kenalkan-jejak-alam-dan-sejarah-ternate-kepada-delegasi-jkpi-xii-ternate"
+          }
+        },
+        "id": "auth:id-public:Q1955002",
+        "location_precision": null,
+        "names": [
+          "托卢科堡",
+          "Fort Tolukko",
+          "Benteng Tolukko",
+          "Benteng Tolucco"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          127.3880932,
+          0.8138856
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The city describes a heritage itinerary that includes an in-person stop at Fort Tolukko.",
+            "id": "auth:id-public:Q1955002:evidence:1",
+            "license": null,
+            "publisher": "Government of Ternate City",
+            "revision": "Retrieved 2026-11-28. SHA-256 fba12a254125d7dbe2aa15d0d55ec36d09156b26b6bc01f20084fe172b524758.",
+            "title": "Heritage City Tour visiting Fort Tolukko",
+            "uri": "https://migrasi.ternatekota.go.id/berita/heritage-city-tour-kenalkan-jejak-alam-dan-sejarah-ternate-kepada-delegasi-jkpi-xii-ternate"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism system lists Ternate’s visitor attractions.",
+            "id": "auth:id-public:Q1955002:evidence:2",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia, SISPARNAS",
+            "revision": "Retrieved 2026-11-28. SHA-256 5fcf78c1207364c7673e03f764d97b08ddda1725d938e0156e7f004e3f70b48e.",
+            "title": "Ternate public tourism listings",
+            "uri": "https://sisparnas.kemenpar.go.id/p/110917"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 127.3880932, latitude 0.8138856",
+            "id": "wikidata:Q1955002",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2550015852. P625 Q1955002$0609319d-43d0-21d3-e29b-59c837969fdc.",
+            "title": "Fort Tolukko representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1955002.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official programme identifies a visit to Fort Tolukko and separately names the other city forts.",
+            "id": "auth:id-public:Q1955002:review-tolukko-itinerary.html",
+            "license": null,
+            "publisher": "Government of Ternate City",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 a8d002b084d18a04c18fdb9ba460f4fb620bc40785c71a776b1dbce6c97a2235.",
+            "title": "Ternate heritage itinerary, August 2026",
+            "uri": "https://ternatekota.go.id/berita/ini-jadwal-lengkap-rakernas-xii-jkpi-di-kota-ternate"
+          }
+        ],
+        "source_uri": "https://migrasi.ternatekota.go.id/berita/heritage-city-tour-kenalkan-jejak-alam-dan-sejarah-ternate-kepada-delegasi-jkpi-xii-ternate",
+        "title": "Fort Tolukko",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ternate-city-tour.html",
+          "sha256": "fba12a254125d7dbe2aa15d0d55ec36d09156b26b6bc01f20084fe172b524758",
+          "uri": "https://migrasi.ternatekota.go.id/berita/heritage-city-tour-kenalkan-jejak-alam-dan-sejarah-ternate-kepada-delegasi-jkpi-xii-ternate"
+        },
+        {
+          "filename": "source/ternate-tourism.html",
+          "sha256": "5fcf78c1207364c7673e03f764d97b08ddda1725d938e0156e7f004e3f70b48e",
+          "uri": "https://sisparnas.kemenpar.go.id/p/110917"
+        },
+        {
+          "filename": "source/Q1955002.json",
+          "sha256": "8b6233f66a1bd2782d9e3abd93d88558c104cdeee70a02ebb118a7639f12c941",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1955002.json"
+        },
+        {
+          "filename": "independent/review-tolukko-itinerary.html",
+          "sha256": "a8d002b084d18a04c18fdb9ba460f4fb620bc40785c71a776b1dbce6c97a2235",
+          "uri": "https://ternatekota.go.id/berita/ini-jadwal-lengkap-rakernas-xii-jkpi-di-kota-ternate"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Marker represents the managed public Leang-Leang park area. Cave interiors and other Maros–Pangkep karst sites have no separate markers.",
+        "point": [
+          119.67572,
+          -4.97922
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q19944351.json",
+        "statement_id": "Q19944351$1325421E-30EA-4981-AE64-273BF2B8BCD8"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Marker represents the managed public Leang-Leang park area. Cave interiors and other Maros–Pangkep karst sites have no separate markers.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministry of Tourism of Indonesia, SISPARNAS",
+          "National Research and Innovation Agency of Indonesia",
+          "Indonesia national submission, UNESCO World Heritage Centre",
+          "Wikidata contributors",
+          "Indonesian Geospatial Information Agency"
+        ],
+        "description": "Public prehistoric park in Maros interpreting the karst landscape, archaeology and cave art. The record identifies the managed visitor park.",
+        "description_zh": "梁梁考古公园位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "Marker represents the managed public Leang-Leang park area. Cave interiors and other Maros–Pangkep karst sites have no separate markers.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q19944351",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Maros Regency.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national listing describes a ticketed public archaeological park with marked visitor routes.",
+            "id": "auth:id-public:Q19944351:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia, SISPARNAS",
+            "revision": "Retrieved 2026-11-28. SHA-256 a5c4fc39bf1631a628c8679c02b1c76a91055a340f66a7a130c0746bb1f8af8b.",
+            "title": "Leang-Leang Archaeological Park visitor facilities",
+            "uri": "https://sisparnas.kemenpar.go.id/sites?id=51"
+          }
+        },
+        "id": "auth:id-public:Q19944351",
+        "location_precision": null,
+        "names": [
+          "梁梁考古公园",
+          "Leang-Leang Archaeological Park",
+          "Taman Arkeologi Leang-Leang",
+          "Taman Prasejarah Leang-leang"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          119.67572,
+          -4.97922
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national listing describes a ticketed public archaeological park with marked visitor routes.",
+            "id": "auth:id-public:Q19944351:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia, SISPARNAS",
+            "revision": "Retrieved 2026-11-28. SHA-256 a5c4fc39bf1631a628c8679c02b1c76a91055a340f66a7a130c0746bb1f8af8b.",
+            "title": "Leang-Leang Archaeological Park visitor facilities",
+            "uri": "https://sisparnas.kemenpar.go.id/sites?id=51"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national research agency distinguishes the park grounds and the named archaeological areas under conservation.",
+            "id": "auth:id-public:Q19944351:evidence:2",
+            "license": null,
+            "publisher": "National Research and Innovation Agency of Indonesia",
+            "revision": "Retrieved 2026-11-28. SHA-256 3d3df0eb0096b7371a43ec0d6d5039d436196604b601fa605c4f1eb2bd88dd8f.",
+            "title": "Conservation at Leang-Leang park",
+            "uri": "https://penerbit.brin.go.id/conference/kms/article/download/57/20/498"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The related karst nomination remains on Indonesia’s tentative World Heritage list.",
+            "id": "auth:id-public:Q19944351:evidence:3",
+            "license": null,
+            "publisher": "Indonesia national submission, UNESCO World Heritage Centre",
+            "revision": "Retrieved 2026-11-28. SHA-256 89d286709e4d931c362d3af11b6884619e381023ca0c4f07d82a9a2a7b35bdb7.",
+            "title": "Maros Pangkep Prehistoric Cave Area tentative submission",
+            "uri": "https://whc.unesco.org/en/tentativelists/6825/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 119.67572, latitude -4.97922",
+            "id": "wikidata:Q19944351",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2571809257. P625 Q19944351$1325421E-30EA-4981-AE64-273BF2B8BCD8.",
+            "title": "Leang-Leang Archaeological Park representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q19944351.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The gazetteer marks one named park representative point matching the selected coordinates.",
+            "id": "auth:id-public:Q19944351:review-leangleang-gazetteer.html",
+            "license": null,
+            "publisher": "Indonesian Geospatial Information Agency",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 5f6a6ae29c24f28b0209f33cddf7b8adce2a7ca6de26532df01b8f276cfccdd4.",
+            "title": "National gazetteer, Taman Prasejarah Leang-leang",
+            "uri": "https://sinar.big.go.id/Pencarian/Detail/47917"
+          }
+        ],
+        "source_uri": "https://sisparnas.kemenpar.go.id/sites?id=51",
+        "title": "Leang-Leang Archaeological Park",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/id-sisparnas-51.html",
+          "sha256": "a5c4fc39bf1631a628c8679c02b1c76a91055a340f66a7a130c0746bb1f8af8b",
+          "uri": "https://sisparnas.kemenpar.go.id/sites?id=51"
+        },
+        {
+          "filename": "source/maros-archaeology.pdf",
+          "sha256": "3d3df0eb0096b7371a43ec0d6d5039d436196604b601fa605c4f1eb2bd88dd8f",
+          "uri": "https://penerbit.brin.go.id/conference/kms/article/download/57/20/498"
+        },
+        {
+          "filename": "source/unesco-maros-tentative.html",
+          "sha256": "89d286709e4d931c362d3af11b6884619e381023ca0c4f07d82a9a2a7b35bdb7",
+          "uri": "https://whc.unesco.org/en/tentativelists/6825/"
+        },
+        {
+          "filename": "source/Q19944351.json",
+          "sha256": "56b2fb5f770dd1eea4af69139ee3191ed7443c583172795987845f0217a7b9a0",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q19944351.json"
+        },
+        {
+          "filename": "independent/review-leangleang-gazetteer.html",
+          "sha256": "5f6a6ae29c24f28b0209f33cddf7b8adce2a7ca6de26532df01b8f276cfccdd4",
+          "uri": "https://sinar.big.go.id/Pencarian/Detail/47917"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Representative point denotes the separately managed Goa Gajah visitor site, outside the inscribed upper Pekerisan component.",
+        "point": [
+          115.286333,
+          -8.523389
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2037360.json",
+        "statement_id": "q2037360$FE2B32EA-B1BE-4506-9C93-B56B995C54D0"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Goa Gajah is the protected sanctuary at Bedulu, south of the Pekerisan World Heritage component and its buffer in the 2012 inscribed map.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministry of Tourism of Indonesia",
+          "Tourism Office, Bali Province",
+          "Wikidata contributors",
+          "UNESCO World Heritage Centre"
+        ],
+        "description": "Historic archaeological sanctuary in Bedulu with a carved rock entrance, courtyard and ritual bathing features. The local site is in the Petanu drainage.",
+        "description_zh": "象窟（戈阿加查）位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "Goa Gajah is the protected sanctuary at Bedulu, south of the Pekerisan World Heritage component and its buffer in the 2012 inscribed map.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q2037360",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Blahbatuh, Gianyar Regency.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry describes public visiting and admission for Goa Gajah.",
+            "id": "auth:id-public:Q2037360:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia",
+            "revision": "Retrieved 2026-11-28. SHA-256 de87cf6e90696605d041ce5981d4ee0011911ee9c92593e3609c5c323d263b62.",
+            "title": "Goa Gajah and Besakih visitor information",
+            "uri": "https://www.indonesia.travel/id/id/travel-ideas/heritage/6-must-visit-temples-in-bali-to-experience-bliss"
+          }
+        },
+        "id": "auth:id-public:Q2037360",
+        "location_precision": null,
+        "names": [
+          "象窟（戈阿加查）",
+          "Goa Gajah",
+          "Elephant Cave",
+          "Pura Goa Gajah",
+          "象洞"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          115.286333,
+          -8.523389
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry describes public visiting and admission for Goa Gajah.",
+            "id": "auth:id-public:Q2037360:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia",
+            "revision": "Retrieved 2026-11-28. SHA-256 de87cf6e90696605d041ce5981d4ee0011911ee9c92593e3609c5c323d263b62.",
+            "title": "Goa Gajah and Besakih visitor information",
+            "uri": "https://www.indonesia.travel/id/id/travel-ideas/heritage/6-must-visit-temples-in-bali-to-experience-bliss"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The province identifies the archaeological sanctuary beside streams draining to the Petanu River.",
+            "id": "auth:id-public:Q2037360:evidence:2",
+            "license": null,
+            "publisher": "Tourism Office, Bali Province",
+            "revision": "Retrieved 2026-11-28. SHA-256 acbab6e69f778c92ee698d279053e3745348a786698ce5e83ea4308b6ef6a2d4.",
+            "title": "Goa Gajah archaeological temple",
+            "uri": "https://disparda.baliprov.go.id/elephant-cave-temple/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 115.286333, latitude -8.523389",
+            "id": "wikidata:Q2037360",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2568078525. P625 q2037360$FE2B32EA-B1BE-4506-9C93-B56B995C54D0.",
+            "title": "Goa Gajah representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2037360.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Goa Gajah sits outside the final Pekerisan component and buffer shown in the 2012 inscription map.",
+            "id": "auth:id-public:Q2037360:review-unesco-2012.html",
+            "license": null,
+            "publisher": "UNESCO World Heritage Centre",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 bc32cb189d686818b9e0ae1eb82732e9ea1f49746018afb550ffbef6ba5244cc.",
+            "title": "2012 final inscription and boundary maps",
+            "uri": "https://whc.unesco.org/en/list/1194/maps/"
+          }
+        ],
+        "source_uri": "https://www.indonesia.travel/id/id/travel-ideas/heritage/6-must-visit-temples-in-bali-to-experience-bliss",
+        "title": "Goa Gajah",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/goagajah-national.html",
+          "sha256": "de87cf6e90696605d041ce5981d4ee0011911ee9c92593e3609c5c323d263b62",
+          "uri": "https://www.indonesia.travel/id/id/travel-ideas/heritage/6-must-visit-temples-in-bali-to-experience-bliss"
+        },
+        {
+          "filename": "source/goagajah-bali.html",
+          "sha256": "acbab6e69f778c92ee698d279053e3745348a786698ce5e83ea4308b6ef6a2d4",
+          "uri": "https://disparda.baliprov.go.id/elephant-cave-temple/"
+        },
+        {
+          "filename": "source/Q2037360.json",
+          "sha256": "3b12144559f1489d4c39284581fde880a43aa193c0f292783b0f7cb42d1e4c54",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2037360.json"
+        },
+        {
+          "filename": "independent/review-unesco-2012.html",
+          "sha256": "bc32cb189d686818b9e0ae1eb82732e9ea1f49746018afb550ffbef6ba5244cc",
+          "uri": "https://whc.unesco.org/en/list/1194/maps/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Marker denotes the historic fort on Saparua, separate from the modern town and beach attractions.",
+        "point": [
+          128.65924,
+          -3.57504
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2433724.json",
+        "statement_id": "Q2433724$2BA007E0-159C-4918-87C8-808B18485814"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Original Fort Duurstede on Saparua. Access refers to the recognised visitor grounds and may change during conservation work.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministry of Tourism of Indonesia, SISPARNAS",
+          "Wikidata contributors",
+          "Maluku Provincial Tourism Office"
+        ],
+        "description": "Historic coastal fort on Saparua Island, identified as a public heritage visitor site on the terraced headland.",
+        "description_zh": "杜尔斯泰德堡位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "Original Fort Duurstede on Saparua. Access refers to the recognised visitor grounds and may change during conservation work.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q2433724",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Saparua, Central Maluku Regency.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism ministry identifies the fort grounds, visitor approach, and restored structures.",
+            "id": "auth:id-public:Q2433724:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia, SISPARNAS",
+            "revision": "Retrieved 2026-11-28. SHA-256 b914636fb45f95383b70c091fea28b2c9d9f590b9d38e734af3683f9520431ef.",
+            "title": "Fort Duurstede public access",
+            "uri": "https://sisparnas.kemenpar.go.id/sites?id=52"
+          }
+        },
+        "id": "auth:id-public:Q2433724",
+        "location_precision": null,
+        "names": [
+          "杜尔斯泰德堡",
+          "Fort Duurstede",
+          "Benteng Duurstede"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          128.65924,
+          -3.57504
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism ministry identifies the fort grounds, visitor approach, and restored structures.",
+            "id": "auth:id-public:Q2433724:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia, SISPARNAS",
+            "revision": "Retrieved 2026-11-28. SHA-256 b914636fb45f95383b70c091fea28b2c9d9f590b9d38e734af3683f9520431ef.",
+            "title": "Fort Duurstede public access",
+            "uri": "https://sisparnas.kemenpar.go.id/sites?id=52"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 128.65924, latitude -3.57504",
+            "id": "wikidata:Q2433724",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2572445167. P625 Q2433724$2BA007E0-159C-4918-87C8-808B18485814.",
+            "title": "Fort Duurstede representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2433724.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The province presents the original fort on Saparua as a current managed historic visitor destination.",
+            "id": "auth:id-public:Q2433724:review-duurstede-2026.html",
+            "license": null,
+            "publisher": "Maluku Provincial Tourism Office",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 17cd5d3a9e8e658fcde8cd049ba725378be777480127b934ce7cb1c9ad57d89c.",
+            "title": "Duurstede visitor information, April 2026",
+            "uri": "https://dispar.malukuprov.go.id/destinasi/jejak-sejarah-benteng-duurstede-di-pulau-saparua"
+          }
+        ],
+        "source_uri": "https://sisparnas.kemenpar.go.id/sites?id=52",
+        "title": "Fort Duurstede",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/id-sisparnas-52.html",
+          "sha256": "b914636fb45f95383b70c091fea28b2c9d9f590b9d38e734af3683f9520431ef",
+          "uri": "https://sisparnas.kemenpar.go.id/sites?id=52"
+        },
+        {
+          "filename": "source/Q2433724.json",
+          "sha256": "1a0993b11fb8e3cf0eb91aca1aea4e55547a214aa446f68caef67e3e75655eb7",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2433724.json"
+        },
+        {
+          "filename": "independent/review-duurstede-2026.html",
+          "sha256": "17cd5d3a9e8e658fcde8cd049ba725378be777480127b934ce7cb1c9ad57d89c",
+          "uri": "https://dispar.malukuprov.go.id/destinasi/jejak-sejarah-benteng-duurstede-di-pulau-saparua"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The representative point denotes the historic water garden complex. Ritual areas remain subject to local access rules.",
+        "point": [
+          116.13317,
+          -8.58668
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q25300699.json",
+        "statement_id": "Q25300699$711A8714-6D2E-4D9F-BDD6-5473D1F40A67"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic royal water garden in Cakranegara, promoted by the local government as a cultural and religious visitor destination.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Mayura Urban Village Government",
+          "Wikidata contributors"
+        ],
+        "description": "Historic royal water garden in Cakranegara, promoted by the local government as a cultural and religious visitor destination.",
+        "description_zh": "玛尤拉水宫位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "Historic royal water garden in Cakranegara, promoted by the local government as a cultural and religious visitor destination.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q25300699",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Cakranegara, Mataram.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The local government names the historic park and describes its use as a visitor destination.",
+            "id": "auth:id-public:Q25300699:evidence:1",
+            "license": null,
+            "publisher": "Mayura Urban Village Government",
+            "revision": "Retrieved 2026-11-28. SHA-256 51dd0db8a6b18b55213b36a28998308716119e84f0905df9908584bdc41711c1.",
+            "title": "Taman Mayura visitor destination",
+            "uri": "https://dev-mayura.ntbprov.go.id/index.php/artikel/2026/8/14/wisata-religi-di-taman-mayura"
+          }
+        },
+        "id": "auth:id-public:Q25300699",
+        "location_precision": null,
+        "names": [
+          "玛尤拉水宫",
+          "Taman Mayura",
+          "Mayura Park",
+          "Taman Kelepug"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          116.13317,
+          -8.58668
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The local government names the historic park and describes its use as a visitor destination.",
+            "id": "auth:id-public:Q25300699:evidence:1",
+            "license": null,
+            "publisher": "Mayura Urban Village Government",
+            "revision": "Retrieved 2026-11-28. SHA-256 51dd0db8a6b18b55213b36a28998308716119e84f0905df9908584bdc41711c1.",
+            "title": "Taman Mayura visitor destination",
+            "uri": "https://dev-mayura.ntbprov.go.id/index.php/artikel/2026/8/14/wisata-religi-di-taman-mayura"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 116.13317, latitude -8.58668",
+            "id": "wikidata:Q25300699",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2571977591. P625 Q25300699$711A8714-6D2E-4D9F-BDD6-5473D1F40A67.",
+            "title": "Taman Mayura representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q25300699.json"
+          }
+        ],
+        "source_uri": "https://dev-mayura.ntbprov.go.id/index.php/artikel/2026/8/14/wisata-religi-di-taman-mayura",
+        "title": "Taman Mayura",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/mayura-mataram.html",
+          "sha256": "51dd0db8a6b18b55213b36a28998308716119e84f0905df9908584bdc41711c1",
+          "uri": "https://dev-mayura.ntbprov.go.id/index.php/artikel/2026/8/14/wisata-religi-di-taman-mayura"
+        },
+        {
+          "filename": "source/Q25300699.json",
+          "sha256": "346c1e8d060e91a81982e040f3244b9399e0383fc65f4f3ed7fbd10c8a179ca2",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q25300699.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "One point represents the overall fort. The museum and other internal features are not separate records.",
+        "point": [
+          119.40575,
+          -5.13439
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q29771.json",
+        "statement_id": "Q29771$87467ADA-8CB8-4AF8-B0F5-D96060D40A3D"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic waterfront fort in Makassar, with public visitor grounds and the La Galigo Museum housed inside the complex.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministry of Tourism of Indonesia, SISPARNAS",
+          "Wikidata contributors"
+        ],
+        "description": "Historic waterfront fort in Makassar, with public visitor grounds and the La Galigo Museum housed inside the complex.",
+        "description_zh": "鹿特丹堡位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "Historic waterfront fort in Makassar, with public visitor grounds and the La Galigo Museum housed inside the complex.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q29771",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Makassar.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry lists the historic fort, visitor access, and interpretive signage within the complex.",
+            "id": "auth:id-public:Q29771:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia, SISPARNAS",
+            "revision": "Retrieved 2026-11-28. SHA-256 eb58114860da51ac1de7118a44c0d25acabe4580b4a8f74731b4ac36164af62f.",
+            "title": "Fort Rotterdam visitor listing",
+            "uri": "https://sisparnas.kemenpar.go.id/sites?id=48"
+          }
+        },
+        "id": "auth:id-public:Q29771",
+        "location_precision": null,
+        "names": [
+          "鹿特丹堡",
+          "Fort Rotterdam",
+          "Benteng Rotterdam",
+          "Benteng Ujung Pandang",
+          "Benteng Panyua"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          119.40575,
+          -5.13439
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry lists the historic fort, visitor access, and interpretive signage within the complex.",
+            "id": "auth:id-public:Q29771:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia, SISPARNAS",
+            "revision": "Retrieved 2026-11-28. SHA-256 eb58114860da51ac1de7118a44c0d25acabe4580b4a8f74731b4ac36164af62f.",
+            "title": "Fort Rotterdam visitor listing",
+            "uri": "https://sisparnas.kemenpar.go.id/sites?id=48"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 119.40575, latitude -5.13439",
+            "id": "wikidata:Q29771",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2562783572. P625 Q29771$87467ADA-8CB8-4AF8-B0F5-D96060D40A3D.",
+            "title": "Fort Rotterdam representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q29771.json"
+          }
+        ],
+        "source_uri": "https://sisparnas.kemenpar.go.id/sites?id=48",
+        "title": "Fort Rotterdam",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/id-sisparnas-48.html",
+          "sha256": "eb58114860da51ac1de7118a44c0d25acabe4580b4a8f74731b4ac36164af62f",
+          "uri": "https://sisparnas.kemenpar.go.id/sites?id=48"
+        },
+        {
+          "filename": "source/Q29771.json",
+          "sha256": "d1281134e8918915b67cdf96b768e47c7421184d609d9073af6710eae5b334e6",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q29771.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Location denotes the temple compound rather than the modern village of Muara Takus.",
+        "point": [
+          100.641951,
+          0.336016
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3101233.json",
+        "statement_id": "Q3101233$50882915-C488-4B90-A4A8-3602062A61C4"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Archaeological compound of Buddhist brick and stone structures in Kampar Regency, listed as a public visitor site.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministry of Tourism of Indonesia",
+          "Indonesia national submission, UNESCO World Heritage Centre",
+          "Geospatial Information Agency of Indonesia",
+          "Wikidata contributors"
+        ],
+        "description": "Archaeological compound of Buddhist brick and stone structures in Kampar Regency, listed as a public visitor site.",
+        "description_zh": "穆阿拉塔库斯寺庙群位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "Archaeological compound of Buddhist brick and stone structures in Kampar Regency, listed as a public visitor site.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q3101233",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Kampar Regency, Riau.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism site describes the visitor destination as the temple compound in Kampar.",
+            "id": "auth:id-public:Q3101233:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia",
+            "revision": "Retrieved 2026-11-28. SHA-256 add60dc23c1fdbbd38451a08575f9626a0700d993e9cfd490bab2f5d9224c592.",
+            "title": "Visit Candi Muara Takus",
+            "uri": "https://www.indonesia.travel/id/id/destination/sumatra/west-sumatra/candi-muara-takus"
+          }
+        },
+        "id": "auth:id-public:Q3101233",
+        "location_precision": null,
+        "names": [
+          "穆阿拉塔库斯寺庙群",
+          "Muara Takus Temple Compound",
+          "Candi Muara Takus",
+          "Muara Takus Compound Site"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          100.641951,
+          0.336016
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism site describes the visitor destination as the temple compound in Kampar.",
+            "id": "auth:id-public:Q3101233:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia",
+            "revision": "Retrieved 2026-11-28. SHA-256 add60dc23c1fdbbd38451a08575f9626a0700d993e9cfd490bab2f5d9224c592.",
+            "title": "Visit Candi Muara Takus",
+            "uri": "https://www.indonesia.travel/id/id/destination/sumatra/west-sumatra/candi-muara-takus"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tentative submission identifies the archaeological compound separately from the village.",
+            "id": "auth:id-public:Q3101233:evidence:2",
+            "license": null,
+            "publisher": "Indonesia national submission, UNESCO World Heritage Centre",
+            "revision": "Retrieved 2026-11-28. SHA-256 edba01b127dd6c4fb5da6c7e34cedcd1b182deba1243d503c4b1841a7e5db585.",
+            "title": "Muara Takus Compound Site tentative submission",
+            "uri": "https://whc.unesco.org/en/tentativelists/5464/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national gazetteer lists the named temple compound and its survey point.",
+            "id": "auth:id-public:Q3101233:evidence:3",
+            "license": null,
+            "publisher": "Geospatial Information Agency of Indonesia",
+            "revision": "Retrieved 2026-11-28. SHA-256 246df26fe06bfd02ed40ff77800c423140b6359b4d8e88e6cad61a632b86d2ef.",
+            "title": "Candi Muara Takus in the national gazetteer",
+            "uri": "https://sinar.big.go.id/Pencarian/Detail/47305"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 100.641951, latitude 0.336016",
+            "id": "wikidata:Q3101233",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2546690608. P625 Q3101233$50882915-C488-4B90-A4A8-3602062A61C4.",
+            "title": "Muara Takus Temple Compound representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3101233.json"
+          }
+        ],
+        "source_uri": "https://www.indonesia.travel/id/id/destination/sumatra/west-sumatra/candi-muara-takus",
+        "title": "Muara Takus Temple Compound",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/muara-takus-tourism.html",
+          "sha256": "add60dc23c1fdbbd38451a08575f9626a0700d993e9cfd490bab2f5d9224c592",
+          "uri": "https://www.indonesia.travel/id/id/destination/sumatra/west-sumatra/candi-muara-takus"
+        },
+        {
+          "filename": "source/unesco-muara-takus.html",
+          "sha256": "edba01b127dd6c4fb5da6c7e34cedcd1b182deba1243d503c4b1841a7e5db585",
+          "uri": "https://whc.unesco.org/en/tentativelists/5464/"
+        },
+        {
+          "filename": "source/muara-takus-big.html",
+          "sha256": "246df26fe06bfd02ed40ff77800c423140b6359b4d8e88e6cad61a632b86d2ef",
+          "uri": "https://sinar.big.go.id/Pencarian/Detail/47305"
+        },
+        {
+          "filename": "source/Q3101233.json",
+          "sha256": "04ab42af405c8dc9cfece3ed7b14a0efd44d7475fd8c230061855553197a58b5",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3101233.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Point represents the named fortress on Banda Neira, separate from nearby ruins at Fort Nassau.",
+        "point": [
+          129.89869,
+          -4.52662
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4982061.json",
+        "statement_id": "Q4982061$E77BF381-312E-4BFC-9542-0E96093CD9D8"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Pentagonal historic fortress on Banda Neira, interpreted as part of the history of the Banda Islands and the spice trade.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tourism Office, Maluku Province",
+          "Indonesia national submission, UNESCO World Heritage Centre",
+          "Wikidata contributors"
+        ],
+        "description": "Pentagonal historic fortress on Banda Neira, interpreted as part of the history of the Banda Islands and the spice trade.",
+        "description_zh": "贝尔吉卡堡位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "Pentagonal historic fortress on Banda Neira, interpreted as part of the history of the Banda Islands and the spice trade.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q4982061",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Banda Neira, Central Maluku Regency.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial tourism office lists the pentagonal fort as a visitor destination.",
+            "id": "auth:id-public:Q4982061:evidence:1",
+            "license": null,
+            "publisher": "Tourism Office, Maluku Province",
+            "revision": "Retrieved 2026-11-28. SHA-256 6b01ef8ad3e562a49618561503486fa9b32054f044c92c4cf9b47c6b8f1d7b7e.",
+            "title": "Fort Belgica visitor destination",
+            "uri": "https://dispar.malukuprov.go.id/index.php/destinasi/benteng-belgica-banda-neira-jejak-sejarah-rempah-dunia-di-maluku"
+          }
+        },
+        "id": "auth:id-public:Q4982061",
+        "location_precision": null,
+        "names": [
+          "贝尔吉卡堡",
+          "Fort Belgica",
+          "Benteng Belgica",
+          "Benteng Belgika"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          129.89869,
+          -4.52662
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial tourism office lists the pentagonal fort as a visitor destination.",
+            "id": "auth:id-public:Q4982061:evidence:1",
+            "license": null,
+            "publisher": "Tourism Office, Maluku Province",
+            "revision": "Retrieved 2026-11-28. SHA-256 6b01ef8ad3e562a49618561503486fa9b32054f044c92c4cf9b47c6b8f1d7b7e.",
+            "title": "Fort Belgica visitor destination",
+            "uri": "https://dispar.malukuprov.go.id/index.php/destinasi/benteng-belgica-banda-neira-jejak-sejarah-rempah-dunia-di-maluku"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The Banda Islands tentative submission discusses the historic forts of Banda Neira.",
+            "id": "auth:id-public:Q4982061:evidence:2",
+            "license": null,
+            "publisher": "Indonesia national submission, UNESCO World Heritage Centre",
+            "revision": "Retrieved 2026-11-28. SHA-256 55ceec9f5b3479f1f9912994cb115f5d414a5a6f6b7f719bc0c344bdfb8ff496.",
+            "title": "Historic and Marine Landscape of the Banda Islands tentative submission",
+            "uri": "https://whc.unesco.org/en/tentativelists/6065/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 129.89869, latitude -4.52662",
+            "id": "wikidata:Q4982061",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2572444529. P625 Q4982061$E77BF381-312E-4BFC-9542-0E96093CD9D8.",
+            "title": "Fort Belgica representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4982061.json"
+          }
+        ],
+        "source_uri": "https://dispar.malukuprov.go.id/index.php/destinasi/benteng-belgica-banda-neira-jejak-sejarah-rempah-dunia-di-maluku",
+        "title": "Fort Belgica",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/belgica-maluku.html",
+          "sha256": "6b01ef8ad3e562a49618561503486fa9b32054f044c92c4cf9b47c6b8f1d7b7e",
+          "uri": "https://dispar.malukuprov.go.id/index.php/destinasi/benteng-belgica-banda-neira-jejak-sejarah-rempah-dunia-di-maluku"
+        },
+        {
+          "filename": "source/unesco-banda-tentative.html",
+          "sha256": "55ceec9f5b3479f1f9912994cb115f5d414a5a6f6b7f719bc0c344bdfb8ff496",
+          "uri": "https://whc.unesco.org/en/tentativelists/6065/"
+        },
+        {
+          "filename": "source/Q4982061.json",
+          "sha256": "5ecdb2d0eebcaffeab1247484cbfeddc07b1580c37efa6d892eb6e2094f731ae",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4982061.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Representative point denotes the offshore temple as a landmark. It does not indicate public access to the sacred interior.",
+        "point": [
+          115.08675,
+          -8.62113889
+        ],
+        "precision": 2.777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q515253.json",
+        "statement_id": "Q515253$AB794905-797D-43E6-B947-BB3412FC028F"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Coastal Balinese temple site in Tabanan. The managed visitor area provides views of the temple and its offshore setting.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Government of Bali Province",
+          "Ministry of Tourism of Indonesia",
+          "Wikidata contributors"
+        ],
+        "description": "Coastal Balinese temple site in Tabanan. The managed visitor area provides views of the temple and its offshore setting.",
+        "description_zh": "海神庙（塔纳洛特）位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "Coastal Balinese temple site in Tabanan. The managed visitor area provides views of the temple and its offshore setting.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q515253",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Tabanan Regency.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial government and site operator document visits to the Tanah Lot attraction.",
+            "id": "auth:id-public:Q515253:evidence:1",
+            "license": null,
+            "publisher": "Government of Bali Province",
+            "revision": "Retrieved 2026-11-28. SHA-256 f99ee4f97feb50562acd28886293d8a9d0bc1bfe8c6736f3d3ff7b3e58f84de0.",
+            "title": "Tourism at Tanah Lot",
+            "uri": "https://bmc.baliprov.go.id/news/title/terus-perkuat-sosialisasi-monitoring-pungutan-wisatawan-asing-sasar-dtw-tanah-lot"
+          }
+        },
+        "id": "auth:id-public:Q515253",
+        "location_precision": null,
+        "names": [
+          "海神庙（塔纳洛特）",
+          "Tanah Lot",
+          "Pura Tanah Lot",
+          "塔纳洛特海神庙"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          115.08675,
+          -8.62113889
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial government and site operator document visits to the Tanah Lot attraction.",
+            "id": "auth:id-public:Q515253:evidence:1",
+            "license": null,
+            "publisher": "Government of Bali Province",
+            "revision": "Retrieved 2026-11-28. SHA-256 f99ee4f97feb50562acd28886293d8a9d0bc1bfe8c6736f3d3ff7b3e58f84de0.",
+            "title": "Tourism at Tanah Lot",
+            "uri": "https://bmc.baliprov.go.id/news/title/terus-perkuat-sosialisasi-monitoring-pungutan-wisatawan-asing-sasar-dtw-tanah-lot"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry describes Tanah Lot’s sightseeing access and exterior viewpoint.",
+            "id": "auth:id-public:Q515253:evidence:2",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia",
+            "revision": "Retrieved 2026-11-28. SHA-256 de87cf6e90696605d041ce5981d4ee0011911ee9c92593e3609c5c323d263b62.",
+            "title": "Goa Gajah and Besakih visitor information",
+            "uri": "https://www.indonesia.travel/id/id/travel-ideas/heritage/6-must-visit-temples-in-bali-to-experience-bliss"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 115.08675, latitude -8.62113889",
+            "id": "wikidata:Q515253",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2564533974. P625 Q515253$AB794905-797D-43E6-B947-BB3412FC028F.",
+            "title": "Tanah Lot representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q515253.json"
+          }
+        ],
+        "source_uri": "https://bmc.baliprov.go.id/news/title/terus-perkuat-sosialisasi-monitoring-pungutan-wisatawan-asing-sasar-dtw-tanah-lot",
+        "title": "Tanah Lot",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/bali-provincial-tanahlot.html",
+          "sha256": "f99ee4f97feb50562acd28886293d8a9d0bc1bfe8c6736f3d3ff7b3e58f84de0",
+          "uri": "https://bmc.baliprov.go.id/news/title/terus-perkuat-sosialisasi-monitoring-pungutan-wisatawan-asing-sasar-dtw-tanah-lot"
+        },
+        {
+          "filename": "source/goagajah-national.html",
+          "sha256": "de87cf6e90696605d041ce5981d4ee0011911ee9c92593e3609c5c323d263b62",
+          "uri": "https://www.indonesia.travel/id/id/travel-ideas/heritage/6-must-visit-temples-in-bali-to-experience-bliss"
+        },
+        {
+          "filename": "source/Q515253.json",
+          "sha256": "6ece2f6b816031c68f84ebeda7144ee521aea78b4e4e38a11e909e267e1decce",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q515253.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Marker represents the named fort and its documented visitor grounds.",
+        "point": [
+          102.25099,
+          -3.78748
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5471595.json",
+        "statement_id": "Q5471595$35F4629E-03F1-4741-9C4A-68A88D4E5628"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public waterfront fort in Bengkulu with historic defensive walls, courtyards and interpretation spaces.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministry of Tourism of Indonesia, SISPARNAS",
+          "Wikidata contributors"
+        ],
+        "description": "Public waterfront fort in Bengkulu with historic defensive walls, courtyards and interpretation spaces.",
+        "description_zh": "马尔堡炮台位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "Public waterfront fort in Bengkulu with historic defensive walls, courtyards and interpretation spaces.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q5471595",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Bengkulu.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies the fort as a visitor site and describes routes and public grounds.",
+            "id": "auth:id-public:Q5471595:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia, SISPARNAS",
+            "revision": "Retrieved 2026-11-28. SHA-256 9dec64ebf8c276ae14b7dbe3777f76d4aba235dfdd334706617879ea4b6b83f8.",
+            "title": "Fort Marlborough visitor listing",
+            "uri": "https://sisparnas.kemenpar.go.id/sites?id=20"
+          }
+        },
+        "id": "auth:id-public:Q5471595",
+        "location_precision": null,
+        "names": [
+          "马尔堡炮台",
+          "Fort Marlborough",
+          "Benteng Marlborough",
+          "马尔堡堡垒"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          102.25099,
+          -3.78748
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies the fort as a visitor site and describes routes and public grounds.",
+            "id": "auth:id-public:Q5471595:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia, SISPARNAS",
+            "revision": "Retrieved 2026-11-28. SHA-256 9dec64ebf8c276ae14b7dbe3777f76d4aba235dfdd334706617879ea4b6b83f8.",
+            "title": "Fort Marlborough visitor listing",
+            "uri": "https://sisparnas.kemenpar.go.id/sites?id=20"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 102.25099, latitude -3.78748",
+            "id": "wikidata:Q5471595",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2555809346. P625 Q5471595$35F4629E-03F1-4741-9C4A-68A88D4E5628.",
+            "title": "Fort Marlborough representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5471595.json"
+          }
+        ],
+        "source_uri": "https://sisparnas.kemenpar.go.id/sites?id=20",
+        "title": "Fort Marlborough",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/id-sisparnas-20.html",
+          "sha256": "9dec64ebf8c276ae14b7dbe3777f76d4aba235dfdd334706617879ea4b6b83f8",
+          "uri": "https://sisparnas.kemenpar.go.id/sites?id=20"
+        },
+        {
+          "filename": "source/Q5471595.json",
+          "sha256": "3f7cc5e772e159caa027034c0f6e6dfbd5a19c32e8607bf7bf77499e7b8d0316",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5471595.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The palace museum is the subject of the entry. Nearby funerary structures are not separate points.",
+        "point": [
+          116.9904,
+          -0.41308
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6933766.json",
+        "statement_id": "Q6933766$9616055a-47f5-c3c5-d9d9-5347569101f3"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The former palace of the Kutai Sultanate in Tenggarong, operated as a public museum in the historic building.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Government of East Kalimantan",
+          "Government of Kutai Kartanegara Regency",
+          "Wikidata contributors"
+        ],
+        "description": "The former palace of the Kutai Sultanate in Tenggarong, operated as a public museum in the historic building.",
+        "description_zh": "穆拉瓦尔曼博物馆位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "The former palace of the Kutai Sultanate in Tenggarong, operated as a public museum in the historic building.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q6933766",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Tenggarong.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The province documents public visits and identifies the museum in the historic royal setting.",
+            "id": "auth:id-public:Q6933766:evidence:1",
+            "license": null,
+            "publisher": "Government of East Kalimantan",
+            "revision": "Retrieved 2026-11-28. SHA-256 228a46a07327bcfe89f3a4b172984ca8375a3d888d646f93dccb6976f93014de.",
+            "title": "Visitors to the Mulawarman Museum",
+            "uri": "https://diskominfo.kaltimprov.go.id/berita/libur-lebaran-museum-mulawarman-hadirkan-ragam-budaya-khas-kaltim-pengunjung-meningkat-signifikan"
+          }
+        },
+        "id": "auth:id-public:Q6933766",
+        "location_precision": null,
+        "names": [
+          "穆拉瓦尔曼博物馆",
+          "Mulawarman Museum",
+          "Museum Mulawarman",
+          "Kutai Sultanate Palace",
+          "Istana Kutai"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          116.9904,
+          -0.41308
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The province documents public visits and identifies the museum in the historic royal setting.",
+            "id": "auth:id-public:Q6933766:evidence:1",
+            "license": null,
+            "publisher": "Government of East Kalimantan",
+            "revision": "Retrieved 2026-11-28. SHA-256 228a46a07327bcfe89f3a4b172984ca8375a3d888d646f93dccb6976f93014de.",
+            "title": "Visitors to the Mulawarman Museum",
+            "uri": "https://diskominfo.kaltimprov.go.id/berita/libur-lebaran-museum-mulawarman-hadirkan-ragam-budaya-khas-kaltim-pengunjung-meningkat-signifikan"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The regency identifies the public museum in Tenggarong.",
+            "id": "auth:id-public:Q6933766:evidence:2",
+            "license": null,
+            "publisher": "Government of Kutai Kartanegara Regency",
+            "revision": "Retrieved 2026-11-28. SHA-256 44ea2801732ae6bd9d29a9d4fa17701ea24a4513a3259d0413c269d7b89b482d.",
+            "title": "Mulawarman Museum, Tenggarong",
+            "uri": "https://visiting.kukarkab.go.id/wisata/1/museum-mulawarman-tenggarong"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 116.9904, latitude -0.41308",
+            "id": "wikidata:Q6933766",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2555807974. P625 Q6933766$9616055a-47f5-c3c5-d9d9-5347569101f3.",
+            "title": "Mulawarman Museum representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6933766.json"
+          }
+        ],
+        "source_uri": "https://diskominfo.kaltimprov.go.id/berita/libur-lebaran-museum-mulawarman-hadirkan-ragam-budaya-khas-kaltim-pengunjung-meningkat-signifikan",
+        "title": "Mulawarman Museum",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/mulawarman-visitors.html",
+          "sha256": "228a46a07327bcfe89f3a4b172984ca8375a3d888d646f93dccb6976f93014de",
+          "uri": "https://diskominfo.kaltimprov.go.id/berita/libur-lebaran-museum-mulawarman-hadirkan-ragam-budaya-khas-kaltim-pengunjung-meningkat-signifikan"
+        },
+        {
+          "filename": "source/mulawarman-tourism.html",
+          "sha256": "44ea2801732ae6bd9d29a9d4fa17701ea24a4513a3259d0413c269d7b89b482d",
+          "uri": "https://visiting.kukarkab.go.id/wisata/1/museum-mulawarman-tenggarong"
+        },
+        {
+          "filename": "source/Q6933766.json",
+          "sha256": "d925e61af68c77d12e2ea9d50b7d70a88421cd8e9b62348ff3d9a56af87eb4aa",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6933766.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Representative point denotes the original house museum at Jalan Ahmad Yani 105.",
+        "point": [
+          98.68033,
+          3.58545
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7810631.json",
+        "statement_id": "Q7810631$1DD3DC87-0668-498A-A878-AFF137FBD86C"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic merchant’s residence in Medan, open as a house museum with interpretation of the city’s Chinese and Malay heritage.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tjong A Fie Mansion",
+          "Inspectorate General, Ministry of Primary and Secondary Education",
+          "Wikidata contributors"
+        ],
+        "description": "Historic merchant’s residence in Medan, open as a house museum with interpretation of the city’s Chinese and Malay heritage.",
+        "description_zh": "张阿辉故居位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "Historic merchant’s residence in Medan, open as a house museum with interpretation of the city’s Chinese and Malay heritage.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q7810631",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Medan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum provides its visiting hours and address for the historic house.",
+            "id": "auth:id-public:Q7810631:evidence:1",
+            "license": null,
+            "publisher": "Tjong A Fie Mansion",
+            "revision": "Retrieved 2026-11-28. SHA-256 9259de9496c6ab322cfb7afc487caae66a16d99eefd0d2582f9a0df3dbd2c08d.",
+            "title": "Museum visitor information",
+            "uri": "https://tjongafiemansion.org/visit-us"
+          }
+        },
+        "id": "auth:id-public:Q7810631",
+        "location_precision": null,
+        "names": [
+          "张阿辉故居",
+          "Tjong A Fie Mansion",
+          "Rumah Tjong A Fie",
+          "Museum Rumah Tjong A Fie"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          98.68033,
+          3.58545
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum provides its visiting hours and address for the historic house.",
+            "id": "auth:id-public:Q7810631:evidence:1",
+            "license": null,
+            "publisher": "Tjong A Fie Mansion",
+            "revision": "Retrieved 2026-11-28. SHA-256 9259de9496c6ab322cfb7afc487caae66a16d99eefd0d2582f9a0df3dbd2c08d.",
+            "title": "Museum visitor information",
+            "uri": "https://tjongafiemansion.org/visit-us"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies the original house and describes the rooms included in the museum visit.",
+            "id": "auth:id-public:Q7810631:evidence:2",
+            "license": null,
+            "publisher": "Inspectorate General, Ministry of Primary and Secondary Education",
+            "revision": "Retrieved 2026-11-28. SHA-256 f36e07408e0679f914eae569195253770ee15d5342e363fa263c03a7564f5331.",
+            "title": "Visiting Tjong A Fie’s historic house",
+            "uri": "https://itjen.kemendikdasmen.go.id/web/?p=9424"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 98.68033, latitude 3.58545",
+            "id": "wikidata:Q7810631",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2547400070. P625 Q7810631$1DD3DC87-0668-498A-A878-AFF137FBD86C.",
+            "title": "Tjong A Fie Mansion representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7810631.json"
+          }
+        ],
+        "source_uri": "https://tjongafiemansion.org/visit-us",
+        "title": "Tjong A Fie Mansion",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/tjong-operator.html",
+          "sha256": "9259de9496c6ab322cfb7afc487caae66a16d99eefd0d2582f9a0df3dbd2c08d",
+          "uri": "https://tjongafiemansion.org/visit-us"
+        },
+        {
+          "filename": "source/tjong-ministry.html",
+          "sha256": "f36e07408e0679f914eae569195253770ee15d5342e363fa263c03a7564f5331",
+          "uri": "https://itjen.kemendikdasmen.go.id/web/?p=9424"
+        },
+        {
+          "filename": "source/Q7810631.json",
+          "sha256": "82e7d564346703cf2894329a2a0c3b7ecc5f61270ba54dd2f68f9d153e37037b",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7810631.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "One representative point denotes the named complex. Sacred precinct access remains subject to local rules.",
+        "point": [
+          115.45222,
+          -8.3741
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q829418.json",
+        "statement_id": "Q829418$4836C9E2-DDD5-4AE6-8A79-D2ED46E43BD5"
+      },
+      "independent_review": {
+        "method": "Independent review audited each original government or operator public scope, active CC0 coordinate and source hash, modern settlement and archaeological identities, and official World Heritage maps and component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Large living Hindu temple complex on the slope of Mount Agung, with designated access for visitors.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched against visitor information and a frozen public Wikidata coordinate.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministry of Tourism of Indonesia",
+          "Wikidata contributors"
+        ],
+        "description": "Large living Hindu temple complex on the slope of Mount Agung, with designated access for visitors.",
+        "description_zh": "巴刹基母庙位于印度尼西亚。来源提供公众参观资料，地图标注遗址代表点。",
+        "details": "Large living Hindu temple complex on the slope of Mount Agung, with designated access for visitors.",
+        "geography": {
+          "authority_id": "supplement:auth:id-public:Q829418",
+          "countries": [
+            "ID"
+          ],
+          "note": "Representative point of the documented public heritage property in Karangasem Regency.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry lists visitor information for the Besakih temple complex and notes ceremony-related conditions.",
+            "id": "auth:id-public:Q829418:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia",
+            "revision": "Retrieved 2026-11-28. SHA-256 de87cf6e90696605d041ce5981d4ee0011911ee9c92593e3609c5c323d263b62.",
+            "title": "Goa Gajah and Besakih visitor information",
+            "uri": "https://www.indonesia.travel/id/id/travel-ideas/heritage/6-must-visit-temples-in-bali-to-experience-bliss"
+          }
+        },
+        "id": "auth:id-public:Q829418",
+        "location_precision": null,
+        "names": [
+          "巴刹基母庙",
+          "Besakih Temple",
+          "Pura Besakih",
+          "Pura Agung Besakih",
+          "百沙基母庙"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          115.45222,
+          -8.3741
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry lists visitor information for the Besakih temple complex and notes ceremony-related conditions.",
+            "id": "auth:id-public:Q829418:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism of Indonesia",
+            "revision": "Retrieved 2026-11-28. SHA-256 de87cf6e90696605d041ce5981d4ee0011911ee9c92593e3609c5c323d263b62.",
+            "title": "Goa Gajah and Besakih visitor information",
+            "uri": "https://www.indonesia.travel/id/id/travel-ideas/heritage/6-must-visit-temples-in-bali-to-experience-bliss"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 115.45222, latitude -8.3741",
+            "id": "wikidata:Q829418",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2568234867. P625 Q829418$4836C9E2-DDD5-4AE6-8A79-D2ED46E43BD5.",
+            "title": "Besakih Temple representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q829418.json"
+          }
+        ],
+        "source_uri": "https://www.indonesia.travel/id/id/travel-ideas/heritage/6-must-visit-temples-in-bali-to-experience-bliss",
+        "title": "Besakih Temple",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/goagajah-national.html",
+          "sha256": "de87cf6e90696605d041ce5981d4ee0011911ee9c92593e3609c5c323d263b62",
+          "uri": "https://www.indonesia.travel/id/id/travel-ideas/heritage/6-must-visit-temples-in-bali-to-experience-bliss"
+        },
+        {
+          "filename": "source/Q829418.json",
+          "sha256": "713409fd90a04a1e0c6e270230028ce470edb102076a57e17fc07dc7ee3da19a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q829418.json"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Public cultural places in six Indonesian island groups outside Java. Selected by original authority visitor evidence and exact licensed representative point after independent scope and existing UNESCO component checks."
+}

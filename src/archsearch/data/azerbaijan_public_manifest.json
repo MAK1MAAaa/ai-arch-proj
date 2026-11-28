@@ -1,0 +1,22 @@
+{
+  "base_count": 5309,
+  "base_ids_sha256": "c3c7c1b545bc552db18d57d9a102fad3ecd2501f1104a6d61fdacfa5780a9ecb",
+  "base_sites_sha256": "83956fe4ef3b9704bf04ef083dbb1ccfa7ad2f99d10ac2f8a538ecb283ebda74",
+  "cohort_version": "azerbaijan-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 5,
+    "total": 5314
+  },
+  "files": {
+    "azerbaijan_public_review.json": {
+      "sha256": "dc849599a572b4153606fffe09596a623c051520030ed77fa770e1e776518f89"
+    },
+    "azerbaijan_public_sites.json": {
+      "sha256": "9d950bf1eddbf201b566e5b3deb6cdfe984eb7462fdebf90c2abf1c54f75f9da"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Five publicly interpreted historic places in Azerbaijan using original CC0 Wikidata position claims, verified visitor scopes and official site identification."
+}

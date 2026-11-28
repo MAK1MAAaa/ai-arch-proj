@@ -1,0 +1,22 @@
+{
+  "base_count": 5029,
+  "base_ids_sha256": "41f21d568969cce19298b5055b81b6e712d32f5a8caf3e00da66fe47b49fd0d0",
+  "base_sites_sha256": "9166f1813d9778565d1e0b145159f87e9de746046a781d3a08446915997750cd",
+  "cohort_version": "korea-gangwon-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 21,
+    "total": 5050
+  },
+  "files": {
+    "korea_gangwon_public_review.json": {
+      "sha256": "b08490b90bab18cd11503a7cc5221ba127418f99752a8185a7b9bbc642f48fa3"
+    },
+    "korea_gangwon_public_sites.json": {
+      "sha256": "3a356ee1eff9228aab550f5134175f8a3059292158665331b51674be6a811843"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Public cultural and archaeological properties in ten Gangwon municipalities, using exact official Korean national heritage coordinates or a separate open point for the Cheorwon ruins; approved access scopes and representative roles are retained."
+}

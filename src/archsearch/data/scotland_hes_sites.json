@@ -1,0 +1,1986 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Aberdour Castle is a historic property in the care of Historic Environment Scotland (Fife).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC001; original local authority label: Fife.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC001",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Fife.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC001 · Aberdour Castle · Fife · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC001",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC001",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -3.2976326266504605,
+      56.05492298796493
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC001 · Aberdour Castle · Fife · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC001",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/aberdour-castle-and-gardens/plan-your-visit/",
+    "title": "Aberdour Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Arbroath Abbey is a historic property in the care of Historic Environment Scotland (Angus).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC006; original local authority label: Angus.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC006",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Angus.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC006 · Arbroath Abbey · Angus · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC006",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC006",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.5825001051589767,
+      56.562225065009336
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC006 · Arbroath Abbey · Angus · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC006",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/arbroath-abbey/plan-your-visit/",
+    "title": "Arbroath Abbey",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Castle Campbell is a historic property in the care of Historic Environment Scotland (Clackmannanshire).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC016; original local authority label: Clackmannanshire.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC016",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Clackmannanshire.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC016 · Castle Campbell · Clackmannanshire · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC016",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC016",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -3.674184702974699,
+      56.17499182269289
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC016 · Castle Campbell · Clackmannanshire · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC016",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/castle-campbell/plan-your-visit/",
+    "title": "Castle Campbell",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Edzell Castle is a historic property in the care of Historic Environment Scotland (Angus).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC027; original local authority label: Angus.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC027",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Angus.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC027 · Edzell Castle · Angus · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC027",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC027",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.6811722329265764,
+      56.81180582437894
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC027 · Edzell Castle · Angus · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC027",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/edzell-castle-and-garden/plan-your-visit/",
+    "title": "Edzell Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Inchcolm Abbey is a historic property in the care of Historic Environment Scotland (Fife).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC028; original local authority label: Fife.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC028",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Fife.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC028 · Inchcolm Abbey · Fife · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC028",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC028",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -3.3025874438423775,
+      56.02990834805941
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC028 · Inchcolm Abbey · Fife · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC028",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/inchcolm-abbey/plan-your-visit/",
+    "title": "Inchcolm Abbey",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Lochleven Castle is a historic property in the care of Historic Environment Scotland (Perth and Kinross).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC030; original local authority label: Perth and Kinross.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC030",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Perth and Kinross.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC030 · Lochleven Castle · Perth and Kinross · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC030",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC030",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -3.3921612556552567,
+      56.20086363535327
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC030 · Lochleven Castle · Perth and Kinross · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC030",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/lochleven-castle/plan-your-visit/",
+    "title": "Lochleven Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "St Andrews Castle is a historic property in the care of Historic Environment Scotland (Fife).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC034; original local authority label: Fife.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC034",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Fife.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC034 · St Andrews Castle · Fife · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC034",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC034",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.7903503722182093,
+      56.34215980993989
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC034 · St Andrews Castle · Fife · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC034",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/st-andrews-castle/plan-your-visit/",
+    "title": "St Andrews Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "St Andrews Cathedral is a historic property in the care of Historic Environment Scotland (Fife).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC035; original local authority label: Fife.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC035",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Fife.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC035 · St Andrews Cathedral · Fife · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC035",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC035",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.787501869259597,
+      56.33978170548364
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC035 · St Andrews Cathedral · Fife · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC035",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/st-andrews-cathedral/plan-your-visit/",
+    "title": "St Andrews Cathedral",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Bonawe Iron Furnace is a historic property in the care of Historic Environment Scotland (Argyll and Bute).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC055; original local authority label: Argyll and Bute.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC055",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Argyll and Bute.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC055 · Bonawe Iron Furnace · Argyll and Bute · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC055",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC055",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -5.227394050676477,
+      56.437177279323606
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC055 · Bonawe Iron Furnace · Argyll and Bute · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC055",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/bonawe-historic-iron-furnace/plan-your-visit/",
+    "title": "Bonawe Iron Furnace",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Elcho Castle is a historic property in the care of Historic Environment Scotland (Perth and Kinross).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC069; original local authority label: Perth and Kinross.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC069",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Perth and Kinross.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC069 · Elcho Castle · Perth and Kinross · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC069",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC069",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -3.355215486646546,
+      56.3744264449052
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC069 · Elcho Castle · Perth and Kinross · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC069",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/elcho-castle/plan-your-visit/",
+    "title": "Elcho Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Iona Abbey is a historic property in the care of Historic Environment Scotland (Argyll and Bute).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC076; original local authority label: Argyll and Bute.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC076",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Argyll and Bute.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC076 · Iona Abbey · Argyll and Bute · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC076",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC076",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -6.3921885904425935,
+      56.33487281736606
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC076 · Iona Abbey · Argyll and Bute · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC076",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/iona-abbey-and-nunnery/plan-your-visit/",
+    "title": "Iona Abbey",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Stirling Castle is a historic property in the care of Historic Environment Scotland (Stirling).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC111; original local authority label: Stirling.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC111",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Stirling.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC111 · Stirling Castle · Stirling · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC111",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC111",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -3.94726219754547,
+      56.12356799364292
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC111 · Stirling Castle · Stirling · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC111",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/stirling-castle/plan-your-visit/",
+    "title": "Stirling Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Bothwell Castle is a historic property in the care of Historic Environment Scotland (South Lanarkshire).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC114; original local authority label: South Lanarkshire.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC114",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: South Lanarkshire.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC114 · Bothwell Castle · South Lanarkshire · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC114",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC114",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -4.093283439059791,
+      55.81005610613151
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC114 · Bothwell Castle · South Lanarkshire · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC114",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/bothwell-castle/plan-your-visit/",
+    "title": "Bothwell Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Dumbarton Castle is a historic property in the care of Historic Environment Scotland (West Dunbartonshire).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC120; original local authority label: West Dunbartonshire.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC120",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: West Dunbartonshire.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC120 · Dumbarton Castle · West Dunbartonshire · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC120",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC120",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -4.5631921285451265,
+      55.93672565265368
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC120 · Dumbarton Castle · West Dunbartonshire · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC120",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/dumbarton-castle/plan-your-visit/",
+    "title": "Dumbarton Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Glasgow Cathedral is a historic property in the care of Historic Environment Scotland (Glasgow City).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC121; original local authority label: Glasgow City.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC121",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Glasgow City.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC121 · Glasgow Cathedral · Glasgow City · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC121",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC121",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -4.234537462648756,
+      55.86299320670211
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC121 · Glasgow Cathedral · Glasgow City · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC121",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/glasgow-cathedral/plan-your-visit/",
+    "title": "Glasgow Cathedral",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Blackness Castle is a historic property in the care of Historic Environment Scotland (Falkirk).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC129; original local authority label: Falkirk.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC129",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Falkirk.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC129 · Blackness Castle · Falkirk · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC129",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC129",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -3.5171079433551258,
+      56.005910318052294
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC129 · Blackness Castle · Falkirk · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC129",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/blackness-castle/plan-your-visit/",
+    "title": "Blackness Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Cairnpapple Hill is a historic property in the care of Historic Environment Scotland (West Lothian).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC130; original local authority label: West Lothian.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC130",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: West Lothian.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC130 · Cairnpapple Hill · West Lothian · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC130",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC130",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -3.6223577397958797,
+      55.92809924606747
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC130 · Cairnpapple Hill · West Lothian · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC130",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/cairnpapple-hill/plan-your-visit/",
+    "title": "Cairnpapple Hill",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Craigmillar Castle is a historic property in the care of Historic Environment Scotland (City of Edinburgh).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC134; original local authority label: City of Edinburgh.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC134",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: City of Edinburgh.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC134 · Craigmillar Castle · City of Edinburgh · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC134",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC134",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -3.140722166682451,
+      55.92537853025509
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC134 · Craigmillar Castle · City of Edinburgh · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC134",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/craigmillar-castle/plan-your-visit/",
+    "title": "Craigmillar Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Dirleton Castle is a historic property in the care of Historic Environment Scotland (East Lothian).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC139; original local authority label: East Lothian.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC139",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: East Lothian.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC139 · Dirleton Castle · East Lothian · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC139",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC139",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.7791867475692853,
+      56.04591265766441
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC139 · Dirleton Castle · East Lothian · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC139",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/dirleton-castle/plan-your-visit/",
+    "title": "Dirleton Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Dryburgh Abbey is a historic property in the care of Historic Environment Scotland (Scottish Borders).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC141; original local authority label: Scottish Borders.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC141",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Scottish Borders.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC141 · Dryburgh Abbey · Scottish Borders · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC141",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC141",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.650007655503195,
+      55.57721684360323
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC141 · Dryburgh Abbey · Scottish Borders · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC141",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/dryburgh-abbey/plan-your-visit/",
+    "title": "Dryburgh Abbey",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Jedburgh Abbey is a historic property in the care of Historic Environment Scotland (Scottish Borders).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC150; original local authority label: Scottish Borders.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC150",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Scottish Borders.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC150 · Jedburgh Abbey · Scottish Borders · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC150",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC150",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.5549172415972747,
+      55.47628105063134
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC150 · Jedburgh Abbey · Scottish Borders · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC150",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/jedburgh-abbey/plan-your-visit/",
+    "title": "Jedburgh Abbey",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Tantallon Castle is a historic property in the care of Historic Environment Scotland (East Lothian).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC164; original local authority label: East Lothian.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC164",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: East Lothian.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC164 · Tantallon Castle · East Lothian · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC164",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC164",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.652149231375754,
+      56.05581857304684
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC164 · Tantallon Castle · East Lothian · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC164",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/tantallon-castle/plan-your-visit/",
+    "title": "Tantallon Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Crossraguel Abbey is a historic property in the care of Historic Environment Scotland (South Ayrshire).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC189; original local authority label: South Ayrshire.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC189",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: South Ayrshire.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC189 · Crossraguel Abbey · South Ayrshire · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC189",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC189",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -4.720900988889738,
+      55.33874306125918
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC189 · Crossraguel Abbey · South Ayrshire · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC189",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/crossraguel-abbey/plan-your-visit/",
+    "title": "Crossraguel Abbey",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Dundrennan Abbey is a historic property in the care of Historic Environment Scotland (Dumfries and Galloway).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC195; original local authority label: Dumfries and Galloway.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC195",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Dumfries and Galloway.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC195 · Dundrennan Abbey · Dumfries and Galloway · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC195",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC195",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -3.9477216761394684,
+      54.806696934860184
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC195 · Dundrennan Abbey · Dumfries and Galloway · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC195",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/dundrennan-abbey/plan-your-visit/",
+    "title": "Dundrennan Abbey",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Corgarff Castle is a historic property in the care of Historic Environment Scotland (Aberdeenshire).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC233; original local authority label: Aberdeenshire.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC233",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Aberdeenshire.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC233 · Corgarff Castle · Aberdeenshire · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC233",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC233",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -3.23422628199127,
+      57.16278485270601
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC233 · Corgarff Castle · Aberdeenshire · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC233",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/corgarff-castle/plan-your-visit/",
+    "title": "Corgarff Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Elgin Cathedral is a historic property in the care of Historic Environment Scotland (Moray).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC243; original local authority label: Moray.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC243",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Moray.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC243 · Elgin Cathedral · Moray · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC243",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC243",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -3.3053437154750225,
+      57.650583545109114
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC243 · Elgin Cathedral · Moray · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC243",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/elgin-cathedral/plan-your-visit/",
+    "title": "Elgin Cathedral",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Huntly Castle is a historic property in the care of Historic Environment Scotland (Aberdeenshire).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC247; original local authority label: Aberdeenshire.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC247",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Aberdeenshire.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC247 · Huntly Castle · Aberdeenshire · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC247",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC247",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.7820862209860295,
+      57.45387283502228
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC247 · Huntly Castle · Aberdeenshire · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC247",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/huntly-castle/plan-your-visit/",
+    "title": "Huntly Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Kildrummy Castle is a historic property in the care of Historic Environment Scotland (Aberdeenshire).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC250; original local authority label: Aberdeenshire.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC250",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Aberdeenshire.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC250 · Kildrummy Castle · Aberdeenshire · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC250",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC250",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.9042389813042133,
+      57.23483129087945
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC250 · Kildrummy Castle · Aberdeenshire · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC250",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/kildrummy-castle/plan-your-visit/",
+    "title": "Kildrummy Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Broch of Gurness is a historic property in the care of Historic Environment Scotland (Orkney Islands).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC277; original local authority label: Orkney Islands.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC277",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Orkney Islands.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC277 · Broch of Gurness · Orkney Islands · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC277",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC277",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -3.0813993217280453,
+      59.12383426003749
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC277 · Broch of Gurness · Orkney Islands · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC277",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/broch-of-gurness/plan-your-visit/",
+    "title": "Broch of Gurness",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Urquhart Castle is a historic property in the care of Historic Environment Scotland (Highland).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC323; original local authority label: Highland.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC323",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Highland.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC323 · Urquhart Castle · Highland · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC323",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC323",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -4.443715650677127,
+      57.32418710703325
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC323 · Urquhart Castle · Highland · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC323",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/urquhart-castle/plan-your-visit/",
+    "title": "Urquhart Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Source catalogue identity and location review",
+      "note": "This public point batch does not establish an individual historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Contains Historic Environment Scotland data © Historic Environment Scotland Scottish Charity No. SC045925 2026"
+    ],
+    "description": "Fort George is a historic property in the care of Historic Environment Scotland (Highland).",
+    "description_zh": "苏格兰历史环境局负责保护的公开文化地点。地图采用该局发布的代表点。",
+    "details": "HES Properties in Care PIC332; original local authority label: Highland.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-hes-pic:PIC332",
+      "countries": [
+        "GB"
+      ],
+      "note": "Original HES local authority field: Highland.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC332 · Fort George · Highland · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC332",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    },
+    "id": "auth:gb-hes-pic:PIC332",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -4.066146508111339,
+      57.58397011461422
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "PIC332 · Fort George · Highland · published WGS84 point.",
+        "id": "hes-properties-in-care-points",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic Environment Scotland, Scottish Charity No. SC045925",
+        "revision": "Official WGS84 response, PIC_ID PIC332",
+        "title": "Properties in Care points",
+        "uri": "https://inspire.hes.scot/arcgis/rest/services/HES/Properties_in_care_points/MapServer/0/query?where=1%3D1&outFields=PIC_ID%2CPIC_NAME%2CLINK%2CLOCAL_AUTH&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.historicenvironment.scot/visit/all/fort-george/plan-your-visit/",
+    "title": "Fort George",
+    "types": [
+      "historic-site"
+    ]
+  }
+]

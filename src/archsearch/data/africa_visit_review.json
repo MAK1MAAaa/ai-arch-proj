@@ -1,0 +1,1132 @@
+{
+  "base_count": 4335,
+  "base_ids_sha256": "c67f0edf42a78dc0387a772757a76dac9bb901fd0fdca6188560cfd9bfb48571",
+  "base_sites_sha256": "8f78edad80ddbd5332985c1515472ca60e88698a475df1a602d8c575dfb85867",
+  "cohort_version": "africa-public-visit-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth P625. The original source precision is retained without adopting any claim of survey accuracy; the official visitor map is used only to check location context.",
+        "point": [
+          18.427725,
+          -33.925908
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1049562.json",
+        "statement_id": "q1049562$0547EEB7-3837-44C4-B2E6-D317525E28CB"
+      },
+      "independent_review": {
+        "method": "Independently recomputed the original artifacts, active Earth statement IDs, coordinates, ranks and precision. Rechecked official public visitor schedules and existing corpus identities.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The entry represents the fortified complex, which maintains public admission under the Castle Control Board.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Point-source review without selecting a historical phase.",
+          "note": "The corpus preserves the public representative location. No historical event phase was established for this point import.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Iziko Museums of South Africa",
+          "Wikidata contributors"
+        ],
+        "description": "The bastioned fort in central Cape Town contains museums and historic interiors visited by the public.",
+        "description_zh": "这座棱堡位于开普敦市中心，公众可以参观城堡内的博物馆和历史建筑空间。",
+        "details": "The entry represents the fortified complex, which maintains public admission under the Castle Control Board.",
+        "geography": {
+          "authority_id": "supplement:wd:Q1049562",
+          "countries": [
+            "ZA"
+          ],
+          "note": "Country metadata is modern catalogue geography. The point is not a historical jurisdiction claim.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "wikidata:Q1049562",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2551613598",
+            "title": "Castle of Good Hope — representative point and identity",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1049562.json"
+          }
+        },
+        "id": "wd:Q1049562",
+        "location_precision": null,
+        "names": [
+          "好望城堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          18.427725,
+          -33.925908
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:za-castle",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 1b088f85d47bf6e9ca3f6294709f688ff5517d896e32a0a0311fda05e1c9bee9",
+            "title": "Castle of Good Hope — identity and public site",
+            "uri": "https://www.iziko.org.za/museums/the-castle-of-good-hope/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "wikidata:Q1049562",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2551613598",
+            "title": "Castle of Good Hope — representative point and identity",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1049562.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:za-castle-board",
+            "license": null,
+            "publisher": "Castle Control Board",
+            "revision": "Retrieved artifact SHA256 2fa0bc3aed010fb267da02c8c43ab55ea09d6d0169cf43b89e18aa8990237683",
+            "title": "Castle of Good Hope — visitor information and directions",
+            "uri": "https://castleofgoodhope.co.za/"
+          }
+        ],
+        "source_uri": "https://www.iziko.org.za/museums/the-castle-of-good-hope/",
+        "title": "Castle of Good Hope",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "za-castle.html",
+          "sha256": "1b088f85d47bf6e9ca3f6294709f688ff5517d896e32a0a0311fda05e1c9bee9",
+          "uri": "https://www.iziko.org.za/museums/the-castle-of-good-hope/"
+        },
+        {
+          "filename": "Q1049562.json",
+          "sha256": "1796c1f3741547c3326d9c6fa3403c8c74196dd8ebcef7c0676a8b2942dcacf8",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1049562.json"
+        },
+        {
+          "filename": "za-castle-board.html",
+          "sha256": "2fa0bc3aed010fb267da02c8c43ab55ea09d6d0169cf43b89e18aa8990237683",
+          "uri": "https://castleofgoodhope.co.za/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth P625. The original source precision is retained without adopting any claim of survey accuracy; the official visitor map is used only to check location context.",
+        "point": [
+          18.413611,
+          -33.930556
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q13034337.json",
+        "statement_id": "Q13034337$ed484a6d-84b2-4fb8-a7ef-0c264b5244fe"
+      },
+      "independent_review": {
+        "method": "Independently recomputed the original artifacts, active Earth statement IDs, coordinates, ranks and precision. Rechecked official public visitor schedules and existing corpus identities.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The house is at the Government Avenue end near Rheede Street. The named Iziko map context was checked at the scale of the building block and the CC0 point was compared to the independently mapped building footprint.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Point-source review without selecting a historical phase.",
+          "note": "The corpus preserves the public representative location. No historical event phase was established for this point import.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Iziko Museums of South Africa",
+          "Wikidata contributors"
+        ],
+        "description": "This Cape Town house preserves a Georgian red-brick residence and is open as an Iziko historic house museum.",
+        "description_zh": "这座开普敦红砖住宅保留乔治亚式建筑风格，现由伊兹科博物馆向公众开放。",
+        "details": "The house is at the Government Avenue end near Rheede Street. The named Iziko map context was checked at the scale of the building block and the CC0 point was compared to the independently mapped building footprint.",
+        "geography": {
+          "authority_id": "supplement:wd:Q13034337",
+          "countries": [
+            "ZA"
+          ],
+          "note": "Country metadata is modern catalogue geography. The point is not a historical jurisdiction claim.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "wikidata:Q13034337",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2515084487",
+            "title": "Bertram House — representative point and identity",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q13034337.json"
+          }
+        },
+        "id": "wd:Q13034337",
+        "location_precision": null,
+        "names": [
+          "伯特伦故居",
+          "Bertram Place"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          18.413611,
+          -33.930556
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:za-bertram",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 48b483cbbd620838806af41371d8b980d607be3cce8132fb4337af8f601bbf51",
+            "title": "Bertram House — identity and public site",
+            "uri": "https://www.iziko.org.za/museums/bertram-house/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "wikidata:Q13034337",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2515084487",
+            "title": "Bertram House — representative point and identity",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q13034337.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:iziko-visit",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 06adeefe14ac471c959d1ceef638f7a3a6ca85cf9b2418d04c3c2dde5fb955d9",
+            "title": "Iziko museums — public visiting hours",
+            "uri": "https://www.iziko.org.za/visit/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:iziko-map",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 a8c7b740e9954d48aa52ec500fb6be79e8ff592dcfa03a1f33c3c13fa3bca0f5",
+            "title": "Iziko museums — public map",
+            "uri": "https://www.iziko.org.za/map/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:osm-bertram-way",
+            "license": "ODbL-1.0",
+            "publisher": "OpenStreetMap contributors",
+            "revision": "Way 23882173 version 5",
+            "title": "Bertram House — independently mapped footprint, location check only",
+            "uri": "https://www.openstreetmap.org/api/0.6/way/23882173/full.json"
+          }
+        ],
+        "source_uri": "https://www.iziko.org.za/museums/bertram-house/",
+        "title": "Bertram House",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "za-bertram.html",
+          "sha256": "48b483cbbd620838806af41371d8b980d607be3cce8132fb4337af8f601bbf51",
+          "uri": "https://www.iziko.org.za/museums/bertram-house/"
+        },
+        {
+          "filename": "Q13034337.json",
+          "sha256": "d60f0e9cce64199b5af0d467b495cf2f625c96a9d8ad3d56e64de33964d78c6f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q13034337.json"
+        },
+        {
+          "filename": "iziko-visit.html",
+          "sha256": "06adeefe14ac471c959d1ceef638f7a3a6ca85cf9b2418d04c3c2dde5fb955d9",
+          "uri": "https://www.iziko.org.za/visit/"
+        },
+        {
+          "filename": "iziko-map.html",
+          "sha256": "a8c7b740e9954d48aa52ec500fb6be79e8ff592dcfa03a1f33c3c13fa3bca0f5",
+          "uri": "https://www.iziko.org.za/map/"
+        },
+        {
+          "filename": "osm-bertram-way.json",
+          "sha256": "c150ccb29c4dcaad717ac20945cf400f6d56385be65db07bdafda5dfa4c7e17c",
+          "uri": "https://www.openstreetmap.org/api/0.6/way/23882173/full.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth P625. The original source precision is retained without adopting any claim of survey accuracy; the official visitor map is used only to check location context.",
+        "point": [
+          18.419875,
+          -33.923044444444
+        ],
+        "precision": 2.7777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q13034442.json",
+        "statement_id": "Q13034442$c4d5dc34-45b6-0361-da09-5de8b73c634e"
+      },
+      "independent_review": {
+        "method": "Independently recomputed the original artifacts, active Earth statement IDs, coordinates, ranks and precision. Rechecked official public visitor schedules and existing corpus identities.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The entry covers the Old Town House building on Greenmarket Square, distinct from the later Cape Town City Hall and from the collection itself.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Point-source review without selecting a historical phase.",
+          "note": "The corpus preserves the public representative location. No historical event phase was established for this point import.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Iziko Museums of South Africa",
+          "Wikidata contributors"
+        ],
+        "description": "A former Cape Town city hall on Greenmarket Square now houses Iziko’s Michaelis Collection.",
+        "description_zh": "这座前市政厅位于开普敦绿市广场，现由伊兹科博物馆展出迈克利斯收藏。",
+        "details": "The entry covers the Old Town House building on Greenmarket Square, distinct from the later Cape Town City Hall and from the collection itself.",
+        "geography": {
+          "authority_id": "supplement:wd:Q13034442",
+          "countries": [
+            "ZA"
+          ],
+          "note": "Country metadata is modern catalogue geography. The point is not a historical jurisdiction claim.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "wikidata:Q13034442",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2277363001",
+            "title": "Old Town House of Cape Town — representative point and identity",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q13034442.json"
+          }
+        },
+        "id": "wd:Q13034442",
+        "location_precision": null,
+        "names": [
+          "开普敦旧市政厅",
+          "Old Town House",
+          "Iziko Old Town House Museum"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          18.419875,
+          -33.923044444444
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:za-oldtown",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 320b987ee84a8ebf6752ca6a945da9372c11d48d9fcbe65038a91a0d0a40f130",
+            "title": "Old Town House of Cape Town — identity and public site",
+            "uri": "https://www.iziko.org.za/museums/old-town-house/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "wikidata:Q13034442",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2277363001",
+            "title": "Old Town House of Cape Town — representative point and identity",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q13034442.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:iziko-visit",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 06adeefe14ac471c959d1ceef638f7a3a6ca85cf9b2418d04c3c2dde5fb955d9",
+            "title": "Iziko museums — public visiting hours",
+            "uri": "https://www.iziko.org.za/visit/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:iziko-map",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 a8c7b740e9954d48aa52ec500fb6be79e8ff592dcfa03a1f33c3c13fa3bca0f5",
+            "title": "Iziko museums — public map",
+            "uri": "https://www.iziko.org.za/map/"
+          }
+        ],
+        "source_uri": "https://www.iziko.org.za/museums/old-town-house/",
+        "title": "Old Town House of Cape Town",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "za-oldtown.html",
+          "sha256": "320b987ee84a8ebf6752ca6a945da9372c11d48d9fcbe65038a91a0d0a40f130",
+          "uri": "https://www.iziko.org.za/museums/old-town-house/"
+        },
+        {
+          "filename": "Q13034442.json",
+          "sha256": "cb526370699af8a425ef5e5964f37a52bd7b24f6a024e620294fe73057d39e8b",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q13034442.json"
+        },
+        {
+          "filename": "iziko-visit.html",
+          "sha256": "06adeefe14ac471c959d1ceef638f7a3a6ca85cf9b2418d04c3c2dde5fb955d9",
+          "uri": "https://www.iziko.org.za/visit/"
+        },
+        {
+          "filename": "iziko-map.html",
+          "sha256": "a8c7b740e9954d48aa52ec500fb6be79e8ff592dcfa03a1f33c3c13fa3bca0f5",
+          "uri": "https://www.iziko.org.za/map/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth P625. The original source precision is retained without adopting any claim of survey accuracy; the official visitor map is used only to check location context.",
+        "point": [
+          18.420393,
+          -33.92506
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q20981944.json",
+        "statement_id": "Q20981944$7088902B-8151-43B3-95CA-A92E570B8C0B"
+      },
+      "independent_review": {
+        "method": "Independently recomputed the original artifacts, active Earth statement IDs, coordinates, ranks and precision. Rechecked official public visitor schedules and existing corpus identities.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The representative point covers the historic Slave Lodge building, formerly also known as the Old Supreme Court.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Point-source review without selecting a historical phase.",
+          "note": "The corpus preserves the public representative location. No historical event phase was established for this point import.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Iziko Museums of South Africa",
+          "Wikidata contributors"
+        ],
+        "description": "A historic building at Adderley and Wale streets in Cape Town houses exhibitions on slavery and human rights.",
+        "description_zh": "这座位于开普敦阿德利街和威尔街交会处的历史建筑，展示奴役与人权相关的历史。",
+        "details": "The representative point covers the historic Slave Lodge building, formerly also known as the Old Supreme Court.",
+        "geography": {
+          "authority_id": "supplement:wd:Q20981944",
+          "countries": [
+            "ZA"
+          ],
+          "note": "Country metadata is modern catalogue geography. The point is not a historical jurisdiction claim.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "wikidata:Q20981944",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2520008204",
+            "title": "Iziko Slave Lodge — representative point and identity",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q20981944.json"
+          }
+        },
+        "id": "wd:Q20981944",
+        "location_precision": null,
+        "names": [
+          "伊兹科奴隶宿舍博物馆",
+          "Slave Lodge",
+          "Old Supreme Court of Cape Town"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          18.420393,
+          -33.92506
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:za-slave",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 73802d86dfd4c3db870047c8e882288da8e9dcb2c5b1eaee06fe6b8b8f47ea91",
+            "title": "Iziko Slave Lodge — identity and public site",
+            "uri": "https://www.iziko.org.za/museums/slave-lodge/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "wikidata:Q20981944",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2520008204",
+            "title": "Iziko Slave Lodge — representative point and identity",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q20981944.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:iziko-visit",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 06adeefe14ac471c959d1ceef638f7a3a6ca85cf9b2418d04c3c2dde5fb955d9",
+            "title": "Iziko museums — public visiting hours",
+            "uri": "https://www.iziko.org.za/visit/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:iziko-map",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 a8c7b740e9954d48aa52ec500fb6be79e8ff592dcfa03a1f33c3c13fa3bca0f5",
+            "title": "Iziko museums — public map",
+            "uri": "https://www.iziko.org.za/map/"
+          }
+        ],
+        "source_uri": "https://www.iziko.org.za/museums/slave-lodge/",
+        "title": "Iziko Slave Lodge",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "za-slave.html",
+          "sha256": "73802d86dfd4c3db870047c8e882288da8e9dcb2c5b1eaee06fe6b8b8f47ea91",
+          "uri": "https://www.iziko.org.za/museums/slave-lodge/"
+        },
+        {
+          "filename": "Q20981944.json",
+          "sha256": "a0182ff4badf865916e0e025ddb8c4edb2151f691e73f1ed450424d681adc497",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q20981944.json"
+        },
+        {
+          "filename": "iziko-visit.html",
+          "sha256": "06adeefe14ac471c959d1ceef638f7a3a6ca85cf9b2418d04c3c2dde5fb955d9",
+          "uri": "https://www.iziko.org.za/visit/"
+        },
+        {
+          "filename": "iziko-map.html",
+          "sha256": "a8c7b740e9954d48aa52ec500fb6be79e8ff592dcfa03a1f33c3c13fa3bca0f5",
+          "uri": "https://www.iziko.org.za/map/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth P625. The original source precision is retained without adopting any claim of survey accuracy; the official visitor map is used only to check location context.",
+        "point": [
+          18.41888889,
+          -34.03111111
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2487774.json",
+        "statement_id": "Q2487774$1B8EEAD5-019A-4C64-8631-789B8E0D8DCD"
+      },
+      "independent_review": {
+        "method": "Independently recomputed the original artifacts, active Earth statement IDs, coordinates, ranks and precision. Rechecked official public visitor schedules and existing corpus identities.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The estate is represented by a site-scale point in the Iziko museum area. The separate Wikidata item for the manor house is not imported.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Point-source review without selecting a historical phase.",
+          "note": "The corpus preserves the public representative location. No historical event phase was established for this point import.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Iziko Museums of South Africa",
+          "Wikidata contributors"
+        ],
+        "description": "A historic wine estate in Cape Town with Iziko museum displays on viticulture, rural slavery and estate life.",
+        "description_zh": "开普敦的历史葡萄酒庄园。伊兹科博物馆在此展示酿酒、乡村奴役制度和庄园生活史。",
+        "details": "The estate is represented by a site-scale point in the Iziko museum area. The separate Wikidata item for the manor house is not imported.",
+        "geography": {
+          "authority_id": "supplement:wd:Q2487774",
+          "countries": [
+            "ZA"
+          ],
+          "note": "Country metadata is modern catalogue geography. The point is not a historical jurisdiction claim.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "wikidata:Q2487774",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2303299584",
+            "title": "Groot Constantia — representative point and identity",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2487774.json"
+          }
+        },
+        "id": "wd:Q2487774",
+        "location_precision": null,
+        "names": [
+          "大康斯坦夏庄园",
+          "Groot Constantia Wine Estate"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          18.41888889,
+          -34.03111111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:za-groot",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 3aacedba425b2bde2d4250c171cf90b0b6588a77b242ad078488f86f8657ec2d",
+            "title": "Groot Constantia — identity and public site",
+            "uri": "https://www.iziko.org.za/museums/groot-constantia/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "wikidata:Q2487774",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2303299584",
+            "title": "Groot Constantia — representative point and identity",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2487774.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:iziko-visit",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 06adeefe14ac471c959d1ceef638f7a3a6ca85cf9b2418d04c3c2dde5fb955d9",
+            "title": "Iziko museums — public visiting hours",
+            "uri": "https://www.iziko.org.za/visit/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:iziko-map",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 a8c7b740e9954d48aa52ec500fb6be79e8ff592dcfa03a1f33c3c13fa3bca0f5",
+            "title": "Iziko museums — public map",
+            "uri": "https://www.iziko.org.za/map/"
+          }
+        ],
+        "source_uri": "https://www.iziko.org.za/museums/groot-constantia/",
+        "title": "Groot Constantia",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "za-groot.html",
+          "sha256": "3aacedba425b2bde2d4250c171cf90b0b6588a77b242ad078488f86f8657ec2d",
+          "uri": "https://www.iziko.org.za/museums/groot-constantia/"
+        },
+        {
+          "filename": "Q2487774.json",
+          "sha256": "cc0425a4bda43e34b52b104e7f62157697ca5ed69a12a7bb75975039dd5dfbf0",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2487774.json"
+        },
+        {
+          "filename": "iziko-visit.html",
+          "sha256": "06adeefe14ac471c959d1ceef638f7a3a6ca85cf9b2418d04c3c2dde5fb955d9",
+          "uri": "https://www.iziko.org.za/visit/"
+        },
+        {
+          "filename": "iziko-map.html",
+          "sha256": "a8c7b740e9954d48aa52ec500fb6be79e8ff592dcfa03a1f33c3c13fa3bca0f5",
+          "uri": "https://www.iziko.org.za/map/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth P625. The original source precision is retained without adopting any claim of survey accuracy; the official visitor map is used only to check location context.",
+        "point": [
+          40.12965,
+          -3.22395
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q42840468.json",
+        "statement_id": "Q42840468$1ADF10B6-6543-4012-A90C-1A9F8FC4038F"
+      },
+      "independent_review": {
+        "method": "Independently recomputed the original artifacts, active Earth statement IDs, coordinates, ranks and precision. Rechecked official public visitor schedules and existing corpus identities.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The entry covers the publicly visited monument and its immediate headland. The Wikidata point is near the site address map and the environmental assessment project point.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Point-source review without selecting a historical phase.",
+          "note": "The corpus preserves the public representative location. No historical event phase was established for this point import.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Museums of Kenya",
+          "Wikidata contributors"
+        ],
+        "description": "This maritime landmark stands on a coastal headland in Malindi and is open to visitors through the National Museums of Kenya.",
+        "description_zh": "这处航海纪念地位于肯尼亚马林迪的海岬，肯尼亚国家博物馆提供公众参观。",
+        "details": "The entry covers the publicly visited monument and its immediate headland. The Wikidata point is near the site address map and the environmental assessment project point.",
+        "geography": {
+          "authority_id": "supplement:wd:Q42840468",
+          "countries": [
+            "KE"
+          ],
+          "note": "Country metadata is modern catalogue geography. The point is not a historical jurisdiction claim.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "wikidata:Q42840468",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2337635499",
+            "title": "Vasco da Gama Pillar, Malindi — representative point and identity",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q42840468.json"
+          }
+        },
+        "id": "wd:Q42840468",
+        "location_precision": null,
+        "names": [
+          "马林迪达伽马纪念柱",
+          "Vasco da Gama Pillar"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          40.12965,
+          -3.22395
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:ke-pilllar",
+            "license": null,
+            "publisher": "National Museums of Kenya",
+            "revision": "Retrieved artifact SHA256 b7a7fd32ea58c81da18865e3a4390db4670d934a1f4ee628ad99e6cff1eea3af",
+            "title": "Vasco da Gama Pillar, Malindi — identity and public site",
+            "uri": "https://nmk.go.ke/vasco-da-gama-pillar/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "wikidata:Q42840468",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2337635499",
+            "title": "Vasco da Gama Pillar, Malindi — representative point and identity",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q42840468.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:ke-pillar-public",
+            "license": null,
+            "publisher": "National Museums of Kenya",
+            "revision": "Retrieved artifact SHA256 1afa8ddf992f8329bb1f1ddd7adf2005b85ce2ce7a14c5a64d7835f006d91ce9",
+            "title": "Vasco da Gama Pillar — public admission",
+            "uri": "https://nmkpay.ecitizen.go.ke/museum-entry/the-vasco-da-gama-pillar/guests"
+          }
+        ],
+        "source_uri": "https://nmk.go.ke/vasco-da-gama-pillar/",
+        "title": "Vasco da Gama Pillar, Malindi",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "ke-pilllar.html",
+          "sha256": "b7a7fd32ea58c81da18865e3a4390db4670d934a1f4ee628ad99e6cff1eea3af",
+          "uri": "https://nmk.go.ke/vasco-da-gama-pillar/"
+        },
+        {
+          "filename": "Q42840468.json",
+          "sha256": "e71908d4fcf6fc0afce23c7042e1cd2b6c5be7b96d7b504057153e8f649cdefa",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q42840468.json"
+        },
+        {
+          "filename": "ke-pillar-public.html",
+          "sha256": "1afa8ddf992f8329bb1f1ddd7adf2005b85ce2ce7a14c5a64d7835f006d91ce9",
+          "uri": "https://nmkpay.ecitizen.go.ke/museum-entry/the-vasco-da-gama-pillar/guests"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth P625. The original source precision is retained without adopting any claim of survey accuracy; the official visitor map is used only to check location context.",
+        "point": [
+          18.414727,
+          -33.921269
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q55904371.json",
+        "statement_id": "Q55904371$4895e2ae-4335-8c78-e305-4c3fcea93ebf"
+      },
+      "independent_review": {
+        "method": "Independently recomputed the original artifacts, active Earth statement IDs, coordinates, ranks and precision. Rechecked official public visitor schedules and existing corpus identities.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The entry covers the museum building on Wale Street, rather than the full Bo-Kaap district.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Point-source review without selecting a historical phase.",
+          "note": "The corpus preserves the public representative location. No historical event phase was established for this point import.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Iziko Museums of South Africa",
+          "Wikidata contributors"
+        ],
+        "description": "A historic house on Wale Street tells the story of Cape Town’s Bo-Kaap neighbourhood.",
+        "description_zh": "博物馆位于开普敦威尔街的一座历史住宅内，展出博卡普街区的生活史。",
+        "details": "The entry covers the museum building on Wale Street, rather than the full Bo-Kaap district.",
+        "geography": {
+          "authority_id": "supplement:wd:Q55904371",
+          "countries": [
+            "ZA"
+          ],
+          "note": "Country metadata is modern catalogue geography. The point is not a historical jurisdiction claim.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "wikidata:Q55904371",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2454307618",
+            "title": "Iziko Bo-Kaap Museum — representative point and identity",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q55904371.json"
+          }
+        },
+        "id": "wd:Q55904371",
+        "location_precision": null,
+        "names": [
+          "伊兹科博卡普博物馆",
+          "Bo-Kaap Museum"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          18.414727,
+          -33.921269
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:za-bo-kaap",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 152f4aaf867293ef509613e5027dd25d609bd8e841edfcffd12aa5247bf30422",
+            "title": "Iziko Bo-Kaap Museum — identity and public site",
+            "uri": "https://www.iziko.org.za/museums/bo-kaap-museum/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "wikidata:Q55904371",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2454307618",
+            "title": "Iziko Bo-Kaap Museum — representative point and identity",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q55904371.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:iziko-visit",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 06adeefe14ac471c959d1ceef638f7a3a6ca85cf9b2418d04c3c2dde5fb955d9",
+            "title": "Iziko museums — public visiting hours",
+            "uri": "https://www.iziko.org.za/visit/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:iziko-map",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 a8c7b740e9954d48aa52ec500fb6be79e8ff592dcfa03a1f33c3c13fa3bca0f5",
+            "title": "Iziko museums — public map",
+            "uri": "https://www.iziko.org.za/map/"
+          }
+        ],
+        "source_uri": "https://www.iziko.org.za/museums/bo-kaap-museum/",
+        "title": "Iziko Bo-Kaap Museum",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "za-bo-kaap.html",
+          "sha256": "152f4aaf867293ef509613e5027dd25d609bd8e841edfcffd12aa5247bf30422",
+          "uri": "https://www.iziko.org.za/museums/bo-kaap-museum/"
+        },
+        {
+          "filename": "Q55904371.json",
+          "sha256": "8dab9ab5106d88d34318872e7215f739e56124354bd77425a09434932674ee96",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q55904371.json"
+        },
+        {
+          "filename": "iziko-visit.html",
+          "sha256": "06adeefe14ac471c959d1ceef638f7a3a6ca85cf9b2418d04c3c2dde5fb955d9",
+          "uri": "https://www.iziko.org.za/visit/"
+        },
+        {
+          "filename": "iziko-map.html",
+          "sha256": "a8c7b740e9954d48aa52ec500fb6be79e8ff592dcfa03a1f33c3c13fa3bca0f5",
+          "uri": "https://www.iziko.org.za/map/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Earth P625. The original source precision is retained without adopting any claim of survey accuracy; the official visitor map is used only to check location context.",
+        "point": [
+          18.420578,
+          -33.930322
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5712574.json",
+        "statement_id": "Q5712574$992c1449-4676-fbe5-e24f-4032b7a9015f"
+      },
+      "independent_review": {
+        "method": "Independently recomputed the original artifacts, active Earth statement IDs, coordinates, ranks and precision. Rechecked official public visitor schedules and existing corpus identities.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The entry represents the named house museum, and excludes the separate unlocated heritage-complex identity.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Point-source review without selecting a historical phase.",
+          "note": "The corpus preserves the public representative location. No historical event phase was established for this point import.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Iziko Museums of South Africa",
+          "Wikidata contributors"
+        ],
+        "description": "A historic Cape Town townhouse on Buitenkant Street and a public Iziko museum.",
+        "description_zh": "这座位于开普敦布滕坎特街的历史联排住宅，现为伊兹科博物馆的公众展馆。",
+        "details": "The entry represents the named house museum, and excludes the separate unlocated heritage-complex identity.",
+        "geography": {
+          "authority_id": "supplement:wd:Q5712574",
+          "countries": [
+            "ZA"
+          ],
+          "note": "Country metadata is modern catalogue geography. The point is not a historical jurisdiction claim.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "wikidata:Q5712574",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2520015293",
+            "title": "Rust en Vreugd — representative point and identity",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5712574.json"
+          }
+        },
+        "id": "wd:Q5712574",
+        "location_precision": null,
+        "names": [
+          "鲁斯特恩弗勒赫德故居"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          18.420578,
+          -33.930322
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:za-rust",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 faaae89322fe6a5eca661e9296d430aa9294cdb74678f9283b403bf40f72309a",
+            "title": "Rust en Vreugd — identity and public site",
+            "uri": "https://www.iziko.org.za/museums/rust-en-vreugd/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "wikidata:Q5712574",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2520015293",
+            "title": "Rust en Vreugd — representative point and identity",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5712574.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:iziko-visit",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 06adeefe14ac471c959d1ceef638f7a3a6ca85cf9b2418d04c3c2dde5fb955d9",
+            "title": "Iziko museums — public visiting hours",
+            "uri": "https://www.iziko.org.za/visit/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "",
+            "id": "point-source:iziko-map",
+            "license": null,
+            "publisher": "Iziko Museums of South Africa",
+            "revision": "Retrieved artifact SHA256 a8c7b740e9954d48aa52ec500fb6be79e8ff592dcfa03a1f33c3c13fa3bca0f5",
+            "title": "Iziko museums — public map",
+            "uri": "https://www.iziko.org.za/map/"
+          }
+        ],
+        "source_uri": "https://www.iziko.org.za/museums/rust-en-vreugd/",
+        "title": "Rust en Vreugd",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "za-rust.html",
+          "sha256": "faaae89322fe6a5eca661e9296d430aa9294cdb74678f9283b403bf40f72309a",
+          "uri": "https://www.iziko.org.za/museums/rust-en-vreugd/"
+        },
+        {
+          "filename": "Q5712574.json",
+          "sha256": "65a81250a95d73bd8c5911ede626c291b5d3704474464c4a2df283572e3eea43",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5712574.json"
+        },
+        {
+          "filename": "iziko-visit.html",
+          "sha256": "06adeefe14ac471c959d1ceef638f7a3a6ca85cf9b2418d04c3c2dde5fb955d9",
+          "uri": "https://www.iziko.org.za/visit/"
+        },
+        {
+          "filename": "iziko-map.html",
+          "sha256": "a8c7b740e9954d48aa52ec500fb6be79e8ff592dcfa03a1f33c3c13fa3bca0f5",
+          "uri": "https://www.iziko.org.za/map/"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Seven open historic places in South Africa and one public monument in Kenya, using active CC0 Wikidata coordinates with independently matched official visitor and identity evidence."
+}

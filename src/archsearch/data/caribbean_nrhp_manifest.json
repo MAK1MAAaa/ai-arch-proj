@@ -1,0 +1,22 @@
+{
+  "base_count": 4374,
+  "base_ids_sha256": "95a7a8d5b0c52edb7f88d1c20deea5a5a1264296fa2b3fb6992048d81cd42380",
+  "base_sites_sha256": "6be7e7179d3bc7c1ff6b06c7d428019d2a9b7a62975946d6095081f92274863b",
+  "cohort_version": "caribbean-nrhp-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 7,
+    "total": 4381
+  },
+  "files": {
+    "caribbean_nrhp_review.json": {
+      "sha256": "697c34f8caf877b70fda7f2f7b47d1803ce8bbad414d8c8a40d936480916c88c"
+    },
+    "caribbean_nrhp_sites.json": {
+      "sha256": "8899b0b29eec454e2e7f1f71241c02a01ee809319dafb49dc8992ae0c1f3e2d3"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Five public cultural sites in Puerto Rico and two in the U.S. Virgin Islands, identified in the public National Register and independently verified for public access and position."
+}

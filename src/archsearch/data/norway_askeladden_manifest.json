@@ -1,0 +1,22 @@
+{
+  "base_count": 4705,
+  "base_ids_sha256": "867a67964552874ad3335682e10dbcec8341b704bfaec5b0c51db21facf5529b",
+  "base_sites_sha256": "8ddaad1b8f9c807d81b9a3502ff1205583040a06d6e7aea46d832314897d6f10",
+  "cohort_version": "norway-askeladden-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 8,
+    "total": 4713
+  },
+  "files": {
+    "norway_askeladden_review.json": {
+      "sha256": "9d549f51941973329f4333ae8246115196aeca4b9d3ded44193a37d4ed64c3ec"
+    },
+    "norway_askeladden_sites.json": {
+      "sha256": "db04050dae9eaf754faeb13ce981fe97fd96d3d62b7ea19a1e4570d6e3174b27"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Public historic fortifications and heritage properties in Norway with exact reuse-licensed points, official heritage area confirmation, and published visitor scope."
+}

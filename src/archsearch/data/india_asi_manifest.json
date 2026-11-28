@@ -1,0 +1,22 @@
+{
+  "base_count": 4390,
+  "base_ids_sha256": "52b08ab97137c125032473ba921256c8b606c4fa44629f3bf7cbaa7f58c29f8c",
+  "base_sites_sha256": "df8a9b9d68a10674de1fb171af46494cd070f45603abf9fc65ae2e84b87bb746",
+  "cohort_version": "india-asi-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 18,
+    "total": 4408
+  },
+  "files": {
+    "india_asi_review.json": {
+      "sha256": "df0e2c551a3a2a96686f0b595221bdb935d3c4d930d80442474c4b93e8763d37"
+    },
+    "india_asi_sites.json": {
+      "sha256": "3647c59d3957018304bd9226faa2faa9792648de152aa27eeeb2684fcfc49c4d"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Eighteen archaeological sites and historic properties listed for public visits by the Archaeological Survey of India, with matching published CC0 representative points."
+}

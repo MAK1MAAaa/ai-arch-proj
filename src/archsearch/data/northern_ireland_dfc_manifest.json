@@ -1,0 +1,22 @@
+{
+  "base_count": 4770,
+  "base_ids_sha256": "faeb3d3d54b61df04129e9507002d8e4f130711a2a1e3aa1b12885318761d48c",
+  "base_sites_sha256": "8c96d87b4ea03a6119554e218e77c3dbf581903f3b944161102812ddf4ae7b9f",
+  "cohort_version": "northern-ireland-dfc-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 60,
+    "total": 4830
+  },
+  "files": {
+    "northern_ireland_dfc_review.json": {
+      "sha256": "f4193e62fda2b351206dda20e1157f60262e03d987bba51a97977ef7394665ed"
+    },
+    "northern_ireland_dfc_sites.json": {
+      "sha256": "c643d62ec4699b43a242a0a25d8ebc022b76f6d98dd10e55b3d1cfe4aa1df929"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Independently matched Northern Ireland State Care public monuments with unique DfC Historic Environment Division points, original coordinate cross-checks, and site-specific access, conservation and display boundaries."
+}

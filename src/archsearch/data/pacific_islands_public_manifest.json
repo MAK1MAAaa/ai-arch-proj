@@ -1,0 +1,22 @@
+{
+  "base_count": 4611,
+  "base_ids_sha256": "07c7524de4c59cf91b08efda9fc7a23153349f8b0b20b2a9cae407b0b4d0a171",
+  "base_sites_sha256": "b85ba61b1b60d53d4bba391cd60cff68f5557033c4ad08d10fc1adda36559276",
+  "cohort_version": "pacific-islands-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 8,
+    "total": 4619
+  },
+  "files": {
+    "pacific_islands_public_review.json": {
+      "sha256": "b61c75a75a93a2eaf1d6bee29f28311aa4e62a4e8c938cbd483b407dd0125d48"
+    },
+    "pacific_islands_public_sites.json": {
+      "sha256": "f48e2fad24bab384a826c9885413f4ce6e7298f03f0d82c6bbb524e3207fd87b"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Eight government-documented public cultural properties in Tonga, Samoa, Fiji and Vanuatu with independently verified original points."
+}

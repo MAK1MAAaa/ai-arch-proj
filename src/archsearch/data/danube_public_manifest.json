@@ -1,0 +1,22 @@
+{
+  "base_count": 4998,
+  "base_ids_sha256": "6c77aea23f1e8f6b914c2b92d47519196c47f1776ca63f7d18304df86c25f59e",
+  "base_sites_sha256": "7c29472c794113baae43a281c4d198de117f96f72b34cde5b54a7ca1e32096c6",
+  "cohort_version": "moldova-romania-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 20,
+    "total": 5018
+  },
+  "files": {
+    "danube_public_review.json": {
+      "sha256": "e90334e75042767c74f8d8b582684a41be2f8fa6d91b74e4b0f91792a8b0cccb"
+    },
+    "danube_public_sites.json": {
+      "sha256": "e50b7dd7c0a729238355a38888bf1b1b03c5f9620673c66722d227a3ac517bce"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Public original archaeological and historic properties in Moldova and Romania, preserving seasonal and designated interior or exterior visits, with licensed representative points."
+}

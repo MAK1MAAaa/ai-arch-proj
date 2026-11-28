@@ -1,0 +1,22 @@
+{
+  "base_count": 5050,
+  "base_ids_sha256": "5df2dc933ec127419e3f5718102d4bf8a4f3923ee577c440ed0288d7748ddf6c",
+  "base_sites_sha256": "932bd46f0c6a301e535af3839b35d6dd840a41d6a3a56c781b6ae44e4c23fed5",
+  "cohort_version": "bulgaria-serbia-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 19,
+    "total": 5069
+  },
+  "files": {
+    "bulgaria_serbia_public_review.json": {
+      "sha256": "e9d8afcb0b54af67c7ae2b3b0ba075e80eadad75184d4ef12d8025224063ee38"
+    },
+    "bulgaria_serbia_public_sites.json": {
+      "sha256": "98201c036b09e190d5ebe3b1d389437effbe93fae1b61a594d678b528581a0bb"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Public Bulgarian and Serbian archaeological and historic properties, with original licensed location points, independently checked public visitor scope and historical property identity."
+}

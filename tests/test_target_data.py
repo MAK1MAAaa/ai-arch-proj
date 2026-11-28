@@ -154,7 +154,7 @@ def test_guyana_batch_rebuilds_with_original_corpus_unchanged(
         (tmp_path / filename).read_bytes() == (data.DATA_DIR / filename).read_bytes()
         for filename in filenames
     )
-    assert data.load_targets(original, tmp_path, cohort=cohort) == current
+    assert data.load_targets(original, tmp_path, cohort=cohort) == current[:3905]
     assert current[:len(original)] == original
     assert [build_document(site) for site in current[:len(original)]] == [
         build_document(site) for site in original
@@ -162,11 +162,12 @@ def test_guyana_batch_rebuilds_with_original_corpus_unchanged(
 
 
 def test_guyana_catalogue_keeps_source_scopes_and_distinct_event_precision(tmp_path: Path) -> None:
+    expected_total = 11
     with TestClient(create_app(home=tmp_path)) as client:
         page = client.get("/api/sites", params={
             "country": "GY", "region": "latin-america-caribbean", "limit": 50,
         }).json()
-        assert page["corpus_version"] == "global-v20" and page["total"] == 8
+        assert page["corpus_version"] == CORPUS_VERSION and page["total"] == expected_total
         prefixes = "auth:gy-ntg:"
         records = {
             site["id"].removeprefix(prefixes): site for site in page["sites"]
@@ -200,5 +201,6 @@ def test_guyana_catalogue_keeps_source_scopes_and_distinct_event_precision(tmp_p
         }).json()
         assert results["results"][0]["site"]["id"] == prefixes + "stabroek-market"
         facets = client.get("/api/subdivisions?country=GY").json()
-        assert facets["ready"] and facets["subdivision_version"] == "source-subdivisions-v8"
-        assert not facets["supported"] and facets["assigned"] == 0 and facets["unassigned"] == 8
+        assert facets["ready"] and facets["subdivision_version"] == "source-subdivisions-v9"
+        assert not facets["supported"] and facets["assigned"] == 0
+        assert facets["unassigned"] == expected_total

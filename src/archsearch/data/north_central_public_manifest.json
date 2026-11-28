@@ -1,0 +1,22 @@
+{
+  "base_count": 4586,
+  "base_ids_sha256": "c51095e0021acf96141dd27b5400275d558923a412e39fb0ea5e64f055706b4a",
+  "base_sites_sha256": "402a3d20687190a94aea72ceefccb33f53acb2e6819c39c38f809f64e28ccc23",
+  "cohort_version": "north-central-america-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 25,
+    "total": 4611
+  },
+  "files": {
+    "north_central_public_review.json": {
+      "sha256": "e23c43b1b7a06fc8716472613810bc05c841b0bd1c72c489e7bc87d0b08a4bae"
+    },
+    "north_central_public_sites.json": {
+      "sha256": "0c484da970e39f89bda49cecb495eee01f16df5c195f058e031290e00073c692"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Twenty-five independently verified public cultural places in Belize, Guatemala, Honduras and El Salvador."
+}

@@ -1,0 +1,22 @@
+{
+  "base_count": 4196,
+  "base_ids_sha256": "595c95e1fc717be95886beda2830258bf6f2f1af40240372e63535c3745e888d",
+  "base_sites_sha256": "190707b4e5759cada1ad0691e14b45a1b8d22a52035a3f1e5170ace687d2935f",
+  "cohort_version": "finland-vark-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 11,
+    "total": 4207
+  },
+  "files": {
+    "finland_vark_review.json": {
+      "sha256": "9d487a5e46f31f671254b4ae7184a0c245c178265cdf53b83a97b11eaeb290b8"
+    },
+    "finland_vark_sites.json": {
+      "sha256": "fb4e142b0f9517ae9e82328f8394c7d985692efb84a846b855cab476ce5270fa"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "11 single-property VARK sites whose original publisher point, identifier and public access were independently checked."
+}

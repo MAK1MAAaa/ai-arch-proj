@@ -1,0 +1,2125 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Pirita Convent",
+      "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium"
+    ],
+    "description": "Tallinn operates visitor access to the remains of the Bridgettine convent in Pirita as an open-air museum.",
+    "description_zh": "爱沙尼亚塔林皮里塔区的布里吉特会修道院原址由市政府作为露天博物馆开放。",
+    "details": "Tallinn operates visitor access to the remains of the Bridgettine convent in Pirita as an open-air museum.",
+    "geography": {
+      "authority_id": "supplement:auth:ee-kpois:1192",
+      "countries": [
+        "EE"
+      ],
+      "note": "Public heritage representative point in Pirita, Tallinn.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Tallinn operates visitor access to the remains of the Bridgettine convent in Pirita as an open-air museum.",
+        "id": "auth:ee-kpois:1192:visit",
+        "license": null,
+        "publisher": "Pirita Convent",
+        "revision": "Retrieved 2026-11-28; SHA-256 8ccd62dd2a6e723cb8f92f81201d29df553c99b3142dfb412a7ea596cca73771.",
+        "title": "Visit Pirita Bridgettine Convent Ruins",
+        "uri": "https://www.piritaklooster.ee/history/visit-monastery-ruins/?lang=en"
+      }
+    },
+    "id": "auth:ee-kpois:1192",
+    "location_precision": null,
+    "names": [
+      "Pirita kloostri varemed"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      24.83608634,
+      59.46678802
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Tallinn operates visitor access to the remains of the Bridgettine convent in Pirita as an open-air museum.",
+        "id": "auth:ee-kpois:1192:visit",
+        "license": null,
+        "publisher": "Pirita Convent",
+        "revision": "Retrieved 2026-11-28; SHA-256 8ccd62dd2a6e723cb8f92f81201d29df553c99b3142dfb412a7ea596cca73771.",
+        "title": "Visit Pirita Bridgettine Convent Ruins",
+        "uri": "https://www.piritaklooster.ee/history/visit-monastery-ruins/?lang=en"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Pirita kloostri varemed kalmistuga, 1417-1577. a., 19.-20. saj.. Record 1192. Point reused unaltered when supplied.",
+        "id": "auth:ee-kpois:1192:register",
+        "license": "CC BY 4.0",
+        "publisher": "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium",
+        "revision": "Retrieved 2026-11-28; SHA-256 ef298f96b8860cb260cd2812075f49b28508dd70ad082625e04375af9e07e6dd.",
+        "title": "National Register 1192",
+        "uri": "https://gsavalik.envir.ee/geoserver/muinsuskaitse/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=muinsuskaitse%3Akpo_malestised_241&srsName=EPSG%3A4326&outputFormat=application%2Fjson&count=400&CQL_FILTER=nimi+ILIKE+%27%25P%C3%B5ltsamaa%25loss%25%27+OR+nimi+ILIKE+%27%25Padise%25kloost%25%27+OR+nimi+ILIKE+%27%25Pirita%25kloost%25%27"
+      }
+    ],
+    "source_uri": "https://www.piritaklooster.ee/history/visit-monastery-ruins/?lang=en",
+    "title": "Pirita Bridgettine Convent Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Narva Museum",
+      "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium"
+    ],
+    "description": "Narva Museum sells admission to the exhibitions in Hermann Castle on the Narva River.",
+    "description_zh": "爱沙尼亚纳尔瓦河畔的赫尔曼城堡由纳尔瓦博物馆开放参观，在城堡内举办展览。",
+    "details": "Narva Museum sells admission to the exhibitions in Hermann Castle on the Narva River.",
+    "geography": {
+      "authority_id": "supplement:auth:ee-kpois:14002",
+      "countries": [
+        "EE"
+      ],
+      "note": "Public heritage representative point in Narva, Ida-Viru County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Narva Museum sells admission to the exhibitions in Hermann Castle on the Narva River.",
+        "id": "auth:ee-kpois:14002:visit",
+        "license": null,
+        "publisher": "Narva Museum",
+        "revision": "Retrieved 2026-11-28; SHA-256 2e8a0a7b79847fd4e60368c43e6527ed2910ed0d5ff00872f31915c9c53270e9.",
+        "title": "Visit Narva Hermann Castle",
+        "uri": "https://www.narvamuuseum.ee/en/services/tickets/"
+      }
+    },
+    "id": "auth:ee-kpois:14002",
+    "location_precision": null,
+    "names": [
+      "Narva Hermanni linnus"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      28.20188898,
+      59.37551092
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Narva Museum sells admission to the exhibitions in Hermann Castle on the Narva River.",
+        "id": "auth:ee-kpois:14002:visit",
+        "license": null,
+        "publisher": "Narva Museum",
+        "revision": "Retrieved 2026-11-28; SHA-256 2e8a0a7b79847fd4e60368c43e6527ed2910ed0d5ff00872f31915c9c53270e9.",
+        "title": "Visit Narva Hermann Castle",
+        "uri": "https://www.narvamuuseum.ee/en/services/tickets/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Narva Hermanni linnus, 13.-17. saj. Record 14002. Point reused unaltered when supplied.",
+        "id": "auth:ee-kpois:14002:register",
+        "license": "CC BY 4.0",
+        "publisher": "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium",
+        "revision": "Retrieved 2026-11-28; SHA-256 21fafc2d8f9a6c1305eb7735c1e0bec4c3b3d75a7848bbeb90871cb5bb82447e.",
+        "title": "National Register 14002",
+        "uri": "https://gsavalik.envir.ee/geoserver/muinsuskaitse/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=muinsuskaitse%3Akpo_malestised_241&srsName=EPSG%3A4326&outputFormat=application%2Fjson&count=400&CQL_FILTER=nimi+ILIKE+%27%25Rakvere%25linnus%25%27+OR+nimi+ILIKE+%27%25Haapsalu%25linnus%25%27+OR+nimi+ILIKE+%27%25Kuressaare%25linnus%25%27+OR+nimi+ILIKE+%27%25Narva%25linnus%25%27+OR+nimi+ILIKE+%27%25Hermanni%25linnus%25%27+OR+nimi+ILIKE+%27%25P%C3%B5ltsamaa%25linnus%25%27+OR+nimi+ILIKE+%27%25Paide%25linnus%25%27+OR+nimi+ILIKE+%27%25Viljandi%25linnus%25%27+OR+nimi+ILIKE+%27%25Toolse%25linnus%25%27+OR+nimi+ILIKE+%27%25Vastseliina%25linnus%25%27+OR+nimi+ILIKE+%27%25Laiuse%25linnus%25%27+OR+nimi+ILIKE+%27%25Karksi%25linnus%25%27+OR+nimi+ILIKE+%27%25Padise%25klooster%25%27+OR+nimi+ILIKE+%27%25Pirita%25klooster%25%27"
+      }
+    ],
+    "source_uri": "https://www.narvamuuseum.ee/en/services/tickets/",
+    "title": "Narva Hermann Castle",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Visit Viljandi / Central Estonia DMO",
+      "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium",
+      "Wikidata contributors"
+    ],
+    "description": "The public fortress hill at Karksi includes the remains of the order fortress and a later church within the ruined precinct.",
+    "description_zh": "爱沙尼亚卡尔克西城堡山保存有骑士团堡垒遗迹，遗址范围内还有后期修建的教堂。",
+    "details": "The public fortress hill at Karksi includes the remains of the order fortress and a later church within the ruined precinct.",
+    "geography": {
+      "authority_id": "supplement:auth:ee-kpois:14485",
+      "countries": [
+        "EE"
+      ],
+      "note": "Public heritage representative point in Karksi-Nuia, Viljandi County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The public fortress hill at Karksi includes the remains of the order fortress and a later church within the ruined precinct.",
+        "id": "auth:ee-kpois:14485:visit",
+        "license": null,
+        "publisher": "Visit Viljandi / Central Estonia DMO",
+        "revision": "Retrieved 2026-11-28; SHA-256 2d0b4ee066e794f95965bc03d23874aa7e92b28106dea5b12b31ed6d2bcdc128.",
+        "title": "Visit Karksi Order Fortress Ruins",
+        "uri": "https://visitviljandi.ee/en/places/karksi-primeval-valley-and-order-fortress-ruins/"
+      }
+    },
+    "id": "auth:ee-kpois:14485",
+    "location_precision": null,
+    "names": [
+      "Karksi ordulinnuse varemed"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      25.56516608956,
+      58.105275840788
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The public fortress hill at Karksi includes the remains of the order fortress and a later church within the ruined precinct.",
+        "id": "auth:ee-kpois:14485:visit",
+        "license": null,
+        "publisher": "Visit Viljandi / Central Estonia DMO",
+        "revision": "Retrieved 2026-11-28; SHA-256 2d0b4ee066e794f95965bc03d23874aa7e92b28106dea5b12b31ed6d2bcdc128.",
+        "title": "Visit Karksi Order Fortress Ruins",
+        "uri": "https://visitviljandi.ee/en/places/karksi-primeval-valley-and-order-fortress-ruins/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Karksi ordulinnuse varemed vallikraaviga, 13.-16.saj.. Record 14485. Point reused unaltered when supplied.",
+        "id": "auth:ee-kpois:14485:register",
+        "license": "CC BY 4.0",
+        "publisher": "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium",
+        "revision": "Retrieved 2026-11-28; SHA-256 21fafc2d8f9a6c1305eb7735c1e0bec4c3b3d75a7848bbeb90871cb5bb82447e.",
+        "title": "National Register 14485",
+        "uri": "https://gsavalik.envir.ee/geoserver/muinsuskaitse/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=muinsuskaitse%3Akpo_malestised_241&srsName=EPSG%3A4326&outputFormat=application%2Fjson&count=400&CQL_FILTER=nimi+ILIKE+%27%25Rakvere%25linnus%25%27+OR+nimi+ILIKE+%27%25Haapsalu%25linnus%25%27+OR+nimi+ILIKE+%27%25Kuressaare%25linnus%25%27+OR+nimi+ILIKE+%27%25Narva%25linnus%25%27+OR+nimi+ILIKE+%27%25Hermanni%25linnus%25%27+OR+nimi+ILIKE+%27%25P%C3%B5ltsamaa%25linnus%25%27+OR+nimi+ILIKE+%27%25Paide%25linnus%25%27+OR+nimi+ILIKE+%27%25Viljandi%25linnus%25%27+OR+nimi+ILIKE+%27%25Toolse%25linnus%25%27+OR+nimi+ILIKE+%27%25Vastseliina%25linnus%25%27+OR+nimi+ILIKE+%27%25Laiuse%25linnus%25%27+OR+nimi+ILIKE+%27%25Karksi%25linnus%25%27+OR+nimi+ILIKE+%27%25Padise%25klooster%25%27+OR+nimi+ILIKE+%27%25Pirita%25klooster%25%27"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 25.56516608956, latitude 58.105275840788.",
+        "id": "auth:ee-kpois:14485:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2553829177, P625 statement Q3205260$D051E370-D234-4CE5-A086-1700FF525B41.",
+        "title": "Karksi Order Fortress Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3205260.json"
+      }
+    ],
+    "source_uri": "https://visitviljandi.ee/en/places/karksi-primeval-valley-and-order-fortress-ruins/",
+    "title": "Karksi Order Fortress Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Visit Viljandi / Central Estonia DMO",
+      "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium",
+      "Wikidata contributors"
+    ],
+    "description": "Ruins and earthworks of Viljandi's order castle can be visited in the public castle hills above Lake Viljandi.",
+    "description_zh": "爱沙尼亚维尔扬迪湖上方的城堡山保留骑士团城堡遗迹和防御土工，可沿开放区域参观。",
+    "details": "Ruins and earthworks of Viljandi's order castle can be visited in the public castle hills above Lake Viljandi.",
+    "geography": {
+      "authority_id": "supplement:auth:ee-kpois:14709",
+      "countries": [
+        "EE"
+      ],
+      "note": "Public heritage representative point in Viljandi, Viljandi County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Ruins and earthworks of Viljandi's order castle can be visited in the public castle hills above Lake Viljandi.",
+        "id": "auth:ee-kpois:14709:visit",
+        "license": null,
+        "publisher": "Visit Viljandi / Central Estonia DMO",
+        "revision": "Retrieved 2026-11-28; SHA-256 3aa3bc61eff7114dfd7488c8b8da812524d321f6dcc292b72021eef7a093d944.",
+        "title": "Visit Viljandi Order Castle Ruins",
+        "uri": "https://visitviljandi.ee/en/places/ruins-of-the-viljandi-order-castle/"
+      }
+    },
+    "id": "auth:ee-kpois:14709",
+    "location_precision": null,
+    "names": [
+      "Viljandi ordulinnuse varemed"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      25.595277777778,
+      58.359166666667
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Ruins and earthworks of Viljandi's order castle can be visited in the public castle hills above Lake Viljandi.",
+        "id": "auth:ee-kpois:14709:visit",
+        "license": null,
+        "publisher": "Visit Viljandi / Central Estonia DMO",
+        "revision": "Retrieved 2026-11-28; SHA-256 3aa3bc61eff7114dfd7488c8b8da812524d321f6dcc292b72021eef7a093d944.",
+        "title": "Visit Viljandi Order Castle Ruins",
+        "uri": "https://visitviljandi.ee/en/places/ruins-of-the-viljandi-order-castle/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Viljandi ordulinnuse varemed vallikraaviga, 13.-17. saj.. Record 14709. Point reused unaltered when supplied.",
+        "id": "auth:ee-kpois:14709:register",
+        "license": "CC BY 4.0",
+        "publisher": "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium",
+        "revision": "Retrieved 2026-11-28; SHA-256 21fafc2d8f9a6c1305eb7735c1e0bec4c3b3d75a7848bbeb90871cb5bb82447e.",
+        "title": "National Register 14709",
+        "uri": "https://gsavalik.envir.ee/geoserver/muinsuskaitse/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=muinsuskaitse%3Akpo_malestised_241&srsName=EPSG%3A4326&outputFormat=application%2Fjson&count=400&CQL_FILTER=nimi+ILIKE+%27%25Rakvere%25linnus%25%27+OR+nimi+ILIKE+%27%25Haapsalu%25linnus%25%27+OR+nimi+ILIKE+%27%25Kuressaare%25linnus%25%27+OR+nimi+ILIKE+%27%25Narva%25linnus%25%27+OR+nimi+ILIKE+%27%25Hermanni%25linnus%25%27+OR+nimi+ILIKE+%27%25P%C3%B5ltsamaa%25linnus%25%27+OR+nimi+ILIKE+%27%25Paide%25linnus%25%27+OR+nimi+ILIKE+%27%25Viljandi%25linnus%25%27+OR+nimi+ILIKE+%27%25Toolse%25linnus%25%27+OR+nimi+ILIKE+%27%25Vastseliina%25linnus%25%27+OR+nimi+ILIKE+%27%25Laiuse%25linnus%25%27+OR+nimi+ILIKE+%27%25Karksi%25linnus%25%27+OR+nimi+ILIKE+%27%25Padise%25klooster%25%27+OR+nimi+ILIKE+%27%25Pirita%25klooster%25%27"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 25.595277777778, latitude 58.359166666667.",
+        "id": "auth:ee-kpois:14709:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2553827234, P625 statement Q373326$3E8299BD-8290-4C0C-A10A-6D4E9DD4E080.",
+        "title": "Viljandi Order Castle Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q373326.json"
+      }
+    ],
+    "source_uri": "https://visitviljandi.ee/en/places/ruins-of-the-viljandi-order-castle/",
+    "title": "Viljandi Order Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Wittenstein Time Centre",
+      "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium",
+      "Wikidata contributors"
+    ],
+    "description": "A reconstructed tower houses the Wittenstein Time Centre on the hill of Paide's original castle ruins.",
+    "description_zh": "爱沙尼亚派德城堡遗址保存原地遗迹，现有一座复建塔楼，用于维滕施泰因历史展览。",
+    "details": "A reconstructed tower houses the Wittenstein Time Centre on the hill of Paide's original castle ruins.",
+    "geography": {
+      "authority_id": "supplement:auth:ee-kpois:15065",
+      "countries": [
+        "EE"
+      ],
+      "note": "Public heritage representative point in Paide, Järva County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "A reconstructed tower houses the Wittenstein Time Centre on the hill of Paide's original castle ruins.",
+        "id": "auth:ee-kpois:15065:visit",
+        "license": null,
+        "publisher": "Wittenstein Time Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 997cee5405ed068a6add40ffc256a6d9a7122fe5facd608c31cbc2f7c58f0135.",
+        "title": "Visit Paide Castle Ruins",
+        "uri": "https://wittenstein.ee/en/ajakeskus-wittenstein/"
+      }
+    },
+    "id": "auth:ee-kpois:15065",
+    "location_precision": null,
+    "names": [
+      "Paide linnuse varemed"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      25.571679487025,
+      58.889266684994
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "A reconstructed tower houses the Wittenstein Time Centre on the hill of Paide's original castle ruins.",
+        "id": "auth:ee-kpois:15065:visit",
+        "license": null,
+        "publisher": "Wittenstein Time Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 997cee5405ed068a6add40ffc256a6d9a7122fe5facd608c31cbc2f7c58f0135.",
+        "title": "Visit Paide Castle Ruins",
+        "uri": "https://wittenstein.ee/en/ajakeskus-wittenstein/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Paide linnuse varemed. Record 15065. Point reused unaltered when supplied.",
+        "id": "auth:ee-kpois:15065:register",
+        "license": "CC BY 4.0",
+        "publisher": "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium",
+        "revision": "Retrieved 2026-11-28; SHA-256 21fafc2d8f9a6c1305eb7735c1e0bec4c3b3d75a7848bbeb90871cb5bb82447e.",
+        "title": "National Register 15065",
+        "uri": "https://gsavalik.envir.ee/geoserver/muinsuskaitse/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=muinsuskaitse%3Akpo_malestised_241&srsName=EPSG%3A4326&outputFormat=application%2Fjson&count=400&CQL_FILTER=nimi+ILIKE+%27%25Rakvere%25linnus%25%27+OR+nimi+ILIKE+%27%25Haapsalu%25linnus%25%27+OR+nimi+ILIKE+%27%25Kuressaare%25linnus%25%27+OR+nimi+ILIKE+%27%25Narva%25linnus%25%27+OR+nimi+ILIKE+%27%25Hermanni%25linnus%25%27+OR+nimi+ILIKE+%27%25P%C3%B5ltsamaa%25linnus%25%27+OR+nimi+ILIKE+%27%25Paide%25linnus%25%27+OR+nimi+ILIKE+%27%25Viljandi%25linnus%25%27+OR+nimi+ILIKE+%27%25Toolse%25linnus%25%27+OR+nimi+ILIKE+%27%25Vastseliina%25linnus%25%27+OR+nimi+ILIKE+%27%25Laiuse%25linnus%25%27+OR+nimi+ILIKE+%27%25Karksi%25linnus%25%27+OR+nimi+ILIKE+%27%25Padise%25klooster%25%27+OR+nimi+ILIKE+%27%25Pirita%25klooster%25%27"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 25.571679487025, latitude 58.889266684994.",
+        "id": "auth:ee-kpois:15065:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2553865714, P625 statement Q16412691$AFE0C1FB-B12E-4AB8-BFE9-4866EF2276D0.",
+        "title": "Paide Castle Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16412691.json"
+      }
+    ],
+    "source_uri": "https://wittenstein.ee/en/ajakeskus-wittenstein/",
+    "title": "Paide Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Haapsalu and Läänemaa Museums Foundation",
+      "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium"
+    ],
+    "description": "Haapsalu's episcopal castle precinct contains a museum, with separate access arrangements for the grounds and museum facilities.",
+    "description_zh": "爱沙尼亚哈普萨卢的主教城堡遗址内设博物馆，院落和馆内空间按照各自的规则开放。",
+    "details": "Haapsalu's episcopal castle precinct contains a museum, with separate access arrangements for the grounds and museum facilities.",
+    "geography": {
+      "authority_id": "supplement:auth:ee-kpois:15391",
+      "countries": [
+        "EE"
+      ],
+      "note": "Public heritage representative point in Haapsalu, Lääne County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Haapsalu's episcopal castle precinct contains a museum, with separate access arrangements for the grounds and museum facilities.",
+        "id": "auth:ee-kpois:15391:visit",
+        "license": null,
+        "publisher": "Haapsalu and Läänemaa Museums Foundation",
+        "revision": "Retrieved 2026-11-28; SHA-256 7db9cd3608cf87c558394ac586d5f32fb0d6698db3a123df4585b101c1e3c0be.",
+        "title": "Visit Haapsalu Episcopal Castle",
+        "uri": "https://salm.ee/en/visiting-information/"
+      }
+    },
+    "id": "auth:ee-kpois:15391",
+    "location_precision": null,
+    "names": [
+      "Haapsalu piiskopilinnus"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      23.53778537,
+      58.94705634
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Haapsalu's episcopal castle precinct contains a museum, with separate access arrangements for the grounds and museum facilities.",
+        "id": "auth:ee-kpois:15391:visit",
+        "license": null,
+        "publisher": "Haapsalu and Läänemaa Museums Foundation",
+        "revision": "Retrieved 2026-11-28; SHA-256 7db9cd3608cf87c558394ac586d5f32fb0d6698db3a123df4585b101c1e3c0be.",
+        "title": "Visit Haapsalu Episcopal Castle",
+        "uri": "https://salm.ee/en/visiting-information/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Haapsalu linnuse varemed ja vallikraav. Record 15391. Point reused unaltered when supplied.",
+        "id": "auth:ee-kpois:15391:register",
+        "license": "CC BY 4.0",
+        "publisher": "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium",
+        "revision": "Retrieved 2026-11-28; SHA-256 21fafc2d8f9a6c1305eb7735c1e0bec4c3b3d75a7848bbeb90871cb5bb82447e.",
+        "title": "National Register 15391",
+        "uri": "https://gsavalik.envir.ee/geoserver/muinsuskaitse/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=muinsuskaitse%3Akpo_malestised_241&srsName=EPSG%3A4326&outputFormat=application%2Fjson&count=400&CQL_FILTER=nimi+ILIKE+%27%25Rakvere%25linnus%25%27+OR+nimi+ILIKE+%27%25Haapsalu%25linnus%25%27+OR+nimi+ILIKE+%27%25Kuressaare%25linnus%25%27+OR+nimi+ILIKE+%27%25Narva%25linnus%25%27+OR+nimi+ILIKE+%27%25Hermanni%25linnus%25%27+OR+nimi+ILIKE+%27%25P%C3%B5ltsamaa%25linnus%25%27+OR+nimi+ILIKE+%27%25Paide%25linnus%25%27+OR+nimi+ILIKE+%27%25Viljandi%25linnus%25%27+OR+nimi+ILIKE+%27%25Toolse%25linnus%25%27+OR+nimi+ILIKE+%27%25Vastseliina%25linnus%25%27+OR+nimi+ILIKE+%27%25Laiuse%25linnus%25%27+OR+nimi+ILIKE+%27%25Karksi%25linnus%25%27+OR+nimi+ILIKE+%27%25Padise%25klooster%25%27+OR+nimi+ILIKE+%27%25Pirita%25klooster%25%27"
+      }
+    ],
+    "source_uri": "https://salm.ee/en/visiting-information/",
+    "title": "Haapsalu Episcopal Castle",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Visit Estonia / Estonian Business and Innovation Agency",
+      "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium"
+    ],
+    "description": "The castle ruins host a public exhibition and visitor programmes on Rakvere's fortified hill.",
+    "description_zh": "爱沙尼亚拉克韦雷城堡遗址位于城中的要塞山丘，现设公众展览和体验项目。",
+    "details": "The castle ruins host a public exhibition and visitor programmes on Rakvere's fortified hill.",
+    "geography": {
+      "authority_id": "supplement:auth:ee-kpois:15740",
+      "countries": [
+        "EE"
+      ],
+      "note": "Public heritage representative point in Rakvere, Lääne-Viru County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The castle ruins host a public exhibition and visitor programmes on Rakvere's fortified hill.",
+        "id": "auth:ee-kpois:15740:visit",
+        "license": null,
+        "publisher": "Visit Estonia / Estonian Business and Innovation Agency",
+        "revision": "Retrieved 2026-11-28; SHA-256 999f1dae2eec022c73cd96c246fe8aec8aad53a6fd7e5f6ff72f041b4fdf19e2.",
+        "title": "Visit Rakvere Castle Ruins",
+        "uri": "https://visitestonia.com/en/rakvere-stronghold"
+      }
+    },
+    "id": "auth:ee-kpois:15740",
+    "location_precision": null,
+    "names": [
+      "Rakvere linnuse varemed"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      26.35190568,
+      59.34761182
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The castle ruins host a public exhibition and visitor programmes on Rakvere's fortified hill.",
+        "id": "auth:ee-kpois:15740:visit",
+        "license": null,
+        "publisher": "Visit Estonia / Estonian Business and Innovation Agency",
+        "revision": "Retrieved 2026-11-28; SHA-256 999f1dae2eec022c73cd96c246fe8aec8aad53a6fd7e5f6ff72f041b4fdf19e2.",
+        "title": "Visit Rakvere Castle Ruins",
+        "uri": "https://visitestonia.com/en/rakvere-stronghold"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Rakvere linnuse varemed vallikraaviga. Record 15740. Point reused unaltered when supplied.",
+        "id": "auth:ee-kpois:15740:register",
+        "license": "CC BY 4.0",
+        "publisher": "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium",
+        "revision": "Retrieved 2026-11-28; SHA-256 21fafc2d8f9a6c1305eb7735c1e0bec4c3b3d75a7848bbeb90871cb5bb82447e.",
+        "title": "National Register 15740",
+        "uri": "https://gsavalik.envir.ee/geoserver/muinsuskaitse/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=muinsuskaitse%3Akpo_malestised_241&srsName=EPSG%3A4326&outputFormat=application%2Fjson&count=400&CQL_FILTER=nimi+ILIKE+%27%25Rakvere%25linnus%25%27+OR+nimi+ILIKE+%27%25Haapsalu%25linnus%25%27+OR+nimi+ILIKE+%27%25Kuressaare%25linnus%25%27+OR+nimi+ILIKE+%27%25Narva%25linnus%25%27+OR+nimi+ILIKE+%27%25Hermanni%25linnus%25%27+OR+nimi+ILIKE+%27%25P%C3%B5ltsamaa%25linnus%25%27+OR+nimi+ILIKE+%27%25Paide%25linnus%25%27+OR+nimi+ILIKE+%27%25Viljandi%25linnus%25%27+OR+nimi+ILIKE+%27%25Toolse%25linnus%25%27+OR+nimi+ILIKE+%27%25Vastseliina%25linnus%25%27+OR+nimi+ILIKE+%27%25Laiuse%25linnus%25%27+OR+nimi+ILIKE+%27%25Karksi%25linnus%25%27+OR+nimi+ILIKE+%27%25Padise%25klooster%25%27+OR+nimi+ILIKE+%27%25Pirita%25klooster%25%27"
+      }
+    ],
+    "source_uri": "https://visitestonia.com/en/rakvere-stronghold",
+    "title": "Rakvere Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Visit Estonia / Estonian Business and Innovation Agency",
+      "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium"
+    ],
+    "description": "The coastal remains of Toolse Order Castle are presented by Virumaa Museums, with some activities available by arrangement.",
+    "description_zh": "爱沙尼亚海岸的托尔塞骑士团城堡遗址由维鲁马博物馆介绍，部分参观活动需要预约。",
+    "details": "The coastal remains of Toolse Order Castle are presented by Virumaa Museums, with some activities available by arrangement.",
+    "geography": {
+      "authority_id": "supplement:auth:ee-kpois:15951",
+      "countries": [
+        "EE"
+      ],
+      "note": "Public heritage representative point in Toolse, Lääne-Viru County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The coastal remains of Toolse Order Castle are presented by Virumaa Museums, with some activities available by arrangement.",
+        "id": "auth:ee-kpois:15951:visit",
+        "license": null,
+        "publisher": "Visit Estonia / Estonian Business and Innovation Agency",
+        "revision": "Retrieved 2026-11-28; SHA-256 dc6f7ad98e09cdd54eadb2d4722ab355c94b20dadcf65cf11ee6794f9fab6727.",
+        "title": "Visit Toolse Order Castle Ruins",
+        "uri": "https://visitestonia.com/en/toolse-order-castle"
+      }
+    },
+    "id": "auth:ee-kpois:15951",
+    "location_precision": null,
+    "names": [
+      "Toolse linnuse varemed"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      26.46843301,
+      59.53466859
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The coastal remains of Toolse Order Castle are presented by Virumaa Museums, with some activities available by arrangement.",
+        "id": "auth:ee-kpois:15951:visit",
+        "license": null,
+        "publisher": "Visit Estonia / Estonian Business and Innovation Agency",
+        "revision": "Retrieved 2026-11-28; SHA-256 dc6f7ad98e09cdd54eadb2d4722ab355c94b20dadcf65cf11ee6794f9fab6727.",
+        "title": "Visit Toolse Order Castle Ruins",
+        "uri": "https://visitestonia.com/en/toolse-order-castle"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Toolse linnuse varemed. Record 15951. Point reused unaltered when supplied.",
+        "id": "auth:ee-kpois:15951:register",
+        "license": "CC BY 4.0",
+        "publisher": "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium",
+        "revision": "Retrieved 2026-11-28; SHA-256 21fafc2d8f9a6c1305eb7735c1e0bec4c3b3d75a7848bbeb90871cb5bb82447e.",
+        "title": "National Register 15951",
+        "uri": "https://gsavalik.envir.ee/geoserver/muinsuskaitse/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=muinsuskaitse%3Akpo_malestised_241&srsName=EPSG%3A4326&outputFormat=application%2Fjson&count=400&CQL_FILTER=nimi+ILIKE+%27%25Rakvere%25linnus%25%27+OR+nimi+ILIKE+%27%25Haapsalu%25linnus%25%27+OR+nimi+ILIKE+%27%25Kuressaare%25linnus%25%27+OR+nimi+ILIKE+%27%25Narva%25linnus%25%27+OR+nimi+ILIKE+%27%25Hermanni%25linnus%25%27+OR+nimi+ILIKE+%27%25P%C3%B5ltsamaa%25linnus%25%27+OR+nimi+ILIKE+%27%25Paide%25linnus%25%27+OR+nimi+ILIKE+%27%25Viljandi%25linnus%25%27+OR+nimi+ILIKE+%27%25Toolse%25linnus%25%27+OR+nimi+ILIKE+%27%25Vastseliina%25linnus%25%27+OR+nimi+ILIKE+%27%25Laiuse%25linnus%25%27+OR+nimi+ILIKE+%27%25Karksi%25linnus%25%27+OR+nimi+ILIKE+%27%25Padise%25klooster%25%27+OR+nimi+ILIKE+%27%25Pirita%25klooster%25%27"
+      }
+    ],
+    "source_uri": "https://visitestonia.com/en/toolse-order-castle",
+    "title": "Toolse Order Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Saaremaa Museum",
+      "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium"
+    ],
+    "description": "Saaremaa Museum operates a public museum in Kuressaare's episcopal castle with seasonal ticketed hours.",
+    "description_zh": "爱沙尼亚萨雷马岛库雷萨雷主教城堡原址现为萨雷马博物馆所在地，按季节时间售票开放。",
+    "details": "Saaremaa Museum operates a public museum in Kuressaare's episcopal castle with seasonal ticketed hours.",
+    "geography": {
+      "authority_id": "supplement:auth:ee-kpois:20868",
+      "countries": [
+        "EE"
+      ],
+      "note": "Public heritage representative point in Kuressaare, Saare County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Saaremaa Museum operates a public museum in Kuressaare's episcopal castle with seasonal ticketed hours.",
+        "id": "auth:ee-kpois:20868:visit",
+        "license": null,
+        "publisher": "Saaremaa Museum",
+        "revision": "Retrieved 2026-11-28; SHA-256 ee6bed086c17716774af4230604f84013eeb43e66a051683d4b351e2b4daadba.",
+        "title": "Visit Kuressaare Episcopal Castle",
+        "uri": "https://linnus.samu.ee/en/visitors-info/"
+      }
+    },
+    "id": "auth:ee-kpois:20868",
+    "location_precision": null,
+    "names": [
+      "Kuressaare linnus"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      22.47919475,
+      58.24688206
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Saaremaa Museum operates a public museum in Kuressaare's episcopal castle with seasonal ticketed hours.",
+        "id": "auth:ee-kpois:20868:visit",
+        "license": null,
+        "publisher": "Saaremaa Museum",
+        "revision": "Retrieved 2026-11-28; SHA-256 ee6bed086c17716774af4230604f84013eeb43e66a051683d4b351e2b4daadba.",
+        "title": "Visit Kuressaare Episcopal Castle",
+        "uri": "https://linnus.samu.ee/en/visitors-info/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Kuressaare linnus. Record 20868. Point reused unaltered when supplied.",
+        "id": "auth:ee-kpois:20868:register",
+        "license": "CC BY 4.0",
+        "publisher": "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium",
+        "revision": "Retrieved 2026-11-28; SHA-256 21fafc2d8f9a6c1305eb7735c1e0bec4c3b3d75a7848bbeb90871cb5bb82447e.",
+        "title": "National Register 20868",
+        "uri": "https://gsavalik.envir.ee/geoserver/muinsuskaitse/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=muinsuskaitse%3Akpo_malestised_241&srsName=EPSG%3A4326&outputFormat=application%2Fjson&count=400&CQL_FILTER=nimi+ILIKE+%27%25Rakvere%25linnus%25%27+OR+nimi+ILIKE+%27%25Haapsalu%25linnus%25%27+OR+nimi+ILIKE+%27%25Kuressaare%25linnus%25%27+OR+nimi+ILIKE+%27%25Narva%25linnus%25%27+OR+nimi+ILIKE+%27%25Hermanni%25linnus%25%27+OR+nimi+ILIKE+%27%25P%C3%B5ltsamaa%25linnus%25%27+OR+nimi+ILIKE+%27%25Paide%25linnus%25%27+OR+nimi+ILIKE+%27%25Viljandi%25linnus%25%27+OR+nimi+ILIKE+%27%25Toolse%25linnus%25%27+OR+nimi+ILIKE+%27%25Vastseliina%25linnus%25%27+OR+nimi+ILIKE+%27%25Laiuse%25linnus%25%27+OR+nimi+ILIKE+%27%25Karksi%25linnus%25%27+OR+nimi+ILIKE+%27%25Padise%25klooster%25%27+OR+nimi+ILIKE+%27%25Pirita%25klooster%25%27"
+      }
+    ],
+    "source_uri": "https://linnus.samu.ee/en/visitors-info/",
+    "title": "Kuressaare Episcopal Castle",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Visit Estonia / Estonian Business and Innovation Agency",
+      "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium"
+    ],
+    "description": "The remains of Laiuse Fortress in Laiusevälja are listed as an open-air destination by Estonia's national visitor service.",
+    "description_zh": "爱沙尼亚约格瓦县莱乌塞要塞的原址遗迹为露天参观点，保留城堡和护城沟遗迹。",
+    "details": "The remains of Laiuse Fortress in Laiusevälja are listed as an open-air destination by Estonia's national visitor service.",
+    "geography": {
+      "authority_id": "supplement:auth:ee-kpois:23932",
+      "countries": [
+        "EE"
+      ],
+      "note": "Public heritage representative point in Laiusevälja, Jõgeva County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The remains of Laiuse Fortress in Laiusevälja are listed as an open-air destination by Estonia's national visitor service.",
+        "id": "auth:ee-kpois:23932:visit",
+        "license": null,
+        "publisher": "Visit Estonia / Estonian Business and Innovation Agency",
+        "revision": "Retrieved 2026-11-28; SHA-256 06374a3dc36378865d90eb9cd3f9b50dc5114856e090638d0653194d8aa28a58.",
+        "title": "Visit Laiuse Fortress Ruins",
+        "uri": "https://visitestonia.com/en/laiuse-fortress-ruins"
+      }
+    },
+    "id": "auth:ee-kpois:23932",
+    "location_precision": null,
+    "names": [
+      "Laiuse linnuse varemed"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      26.54428075,
+      58.81219112
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The remains of Laiuse Fortress in Laiusevälja are listed as an open-air destination by Estonia's national visitor service.",
+        "id": "auth:ee-kpois:23932:visit",
+        "license": null,
+        "publisher": "Visit Estonia / Estonian Business and Innovation Agency",
+        "revision": "Retrieved 2026-11-28; SHA-256 06374a3dc36378865d90eb9cd3f9b50dc5114856e090638d0653194d8aa28a58.",
+        "title": "Visit Laiuse Fortress Ruins",
+        "uri": "https://visitestonia.com/en/laiuse-fortress-ruins"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Laiuse linnuse varemed vallikraaviga. Record 23932. Point reused unaltered when supplied.",
+        "id": "auth:ee-kpois:23932:register",
+        "license": "CC BY 4.0",
+        "publisher": "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium",
+        "revision": "Retrieved 2026-11-28; SHA-256 21fafc2d8f9a6c1305eb7735c1e0bec4c3b3d75a7848bbeb90871cb5bb82447e.",
+        "title": "National Register 23932",
+        "uri": "https://gsavalik.envir.ee/geoserver/muinsuskaitse/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=muinsuskaitse%3Akpo_malestised_241&srsName=EPSG%3A4326&outputFormat=application%2Fjson&count=400&CQL_FILTER=nimi+ILIKE+%27%25Rakvere%25linnus%25%27+OR+nimi+ILIKE+%27%25Haapsalu%25linnus%25%27+OR+nimi+ILIKE+%27%25Kuressaare%25linnus%25%27+OR+nimi+ILIKE+%27%25Narva%25linnus%25%27+OR+nimi+ILIKE+%27%25Hermanni%25linnus%25%27+OR+nimi+ILIKE+%27%25P%C3%B5ltsamaa%25linnus%25%27+OR+nimi+ILIKE+%27%25Paide%25linnus%25%27+OR+nimi+ILIKE+%27%25Viljandi%25linnus%25%27+OR+nimi+ILIKE+%27%25Toolse%25linnus%25%27+OR+nimi+ILIKE+%27%25Vastseliina%25linnus%25%27+OR+nimi+ILIKE+%27%25Laiuse%25linnus%25%27+OR+nimi+ILIKE+%27%25Karksi%25linnus%25%27+OR+nimi+ILIKE+%27%25Padise%25klooster%25%27+OR+nimi+ILIKE+%27%25Pirita%25klooster%25%27"
+      }
+    ],
+    "source_uri": "https://visitestonia.com/en/laiuse-fortress-ruins",
+    "title": "Laiuse Fortress Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Padise Monastery",
+      "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium"
+    ],
+    "description": "Padise Monastery offers scheduled visitor access and guided tours through its historic monastic ruins.",
+    "description_zh": "爱沙尼亚帕迪塞修道院的原址遗迹设有季节性开放时间，并提供导览。",
+    "details": "Padise Monastery offers scheduled visitor access and guided tours through its historic monastic ruins.",
+    "geography": {
+      "authority_id": "supplement:auth:ee-kpois:2921",
+      "countries": [
+        "EE"
+      ],
+      "note": "Public heritage representative point in Padise, Harju County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Padise Monastery offers scheduled visitor access and guided tours through its historic monastic ruins.",
+        "id": "auth:ee-kpois:2921:visit",
+        "license": null,
+        "publisher": "Padise Monastery",
+        "revision": "Retrieved 2026-11-28; SHA-256 91150447d1bb0471a4a0b5a6980372581b0f260bdd16cea8fcf9c222b91d269f.",
+        "title": "Visit Padise Monastery Ruins",
+        "uri": "https://padise.ee/en/"
+      }
+    },
+    "id": "auth:ee-kpois:2921",
+    "location_precision": null,
+    "names": [
+      "Padise kloostri varemed"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      24.14075347,
+      59.22768714
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Padise Monastery offers scheduled visitor access and guided tours through its historic monastic ruins.",
+        "id": "auth:ee-kpois:2921:visit",
+        "license": null,
+        "publisher": "Padise Monastery",
+        "revision": "Retrieved 2026-11-28; SHA-256 91150447d1bb0471a4a0b5a6980372581b0f260bdd16cea8fcf9c222b91d269f.",
+        "title": "Visit Padise Monastery Ruins",
+        "uri": "https://padise.ee/en/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Padise kloostri varemed vallikraaviga, 13.-16. saj.. Record 2921. Point reused unaltered when supplied.",
+        "id": "auth:ee-kpois:2921:register",
+        "license": "CC BY 4.0",
+        "publisher": "Muinsuskaitseamet and Regionaal- ja Põllumajandusministeerium",
+        "revision": "Retrieved 2026-11-28; SHA-256 ef298f96b8860cb260cd2812075f49b28508dd70ad082625e04375af9e07e6dd.",
+        "title": "National Register 2921",
+        "uri": "https://gsavalik.envir.ee/geoserver/muinsuskaitse/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=muinsuskaitse%3Akpo_malestised_241&srsName=EPSG%3A4326&outputFormat=application%2Fjson&count=400&CQL_FILTER=nimi+ILIKE+%27%25P%C3%B5ltsamaa%25loss%25%27+OR+nimi+ILIKE+%27%25Padise%25kloost%25%27+OR+nimi+ILIKE+%27%25Pirita%25kloost%25%27"
+      }
+    ],
+    "source_uri": "https://padise.ee/en/",
+    "title": "Padise Monastery Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Latvia Travel / Investment and Development Agency of Latvia",
+      "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+      "Wikidata contributors"
+    ],
+    "description": "The public Koknese castle ruins occupy the waterfront at the confluence, where the municipality operates a visitor service pavilion.",
+    "description_zh": "拉脱维亚科克内塞中世纪城堡遗址位于河流交汇处，市政旅游机构在遗址设访客服务站。",
+    "details": "The public Koknese castle ruins occupy the waterfront at the confluence, where the municipality operates a visitor service pavilion.",
+    "geography": {
+      "authority_id": "supplement:auth:lv-public:118",
+      "countries": [
+        "LV"
+      ],
+      "note": "Public heritage representative point in Koknese, Aizkraukle Municipality.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The public Koknese castle ruins occupy the waterfront at the confluence, where the municipality operates a visitor service pavilion.",
+        "id": "auth:lv-public:118:visit",
+        "license": null,
+        "publisher": "Latvia Travel / Investment and Development Agency of Latvia",
+        "revision": "Retrieved 2026-11-28; SHA-256 2d5062a1d5c37b4c936a75a8deb75688e80cd6c38cc3cc3ad6bef6ad734dd3f4.",
+        "title": "Visit Koknese Medieval Castle Ruins",
+        "uri": "https://www.latvia.travel/en/sight/koknese-castle-ruins"
+      }
+    },
+    "id": "auth:lv-public:118",
+    "location_precision": null,
+    "names": [
+      "Kokneses viduslaiku pilsdrupas"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      25.4175,
+      56.63805556
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The public Koknese castle ruins occupy the waterfront at the confluence, where the municipality operates a visitor service pavilion.",
+        "id": "auth:lv-public:118:visit",
+        "license": null,
+        "publisher": "Latvia Travel / Investment and Development Agency of Latvia",
+        "revision": "Retrieved 2026-11-28; SHA-256 2d5062a1d5c37b4c936a75a8deb75688e80cd6c38cc3cc3ad6bef6ad734dd3f4.",
+        "title": "Visit Koknese Medieval Castle Ruins",
+        "uri": "https://www.latvia.travel/en/sight/koknese-castle-ruins"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Kokneses viduslaiku pils un senpilsēta. Pieejams.",
+        "id": "auth:lv-public:118:register",
+        "license": "CC0",
+        "publisher": "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+        "revision": "Retrieved 2026-11-28; SHA-256 ae9f294d5fe0baef76146a0e6d7c789e63f56714859b19940d4a3710d6d6d5d8.",
+        "title": "National protected monument 118",
+        "uri": "https://data.gov.lv/dati/dataset/79e7246f-57cc-41fc-9a10-96521422359c/resource/25583e4e-ca54-430e-b275-b38057a5ee70/download/saraksts.csv"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 25.4175, latitude 56.63805556.",
+        "id": "auth:lv-public:118:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2512691927, P625 statement Q3744576$BB9AD951-2250-4853-BEE8-C32E5B07D8A1.",
+        "title": "Koknese Medieval Castle Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3744576.json"
+      }
+    ],
+    "source_uri": "https://www.latvia.travel/en/sight/koknese-castle-ruins",
+    "title": "Koknese Medieval Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ludza Municipality Tourism Information Centre",
+      "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+      "Wikidata contributors"
+    ],
+    "description": "Ludza's castle ruins stand on a hill between the lakes, with a publicly described pedestrian route and viewpoint.",
+    "description_zh": "拉脱维亚卢扎中世纪城堡遗址位于两湖之间的山丘，市政旅游机构介绍了步行路线和观景平台。",
+    "details": "Ludza's castle ruins stand on a hill between the lakes, with a publicly described pedestrian route and viewpoint.",
+    "geography": {
+      "authority_id": "supplement:auth:lv-public:1544",
+      "countries": [
+        "LV"
+      ],
+      "note": "Public heritage representative point in Ludza, Ludza Municipality.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Ludza's castle ruins stand on a hill between the lakes, with a publicly described pedestrian route and viewpoint.",
+        "id": "auth:lv-public:1544:visit",
+        "license": null,
+        "publisher": "Ludza Municipality Tourism Information Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 1f5db2c052db934e24a2976b0ad3beb20b2b7d43907b5cc2905cd6125cbc5ff2.",
+        "title": "Visit Ludza Medieval Castle Ruins",
+        "uri": "https://visitludza.lv/en/what-to-see/history-and-culture/ruins-of-ludza-medieval-castle/"
+      }
+    },
+    "id": "auth:lv-public:1544",
+    "location_precision": null,
+    "names": [
+      "Ludzas viduslaiku pils"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      27.728695,
+      56.548851
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Ludza's castle ruins stand on a hill between the lakes, with a publicly described pedestrian route and viewpoint.",
+        "id": "auth:lv-public:1544:visit",
+        "license": null,
+        "publisher": "Ludza Municipality Tourism Information Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 1f5db2c052db934e24a2976b0ad3beb20b2b7d43907b5cc2905cd6125cbc5ff2.",
+        "title": "Visit Ludza Medieval Castle Ruins",
+        "uri": "https://visitludza.lv/en/what-to-see/history-and-culture/ruins-of-ludza-medieval-castle/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Ludzas viduslaiku pils. Pieejams.",
+        "id": "auth:lv-public:1544:register",
+        "license": "CC0",
+        "publisher": "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+        "revision": "Retrieved 2026-11-28; SHA-256 ae9f294d5fe0baef76146a0e6d7c789e63f56714859b19940d4a3710d6d6d5d8.",
+        "title": "National protected monument 1544",
+        "uri": "https://data.gov.lv/dati/dataset/79e7246f-57cc-41fc-9a10-96521422359c/resource/25583e4e-ca54-430e-b275-b38057a5ee70/download/saraksts.csv"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 27.728695, latitude 56.548851.",
+        "id": "auth:lv-public:1544:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2518724274, P625 statement Q6111771$d6351225-4ffb-95e6-5a5c-72909f21a23f.",
+        "title": "Ludza Medieval Castle Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6111771.json"
+      }
+    ],
+    "source_uri": "https://visitludza.lv/en/what-to-see/history-and-culture/ruins-of-ludza-medieval-castle/",
+    "title": "Ludza Medieval Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Latvia Travel / Investment and Development Agency of Latvia",
+      "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+      "Wikidata contributors"
+    ],
+    "description": "The Sigulda medieval castle has publicly visitable towers and a courtyard used for performance events.",
+    "description_zh": "拉脱维亚锡古尔达骑士团城堡保留中世纪要塞遗迹，开放参观塔楼和院落。",
+    "details": "The Sigulda medieval castle has publicly visitable towers and a courtyard used for performance events.",
+    "geography": {
+      "authority_id": "supplement:auth:lv-public:2139",
+      "countries": [
+        "LV"
+      ],
+      "note": "Public heritage representative point in Sigulda, Sigulda Municipality.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Sigulda medieval castle has publicly visitable towers and a courtyard used for performance events.",
+        "id": "auth:lv-public:2139:visit",
+        "license": null,
+        "publisher": "Latvia Travel / Investment and Development Agency of Latvia",
+        "revision": "Retrieved 2026-11-28; SHA-256 ce72c499b4878c05517e777e08db3668cafe6aba6e667f634982a2e99a23b7e5.",
+        "title": "Visit Sigulda Livonian Order Castle",
+        "uri": "https://www.latvia.travel/en/sight/livonian-order-sigulda-castle"
+      }
+    },
+    "id": "auth:lv-public:2139",
+    "location_precision": null,
+    "names": [
+      "Siguldas viduslaiku pils"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      24.85,
+      57.16638888888889
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Sigulda medieval castle has publicly visitable towers and a courtyard used for performance events.",
+        "id": "auth:lv-public:2139:visit",
+        "license": null,
+        "publisher": "Latvia Travel / Investment and Development Agency of Latvia",
+        "revision": "Retrieved 2026-11-28; SHA-256 ce72c499b4878c05517e777e08db3668cafe6aba6e667f634982a2e99a23b7e5.",
+        "title": "Visit Sigulda Livonian Order Castle",
+        "uri": "https://www.latvia.travel/en/sight/livonian-order-sigulda-castle"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Siguldas viduslaiku pils un Krusta kalns. Pieejams.",
+        "id": "auth:lv-public:2139:register",
+        "license": "CC0",
+        "publisher": "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+        "revision": "Retrieved 2026-11-28; SHA-256 ae9f294d5fe0baef76146a0e6d7c789e63f56714859b19940d4a3710d6d6d5d8.",
+        "title": "National protected monument 2139",
+        "uri": "https://data.gov.lv/dati/dataset/79e7246f-57cc-41fc-9a10-96521422359c/resource/25583e4e-ca54-430e-b275-b38057a5ee70/download/saraksts.csv"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 24.85, latitude 57.16638888888889.",
+        "id": "auth:lv-public:2139:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2497864209, P625 statement q2089479$E15B6E6B-D718-45E3-B35F-74CA457A23A4.",
+        "title": "Sigulda Livonian Order Castle Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2089479.json"
+      }
+    ],
+    "source_uri": "https://www.latvia.travel/en/sight/livonian-order-sigulda-castle",
+    "title": "Sigulda Livonian Order Castle",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Turaida Museum Reserve",
+      "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+      "Wikidata contributors"
+    ],
+    "description": "The medieval castle is one of the historic places presented within the public Turaida Museum Reserve.",
+    "description_zh": "拉脱维亚图赖达中世纪城堡位于图赖达博物馆保护区内，开放范围按保护区安排。",
+    "details": "The medieval castle is one of the historic places presented within the public Turaida Museum Reserve.",
+    "geography": {
+      "authority_id": "supplement:auth:lv-public:2147",
+      "countries": [
+        "LV"
+      ],
+      "note": "Public heritage representative point in Turaida, Sigulda Municipality.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The medieval castle is one of the historic places presented within the public Turaida Museum Reserve.",
+        "id": "auth:lv-public:2147:visit",
+        "license": null,
+        "publisher": "Turaida Museum Reserve",
+        "revision": "Retrieved 2026-11-28; SHA-256 cad7392c8eb3e904fffcee67b1e9d58012ddf762b3a129cc2912d9f97be76a62.",
+        "title": "Visit Turaida Medieval Castle",
+        "uri": "https://tmr.gov.lv/en/ticket-info"
+      }
+    },
+    "id": "auth:lv-public:2147",
+    "location_precision": null,
+    "names": [
+      "Turaidas mūra pils"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      24.850277777778,
+      57.182222222222
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The medieval castle is one of the historic places presented within the public Turaida Museum Reserve.",
+        "id": "auth:lv-public:2147:visit",
+        "license": null,
+        "publisher": "Turaida Museum Reserve",
+        "revision": "Retrieved 2026-11-28; SHA-256 cad7392c8eb3e904fffcee67b1e9d58012ddf762b3a129cc2912d9f97be76a62.",
+        "title": "Visit Turaida Medieval Castle",
+        "uri": "https://tmr.gov.lv/en/ticket-info"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Turaidas pilskalns un viduslaiku pils. Daļēji pieejams.",
+        "id": "auth:lv-public:2147:register",
+        "license": "CC0",
+        "publisher": "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+        "revision": "Retrieved 2026-11-28; SHA-256 ae9f294d5fe0baef76146a0e6d7c789e63f56714859b19940d4a3710d6d6d5d8.",
+        "title": "National protected monument 2147",
+        "uri": "https://data.gov.lv/dati/dataset/79e7246f-57cc-41fc-9a10-96521422359c/resource/25583e4e-ca54-430e-b275-b38057a5ee70/download/saraksts.csv"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 24.850277777778, latitude 57.182222222222.",
+        "id": "auth:lv-public:2147:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2548508673, P625 statement q2075107$2D21F14D-770C-4B4F-8F85-0CC003112A62.",
+        "title": "Turaida Medieval Castle Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2075107.json"
+      }
+    ],
+    "source_uri": "https://tmr.gov.lv/en/ticket-info",
+    "title": "Turaida Medieval Castle",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Latvia Travel / Investment and Development Agency of Latvia",
+      "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+      "Wikidata contributors"
+    ],
+    "description": "The municipal Ventspils Museum presents public history exhibitions in the historic Livonian Order castle.",
+    "description_zh": "拉脱维亚文茨皮尔斯的骑士团城堡原址由市立博物馆使用，对公众开放历史展览。",
+    "details": "The municipal Ventspils Museum presents public history exhibitions in the historic Livonian Order castle.",
+    "geography": {
+      "authority_id": "supplement:auth:lv-public:2517",
+      "countries": [
+        "LV"
+      ],
+      "note": "Public heritage representative point in Ventspils.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal Ventspils Museum presents public history exhibitions in the historic Livonian Order castle.",
+        "id": "auth:lv-public:2517:visit",
+        "license": null,
+        "publisher": "Latvia Travel / Investment and Development Agency of Latvia",
+        "revision": "Retrieved 2026-11-28; SHA-256 d8c8cf135f72c505aa12cd2c07a70bead488e653dc7b20f1187f0a0c63873620.",
+        "title": "Visit Ventspils Livonian Order Castle",
+        "uri": "https://www.latvia.travel/en/sight/ventspils-livonian-order-castle"
+      }
+    },
+    "id": "auth:lv-public:2517",
+    "location_precision": null,
+    "names": [
+      "Ventspils viduslaiku pils"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      21.558609,
+      57.396124
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal Ventspils Museum presents public history exhibitions in the historic Livonian Order castle.",
+        "id": "auth:lv-public:2517:visit",
+        "license": null,
+        "publisher": "Latvia Travel / Investment and Development Agency of Latvia",
+        "revision": "Retrieved 2026-11-28; SHA-256 d8c8cf135f72c505aa12cd2c07a70bead488e653dc7b20f1187f0a0c63873620.",
+        "title": "Visit Ventspils Livonian Order Castle",
+        "uri": "https://www.latvia.travel/en/sight/ventspils-livonian-order-castle"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Ventspils viduslaiku pils. Pieejams.",
+        "id": "auth:lv-public:2517:register",
+        "license": "CC0",
+        "publisher": "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+        "revision": "Retrieved 2026-11-28; SHA-256 ae9f294d5fe0baef76146a0e6d7c789e63f56714859b19940d4a3710d6d6d5d8.",
+        "title": "National protected monument 2517",
+        "uri": "https://data.gov.lv/dati/dataset/79e7246f-57cc-41fc-9a10-96521422359c/resource/25583e4e-ca54-430e-b275-b38057a5ee70/download/saraksts.csv"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 21.558609, latitude 57.396124.",
+        "id": "auth:lv-public:2517:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2512694524, P625 statement q7920355$A9F34FBC-F5ED-462D-B932-13A0787BD2CB.",
+        "title": "Ventspils Livonian Order Castle Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7920355.json"
+      }
+    ],
+    "source_uri": "https://www.latvia.travel/en/sight/ventspils-livonian-order-castle",
+    "title": "Ventspils Livonian Order Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Alūksne Tourism Information Centre",
+      "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+      "Wikidata contributors"
+    ],
+    "description": "Alūksne Castle Island contains the remains of the order castle and a restored South Tower with a visitor exhibition.",
+    "description_zh": "拉脱维亚阿卢克斯内湖的城堡岛保存骑士团城堡遗迹，修复后的南塔设有公众展览。",
+    "details": "Alūksne Castle Island contains the remains of the order castle and a restored South Tower with a visitor exhibition.",
+    "geography": {
+      "authority_id": "supplement:auth:lv-public:2665",
+      "countries": [
+        "LV"
+      ],
+      "note": "Public heritage representative point in Alūksne Castle Island, Alūksne Municipality.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Alūksne Castle Island contains the remains of the order castle and a restored South Tower with a visitor exhibition.",
+        "id": "auth:lv-public:2665:visit",
+        "license": null,
+        "publisher": "Alūksne Tourism Information Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 5ad266f3432f116c57e30daa439e411e5c19370baa7bf63e20ae90a9393f8da6.",
+        "title": "Visit Alūksne Castle Ruins",
+        "uri": "https://visitaluksne.lv/en/visit/aluksnes-pilssala/"
+      }
+    },
+    "id": "auth:lv-public:2665",
+    "location_precision": null,
+    "names": [
+      "Alūksnes pilsdrupas"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      27.051944444444,
+      57.428888888889
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Alūksne Castle Island contains the remains of the order castle and a restored South Tower with a visitor exhibition.",
+        "id": "auth:lv-public:2665:visit",
+        "license": null,
+        "publisher": "Alūksne Tourism Information Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 5ad266f3432f116c57e30daa439e411e5c19370baa7bf63e20ae90a9393f8da6.",
+        "title": "Visit Alūksne Castle Ruins",
+        "uri": "https://visitaluksne.lv/en/visit/aluksnes-pilssala/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Alūksnes pilsdrupas. Pieejams.",
+        "id": "auth:lv-public:2665:register",
+        "license": "CC0",
+        "publisher": "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+        "revision": "Retrieved 2026-11-28; SHA-256 ae9f294d5fe0baef76146a0e6d7c789e63f56714859b19940d4a3710d6d6d5d8.",
+        "title": "National protected monument 2665",
+        "uri": "https://data.gov.lv/dati/dataset/79e7246f-57cc-41fc-9a10-96521422359c/resource/25583e4e-ca54-430e-b275-b38057a5ee70/download/saraksts.csv"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 27.051944444444, latitude 57.428888888889.",
+        "id": "auth:lv-public:2665:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2512690670, P625 statement Q2967827$68303324-42dd-6740-0b7e-dd3bba05e7db.",
+        "title": "Alūksne Castle Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2967827.json"
+      }
+    ],
+    "source_uri": "https://visitaluksne.lv/en/visit/aluksnes-pilssala/",
+    "title": "Alūksne Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Cēsis Municipality Tourism",
+      "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+      "Wikidata contributors"
+    ],
+    "description": "The Cēsis visitor complex includes the original medieval castle ruins and a separately identified New Castle.",
+    "description_zh": "拉脱维亚采西斯中世纪城堡原址可供参观，附近的新城堡为同一参观园区内的另一处建筑。",
+    "details": "The Cēsis visitor complex includes the original medieval castle ruins and a separately identified New Castle.",
+    "geography": {
+      "authority_id": "supplement:auth:lv-public:392",
+      "countries": [
+        "LV"
+      ],
+      "note": "Public heritage representative point in Cēsis, Cēsis Municipality.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Cēsis visitor complex includes the original medieval castle ruins and a separately identified New Castle.",
+        "id": "auth:lv-public:392:visit",
+        "license": null,
+        "publisher": "Cēsis Municipality Tourism",
+        "revision": "Retrieved 2026-11-28; SHA-256 0bba290e2301d26ecd44204e95930c79a6b69e2b8c061328f7830db456bdf4ab.",
+        "title": "Visit Cēsis Medieval Castle Ruins",
+        "uri": "https://visit.cesis.lv/en/place/cesis-medieval-castle/?post_type=place"
+      }
+    },
+    "id": "auth:lv-public:392",
+    "location_precision": null,
+    "names": [
+      "Cēsu viduslaiku pils"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      25.27,
+      57.31333333333333
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Cēsis visitor complex includes the original medieval castle ruins and a separately identified New Castle.",
+        "id": "auth:lv-public:392:visit",
+        "license": null,
+        "publisher": "Cēsis Municipality Tourism",
+        "revision": "Retrieved 2026-11-28; SHA-256 0bba290e2301d26ecd44204e95930c79a6b69e2b8c061328f7830db456bdf4ab.",
+        "title": "Visit Cēsis Medieval Castle Ruins",
+        "uri": "https://visit.cesis.lv/en/place/cesis-medieval-castle/?post_type=place"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Cēsu viduslaiku pils. Pieejams.",
+        "id": "auth:lv-public:392:register",
+        "license": "CC0",
+        "publisher": "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+        "revision": "Retrieved 2026-11-28; SHA-256 ae9f294d5fe0baef76146a0e6d7c789e63f56714859b19940d4a3710d6d6d5d8.",
+        "title": "National protected monument 392",
+        "uri": "https://data.gov.lv/dati/dataset/79e7246f-57cc-41fc-9a10-96521422359c/resource/25583e4e-ca54-430e-b275-b38057a5ee70/download/saraksts.csv"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 25.27, latitude 57.31333333333333.",
+        "id": "auth:lv-public:392:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2530148416, P625 statement q2512369$55BA3417-7004-4C4E-915A-3A4A79320815.",
+        "title": "Cēsis Medieval Castle Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2512369.json"
+      }
+    ],
+    "source_uri": "https://visit.cesis.lv/en/place/cesis-medieval-castle/?post_type=place",
+    "title": "Cēsis Medieval Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Rēzekne City Tourism",
+      "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+      "Wikidata contributors"
+    ],
+    "description": "The publicly listed Rēzekne castle hill preserves fragments of the former stone fortifications.",
+    "description_zh": "拉脱维亚雷泽克内的城堡山为公众参观点，保存石砌要塞的残段。",
+    "details": "The publicly listed Rēzekne castle hill preserves fragments of the former stone fortifications.",
+    "geography": {
+      "authority_id": "supplement:auth:lv-public:5767",
+      "countries": [
+        "LV"
+      ],
+      "note": "Public heritage representative point in Rēzekne.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The publicly listed Rēzekne castle hill preserves fragments of the former stone fortifications.",
+        "id": "auth:lv-public:5767:visit",
+        "license": null,
+        "publisher": "Rēzekne City Tourism",
+        "revision": "Retrieved 2026-11-28; SHA-256 34356ccec82a708f48e5ed261acbc0f06267faf0b78b96d6e96efe52323ac5d5.",
+        "title": "Visit Rēzekne Castle Ruins",
+        "uri": "https://visit.rezekne.lv/en/objekti/rezekne-castle-hill-and-castle-ruins/"
+      }
+    },
+    "id": "auth:lv-public:5767",
+    "location_precision": null,
+    "names": [
+      "Rēzeknes pilsdrupas"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      27.334641,
+      56.502429
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The publicly listed Rēzekne castle hill preserves fragments of the former stone fortifications.",
+        "id": "auth:lv-public:5767:visit",
+        "license": null,
+        "publisher": "Rēzekne City Tourism",
+        "revision": "Retrieved 2026-11-28; SHA-256 34356ccec82a708f48e5ed261acbc0f06267faf0b78b96d6e96efe52323ac5d5.",
+        "title": "Visit Rēzekne Castle Ruins",
+        "uri": "https://visit.rezekne.lv/en/objekti/rezekne-castle-hill-and-castle-ruins/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Rēzeknes pilsdrupas. Pieejams.",
+        "id": "auth:lv-public:5767:register",
+        "license": "CC0",
+        "publisher": "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+        "revision": "Retrieved 2026-11-28; SHA-256 ae9f294d5fe0baef76146a0e6d7c789e63f56714859b19940d4a3710d6d6d5d8.",
+        "title": "National protected monument 5767",
+        "uri": "https://data.gov.lv/dati/dataset/79e7246f-57cc-41fc-9a10-96521422359c/resource/25583e4e-ca54-430e-b275-b38057a5ee70/download/saraksts.csv"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 27.334641, latitude 56.502429.",
+        "id": "auth:lv-public:5767:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2512694402, P625 statement Q7386890$4CA7C2D4-A3E5-4FD9-8BB5-99965A8B350B.",
+        "title": "Rēzekne Castle Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7386890.json"
+      }
+    ],
+    "source_uri": "https://visit.rezekne.lv/en/objekti/rezekne-castle-hill-and-castle-ruins/",
+    "title": "Rēzekne Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Latvia Travel / Investment and Development Agency of Latvia",
+      "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+      "Wikidata contributors",
+      "Bauska Castle Museum"
+    ],
+    "description": "Bauska Castle includes the historic fortress ruins and a later palace wing operated as a museum.",
+    "description_zh": "拉脱维亚包斯卡城堡包括堡垒遗迹及后期宫殿。馆方仍接待访客，施工期间到馆通行受限。",
+    "details": "Bauska Castle includes the historic fortress ruins and a later palace wing operated as a museum.",
+    "geography": {
+      "authority_id": "supplement:auth:lv-public:6166",
+      "countries": [
+        "LV"
+      ],
+      "note": "Public heritage representative point in Bauska, Bauska Municipality.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Bauska Castle includes the historic fortress ruins and a later palace wing operated as a museum.",
+        "id": "auth:lv-public:6166:visit",
+        "license": null,
+        "publisher": "Latvia Travel / Investment and Development Agency of Latvia",
+        "revision": "Retrieved 2026-11-28; SHA-256 01a5e2d9ecaa70891f6d7ed065e598b796df476ae95cdbebb8261619edc9e011.",
+        "title": "Visit Bauska Castle",
+        "uri": "https://www.latvia.travel/en/sight/bauska-castle"
+      }
+    },
+    "id": "auth:lv-public:6166",
+    "location_precision": null,
+    "names": [
+      "Bauskas pils"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      24.173611111111,
+      56.403611111111
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Bauska Castle includes the historic fortress ruins and a later palace wing operated as a museum.",
+        "id": "auth:lv-public:6166:visit",
+        "license": null,
+        "publisher": "Latvia Travel / Investment and Development Agency of Latvia",
+        "revision": "Retrieved 2026-11-28; SHA-256 01a5e2d9ecaa70891f6d7ed065e598b796df476ae95cdbebb8261619edc9e011.",
+        "title": "Visit Bauska Castle",
+        "uri": "https://www.latvia.travel/en/sight/bauska-castle"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Bauskas pilsdrupas ar parku. Pieejams.",
+        "id": "auth:lv-public:6166:register",
+        "license": "CC0",
+        "publisher": "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+        "revision": "Retrieved 2026-11-28; SHA-256 ae9f294d5fe0baef76146a0e6d7c789e63f56714859b19940d4a3710d6d6d5d8.",
+        "title": "National protected monument 6166",
+        "uri": "https://data.gov.lv/dati/dataset/79e7246f-57cc-41fc-9a10-96521422359c/resource/25583e4e-ca54-430e-b275-b38057a5ee70/download/saraksts.csv"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 24.173611111111, latitude 56.403611111111.",
+        "id": "auth:lv-public:6166:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2512685616, P625 statement q645898$070DE628-F559-4C0A-9F03-CE1FDFA8FA6D.",
+        "title": "Bauska Castle Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q645898.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum remains open, with restricted access during construction.",
+        "id": "auth:lv-public:6166:access",
+        "license": null,
+        "publisher": "Bauska Castle Museum",
+        "revision": "Retrieved 2026-11-28; SHA-256 e7cce9482ee05f04276c7816c4539cc26eb26e1f0332424084c567792cb514af.",
+        "title": "Bauska Castle visitor access update",
+        "uri": "https://bauskaspils.lv/en/access-to-bauska-castle-museum-is-difficult/"
+      }
+    ],
+    "source_uri": "https://www.latvia.travel/en/sight/bauska-castle",
+    "title": "Bauska Castle",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Rundāle Palace Museum",
+      "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+      "Wikidata contributors"
+    ],
+    "description": "Rundāle Palace Museum presents the palace's historic interiors and gardens to the public on a ticketed schedule.",
+    "description_zh": "拉脱维亚伦代尔宫博物馆按开放时间接待公众参观历史宫室和花园。",
+    "details": "Rundāle Palace Museum presents the palace's historic interiors and gardens to the public on a ticketed schedule.",
+    "geography": {
+      "authority_id": "supplement:auth:lv-public:6178",
+      "countries": [
+        "LV"
+      ],
+      "note": "Public heritage representative point in Pilsrundāle, Bauska Municipality.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Rundāle Palace Museum presents the palace's historic interiors and gardens to the public on a ticketed schedule.",
+        "id": "auth:lv-public:6178:visit",
+        "license": null,
+        "publisher": "Rundāle Palace Museum",
+        "revision": "Retrieved 2026-11-28; SHA-256 c8db7e33fcabc80ab734fc5e836c925aa319487f07047efb75675d966a73fd52.",
+        "title": "Visit Rundāle Palace",
+        "uri": "https://rundale.net/en/"
+      }
+    },
+    "id": "auth:lv-public:6178",
+    "location_precision": null,
+    "names": [
+      "Rundāles pils"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      24.024835,
+      56.413301
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Rundāle Palace Museum presents the palace's historic interiors and gardens to the public on a ticketed schedule.",
+        "id": "auth:lv-public:6178:visit",
+        "license": null,
+        "publisher": "Rundāle Palace Museum",
+        "revision": "Retrieved 2026-11-28; SHA-256 c8db7e33fcabc80ab734fc5e836c925aa319487f07047efb75675d966a73fd52.",
+        "title": "Visit Rundāle Palace",
+        "uri": "https://rundale.net/en/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Rundāles pils apbūves ansamblis. Pieejams.",
+        "id": "auth:lv-public:6178:register",
+        "license": "CC0",
+        "publisher": "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+        "revision": "Retrieved 2026-11-28; SHA-256 ae9f294d5fe0baef76146a0e6d7c789e63f56714859b19940d4a3710d6d6d5d8.",
+        "title": "National protected monument 6178",
+        "uri": "https://data.gov.lv/dati/dataset/79e7246f-57cc-41fc-9a10-96521422359c/resource/25583e4e-ca54-430e-b275-b38057a5ee70/download/saraksts.csv"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 24.024835, latitude 56.413301.",
+        "id": "auth:lv-public:6178:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2559457509, P625 statement q1123987$C1A9A4D4-6DC4-4AD3-BB9A-D713AEE3046F.",
+        "title": "Rundāle Palace Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1123987.json"
+      }
+    ],
+    "source_uri": "https://rundale.net/en/",
+    "title": "Rundāle Palace",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Jēkabpils Municipality Tourism",
+      "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+      "Wikidata contributors"
+    ],
+    "description": "The Jēkabpils History Museum uses the historic Krustpils Castle for its exhibitions and guided public visits.",
+    "description_zh": "拉脱维亚叶卡布皮尔斯历史博物馆在克鲁斯特皮尔斯城堡原址内举办展览和导览。",
+    "details": "The Jēkabpils History Museum uses the historic Krustpils Castle for its exhibitions and guided public visits.",
+    "geography": {
+      "authority_id": "supplement:auth:lv-public:6308",
+      "countries": [
+        "LV"
+      ],
+      "note": "Public heritage representative point in Krustpils, Jēkabpils Municipality.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Jēkabpils History Museum uses the historic Krustpils Castle for its exhibitions and guided public visits.",
+        "id": "auth:lv-public:6308:visit",
+        "license": null,
+        "publisher": "Jēkabpils Municipality Tourism",
+        "revision": "Retrieved 2026-11-28; SHA-256 c2fab182bbde2092aafed54c72d764b45c12af119687e6e79945b8d464403c34.",
+        "title": "Visit Krustpils Castle",
+        "uri": "https://visit.jekabpils.lv/en/objekti/muzeji-un-ekspozicijas/apskates-vietas/location/krustpils-pils-un-jekabpils-vestures-muzejs/"
+      }
+    },
+    "id": "auth:lv-public:6308",
+    "location_precision": null,
+    "names": [
+      "Krustpils pils"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      25.859166666666667,
+      56.51111111111111
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Jēkabpils History Museum uses the historic Krustpils Castle for its exhibitions and guided public visits.",
+        "id": "auth:lv-public:6308:visit",
+        "license": null,
+        "publisher": "Jēkabpils Municipality Tourism",
+        "revision": "Retrieved 2026-11-28; SHA-256 c2fab182bbde2092aafed54c72d764b45c12af119687e6e79945b8d464403c34.",
+        "title": "Visit Krustpils Castle",
+        "uri": "https://visit.jekabpils.lv/en/objekti/muzeji-un-ekspozicijas/apskates-vietas/location/krustpils-pils-un-jekabpils-vestures-muzejs/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Krustpils pils un luterāņu baznīcas apbūve. Daļēji pieejams.",
+        "id": "auth:lv-public:6308:register",
+        "license": "CC0",
+        "publisher": "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+        "revision": "Retrieved 2026-11-28; SHA-256 ae9f294d5fe0baef76146a0e6d7c789e63f56714859b19940d4a3710d6d6d5d8.",
+        "title": "National protected monument 6308",
+        "uri": "https://data.gov.lv/dati/dataset/79e7246f-57cc-41fc-9a10-96521422359c/resource/25583e4e-ca54-430e-b275-b38057a5ee70/download/saraksts.csv"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 25.859166666666667, latitude 56.51111111111111.",
+        "id": "auth:lv-public:6308:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2516747967, P625 statement Q6439442$27FE4523-BABC-4159-B177-E27D451C39ED.",
+        "title": "Krustpils Castle Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6439442.json"
+      }
+    ],
+    "source_uri": "https://visit.jekabpils.lv/en/objekti/muzeji-un-ekspozicijas/apskates-vietas/location/krustpils-pils-un-jekabpils-vestures-muzejs/",
+    "title": "Krustpils Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Visit Daugavpils / Municipality Visitor Service",
+      "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+      "Wikidata contributors"
+    ],
+    "description": "Daugavpils Fortress is a historic city district whose streets and public visitor routes are accessible independently of indoor opening schedules.",
+    "description_zh": "拉脱维亚陶格夫匹尔斯要塞是一处历史城区，街道和公共游览路线开放，馆舍按各自时间接待。",
+    "details": "Daugavpils Fortress is a historic city district whose streets and public visitor routes are accessible independently of indoor opening schedules.",
+    "geography": {
+      "authority_id": "supplement:auth:lv-public:7428",
+      "countries": [
+        "LV"
+      ],
+      "note": "Public heritage representative point in Daugavpils.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Daugavpils Fortress is a historic city district whose streets and public visitor routes are accessible independently of indoor opening schedules.",
+        "id": "auth:lv-public:7428:visit",
+        "license": null,
+        "publisher": "Visit Daugavpils / Municipality Visitor Service",
+        "revision": "Retrieved 2026-11-28; SHA-256 57634df711b90cf0d86054c2e20b11542a5193769fe0a839897454cd106748fe.",
+        "title": "Visit Daugavpils Fortress",
+        "uri": "https://www.visitdaugavpils.lv/en/turisma-objekts/daugavpils-cietoksnis/"
+      }
+    },
+    "id": "auth:lv-public:7428",
+    "location_precision": null,
+    "names": [
+      "Daugavpils cietoksnis"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      26.495277777777776,
+      55.88625
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Daugavpils Fortress is a historic city district whose streets and public visitor routes are accessible independently of indoor opening schedules.",
+        "id": "auth:lv-public:7428:visit",
+        "license": null,
+        "publisher": "Visit Daugavpils / Municipality Visitor Service",
+        "revision": "Retrieved 2026-11-28; SHA-256 57634df711b90cf0d86054c2e20b11542a5193769fe0a839897454cd106748fe.",
+        "title": "Visit Daugavpils Fortress",
+        "uri": "https://www.visitdaugavpils.lv/en/turisma-objekts/daugavpils-cietoksnis/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Daugavpils cietoksnis ar priekštilta nocietinājumu. Pieejams.",
+        "id": "auth:lv-public:7428:register",
+        "license": "CC0",
+        "publisher": "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+        "revision": "Retrieved 2026-11-28; SHA-256 ae9f294d5fe0baef76146a0e6d7c789e63f56714859b19940d4a3710d6d6d5d8.",
+        "title": "National protected monument 7428",
+        "uri": "https://data.gov.lv/dati/dataset/79e7246f-57cc-41fc-9a10-96521422359c/resource/25583e4e-ca54-430e-b275-b38057a5ee70/download/saraksts.csv"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 26.495277777777776, latitude 55.88625.",
+        "id": "auth:lv-public:7428:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2301847488, P625 statement q2666994$A8F937FA-8D44-4332-B189-D2A6381FB3D4.",
+        "title": "Daugavpils Fortress Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2666994.json"
+      }
+    ],
+    "source_uri": "https://www.visitdaugavpils.lv/en/turisma-objekts/daugavpils-cietoksnis/",
+    "title": "Daugavpils Fortress",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Latvia Travel / Investment and Development Agency of Latvia",
+      "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+      "Wikidata contributors"
+    ],
+    "description": "The protected Dobele castle hill retains the remains of the order fortress and a modern reconstruction of its chapel.",
+    "description_zh": "拉脱维亚多贝莱城堡山保存骑士团城堡遗迹，遗址中的礼拜堂经过现代复建。",
+    "details": "The protected Dobele castle hill retains the remains of the order fortress and a modern reconstruction of its chapel.",
+    "geography": {
+      "authority_id": "supplement:auth:lv-public:752",
+      "countries": [
+        "LV"
+      ],
+      "note": "Public heritage representative point in Dobele, Dobele Municipality.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The protected Dobele castle hill retains the remains of the order fortress and a modern reconstruction of its chapel.",
+        "id": "auth:lv-public:752:visit",
+        "license": null,
+        "publisher": "Latvia Travel / Investment and Development Agency of Latvia",
+        "revision": "Retrieved 2026-11-28; SHA-256 c203021ca6cd6735dea26662c84931e01511540a71abb4c98faf02985fbebf01.",
+        "title": "Visit Dobele Order Castle Ruins",
+        "uri": "https://www.latvia.travel/en/sight/dobele-castle"
+      }
+    },
+    "id": "auth:lv-public:752",
+    "location_precision": null,
+    "names": [
+      "Dobeles Livonijas ordeņa pilsdrupas"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      23.272757,
+      56.622171
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The protected Dobele castle hill retains the remains of the order fortress and a modern reconstruction of its chapel.",
+        "id": "auth:lv-public:752:visit",
+        "license": null,
+        "publisher": "Latvia Travel / Investment and Development Agency of Latvia",
+        "revision": "Retrieved 2026-11-28; SHA-256 c203021ca6cd6735dea26662c84931e01511540a71abb4c98faf02985fbebf01.",
+        "title": "Visit Dobele Order Castle Ruins",
+        "uri": "https://www.latvia.travel/en/sight/dobele-castle"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Dobeles pilskalns ar priekšpili un viduslaiku pils. Pieejams.",
+        "id": "auth:lv-public:752:register",
+        "license": "CC0",
+        "publisher": "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+        "revision": "Retrieved 2026-11-28; SHA-256 ae9f294d5fe0baef76146a0e6d7c789e63f56714859b19940d4a3710d6d6d5d8.",
+        "title": "National protected monument 752",
+        "uri": "https://data.gov.lv/dati/dataset/79e7246f-57cc-41fc-9a10-96521422359c/resource/25583e4e-ca54-430e-b275-b38057a5ee70/download/saraksts.csv"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 23.272757, latitude 56.622171.",
+        "id": "auth:lv-public:752:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2513202060, P625 statement Q3737987$C51C5528-F31B-404C-B7E2-26FF3C2476BA.",
+        "title": "Dobele Order Castle Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3737987.json"
+      }
+    ],
+    "source_uri": "https://www.latvia.travel/en/sight/dobele-castle",
+    "title": "Dobele Order Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked public access scope, legally registered identity and an openly reusable representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Visit Ogre / Ogre Municipality",
+      "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+      "Wikidata contributors"
+    ],
+    "description": "Remains of the medieval stone castle can be viewed in Lielvārde Park by the Daugava.",
+    "description_zh": "拉脱维亚利耶尔瓦尔代公园内保留中世纪石砌城堡遗迹，可在公共公园内参观。",
+    "details": "Remains of the medieval stone castle can be viewed in Lielvārde Park by the Daugava.",
+    "geography": {
+      "authority_id": "supplement:auth:lv-public:8247",
+      "countries": [
+        "LV"
+      ],
+      "note": "Public heritage representative point in Lielvārde, Ogre Municipality.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Remains of the medieval stone castle can be viewed in Lielvārde Park by the Daugava.",
+        "id": "auth:lv-public:8247:visit",
+        "license": null,
+        "publisher": "Visit Ogre / Ogre Municipality",
+        "revision": "Retrieved 2026-11-28; SHA-256 01a163c788a11a6577623fb9a667605342d10d1c9248ef995c7ba852b4cb6cc7.",
+        "title": "Visit Lielvārde Medieval Castle Ruins",
+        "uri": "https://www.visitogre.lv/en/cultural-history-and-architecture/597/3-medieval-castle-ruins-lielvarde"
+      }
+    },
+    "id": "auth:lv-public:8247",
+    "location_precision": null,
+    "names": [
+      "Lielvārdes pilsdrupas"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      24.83825,
+      56.711388888889
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Remains of the medieval stone castle can be viewed in Lielvārde Park by the Daugava.",
+        "id": "auth:lv-public:8247:visit",
+        "license": null,
+        "publisher": "Visit Ogre / Ogre Municipality",
+        "revision": "Retrieved 2026-11-28; SHA-256 01a163c788a11a6577623fb9a667605342d10d1c9248ef995c7ba852b4cb6cc7.",
+        "title": "Visit Lielvārde Medieval Castle Ruins",
+        "uri": "https://www.visitogre.lv/en/cultural-history-and-architecture/597/3-medieval-castle-ruins-lielvarde"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Lielvārdes pilsdrupas. Pieejams.",
+        "id": "auth:lv-public:8247:register",
+        "license": "CC0",
+        "publisher": "Nacionālā kultūras mantojuma pārvalde / Kultūras informācijas sistēmu centrs",
+        "revision": "Retrieved 2026-11-28; SHA-256 ae9f294d5fe0baef76146a0e6d7c789e63f56714859b19940d4a3710d6d6d5d8.",
+        "title": "National protected monument 8247",
+        "uri": "https://data.gov.lv/dati/dataset/79e7246f-57cc-41fc-9a10-96521422359c/resource/25583e4e-ca54-430e-b275-b38057a5ee70/download/saraksts.csv"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 24.83825, latitude 56.711388888889.",
+        "id": "auth:lv-public:8247:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2550378265, P625 statement Q6544145$658e2172-459c-14a3-fa67-e69ba2f8056c.",
+        "title": "Lielvārde Medieval Castle Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6544145.json"
+      }
+    ],
+    "source_uri": "https://www.visitogre.lv/en/cultural-history-and-architecture/597/3-medieval-castle-ruins-lielvarde",
+    "title": "Lielvārde Medieval Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  }
+]

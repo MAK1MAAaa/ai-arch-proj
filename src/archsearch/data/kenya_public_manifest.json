@@ -1,0 +1,22 @@
+{
+  "base_count": 4632,
+  "base_ids_sha256": "8ded001e43f690d165ca013ca8ffbfd8fe8cee9cf45f1cd34e2465dab5a6b141",
+  "base_sites_sha256": "4b2cbed7df746ee04813c1625b8034c6e28bf6d2430f6284cad7c819579f0e3d",
+  "cohort_version": "kenya-nmk-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 6,
+    "total": 4638
+  },
+  "files": {
+    "kenya_public_review.json": {
+      "sha256": "c5334adb77f40a3f3127ce99654541e11fd0036961e5b44761062c66ce3027e0"
+    },
+    "kenya_public_sites.json": {
+      "sha256": "24a0ce444669cfb70e31856df0f3429ee6e14da741e40d570a7d1bd6857d6a9e"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Six cultural places in the National Museums of Kenya current public visitor catalogue with independently verified location and access evidence."
+}

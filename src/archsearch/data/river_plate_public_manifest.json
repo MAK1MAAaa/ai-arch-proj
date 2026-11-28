@@ -1,0 +1,22 @@
+{
+  "base_count": 4638,
+  "base_ids_sha256": "2a9344cb913efcb4ef087cf3f899a876ef9706cb2706a2aeb78c91d63b124c31",
+  "base_sites_sha256": "16e8c13afd8edab182a4250854f8817601a1c0dd9788eefa410aa1c4c80ced74",
+  "cohort_version": "uruguay-paraguay-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 16,
+    "total": 4654
+  },
+  "files": {
+    "river_plate_public_review.json": {
+      "sha256": "a692b95b91fdb084f96d54b87f98445598b43360d5ced82ad8155ce7ed3de149"
+    },
+    "river_plate_public_sites.json": {
+      "sha256": "40671f78f50f735966c246bf0df18f82e626f828b569b141fb461ec41da120e1"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Public historic properties in Uruguay and Paraguay independently checked against the managing agencies, reuse-licensed named coordinates, and existing corpus places and components."
+}

@@ -1,0 +1,22 @@
+{
+  "base_count": 5272,
+  "base_ids_sha256": "7cd54780831b3f8bd771e9120597657f83e6b8e2961eb697bf7d19959a6589cd",
+  "base_sites_sha256": "f204d86b2d88bf2f686aef49edfa7df0c87f014a8e61f30401997b39fe0db64b",
+  "cohort_version": "us-southwest-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 14,
+    "total": 5286
+  },
+  "files": {
+    "us_southwest_public_review.json": {
+      "sha256": "aff956987f6642fd986251958086bd011d4038f94e05e1faf183136d4ed45fd4"
+    },
+    "us_southwest_public_sites.json": {
+      "sha256": "07559dd3775d13bec038a8a2a88eec7377c293a584d050f227f62a7fe59ff54a"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Fourteen independently reviewed public visitor precincts of historic archaeological sites in Arizona, New Mexico, Colorado and Utah, using federal public-domain or native CC0 coordinates and documented present visitor scope."
+}

@@ -1,0 +1,22 @@
+{
+  "base_count": 5164,
+  "base_ids_sha256": "ed2db739b5e4089d5eaeb874eae2031f438d04ebcfba7bb460aefafbe434ada3",
+  "base_sites_sha256": "2be58d8cec10dc6ee44f7ab4485615f866375a4b19bdc57274ad35f6c59c9f9e",
+  "cohort_version": "anatolia-inland-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 13,
+    "total": 5177
+  },
+  "files": {
+    "anatolia_inland_public_review.json": {
+      "sha256": "198e32ac7a2c6c4b8992e0588f37cc8e2fd719b1e62625a93e1c14c1d1dcfdfb"
+    },
+    "anatolia_inland_public_sites.json": {
+      "sha256": "29aaedadaa2b5444cbbd8377a3d62d751f44d576ee9c369754d5acb8495906bd"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Thirteen archaeological sites, historical buildings and managed visitor precincts across inland Anatolia."
+}

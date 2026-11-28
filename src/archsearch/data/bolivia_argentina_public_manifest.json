@@ -1,0 +1,22 @@
+{
+  "base_count": 5226,
+  "base_ids_sha256": "0fffb8de5865d88531c87ffa1f844ac5dbf95d7a65316224f456fc1010bbe883",
+  "base_sites_sha256": "12f8d4b30440c580161a1b7d5913cea3eb099f8885a7d6431660f255ef137b61",
+  "cohort_version": "bolivia-argentina-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 10,
+    "total": 5236
+  },
+  "files": {
+    "bolivia_argentina_public_review.json": {
+      "sha256": "66c45e3218f99c3f42209f7a9b8a3054b8be6d5281320eebe3333df723f7008d"
+    },
+    "bolivia_argentina_public_sites.json": {
+      "sha256": "903a6865a4234c9e73bc11006d097fb52440eed168955bd36fdaa3aff16f162a"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Four visitor heritage places in Bolivia and six in Argentina, selected for original public site and published reuse coordinates."
+}

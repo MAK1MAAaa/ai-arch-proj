@@ -1,0 +1,22 @@
+{
+  "base_count": 5331,
+  "base_ids_sha256": "c08c7042b56e44b147f3739331fb66079fbc1219aa0d914ca4d27034dd192473",
+  "base_sites_sha256": "fb7363778ecfa4918d6ac70036947121050b7c137160056572cc4a2d80fc16f3",
+  "cohort_version": "northern-south-america-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 3,
+    "total": 5334
+  },
+  "files": {
+    "northern_south_america_public_review.json": {
+      "sha256": "00d7ccd1947386fc1ef2555f38fb3ae710c35a184fd88b16e735df0432f935f3"
+    },
+    "northern_south_america_public_sites.json": {
+      "sha256": "10e0ce6e840477aa2901f53e6cf4ffb7c83d0bfd83ea2172cee8d6aeacf4a03c"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Three documented publicly visited cultural places in Suriname and Ecuador, representing an original fort, an archaeological museum on the excavation site and a public fortress enclosure."
+}

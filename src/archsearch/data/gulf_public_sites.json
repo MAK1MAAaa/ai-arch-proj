@@ -1,0 +1,919 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Original public access information and named representative point verified.",
+      "note": "This point update does not assign a historical stage.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Bahrain Tourism and Exhibitions Authority",
+      "Wikidata contributors"
+    ],
+    "description": "Public historic hilltop fort in Riffa. The record represents the fort visitor property.",
+    "description_zh": "里法堡位于巴林。主管方提供公开参观信息，地图所标为遗址代表点。",
+    "details": "Public historic hilltop fort in Riffa. The record represents the fort visitor property.",
+    "geography": {
+      "authority_id": "supplement:auth:bh-public:Q2189330",
+      "countries": [
+        "BH"
+      ],
+      "note": "One point for the named publicly interpreted venue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Bahrain’s tourism authority lists visitor hours at the historic fort and the historical exhibitions at the property.",
+        "id": "auth:bh-public:Q2189330:evidence:1",
+        "license": null,
+        "publisher": "Bahrain Tourism and Exhibitions Authority",
+        "revision": "Retrieved 2026-11-28; SHA-256 f74b252e4e1337d87f63eae1c372c063200f81e47a2547687787cc9382526f41.",
+        "title": "Riffa Fort visitor information",
+        "uri": "https://www.bahrain.com/en/sheikh-salman-bin-ahmed-al-fateh-fort"
+      }
+    },
+    "id": "auth:bh-public:Q2189330",
+    "location_precision": null,
+    "names": [
+      "里法堡",
+      "Riffa Fort",
+      "Sheikh Salman bin Ahmed Al Fateh Fort",
+      "قلعة الرفاع"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      50.562778,
+      26.117778
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Bahrain’s tourism authority lists visitor hours at the historic fort and the historical exhibitions at the property.",
+        "id": "auth:bh-public:Q2189330:evidence:1",
+        "license": null,
+        "publisher": "Bahrain Tourism and Exhibitions Authority",
+        "revision": "Retrieved 2026-11-28; SHA-256 f74b252e4e1337d87f63eae1c372c063200f81e47a2547687787cc9382526f41.",
+        "title": "Riffa Fort visitor information",
+        "uri": "https://www.bahrain.com/en/sheikh-salman-bin-ahmed-al-fateh-fort"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 50.562778, latitude 26.117778.",
+        "id": "wikidata:Q2189330",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2512673476; P625 q2189330$CB51145C-772A-48B0-92EB-601E9FD178FF.",
+        "title": "Riffa Fort coordinate",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2189330.json"
+      }
+    ],
+    "source_uri": "https://www.bahrain.com/en/sheikh-salman-bin-ahmed-al-fateh-fort",
+    "title": "Riffa Fort",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Original public access information and named representative point verified.",
+      "note": "This point update does not assign a historical stage.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Bahrain Tourism and Exhibitions Authority",
+      "Wikidata contributors"
+    ],
+    "description": "Historic independently visited fort on Arad’s shore, in Muharraq Governorate.",
+    "description_zh": "阿拉德堡位于巴林。主管方提供公开参观信息，地图所标为遗址代表点。",
+    "details": "Historic independently visited fort on Arad’s shore, in Muharraq Governorate.",
+    "geography": {
+      "authority_id": "supplement:auth:bh-public:Q3078134",
+      "countries": [
+        "BH"
+      ],
+      "note": "One point for the named publicly interpreted venue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Bahrain’s tourism authority identifies the Arad shore fort and publishes visitor hours and features.",
+        "id": "auth:bh-public:Q3078134:evidence:1",
+        "license": null,
+        "publisher": "Bahrain Tourism and Exhibitions Authority",
+        "revision": "Retrieved 2026-11-28; SHA-256 749be13dce03f3d275f7cd23a8e12fe936160e8507a05cc00fc8fdc729823fd2.",
+        "title": "Arad Fort visitor information",
+        "uri": "https://www.bahrain.com/en/arad-fort"
+      }
+    },
+    "id": "auth:bh-public:Q3078134",
+    "location_precision": null,
+    "names": [
+      "阿拉德堡",
+      "Arad Fort",
+      "Qalʻat ʻArād",
+      "قلعة عراد"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      50.626944,
+      26.2525
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Bahrain’s tourism authority identifies the Arad shore fort and publishes visitor hours and features.",
+        "id": "auth:bh-public:Q3078134:evidence:1",
+        "license": null,
+        "publisher": "Bahrain Tourism and Exhibitions Authority",
+        "revision": "Retrieved 2026-11-28; SHA-256 749be13dce03f3d275f7cd23a8e12fe936160e8507a05cc00fc8fdc729823fd2.",
+        "title": "Arad Fort visitor information",
+        "uri": "https://www.bahrain.com/en/arad-fort"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 50.626944, latitude 26.2525.",
+        "id": "wikidata:Q3078134",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2491546772; P625 q3078134$AE8A1BB1-3F3E-49AF-9EFD-2A62BD48AD4C.",
+        "title": "Arad Fort coordinate",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3078134.json"
+      }
+    ],
+    "source_uri": "https://www.bahrain.com/en/arad-fort",
+    "title": "Arad Fort",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Original public access information and named representative point verified.",
+      "note": "This point update does not assign a historical stage.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Bahrain Tourism and Exhibitions Authority",
+      "Bahrain Crown Prince’s Office",
+      "Wikidata contributors"
+    ],
+    "description": "Historic mosque ruins and their adjoining public visitor centre in Tashan, with surviving twin minarets.",
+    "description_zh": "哈米斯清真寺遗址位于巴林。主管方提供公开参观信息，地图所标为遗址代表点。",
+    "details": "Historic mosque ruins and their adjoining public visitor centre in Tashan, with surviving twin minarets.",
+    "geography": {
+      "authority_id": "supplement:auth:bh-public:Q4119263",
+      "countries": [
+        "BH"
+      ],
+      "note": "One point for the named publicly interpreted venue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Bahrain’s tourism authority describes public visiting hours at the ruins and exhibits in the adjoining visitor centre.",
+        "id": "auth:bh-public:Q4119263:evidence:1",
+        "license": null,
+        "publisher": "Bahrain Tourism and Exhibitions Authority",
+        "revision": "Retrieved 2026-11-28; SHA-256 b2e9187a6ad343020c092da99fbfececaae21bece19531a679eef627c762496c.",
+        "title": "Khamis Mosque Archaeological Site visitor information",
+        "uri": "https://www.bahrain.com/en/khamis-mosque"
+      }
+    },
+    "id": "auth:bh-public:Q4119263",
+    "location_precision": null,
+    "names": [
+      "哈米斯清真寺遗址",
+      "Khamis Mosque Archaeological Site",
+      "Al Khamis Mosque",
+      "Khamis Mosque",
+      "مسجد الخميس"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      50.5483,
+      26.2082
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Bahrain’s tourism authority describes public visiting hours at the ruins and exhibits in the adjoining visitor centre.",
+        "id": "auth:bh-public:Q4119263:evidence:1",
+        "license": null,
+        "publisher": "Bahrain Tourism and Exhibitions Authority",
+        "revision": "Retrieved 2026-11-28; SHA-256 b2e9187a6ad343020c092da99fbfececaae21bece19531a679eef627c762496c.",
+        "title": "Khamis Mosque Archaeological Site visitor information",
+        "uri": "https://www.bahrain.com/en/khamis-mosque"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The official opening documents the visitor centre established beside the mosque’s archaeological remains.",
+        "id": "auth:bh-public:Q4119263:evidence:2",
+        "license": null,
+        "publisher": "Bahrain Crown Prince’s Office",
+        "revision": "Retrieved 2026-11-28; SHA-256 77b9cef844f33f6ee8b72ea24ad288a83dff4d2ccdee4ec79bdf3812beb8a782.",
+        "title": "Opening of Khamis Mosque visitor centre",
+        "uri": "https://www.crownprince.bh/en/news/48850/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 50.5483, latitude 26.2082.",
+        "id": "wikidata:Q4119263",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2575579997; P625 q4119263$F57C891D-A394-4438-BC48-805218B3CA26.",
+        "title": "Khamis Mosque Archaeological Site coordinate",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4119263.json"
+      }
+    ],
+    "source_uri": "https://www.bahrain.com/en/khamis-mosque",
+    "title": "Khamis Mosque Archaeological Site",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Original public access information and named representative point verified.",
+      "note": "This point update does not assign a historical stage.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Bahrain Tourism and Exhibitions Authority",
+      "Wikidata contributors"
+    ],
+    "description": "Archaeological temple precinct in Barbar with three successive temples and public interpretation. One point covers the precinct.",
+    "description_zh": "巴尔巴尔神庙遗址位于巴林。主管方提供公开参观信息，地图所标为遗址代表点。",
+    "details": "Archaeological temple precinct in Barbar with three successive temples and public interpretation. One point covers the precinct.",
+    "geography": {
+      "authority_id": "supplement:auth:bh-public:Q807317",
+      "countries": [
+        "BH"
+      ],
+      "note": "One point for the named publicly interpreted venue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Bahrain’s tourism authority describes the successive Dilmun temples, visitor centre and published public opening hours.",
+        "id": "auth:bh-public:Q807317:evidence:1",
+        "license": null,
+        "publisher": "Bahrain Tourism and Exhibitions Authority",
+        "revision": "Retrieved 2026-11-28; SHA-256 1abd05987ba3339373c3a6f1aed6e04a14b34a634c34308df761b64b5a95c155.",
+        "title": "Barbar Temple visitor information",
+        "uri": "https://www.bahrain.com/en/barbar-temples"
+      }
+    },
+    "id": "auth:bh-public:Q807317",
+    "location_precision": null,
+    "names": [
+      "巴尔巴尔神庙遗址",
+      "Barbar Temple",
+      "Barbar Temples",
+      "معابد باربار"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      50.484154,
+      26.22612
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Bahrain’s tourism authority describes the successive Dilmun temples, visitor centre and published public opening hours.",
+        "id": "auth:bh-public:Q807317:evidence:1",
+        "license": null,
+        "publisher": "Bahrain Tourism and Exhibitions Authority",
+        "revision": "Retrieved 2026-11-28; SHA-256 1abd05987ba3339373c3a6f1aed6e04a14b34a634c34308df761b64b5a95c155.",
+        "title": "Barbar Temple visitor information",
+        "uri": "https://www.bahrain.com/en/barbar-temples"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 50.484154, latitude 26.22612.",
+        "id": "wikidata:Q807317",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2387092420; P625 Q807317$1FB7D70F-EC52-426A-8E08-522A04B5EC2B.",
+        "title": "Barbar Temple coordinate",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q807317.json"
+      }
+    ],
+    "source_uri": "https://www.bahrain.com/en/barbar-temples",
+    "title": "Barbar Temple",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Original public access information and named representative point verified.",
+      "note": "This point update does not assign a historical stage.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Oman Ministry of Heritage and Tourism, Experience Oman",
+      "GeoNames"
+    ],
+    "description": "Historic fort on the hill above Sur, with publicly interpreted fortifications and associated visitor facilities.",
+    "description_zh": "苏奈西拉堡位于阿曼。主管方提供公开参观信息，地图所标为遗址代表点。",
+    "details": "Historic fort on the hill above Sur, with publicly interpreted fortifications and associated visitor facilities.",
+    "geography": {
+      "authority_id": "supplement:auth:om-public:GN8508062",
+      "countries": [
+        "OM"
+      ],
+      "note": "One point for the named publicly interpreted venue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry names the fort in Sur, describes the open visitor facilities and lists its on-site visit arrangements.",
+        "id": "auth:om-public:GN8508062:evidence:1",
+        "license": null,
+        "publisher": "Oman Ministry of Heritage and Tourism, Experience Oman",
+        "revision": "Retrieved 2026-11-28; SHA-256 88b48215f8f42434985f5b65270e7ed3eb88b791c998bb3647651cee00cd0d0d.",
+        "title": "Al Sunaysilah Fort visitor information",
+        "uri": "https://experienceoman.om/en/destinations/al-sharqiyah-south/al-sunaysla-fort"
+      }
+    },
+    "id": "auth:om-public:GN8508062",
+    "location_precision": null,
+    "names": [
+      "苏奈西拉堡",
+      "Al Sunaysilah Fort",
+      "Al Sunaysla Fort",
+      "Sunaysilah Fort",
+      "حصن السنيسلة"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      59.50413,
+      22.57939
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry names the fort in Sur, describes the open visitor facilities and lists its on-site visit arrangements.",
+        "id": "auth:om-public:GN8508062:evidence:1",
+        "license": null,
+        "publisher": "Oman Ministry of Heritage and Tourism, Experience Oman",
+        "revision": "Retrieved 2026-11-28; SHA-256 88b48215f8f42434985f5b65270e7ed3eb88b791c998bb3647651cee00cd0d0d.",
+        "title": "Al Sunaysilah Fort visitor information",
+        "uri": "https://experienceoman.om/en/destinations/al-sharqiyah-south/al-sunaysla-fort"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Ḩişn Sunaysilah, S.FT. Original WGS84 longitude 59.50413, latitude 22.57939.",
+        "id": "geonames:8508062",
+        "license": "CC BY 4.0",
+        "publisher": "GeoNames",
+        "revision": "Retrieved 2026-11-28; SHA-256 e34b7503729273d4193275c0ff502ddfe24e81e8674e7bb47f4078fcd5a4bb33.",
+        "title": "Al Sunaysilah Fort coordinate",
+        "uri": "https://sws.geonames.org/8508062/about.rdf"
+      }
+    ],
+    "source_uri": "https://experienceoman.om/en/destinations/al-sharqiyah-south/al-sunaysla-fort",
+    "title": "Al Sunaysilah Fort",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Original public access information and named representative point verified.",
+      "note": "This point update does not assign a historical stage.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Oman Ministry of Heritage and Tourism, Experience Oman",
+      "Visit Oman",
+      "Wikidata contributors"
+    ],
+    "description": "Historic coastal fort overlooking Old Muscat. Its published ticketed visitor route is the scope of this record.",
+    "description_zh": "米拉尼堡位于阿曼。主管方提供公开参观信息，地图所标为遗址代表点。",
+    "details": "Historic coastal fort overlooking Old Muscat. Its published ticketed visitor route is the scope of this record.",
+    "geography": {
+      "authority_id": "supplement:auth:om-public:Q5470708",
+      "countries": [
+        "OM"
+      ],
+      "note": "One point for the named publicly interpreted venue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry identifies the coastal fort as a visitor attraction and describes the interpreted historic fortifications.",
+        "id": "auth:om-public:Q5470708:evidence:1",
+        "license": null,
+        "publisher": "Oman Ministry of Heritage and Tourism, Experience Oman",
+        "revision": "Retrieved 2026-11-28; SHA-256 fde957e44a14034962bb7dd33536e32df55b51e8586de3f106a7fb735e982b64.",
+        "title": "Al Mirani Fort visitor information",
+        "uri": "https://experienceoman.om/en/destinations/muscat/al-mirani-fort"
+      }
+    },
+    "id": "auth:om-public:Q5470708",
+    "location_precision": null,
+    "names": [
+      "米拉尼堡",
+      "Al Mirani Fort",
+      "Fort Al-Mirani",
+      "Qal‘at al Mīrānī",
+      "قلعة الميراني"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      58.59305556,
+      23.61722222
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry identifies the coastal fort as a visitor attraction and describes the interpreted historic fortifications.",
+        "id": "auth:om-public:Q5470708:evidence:1",
+        "license": null,
+        "publisher": "Oman Ministry of Heritage and Tourism, Experience Oman",
+        "revision": "Retrieved 2026-11-28; SHA-256 fde957e44a14034962bb7dd33536e32df55b51e8586de3f106a7fb735e982b64.",
+        "title": "Al Mirani Fort visitor information",
+        "uri": "https://experienceoman.om/en/destinations/muscat/al-mirani-fort"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national booking site advertises admission to the named Al Mirani Fort venue.",
+        "id": "auth:om-public:Q5470708:evidence:2",
+        "license": null,
+        "publisher": "Visit Oman",
+        "revision": "Retrieved 2026-11-28; SHA-256 1ced5fe0a00bca50b35e5a0085f60d45c06689ce2180a8f9e1fa6f6bae9ecf96.",
+        "title": "Al Mirani Fort visitor booking",
+        "uri": "https://booknow.visitoman.om/en/idea/50073618/al-mirani-fort"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 58.59305556, latitude 23.61722222.",
+        "id": "wikidata:Q5470708",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2512675034; P625 Q5470708$EE45954A-61D4-4D44-9918-BC2D3C8AB60A.",
+        "title": "Al Mirani Fort coordinate",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5470708.json"
+      }
+    ],
+    "source_uri": "https://experienceoman.om/en/destinations/muscat/al-mirani-fort",
+    "title": "Al Mirani Fort",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Original public access information and named representative point verified.",
+      "note": "This point update does not assign a historical stage.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Oman Ministry of Heritage and Tourism, Experience Oman",
+      "Wikidata contributors"
+    ],
+    "description": "Historic castle at Jabreen with visitor rooms and defensive towers, separately operated from the Bahla oasis property.",
+    "description_zh": "贾布林城堡位于阿曼。主管方提供公开参观信息，地图所标为遗址代表点。",
+    "details": "Historic castle at Jabreen with visitor rooms and defensive towers, separately operated from the Bahla oasis property.",
+    "geography": {
+      "authority_id": "supplement:auth:om-public:Q6413916",
+      "countries": [
+        "OM"
+      ],
+      "note": "One point for the named publicly interpreted venue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry identifies the castle in Jabreen, its standing historic rooms and daily public visits.",
+        "id": "auth:om-public:Q6413916:evidence:1",
+        "license": null,
+        "publisher": "Oman Ministry of Heritage and Tourism, Experience Oman",
+        "revision": "Retrieved 2026-11-28; SHA-256 6bff84ff3a89c9ba5b7ceaa9e30a365924619d9ae8adc2a740e57b7aeeb297f6.",
+        "title": "Jabreen Castle visitor information",
+        "uri": "https://experienceoman.om/en/destinations/al-dakhiliyah/jabreen-castle"
+      }
+    },
+    "id": "auth:om-public:Q6413916",
+    "location_precision": null,
+    "names": [
+      "贾布林城堡",
+      "Jabreen Castle",
+      "Jabrin Castle",
+      "Jibreen Castle",
+      "حصن جبرين"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      57.24905556,
+      22.91527778
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry identifies the castle in Jabreen, its standing historic rooms and daily public visits.",
+        "id": "auth:om-public:Q6413916:evidence:1",
+        "license": null,
+        "publisher": "Oman Ministry of Heritage and Tourism, Experience Oman",
+        "revision": "Retrieved 2026-11-28; SHA-256 6bff84ff3a89c9ba5b7ceaa9e30a365924619d9ae8adc2a740e57b7aeeb297f6.",
+        "title": "Jabreen Castle visitor information",
+        "uri": "https://experienceoman.om/en/destinations/al-dakhiliyah/jabreen-castle"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 57.24905556, latitude 22.91527778.",
+        "id": "wikidata:Q6413916",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2260116004; P625 Q6413916$83831a0a-7e42-4421-87bf-23d2262ac47e.",
+        "title": "Jabreen Castle coordinate",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6413916.json"
+      }
+    ],
+    "source_uri": "https://experienceoman.om/en/destinations/al-dakhiliyah/jabreen-castle",
+    "title": "Jabreen Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Original public access information and named representative point verified.",
+      "note": "This point update does not assign a historical stage.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Oman Ministry of Heritage and Tourism, Experience Oman",
+      "Wikidata contributors"
+    ],
+    "description": "Historic fort and visitor property beside Wadi Rustaq. The record represents the Al Hazm venue.",
+    "description_zh": "哈兹姆城堡位于阿曼。主管方提供公开参观信息，地图所标为遗址代表点。",
+    "details": "Historic fort and visitor property beside Wadi Rustaq. The record represents the Al Hazm venue.",
+    "geography": {
+      "authority_id": "supplement:auth:om-public:Q6414000",
+      "countries": [
+        "OM"
+      ],
+      "note": "One point for the named publicly interpreted venue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry publishes public visitor hours and describes the fort rooms, courtyard, towers and historical artillery.",
+        "id": "auth:om-public:Q6414000:evidence:1",
+        "license": null,
+        "publisher": "Oman Ministry of Heritage and Tourism, Experience Oman",
+        "revision": "Retrieved 2026-11-28; SHA-256 965920d56e12475ab6e4bdcb72a31231b4eef5a8f808accd43e80a2cfc8f076e.",
+        "title": "Al Hazm Castle visitor information",
+        "uri": "https://experienceoman.om/en/destinations/al-batinah-south/al-hazm-castle"
+      }
+    },
+    "id": "auth:om-public:Q6414000",
+    "location_precision": null,
+    "names": [
+      "哈兹姆城堡",
+      "Al Hazm Castle",
+      "Al-Hazm Fort",
+      "حصن الحزم"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      57.4729,
+      23.5507
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry publishes public visitor hours and describes the fort rooms, courtyard, towers and historical artillery.",
+        "id": "auth:om-public:Q6414000:evidence:1",
+        "license": null,
+        "publisher": "Oman Ministry of Heritage and Tourism, Experience Oman",
+        "revision": "Retrieved 2026-11-28; SHA-256 965920d56e12475ab6e4bdcb72a31231b4eef5a8f808accd43e80a2cfc8f076e.",
+        "title": "Al Hazm Castle visitor information",
+        "uri": "https://experienceoman.om/en/destinations/al-batinah-south/al-hazm-castle"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 57.4729, latitude 23.5507.",
+        "id": "wikidata:Q6414000",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2276393381; P625 Q6414000$3cc22aa0-555e-4b0b-8f33-4ed77d691339.",
+        "title": "Al Hazm Castle coordinate",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6414000.json"
+      }
+    ],
+    "source_uri": "https://experienceoman.om/en/destinations/al-batinah-south/al-hazm-castle",
+    "title": "Al Hazm Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Original public access information and named representative point verified.",
+      "note": "This point update does not assign a historical stage.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Oman Ministry of Heritage and Tourism, Experience Oman",
+      "Wikidata contributors"
+    ],
+    "description": "Historic round-towered fort and public visitor site in Nizwa. The adjoining souq is outside this point’s scope.",
+    "description_zh": "尼兹瓦堡位于阿曼。主管方提供公开参观信息，地图所标为遗址代表点。",
+    "details": "Historic round-towered fort and public visitor site in Nizwa. The adjoining souq is outside this point’s scope.",
+    "geography": {
+      "authority_id": "supplement:auth:om-public:Q7042280",
+      "countries": [
+        "OM"
+      ],
+      "note": "One point for the named publicly interpreted venue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry identifies the circular fort and publishes ticketed visitor access through the historic defensive and residential rooms.",
+        "id": "auth:om-public:Q7042280:evidence:1",
+        "license": null,
+        "publisher": "Oman Ministry of Heritage and Tourism, Experience Oman",
+        "revision": "Retrieved 2026-11-28; SHA-256 337bf46526701a8548a23513d278bd82667a8056f879eef478345ec62011c4d4.",
+        "title": "Nizwa Fort visitor information",
+        "uri": "https://experienceoman.om/en/destinations/al-dakhiliyah/nizwa-fort"
+      }
+    },
+    "id": "auth:om-public:Q7042280",
+    "location_precision": null,
+    "names": [
+      "尼兹瓦堡",
+      "Nizwa Fort",
+      "Fort of Nizwa",
+      "قلعة نزوى"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      57.530278,
+      22.933333
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry identifies the circular fort and publishes ticketed visitor access through the historic defensive and residential rooms.",
+        "id": "auth:om-public:Q7042280:evidence:1",
+        "license": null,
+        "publisher": "Oman Ministry of Heritage and Tourism, Experience Oman",
+        "revision": "Retrieved 2026-11-28; SHA-256 337bf46526701a8548a23513d278bd82667a8056f879eef478345ec62011c4d4.",
+        "title": "Nizwa Fort visitor information",
+        "uri": "https://experienceoman.om/en/destinations/al-dakhiliyah/nizwa-fort"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 57.530278, latitude 22.933333.",
+        "id": "wikidata:Q7042280",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2568404192; P625 q7042280$941A2021-68D7-41EF-8C96-0778F98B3AFA.",
+        "title": "Nizwa Fort coordinate",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7042280.json"
+      }
+    ],
+    "source_uri": "https://experienceoman.om/en/destinations/al-dakhiliyah/nizwa-fort",
+    "title": "Nizwa Fort",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Original public access information and named representative point verified.",
+      "note": "This point update does not assign a historical stage.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Oman Ministry of Heritage and Tourism, Experience Oman",
+      "Wikidata contributors"
+    ],
+    "description": "Publicly interpreted hilltop fort at Nakhl, constructed around a natural rock outcrop and repeatedly rebuilt.",
+    "description_zh": "纳赫勒堡位于阿曼。主管方提供公开参观信息，地图所标为遗址代表点。",
+    "details": "Publicly interpreted hilltop fort at Nakhl, constructed around a natural rock outcrop and repeatedly rebuilt.",
+    "geography": {
+      "authority_id": "supplement:auth:om-public:Q7917433",
+      "countries": [
+        "OM"
+      ],
+      "note": "One point for the named publicly interpreted venue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry identifies the fort at Nakhl and lists tickets and guided visits inside.",
+        "id": "auth:om-public:Q7917433:evidence:1",
+        "license": null,
+        "publisher": "Oman Ministry of Heritage and Tourism, Experience Oman",
+        "revision": "Retrieved 2026-11-28; SHA-256 9fe5d4c399c950ec11f9ab9a518f737eacd114747987db2dccf50f5504e7b7c4.",
+        "title": "Nakhl Fort visitor information",
+        "uri": "https://experienceoman.om/en/destinations/al-batinah-south/nakhl-fort"
+      }
+    },
+    "id": "auth:om-public:Q7917433",
+    "location_precision": null,
+    "names": [
+      "纳赫勒堡",
+      "Nakhl Fort",
+      "Nakhal Fort",
+      "حصن نخل"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      57.8285,
+      23.3947
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry identifies the fort at Nakhl and lists tickets and guided visits inside.",
+        "id": "auth:om-public:Q7917433:evidence:1",
+        "license": null,
+        "publisher": "Oman Ministry of Heritage and Tourism, Experience Oman",
+        "revision": "Retrieved 2026-11-28; SHA-256 9fe5d4c399c950ec11f9ab9a518f737eacd114747987db2dccf50f5504e7b7c4.",
+        "title": "Nakhl Fort visitor information",
+        "uri": "https://experienceoman.om/en/destinations/al-batinah-south/nakhl-fort"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 57.8285, latitude 23.3947.",
+        "id": "wikidata:Q7917433",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2491549977; P625 Q7917433$78185B49-9B4D-4A04-8E8A-49F1783E87CD.",
+        "title": "Nakhl Fort coordinate",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7917433.json"
+      }
+    ],
+    "source_uri": "https://experienceoman.om/en/destinations/al-batinah-south/nakhl-fort",
+    "title": "Nakhl Fort",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Original public access information and named representative point verified.",
+      "note": "This point update does not assign a historical stage.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Qatar Museums",
+      "Wikidata contributors"
+    ],
+    "description": "Restored historic residence of Sheikh Abdullah bin Jassim in Doha. The original palace is publicly accessible through the National Museum of Qatar under its visitor admission.",
+    "description_zh": "多哈旧埃米尔宫位于卡塔尔。主管方提供公开参观信息，地图所标为遗址代表点。",
+    "details": "Restored historic residence of Sheikh Abdullah bin Jassim in Doha. The original palace is publicly accessible through the National Museum of Qatar under its visitor admission.",
+    "geography": {
+      "authority_id": "supplement:auth:qa-public:Q65117843",
+      "countries": [
+        "QA"
+      ],
+      "note": "One point for the named publicly interpreted venue.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Qatar Museums identifies the Old Palace as a historic building within the museum and explicitly lists it as open to visitors.",
+        "id": "auth:qa-public:Q65117843:evidence:1",
+        "license": null,
+        "publisher": "Qatar Museums",
+        "revision": "Retrieved 2026-11-28; SHA-256 f79bbed95c092e6edaf12f4f23a51a768a1c69468af12763b3844baeb3c6f28b.",
+        "title": "Old Amiri Palace visitor information",
+        "uri": "https://qm.org.qa/en/visit/heritage-sites/the-old-palace/"
+      }
+    },
+    "id": "auth:qa-public:Q65117843",
+    "location_precision": null,
+    "names": [
+      "多哈旧埃米尔宫",
+      "Old Amiri Palace",
+      "The Old Palace at NMoQ",
+      "Sheikh Abdulla bin Jassim Al-Thani Palace",
+      "قصر الشيخ عبدالله بن جاسم آل ثاني"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      51.54830555555555,
+      25.287916666666668
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Qatar Museums identifies the Old Palace as a historic building within the museum and explicitly lists it as open to visitors.",
+        "id": "auth:qa-public:Q65117843:evidence:1",
+        "license": null,
+        "publisher": "Qatar Museums",
+        "revision": "Retrieved 2026-11-28; SHA-256 f79bbed95c092e6edaf12f4f23a51a768a1c69468af12763b3844baeb3c6f28b.",
+        "title": "Old Amiri Palace visitor information",
+        "uri": "https://qm.org.qa/en/visit/heritage-sites/the-old-palace/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator distinguishes the restored early twentieth-century palace from the modern museum that surrounds it.",
+        "id": "auth:qa-public:Q65117843:evidence:2",
+        "license": null,
+        "publisher": "Qatar Museums",
+        "revision": "Retrieved 2026-11-28; SHA-256 f39813f1b2b16f2cd68caf1b2cb164302fe33682f3b29f41649a2fbf7b86d5c6.",
+        "title": "Restoration of Doha’s Old Palace",
+        "uri": "https://qm.org.qa/en/stories/all-stories/old-palace/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 51.54830555555555, latitude 25.287916666666668.",
+        "id": "wikidata:Q65117843",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2551331350; P625 Q65117843$f2ef1ab3-093c-4256-98cc-c5f1c30cd178.",
+        "title": "Old Amiri Palace coordinate",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q65117843.json"
+      }
+    ],
+    "source_uri": "https://qm.org.qa/en/visit/heritage-sites/the-old-palace/",
+    "title": "Old Amiri Palace",
+    "types": [
+      "historic-site"
+    ]
+  }
+]

@@ -1,0 +1,1622 @@
+{
+  "base_count": 4619,
+  "base_ids_sha256": "2bacaf6ae0d4daf53b8cccf486fb28f107e56fc8baaaa2ddc6b06844f28fdb73",
+  "base_sites_sha256": "791dedf99a50e14f4037009d0d756d11dff06dd461e1bcb985ef8602a04ffe22",
+  "cohort_version": "tanzania-uganda-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth statement, with the source precision retained.",
+        "point": [
+          39.215,
+          -6.6626
+        ],
+        "precision": 2.777777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q114024156.json",
+        "statement_id": "Q114024156$e0d64956-f07d-4f42-a600-8b7cbb0e9a5a"
+      },
+      "independent_review": {
+        "method": "Compared the original public access, source hashes and selected CC0 or GeoNames WGS84 statements. Checked older component records, distinct palace grounds and the custodian-led access scope of Wamala.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point identifies the named archaeological remains at Kunduchi.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named public place and representative point",
+          "note": "Historical phases remain undetermined in this point review.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tanzania Tourist Board",
+          "Government of Tanzania",
+          "Wikidata contributors"
+        ],
+        "description": "Kunduchi Ruins is a documented heritage site in Dar es Salaam, Tanzania.",
+        "description_zh": "昆杜奇遗址位于坦桑尼亚，见主管机构公开访客资料。地图使用有来源的代表点。",
+        "details": "The point identifies the named archaeological remains at Kunduchi.",
+        "geography": {
+          "authority_id": "supplement:auth:tz-public:Q114024156",
+          "countries": [
+            "TZ"
+          ],
+          "note": "Authority locality: Dar es Salaam.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor authority identifies the historic ruins at Kunduchi as a distinct visitor site.",
+            "id": "heritage-visitor:Q114024156",
+            "license": null,
+            "publisher": "Tanzania Tourist Board",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Kunduchi Ruins public visitor listing",
+            "uri": "https://www.tanzaniatourism.com/destination/kunduchi-ruins"
+          }
+        },
+        "id": "auth:tz-public:Q114024156",
+        "location_precision": null,
+        "names": [
+          "昆杜奇遗址",
+          "Kunduchi Ruins"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          39.215,
+          -6.6626
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor authority identifies the historic ruins at Kunduchi as a distinct visitor site.",
+            "id": "heritage-visitor:Q114024156",
+            "license": null,
+            "publisher": "Tanzania Tourist Board",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Kunduchi Ruins public visitor listing",
+            "uri": "https://www.tanzaniatourism.com/destination/kunduchi-ruins"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public source corroborates the separately named heritage site and visit scope.",
+            "id": "public-scope:Q114024156:1",
+            "license": null,
+            "publisher": "Government of Tanzania",
+            "revision": "Authority document retrieved 2026-11-28",
+            "title": "Tanzania 2024 Antiquities User Fees (Amendment) Rules, PDF page 3",
+            "uri": "https://www.tawa.go.tz/storage/app/media/uploaded-files/the-antiquities-user-fees-amendment-rules-2024.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 39.215, latitude -6.6626",
+            "id": "wikidata:Q114024156",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2161416846. P625 statement Q114024156$e0d64956-f07d-4f42-a600-8b7cbb0e9a5a.",
+            "title": "Kunduchi Ruins representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q114024156.json"
+          }
+        ],
+        "source_uri": "https://www.tanzaniatourism.com/destination/kunduchi-ruins",
+        "title": "Kunduchi Ruins",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "tz-kunduchi-tourism.htm",
+          "sha256": "679458f77e549e31230292c5fedae20397d5d6b164bd0f3bf090d568760dc892",
+          "uri": "https://www.tanzaniatourism.com/destination/kunduchi-ruins"
+        },
+        {
+          "filename": "Q114024156.json",
+          "sha256": "15ff304a16b8c7ad7f9dda83295c35785cfe56f4cb888e9035c57c40cdaf6f2b",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q114024156.json"
+        },
+        {
+          "filename": "tz-fees-2024.pdf",
+          "sha256": "772eb29f4ff4703228162532b975c8878b2570bbf55a87b1ff9a9c3773bed020",
+          "uri": "https://www.tawa.go.tz/storage/app/media/uploaded-files/the-antiquities-user-fees-amendment-rules-2024.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth statement, with the source precision retained. The independent site reference differs by 92.7 m.",
+        "point": [
+          35.60583333333334,
+          -7.896944444444444
+        ],
+        "precision": 0.0002777777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q114024189.json",
+        "statement_id": "Q114024189$248879f7-966f-4ebc-b0a7-ab0bdc1c22c5"
+      },
+      "independent_review": {
+        "method": "Compared the original public access, source hashes and selected CC0 or GeoNames WGS84 statements. Checked older component records, distinct palace grounds and the custodian-led access scope of Wamala.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The named Stone Age archaeological grounds form one public site with the associated visitor museum.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named public place and representative point",
+          "note": "Historical phases remain undetermined in this point review.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tanzania Tourist Board",
+          "Sustainable Digital Heritage Tanzania",
+          "Government of Tanzania",
+          "Wikidata contributors"
+        ],
+        "description": "Isimila Stone Age Site is a documented heritage site in near Iringa, Tanzania.",
+        "description_zh": "伊西米拉石器时代遗址位于坦桑尼亚，见主管机构公开访客资料。地图使用有来源的代表点。",
+        "details": "The named Stone Age archaeological grounds form one public site with the associated visitor museum.",
+        "geography": {
+          "authority_id": "supplement:auth:tz-public:Q114024189",
+          "countries": [
+            "TZ"
+          ],
+          "note": "Authority locality: near Iringa.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism authority lists public visits to the original archaeological site and associated museum.",
+            "id": "heritage-visitor:Q114024189",
+            "license": null,
+            "publisher": "Tanzania Tourist Board",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Isimila Stone Age Site visitor listing",
+            "uri": "https://www.tanzaniatourism.com/destination/isimila-stone-age-site"
+          }
+        },
+        "id": "auth:tz-public:Q114024189",
+        "location_precision": null,
+        "names": [
+          "伊西米拉石器时代遗址",
+          "Isimila Stone Age Site"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          35.60583333333334,
+          -7.896944444444444
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism authority lists public visits to the original archaeological site and associated museum.",
+            "id": "heritage-visitor:Q114024189",
+            "license": null,
+            "publisher": "Tanzania Tourist Board",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Isimila Stone Age Site visitor listing",
+            "uri": "https://www.tanzaniatourism.com/destination/isimila-stone-age-site"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The separately published site reference point is 93 m from the selected heritage point.",
+            "id": "comparison:position:Q114024189",
+            "license": null,
+            "publisher": "Sustainable Digital Heritage Tanzania",
+            "revision": "Published public site information retrieved 2026-11-28",
+            "title": "Isimila Stone Age Site · Tanzania",
+            "uri": "https://sdhtanzania.org/omeka/items/show/3"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public source corroborates the separately named heritage site and visit scope.",
+            "id": "public-scope:Q114024189:2",
+            "license": null,
+            "publisher": "Government of Tanzania",
+            "revision": "Authority document retrieved 2026-11-28",
+            "title": "Tanzania 2024 Antiquities User Fees (Amendment) Rules, PDF page 6",
+            "uri": "https://www.tawa.go.tz/storage/app/media/uploaded-files/the-antiquities-user-fees-amendment-rules-2024.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 35.60583333333334, latitude -7.896944444444444",
+            "id": "wikidata:Q114024189",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2441493933. P625 statement Q114024189$248879f7-966f-4ebc-b0a7-ab0bdc1c22c5.",
+            "title": "Isimila Stone Age Site representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q114024189.json"
+          }
+        ],
+        "source_uri": "https://www.tanzaniatourism.com/destination/isimila-stone-age-site",
+        "title": "Isimila Stone Age Site",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "tz-isimila-tourism.htm",
+          "sha256": "1ac7f2b5c24990244a69c100e640cbf110f620fd566bd615ac8b5eeb0b8d37a5",
+          "uri": "https://www.tanzaniatourism.com/destination/isimila-stone-age-site"
+        },
+        {
+          "filename": "Q114024189.json",
+          "sha256": "f423c19c02ca18750c5033cb5713566c2560a7168ab37c31e2c45d536198aea3",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q114024189.json"
+        },
+        {
+          "filename": "tz-isimila-research.htm",
+          "sha256": "71fb224187ca92052155e8bed66a23f49b629af443d27e98e12ecbdf1c3e6dff",
+          "uri": "https://sdhtanzania.org/omeka/items/show/3"
+        },
+        {
+          "filename": "tz-fees-2024.pdf",
+          "sha256": "772eb29f4ff4703228162532b975c8878b2570bbf55a87b1ff9a9c3773bed020",
+          "uri": "https://www.tawa.go.tz/storage/app/media/uploaded-files/the-antiquities-user-fees-amendment-rules-2024.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth statement, with the source precision retained. The independent site reference differs by 202.6 m.",
+        "point": [
+          38.9468,
+          -6.4634
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3812877.json",
+        "statement_id": "Q3812877$F139080E-A23B-49ED-8640-1A18294A9903"
+      },
+      "independent_review": {
+        "method": "Compared the original public access, source hashes and selected CC0 or GeoNames WGS84 statements. Checked older component records, distinct palace grounds and the custodian-led access scope of Wamala.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The named ancient Kaole archaeological ruins lie on the coast by Bagamoyo. The nearby modern town is a separate identity.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named public place and representative point",
+          "note": "Historical phases remain undetermined in this point review.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tanzania Tourist Board",
+          "GeoNames",
+          "Government of Tanzania",
+          "Wikidata contributors"
+        ],
+        "description": "Kaole Ruins is a documented heritage site in Bagamoyo, Tanzania.",
+        "description_zh": "卡奥莱遗址位于坦桑尼亚，见主管机构公开访客资料。地图使用有来源的代表点。",
+        "details": "The named ancient Kaole archaeological ruins lie on the coast by Bagamoyo. The nearby modern town is a separate identity.",
+        "geography": {
+          "authority_id": "supplement:auth:tz-public:Q3812877",
+          "countries": [
+            "TZ"
+          ],
+          "note": "Authority locality: Bagamoyo.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor authority identifies the historic Kaole ruins as a named cultural destination.",
+            "id": "heritage-visitor:Q3812877",
+            "license": null,
+            "publisher": "Tanzania Tourist Board",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Kaole Ruins public visitor listing",
+            "uri": "https://www.tanzaniatourism.com/safari/kaole-ruins-bagamoyo"
+          }
+        },
+        "id": "auth:tz-public:Q3812877",
+        "location_precision": null,
+        "names": [
+          "卡奥莱遗址",
+          "Kaole Ruins",
+          "Kaole"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          38.9468,
+          -6.4634
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor authority identifies the historic Kaole ruins as a named cultural destination.",
+            "id": "heritage-visitor:Q3812877",
+            "license": null,
+            "publisher": "Tanzania Tourist Board",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Kaole Ruins public visitor listing",
+            "uri": "https://www.tanzaniatourism.com/safari/kaole-ruins-bagamoyo"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The named ruin feature is 203 m from the selected heritage point.",
+            "id": "comparison:geonames:149994",
+            "license": "CC BY 4.0",
+            "publisher": "GeoNames",
+            "revision": "GeoNames 149994, S.RUIN",
+            "title": "GeoNames Kaole Ruins",
+            "uri": "https://download.geonames.org/export/dump/TZ.zip"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public source corroborates the separately named heritage site and visit scope.",
+            "id": "public-scope:Q3812877:2",
+            "license": null,
+            "publisher": "Government of Tanzania",
+            "revision": "Authority document retrieved 2026-11-28",
+            "title": "Tanzania 2024 Antiquities User Fees (Amendment) Rules, PDF page 7",
+            "uri": "https://www.tawa.go.tz/storage/app/media/uploaded-files/the-antiquities-user-fees-amendment-rules-2024.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 38.9468, latitude -6.4634",
+            "id": "wikidata:Q3812877",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2570259138. P625 statement Q3812877$F139080E-A23B-49ED-8640-1A18294A9903.",
+            "title": "Kaole Ruins representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3812877.json"
+          }
+        ],
+        "source_uri": "https://www.tanzaniatourism.com/safari/kaole-ruins-bagamoyo",
+        "title": "Kaole Ruins",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "tz-kaole-ttb.htm",
+          "sha256": "c8ea1d53cd23cb4c969cab02a0c3c5d0099c95e660660895298a69c29f82d1a4",
+          "uri": "https://www.tanzaniatourism.com/safari/kaole-ruins-bagamoyo"
+        },
+        {
+          "filename": "Q3812877.json",
+          "sha256": "55243c99ca1b29b1642de96049b7214099747f424b55590513ea5003a7ab03be",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3812877.json"
+        },
+        {
+          "filename": "TZ.zip",
+          "sha256": "4fdb9e442cc6feac69c02833c0a91bb7b1d8ed407e94ba979c1eb1f95e73d0be",
+          "uri": "https://download.geonames.org/export/dump/TZ.zip"
+        },
+        {
+          "filename": "readme.txt",
+          "sha256": "b1957379b6c1242c700c98ac9a8aa0a09f56c3c0a50ee72175527005f48ef2c5",
+          "uri": "https://download.geonames.org/export/dump/readme.txt"
+        },
+        {
+          "filename": "tz-fees-2024.pdf",
+          "sha256": "772eb29f4ff4703228162532b975c8878b2570bbf55a87b1ff9a9c3773bed020",
+          "uri": "https://www.tawa.go.tz/storage/app/media/uploaded-files/the-antiquities-user-fees-amendment-rules-2024.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Original WGS84 coordinate in the named GeoNames heritage feature. The independent site reference differs by 8.7 m.",
+        "point": [
+          39.20906,
+          -6.14468
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://download.geonames.org/export/dump/TZ.zip",
+        "statement_id": "11281222"
+      },
+      "independent_review": {
+        "method": "Compared the original public access, source hashes and selected CC0 or GeoNames WGS84 statements. Checked older component records, distinct palace grounds and the custodian-led access scope of Wamala.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point covers the separately bookable historic Maruhubi Palace complex.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named public place and representative point",
+          "note": "Historical phases remain undetermined in this point review.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Zanzibar Ministry of Tourism and Heritage",
+          "GeoNames"
+        ],
+        "description": "Maruhubi Palace Ruins is a documented heritage site in Unguja, Zanzibar, Tanzania.",
+        "description_zh": "马鲁胡比宫殿遗址位于坦桑尼亚，见主管机构公开访客资料。地图使用有来源的代表点。",
+        "details": "The point covers the separately bookable historic Maruhubi Palace complex.",
+        "geography": {
+          "authority_id": "supplement:auth:tz-public:geonames-11281222",
+          "countries": [
+            "TZ"
+          ],
+          "note": "Authority locality: Unguja, Zanzibar.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The Zanzibar ministry provides a separately named visitor booking entry for Maruhubi Palace.",
+            "id": "heritage-visitor:gn-11281222",
+            "license": null,
+            "publisher": "Zanzibar Ministry of Tourism and Heritage",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Zanzibar heritage site booking catalogue",
+            "uri": "https://utaliismz.go.tz/sites"
+          }
+        },
+        "id": "auth:tz-public:geonames-11281222",
+        "location_precision": null,
+        "names": [
+          "马鲁胡比宫殿遗址",
+          "Maruhubi Palace Ruins",
+          "Maruhubi Palace"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          39.20906,
+          -6.14468
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The Zanzibar ministry provides a separately named visitor booking entry for Maruhubi Palace.",
+            "id": "heritage-visitor:gn-11281222",
+            "license": null,
+            "publisher": "Zanzibar Ministry of Tourism and Heritage",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Zanzibar heritage site booking catalogue",
+            "uri": "https://utaliismz.go.tz/sites"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 39.20906, latitude -6.14468",
+            "id": "geonames:11281222",
+            "license": "CC BY 4.0",
+            "publisher": "GeoNames",
+            "revision": "Record 11281222, S.RUIN, update 2018-01-16",
+            "title": "GeoNames feature Maruhubi Palace",
+            "uri": "https://download.geonames.org/export/dump/TZ.zip"
+          }
+        ],
+        "source_uri": "https://utaliismz.go.tz/sites",
+        "title": "Maruhubi Palace Ruins",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "tz-zanzibar-book.htm",
+          "sha256": "566e13562c3cb767e5dd4937af4ee73464bc2ffff56b27f55aa3520acb7fbb6f",
+          "uri": "https://utaliismz.go.tz/sites"
+        },
+        {
+          "filename": "TZ.zip",
+          "sha256": "4fdb9e442cc6feac69c02833c0a91bb7b1d8ed407e94ba979c1eb1f95e73d0be",
+          "uri": "https://download.geonames.org/export/dump/TZ.zip"
+        },
+        {
+          "filename": "readme.txt",
+          "sha256": "b1957379b6c1242c700c98ac9a8aa0a09f56c3c0a50ee72175527005f48ef2c5",
+          "uri": "https://download.geonames.org/export/dump/readme.txt"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Original WGS84 coordinate in the named GeoNames heritage feature. The independent site reference differs by 149.5 m.",
+        "point": [
+          39.21337,
+          -6.13553
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://download.geonames.org/export/dump/TZ.zip",
+        "statement_id": "11791590"
+      },
+      "independent_review": {
+        "method": "Compared the original public access, source hashes and selected CC0 or GeoNames WGS84 statements. Checked older component records, distinct palace grounds and the custodian-led access scope of Wamala.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point covers the separately bookable Mtoni Palace grounds.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named public place and representative point",
+          "note": "Historical phases remain undetermined in this point review.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Zanzibar Ministry of Tourism and Heritage",
+          "GeoNames"
+        ],
+        "description": "Mtoni Palace Ruins is a documented heritage site in Unguja, Zanzibar, Tanzania.",
+        "description_zh": "姆托尼宫殿遗址位于坦桑尼亚，见主管机构公开访客资料。地图使用有来源的代表点。",
+        "details": "The point covers the separately bookable Mtoni Palace grounds.",
+        "geography": {
+          "authority_id": "supplement:auth:tz-public:geonames-11791590",
+          "countries": [
+            "TZ"
+          ],
+          "note": "Authority locality: Unguja, Zanzibar.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The Zanzibar ministry provides a separately named visitor booking entry for Mtoni Palace ruins.",
+            "id": "heritage-visitor:gn-11791590",
+            "license": null,
+            "publisher": "Zanzibar Ministry of Tourism and Heritage",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Zanzibar heritage site booking catalogue",
+            "uri": "https://utaliismz.go.tz/sites"
+          }
+        },
+        "id": "auth:tz-public:geonames-11791590",
+        "location_precision": null,
+        "names": [
+          "姆托尼宫殿遗址",
+          "Mtoni Palace Ruins",
+          "Mtoni Palace"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          39.21337,
+          -6.13553
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The Zanzibar ministry provides a separately named visitor booking entry for Mtoni Palace ruins.",
+            "id": "heritage-visitor:gn-11791590",
+            "license": null,
+            "publisher": "Zanzibar Ministry of Tourism and Heritage",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Zanzibar heritage site booking catalogue",
+            "uri": "https://utaliismz.go.tz/sites"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 39.21337, latitude -6.13553",
+            "id": "geonames:11791590",
+            "license": "CC BY 4.0",
+            "publisher": "GeoNames",
+            "revision": "Record 11791590, S.RUIN, update 2018-01-10",
+            "title": "GeoNames feature Mtoni Palace",
+            "uri": "https://download.geonames.org/export/dump/TZ.zip"
+          }
+        ],
+        "source_uri": "https://utaliismz.go.tz/sites",
+        "title": "Mtoni Palace Ruins",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "tz-zanzibar-book.htm",
+          "sha256": "566e13562c3cb767e5dd4937af4ee73464bc2ffff56b27f55aa3520acb7fbb6f",
+          "uri": "https://utaliismz.go.tz/sites"
+        },
+        {
+          "filename": "TZ.zip",
+          "sha256": "4fdb9e442cc6feac69c02833c0a91bb7b1d8ed407e94ba979c1eb1f95e73d0be",
+          "uri": "https://download.geonames.org/export/dump/TZ.zip"
+        },
+        {
+          "filename": "readme.txt",
+          "sha256": "b1957379b6c1242c700c98ac9a8aa0a09f56c3c0a50ee72175527005f48ef2c5",
+          "uri": "https://download.geonames.org/export/dump/readme.txt"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth statement, with the source precision retained.",
+        "point": [
+          33.202717618809466,
+          0.4479748488788124
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q111924939.json",
+        "statement_id": "Q111924939$ec2e9e3b-47e6-ac1b-3ad6-10146326ce53"
+      },
+      "independent_review": {
+        "method": "Compared the original public access, source hashes and selected CC0 or GeoNames WGS84 statements. Checked older component records, distinct palace grounds and the custodian-led access scope of Wamala.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point covers the public railway heritage site at the Jinja station.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named public place and representative point",
+          "note": "Historical phases remain undetermined in this point review.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Uganda Tourism Board",
+          "Delegation of the European Union to Uganda",
+          "Wikidata contributors"
+        ],
+        "description": "Uganda Railway Museum, Jinja is a documented heritage site in Jinja railway station, Jinja, Uganda.",
+        "description_zh": "金贾铁路博物馆旧站位于乌干达，见主管机构公开访客资料。地图使用有来源的代表点。",
+        "details": "The point covers the public railway heritage site at the Jinja station.",
+        "geography": {
+          "authority_id": "supplement:auth:ug-public:Q111924939",
+          "countries": [
+            "UG"
+          ],
+          "note": "Authority locality: Jinja railway station, Jinja.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The visitor catalogue identifies the railway heritage museum at its original Jinja railway station location.",
+            "id": "heritage-visitor:Q111924939",
+            "license": null,
+            "publisher": "Uganda Tourism Board",
+            "revision": "Original official visitor guide, PDF page 65",
+            "title": "Uganda Tourism Board 2025 destination catalogue",
+            "uri": "https://exploreuganda.com/wp-content/uploads/2025/07/UTB-Catalogue-Uganda-2025_Option-1.pdf"
+          }
+        },
+        "id": "auth:ug-public:Q111924939",
+        "location_precision": null,
+        "names": [
+          "金贾铁路博物馆旧站",
+          "Uganda Railway Museum, Jinja",
+          "Uganda Railway Museum",
+          "Ekitebe ky'eggaali y'omukka ekya Uganda Railway Museum"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          33.202717618809466,
+          0.4479748488788124
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The visitor catalogue identifies the railway heritage museum at its original Jinja railway station location.",
+            "id": "heritage-visitor:Q111924939",
+            "license": null,
+            "publisher": "Uganda Tourism Board",
+            "revision": "Original official visitor guide, PDF page 65",
+            "title": "Uganda Tourism Board 2025 destination catalogue",
+            "uri": "https://exploreuganda.com/wp-content/uploads/2025/07/UTB-Catalogue-Uganda-2025_Option-1.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public source corroborates the separately named heritage site and visit scope.",
+            "id": "public-scope:Q111924939:1",
+            "license": null,
+            "publisher": "Delegation of the European Union to Uganda",
+            "revision": "Authority document retrieved 2026-11-28",
+            "title": "Original Jinja railway station museum opening",
+            "uri": "https://www.eeas.europa.eu/delegations/uganda/european-union-support-first-railway-museum-uganda-opens_und_en"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 33.202717618809466, latitude 0.4479748488788124",
+            "id": "wikidata:Q111924939",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2539116290. P625 statement Q111924939$ec2e9e3b-47e6-ac1b-3ad6-10146326ce53.",
+            "title": "Uganda Railway Museum, Jinja representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q111924939.json"
+          }
+        ],
+        "source_uri": "https://exploreuganda.com/wp-content/uploads/2025/07/UTB-Catalogue-Uganda-2025_Option-1.pdf",
+        "title": "Uganda Railway Museum, Jinja",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "ug-2025-utb.pdf",
+          "sha256": "5ec35842f68139811776c7c7a623b0d61a7ca1aaa2ddc6afdff6a2f746c43233",
+          "uri": "https://exploreuganda.com/wp-content/uploads/2025/07/UTB-Catalogue-Uganda-2025_Option-1.pdf"
+        },
+        {
+          "filename": "Q111924939.json",
+          "sha256": "6001eddc3bf29c9ccce964fafccd426923d9da658c1444b2719499ba2cd85d88",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q111924939.json"
+        },
+        {
+          "filename": "ug-rail-eeas.htm",
+          "sha256": "d2b239165dc86d70e4d6f37d64134d4c3d265c4d0b9815f126370820c786da0e",
+          "uri": "https://www.eeas.europa.eu/delegations/uganda/european-union-support-first-railway-museum-uganda-opens_und_en"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth statement, with the source precision retained.",
+        "point": [
+          32.525429195473514,
+          0.39131054263357207
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q121501039.json",
+        "statement_id": "Q121501039$efdf7de8-4227-f269-dfaa-a87c40800d55"
+      },
+      "independent_review": {
+        "method": "Compared the original public access, source hashes and selected CC0 or GeoNames WGS84 statements. Checked older component records, distinct palace grounds and the custodian-led access scope of Wamala.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point covers the burial complex at Wamala in Wakiso. Kasubi and Wamala are separately identified royal properties. Public visitor scope follows custodian-led visits described by the Buganda Kingdom.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named public place and representative point",
+          "note": "Historical phases remain undetermined in this point review.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Buganda Kingdom",
+          "Wikidata contributors"
+        ],
+        "description": "Wamala Tombs is a documented heritage site in Wakiso District, Uganda.",
+        "description_zh": "瓦马拉王陵位于乌干达，见主管机构公开访客资料。地图使用有来源的代表点。",
+        "details": "The point covers the burial complex at Wamala in Wakiso. Kasubi and Wamala are separately identified royal properties. Public visitor scope follows custodian-led visits described by the Buganda Kingdom.",
+        "geography": {
+          "authority_id": "supplement:auth:ug-public:Q121501039",
+          "countries": [
+            "UG"
+          ],
+          "note": "Authority locality: Wakiso District.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The royal heritage custodian separately identifies the Wamala Tombs and describes guided visits for the royal tomb properties.",
+            "id": "heritage-visitor:Q121501039",
+            "license": null,
+            "publisher": "Buganda Kingdom",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Amasiro royal tombs visitor guidance",
+            "uri": "https://buganda.or.ug/royal-tombs/"
+          }
+        },
+        "id": "auth:ug-public:Q121501039",
+        "location_precision": null,
+        "names": [
+          "瓦马拉王陵",
+          "Wamala Tombs",
+          "amasiro g'eWamala"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          32.525429195473514,
+          0.39131054263357207
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The royal heritage custodian separately identifies the Wamala Tombs and describes guided visits for the royal tomb properties.",
+            "id": "heritage-visitor:Q121501039",
+            "license": null,
+            "publisher": "Buganda Kingdom",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Amasiro royal tombs visitor guidance",
+            "uri": "https://buganda.or.ug/royal-tombs/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 32.525429195473514, latitude 0.39131054263357207",
+            "id": "wikidata:Q121501039",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2484587773. P625 statement Q121501039$efdf7de8-4227-f269-dfaa-a87c40800d55.",
+            "title": "Wamala Tombs representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q121501039.json"
+          }
+        ],
+        "source_uri": "https://buganda.or.ug/royal-tombs/",
+        "title": "Wamala Tombs",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "ug-buganda-tombs.htm",
+          "sha256": "cbb50badf2821379c8ca915275032df4b1b44c7d2617118f6b7ed5c6e564c2ff",
+          "uri": "https://buganda.or.ug/royal-tombs/"
+        },
+        {
+          "filename": "Q121501039.json",
+          "sha256": "d31f9367fa4df73a7e1c12d359026ecf4fb3aa2168f1ec2d8888ef99dafe0d83",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q121501039.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth statement, with the source precision retained. The independent site reference differs by 35.2 m.",
+        "point": [
+          32.5597,
+          0.315
+        ],
+        "precision": 0.0089832886037824,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16895659.json",
+        "statement_id": "Q16895659$9B78BADA-D0C1-4AD6-910C-907B0852D221"
+      },
+      "independent_review": {
+        "method": "Compared the original public access, source hashes and selected CC0 or GeoNames WGS84 statements. Checked older component records, distinct palace grounds and the custodian-led access scope of Wamala.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The named public heritage place is located in Namirembe Hill, Kampala.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named public place and representative point",
+          "note": "Historical phases remain undetermined in this point review.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Kampala Capital City Authority",
+          "Wikidata contributors"
+        ],
+        "description": "Namirembe Cathedral is a documented heritage site in Namirembe Hill, Kampala, Uganda.",
+        "description_zh": "纳米伦贝主教座堂位于乌干达，见主管机构公开访客资料。地图使用有来源的代表点。",
+        "details": "The named public heritage place is located in Namirembe Hill, Kampala.",
+        "geography": {
+          "authority_id": "supplement:auth:ug-public:Q16895659",
+          "countries": [
+            "UG"
+          ],
+          "note": "Authority locality: Namirembe Hill, Kampala.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The city visitor authority identifies the historic Namirembe Cathedral and public visitor information.",
+            "id": "heritage-visitor:Q16895659",
+            "license": null,
+            "publisher": "Kampala Capital City Authority",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Namirembe Cathedral visitor listing",
+            "uri": "https://visitkampala.kcca.go.ug/business_details/namirenbe-cathedral"
+          }
+        },
+        "id": "auth:ug-public:Q16895659",
+        "location_precision": null,
+        "names": [
+          "纳米伦贝主教座堂",
+          "Namirembe Cathedral"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          32.5597,
+          0.315
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The city visitor authority identifies the historic Namirembe Cathedral and public visitor information.",
+            "id": "heritage-visitor:Q16895659",
+            "license": null,
+            "publisher": "Kampala Capital City Authority",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Namirembe Cathedral visitor listing",
+            "uri": "https://visitkampala.kcca.go.ug/business_details/namirenbe-cathedral"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 32.5597, latitude 0.315",
+            "id": "wikidata:Q16895659",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2574374061. P625 statement Q16895659$9B78BADA-D0C1-4AD6-910C-907B0852D221.",
+            "title": "Namirembe Cathedral representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16895659.json"
+          }
+        ],
+        "source_uri": "https://visitkampala.kcca.go.ug/business_details/namirenbe-cathedral",
+        "title": "Namirembe Cathedral",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "ug-kampala-namirembe.htm",
+          "sha256": "7df33ec42089dd675aa101e900a03e3716f940ca3e3619a28a9254ed1b184313",
+          "uri": "https://visitkampala.kcca.go.ug/business_details/namirenbe-cathedral"
+        },
+        {
+          "filename": "Q16895659.json",
+          "sha256": "2d761c0f43b1203aceb4555004f7081cabbf2823663268b0a62fc98c00b5ea68",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16895659.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth statement, with the source precision retained. The independent site reference differs by 80.5 m.",
+        "point": [
+          32.617277777778,
+          0.23725
+        ],
+        "precision": 2.7777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q20746335.json",
+        "statement_id": "Q20746335$665afcf0-4eb4-4e09-07b0-b9fcafd04d75"
+      },
+      "independent_review": {
+        "method": "Compared the original public access, source hashes and selected CC0 or GeoNames WGS84 statements. Checked older component records, distinct palace grounds and the custodian-led access scope of Wamala.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The named public heritage place is located in Munyonyo, Kampala.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named public place and representative point",
+          "note": "Historical phases remain undetermined in this point review.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Kampala Capital City Authority",
+          "Wikidata contributors"
+        ],
+        "description": "Munyonyo Martyrs’ Shrine is a documented heritage site in Munyonyo, Kampala, Uganda.",
+        "description_zh": "穆尼奥尼奥殉道者圣地位于乌干达，见主管机构公开访客资料。地图使用有来源的代表点。",
+        "details": "The named public heritage place is located in Munyonyo, Kampala.",
+        "geography": {
+          "authority_id": "supplement:auth:ug-public:Q20746335",
+          "countries": [
+            "UG"
+          ],
+          "note": "Authority locality: Munyonyo, Kampala.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal visitor guide identifies the historically associated shrine in Munyonyo.",
+            "id": "heritage-visitor:Q20746335",
+            "license": null,
+            "publisher": "Kampala Capital City Authority",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Munyonyo Martyrs’ Shrine visitor listing",
+            "uri": "https://visitkampala.kcca.go.ug/business_details/the-munyonyo-martyrs-shrine"
+          }
+        },
+        "id": "auth:ug-public:Q20746335",
+        "location_precision": null,
+        "names": [
+          "穆尼奥尼奥殉道者圣地",
+          "Munyonyo Martyrs’ Shrine",
+          "Munyonyo Martyrs Shrine"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          32.617277777778,
+          0.23725
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal visitor guide identifies the historically associated shrine in Munyonyo.",
+            "id": "heritage-visitor:Q20746335",
+            "license": null,
+            "publisher": "Kampala Capital City Authority",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Munyonyo Martyrs’ Shrine visitor listing",
+            "uri": "https://visitkampala.kcca.go.ug/business_details/the-munyonyo-martyrs-shrine"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 32.617277777778, latitude 0.23725",
+            "id": "wikidata:Q20746335",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2559530754. P625 statement Q20746335$665afcf0-4eb4-4e09-07b0-b9fcafd04d75.",
+            "title": "Munyonyo Martyrs’ Shrine representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q20746335.json"
+          }
+        ],
+        "source_uri": "https://visitkampala.kcca.go.ug/business_details/the-munyonyo-martyrs-shrine",
+        "title": "Munyonyo Martyrs’ Shrine",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "ug-kampala-munyonyo.htm",
+          "sha256": "daf70ffd0e3894900432b15a24ba0152b774c81db729b32b55982174c4a9427f",
+          "uri": "https://visitkampala.kcca.go.ug/business_details/the-munyonyo-martyrs-shrine"
+        },
+        {
+          "filename": "Q20746335.json",
+          "sha256": "25ec6529ec612b2ba9beb0607fd15d596d5d8c5b0d12e490485f169642d8cc6c",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q20746335.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth statement, with the source precision retained. The independent site reference differs by 35.8 m.",
+        "point": [
+          32.65138889,
+          0.38527778
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4867416.json",
+        "statement_id": "Q4867416$219B378A-FEBA-4034-A4DD-D21A8FC617A4"
+      },
+      "independent_review": {
+        "method": "Compared the original public access, source hashes and selected CC0 or GeoNames WGS84 statements. Checked older component records, distinct palace grounds and the custodian-led access scope of Wamala.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point covers the Roman Catholic basilica compound in Namugongo.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named public place and representative point",
+          "note": "Historical phases remain undetermined in this point review.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Kampala Capital City Authority",
+          "Kampala Archdiocese",
+          "Wikidata contributors"
+        ],
+        "description": "Basilica of the Uganda Martyrs, Namugongo is a documented heritage site in Namugongo, Wakiso District, Uganda.",
+        "description_zh": "纳穆贡戈乌干达殉道者圣殿位于乌干达，见主管机构公开访客资料。地图使用有来源的代表点。",
+        "details": "The point covers the Roman Catholic basilica compound in Namugongo.",
+        "geography": {
+          "authority_id": "supplement:auth:ug-public:Q4867416",
+          "countries": [
+            "UG"
+          ],
+          "note": "Authority locality: Namugongo, Wakiso District.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The city authority identifies the Namugongo historical shrine and public visitor arrangements.",
+            "id": "heritage-visitor:Q4867416",
+            "license": null,
+            "publisher": "Kampala Capital City Authority",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Namugongo Martyrs Shrine visitor listing",
+            "uri": "https://visitkampala.kcca.go.ug/business_details/namugongo-martyrs-shrine"
+          }
+        },
+        "id": "auth:ug-public:Q4867416",
+        "location_precision": null,
+        "names": [
+          "纳穆贡戈乌干达殉道者圣殿",
+          "Basilica of the Uganda Martyrs, Namugongo",
+          "Basilica of the Uganda Martyrs"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          32.65138889,
+          0.38527778
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The city authority identifies the Namugongo historical shrine and public visitor arrangements.",
+            "id": "heritage-visitor:Q4867416",
+            "license": null,
+            "publisher": "Kampala Capital City Authority",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Namugongo Martyrs Shrine visitor listing",
+            "uri": "https://visitkampala.kcca.go.ug/business_details/namugongo-martyrs-shrine"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public source corroborates the separately named heritage site and visit scope.",
+            "id": "public-scope:Q4867416:1",
+            "license": null,
+            "publisher": "Kampala Archdiocese",
+            "revision": "Authority document retrieved 2026-11-28",
+            "title": "Basilica of the Uganda Martyrs at Namugongo",
+            "uri": "https://archdiocese.nswanjereseminary.ac.ug/about-us/the-uganda-martyrs/basilicas/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 32.65138889, latitude 0.38527778",
+            "id": "wikidata:Q4867416",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2485953716. P625 statement Q4867416$219B378A-FEBA-4034-A4DD-D21A8FC617A4.",
+            "title": "Basilica of the Uganda Martyrs, Namugongo representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4867416.json"
+          }
+        ],
+        "source_uri": "https://visitkampala.kcca.go.ug/business_details/namugongo-martyrs-shrine",
+        "title": "Basilica of the Uganda Martyrs, Namugongo",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "ug-kampala-namugongo.htm",
+          "sha256": "1817c14ef9f63bde282b4a779773203e65e667da8dbb2574cf6ad62c52a33e0e",
+          "uri": "https://visitkampala.kcca.go.ug/business_details/namugongo-martyrs-shrine"
+        },
+        {
+          "filename": "Q4867416.json",
+          "sha256": "db60e005a4caf7b487cb43d3c43cdeacb8a0545a85b11da30c70ae2938039fcf",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4867416.json"
+        },
+        {
+          "filename": "ug-archdiocese-namugongo.htm",
+          "sha256": "aaf0df28700a4a32ae71d38d53b6374353206b891ec3dce8711a9307b31b69ec",
+          "uri": "https://archdiocese.nswanjereseminary.ac.ug/about-us/the-uganda-martyrs/basilicas/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth statement, with the source precision retained.",
+        "point": [
+          32.317625,
+          3.015834
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5471796.json",
+        "statement_id": "Q5471796$5BF1D4B7-5D36-4894-A295-821BE8C9DAA0"
+      },
+      "independent_review": {
+        "method": "Compared the original public access, source hashes and selected CC0 or GeoNames WGS84 statements. Checked older component records, distinct palace grounds and the custodian-led access scope of Wamala.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The named public heritage place is located in Gulu District.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named public place and representative point",
+          "note": "Historical phases remain undetermined in this point review.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Uganda Tourism Board",
+          "Wikidata contributors"
+        ],
+        "description": "Fort Patiko is a documented heritage site in Gulu District, Uganda.",
+        "description_zh": "帕蒂科堡遗址位于乌干达，见主管机构公开访客资料。地图使用有来源的代表点。",
+        "details": "The named public heritage place is located in Gulu District.",
+        "geography": {
+          "authority_id": "supplement:auth:ug-public:Q5471796",
+          "countries": [
+            "UG"
+          ],
+          "note": "Authority locality: Gulu District.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide separately identifies the original historical fort at Patiko in Gulu.",
+            "id": "heritage-visitor:Q5471796",
+            "license": null,
+            "publisher": "Uganda Tourism Board",
+            "revision": "Original official visitor guide, PDF page 75",
+            "title": "Uganda Tourism Board 2025 destination catalogue",
+            "uri": "https://exploreuganda.com/wp-content/uploads/2025/07/UTB-Catalogue-Uganda-2025_Option-1.pdf"
+          }
+        },
+        "id": "auth:ug-public:Q5471796",
+        "location_precision": null,
+        "names": [
+          "帕蒂科堡遗址",
+          "Fort Patiko",
+          "Baker's Fort"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          32.317625,
+          3.015834
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide separately identifies the original historical fort at Patiko in Gulu.",
+            "id": "heritage-visitor:Q5471796",
+            "license": null,
+            "publisher": "Uganda Tourism Board",
+            "revision": "Original official visitor guide, PDF page 75",
+            "title": "Uganda Tourism Board 2025 destination catalogue",
+            "uri": "https://exploreuganda.com/wp-content/uploads/2025/07/UTB-Catalogue-Uganda-2025_Option-1.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 32.317625, latitude 3.015834",
+            "id": "wikidata:Q5471796",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2512675561. P625 statement Q5471796$5BF1D4B7-5D36-4894-A295-821BE8C9DAA0.",
+            "title": "Fort Patiko representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5471796.json"
+          }
+        ],
+        "source_uri": "https://exploreuganda.com/wp-content/uploads/2025/07/UTB-Catalogue-Uganda-2025_Option-1.pdf",
+        "title": "Fort Patiko",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "ug-2025-utb.pdf",
+          "sha256": "5ec35842f68139811776c7c7a623b0d61a7ca1aaa2ddc6afdff6a2f746c43233",
+          "uri": "https://exploreuganda.com/wp-content/uploads/2025/07/UTB-Catalogue-Uganda-2025_Option-1.pdf"
+        },
+        {
+          "filename": "Q5471796.json",
+          "sha256": "1106c824f267aa0b196f911b7fa65075bda85fb1089b9c00ba5794b8c69ebaa4",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5471796.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth statement, with the source precision retained.",
+        "point": [
+          32.581609824212556,
+          0.31571258022170456
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q67758661.json",
+        "statement_id": "Q67758661$769C7CBB-9ACA-4A98-B0B1-914AE8EB10C7"
+      },
+      "independent_review": {
+        "method": "Compared the original public access, source hashes and selected CC0 or GeoNames WGS84 statements. Checked older component records, distinct palace grounds and the custodian-led access scope of Wamala.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The named public heritage place is located in Kampala.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named public place and representative point",
+          "note": "Historical phases remain undetermined in this point review.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Uganda Ministry of Tourism, Wildlife and Antiquities",
+          "Wikidata contributors"
+        ],
+        "description": "Independence Monument, Kampala is a documented heritage site in Kampala, Uganda.",
+        "description_zh": "坎帕拉独立纪念碑位于乌干达，见主管机构公开访客资料。地图使用有来源的代表点。",
+        "details": "The named public heritage place is located in Kampala.",
+        "geography": {
+          "authority_id": "supplement:auth:ug-public:Q67758661",
+          "countries": [
+            "UG"
+          ],
+          "note": "Authority locality: Kampala.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national museum portal identifies the publicly visible historic independence monument.",
+            "id": "heritage-visitor:Q67758661",
+            "license": null,
+            "publisher": "Uganda Ministry of Tourism, Wildlife and Antiquities",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Uganda Museums: Independence Monument",
+            "uri": "https://museums.tourism.go.ug/independence-monument/"
+          }
+        },
+        "id": "auth:ug-public:Q67758661",
+        "location_precision": null,
+        "names": [
+          "坎帕拉独立纪念碑",
+          "Independence Monument, Kampala",
+          "Independence Monument"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          32.581609824212556,
+          0.31571258022170456
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national museum portal identifies the publicly visible historic independence monument.",
+            "id": "heritage-visitor:Q67758661",
+            "license": null,
+            "publisher": "Uganda Ministry of Tourism, Wildlife and Antiquities",
+            "revision": "Public source retrieved 2026-11-28",
+            "title": "Uganda Museums: Independence Monument",
+            "uri": "https://museums.tourism.go.ug/independence-monument/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 32.581609824212556, latitude 0.31571258022170456",
+            "id": "wikidata:Q67758661",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2573776452. P625 statement Q67758661$769C7CBB-9ACA-4A98-B0B1-914AE8EB10C7.",
+            "title": "Independence Monument, Kampala representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q67758661.json"
+          }
+        ],
+        "source_uri": "https://museums.tourism.go.ug/independence-monument/",
+        "title": "Independence Monument, Kampala",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "ug-national-independence.htm",
+          "sha256": "8beea5aad4383414c70faa10681046c5921e9154fe1276f3ac21e50d9528a8e7",
+          "uri": "https://museums.tourism.go.ug/independence-monument/"
+        },
+        {
+          "filename": "Q67758661.json",
+          "sha256": "934a573a387bc906bb588498bb6b35f7242cae5dcee1fbf84ec67ed1c8dfe733",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q67758661.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth statement, with the source precision retained.",
+        "point": [
+          33.504,
+          1.283
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7071070.json",
+        "statement_id": "Q7071070$087073B6-B148-44BE-A67F-7E9C2309DA33"
+      },
+      "independent_review": {
+        "method": "Compared the original public access, source hashes and selected CC0 or GeoNames WGS84 statements. Checked older component records, distinct palace grounds and the custodian-led access scope of Wamala.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The named public heritage place is located in Kumi District.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named public place and representative point",
+          "note": "Historical phases remain undetermined in this point review.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Uganda Tourism Board",
+          "Kumi District Local Government",
+          "Wikidata contributors"
+        ],
+        "description": "Nyero Rock Paintings is a documented heritage site in Kumi District, Uganda.",
+        "description_zh": "涅罗岩画遗址位于乌干达，见主管机构公开访客资料。地图使用有来源的代表点。",
+        "details": "The named public heritage place is located in Kumi District.",
+        "geography": {
+          "authority_id": "supplement:auth:ug-public:Q7071070",
+          "countries": [
+            "UG"
+          ],
+          "note": "Authority locality: Kumi District.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism guide identifies the named Nyero rock art heritage grounds and public visiting.",
+            "id": "heritage-visitor:Q7071070",
+            "license": null,
+            "publisher": "Uganda Tourism Board",
+            "revision": "Original official visitor guide, PDF page 70",
+            "title": "Uganda Tourism Board 2025 destination catalogue",
+            "uri": "https://exploreuganda.com/wp-content/uploads/2025/07/UTB-Catalogue-Uganda-2025_Option-1.pdf"
+          }
+        },
+        "id": "auth:ug-public:Q7071070",
+        "location_precision": null,
+        "names": [
+          "涅罗岩画遗址",
+          "Nyero Rock Paintings",
+          "Nyero Rockpaintings",
+          "Nyero rock paintings"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          33.504,
+          1.283
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism guide identifies the named Nyero rock art heritage grounds and public visiting.",
+            "id": "heritage-visitor:Q7071070",
+            "license": null,
+            "publisher": "Uganda Tourism Board",
+            "revision": "Original official visitor guide, PDF page 70",
+            "title": "Uganda Tourism Board 2025 destination catalogue",
+            "uri": "https://exploreuganda.com/wp-content/uploads/2025/07/UTB-Catalogue-Uganda-2025_Option-1.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public source corroborates the separately named heritage site and visit scope.",
+            "id": "public-scope:Q7071070:1",
+            "license": null,
+            "publisher": "Kumi District Local Government",
+            "revision": "Authority document retrieved 2026-11-28",
+            "title": "Nyero Rock Paintings in Kumi District",
+            "uri": "https://www.kumi.go.ug/opportunity/iteso-authors-nyero-rock-paintings"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 33.504, latitude 1.283",
+            "id": "wikidata:Q7071070",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2528414503. P625 statement Q7071070$087073B6-B148-44BE-A67F-7E9C2309DA33.",
+            "title": "Nyero Rock Paintings representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7071070.json"
+          }
+        ],
+        "source_uri": "https://exploreuganda.com/wp-content/uploads/2025/07/UTB-Catalogue-Uganda-2025_Option-1.pdf",
+        "title": "Nyero Rock Paintings",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "ug-2025-utb.pdf",
+          "sha256": "5ec35842f68139811776c7c7a623b0d61a7ca1aaa2ddc6afdff6a2f746c43233",
+          "uri": "https://exploreuganda.com/wp-content/uploads/2025/07/UTB-Catalogue-Uganda-2025_Option-1.pdf"
+        },
+        {
+          "filename": "Q7071070.json",
+          "sha256": "0e3890fc4caac500145c762daf2bffe839dd8dea23e5a13158e83bd813c795e0",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7071070.json"
+        },
+        {
+          "filename": "ug-nyero-kumi.htm",
+          "sha256": "d97f5fb3341b4f36ad6a34236c2d59dda46c8f00fcf7b0f70e8534cd9eda1b3e",
+          "uri": "https://www.kumi.go.ug/opportunity/iteso-authors-nyero-rock-paintings"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Thirteen independently verified public historical or archaeological sites in Tanzania and Uganda, with checked site identity and visitor scope."
+}

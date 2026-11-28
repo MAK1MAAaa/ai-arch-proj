@@ -1,0 +1,1821 @@
+{
+  "base_count": 5272,
+  "base_ids_sha256": "7cd54780831b3f8bd771e9120597657f83e6b8e2961eb697bf7d19959a6589cd",
+  "base_sites_sha256": "f204d86b2d88bf2f686aef49edfa7df0c87f014a8e61f30401997b39fe0db64b",
+  "cohort_version": "us-southwest-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The original CC0 point is inside the publicly interpreted site boundary, close to the mapped archaeological enclosure and ballcourt.",
+        "point": [
+          -111.984167,
+          33.446389
+        ],
+        "precision": 0.001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4384906.json",
+        "statement_id": "q4384906$7FC4B67B-7590-4573-847A-D1A8BC3AD61F"
+      },
+      "independent_review": {
+        "method": "Independently recomputed fixed NPS public Places, NRHP and BLM coordinate records or native Wikidata, checked current access and permitted routes, compared authority outlines and whole corpus identity/WHC components; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original ancestral site in Phoenix administered by the city's S’edav Va’aki Museum. Public access covers the designated interpretive platform mound trail.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original archaeological identity, licensed point and public visitor scope assessed.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "City of Phoenix",
+          "Wikidata contributors"
+        ],
+        "description": "The original ancestral site in Phoenix administered by the city's S’edav Va’aki Museum. Public access covers the designated interpretive platform mound trail.",
+        "description_zh": "塞达夫瓦阿基遗址位于美国亚利桑那州。地图显示公开参观区域的代表点，现场请沿主管方指定路线参观。",
+        "details": "The original ancestral site in Phoenix administered by the city's S’edav Va’aki Museum. Public access covers the designated interpretive platform mound trail.",
+        "geography": {
+          "authority_id": "supplement:auth:us-southwest:az-sedav",
+          "countries": [
+            "US"
+          ],
+          "note": "Named public cultural heritage representative point.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The city identifies the archaeological outdoor platform mound trail and the on-site heritage interpretation.",
+            "id": "auth:us-southwest:az-sedav:source:1",
+            "license": null,
+            "publisher": "City of Phoenix",
+            "revision": "Frozen source 2026-11-28. SHA-256 b0f36ccf4bbc3fa611739449515a60f37d9b3d2fb3a0effd2afc613485293866.",
+            "title": "S’edav Va’aki Archaeological Site public visitor information",
+            "uri": "https://www.phoenix.gov/administration/departments/sedav-vaaki/exhibits/outdoor-trails.html"
+          }
+        },
+        "id": "auth:us-southwest:az-sedav",
+        "location_precision": null,
+        "names": [
+          "塞达夫瓦阿基遗址",
+          "Pueblo Grande",
+          "Pueblo Grande Ruin and Irrigation Sites"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -111.984167,
+          33.446389
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The city identifies the archaeological outdoor platform mound trail and the on-site heritage interpretation.",
+            "id": "auth:us-southwest:az-sedav:source:1",
+            "license": null,
+            "publisher": "City of Phoenix",
+            "revision": "Frozen source 2026-11-28. SHA-256 b0f36ccf4bbc3fa611739449515a60f37d9b3d2fb3a0effd2afc613485293866.",
+            "title": "S’edav Va’aki Archaeological Site public visitor information",
+            "uri": "https://www.phoenix.gov/administration/departments/sedav-vaaki/exhibits/outdoor-trails.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator publishes visitor admissions and hours for the same museum and on-site interpretive trail.",
+            "id": "auth:us-southwest:az-sedav:source:2",
+            "license": null,
+            "publisher": "City of Phoenix",
+            "revision": "Frozen source 2026-11-28. SHA-256 fadd3321d76e3453479acd88b92cb42863179ac5323e41fc9839c948a4c178d1.",
+            "title": "S’edav Va’aki Archaeological Site public visitor information",
+            "uri": "https://www.phoenix.gov/administration/departments/sedav-vaaki/plan-your-visit.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -111.984167, latitude 33.446389.",
+            "id": "auth:us-southwest:az-sedav:source:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Original Wikidata revision 2540980356; P625 q4384906$7FC4B67B-7590-4573-847A-D1A8BC3AD61F.",
+            "title": "S’edav Va’aki Archaeological Site representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4384906.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The city’s current trail map shows the public Interpretive Mound Trail and locates restricted construction inside the museum.",
+            "id": "auth:us-southwest:az-sedav:independent:evidence:4",
+            "license": null,
+            "publisher": "City of Phoenix",
+            "revision": "Retrieved 2026-11-28; SHA-256 5bed98ad614edb8f1c46ba9b98884456b036d0d51dc0bbf0286e2ae13f84d75b.",
+            "title": "S’edav Va’aki temporarily modified visitor route, 2026",
+            "uri": "https://www.phoenix.gov/content/dam/phoenix/sedavvaaki/documents/visit-us/Temporary%20Museum%20Map%20and%20Trail%20Guide%202026%20-%20Online%20Version.pdf"
+          }
+        ],
+        "source_uri": "https://www.phoenix.gov/administration/departments/sedav-vaaki/exhibits/outdoor-trails.html",
+        "title": "S’edav Va’aki Archaeological Site",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q4384906.json",
+          "sha256": "4afef6bd3f54a0658c7476ebdf3a28f1cb9523a6dfa5259853304797d402b597",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4384906.json"
+        },
+        {
+          "filename": "sedav-trail.html",
+          "sha256": "b0f36ccf4bbc3fa611739449515a60f37d9b3d2fb3a0effd2afc613485293866",
+          "uri": "https://www.phoenix.gov/administration/departments/sedav-vaaki/exhibits/outdoor-trails.html"
+        },
+        {
+          "filename": "sedav-public.html",
+          "sha256": "fadd3321d76e3453479acd88b92cb42863179ac5323e41fc9839c948a4c178d1",
+          "uri": "https://www.phoenix.gov/administration/departments/sedav-vaaki/plan-your-visit.html"
+        },
+        {
+          "filename": "independent-source/az-sedav-2026-temp-public-map.pdf",
+          "sha256": "5bed98ad614edb8f1c46ba9b98884456b036d0d51dc0bbf0286e2ae13f84d75b",
+          "uri": "https://www.phoenix.gov/content/dam/phoenix/sedavvaaki/documents/visit-us/Temporary%20Museum%20Map%20and%20Trail%20Guide%202026%20-%20Online%20Version.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "This is the published National Register Lower Ruin reference point. The upper ruin and visitor center have separate source records.",
+        "point": [
+          -111.11627803999994,
+          33.64443444400007
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27ARIZONA%27%2C%27NEW+MEXICO%27%2C%27COLORADO%27%2C%27UTAH%27%29+AND+%28UPPER%28RESNAME%29+LIKE+%27%25WUPATKI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25WALNUT+CANYON+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25TUZIGOOT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25MONTEZUMA+CASTLE%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25MONTEZUMA+WELL%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25CASA+GRANDE+RUINS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25TONTO+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25LOWER+CLIFF+DWELLING%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PUEBLO+GRANDE+RUIN%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25HOMOLOVI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25FRIJOLES+CANYON%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25BANDELIER+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PECOS+NATIONAL%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PECOS+PUEBLO%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25GILA+CLIFF+DWELLINGS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25EL+MORRO+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25ATSINNA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25SALINAS+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25QUARAI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25ABO+MISSION%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25GRAN+QUIVIRA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25JEMEZ+STATE+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25JEMEZ+HISTORIC+SITE%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25CORONADO+STATE+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25KU+AUA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25LOWRY%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25HOVENWEEP+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25EDGE+OF+THE+CEDARS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25COOMBS+SITE%25%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independently recomputed fixed NPS public Places, NRHP and BLM coordinate records or native Wikidata, checked current access and permitted routes, compared authority outlines and whole corpus identity/WHC components; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The Lower Cliff Dwelling at Tonto National Monument and its designated public trail. Access is subject to the operator's posted hours and site conditions.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original archaeological identity, licensed point and public visitor scope assessed.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Park Service"
+        ],
+        "description": "The Lower Cliff Dwelling at Tonto National Monument and its designated public trail. Access is subject to the operator's posted hours and site conditions.",
+        "description_zh": "通托下层崖居遗址位于美国亚利桑那州。地图显示公开参观区域的代表点，现场请沿主管方指定路线参观。",
+        "details": "The Lower Cliff Dwelling at Tonto National Monument and its designated public trail. Access is subject to the operator's posted hours and site conditions.",
+        "geography": {
+          "authority_id": "supplement:auth:us-southwest:az-tonto-lower",
+          "countries": [
+            "US"
+          ],
+          "note": "Named public cultural heritage representative point.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "NPS identifies the separate public trail leading to the Lower Cliff Dwelling.",
+            "id": "auth:us-southwest:az-tonto-lower:source:1",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 398b8f60a526f2adc42106c9b9a110028c4e9d98aa868c99adc7855eead9a0bc.",
+            "title": "Tonto Lower Cliff Dwelling visitor precinct public visitor information",
+            "uri": "https://www.nps.gov/thingstodo/hike-the-lower-cliff-dwelling-trail.htm"
+          }
+        },
+        "id": "auth:us-southwest:az-tonto-lower",
+        "location_precision": null,
+        "names": [
+          "通托下层崖居遗址",
+          "Tonto Lower Ruin"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -111.11627803999994,
+          33.64443444400007
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "NPS identifies the separate public trail leading to the Lower Cliff Dwelling.",
+            "id": "auth:us-southwest:az-tonto-lower:source:1",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 398b8f60a526f2adc42106c9b9a110028c4e9d98aa868c99adc7855eead9a0bc.",
+            "title": "Tonto Lower Cliff Dwelling visitor precinct public visitor information",
+            "uri": "https://www.nps.gov/thingstodo/hike-the-lower-cliff-dwelling-trail.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The current bulletin confirms the lower route and distinguishes access to the separate Upper Cliff Dwelling.",
+            "id": "auth:us-southwest:az-tonto-lower:source:2",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 006715d6cfe099fefd998f023d7b380b602675aba022f251a7aad0223b76d5ae.",
+            "title": "Tonto Lower Cliff Dwelling visitor precinct public visitor information",
+            "uri": "https://www.nps.gov/tont/planyourvisit/conditions.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -111.11627803999994, latitude 33.64443444400007.",
+            "id": "auth:us-southwest:az-tonto-lower:source:3",
+            "license": "U.S. public domain (federal agency data)",
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 5f2599ba27bb5dee8700e1c65aade1ec8b8158f44c0a86bc78edb7ef98bb0b05.",
+            "title": "Tonto National Monument, Lower Ruin (AZ U:8:047A ASM) representative point",
+            "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27ARIZONA%27%2C%27NEW+MEXICO%27%2C%27COLORADO%27%2C%27UTAH%27%29+AND+%28UPPER%28RESNAME%29+LIKE+%27%25WUPATKI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25WALNUT+CANYON+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25TUZIGOOT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25MONTEZUMA+CASTLE%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25MONTEZUMA+WELL%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25CASA+GRANDE+RUINS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25TONTO+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25LOWER+CLIFF+DWELLING%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PUEBLO+GRANDE+RUIN%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25HOMOLOVI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25FRIJOLES+CANYON%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25BANDELIER+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PECOS+NATIONAL%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PECOS+PUEBLO%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25GILA+CLIFF+DWELLINGS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25EL+MORRO+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25ATSINNA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25SALINAS+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25QUARAI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25ABO+MISSION%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25GRAN+QUIVIRA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25JEMEZ+STATE+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25JEMEZ+HISTORIC+SITE%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25CORONADO+STATE+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25KU+AUA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25LOWRY%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25HOVENWEEP+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25EDGE+OF+THE+CEDARS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25COOMBS+SITE%25%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+          }
+        ],
+        "source_uri": "https://www.nps.gov/thingstodo/hike-the-lower-cliff-dwelling-trail.htm",
+        "title": "Tonto Lower Cliff Dwelling visitor precinct",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "nrhp-southwest-filtered.geojson",
+          "sha256": "5f2599ba27bb5dee8700e1c65aade1ec8b8158f44c0a86bc78edb7ef98bb0b05",
+          "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27ARIZONA%27%2C%27NEW+MEXICO%27%2C%27COLORADO%27%2C%27UTAH%27%29+AND+%28UPPER%28RESNAME%29+LIKE+%27%25WUPATKI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25WALNUT+CANYON+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25TUZIGOOT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25MONTEZUMA+CASTLE%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25MONTEZUMA+WELL%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25CASA+GRANDE+RUINS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25TONTO+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25LOWER+CLIFF+DWELLING%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PUEBLO+GRANDE+RUIN%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25HOMOLOVI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25FRIJOLES+CANYON%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25BANDELIER+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PECOS+NATIONAL%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PECOS+PUEBLO%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25GILA+CLIFF+DWELLINGS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25EL+MORRO+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25ATSINNA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25SALINAS+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25QUARAI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25ABO+MISSION%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25GRAN+QUIVIRA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25JEMEZ+STATE+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25JEMEZ+HISTORIC+SITE%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25CORONADO+STATE+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25KU+AUA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25LOWRY%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25HOVENWEEP+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25EDGE+OF+THE+CEDARS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25COOMBS+SITE%25%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+        },
+        {
+          "filename": "tonto-public.html",
+          "sha256": "398b8f60a526f2adc42106c9b9a110028c4e9d98aa868c99adc7855eead9a0bc",
+          "uri": "https://www.nps.gov/thingstodo/hike-the-lower-cliff-dwelling-trail.htm"
+        },
+        {
+          "filename": "tonto-current.html",
+          "sha256": "006715d6cfe099fefd998f023d7b380b602675aba022f251a7aad0223b76d5ae",
+          "uri": "https://www.nps.gov/tont/planyourvisit/conditions.htm"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "The NPS public activity point represents the Wukoki visitor approach. It is distinct from the archaeologically separate Wupatki Pueblo to the west.",
+        "point": [
+          -111.32865251967485,
+          35.529555489593456
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://developer.nps.gov/api/v1/thingstodo?parkCode=wupa%2Cwaca%2Ctuzi%2Cmoca%2Ccagr%2Ctont&limit=150",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independently recomputed fixed NPS public Places, NRHP and BLM coordinate records or native Wikidata, checked current access and permitted routes, compared authority outlines and whole corpus identity/WHC components; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Wukoki Pueblo is a separately named ancestral Pueblo within Wupatki National Monument. Visitors can use the designated trail to the base.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original archaeological identity, licensed point and public visitor scope assessed.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Park Service"
+        ],
+        "description": "Wukoki Pueblo is a separately named ancestral Pueblo within Wupatki National Monument. Visitors can use the designated trail to the base.",
+        "description_zh": "乌科基普韦布洛遗址位于美国亚利桑那州。地图显示公开参观区域的代表点，现场请沿主管方指定路线参观。",
+        "details": "Wukoki Pueblo is a separately named ancestral Pueblo within Wupatki National Monument. Visitors can use the designated trail to the base.",
+        "geography": {
+          "authority_id": "supplement:auth:us-southwest:az-wukoki",
+          "countries": [
+            "US"
+          ],
+          "note": "Named public cultural heritage representative point.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The custodian describes its separate access road and the developed visitor trail to the base of Wukoki Pueblo.",
+            "id": "auth:us-southwest:az-wukoki:source:1",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 8ba3a35a87e2caa84bde67be2c687304e0104282e0f11f896320f66c8eba7477.",
+            "title": "Wukoki Pueblo public trail public visitor information",
+            "uri": "https://www.nps.gov/thingstodo/visit-wukoki-pueblo.htm"
+          }
+        },
+        "id": "auth:us-southwest:az-wukoki",
+        "location_precision": null,
+        "names": [
+          "乌科基普韦布洛遗址",
+          "Wukoki Pueblo"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -111.32865251967485,
+          35.529555489593456
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The custodian describes its separate access road and the developed visitor trail to the base of Wukoki Pueblo.",
+            "id": "auth:us-southwest:az-wukoki:source:1",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 8ba3a35a87e2caa84bde67be2c687304e0104282e0f11f896320f66c8eba7477.",
+            "title": "Wukoki Pueblo public trail public visitor information",
+            "uri": "https://www.nps.gov/thingstodo/visit-wukoki-pueblo.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The superintendent names Wukoki among the developed archaeological sites open to visitors.",
+            "id": "auth:us-southwest:az-wukoki:source:2",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 2b2339f30fbd5928598101d1eed5969a701022f0eed1e2c16f8eba86e0a1683e.",
+            "title": "Wukoki Pueblo public trail public visitor information",
+            "uri": "https://www.nps.gov/wupa/learn/management/superintendent-compendium.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -111.32865251967485, latitude 35.529555489593456.",
+            "id": "auth:us-southwest:az-wukoki:source:3",
+            "license": "U.S. public domain (federal agency data)",
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 31a4797b191b47478474cb7c3fe7008ad0a1121550fa68c5ff69738e6b96daa8.",
+            "title": "Visit Wukoki Pueblo representative point",
+            "uri": "https://developer.nps.gov/api/v1/thingstodo?parkCode=wupa%2Cwaca%2Ctuzi%2Cmoca%2Ccagr%2Ctont&limit=150"
+          }
+        ],
+        "source_uri": "https://www.nps.gov/thingstodo/visit-wukoki-pueblo.htm",
+        "title": "Wukoki Pueblo public trail",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "nps-thingstodo-az.json",
+          "sha256": "31a4797b191b47478474cb7c3fe7008ad0a1121550fa68c5ff69738e6b96daa8",
+          "uri": "https://developer.nps.gov/api/v1/thingstodo?parkCode=wupa%2Cwaca%2Ctuzi%2Cmoca%2Ccagr%2Ctont&limit=150"
+        },
+        {
+          "filename": "wukoki-public.html",
+          "sha256": "8ba3a35a87e2caa84bde67be2c687304e0104282e0f11f896320f66c8eba7477",
+          "uri": "https://www.nps.gov/thingstodo/visit-wukoki-pueblo.htm"
+        },
+        {
+          "filename": "wupatki-current-public-rules.html",
+          "sha256": "2b2339f30fbd5928598101d1eed5969a701022f0eed1e2c16f8eba86e0a1683e",
+          "uri": "https://www.nps.gov/wupa/learn/management/superintendent-compendium.htm"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Original NPS Places point Wupatki Pueblo & Blowhole lies within the mapped principal structure. This is a public interpretation reference for the whole visitor precinct.",
+        "point": [
+          -111.372841111,
+          35.5211506985
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://developer.nps.gov/api/v1/places?parkCode=wupa%2Cwaca%2Ctuzi%2Cmoca%2Ccagr%2Ctont&limit=150",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independently recomputed fixed NPS public Places, NRHP and BLM coordinate records or native Wikidata, checked current access and permitted routes, compared authority outlines and whole corpus identity/WHC components; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The principal ancestral Pueblo at Wupatki National Monument. Public access follows the designated Wupatki Pueblo Trail and overlook.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original archaeological identity, licensed point and public visitor scope assessed.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Park Service"
+        ],
+        "description": "The principal ancestral Pueblo at Wupatki National Monument. Public access follows the designated Wupatki Pueblo Trail and overlook.",
+        "description_zh": "乌帕特基普韦布洛遗址位于美国亚利桑那州。地图显示公开参观区域的代表点，现场请沿主管方指定路线参观。",
+        "details": "The principal ancestral Pueblo at Wupatki National Monument. Public access follows the designated Wupatki Pueblo Trail and overlook.",
+        "geography": {
+          "authority_id": "supplement:auth:us-southwest:az-wupatki",
+          "countries": [
+            "US"
+          ],
+          "note": "Named public cultural heritage representative point.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "NPS identifies the main Pueblo, overlook and designated self-guided trail at the original archaeological site.",
+            "id": "auth:us-southwest:az-wupatki:source:1",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 edc555f03ef493f2c6561974e5b7a78031c8689ffced8f297fa5133ceca1b456.",
+            "title": "Wupatki Pueblo visitor precinct public visitor information",
+            "uri": "https://www.nps.gov/thingstodo/visit-wupatki-pueblo.htm"
+          }
+        },
+        "id": "auth:us-southwest:az-wupatki",
+        "location_precision": null,
+        "names": [
+          "乌帕特基普韦布洛遗址",
+          "Wupatki Pueblo"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -111.372841111,
+          35.5211506985
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "NPS identifies the main Pueblo, overlook and designated self-guided trail at the original archaeological site.",
+            "id": "auth:us-southwest:az-wupatki:source:1",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 edc555f03ef493f2c6561974e5b7a78031c8689ffced8f297fa5133ceca1b456.",
+            "title": "Wupatki Pueblo visitor precinct public visitor information",
+            "uri": "https://www.nps.gov/thingstodo/visit-wupatki-pueblo.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The current superintendent's compendium explicitly names Wupatki among the developed archaeological sites open to visitors.",
+            "id": "auth:us-southwest:az-wupatki:source:2",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 2b2339f30fbd5928598101d1eed5969a701022f0eed1e2c16f8eba86e0a1683e.",
+            "title": "Wupatki Pueblo visitor precinct public visitor information",
+            "uri": "https://www.nps.gov/wupa/learn/management/superintendent-compendium.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -111.372841111, latitude 35.5211506985.",
+            "id": "auth:us-southwest:az-wupatki:source:3",
+            "license": "U.S. public domain (federal agency data)",
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 a05b124824bd976d275dd7eb4127380c753c444ddfe3c8b952b6da24b3bdcb99.",
+            "title": "Wupatki Pueblo & Blowhole representative point",
+            "uri": "https://developer.nps.gov/api/v1/places?parkCode=wupa%2Cwaca%2Ctuzi%2Cmoca%2Ccagr%2Ctont&limit=150"
+          }
+        ],
+        "source_uri": "https://www.nps.gov/thingstodo/visit-wupatki-pueblo.htm",
+        "title": "Wupatki Pueblo visitor precinct",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "nps-places-az.json",
+          "sha256": "a05b124824bd976d275dd7eb4127380c753c444ddfe3c8b952b6da24b3bdcb99",
+          "uri": "https://developer.nps.gov/api/v1/places?parkCode=wupa%2Cwaca%2Ctuzi%2Cmoca%2Ccagr%2Ctont&limit=150"
+        },
+        {
+          "filename": "wupatki-public.html",
+          "sha256": "edc555f03ef493f2c6561974e5b7a78031c8689ffced8f297fa5133ceca1b456",
+          "uri": "https://www.nps.gov/thingstodo/visit-wupatki-pueblo.htm"
+        },
+        {
+          "filename": "wupatki-current-public-rules.html",
+          "sha256": "2b2339f30fbd5928598101d1eed5969a701022f0eed1e2c16f8eba86e0a1683e",
+          "uri": "https://www.nps.gov/wupa/learn/management/superintendent-compendium.htm"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Original BLM visitor-map location at Lowry's Great House. A generalized NRHP point under the name Lowry Ruin is over 700 m away and was not used.",
+        "point": [
+          -108.9201,
+          37.58476
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://www.blm.gov/visit/lowry-pueblo-national-historic-landmark",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independently recomputed fixed NPS public Places, NRHP and BLM coordinate records or native Wikidata, checked current access and permitted routes, compared authority outlines and whole corpus identity/WHC components; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original Lowry Pueblo on public BLM land in southwestern Colorado. Visitor access follows the marked trail to the Great House and the large kiva.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original archaeological identity, licensed point and public visitor scope assessed.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Bureau of Land Management"
+        ],
+        "description": "The original Lowry Pueblo on public BLM land in southwestern Colorado. Visitor access follows the marked trail to the Great House and the large kiva.",
+        "description_zh": "劳里普韦布洛遗址位于美国科罗拉多州。地图显示公开参观区域的代表点，现场请沿主管方指定路线参观。",
+        "details": "The original Lowry Pueblo on public BLM land in southwestern Colorado. Visitor access follows the marked trail to the Great House and the large kiva.",
+        "geography": {
+          "authority_id": "supplement:auth:us-southwest:co-lowry",
+          "countries": [
+            "US"
+          ],
+          "note": "Named public cultural heritage representative point.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The federal custodian identifies the original site and its designated visitor trail and viewing stops.",
+            "id": "auth:us-southwest:co-lowry:source:1",
+            "license": null,
+            "publisher": "Bureau of Land Management",
+            "revision": "Frozen source 2026-11-28. SHA-256 3e7677817b93d38e008cd8c6fd2440a68fa1cd35ad8c3d5f64748e0422cb899b.",
+            "title": "Lowry Pueblo visitor precinct public visitor information",
+            "uri": "https://www.blm.gov/visit/lowry-pueblo-national-historic-landmark"
+          }
+        },
+        "id": "auth:us-southwest:co-lowry",
+        "location_precision": null,
+        "names": [
+          "劳里普韦布洛遗址",
+          "Lowry Pueblo",
+          "Lowry Ruin"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -108.9201,
+          37.58476
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The federal custodian identifies the original site and its designated visitor trail and viewing stops.",
+            "id": "auth:us-southwest:co-lowry:source:1",
+            "license": null,
+            "publisher": "Bureau of Land Management",
+            "revision": "Frozen source 2026-11-28. SHA-256 3e7677817b93d38e008cd8c6fd2440a68fa1cd35ad8c3d5f64748e0422cb899b.",
+            "title": "Lowry Pueblo visitor precinct public visitor information",
+            "uri": "https://www.blm.gov/visit/lowry-pueblo-national-historic-landmark"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -108.9201, latitude 37.58476.",
+            "id": "auth:us-southwest:co-lowry:source:2",
+            "license": "U.S. public domain (federal agency data)",
+            "publisher": "Bureau of Land Management",
+            "revision": "Frozen source 2026-11-28. SHA-256 3e7677817b93d38e008cd8c6fd2440a68fa1cd35ad8c3d5f64748e0422cb899b.",
+            "title": "Lowry Pueblo National Historic Landmark representative point",
+            "uri": "https://www.blm.gov/visit/lowry-pueblo-national-historic-landmark"
+          }
+        ],
+        "source_uri": "https://www.blm.gov/visit/lowry-pueblo-national-historic-landmark",
+        "title": "Lowry Pueblo visitor precinct",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "lowry-blm.html",
+          "sha256": "3e7677817b93d38e008cd8c6fd2440a68fa1cd35ad8c3d5f64748e0422cb899b",
+          "uri": "https://www.blm.gov/visit/lowry-pueblo-national-historic-landmark"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Original BLM Geographic Coordinates of the documented visitor locality near the named trailhead. It represents the managed viewpoint route without marking separate structures.",
+        "point": [
+          -108.972199,
+          37.45454
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://www.blm.gov/visit/painted-hand-pueblo",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independently recomputed fixed NPS public Places, NRHP and BLM coordinate records or native Wikidata, checked current access and permitted routes, compared authority outlines and whole corpus identity/WHC components; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The ancestral Painted Hand Pueblo viewed from BLM's designated visitor trail and overlooks in southwestern Colorado. The map point represents the publicly managed approach.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original archaeological identity, licensed point and public visitor scope assessed.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Bureau of Land Management"
+        ],
+        "description": "The ancestral Painted Hand Pueblo viewed from BLM's designated visitor trail and overlooks in southwestern Colorado. The map point represents the publicly managed approach.",
+        "description_zh": "彩手普韦布洛遗址观景区位于美国科罗拉多州。地图显示公开参观区域的代表点，现场请沿主管方指定路线参观。",
+        "details": "The ancestral Painted Hand Pueblo viewed from BLM's designated visitor trail and overlooks in southwestern Colorado. The map point represents the publicly managed approach.",
+        "geography": {
+          "authority_id": "supplement:auth:us-southwest:co-painted",
+          "countries": [
+            "US"
+          ],
+          "note": "Named public cultural heritage representative point.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The November 2026 visitor materials specify the accessible trail segment, the rim overlook and the legal managed approach.",
+            "id": "auth:us-southwest:co-painted:source:1",
+            "license": null,
+            "publisher": "Bureau of Land Management",
+            "revision": "Frozen source 2026-11-28. SHA-256 e23c01c7910a1268d4c977f35a764099c8ab765dbebea5a330cd70f80b5213f1.",
+            "title": "Painted Hand Pueblo public overlook precinct public visitor information",
+            "uri": "https://www.blm.gov/visit/painted-hand-pueblo"
+          }
+        },
+        "id": "auth:us-southwest:co-painted",
+        "location_precision": null,
+        "names": [
+          "彩手普韦布洛遗址观景区",
+          "Painted Hand Pueblo"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -108.972199,
+          37.45454
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The November 2026 visitor materials specify the accessible trail segment, the rim overlook and the legal managed approach.",
+            "id": "auth:us-southwest:co-painted:source:1",
+            "license": null,
+            "publisher": "Bureau of Land Management",
+            "revision": "Frozen source 2026-11-28. SHA-256 e23c01c7910a1268d4c977f35a764099c8ab765dbebea5a330cd70f80b5213f1.",
+            "title": "Painted Hand Pueblo public overlook precinct public visitor information",
+            "uri": "https://www.blm.gov/visit/painted-hand-pueblo"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -108.972199, latitude 37.45454.",
+            "id": "auth:us-southwest:co-painted:source:2",
+            "license": "U.S. public domain (federal agency data)",
+            "publisher": "Bureau of Land Management",
+            "revision": "Frozen source 2026-11-28. SHA-256 e23c01c7910a1268d4c977f35a764099c8ab765dbebea5a330cd70f80b5213f1.",
+            "title": "Painted Hand Pueblo public overlook precinct representative point",
+            "uri": "https://www.blm.gov/visit/painted-hand-pueblo"
+          }
+        ],
+        "source_uri": "https://www.blm.gov/visit/painted-hand-pueblo",
+        "title": "Painted Hand Pueblo public overlook precinct",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "painted-hand-blm.html",
+          "sha256": "e23c01c7910a1268d4c977f35a764099c8ab765dbebea5a330cd70f80b5213f1",
+          "uri": "https://www.blm.gov/visit/painted-hand-pueblo"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Two Wikidata normal claims exist. The chosen point lies within the archaeological visitor precinct. The other is over eighty metres outside its mapped boundary.",
+        "point": [
+          -106.5575,
+          35.329444
+        ],
+        "precision": 0.001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5172163.json",
+        "statement_id": "q5172163$5B342480-CA90-479C-8C54-32D325A717DD"
+      },
+      "independent_review": {
+        "method": "Independently recomputed fixed NPS public Places, NRHP and BLM coordinate records or native Wikidata, checked current access and permitted routes, compared authority outlines and whole corpus identity/WHC components; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original Tiwa settlement interpreted at Coronado Historic Site in Bernalillo. Public scope covers the marked interpretive route and adobe reconstructions on the original footprint.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original archaeological identity, licensed point and public visitor scope assessed.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "New Mexico Department of Cultural Affairs",
+          "Wikidata contributors"
+        ],
+        "description": "The original Tiwa settlement interpreted at Coronado Historic Site in Bernalillo. Public scope covers the marked interpretive route and adobe reconstructions on the original footprint.",
+        "description_zh": "库阿瓦普韦布洛遗址位于美国新墨西哥州。地图显示公开参观区域的代表点，现场请沿主管方指定路线参观。",
+        "details": "The original Tiwa settlement interpreted at Coronado Historic Site in Bernalillo. Public scope covers the marked interpretive route and adobe reconstructions on the original footprint.",
+        "geography": {
+          "authority_id": "supplement:auth:us-southwest:nm-coronado",
+          "countries": [
+            "US"
+          ],
+          "note": "Named public cultural heritage representative point.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official site gives visitor access directions, guided-only admission to the reconstructed painted kiva, and operating arrangements.",
+            "id": "auth:us-southwest:nm-coronado:source:1",
+            "license": null,
+            "publisher": "New Mexico Department of Cultural Affairs",
+            "revision": "Retrieved 2026-11-28; SHA-256 1ff6a32877166d7d816fce92cb61ae62b0b20da3a056484d8b2d2a404b7f0a55.",
+            "title": "Coronado Historic Site visitor route and access controls",
+            "uri": "https://www.nmhistoricsites.dca.nm.gov/coronado/plan-your-visit/"
+          }
+        },
+        "id": "auth:us-southwest:nm-coronado",
+        "location_precision": null,
+        "names": [
+          "库阿瓦普韦布洛遗址",
+          "Coronado Historic Site",
+          "Kuaua Pueblo"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -106.5575,
+          35.329444
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official site gives visitor access directions, guided-only admission to the reconstructed painted kiva, and operating arrangements.",
+            "id": "auth:us-southwest:nm-coronado:source:1",
+            "license": null,
+            "publisher": "New Mexico Department of Cultural Affairs",
+            "revision": "Retrieved 2026-11-28; SHA-256 1ff6a32877166d7d816fce92cb61ae62b0b20da3a056484d8b2d2a404b7f0a55.",
+            "title": "Coronado Historic Site visitor route and access controls",
+            "uri": "https://www.nmhistoricsites.dca.nm.gov/coronado/plan-your-visit/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official public site list gives current visiting days and hours for Coronado Historic Site.",
+            "id": "auth:us-southwest:nm-coronado:source:2",
+            "license": null,
+            "publisher": "New Mexico Department of Cultural Affairs",
+            "revision": "Frozen source 2026-11-28. SHA-256 16b4ea626fc998a668f3cae44dbb797653a6a97bbae46957ab211b0f501636a6.",
+            "title": "Kuaua Pueblo public archaeological precinct public visitor information",
+            "uri": "https://www.nmculture.dca.nm.gov/new-mexico-museums/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -106.5575, latitude 35.329444.",
+            "id": "auth:us-southwest:nm-coronado:source:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Original Wikidata revision 2541594087; P625 q5172163$5B342480-CA90-479C-8C54-32D325A717DD.",
+            "title": "Kuaua Pueblo public archaeological precinct representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5172163.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator describes the archaeological visitor site and its historic interpretive displays.",
+            "id": "auth:us-southwest:nm-coronado:independent:evidence:4",
+            "license": null,
+            "publisher": "New Mexico Department of Cultural Affairs",
+            "revision": "Retrieved 2026-11-28; SHA-256 26e3d12d8615c1f1e9e4bc0e9f832d7e1d899fc2a47cd47348513ce272c686b9.",
+            "title": "Kuaua Pueblo, Coronado Historic Site",
+            "uri": "https://www.nmhistoricsites.dca.nm.gov/coronado/"
+          }
+        ],
+        "source_uri": "https://www.nmhistoricsites.dca.nm.gov/coronado/plan-your-visit/",
+        "title": "Kuaua Pueblo public archaeological precinct",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q5172163.json",
+          "sha256": "e5bb5a42b691dd8c870b18d21e5421dcf95659bc671cd14fa68aa59a0a9a3424",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5172163.json"
+        },
+        {
+          "filename": "independent-source/nm-coronado-state-plan.html",
+          "sha256": "1ff6a32877166d7d816fce92cb61ae62b0b20da3a056484d8b2d2a404b7f0a55",
+          "uri": "https://www.nmhistoricsites.dca.nm.gov/coronado/plan-your-visit/"
+        },
+        {
+          "filename": "nm-dca-public-hours.html",
+          "sha256": "16b4ea626fc998a668f3cae44dbb797653a6a97bbae46957ab211b0f501636a6",
+          "uri": "https://www.nmculture.dca.nm.gov/new-mexico-museums/"
+        },
+        {
+          "filename": "independent-source/nm-coronado-public-layout.html",
+          "sha256": "26e3d12d8615c1f1e9e4bc0e9f832d7e1d899fc2a47cd47348513ce272c686b9",
+          "uri": "https://www.nmhistoricsites.dca.nm.gov/coronado/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Uses the explicitly named at-dwellings meeting point in the November 27, 2026 ranger tour. The visitor center and trailhead have separate locations.",
+        "point": [
+          -108.267097,
+          33.227428
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://www.nps.gov/planyourvisit/event-details.htm?id=5289FE23-C9B4-279A-F5D90CDDDD3919D8",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independently recomputed fixed NPS public Places, NRHP and BLM coordinate records or native Wikidata, checked current access and permitted routes, compared authority outlines and whole corpus identity/WHC components; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original Mogollon dwellings on the managed Cliff Dweller Trail in New Mexico. Access is limited to the rooms and paths the park opens to visitors.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original archaeological identity, licensed point and public visitor scope assessed.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Park Service"
+        ],
+        "description": "The original Mogollon dwellings on the managed Cliff Dweller Trail in New Mexico. Access is limited to the rooms and paths the park opens to visitors.",
+        "description_zh": "希拉崖居遗址位于美国新墨西哥州。地图显示公开参观区域的代表点，现场请沿主管方指定路线参观。",
+        "details": "The original Mogollon dwellings on the managed Cliff Dweller Trail in New Mexico. Access is limited to the rooms and paths the park opens to visitors.",
+        "geography": {
+          "authority_id": "supplement:auth:us-southwest:nm-gila",
+          "countries": [
+            "US"
+          ],
+          "note": "Named public cultural heritage representative point.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official hours identify public access to the designated trail and the cliff dwellings.",
+            "id": "auth:us-southwest:nm-gila:source:1",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 b5b65ed68538d8d7e64864e84b9ef0ddac669532e33065e64a0b652a9d81a2b9.",
+            "title": "Gila Cliff Dwellings visitor precinct public visitor information",
+            "uri": "https://www.nps.gov/gicl/planyourvisit/hours.htm"
+          }
+        },
+        "id": "auth:us-southwest:nm-gila",
+        "location_precision": null,
+        "names": [
+          "希拉崖居遗址",
+          "Gila Cliff Dwellings"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -108.267097,
+          33.227428
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official hours identify public access to the designated trail and the cliff dwellings.",
+            "id": "auth:us-southwest:nm-gila:source:1",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 b5b65ed68538d8d7e64864e84b9ef0ddac669532e33065e64a0b652a9d81a2b9.",
+            "title": "Gila Cliff Dwellings visitor precinct public visitor information",
+            "uri": "https://www.nps.gov/gicl/planyourvisit/hours.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ranger guidance limits access to open rooms and the marked visitor trail.",
+            "id": "auth:us-southwest:nm-gila:source:2",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 46aea61718ee92d6e95956e9f2031962751e78d40463b94632caa09bf6054bd2.",
+            "title": "Gila Cliff Dwellings visitor precinct public visitor information",
+            "uri": "https://www.nps.gov/gicl/planyourvisit/hike-to-the-cliff-dwellings.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -108.267097, latitude 33.227428.",
+            "id": "auth:us-southwest:nm-gila:source:3",
+            "license": "U.S. public domain (federal agency data)",
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 7b66090f46805d2bdddca7c10149b5b8dcf5a37781f2e4bb6cb2d01f26f49181.",
+            "title": "Gila Cliff Dwellings visitor precinct representative point",
+            "uri": "https://www.nps.gov/planyourvisit/event-details.htm?id=5289FE23-C9B4-279A-F5D90CDDDD3919D8"
+          }
+        ],
+        "source_uri": "https://www.nps.gov/gicl/planyourvisit/hours.htm",
+        "title": "Gila Cliff Dwellings visitor precinct",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "gila-nov-2026-ranger.html",
+          "sha256": "7b66090f46805d2bdddca7c10149b5b8dcf5a37781f2e4bb6cb2d01f26f49181",
+          "uri": "https://www.nps.gov/planyourvisit/event-details.htm?id=5289FE23-C9B4-279A-F5D90CDDDD3919D8"
+        },
+        {
+          "filename": "gila-hours.html",
+          "sha256": "b5b65ed68538d8d7e64864e84b9ef0ddac669532e33065e64a0b652a9d81a2b9",
+          "uri": "https://www.nps.gov/gicl/planyourvisit/hours.htm"
+        },
+        {
+          "filename": "gila-hike.html",
+          "sha256": "46aea61718ee92d6e95956e9f2031962751e78d40463b94632caa09bf6054bd2",
+          "uri": "https://www.nps.gov/gicl/planyourvisit/hike-to-the-cliff-dwellings.htm"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "The historical Pecos National Monument public register point lies about nine metres from the original mission footprint on the same visitor circuit.",
+        "point": [
+          -105.68925607199998,
+          35.54978760800003
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27ARIZONA%27%2C%27NEW+MEXICO%27%2C%27COLORADO%27%2C%27UTAH%27%29+AND+%28UPPER%28RESNAME%29+LIKE+%27%25WUPATKI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25WALNUT+CANYON+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25TUZIGOOT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25MONTEZUMA+CASTLE%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25MONTEZUMA+WELL%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25CASA+GRANDE+RUINS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25TONTO+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25LOWER+CLIFF+DWELLING%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PUEBLO+GRANDE+RUIN%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25HOMOLOVI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25FRIJOLES+CANYON%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25BANDELIER+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PECOS+NATIONAL%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PECOS+PUEBLO%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25GILA+CLIFF+DWELLINGS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25EL+MORRO+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25ATSINNA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25SALINAS+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25QUARAI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25ABO+MISSION%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25GRAN+QUIVIRA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25JEMEZ+STATE+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25JEMEZ+HISTORIC+SITE%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25CORONADO+STATE+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25KU+AUA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25LOWRY%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25HOVENWEEP+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25EDGE+OF+THE+CEDARS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25COOMBS+SITE%25%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independently recomputed fixed NPS public Places, NRHP and BLM coordinate records or native Wikidata, checked current access and permitted routes, compared authority outlines and whole corpus identity/WHC components; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The archaeological Pecos Pueblo and adjoining Spanish mission in Pecos National Historical Park. Access follows the Ancestral Sites Trail and designated public stops.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original archaeological identity, licensed point and public visitor scope assessed.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Park Service"
+        ],
+        "description": "The archaeological Pecos Pueblo and adjoining Spanish mission in Pecos National Historical Park. Access follows the Ancestral Sites Trail and designated public stops.",
+        "description_zh": "佩科斯普韦布洛及传教站遗址位于美国新墨西哥州。地图显示公开参观区域的代表点，现场请沿主管方指定路线参观。",
+        "details": "The archaeological Pecos Pueblo and adjoining Spanish mission in Pecos National Historical Park. Access follows the Ancestral Sites Trail and designated public stops.",
+        "geography": {
+          "authority_id": "supplement:auth:us-southwest:nm-pecos",
+          "countries": [
+            "US"
+          ],
+          "note": "Named public cultural heritage representative point.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The Ancestral Sites Trail interprets both Pecos Pueblo and the historical Spanish Mission Church on their original ground.",
+            "id": "auth:us-southwest:nm-pecos:source:1",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 e0d5dce1c083646f1c208469ffb3da450c70f5a64ef699f292d6797387fea4f8.",
+            "title": "Pecos Pueblo and mission visitor precinct public visitor information",
+            "uri": "https://www.nps.gov/thingstodo/hiking-the-ancestral-sites-trail.htm"
+          }
+        },
+        "id": "auth:us-southwest:nm-pecos",
+        "location_precision": null,
+        "names": [
+          "佩科斯普韦布洛及传教站遗址",
+          "Pecos Pueblo"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -105.68925607199998,
+          35.54978760800003
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The Ancestral Sites Trail interprets both Pecos Pueblo and the historical Spanish Mission Church on their original ground.",
+            "id": "auth:us-southwest:nm-pecos:source:1",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 e0d5dce1c083646f1c208469ffb3da450c70f5a64ef699f292d6797387fea4f8.",
+            "title": "Pecos Pueblo and mission visitor precinct public visitor information",
+            "uri": "https://www.nps.gov/thingstodo/hiking-the-ancestral-sites-trail.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Current park hours explicitly identify the Ancestral Sites Trail separately from the visitor centre.",
+            "id": "auth:us-southwest:nm-pecos:source:2",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 ce6173f9b78232469b142d641c5affa9dafd46b25a6ba14c168ecc32abf28f8f.",
+            "title": "Pecos Pueblo and mission visitor precinct public visitor information",
+            "uri": "https://www.nps.gov/peco/planyourvisit/hours.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -105.68925607199998, latitude 35.54978760800003.",
+            "id": "auth:us-southwest:nm-pecos:source:3",
+            "license": "U.S. public domain (federal agency data)",
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 5f2599ba27bb5dee8700e1c65aade1ec8b8158f44c0a86bc78edb7ef98bb0b05.",
+            "title": "Pecos National Monument representative point",
+            "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27ARIZONA%27%2C%27NEW+MEXICO%27%2C%27COLORADO%27%2C%27UTAH%27%29+AND+%28UPPER%28RESNAME%29+LIKE+%27%25WUPATKI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25WALNUT+CANYON+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25TUZIGOOT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25MONTEZUMA+CASTLE%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25MONTEZUMA+WELL%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25CASA+GRANDE+RUINS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25TONTO+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25LOWER+CLIFF+DWELLING%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PUEBLO+GRANDE+RUIN%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25HOMOLOVI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25FRIJOLES+CANYON%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25BANDELIER+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PECOS+NATIONAL%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PECOS+PUEBLO%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25GILA+CLIFF+DWELLINGS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25EL+MORRO+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25ATSINNA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25SALINAS+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25QUARAI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25ABO+MISSION%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25GRAN+QUIVIRA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25JEMEZ+STATE+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25JEMEZ+HISTORIC+SITE%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25CORONADO+STATE+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25KU+AUA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25LOWRY%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25HOVENWEEP+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25EDGE+OF+THE+CEDARS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25COOMBS+SITE%25%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+          }
+        ],
+        "source_uri": "https://www.nps.gov/thingstodo/hiking-the-ancestral-sites-trail.htm",
+        "title": "Pecos Pueblo and mission visitor precinct",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "nrhp-southwest-filtered.geojson",
+          "sha256": "5f2599ba27bb5dee8700e1c65aade1ec8b8158f44c0a86bc78edb7ef98bb0b05",
+          "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=State+IN+%28%27ARIZONA%27%2C%27NEW+MEXICO%27%2C%27COLORADO%27%2C%27UTAH%27%29+AND+%28UPPER%28RESNAME%29+LIKE+%27%25WUPATKI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25WALNUT+CANYON+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25TUZIGOOT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25MONTEZUMA+CASTLE%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25MONTEZUMA+WELL%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25CASA+GRANDE+RUINS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25TONTO+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25LOWER+CLIFF+DWELLING%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PUEBLO+GRANDE+RUIN%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25HOMOLOVI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25FRIJOLES+CANYON%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25BANDELIER+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PECOS+NATIONAL%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25PECOS+PUEBLO%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25GILA+CLIFF+DWELLINGS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25EL+MORRO+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25ATSINNA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25SALINAS+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25QUARAI%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25ABO+MISSION%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25GRAN+QUIVIRA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25JEMEZ+STATE+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25JEMEZ+HISTORIC+SITE%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25CORONADO+STATE+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25KU+AUA%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25LOWRY%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25HOVENWEEP+NATIONAL+MONUMENT%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25EDGE+OF+THE+CEDARS%25%27+OR+UPPER%28RESNAME%29+LIKE+%27%25COOMBS+SITE%25%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+        },
+        {
+          "filename": "pecos-public.html",
+          "sha256": "e0d5dce1c083646f1c208469ffb3da450c70f5a64ef699f292d6797387fea4f8",
+          "uri": "https://www.nps.gov/thingstodo/hiking-the-ancestral-sites-trail.htm"
+        },
+        {
+          "filename": "pecos-hours.html",
+          "sha256": "ce6173f9b78232469b142d641c5affa9dafd46b25a6ba14c168ecc32abf28f8f",
+          "uri": "https://www.nps.gov/peco/planyourvisit/hours.htm"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Uses the CC0 point near the designated Mission Loop. The older itineraries misassign Quarai's coordinates to other Salinas locations and are used for interpretation only.",
+        "point": [
+          -106.295,
+          34.595833
+        ],
+        "precision": 0.001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7269128.json",
+        "statement_id": "q7269128$F217DE14-CD89-4F9B-AE1E-D11108390429"
+      },
+      "independent_review": {
+        "method": "Independently recomputed fixed NPS public Places, NRHP and BLM coordinate records or native Wikidata, checked current access and permitted routes, compared authority outlines and whole corpus identity/WHC components; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The Quarai ancestral Pueblo and historical mission remains in the Quarai unit of Salinas Pueblo Missions National Monument. Public access follows the designated interpretive trail.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original archaeological identity, licensed point and public visitor scope assessed.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Park Service",
+          "Wikidata contributors"
+        ],
+        "description": "The Quarai ancestral Pueblo and historical mission remains in the Quarai unit of Salinas Pueblo Missions National Monument. Public access follows the designated interpretive trail.",
+        "description_zh": "夸赖普韦布洛及传教站遗址位于美国新墨西哥州。地图显示公开参观区域的代表点，现场请沿主管方指定路线参观。",
+        "details": "The Quarai ancestral Pueblo and historical mission remains in the Quarai unit of Salinas Pueblo Missions National Monument. Public access follows the designated interpretive trail.",
+        "geography": {
+          "authority_id": "supplement:auth:us-southwest:nm-quarai",
+          "countries": [
+            "US"
+          ],
+          "note": "Named public cultural heritage representative point.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The October 2026 hours explicitly identify Quarai as a named public unit.",
+            "id": "auth:us-southwest:nm-quarai:source:1",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 8a25079799ee9d3f7c03b19a0795128baf9eacd98c9db9c30c27179e84227b2f.",
+            "title": "Quarai Pueblo and mission public site public visitor information",
+            "uri": "https://www.nps.gov/sapu/planyourvisit/hours.htm"
+          }
+        },
+        "id": "auth:us-southwest:nm-quarai",
+        "location_precision": null,
+        "names": [
+          "夸赖普韦布洛及传教站遗址",
+          "Quarai Pueblo",
+          "La Purísima Concepción de Quarai"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -106.295,
+          34.595833
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The October 2026 hours explicitly identify Quarai as a named public unit.",
+            "id": "auth:us-southwest:nm-quarai:source:1",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 8a25079799ee9d3f7c03b19a0795128baf9eacd98c9db9c30c27179e84227b2f.",
+            "title": "Quarai Pueblo and mission public site public visitor information",
+            "uri": "https://www.nps.gov/sapu/planyourvisit/hours.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The custodian distinguishes the original church remains, the wider Pueblo and a self-guided trail.",
+            "id": "auth:us-southwest:nm-quarai:source:2",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 9eb10c8ee4aa0f7db094f836af8985d020d198735ca6553d2c04bb56e6c0ba87.",
+            "title": "Quarai Pueblo and mission public site public visitor information",
+            "uri": "https://www.nps.gov/subjects/travelspanishmissions/quarai.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -106.295, latitude 34.595833.",
+            "id": "auth:us-southwest:nm-quarai:source:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Original Wikidata revision 2311670020; P625 q7269128$F217DE14-CD89-4F9B-AE1E-D11108390429.",
+            "title": "Quarai Pueblo and mission public site representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7269128.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The park service describes the paved loop around the public mission church and pueblo site.",
+            "id": "auth:us-southwest:nm-quarai:independent:evidence:4",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Retrieved 2026-11-28; SHA-256 53d6767ab4c726fe020809ffeda14c05d73d16342e8c538aa1ab60d54b79da59.",
+            "title": "Quarai accessible visitor route",
+            "uri": "https://www.nps.gov/sapu/planyourvisit/accessibility.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The park visitor diagram shows the mission complex, marked public trail and visitor facilities.",
+            "id": "auth:us-southwest:nm-quarai:independent:evidence:5",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Retrieved 2026-11-28; SHA-256 64088ae5377d58cca19055a801081abb73f99c5e46064e12fd9bc253941441d3.",
+            "title": "Quarai visitor route and park boundary map",
+            "uri": "https://www.nps.gov/npgallery/GetAsset/5d7360e2-283d-421f-8173-77d1d91d277a"
+          }
+        ],
+        "source_uri": "https://www.nps.gov/sapu/planyourvisit/hours.htm",
+        "title": "Quarai Pueblo and mission public site",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q7269128.json",
+          "sha256": "36eca62ded1248ef3f26c5261a9399b94a98a814826e860fd4a4ae21dad29ca6",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7269128.json"
+        },
+        {
+          "filename": "salinas-current-hours.html",
+          "sha256": "8a25079799ee9d3f7c03b19a0795128baf9eacd98c9db9c30c27179e84227b2f",
+          "uri": "https://www.nps.gov/sapu/planyourvisit/hours.htm"
+        },
+        {
+          "filename": "quarai-route.html",
+          "sha256": "9eb10c8ee4aa0f7db094f836af8985d020d198735ca6553d2c04bb56e6c0ba87",
+          "uri": "https://www.nps.gov/subjects/travelspanishmissions/quarai.htm"
+        },
+        {
+          "filename": "independent-source/nps-quarai-accessibility.html",
+          "sha256": "53d6767ab4c726fe020809ffeda14c05d73d16342e8c538aa1ab60d54b79da59",
+          "uri": "https://www.nps.gov/sapu/planyourvisit/accessibility.htm"
+        },
+        {
+          "filename": "independent-source/nps-quarai-visitor-map.pdf",
+          "sha256": "64088ae5377d58cca19055a801081abb73f99c5e46064e12fd9bc253941441d3",
+          "uri": "https://www.nps.gov/npgallery/GetAsset/5d7360e2-283d-421f-8173-77d1d91d277a"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Uses the official Stop 8 point in the original pueblo. Park-level coordinates from the broader monument are not applied.",
+        "point": [
+          -106.27409040921066,
+          35.782418758958904
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://developer.nps.gov/api/v1/places?parkCode=band%2Cpeco%2Cgicl%2Celmo%2Csapu&limit=150",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independently recomputed fixed NPS public Places, NRHP and BLM coordinate records or native Wikidata, checked current access and permitted routes, compared authority outlines and whole corpus identity/WHC components; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original Tyuonyi Pueblo in Frijoles Canyon, Bandelier National Monument. Access follows the designated Pueblo Loop Trail and interpreted stops.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original archaeological identity, licensed point and public visitor scope assessed.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Park Service"
+        ],
+        "description": "The original Tyuonyi Pueblo in Frijoles Canyon, Bandelier National Monument. Access follows the designated Pueblo Loop Trail and interpreted stops.",
+        "description_zh": "蒂尤奥尼普韦布洛遗址位于美国新墨西哥州。地图显示公开参观区域的代表点，现场请沿主管方指定路线参观。",
+        "details": "The original Tyuonyi Pueblo in Frijoles Canyon, Bandelier National Monument. Access follows the designated Pueblo Loop Trail and interpreted stops.",
+        "geography": {
+          "authority_id": "supplement:auth:us-southwest:nm-tyuonyi",
+          "countries": [
+            "US"
+          ],
+          "note": "Named public cultural heritage representative point.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "NPS identifies Stop 8 of the visitor trail within the historic settlement.",
+            "id": "auth:us-southwest:nm-tyuonyi:source:1",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 5adb2a802978437c62a7bae2c10ae9bbfe592778c068116167f2791ab2aafe59.",
+            "title": "Tyuonyi Pueblo public loop public visitor information",
+            "uri": "https://www.nps.gov/places/in-tyuonyi-pueblo-loop-trail-stop-8.htm"
+          }
+        },
+        "id": "auth:us-southwest:nm-tyuonyi",
+        "location_precision": null,
+        "names": [
+          "蒂尤奥尼普韦布洛遗址",
+          "Tyuonyi Pueblo at Bandelier"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -106.27409040921066,
+          35.782418758958904
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "NPS identifies Stop 8 of the visitor trail within the historic settlement.",
+            "id": "auth:us-southwest:nm-tyuonyi:source:1",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 5adb2a802978437c62a7bae2c10ae9bbfe592778c068116167f2791ab2aafe59.",
+            "title": "Tyuonyi Pueblo public loop public visitor information",
+            "uri": "https://www.nps.gov/places/in-tyuonyi-pueblo-loop-trail-stop-8.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The park documents the original archaeological setting and the marked Pueblo Loop visitor route.",
+            "id": "auth:us-southwest:nm-tyuonyi:source:2",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 a1bc3e6ea44eebfed2b5fcad711f4f32ad8e101d8e3797b9e3b126973e8cb3af.",
+            "title": "Tyuonyi Pueblo public loop public visitor information",
+            "uri": "https://www.nps.gov/band/planyourvisit/pueblo-loop-trail.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -106.27409040921066, latitude 35.782418758958904.",
+            "id": "auth:us-southwest:nm-tyuonyi:source:3",
+            "license": "U.S. public domain (federal agency data)",
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 db0167ab5d7fbf63d90bfb3731711bbcd5ebe5cf5a659804687d80fa2e144d6a.",
+            "title": "In Tyuonyi Pueblo Loop Trail Stop 8 representative point",
+            "uri": "https://developer.nps.gov/api/v1/places?parkCode=band%2Cpeco%2Cgicl%2Celmo%2Csapu&limit=150"
+          }
+        ],
+        "source_uri": "https://www.nps.gov/places/in-tyuonyi-pueblo-loop-trail-stop-8.htm",
+        "title": "Tyuonyi Pueblo public loop",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "nps-places-nm.json",
+          "sha256": "db0167ab5d7fbf63d90bfb3731711bbcd5ebe5cf5a659804687d80fa2e144d6a",
+          "uri": "https://developer.nps.gov/api/v1/places?parkCode=band%2Cpeco%2Cgicl%2Celmo%2Csapu&limit=150"
+        },
+        {
+          "filename": "tyuonyi-place.html",
+          "sha256": "5adb2a802978437c62a7bae2c10ae9bbfe592778c068116167f2791ab2aafe59",
+          "uri": "https://www.nps.gov/places/in-tyuonyi-pueblo-loop-trail-stop-8.htm"
+        },
+        {
+          "filename": "bandelier-public.html",
+          "sha256": "a1bc3e6ea44eebfed2b5fcad711f4f32ad8e101d8e3797b9e3b126973e8cb3af",
+          "uri": "https://www.nps.gov/band/planyourvisit/pueblo-loop-trail.htm"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "The public NPS National Register point is inside the named state park. The registry assigns approximately twelve metres of source accuracy.",
+        "point": [
+          -111.42322149699999,
+          37.91045471600006
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=NRIS_Refnum+IN+%28%2766000185%27%2C%2766000184%27%2C%2712001007%27%2C%2773001147%27%2C%2776001199%27%2C%2771000853%27%2C%2776001815%27%2C%2784000776%27%2C%2766000174%27%2C%2766000192%27%2C%2766000472%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independently recomputed fixed NPS public Places, NRHP and BLM coordinate records or native Wikidata, checked current access and permitted routes, compared authority outlines and whole corpus identity/WHC components; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original ancestral village at Utah's Anasazi State Park. The managed public route includes a displayed part of the original site and an identified replica.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original archaeological identity, licensed point and public visitor scope assessed.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Utah Division of State Parks",
+          "National Park Service"
+        ],
+        "description": "The original ancestral village at Utah's Anasazi State Park. The managed public route includes a displayed part of the original site and an identified replica.",
+        "description_zh": "库姆斯村落遗址位于美国犹他州。地图显示公开参观区域的代表点，现场请沿主管方指定路线参观。",
+        "details": "The original ancestral village at Utah's Anasazi State Park. The managed public route includes a displayed part of the original site and an identified replica.",
+        "geography": {
+          "authority_id": "supplement:auth:us-southwest:ut-coombs",
+          "countries": [
+            "US"
+          ],
+          "note": "Named public cultural heritage representative point.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The September 2026 advisory confirms the archaeological site is open and distinguishes the nearby gallery renovation and replica.",
+            "id": "auth:us-southwest:ut-coombs:source:1",
+            "license": null,
+            "publisher": "Utah Division of State Parks",
+            "revision": "Frozen source 2026-11-28. SHA-256 627a5fb510da34caaf056c6953c0e79821adc8ff9b9234ddbbdced781d67c035.",
+            "title": "Coombs Village archaeological visitor precinct public visitor information",
+            "uri": "https://stateparks.utah.gov/parks/anasazi/"
+          }
+        },
+        "id": "auth:us-southwest:ut-coombs",
+        "location_precision": null,
+        "names": [
+          "库姆斯村落遗址",
+          "Coombs Village Site",
+          "Coombs Site at Anasazi State Park"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -111.42322149699999,
+          37.91045471600006
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The September 2026 advisory confirms the archaeological site is open and distinguishes the nearby gallery renovation and replica.",
+            "id": "auth:us-southwest:ut-coombs:source:1",
+            "license": null,
+            "publisher": "Utah Division of State Parks",
+            "revision": "Frozen source 2026-11-28. SHA-256 627a5fb510da34caaf056c6953c0e79821adc8ff9b9234ddbbdced781d67c035.",
+            "title": "Coombs Village archaeological visitor precinct public visitor information",
+            "uri": "https://stateparks.utah.gov/parks/anasazi/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -111.42322149699999, latitude 37.91045471600006.",
+            "id": "auth:us-southwest:ut-coombs:source:2",
+            "license": "U.S. public domain (federal agency data)",
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 5e3862eb9a717d047af8590db3e0f009e5e8b51d47bfed7bd7a2e93e5426bc15.",
+            "title": "Coombs Village Site representative point",
+            "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=NRIS_Refnum+IN+%28%2766000185%27%2C%2766000184%27%2C%2712001007%27%2C%2773001147%27%2C%2776001199%27%2C%2771000853%27%2C%2776001815%27%2C%2784000776%27%2C%2766000174%27%2C%2766000192%27%2C%2766000472%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state park map marks the visitor path to displayed original ruins and separately identifies the replica.",
+            "id": "auth:us-southwest:ut-coombs:independent:evidence:3",
+            "license": null,
+            "publisher": "Utah Division of State Parks",
+            "revision": "Retrieved 2026-11-28; SHA-256 706f2a5cb49941849ef86427d9194633bac3061cbb663517df9693c348695b13.",
+            "title": "Coombs Site Ruins and public visitor path",
+            "uri": "https://stateparks.utah.gov/wp-content/uploads/anasazi-digital-brochure-2026.pdf"
+          }
+        ],
+        "source_uri": "https://stateparks.utah.gov/parks/anasazi/",
+        "title": "Coombs Village archaeological visitor precinct",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "nrhp-southwest-reference-id.geojson",
+          "sha256": "5e3862eb9a717d047af8590db3e0f009e5e8b51d47bfed7bd7a2e93e5426bc15",
+          "uri": "https://mapservices.nps.gov/arcgis/rest/services/cultural_resources/nrhp_locations/MapServer/0/query?where=NRIS_Refnum+IN+%28%2766000185%27%2C%2766000184%27%2C%2712001007%27%2C%2773001147%27%2C%2776001199%27%2C%2771000853%27%2C%2776001815%27%2C%2784000776%27%2C%2766000174%27%2C%2766000192%27%2C%2766000472%27%29&outFields=NRIS_Refnum%2CRESNAME%2CResType%2CState%2CCounty%2CCity%2CCertDate%2CIs_NHL%2CIS_EXTANT%2CCONSTRANT%2CSTATUS%2CNARA_URL%2CSOURCE%2CORIGINATOR%2CMAP_METHOD%2CSRC_ACCU%2CEDIT_DATE&returnGeometry=true&outSR=4326&f=geojson"
+        },
+        {
+          "filename": "coombs-state.html",
+          "sha256": "627a5fb510da34caaf056c6953c0e79821adc8ff9b9234ddbbdced781d67c035",
+          "uri": "https://stateparks.utah.gov/parks/anasazi/"
+        },
+        {
+          "filename": "independent-source/ut-coombs-2026-brochure.pdf",
+          "sha256": "706f2a5cb49941849ef86427d9194633bac3061cbb663517df9693c348695b13",
+          "uri": "https://stateparks.utah.gov/wp-content/uploads/anasazi-digital-brochure-2026.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The CC0 point lies inside the state visitor precinct. It represents the interpreted Pueblo and associated on-site museum rather than a particular archaeological structure.",
+        "point": [
+          -109.49,
+          37.6314
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5337723.json",
+        "statement_id": "q5337723$84FE0F87-A998-429F-B166-13D2490B53F3"
+      },
+      "independent_review": {
+        "method": "Independently recomputed fixed NPS public Places, NRHP and BLM coordinate records or native Wikidata, checked current access and permitted routes, compared authority outlines and whole corpus identity/WHC components; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original ancestral settlement at Edge of the Cedars State Park in Blanding. Public access follows the state's designated interpretive route around the ruins.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original archaeological identity, licensed point and public visitor scope assessed.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Utah Division of State Parks",
+          "Wikidata contributors"
+        ],
+        "description": "The original ancestral settlement at Edge of the Cedars State Park in Blanding. Public access follows the state's designated interpretive route around the ruins.",
+        "description_zh": "雪松边缘普韦布洛遗址位于美国犹他州。地图显示公开参观区域的代表点，现场请沿主管方指定路线参观。",
+        "details": "The original ancestral settlement at Edge of the Cedars State Park in Blanding. Public access follows the state's designated interpretive route around the ruins.",
+        "geography": {
+          "authority_id": "supplement:auth:us-southwest:ut-edge",
+          "countries": [
+            "US"
+          ],
+          "note": "Named public cultural heritage representative point.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The state identifies the original Pueblo, public paved interpretive trail and a managed access area.",
+            "id": "auth:us-southwest:ut-edge:source:1",
+            "license": null,
+            "publisher": "Utah Division of State Parks",
+            "revision": "Frozen source 2026-11-28. SHA-256 ba355ce0f653f3c8864cbd26a0ccd58cfeb68c46ad2e75fd03cc994e99f2b40d.",
+            "title": "Edge of the Cedars Pueblo visitor precinct public visitor information",
+            "uri": "https://stateparks.utah.gov/parks/edge-of-the-cedars/"
+          }
+        },
+        "id": "auth:us-southwest:ut-edge",
+        "location_precision": null,
+        "names": [
+          "雪松边缘普韦布洛遗址",
+          "Edge of the Cedars Pueblo"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -109.49,
+          37.6314
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state identifies the original Pueblo, public paved interpretive trail and a managed access area.",
+            "id": "auth:us-southwest:ut-edge:source:1",
+            "license": null,
+            "publisher": "Utah Division of State Parks",
+            "revision": "Frozen source 2026-11-28. SHA-256 ba355ce0f653f3c8864cbd26a0ccd58cfeb68c46ad2e75fd03cc994e99f2b40d.",
+            "title": "Edge of the Cedars Pueblo visitor precinct public visitor information",
+            "uri": "https://stateparks.utah.gov/parks/edge-of-the-cedars/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The current park page supports the named state-operated visitor destination at Blanding.",
+            "id": "auth:us-southwest:ut-edge:source:2",
+            "license": null,
+            "publisher": "Utah Division of State Parks",
+            "revision": "Frozen source 2026-11-28. SHA-256 b1c5dca269dad8696b54b8b09faededc695ab9c087f37ce1cc33e2569dbc2cfd.",
+            "title": "Edge of the Cedars Pueblo visitor precinct public visitor information",
+            "uri": "https://stateparks.utah.gov/parks/edge-of-the-cedars/current-conditions/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -109.49, latitude 37.6314.",
+            "id": "auth:us-southwest:ut-edge:source:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Original Wikidata revision 2242170035; P625 q5337723$84FE0F87-A998-429F-B166-13D2490B53F3.",
+            "title": "Edge of the Cedars Pueblo visitor precinct representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5337723.json"
+          }
+        ],
+        "source_uri": "https://stateparks.utah.gov/parks/edge-of-the-cedars/",
+        "title": "Edge of the Cedars Pueblo visitor precinct",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q5337723.json",
+          "sha256": "da220c1dd6f95c229524b48bdc190c4f1040187e93880eab584d935c274f7748",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5337723.json"
+        },
+        {
+          "filename": "edge-state.html",
+          "sha256": "ba355ce0f653f3c8864cbd26a0ccd58cfeb68c46ad2e75fd03cc994e99f2b40d",
+          "uri": "https://stateparks.utah.gov/parks/edge-of-the-cedars/"
+        },
+        {
+          "filename": "edge-current-state.html",
+          "sha256": "b1c5dca269dad8696b54b8b09faededc695ab9c087f37ce1cc33e2569dbc2cfd",
+          "uri": "https://stateparks.utah.gov/parks/edge-of-the-cedars/current-conditions/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Uses the official NPS Tower Point scenic stop within the Square Tower Group. Other monument units and their separately managed access are outside this entry.",
+        "point": [
+          -109.077997656,
+          37.3841461606
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://developer.nps.gov/api/v1/places?parkCode=hove%2Cnabr&limit=150",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independently recomputed fixed NPS public Places, NRHP and BLM coordinate records or native Wikidata, checked current access and permitted routes, compared authority outlines and whole corpus identity/WHC components; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The Square Tower Group of ancestral buildings in Hovenweep National Monument. Visitors view the structures from the designated trail and overlooks.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original archaeological identity, licensed point and public visitor scope assessed.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Park Service"
+        ],
+        "description": "The Square Tower Group of ancestral buildings in Hovenweep National Monument. Visitors view the structures from the designated trail and overlooks.",
+        "description_zh": "霍文威普方塔群遗址位于美国犹他州。地图显示公开参观区域的代表点，现场请沿主管方指定路线参观。",
+        "details": "The Square Tower Group of ancestral buildings in Hovenweep National Monument. Visitors view the structures from the designated trail and overlooks.",
+        "geography": {
+          "authority_id": "supplement:auth:us-southwest:ut-hovenweep",
+          "countries": [
+            "US"
+          ],
+          "note": "Named public cultural heritage representative point.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official Square Tower Group loop provides exterior views of the archaeological buildings.",
+            "id": "auth:us-southwest:ut-hovenweep:source:1",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 a70e165ed7eadafcc049de70f464885282f872787e856e86c74e628ec1a0234c.",
+            "title": "Hovenweep Square Tower Group visitor precinct public visitor information",
+            "uri": "https://www.nps.gov/thingstodo/hike-stg-loop.htm"
+          }
+        },
+        "id": "auth:us-southwest:ut-hovenweep",
+        "location_precision": null,
+        "names": [
+          "霍文威普方塔群遗址",
+          "Square Tower Group",
+          "Little Ruin Canyon"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -109.077997656,
+          37.3841461606
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official Square Tower Group loop provides exterior views of the archaeological buildings.",
+            "id": "auth:us-southwest:ut-hovenweep:source:1",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 a70e165ed7eadafcc049de70f464885282f872787e856e86c74e628ec1a0234c.",
+            "title": "Hovenweep Square Tower Group visitor precinct public visitor information",
+            "uri": "https://www.nps.gov/thingstodo/hike-stg-loop.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "NPS identifies Tower Point within the Square Tower Group as an official scenic stop and limits visitors to marked paths.",
+            "id": "auth:us-southwest:ut-hovenweep:source:2",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 c79feed3066eb72a44e8f4907016ccd81f83ae0b514cc662b94de38630ad5960.",
+            "title": "Hovenweep Square Tower Group visitor precinct public visitor information",
+            "uri": "https://www.nps.gov/places/tower-point.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The March 2026 regulations define the public trail route and its daylight limits.",
+            "id": "auth:us-southwest:ut-hovenweep:source:3",
+            "license": null,
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 7bd7aa3f2e02f45941e53b53d382ddb884b381288a8d603263b5999f744d7207.",
+            "title": "Hovenweep Square Tower Group visitor precinct public visitor information",
+            "uri": "https://www.nps.gov/hove/learn/management/compendium.htm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -109.077997656, latitude 37.3841461606.",
+            "id": "auth:us-southwest:ut-hovenweep:source:4",
+            "license": "U.S. public domain (federal agency data)",
+            "publisher": "National Park Service",
+            "revision": "Frozen source 2026-11-28. SHA-256 22ce931d65e0e31bebe88dc0fb220642870208e6b69e8ed9fd7b2c75dc7d5aa2.",
+            "title": "Tower Point representative point",
+            "uri": "https://developer.nps.gov/api/v1/places?parkCode=hove%2Cnabr&limit=150"
+          }
+        ],
+        "source_uri": "https://www.nps.gov/thingstodo/hike-stg-loop.htm",
+        "title": "Hovenweep Square Tower Group visitor precinct",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "nps-places-ut.json",
+          "sha256": "22ce931d65e0e31bebe88dc0fb220642870208e6b69e8ed9fd7b2c75dc7d5aa2",
+          "uri": "https://developer.nps.gov/api/v1/places?parkCode=hove%2Cnabr&limit=150"
+        },
+        {
+          "filename": "hove-stg.html",
+          "sha256": "a70e165ed7eadafcc049de70f464885282f872787e856e86c74e628ec1a0234c",
+          "uri": "https://www.nps.gov/thingstodo/hike-stg-loop.htm"
+        },
+        {
+          "filename": "hove-tower-point.html",
+          "sha256": "c79feed3066eb72a44e8f4907016ccd81f83ae0b514cc662b94de38630ad5960",
+          "uri": "https://www.nps.gov/places/tower-point.htm"
+        },
+        {
+          "filename": "hove-compendium.html",
+          "sha256": "7bd7aa3f2e02f45941e53b53d382ddb884b381288a8d603263b5999f744d7207",
+          "uri": "https://www.nps.gov/hove/learn/management/compendium.htm"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Fourteen independently reviewed public visitor precincts of historic archaeological sites in Arizona, New Mexico, Colorado and Utah, using federal public-domain or native CC0 coordinates and documented present visitor scope."
+}

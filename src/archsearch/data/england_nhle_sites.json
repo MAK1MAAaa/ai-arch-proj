@@ -1,0 +1,2296 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Public castle enclosure at Framlingham, using the NHLE point for the castle and Red House designation. National Heritage List entry 1030383, Grade I.",
+    "description_zh": "弗拉姆灵厄姆城堡位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Public castle enclosure at Framlingham, using the NHLE point for the castle and Red House designation. National Heritage List entry 1030383, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1030383",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Suffolk, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1030383:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 35db357a0b1353f3b6f6ce6a02406c2ba2b35651b80d2c5e38b24dee20e04534.",
+        "title": "Framlingham Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/framlingham-castle/"
+      }
+    },
+    "id": "auth:gb-nhle:1030383",
+    "location_precision": null,
+    "names": [
+      "弗拉姆灵厄姆城堡",
+      "Framlingham Castle"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      1.34662131794244,
+      52.2241918415434
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1030383:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 35db357a0b1353f3b6f6ce6a02406c2ba2b35651b80d2c5e38b24dee20e04534.",
+        "title": "Framlingham Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/framlingham-castle/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1030383:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 4706ea121092d13bc47346a6e9405afaa2e8489b601f398b6c4129bd57777a26.",
+        "title": "NHLE List Entry 1030383 · Framlingham Castle and Red House",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1030383&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/framlingham-castle/",
+    "title": "Framlingham Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Public castle keep at Orford, with a dedicated admission and visitor schedule. National Heritage List entry 1030873, Grade I.",
+    "description_zh": "奥福德城堡位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Public castle keep at Orford, with a dedicated admission and visitor schedule. National Heritage List entry 1030873, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1030873",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Suffolk, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1030873:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 ca6a169d195d2f837616b6572f98e08179029539062481b7e69ff2665e0f8657.",
+        "title": "Orford Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/orford-castle/"
+      }
+    },
+    "id": "auth:gb-nhle:1030873",
+    "location_precision": null,
+    "names": [
+      "奥福德城堡",
+      "Orford Castle"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      1.530750851261,
+      52.0942723749045
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1030873:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 ca6a169d195d2f837616b6572f98e08179029539062481b7e69ff2665e0f8657.",
+        "title": "Orford Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/orford-castle/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1030873:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 ebfb3199403884c6058c3ef69bcc2cb9e91ad79ce43c3bc502439369daa99e39.",
+        "title": "NHLE List Entry 1030873 · ORFORD CASTLE",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1030873&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/orford-castle/",
+    "title": "Orford Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Publicly visited castle at Carisbrooke. The point identifies the historic castle fabric. National Heritage List entry 1034657, Grade I.",
+    "description_zh": "卡里斯布鲁克城堡位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Publicly visited castle at Carisbrooke. The point identifies the historic castle fabric. National Heritage List entry 1034657, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1034657",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Isle of Wight, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1034657:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 2b773a4b976143daca0c71ef87b28d2226aa98edd5c036683033b183103e53f4.",
+        "title": "Carisbrooke Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/carisbrooke-castle/"
+      }
+    },
+    "id": "auth:gb-nhle:1034657",
+    "location_precision": null,
+    "names": [
+      "卡里斯布鲁克城堡",
+      "Carisbrooke Castle"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.31345179600828,
+      50.6875840416561
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1034657:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 2b773a4b976143daca0c71ef87b28d2226aa98edd5c036683033b183103e53f4.",
+        "title": "Carisbrooke Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/carisbrooke-castle/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1034657:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 2cb6ca7768d7120ea91156444554388ef4bdd920dc541b5724246f8f1037abe3.",
+        "title": "NHLE List Entry 1034657 · CARISBROOKE CASTLE",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1034657&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/carisbrooke-castle/",
+    "title": "Carisbrooke Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Public castle ruins at Kenilworth. The point identifies the castle rather than a garden or visitor facility. National Heritage List entry 1035327, Grade I.",
+    "description_zh": "凯尼尔沃思城堡位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Public castle ruins at Kenilworth. The point identifies the castle rather than a garden or visitor facility. National Heritage List entry 1035327, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1035327",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Warwickshire, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1035327:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 1ced84e34b88fb024bfee3dfa1c080ebeb8594dd522146cd63ae7b4b97644c00.",
+        "title": "Kenilworth Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/kenilworth-castle/"
+      }
+    },
+    "id": "auth:gb-nhle:1035327",
+    "location_precision": null,
+    "names": [
+      "凯尼尔沃思城堡",
+      "Kenilworth Castle"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.5928848514437,
+      52.3473052839248
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1035327:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 1ced84e34b88fb024bfee3dfa1c080ebeb8594dd522146cd63ae7b4b97644c00.",
+        "title": "Kenilworth Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/kenilworth-castle/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1035327:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 63a504584304b1314493cc0950091f1ebc920f02248772434859b987c203d805.",
+        "title": "NHLE List Entry 1035327 · KENILWORTH CASTLE",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1035327&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/kenilworth-castle/",
+    "title": "Kenilworth Castle",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Priory ruins on Holy Island. The published visitor hours are subject to tidal access. National Heritage List entry 1042304, Grade I.",
+    "description_zh": "林迪斯法恩修道院位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Priory ruins on Holy Island. The published visitor hours are subject to tidal access. National Heritage List entry 1042304, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1042304",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Northumberland, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1042304:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 9b2b7acdf376330283f76a2fe2527206cbdb15922572f89d285ced613c8acf7b.",
+        "title": "Lindisfarne Priory public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/lindisfarne-priory/"
+      }
+    },
+    "id": "auth:gb-nhle:1042304",
+    "location_precision": null,
+    "names": [
+      "林迪斯法恩修道院",
+      "Lindisfarne Priory"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.80098591575985,
+      55.6689309907239
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1042304:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 9b2b7acdf376330283f76a2fe2527206cbdb15922572f89d285ced613c8acf7b.",
+        "title": "Lindisfarne Priory public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/lindisfarne-priory/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1042304:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 a6b3619f311153e5295797c20e6d1d198f594416eb226de0ea94563023577826.",
+        "title": "NHLE List Entry 1042304 · LINDISFARNE PRIORY",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1042304&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/lindisfarne-priory/",
+    "title": "Lindisfarne Priory",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Castle ruins that reopened to visitors after conservation. The listing distinguishes the nearby hall remains. National Heritage List entry 1049845, Grade I.",
+    "description_zh": "贝肯索普城堡位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Castle ruins that reopened to visitors after conservation. The listing distinguishes the nearby hall remains. National Heritage List entry 1049845, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1049845",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Norfolk, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1049845:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 64fba21573572f093b4cb9e0abb244450987cf06503a5800daa222a9ee979c2c.",
+        "title": "Baconsthorpe Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/baconsthorpe-castle/"
+      }
+    },
+    "id": "auth:gb-nhle:1049845",
+    "location_precision": null,
+    "names": [
+      "贝肯索普城堡",
+      "Baconsthorpe Castle"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      1.15197102637673,
+      52.8991131844119
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1049845:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 64fba21573572f093b4cb9e0abb244450987cf06503a5800daa222a9ee979c2c.",
+        "title": "Baconsthorpe Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/baconsthorpe-castle/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1049845:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 85207c17f3a5ff7b28aaf3c89c8b24b9e4195f3a826b6549ae08dcd9a7a71556.",
+        "title": "NHLE List Entry 1049845 · REMAINS OF BACONSTHORPE CASTLE",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1049845&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/baconsthorpe-castle/",
+    "title": "Baconsthorpe Castle",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "The public remains of Haughmond Abbey in Shropshire. National Heritage List entry 1052157, Grade I.",
+    "description_zh": "霍蒙德修道院位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "The public remains of Haughmond Abbey in Shropshire. National Heritage List entry 1052157, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1052157",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Shropshire, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1052157:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 1603c3065959490942eb8103c18e38a8a06f39b443a27adc7b241917e8d23041.",
+        "title": "Haughmond Abbey public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/haughmond-abbey/"
+      }
+    },
+    "id": "auth:gb-nhle:1052157",
+    "location_precision": null,
+    "names": [
+      "霍蒙德修道院",
+      "Haughmond Abbey"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.67999703601821,
+      52.7317695373196
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1052157:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 1603c3065959490942eb8103c18e38a8a06f39b443a27adc7b241917e8d23041.",
+        "title": "Haughmond Abbey public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/haughmond-abbey/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1052157:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 4056f8ec7ab6288f8e482b3c78bba7422faa7f29daab3ee5c2d8169a8b605395.",
+        "title": "NHLE List Entry 1052157 · HAUGHMOND ABBEY",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1052157&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/haughmond-abbey/",
+    "title": "Haughmond Abbey",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Public ruins of the castle at Farleigh Hungerford, represented by the main castle point. National Heritage List entry 1058117, Grade I.",
+    "description_zh": "法利亨格福德城堡位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Public ruins of the castle at Farleigh Hungerford, represented by the main castle point. National Heritage List entry 1058117, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1058117",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Somerset, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1058117:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 dfa4c522e7c83ee1f672c47f0762f7d6628114f7839a739e9ab9ee6a31a3fc3a.",
+        "title": "Farleigh Hungerford Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/farleigh-hungerford-castle/"
+      }
+    },
+    "id": "auth:gb-nhle:1058117",
+    "location_precision": null,
+    "names": [
+      "法利亨格福德城堡",
+      "Farleigh Hungerford Castle"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.28722387222942,
+      51.3176972577295
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1058117:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 dfa4c522e7c83ee1f672c47f0762f7d6628114f7839a739e9ab9ee6a31a3fc3a.",
+        "title": "Farleigh Hungerford Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/farleigh-hungerford-castle/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1058117:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 ca7810ca579e94e79a9ded3db0d467ec7499943e64a5ff2a66a39a0067038807.",
+        "title": "NHLE List Entry 1058117 · FARLEIGH HUNGERFORD CASTLE",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1058117&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/farleigh-hungerford-castle/",
+    "title": "Farleigh Hungerford Castle",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Public abbey ruins on the River Ribble. Some areas are fenced off during conservation work. National Heritage List entry 1072099, Grade I.",
+    "description_zh": "索利修道院位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Public abbey ruins on the River Ribble. Some areas are fenced off during conservation work. National Heritage List entry 1072099, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1072099",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Lancashire, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1072099:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 8876eb49a1a7f01914c1f8a957b3c155253ffa5454c4664b5bfe543097fb500f.",
+        "title": "Sawley Abbey public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/sawley-abbey/"
+      }
+    },
+    "id": "auth:gb-nhle:1072099",
+    "location_precision": null,
+    "names": [
+      "索利修道院",
+      "Sawley Abbey"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.34169942393906,
+      53.9135690135652
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1072099:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 8876eb49a1a7f01914c1f8a957b3c155253ffa5454c4664b5bfe543097fb500f.",
+        "title": "Sawley Abbey public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/sawley-abbey/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1072099:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 17b14bd7b10969df9c44893ee31f37d75fe992e615248ea68383b152d0d61cb1.",
+        "title": "NHLE List Entry 1072099 · SAWLEY ABBEY RUINS",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1072099&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/sawley-abbey/",
+    "title": "Sawley Abbey",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Publicly visited country-house ruins at Witley Court. The marker locates the main house remains. National Heritage List entry 1082656, Grade I.",
+    "description_zh": "威特利宫遗址位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Publicly visited country-house ruins at Witley Court. The marker locates the main house remains. National Heritage List entry 1082656, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1082656",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Worcestershire, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1082656:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 9dbefff343886325776696e3f2c43f3fce3e74c83e3fb7d0a18ade1c9dccf170.",
+        "title": "Witley Court public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/witley-court-and-gardens/"
+      }
+    },
+    "id": "auth:gb-nhle:1082656",
+    "location_precision": null,
+    "names": [
+      "威特利宫遗址",
+      "Witley Court"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.33881062056089,
+      52.2821019044886
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1082656:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 9dbefff343886325776696e3f2c43f3fce3e74c83e3fb7d0a18ade1c9dccf170.",
+        "title": "Witley Court public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/witley-court-and-gardens/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1082656:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 6ff27eca00c7787ab5875bc6b02c1bef6d4eb9634b467a64c75eb3248556546e.",
+        "title": "NHLE List Entry 1082656 · WITLEY COURT AND LINK TO CHURCH OF ST MICHAEL",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1082656&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/witley-court-and-gardens/",
+    "title": "Witley Court",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Public ruins of the old bishops’ palace in Winchester, distinct from adjacent Wolvesey Palace. National Heritage List entry 1095511, Grade I.",
+    "description_zh": "沃尔夫西城堡位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Public ruins of the old bishops’ palace in Winchester, distinct from adjacent Wolvesey Palace. National Heritage List entry 1095511, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1095511",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Hampshire, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1095511:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 af0f7c6c4cc57707e04ad641c5c3bca71ab67dab74afe572faec2385a7696f9d.",
+        "title": "Wolvesey Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/wolvesey-castle-old-bishops-palace/"
+      }
+    },
+    "id": "auth:gb-nhle:1095511",
+    "location_precision": null,
+    "names": [
+      "沃尔夫西城堡",
+      "Wolvesey Castle",
+      "Old Bishops' Palace, Winchester"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.30984679186272,
+      51.0590865182324
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1095511:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 af0f7c6c4cc57707e04ad641c5c3bca71ab67dab74afe572faec2385a7696f9d.",
+        "title": "Wolvesey Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/wolvesey-castle-old-bishops-palace/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1095511:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 c3b74fcd0f31f5758f5ff78d7591e86bb77028f09f9a6c338e05a97a2e8bc7be.",
+        "title": "NHLE List Entry 1095511 · WOLVESEY CASTLE",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1095511&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/wolvesey-castle-old-bishops-palace/",
+    "title": "Wolvesey Castle",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Castle keep ruins at Bowes. Visitors may enter the publicly accessible grounds during daylight. National Heritage List entry 1121039, Grade I.",
+    "description_zh": "鲍斯城堡位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Castle keep ruins at Bowes. Visitors may enter the publicly accessible grounds during daylight. National Heritage List entry 1121039, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1121039",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in County Durham, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1121039:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 e19323fddacc31a7fab6b785e68043281c3ded3326c2a40acec298a5a05232dc.",
+        "title": "Bowes Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/bowes-castle/"
+      }
+    },
+    "id": "auth:gb-nhle:1121039",
+    "location_precision": null,
+    "names": [
+      "鲍斯城堡",
+      "Bowes Castle"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.01335188569503,
+      54.516843436413
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1121039:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 e19323fddacc31a7fab6b785e68043281c3ded3326c2a40acec298a5a05232dc.",
+        "title": "Bowes Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/bowes-castle/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1121039:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 f6d3b629925153601ecb57834dacabe4f3d9cb1e4ddd134641c5de057a6677ea.",
+        "title": "NHLE List Entry 1121039 · BOWES CASTLE",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1121039&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/bowes-castle/",
+    "title": "Bowes Castle",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Coastal castle ruins. The site admits visitors while the main gatehouse undergoes restoration. National Heritage List entry 1153477, Grade I.",
+    "description_zh": "邓斯坦堡城堡位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Coastal castle ruins. The site admits visitors while the main gatehouse undergoes restoration. National Heritage List entry 1153477, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1153477",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Northumberland, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1153477:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 40e183392e19d44efe1820754fb1c80feb0f64047da56358166e1a7aa32d381e.",
+        "title": "Dunstanburgh Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/dunstanburgh-castle/"
+      }
+    },
+    "id": "auth:gb-nhle:1153477",
+    "location_precision": null,
+    "names": [
+      "邓斯坦堡城堡",
+      "Dunstanburgh Castle"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.595110996673,
+      55.4893096027667
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1153477:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 40e183392e19d44efe1820754fb1c80feb0f64047da56358166e1a7aa32d381e.",
+        "title": "Dunstanburgh Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/dunstanburgh-castle/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1153477:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 b54872aba747fb3bef376db294a5b246607288610e5fe23914962f8ca08f6622.",
+        "title": "NHLE List Entry 1153477 · DUNSTANBURGH CASTLE",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1153477&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/dunstanburgh-castle/",
+    "title": "Dunstanburgh Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Public castle ruins and earthworks. The point identifies the castle at Castle Acre. National Heritage List entry 1171480, Grade I.",
+    "description_zh": "卡斯尔阿克尔城堡位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Public castle ruins and earthworks. The point identifies the castle at Castle Acre. National Heritage List entry 1171480, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1171480",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Norfolk, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1171480:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 2dbf327d187f751eaa5ac52a2400f8706992a0b690c5b05c1f9b76e09d68fde3.",
+        "title": "Castle Acre Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/castle-acre-castle-and-bailey-gate/"
+      }
+    },
+    "id": "auth:gb-nhle:1171480",
+    "location_precision": null,
+    "names": [
+      "卡斯尔阿克尔城堡",
+      "Castle Acre Castle"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      0.690611038778925,
+      52.7036560730621
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1171480:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 2dbf327d187f751eaa5ac52a2400f8706992a0b690c5b05c1f9b76e09d68fde3.",
+        "title": "Castle Acre Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/castle-acre-castle-and-bailey-gate/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1171480:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 dd16950e8edf5679439dd63f9d056bf3baeda4c8d3cf851fcbe8447f956422b9.",
+        "title": "NHLE List Entry 1171480 · CASTLE ACRE CASTLE",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1171480&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/castle-acre-castle-and-bailey-gate/",
+    "title": "Castle Acre Castle",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Public castle ruins and built remains overlooking Helmsley. National Heritage List entry 1175226, Grade I.",
+    "description_zh": "赫姆斯利城堡位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Public castle ruins and built remains overlooking Helmsley. National Heritage List entry 1175226, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1175226",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in North Yorkshire, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1175226:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 3b2230bfcd1c93149a22001fe37b9e15042f0ba0c14ef4aefbd01e1aa87ca5f6.",
+        "title": "Helmsley Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/helmsley-castle/"
+      }
+    },
+    "id": "auth:gb-nhle:1175226",
+    "location_precision": null,
+    "names": [
+      "赫姆斯利城堡",
+      "Helmsley Castle"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.06449517818701,
+      54.2448045809012
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1175226:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 3b2230bfcd1c93149a22001fe37b9e15042f0ba0c14ef4aefbd01e1aa87ca5f6.",
+        "title": "Helmsley Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/helmsley-castle/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1175226:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 f0fa629dea3cba4e2ecffc3cc3b2c711a9dcd52211aafcfa66c9137e79cffe63.",
+        "title": "NHLE List Entry 1175226 · HELMSLEY CASTLE",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1175226&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/helmsley-castle/",
+    "title": "Helmsley Castle",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Public abbey ruins in the valley of the River Rye, with separate visitor access from Rievaulx Terrace. National Heritage List entry 1175724, Grade I.",
+    "description_zh": "里沃修道院位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Public abbey ruins in the valley of the River Rye, with separate visitor access from Rievaulx Terrace. National Heritage List entry 1175724, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1175724",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in North Yorkshire, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1175724:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 c1a81811b9183f6b354595237fd890f41ebb2cdfc6acd05e3ed27f5247a96e85.",
+        "title": "Rievaulx Abbey public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/rievaulx-abbey/"
+      }
+    },
+    "id": "auth:gb-nhle:1175724",
+    "location_precision": null,
+    "names": [
+      "里沃修道院",
+      "Rievaulx Abbey"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.11637105374356,
+      54.2575967128643
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1175724:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 c1a81811b9183f6b354595237fd890f41ebb2cdfc6acd05e3ed27f5247a96e85.",
+        "title": "Rievaulx Abbey public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/rievaulx-abbey/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1175724:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 dda63df5e31f04001b1c6009c23c4eba43f8bf552a92edfda4a844d18a38d34a.",
+        "title": "NHLE List Entry 1175724 · RIEVAULX ABBEY",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1175724&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/rievaulx-abbey/",
+    "title": "Rievaulx Abbey",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Historic house with access to the ground floor. Upper floors are closed. National Heritage List entry 1191614, Grade I.",
+    "description_zh": "布罗兹沃思庄园主宅位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Historic house with access to the ground floor. Upper floors are closed. National Heritage List entry 1191614, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1191614",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in South Yorkshire, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1191614:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 0d94bfd568258d1cd0548f603d59ccdda78dbd60a8fdbdf0fa5239895d442300.",
+        "title": "Brodsworth Hall public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/brodsworth-hall-and-gardens/"
+      }
+    },
+    "id": "auth:gb-nhle:1191614",
+    "location_precision": null,
+    "names": [
+      "布罗兹沃思庄园主宅",
+      "Brodsworth Hall"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.2377062020318,
+      53.5576076671037
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1191614:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 0d94bfd568258d1cd0548f603d59ccdda78dbd60a8fdbdf0fa5239895d442300.",
+        "title": "Brodsworth Hall public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/brodsworth-hall-and-gardens/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1191614:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 541a26625ae8d942b49be43c7df5f2e88a6c259f569b430f64f1ceab4d6efe75.",
+        "title": "NHLE List Entry 1191614 · BRODSWORTH HALL",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1191614&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/brodsworth-hall-and-gardens/",
+    "title": "Brodsworth Hall",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Publicly visited house in the Audley End estate. The Victorian Nursery is closed for separate conservation. National Heritage List entry 1196114, Grade I.",
+    "description_zh": "奥德利恩德庄园主宅位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Publicly visited house in the Audley End estate. The Victorian Nursery is closed for separate conservation. National Heritage List entry 1196114, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1196114",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Essex, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1196114:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 ab727a1e71bb6f33761afb1313dcb2c657ad44b54f0cc0fcf781524b7592236a.",
+        "title": "Audley End House public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/audley-end-house-and-gardens/"
+      }
+    },
+    "id": "auth:gb-nhle:1196114",
+    "location_precision": null,
+    "names": [
+      "奥德利恩德庄园主宅",
+      "Audley End House"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      0.220630468736657,
+      52.0208339161535
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1196114:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 ab727a1e71bb6f33761afb1313dcb2c657ad44b54f0cc0fcf781524b7592236a.",
+        "title": "Audley End House public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/audley-end-house-and-gardens/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1196114:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 2d39f38fbf34f3eca708a1b150a0903d7bbed1ffa8403db7d8f92cf0a0855c85.",
+        "title": "NHLE List Entry 1196114 · AUDLEY END HOUSE",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1196114&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/audley-end-house-and-gardens/",
+    "title": "Audley End House",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Public coastal castle at the entrance to the River Dart, with its associated gun platforms. National Heritage List entry 1197563, Grade I.",
+    "description_zh": "达特茅斯城堡位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Public coastal castle at the entrance to the River Dart, with its associated gun platforms. National Heritage List entry 1197563, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1197563",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Devon, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1197563:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 d06f7f4e4d126f07dbe84e96b554f62b90060170c0eb8d97a0a7d6c84f3dd376.",
+        "title": "Dartmouth Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/dartmouth-castle/"
+      }
+    },
+    "id": "auth:gb-nhle:1197563",
+    "location_precision": null,
+    "names": [
+      "达特茅斯城堡",
+      "Dartmouth Castle"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -3.56592438775767,
+      50.3423334809222
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1197563:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 d06f7f4e4d126f07dbe84e96b554f62b90060170c0eb8d97a0a7d6c84f3dd376.",
+        "title": "Dartmouth Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/dartmouth-castle/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1197563:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 263199d7621951645bc1c3722c761e381cee813d8b070aba633b8e026d84a3cf.",
+        "title": "NHLE List Entry 1197563 · DARTMOUTH CASTLE AND GUN PLATFORMS TO WEST AND SOUTH",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1197563&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/dartmouth-castle/",
+    "title": "Dartmouth Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Publicly visited keep of York Castle, with its own English Heritage admission and opening programme. National Heritage List entry 1259325, Grade I.",
+    "description_zh": "克利福德塔位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Publicly visited keep of York Castle, with its own English Heritage admission and opening programme. National Heritage List entry 1259325, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1259325",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in York, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1259325:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 8a2f0fe59421f9bc99551848df798bfd3b67926c5b14d42aad012bc917a9d17c.",
+        "title": "Clifford’s Tower public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/cliffords-tower-york/"
+      }
+    },
+    "id": "auth:gb-nhle:1259325",
+    "location_precision": null,
+    "names": [
+      "克利福德塔",
+      "Clifford’s Tower",
+      "Clifford's Tower"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.08008640841244,
+      53.9557884898102
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1259325:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 8a2f0fe59421f9bc99551848df798bfd3b67926c5b14d42aad012bc917a9d17c.",
+        "title": "Clifford’s Tower public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/cliffords-tower-york/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1259325:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 21ce4dda3de5828a60fd4f4e5a07123345b84df1e88455742593554c104b3fe7.",
+        "title": "NHLE List Entry 1259325 · CLIFFORDS TOWER",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1259325&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/cliffords-tower-york/",
+    "title": "Clifford’s Tower",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Public fortified manor complex represented by the point for the castle and its gatehouse. National Heritage List entry 1269939, Grade I.",
+    "description_zh": "斯托克赛城堡位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Public fortified manor complex represented by the point for the castle and its gatehouse. National Heritage List entry 1269939, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1269939",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Shropshire, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1269939:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 00d164c36dcfb084dec21796aefe144a9140ccbb6303676908d9367e1eebaab9.",
+        "title": "Stokesay Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/stokesay-castle/"
+      }
+    },
+    "id": "auth:gb-nhle:1269939",
+    "location_precision": null,
+    "names": [
+      "斯托克赛城堡",
+      "Stokesay Castle"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.83151867127417,
+      52.4303254170151
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1269939:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 00d164c36dcfb084dec21796aefe144a9140ccbb6303676908d9367e1eebaab9.",
+        "title": "Stokesay Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/stokesay-castle/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1269939:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 5dbcbb1df54dc9d76efcde0e69af2a670c4dc9d92e2667a235639752cece5121.",
+        "title": "NHLE List Entry 1269939 · STOKESAY CASTLE AND GATEHOUSE INCLUDING MOAT RETAINING WALLS",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1269939&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/stokesay-castle/",
+    "title": "Stokesay Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Public coastal fortress at Falmouth. The marker uses the official main-castle point. National Heritage List entry 1270096, Grade I.",
+    "description_zh": "彭丹尼斯城堡位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Public coastal fortress at Falmouth. The marker uses the official main-castle point. National Heritage List entry 1270096, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1270096",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Cornwall, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1270096:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 33040b18dc2d01a662d7a48fe4d5b04096f557fef0fffd517e1f3c0c8923ab4a.",
+        "title": "Pendennis Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/pendennis-castle/"
+      }
+    },
+    "id": "auth:gb-nhle:1270096",
+    "location_precision": null,
+    "names": [
+      "彭丹尼斯城堡",
+      "Pendennis Castle"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -5.04663500168503,
+      50.1460970022969
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1270096:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 33040b18dc2d01a662d7a48fe4d5b04096f557fef0fffd517e1f3c0c8923ab4a.",
+        "title": "Pendennis Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/pendennis-castle/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1270096:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 0062c7f4d12f00a34e062307a95810facc119d319e2cd98a467c714f95b77ffa.",
+        "title": "NHLE List Entry 1270096 · PENDENNIS CASTLE",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1270096&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/pendennis-castle/",
+    "title": "Pendennis Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Public priory site represented by the National Heritage List point for its principal remains. National Heritage List entry 1315123, Grade I.",
+    "description_zh": "芒特格雷斯修道院位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Public priory site represented by the National Heritage List point for its principal remains. National Heritage List entry 1315123, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1315123",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in North Yorkshire, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1315123:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 edf06ea10c1df8cfaf2ee1e3a8b9c6e33ca754d4b68cf947bfb064be31dc41e0.",
+        "title": "Mount Grace Priory public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/mount-grace-priory/"
+      }
+    },
+    "id": "auth:gb-nhle:1315123",
+    "location_precision": null,
+    "names": [
+      "芒特格雷斯修道院",
+      "Mount Grace Priory"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.31008721240492,
+      54.3798857335284
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1315123:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 edf06ea10c1df8cfaf2ee1e3a8b9c6e33ca754d4b68cf947bfb064be31dc41e0.",
+        "title": "Mount Grace Priory public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/mount-grace-priory/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1315123:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 44de698c7afceb7feec814ddb0f17e9b358de95bf965ffa1ab1832ea786744e3.",
+        "title": "NHLE List Entry 1315123 · MOUNT GRACE PRIORY",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1315123&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/mount-grace-priory/",
+    "title": "Mount Grace Priory",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "The ruins and grounds of Byland Abbey open during daylight. The on-site museum has its own hours. National Heritage List entry 1315790, Grade I.",
+    "description_zh": "拜兰德修道院位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "The ruins and grounds of Byland Abbey open during daylight. The on-site museum has its own hours. National Heritage List entry 1315790, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1315790",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in North Yorkshire, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1315790:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 056b6f723381ed258718ad2afd03e5b6e26e49a697ff4c4b429a33c011093bd0.",
+        "title": "Byland Abbey public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/byland-abbey/"
+      }
+    },
+    "id": "auth:gb-nhle:1315790",
+    "location_precision": null,
+    "names": [
+      "拜兰德修道院",
+      "Byland Abbey"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.15909239665314,
+      54.2034609990405
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1315790:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 056b6f723381ed258718ad2afd03e5b6e26e49a697ff4c4b429a33c011093bd0.",
+        "title": "Byland Abbey public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/byland-abbey/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1315790:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 fc7877c7c6e54fa74bb87f94e2c9668c0eca3f16ccf06bf06af34b965633acbe.",
+        "title": "NHLE List Entry 1315790 · BYLAND ABBEY",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1315790&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/byland-abbey/",
+    "title": "Byland Abbey",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Public abbey ruins. Winter visitors use the main visitor centre while the south entrance is closed. National Heritage List entry 1316347, Grade I.",
+    "description_zh": "惠特比修道院位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Public abbey ruins. Winter visitors use the main visitor centre while the south entrance is closed. National Heritage List entry 1316347, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1316347",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in North Yorkshire, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1316347:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 562dc12d061c056428e2d3b7159cb56a84c2f96cf7a5d41a2bcdf70d07b79c7e.",
+        "title": "Whitby Abbey public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/whitby-abbey/"
+      }
+    },
+    "id": "auth:gb-nhle:1316347",
+    "location_precision": null,
+    "names": [
+      "惠特比修道院",
+      "Whitby Abbey"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -0.607186299159433,
+      54.4883777074869
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1316347:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 562dc12d061c056428e2d3b7159cb56a84c2f96cf7a5d41a2bcdf70d07b79c7e.",
+        "title": "Whitby Abbey public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/whitby-abbey/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1316347:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 7b52e93652d0ee83f6ecc43009c7dea4e486bd079cd9b1267b9716807651f7b2.",
+        "title": "NHLE List Entry 1316347 · WHITBY ABBEY (RUINS)",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1316347&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/whitby-abbey/",
+    "title": "Whitby Abbey",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Public ruins of the abbey by the River Tees, separately identified from Barnard Castle. National Heritage List entry 1322741, Grade I.",
+    "description_zh": "埃格尔斯通修道院位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Public ruins of the abbey by the River Tees, separately identified from Barnard Castle. National Heritage List entry 1322741, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1322741",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in County Durham, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1322741:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 9c0042b3787958b3a480f8b3d303d5a97c2ba5195ea5dc65030260670dd6a68a.",
+        "title": "Egglestone Abbey public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/egglestone-abbey/"
+      }
+    },
+    "id": "auth:gb-nhle:1322741",
+    "location_precision": null,
+    "names": [
+      "埃格尔斯通修道院",
+      "Egglestone Abbey"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.90512102643762,
+      54.5313380681847
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1322741:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 9c0042b3787958b3a480f8b3d303d5a97c2ba5195ea5dc65030260670dd6a68a.",
+        "title": "Egglestone Abbey public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/egglestone-abbey/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1322741:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 e3ca166d3852709c0231c7cb3e3d032c889557321f04acc3efdd4e00905d5db9.",
+        "title": "NHLE List Entry 1322741 · RUINS OF EGGLESTONE ABBEY",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1322741&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/egglestone-abbey/",
+    "title": "Egglestone Abbey",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Publicly visited timber-framed manor on Cobden Street. The listing calls the building The Old Hall. National Heritage List entry 1359773, Grade I.",
+    "description_zh": "盖恩斯伯勒旧厅位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Publicly visited timber-framed manor on Cobden Street. The listing calls the building The Old Hall. National Heritage List entry 1359773, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1359773",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Lincolnshire, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1359773:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 002ea7a716dcc28c59422641a2ea90987fd85d8e28707ef5b19e4bea8c53934b.",
+        "title": "Gainsborough Old Hall public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/gainsborough-old-hall/"
+      }
+    },
+    "id": "auth:gb-nhle:1359773",
+    "location_precision": null,
+    "names": [
+      "盖恩斯伯勒旧厅",
+      "Gainsborough Old Hall"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -0.778388027850339,
+      53.4006998978266
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1359773:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 002ea7a716dcc28c59422641a2ea90987fd85d8e28707ef5b19e4bea8c53934b.",
+        "title": "Gainsborough Old Hall public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/gainsborough-old-hall/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1359773:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 006ce94702aa92971a81cfbaabfed2653579634aed2e82dc7c07c961b37ee8b4.",
+        "title": "NHLE List Entry 1359773 · THE OLD HALL",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1359773&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/gainsborough-old-hall/",
+    "title": "Gainsborough Old Hall",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "The independently designated north-west gatehouse is publicly viewable from The Sands during daylight. Its interior is closed. National Heritage List entry 1362365, Grade I.",
+    "description_zh": "沃利修道院西北门楼位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "The independently designated north-west gatehouse is publicly viewable from The Sands during daylight. Its interior is closed. National Heritage List entry 1362365, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1362365",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Lancashire, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1362365:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 07d009020f2c005e1cba6f30b860d6e1777a21f468db603c0360079b657f037b.",
+        "title": "Whalley Abbey Gatehouse public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/whalley-abbey-gatehouse/"
+      }
+    },
+    "id": "auth:gb-nhle:1362365",
+    "location_precision": null,
+    "names": [
+      "沃利修道院西北门楼",
+      "Whalley Abbey Gatehouse",
+      "North-West Gateway to Whalley Abbey"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.41311569645338,
+      53.8211747343957
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1362365:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 07d009020f2c005e1cba6f30b860d6e1777a21f468db603c0360079b657f037b.",
+        "title": "Whalley Abbey Gatehouse public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/whalley-abbey-gatehouse/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1362365:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 2397c7b13a89495d220f165fc05c6e8c8f5982ef172eccba37156fd5482e4fb5.",
+        "title": "NHLE List Entry 1362365 · NORTH WEST GATEWAY (FORMERLY INCLUDED AS AN INTEGRAL PART OF WHALLEY ABBEY)",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1362365&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/whalley-abbey-gatehouse/",
+    "title": "Whalley Abbey Gatehouse",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor identity and the original heritage designation coordinate were checked.",
+      "note": "No dated historical phase is assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "English Heritage",
+      "Historic England",
+      "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026."
+    ],
+    "description": "Castle complex with daily public access to the outer ward and limited openings of the inner ward. National Heritage List entry 1370476, Grade I.",
+    "description_zh": "普拉德霍城堡位于英格兰，具有官方公众参观依据。地图显示英国国家遗产名录发布的代表点。",
+    "details": "Castle complex with daily public access to the outer ward and limited openings of the inner ward. National Heritage List entry 1370476, Grade I.",
+    "geography": {
+      "authority_id": "supplement:auth:gb-nhle:1370476",
+      "countries": [
+        "GB"
+      ],
+      "note": "Public heritage property in Northumberland, England.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1370476:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 8de4b45675bad5285ef8a22fc3c0a0b1c04e2a0025c6f52e67f1f9c9d66ce488.",
+        "title": "Prudhoe Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/prudhoe-castle/"
+      }
+    },
+    "id": "auth:gb-nhle:1370476",
+    "location_precision": null,
+    "names": [
+      "普拉德霍城堡",
+      "Prudhoe Castle"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.85838086721584,
+      54.965224288871
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Official visitor information specifies access to the named heritage place.",
+        "id": "nhle-1370476:visitor",
+        "license": null,
+        "publisher": "English Heritage",
+        "revision": "Retrieved 2026-11-28. SHA-256 8de4b45675bad5285ef8a22fc3c0a0b1c04e2a0025c6f52e67f1f9c9d66ce488.",
+        "title": "Prudhoe Castle public visitor information",
+        "uri": "https://www.english-heritage.org.uk/visit/places/prudhoe-castle/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "© Historic England 2026. Contains Ordnance Survey data © Crown copyright and database right 2026.",
+        "id": "nhle-1370476:point",
+        "license": "UK Open Government Licence v3.0",
+        "publisher": "Historic England",
+        "revision": "Listed Building points, 2026-11-27 service edit. Retrieved 2026-11-28. SHA-256 aadc36303853fb65dd9ef24b70479bb8f41f6604ce1e7d620eb6bb5e0f63215f.",
+        "title": "NHLE List Entry 1370476 · PRUDHOE CASTLE",
+        "uri": "https://services-eu1.arcgis.com/ZOdPfBS3aqqDYPUQ/ArcGIS/rest/services/National_Heritage_List_for_England_NHLE_v02_VIEW/FeatureServer/0/query?where=ListEntry%3D1370476&outFields=ListEntry%2CName%2CGrade%2Chyperlink%2CListDate%2CAmendDate%2CCaptureScale%2CNGR%2CEasting%2CNorthing&returnGeometry=true&outSR=4326&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.english-heritage.org.uk/visit/places/prudhoe-castle/",
+    "title": "Prudhoe Castle",
+    "types": [
+      "historic-site"
+    ]
+  }
+]

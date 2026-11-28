@@ -1,0 +1,413 @@
+{
+  "base_count": 5253,
+  "base_ids_sha256": "4977efe45c274d6b4bb3de1412928d359df0bf1c3141d7d3a95c19b4e30cdf36",
+  "base_sites_sha256": "f6a1d000f94e9b1ba7b005dc174361936ec92132126fbc43c2b693a4f3f9505a",
+  "cohort_version": "sahel-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Native WGS84 statement with coarse published precision. This is a site-scale reference for the publicly interpreted hill and not a surveyed feature.",
+        "point": [
+          -5.66625,
+          11.315
+        ],
+        "precision": 0.0091612164147814,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16508963.json",
+        "statement_id": "Q16508963$B4854D14-F4C4-4CF9-B9D5-CEFB10014B3E"
+      },
+      "independent_review": {
+        "method": "Independently compared fixed Wikidata coordinates and precision, exact licensed source bytes, primary public access and site identity, protected heritage components and complete current corpus proximity; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic Kénédougou hilltop precinct in Sikasso, listed in the national heritage decree among the associated sites of the Tata. Public access covers the managed local cultural tour stop and presented exterior.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public original-site documentation assessed.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Centre d’Information Gouvernementale du Mali",
+          "Journal officiel de la République du Mali",
+          "UNESCO World Heritage Centre",
+          "Wikidata contributors"
+        ],
+        "description": "The historic Kénédougou hilltop precinct in Sikasso, listed in the national heritage decree among the associated sites of the Tata. Public access covers the managed local cultural tour stop and presented exterior.",
+        "description_zh": "锡卡索马默隆历史山堡位于马里。代表点标示可辨认的历史文化地点，参观以管理方公告为准。",
+        "details": "The historic Kénédougou hilltop precinct in Sikasso, listed in the national heritage decree among the associated sites of the Tata. Public access covers the managed local cultural tour stop and presented exterior.",
+        "geography": {
+          "authority_id": "supplement:auth:ml-public:Q16508963",
+          "countries": [
+            "ML"
+          ],
+          "note": "Public heritage representative point.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The government documents the September 2026 domestic heritage visit and identifies the Mamelon hill as a distinct named stop from the Tata wall remains.",
+            "id": "auth:ml-public:Q16508963:ml-sikasso-government-public.html",
+            "license": null,
+            "publisher": "Centre d’Information Gouvernementale du Mali",
+            "revision": "Frozen source file 2026-11-28. SHA-256 65b7d0e8c1fbff58337ebf586d34ba61bac68fc6e44c53ca11561bf67cc0c784.",
+            "title": "Mamelon de Sikasso visitor precinct original site and public scope",
+            "uri": "https://gouvernement.ml/mois-du-tourisme-interne-a-sikasso-la-cite-de-guenedougou-ouvre-les-portes-de-son-patrimoine-aux-visiteurs/"
+          }
+        },
+        "id": "auth:ml-public:Q16508963",
+        "location_precision": null,
+        "names": [
+          "锡卡索马默隆历史山堡",
+          "Mamelon of Sikasso",
+          "Colline du Mamelon"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -5.66625,
+          11.315
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The government documents the September 2026 domestic heritage visit and identifies the Mamelon hill as a distinct named stop from the Tata wall remains.",
+            "id": "auth:ml-public:Q16508963:ml-sikasso-government-public.html",
+            "license": null,
+            "publisher": "Centre d’Information Gouvernementale du Mali",
+            "revision": "Frozen source file 2026-11-28. SHA-256 65b7d0e8c1fbff58337ebf586d34ba61bac68fc6e44c53ca11561bf67cc0c784.",
+            "title": "Mamelon de Sikasso visitor precinct original site and public scope",
+            "uri": "https://gouvernement.ml/mois-du-tourisme-interne-a-sikasso-la-cite-de-guenedougou-ouvre-les-portes-de-son-patrimoine-aux-visiteurs/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Decree 09-131/P-RM separately identifies the Mamelon hill and lists survey points at its foot.",
+            "id": "auth:ml-public:Q16508963:ml-sikasso-law.pdf",
+            "license": null,
+            "publisher": "Journal officiel de la République du Mali",
+            "revision": "Frozen source file 2026-11-28. SHA-256 91eb368c1f245a8890ae5b5ae8613f138ae0c70e3c06f5d96797bdd2ff186796.",
+            "title": "Mamelon de Sikasso visitor precinct original site and public scope",
+            "uri": "https://sgg-mali.ml/JO/2009/mali-jo-2009-17.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The associated Tata complex appears in the World Heritage Tentative List as a proposed property.",
+            "id": "auth:ml-public:Q16508963:ml-sikasso-tentative.html",
+            "license": null,
+            "publisher": "UNESCO World Heritage Centre",
+            "revision": "Frozen source file 2026-11-28. SHA-256 854d26d9d51511f880bf0f765e7319181cb9cf1d91b97c191c201013f45dafb7.",
+            "title": "Mamelon de Sikasso visitor precinct original site and public scope",
+            "uri": "https://whc.unesco.org/en/tentativelists/5443/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -5.66625, latitude 11.315.",
+            "id": "wikidata:Q16508963",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 1728029024; P625 Q16508963$B4854D14-F4C4-4CF9-B9D5-CEFB10014B3E.",
+            "title": "Mamelon de Sikasso visitor precinct representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16508963.json"
+          }
+        ],
+        "source_uri": "https://gouvernement.ml/mois-du-tourisme-interne-a-sikasso-la-cite-de-guenedougou-ouvre-les-portes-de-son-patrimoine-aux-visiteurs/",
+        "title": "Mamelon de Sikasso visitor precinct",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q16508963.json",
+          "sha256": "628b6829fc0459ec3714ca94aff2579f0b5b9c6581d20b709e659d0e859dc557",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16508963.json"
+        },
+        {
+          "filename": "ml-sikasso-government-public.html",
+          "sha256": "65b7d0e8c1fbff58337ebf586d34ba61bac68fc6e44c53ca11561bf67cc0c784",
+          "uri": "https://gouvernement.ml/mois-du-tourisme-interne-a-sikasso-la-cite-de-guenedougou-ouvre-les-portes-de-son-patrimoine-aux-visiteurs/"
+        },
+        {
+          "filename": "ml-sikasso-law.pdf",
+          "sha256": "91eb368c1f245a8890ae5b5ae8613f138ae0c70e3c06f5d96797bdd2ff186796",
+          "uri": "https://sgg-mali.ml/JO/2009/mali-jo-2009-17.pdf"
+        },
+        {
+          "filename": "ml-sikasso-tentative.html",
+          "sha256": "854d26d9d51511f880bf0f765e7319181cb9cf1d91b97c191c201013f45dafb7",
+          "uri": "https://whc.unesco.org/en/tentativelists/5443/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The source point lies within the named museum footprint. The institution's earlier colonial premises are a different site.",
+        "point": [
+          -7.999298,
+          12.658632
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1867505.json",
+        "statement_id": "Q1867505$B869FCA4-5259-4476-8FD8-C37E4150E8E1"
+      },
+      "independent_review": {
+        "method": "Independently compared fixed Wikidata coordinates and precision, exact licensed source bytes, primary public access and site identity, protected heritage components and complete current corpus proximity; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The first purpose-built permanent site of the independent national museum in Bamako, opened in the early 1980s and subsequently expanded. The published public programmes use the museum exhibition route.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public original-site documentation assessed.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Agence Malienne de Presse et de Publicité, interviewing the museum director",
+          "Centre d’Information Gouvernementale du Mali",
+          "Wikidata contributors"
+        ],
+        "description": "The first purpose-built permanent site of the independent national museum in Bamako, opened in the early 1980s and subsequently expanded. The published public programmes use the museum exhibition route.",
+        "description_zh": "马里国家博物馆历史馆舍位于马里。代表点标示可辨认的历史文化地点，参观以管理方公告为准。",
+        "details": "The first purpose-built permanent site of the independent national museum in Bamako, opened in the early 1980s and subsequently expanded. The published public programmes use the museum exhibition route.",
+        "geography": {
+          "authority_id": "supplement:auth:ml-public:Q1867505",
+          "countries": [
+            "ML"
+          ],
+          "note": "Public heritage representative point.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The director and government reporting identify the present site, its first building construction starting in 1976, its historical enlargement and contemporary public engagement.",
+            "id": "auth:ml-public:Q1867505:ml-museum-historic.html",
+            "license": null,
+            "publisher": "Agence Malienne de Presse et de Publicité, interviewing the museum director",
+            "revision": "Frozen source file 2026-11-28. SHA-256 dccdc2e3b7296d2614846be3148de46d43139c3c96933f65ab3b3c43a2751186.",
+            "title": "Musée national du Mali historic premises original site and public scope",
+            "uri": "https://amap.ml/2026/10/16/le-musee-national-un-haut-lieu-de-la-diversite-culturelle-et-de-savoirs-au-mali/"
+          }
+        },
+        "id": "auth:ml-public:Q1867505",
+        "location_precision": null,
+        "names": [
+          "马里国家博物馆历史馆舍",
+          "National Museum of Mali"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -7.999298,
+          12.658632
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The director and government reporting identify the present site, its first building construction starting in 1976, its historical enlargement and contemporary public engagement.",
+            "id": "auth:ml-public:Q1867505:ml-museum-historic.html",
+            "license": null,
+            "publisher": "Agence Malienne de Presse et de Publicité, interviewing the museum director",
+            "revision": "Frozen source file 2026-11-28. SHA-256 dccdc2e3b7296d2614846be3148de46d43139c3c96933f65ab3b3c43a2751186.",
+            "title": "Musée national du Mali historic premises original site and public scope",
+            "uri": "https://amap.ml/2026/10/16/le-musee-national-un-haut-lieu-de-la-diversite-culturelle-et-de-savoirs-au-mali/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The government announces the 2026 public exhibition programme at the named national museum in Bamako.",
+            "id": "auth:ml-public:Q1867505:ml-museum-admission.html",
+            "license": null,
+            "publisher": "Centre d’Information Gouvernementale du Mali",
+            "revision": "Frozen source file 2026-11-28. SHA-256 08aabb7e083a1e6546535b818759f971d025f74bfa941402e3301612fd3bf405.",
+            "title": "Musée national du Mali historic premises original site and public scope",
+            "uri": "https://gouvernement.ml/promotion-culturelle-et-artisanale-du-mali-lexposition-lame-des-signes-dabdoulaye-konate-prolongee-jusquau-4-octobre-2026/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -7.999298, latitude 12.658632.",
+            "id": "wikidata:Q1867505",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2574933776; P625 Q1867505$B869FCA4-5259-4476-8FD8-C37E4150E8E1.",
+            "title": "Musée national du Mali historic premises representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1867505.json"
+          }
+        ],
+        "source_uri": "https://amap.ml/2026/10/16/le-musee-national-un-haut-lieu-de-la-diversite-culturelle-et-de-savoirs-au-mali/",
+        "title": "Musée national du Mali historic premises",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1867505.json",
+          "sha256": "68d412609e966b41c046ab4efa0cd21a6afe7d14b5fe0cc8b4b5adf785975089",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1867505.json"
+        },
+        {
+          "filename": "ml-museum-historic.html",
+          "sha256": "dccdc2e3b7296d2614846be3148de46d43139c3c96933f65ab3b3c43a2751186",
+          "uri": "https://amap.ml/2026/10/16/le-musee-national-un-haut-lieu-de-la-diversite-culturelle-et-de-savoirs-au-mali/"
+        },
+        {
+          "filename": "ml-museum-admission.html",
+          "sha256": "08aabb7e083a1e6546535b818759f971d025f74bfa941402e3301612fd3bf405",
+          "uri": "https://gouvernement.ml/promotion-culturelle-et-artisanale-du-mali-lexposition-lame-des-signes-dabdoulaye-konate-prolongee-jusquau-4-octobre-2026/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The coordinate lies 8.8 metres from the footprint of the original named museum. The documented scope is the museum's open days and approved exhibition areas.",
+        "point": [
+          -15.974722,
+          18.085556
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2370438.json",
+        "statement_id": "Q2370438$b1be151b-486e-8803-43d9-f2a497b6d403"
+      },
+      "independent_review": {
+        "method": "Independently compared fixed Wikidata coordinates and precision, exact licensed source bytes, primary public access and site identity, protected heritage components and complete current corpus proximity; no new structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original purpose-built national museum premises in Nouakchott. The National Museums Office confirms visitor admission to the managed exhibition areas and the public museum open day.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public original-site documentation assessed.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Agence mauritanienne d'information, reporting the Office national des musées",
+          "Billet de France on-site reporting",
+          "Wikidata contributors"
+        ],
+        "description": "The original purpose-built national museum building at Nouakchott, opened in 1972. The National Museums Office documents public open-day access to the museum's exhibition areas.",
+        "description_zh": "毛里塔尼亚国家博物馆历史馆舍位于毛里塔尼亚。代表点标示可辨认的历史文化地点，参观以管理方公告为准。",
+        "details": "The original purpose-built national museum premises in Nouakchott. The National Museums Office confirms visitor admission to the managed exhibition areas and the public museum open day.",
+        "geography": {
+          "authority_id": "supplement:auth:mr-public:Q2370438",
+          "countries": [
+            "MR"
+          ],
+          "note": "Public heritage representative point.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The National Museums Office reports regular visitor admission and a public museum open day in May 2026.",
+            "id": "auth:mr-public:Q2370438:mr-museum-national.html",
+            "license": null,
+            "publisher": "Agence mauritanienne d'information, reporting the Office national des musées",
+            "revision": "Frozen source file 2026-11-28. SHA-256 9cc69ce2b58137320f6a9c9a669902045006fed5da3a5080ce7a21a069e9ccce.",
+            "title": "Musée national de Mauritanie historic building original site and public scope",
+            "uri": "https://ami.mr/fr/archives/295457"
+          }
+        },
+        "id": "auth:mr-public:Q2370438",
+        "location_precision": null,
+        "names": [
+          "毛里塔尼亚国家博物馆历史馆舍",
+          "المتحف الوطني الموريتاني",
+          "Musée national de Nouakchott"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -15.974722,
+          18.085556
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The National Museums Office reports regular visitor admission and a public museum open day in May 2026.",
+            "id": "auth:mr-public:Q2370438:mr-museum-national.html",
+            "license": null,
+            "publisher": "Agence mauritanienne d'information, reporting the Office national des musées",
+            "revision": "Frozen source file 2026-11-28. SHA-256 9cc69ce2b58137320f6a9c9a669902045006fed5da3a5080ce7a21a069e9ccce.",
+            "title": "Musée national de Mauritanie historic building original site and public scope",
+            "uri": "https://ami.mr/fr/archives/295457"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The on-site report identifies the national museum building that opened in 1972 and describes ongoing exhibition activity.",
+            "id": "auth:mr-public:Q2370438:mr-museum-building.html",
+            "license": null,
+            "publisher": "Billet de France on-site reporting",
+            "revision": "Frozen source file 2026-11-28. SHA-256 d3e37ada785d68c1e446faaa8aa928953bc4abe0677257bb811169abbd3fba2a.",
+            "title": "Musée national de Mauritanie historic building original site and public scope",
+            "uri": "https://www.billetdefrance.fr/reportages/reportage-mauritanie-sur-les-traces-des-gardiens-du-patrimoine/25/06/2023/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -15.974722, latitude 18.085556.",
+            "id": "wikidata:Q2370438",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2350579790; P625 Q2370438$b1be151b-486e-8803-43d9-f2a497b6d403.",
+            "title": "Musée national de Mauritanie historic building representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2370438.json"
+          }
+        ],
+        "source_uri": "https://ami.mr/fr/archives/295457",
+        "title": "Musée national de Mauritanie historic building",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q2370438.json",
+          "sha256": "3ff5e769b55e6dfae2eb9f029265d6159a8cf7bd937040a1a75d5be65e0c73c5",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2370438.json"
+        },
+        {
+          "filename": "mr-museum-national.html",
+          "sha256": "9cc69ce2b58137320f6a9c9a669902045006fed5da3a5080ce7a21a069e9ccce",
+          "uri": "https://ami.mr/fr/archives/295457"
+        },
+        {
+          "filename": "mr-museum-building.html",
+          "sha256": "d3e37ada785d68c1e446faaa8aa928953bc4abe0677257bb811169abbd3fba2a",
+          "uri": "https://www.billetdefrance.fr/reportages/reportage-mauritanie-sur-les-traces-des-gardiens-du-patrimoine/25/06/2023/"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Three distinct publicly interpreted built-heritage venues in Mauritania and Mali, with original CC0 coordinate claims and current national or site authority visitor evidence."
+}

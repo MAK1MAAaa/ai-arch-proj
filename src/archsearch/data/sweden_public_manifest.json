@@ -1,0 +1,22 @@
+{
+  "base_count": 5093,
+  "base_ids_sha256": "1b6cb0cb3004bb0b96220afc6a8f0b86bea63cd1cf7d8f3c0b92618fd723bbcf",
+  "base_sites_sha256": "4c347ee437c3e7809dd093893280362a2eb008b873443dc7b56ec05b39e96de3",
+  "cohort_version": "sweden-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 28,
+    "total": 5121
+  },
+  "files": {
+    "sweden_public_review.json": {
+      "sha256": "4574ce2df710601c7c8cb4a6722d8e49e80f153a590ce875d7ec7d3b8c0589bc"
+    },
+    "sweden_public_sites.json": {
+      "sha256": "bfd265bd401279e427f2b6333c45c5a52cf38532929489b2ac13c7ab362dfae3"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Public Swedish historic and archaeological heritage points from fourteen counties, with governed visitor scopes and exact original coordinate evidence independently checked."
+}

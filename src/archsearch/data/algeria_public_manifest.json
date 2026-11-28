@@ -1,0 +1,22 @@
+{
+  "base_count": 5088,
+  "base_ids_sha256": "c48f515eccbf40f311158be28946f6d4eb9c97b1ac3c686efa24783944952d0c",
+  "base_sites_sha256": "6814a78c2a920755b58116d83c318d34b9d8892fdb5f26ad71495bd921a724a1",
+  "cohort_version": "algeria-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 5,
+    "total": 5093
+  },
+  "files": {
+    "algeria_public_review.json": {
+      "sha256": "e849c4ad0ef8b5db73a666ab88bafbc1892b4b1456a48d7af33d43946e5d82fe"
+    },
+    "algeria_public_sites.json": {
+      "sha256": "09f369cd3f52df723d8654364332d926b583ac30c11b47b061f4da58d67f8c88"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Five Algerian public heritage properties in Tlemcen, Oran and Constantine, distinguishing current exterior viewing and named original or reconstructed structures with exact adopted coordinates."
+}

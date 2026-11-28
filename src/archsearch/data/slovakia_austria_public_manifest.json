@@ -1,0 +1,22 @@
+{
+  "base_count": 5317,
+  "base_ids_sha256": "64efaf1866887370e6f522998338c0457e58be566eff3bbfc74fc516f609f473",
+  "base_sites_sha256": "af1f323a96a326bb4d3371f2172734e945aef7958d3bfa483e06dce1631f039d",
+  "cohort_version": "slovakia-austria-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 14,
+    "total": 5331
+  },
+  "files": {
+    "slovakia_austria_public_review.json": {
+      "sha256": "48e6cd4e13bc36919fff06ea895b94837f60c565ebc47ebb88a5badafc48c264"
+    },
+    "slovakia_austria_public_sites.json": {
+      "sha256": "55100c98fa83e034e8fd55142a6da8f08270d94bbfd8a91a3e64a876b2217f51"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Fourteen documented historic places in Slovakia and Austria with directly licensed native coordinate claims and current managed visitor evidence."
+}

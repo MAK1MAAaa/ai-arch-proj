@@ -1,0 +1,2341 @@
+{
+  "base_count": 5236,
+  "base_ids_sha256": "4f20996516d301eb1f6c8d922e8ceb5a82833951d3ca0956ec1dcc9799d417f6",
+  "base_sites_sha256": "3efa619fa136f02f12ed971e01581fa237e3524d7274a9e61280e9ab5c429fb3",
+  "cohort_version": "australia-nt-wa-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Gazetteer of Australia 2012, original GA10556 MANGOWINE, GA. GDA94 explicit LONGITUDE/LATITUDE 118.104233, -31.0469015 transformed to WGS84. © Commonwealth of Australia (Geoscience Australia) 2013. CC BY 3.0 AU https://creativecommons.org/licenses/by/3.0/au/. The Gazetteer’s homestead point sits inside the registered visitor property. The independently named spring, well and graves are outside this record.",
+        "point": [
+          118.104233,
+          -31.0469015
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independent agent recomputed exact GML national gazetteer coordinates and audited publication license, native CC0 statements, state and World Heritage geographies, traditional access and current visitor routes.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The Gazetteer’s homestead point sits inside the registered visitor property. The independently named spring, well and graves are outside this record.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched the public visitor place to a published site-specific point.",
+          "note": "No new historical phases assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Shire of Nungarin",
+          "Commonwealth of Australia (Geoscience Australia)"
+        ],
+        "description": "The historic homestead is open for public tours near Nungarin.",
+        "description_zh": "曼戈温历史农庄是澳大利亚公开文化遗址。地图标注遗址代表点。",
+        "details": "The historic homestead is open for public tours near Nungarin.",
+        "geography": {
+          "authority_id": "supplement:auth:au-ga2012:GA10556",
+          "countries": [
+            "AU"
+          ],
+          "note": "The Gazetteer’s homestead point sits inside the registered visitor property. The independently named spring, well and graves are outside this record.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record GA10556, MANGOWINE.",
+            "id": "auth:au-ga2012:GA10556:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          }
+        },
+        "id": "auth:au-ga2012:GA10556",
+        "location_precision": null,
+        "names": [
+          "Mangowine Homestead",
+          "曼戈温历史农庄",
+          "MANGOWINE"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          118.104233,
+          -31.0469015
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The historic homestead is open for public tours near Nungarin.",
+            "id": "auth:au-ga2012:GA10556:visit",
+            "license": null,
+            "publisher": "Shire of Nungarin",
+            "revision": "Snapshot 2026-11-28; SHA-256 4d5e764505ce97d9ee0f9f1ba59dfb037fd3b1826c833875f9226c0c7eba4ecc.",
+            "title": "Mangowine Homestead visitor information",
+            "uri": "https://www.nungarin.wa.gov.au/our-community/community-groups-directory/mangowine-homestead.aspx"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record GA10556, MANGOWINE.",
+            "id": "auth:au-ga2012:GA10556:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Current catalogue metadata labels CC BY 4.0. The supplied 2012 package guide states CC BY 3.0 Australia.",
+            "id": "auth:au-ga2012:GA10556:metadata",
+            "license": null,
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "Snapshot 2026-11-28; SHA-256 497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408.",
+            "title": "Gazetteer of Australia 2012 dataset metadata",
+            "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+          }
+        ],
+        "source_uri": "https://www.nungarin.wa.gov.au/our-community/community-groups-directory/mangowine-homestead.aspx",
+        "title": "Mangowine Homestead",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/wa-mangowine.html",
+          "sha256": "4d5e764505ce97d9ee0f9f1ba59dfb037fd3b1826c833875f9226c0c7eba4ecc",
+          "uri": "https://www.nungarin.wa.gov.au/our-community/community-groups-directory/mangowine-homestead.aspx"
+        },
+        {
+          "filename": "source/ga-2012-point-package.zip",
+          "sha256": "3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e",
+          "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+        },
+        {
+          "filename": "source/ga-2012-point-metadata.html",
+          "sha256": "497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408",
+          "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+        },
+        {
+          "filename": "source/ga-cc-by-3.0-au.html",
+          "sha256": "4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c",
+          "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Gazetteer of Australia 2012, original NT23633 Fannie Bay Gaol, NT. GDA94 explicit LONGITUDE/LATITUDE 130.83647, -12.42553 transformed to WGS84. © Commonwealth of Australia (Geoscience Australia) 2013. CC BY 3.0 AU https://creativecommons.org/licenses/by/3.0/au/. Named official museum point on the historic gaol grounds; the institution’s main Darwin gallery is a different place.",
+        "point": [
+          130.83647,
+          -12.42553
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independent agent recomputed exact GML national gazetteer coordinates and audited publication license, native CC0 statements, state and World Heritage geographies, traditional access and current visitor routes.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Named official museum point on the historic gaol grounds; the institution’s main Darwin gallery is a different place.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched the public visitor place to a published site-specific point.",
+          "note": "No new historical phases assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Museum and Art Gallery of the Northern Territory",
+          "Commonwealth of Australia (Geoscience Australia)"
+        ],
+        "description": "The historic gaol is a public museum retaining original prison buildings.",
+        "description_zh": "芬尼湾监狱是澳大利亚公开文化遗址。地图标注遗址代表点。",
+        "details": "The historic gaol is a public museum retaining original prison buildings.",
+        "geography": {
+          "authority_id": "supplement:auth:au-ga2012:NT23633",
+          "countries": [
+            "AU"
+          ],
+          "note": "Named official museum point on the historic gaol grounds; the institution’s main Darwin gallery is a different place.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record NT23633, Fannie Bay Gaol.",
+            "id": "auth:au-ga2012:NT23633:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          }
+        },
+        "id": "auth:au-ga2012:NT23633",
+        "location_precision": null,
+        "names": [
+          "Fannie Bay Gaol",
+          "芬尼湾监狱"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          130.83647,
+          -12.42553
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The historic gaol is a public museum retaining original prison buildings.",
+            "id": "auth:au-ga2012:NT23633:visit",
+            "license": null,
+            "publisher": "Museum and Art Gallery of the Northern Territory",
+            "revision": "Snapshot 2026-11-28; SHA-256 da0f125e6443140127000b5578c979a8da7eab121c01ba5b038de0f8b35708b2.",
+            "title": "Fannie Bay Gaol visitor information",
+            "uri": "https://www.magnt.net.au/fannie-bay-gaol"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record NT23633, Fannie Bay Gaol.",
+            "id": "auth:au-ga2012:NT23633:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Current catalogue metadata labels CC BY 4.0. The supplied 2012 package guide states CC BY 3.0 Australia.",
+            "id": "auth:au-ga2012:NT23633:metadata",
+            "license": null,
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "Snapshot 2026-11-28; SHA-256 497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408.",
+            "title": "Gazetteer of Australia 2012 dataset metadata",
+            "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+          }
+        ],
+        "source_uri": "https://www.magnt.net.au/fannie-bay-gaol",
+        "title": "Fannie Bay Gaol",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/nt-fannie.html",
+          "sha256": "da0f125e6443140127000b5578c979a8da7eab121c01ba5b038de0f8b35708b2",
+          "uri": "https://www.magnt.net.au/fannie-bay-gaol"
+        },
+        {
+          "filename": "source/ga-2012-point-package.zip",
+          "sha256": "3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e",
+          "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+        },
+        {
+          "filename": "source/ga-2012-point-metadata.html",
+          "sha256": "497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408",
+          "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+        },
+        {
+          "filename": "source/ga-cc-by-3.0-au.html",
+          "sha256": "4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c",
+          "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+        },
+        {
+          "filename": "source/nt-fannie-visitor-current.html",
+          "sha256": "ad06ed58b4ad2299e16daf63284ca223238527001ec675f0440822c4ffd0e1d9",
+          "uri": "https://www.magnt.net.au/visit"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Gazetteer of Australia 2012, original NT23643 Adelaide House Museum, NT. GDA94 explicit LONGITUDE/LATITUDE 133.88262, -23.69956 transformed to WGS84. © Commonwealth of Australia (Geoscience Australia) 2013. CC BY 3.0 AU https://creativecommons.org/licenses/by/3.0/au/. The archived museum position falls on the building at the church’s Todd Mall site, distinct from the adjacent church and other town museums.",
+        "point": [
+          133.88262,
+          -23.69956
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independent agent recomputed exact GML national gazetteer coordinates and audited publication license, native CC0 statements, state and World Heritage geographies, traditional access and current visitor routes.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The archived museum position falls on the building at the church’s Todd Mall site, distinct from the adjacent church and other town museums.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched the public visitor place to a published site-specific point.",
+          "note": "No new historical phases assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Uniting Church in Australia",
+          "Commonwealth of Australia (Geoscience Australia)"
+        ],
+        "description": "Alice Springs’ early hospital building now houses a public museum in Todd Mall.",
+        "description_zh": "爱丽斯泉阿德莱德之家博物馆是澳大利亚公开文化遗址。地图标注遗址代表点。",
+        "details": "Alice Springs’ early hospital building now houses a public museum in Todd Mall.",
+        "geography": {
+          "authority_id": "supplement:auth:au-ga2012:NT23643",
+          "countries": [
+            "AU"
+          ],
+          "note": "The archived museum position falls on the building at the church’s Todd Mall site, distinct from the adjacent church and other town museums.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record NT23643, Adelaide House Museum.",
+            "id": "auth:au-ga2012:NT23643:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          }
+        },
+        "id": "auth:au-ga2012:NT23643",
+        "location_precision": null,
+        "names": [
+          "Adelaide House Museum",
+          "爱丽斯泉阿德莱德之家博物馆"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          133.88262,
+          -23.69956
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Alice Springs’ early hospital building now houses a public museum in Todd Mall.",
+            "id": "auth:au-ga2012:NT23643:visit",
+            "license": null,
+            "publisher": "Uniting Church in Australia",
+            "revision": "Snapshot 2026-11-28; SHA-256 621105509dd4991d6c5eea314a00e96e7f24ae856ae2b34d3d10c3100a6c2129.",
+            "title": "Adelaide House Museum visitor information",
+            "uri": "https://ns.uca.org.au/alice-springs-uniting-church/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record NT23643, Adelaide House Museum.",
+            "id": "auth:au-ga2012:NT23643:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Current catalogue metadata labels CC BY 4.0. The supplied 2012 package guide states CC BY 3.0 Australia.",
+            "id": "auth:au-ga2012:NT23643:metadata",
+            "license": null,
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "Snapshot 2026-11-28; SHA-256 497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408.",
+            "title": "Gazetteer of Australia 2012 dataset metadata",
+            "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+          }
+        ],
+        "source_uri": "https://ns.uca.org.au/alice-springs-uniting-church/",
+        "title": "Adelaide House Museum",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/nt-adelaide-house-church.html",
+          "sha256": "621105509dd4991d6c5eea314a00e96e7f24ae856ae2b34d3d10c3100a6c2129",
+          "uri": "https://ns.uca.org.au/alice-springs-uniting-church/"
+        },
+        {
+          "filename": "source/ga-2012-point-package.zip",
+          "sha256": "3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e",
+          "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+        },
+        {
+          "filename": "source/ga-2012-point-metadata.html",
+          "sha256": "497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408",
+          "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+        },
+        {
+          "filename": "source/ga-cc-by-3.0-au.html",
+          "sha256": "4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c",
+          "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+        },
+        {
+          "filename": "source/nt-museums.html",
+          "sha256": "18cf2d88cea402b4ee06c0ca390c053d1be384a511d60abe607723dad512cbb7",
+          "uri": "https://nt.gov.au/leisure/arts-culture-heritage/organisations-and-venues/museums-galleries-art-centres/museums"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Gazetteer of Australia 2012, original NT23649 Stuart Town Gaol, NT. GDA94 explicit LONGITUDE/LATITUDE 133.88134, -23.69831 transformed to WGS84. © Commonwealth of Australia (Geoscience Australia) 2013. CC BY 3.0 AU https://creativecommons.org/licenses/by/3.0/au/. Original venue point for the gaol at 8 Parsons Street. The later Alice Springs Gaol and Hartley Street key collection are separate sites.",
+        "point": [
+          133.88134,
+          -23.69831
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independent agent recomputed exact GML national gazetteer coordinates and audited publication license, native CC0 statements, state and World Heritage geographies, traditional access and current visitor routes.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original gaol at 8 Parsons Street offers public visits by key arrangement. The National Trust lists closure from December to February.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched the public visitor place to a published site-specific point.",
+          "note": "No new historical phases assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Trust of Australia (Northern Territory)",
+          "Commonwealth of Australia (Geoscience Australia)"
+        ],
+        "description": "The original gaol at 8 Parsons Street offers public visits by key arrangement. The National Trust lists closure from December to February.",
+        "description_zh": "斯图尔特镇旧监狱位于帕森斯街 8 号。参观需按国家信托的安排领取钥匙，12 月至次年 2 月关闭。",
+        "details": "The original gaol at 8 Parsons Street offers public visits by key arrangement. The National Trust lists closure from December to February.",
+        "geography": {
+          "authority_id": "supplement:auth:au-ga2012:NT23649",
+          "countries": [
+            "AU"
+          ],
+          "note": "Original venue point for the gaol at 8 Parsons Street. The later Alice Springs Gaol and Hartley Street key collection are separate sites.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record NT23649, Stuart Town Gaol.",
+            "id": "auth:au-ga2012:NT23649:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          }
+        },
+        "id": "auth:au-ga2012:NT23649",
+        "location_precision": null,
+        "names": [
+          "Stuart Town Gaol",
+          "斯图尔特镇旧监狱"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          133.88134,
+          -23.69831
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The town’s early stone gaol is a small historic museum with seasonal access by key arrangement.",
+            "id": "auth:au-ga2012:NT23649:visit",
+            "license": null,
+            "publisher": "National Trust of Australia (Northern Territory)",
+            "revision": "Snapshot 2026-11-28; SHA-256 dd9609b0e2b364d100e5b408e36bb49e4bc9488b2809e46f7d3d0cd3ae8cd071.",
+            "title": "Stuart Town Gaol visitor information",
+            "uri": "https://www.nationaltrust.org.au/places/stuart-town-gaol/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record NT23649, Stuart Town Gaol.",
+            "id": "auth:au-ga2012:NT23649:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Current catalogue metadata labels CC BY 4.0. The supplied 2012 package guide states CC BY 3.0 Australia.",
+            "id": "auth:au-ga2012:NT23649:metadata",
+            "license": null,
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "Snapshot 2026-11-28; SHA-256 497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408.",
+            "title": "Gazetteer of Australia 2012 dataset metadata",
+            "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+          }
+        ],
+        "source_uri": "https://www.nationaltrust.org.au/places/stuart-town-gaol/",
+        "title": "Stuart Town Gaol",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/nt-stuart.html",
+          "sha256": "dd9609b0e2b364d100e5b408e36bb49e4bc9488b2809e46f7d3d0cd3ae8cd071",
+          "uri": "https://www.nationaltrust.org.au/places/stuart-town-gaol/"
+        },
+        {
+          "filename": "source/ga-2012-point-package.zip",
+          "sha256": "3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e",
+          "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+        },
+        {
+          "filename": "source/ga-2012-point-metadata.html",
+          "sha256": "497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408",
+          "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+        },
+        {
+          "filename": "source/ga-cc-by-3.0-au.html",
+          "sha256": "4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c",
+          "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+        },
+        {
+          "filename": "source/nt-stuart-official-registry.html",
+          "sha256": "e8095d3d2d6eb16e3292d2de31c152c8e3dd01731cae50e8fe9fc55362663a6c",
+          "uri": "https://www.ntlis.nt.gov.au/heritageregister/f?p=103%3A302%3A%3A%3ANO%3A%3AP302_SITE_ID%3A125"
+        },
+        {
+          "filename": "source/nt-stuart-names-original.html",
+          "sha256": "a465dfd0f7cb343246a54ed6357a5d22a6fad179d7424456dfa2e149ab09ca03",
+          "uri": "https://www.ntlis.nt.gov.au/placenames/view.jsp?id=23649"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Gazetteer of Australia 2012, original NT23651 Battery Hill Mining Centre, NT. GDA94 explicit LONGITUDE/LATITUDE 134.20795, -19.64792 transformed to WGS84. © Commonwealth of Australia (Geoscience Australia) 2013. CC BY 3.0 AU https://creativecommons.org/licenses/by/3.0/au/. The original Gazetteer point lies inside the public visitor building at the battery precinct. Mine access is governed separately.",
+        "point": [
+          134.20795,
+          -19.64792
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independent agent recomputed exact GML national gazetteer coordinates and audited publication license, native CC0 statements, state and World Heritage geographies, traditional access and current visitor routes.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "This point locates the visitor centre at the Battery Hill heritage mining precinct. It covers publicly interpreted site areas; underground tours have separate booking and operating terms.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched the public visitor place to a published site-specific point.",
+          "note": "No new historical phases assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Barkly Regional Council",
+          "Commonwealth of Australia (Geoscience Australia)"
+        ],
+        "description": "This point locates the visitor centre at the Battery Hill heritage mining precinct. It covers publicly interpreted site areas; underground tours have separate booking and operating terms.",
+        "description_zh": "代表点位于巴特里山矿业遗址的访客中心。参观范围为公开展示区，地下矿巷导览另有安排。",
+        "details": "This point locates the visitor centre at the Battery Hill heritage mining precinct. It covers publicly interpreted site areas; underground tours have separate booking and operating terms.",
+        "geography": {
+          "authority_id": "supplement:auth:au-ga2012:NT23651",
+          "countries": [
+            "AU"
+          ],
+          "note": "The original Gazetteer point lies inside the public visitor building at the battery precinct. Mine access is governed separately.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record NT23651, Battery Hill Mining Centre.",
+            "id": "auth:au-ga2012:NT23651:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          }
+        },
+        "id": "auth:au-ga2012:NT23651",
+        "location_precision": null,
+        "names": [
+          "Battery Hill Mining Centre",
+          "巴特里山矿业遗址中心"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          134.20795,
+          -19.64792
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public interpretation centre at Battery Hill presents the former stamp battery and mining history of Tennant Creek.",
+            "id": "auth:au-ga2012:NT23651:visit",
+            "license": null,
+            "publisher": "Barkly Regional Council",
+            "revision": "Snapshot 2026-11-28; SHA-256 3bee552563165ab1f0437161b55754908721910e38afcdb45345a71e9e20500c.",
+            "title": "Battery Hill Mining Centre visitor information",
+            "uri": "https://www.barkly.nt.gov.au/communities"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record NT23651, Battery Hill Mining Centre.",
+            "id": "auth:au-ga2012:NT23651:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Current catalogue metadata labels CC BY 4.0. The supplied 2012 package guide states CC BY 3.0 Australia.",
+            "id": "auth:au-ga2012:NT23651:metadata",
+            "license": null,
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "Snapshot 2026-11-28; SHA-256 497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408.",
+            "title": "Gazetteer of Australia 2012 dataset metadata",
+            "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+          }
+        ],
+        "source_uri": "https://www.barkly.nt.gov.au/communities",
+        "title": "Battery Hill Mining Centre",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/nt-battery-hill-authority.html",
+          "sha256": "3bee552563165ab1f0437161b55754908721910e38afcdb45345a71e9e20500c",
+          "uri": "https://www.barkly.nt.gov.au/communities"
+        },
+        {
+          "filename": "source/ga-2012-point-package.zip",
+          "sha256": "3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e",
+          "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+        },
+        {
+          "filename": "source/ga-2012-point-metadata.html",
+          "sha256": "497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408",
+          "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+        },
+        {
+          "filename": "source/ga-cc-by-3.0-au.html",
+          "sha256": "4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c",
+          "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+        },
+        {
+          "filename": "source/nt-museums.html",
+          "sha256": "18cf2d88cea402b4ee06c0ca390c053d1be384a511d60abe607723dad512cbb7",
+          "uri": "https://nt.gov.au/leisure/arts-culture-heritage/organisations-and-venues/museums-galleries-art-centres/museums"
+        },
+        {
+          "filename": "source/nt-battery-hill-visitors.html",
+          "sha256": "fd8e42487c9c1475aa35f8b27bba1a33f86f22ab3cea1e29b71af65c90e765d7",
+          "uri": "https://www.discoverthebarkly.com/barkly-things-to-do/attractions-barkly"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Gazetteer of Australia 2012, original NT23652 Jones Store (Newcastle Waters), NT. GDA94 explicit LONGITUDE/LATITUDE 133.40734, -17.37049 transformed to WGS84. © Commonwealth of Australia (Geoscience Australia) 2013. CC BY 3.0 AU https://creativecommons.org/licenses/by/3.0/au/. Official museum place point about 10m from the historical shop’s structure. The public visit covers the store at Newcastle Waters, separate from namesakes.",
+        "point": [
+          133.40734,
+          -17.37049
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independent agent recomputed exact GML national gazetteer coordinates and audited publication license, native CC0 statements, state and World Heritage geographies, traditional access and current visitor routes.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Official museum place point about 10m from the historical shop’s structure. The public visit covers the store at Newcastle Waters, separate from namesakes.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched the public visitor place to a published site-specific point.",
+          "note": "No new historical phases assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Trust of Australia (Northern Territory)",
+          "Commonwealth of Australia (Geoscience Australia)"
+        ],
+        "description": "The former stock-route supply store is a self-guided museum on Drovers Drive.",
+        "description_zh": "纽卡斯尔沃特斯琼斯商店是澳大利亚公开文化遗址。地图标注遗址代表点。",
+        "details": "The former stock-route supply store is a self-guided museum on Drovers Drive.",
+        "geography": {
+          "authority_id": "supplement:auth:au-ga2012:NT23652",
+          "countries": [
+            "AU"
+          ],
+          "note": "Official museum place point about 10m from the historical shop’s structure. The public visit covers the store at Newcastle Waters, separate from namesakes.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record NT23652, Jones Store (Newcastle Waters).",
+            "id": "auth:au-ga2012:NT23652:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          }
+        },
+        "id": "auth:au-ga2012:NT23652",
+        "location_precision": null,
+        "names": [
+          "Jones Store, Newcastle Waters",
+          "纽卡斯尔沃特斯琼斯商店",
+          "Jones Store (Newcastle Waters)"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          133.40734,
+          -17.37049
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The former stock-route supply store is a self-guided museum on Drovers Drive.",
+            "id": "auth:au-ga2012:NT23652:visit",
+            "license": null,
+            "publisher": "National Trust of Australia (Northern Territory)",
+            "revision": "Snapshot 2026-11-28; SHA-256 8a0f7c2ef9476445161e50c3d6d0b49a250b643370e7cb6ac7db8c9a18458de0.",
+            "title": "Jones Store, Newcastle Waters visitor information",
+            "uri": "https://www.nationaltrust.org.au/places/jones-store/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record NT23652, Jones Store (Newcastle Waters).",
+            "id": "auth:au-ga2012:NT23652:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Current catalogue metadata labels CC BY 4.0. The supplied 2012 package guide states CC BY 3.0 Australia.",
+            "id": "auth:au-ga2012:NT23652:metadata",
+            "license": null,
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "Snapshot 2026-11-28; SHA-256 497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408.",
+            "title": "Gazetteer of Australia 2012 dataset metadata",
+            "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+          }
+        ],
+        "source_uri": "https://www.nationaltrust.org.au/places/jones-store/",
+        "title": "Jones Store, Newcastle Waters",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/nt-jones.html",
+          "sha256": "8a0f7c2ef9476445161e50c3d6d0b49a250b643370e7cb6ac7db8c9a18458de0",
+          "uri": "https://www.nationaltrust.org.au/places/jones-store/"
+        },
+        {
+          "filename": "source/ga-2012-point-package.zip",
+          "sha256": "3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e",
+          "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+        },
+        {
+          "filename": "source/ga-2012-point-metadata.html",
+          "sha256": "497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408",
+          "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+        },
+        {
+          "filename": "source/ga-cc-by-3.0-au.html",
+          "sha256": "4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c",
+          "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+        },
+        {
+          "filename": "source/nt-jones-current-register.html",
+          "sha256": "2d422f87be70004187dd9695ec6a18bdcd84c0fe4b687a22cf69d285171173ef",
+          "uri": "https://www.ntlis.nt.gov.au/placenames/view.jsp?id=23652"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Gazetteer of Australia 2012, original NT23654 Borroloola Police Station Museum, NT. GDA94 explicit LONGITUDE/LATITUDE 136.30521, -16.06794 transformed to WGS84. © Commonwealth of Australia (Geoscience Australia) 2013. CC BY 3.0 AU https://creativecommons.org/licenses/by/3.0/au/. Officially named museum position close to the old buildings. Access follows the museum arrangements at John Street; the modern police station is separate.",
+        "point": [
+          136.30521,
+          -16.06794
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independent agent recomputed exact GML national gazetteer coordinates and audited publication license, native CC0 statements, state and World Heritage geographies, traditional access and current visitor routes.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Officially named museum position close to the old buildings. Access follows the museum arrangements at John Street; the modern police station is separate.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched the public visitor place to a published site-specific point.",
+          "note": "No new historical phases assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Trust of Australia (Northern Territory)",
+          "Commonwealth of Australia (Geoscience Australia)"
+        ],
+        "description": "The former outpost police station now houses a public district museum.",
+        "description_zh": "博罗卢拉老警署博物馆是澳大利亚公开文化遗址。地图标注遗址代表点。",
+        "details": "The former outpost police station now houses a public district museum.",
+        "geography": {
+          "authority_id": "supplement:auth:au-ga2012:NT23654",
+          "countries": [
+            "AU"
+          ],
+          "note": "Officially named museum position close to the old buildings. Access follows the museum arrangements at John Street; the modern police station is separate.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record NT23654, Borroloola Police Station Museum.",
+            "id": "auth:au-ga2012:NT23654:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          }
+        },
+        "id": "auth:au-ga2012:NT23654",
+        "location_precision": null,
+        "names": [
+          "Old Borroloola Police Station Museum",
+          "博罗卢拉老警署博物馆",
+          "Borroloola Police Station Museum"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          136.30521,
+          -16.06794
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The former outpost police station now houses a public district museum.",
+            "id": "auth:au-ga2012:NT23654:visit",
+            "license": null,
+            "publisher": "National Trust of Australia (Northern Territory)",
+            "revision": "Snapshot 2026-11-28; SHA-256 c85d315f12eebeb98f71b7abda61588fc2dda60e0736acc359e846a410f4c917.",
+            "title": "Old Borroloola Police Station Museum visitor information",
+            "uri": "https://www.nationaltrust.org.au/places/old-police-station-borroloola/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record NT23654, Borroloola Police Station Museum.",
+            "id": "auth:au-ga2012:NT23654:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Current catalogue metadata labels CC BY 4.0. The supplied 2012 package guide states CC BY 3.0 Australia.",
+            "id": "auth:au-ga2012:NT23654:metadata",
+            "license": null,
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "Snapshot 2026-11-28; SHA-256 497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408.",
+            "title": "Gazetteer of Australia 2012 dataset metadata",
+            "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+          }
+        ],
+        "source_uri": "https://www.nationaltrust.org.au/places/old-police-station-borroloola/",
+        "title": "Old Borroloola Police Station Museum",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/nt-borroloola.html",
+          "sha256": "c85d315f12eebeb98f71b7abda61588fc2dda60e0736acc359e846a410f4c917",
+          "uri": "https://www.nationaltrust.org.au/places/old-police-station-borroloola/"
+        },
+        {
+          "filename": "source/ga-2012-point-package.zip",
+          "sha256": "3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e",
+          "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+        },
+        {
+          "filename": "source/ga-2012-point-metadata.html",
+          "sha256": "497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408",
+          "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+        },
+        {
+          "filename": "source/ga-cc-by-3.0-au.html",
+          "sha256": "4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c",
+          "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+        },
+        {
+          "filename": "source/nt-borroloola-current-register.html",
+          "sha256": "eef0f770266bebbd39a5a13d9f987c85f5788d3e0a7f039ceb9d08ce53b3d206",
+          "uri": "https://www.ntlis.nt.gov.au/placenames/view.jsp?id=23654"
+        },
+        {
+          "filename": "source/nt-museums.html",
+          "sha256": "18cf2d88cea402b4ee06c0ca390c053d1be384a511d60abe607723dad512cbb7",
+          "uri": "https://nt.gov.au/leisure/arts-culture-heritage/organisations-and-venues/museums-galleries-art-centres/museums"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Gazetteer of Australia 2012, original NT23657 Pine Creek Railway Precinct, NT. GDA94 explicit LONGITUDE/LATITUDE 131.83257, -13.81967 transformed to WGS84. © Commonwealth of Australia (Geoscience Australia) 2013. CC BY 3.0 AU https://creativecommons.org/licenses/by/3.0/au/. Original place point on the rail precinct near the former platform and station buildings. It identifies the museum precinct, separate from the repeater museum.",
+        "point": [
+          131.83257,
+          -13.81967
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independent agent recomputed exact GML national gazetteer coordinates and audited publication license, native CC0 statements, state and World Heritage geographies, traditional access and current visitor routes.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The representative point marks the historic railway museum precinct on Main Terrace. Access is limited to areas and hours designated by National Trust.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched the public visitor place to a published site-specific point.",
+          "note": "No new historical phases assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Trust of Australia (Northern Territory)",
+          "Commonwealth of Australia (Geoscience Australia)"
+        ],
+        "description": "The representative point marks the historic railway museum precinct on Main Terrace. Access is limited to areas and hours designated by National Trust.",
+        "description_zh": "代表点对应梅因露台街的派恩克里克铁路历史区。公众参观范围和时段以国家信托公告为准。",
+        "details": "The representative point marks the historic railway museum precinct on Main Terrace. Access is limited to areas and hours designated by National Trust.",
+        "geography": {
+          "authority_id": "supplement:auth:au-ga2012:NT23657",
+          "countries": [
+            "AU"
+          ],
+          "note": "Original place point on the rail precinct near the former platform and station buildings. It identifies the museum precinct, separate from the repeater museum.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record NT23657, Pine Creek Railway Precinct.",
+            "id": "auth:au-ga2012:NT23657:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          }
+        },
+        "id": "auth:au-ga2012:NT23657",
+        "location_precision": null,
+        "names": [
+          "Pine Creek Railway Precinct",
+          "派恩克里克铁路历史区"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          131.83257,
+          -13.81967
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public railway precinct preserves the former North Australia Railway station and freight facilities.",
+            "id": "auth:au-ga2012:NT23657:visit",
+            "license": null,
+            "publisher": "National Trust of Australia (Northern Territory)",
+            "revision": "Snapshot 2026-11-28; SHA-256 19d6ad71048c39409a415b31f8a298d49afd9e76a437c883bd581e5db6056fb4.",
+            "title": "Pine Creek Railway Precinct visitor information",
+            "uri": "https://www.nationaltrust.org.au/wp-content/uploads/2025/12/National_Trust_December_2025_Newsletter.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record NT23657, Pine Creek Railway Precinct.",
+            "id": "auth:au-ga2012:NT23657:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Current catalogue metadata labels CC BY 4.0. The supplied 2012 package guide states CC BY 3.0 Australia.",
+            "id": "auth:au-ga2012:NT23657:metadata",
+            "license": null,
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "Snapshot 2026-11-28; SHA-256 497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408.",
+            "title": "Gazetteer of Australia 2012 dataset metadata",
+            "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The designated heritage property has published visitor arrangements and route restrictions.",
+            "id": "auth:au-ga2012:NT23657:independent-scope",
+            "license": null,
+            "publisher": "National Trust of Australia (Northern Territory)",
+            "revision": "2026-11-28; SHA-256 e46dec67c5dcb5d7b023097be6875164b1005764b7dee7bc01b6f14053673158.",
+            "title": "Current heritage visitor scope",
+            "uri": "https://www.nationaltrust.org.au/places/railway-station-pine-creek/"
+          }
+        ],
+        "source_uri": "https://www.nationaltrust.org.au/wp-content/uploads/2025/12/National_Trust_December_2025_Newsletter.pdf",
+        "title": "Pine Creek Railway Precinct",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/nt-pine-current-list.pdf",
+          "sha256": "19d6ad71048c39409a415b31f8a298d49afd9e76a437c883bd581e5db6056fb4",
+          "uri": "https://www.nationaltrust.org.au/wp-content/uploads/2025/12/National_Trust_December_2025_Newsletter.pdf"
+        },
+        {
+          "filename": "source/ga-2012-point-package.zip",
+          "sha256": "3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e",
+          "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+        },
+        {
+          "filename": "source/ga-2012-point-metadata.html",
+          "sha256": "497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408",
+          "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+        },
+        {
+          "filename": "source/ga-cc-by-3.0-au.html",
+          "sha256": "4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c",
+          "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+        },
+        {
+          "filename": "source/nt-pine-names-original.html",
+          "sha256": "353c1fbe84b1d405e0223ba6388bee941f8a2ffedcb5b3864a3b10abd0883276",
+          "uri": "https://www.ntlis.nt.gov.au/placenames/view.jsp?id=23764"
+        },
+        {
+          "filename": "source/nt-museums.html",
+          "sha256": "18cf2d88cea402b4ee06c0ca390c053d1be384a511d60abe607723dad512cbb7",
+          "uri": "https://nt.gov.au/leisure/arts-culture-heritage/organisations-and-venues/museums-galleries-art-centres/museums"
+        },
+        {
+          "filename": "source/independent-pine-trust.html",
+          "sha256": "e46dec67c5dcb5d7b023097be6875164b1005764b7dee7bc01b6f14053673158",
+          "uri": "https://www.nationaltrust.org.au/places/railway-station-pine-creek/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Gazetteer of Australia 2012, original NT3242 Adelaide River War Cemetery, NT. GDA94 explicit LONGITUDE/LATITUDE 131.11417, -13.23078 transformed to WGS84. © Commonwealth of Australia (Geoscience Australia) 2013. CC BY 3.0 AU https://creativecommons.org/licenses/by/3.0/au/. Original named cemetery point inside the military burial grounds. The nearby Wartime Civilian Cemetery has a separate gazetteer record.",
+        "point": [
+          131.11417,
+          -13.23078
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independent agent recomputed exact GML national gazetteer coordinates and audited publication license, native CC0 statements, state and World Heritage geographies, traditional access and current visitor routes.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Original named cemetery point inside the military burial grounds. The nearby Wartime Civilian Cemetery has a separate gazetteer record.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched the public visitor place to a published site-specific point.",
+          "note": "No new historical phases assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Australian War Memorial",
+          "Commonwealth of Australia (Geoscience Australia)"
+        ],
+        "description": "The public military cemetery preserves Commonwealth war graves in Adelaide River.",
+        "description_zh": "阿德莱德河战争公墓是澳大利亚公开文化遗址。地图标注遗址代表点。",
+        "details": "The public military cemetery preserves Commonwealth war graves in Adelaide River.",
+        "geography": {
+          "authority_id": "supplement:auth:au-ga2012:NT3242",
+          "countries": [
+            "AU"
+          ],
+          "note": "Original named cemetery point inside the military burial grounds. The nearby Wartime Civilian Cemetery has a separate gazetteer record.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record NT3242, Adelaide River War Cemetery.",
+            "id": "auth:au-ga2012:NT3242:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          }
+        },
+        "id": "auth:au-ga2012:NT3242",
+        "location_precision": null,
+        "names": [
+          "Adelaide River War Cemetery",
+          "阿德莱德河战争公墓"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          131.11417,
+          -13.23078
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public military cemetery preserves Commonwealth war graves in Adelaide River.",
+            "id": "auth:au-ga2012:NT3242:visit",
+            "license": null,
+            "publisher": "Australian War Memorial",
+            "revision": "Snapshot 2026-11-28; SHA-256 6f2a799e4ca0e0eabe7a4be0ae369a4d7a864b6b77c1ec9f2469a4f415002b05.",
+            "title": "Adelaide River War Cemetery visitor information",
+            "uri": "https://placesofpride.awm.gov.au/memorials/244466"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record NT3242, Adelaide River War Cemetery.",
+            "id": "auth:au-ga2012:NT3242:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Current catalogue metadata labels CC BY 4.0. The supplied 2012 package guide states CC BY 3.0 Australia.",
+            "id": "auth:au-ga2012:NT3242:metadata",
+            "license": null,
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "Snapshot 2026-11-28; SHA-256 497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408.",
+            "title": "Gazetteer of Australia 2012 dataset metadata",
+            "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+          }
+        ],
+        "source_uri": "https://placesofpride.awm.gov.au/memorials/244466",
+        "title": "Adelaide River War Cemetery",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/nt-adelaide-river-visit-government.html",
+          "sha256": "6f2a799e4ca0e0eabe7a4be0ae369a4d7a864b6b77c1ec9f2469a4f415002b05",
+          "uri": "https://placesofpride.awm.gov.au/memorials/244466"
+        },
+        {
+          "filename": "source/ga-2012-point-package.zip",
+          "sha256": "3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e",
+          "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+        },
+        {
+          "filename": "source/ga-2012-point-metadata.html",
+          "sha256": "497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408",
+          "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+        },
+        {
+          "filename": "source/ga-cc-by-3.0-au.html",
+          "sha256": "4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c",
+          "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+        },
+        {
+          "filename": "source/nt-adelaide-river-names-original.html",
+          "sha256": "ab4ae30ec2afd98b387bcb61f0d14b63f2c1347022c368d4e68987dd43528909",
+          "uri": "https://www.ntlis.nt.gov.au/placenames/view.jsp?id=3242"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Gazetteer of Australia 2012, original WA100039010 Whaling Station, WA. GDA94 explicit LONGITUDE/LATITUDE 117.9599, -35.09546 transformed to WGS84. © Commonwealth of Australia (Geoscience Australia) 2013. CC BY 3.0 AU https://creativecommons.org/licenses/by/3.0/au/. The Gazetteer’s original Whaling Station marker is inside the precisely matching named industrial precinct visited today.",
+        "point": [
+          117.9599,
+          -35.09546
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independent agent recomputed exact GML national gazetteer coordinates and audited publication license, native CC0 statements, state and World Heritage geographies, traditional access and current visitor routes.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The Gazetteer’s original Whaling Station marker is inside the precisely matching named industrial precinct visited today.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched the public visitor place to a published site-specific point.",
+          "note": "No new historical phases assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Discovery Bay Tourism Precinct Ltd",
+          "Commonwealth of Australia (Geoscience Australia)"
+        ],
+        "description": "The former Cheynes Beach industrial whaling station retains original facilities open to the public.",
+        "description_zh": "奥尔巴尼历史捕鲸站是澳大利亚公开文化遗址。地图标注遗址代表点。",
+        "details": "The former Cheynes Beach industrial whaling station retains original facilities open to the public.",
+        "geography": {
+          "authority_id": "supplement:auth:au-ga2012:WA100039010",
+          "countries": [
+            "AU"
+          ],
+          "note": "The Gazetteer’s original Whaling Station marker is inside the precisely matching named industrial precinct visited today.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record WA100039010, Whaling Station.",
+            "id": "auth:au-ga2012:WA100039010:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          }
+        },
+        "id": "auth:au-ga2012:WA100039010",
+        "location_precision": null,
+        "names": [
+          "Albany’s Historic Whaling Station",
+          "奥尔巴尼历史捕鲸站",
+          "Whaling Station"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          117.9599,
+          -35.09546
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The former Cheynes Beach industrial whaling station retains original facilities open to the public.",
+            "id": "auth:au-ga2012:WA100039010:visit",
+            "license": null,
+            "publisher": "Discovery Bay Tourism Precinct Ltd",
+            "revision": "Snapshot 2026-11-28; SHA-256 1f380a5cc1d96baafe87f8e82aad741b3571c030c31cb515bea352d642cb33c8.",
+            "title": "Albany’s Historic Whaling Station visitor information",
+            "uri": "https://discoverybay.com.au/blog/information/about-us/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record WA100039010, Whaling Station.",
+            "id": "auth:au-ga2012:WA100039010:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Current catalogue metadata labels CC BY 4.0. The supplied 2012 package guide states CC BY 3.0 Australia.",
+            "id": "auth:au-ga2012:WA100039010:metadata",
+            "license": null,
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "Snapshot 2026-11-28; SHA-256 497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408.",
+            "title": "Gazetteer of Australia 2012 dataset metadata",
+            "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+          }
+        ],
+        "source_uri": "https://discoverybay.com.au/blog/information/about-us/",
+        "title": "Albany’s Historic Whaling Station",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/wa-whaling-operator-plan.html",
+          "sha256": "1f380a5cc1d96baafe87f8e82aad741b3571c030c31cb515bea352d642cb33c8",
+          "uri": "https://discoverybay.com.au/blog/information/about-us/"
+        },
+        {
+          "filename": "source/ga-2012-point-package.zip",
+          "sha256": "3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e",
+          "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+        },
+        {
+          "filename": "source/ga-2012-point-metadata.html",
+          "sha256": "497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408",
+          "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+        },
+        {
+          "filename": "source/ga-cc-by-3.0-au.html",
+          "sha256": "4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c",
+          "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+        },
+        {
+          "filename": "source/wa-whaling-collection.html",
+          "sha256": "8d7e29566808d9fed8ad60e4e62baf46f90d566602c429ad924e605a17ca9ceb",
+          "uri": "https://visitwanderland.com.au/explore/south-west/albanys-historic-whaling-station"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Gazetteer of Australia 2012, original WA100156285 Ellensbrook, WA. GDA94 explicit LONGITUDE/LATITUDE 114.9912, -33.91048 transformed to WGS84. © Commonwealth of Australia (Geoscience Australia) 2013. CC BY 3.0 AU https://creativecommons.org/licenses/by/3.0/au/. Original point for the managed historic homestead within registered grounds and within 5m of the building. Broader cultural sites are outside this record.",
+        "point": [
+          114.9912,
+          -33.91048
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independent agent recomputed exact GML national gazetteer coordinates and audited publication license, native CC0 statements, state and World Heritage geographies, traditional access and current visitor routes.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Original point for the managed historic homestead within registered grounds and within 5m of the building. Broader cultural sites are outside this record.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched the public visitor place to a published site-specific point.",
+          "note": "No new historical phases assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Western Australia Department of Biodiversity, Conservation and Attractions",
+          "Commonwealth of Australia (Geoscience Australia)"
+        ],
+        "description": "The public homestead and grounds at Mokidup interpret the area’s natural and cultural history.",
+        "description_zh": "莫基达普埃伦斯布鲁克旧宅是澳大利亚公开文化遗址。地图标注遗址代表点。",
+        "details": "The public homestead and grounds at Mokidup interpret the area’s natural and cultural history.",
+        "geography": {
+          "authority_id": "supplement:auth:au-ga2012:WA100156285",
+          "countries": [
+            "AU"
+          ],
+          "note": "Original point for the managed historic homestead within registered grounds and within 5m of the building. Broader cultural sites are outside this record.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record WA100156285, Ellensbrook.",
+            "id": "auth:au-ga2012:WA100156285:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          }
+        },
+        "id": "auth:au-ga2012:WA100156285",
+        "location_precision": null,
+        "names": [
+          "Ellensbrook at Mokidup",
+          "莫基达普埃伦斯布鲁克旧宅",
+          "Ellensbrook"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          114.9912,
+          -33.91048
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public homestead and grounds at Mokidup interpret the area’s natural and cultural history.",
+            "id": "auth:au-ga2012:WA100156285:visit",
+            "license": null,
+            "publisher": "Western Australia Department of Biodiversity, Conservation and Attractions",
+            "revision": "Snapshot 2026-11-28; SHA-256 2cd69f47f0378e65bd48b89a58d5636c359d7dbefa37669b33af860b3ed6597d.",
+            "title": "Ellensbrook at Mokidup visitor information",
+            "uri": "https://exploreparks.dbca.wa.gov.au/site/ellensbrook-mokidup"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record WA100156285, Ellensbrook.",
+            "id": "auth:au-ga2012:WA100156285:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Current catalogue metadata labels CC BY 4.0. The supplied 2012 package guide states CC BY 3.0 Australia.",
+            "id": "auth:au-ga2012:WA100156285:metadata",
+            "license": null,
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "Snapshot 2026-11-28; SHA-256 497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408.",
+            "title": "Gazetteer of Australia 2012 dataset metadata",
+            "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+          }
+        ],
+        "source_uri": "https://exploreparks.dbca.wa.gov.au/site/ellensbrook-mokidup",
+        "title": "Ellensbrook at Mokidup",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/wa-ellensbrook-dbca.html",
+          "sha256": "2cd69f47f0378e65bd48b89a58d5636c359d7dbefa37669b33af860b3ed6597d",
+          "uri": "https://exploreparks.dbca.wa.gov.au/site/ellensbrook-mokidup"
+        },
+        {
+          "filename": "source/ga-2012-point-package.zip",
+          "sha256": "3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e",
+          "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+        },
+        {
+          "filename": "source/ga-2012-point-metadata.html",
+          "sha256": "497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408",
+          "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+        },
+        {
+          "filename": "source/ga-cc-by-3.0-au.html",
+          "sha256": "4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c",
+          "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Gazetteer of Australia 2012, original WA100182060 Tranby House, WA. GDA94 explicit LONGITUDE/LATITUDE 115.9103, -31.94278 transformed to WGS84. © Commonwealth of Australia (Geoscience Australia) 2013. CC BY 3.0 AU https://creativecommons.org/licenses/by/3.0/au/. Named Tranby House place point falls in the public farm grounds beside the historic house, inside its registration boundary.",
+        "point": [
+          115.9103,
+          -31.94278
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independent agent recomputed exact GML national gazetteer coordinates and audited publication license, native CC0 statements, state and World Heritage geographies, traditional access and current visitor routes.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Named Tranby House place point falls in the public farm grounds beside the historic house, inside its registration boundary.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched the public visitor place to a published site-specific point.",
+          "note": "No new historical phases assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Trust of Western Australia",
+          "Commonwealth of Australia (Geoscience Australia)"
+        ],
+        "description": "The farm’s historic Tranby House and grounds form a public heritage property on the Swan River.",
+        "description_zh": "乌鲁特沃拉特半岛农庄是澳大利亚公开文化遗址。地图标注遗址代表点。",
+        "details": "The farm’s historic Tranby House and grounds form a public heritage property on the Swan River.",
+        "geography": {
+          "authority_id": "supplement:auth:au-ga2012:WA100182060",
+          "countries": [
+            "AU"
+          ],
+          "note": "Named Tranby House place point falls in the public farm grounds beside the historic house, inside its registration boundary.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record WA100182060, Tranby House.",
+            "id": "auth:au-ga2012:WA100182060:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          }
+        },
+        "id": "auth:au-ga2012:WA100182060",
+        "location_precision": null,
+        "names": [
+          "Peninsula Farm at Wu-rut Woorat",
+          "乌鲁特沃拉特半岛农庄",
+          "Tranby House"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          115.9103,
+          -31.94278
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The farm’s historic Tranby House and grounds form a public heritage property on the Swan River.",
+            "id": "auth:au-ga2012:WA100182060:visit",
+            "license": null,
+            "publisher": "National Trust of Western Australia",
+            "revision": "Snapshot 2026-11-28; SHA-256 cf7cfc13c425a37457ad834bf9e1698de878ae082155e0a1b2a88dd891987978.",
+            "title": "Peninsula Farm at Wu-rut Woorat visitor information",
+            "uri": "https://nationaltrustwa.rezdy.com/484887/peninsula-farm"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record WA100182060, Tranby House.",
+            "id": "auth:au-ga2012:WA100182060:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Current catalogue metadata labels CC BY 4.0. The supplied 2012 package guide states CC BY 3.0 Australia.",
+            "id": "auth:au-ga2012:WA100182060:metadata",
+            "license": null,
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "Snapshot 2026-11-28; SHA-256 497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408.",
+            "title": "Gazetteer of Australia 2012 dataset metadata",
+            "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+          }
+        ],
+        "source_uri": "https://nationaltrustwa.rezdy.com/484887/peninsula-farm",
+        "title": "Peninsula Farm at Wu-rut Woorat",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/wa-peninsula-current-ticket.html",
+          "sha256": "cf7cfc13c425a37457ad834bf9e1698de878ae082155e0a1b2a88dd891987978",
+          "uri": "https://nationaltrustwa.rezdy.com/484887/peninsula-farm"
+        },
+        {
+          "filename": "source/ga-2012-point-package.zip",
+          "sha256": "3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e",
+          "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+        },
+        {
+          "filename": "source/ga-2012-point-metadata.html",
+          "sha256": "497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408",
+          "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+        },
+        {
+          "filename": "source/ga-cc-by-3.0-au.html",
+          "sha256": "4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c",
+          "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+        },
+        {
+          "filename": "source/wa-peninsula-assessment.pdf",
+          "sha256": "d73f6eda885ee039423fa81bcb6f54aa53d1292ba3e488512faad733732ff2a9",
+          "uri": "https://www.nationaltrust.org.au/wp-content/uploads/2022/07/20220712-PENF-Cultural-Landscape-Plan.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Gazetteer of Australia 2012, original WA100187892 Cossack, WA. GDA94 explicit LONGITUDE/LATITUDE 117.1886, -20.67833 transformed to WGS84. © Commonwealth of Australia (Geoscience Australia) 2013. CC BY 3.0 AU https://creativecommons.org/licenses/by/3.0/au/. Original townsite point within the registered historic precinct, by the outdoor heritage route. Interior access depends on the responsible venue.",
+        "point": [
+          117.1886,
+          -20.67833
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independent agent recomputed exact GML national gazetteer coordinates and audited publication license, native CC0 statements, state and World Heritage geographies, traditional access and current visitor routes.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The representative point is near the marked outdoor Heritage Trail in the registered historic townsite. The public scope follows that trail and the city’s opening arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched the public visitor place to a published site-specific point.",
+          "note": "No new historical phases assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "City of Karratha",
+          "Commonwealth of Australia (Geoscience Australia)"
+        ],
+        "description": "The representative point is near the marked outdoor Heritage Trail in the registered historic townsite. The public scope follows that trail and the city’s opening arrangements.",
+        "description_zh": "代表点位于科萨克登记历史镇区内，靠近标明的户外遗产步道。开放范围和时段以卡拉萨市的步道公告为准。",
+        "details": "The representative point is near the marked outdoor Heritage Trail in the registered historic townsite. The public scope follows that trail and the city’s opening arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:au-ga2012:WA100187892",
+          "countries": [
+            "AU"
+          ],
+          "note": "Original townsite point within the registered historic precinct, by the outdoor heritage route. Interior access depends on the responsible venue.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record WA100187892, Cossack.",
+            "id": "auth:au-ga2012:WA100187892:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          }
+        },
+        "id": "auth:au-ga2012:WA100187892",
+        "location_precision": null,
+        "names": [
+          "Cossack Historic Town",
+          "科萨克历史镇址",
+          "Cossack"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          117.1886,
+          -20.67833
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The local authority publishes access to the heritage trail in the former port town of Cossack.",
+            "id": "auth:au-ga2012:WA100187892:visit",
+            "license": null,
+            "publisher": "City of Karratha",
+            "revision": "Snapshot 2026-11-28; SHA-256 8d7900f317987b94be6974a0244ff6221d9e901fda4fb2c0f5cdd3877c93869c.",
+            "title": "Cossack Historic Town visitor information",
+            "uri": "https://www.karratha.wa.gov.au/recreation-and-sports/cossack-heritage-trail"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record WA100187892, Cossack.",
+            "id": "auth:au-ga2012:WA100187892:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Current catalogue metadata labels CC BY 4.0. The supplied 2012 package guide states CC BY 3.0 Australia.",
+            "id": "auth:au-ga2012:WA100187892:metadata",
+            "license": null,
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "Snapshot 2026-11-28; SHA-256 497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408.",
+            "title": "Gazetteer of Australia 2012 dataset metadata",
+            "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The designated heritage property has published visitor arrangements and route restrictions.",
+            "id": "auth:au-ga2012:WA100187892:independent-scope",
+            "license": null,
+            "publisher": "City of Karratha",
+            "revision": "2026-11-28; SHA-256 936f17b375b42554f4cb5791c037056158222a071650b4f55129b057f23b175d.",
+            "title": "Current heritage visitor scope",
+            "uri": "https://trailswa.com.au/trails/trail/cossack-heritage-trail?needToKnow=1"
+          }
+        ],
+        "source_uri": "https://www.karratha.wa.gov.au/recreation-and-sports/cossack-heritage-trail",
+        "title": "Cossack Historic Town",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/wa-cossack-heritage-trail-canonical.html",
+          "sha256": "8d7900f317987b94be6974a0244ff6221d9e901fda4fb2c0f5cdd3877c93869c",
+          "uri": "https://www.karratha.wa.gov.au/recreation-and-sports/cossack-heritage-trail"
+        },
+        {
+          "filename": "source/ga-2012-point-package.zip",
+          "sha256": "3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e",
+          "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+        },
+        {
+          "filename": "source/ga-2012-point-metadata.html",
+          "sha256": "497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408",
+          "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+        },
+        {
+          "filename": "source/ga-cc-by-3.0-au.html",
+          "sha256": "4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c",
+          "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+        },
+        {
+          "filename": "source/wa-cossack-conservation-plan.pdf",
+          "sha256": "298ab8fd3e91d1f86f5aba2519440f3cdc0044607dd7c9a85c7f753ada782fa7",
+          "uri": "https://www.karratha.wa.gov.au/sites/default/files/uploads/20180213%20Cossack%20CMP.pdf"
+        },
+        {
+          "filename": "source/independent-cossack-trail-wa.html",
+          "sha256": "936f17b375b42554f4cb5791c037056158222a071650b4f55129b057f23b175d",
+          "uri": "https://trailswa.com.au/trails/trail/cossack-heritage-trail?needToKnow=1"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Gazetteer of Australia 2012, original WA100194190 East Perth Cemetery, WA. GDA94 explicit LONGITUDE/LATITUDE 115.8786, -31.95583 transformed to WGS84. © Commonwealth of Australia (Geoscience Australia) 2013. CC BY 3.0 AU https://creativecommons.org/licenses/by/3.0/au/. The original point is inside the maintained and visited burial grounds, separate from historical former burial parcels outside the site.",
+        "point": [
+          115.8786,
+          -31.95583
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independent agent recomputed exact GML national gazetteer coordinates and audited publication license, native CC0 statements, state and World Heritage geographies, traditional access and current visitor routes.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original point is inside the maintained and visited burial grounds, separate from historical former burial parcels outside the site.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched the public visitor place to a published site-specific point.",
+          "note": "No new historical phases assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Trust of Western Australia",
+          "Commonwealth of Australia (Geoscience Australia)"
+        ],
+        "description": "The historic cemetery precinct in East Perth opens on the National Trust’s public visiting schedule.",
+        "description_zh": "马特卢普东珀斯历史公墓是澳大利亚公开文化遗址。地图标注遗址代表点。",
+        "details": "The historic cemetery precinct in East Perth opens on the National Trust’s public visiting schedule.",
+        "geography": {
+          "authority_id": "supplement:auth:au-ga2012:WA100194190",
+          "countries": [
+            "AU"
+          ],
+          "note": "The original point is inside the maintained and visited burial grounds, separate from historical former burial parcels outside the site.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record WA100194190, East Perth Cemetery.",
+            "id": "auth:au-ga2012:WA100194190:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          }
+        },
+        "id": "auth:au-ga2012:WA100194190",
+        "location_precision": null,
+        "names": [
+          "East Perth Cemeteries at Martellup",
+          "马特卢普东珀斯历史公墓",
+          "East Perth Cemetery"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          115.8786,
+          -31.95583
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The historic cemetery precinct in East Perth opens on the National Trust’s public visiting schedule.",
+            "id": "auth:au-ga2012:WA100194190:visit",
+            "license": null,
+            "publisher": "National Trust of Western Australia",
+            "revision": "Snapshot 2026-11-28; SHA-256 4dd0357a4250cf5d5744913451a3dcaed162ceb232de10ff087ec73b8800adc4.",
+            "title": "East Perth Cemeteries at Martellup visitor information",
+            "uri": "https://www.eastperthcemeteries.com.au/index.php/visit/opening-times"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "© Commonwealth of Australia (Geoscience Australia) 2013. Original Gazetteer record WA100194190, East Perth Cemetery.",
+            "id": "auth:au-ga2012:WA100194190:point",
+            "license": "CC BY 3.0 AU",
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "2012 release, eCat 76695, archive SHA-256 3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e.",
+            "title": "Gazetteer of Australia 2012 GDA94 point",
+            "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Current catalogue metadata labels CC BY 4.0. The supplied 2012 package guide states CC BY 3.0 Australia.",
+            "id": "auth:au-ga2012:WA100194190:metadata",
+            "license": null,
+            "publisher": "Commonwealth of Australia (Geoscience Australia)",
+            "revision": "Snapshot 2026-11-28; SHA-256 497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408.",
+            "title": "Gazetteer of Australia 2012 dataset metadata",
+            "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+          }
+        ],
+        "source_uri": "https://www.eastperthcemeteries.com.au/index.php/visit/opening-times",
+        "title": "East Perth Cemeteries at Martellup",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/wa-east-perth-venue.html",
+          "sha256": "4dd0357a4250cf5d5744913451a3dcaed162ceb232de10ff087ec73b8800adc4",
+          "uri": "https://www.eastperthcemeteries.com.au/index.php/visit/opening-times"
+        },
+        {
+          "filename": "source/ga-2012-point-package.zip",
+          "sha256": "3260bd557ca49989335726e498630746a49dc65c497cef3392ef5bf4d905af1e",
+          "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+        },
+        {
+          "filename": "source/ga-2012-point-metadata.html",
+          "sha256": "497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408",
+          "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+        },
+        {
+          "filename": "source/ga-cc-by-3.0-au.html",
+          "sha256": "4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c",
+          "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+        },
+        {
+          "filename": "source/wa-east-perth-native-assessment.pdf",
+          "sha256": "8cf242551a1ae5432a797d8b6f214ca05268825002be8f4150c34397fc338b20",
+          "uri": "https://inherit.dplh.wa.gov.au/admin/api/file/b6e3afa2-fda3-4ac9-8cf9-c85111a135a6"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original point within the registered public heritage precinct near the operator’s mapped visitor approach. It represents the public property at grounds scale.",
+        "point": [
+          115.433,
+          -33.6276
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Bamboo+Creek+Tin+Mine%7CAdelaide+River+War+Cemetery%7CBurnett+House%7CAudit+House%7CEllensbrook%7CWonnerup+House%7CWoodbridge%2C+Western+Australia+%28house%29%7CTranby+House%7COld+Blythewood%7CEast+Perth+Cemeteries%7CCentral+Greenough%7CANZAC+Cottage&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json",
+        "statement_id": "q12073126$BB120AFF-54DF-435C-B425-61BC90B399E3"
+      },
+      "independent_review": {
+        "method": "Independent agent recomputed exact GML national gazetteer coordinates and audited publication license, native CC0 statements, state and World Heritage geographies, traditional access and current visitor routes.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "This point is within the public registered grounds of Wonnerup at 935 Layman Road. Scheduled tickets cover the historic houses and authorised grounds.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched the public visitor place to a published site-specific point.",
+          "note": "No new historical phases assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Trust of Western Australia",
+          "Wikidata contributors"
+        ],
+        "description": "This point is within the public registered grounds of Wonnerup at 935 Layman Road. Scheduled tickets cover the historic houses and authorised grounds.",
+        "description_zh": "代表点落在莱曼路 935 号的沃纳拉普登记遗产园区内。历史住宅及指定园区按管理方公告购票参观。",
+        "details": "This point is within the public registered grounds of Wonnerup at 935 Layman Road. Scheduled tickets cover the historic houses and authorised grounds.",
+        "geography": {
+          "authority_id": "supplement:auth:au-public:Q12073126",
+          "countries": [
+            "AU"
+          ],
+          "note": "Original point within the registered public heritage precinct near the operator’s mapped visitor approach. It represents the public property at grounds scale.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Q12073126 WGS84 longitude 115.433, latitude -33.6276.",
+            "id": "wikidata:Q12073126",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Revision 2510644678; P625 q12073126$BB120AFF-54DF-435C-B425-61BC90B399E3.",
+            "title": "Original Wikidata representative point",
+            "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Bamboo+Creek+Tin+Mine%7CAdelaide+River+War+Cemetery%7CBurnett+House%7CAudit+House%7CEllensbrook%7CWonnerup+House%7CWoodbridge%2C+Western+Australia+%28house%29%7CTranby+House%7COld+Blythewood%7CEast+Perth+Cemeteries%7CCentral+Greenough%7CANZAC+Cottage&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+          }
+        },
+        "id": "auth:au-public:Q12073126",
+        "location_precision": null,
+        "names": [
+          "Wonnerup House and Grounds",
+          "沃纳拉普旧宅与园区",
+          "Wonnerup House"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          115.433,
+          -33.6276
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The National Trust opens the historic Wonnerup property for ticketed public visits.",
+            "id": "auth:au-public:Q12073126:visit",
+            "license": null,
+            "publisher": "National Trust of Western Australia",
+            "revision": "Snapshot 2026-11-28; SHA-256 9b9e1a6b51a55401fab43fda8d0db93a5988ccfb1dbaa2276563bf23def05246.",
+            "title": "Wonnerup House and Grounds visitor information",
+            "uri": "https://nationaltrustwa.rezdy.com/485951/wonnerup-house"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Q12073126 WGS84 longitude 115.433, latitude -33.6276.",
+            "id": "wikidata:Q12073126",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Revision 2510644678; P625 q12073126$BB120AFF-54DF-435C-B425-61BC90B399E3.",
+            "title": "Original Wikidata representative point",
+            "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Bamboo+Creek+Tin+Mine%7CAdelaide+River+War+Cemetery%7CBurnett+House%7CAudit+House%7CEllensbrook%7CWonnerup+House%7CWoodbridge%2C+Western+Australia+%28house%29%7CTranby+House%7COld+Blythewood%7CEast+Perth+Cemeteries%7CCentral+Greenough%7CANZAC+Cottage&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+          }
+        ],
+        "source_uri": "https://nationaltrustwa.rezdy.com/485951/wonnerup-house",
+        "title": "Wonnerup House and Grounds",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/wa-wonnerup-trust-booking.html",
+          "sha256": "9b9e1a6b51a55401fab43fda8d0db93a5988ccfb1dbaa2276563bf23def05246",
+          "uri": "https://nationaltrustwa.rezdy.com/485951/wonnerup-house"
+        },
+        {
+          "filename": "source/wd-titles-12.json",
+          "sha256": "4356717a67903154e298e0de8bcd77e0c8e709039bc4665a0cf27a9d82f24269",
+          "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Bamboo+Creek+Tin+Mine%7CAdelaide+River+War+Cemetery%7CBurnett+House%7CAudit+House%7CEllensbrook%7CWonnerup+House%7CWoodbridge%2C+Western+Australia+%28house%29%7CTranby+House%7COld+Blythewood%7CEast+Perth+Cemeteries%7CCentral+Greenough%7CANZAC+Cottage&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The native museum point matches the old gaol building at Stuart Terrace. The earlier Stuart Town Gaol on Parsons Street is a separate property.",
+        "point": [
+          133.8769,
+          -23.7041
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Old+Police+Station%2C+Borroloola%7CBorroloola+Police+Station+Museum%7CBorroloola+Police+Station%7CPine+Creek+%28Northern+Territory%29%7CNewcastle+Waters%2C+Northern+Territory%7CNewcastle+Waters+Township%7CJones+Store%2C+Newcastle+Waters%7CStuart+Town+Gaol%2C+Alice+Springs%7CTuxworth-Fullwood+House%7CAlice+Springs+Gaol%7CNational+Pioneer+Women%E2%80%99s+Hall+of+Fame%7CWomen%27s+Museum+of+Australia&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json",
+        "statement_id": "Q14935683$6F140EC6-E964-4935-8635-B7CC437C0C80"
+      },
+      "independent_review": {
+        "method": "Independent agent recomputed exact GML national gazetteer coordinates and audited publication license, native CC0 statements, state and World Heritage geographies, traditional access and current visitor routes.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The native museum point matches the old gaol building at Stuart Terrace. The earlier Stuart Town Gaol on Parsons Street is a separate property.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched the public visitor place to a published site-specific point.",
+          "note": "No new historical phases assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Women’s Museum of Australia",
+          "Wikidata contributors"
+        ],
+        "description": "The old Alice Springs gaol now houses the Women’s Museum of Australia and remains open to visitors.",
+        "description_zh": "爱丽斯泉旧监狱是澳大利亚公开文化遗址。地图标注遗址代表点。",
+        "details": "The old Alice Springs gaol now houses the Women’s Museum of Australia and remains open to visitors.",
+        "geography": {
+          "authority_id": "supplement:auth:au-public:Q14935683",
+          "countries": [
+            "AU"
+          ],
+          "note": "The native museum point matches the old gaol building at Stuart Terrace. The earlier Stuart Town Gaol on Parsons Street is a separate property.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Q14935683 WGS84 longitude 133.8769, latitude -23.7041.",
+            "id": "wikidata:Q14935683",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Revision 2496749502; P625 Q14935683$6F140EC6-E964-4935-8635-B7CC437C0C80.",
+            "title": "Original Wikidata representative point",
+            "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Old+Police+Station%2C+Borroloola%7CBorroloola+Police+Station+Museum%7CBorroloola+Police+Station%7CPine+Creek+%28Northern+Territory%29%7CNewcastle+Waters%2C+Northern+Territory%7CNewcastle+Waters+Township%7CJones+Store%2C+Newcastle+Waters%7CStuart+Town+Gaol%2C+Alice+Springs%7CTuxworth-Fullwood+House%7CAlice+Springs+Gaol%7CNational+Pioneer+Women%E2%80%99s+Hall+of+Fame%7CWomen%27s+Museum+of+Australia&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+          }
+        },
+        "id": "auth:au-public:Q14935683",
+        "location_precision": null,
+        "names": [
+          "Old Alice Springs Gaol",
+          "爱丽斯泉旧监狱",
+          "Women's Museum of Australia"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          133.8769,
+          -23.7041
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The old Alice Springs gaol now houses the Women’s Museum of Australia and remains open to visitors.",
+            "id": "auth:au-public:Q14935683:visit",
+            "license": null,
+            "publisher": "Women’s Museum of Australia",
+            "revision": "Snapshot 2026-11-28; SHA-256 44d09d41d8f14f6a5e9a4082f62d101801301f8614b6da8da5cf54fafee4571d.",
+            "title": "Old Alice Springs Gaol visitor information",
+            "uri": "https://www.wmoa.com.au/visit"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Q14935683 WGS84 longitude 133.8769, latitude -23.7041.",
+            "id": "wikidata:Q14935683",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Revision 2496749502; P625 Q14935683$6F140EC6-E964-4935-8635-B7CC437C0C80.",
+            "title": "Original Wikidata representative point",
+            "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Old+Police+Station%2C+Borroloola%7CBorroloola+Police+Station+Museum%7CBorroloola+Police+Station%7CPine+Creek+%28Northern+Territory%29%7CNewcastle+Waters%2C+Northern+Territory%7CNewcastle+Waters+Township%7CJones+Store%2C+Newcastle+Waters%7CStuart+Town+Gaol%2C+Alice+Springs%7CTuxworth-Fullwood+House%7CAlice+Springs+Gaol%7CNational+Pioneer+Women%E2%80%99s+Hall+of+Fame%7CWomen%27s+Museum+of+Australia&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+          }
+        ],
+        "source_uri": "https://www.wmoa.com.au/visit",
+        "title": "Old Alice Springs Gaol",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/nt-alice-gaol.html",
+          "sha256": "44d09d41d8f14f6a5e9a4082f62d101801301f8614b6da8da5cf54fafee4571d",
+          "uri": "https://www.wmoa.com.au/visit"
+        },
+        {
+          "filename": "source/wd-titles-36.json",
+          "sha256": "2a47d582be8d2767d67e509db5c9c01231c75afc0075c7d948eac39872a576d8",
+          "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Old+Police+Station%2C+Borroloola%7CBorroloola+Police+Station+Museum%7CBorroloola+Police+Station%7CPine+Creek+%28Northern+Territory%29%7CNewcastle+Waters%2C+Northern+Territory%7CNewcastle+Waters+Township%7CJones+Store%2C+Newcastle+Waters%7CStuart+Town+Gaol%2C+Alice+Springs%7CTuxworth-Fullwood+House%7CAlice+Springs+Gaol%7CNational+Pioneer+Women%E2%80%99s+Hall+of+Fame%7CWomen%27s+Museum+of+Australia&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+        },
+        {
+          "filename": "source/nt-museums.html",
+          "sha256": "18cf2d88cea402b4ee06c0ca390c053d1be384a511d60abe607723dad512cbb7",
+          "uri": "https://nt.gov.au/leisure/arts-culture-heritage/organisations-and-venues/museums-galleries-art-centres/museums"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The original town marker lies in the heritage precinct’s interpreted former mining camps. Public paths and individually open buildings define visit access.",
+        "point": [
+          121.33,
+          -28.9133
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Israelite+Bay+Telegraph+Station%7CGwalia%2C+Western+Australia%7CMangowine+Homestead%7CCossack%2C+Western+Australia%7CCheynes+Beach+Whaling+Station%7CMoir+Homestead%7COld+Farm%2C+Strawberry+Hill%7CSamson+House%7CPine+Creek+Railway+Station%7CPine+Creek+Repeater+Station+and+Museum%7CAdelaide+House+Museum%7CPine+Creek+Repeater+Museum&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json",
+        "statement_id": "q5623251$FCEBDA47-E016-4F03-9AB8-17CEB5E0DB76"
+      },
+      "independent_review": {
+        "method": "Independent agent recomputed exact GML national gazetteer coordinates and audited publication license, native CC0 statements, state and World Heritage geographies, traditional access and current visitor routes.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "This precinct-scale point falls within the state-listed historic townsite near Little Pink Camp. Public visits follow designated townsite paths, open buildings, and conservation closures.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Matched the public visitor place to a published site-specific point.",
+          "note": "No new historical phases assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Shire of Leonora",
+          "Wikidata contributors"
+        ],
+        "description": "This precinct-scale point falls within the state-listed historic townsite near Little Pink Camp. Public visits follow designated townsite paths, open buildings, and conservation closures.",
+        "description_zh": "代表点位于格瓦利亚登记历史镇区的小粉营旧址一带。公众可按管理方公告参观开放步道及建筑，维修区域以现场安排为准。",
+        "details": "This precinct-scale point falls within the state-listed historic townsite near Little Pink Camp. Public visits follow designated townsite paths, open buildings, and conservation closures.",
+        "geography": {
+          "authority_id": "supplement:auth:au-public:Q5623251",
+          "countries": [
+            "AU"
+          ],
+          "note": "The original town marker lies in the heritage precinct’s interpreted former mining camps. Public paths and individually open buildings define visit access.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Q5623251 WGS84 longitude 121.33, latitude -28.9133.",
+            "id": "wikidata:Q5623251",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Revision 2570980763; P625 q5623251$FCEBDA47-E016-4F03-9AB8-17CEB5E0DB76.",
+            "title": "Original Wikidata representative point",
+            "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Israelite+Bay+Telegraph+Station%7CGwalia%2C+Western+Australia%7CMangowine+Homestead%7CCossack%2C+Western+Australia%7CCheynes+Beach+Whaling+Station%7CMoir+Homestead%7COld+Farm%2C+Strawberry+Hill%7CSamson+House%7CPine+Creek+Railway+Station%7CPine+Creek+Repeater+Station+and+Museum%7CAdelaide+House+Museum%7CPine+Creek+Repeater+Museum&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+          }
+        },
+        "id": "auth:au-public:Q5623251",
+        "location_precision": null,
+        "names": [
+          "Gwalia Townsite Precinct",
+          "格瓦利亚采矿历史镇址",
+          "Gwalia"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          121.33,
+          -28.9133
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public historic settlement includes preserved and relocated mining-era buildings on designated routes.",
+            "id": "auth:au-public:Q5623251:visit",
+            "license": null,
+            "publisher": "Shire of Leonora",
+            "revision": "Snapshot 2026-11-28; SHA-256 5e07bbb088ca9856e3146c0c96983ca0f8dec23ca1778348d72f932faeabee92.",
+            "title": "Gwalia Townsite Precinct visitor information",
+            "uri": "https://www.leonora.wa.gov.au/visitors/gwalia-museum/gwalia-museum.aspx"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Q5623251 WGS84 longitude 121.33, latitude -28.9133.",
+            "id": "wikidata:Q5623251",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Revision 2570980763; P625 q5623251$FCEBDA47-E016-4F03-9AB8-17CEB5E0DB76.",
+            "title": "Original Wikidata representative point",
+            "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Israelite+Bay+Telegraph+Station%7CGwalia%2C+Western+Australia%7CMangowine+Homestead%7CCossack%2C+Western+Australia%7CCheynes+Beach+Whaling+Station%7CMoir+Homestead%7COld+Farm%2C+Strawberry+Hill%7CSamson+House%7CPine+Creek+Railway+Station%7CPine+Creek+Repeater+Station+and+Museum%7CAdelaide+House+Museum%7CPine+Creek+Repeater+Museum&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The designated heritage property has published visitor arrangements and route restrictions.",
+            "id": "auth:au-public:Q5623251:independent-scope",
+            "license": null,
+            "publisher": "Shire of Leonora",
+            "revision": "2026-11-28; SHA-256 61cd65b698e6dd125ef9d776ec729c20f43adda91334f9cae1c4ee43ca5f827e.",
+            "title": "Current heritage visitor scope",
+            "uri": "https://www.gwalia.org.au/visit/opening-hours-charges.aspx"
+          }
+        ],
+        "source_uri": "https://www.leonora.wa.gov.au/visitors/gwalia-museum/gwalia-museum.aspx",
+        "title": "Gwalia Townsite Precinct",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/wa-gwalia.html",
+          "sha256": "5e07bbb088ca9856e3146c0c96983ca0f8dec23ca1778348d72f932faeabee92",
+          "uri": "https://www.leonora.wa.gov.au/visitors/gwalia-museum/gwalia-museum.aspx"
+        },
+        {
+          "filename": "source/wd-titles-24.json",
+          "sha256": "e55ad75f6187558acf24927c543103c70760608ee746705b080130227bf4d011",
+          "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Israelite+Bay+Telegraph+Station%7CGwalia%2C+Western+Australia%7CMangowine+Homestead%7CCossack%2C+Western+Australia%7CCheynes+Beach+Whaling+Station%7CMoir+Homestead%7COld+Farm%2C+Strawberry+Hill%7CSamson+House%7CPine+Creek+Railway+Station%7CPine+Creek+Repeater+Station+and+Museum%7CAdelaide+House+Museum%7CPine+Creek+Repeater+Museum&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+        },
+        {
+          "filename": "source/wa-gwalia-pink-camp-archive.html",
+          "sha256": "a20d8d35d8102365aa1510aa29b9bb90161337e88469e874257303712133dadf",
+          "uri": "https://www.gwalia.org.au/image-gallery/gwalia-buildings/15"
+        },
+        {
+          "filename": "source/independent-gwalia-hours.html",
+          "sha256": "61cd65b698e6dd125ef9d776ec729c20f43adda91334f9cae1c4ee43ca5f827e",
+          "uri": "https://www.gwalia.org.au/visit/opening-hours-charges.aspx"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Nine public heritage places in Northern Territory and eight in Western Australia, with current scope and reuse coordinates."
+}

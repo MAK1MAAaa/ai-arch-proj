@@ -1,0 +1,1021 @@
+{
+  "base_count": 4762,
+  "base_ids_sha256": "c7fbef845f20b68a4370484627efb7cc92084910daa72bd381a79711cd7dbe04",
+  "base_sites_sha256": "c33988c0d2180582c81c6fb7e81ef183611bc7bdb307d42067a1b9fc546861ed",
+  "cohort_version": "kyrgyzstan-tajikistan-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The named historic mosque, distinct from the nearby Tatar mosque. This is a building reference, with visits subject to site arrangements.",
+        "point": [
+          78.390873,
+          42.497376
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12823048.json",
+        "statement_id": "Q12823048$0B3CAC54-87D9-411A-A685-693293CC673B"
+      },
+      "independent_review": {
+        "method": "Independently verified active CC0 Wikidata or native GeoNames CC BY coordinates, first-party visit or reopening notices, official parcel context and nearby UNESCO component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic timber Dungan mosque in Karakol, still used for worship. Public sightseeing is subject to the venue’s clothing and access rules.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public historical place scope and a documented source point.",
+          "note": "This point update does not establish a dated historical phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Destination Karakol",
+          "Wikidata contributors"
+        ],
+        "description": "Historic timber Dungan mosque in Karakol, still used for worship. Public sightseeing is subject to the venue’s clothing and access rules.",
+        "description_zh": "卡拉科尔东干清真寺是仍在使用的木构宗教场所。参观须遵守场地的着装和进出规定。",
+        "details": "Historic timber Dungan mosque in Karakol, still used for worship. Public sightseeing is subject to the venue’s clothing and access rules.",
+        "geography": {
+          "authority_id": "supplement:auth:kg-public:Q12823048",
+          "countries": [
+            "KG"
+          ],
+          "note": "Public visitor location in Karakol, Issyk-Kul Region.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Visitor information describes the historic Dungan mosque and courteous access at the named building.",
+            "id": "auth:kg-public:Q12823048:evidence:0",
+            "license": null,
+            "publisher": "Destination Karakol",
+            "revision": "Retrieved 2026-11-28; SHA-256 8ae3e1797906acc0fa70c6d12ffffd8c7d1bcbab3dedac92ade3f69bb3d227ad.",
+            "title": "Karakol Dungan Mosque official public scope",
+            "uri": "https://destinationkarakol.com/what-to-do/attractions-museums/"
+          }
+        },
+        "id": "auth:kg-public:Q12823048",
+        "location_precision": null,
+        "names": [
+          "Дунганская мечеть",
+          "卡拉科尔东干清真寺"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          78.390873,
+          42.497376
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Visitor information describes the historic Dungan mosque and courteous access at the named building.",
+            "id": "auth:kg-public:Q12823048:evidence:0",
+            "license": null,
+            "publisher": "Destination Karakol",
+            "revision": "Retrieved 2026-11-28; SHA-256 8ae3e1797906acc0fa70c6d12ffffd8c7d1bcbab3dedac92ade3f69bb3d227ad.",
+            "title": "Karakol Dungan Mosque official public scope",
+            "uri": "https://destinationkarakol.com/what-to-do/attractions-museums/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 78.390873, latitude 42.497376.",
+            "id": "auth:kg-public:Q12823048:coordinate",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2572211305, P625 Q12823048$0B3CAC54-87D9-411A-A685-693293CC673B.",
+            "title": "Karakol Dungan Mosque representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12823048.json"
+          }
+        ],
+        "source_uri": "https://destinationkarakol.com/what-to-do/attractions-museums/",
+        "title": "Karakol Dungan Mosque",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "kg-tj/kg-karakol-visits.html",
+          "sha256": "8ae3e1797906acc0fa70c6d12ffffd8c7d1bcbab3dedac92ade3f69bb3d227ad",
+          "uri": "https://destinationkarakol.com/what-to-do/attractions-museums/"
+        },
+        {
+          "filename": "kg-tj/Q12823048.json",
+          "sha256": "6654baf0d8520c88fd41ace0cd2108e20d3a38f7caa30d8333e55be2f70c2d4f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12823048.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Whole publicly identified historical park. The mausoleum association is traditional, and the coordinate does not identify a verified burial or the nearby hill.",
+        "point": [
+          72.3824,
+          42.525
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2498907.json",
+        "statement_id": "Q2498907$01612F1F-3530-4A5E-8B68-86581687CB17"
+      },
+      "independent_review": {
+        "method": "Independently verified active CC0 Wikidata or native GeoNames CC BY coordinates, first-party visit or reopening notices, official parcel context and nearby UNESCO component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Whole publicly identified historical park. The mausoleum association is traditional, and the coordinate does not identify a verified burial or the nearby hill.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public historical place scope and a documented source point.",
+          "note": "This point update does not establish a dated historical phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Kyrgyz National News Agency Kabar",
+          "State Agency for Tourism Development under the Cabinet of Ministers of the Kyrgyz Republic",
+          "Wikidata contributors"
+        ],
+        "description": "Public historical park built around the historic mausoleum traditionally associated with Manas. New visitor facilities opened after renovation in 2026.",
+        "description_zh": "塔拉斯州历史公园，以传统上与史诗人物玛纳斯相关的历史陵墓为中心，2026 年翻修后启用新的访客设施。",
+        "details": "Public historical park built around the historic mausoleum traditionally associated with Manas. New visitor facilities opened after renovation in 2026.",
+        "geography": {
+          "authority_id": "supplement:auth:kg-public:Q2498907",
+          "countries": [
+            "KG"
+          ],
+          "note": "Public visitor location in Talas Region.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The presidential administration reported an opening ceremony for new visitor facilities after renovation.",
+            "id": "auth:kg-public:Q2498907:evidence:0",
+            "license": null,
+            "publisher": "Kyrgyz National News Agency Kabar",
+            "revision": "Retrieved 2026-11-28; SHA-256 40a0f23a0d393b7d6a4bd3794f64db12914c36a93c3f2d37baa8967820da0764.",
+            "title": "Manas Ordo Historical Park official public scope",
+            "uri": "https://ru.kabar.kg/news/sadyr-zhaparov-prinyal-uchastie-v-otkrytii-novyx-obektov-kompleksa-manas-ordo/"
+          }
+        },
+        "id": "auth:kg-public:Q2498907",
+        "location_precision": null,
+        "names": [
+          "Манас Ордо",
+          "玛纳斯奥尔多历史公园"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          72.3824,
+          42.525
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The presidential administration reported an opening ceremony for new visitor facilities after renovation.",
+            "id": "auth:kg-public:Q2498907:evidence:0",
+            "license": null,
+            "publisher": "Kyrgyz National News Agency Kabar",
+            "revision": "Retrieved 2026-11-28; SHA-256 40a0f23a0d393b7d6a4bd3794f64db12914c36a93c3f2d37baa8967820da0764.",
+            "title": "Manas Ordo Historical Park official public scope",
+            "uri": "https://ru.kabar.kg/news/sadyr-zhaparov-prinyal-uchastie-v-otkrytii-novyx-obektov-kompleksa-manas-ordo/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public navigation list identifies the Manas Ordo memorial complex near Talas.",
+            "id": "auth:kg-public:Q2498907:evidence:1",
+            "license": null,
+            "publisher": "State Agency for Tourism Development under the Cabinet of Ministers of the Kyrgyz Republic",
+            "revision": "Retrieved 2026-11-28; SHA-256 6f47b34f893503f9a55be7dab7a07a19b8026137468dbb097a399a73d86b2c87.",
+            "title": "Manas Ordo Historical Park official public scope",
+            "uri": "https://tourism.gov.kg/digital-navigation/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 72.3824, latitude 42.525.",
+            "id": "auth:kg-public:Q2498907:coordinate",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2430637444, P625 Q2498907$01612F1F-3530-4A5E-8B68-86581687CB17.",
+            "title": "Manas Ordo Historical Park representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2498907.json"
+          }
+        ],
+        "source_uri": "https://ru.kabar.kg/news/sadyr-zhaparov-prinyal-uchastie-v-otkrytii-novyx-obektov-kompleksa-manas-ordo/",
+        "title": "Manas Ordo Historical Park",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "kg-tj/kg-manas-reopening.html",
+          "sha256": "40a0f23a0d393b7d6a4bd3794f64db12914c36a93c3f2d37baa8967820da0764",
+          "uri": "https://ru.kabar.kg/news/sadyr-zhaparov-prinyal-uchastie-v-otkrytii-novyx-obektov-kompleksa-manas-ordo/"
+        },
+        {
+          "filename": "kg-tj/kg-navigate.html",
+          "sha256": "6f47b34f893503f9a55be7dab7a07a19b8026137468dbb097a399a73d86b2c87",
+          "uri": "https://tourism.gov.kg/digital-navigation/"
+        },
+        {
+          "filename": "kg-tj/Q2498907.json",
+          "sha256": "cc38ab0c6ebcefa4d55a3cea8a2f74ecb8b13835bcdead381167d1616eb7cd87",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2498907.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "GeoNames S.ANS ancient site point near the centre of the earth-walled public fortress scope. The adjacent museum has a separate location.",
+        "point": [
+          75.69861,
+          41.12372
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://sws.geonames.org/11888204/about.rdf",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independently verified active CC0 Wikidata or native GeoNames CC BY coordinates, first-party visit or reopening notices, official parcel context and nearby UNESCO component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Fortified archaeological site in the At-Bashy valley. The visitor listing covers the surviving outdoor earthworks. The nearby museum has its own visitor arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public historical place scope and a documented source point.",
+          "note": "This point update does not establish a dated historical phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "At-Bashy District State Administration",
+          "State Agency for Tourism Development under the Cabinet of Ministers of the Kyrgyz Republic",
+          "GeoNames"
+        ],
+        "description": "Fortified archaeological site in the At-Bashy valley. The visitor listing covers the surviving outdoor earthworks. The nearby museum has its own visitor arrangements.",
+        "description_zh": "科绍伊科尔贡位于吉尔吉斯斯坦阿特巴什谷地。点位对应对外介绍的古堡土墙遗址，附近博物馆另有参观安排。",
+        "details": "Fortified archaeological site in the At-Bashy valley. The visitor listing covers the surviving outdoor earthworks. The nearby museum has its own visitor arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:kg-public:Q2512688",
+          "countries": [
+            "KG"
+          ],
+          "note": "Public visitor location in At-Bashy District, Naryn Region.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The district identifies the earth-walled ruins and an adjoining museum as a cultural tourism site.",
+            "id": "auth:kg-public:Q2512688:evidence:0",
+            "license": null,
+            "publisher": "At-Bashy District State Administration",
+            "revision": "Retrieved 2026-11-28; SHA-256 64aa9ac86a244459f6a46ce8ff52289059aaff4774b866690373ac14eeba27bc.",
+            "title": "Koshoy Korgon Fortress Ruins official public scope",
+            "uri": "https://at-bashy.gov.kg/rajon-tuuraluu/turisttik-zhajlar/"
+          }
+        },
+        "id": "auth:kg-public:Q2512688",
+        "location_precision": null,
+        "names": [
+          "Кошой-Коргон",
+          "科绍伊科尔贡城址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          75.69861,
+          41.12372
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The district identifies the earth-walled ruins and an adjoining museum as a cultural tourism site.",
+            "id": "auth:kg-public:Q2512688:evidence:0",
+            "license": null,
+            "publisher": "At-Bashy District State Administration",
+            "revision": "Retrieved 2026-11-28; SHA-256 64aa9ac86a244459f6a46ce8ff52289059aaff4774b866690373ac14eeba27bc.",
+            "title": "Koshoy Korgon Fortress Ruins official public scope",
+            "uri": "https://at-bashy.gov.kg/rajon-tuuraluu/turisttik-zhajlar/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state visitor navigation lists the ancient fortress near At-Bashy.",
+            "id": "auth:kg-public:Q2512688:evidence:1",
+            "license": null,
+            "publisher": "State Agency for Tourism Development under the Cabinet of Ministers of the Kyrgyz Republic",
+            "revision": "Retrieved 2026-11-28; SHA-256 6f47b34f893503f9a55be7dab7a07a19b8026137468dbb097a399a73d86b2c87.",
+            "title": "Koshoy Korgon Fortress Ruins official public scope",
+            "uri": "https://tourism.gov.kg/digital-navigation/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "GeoNames (CC BY 4.0), unaltered WGS84 point 75.69861, 41.12372.",
+            "id": "auth:kg-public:Q2512688:coordinate",
+            "license": "CC BY 4.0",
+            "publisher": "GeoNames",
+            "revision": "Retrieved 2026-11-28; SHA-256 8cec3123cb4026f18d6d4e9097c3f30042bd8030606e9b229c21cb8c2f85906c.",
+            "title": "GeoNames Koshoy Korgon ancient site",
+            "uri": "https://sws.geonames.org/11888204/about.rdf"
+          }
+        ],
+        "source_uri": "https://at-bashy.gov.kg/rajon-tuuraluu/turisttik-zhajlar/",
+        "title": "Koshoy Korgon Fortress Ruins",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "kg-tj/kg-at-bashy.html",
+          "sha256": "64aa9ac86a244459f6a46ce8ff52289059aaff4774b866690373ac14eeba27bc",
+          "uri": "https://at-bashy.gov.kg/rajon-tuuraluu/turisttik-zhajlar/"
+        },
+        {
+          "filename": "kg-tj/kg-navigate.html",
+          "sha256": "6f47b34f893503f9a55be7dab7a07a19b8026137468dbb097a399a73d86b2c87",
+          "uri": "https://tourism.gov.kg/digital-navigation/"
+        },
+        {
+          "filename": "kg-tj/crosscheck-koshoy-geonames.rdf",
+          "sha256": "8cec3123cb4026f18d6d4e9097c3f30042bd8030606e9b229c21cb8c2f85906c",
+          "uri": "https://sws.geonames.org/11888204/about.rdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The single, publicly identified mausoleum in the national visitor directory. The 2025 approximate co-ordinate is close; an older tentative listing has inconsistent coordinates.",
+        "point": [
+          71.659094444444,
+          41.428747222222
+        ],
+        "precision": 2.7777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4521125.json",
+        "statement_id": "Q4521125$f79fa7e7-4b5f-a160-a359-84e131e96735"
+      },
+      "independent_review": {
+        "method": "Independently verified active CC0 Wikidata or native GeoNames CC BY coordinates, first-party visit or reopening notices, official parcel context and nearby UNESCO component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The single, publicly identified mausoleum in the national visitor directory. The 2025 approximate co-ordinate is close; an older tentative listing has inconsistent coordinates.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public historical place scope and a documented source point.",
+          "note": "This point update does not establish a dated historical phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "State Agency for Tourism Development under the Cabinet of Ministers of the Kyrgyz Republic",
+          "UNESCO World Heritage Centre",
+          "Wikidata contributors"
+        ],
+        "description": "Historic mausoleum in the public Safed-Bulan heritage area, separately identified from the other tombs and landscape features in the complex.",
+        "description_zh": "位于萨菲德布兰遗产区的历史陵墓，在景区资料中与周边其他墓葬及景观要素分列。",
+        "details": "Historic mausoleum in the public Safed-Bulan heritage area, separately identified from the other tombs and landscape features in the complex.",
+        "geography": {
+          "authority_id": "supplement:auth:kg-public:Q4521125",
+          "countries": [
+            "KG"
+          ],
+          "note": "Public visitor location in Safed-Bulan, Ala-Buka District.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor navigation lists Shah Fazil and Safed-Bulan's other mausoleum.",
+            "id": "auth:kg-public:Q4521125:evidence:0",
+            "license": null,
+            "publisher": "State Agency for Tourism Development under the Cabinet of Ministers of the Kyrgyz Republic",
+            "revision": "Retrieved 2026-11-28; SHA-256 6f47b34f893503f9a55be7dab7a07a19b8026137468dbb097a399a73d86b2c87.",
+            "title": "Shah Fazil Mausoleum official public scope",
+            "uri": "https://tourism.gov.kg/digital-navigation/"
+          }
+        },
+        "id": "auth:kg-public:Q4521125",
+        "location_precision": null,
+        "names": [
+          "Шах-Фазиль",
+          "沙赫法齐勒陵墓"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          71.659094444444,
+          41.428747222222
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor navigation lists Shah Fazil and Safed-Bulan's other mausoleum.",
+            "id": "auth:kg-public:Q4521125:evidence:0",
+            "license": null,
+            "publisher": "State Agency for Tourism Development under the Cabinet of Ministers of the Kyrgyz Republic",
+            "revision": "Retrieved 2026-11-28; SHA-256 6f47b34f893503f9a55be7dab7a07a19b8026137468dbb097a399a73d86b2c87.",
+            "title": "Shah Fazil Mausoleum official public scope",
+            "uri": "https://tourism.gov.kg/digital-navigation/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The 2025 Kyrgyz tentative-list submission identifies the named Safid-Bulan complex and its approximate location.",
+            "id": "auth:kg-public:Q4521125:evidence:1",
+            "license": null,
+            "publisher": "UNESCO World Heritage Centre",
+            "revision": "Retrieved 2026-11-28; SHA-256 7e43d25683963ccd21b578a3279695510b6f088def0ce445a4c20e10b5d28394.",
+            "title": "Shah Fazil Mausoleum official public scope",
+            "uri": "https://whc.unesco.org/en/tentativelists/6793/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 71.659094444444, latitude 41.428747222222.",
+            "id": "auth:kg-public:Q4521125:coordinate",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2315741438, P625 Q4521125$f79fa7e7-4b5f-a160-a359-84e131e96735.",
+            "title": "Shah Fazil Mausoleum representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4521125.json"
+          }
+        ],
+        "source_uri": "https://tourism.gov.kg/digital-navigation/",
+        "title": "Shah Fazil Mausoleum",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "kg-tj/kg-navigate.html",
+          "sha256": "6f47b34f893503f9a55be7dab7a07a19b8026137468dbb097a399a73d86b2c87",
+          "uri": "https://tourism.gov.kg/digital-navigation/"
+        },
+        {
+          "filename": "kg-tj/whc-kg-shah-tentative.html",
+          "sha256": "7e43d25683963ccd21b578a3279695510b6f088def0ce445a4c20e10b5d28394",
+          "uri": "https://whc.unesco.org/en/tentativelists/6793/"
+        },
+        {
+          "filename": "kg-tj/Q4521125.json",
+          "sha256": "206090544b02217370a95ca01a1a7ba5b31814818ab6ec7d2f22439c7f2f836e",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4521125.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Representative point of the church at 16 Gagarin Street, separate from other Holy Trinity churches and the old Dungan mosque.",
+        "point": [
+          78.394847,
+          42.489086
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q65143333.json",
+        "statement_id": "Q65143333$90E6964D-C535-42B1-9495-8476096C5E66"
+      },
+      "independent_review": {
+        "method": "Independently verified active CC0 Wikidata or native GeoNames CC BY coordinates, first-party visit or reopening notices, official parcel context and nearby UNESCO component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic wooden Orthodox cathedral on Gagarin Street in Karakol. The active parish welcomes visitors and recommends sightseeing between services.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public historical place scope and a documented source point.",
+          "note": "This point update does not establish a dated historical phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Holy Trinity Cathedral parish in Karakol",
+          "Wikidata contributors"
+        ],
+        "description": "Historic wooden Orthodox cathedral on Gagarin Street in Karakol. The active parish welcomes visitors and recommends sightseeing between services.",
+        "description_zh": "卡拉科尔圣三一主教座堂是仍在使用的木构东正教堂。堂区欢迎公众参观，并建议安排在礼拜间隙。",
+        "details": "Historic wooden Orthodox cathedral on Gagarin Street in Karakol. The active parish welcomes visitors and recommends sightseeing between services.",
+        "geography": {
+          "authority_id": "supplement:auth:kg-public:Q65143333",
+          "countries": [
+            "KG"
+          ],
+          "note": "Public visitor location in Karakol, Issyk-Kul Region.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The parish welcomes visitors to the named cathedral at 16 Gagarin Street and lists visitor rules.",
+            "id": "auth:kg-public:Q65143333:evidence:0",
+            "license": null,
+            "publisher": "Holy Trinity Cathedral parish in Karakol",
+            "revision": "Retrieved 2026-11-28; SHA-256 ca6f91c5d7722548849174de0e095ed1913baae51e4df98aaaaedb13819de07a.",
+            "title": "Holy Trinity Cathedral, Karakol official public scope",
+            "uri": "https://church-karakol.kg/en/tourists/"
+          }
+        },
+        "id": "auth:kg-public:Q65143333",
+        "location_precision": null,
+        "names": [
+          "Свято-Троицкая церковь",
+          "卡拉科尔圣三一主教座堂"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          78.394847,
+          42.489086
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The parish welcomes visitors to the named cathedral at 16 Gagarin Street and lists visitor rules.",
+            "id": "auth:kg-public:Q65143333:evidence:0",
+            "license": null,
+            "publisher": "Holy Trinity Cathedral parish in Karakol",
+            "revision": "Retrieved 2026-11-28; SHA-256 ca6f91c5d7722548849174de0e095ed1913baae51e4df98aaaaedb13819de07a.",
+            "title": "Holy Trinity Cathedral, Karakol official public scope",
+            "uri": "https://church-karakol.kg/en/tourists/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 78.394847, latitude 42.489086.",
+            "id": "auth:kg-public:Q65143333:coordinate",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2569337090, P625 Q65143333$90E6964D-C535-42B1-9495-8476096C5E66.",
+            "title": "Holy Trinity Cathedral, Karakol representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q65143333.json"
+          }
+        ],
+        "source_uri": "https://church-karakol.kg/en/tourists/",
+        "title": "Holy Trinity Cathedral, Karakol",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "kg-tj/kg-karakol-cathedral.html",
+          "sha256": "ca6f91c5d7722548849174de0e095ed1913baae51e4df98aaaaedb13819de07a",
+          "uri": "https://church-karakol.kg/en/tourists/"
+        },
+        {
+          "filename": "kg-tj/Q65143333.json",
+          "sha256": "6317badd395f0b2aa46c7d48b6c154611f943621db7619868c9b8101c8a2a0a0",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q65143333.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Representative point for the documented public memorial museum property. Does not identify the grave or the separate municipal museum.",
+        "point": [
+          78.321025,
+          42.57296
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q84737709.json",
+        "statement_id": "Q84737709$120376a1-4964-435a-b911-96bda36e4c27"
+      },
+      "independent_review": {
+        "method": "Independently verified active CC0 Wikidata or native GeoNames CC BY coordinates, first-party visit or reopening notices, official parcel context and nearby UNESCO component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Representative point for the documented public memorial museum property. Does not identify the grave or the separate municipal museum.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public historical place scope and a documented source point.",
+          "note": "This point update does not establish a dated historical phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Destination Karakol",
+          "Kyrgyz National News Agency Kabar",
+          "Wikidata contributors"
+        ],
+        "description": "Memorial museum and public formal grounds associated with the explorer's burial in Pristan-Przhevalsk, separately interpreted from Karakol's city history museum.",
+        "description_zh": "位于普热瓦尔斯克码头地区的纪念馆及公共纪念园，与探险家的安葬地相关。当地另有卡拉科尔市历史博物馆。",
+        "details": "Memorial museum and public formal grounds associated with the explorer's burial in Pristan-Przhevalsk, separately interpreted from Karakol's city history museum.",
+        "geography": {
+          "authority_id": "supplement:auth:kg-public:Q84737709",
+          "countries": [
+            "KG"
+          ],
+          "note": "Public visitor location in Pristan-Przhevalsk, Issyk-Kul Region.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Visitor guidance presents the historical museum grounds, associated memorial and formal park.",
+            "id": "auth:kg-public:Q84737709:evidence:0",
+            "license": null,
+            "publisher": "Destination Karakol",
+            "revision": "Retrieved 2026-11-28; SHA-256 8ae3e1797906acc0fa70c6d12ffffd8c7d1bcbab3dedac92ade3f69bb3d227ad.",
+            "title": "Przhevalsky Memorial Museum and Grounds official public scope",
+            "uri": "https://destinationkarakol.com/what-to-do/attractions-museums/"
+          }
+        },
+        "id": "auth:kg-public:Q84737709",
+        "location_precision": null,
+        "names": [
+          "Мемориальный музей Н. М. Пржевальского",
+          "普热瓦尔斯基纪念馆及纪念园"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          78.321025,
+          42.57296
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Visitor guidance presents the historical museum grounds, associated memorial and formal park.",
+            "id": "auth:kg-public:Q84737709:evidence:0",
+            "license": null,
+            "publisher": "Destination Karakol",
+            "revision": "Retrieved 2026-11-28; SHA-256 8ae3e1797906acc0fa70c6d12ffffd8c7d1bcbab3dedac92ade3f69bb3d227ad.",
+            "title": "Przhevalsky Memorial Museum and Grounds official public scope",
+            "uri": "https://destinationkarakol.com/what-to-do/attractions-museums/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "A July 2026 itinerary identifies a visit to the memorial museum complex at Pristan-Przhevalsk.",
+            "id": "auth:kg-public:Q84737709:evidence:1",
+            "license": null,
+            "publisher": "Kyrgyz National News Agency Kabar",
+            "revision": "Retrieved 2026-11-28; SHA-256 fa609e5932e1ff81ddd28dd573a1115280cd547c6a342f2bbc44ee12e523beae.",
+            "title": "Przhevalsky Memorial Museum and Grounds official public scope",
+            "uri": "https://ru.kabar.kg/news/v-kyrgyzstane-zavershilsya-mezhdunarodnyj-avtoprobeg-po-gornym-dorogam/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 78.321025, latitude 42.57296.",
+            "id": "auth:kg-public:Q84737709:coordinate",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2491551452, P625 Q84737709$120376a1-4964-435a-b911-96bda36e4c27.",
+            "title": "Przhevalsky Memorial Museum and Grounds representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q84737709.json"
+          }
+        ],
+        "source_uri": "https://destinationkarakol.com/what-to-do/attractions-museums/",
+        "title": "Przhevalsky Memorial Museum and Grounds",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "kg-tj/kg-karakol-visits.html",
+          "sha256": "8ae3e1797906acc0fa70c6d12ffffd8c7d1bcbab3dedac92ade3f69bb3d227ad",
+          "uri": "https://destinationkarakol.com/what-to-do/attractions-museums/"
+        },
+        {
+          "filename": "kg-tj/kg-przheval-2026.html",
+          "sha256": "fa609e5932e1ff81ddd28dd573a1115280cd547c6a342f2bbc44ee12e523beae",
+          "uri": "https://ru.kabar.kg/news/v-kyrgyzstane-zavershilsya-mezhdunarodnyj-avtoprobeg-po-gornym-dorogam/"
+        },
+        {
+          "filename": "kg-tj/Q84737709.json",
+          "sha256": "22f4565923b6dfee47a63ecd1455236818f50ae37362cd7052730abab15e4575",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q84737709.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The archaeologically documented original Hisor fortress compound, including restored fabric. Distinct from Khisorak and Gardani Khisor in the Zarafshan-Karakum inscription.",
+        "point": [
+          68.593416,
+          38.484061
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q20614705.json",
+        "statement_id": "Q20614705$de8f9976-40c4-d719-efcf-7d5dc33a30fc"
+      },
+      "independent_review": {
+        "method": "Independently verified active CC0 Wikidata or native GeoNames CC BY coordinates, first-party visit or reopening notices, official parcel context and nearby UNESCO component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The archaeologically documented original Hisor fortress compound, including restored fabric. Distinct from Khisorak and Gardani Khisor in the Zarafshan-Karakum inscription.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public historical place scope and a documented source point.",
+          "note": "This point update does not establish a dated historical phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Travel to Tajikistan",
+          "National Information Agency of Tajikistan Khovar",
+          "Wikidata contributors"
+        ],
+        "description": "The public historic fortress property at Hisor, with a restored gate and related visitor areas in the designated cultural reserve.",
+        "description_zh": "希萨尔历史保护区中开放参观的堡址，包含经修复的城门和相关展示区域。",
+        "details": "The public historic fortress property at Hisor, with a restored gate and related visitor areas in the designated cultural reserve.",
+        "geography": {
+          "authority_id": "supplement:auth:tj-public:Q20614705",
+          "countries": [
+            "TJ"
+          ],
+          "note": "Public visitor location in Hisor District.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Tourism guidance for the fortress lists public areas of the historic reserve.",
+            "id": "auth:tj-public:Q20614705:evidence:0",
+            "license": null,
+            "publisher": "Travel to Tajikistan",
+            "revision": "Retrieved 2026-11-28; SHA-256 3cb655141b76da7b726c0bb95660e67067ee0f126a415c6f821aa69ae9ab570a.",
+            "title": "Hisor Fortress official public scope",
+            "uri": "https://traveltajikistan.tj/en/hisor-fortress/"
+          }
+        },
+        "id": "auth:tj-public:Q20614705",
+        "location_precision": null,
+        "names": [
+          "Қалъаи Ҳисор",
+          "Гиссарская крепость",
+          "希萨尔堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          68.593416,
+          38.484061
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Tourism guidance for the fortress lists public areas of the historic reserve.",
+            "id": "auth:tj-public:Q20614705:evidence:0",
+            "license": null,
+            "publisher": "Travel to Tajikistan",
+            "revision": "Retrieved 2026-11-28; SHA-256 3cb655141b76da7b726c0bb95660e67067ee0f126a415c6f821aa69ae9ab570a.",
+            "title": "Hisor Fortress official public scope",
+            "uri": "https://traveltajikistan.tj/en/hisor-fortress/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national agency identifies the Hisor fortress among the properties visited by domestic and international visitors.",
+            "id": "auth:tj-public:Q20614705:evidence:1",
+            "license": null,
+            "publisher": "National Information Agency of Tajikistan Khovar",
+            "revision": "Retrieved 2026-11-28; SHA-256 5f137f379be32af0d065f8cebb057ee618f7a4aec041d3e64bbb192f83e00554.",
+            "title": "Hisor Fortress official public scope",
+            "uri": "https://khovar.tj/2025/11/dar-nu-mo-i-soli-2025-ziyoda-az-90-azor-nafar-sajyo-mavze-oi-tarihiyu-far-angii-to-ikistonro-tamosho-kardand/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 68.593416, latitude 38.484061.",
+            "id": "auth:tj-public:Q20614705:coordinate",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2491546922, P625 Q20614705$de8f9976-40c4-d719-efcf-7d5dc33a30fc.",
+            "title": "Hisor Fortress representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q20614705.json"
+          }
+        ],
+        "source_uri": "https://traveltajikistan.tj/en/hisor-fortress/",
+        "title": "Hisor Fortress",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "kg-tj/tj-hisor.html",
+          "sha256": "3cb655141b76da7b726c0bb95660e67067ee0f126a415c6f821aa69ae9ab570a",
+          "uri": "https://traveltajikistan.tj/en/hisor-fortress/"
+        },
+        {
+          "filename": "kg-tj/tj-hisor-visitors.html",
+          "sha256": "5f137f379be32af0d065f8cebb057ee618f7a4aec041d3e64bbb192f83e00554",
+          "uri": "https://khovar.tj/2025/11/dar-nu-mo-i-soli-2025-ziyoda-az-90-azor-nafar-sajyo-mavze-oi-tarihiyu-far-angii-to-ikistonro-tamosho-kardand/"
+        },
+        {
+          "filename": "kg-tj/Q20614705.json",
+          "sha256": "396391276a366b3141223b11cabacbcfac85fc96decac2e2a27ca98314a35740",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q20614705.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata reference lies within the original upper citadel. Tentative-list geographical fields conflict with the original citadel extent and were not adopted.",
+        "point": [
+          72.26083333333334,
+          36.969722222222224
+        ],
+        "precision": 0.0002777777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q97999750.json",
+        "statement_id": "Q97999750$95eeac1f-4474-8522-856b-944695977084"
+      },
+      "independent_review": {
+        "method": "Independently verified active CC0 Wikidata or native GeoNames CC BY coordinates, first-party visit or reopening notices, official parcel context and nearby UNESCO component status.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic hilltop fortress ruins above the Wakhan valley in Ishkoshim. A September 2026 state notice reports reopening after renovation. The tourism authority describes the visitor approach to the citadel.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public historical place scope and a documented source point.",
+          "note": "This point update does not establish a dated historical phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Travel to Tajikistan",
+          "Tajikistan State Television Sinamo",
+          "Wikidata contributors",
+          "Khovar, National Information Agency of Tajikistan"
+        ],
+        "description": "Historic hilltop fortress ruins above the Wakhan valley in Ishkoshim. A September 2026 state notice reports reopening after renovation. The tourism authority describes the visitor approach to the citadel.",
+        "description_zh": "亚姆春堡位于塔吉克斯坦瓦罕谷地。2026年9月官方通报修复后开放，旅游主管机构公开了前往上部堡垒的参观路线。",
+        "details": "Historic hilltop fortress ruins above the Wakhan valley in Ishkoshim. A September 2026 state notice reports reopening after renovation. The tourism authority describes the visitor approach to the citadel.",
+        "geography": {
+          "authority_id": "supplement:auth:tj-public:Q97999750",
+          "countries": [
+            "TJ"
+          ],
+          "note": "Public visitor location in Ishkoshim District, Gorno-Badakhshan Autonomous Region.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public tourism describes routes to the ruins and the original upper citadel.",
+            "id": "auth:tj-public:Q97999750:evidence:0",
+            "license": null,
+            "publisher": "Travel to Tajikistan",
+            "revision": "Retrieved 2026-11-28; SHA-256 ff17207f3e77290777dc5a3d4d99fd87b1c1cb2100634a44d2cb1a25b1072338.",
+            "title": "Yamchun Fortress Ruins official public scope",
+            "uri": "https://traveltajikistan.tj/en/the-fortress-of-yamchun/"
+          }
+        },
+        "id": "auth:tj-public:Q97999750",
+        "location_precision": null,
+        "names": [
+          "Қалъаи Ямчун",
+          "Ямчунская крепость",
+          "亚姆春堡遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          72.26083333333334,
+          36.969722222222224
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public tourism describes routes to the ruins and the original upper citadel.",
+            "id": "auth:tj-public:Q97999750:evidence:0",
+            "license": null,
+            "publisher": "Travel to Tajikistan",
+            "revision": "Retrieved 2026-11-28; SHA-256 ff17207f3e77290777dc5a3d4d99fd87b1c1cb2100634a44d2cb1a25b1072338.",
+            "title": "Yamchun Fortress Ruins official public scope",
+            "uri": "https://traveltajikistan.tj/en/the-fortress-of-yamchun/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The state broadcaster reported the historic Yamchun fortress opening after renovation in 2026.",
+            "id": "auth:tj-public:Q97999750:evidence:1",
+            "license": null,
+            "publisher": "Tajikistan State Television Sinamo",
+            "revision": "Retrieved 2026-11-28; SHA-256 7cca7de51db88f6e116bbf03b2ec1d95f86a2bfb45d4c03025ef95d53cd7681a.",
+            "title": "Yamchun Fortress Ruins official public scope",
+            "uri": "https://sinamo.tv/news/4012-peshvoi-millat-jemomal-ramon-90-inshooti-tajinoti-gunogunro-dar-sharu-noijaoi-vilojati-muhtori-kistoni-badahshon-ba-tavri-fosilav-iftito-namudand.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 72.26083333333334, latitude 36.969722222222224.",
+            "id": "auth:tj-public:Q97999750:coordinate",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2512679447, P625 Q97999750$95eeac1f-4474-8522-856b-944695977084.",
+            "title": "Yamchun Fortress Ruins representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q97999750.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national agency reports the historic fortress was opened following renovation.",
+            "id": "auth:tj-public:Q97999750:independent:3",
+            "license": null,
+            "publisher": "Khovar, National Information Agency of Tajikistan",
+            "revision": "Retrieved 2026-11-28; SHA-256 4dce8862c4177a1ff22ed2d69815c107f6c3f0f460e12de2e4f33edb58326223.",
+            "title": "September 2026 commissioning of renovated Yamchun",
+            "uri": "https://khovar.tj/2026/09/peshvoi-millat-emomal-ra-mon-90-inshooti-tajinoti-gunogunro-dar-sha-ru-no-iya-oi-viloyati-muhtori-k-istoni-badahshon-ba-tavri-fosilav-iftito-namudand/"
+          }
+        ],
+        "source_uri": "https://traveltajikistan.tj/en/the-fortress-of-yamchun/",
+        "title": "Yamchun Fortress Ruins",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "kg-tj/tj-yamchun.html",
+          "sha256": "ff17207f3e77290777dc5a3d4d99fd87b1c1cb2100634a44d2cb1a25b1072338",
+          "uri": "https://traveltajikistan.tj/en/the-fortress-of-yamchun/"
+        },
+        {
+          "filename": "kg-tj/tj-yamchun-reopening.html",
+          "sha256": "7cca7de51db88f6e116bbf03b2ec1d95f86a2bfb45d4c03025ef95d53cd7681a",
+          "uri": "https://sinamo.tv/news/4012-peshvoi-millat-jemomal-ramon-90-inshooti-tajinoti-gunogunro-dar-sharu-noijaoi-vilojati-muhtori-kistoni-badahshon-ba-tavri-fosilav-iftito-namudand.html"
+        },
+        {
+          "filename": "kg-tj/Q97999750.json",
+          "sha256": "2355d7d3e4f4e58ac8496e1ec68bdcc8779b023cb26103244c7ef0c9b56bb455",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q97999750.json"
+        },
+        {
+          "filename": "kg-tj/independent-tj-yamchun-khovar.html",
+          "sha256": "4dce8862c4177a1ff22ed2d69815c107f6c3f0f460e12de2e4f33edb58326223",
+          "uri": "https://khovar.tj/2026/09/peshvoi-millat-emomal-ra-mon-90-inshooti-tajinoti-gunogunro-dar-sha-ru-no-iya-oi-viloyati-muhtori-k-istoni-badahshon-ba-tavri-fosilav-iftito-namudand/"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Named publicly interpreted cultural sites in Kyrgyzstan and Tajikistan, each with an exact published representative point and official public-scope and World Heritage identity checks."
+}

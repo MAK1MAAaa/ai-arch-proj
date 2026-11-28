@@ -1,0 +1,1276 @@
+{
+  "base_count": 5213,
+  "base_ids_sha256": "3b8a09c5590a095e577f9142d969293f2889e167f28e85da49b5ac5113164aa5",
+  "base_sites_sha256": "09d9b0a086d15e382108dd59f05c7000d00fbf5fb16c5ee823a82d5a77e4c3b9",
+  "cohort_version": "west-african-coastal-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          -16.67241667,
+          13.47652778
+        ],
+        "precision": 2.777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1720898.json",
+        "statement_id": "Q1720898$C057CD1C-9070-4BCC-80E5-77D5898AF608"
+      },
+      "independent_review": {
+        "method": "Independent agent checked documented access and current named scope, direct RDF coordinate and licensing evidence, native Wikidata coordinates and recent World Heritage sources.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The publicly interpreted visitor precinct is represented by the documented pool point. Access and conduct follow the custodian’s arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Centre for Arts and Culture, The Gambia",
+          "Gambia Daily",
+          "Wikidata contributors"
+        ],
+        "description": "The family-managed Katchikally heritage precinct in Bakau presents a historic sacred pool and a local museum through managed visits.",
+        "description_zh": "巴考的卡奇卡利由当地家族管理，按管理方安排参观历史圣池与地方博物馆。",
+        "details": "The publicly interpreted visitor precinct is represented by the documented pool point. Access and conduct follow the custodian’s arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:gm-public:Q1720898",
+          "countries": [
+            "GM"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The cultural authority identifies the historic pool and its traditional custodians.",
+            "id": "auth:gm-public:Q1720898:evidence:1",
+            "license": null,
+            "publisher": "National Centre for Arts and Culture, The Gambia",
+            "revision": "Retrieved 2026-11-28; SHA-256 32f2f8bfe497de5d9182d5dc3b99474d012bef161e63cc04a7d43a946c3a69bd.",
+            "title": "Katchikally heritage and custodianship",
+            "uri": "https://ncac.gm/sacred-sites/"
+          }
+        },
+        "id": "auth:gm-public:Q1720898",
+        "location_precision": null,
+        "names": [
+          "巴考卡奇卡利历史文化参观区",
+          "Katchikally public heritage precinct, Bakau",
+          "Katchikally Crocodile Pool",
+          "Kachikally Crocodile Pool and Museum",
+          "Katchikally Museum"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -16.67241667,
+          13.47652778
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The cultural authority identifies the historic pool and its traditional custodians.",
+            "id": "auth:gm-public:Q1720898:evidence:1",
+            "license": null,
+            "publisher": "National Centre for Arts and Culture, The Gambia",
+            "revision": "Retrieved 2026-11-28; SHA-256 32f2f8bfe497de5d9182d5dc3b99474d012bef161e63cc04a7d43a946c3a69bd.",
+            "title": "Katchikally heritage and custodianship",
+            "uri": "https://ncac.gm/sacred-sites/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The authority identifies Katchikally Museum among documented community institutions.",
+            "id": "auth:gm-public:Q1720898:evidence:2",
+            "license": null,
+            "publisher": "National Centre for Arts and Culture, The Gambia",
+            "revision": "Retrieved 2026-11-28; SHA-256 a0fb89f47ef458209f5a8ada6dc76efc1449954c76c33b733c74df643f134c6a.",
+            "title": "Community heritage museums",
+            "uri": "https://ncac.gm/cultural-heritage/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The government newspaper documents a recent guided visit through the publicly presented precinct.",
+            "id": "auth:gm-public:Q1720898:evidence:3",
+            "license": null,
+            "publisher": "Gambia Daily",
+            "revision": "Retrieved 2026-11-28; SHA-256 01abf2dee8f76928d6fe6a6352b6a00717e3738bd243da127217ff70e2410c33.",
+            "title": "Gambia Tourism Board visitor tour, September 2026",
+            "uri": "https://gambiadaily.gov.gm/wp-content/uploads/2026/09/Gambia-Daily-Edition-65.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude -16.67241667, latitude 13.47652778.",
+            "id": "auth:gm-public:Q1720898:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 8a6e12f99173b64f6ba5be7457989d8190107003d404240ff47c46405554b24f.",
+            "title": "Katchikally public heritage precinct, Bakau coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1720898.json"
+          }
+        ],
+        "source_uri": "https://ncac.gm/sacred-sites/",
+        "title": "Katchikally public heritage precinct, Bakau",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/gm-ncac-sacred.html",
+          "sha256": "32f2f8bfe497de5d9182d5dc3b99474d012bef161e63cc04a7d43a946c3a69bd",
+          "uri": "https://ncac.gm/sacred-sites/"
+        },
+        {
+          "filename": "source/gm-ncac-heritage.html",
+          "sha256": "a0fb89f47ef458209f5a8ada6dc76efc1449954c76c33b733c74df643f134c6a",
+          "uri": "https://ncac.gm/cultural-heritage/"
+        },
+        {
+          "filename": "source/gm-sept-tour-government.pdf",
+          "sha256": "01abf2dee8f76928d6fe6a6352b6a00717e3738bd243da127217ff70e2410c33",
+          "uri": "https://gambiadaily.gov.gm/wp-content/uploads/2026/09/Gambia-Daily-Edition-65.pdf"
+        },
+        {
+          "filename": "source/Q1720898.json",
+          "sha256": "8a6e12f99173b64f6ba5be7457989d8190107003d404240ff47c46405554b24f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1720898.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          -16.57194549,
+          13.45430451
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q325000.json",
+        "statement_id": "Q325000$E851B1B6-FB98-4008-8675-C707BA9396C3"
+      },
+      "independent_review": {
+        "method": "Independent agent checked documented access and current named scope, direct RDF coordinate and licensing evidence, native Wikidata coordinates and recent World Heritage sources.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The representative point is within the historic named market parcel. The visitor scope covers the active public market sections under the City Council’s arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Banjul City Council",
+          "Wikidata contributors"
+        ],
+        "description": "Banjul’s historic Albert Market remains a public market in the city’s old commercial area.",
+        "description_zh": "阿尔伯特市场位于班珠尔历史商业区，现仍有对公众开放的经营区域。",
+        "details": "The representative point is within the historic named market parcel. The visitor scope covers the active public market sections under the City Council’s arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:gm-public:Q325000",
+          "countries": [
+            "GM"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The city presents the historic market among its visitor attractions.",
+            "id": "auth:gm-public:Q325000:evidence:1",
+            "license": null,
+            "publisher": "Banjul City Council",
+            "revision": "Retrieved 2026-11-28; SHA-256 82c7b5eb561d6b5083eca2ef3ae8445851707183d9fc423cb7b8a6aa68e36ed8.",
+            "title": "City visitor attractions: Albert Market",
+            "uri": "https://www.banjulcity.gm/"
+          }
+        },
+        "id": "auth:gm-public:Q325000",
+        "location_precision": null,
+        "names": [
+          "班珠尔皇家阿尔伯特市场",
+          "Royal Albert Market, Banjul",
+          "Albert Market",
+          "Royal Albert Market",
+          "Marché Albert"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -16.57194549,
+          13.45430451
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The city presents the historic market among its visitor attractions.",
+            "id": "auth:gm-public:Q325000:evidence:1",
+            "license": null,
+            "publisher": "Banjul City Council",
+            "revision": "Retrieved 2026-11-28; SHA-256 82c7b5eb561d6b5083eca2ef3ae8445851707183d9fc423cb7b8a6aa68e36ed8.",
+            "title": "City visitor attractions: Albert Market",
+            "uri": "https://www.banjulcity.gm/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The council describes ongoing market use and operations at the main gate.",
+            "id": "auth:gm-public:Q325000:evidence:2",
+            "license": null,
+            "publisher": "Banjul City Council",
+            "revision": "Retrieved 2026-11-28; SHA-256 64a3064a61c0c973a7301a127c5fe0cac65d8552298820300029d3b6e39eff03.",
+            "title": "Albert Market operations after the Sandika incident",
+            "uri": "https://www.banjulcity.gm/banjul-city-council-update-3/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The notice identifies the affected section near the beach.",
+            "id": "auth:gm-public:Q325000:evidence:3",
+            "license": null,
+            "publisher": "Banjul City Council",
+            "revision": "Retrieved 2026-11-28; SHA-256 d642843094378c01c842fe1c349eedbe4b6920d347f4cfb77c1b28c9a9ba2790.",
+            "title": "Sandika section fire incident",
+            "uri": "https://www.banjulcity.gm/alert-fire-outbreak-at-the-albert-market/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude -16.57194549, latitude 13.45430451.",
+            "id": "auth:gm-public:Q325000:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 b8ee1d6417dc2fe4a235fda9e3695bc7b08e580627f91b1c436e93b415fa87d6.",
+            "title": "Royal Albert Market, Banjul coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q325000.json"
+          }
+        ],
+        "source_uri": "https://www.banjulcity.gm/",
+        "title": "Royal Albert Market, Banjul",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/gm-banjul-home.html",
+          "sha256": "82c7b5eb561d6b5083eca2ef3ae8445851707183d9fc423cb7b8a6aa68e36ed8",
+          "uri": "https://www.banjulcity.gm/"
+        },
+        {
+          "filename": "source/gm-albert-operations-bcc.html",
+          "sha256": "64a3064a61c0c973a7301a127c5fe0cac65d8552298820300029d3b6e39eff03",
+          "uri": "https://www.banjulcity.gm/banjul-city-council-update-3/"
+        },
+        {
+          "filename": "source/gm-albert-fire-detail.html",
+          "sha256": "d642843094378c01c842fe1c349eedbe4b6920d347f4cfb77c1b28c9a9ba2790",
+          "uri": "https://www.banjulcity.gm/alert-fire-outbreak-at-the-albert-market/"
+        },
+        {
+          "filename": "source/Q325000.json",
+          "sha256": "b8ee1d6417dc2fe4a235fda9e3695bc7b08e580627f91b1c436e93b415fa87d6",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q325000.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          -16.58227222,
+          13.46029444
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q632012.json",
+        "statement_id": "Q632012$1FC7F083-1BF9-4027-84C4-A9CBDFE6D048"
+      },
+      "independent_review": {
+        "method": "Independent agent checked documented access and current named scope, direct RDF coordinate and licensing evidence, native Wikidata coordinates and recent World Heritage sources.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point represents the named arch and its civic approach on Independence Drive. Admission to the interpretation spaces follows the operator’s arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Centre for Arts and Culture, The Gambia",
+          "Banjul City Council",
+          "Gambia Radio and Television Services",
+          "Wikidata contributors"
+        ],
+        "description": "Banjul’s historic memorial arch is interpreted by the National Centre for Arts and Culture.",
+        "description_zh": "冈比亚国家艺术文化中心负责班珠尔历史纪念拱门的展示与讲解。",
+        "details": "The point represents the named arch and its civic approach on Independence Drive. Admission to the interpretation spaces follows the operator’s arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:gm-public:Q632012",
+          "countries": [
+            "GM"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The custodian publishes public admission terms for the arch.",
+            "id": "auth:gm-public:Q632012:evidence:1",
+            "license": null,
+            "publisher": "National Centre for Arts and Culture, The Gambia",
+            "revision": "Retrieved 2026-11-28; SHA-256 7b96375725847c5569e67081efcc2798105c98013197f2213da0a699dcc3a9cc.",
+            "title": "Arch 22 public admissions",
+            "uri": "https://ncac.gm/nationalmonuments-and-sites-entry-fees/"
+          }
+        },
+        "id": "auth:gm-public:Q632012",
+        "location_precision": null,
+        "names": [
+          "班珠尔二十二号拱门",
+          "Arch 22, Banjul",
+          "Arch 22",
+          "Arche 22",
+          "Never Again Memorial Arch"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -16.58227222,
+          13.46029444
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The custodian publishes public admission terms for the arch.",
+            "id": "auth:gm-public:Q632012:evidence:1",
+            "license": null,
+            "publisher": "National Centre for Arts and Culture, The Gambia",
+            "revision": "Retrieved 2026-11-28; SHA-256 7b96375725847c5569e67081efcc2798105c98013197f2213da0a699dcc3a9cc.",
+            "title": "Arch 22 public admissions",
+            "uri": "https://ncac.gm/nationalmonuments-and-sites-entry-fees/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The city lists the arch among local visitor attractions.",
+            "id": "auth:gm-public:Q632012:evidence:2",
+            "license": null,
+            "publisher": "Banjul City Council",
+            "revision": "Retrieved 2026-11-28; SHA-256 82c7b5eb561d6b5083eca2ef3ae8445851707183d9fc423cb7b8a6aa68e36ed8.",
+            "title": "Arch 22 visitor destination",
+            "uri": "https://www.banjulcity.gm/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public broadcaster reports the government’s direction to rename the monument.",
+            "id": "auth:gm-public:Q632012:evidence:3",
+            "license": null,
+            "publisher": "Gambia Radio and Television Services",
+            "revision": "Retrieved 2026-11-28; SHA-256 026a3069f4afd6e691da9c84a017bd1fe0f8a6054dbc33b1f9e9024eed5ce516.",
+            "title": "Memorial arch renaming decision",
+            "uri": "https://grts.gm/news-article-details/news/the-gambia-government-accepts-all-but-two-of-trrc-recommendations"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude -16.58227222, latitude 13.46029444.",
+            "id": "auth:gm-public:Q632012:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 8d8efba74bc3d4c6ca565bc5bb7fab67cabac862b50fdb583ec573dd2ef02f6c.",
+            "title": "Arch 22, Banjul coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q632012.json"
+          }
+        ],
+        "source_uri": "https://ncac.gm/nationalmonuments-and-sites-entry-fees/",
+        "title": "Arch 22, Banjul",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/gm-ncac-fees.html",
+          "sha256": "7b96375725847c5569e67081efcc2798105c98013197f2213da0a699dcc3a9cc",
+          "uri": "https://ncac.gm/nationalmonuments-and-sites-entry-fees/"
+        },
+        {
+          "filename": "source/gm-banjul-home.html",
+          "sha256": "82c7b5eb561d6b5083eca2ef3ae8445851707183d9fc423cb7b8a6aa68e36ed8",
+          "uri": "https://www.banjulcity.gm/"
+        },
+        {
+          "filename": "source/gm-arch-renaming-state-broadcaster.html",
+          "sha256": "026a3069f4afd6e691da9c84a017bd1fe0f8a6054dbc33b1f9e9024eed5ce516",
+          "uri": "https://grts.gm/news-article-details/news/the-gambia-government-accepts-all-but-two-of-trrc-recommendations"
+        },
+        {
+          "filename": "source/Q632012.json",
+          "sha256": "8d8efba74bc3d4c6ca565bc5bb7fab67cabac862b50fdb583ec573dd2ef02f6c",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q632012.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          -10.80387354,
+          6.31705
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1053549.json",
+        "statement_id": "Q1053549$42F4C126-28E9-4774-B607-0F5477704215"
+      },
+      "independent_review": {
+        "method": "Independent agent checked documented access and current named scope, direct RDF coordinate and licensing evidence, native Wikidata coordinates and recent World Heritage sources.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point represents the pavilion by Ashmun Street. Visits follow scheduled tours and civic venue arrangements. The adjacent National Museum is a distinct visitor property.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Monrovia City Corporation",
+          "Liberia National Tourism Authority",
+          "Enjoy Liberia",
+          "Wikidata contributors"
+        ],
+        "description": "The historic national pavilion on Ashmun Street is a civic event venue and organised heritage tour stop.",
+        "description_zh": "阿什蒙街的历史百年纪念馆用于市民活动，也是蒙罗维亚官方组织的文化遗产导览站点。",
+        "details": "The point represents the pavilion by Ashmun Street. Visits follow scheduled tours and civic venue arrangements. The adjacent National Museum is a distinct visitor property.",
+        "geography": {
+          "authority_id": "supplement:auth:lr-public:Q1053549",
+          "countries": [
+            "LR"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The city identifies the named pavilion as a national monument on Ashmun Street.",
+            "id": "auth:lr-public:Q1053549:evidence:1",
+            "license": null,
+            "publisher": "Monrovia City Corporation",
+            "revision": "Retrieved 2026-11-28; SHA-256 045a0c9a869004c276a6d2e19df59693a7c29a7cecd8e43b6828d113cc7b255b.",
+            "title": "Historic Sites: Centennial Pavilion",
+            "uri": "https://monrovia.gov.lr/index.php/historic-sites/"
+          }
+        },
+        "id": "auth:lr-public:Q1053549",
+        "location_precision": null,
+        "names": [
+          "蒙罗维亚百年纪念馆",
+          "Centennial Pavilion, Monrovia",
+          "Centennial Pavilion",
+          "Centennial Pavillion",
+          "Liberia Centennial Pavilion"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -10.80387354,
+          6.31705
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The city identifies the named pavilion as a national monument on Ashmun Street.",
+            "id": "auth:lr-public:Q1053549:evidence:1",
+            "license": null,
+            "publisher": "Monrovia City Corporation",
+            "revision": "Retrieved 2026-11-28; SHA-256 045a0c9a869004c276a6d2e19df59693a7c29a7cecd8e43b6828d113cc7b255b.",
+            "title": "Historic Sites: Centennial Pavilion",
+            "uri": "https://monrovia.gov.lr/index.php/historic-sites/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The authority records a public visitor itinerary through the pavilion.",
+            "id": "auth:lr-public:Q1053549:evidence:2",
+            "license": null,
+            "publisher": "Liberia National Tourism Authority",
+            "revision": "Retrieved 2026-11-28; SHA-256 a1a6577f84b5b3b60d6079ccc9509d6b90537d431d7cc7934e5c5f65f5b842e1.",
+            "title": "Monrovia visitor route, September 2026",
+            "uri": "https://lnta.gov.lr/sh-diana-arrives-in-monrovia-with-141-passengers-as-liberia-records-third-cruise-visit-of-2026/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism guide identifies the pavilion and describes arranged tours at the property.",
+            "id": "auth:lr-public:Q1053549:evidence:3",
+            "license": null,
+            "publisher": "Enjoy Liberia",
+            "revision": "Retrieved 2026-11-28; SHA-256 15fc5e845fda6a26cbcd9f347a1c840348181066ea6bf391291b7a47b2a09410.",
+            "title": "Bookable visitor scope at the Centennial Pavilion",
+            "uri": "https://enjoyliberia.travel/blog/post/tracing-liberias-past-through-monrovias-must-see-h/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude -10.80387354, latitude 6.31705.",
+            "id": "auth:lr-public:Q1053549:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 9576f52a78264116357c957fd4d4075f2fade00703435937d8c5fd871470f5b4.",
+            "title": "Centennial Pavilion, Monrovia coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1053549.json"
+          }
+        ],
+        "source_uri": "https://monrovia.gov.lr/index.php/historic-sites/",
+        "title": "Centennial Pavilion, Monrovia",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/lr-monrovia-historic-sites.html",
+          "sha256": "045a0c9a869004c276a6d2e19df59693a7c29a7cecd8e43b6828d113cc7b255b",
+          "uri": "https://monrovia.gov.lr/index.php/historic-sites/"
+        },
+        {
+          "filename": "source/lr-lnta-september-route.html",
+          "sha256": "a1a6577f84b5b3b60d6079ccc9509d6b90537d431d7cc7934e5c5f65f5b842e1",
+          "uri": "https://lnta.gov.lr/sh-diana-arrives-in-monrovia-with-141-passengers-as-liberia-records-third-cruise-visit-of-2026/"
+        },
+        {
+          "filename": "source/lr-tourism-route-bookable.html",
+          "sha256": "15fc5e845fda6a26cbcd9f347a1c840348181066ea6bf391291b7a47b2a09410",
+          "uri": "https://enjoyliberia.travel/blog/post/tracing-liberias-past-through-monrovias-must-see-h/"
+        },
+        {
+          "filename": "source/Q1053549.json",
+          "sha256": "9576f52a78264116357c957fd4d4075f2fade00703435937d8c5fd871470f5b4",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1053549.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          -13.23583889,
+          8.48669444
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3330698.json",
+        "statement_id": "Q3330698$E0DCF6EF-8C74-4274-9433-6C2F4BCD9652"
+      },
+      "independent_review": {
+        "method": "Independent agent checked documented access and current named scope, direct RDF coordinate and licensing evidence, native Wikidata coordinates and recent World Heritage sources.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "This representative point identifies the historic station museum premises near Siaka Stevens Street and Pademba Road. Visits follow arrangements of the museum and Monuments and Relics Commission.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministry of Tourism and Cultural Affairs, Sierra Leone",
+          "Wikidata contributors"
+        ],
+        "description": "The national museum occupies the old Cotton Tree railway station and its visitor extension in central Freetown.",
+        "description_zh": "塞拉利昂国家博物馆设在弗里敦市中心的旧棉树火车站及相邻扩建展馆内。",
+        "details": "This representative point identifies the historic station museum premises near Siaka Stevens Street and Pademba Road. Visits follow arrangements of the museum and Monuments and Relics Commission.",
+        "geography": {
+          "authority_id": "supplement:auth:sl-public:Q3330698",
+          "countries": [
+            "SL"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The authority identifies the museum and its location in central Freetown.",
+            "id": "auth:sl-public:Q3330698:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism and Cultural Affairs, Sierra Leone",
+            "revision": "Retrieved 2026-11-28; SHA-256 de6e3218af78ffce240d31fa147e401cd3c4fa5838c9d41f7d80ea2d8af4b6a0.",
+            "title": "Sierra Leone National Museum",
+            "uri": "https://tourism.gov.sl/national-museum/"
+          }
+        },
+        "id": "auth:sl-public:Q3330698",
+        "location_precision": null,
+        "names": [
+          "塞拉利昂国家博物馆与旧棉树车站",
+          "Sierra Leone National Museum, former Cotton Tree Station",
+          "Sierra Leone National Museum",
+          "Old Cotton Tree Railway Station"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -13.23583889,
+          8.48669444
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The authority identifies the museum and its location in central Freetown.",
+            "id": "auth:sl-public:Q3330698:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism and Cultural Affairs, Sierra Leone",
+            "revision": "Retrieved 2026-11-28; SHA-256 de6e3218af78ffce240d31fa147e401cd3c4fa5838c9d41f7d80ea2d8af4b6a0.",
+            "title": "Sierra Leone National Museum",
+            "uri": "https://tourism.gov.sl/national-museum/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The report identifies the original Cotton Tree station and the museum extension.",
+            "id": "auth:sl-public:Q3330698:evidence:2",
+            "license": null,
+            "publisher": "Ministry of Tourism and Cultural Affairs, Sierra Leone",
+            "revision": "Retrieved 2026-11-28; SHA-256 12203d14c5b79cb1c0a0d05355357c9bdc8f6b015baef2dff6c50a78967b646c.",
+            "title": "Ministry functional review and visitor institutions",
+            "uri": "https://tourism.gov.sl/wp-content/uploads/2024/04/FINAL-MFR-REPORT-FOR-MTCA-2024.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry confirms a recent tour led by the Monuments and Relics Commission.",
+            "id": "auth:sl-public:Q3330698:evidence:3",
+            "license": null,
+            "publisher": "Ministry of Tourism and Cultural Affairs, Sierra Leone",
+            "revision": "Retrieved 2026-11-28; SHA-256 c43cfff656bffee721e635520f5c5d3bf40c7558cc8a4e4af03c4acb86f79c68.",
+            "title": "National Museum tour, May 2026",
+            "uri": "https://tourism.gov.sl/olu-of-warri-explores-sierra-leones-rich-cultural-heritage-during-diplomatic-visit/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude -13.23583889, latitude 8.48669444.",
+            "id": "auth:sl-public:Q3330698:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 95c71b7f75b39af912360b6543731b0a53670ade6bfb777f7f89f0f0f9720fd3.",
+            "title": "Sierra Leone National Museum, former Cotton Tree Station coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3330698.json"
+          }
+        ],
+        "source_uri": "https://tourism.gov.sl/national-museum/",
+        "title": "Sierra Leone National Museum, former Cotton Tree Station",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/sl-ministry-museum.html",
+          "sha256": "de6e3218af78ffce240d31fa147e401cd3c4fa5838c9d41f7d80ea2d8af4b6a0",
+          "uri": "https://tourism.gov.sl/national-museum/"
+        },
+        {
+          "filename": "source/sl-ministry-report.pdf",
+          "sha256": "12203d14c5b79cb1c0a0d05355357c9bdc8f6b015baef2dff6c50a78967b646c",
+          "uri": "https://tourism.gov.sl/wp-content/uploads/2024/04/FINAL-MFR-REPORT-FOR-MTCA-2024.pdf"
+        },
+        {
+          "filename": "source/sl-may2026-museum-visit.html",
+          "sha256": "c43cfff656bffee721e635520f5c5d3bf40c7558cc8a4e4af03c4acb86f79c68",
+          "uri": "https://tourism.gov.sl/olu-of-warri-explores-sierra-leones-rich-cultural-heritage-during-diplomatic-visit/"
+        },
+        {
+          "filename": "source/Q3330698.json",
+          "sha256": "95c71b7f75b39af912360b6543731b0a53670ade6bfb777f7f89f0f0f9720fd3",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3330698.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Original GeoNames RDF WGS84 for the named heritage place, S.CH.",
+        "point": [
+          -13.23574,
+          8.48996
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://sws.geonames.org/11602529/about.rdf",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independent agent checked documented access and current named scope, direct RDF coordinate and licensing evidence, native Wikidata coordinates and recent World Heritage sources.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The representative point lies within the named cathedral building. The heritage visit scope covers exterior interpretation and any announced events or visits permitted by the congregation.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministry of Tourism and Cultural Affairs, Sierra Leone",
+          "GeoNames"
+        ],
+        "description": "The historic Anglican cathedral in central Freetown is a landmark on the city’s heritage route.",
+        "description_zh": "弗里敦市中心的圣公会历史主教座堂是官方城市遗产导览中的一站。",
+        "details": "The representative point lies within the named cathedral building. The heritage visit scope covers exterior interpretation and any announced events or visits permitted by the congregation.",
+        "geography": {
+          "authority_id": "supplement:auth:sl-public:geonames-11602529",
+          "countries": [
+            "SL"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies the named historic cathedral.",
+            "id": "auth:sl-public:geonames-11602529:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism and Cultural Affairs, Sierra Leone",
+            "revision": "Retrieved 2026-11-28; SHA-256 e78144417c2118821ddcc861f9144ccee4cc2b6bbfca54b2240b055adbdf1c38.",
+            "title": "Freetown cultural heritage: St George’s Cathedral",
+            "uri": "https://tourism.gov.sl/cultural-heritage/"
+          }
+        },
+        "id": "auth:sl-public:geonames-11602529",
+        "location_precision": null,
+        "names": [
+          "弗里敦圣乔治主教座堂",
+          "St George’s Cathedral, Freetown",
+          "St George’s Cathedral",
+          "St. Georges Cathedral",
+          "Freetown Cathedral"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -13.23574,
+          8.48996
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies the named historic cathedral.",
+            "id": "auth:sl-public:geonames-11602529:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Tourism and Cultural Affairs, Sierra Leone",
+            "revision": "Retrieved 2026-11-28; SHA-256 e78144417c2118821ddcc861f9144ccee4cc2b6bbfca54b2240b055adbdf1c38.",
+            "title": "Freetown cultural heritage: St George’s Cathedral",
+            "uri": "https://tourism.gov.sl/cultural-heritage/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The Monuments and Relics Commission identifies the cathedral on its guided heritage route.",
+            "id": "auth:sl-public:geonames-11602529:evidence:2",
+            "license": null,
+            "publisher": "Ministry of Tourism and Cultural Affairs, Sierra Leone",
+            "revision": "Retrieved 2026-11-28; SHA-256 1c828f17d65923c691d7b0602d33cbb11d5ee7a4e9616ca70f8c330e30ec7b9a.",
+            "title": "Guided public heritage route in Freetown",
+            "uri": "https://tourism.gov.sl/mrc-takes-school-pupils-on-tour-of-historic-sites-in-freetown/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original GeoNames WGS84 coordinates for the named heritage place. Attribution: GeoNames.",
+            "id": "auth:sl-public:geonames-11602529:evidence:3",
+            "license": "CC BY 4.0",
+            "publisher": "GeoNames",
+            "revision": "Retrieved 2026-11-28; SHA-256 ea671fe765a372b5f74ef021c877554d67017daa0e03c2f27668562e19e71e4f.",
+            "title": "St. Georges Cathedral representative point",
+            "uri": "https://sws.geonames.org/11602529/about.rdf"
+          }
+        ],
+        "source_uri": "https://tourism.gov.sl/cultural-heritage/",
+        "title": "St George’s Cathedral, Freetown",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/sl-ministry-heritage.html",
+          "sha256": "e78144417c2118821ddcc861f9144ccee4cc2b6bbfca54b2240b055adbdf1c38",
+          "uri": "https://tourism.gov.sl/cultural-heritage/"
+        },
+        {
+          "filename": "source/sl-ministry-heritage-tour.html",
+          "sha256": "1c828f17d65923c691d7b0602d33cbb11d5ee7a4e9616ca70f8c330e30ec7b9a",
+          "uri": "https://tourism.gov.sl/mrc-takes-school-pupils-on-tour-of-historic-sites-in-freetown/"
+        },
+        {
+          "filename": "source/sl-church-gn-11602529.rdf",
+          "sha256": "ea671fe765a372b5f74ef021c877554d67017daa0e03c2f27668562e19e71e4f",
+          "uri": "https://sws.geonames.org/11602529/about.rdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          -17.50177056,
+          14.72380667
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1567959.json",
+        "statement_id": "Q1567959$CAD51C0F-DE68-4F7E-8345-E1B812080022"
+      },
+      "independent_review": {
+        "method": "Independent agent checked documented access and current named scope, direct RDF coordinate and licensing evidence, native Wikidata coordinates and recent World Heritage sources.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The named source point represents the historic lighthouse visitor precinct. Visits cover the exhibition and guided lighthouse route as published by the operator.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Phare des Mamelles visitor operator",
+          "Wikidata contributors"
+        ],
+        "description": "The historic Mamelles lighthouse hosts an exhibition and scheduled guided visits in its original maritime structure.",
+        "description_zh": "马梅勒灯塔的原建筑设有展览，并按时刻表提供管理方导览。",
+        "details": "The named source point represents the historic lighthouse visitor precinct. Visits cover the exhibition and guided lighthouse route as published by the operator.",
+        "geography": {
+          "authority_id": "supplement:auth:sn-public:Q1567959",
+          "countries": [
+            "SN"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator lists access arrangements, exhibition rooms and the lighthouse tour.",
+            "id": "auth:sn-public:Q1567959:evidence:1",
+            "license": null,
+            "publisher": "Phare des Mamelles visitor operator",
+            "revision": "Retrieved 2026-11-28; SHA-256 dfc9b742be4e32bde971cff6fc87f9ce2b4b3861b60e7b0791d2a153ee92cdab.",
+            "title": "Museum and guided visits at Phare des Mamelles",
+            "uri": "https://www.pharedesmamelles.sn/musee-histoire/"
+          }
+        },
+        "id": "auth:sn-public:Q1567959",
+        "location_precision": null,
+        "names": [
+          "达喀尔马梅勒灯塔",
+          "Phare des Mamelles, Dakar",
+          "Les Mamelles Lighthouse",
+          "Phare des Mamelles"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -17.50177056,
+          14.72380667
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator lists access arrangements, exhibition rooms and the lighthouse tour.",
+            "id": "auth:sn-public:Q1567959:evidence:1",
+            "license": null,
+            "publisher": "Phare des Mamelles visitor operator",
+            "revision": "Retrieved 2026-11-28; SHA-256 dfc9b742be4e32bde971cff6fc87f9ce2b4b3861b60e7b0791d2a153ee92cdab.",
+            "title": "Museum and guided visits at Phare des Mamelles",
+            "uri": "https://www.pharedesmamelles.sn/musee-histoire/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude -17.50177056, latitude 14.72380667.",
+            "id": "auth:sn-public:Q1567959:evidence:2",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 2c558f79cb413dc49311b3ce472d0ad085cf98cc5fae79bb6c9b267235579ec0.",
+            "title": "Phare des Mamelles, Dakar coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1567959.json"
+          }
+        ],
+        "source_uri": "https://www.pharedesmamelles.sn/musee-histoire/",
+        "title": "Phare des Mamelles, Dakar",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/sn-lighthouse-visitor.html",
+          "sha256": "dfc9b742be4e32bde971cff6fc87f9ce2b4b3861b60e7b0791d2a153ee92cdab",
+          "uri": "https://www.pharedesmamelles.sn/musee-histoire/"
+        },
+        {
+          "filename": "source/Q1567959.json",
+          "sha256": "2c558f79cb413dc49311b3ce472d0ad085cf98cc5fae79bb6c9b267235579ec0",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1567959.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          -16.934319062089585,
+          14.794472429401301
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3287072.json",
+        "statement_id": "Q3287072$c7fb4b7d-45ae-dc33-9420-d4937fc7cc08"
+      },
+      "independent_review": {
+        "method": "Independent agent checked documented access and current named scope, direct RDF coordinate and licensing evidence, native Wikidata coordinates and recent World Heritage sources.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point lies within the historic workshop parcel. Access is limited to the announced exhibition and workshop tour areas.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Secrétariat d’État à la Culture, Senegal",
+          "Ministère de la Culture, de l’Artisanat et du Tourisme, Senegal",
+          "Agence de presse sénégalaise",
+          "Wikidata contributors"
+        ],
+        "description": "The historic national tapestry workshops in Thiès produce and exhibit Senegalese decorative art.",
+        "description_zh": "捷斯的历史国家挂毯工坊制作并展示塞内加尔装饰艺术。",
+        "details": "The point lies within the historic workshop parcel. Access is limited to the announced exhibition and workshop tour areas.",
+        "geography": {
+          "authority_id": "supplement:auth:sn-public:Q3287072",
+          "countries": [
+            "SN"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies the historic national tapestry workshops in Thiès.",
+            "id": "auth:sn-public:Q3287072:evidence:1",
+            "license": null,
+            "publisher": "Secrétariat d’État à la Culture, Senegal",
+            "revision": "Retrieved 2026-11-28; SHA-256 3e2ab1e7a85cfcf85404202c175950b57b8a53924c7605cdf590cea33d16a159.",
+            "title": "Historic Manufactures sénégalaises des Arts décoratifs",
+            "uri": "https://www.culture.gouv.sn/index.php/manufactures-senegalaises/"
+          }
+        },
+        "id": "auth:sn-public:Q3287072",
+        "location_precision": null,
+        "names": [
+          "捷斯塞内加尔装饰艺术工坊",
+          "Manufactures sénégalaises des Arts décoratifs, Thiès",
+          "Manufactures sénégalaises des arts décoratifs",
+          "Manufacture nationale de Tapisserie",
+          "MSAD Thiès"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -16.934319062089585,
+          14.794472429401301
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies the historic national tapestry workshops in Thiès.",
+            "id": "auth:sn-public:Q3287072:evidence:1",
+            "license": null,
+            "publisher": "Secrétariat d’État à la Culture, Senegal",
+            "revision": "Retrieved 2026-11-28; SHA-256 3e2ab1e7a85cfcf85404202c175950b57b8a53924c7605cdf590cea33d16a159.",
+            "title": "Historic Manufactures sénégalaises des Arts décoratifs",
+            "uri": "https://www.culture.gouv.sn/index.php/manufactures-senegalaises/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The visitor authority invites visitors to view the historic workshop’s work in Thiès.",
+            "id": "auth:sn-public:Q3287072:evidence:2",
+            "license": null,
+            "publisher": "Ministère de la Culture, de l’Artisanat et du Tourisme, Senegal",
+            "revision": "Retrieved 2026-11-28; SHA-256 9de26109073a8e56d0ceea43f0879639beabb66c7ddf3090c2c600deba1116c7.",
+            "title": "Visits to Senegal’s cultural destinations",
+            "uri": "https://mcat.gouv.sn/activites-touristiques/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national agency documents visits through the workshops and their interpretive scope.",
+            "id": "auth:sn-public:Q3287072:evidence:3",
+            "license": null,
+            "publisher": "Agence de presse sénégalaise",
+            "revision": "Retrieved 2026-11-28; SHA-256 4b8fd1858cfa438d491f6398ffab06bbf30cf23eb4bc122ec8f36334f7c4c8c5.",
+            "title": "Workshop visits in Thiès",
+            "uri": "https://aps.sn/les-manufactures-senegalaises-des-arts-decoratifs-une-fabrique-de-la-diplomatie-culturelle/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The agency reports the minister’s recent visit and invitation to the public.",
+            "id": "auth:sn-public:Q3287072:evidence:4",
+            "license": null,
+            "publisher": "Agence de presse sénégalaise",
+            "revision": "Retrieved 2026-11-28; SHA-256 4424a875fd2f7f0e895a347c89c7d2cb12db1dd87afa2f046dea8fc0314644b1.",
+            "title": "Thiès cultural visit, September 2026",
+            "uri": "https://aps.sn/thies-mame-c-diop-appelle-les-citoyens-a-sapproprier-les-manufactures-des-arts-decoratifs/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude -16.934319062089585, latitude 14.794472429401301.",
+            "id": "auth:sn-public:Q3287072:evidence:5",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 9ae98db657974c0cc641d2882ae0f8d718131a8d2563354a07996a5aefaef3e3.",
+            "title": "Manufactures sénégalaises des Arts décoratifs, Thiès coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3287072.json"
+          }
+        ],
+        "source_uri": "https://www.culture.gouv.sn/index.php/manufactures-senegalaises/",
+        "title": "Manufactures sénégalaises des Arts décoratifs, Thiès",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/sn-thies-manufacture.html",
+          "sha256": "3e2ab1e7a85cfcf85404202c175950b57b8a53924c7605cdf590cea33d16a159",
+          "uri": "https://www.culture.gouv.sn/index.php/manufactures-senegalaises/"
+        },
+        {
+          "filename": "source/sn-tourism-visits.html",
+          "sha256": "9de26109073a8e56d0ceea43f0879639beabb66c7ddf3090c2c600deba1116c7",
+          "uri": "https://mcat.gouv.sn/activites-touristiques/"
+        },
+        {
+          "filename": "source/sn-aps-factory-visits.html",
+          "sha256": "4b8fd1858cfa438d491f6398ffab06bbf30cf23eb4bc122ec8f36334f7c4c8c5",
+          "uri": "https://aps.sn/les-manufactures-senegalaises-des-arts-decoratifs-une-fabrique-de-la-diplomatie-culturelle/"
+        },
+        {
+          "filename": "source/sn-aps-msad-2026.html",
+          "sha256": "4424a875fd2f7f0e895a347c89c7d2cb12db1dd87afa2f046dea8fc0314644b1",
+          "uri": "https://aps.sn/thies-mame-c-diop-appelle-les-citoyens-a-sapproprier-les-manufactures-des-arts-decoratifs/"
+        },
+        {
+          "filename": "source/Q3287072.json",
+          "sha256": "9ae98db657974c0cc641d2882ae0f8d718131a8d2563354a07996a5aefaef3e3",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3287072.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Original GeoNames RDF WGS84 for the named heritage place, S.RSTN.",
+        "point": [
+          -17.43323,
+          14.67565
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://sws.geonames.org/10401826/about.rdf",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independent agent checked documented access and current named scope, direct RDF coordinate and licensing evidence, native Wikidata coordinates and recent World Heritage sources.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The representative point locates the historic named station building. The scope is the restored public passenger areas and exterior frontage.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "GA2D, project architect for APIX",
+          "Société d’Exploitation du Train Express Régional",
+          "GeoNames"
+        ],
+        "description": "The restored historic Dakar railway station forms part of the operating regional passenger railway terminal.",
+        "description_zh": "达喀尔历史火车站修复后继续作为区域客运铁路终点站的一部分使用。",
+        "details": "The representative point locates the historic named station building. The scope is the restored public passenger areas and exterior frontage.",
+        "geography": {
+          "authority_id": "supplement:auth:sn-public:geonames-10401826",
+          "countries": [
+            "SN"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The architect identifies the retained historical building and distinguishes it from the modern extension.",
+            "id": "auth:sn-public:geonames-10401826:evidence:1",
+            "license": null,
+            "publisher": "GA2D, project architect for APIX",
+            "revision": "Retrieved 2026-11-28; SHA-256 3494b18c995682fb68b4bc388f14d5ee2433cdd6745602d61401836caa1d7616.",
+            "title": "Restoration of Dakar’s historic railway station",
+            "uri": "https://ga2d.com/projet/gare-de-dakar/"
+          }
+        },
+        "id": "auth:sn-public:geonames-10401826",
+        "location_precision": null,
+        "names": [
+          "达喀尔历史火车站",
+          "Historic Dakar Railway Station",
+          "Gare de Dakar",
+          "Dakar Railway Station"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -17.43323,
+          14.67565
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The architect identifies the retained historical building and distinguishes it from the modern extension.",
+            "id": "auth:sn-public:geonames-10401826:evidence:1",
+            "license": null,
+            "publisher": "GA2D, project architect for APIX",
+            "revision": "Retrieved 2026-11-28; SHA-256 3494b18c995682fb68b4bc388f14d5ee2433cdd6745602d61401836caa1d7616.",
+            "title": "Restoration of Dakar’s historic railway station",
+            "uri": "https://ga2d.com/projet/gare-de-dakar/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator describes public passenger services in the stations of the regional train.",
+            "id": "auth:sn-public:geonames-10401826:evidence:2",
+            "license": null,
+            "publisher": "Société d’Exploitation du Train Express Régional",
+            "revision": "Retrieved 2026-11-28; SHA-256 7fb77bb80a6c69dec73f978930951d27f6df39587c67f4d423b3a3eaacb3f554.",
+            "title": "Public passenger services at Dakar TER",
+            "uri": "https://seter.sn/service-voyageur/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original GeoNames WGS84 coordinates for the named heritage place. Attribution: GeoNames.",
+            "id": "auth:sn-public:geonames-10401826:evidence:3",
+            "license": "CC BY 4.0",
+            "publisher": "GeoNames",
+            "revision": "Retrieved 2026-11-28; SHA-256 69b843ee115803cbfcaac3e730d2d8ad1c44fe6dd87abbaaeae49ad8ea7eb32f.",
+            "title": "Dakar Railway Station representative point",
+            "uri": "https://sws.geonames.org/10401826/about.rdf"
+          }
+        ],
+        "source_uri": "https://ga2d.com/projet/gare-de-dakar/",
+        "title": "Historic Dakar Railway Station",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/sn-station-restoration.html",
+          "sha256": "3494b18c995682fb68b4bc388f14d5ee2433cdd6745602d61401836caa1d7616",
+          "uri": "https://ga2d.com/projet/gare-de-dakar/"
+        },
+        {
+          "filename": "source/sn-seter-visitor.html",
+          "sha256": "7fb77bb80a6c69dec73f978930951d27f6df39587c67f4d423b3a3eaacb3f554",
+          "uri": "https://seter.sn/service-voyageur/"
+        },
+        {
+          "filename": "source/sn-dakar-gn-10401826.rdf",
+          "sha256": "69b843ee115803cbfcaac3e730d2d8ad1c44fe6dd87abbaaeae49ad8ea7eb32f",
+          "uri": "https://sws.geonames.org/10401826/about.rdf"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Nine named public heritage places in Sierra Leone, Liberia, The Gambia and Senegal."
+}

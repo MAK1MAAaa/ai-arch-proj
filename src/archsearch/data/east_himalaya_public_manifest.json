@@ -1,0 +1,22 @@
+{
+  "base_count": 5256,
+  "base_ids_sha256": "13ad542226d26b5e19aa1c3977a8a03e97c2e5afc86c03c79d36c23885458f30",
+  "base_sites_sha256": "4e30ba1061b7326da6e310b6d99c4a6f9ef20d892fab6ebffedde93589f61a55",
+  "cohort_version": "east-himalaya-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 8,
+    "total": 5264
+  },
+  "files": {
+    "east_himalaya_public_review.json": {
+      "sha256": "a7fd7d41935fd6e014f1379b98b117e436c5be8b8f54181b74378bb53ccadd3f"
+    },
+    "east_himalaya_public_sites.json": {
+      "sha256": "693279bb47250d2c9e5b648bbf0fc6d3147595e9303b6f468480d804895ab09b"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Eight separate publicly documented fortresses, monuments and archaeological landscapes in Bhutan and eastern India, retaining original CC0 coordinate claims and explicitly managed visitor areas."
+}

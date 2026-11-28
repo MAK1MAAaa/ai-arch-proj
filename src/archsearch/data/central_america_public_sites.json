@@ -1,0 +1,844 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the scope of the adopted public location and visitor evidence.",
+      "note": "The evidence was checked for place identity and access. A historical stage remains unverified for this point batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Universidad Pedagógica y Tecnológica de Colombia",
+      "Universidad Distrital Francisco José de Caldas",
+      "Wikidata contributors"
+    ],
+    "description": "Publicly interpreted stone monument and archaeological park near Villa de Leyva.",
+    "description_zh": "哥伦比亚博亚卡省莱瓦镇附近的蒙基拉考古公园，公众可参观石刻和古石柱遗存。",
+    "details": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+    "geography": {
+      "authority_id": "supplement:auth:public-americas:co-monquira",
+      "countries": [
+        "CO"
+      ],
+      "note": "Modern location: Monquirá, Villa de Leyva, Boyacá.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Horario de atención",
+        "id": "co-monquira:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Universidad Pedagógica y Tecnológica de Colombia",
+        "revision": "Frozen authority or published-site reference; SHA-256 c914b2f6af82d538087dd0306aaa3bee2c985dc407b9caca36e153db5a3e233f",
+        "title": "Monquirá public park-museum directory",
+        "uri": "https://dsp.uptc.edu.co/sitio/portal/sitios/universidad/vic_inv_ext/ext_univ/unidades/redmuseos/muarvile/"
+      }
+    },
+    "id": "auth:public-americas:co-monquira",
+    "location_precision": null,
+    "names": [
+      "Parque Museo Arqueológico de Monquirá",
+      "Observatorio Solar Muisca",
+      "El Infiernito"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -73.558725,
+      5.64739722
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Horario de atención",
+        "id": "co-monquira:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Universidad Pedagógica y Tecnológica de Colombia",
+        "revision": "Frozen authority or published-site reference; SHA-256 c914b2f6af82d538087dd0306aaa3bee2c985dc407b9caca36e153db5a3e233f",
+        "title": "Monquirá public park-museum directory",
+        "uri": "https://dsp.uptc.edu.co/sitio/portal/sitios/universidad/vic_inv_ext/ext_univ/unidades/redmuseos/muarvile/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Observatorio Astronómico",
+        "id": "co-monquira:ref-2",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Universidad Distrital Francisco José de Caldas",
+        "revision": "Frozen authority or published-site reference; SHA-256 56e87718a92f068ff08c5c30172ebf6062dc2a74e89117bc257d5e7e5eb5ecfa",
+        "title": "Published study of the Monquirá observatory location",
+        "uri": "https://repository.udistrital.edu.co/server/api/core/bitstreams/aa006d2b-f66a-460f-b8bb-a442cca03a83/content"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Parque Museo Arqueológico de Monquirá; public coordinate statement.",
+        "id": "wd:Q1987940",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2464520398; SHA-256 3969d61ab26faaf4830a0bda814378a03ae10650ad2f6b83783f49486a3c0af9",
+        "title": "Wikidata structured location — Parque Museo Arqueológico de Monquirá",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1987940.json"
+      }
+    ],
+    "source_uri": "https://dsp.uptc.edu.co/sitio/portal/sitios/universidad/vic_inv_ext/ext_univ/unidades/redmuseos/muarvile/",
+    "title": "Parque Museo Arqueológico de Monquirá",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the scope of the adopted public location and visitor evidence.",
+      "note": "The evidence was checked for place identity and access. A historical stage remains unverified for this point batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto Colombiano de Antropología e Historia",
+      "Revista Medicina, Academia Nacional de Medicina de Colombia",
+      "Wikidata contributors"
+    ],
+    "description": "Publicly interpreted archaeological park at the historic settlement in Unguía, Chocó.",
+    "description_zh": "哥伦比亚乔科省翁吉亚的达连圣玛丽亚历史聚落原址，设有公众考古公园。",
+    "details": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+    "geography": {
+      "authority_id": "supplement:auth:public-americas:co-santa-maria",
+      "countries": [
+        "CO"
+      ],
+      "note": "Modern location: Unguía, Chocó.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "actualmente abierto al público",
+        "id": "co-santa-maria:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Instituto Colombiano de Antropología e Historia",
+        "revision": "Frozen authority or published-site reference; SHA-256 13691a1c3b13ae945f55a8f272df9d9c94c35d18f4a5b71294d2683ffb21c0d4",
+        "title": "Santa María de la Antigua del Darién public visiting information",
+        "uri": "https://www.icanh.gov.co/parques-icanh/parque-arqueologico-santa-maria/horarios-y-tarifas"
+      }
+    },
+    "id": "auth:public-americas:co-santa-maria",
+    "location_precision": null,
+    "names": [
+      "Parque Arqueológico Santa María de la Antigua del Darién",
+      "Santa María la Antigua del Darién",
+      "Santa María de la Antigua del Darién"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -77.021361,
+      8.214861
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "actualmente abierto al público",
+        "id": "co-santa-maria:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Instituto Colombiano de Antropología e Historia",
+        "revision": "Frozen authority or published-site reference; SHA-256 13691a1c3b13ae945f55a8f272df9d9c94c35d18f4a5b71294d2683ffb21c0d4",
+        "title": "Santa María de la Antigua del Darién public visiting information",
+        "uri": "https://www.icanh.gov.co/parques-icanh/parque-arqueologico-santa-maria/horarios-y-tarifas"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "coordenadas geográficas",
+        "id": "co-santa-maria:ref-2",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Revista Medicina, Academia Nacional de Medicina de Colombia",
+        "revision": "Frozen authority or published-site reference; SHA-256 5e62bf7efa11a6f6c11904593721355240aba7d678e093d063d4f344dc930e92",
+        "title": "Published study locates the surviving settlement",
+        "uri": "https://revistamedicina.net/articulo/revmedicinacolombia-2383"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Parque Arqueológico Santa María de la Antigua del Darién; public coordinate statement.",
+        "id": "wd:Q2573380",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2569894281; SHA-256 c8ff1aea514872056244e29fbb8f1ae064f48adf52d65174a3599ca17c0d754b",
+        "title": "Wikidata structured location — Parque Arqueológico Santa María de la Antigua del Darién",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2573380.json"
+      }
+    ],
+    "source_uri": "https://www.icanh.gov.co/parques-icanh/parque-arqueologico-santa-maria/horarios-y-tarifas",
+    "title": "Parque Arqueológico Santa María de la Antigua del Darién",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the scope of the adopted public location and visitor evidence.",
+      "note": "The evidence was checked for place identity and access. A historical stage remains unverified for this point batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto Colombiano de Antropología e Historia",
+      "Wikidata contributors"
+    ],
+    "description": "Publicly guided visits to the Teyuna archaeological park in the Sierra Nevada de Santa Marta.",
+    "description_zh": "哥伦比亚圣玛尔塔内华达山地的特尤纳考古公园，公众须由持证向导陪同参观。",
+    "details": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+    "geography": {
+      "authority_id": "supplement:auth:public-americas:co-teyuna",
+      "countries": [
+        "CO"
+      ],
+      "note": "Modern location: Santa Marta, Magdalena.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "reabrirá el 16 de octubre de 2026",
+        "id": "co-teyuna:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Instituto Colombiano de Antropología e Historia",
+        "revision": "Frozen authority or published-site reference; SHA-256 237ce5f431c080bfa164adfff240466ab5ff27e9179e4f512fdfd6186438b357",
+        "title": "October 2026 reopening announcement",
+        "uri": "https://www.icanh.gov.co/prensa/actualidad-icanh/el-parque-arqueologico-nacional-teyuna-ciudad-perdida-reabrira-al-publico-el-16-de-octubre-de-2026"
+      }
+    },
+    "id": "auth:public-americas:co-teyuna",
+    "location_precision": null,
+    "names": [
+      "Parque Arqueológico Nacional Teyuna – Ciudad Perdida",
+      "Ciudad Perdida",
+      "Teyuna",
+      "Buritaca-200"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -73.925191666667,
+      11.037997222222
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "reabrirá el 16 de octubre de 2026",
+        "id": "co-teyuna:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Instituto Colombiano de Antropología e Historia",
+        "revision": "Frozen authority or published-site reference; SHA-256 237ce5f431c080bfa164adfff240466ab5ff27e9179e4f512fdfd6186438b357",
+        "title": "October 2026 reopening announcement",
+        "uri": "https://www.icanh.gov.co/prensa/actualidad-icanh/el-parque-arqueologico-nacional-teyuna-ciudad-perdida-reabrira-al-publico-el-16-de-octubre-de-2026"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "terraza central",
+        "id": "co-teyuna:ref-2",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Instituto Colombiano de Antropología e Historia",
+        "revision": "Frozen authority or published-site reference; SHA-256 5816c181bc12579f14858ae7ee032830ad798c336e96514d937de8596527ab4d",
+        "title": "Teyuna public visit information",
+        "uri": "https://www.icanh.gov.co/parques-icanh/parque-arqueologico-teyuna/informacion-para-la-visita"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Parque Arqueológico Nacional Teyuna – Ciudad Perdida; public coordinate statement.",
+        "id": "wd:Q1094367",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2574540093; SHA-256 45b82558d088492567d18c710a062e2fe60ad126d43a15f103c9fb817ec48f76",
+        "title": "Wikidata structured location — Parque Arqueológico Nacional Teyuna – Ciudad Perdida",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1094367.json"
+      }
+    ],
+    "source_uri": "https://www.icanh.gov.co/prensa/actualidad-icanh/el-parque-arqueologico-nacional-teyuna-ciudad-perdida-reabrira-al-publico-el-16-de-octubre-de-2026",
+    "title": "Parque Arqueológico Nacional Teyuna – Ciudad Perdida",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the scope of the adopted public location and visitor evidence.",
+      "note": "The evidence was checked for place identity and access. A historical stage remains unverified for this point batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Alcaldía Municipal de Facatativá",
+      "Universidad Distrital Francisco José de Caldas",
+      "Wikidata contributors"
+    ],
+    "description": "Archaeological park with rock-art heritage and public visitor access in Facatativá.",
+    "description_zh": "哥伦比亚昆迪纳马卡省法卡塔蒂瓦的通霍岩画考古公园，设有公众参观区域。",
+    "details": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+    "geography": {
+      "authority_id": "supplement:auth:public-americas:co-tunjo",
+      "countries": [
+        "CO"
+      ],
+      "note": "Modern location: Facatativá, Cundinamarca.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Público General",
+        "id": "co-tunjo:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Alcaldía Municipal de Facatativá",
+        "revision": "Frozen authority or published-site reference; SHA-256 57b64e654d9f1c76931b571a62ab7b0341285f821d6922a509e9292a6c8b9eae",
+        "title": "Official public visiting schedule and fees",
+        "uri": "https://facaapp.gov.co/parque-arqueologico/tarifas-y-horarios/"
+      }
+    },
+    "id": "auth:public-americas:co-tunjo",
+    "location_precision": null,
+    "names": [
+      "Parque Arqueológico de Facatativá",
+      "Piedras del Tunjo",
+      "Cercado de los Zipas",
+      "Piedras de Tunja"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -74.34599722,
+      4.81655278
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Público General",
+        "id": "co-tunjo:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Alcaldía Municipal de Facatativá",
+        "revision": "Frozen authority or published-site reference; SHA-256 57b64e654d9f1c76931b571a62ab7b0341285f821d6922a509e9292a6c8b9eae",
+        "title": "Official public visiting schedule and fees",
+        "uri": "https://facaapp.gov.co/parque-arqueologico/tarifas-y-horarios/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Parque Arqueológico de Facatativá",
+        "id": "co-tunjo:ref-2",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Alcaldía Municipal de Facatativá",
+        "revision": "Frozen authority or published-site reference; SHA-256 1800149426630fc795d31798a05535ae4c0a03e00db7b81d4b9c940fd20a5792",
+        "title": "Facatativá archaeological park",
+        "uri": "https://www.facaapp.gov.co/parque-arqueologico/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Piedras del Tunjo",
+        "id": "co-tunjo:ref-3",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Universidad Distrital Francisco José de Caldas",
+        "revision": "Frozen authority or published-site reference; SHA-256 dfb2c6207284de57d8de431a3c00b58c99976ecc92fce3a86c2e5752cb686735",
+        "title": "Cultural property inventory for Piedras del Tunjo",
+        "uri": "https://repository.udistrital.edu.co/server/api/core/bitstreams/76028694-f67a-4c3e-8f51-1319ffc4236d/content"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Parque Arqueológico de Facatativá; public coordinate statement.",
+        "id": "wd:Q3902764",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2438619678; SHA-256 cc4bf841cd4ae89709f737bc3d3c3e8d4c57607b9495b97716f2703cee2311b2",
+        "title": "Wikidata structured location — Parque Arqueológico de Facatativá",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3902764.json"
+      }
+    ],
+    "source_uri": "https://facaapp.gov.co/parque-arqueologico/tarifas-y-horarios/",
+    "title": "Parque Arqueológico de Facatativá",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the scope of the adopted public location and visitor evidence.",
+      "note": "The evidence was checked for place identity and access. A historical stage remains unverified for this point batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Museo Histórico Cultural Juan Santamaría",
+      "Ministerio de Cultura y Juventud de Costa Rica",
+      "Wikidata contributors"
+    ],
+    "description": "Public museum occupying the former Alajuela barracks and jail.",
+    "description_zh": "哥斯达黎加阿拉胡埃拉的旧兵营与旧监狱，现为胡安·圣塔玛丽亚历史文化博物馆。",
+    "details": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+    "geography": {
+      "authority_id": "supplement:auth:public-americas:cr-alajuela",
+      "countries": [
+        "CR"
+      ],
+      "note": "Modern location: Alajuela, Alajuela.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "La entrada al Museo es gratuita",
+        "id": "cr-alajuela:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Museo Histórico Cultural Juan Santamaría",
+        "revision": "Frozen authority or published-site reference; SHA-256 7c6b7fb77288d6c809e0bf84293dc188cec25e29671c8e8756c7cd290d557963",
+        "title": "Museum public guided visits",
+        "uri": "https://museojuansantamaria.go.cr/visitras-guiadas/"
+      }
+    },
+    "id": "auth:public-americas:cr-alajuela",
+    "location_precision": null,
+    "names": [
+      "Museo Histórico Cultural Juan Santamaría",
+      "Antiguo Cuartel de Armas de Alajuela",
+      "Antigua Cárcel de Alajuela"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -84.214345,
+      10.017019
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "La entrada al Museo es gratuita",
+        "id": "cr-alajuela:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Museo Histórico Cultural Juan Santamaría",
+        "revision": "Frozen authority or published-site reference; SHA-256 7c6b7fb77288d6c809e0bf84293dc188cec25e29671c8e8756c7cd290d557963",
+        "title": "Museum public guided visits",
+        "uri": "https://museojuansantamaria.go.cr/visitras-guiadas/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "antiguo Cuartel de Armas",
+        "id": "cr-alajuela:ref-2",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministerio de Cultura y Juventud de Costa Rica",
+        "revision": "Frozen authority or published-site reference; SHA-256 970b28519f7d21038f24a69679c442f473e82c1404f86ea78f625087b3bc0c57",
+        "title": "Juan Santamaría museum cultural register",
+        "uri": "https://adminsi.cultura.cr/infraestructura/museo-historico-cultural-juan-santamaria"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Museo Histórico Cultural Juan Santamaría; public coordinate statement.",
+        "id": "wd:Q28503034",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2245108834; SHA-256 adfc4c257deb8cecc23160b517d8a15e5ead151641366877173709713b1a93a3",
+        "title": "Wikidata structured location — Museo Histórico Cultural Juan Santamaría",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q28503034.json"
+      }
+    ],
+    "source_uri": "https://museojuansantamaria.go.cr/visitras-guiadas/",
+    "title": "Museo Histórico Cultural Juan Santamaría",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the scope of the adopted public location and visitor evidence.",
+      "note": "The evidence was checked for place identity and access. A historical stage remains unverified for this point batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Museo Nacional de Costa Rica",
+      "Wikidata contributors"
+    ],
+    "description": "Historic Bellavista barracks in San José that now houses the National Museum of Costa Rica.",
+    "description_zh": "哥斯达黎加圣何塞的贝亚维斯塔旧兵营，现作为哥斯达黎加国家博物馆开放。",
+    "details": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+    "geography": {
+      "authority_id": "supplement:auth:public-americas:cr-bellavista",
+      "countries": [
+        "CR"
+      ],
+      "note": "Modern location: San José, San José.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Bellavista",
+        "id": "cr-bellavista:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Museo Nacional de Costa Rica",
+        "revision": "Frozen authority or published-site reference; SHA-256 ba13a6aa1a42e29c08f19432c9cda2433fed4448c5253e8ff1e99bb753207ce2",
+        "title": "Visit the National Museum",
+        "uri": "https://www.museocostarica.go.cr/visitar/"
+      }
+    },
+    "id": "auth:public-americas:cr-bellavista",
+    "location_precision": null,
+    "names": [
+      "Cuartel Bellavista",
+      "Museo Nacional de Costa Rica",
+      "Sede Bellavista"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -84.0717187,
+      9.9328131
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Bellavista",
+        "id": "cr-bellavista:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Museo Nacional de Costa Rica",
+        "revision": "Frozen authority or published-site reference; SHA-256 ba13a6aa1a42e29c08f19432c9cda2433fed4448c5253e8ff1e99bb753207ce2",
+        "title": "Visit the National Museum",
+        "uri": "https://www.museocostarica.go.cr/visitar/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Patrimonio Histórico Arquitectónico",
+        "id": "cr-bellavista:ref-2",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Museo Nacional de Costa Rica",
+        "revision": "Frozen authority or published-site reference; SHA-256 1b23127726d4f7cdbc0b2726257a0521b3522c9e64290707320c474da54218cf",
+        "title": "Architecture of Bellavista",
+        "uri": "https://www.museocostarica.go.cr/museo/arquitectura-bellavista/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Cuartel Bellavista; public coordinate statement.",
+        "id": "wd:Q1968698",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2517628814; SHA-256 4f98cf3bbc83b7d56a1898003c86472a9f06b7d4f1788299cadcb4595981b815",
+        "title": "Wikidata structured location — Cuartel Bellavista",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1968698.json"
+      }
+    ],
+    "source_uri": "https://www.museocostarica.go.cr/visitar/",
+    "title": "Cuartel Bellavista",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the scope of the adopted public location and visitor evidence.",
+      "note": "The evidence was checked for place identity and access. A historical stage remains unverified for this point batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministerio de Cultura y Juventud de Costa Rica",
+      "Sistema Nacional de Áreas de Conservación / Instituto Costarricense de Turismo",
+      "American Society of Civil Engineers",
+      "Wikidata contributors"
+    ],
+    "description": "Public pre-Columbian archaeological park in Turrialba, Cartago.",
+    "description_zh": "哥斯达黎加卡塔戈省图里亚尔瓦的前哥伦布时期考古公园，设有公开参观区域。",
+    "details": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+    "geography": {
+      "authority_id": "supplement:auth:public-americas:cr-guayabo",
+      "countries": [
+        "CR"
+      ],
+      "note": "Modern location: Turrialba, Cartago.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Horario de atención",
+        "id": "cr-guayabo:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministerio de Cultura y Juventud de Costa Rica",
+        "revision": "Frozen authority or published-site reference; SHA-256 4fec87814ceaf0a9ffcf73283cb012133049ca6a4e33f92a94a6ca00492ccc6a",
+        "title": "Monumento Nacional Guayabo",
+        "uri": "https://si.cultura.cr/infraestructura/monumento-nacional-guayabo"
+      }
+    },
+    "id": "auth:public-americas:cr-guayabo",
+    "location_precision": null,
+    "names": [
+      "Monumento Nacional Guayabo",
+      "Guayabo de Turrialba",
+      "Guayabo Ceremonial Center"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -83.6913979646047,
+      9.97244412069645
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Horario de atención",
+        "id": "cr-guayabo:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministerio de Cultura y Juventud de Costa Rica",
+        "revision": "Frozen authority or published-site reference; SHA-256 4fec87814ceaf0a9ffcf73283cb012133049ca6a4e33f92a94a6ca00492ccc6a",
+        "title": "Monumento Nacional Guayabo",
+        "uri": "https://si.cultura.cr/infraestructura/monumento-nacional-guayabo"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Sitio Arqueológico",
+        "id": "cr-guayabo:ref-2",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Sistema Nacional de Áreas de Conservación / Instituto Costarricense de Turismo",
+        "revision": "Frozen authority or published-site reference; SHA-256 c87ce5bfc96381cad384b8cde13e6dc5f0b7483d0209e069597c79eaca5d5807",
+        "title": "Guayabo national monument visitor guide",
+        "uri": "https://www.sinac.go.cr/ES/turismo/Brochure%20ICT/Parque%20Nacional%20Guayabo.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "83 41 26.6 W",
+        "id": "cr-guayabo:ref-3",
+        "license": "Public reference; source content rights retained",
+        "publisher": "American Society of Civil Engineers",
+        "revision": "Frozen authority or published-site reference; SHA-256 ed66466ee328243d25f0b12f0a00cdb94d4ec13e588047d5ae40eaf35dfa68f8",
+        "title": "Guayabo Ceremonial Center",
+        "uri": "https://www.asce.org/about-civil-engineering/history-and-heritage/historic-landmarks/guayabo-ceremonial-center"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Monumento Nacional Guayabo; public coordinate statement.",
+        "id": "wd:Q5614364",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2517064374; SHA-256 ab33aa3b7a969ff8bc28e625b9017183a82be744ff6227289ca59c6d5870f87f",
+        "title": "Wikidata structured location — Monumento Nacional Guayabo",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5614364.json"
+      }
+    ],
+    "source_uri": "https://si.cultura.cr/infraestructura/monumento-nacional-guayabo",
+    "title": "Monumento Nacional Guayabo",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the scope of the adopted public location and visitor evidence.",
+      "note": "The evidence was checked for place identity and access. A historical stage remains unverified for this point batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministerio de Cultura y Juventud de Costa Rica",
+      "Municipalidad de Paraíso",
+      "Wikidata contributors"
+    ],
+    "description": "Historic church and adjoining religious museum in Orosi, Cartago.",
+    "description_zh": "哥斯达黎加卡塔戈省奥罗西的历史教堂与相邻的宗教艺术博物馆。",
+    "details": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+    "geography": {
+      "authority_id": "supplement:auth:public-americas:cr-orosi",
+      "countries": [
+        "CR"
+      ],
+      "note": "Modern location: Orosi, Paraíso, Cartago.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Horario de atención",
+        "id": "cr-orosi:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministerio de Cultura y Juventud de Costa Rica",
+        "revision": "Frozen authority or published-site reference; SHA-256 586639fe6f0603a07d5ba7ebcdbe99249fb9260380f5a66a31ecec91008f32ac",
+        "title": "Public Museo de Arte Religioso San José de Orosi entry",
+        "uri": "https://si.cultura.cr/es/infraestructura/museo-de-arte-religioso-san-jose-de-orosi"
+      }
+    },
+    "id": "auth:public-americas:cr-orosi",
+    "location_precision": null,
+    "names": [
+      "Iglesia de San José de Orosi",
+      "Iglesia de Orosi",
+      "Iglesia Colonial de Orosi",
+      "Museo de Arte Religioso San José de Orosi"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -83.85550833333333,
+      9.797272222222222
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Horario de atención",
+        "id": "cr-orosi:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministerio de Cultura y Juventud de Costa Rica",
+        "revision": "Frozen authority or published-site reference; SHA-256 586639fe6f0603a07d5ba7ebcdbe99249fb9260380f5a66a31ecec91008f32ac",
+        "title": "Public Museo de Arte Religioso San José de Orosi entry",
+        "uri": "https://si.cultura.cr/es/infraestructura/museo-de-arte-religioso-san-jose-de-orosi"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Patrimonio Nacional",
+        "id": "cr-orosi:ref-2",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Municipalidad de Paraíso",
+        "revision": "Frozen authority or published-site reference; SHA-256 4f178a6a244c6b4f303e41306bdcca9ab8cdf4f348a134900256077d9c1df867",
+        "title": "Iglesia de Orosi",
+        "uri": "https://www.muniparaiso.go.cr/lugar/13/iglesia-de-orosi"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Iglesia de San José de Orosi; public coordinate statement.",
+        "id": "wd:Q18170804",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2341837986; SHA-256 dba911c73114a5745ebf94c27ebf0a8c68e49d70eb12ffd1122e1725ffb1f90e",
+        "title": "Wikidata structured location — Iglesia de San José de Orosi",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q18170804.json"
+      }
+    ],
+    "source_uri": "https://si.cultura.cr/es/infraestructura/museo-de-arte-religioso-san-jose-de-orosi",
+    "title": "Iglesia de San José de Orosi",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the scope of the adopted public location and visitor evidence.",
+      "note": "The evidence was checked for place identity and access. A historical stage remains unverified for this point batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministerio de Cultura de Panamá",
+      "Julia Mayo Torné and co-authors; Arqueología Iberoamericana",
+      "Wikidata contributors"
+    ],
+    "description": "Public archaeological park and site museum in Natá, Coclé, Panama.",
+    "description_zh": "巴拿马科克莱省纳塔的埃尔卡尼奥考古公园，设有向公众开放的原址博物馆。",
+    "details": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+    "geography": {
+      "authority_id": "supplement:auth:public-americas:pa-el-cano",
+      "countries": [
+        "PA"
+      ],
+      "note": "Modern location: El Caño, Natá, Coclé.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "MUSEO",
+        "id": "pa-el-cano:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministerio de Cultura de Panamá",
+        "revision": "Frozen authority or published-site reference; SHA-256 0c9f5c4cf5099276102b260c758afb35b34669934d5322cbb6c63220c5fcb30b",
+        "title": "Ministry visitor guide to the El Caño site museum",
+        "uri": "https://micultura.gob.pa/wp-content/uploads/2025/09/4.-MUSEO-EL-CANO-2025.pdf"
+      }
+    },
+    "id": "auth:public-americas:pa-el-cano",
+    "location_precision": null,
+    "names": [
+      "Parque Arqueológico El Caño",
+      "Parque Arqueológico de El Caño",
+      "Museo del Parque Arqueológico El Caño"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -80.50105555555555,
+      8.394444444444444
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "MUSEO",
+        "id": "pa-el-cano:ref-1",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministerio de Cultura de Panamá",
+        "revision": "Frozen authority or published-site reference; SHA-256 0c9f5c4cf5099276102b260c758afb35b34669934d5322cbb6c63220c5fcb30b",
+        "title": "Ministry visitor guide to the El Caño site museum",
+        "uri": "https://micultura.gob.pa/wp-content/uploads/2025/09/4.-MUSEO-EL-CANO-2025.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "museo de sitio administrado por el Ministerio de Cultura",
+        "id": "pa-el-cano:ref-2",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministerio de Cultura de Panamá",
+        "revision": "Frozen authority or published-site reference; SHA-256 222653c26bd850b4727520ed1bac93184253a35ef23b64f123097ba687404d46",
+        "title": "El Caño archaeological park heritage directory entry",
+        "uri": "https://files.sicultura.gob.pa/espacios-culturales/monumentos-sitios-declarados-patrimonio/parque-arqueologico-el-cano"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "latitud 8° 23’ 40’’ N",
+        "id": "pa-el-cano:ref-3",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Julia Mayo Torné and co-authors; Arqueología Iberoamericana",
+        "revision": "Frozen authority or published-site reference; SHA-256 34a637da4fad777c76392a15661a157268036877ebda41cc5136ddb8c563d71f",
+        "title": "Published field study giving the park’s general necropolis point",
+        "uri": "https://www.laiesken.net/arqueologia/pdf/2016/AI3005.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Parque Arqueológico El Caño; public coordinate statement.",
+        "id": "wd:Q42883740",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2466434920; SHA-256 d7d1708787bb65adf7c9f13107213b0f57b43e160756ca0077c4b896c1dcdf4d",
+        "title": "Wikidata structured location — Parque Arqueológico El Caño",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q42883740.json"
+      }
+    ],
+    "source_uri": "https://micultura.gob.pa/wp-content/uploads/2025/09/4.-MUSEO-EL-CANO-2025.pdf",
+    "title": "Parque Arqueológico El Caño",
+    "types": [
+      "archaeological-site"
+    ]
+  }
+]

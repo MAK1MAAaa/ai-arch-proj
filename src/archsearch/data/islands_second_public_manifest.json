@@ -1,0 +1,22 @@
+{
+  "base_count": 5018,
+  "base_ids_sha256": "035419a1e52e1c7545f30b22ce067ac3a701902c5b0c38d6237d4d01eeff4bd4",
+  "base_sites_sha256": "0bcfbf96a23fa2b1893f1f45653c8593d798d45616eab4e3e2198eac65519192",
+  "cohort_version": "public-pacific-and-atlantic-islands-v2",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 11,
+    "total": 5029
+  },
+  "files": {
+    "islands_second_public_review.json": {
+      "sha256": "337dbbc84fa8ffa898a8393204848d5e667898f2d9d198cbc341f4099d51103c"
+    },
+    "islands_second_public_sites.json": {
+      "sha256": "2387d930517c66a1bac08047a70a8d752d718c514a5b146827e57ae416165ada"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Eleven verified accessible cultural sites in Pacific, Caribbean and Atlantic island jurisdictions, retaining official visitor scope, coordinate source and specific point role."
+}

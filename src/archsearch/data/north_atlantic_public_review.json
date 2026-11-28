@@ -1,0 +1,492 @@
+{
+  "base_count": 5334,
+  "base_ids_sha256": "7922f11c7435e1d8da72aedc77827b805ac62f3c38823289b640a85b7280d069",
+  "base_sites_sha256": "b2ee1072538f43f7a0fd2e037ddfe2ba37ae179f05108a62aefde5ecf4a1a18b",
+  "cohort_version": "north-atlantic-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The original point is inside the named cathedral ruins. The adjacent Saint Olav's Church, mortuary church remains and occupied farmhouse are separate.",
+        "point": [
+          -6.79207,
+          61.95184
+        ],
+        "precision": 2.77778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q601540.json",
+        "statement_id": "q601540$C58C2E31-A752-4208-A016-1FB4C61330A6"
+      },
+      "independent_review": {
+        "method": "Independently measured original native point and public interpretation in the Magnus cathedral, Nuuk B-66 exhibition and Reykjavik archaeological display, checked sources, UNESCO components, source country labels and whole corpus identity. No dates inferred.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The medieval St. Magnus Cathedral ruins at Kirkjubøur on Streymoy. The ruins are a stop on the designated Kirkjubøur heritage visitor route. Follow the venue’s posted access rules.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original site and its public visitor scope checked.",
+          "note": "No independently reviewed dated phase was assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Visit Tórshavn / Tórshavnar kommuna",
+          "Tjóðsavnið – Faroe Islands National Museum",
+          "Wikidata contributors"
+        ],
+        "description": "The medieval St. Magnus Cathedral ruins at Kirkjubøur on Streymoy. The ruins are a stop on the designated Kirkjubøur heritage visitor route. Follow the venue’s posted access rules.",
+        "description_zh": "希尔丘伯尔圣马格努斯大教堂遗址位于法罗群岛。地图所示为经核对的历史原址代表点，参观范围以主管方公告为准。",
+        "details": "The medieval St. Magnus Cathedral ruins at Kirkjubøur on Streymoy. The ruins are a stop on the designated Kirkjubøur heritage visitor route. Follow the venue’s posted access rules.",
+        "geography": {
+          "authority_id": "supplement:auth:fo-public:Q601540",
+          "countries": [
+            "FO"
+          ],
+          "note": "Original site representative point with documented current country.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The city visitor agency lists paid entry to the heritage area and identifies the medieval cathedral separately from its neighbours.",
+            "id": "auth:fo-public:Q601540:fo-kirkjubour-town-tickets.html",
+            "license": null,
+            "publisher": "Visit Tórshavn / Tórshavnar kommuna",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 fd5426ba492e12b30925997c57cd2a31256084b85ad8952717b142f5443afbc8.",
+            "title": "Magnus Cathedral Ruins, Kirkjubøur original location and visitor scope",
+            "uri": "https://www.visittorshavn.fo/kirkjubour/"
+          }
+        },
+        "id": "auth:fo-public:Q601540",
+        "location_precision": null,
+        "names": [
+          "希尔丘伯尔圣马格努斯大教堂遗址",
+          "Kirkjubømúrurin",
+          "Múrurin",
+          "Magnuskatedralen"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -6.79207,
+          61.95184
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The city visitor agency lists paid entry to the heritage area and identifies the medieval cathedral separately from its neighbours.",
+            "id": "auth:fo-public:Q601540:fo-kirkjubour-town-tickets.html",
+            "license": null,
+            "publisher": "Visit Tórshavn / Tórshavnar kommuna",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 fd5426ba492e12b30925997c57cd2a31256084b85ad8952717b142f5443afbc8.",
+            "title": "Magnus Cathedral Ruins, Kirkjubøur original location and visitor scope",
+            "uri": "https://www.visittorshavn.fo/kirkjubour/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national museum identifies the cathedral ruins in its Kirkjubøur site material.",
+            "id": "auth:fo-public:Q601540:fo-magnus-operator.html",
+            "license": null,
+            "publisher": "Tjóðsavnið – Faroe Islands National Museum",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 fafbb9356f1fc0eb7e153b16050beb809255ea1c9cad40d5715203586b03e787.",
+            "title": "Magnus Cathedral Ruins, Kirkjubøur original location and visitor scope",
+            "uri": "https://www.tjodsavnid.fo/kirkjubur"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national museum details its applied preservation work at the cathedral ruin.",
+            "id": "auth:fo-public:Q601540:fo-magnus-operator-conservation.html",
+            "license": null,
+            "publisher": "Tjóðsavnið – Faroe Islands National Museum",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 5a029b0856fe57edbb18c490f18b5172e5fbfe40b96bf9cfee9fb0905f447cb2.",
+            "title": "Magnus Cathedral Ruins, Kirkjubøur original location and visitor scope",
+            "uri": "https://www.tjodsavnid.fo/verkaetlanir/kirkjubour"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -6.79207, latitude 61.95184.",
+            "id": "wikidata:Q601540",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2362906231; P625 q601540$C58C2E31-A752-4208-A016-1FB4C61330A6.",
+            "title": "Magnus Cathedral Ruins, Kirkjubøur representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q601540.json"
+          }
+        ],
+        "source_uri": "https://www.visittorshavn.fo/kirkjubour/",
+        "title": "Magnus Cathedral Ruins, Kirkjubøur",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q601540.json",
+          "sha256": "461e2ed47913c71119cae20decc6e43702ebc91fa193e0781811c639edaf0032",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q601540.json"
+        },
+        {
+          "filename": "fo-kirkjubour-town-tickets.html",
+          "sha256": "fd5426ba492e12b30925997c57cd2a31256084b85ad8952717b142f5443afbc8",
+          "uri": "https://www.visittorshavn.fo/kirkjubour/"
+        },
+        {
+          "filename": "fo-magnus-operator.html",
+          "sha256": "fafbb9356f1fc0eb7e153b16050beb809255ea1c9cad40d5715203586b03e787",
+          "uri": "https://www.tjodsavnid.fo/kirkjubur"
+        },
+        {
+          "filename": "fo-magnus-operator-conservation.html",
+          "sha256": "5a029b0856fe57edbb18c490f18b5172e5fbfe40b96bf9cfee9fb0905f447cb2",
+          "uri": "https://www.tjodsavnid.fo/verkaetlanir/kirkjubour"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The raw point is inside the B-66 outline at Hans Egedesvej 12, one of the active historic museum warehouses. The main ticket entrance at number 8 is recorded separately.",
+        "point": [
+          -51.7462,
+          64.1772
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3117388.json",
+        "statement_id": "Q3117388$46B17E8F-BF7C-470D-90A7-CC797FE84944"
+      },
+      "independent_review": {
+        "method": "Independently measured original native point and public interpretation in the Magnus cathedral, Nuuk B-66 exhibition and Reykjavik archaeological display, checked sources, UNESCO components, source country labels and whole corpus identity. No dates inferred.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original historic harbour warehouses housing Greenland’s National Museum in Nuuk. The representative point denotes the public Thule Culture exhibition in warehouse B-66, Hans Egedesvej 12. The museum entrance is at Hans Egedesvej 8.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original site and its public visitor scope checked.",
+          "note": "No independently reviewed dated phase was assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Nunatta Katersugaasivia Allagaateqarfialu – Greenland National Museum and Archives",
+          "Wikidata contributors",
+          "Greenland National Museum and Archives"
+        ],
+        "description": "The original historic harbour warehouses housing Greenland’s National Museum in Nuuk. The representative point denotes the public Thule Culture exhibition in warehouse B-66, Hans Egedesvej 12. The museum entrance is at Hans Egedesvej 8.",
+        "description_zh": "努克旧港格陵兰国家博物馆仓库群位于格陵兰。地图所示为经核对的历史原址代表点，参观范围以主管方公告为准。",
+        "details": "The original historic harbour warehouses housing Greenland’s National Museum in Nuuk. The representative point denotes the public Thule Culture exhibition in warehouse B-66, Hans Egedesvej 12. The museum entrance is at Hans Egedesvej 8.",
+        "geography": {
+          "authority_id": "supplement:auth:gl-public:Q3117388",
+          "countries": [
+            "GL"
+          ],
+          "note": "Original site representative point with documented current country.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum gives the Hans Egedesvej 8 public entrance and separate daily summer and winter hours.",
+            "id": "auth:gl-public:Q3117388:gl-nuuk-practical.html",
+            "license": null,
+            "publisher": "Nunatta Katersugaasivia Allagaateqarfialu – Greenland National Museum and Archives",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 a26676bc48c6e13c97028da279bf8ad1d7cc83bd065f1d6717c52563ddaf4ffb.",
+            "title": "Greenland National Museum historic warehouses, Nuuk original location and visitor scope",
+            "uri": "https://en.nka.gl/about/practical-information/"
+          }
+        },
+        "id": "auth:gl-public:Q3117388",
+        "location_precision": null,
+        "names": [
+          "努克旧港格陵兰国家博物馆仓库群",
+          "Nunatta Katersugaasivia Allagaateqarfialu",
+          "Grønlands Nationalmuseum og Arkiv"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -51.7462,
+          64.1772
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum gives the Hans Egedesvej 8 public entrance and separate daily summer and winter hours.",
+            "id": "auth:gl-public:Q3117388:gl-nuuk-practical.html",
+            "license": null,
+            "publisher": "Nunatta Katersugaasivia Allagaateqarfialu – Greenland National Museum and Archives",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 a26676bc48c6e13c97028da279bf8ad1d7cc83bd065f1d6717c52563ddaf4ffb.",
+            "title": "Greenland National Museum historic warehouses, Nuuk original location and visitor scope",
+            "uri": "https://en.nka.gl/about/practical-information/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator identifies B-66 at Hans Egedesvej 12 as an original historic warehouse with the public Thule culture exhibition.",
+            "id": "auth:gl-public:Q3117388:gl-nuuk-buildings.html",
+            "license": null,
+            "publisher": "Nunatta Katersugaasivia Allagaateqarfialu – Greenland National Museum and Archives",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 ff77002cec28a16d17204fda3a65b70c15bae1dfe3e33642fd8bbf725effecc6.",
+            "title": "Greenland National Museum historic warehouses, Nuuk original location and visitor scope",
+            "uri": "https://en.nka.gl/about-nka/the-history-of-nka/the-nka-buildings/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum identifies its present home in the original storage buildings of the colonial harbour.",
+            "id": "auth:gl-public:Q3117388:gl-nuuk-museum-address.html",
+            "license": null,
+            "publisher": "Nunatta Katersugaasivia Allagaateqarfialu – Greenland National Museum and Archives",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 795eb1b8b91ff6c06c7465f374ea002ae59b290ef41114430cc5b9b8d5727d6d.",
+            "title": "Greenland National Museum historic warehouses, Nuuk original location and visitor scope",
+            "uri": "https://en.nka.gl/contact/the-museum/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -51.7462, latitude 64.1772.",
+            "id": "wikidata:Q3117388",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2564485848; P625 Q3117388$46B17E8F-BF7C-470D-90A7-CC797FE84944.",
+            "title": "Greenland National Museum historic warehouses, Nuuk representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3117388.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum invites the public to its Thule Culture exhibition, identified by its building history as being in warehouse B-66.",
+            "id": "auth:gl-public:Q3117388:gl-nuuk-thule-exhibition.html",
+            "license": null,
+            "publisher": "Greenland National Museum and Archives",
+            "revision": "Retrieved 2026-11-28; SHA-256 85117a80b8ee2b917d0c5d5669ff1eaf50acdf0f5270fb030c7491edbe5ecf4c.",
+            "title": "New People – the Thule Culture",
+            "uri": "https://en.nka.gl/museum/exhibitions/new-people-the-thule-culture/"
+          }
+        ],
+        "source_uri": "https://en.nka.gl/about/practical-information/",
+        "title": "Greenland National Museum historic warehouses, Nuuk",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q3117388.json",
+          "sha256": "5b0e793be4b2f640604b090beaa40f24b5ae3d4cdebc7872912c5b4214f29d24",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3117388.json"
+        },
+        {
+          "filename": "gl-nuuk-practical.html",
+          "sha256": "a26676bc48c6e13c97028da279bf8ad1d7cc83bd065f1d6717c52563ddaf4ffb",
+          "uri": "https://en.nka.gl/about/practical-information/"
+        },
+        {
+          "filename": "gl-nuuk-buildings.html",
+          "sha256": "ff77002cec28a16d17204fda3a65b70c15bae1dfe3e33642fd8bbf725effecc6",
+          "uri": "https://en.nka.gl/about-nka/the-history-of-nka/the-nka-buildings/"
+        },
+        {
+          "filename": "gl-nuuk-museum-address.html",
+          "sha256": "795eb1b8b91ff6c06c7465f374ea002ae59b290ef41114430cc5b9b8d5727d6d",
+          "uri": "https://en.nka.gl/contact/the-museum/"
+        },
+        {
+          "filename": "independent-source/gl-nuuk-thule-exhibition.html",
+          "sha256": "85117a80b8ee2b917d0c5d5669ff1eaf50acdf0f5270fb030c7491edbe5ecf4c",
+          "uri": "https://en.nka.gl/museum/exhibitions/new-people-the-thule-culture/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The CC0 point represents the original site beneath the common development at number 16, as corroborated by the excavation report and museum information. The museum offers a dedicated public visitor entrance.",
+        "point": [
+          -21.942814,
+          64.147512
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7319496.json",
+        "statement_id": "Q7319496$48D8D9AA-5F73-4BF2-89A5-81DF50FE3CC7"
+      },
+      "independent_review": {
+        "method": "Independently measured original native point and public interpretation in the Magnus cathedral, Nuuk B-66 exhibition and Reykjavik archaeological display, checked sources, UNESCO components, source country labels and whole corpus identity. No dates inferred.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The Viking-age longhouse remains are preserved at the excavated site beneath Aðalstræti 16. The Reykjavík City Museum entrance to the underground exhibition is on the corner of Aðalstræti and Túngata.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original site and its public visitor scope checked.",
+          "note": "No independently reviewed dated phase was assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "City of Reykjavík",
+          "Borgarsögusafn Reykjavíkur – Reykjavík City Museum",
+          "Wikidata contributors",
+          "Fornleifastofnun Íslands for Reykjavík City Museum",
+          "Reykjavík City Museum"
+        ],
+        "description": "The Viking-age longhouse remains are preserved at the excavated site beneath Aðalstræti 16. The Reykjavík City Museum entrance to the underground exhibition is on the corner of Aðalstræti and Túngata.",
+        "description_zh": "雷克雅未克阿达尔大街长屋遗址位于冰岛。地图所示为经核对的历史原址代表点，参观范围以主管方公告为准。",
+        "details": "The Viking-age longhouse remains are preserved at the excavated site beneath Aðalstræti 16. The Reykjavík City Museum entrance to the underground exhibition is on the corner of Aðalstræti and Túngata.",
+        "geography": {
+          "authority_id": "supplement:auth:is-public:Q7319496",
+          "countries": [
+            "IS"
+          ],
+          "note": "Original site representative point with documented current country.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The city identifies Aðalstræti 16 and lists daily visitor admission.",
+            "id": "auth:is-public:Q7319496:is-871-city.html",
+            "license": null,
+            "publisher": "City of Reykjavík",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 5c7d18f46354a55bdbf10e22f39d729509f0185cc7087ef82d099454681e1cab.",
+            "title": "Reykjavík Settlement Exhibition, Aðalstræti 16 original location and visitor scope",
+            "uri": "https://reykjavik.is/en/settlement-exhibition"
+          }
+        },
+        "id": "auth:is-public:Q7319496",
+        "location_precision": null,
+        "names": [
+          "雷克雅未克阿达尔大街长屋遗址",
+          "Landnámssýningin",
+          "Reykjavík 871±2",
+          "The Settlement Exhibition"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -21.942814,
+          64.147512
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The city identifies Aðalstræti 16 and lists daily visitor admission.",
+            "id": "auth:is-public:Q7319496:is-871-city.html",
+            "license": null,
+            "publisher": "City of Reykjavík",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 5c7d18f46354a55bdbf10e22f39d729509f0185cc7087ef82d099454681e1cab.",
+            "title": "Reykjavík Settlement Exhibition, Aðalstræti 16 original location and visitor scope",
+            "uri": "https://reykjavik.is/en/settlement-exhibition"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum identifies the original longhouse ruins and held a public guided visit at this location in November 2026.",
+            "id": "auth:is-public:Q7319496:is-871-current.html",
+            "license": null,
+            "publisher": "Borgarsögusafn Reykjavíkur – Reykjavík City Museum",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 60bc86ac30b8c47be435dbe8e4bcb821405ca4b457f99c48b7c575325131a510.",
+            "title": "Reykjavík Settlement Exhibition, Aðalstræti 16 original location and visitor scope",
+            "uri": "https://borgarsogusafn.is/en/events/ertu-ad-laera-islensku-leidsogn-a-audskilinni-islensku-718899"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum describes the under-street exhibition room and the opening from Aðalstræti 16 and Túngata.",
+            "id": "auth:is-public:Q7319496:is-871-access.html",
+            "license": null,
+            "publisher": "Borgarsögusafn Reykjavíkur – Reykjavík City Museum",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 4c5f1d9bfffbaffa4d014c9d4e4f61c39c8eda170664b89ee9525eac67e656cf.",
+            "title": "Reykjavík Settlement Exhibition, Aðalstræti 16 original location and visitor scope",
+            "uri": "https://borgarsogusafn.is/adgengi"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -21.942814, latitude 64.147512.",
+            "id": "wikidata:Q7319496",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2500814624; P625 Q7319496$48D8D9AA-5F73-4BF2-89A5-81DF50FE3CC7.",
+            "title": "Reykjavík Settlement Exhibition, Aðalstræti 16 representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7319496.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Sections 1 and 2 identify the 14–16 Viking hall excavation and describe the hotel development planned on the same site.",
+            "id": "auth:is-public:Q7319496:is-871-excavation-report.pdf",
+            "license": null,
+            "publisher": "Fornleifastofnun Íslands for Reykjavík City Museum",
+            "revision": "Retrieved 2026-11-28; SHA-256 2469be186901d5f37c37cd461ce5a71f9671976968082153f77f3143996730b1.",
+            "title": "Archaeological Excavations at Aðalstræti 14–18, FS156-00161",
+            "uri": "https://fornleif.is/wp-content/uploads/2023/07/FS156-00161-Adalstraeti-14-18.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum locates its open excavation and original longhouse at the corner of Aðalstræti and Túngata.",
+            "id": "auth:is-public:Q7319496:is-871-exhibit-operator.html",
+            "license": null,
+            "publisher": "Reykjavík City Museum",
+            "revision": "Retrieved 2026-11-28; SHA-256 44de388061ad6bc8b7853bd01c20703256907548271bfa5397d09e5db8088e20.",
+            "title": "The Settlement Exhibition",
+            "uri": "https://borgarsogusafn.is/en/exhibitions/the-settlement-exhibition"
+          }
+        ],
+        "source_uri": "https://reykjavik.is/en/settlement-exhibition",
+        "title": "Reykjavík Settlement Exhibition, Aðalstræti 16",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q7319496.json",
+          "sha256": "384b5b21e851cc317ca9ee5760c94e9269b42cfad3c5e6e0e0fcea598bd1025e",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7319496.json"
+        },
+        {
+          "filename": "is-871-city.html",
+          "sha256": "5c7d18f46354a55bdbf10e22f39d729509f0185cc7087ef82d099454681e1cab",
+          "uri": "https://reykjavik.is/en/settlement-exhibition"
+        },
+        {
+          "filename": "is-871-current.html",
+          "sha256": "60bc86ac30b8c47be435dbe8e4bcb821405ca4b457f99c48b7c575325131a510",
+          "uri": "https://borgarsogusafn.is/en/events/ertu-ad-laera-islensku-leidsogn-a-audskilinni-islensku-718899"
+        },
+        {
+          "filename": "is-871-access.html",
+          "sha256": "4c5f1d9bfffbaffa4d014c9d4e4f61c39c8eda170664b89ee9525eac67e656cf",
+          "uri": "https://borgarsogusafn.is/adgengi"
+        },
+        {
+          "filename": "independent-source/is-871-excavation-report.pdf",
+          "sha256": "2469be186901d5f37c37cd461ce5a71f9671976968082153f77f3143996730b1",
+          "uri": "https://fornleif.is/wp-content/uploads/2023/07/FS156-00161-Adalstraeti-14-18.pdf"
+        },
+        {
+          "filename": "independent-source/is-871-exhibit-operator.html",
+          "sha256": "44de388061ad6bc8b7853bd01c20703256907548271bfa5397d09e5db8088e20",
+          "uri": "https://borgarsogusafn.is/en/exhibitions/the-settlement-exhibition"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Three separately identified public heritage places in the Faroe Islands, Greenland and Iceland. Uses original CC0 assertions and independently verified current visitor scope."
+}

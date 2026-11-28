@@ -1,0 +1,22 @@
+{
+  "base_count": 4743,
+  "base_ids_sha256": "c404813c220c651b0110b1707ebb6a57221f4ee1775f6c9c1adb04cb00d4b4b4",
+  "base_sites_sha256": "4ce1f1cdae35739d5e7c69afb9d7066b84c6aca098f7f9fa597f7f940a2335bf",
+  "cohort_version": "indonesia-islands-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 19,
+    "total": 4762
+  },
+  "files": {
+    "indonesia_islands_public_review.json": {
+      "sha256": "4d29f252232e3c4b3df2844f6d2d16aa00c89f7670512e5d58a9b5aad91870e3"
+    },
+    "indonesia_islands_public_sites.json": {
+      "sha256": "d30298be8c6d42119c39b19ff6abcc285eabcee392c7486b728738bf47c1d325"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Public cultural places in six Indonesian island groups outside Java. Selected by original authority visitor evidence and exact licensed representative point after independent scope and existing UNESCO component checks."
+}

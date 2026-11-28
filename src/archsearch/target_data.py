@@ -37,6 +37,7 @@ class NamedPlaceCohort:
     file_prefix: str
     review_sha256: str
     sites_sha256: str
+    country_labels: tuple[tuple[str, str], ...] = ()
 
     @property
     def filenames(self) -> tuple[str, str, str]:
@@ -51,6 +52,606 @@ GUYANA = NamedPlaceCohort(
     "guyana",
     "b60e4d13bd63e7ea1a74085a4931925fba0c7910d76778497346819923618904",
     "42309086e8ed2a5f01f92e68d6bd09529dc28ea5b75d2946348fb578a5831a80",
+)
+IRELAND = NamedPlaceCohort(
+    "ireland-public-monuments-v1",
+    "global-v21",
+    "ireland_nms",
+    "a652dce6ae63d6a940667bfe83acf3094a86b18edd6d06d2a60b3c42d00b929a",
+    "323e9e5300416db7337fb177df017b60f6d35edddbd7970168c86537b17c7902",
+)
+ANDALUCIA = NamedPlaceCohort(
+    "andalucia-reca-v1",
+    "global-v21",
+    "andalucia_reca",
+    "b518958cec6782751bb246d32979c06b9186c493171bcc783defc73e2c6bdc75",
+    "35fff33b680ce7a40991976fee121bd0beeeba1800d09c82b8be04984c87f321",
+)
+TAIWAN_ICULTURE = NamedPlaceCohort(
+    "taiwan-iculture-v1",
+    "global-v21",
+    "taiwan_iculture",
+    "0ddff3d9dd12b60cc7f54d23fef8c10ab4d514723c9f0119422fdf80db193075",
+    "860b2e16629089779e33699a8ba7f6bd06c3fdc020e934c88bc8ce824e4bb8ca",
+    country_labels=(("TW", "Taiwan"),),
+)
+MEXICO_SIC = NamedPlaceCohort(
+    "mexico-sic-public-archaeology-v1",
+    "global-v21",
+    "mexico_sic",
+    "45793ce985a6ba2dd4035c9b58d7786943872ee5287a97d4f77c18162fbd08b4",
+    "9f1b3d27dfcfe2ed2b631e9f3cd140c8c660425fa4d2e5d4b2e46d7a87753286",
+)
+FINLAND_VARK = NamedPlaceCohort(
+    "finland-vark-public-v1",
+    "global-v21",
+    "finland_vark",
+    "9d487a5e46f31f671254b4ae7184a0c245c178265cdf53b83a97b11eaeb290b8",
+    "fb4e142b0f9517ae9e82328f8394c7d985692efb84a846b855cab476ce5270fa",
+)
+WALES_CADW = NamedPlaceCohort(
+    "wales-cadw-public-v1",
+    "global-v21",
+    "wales_cadw",
+    "800a7f09b32eb1d0a0e605895e42d60c5b6073a1ffe4a32470333669c3ecafd4",
+    "f142e838e97dcd2545fc52c36827f0dbc448722c8ef6a58a96d0cf42ef435eb7",
+)
+THAILAND_FAD = NamedPlaceCohort(
+    "thailand-fad-public-v1",
+    "global-v21",
+    "thailand_fad",
+    "1cc7aecfdb0cb1b2925e15c4dc4c6587b8d6451b19a1a2e63929fc371f0fc44c",
+    "9ee26d0b20abf35338d93430a812c06df435bffe827654d4081154d1670c08d4",
+)
+AFRICA_VISIT = NamedPlaceCohort(
+    "africa-public-visit-v1",
+    "global-v21",
+    "africa_visit",
+    "184d58133b5930819d4209057789071e0998c8a88b09434934403364a7fd3d76",
+    "f16570a0fe066763579adadc8b440622378bce8cffa3bd23e4a7a10ab6788155",
+)
+SCOTLAND_HES = NamedPlaceCohort(
+    "scotland-hes-public-v1",
+    "global-v21",
+    "scotland_hes",
+    "1db3d61d10a10bc8d59c6fb725b21a99b7b564a46da46578c896b4551e902e86",
+    "b8b553b4026ce9ac1f2def85457fd85c300f6651e636d96e1f5db8797dd04723",
+)
+CARIBBEAN_NRHP = NamedPlaceCohort(
+    "caribbean-nrhp-public-v1",
+    "global-v21",
+    "caribbean_nrhp",
+    "697c34f8caf877b70fda7f2f7b47d1803ce8bbad414d8c8a40d936480916c88c",
+    "8899b0b29eec454e2e7f1f71241c02a01ee809319dafb49dc8992ae0c1f3e2d3",
+    country_labels=(("PR", "Puerto Rico"), ("VI", "United States Virgin Islands")),
+)
+PERU_PUBLIC = NamedPlaceCohort(
+    "peru-mincul-public-v1",
+    "global-v21",
+    "peru_public",
+    "fd042f30ff3f8719364f132e085b2d019c08d10920833e18ed62ef0fd37eba77",
+    "b77b25d193ba22505e0255a93863e794eb2ab8a70e822a5f8f83d7c1708f1dcf",
+)
+INDIA_ASI = NamedPlaceCohort(
+    "india-asi-public-v1",
+    "global-v21",
+    "india_asi",
+    "df0e2c551a3a2a96686f0b595221bdb935d3c4d930d80442474c4b93e8763d37",
+    "3647c59d3957018304bd9226faa2faa9792648de152aa27eeeb2684fcfc49c4d",
+)
+INDIA_ASI_NEXT = NamedPlaceCohort(
+    "india-asi-public-v2",
+    "global-v21",
+    "india_asi_next",
+    "71a5d01e639267be7c014e654d14a0e290dc16a765a10a8012049e3d45d1dbd8",
+    "5fc2ecb2d575c6b6ae51fbab98cc03f5b250bda39589751363ff71d31f66c7a6",
+)
+SRI_LANKA_PUBLIC = NamedPlaceCohort(
+    "sri-lanka-public-v1",
+    "global-v21",
+    "sri_lanka_public",
+    "c70da6586e71c743f37f43dbe8a3c5c8fd4e9ba3ffd771d6ac14a4ba5f3ae3d9",
+    "0b369ab2c8cf1e7bfc3054a7cada630153a8855a90ec204a1148307c208f4489",
+)
+SOUTH_ASIA_PUBLIC = NamedPlaceCohort(
+    "south-asia-bd-np-pk-public-v1",
+    "global-v21",
+    "south_asia_public",
+    "70cd25abac05104b6f7be6661a50a8dd5105c5117377433436331d676d7a72b9",
+    "298a855b6905f736f209ab6674587f77953df0106341997c7913143eb49e23f0",
+)
+CENTRAL_AMERICA_PUBLIC = NamedPlaceCohort(
+    "public-central-america-colombia-v1",
+    "global-v21",
+    "central_america_public",
+    "03aa02e5faf3c14747413a1a62e0d431a5a28509b3398690851973a60d7ee517",
+    "1fd5f68277153eff34d2e7d48d52ddc956ee3c22ed9432759891e350c1b5388f",
+)
+SOUTHERN_PUBLIC = NamedPlaceCohort(
+    "southern-cone-public-v1",
+    "global-v21",
+    "southern_public",
+    "97706bbef72a4c30d511fdf5ba73bb5e782b3e535eb44759741e0864f1f503d8",
+    "8606c50ab848729252bc30c9c711e5c4cecd6410a7cbc5eb26ba9d820aa4e17f",
+)
+NEW_ZEALAND_PUBLIC = NamedPlaceCohort(
+    "new-zealand-public-v1",
+    "global-v21",
+    "new_zealand_public",
+    "ca03ffffdb79bb4c43d3f22e5d0bbf1884bf8cac213cb9df77b6bee4f77b3dc3",
+    "dba29f8e7562b2df0f30787353a143f3c8b78cb05938a00af8fac9c4ea3534dd",
+)
+EGYPT_PUBLIC = NamedPlaceCohort(
+    "egypt-mota-public-v1",
+    "global-v21",
+    "egypt_public",
+    "89a99e29afb86070b703281471219c5454ea127554ac9b9da83b0382cb6df3d6",
+    "fbfb0317e370df2f3f0fd4601ca2f6a00a130d10324733cdbc106f1bbb815c3e",
+)
+SOUTHEAST_PUBLIC = NamedPlaceCohort(
+    "vietnam-cambodia-public-v1",
+    "global-v21",
+    "southeast_public",
+    "5cb9406321605edf6c7a3fb96affc7a9fba9519712605caf6484fdd14dff348b",
+    "261a0aa22efe6beb61a518944538dcddeee6d416e4c866813dd543da7ccdc974",
+)
+CARIBBEAN_ISLANDS_PUBLIC = NamedPlaceCohort(
+    "caribbean-islands-public-v1",
+    "global-v21",
+    "caribbean_islands_public",
+    "ca91998d3226028b7f9272a684fce9048a2de5fe073a32023fa72ea730233136",
+    "7bd2b413ce2ef6cb8139bc2002cd30b6c4ef87aed1eaa9e2f78314b20de61c14",
+)
+TUNISIA_PUBLIC = NamedPlaceCohort(
+    "tunisia-amvppc-public-v1",
+    "global-v21",
+    "tunisia_public",
+    "4f69a96aa81163c5c60d4eaafa032eec198dde0d74aaa84d329dedfedfeee243",
+    "89ccb4b61061707fb118c139dfd0f1cc54cc1b2540b6b045cb145008c0583b9c",
+)
+MOROCCO_PUBLIC = NamedPlaceCohort(
+    "morocco-public-v1",
+    "global-v21",
+    "morocco_public",
+    "b344ca464c90c8df4fab286604bdbcfacfa6e800d8f909233dcf69e77d260f65",
+    "4a7d7186e52702bb0eb7c01ff2a28237d9f1cf7363f250e8e6fe9a4bc00acc9a",
+)
+NORTH_CENTRAL_PUBLIC = NamedPlaceCohort(
+    "north-central-america-public-v1",
+    "global-v21",
+    "north_central_public",
+    "e23c43b1b7a06fc8716472613810bc05c841b0bd1c72c489e7bc87d0b08a4bae",
+    "0c484da970e39f89bda49cecb495eee01f16df5c195f058e031290e00073c692",
+)
+PACIFIC_ISLANDS_PUBLIC = NamedPlaceCohort(
+    "pacific-islands-public-v1",
+    "global-v21",
+    "pacific_islands_public",
+    "b61c75a75a93a2eaf1d6bee29f28311aa4e62a4e8c938cbd483b407dd0125d48",
+    "f48e2fad24bab384a826c9885413f4ce6e7298f03f0d82c6bbb524e3207fd87b",
+)
+EAST_AFRICA_PUBLIC = NamedPlaceCohort(
+    "tanzania-uganda-public-v1",
+    "global-v21",
+    "east_africa_public",
+    "c68fd862dd7caad2f6e351159c186c9072dacc9bd3e5fa21c928947776e3d904",
+    "2522b3601149e8289d86fdf75bbac046d4afd362df00017bab3a8aaaf10907b9",
+)
+KENYA_PUBLIC = NamedPlaceCohort(
+    "kenya-nmk-public-v1",
+    "global-v21",
+    "kenya_public",
+    "c5334adb77f40a3f3127ce99654541e11fd0036961e5b44761062c66ce3027e0",
+    "24a0ce444669cfb70e31856df0f3429ee6e14da741e40d570a7d1bd6857d6a9e",
+)
+RIVER_PLATE_PUBLIC = NamedPlaceCohort(
+    "uruguay-paraguay-public-v1",
+    "global-v21",
+    "river_plate_public",
+    "a692b95b91fdb084f96d54b87f98445598b43360d5ced82ad8155ce7ed3de149",
+    "40671f78f50f735966c246bf0df18f82e626f828b569b141fb461ec41da120e1",
+)
+CENTRAL_ASIA_PUBLIC = NamedPlaceCohort(
+    "kazakhstan-uzbekistan-public-v1",
+    "global-v21",
+    "central_asia_public",
+    "ab9d4632b74b58889c197ce9a2a553409d6d6670afc83970f332f6da6084477b",
+    "e87bf1088d402513a9cf8102cdd475d25ff046e710a6d197414b63f25dba2a99",
+)
+ENGLAND_NHLE = NamedPlaceCohort(
+    "england-nhle-public-v1",
+    "global-v21",
+    "england_nhle",
+    "a5af2649aa2269dc224ee46e2e83740e2174221e0c709ec85699aa5a9c330b01",
+    "cdbc62fa05de8df2b6e581202aa181995f12517ecfbc591c7a40e944fcd027d8",
+)
+CENTRAL_SOUTH_PUBLIC = NamedPlaceCohort(
+    "ecuador-bolivia-brazil-guyana-public-v1",
+    "global-v21",
+    "central_south_public",
+    "3764b07ae67ebb1950dc276a530583886196f93f514ffe1f29eb4c1eca30736f",
+    "d7a61776796da2bf57cfe166334712ac9f3753da656520dfe62a38af7faded94",
+)
+NORWAY_ASKELADDEN = NamedPlaceCohort(
+    "norway-askeladden-public-v1",
+    "global-v21",
+    "norway_askeladden",
+    "9d549f51941973329f4333ae8246115196aeca4b9d3ded44193a37d4ed64c3ec",
+    "db04050dae9eaf754faeb13ce981fe97fd96d3d62b7ea19a1e4570d6e3174b27",
+)
+JAPAN_PUBLIC = NamedPlaceCohort(
+    "japan-public-heritage-v1",
+    "global-v21",
+    "japan_public",
+    "934caed564b481cf3cb613d04a6a01917c0f83f920c541d28b51fb4a8303fc9e",
+    "b8be883727c868de1703a622867010343ba18374cc221bfd1df91ab2e916c8f6",
+)
+SOUTHERN_AFRICA_PUBLIC = NamedPlaceCohort(
+    "namibia-botswana-zimbabwe-zambia-public-v1",
+    "global-v21",
+    "southern_africa_public",
+    "33fcb3cb5cbf8714af1ca4688a9f80bd74b283eacd92695223d0d47a16d9cc51",
+    "e928b56e4f9be402f3b0699fef6f8a3c445a6df414368d6c01a92a4c5aebea31",
+)
+INDONESIA_ISLANDS_PUBLIC = NamedPlaceCohort(
+    "indonesia-islands-public-v1",
+    "global-v21",
+    "indonesia_islands_public",
+    "4d29f252232e3c4b3df2844f6d2d16aa00c89f7670512e5d58a9b5aad91870e3",
+    "d30298be8c6d42119c39b19ff6abcc285eabcee392c7486b728738bf47c1d325",
+)
+KYRGYZ_TAJIK_PUBLIC = NamedPlaceCohort(
+    "kyrgyzstan-tajikistan-public-v1",
+    "global-v21",
+    "kyrgyz_tajik_public",
+    "01fef86d0d9035655499f940f4854c8ca1f9ab0b7dd595c520e2e55d1e3f5c82",
+    "7b9298950ea930c358a1b30c161b41303cdcf04941531e0d900f7a5cc4c9608c",
+)
+NORTHERN_IRELAND_DFC = NamedPlaceCohort(
+    "northern-ireland-dfc-public-v1",
+    "global-v21",
+    "northern_ireland_dfc",
+    "f4193e62fda2b351206dda20e1157f60262e03d987bba51a97977ef7394665ed",
+    "c643d62ec4699b43a242a0a25d8ebc022b76f6d98dd10e55b3d1cfe4aa1df929",
+)
+FRANCOPHONE_WEST_PUBLIC = NamedPlaceCohort(
+    "senegal-benin-togo-public-v1",
+    "global-v21",
+    "francophone_west_public",
+    "33b563ba60fae8ad9b851f70de2482e2c8c01bb29841e176d795440d4b96a90d",
+    "7e46fa2d6d63700a0caf1ebc56ab20bacf367e01050e7c7f2a0b87568e1e19a9",
+)
+GHANA_NIGERIA_PUBLIC = NamedPlaceCohort(
+    "ghana-nigeria-public-v1",
+    "global-v21",
+    "ghana_nigeria_public",
+    "5669e6e1c43ee5acd492f18d231a8e93f4123ffca73421da5b282041b7a8ec2e",
+    "03baa8015832255190176f1b87e9032dc60f0488e48603840e0c2e1cb70f56b2",
+)
+PH_EAST_MY_PUBLIC = NamedPlaceCohort(
+    "philippines-east-malaysia-public-v1",
+    "global-v21",
+    "ph_east_my_public",
+    "dd068d8e93a0d60f76ab2c6cf85cc42037a370ab2087d9b6264250b656cbebb7",
+    "fdae60e4c406177db144c42b6cb1303747c9199e33c655e8db8890740a874f55",
+)
+BALTIC_PUBLIC = NamedPlaceCohort(
+    "estonia-latvia-public-v1",
+    "global-v21",
+    "baltic_public",
+    "46f94420053f7996e609d1ccb4b830e3bc4d021c61eb05c4490b6ab428a94676",
+    "8d67bbc07f2c9053809a2bb00810bd54072cbb0879f8b613ac44e306e7c36761",
+)
+BALKAN_PUBLIC = NamedPlaceCohort(
+    "albania-north-macedonia-public-v1",
+    "global-v21",
+    "balkan_public",
+    "d9ca3c0608284442dab7b4ef959c10a18909478d9e56a3bace9ff0f330048349",
+    "a7cde0e92650c8eefae6590e07090d6d7e899fa2ea28f38d76c4120affd58bd6",
+)
+GULF_PUBLIC = NamedPlaceCohort(
+    "oman-bahrain-qatar-public-v1",
+    "global-v21",
+    "gulf_public",
+    "2ad6a4595462a3fe590ac2b0d9c439d054c6a432cf708c65e516ebb37e330133",
+    "dc702c78fa34f1f9474c339b413622f74a121e617a7c7b880103bf9cf3a6b88d",
+)
+CAUCASUS_PUBLIC = NamedPlaceCohort(
+    "georgia-armenia-public-v1",
+    "global-v21",
+    "caucasus_public",
+    "26bb7af9b0c2fe4fca71b9439b892e116f96fb0144a7b95255af3ef1331b30f2",
+    "69794e6d8fdc74545310257e5cda49a0851998073c99278439143755a8678236",
+)
+LITHUANIA_PUBLIC = NamedPlaceCohort(
+    "lithuania-kvr-public-v1",
+    "global-v21",
+    "lithuania_public",
+    "155e8c069beb5799d9a5c9031584a8c0aa9bec9a402a77ea3a81c7afd1885d91",
+    "7deef1f035aae55549a6af934c6112c2095dd9928db2d5c2a71687010deba52b",
+)
+DENMARK_PUBLIC = NamedPlaceCohort(
+    "denmark-public-v1",
+    "global-v21",
+    "denmark_public",
+    "336d0724e43bef33e6ea3a589603f1da09f4a61e0df5162715aaa0bdbeab29f7",
+    "5256b7831484ab2c6fb673151404e64847df2423835052570310cf13426ba3b9",
+)
+MONGOLIA_PUBLIC = NamedPlaceCohort(
+    "mongolia-public-v1",
+    "global-v21",
+    "mongolia_public",
+    "12f942adc28f479545a567c8e2934309b4e33ae4e61c0745ff2d3408aa20938c",
+    "f8cfc5e1fe21c38d5b1dba8477009591242616fcf508548d405628caf8acc2ff",
+)
+PORTUGAL_PUBLIC = NamedPlaceCohort(
+    "portugal-public-v1",
+    "global-v21",
+    "portugal_public",
+    "c8bbc1ee04978230f2d6d928e29b3d39c9145f2035d9c31398867610816aa7bf",
+    "7ea1297edd23f31cac514e984d32c3995c411bc552302dd31bdf5ed5f4c14803",
+)
+DANUBE_PUBLIC = NamedPlaceCohort(
+    "moldova-romania-public-v1",
+    "global-v21",
+    "danube_public",
+    "e90334e75042767c74f8d8b582684a41be2f8fa6d91b74e4b0f91792a8b0cccb",
+    "e50b7dd7c0a729238355a38888bf1b1b03c5f9620673c66722d227a3ac517bce",
+)
+ISLANDS_SECOND_PUBLIC = NamedPlaceCohort(
+    "public-pacific-and-atlantic-islands-v2",
+    "global-v21",
+    "islands_second_public",
+    "337dbbc84fa8ffa898a8393204848d5e667898f2d9d198cbc341f4099d51103c",
+    "2387d930517c66a1bac08047a70a8d752d718c514a5b146827e57ae416165ada",
+    country_labels=(("BM", "Bermuda"), ("KY", "Cayman Islands")),
+)
+KOREA_GANGWON_PUBLIC = NamedPlaceCohort(
+    "korea-gangwon-public-v1",
+    "global-v21",
+    "korea_gangwon_public",
+    "b08490b90bab18cd11503a7cc5221ba127418f99752a8185a7b9bbc642f48fa3",
+    "3a356ee1eff9228aab550f5134175f8a3059292158665331b51674be6a811843",
+)
+BULGARIA_SERBIA_PUBLIC = NamedPlaceCohort(
+    "bulgaria-serbia-public-v1",
+    "global-v21",
+    "bulgaria_serbia_public",
+    "e9d8afcb0b54af67c7ae2b3b0ba075e80eadad75184d4ef12d8025224063ee38",
+    "98201c036b09e190d5ebe3b1d389437effbe93fae1b61a594d678b528581a0bb",
+)
+RWANDA_PUBLIC = NamedPlaceCohort(
+    "rwanda-public-v1",
+    "global-v21",
+    "rwanda_public",
+    "30ac9e7813737a75cb340a4207571be2fec5ecf8b861d8688e8fedfeb51c9dbb",
+    "4d3f008417a47a089c3631fe25e56fc200a9b0d2b30b9ab1f49f8df5e516bb0f",
+)
+LAOS_BHUTAN_PUBLIC = NamedPlaceCohort(
+    "laos-bhutan-public-v1",
+    "global-v21",
+    "laos_bhutan_public",
+    "66eb4d582ff49aa15848b39d881808b175c9bb531c02014936a98dbe0f61b1aa",
+    "0c2724de2e26e0406021958b6ada7403fc065706405a9cf5553695030d5711df",
+)
+ALGERIA_PUBLIC = NamedPlaceCohort(
+    "algeria-public-v1",
+    "global-v21",
+    "algeria_public",
+    "e849c4ad0ef8b5db73a666ab88bafbc1892b4b1456a48d7af33d43946e5d82fe",
+    "09f369cd3f52df723d8654364332d926b583ac30c11b47b061f4da58d67f8c88",
+)
+SWEDEN_PUBLIC = NamedPlaceCohort(
+    "sweden-public-v1",
+    "global-v21",
+    "sweden_public",
+    "4574ce2df710601c7c8cb4a6722d8e49e80f153a590ce875d7ec7d3b8c0589bc",
+    "bfd265bd401279e427f2b6333c45c5a52cf38532929489b2ac13c7ab362dfae3",
+)
+POLAND_PUBLIC = NamedPlaceCohort(
+    "poland-public-v1",
+    "global-v21",
+    "poland_public",
+    "5fd5335051fe7401e6f8d1470e15a24f8f9cb48442c10a43744e5ae17ed85eda",
+    "e582adffbd9a74107d0e88a53706cb72d3d2d1f6bae51e9e54d0f626361702e0",
+)
+CABO_CAMEROON_PUBLIC = NamedPlaceCohort(
+    "cabo-verde-cameroon-public-v1",
+    "global-v21",
+    "cabo_cameroon_public",
+    "6b12266e71ef78534b92624df0dd0b6d7cebb73ba10622d8dec565ff1a48971f",
+    "014e10b427dbef555cb7524579ab6033ef054bee1f77b26a7696bf3207ce6ed7",
+)
+COLOMBIA_VENEZUELA_PUBLIC = NamedPlaceCohort(
+    "colombia-venezuela-public-v1",
+    "global-v21",
+    "colombia_venezuela_public",
+    "0702aafa54e1d9ea420294d688e83bb51b78a2c4a1bd1cd4117d0b1b5349e6cc",
+    "fb1a37ca45c82c5064666bc95ba30c23ba7291273eb29d4e86558f2d9854f7f7",
+)
+CHINA_ARCHPARKS_PUBLIC = NamedPlaceCohort(
+    "china-archaeological-parks-public-v1",
+    "global-v21",
+    "china_archparks_public",
+    "4412393fe2062a79ac1303f58a21adf097a490b7a31910beac658a000e76cf1a",
+    "233f60efda3b4d48575ceffbc2828f517a48d4cf8adec7a5bfd19065b6082e05",
+)
+ANATOLIA_INLAND_PUBLIC = NamedPlaceCohort(
+    "anatolia-inland-public-v1",
+    "global-v21",
+    "anatolia_inland_public",
+    "198e32ac7a2c6c4b8992e0588f37cc8e2fd719b1e62625a93e1c14c1d1dcfdfb",
+    "29aaedadaa2b5444cbbd8377a3d62d751f44d576ee9c369754d5acb8495906bd",
+)
+MOZAMBIQUE_ANGOLA_PUBLIC = NamedPlaceCohort(
+    "mozambique-angola-public-v1",
+    "global-v21",
+    "mozambique_angola_public",
+    "70555a0df4b3d72d71b94dad0416228e1c6c3a6617b76fef3082a1e7e1b694f5",
+    "1e70cbcb19a9cdeb553f2fe5c27089adb49b038ec2d717b0a8fc68cb760fd760",
+)
+CZECH_PUBLIC = NamedPlaceCohort(
+    "czech-public-v1",
+    "global-v21",
+    "czech_public",
+    "1438f52e613c1b9e72ba85257652551700305f14ff22ef3480afeb281504aba3",
+    "59d2a789bf812aeffffcb2f934d8819f5112fc4c06a93ded8a7edb378dd9d786",
+)
+WEST_AFRICAN_COASTAL_PUBLIC = NamedPlaceCohort(
+    "west-african-coastal-public-v1",
+    "global-v21",
+    "west_african_coastal_public",
+    "6d59ebc2cb04cf9a9da689a92d6c397966c253397af8f704011de756eeeda487",
+    "5568c062da59a16c5df39f5c66fd0c97855d2ff7a66f285700b9f5973f4c9453",
+)
+CHINA_REGIONAL_PUBLIC = NamedPlaceCohort(
+    "china-regional-public-v1",
+    "global-v21",
+    "china_regional_public",
+    "e6c091394d16e78fa0d9eebe799255c5b7657944946100d5b4a061fb56d9f1f7",
+    "98a90e11ac7051f6a3d728fab25190207c300db2ce0f9c815945cd0118cd2e16",
+)
+BOLIVIA_ARGENTINA_PUBLIC = NamedPlaceCohort(
+    "bolivia-argentina-public-v1",
+    "global-v21",
+    "bolivia_argentina_public",
+    "66c45e3218f99c3f42209f7a9b8a3054b8be6d5281320eebe3333df723f7008d",
+    "903a6865a4234c9e73bc11006d097fb52440eed168955bd36fdaa3aff16f162a",
+)
+AUSTRALIA_NT_WA_PUBLIC = NamedPlaceCohort(
+    "australia-nt-wa-public-v1",
+    "global-v21",
+    "australia_nt_wa_public",
+    "b45ef5b480c407129dd280f5f81085ca3f5223abaa54e018d2c84cae11d2dc8c",
+    "928ad6a553d1ec8ee19924a508b552bdac24585434c89116352e2fcabf513dd9",
+)
+SAHEL_PUBLIC = NamedPlaceCohort(
+    "sahel-public-v1",
+    "global-v21",
+    "sahel_public",
+    "d1b70eff079b89f7ecdbf12e5fa757bca94f76e0e4d51b9aa5b63a35d7044cc2",
+    "6808461cc7cb4a092917f6d38564670e77a7795c2518d6bd5870cbe017f4c31a",
+)
+EAST_HIMALAYA_PUBLIC = NamedPlaceCohort(
+    "east-himalaya-public-v1",
+    "global-v21",
+    "east_himalaya_public",
+    "a7fd7d41935fd6e014f1379b98b117e436c5be8b8f54181b74378bb53ccadd3f",
+    "693279bb47250d2c9e5b648bbf0fc6d3147595e9303b6f468480d804895ab09b",
+)
+INDIAN_OCEAN_PUBLIC = NamedPlaceCohort(
+    "indian-ocean-public-v1",
+    "global-v21",
+    "indian_ocean_public",
+    "5aed9d6df147cc4ef90fde0fc4e2df92f281ec576bb97787b171804161aac226",
+    "252ca22fce76856bd79dc2524db864ff59a3e4059c20edd03e2344c5b8551d73",
+)
+US_SOUTHWEST_PUBLIC = NamedPlaceCohort(
+    "us-southwest-public-v1",
+    "global-v21",
+    "us_southwest_public",
+    "aff956987f6642fd986251958086bd011d4038f94e05e1faf183136d4ed45fd4",
+    "07559dd3775d13bec038a8a2a88eec7377c293a584d050f227f62a7fe59ff54a",
+)
+AUSTRALIA_STATES_PUBLIC = NamedPlaceCohort(
+    "australia-states-public-v1",
+    "global-v21",
+    "australia_states_public",
+    "2e487c2d906f67ba67331531e6ae152b2ba3b95583747869a0391f4976dfbd5c",
+    "f870368a6fdca60b34dd6ff97ad2b20d296c350cee23555455013ce46cf44df3",
+)
+AZERBAIJAN_PUBLIC = NamedPlaceCohort(
+    "azerbaijan-public-v1",
+    "global-v21",
+    "azerbaijan_public",
+    "dc849599a572b4153606fffe09596a623c051520030ed77fa770e1e776518f89",
+    "9d950bf1eddbf201b566e5b3deb6cdfe984eb7462fdebf90c2abf1c54f75f9da",
+)
+ARUBA_CURACAO_PUBLIC = NamedPlaceCohort(
+    "aruba-curacao-public-v1",
+    "global-v21",
+    "aruba_curacao_public",
+    "6fe929a6ed6d8d837b747407872b9cd3a808e2b1eb6df86d066d2da178773279",
+    "81e5601808e6659d904d13dc16cb4e76d4238fdbafc4651d6f2402fbb60ea40d",
+    country_labels=(("AW", "Aruba"), ("CW", "Curaçao")),
+)
+SLOVAKIA_AUSTRIA_PUBLIC = NamedPlaceCohort(
+    "slovakia-austria-public-v1",
+    "global-v21",
+    "slovakia_austria_public",
+    "48e6cd4e13bc36919fff06ea895b94837f60c565ebc47ebb88a5badafc48c264",
+    "55100c98fa83e034e8fd55142a6da8f08270d94bbfd8a91a3e64a876b2217f51",
+)
+NORTHERN_SOUTH_AMERICA_PUBLIC = NamedPlaceCohort(
+    "northern-south-america-public-v1",
+    "global-v21",
+    "northern_south_america_public",
+    "00d7ccd1947386fc1ef2555f38fb3ae710c35a184fd88b16e735df0432f935f3",
+    "10e0ce6e840477aa2901f53e6cf4ffb7c83d0bfd83ea2172cee8d6aeacf4a03c",
+)
+NORTH_ATLANTIC_PUBLIC = NamedPlaceCohort(
+    "north-atlantic-public-v1",
+    "global-v21",
+    "north_atlantic_public",
+    "375ead02b502955389328fd29cebdb8faf2d5cb50c3eae78ec440e84b0677e57",
+    "5e7a363d694c20db6656f7dc5c1ae51889300105812a41948d7b9e399980149a",
+    country_labels=(("FO", "Faroe Islands"), ("GL", "Greenland")),
+)
+SRI_LANKA_INLAND_PUBLIC = NamedPlaceCohort(
+    "sri-lanka-inland-public-v1",
+    "global-v21",
+    "sri_lanka_inland_public",
+    "aafd926cce9be45daec151a961dcf73e488fc6a44eee877089b11aeccdca881d",
+    "cdc0fe3a47494682657aca261459e30a142757a6dba68d8ea37169dcf9d576ed",
+)
+POINT_COHORTS = (
+    IRELAND, ANDALUCIA, TAIWAN_ICULTURE, MEXICO_SIC, FINLAND_VARK, WALES_CADW, THAILAND_FAD,
+    AFRICA_VISIT, SCOTLAND_HES, CARIBBEAN_NRHP, PERU_PUBLIC, INDIA_ASI, INDIA_ASI_NEXT,
+    SRI_LANKA_PUBLIC, SOUTH_ASIA_PUBLIC, CENTRAL_AMERICA_PUBLIC, SOUTHERN_PUBLIC,
+    NEW_ZEALAND_PUBLIC, EGYPT_PUBLIC, SOUTHEAST_PUBLIC, CARIBBEAN_ISLANDS_PUBLIC,
+    TUNISIA_PUBLIC, MOROCCO_PUBLIC, NORTH_CENTRAL_PUBLIC, PACIFIC_ISLANDS_PUBLIC,
+    EAST_AFRICA_PUBLIC, KENYA_PUBLIC, RIVER_PLATE_PUBLIC, CENTRAL_ASIA_PUBLIC, ENGLAND_NHLE,
+    CENTRAL_SOUTH_PUBLIC, NORWAY_ASKELADDEN, JAPAN_PUBLIC, SOUTHERN_AFRICA_PUBLIC,
+    INDONESIA_ISLANDS_PUBLIC, KYRGYZ_TAJIK_PUBLIC, NORTHERN_IRELAND_DFC,
+    FRANCOPHONE_WEST_PUBLIC, GHANA_NIGERIA_PUBLIC, PH_EAST_MY_PUBLIC,
+    BALTIC_PUBLIC,
+    BALKAN_PUBLIC,
+    GULF_PUBLIC,
+    CAUCASUS_PUBLIC,
+    LITHUANIA_PUBLIC,
+    DENMARK_PUBLIC,
+    MONGOLIA_PUBLIC,
+    PORTUGAL_PUBLIC,
+    DANUBE_PUBLIC,
+    ISLANDS_SECOND_PUBLIC,
+    KOREA_GANGWON_PUBLIC,
+    BULGARIA_SERBIA_PUBLIC,
+    RWANDA_PUBLIC,
+    LAOS_BHUTAN_PUBLIC,
+    ALGERIA_PUBLIC,
+    SWEDEN_PUBLIC,
+    POLAND_PUBLIC,
+    CABO_CAMEROON_PUBLIC,
+    COLOMBIA_VENEZUELA_PUBLIC,
+    CHINA_ARCHPARKS_PUBLIC,
+    ANATOLIA_INLAND_PUBLIC,
+    MOZAMBIQUE_ANGOLA_PUBLIC,
+    CZECH_PUBLIC,
+    WEST_AFRICAN_COASTAL_PUBLIC,
+    CHINA_REGIONAL_PUBLIC,
+    BOLIVIA_ARGENTINA_PUBLIC,
+    AUSTRALIA_NT_WA_PUBLIC,
+    SAHEL_PUBLIC,
+    EAST_HIMALAYA_PUBLIC,
+    INDIAN_OCEAN_PUBLIC,
+    US_SOUTHWEST_PUBLIC,
+    AUSTRALIA_STATES_PUBLIC,
+    AZERBAIJAN_PUBLIC,
+    ARUBA_CURACAO_PUBLIC,
+    SLOVAKIA_AUSTRIA_PUBLIC,
+    NORTHERN_SOUTH_AMERICA_PUBLIC,
+    NORTH_ATLANTIC_PUBLIC,
+    SRI_LANKA_INLAND_PUBLIC,
 )
 
 
@@ -186,14 +787,31 @@ def rebuild_targets(
 
 
 def main() -> None:
-    from archsearch.corpus import load_named_places_v1_corpus, load_pre_targets_corpus
+    from archsearch.corpus import (
+        load_guyana_corpus,
+        load_named_places_v1_corpus,
+        load_pre_targets_corpus,
+    )
 
     parser = argparse.ArgumentParser(description="重建已复核的专名地点资料")
     parser.add_argument("--output", type=Path, default=DATA_DIR)
-    parser.add_argument("--guyana", action="store_true", help="重建圭亚那批次")
+    batches = parser.add_mutually_exclusive_group()
+    batches.add_argument("--guyana", action="store_true", help="重建圭亚那批次")
+    batches.add_argument(
+        "--cohort", choices=[cohort.file_prefix for cohort in POINT_COHORTS],
+        help="重建指定的公共点位批次",
+    )
     args = parser.parse_args()
-    base = load_named_places_v1_corpus() if args.guyana else load_pre_targets_corpus()
-    cohort = GUYANA if args.guyana else ORIGINAL
+    if args.cohort:
+        base = load_guyana_corpus()
+        for cohort in POINT_COHORTS:
+            if cohort.file_prefix == args.cohort:
+                break
+            base = load_targets(base, cohort=cohort)
+    elif args.guyana:
+        base, cohort = load_named_places_v1_corpus(), GUYANA
+    else:
+        base, cohort = load_pre_targets_corpus(), ORIGINAL
     print(json.dumps(rebuild_targets(base, args.output, cohort=cohort),
                      ensure_ascii=False, indent=2))
 

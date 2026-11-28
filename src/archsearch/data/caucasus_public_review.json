@@ -1,0 +1,2590 @@
+{
+  "base_count": 4927,
+  "base_ids_sha256": "46ebca6422f90d6152ab2d86d65055043deb7ae28d156da28dc577947417bdb2",
+  "base_sites_sha256": "bdbdaf2eb6564259b1cb5ff9c227474234892ea46badf043f3cec58d465c850e",
+  "cohort_version": "georgia-armenia-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          45.20361111,
+          39.73138889
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1007510.json",
+        "statement_id": "Q1007510$32B71397-F6D0-4BCF-B7B9-ABCF6DF41A6C"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original cave archaeological site by Areni, limited to designated public sections and tours.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tourism Committee of Armenia",
+          "Wikidata contributors"
+        ],
+        "description": "The original cave archaeological site by Areni, limited to designated public sections and tours.",
+        "description_zh": "阿雷尼一号洞穴遗址位于亚美尼亚，保留原址公众参观出处及地图代表点。",
+        "details": "The original cave archaeological site by Areni, limited to designated public sections and tours.",
+        "geography": {
+          "authority_id": "supplement:auth:am-public:Q1007510",
+          "countries": [
+            "AM"
+          ],
+          "note": "Named public heritage place in Areni, Vayots Dzor.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide explicitly recommends visiting the original cave archaeological site.",
+            "id": "auth:am-public:Q1007510:am-archaeo-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 1a70386bcb58fe06cdc6e65233ac9c976c26199ae25d23ecb2ed6037c05246f5.",
+            "title": "Areni-1 Cave Complex public scope and site identity",
+            "uri": "https://armenia.travel/places-to-go/top-archaeological-sites/"
+          }
+        },
+        "id": "auth:am-public:Q1007510",
+        "location_precision": null,
+        "names": [
+          "阿雷尼一号洞穴遗址",
+          "Areni-1 Cave Complex"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          45.20361111,
+          39.73138889
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide explicitly recommends visiting the original cave archaeological site.",
+            "id": "auth:am-public:Q1007510:am-archaeo-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 1a70386bcb58fe06cdc6e65233ac9c976c26199ae25d23ecb2ed6037c05246f5.",
+            "title": "Areni-1 Cave Complex public scope and site identity",
+            "uri": "https://armenia.travel/places-to-go/top-archaeological-sites/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The published route identifies the visited cave separately from modern Areni village.",
+            "id": "auth:am-public:Q1007510:am-south-sites.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 ac188da981faa3c8389a02f78587bb3fd2540cbf78c820e2fea57cb8affc7c01.",
+            "title": "Areni-1 Cave Complex public scope and site identity",
+            "uri": "https://armenia.travel/articles/the-ultimate-2-week-itinerary-for-first-time-visitors/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 45.20361111, latitude 39.73138889.",
+            "id": "wikidata:Q1007510",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2569777428, statement Q1007510$32B71397-F6D0-4BCF-B7B9-ABCF6DF41A6C.",
+            "title": "Areni-1 Cave Complex representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1007510.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism authority lists a dedicated guest experience at the original Areni-1 Cave.",
+            "id": "auth:am-public:Q1007510:independent:3",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Retrieved 2026-11-28; SHA-256 c38605e7d0b62ca2a7e07ffd44f80b1901f661ab10c882c2043a0ff8791f35a0.",
+            "title": "Areni-1 Cave Scientific Research Foundation visitor listing",
+            "uri": "https://armenia.travel/experiences/areni-1-cave-scientific-research-foundation/"
+          }
+        ],
+        "source_uri": "https://armenia.travel/places-to-go/top-archaeological-sites/",
+        "title": "Areni-1 Cave Complex",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1007510.json",
+          "sha256": "5fb6cd434a64570b830c57930bb7f52e68503c8bcd48ac3a81bef90ce38fdee7",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1007510.json"
+        },
+        {
+          "filename": "am-archaeo-tourism.html",
+          "sha256": "1a70386bcb58fe06cdc6e65233ac9c976c26199ae25d23ecb2ed6037c05246f5",
+          "uri": "https://armenia.travel/places-to-go/top-archaeological-sites/"
+        },
+        {
+          "filename": "am-south-sites.html",
+          "sha256": "ac188da981faa3c8389a02f78587bb3fd2540cbf78c820e2fea57cb8affc7c01",
+          "uri": "https://armenia.travel/articles/the-ultimate-2-week-itinerary-for-first-time-visitors/"
+        },
+        {
+          "filename": "independent-areni-cave.html",
+          "sha256": "c38605e7d0b62ca2a7e07ffd44f80b1901f661ab10c882c2043a0ff8791f35a0",
+          "uri": "https://armenia.travel/experiences/areni-1-cave-scientific-research-foundation/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          44.18679444,
+          40.126275
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11120743.json",
+        "statement_id": "Q11120743$BBA76B93-516D-404E-89D1-32B2D8E1E4A9"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The in-place ancient settlement at Taronik and its public archaeological reserve, represented by a site point.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tourism Committee of Armenia",
+          "Aramazd: Armenian Journal of Near Eastern Studies",
+          "Armenian-Polish Archaeological Mission Metsamor",
+          "Wikidata contributors"
+        ],
+        "description": "The in-place ancient settlement at Taronik and its public archaeological reserve, represented by a site point.",
+        "description_zh": "梅察莫尔历史考古保护区位于亚美尼亚，保留原址公众参观出处及地图代表点。",
+        "details": "The in-place ancient settlement at Taronik and its public archaeological reserve, represented by a site point.",
+        "geography": {
+          "authority_id": "supplement:auth:am-public:Q11120743",
+          "countries": [
+            "AM"
+          ],
+          "note": "Named public heritage place in Taronik, Armavir.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide identifies the reserve and the ruins of the original settlement.",
+            "id": "auth:am-public:Q11120743:am-mets-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 db0e62cbc14d354739e38dc56e4801b5940cbed0c1368cfd5b17c7ce31af19bf.",
+            "title": "Metsamor Historical-Archaeological Reserve public scope and site identity",
+            "uri": "https://armenia.travel/destination/the-metsamor-historical-archaeological-museum-reserve/"
+          }
+        },
+        "id": "auth:am-public:Q11120743",
+        "location_precision": null,
+        "names": [
+          "梅察莫尔历史考古保护区",
+          "Metsamor Historical-Archaeological Reserve"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          44.18679444,
+          40.126275
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide identifies the reserve and the ruins of the original settlement.",
+            "id": "auth:am-public:Q11120743:am-mets-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 db0e62cbc14d354739e38dc56e4801b5940cbed0c1368cfd5b17c7ce31af19bf.",
+            "title": "Metsamor Historical-Archaeological Reserve public scope and site identity",
+            "uri": "https://armenia.travel/destination/the-metsamor-historical-archaeological-museum-reserve/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The excavators give an independent representative location for the ancient site southwest of Taronik.",
+            "id": "auth:am-public:Q11120743:am-mets-field.html",
+            "license": null,
+            "publisher": "Aramazd: Armenian Journal of Near Eastern Studies",
+            "revision": "Frozen 2026-11-28, SHA-256 dea0d7fc54dbd296b6e9c16a39391ce5645389c332bd96cec0295ea501e3c78f.",
+            "title": "Metsamor Historical-Archaeological Reserve public scope and site identity",
+            "uri": "https://archaeopresspublishing.com/ojs/index.php/aramazd/article/view/931"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The archaeological mission confirms public operation of the museum at the named reserve.",
+            "id": "auth:am-public:Q11120743:am-mets-mission.html",
+            "license": null,
+            "publisher": "Armenian-Polish Archaeological Mission Metsamor",
+            "revision": "Frozen 2026-11-28, SHA-256 8f595b6974ec51610c05a7658a958901b8850a5fafdeb3b19e5fe918d218f8a5.",
+            "title": "Metsamor Historical-Archaeological Reserve public scope and site identity",
+            "uri": "https://metsamor.uw.edu.pl/home/museum/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 44.18679444, latitude 40.126275.",
+            "id": "wikidata:Q11120743",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2539133337, statement Q11120743$BBA76B93-516D-404E-89D1-32B2D8E1E4A9.",
+            "title": "Metsamor Historical-Archaeological Reserve representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11120743.json"
+          }
+        ],
+        "source_uri": "https://armenia.travel/destination/the-metsamor-historical-archaeological-museum-reserve/",
+        "title": "Metsamor Historical-Archaeological Reserve",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q11120743.json",
+          "sha256": "7f62be107bd9eb5bf117a6d71e148b1037c786e430e4a922f3c069980c12b37e",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11120743.json"
+        },
+        {
+          "filename": "am-mets-tourism.html",
+          "sha256": "db0e62cbc14d354739e38dc56e4801b5940cbed0c1368cfd5b17c7ce31af19bf",
+          "uri": "https://armenia.travel/destination/the-metsamor-historical-archaeological-museum-reserve/"
+        },
+        {
+          "filename": "am-mets-field.html",
+          "sha256": "dea0d7fc54dbd296b6e9c16a39391ce5645389c332bd96cec0295ea501e3c78f",
+          "uri": "https://archaeopresspublishing.com/ojs/index.php/aramazd/article/view/931"
+        },
+        {
+          "filename": "am-mets-mission.html",
+          "sha256": "8f595b6974ec51610c05a7658a958901b8850a5fafdeb3b19e5fe918d218f8a5",
+          "uri": "https://metsamor.uw.edu.pl/home/museum/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          44.576111111111,
+          39.878333333333
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1144626.json",
+        "statement_id": "q1144626$D8DD0D48-62EE-44C8-91E7-5F7997117C63"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The surviving historic monastic precinct with public pilgrimage access within the wider Artaxiata area.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tourism Committee of Armenia",
+          "Wikidata contributors"
+        ],
+        "description": "The surviving historic monastic precinct with public pilgrimage access within the wider Artaxiata area.",
+        "description_zh": "霍尔维拉普修道院位于亚美尼亚，保留原址公众参观出处及地图代表点。",
+        "details": "The surviving historic monastic precinct with public pilgrimage access within the wider Artaxiata area.",
+        "geography": {
+          "authority_id": "supplement:auth:am-public:Q1144626",
+          "countries": [
+            "AM"
+          ],
+          "note": "Named public heritage place in Ararat Province.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide describes the existing monastery and its pilgrim access separately from the wider Artaxiata archaeological reserve.",
+            "id": "auth:am-public:Q1144626:am-khorvirap-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 f77fa9226e73af28b2aff95ca45ec198fe1fdf51940a4ba945de1c88613439ac.",
+            "title": "Khor Virap Monastery public scope and site identity",
+            "uri": "https://armenia.travel/destination/khor-virap-monastery/"
+          }
+        },
+        "id": "auth:am-public:Q1144626",
+        "location_precision": null,
+        "names": [
+          "霍尔维拉普修道院",
+          "Khor Virap Monastery"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          44.576111111111,
+          39.878333333333
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide describes the existing monastery and its pilgrim access separately from the wider Artaxiata archaeological reserve.",
+            "id": "auth:am-public:Q1144626:am-khorvirap-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 f77fa9226e73af28b2aff95ca45ec198fe1fdf51940a4ba945de1c88613439ac.",
+            "title": "Khor Virap Monastery public scope and site identity",
+            "uri": "https://armenia.travel/destination/khor-virap-monastery/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 44.576111111111, latitude 39.878333333333.",
+            "id": "wikidata:Q1144626",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2549927099, statement q1144626$D8DD0D48-62EE-44C8-91E7-5F7997117C63.",
+            "title": "Khor Virap Monastery representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1144626.json"
+          }
+        ],
+        "source_uri": "https://armenia.travel/destination/khor-virap-monastery/",
+        "title": "Khor Virap Monastery",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1144626.json",
+          "sha256": "7d1919577e4f1c5767bf9797ec4c7a46ec12fc3b0d5dca6c53ba29c971470319",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1144626.json"
+        },
+        {
+          "filename": "am-khorvirap-tourism.html",
+          "sha256": "f77fa9226e73af28b2aff95ca45ec198fe1fdf51940a4ba945de1c88613439ac",
+          "uri": "https://armenia.travel/destination/khor-virap-monastery/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          45.23286829439024,
+          39.684863330881704
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1474586.json",
+        "statement_id": "q1474586$A6B2C0BC-3340-44D3-96B4-09F7EFBB1F04"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The surviving medieval monastic complex in the Amaghu Valley and its designated visitor areas.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tourism Committee of Armenia",
+          "Wikidata contributors"
+        ],
+        "description": "The surviving medieval monastic complex in the Amaghu Valley and its designated visitor areas.",
+        "description_zh": "诺拉万克修道院位于亚美尼亚，保留原址公众参观出处及地图代表点。",
+        "details": "The surviving medieval monastic complex in the Amaghu Valley and its designated visitor areas.",
+        "geography": {
+          "authority_id": "supplement:auth:am-public:Q1474586",
+          "countries": [
+            "AM"
+          ],
+          "note": "Named public heritage place in Amaghu Valley, Vayots Dzor.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor route identifies the original monastic complex and describes access.",
+            "id": "auth:am-public:Q1474586:am-noravank-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 1e75d90c8ce838d44e4247954202d2943cec08414c056e3ed94e7c634fffb424.",
+            "title": "Noravank Monastery public scope and site identity",
+            "uri": "https://armenia.travel/destination/noravank-monastery/"
+          }
+        },
+        "id": "auth:am-public:Q1474586",
+        "location_precision": null,
+        "names": [
+          "诺拉万克修道院",
+          "Noravank Monastery"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          45.23286829439024,
+          39.684863330881704
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor route identifies the original monastic complex and describes access.",
+            "id": "auth:am-public:Q1474586:am-noravank-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 1e75d90c8ce838d44e4247954202d2943cec08414c056e3ed94e7c634fffb424.",
+            "title": "Noravank Monastery public scope and site identity",
+            "uri": "https://armenia.travel/destination/noravank-monastery/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The itinerary situates the existing monastery separately from Areni-1 Cave.",
+            "id": "auth:am-public:Q1474586:am-south-sites.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 ac188da981faa3c8389a02f78587bb3fd2540cbf78c820e2fea57cb8affc7c01.",
+            "title": "Noravank Monastery public scope and site identity",
+            "uri": "https://armenia.travel/articles/the-ultimate-2-week-itinerary-for-first-time-visitors/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 45.23286829439024, latitude 39.684863330881704.",
+            "id": "wikidata:Q1474586",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2570982384, statement q1474586$A6B2C0BC-3340-44D3-96B4-09F7EFBB1F04.",
+            "title": "Noravank Monastery representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1474586.json"
+          }
+        ],
+        "source_uri": "https://armenia.travel/destination/noravank-monastery/",
+        "title": "Noravank Monastery",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1474586.json",
+          "sha256": "8dcb73530e4a6bddccae35d7c159fc1606a9cffb3e9ae88273799403eba51c38",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1474586.json"
+        },
+        {
+          "filename": "am-noravank-tourism.html",
+          "sha256": "1e75d90c8ce838d44e4247954202d2943cec08414c056e3ed94e7c634fffb424",
+          "uri": "https://armenia.travel/destination/noravank-monastery/"
+        },
+        {
+          "filename": "am-south-sites.html",
+          "sha256": "ac188da981faa3c8389a02f78587bb3fd2540cbf78c820e2fea57cb8affc7c01",
+          "uri": "https://armenia.travel/articles/the-ultimate-2-week-itinerary-for-first-time-visitors/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          46.0286,
+          39.5507
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2479712.json",
+        "statement_id": "q2479712$4E5B3053-8732-4EEC-BB7A-A0EBF3E8669E"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The publicly visited archaeological landscape and standing stones near Sisian.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tourism Committee of Armenia",
+          "Wikidata contributors"
+        ],
+        "description": "The publicly visited archaeological landscape and standing stones near Sisian.",
+        "description_zh": "佐拉茨卡雷尔巨石遗址位于亚美尼亚，保留原址公众参观出处及地图代表点。",
+        "details": "The publicly visited archaeological landscape and standing stones near Sisian.",
+        "geography": {
+          "authority_id": "supplement:auth:am-public:Q2479712",
+          "countries": [
+            "AM"
+          ],
+          "note": "Named public heritage place in near Sisian, Syunik.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide identifies the archaeological stop and notes that research remains ongoing.",
+            "id": "auth:am-public:Q2479712:am-archaeo-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 1a70386bcb58fe06cdc6e65233ac9c976c26199ae25d23ecb2ed6037c05246f5.",
+            "title": "Zorats Karer public scope and site identity",
+            "uri": "https://armenia.travel/places-to-go/top-archaeological-sites/"
+          }
+        },
+        "id": "auth:am-public:Q2479712",
+        "location_precision": null,
+        "names": [
+          "佐拉茨卡雷尔巨石遗址",
+          "Zorats Karer"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          46.0286,
+          39.5507
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide identifies the archaeological stop and notes that research remains ongoing.",
+            "id": "auth:am-public:Q2479712:am-archaeo-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 1a70386bcb58fe06cdc6e65233ac9c976c26199ae25d23ecb2ed6037c05246f5.",
+            "title": "Zorats Karer public scope and site identity",
+            "uri": "https://armenia.travel/places-to-go/top-archaeological-sites/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The visitor guide describes the original standing stones and differing interpretations of the site.",
+            "id": "auth:am-public:Q2479712:am-top-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 521eb2c22bab21152bbdb1e646dadbd946a2ed4530aef1dc1880ae00522456ef.",
+            "title": "Zorats Karer public scope and site identity",
+            "uri": "https://armenia.travel/places-to-go/top-10-attractions/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 46.0286, latitude 39.5507.",
+            "id": "wikidata:Q2479712",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2491552747, statement q2479712$4E5B3053-8732-4EEC-BB7A-A0EBF3E8669E.",
+            "title": "Zorats Karer representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2479712.json"
+          }
+        ],
+        "source_uri": "https://armenia.travel/places-to-go/top-archaeological-sites/",
+        "title": "Zorats Karer",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q2479712.json",
+          "sha256": "9d2c559eb0cc37ca70a87deb002a09e3d05dc0d6960fee5220e5a3c046fc3896",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2479712.json"
+        },
+        {
+          "filename": "am-archaeo-tourism.html",
+          "sha256": "1a70386bcb58fe06cdc6e65233ac9c976c26199ae25d23ecb2ed6037c05246f5",
+          "uri": "https://armenia.travel/places-to-go/top-archaeological-sites/"
+        },
+        {
+          "filename": "am-top-tourism.html",
+          "sha256": "521eb2c22bab21152bbdb1e646dadbd946a2ed4530aef1dc1880ae00522456ef",
+          "uri": "https://armenia.travel/places-to-go/top-10-attractions/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          46.250030555556,
+          39.379366666667
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q554947.json",
+        "statement_id": "q554947$1AE50F16-2862-4D2C-B286-326F4934A3D4"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original hilltop monastic complex in Tatev with designated public visitor areas.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tourism Committee of Armenia",
+          "Wikidata contributors"
+        ],
+        "description": "The original hilltop monastic complex in Tatev with designated public visitor areas.",
+        "description_zh": "塔捷夫修道院位于亚美尼亚，保留原址公众参观出处及地图代表点。",
+        "details": "The original hilltop monastic complex in Tatev with designated public visitor areas.",
+        "geography": {
+          "authority_id": "supplement:auth:am-public:Q554947",
+          "countries": [
+            "AM"
+          ],
+          "note": "Named public heritage place in Tatev, Syunik.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide identifies the original monastery and gives its public itinerary.",
+            "id": "auth:am-public:Q554947:am-tatev-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 640253d9eea6afa653066a442a69250cfbdbd2862d541d181c587da3a9a1a9a3.",
+            "title": "Tatev Monastery public scope and site identity",
+            "uri": "https://armenia.travel/destination/tatev-monastery/"
+          }
+        },
+        "id": "auth:am-public:Q554947",
+        "location_precision": null,
+        "names": [
+          "塔捷夫修道院",
+          "Tatev Monastery"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          46.250030555556,
+          39.379366666667
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide identifies the original monastery and gives its public itinerary.",
+            "id": "auth:am-public:Q554947:am-tatev-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 640253d9eea6afa653066a442a69250cfbdbd2862d541d181c587da3a9a1a9a3.",
+            "title": "Tatev Monastery public scope and site identity",
+            "uri": "https://armenia.travel/destination/tatev-monastery/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 46.250030555556, latitude 39.379366666667.",
+            "id": "wikidata:Q554947",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2518399908, statement q554947$1AE50F16-2862-4D2C-B286-326F4934A3D4.",
+            "title": "Tatev Monastery representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q554947.json"
+          }
+        ],
+        "source_uri": "https://armenia.travel/destination/tatev-monastery/",
+        "title": "Tatev Monastery",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q554947.json",
+          "sha256": "a03cdf1b6a26c0e170ab97ebea5b57c5c72feaedfdf27738d046b9385a97a48e",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q554947.json"
+        },
+        {
+          "filename": "am-tatev-tourism.html",
+          "sha256": "640253d9eea6afa653066a442a69250cfbdbd2862d541d181c587da3a9a1a9a3",
+          "uri": "https://armenia.travel/destination/tatev-monastery/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          44.4312,
+          41.002638
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6681036.json",
+        "statement_id": "Q6681036$0B6E32B6-9CF2-4A68-BBB8-A1CC5DD9DD0A"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic city-fortress on a promontory in Lori Province, represented by the public visitor portion of the reserve. Restricted conservation areas are excluded.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tourism Committee of Armenia",
+          "Government of Armenia",
+          "Wikidata contributors"
+        ],
+        "description": "The historic city-fortress on a promontory in Lori Province, represented by the public visitor portion of the reserve. Restricted conservation areas are excluded.",
+        "description_zh": "洛里省岬地上的历史城堡与城市遗址，点位代表保护区的公众参观范围，修缮封闭区域不在该范围内。",
+        "details": "The historic city-fortress on a promontory in Lori Province, represented by the public visitor portion of the reserve. Restricted conservation areas are excluded.",
+        "geography": {
+          "authority_id": "supplement:auth:am-public:Q6681036",
+          "countries": [
+            "AM"
+          ],
+          "note": "Named public heritage place in Lori Berd near Stepanavan.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide identifies the historic fortress on the promontory.",
+            "id": "auth:am-public:Q6681036:am-lori-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 5922dff3792c234c019c9fcfeb403ab859a7364acc5a933d2ce18bc2ca64ed4d.",
+            "title": "Lori Berd Fortress public scope and site identity",
+            "uri": "https://armenia.travel/places-to-go/lori/"
+          }
+        },
+        "id": "auth:am-public:Q6681036",
+        "location_precision": null,
+        "names": [
+          "洛里贝尔德堡垒",
+          "Lori Berd Fortress"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          44.4312,
+          41.002638
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide identifies the historic fortress on the promontory.",
+            "id": "auth:am-public:Q6681036:am-lori-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 5922dff3792c234c019c9fcfeb403ab859a7364acc5a933d2ce18bc2ca64ed4d.",
+            "title": "Lori Berd Fortress public scope and site identity",
+            "uri": "https://armenia.travel/places-to-go/lori/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official 2025 decision designates the existing Lori Berd museum-reserve as a visitor destination.",
+            "id": "auth:am-public:Q6681036:am-destinations-gov.html",
+            "license": null,
+            "publisher": "Government of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 362b5d8687539118b45214a0b787bf67d60666e5a8ac4c234520e211adda8384.",
+            "title": "Lori Berd Fortress public scope and site identity",
+            "uri": "https://www.arlis.am/en/acts/225667/print/act"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 44.4312, latitude 41.002638.",
+            "id": "wikidata:Q6681036",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2375382809, statement Q6681036$0B6E32B6-9CF2-4A68-BBB8-A1CC5DD9DD0A.",
+            "title": "Lori Berd Fortress representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6681036.json"
+          }
+        ],
+        "source_uri": "https://armenia.travel/places-to-go/lori/",
+        "title": "Lori Berd Fortress",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q6681036.json",
+          "sha256": "c00c608874790785e14ef6c496d8c91f7f1ab1c9b14bb2ea1b209832567c8423",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6681036.json"
+        },
+        {
+          "filename": "am-lori-tourism.html",
+          "sha256": "5922dff3792c234c019c9fcfeb403ab859a7364acc5a933d2ce18bc2ca64ed4d",
+          "uri": "https://armenia.travel/places-to-go/lori/"
+        },
+        {
+          "filename": "am-destinations-gov.html",
+          "sha256": "362b5d8687539118b45214a0b787bf67d60666e5a8ac4c234520e211adda8384",
+          "uri": "https://www.arlis.am/en/acts/225667/print/act"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "CC BY 4.0 GeoNames WGS84 point for the named temple. Source does not declare accuracy.",
+        "point": [
+          44.73015,
+          40.11233
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://sws.geonames.org/11336259/about.rdf",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The reconstructed temple in the original fortified precinct at Garni, open through the Garni Historical-Cultural Museum-Reserve.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Government of Armenia",
+          "Tourism Committee of Armenia",
+          "Permanent Delegation of Armenia to UNESCO",
+          "GeoNames contributors",
+          "GeoNames"
+        ],
+        "description": "The reconstructed temple in the original fortified precinct at Garni, open through the Garni Historical-Cultural Museum-Reserve.",
+        "description_zh": "加尔尼神庙原址园区位于亚美尼亚，保留原址公众参观出处及地图代表点。",
+        "details": "The reconstructed temple in the original fortified precinct at Garni, open through the Garni Historical-Cultural Museum-Reserve.",
+        "geography": {
+          "authority_id": "supplement:auth:am-public:Q684072",
+          "countries": [
+            "AM"
+          ],
+          "note": "Named public heritage place in Garni, Kotayk.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national service portal lists the active Garni Historical-Cultural Museum-Reserve.",
+            "id": "auth:am-public:Q684072:am-national-service.html",
+            "license": null,
+            "publisher": "Government of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 a13b79fee17094223dc5941a87c5428bbe6fd0f13db8f9244b2de775044f9cd9.",
+            "title": "Garni Temple precinct public scope and site identity",
+            "uri": "https://english.hartak.am/pages/museums-theatres-list/"
+          }
+        },
+        "id": "auth:am-public:Q684072",
+        "location_precision": null,
+        "names": [
+          "加尔尼神庙原址园区",
+          "Garni Temple precinct"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          44.73015,
+          40.11233
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national service portal lists the active Garni Historical-Cultural Museum-Reserve.",
+            "id": "auth:am-public:Q684072:am-national-service.html",
+            "license": null,
+            "publisher": "Government of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 a13b79fee17094223dc5941a87c5428bbe6fd0f13db8f9244b2de775044f9cd9.",
+            "title": "Garni Temple precinct public scope and site identity",
+            "uri": "https://english.hartak.am/pages/museums-theatres-list/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide explicitly recommends visiting the temple at Garni.",
+            "id": "auth:am-public:Q684072:am-villages-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 7eeb80d3e2510b9ef2833d9c24da7f381bf639eb4d0acb26acf06b709b47d078.",
+            "title": "Garni Temple precinct public scope and site identity",
+            "uri": "https://armenia.travel/places-to-go/top-villages/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The tentative submission identifies the original separate Garni archaeological promontory.",
+            "id": "auth:am-public:Q684072:am-garni-tentative.html",
+            "license": null,
+            "publisher": "Permanent Delegation of Armenia to UNESCO",
+            "revision": "Frozen 2026-11-28, SHA-256 507766de6b99dd078a5c361b0e70cb8a93631ae25f97c16eb43fc2292ae45f0e.",
+            "title": "Garni Temple precinct public scope and site identity",
+            "uri": "https://whc.unesco.org/en/tentativelists/6808/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 44.73015, latitude 40.11233. Attribution: https://www.geonames.org/11336259/.",
+            "id": "auth:am-public:Q684072:geonames:11336259",
+            "license": "CC BY 4.0",
+            "publisher": "GeoNames contributors",
+            "revision": "GeoNames 11336259, last modified 2026-03-31; frozen 2026-11-28.",
+            "title": "Garni Temple representative point",
+            "uri": "https://download.geonames.org/export/dump/AM.zip"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 44.73015, latitude 40.11233. Attribution: GeoNames.",
+            "id": "auth:am-public:Q684072:independent:4",
+            "license": "CC BY 4.0",
+            "publisher": "GeoNames",
+            "revision": "GeoNames 11336259, last modified 2026-03-31.",
+            "title": "Garni Temple gazetteer record 11336259",
+            "uri": "https://sws.geonames.org/11336259/about.rdf"
+          }
+        ],
+        "source_uri": "https://english.hartak.am/pages/museums-theatres-list/",
+        "title": "Garni Temple precinct",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q684072.json",
+          "sha256": "ca77a572be27fcbc312b37b0552ad97b69299cc05ffceafc1fc2c39da1319060",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q684072.json"
+        },
+        {
+          "filename": "am-national-service.html",
+          "sha256": "a13b79fee17094223dc5941a87c5428bbe6fd0f13db8f9244b2de775044f9cd9",
+          "uri": "https://english.hartak.am/pages/museums-theatres-list/"
+        },
+        {
+          "filename": "am-villages-tourism.html",
+          "sha256": "7eeb80d3e2510b9ef2833d9c24da7f381bf639eb4d0acb26acf06b709b47d078",
+          "uri": "https://armenia.travel/places-to-go/top-villages/"
+        },
+        {
+          "filename": "am-garni-tentative.html",
+          "sha256": "507766de6b99dd078a5c361b0e70cb8a93631ae25f97c16eb43fc2292ae45f0e",
+          "uri": "https://whc.unesco.org/en/tentativelists/6808/"
+        },
+        {
+          "filename": "geonames-AM.zip",
+          "sha256": "0d1cab440060e3eb21835cafae69cfdc609a8cf2d7ad6b4060b6b2cb4eb72878",
+          "uri": "https://download.geonames.org/export/dump/AM.zip"
+        },
+        {
+          "filename": "geonames-readme.txt",
+          "sha256": "b1957379b6c1242c700c98ac9a8aa0a09f56c3c0a50ee72175527005f48ef2c5",
+          "uri": "https://download.geonames.org/export/dump/readme.txt"
+        },
+        {
+          "filename": "independent-garni-11336259.rdf",
+          "sha256": "4c8774507f313f559d9924a17c1dd42924ab0469268ec43c362a3dc87a21f9a8",
+          "uri": "https://sws.geonames.org/11336259/about.rdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          44.537949,
+          40.140647
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q733610.json",
+        "statement_id": "Q733610$4419296F-186C-4A23-8647-F2AC18287567"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original Urartian fortress on Arin Berd, visited on the reserve-museum’s designated fortress route.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Yerevan Municipality",
+          "Wikidata contributors"
+        ],
+        "description": "The original Urartian fortress on Arin Berd, visited on the reserve-museum’s designated fortress route.",
+        "description_zh": "埃雷布尼堡垒位于亚美尼亚，保留原址公众参观出处及地图代表点。",
+        "details": "The original Urartian fortress on Arin Berd, visited on the reserve-museum’s designated fortress route.",
+        "geography": {
+          "authority_id": "supplement:auth:am-public:Q733610",
+          "countries": [
+            "AM"
+          ],
+          "note": "Named public heritage place in Arin Berd, Yerevan.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal visitor service explicitly offers admission and a guided route combining the museum and the fortress.",
+            "id": "auth:am-public:Q733610:am-erebuni-hours.html",
+            "license": null,
+            "publisher": "Yerevan Municipality",
+            "revision": "Frozen 2026-11-28, SHA-256 098fed4639a739249caa4f1bb0b9a250362e9d32e13d73d8884b3752eff83f5f.",
+            "title": "Erebuni Fortress public scope and site identity",
+            "uri": "https://www.visityerevan.am/places/details/57/en/"
+          }
+        },
+        "id": "auth:am-public:Q733610",
+        "location_precision": null,
+        "names": [
+          "埃雷布尼堡垒",
+          "Erebuni Fortress"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          44.537949,
+          40.140647
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal visitor service explicitly offers admission and a guided route combining the museum and the fortress.",
+            "id": "auth:am-public:Q733610:am-erebuni-hours.html",
+            "license": null,
+            "publisher": "Yerevan Municipality",
+            "revision": "Frozen 2026-11-28, SHA-256 098fed4639a739249caa4f1bb0b9a250362e9d32e13d73d8884b3752eff83f5f.",
+            "title": "Erebuni Fortress public scope and site identity",
+            "uri": "https://www.visityerevan.am/places/details/57/en/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal heritage record explicitly locates the ancient fortress on Arin Berd.",
+            "id": "auth:am-public:Q733610:am-erebuni-city.html",
+            "license": null,
+            "publisher": "Yerevan Municipality",
+            "revision": "Frozen 2026-11-28, SHA-256 09b7842b0b9b41032c11216f9ac3aabfd2fd9675416294ec89bb6b4e146fa07a.",
+            "title": "Erebuni Fortress public scope and site identity",
+            "uri": "https://www.visityerevan.am/places/details/407/en/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 44.537949, latitude 40.140647.",
+            "id": "wikidata:Q733610",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2512674736, statement Q733610$4419296F-186C-4A23-8647-F2AC18287567.",
+            "title": "Erebuni Fortress representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q733610.json"
+          }
+        ],
+        "source_uri": "https://www.visityerevan.am/places/details/57/en/",
+        "title": "Erebuni Fortress",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q733610.json",
+          "sha256": "d96118d9aea43d3e9be26a137de70eb7a612da6acd58173e2d88b582e0fc25e6",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q733610.json"
+        },
+        {
+          "filename": "am-erebuni-hours.html",
+          "sha256": "098fed4639a739249caa4f1bb0b9a250362e9d32e13d73d8884b3752eff83f5f",
+          "uri": "https://www.visityerevan.am/places/details/57/en/"
+        },
+        {
+          "filename": "am-erebuni-city.html",
+          "sha256": "09b7842b0b9b41032c11216f9ac3aabfd2fd9675416294ec89bb6b4e146fa07a",
+          "uri": "https://www.visityerevan.am/places/details/407/en/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          44.47694444,
+          40.15694444
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7494260.json",
+        "statement_id": "Q7494260$7B5B7161-5BED-44D4-8A12-72419E3996FA"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The public archaeological settlement precinct on the southern side of Lake Yerevan.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tourism Committee of Armenia",
+          "Yerevan Municipality",
+          "Wikidata contributors"
+        ],
+        "description": "The public archaeological settlement precinct on the southern side of Lake Yerevan.",
+        "description_zh": "申加维特早期聚落位于亚美尼亚，保留原址公众参观出处及地图代表点。",
+        "details": "The public archaeological settlement precinct on the southern side of Lake Yerevan.",
+        "geography": {
+          "authority_id": "supplement:auth:am-public:Q7494260",
+          "countries": [
+            "AM"
+          ],
+          "note": "Named public heritage place in Shengavit, Yerevan.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide lists Shengavit among archaeological sites to visit.",
+            "id": "auth:am-public:Q7494260:am-archaeo-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 1a70386bcb58fe06cdc6e65233ac9c976c26199ae25d23ecb2ed6037c05246f5.",
+            "title": "Shengavit Settlement public scope and site identity",
+            "uri": "https://armenia.travel/places-to-go/top-archaeological-sites/"
+          }
+        },
+        "id": "auth:am-public:Q7494260",
+        "location_precision": null,
+        "names": [
+          "申加维特早期聚落",
+          "Shengavit Settlement"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          44.47694444,
+          40.15694444
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide lists Shengavit among archaeological sites to visit.",
+            "id": "auth:am-public:Q7494260:am-archaeo-tourism.html",
+            "license": null,
+            "publisher": "Tourism Committee of Armenia",
+            "revision": "Frozen 2026-11-28, SHA-256 1a70386bcb58fe06cdc6e65233ac9c976c26199ae25d23ecb2ed6037c05246f5.",
+            "title": "Shengavit Settlement public scope and site identity",
+            "uri": "https://armenia.travel/places-to-go/top-archaeological-sites/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal heritage page identifies the original settlement on the promontory of Lake Yerevan.",
+            "id": "auth:am-public:Q7494260:am-shengavit-city.html",
+            "license": null,
+            "publisher": "Yerevan Municipality",
+            "revision": "Frozen 2026-11-28, SHA-256 4de799a47caccd89eeb32f467b9c738746336852a562a2d1959e606c370d6aa9.",
+            "title": "Shengavit Settlement public scope and site identity",
+            "uri": "https://visityerevan.am/places/details/410/en/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 44.47694444, latitude 40.15694444.",
+            "id": "wikidata:Q7494260",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2464914364, statement Q7494260$7B5B7161-5BED-44D4-8A12-72419E3996FA.",
+            "title": "Shengavit Settlement representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7494260.json"
+          }
+        ],
+        "source_uri": "https://armenia.travel/places-to-go/top-archaeological-sites/",
+        "title": "Shengavit Settlement",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q7494260.json",
+          "sha256": "ffb5de3b7c498fda8c69d62a96789b2fdc15c05685a80ed8d57c4a5bee888c7f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7494260.json"
+        },
+        {
+          "filename": "am-archaeo-tourism.html",
+          "sha256": "1a70386bcb58fe06cdc6e65233ac9c976c26199ae25d23ecb2ed6037c05246f5",
+          "uri": "https://armenia.travel/places-to-go/top-archaeological-sites/"
+        },
+        {
+          "filename": "am-shengavit-city.html",
+          "sha256": "4de799a47caccd89eeb32f467b9c738746336852a562a2d1959e606c370d6aa9",
+          "uri": "https://visityerevan.am/places/details/410/en/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          44.207505,
+          41.966664
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1351318.json",
+        "statement_id": "q1351318$3522BCA7-CDAF-4EFF-BB70-D35437249976"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The public rock-cut settlement and museum precinct east of Gori.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Georgian National Tourism Administration",
+          "Wikidata contributors"
+        ],
+        "description": "The public rock-cut settlement and museum precinct east of Gori.",
+        "description_zh": "乌普利斯齐赫洞穴城位于格鲁吉亚，保留原址公众参观出处及地图代表点。",
+        "details": "The public rock-cut settlement and museum precinct east of Gori.",
+        "geography": {
+          "authority_id": "supplement:auth:ge-public:Q1351318",
+          "countries": [
+            "GE"
+          ],
+          "note": "Named public heritage place in near Gori, Shida Kartli.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration describes the protected rock-cut settlement and the visitor route through its main street.",
+            "id": "auth:ge-public:Q1351318:ge-upli-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 72553d97038eff4614ee76fd1ffe63ccb62acb56e35d3cd6df5f733a61b320a7.",
+            "title": "Uplistsikhe Cave Town public scope and site identity",
+            "uri": "https://georgia.travel/uplistsikhe-cave-town"
+          }
+        },
+        "id": "auth:ge-public:Q1351318",
+        "location_precision": null,
+        "names": [
+          "乌普利斯齐赫洞穴城",
+          "Uplistsikhe Cave Town"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          44.207505,
+          41.966664
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration describes the protected rock-cut settlement and the visitor route through its main street.",
+            "id": "auth:ge-public:Q1351318:ge-upli-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 72553d97038eff4614ee76fd1ffe63ccb62acb56e35d3cd6df5f733a61b320a7.",
+            "title": "Uplistsikhe Cave Town public scope and site identity",
+            "uri": "https://georgia.travel/uplistsikhe-cave-town"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 44.207505, latitude 41.966664.",
+            "id": "wikidata:Q1351318",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2575301006, statement q1351318$3522BCA7-CDAF-4EFF-BB70-D35437249976.",
+            "title": "Uplistsikhe Cave Town representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1351318.json"
+          }
+        ],
+        "source_uri": "https://georgia.travel/uplistsikhe-cave-town",
+        "title": "Uplistsikhe Cave Town",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1351318.json",
+          "sha256": "691ca71c1dd781c76990ebb4b48c75c992a27bde96b0934d5ebcb907de74627f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1351318.json"
+        },
+        {
+          "filename": "ge-upli-tourism.html",
+          "sha256": "72553d97038eff4614ee76fd1ffe63ccb62acb56e35d3cd6df5f733a61b320a7",
+          "uri": "https://georgia.travel/uplistsikhe-cave-town"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          41.75333333,
+          41.76833333
+        ],
+        "precision": 0.012044274122137,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1519037.json",
+        "statement_id": "Q1519037$7dbc159a-a357-4ab2-96e8-b07ad4cd15db"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The in-place ruins of the historic Black Sea fortress at Tsikhisdziri, with designated museum-reserve visitor access. The coordinate is an approximate representative point at the complex.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Department of Tourism and Resorts of Ajara",
+          "Georgian National Tourism Administration",
+          "Wikidata contributors"
+        ],
+        "description": "The in-place ruins of the historic Black Sea fortress at Tsikhisdziri, with designated museum-reserve visitor access. The coordinate is an approximate representative point at the complex.",
+        "description_zh": "佩特拉－齐希斯济里堡垒位于格鲁吉亚，保留原址公众参观出处及地图代表点。",
+        "details": "The in-place ruins of the historic Black Sea fortress at Tsikhisdziri, with designated museum-reserve visitor access. The coordinate is an approximate representative point at the complex.",
+        "geography": {
+          "authority_id": "supplement:auth:ge-public:Q1519037",
+          "countries": [
+            "GE"
+          ],
+          "note": "Named public heritage place in Tsikhisdziri, Kobuleti.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The regional authority gives admission information for the historical archaeological complex at Tsikhisdziri.",
+            "id": "auth:ge-public:Q1519037:ge-petra-ajaria.html",
+            "license": null,
+            "publisher": "Department of Tourism and Resorts of Ajara",
+            "revision": "Frozen 2026-11-28, SHA-256 617bdcfab340fa9c9d4fb9da49aeb302dc71fb688676be8f929a5df3498c8d33.",
+            "title": "Petra-Tsikhisdziri Fortress public scope and site identity",
+            "uri": "https://www.visitajara.com/public/en/sights/45"
+          }
+        },
+        "id": "auth:ge-public:Q1519037",
+        "location_precision": null,
+        "names": [
+          "佩特拉－齐希斯济里堡垒",
+          "Petra-Tsikhisdziri Fortress"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          41.75333333,
+          41.76833333
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The regional authority gives admission information for the historical archaeological complex at Tsikhisdziri.",
+            "id": "auth:ge-public:Q1519037:ge-petra-ajaria.html",
+            "license": null,
+            "publisher": "Department of Tourism and Resorts of Ajara",
+            "revision": "Frozen 2026-11-28, SHA-256 617bdcfab340fa9c9d4fb9da49aeb302dc71fb688676be8f929a5df3498c8d33.",
+            "title": "Petra-Tsikhisdziri Fortress public scope and site identity",
+            "uri": "https://www.visitajara.com/public/en/sights/45"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration identifies the coastal acropolis as Petra in Georgia.",
+            "id": "auth:ge-public:Q1519037:ge-petra-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 75d35e4aedfb1ba0d1e66483992b9c7425235c136a63f420d0d0e789d2222225.",
+            "title": "Petra-Tsikhisdziri Fortress public scope and site identity",
+            "uri": "https://georgia.travel/petra-fortress"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 41.75333333, latitude 41.76833333.",
+            "id": "wikidata:Q1519037",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2517665538, statement Q1519037$7dbc159a-a357-4ab2-96e8-b07ad4cd15db.",
+            "title": "Petra-Tsikhisdziri Fortress representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1519037.json"
+          }
+        ],
+        "source_uri": "https://www.visitajara.com/public/en/sights/45",
+        "title": "Petra-Tsikhisdziri Fortress",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1519037.json",
+          "sha256": "9b5eb0d6b176b44a470c7f1cbcb532bbe660b9a135cb708363e99b6daa7190ef",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1519037.json"
+        },
+        {
+          "filename": "ge-petra-ajaria.html",
+          "sha256": "617bdcfab340fa9c9d4fb9da49aeb302dc71fb688676be8f929a5df3498c8d33",
+          "uri": "https://www.visitajara.com/public/en/sights/45"
+        },
+        {
+          "filename": "ge-petra-tourism.html",
+          "sha256": "75d35e4aedfb1ba0d1e66483992b9c7425235c136a63f420d0d0e789d2222225",
+          "uri": "https://georgia.travel/petra-fortress"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          42.97815,
+          41.642891
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16534749.json",
+        "statement_id": "Q16534749$728c9a38-4c33-25d3-3bad-54fe87029dcf"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic castle site and partly reconstructed fortifications in the Rabati district. The representative point lies along the edge of the visitor complex.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Georgian National Tourism Administration",
+          "Wikidata contributors"
+        ],
+        "description": "The historic castle site and partly reconstructed fortifications in the Rabati district. The representative point lies along the edge of the visitor complex.",
+        "description_zh": "阿哈尔齐赫拉巴蒂城堡位于格鲁吉亚，保留原址公众参观出处及地图代表点。",
+        "details": "The historic castle site and partly reconstructed fortifications in the Rabati district. The representative point lies along the edge of the visitor complex.",
+        "geography": {
+          "authority_id": "supplement:auth:ge-public:Q16534749",
+          "countries": [
+            "GE"
+          ],
+          "note": "Named public heritage place in Rabati, Akhaltsikhe.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration identifies the reconstructed upper heritage precinct and its visitor sites.",
+            "id": "auth:ge-public:Q16534749:ge-rabati-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 9766d975ba0fa9b4ccb4946f0798a18fe817f257d9dd0a3abeaa1bb5e375767d.",
+            "title": "Akhaltsikhe Castle public scope and site identity",
+            "uri": "https://georgia.travel/akhaltsikhe-castle"
+          }
+        },
+        "id": "auth:ge-public:Q16534749",
+        "location_precision": null,
+        "names": [
+          "阿哈尔齐赫拉巴蒂城堡",
+          "Akhaltsikhe Castle"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          42.97815,
+          41.642891
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration identifies the reconstructed upper heritage precinct and its visitor sites.",
+            "id": "auth:ge-public:Q16534749:ge-rabati-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 9766d975ba0fa9b4ccb4946f0798a18fe817f257d9dd0a3abeaa1bb5e375767d.",
+            "title": "Akhaltsikhe Castle public scope and site identity",
+            "uri": "https://georgia.travel/akhaltsikhe-castle"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The district route locates the historic castle within the wider living neighbourhood.",
+            "id": "auth:ge-public:Q16534749:ge-rabati-district.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 a89394772c37360c04cc9d9fe1a905267a550b260c32e46dad3d9a447312871d.",
+            "title": "Akhaltsikhe Castle public scope and site identity",
+            "uri": "https://georgia.travel/akhaltsikhe-rabat-district"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 42.97815, latitude 41.642891.",
+            "id": "wikidata:Q16534749",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2559644545, statement Q16534749$728c9a38-4c33-25d3-3bad-54fe87029dcf.",
+            "title": "Akhaltsikhe Castle representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16534749.json"
+          }
+        ],
+        "source_uri": "https://georgia.travel/akhaltsikhe-castle",
+        "title": "Akhaltsikhe Castle",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q16534749.json",
+          "sha256": "bf90f0302c497bb0a90c24cb1c07aea8a9a67399d97685379a28f1616fd0cb3a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16534749.json"
+        },
+        {
+          "filename": "ge-rabati-tourism.html",
+          "sha256": "9766d975ba0fa9b4ccb4946f0798a18fe817f257d9dd0a3abeaa1bb5e375767d",
+          "uri": "https://georgia.travel/akhaltsikhe-castle"
+        },
+        {
+          "filename": "ge-rabati-district.html",
+          "sha256": "a89394772c37360c04cc9d9fe1a905267a550b260c32e46dad3d9a447312871d",
+          "uri": "https://georgia.travel/akhaltsikhe-rabat-district"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          44.3446929,
+          41.3372601
+        ],
+        "precision": 1e-07,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q20573231.json",
+        "statement_id": "Q20573231$f7cf4d29-4fbf-debe-6ffd-98eb52459675"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Dmanisi's publicly interpreted field museum and preserved medieval town ruins on the original site. The operator's designated route is seasonal.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Georgian National Tourism Administration",
+          "Georgian National Museum",
+          "Wikidata contributors",
+          "Dmanisi Tourism"
+        ],
+        "description": "Dmanisi's publicly interpreted field museum and preserved medieval town ruins on the original site. The operator's designated route is seasonal.",
+        "description_zh": "德马尼西原址的考古展馆和中世纪城址开放部分，参观范围及日期依场馆当季安排。",
+        "details": "Dmanisi's publicly interpreted field museum and preserved medieval town ruins on the original site. The operator's designated route is seasonal.",
+        "geography": {
+          "authority_id": "supplement:auth:ge-public:Q20573231",
+          "countries": [
+            "GE"
+          ],
+          "note": "Named public heritage place in Patara Dmanisi, Kvemo Kartli.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration identifies the original site and invites people to visit the historical strata on location.",
+            "id": "auth:ge-public:Q20573231:ge-dmanisi-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 aaa285c4abc9d95fbd99282ca3f1512d170f4cdcc8f04959a7fb3eedfc0d60d5.",
+            "title": "Dmanisi Historic and Archaeological Site public scope and site identity",
+            "uri": "https://georgia.travel/dmanisi-home-to-the-first-europeans"
+          }
+        },
+        "id": "auth:ge-public:Q20573231",
+        "location_precision": null,
+        "names": [
+          "德马尼西历史考古遗址",
+          "Dmanisi Historic and Archaeological Site"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          44.3446929,
+          41.3372601
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration identifies the original site and invites people to visit the historical strata on location.",
+            "id": "auth:ge-public:Q20573231:ge-dmanisi-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 aaa285c4abc9d95fbd99282ca3f1512d170f4cdcc8f04959a7fb3eedfc0d60d5.",
+            "title": "Dmanisi Historic and Archaeological Site public scope and site identity",
+            "uri": "https://georgia.travel/dmanisi-home-to-the-first-europeans"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator identifies the open-air field museum and its visitor infrastructure.",
+            "id": "auth:ge-public:Q20573231:ge-dmanisi-operator.pdf",
+            "license": null,
+            "publisher": "Georgian National Museum",
+            "revision": "Frozen 2026-11-28, SHA-256 2a4272be02715f11ea33f558b73bb23bf368f5626b703ef0edcea0d382651dcf.",
+            "title": "Dmanisi Historic and Archaeological Site public scope and site identity",
+            "uri": "https://museum.ge/files/broshurebi/Museum_Broshura_A4_ENG_WEB.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 44.3446929, latitude 41.3372601.",
+            "id": "wikidata:Q20573231",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2443724005, statement Q20573231$f7cf4d29-4fbf-debe-6ffd-98eb52459675.",
+            "title": "Dmanisi Historic and Archaeological Site representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q20573231.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The visitor listing identifies the onsite museum route and a seasonal closure from December to March.",
+            "id": "auth:ge-public:Q20573231:independent:3",
+            "license": null,
+            "publisher": "Dmanisi Tourism",
+            "revision": "Retrieved 2026-11-28; SHA-256 ad4e63483cf8e90bcb408d18c4ea6048fb5295aecd0fac99e021a9f33b2735fd.",
+            "title": "Dmanisi Archaeological Museum visitor information",
+            "uri": "https://dmanisitourism.com/tourist-attractions/"
+          }
+        ],
+        "source_uri": "https://georgia.travel/dmanisi-home-to-the-first-europeans",
+        "title": "Dmanisi Historic and Archaeological Site",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q20573231.json",
+          "sha256": "081d36033f6e0cc05f292a10ca04c3e09ca88fec263aa1d57c258bff36713062",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q20573231.json"
+        },
+        {
+          "filename": "ge-dmanisi-tourism.html",
+          "sha256": "aaa285c4abc9d95fbd99282ca3f1512d170f4cdcc8f04959a7fb3eedfc0d60d5",
+          "uri": "https://georgia.travel/dmanisi-home-to-the-first-europeans"
+        },
+        {
+          "filename": "ge-dmanisi-operator.pdf",
+          "sha256": "2a4272be02715f11ea33f558b73bb23bf368f5626b703ef0edcea0d382651dcf",
+          "uri": "https://museum.ge/files/broshurebi/Museum_Broshura_A4_ENG_WEB.pdf"
+        },
+        {
+          "filename": "independent-dmanisi-visit.html",
+          "sha256": "ad4e63483cf8e90bcb408d18c4ea6048fb5295aecd0fac99e021a9f33b2735fd",
+          "uri": "https://dmanisitourism.com/tourist-attractions/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          43.285681,
+          41.479573
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2478899.json",
+        "statement_id": "Q2478899$6DA96D7F-945D-4E8C-95AB-3B71FF09161A"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The surviving fortress and designated visitor route above the confluence near Khertvisi.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Georgian National Tourism Administration",
+          "Wikidata contributors"
+        ],
+        "description": "The surviving fortress and designated visitor route above the confluence near Khertvisi.",
+        "description_zh": "赫尔特维西堡垒位于格鲁吉亚，保留原址公众参观出处及地图代表点。",
+        "details": "The surviving fortress and designated visitor route above the confluence near Khertvisi.",
+        "geography": {
+          "authority_id": "supplement:auth:ge-public:Q2478899",
+          "countries": [
+            "GE"
+          ],
+          "note": "Named public heritage place in Khertvisi, Samtskhe-Javakheti.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration describes the fortress and the publicly accessible village footpath.",
+            "id": "auth:ge-public:Q2478899:ge-khertvisi-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 b3c05f07fdea571555df5a5f40b3524a96f2d229f3f20159426639d6dfb152a0.",
+            "title": "Khertvisi Fortress public scope and site identity",
+            "uri": "https://georgia.travel/khertvisi-fortress"
+          }
+        },
+        "id": "auth:ge-public:Q2478899",
+        "location_precision": null,
+        "names": [
+          "赫尔特维西堡垒",
+          "Khertvisi Fortress"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          43.285681,
+          41.479573
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration describes the fortress and the publicly accessible village footpath.",
+            "id": "auth:ge-public:Q2478899:ge-khertvisi-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 b3c05f07fdea571555df5a5f40b3524a96f2d229f3f20159426639d6dfb152a0.",
+            "title": "Khertvisi Fortress public scope and site identity",
+            "uri": "https://georgia.travel/khertvisi-fortress"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 43.285681, latitude 41.479573.",
+            "id": "wikidata:Q2478899",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2419291141, statement Q2478899$6DA96D7F-945D-4E8C-95AB-3B71FF09161A.",
+            "title": "Khertvisi Fortress representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2478899.json"
+          }
+        ],
+        "source_uri": "https://georgia.travel/khertvisi-fortress",
+        "title": "Khertvisi Fortress",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q2478899.json",
+          "sha256": "46f80f2ac73fb7eeb11f8adc67e7497160ed4bdfa9960e287e9893893569ee8d",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2478899.json"
+        },
+        {
+          "filename": "ge-khertvisi-tourism.html",
+          "sha256": "b3c05f07fdea571555df5a5f40b3524a96f2d229f3f20159426639d6dfb152a0",
+          "uri": "https://georgia.travel/khertvisi-fortress"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          42.19388889,
+          42.35722222
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2586542.json",
+        "statement_id": "Q2586542$61C441DE-618C-4552-8649-803F7E34881D"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The public ruins and museum-reserve of fortified Nokalakevi, also known as Archaeopolis or Tsikhegoji.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Georgian National Tourism Administration",
+          "Explore Georgia",
+          "Wikidata contributors"
+        ],
+        "description": "The public ruins and museum-reserve of fortified Nokalakevi, also known as Archaeopolis or Tsikhegoji.",
+        "description_zh": "诺卡拉凯维考古保护博物馆位于格鲁吉亚，保留原址公众参观出处及地图代表点。",
+        "details": "The public ruins and museum-reserve of fortified Nokalakevi, also known as Archaeopolis or Tsikhegoji.",
+        "geography": {
+          "authority_id": "supplement:auth:ge-public:Q2586542",
+          "countries": [
+            "GE"
+          ],
+          "note": "Named public heritage place in Senaki, Samegrelo.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration invites visitors to the in-place historical remains of Archaeopolis.",
+            "id": "auth:ge-public:Q2586542:ge-nokalakevi-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 152968e6a84fd0e1ab8c0e825f87e2cfe84fef2713c8ea11dd7d722085e0d891.",
+            "title": "Nokalakevi Museum-Reserve public scope and site identity",
+            "uri": "https://georgia.travel/nokalakevi-museum-reserve"
+          }
+        },
+        "id": "auth:ge-public:Q2586542",
+        "location_precision": null,
+        "names": [
+          "诺卡拉凯维考古保护博物馆",
+          "Nokalakevi Museum-Reserve"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          42.19388889,
+          42.35722222
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration invites visitors to the in-place historical remains of Archaeopolis.",
+            "id": "auth:ge-public:Q2586542:ge-nokalakevi-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 152968e6a84fd0e1ab8c0e825f87e2cfe84fef2713c8ea11dd7d722085e0d891.",
+            "title": "Nokalakevi Museum-Reserve public scope and site identity",
+            "uri": "https://georgia.travel/nokalakevi-museum-reserve"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The site guide distinguishes the fortifications and archaeological museum from the modern village.",
+            "id": "auth:ge-public:Q2586542:ge-nokalakevi-mission.html",
+            "license": null,
+            "publisher": "Explore Georgia",
+            "revision": "Frozen 2026-11-28, SHA-256 28b6448c3269af1899768f5d0fe75ae2bfb60be96dcaace1bbb056f71abb1432.",
+            "title": "Nokalakevi Museum-Reserve public scope and site identity",
+            "uri": "https://explore-georgia.ge/en/places/nokalakevi"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 42.19388889, latitude 42.35722222.",
+            "id": "wikidata:Q2586542",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2569638331, statement Q2586542$61C441DE-618C-4552-8649-803F7E34881D.",
+            "title": "Nokalakevi Museum-Reserve representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2586542.json"
+          }
+        ],
+        "source_uri": "https://georgia.travel/nokalakevi-museum-reserve",
+        "title": "Nokalakevi Museum-Reserve",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q2586542.json",
+          "sha256": "3a654e481dac5879bc2332afacbfb0c1a66d5c993791736356c95ef59c427bd2",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2586542.json"
+        },
+        {
+          "filename": "ge-nokalakevi-tourism.html",
+          "sha256": "152968e6a84fd0e1ab8c0e825f87e2cfe84fef2713c8ea11dd7d722085e0d891",
+          "uri": "https://georgia.travel/nokalakevi-museum-reserve"
+        },
+        {
+          "filename": "ge-nokalakevi-mission.html",
+          "sha256": "28b6448c3269af1899768f5d0fe75ae2bfb60be96dcaace1bbb056f71abb1432",
+          "uri": "https://explore-georgia.ge/en/places/nokalakevi"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          44.703888888889,
+          42.163611111111
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2600596.json",
+        "statement_id": "q2600596$FED21E86-A103-4D7D-98A9-FB7878211099"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The in-place fortified castle ensemble on the Aragvi. The representative point is adjacent to the surviving walled complex.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Georgian National Tourism Administration",
+          "Wikidata contributors"
+        ],
+        "description": "The in-place fortified castle ensemble on the Aragvi. The representative point is adjacent to the surviving walled complex.",
+        "description_zh": "阿纳努里城堡建筑群位于格鲁吉亚，保留原址公众参观出处及地图代表点。",
+        "details": "The in-place fortified castle ensemble on the Aragvi. The representative point is adjacent to the surviving walled complex.",
+        "geography": {
+          "authority_id": "supplement:auth:ge-public:Q2600596",
+          "countries": [
+            "GE"
+          ],
+          "note": "Named public heritage place in Ananuri, Dusheti.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration locates the historic castle and describes its surviving structures for visitors.",
+            "id": "auth:ge-public:Q2600596:ge-ananuri-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 37c25911da85777968a1e8a9c33e08469bb6cfa8dead767fd4fe4a31efe4c22d.",
+            "title": "Ananuri Fortified Castle Ensemble public scope and site identity",
+            "uri": "https://georgia.travel/ananuri-fortified-castle-ensemble"
+          }
+        },
+        "id": "auth:ge-public:Q2600596",
+        "location_precision": null,
+        "names": [
+          "阿纳努里城堡建筑群",
+          "Ananuri Fortified Castle Ensemble"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          44.703888888889,
+          42.163611111111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration locates the historic castle and describes its surviving structures for visitors.",
+            "id": "auth:ge-public:Q2600596:ge-ananuri-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 37c25911da85777968a1e8a9c33e08469bb6cfa8dead767fd4fe4a31efe4c22d.",
+            "title": "Ananuri Fortified Castle Ensemble public scope and site identity",
+            "uri": "https://georgia.travel/ananuri-fortified-castle-ensemble"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 44.703888888889, latitude 42.163611111111.",
+            "id": "wikidata:Q2600596",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2549101119, statement q2600596$FED21E86-A103-4D7D-98A9-FB7878211099.",
+            "title": "Ananuri Fortified Castle Ensemble representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2600596.json"
+          }
+        ],
+        "source_uri": "https://georgia.travel/ananuri-fortified-castle-ensemble",
+        "title": "Ananuri Fortified Castle Ensemble",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q2600596.json",
+          "sha256": "944a4fcd3b1164dc99002257a85421322af065cfd3db90aca75b36cab16d97cc",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2600596.json"
+        },
+        {
+          "filename": "ge-ananuri-tourism.html",
+          "sha256": "37c25911da85777968a1e8a9c33e08469bb6cfa8dead767fd4fe4a31efe4c22d",
+          "uri": "https://georgia.travel/ananuri-fortified-castle-ensemble"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          42.50400833333333,
+          42.08505
+        ],
+        "precision": 2.777777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q66376513.json",
+        "statement_id": "Q66376513$002892be-4dec-00d8-f6e7-12cb533a0a90"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The surviving terraces and excavated remains of the Colchian settlement at Vani, with designated visitor access.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Georgian National Tourism Administration",
+          "Wikidata contributors"
+        ],
+        "description": "The surviving terraces and excavated remains of the Colchian settlement at Vani, with designated visitor access.",
+        "description_zh": "瓦尼古城考古遗址位于格鲁吉亚，保留原址公众参观出处及地图代表点。",
+        "details": "The surviving terraces and excavated remains of the Colchian settlement at Vani, with designated visitor access.",
+        "geography": {
+          "authority_id": "supplement:auth:ge-public:Q66376513",
+          "countries": [
+            "GE"
+          ],
+          "note": "Named public heritage place in Vani, Imereti.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration describes the original archaeological terraces as a visitor site.",
+            "id": "auth:ge-public:Q66376513:ge-vani-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 6bcd3eb18fb26e2918b7259907b016bb0fc805461d38a0e699176865d39850c1.",
+            "title": "Vani Archaeological Site public scope and site identity",
+            "uri": "https://georgia.travel/vani-archaeological-site"
+          }
+        },
+        "id": "auth:ge-public:Q66376513",
+        "location_precision": null,
+        "names": [
+          "瓦尼古城考古遗址",
+          "Vani Archaeological Site"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          42.50400833333333,
+          42.08505
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration describes the original archaeological terraces as a visitor site.",
+            "id": "auth:ge-public:Q66376513:ge-vani-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 6bcd3eb18fb26e2918b7259907b016bb0fc805461d38a0e699176865d39850c1.",
+            "title": "Vani Archaeological Site public scope and site identity",
+            "uri": "https://georgia.travel/vani-archaeological-site"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The regional visitor itinerary explicitly identifies the ancient ruins and the adjacent museum.",
+            "id": "auth:ge-public:Q66376513:ge-vani-ruins.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 543df6713aee0d56f1290fa8fa02ae4bbd43758ac1235a739d1fa2546111e774.",
+            "title": "Vani Archaeological Site public scope and site identity",
+            "uri": "https://georgia.travel/regions/imereti"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 42.50400833333333, latitude 42.08505.",
+            "id": "wikidata:Q66376513",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2341878039, statement Q66376513$002892be-4dec-00d8-f6e7-12cb533a0a90.",
+            "title": "Vani Archaeological Site representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q66376513.json"
+          }
+        ],
+        "source_uri": "https://georgia.travel/vani-archaeological-site",
+        "title": "Vani Archaeological Site",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q66376513.json",
+          "sha256": "53a0133ec2ab821297d03d791b375eb8af60dce311432acde6184121c06a5464",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q66376513.json"
+        },
+        {
+          "filename": "ge-vani-tourism.html",
+          "sha256": "6bcd3eb18fb26e2918b7259907b016bb0fc805461d38a0e699176865d39850c1",
+          "uri": "https://georgia.travel/vani-archaeological-site"
+        },
+        {
+          "filename": "ge-vani-ruins.html",
+          "sha256": "543df6713aee0d56f1290fa8fa02ae4bbd43758ac1235a739d1fa2546111e774",
+          "uri": "https://georgia.travel/regions/imereti"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          43.283761111111,
+          41.380841666667
+        ],
+        "precision": 2.7777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q691813.json",
+        "statement_id": "q691813$7B371606-9237-4BB3-8E74-677097A0458D"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original cliff-cut Vardzia visitor route near the Church of the Dormition. As of November 2026, the Secret Tunnel section remains excluded after a rockfall.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Georgian National Tourism Administration",
+          "Georgia Today, reporting the National Agency for Cultural Heritage Preservation",
+          "Geotour Team",
+          "Wikidata contributors"
+        ],
+        "description": "The original cliff-cut Vardzia visitor route near the Church of the Dormition. As of November 2026, the Secret Tunnel section remains excluded after a rockfall.",
+        "description_zh": "瓦尔齐亚石窟遗址的代表点位于圣母安息教堂附近的游客区域。截至 2026 年 11 月，落石后的秘密隧道段未纳入公开路线。",
+        "details": "The original cliff-cut Vardzia visitor route near the Church of the Dormition. As of November 2026, the Secret Tunnel section remains excluded after a rockfall.",
+        "geography": {
+          "authority_id": "supplement:auth:ge-public:Q691813",
+          "countries": [
+            "GE"
+          ],
+          "note": "Named public heritage place in Aspindza, Samtskhe-Javakheti.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration identifies the surviving nationally designated cliff complex.",
+            "id": "auth:ge-public:Q691813:ge-vardzia-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 58bb5af06b2674345b788991315ba86b75f431c056ecc4db6514b7bd28d3c75f.",
+            "title": "Vardzia Cave Town public scope and site identity",
+            "uri": "https://georgia.travel/vardzia"
+          }
+        },
+        "id": "auth:ge-public:Q691813",
+        "location_precision": null,
+        "names": [
+          "瓦尔齐亚洞穴城",
+          "Vardzia Cave Town"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          43.283761111111,
+          41.380841666667
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration identifies the surviving nationally designated cliff complex.",
+            "id": "auth:ge-public:Q691813:ge-vardzia-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 58bb5af06b2674345b788991315ba86b75f431c056ecc4db6514b7bd28d3c75f.",
+            "title": "Vardzia Cave Town public scope and site identity",
+            "uri": "https://georgia.travel/vardzia"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The 2026 update identifies the temporary closure of the Secret Tunnel section.",
+            "id": "auth:ge-public:Q691813:ge-vardzia-closure.html",
+            "license": null,
+            "publisher": "Georgia Today, reporting the National Agency for Cultural Heritage Preservation",
+            "revision": "Frozen 2026-11-28, SHA-256 8e537277a8b11f043b9294cb3f66b9ec649a84c45d37a35369842c5b4ed27397.",
+            "title": "Vardzia Cave Town public scope and site identity",
+            "uri": "https://georgiatoday.ge/vardzia-section-temporarily-closed-after-rockfalls-restoration-works-to-begin/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The current on-site tour describes access up to the Church of the Dormition.",
+            "id": "auth:ge-public:Q691813:ge-vardzia-current.html",
+            "license": null,
+            "publisher": "Geotour Team",
+            "revision": "Frozen 2026-11-28, SHA-256 7526fe67218c9822ada14501ee9ca01ccaa8f36e74a99bf1dca5da01e3c817d1.",
+            "title": "Vardzia Cave Town public scope and site identity",
+            "uri": "https://www.geotour.ge/ka/blog/vardzia-2026-whats-open"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 43.283761111111, latitude 41.380841666667.",
+            "id": "wikidata:Q691813",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2548303552, statement q691813$7B371606-9237-4BB3-8E74-677097A0458D.",
+            "title": "Vardzia Cave Town representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q691813.json"
+          }
+        ],
+        "source_uri": "https://georgia.travel/vardzia",
+        "title": "Vardzia Cave Town",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q691813.json",
+          "sha256": "6073bc3c5ddfd929fe5cfef2e54d0f9d40d47fe86c6b77592f288d9e891f7982",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q691813.json"
+        },
+        {
+          "filename": "ge-vardzia-tourism.html",
+          "sha256": "58bb5af06b2674345b788991315ba86b75f431c056ecc4db6514b7bd28d3c75f",
+          "uri": "https://georgia.travel/vardzia"
+        },
+        {
+          "filename": "ge-vardzia-closure.html",
+          "sha256": "8e537277a8b11f043b9294cb3f66b9ec649a84c45d37a35369842c5b4ed27397",
+          "uri": "https://georgiatoday.ge/vardzia-section-temporarily-closed-after-rockfalls-restoration-works-to-begin/"
+        },
+        {
+          "filename": "ge-vardzia-current.html",
+          "sha256": "7526fe67218c9822ada14501ee9ca01ccaa8f36e74a99bf1dca5da01e3c817d1",
+          "uri": "https://www.geotour.ge/ka/blog/vardzia-2026-whats-open"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "WGS84 Wikidata representative point for the named public scope. Source precision and statement are retained.",
+        "point": [
+          41.57361111,
+          41.57305556
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q944813.json",
+        "statement_id": "Q944813$FBC22B83-57E4-4CCD-B42E-75FA47383EF9"
+      },
+      "independent_review": {
+        "method": "An independent agent compared native Wikidata and GeoNames RDF coordinates, protected components and published visitor routes, including the currently limited visitor route at Vardzia and the independent Garni Temple footprint.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The surviving fortifications of Apsaros and their public archaeological museum-reserve at Gonio.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "The original site and visitor scope were checked using frozen sources.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Department of Tourism and Resorts of Ajara",
+          "Georgian National Tourism Administration",
+          "Wikidata contributors"
+        ],
+        "description": "The surviving fortifications of Apsaros and their public archaeological museum-reserve at Gonio.",
+        "description_zh": "戈尼奥－阿普萨罗斯堡位于格鲁吉亚，保留原址公众参观出处及地图代表点。",
+        "details": "The surviving fortifications of Apsaros and their public archaeological museum-reserve at Gonio.",
+        "geography": {
+          "authority_id": "supplement:auth:ge-public:Q944813",
+          "countries": [
+            "GE"
+          ],
+          "note": "Named public heritage place in Gonio, Ajara.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The regional authority lists visitor access and museum services at the existing fortress.",
+            "id": "auth:ge-public:Q944813:ge-gonio-ajaria.html",
+            "license": null,
+            "publisher": "Department of Tourism and Resorts of Ajara",
+            "revision": "Frozen 2026-11-28, SHA-256 03247d494375274c58cf6dc5e837852de0c23dbd415d0d99e1f519e83df56fdc.",
+            "title": "Gonio-Apsaros Fortress public scope and site identity",
+            "uri": "https://www.visitajara.com/en/sights/189"
+          }
+        },
+        "id": "auth:ge-public:Q944813",
+        "location_precision": null,
+        "names": [
+          "戈尼奥－阿普萨罗斯堡",
+          "Gonio-Apsaros Fortress"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          41.57361111,
+          41.57305556
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The regional authority lists visitor access and museum services at the existing fortress.",
+            "id": "auth:ge-public:Q944813:ge-gonio-ajaria.html",
+            "license": null,
+            "publisher": "Department of Tourism and Resorts of Ajara",
+            "revision": "Frozen 2026-11-28, SHA-256 03247d494375274c58cf6dc5e837852de0c23dbd415d0d99e1f519e83df56fdc.",
+            "title": "Gonio-Apsaros Fortress public scope and site identity",
+            "uri": "https://www.visitajara.com/en/sights/189"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism administration identifies the archaeological fortress and its defensive towers.",
+            "id": "auth:ge-public:Q944813:ge-gonio-tourism.html",
+            "license": null,
+            "publisher": "Georgian National Tourism Administration",
+            "revision": "Frozen 2026-11-28, SHA-256 a659af618c363bff21fae25848b665931ea3014a544a5200ee1a0c33b41c8857.",
+            "title": "Gonio-Apsaros Fortress public scope and site identity",
+            "uri": "https://georgia.travel/gonio-apsaros-fortress"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 41.57361111, latitude 41.57305556.",
+            "id": "wikidata:Q944813",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2575433654, statement Q944813$FBC22B83-57E4-4CCD-B42E-75FA47383EF9.",
+            "title": "Gonio-Apsaros Fortress representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q944813.json"
+          }
+        ],
+        "source_uri": "https://www.visitajara.com/en/sights/189",
+        "title": "Gonio-Apsaros Fortress",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q944813.json",
+          "sha256": "085bfb9ab6ea9a52b34d210afdc09b3ac5eebb88d7fb86ad99d029a90ae4ebc8",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q944813.json"
+        },
+        {
+          "filename": "ge-gonio-ajaria.html",
+          "sha256": "03247d494375274c58cf6dc5e837852de0c23dbd415d0d99e1f519e83df56fdc",
+          "uri": "https://www.visitajara.com/en/sights/189"
+        },
+        {
+          "filename": "ge-gonio-tourism.html",
+          "sha256": "a659af618c363bff21fae25848b665931ea3014a544a5200ee1a0c33b41c8857",
+          "uri": "https://georgia.travel/gonio-apsaros-fortress"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Twenty distinct public archaeological and historic locations in Georgia and Armenia, preserving locally managed routes and access limits."
+}

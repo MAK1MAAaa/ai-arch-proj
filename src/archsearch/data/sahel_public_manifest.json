@@ -1,0 +1,22 @@
+{
+  "base_count": 5253,
+  "base_ids_sha256": "4977efe45c274d6b4bb3de1412928d359df0bf1c3141d7d3a95c19b4e30cdf36",
+  "base_sites_sha256": "f6a1d000f94e9b1ba7b005dc174361936ec92132126fbc43c2b693a4f3f9505a",
+  "cohort_version": "sahel-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 3,
+    "total": 5256
+  },
+  "files": {
+    "sahel_public_review.json": {
+      "sha256": "d1b70eff079b89f7ecdbf12e5fa757bca94f76e0e4d51b9aa5b63a35d7044cc2"
+    },
+    "sahel_public_sites.json": {
+      "sha256": "6808461cc7cb4a092917f6d38564670e77a7795c2518d6bd5870cbe017f4c31a"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Three distinct publicly interpreted built-heritage venues in Mauritania and Mali, with original CC0 coordinate claims and current national or site authority visitor evidence."
+}

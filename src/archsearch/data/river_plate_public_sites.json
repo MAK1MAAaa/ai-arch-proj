@@ -1,0 +1,1366 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visit, point and published location checked against frozen evidence.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Secretaría Nacional de Turismo, Paraguay",
+      "Wikidata contributors"
+    ],
+    "description": "The original surviving Jesuit mission precinct shown on the public heritage visit, distinct from the modern planetarium and town.",
+    "description_zh": "圣科斯梅与圣达米安耶稣会传教站位于巴拉圭，保留原址公众参观出处及地图代表点。",
+    "details": "The original surviving Jesuit mission precinct shown on the public heritage visit, distinct from the modern planetarium and town.",
+    "geography": {
+      "authority_id": "supplement:auth:py-public:Q16608012",
+      "countries": [
+        "PY"
+      ],
+      "note": "Named public heritage place in San Cosme y Damián, Itapúa.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism office identifies the historic mission and its surviving buildings as a visitor attraction.",
+        "id": "auth:py-public:Q16608012:py-san-cosme.html",
+        "license": null,
+        "publisher": "Secretaría Nacional de Turismo, Paraguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 322e138dc3578e0de8bf7e70fd4f76c769b8c3f673d18a2e2c1801bd452912e4.",
+        "title": "Misión Jesuítica de San Cosme y San Damián public heritage record",
+        "uri": "https://visitparaguay.travel/places/mision-jesuitica-guarani-de-san-cosme-y-san-damian"
+      }
+    },
+    "id": "auth:py-public:Q16608012",
+    "location_precision": null,
+    "names": [
+      "圣科斯梅与圣达米安耶稣会传教站",
+      "Misión Jesuítica de San Cosme y San Damián"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -56.33132134254669,
+      -27.316870534628517
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism office identifies the historic mission and its surviving buildings as a visitor attraction.",
+        "id": "auth:py-public:Q16608012:py-san-cosme.html",
+        "license": null,
+        "publisher": "Secretaría Nacional de Turismo, Paraguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 322e138dc3578e0de8bf7e70fd4f76c769b8c3f673d18a2e2c1801bd452912e4.",
+        "title": "Misión Jesuítica de San Cosme y San Damián public heritage record",
+        "uri": "https://visitparaguay.travel/places/mision-jesuitica-guarani-de-san-cosme-y-san-damian"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The official listing describes a public heritage visit to the mission.",
+        "id": "auth:py-public:Q16608012:py-san-cosme-events.html",
+        "license": null,
+        "publisher": "Secretaría Nacional de Turismo, Paraguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 b2a5079d4b057abbe1ec934e9c55168d8c0a2c583dc467f8596d4c1d8865eaa5.",
+        "title": "Misión Jesuítica de San Cosme y San Damián public heritage record",
+        "uri": "https://visitparaguay.travel/events/conoce-las-misiones-jesuiticas-de-san-cosme-y-damian"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -56.33132134254669, latitude -27.316870534628517.",
+        "id": "wikidata:Q16608012",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2533575662, statement Q16608012$7DC4F6AB-CA65-47C7-A7A3-EC93887B2429.",
+        "title": "Misión Jesuítica de San Cosme y San Damián representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16608012.json"
+      }
+    ],
+    "source_uri": "https://visitparaguay.travel/places/mision-jesuitica-guarani-de-san-cosme-y-san-damian",
+    "title": "Misión Jesuítica de San Cosme y San Damián",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visit, point and published location checked against frozen evidence.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Municipalidad de Asunción",
+      "Wikivoyage contributors"
+    ],
+    "description": "The restored historic block by the Palacio de López. Access is limited to its designated public museum and cultural rooms.",
+    "description_zh": "里韦拉历史街区位于巴拉圭，保留原址公众参观出处及地图代表点。",
+    "details": "The restored historic block by the Palacio de López. Access is limited to its designated public museum and cultural rooms.",
+    "geography": {
+      "authority_id": "supplement:auth:py-public:Q3300173",
+      "countries": [
+        "PY"
+      ],
+      "note": "Named public heritage place in Asunción.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipality identifies the nine buildings forming the historic block and its cultural use.",
+        "id": "auth:py-public:Q3300173:py-manzana.html",
+        "license": null,
+        "publisher": "Municipalidad de Asunción",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 454641f73bcb4483610a7a34bd97f2705a3be67fc0c3d298d6571c11b6809ff3.",
+        "title": "Manzana de la Rivera public heritage record",
+        "uri": "https://cultura.asuncion.gov.py/manzana"
+      }
+    },
+    "id": "auth:py-public:Q3300173",
+    "location_precision": null,
+    "names": [
+      "里韦拉历史街区",
+      "Manzana de la Rivera"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -57.638192,
+      -25.277991
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipality identifies the nine buildings forming the historic block and its cultural use.",
+        "id": "auth:py-public:Q3300173:py-manzana.html",
+        "license": null,
+        "publisher": "Municipalidad de Asunción",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 454641f73bcb4483610a7a34bd97f2705a3be67fc0c3d298d6571c11b6809ff3.",
+        "title": "Manzana de la Rivera public heritage record",
+        "uri": "https://cultura.asuncion.gov.py/manzana"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipality lists a public visit to Casa Viola within the restored block.",
+        "id": "auth:py-public:Q3300173:py-manzana-visit.html",
+        "license": null,
+        "publisher": "Municipalidad de Asunción",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 04f9ad5736e9a21bfdb8c16ab66706f4f5609c73a807f111f7a6d920633b7b7e.",
+        "title": "Manzana de la Rivera public heritage record",
+        "uri": "https://cultura.asuncion.gov.py/novedades/semana-santa-2026-en-la-manzana-de-la-rivera-353"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -57.638192, latitude -25.277991.",
+        "id": "wikivoyage:5433614:py-manzana",
+        "license": "CC BY-SA 4.0",
+        "publisher": "Wikivoyage contributors",
+        "revision": "Permanent article revision 5433614. This record retains only its named feature point.",
+        "title": "Manzana de la Rivera representative coordinates",
+        "uri": "https://en.wikivoyage.org/w/index.php?title=Asunci%C3%B3n&oldid=5433614"
+      }
+    ],
+    "source_uri": "https://cultura.asuncion.gov.py/manzana",
+    "title": "Manzana de la Rivera",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visit, point and published location checked against frozen evidence.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Secretaría Nacional de Cultura, Paraguay",
+      "Wikidata contributors"
+    ],
+    "description": "The original colonial house associated with Paraguayan independence, now a public house museum.",
+    "description_zh": "巴拉圭独立纪念馆旧宅位于巴拉圭，保留原址公众参观出处及地图代表点。",
+    "details": "The original colonial house associated with Paraguayan independence, now a public house museum.",
+    "geography": {
+      "authority_id": "supplement:auth:py-public:Q3300187",
+      "countries": [
+        "PY"
+      ],
+      "note": "Named public heritage place in Asunción.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The heritage authority identifies the original house and its public museum.",
+        "id": "auth:py-public:Q3300187:py-independencia.html",
+        "license": null,
+        "publisher": "Secretaría Nacional de Cultura, Paraguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 c326ce1880aafbdfca5cad7917b22eed26cc71bccd5102294aa0cf08828e5581.",
+        "title": "Casa de la Independencia public heritage record",
+        "uri": "https://cultura.gov.py/museos/museo-casa-de-la-independencia/"
+      }
+    },
+    "id": "auth:py-public:Q3300187",
+    "location_precision": null,
+    "names": [
+      "巴拉圭独立纪念馆旧宅",
+      "Casa de la Independencia"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -57.63622222,
+      -25.28056944
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The heritage authority identifies the original house and its public museum.",
+        "id": "auth:py-public:Q3300187:py-independencia.html",
+        "license": null,
+        "publisher": "Secretaría Nacional de Cultura, Paraguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 c326ce1880aafbdfca5cad7917b22eed26cc71bccd5102294aa0cf08828e5581.",
+        "title": "Casa de la Independencia public heritage record",
+        "uri": "https://cultura.gov.py/museos/museo-casa-de-la-independencia/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry lists the house museum in its 2026 public visitor schedule.",
+        "id": "auth:py-public:Q3300187:py-museums-temporada.html",
+        "license": null,
+        "publisher": "Secretaría Nacional de Cultura, Paraguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 3af3b296414a54f8bd1cb6cb379f2d6c023a7e6bf28a332fb18c5c74d2859311.",
+        "title": "Casa de la Independencia public heritage record",
+        "uri": "https://cultura.gov.py/2026/03/rutas-culturales-para-semana-santa-museos-nacionales-proponen-recorridos-para-descubrir-el-patrimonio-en-todo-el-pais/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -57.63622222, latitude -25.28056944.",
+        "id": "wikidata:Q3300187",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2540910233, statement Q3300187$9D3C1F1C-976D-44EF-86E9-D66F7BF54ED8.",
+        "title": "Casa de la Independencia representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3300187.json"
+      }
+    ],
+    "source_uri": "https://cultura.gov.py/museos/museo-casa-de-la-independencia/",
+    "title": "Casa de la Independencia",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visit, point and published location checked against frozen evidence.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Secretaría Nacional de Turismo, Paraguay",
+      "Orquesta Sinfónica Nacional, Paraguay",
+      "Wikidata contributors"
+    ],
+    "description": "The historic public oratory and national memorial building within the visitor areas described by tourism authorities.",
+    "description_zh": "巴拉圭民族英雄纪念堂位于巴拉圭，保留原址公众参观出处及地图代表点。",
+    "details": "The historic public oratory and national memorial building within the visitor areas described by tourism authorities.",
+    "geography": {
+      "authority_id": "supplement:auth:py-public:Q3500546",
+      "countries": [
+        "PY"
+      ],
+      "note": "Named public heritage place in Asunción.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The official tourist guide identifies the historic oratory and memorial and publishes its visiting hours.",
+        "id": "auth:py-public:Q3500546:py-oratory.pdf",
+        "license": null,
+        "publisher": "Secretaría Nacional de Turismo, Paraguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 e9df1f399e98148ba6f4e669c44eb2908896e8ac2327b7ae1896bc83b5981e32.",
+        "title": "Panteón Nacional de los Héroes y Oratorio de la Virgen de la Asunción public heritage record",
+        "uri": "https://www.ip.gov.py/ip/wp-content/uploads/2024/03/Guia-Senatur.pdf"
+      }
+    },
+    "id": "auth:py-public:Q3500546",
+    "location_precision": null,
+    "names": [
+      "巴拉圭民族英雄纪念堂",
+      "Panteón Nacional de los Héroes y Oratorio de la Virgen de la Asunción"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -57.635179,
+      -25.282227
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The official tourist guide identifies the historic oratory and memorial and publishes its visiting hours.",
+        "id": "auth:py-public:Q3500546:py-oratory.pdf",
+        "license": null,
+        "publisher": "Secretaría Nacional de Turismo, Paraguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 e9df1f399e98148ba6f4e669c44eb2908896e8ac2327b7ae1896bc83b5981e32.",
+        "title": "Panteón Nacional de los Héroes y Oratorio de la Virgen de la Asunción public heritage record",
+        "uri": "https://www.ip.gov.py/ip/wp-content/uploads/2024/03/Guia-Senatur.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national orchestra reports public commemorations at the national memorial.",
+        "id": "auth:py-public:Q3500546:py-oratory-2026.html",
+        "license": null,
+        "publisher": "Orquesta Sinfónica Nacional, Paraguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 4f0ffaf355761911f20c282209be870a0bd0c5879336ed0181e16720271a45dc.",
+        "title": "Panteón Nacional de los Héroes y Oratorio de la Virgen de la Asunción public heritage record",
+        "uri": "https://www.osn.gov.py/noticias/serenata-a-la-democracia-en-el-panteon-de-los-heroes"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -57.635179, latitude -25.282227.",
+        "id": "wikidata:Q3500546",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2569697185, statement Q3500546$44332e9e-48ee-dea1-29d7-b98a9ef41a2f.",
+        "title": "Panteón Nacional de los Héroes y Oratorio de la Virgen de la Asunción representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3500546.json"
+      }
+    ],
+    "source_uri": "https://www.ip.gov.py/ip/wp-content/uploads/2024/03/Guia-Senatur.pdf",
+    "title": "Panteón Nacional de los Héroes y Oratorio de la Virgen de la Asunción",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visit, point and published location checked against frozen evidence.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Centro Cultural de la República El Cabildo",
+      "Secretaría Nacional de Cultura, Paraguay",
+      "Wikidata contributors"
+    ],
+    "description": "The surviving nineteenth-century government building known as El Cabildo, open through the public cultural centre. The earlier colonial Cabildo stood beside the current building.",
+    "description_zh": "亚松森共和国文化中心旧国会大楼位于巴拉圭，保留原址公众参观出处及地图代表点。",
+    "details": "The surviving nineteenth-century government building known as El Cabildo, open through the public cultural centre. The earlier colonial Cabildo stood beside the current building.",
+    "geography": {
+      "authority_id": "supplement:auth:py-public:Q532157",
+      "countries": [
+        "PY"
+      ],
+      "note": "Named public heritage place in Asunción.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator identifies the surviving building as constructed for the executive and legislative branches.",
+        "id": "auth:py-public:Q532157:py-cabildo-congress-history.html",
+        "license": null,
+        "publisher": "Centro Cultural de la República El Cabildo",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 9cd7e86cc16bffbdf452d468c5e2a7a939ac99e84c705a9a396b70b50c89ee64.",
+        "title": "Centro Cultural de la República El Cabildo public heritage record",
+        "uri": "https://cabildoccr.gov.py/publicacion/carlos-antonio-lopez-2361"
+      }
+    },
+    "id": "auth:py-public:Q532157",
+    "location_precision": null,
+    "names": [
+      "亚松森共和国文化中心旧国会大楼",
+      "Centro Cultural de la República El Cabildo"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -57.63367222,
+      -25.27975556
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator identifies the surviving building as constructed for the executive and legislative branches.",
+        "id": "auth:py-public:Q532157:py-cabildo-congress-history.html",
+        "license": null,
+        "publisher": "Centro Cultural de la República El Cabildo",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 9cd7e86cc16bffbdf452d468c5e2a7a939ac99e84c705a9a396b70b50c89ee64.",
+        "title": "Centro Cultural de la República El Cabildo public heritage record",
+        "uri": "https://cabildoccr.gov.py/publicacion/carlos-antonio-lopez-2361"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry distinguishes the site of the earlier colonial building from the surviving government building.",
+        "id": "auth:py-public:Q532157:py-cabildo-colonial-history.html",
+        "license": null,
+        "publisher": "Secretaría Nacional de Cultura, Paraguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 54589b982c29b10a9ed8c2443caa96baea5411d65d432cc0d39c10660d27b956.",
+        "title": "Centro Cultural de la República El Cabildo public heritage record",
+        "uri": "https://cultura.gov.py/2011/09/aniversario-de-la-fundacion-del-cabildo-de-asuncion/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The official listing confirms a public cultural activity at the current building.",
+        "id": "auth:py-public:Q532157:py-cabildo-live.html",
+        "license": null,
+        "publisher": "Secretaría Nacional de Cultura, Paraguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 0534abe884d3a036a5662facced452af96279c06ebe03366350d3eeab6be28e3.",
+        "title": "Centro Cultural de la República El Cabildo public heritage record",
+        "uri": "https://agendarte.cultura.gov.py/evento/exploradores-del-patrimonio-aprender-crear-y-sonar"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -57.63367222, latitude -25.27975556.",
+        "id": "wikidata:Q532157",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 1970616267, statement Q532157$4B9E5D90-D57C-4BCF-9207-69584EBF847B.",
+        "title": "Centro Cultural de la República El Cabildo representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q532157.json"
+      }
+    ],
+    "source_uri": "https://cabildoccr.gov.py/publicacion/carlos-antonio-lopez-2361",
+    "title": "Centro Cultural de la República El Cabildo",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visit, point and published location checked against frozen evidence.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministerio de Educación y Cultura, Uruguay",
+      "Wikidata contributors"
+    ],
+    "description": "The original Lavalleja house and public National Historical Museum rooms in Montevideo.",
+    "description_zh": "胡安·安东尼奥·拉瓦列哈故居位于乌拉圭，保留原址公众参观出处及地图代表点。",
+    "details": "The original Lavalleja house and public National Historical Museum rooms in Montevideo.",
+    "geography": {
+      "authority_id": "supplement:auth:uy-public:Q1046478",
+      "countries": [
+        "UY"
+      ],
+      "note": "Named public heritage place in Zabala 1469, Montevideo.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The government lists public visits of the historic Lavalleja house in Montevideo.",
+        "id": "auth:uy-public:Q1046478:uy-casas-2026.html",
+        "license": null,
+        "publisher": "Ministerio de Educación y Cultura, Uruguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 c17dacc36230149ae6f3cbc90b60f44f25ce714653048a7c860cf69e4c7ae099.",
+        "title": "Casa de Juan Antonio Lavalleja public heritage record",
+        "uri": "https://www.gub.uy/ministerio-educacion-cultura/patrimonio-uruguay/guia-actividades-dia-del-patrimonio-2026/montevideo/ciudad-vieja"
+      }
+    },
+    "id": "auth:uy-public:Q1046478",
+    "location_precision": null,
+    "names": [
+      "胡安·安东尼奥·拉瓦列哈故居",
+      "Casa de Juan Antonio Lavalleja"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -56.20783333,
+      -34.90630556
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The government lists public visits of the historic Lavalleja house in Montevideo.",
+        "id": "auth:uy-public:Q1046478:uy-casas-2026.html",
+        "license": null,
+        "publisher": "Ministerio de Educación y Cultura, Uruguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 c17dacc36230149ae6f3cbc90b60f44f25ce714653048a7c860cf69e4c7ae099.",
+        "title": "Casa de Juan Antonio Lavalleja public heritage record",
+        "uri": "https://www.gub.uy/ministerio-educacion-cultura/patrimonio-uruguay/guia-actividades-dia-del-patrimonio-2026/montevideo/ciudad-vieja"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -56.20783333, latitude -34.90630556.",
+        "id": "wikidata:Q1046478",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2571817282, statement Q1046478$D5A756A1-9F51-4D3E-B324-44D60593C4EC.",
+        "title": "Casa de Juan Antonio Lavalleja representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1046478.json"
+      }
+    ],
+    "source_uri": "https://www.gub.uy/ministerio-educacion-cultura/patrimonio-uruguay/guia-actividades-dia-del-patrimonio-2026/montevideo/ciudad-vieja",
+    "title": "Casa de Juan Antonio Lavalleja",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visit, point and published location checked against frozen evidence.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Museo Histórico Nacional, Uruguay",
+      "Ministerio de Educación y Cultura, Uruguay",
+      "Wikivoyage contributors"
+    ],
+    "description": "The original Fructuoso Rivera house in Montevideo now visited as part of the national historical museum.",
+    "description_zh": "弗鲁克托索·里韦拉故居位于乌拉圭，保留原址公众参观出处及地图代表点。",
+    "details": "The original Fructuoso Rivera house in Montevideo now visited as part of the national historical museum.",
+    "geography": {
+      "authority_id": "supplement:auth:uy-public:Q1046504",
+      "countries": [
+        "UY"
+      ],
+      "note": "Named public heritage place in Rincón 437, Montevideo.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum identifies the historic Rivera house at Rincón 437.",
+        "id": "auth:uy-public:Q1046504:uy-rivera-house.html",
+        "license": null,
+        "publisher": "Museo Histórico Nacional, Uruguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 5b7fa23de3fa214255caecbe06b529fa606955b693709bf064a7e44e2a023e81.",
+        "title": "Casa de Fructuoso Rivera public heritage record",
+        "uri": "https://museozorrilla.gub.uy/innovaportal/v/42193/6/mecweb/casa-fructuoso-rivera?contid=42192"
+      }
+    },
+    "id": "auth:uy-public:Q1046504",
+    "location_precision": null,
+    "names": [
+      "弗鲁克托索·里韦拉故居",
+      "Casa de Fructuoso Rivera"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -56.20673,
+      -34.90703
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum identifies the historic Rivera house at Rincón 437.",
+        "id": "auth:uy-public:Q1046504:uy-rivera-house.html",
+        "license": null,
+        "publisher": "Museo Histórico Nacional, Uruguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 5b7fa23de3fa214255caecbe06b529fa606955b693709bf064a7e44e2a023e81.",
+        "title": "Casa de Fructuoso Rivera public heritage record",
+        "uri": "https://museozorrilla.gub.uy/innovaportal/v/42193/6/mecweb/casa-fructuoso-rivera?contid=42192"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry lists the Rivera house among the visitable museum houses.",
+        "id": "auth:uy-public:Q1046504:uy-casas-current.html",
+        "license": null,
+        "publisher": "Ministerio de Educación y Cultura, Uruguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 1c079da56ffc4624344f57ff695efaaf79ce31355960e57c75539b41d2045ed5.",
+        "title": "Casa de Fructuoso Rivera public heritage record",
+        "uri": "https://www.gub.uy/ministerio-educacion-cultura/tramites-y-servicios/servicios/visitas-guiadas-museos"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -56.20673, latitude -34.90703.",
+        "id": "wikivoyage:5441415:uy-rivera",
+        "license": "CC BY-SA 4.0",
+        "publisher": "Wikivoyage contributors",
+        "revision": "Permanent article revision 5441415. This record retains only its named feature point.",
+        "title": "Casa de Fructuoso Rivera representative coordinates",
+        "uri": "https://en.wikivoyage.org/w/index.php?title=Montevideo&oldid=5441415"
+      }
+    ],
+    "source_uri": "https://museozorrilla.gub.uy/innovaportal/v/42193/6/mecweb/casa-fructuoso-rivera?contid=42192",
+    "title": "Casa de Fructuoso Rivera",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visit, point and published location checked against frozen evidence.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Dirección de Turismo de Rocha",
+      "Wikidata contributors"
+    ],
+    "description": "The original historic fortress visited from Santa Teresa park, with the representative point on the fort itself.",
+    "description_zh": "圣特雷莎堡位于乌拉圭，保留原址公众参观出处及地图代表点。",
+    "details": "The original historic fortress visited from Santa Teresa park, with the representative point on the fort itself.",
+    "geography": {
+      "authority_id": "supplement:auth:uy-public:Q1438902",
+      "countries": [
+        "UY"
+      ],
+      "note": "Named public heritage place in Rocha.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The official visitor page identifies the historic fort and gives its public opening schedule.",
+        "id": "auth:uy-public:Q1438902:uy-santa-teresa-tour.html",
+        "license": null,
+        "publisher": "Dirección de Turismo de Rocha",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 ac4c8403195e5b82ab7b2df81cf20298613636bab8506056072595f60c2afdff.",
+        "title": "Fortaleza de Santa Teresa public heritage record",
+        "uri": "https://turismorocha.gub.uy/atractivos/historicos/fortaleza-de-santa-teresa"
+      }
+    },
+    "id": "auth:uy-public:Q1438902",
+    "location_precision": null,
+    "names": [
+      "圣特雷莎堡",
+      "Fortaleza de Santa Teresa"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -53.54861111,
+      -33.97222222
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The official visitor page identifies the historic fort and gives its public opening schedule.",
+        "id": "auth:uy-public:Q1438902:uy-santa-teresa-tour.html",
+        "license": null,
+        "publisher": "Dirección de Turismo de Rocha",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 ac4c8403195e5b82ab7b2df81cf20298613636bab8506056072595f60c2afdff.",
+        "title": "Fortaleza de Santa Teresa public heritage record",
+        "uri": "https://turismorocha.gub.uy/atractivos/historicos/fortaleza-de-santa-teresa"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -53.54861111, latitude -33.97222222.",
+        "id": "wikidata:Q1438902",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2456524260, statement Q1438902$8AF0C528-16BC-47C6-AAAD-3A5D612AD423.",
+        "title": "Fortaleza de Santa Teresa representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1438902.json"
+      }
+    ],
+    "source_uri": "https://turismorocha.gub.uy/atractivos/historicos/fortaleza-de-santa-teresa",
+    "title": "Fortaleza de Santa Teresa",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visit, point and published location checked against frozen evidence.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Intendencia de Montevideo",
+      "Descubrí Montevideo",
+      "Wikidata contributors"
+    ],
+    "description": "The original Palacio Salvo building. Access refers to the areas included in designated public tours.",
+    "description_zh": "萨尔沃宫位于乌拉圭，保留原址公众参观出处及地图代表点。",
+    "details": "The original Palacio Salvo building. Access refers to the areas included in designated public tours.",
+    "geography": {
+      "authority_id": "supplement:auth:uy-public:Q1519373",
+      "countries": [
+        "UY"
+      ],
+      "note": "Named public heritage place in Montevideo.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipality identifies the historic building on Plaza Independencia.",
+        "id": "auth:uy-public:Q1519373:uy-salvo.html",
+        "license": null,
+        "publisher": "Intendencia de Montevideo",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 06cc3f51e8df8de2ae0ac5bd485fa0b306c7f2f22963d29ba0e1e311a3ec375f.",
+        "title": "Palacio Salvo public heritage record",
+        "uri": "https://montevideo.gub.uy/areas-tematicas/turismo/palacio-salvo"
+      }
+    },
+    "id": "auth:uy-public:Q1519373",
+    "location_precision": null,
+    "names": [
+      "萨尔沃宫",
+      "Palacio Salvo"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -56.198308,
+      -34.906725
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipality identifies the historic building on Plaza Independencia.",
+        "id": "auth:uy-public:Q1519373:uy-salvo.html",
+        "license": null,
+        "publisher": "Intendencia de Montevideo",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 06cc3f51e8df8de2ae0ac5bd485fa0b306c7f2f22963d29ba0e1e311a3ec375f.",
+        "title": "Palacio Salvo public heritage record",
+        "uri": "https://montevideo.gub.uy/areas-tematicas/turismo/palacio-salvo"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The destination visitor portal lists guided visits to parts of Palacio Salvo.",
+        "id": "auth:uy-public:Q1519373:uy-salvo-tour.html",
+        "license": null,
+        "publisher": "Descubrí Montevideo",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 bf4deb706b81d8288798bf6deefa0da06e0c1215d4aaa028e1c8b375706d7e14.",
+        "title": "Palacio Salvo public heritage record",
+        "uri": "https://www.descubrimontevideo.uy/palacio-salvo"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -56.198308, latitude -34.906725.",
+        "id": "wikidata:Q1519373",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2561526039, statement Q1519373$3016AFC7-7C46-4E0E-8BE0-E320CB9033EC.",
+        "title": "Palacio Salvo representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1519373.json"
+      }
+    ],
+    "source_uri": "https://montevideo.gub.uy/areas-tematicas/turismo/palacio-salvo",
+    "title": "Palacio Salvo",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visit, point and published location checked against frozen evidence.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Intendencia de Montevideo",
+      "Wikidata contributors"
+    ],
+    "description": "The historic Solís Theatre building, publicly visited in the areas covered by its official guided tours.",
+    "description_zh": "索利斯剧院位于乌拉圭，保留原址公众参观出处及地图代表点。",
+    "details": "The historic Solís Theatre building, publicly visited in the areas covered by its official guided tours.",
+    "geography": {
+      "authority_id": "supplement:auth:uy-public:Q1570788",
+      "countries": [
+        "UY"
+      ],
+      "note": "Named public heritage place in Montevideo.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipality identifies the historic theatre and lists its public guided visits.",
+        "id": "auth:uy-public:Q1570788:uy-solis.html",
+        "license": null,
+        "publisher": "Intendencia de Montevideo",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 badc20db761732e91f2bcb00a576ae74d62aad8a2969d530fae72f31a944679f.",
+        "title": "Teatro Solís public heritage record",
+        "uri": "https://montevideo.gub.uy/areas-tematicas/turismo/teatro-solis"
+      }
+    },
+    "id": "auth:uy-public:Q1570788",
+    "location_precision": null,
+    "names": [
+      "索利斯剧院",
+      "Teatro Solís"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -56.20102778,
+      -34.90786111
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipality identifies the historic theatre and lists its public guided visits.",
+        "id": "auth:uy-public:Q1570788:uy-solis.html",
+        "license": null,
+        "publisher": "Intendencia de Montevideo",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 badc20db761732e91f2bcb00a576ae74d62aad8a2969d530fae72f31a944679f.",
+        "title": "Teatro Solís public heritage record",
+        "uri": "https://montevideo.gub.uy/areas-tematicas/turismo/teatro-solis"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -56.20102778, latitude -34.90786111.",
+        "id": "wikidata:Q1570788",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2483331952, statement Q1570788$FB666B99-5FDC-4AC4-A2C4-ACEE79A42B59.",
+        "title": "Teatro Solís representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1570788.json"
+      }
+    ],
+    "source_uri": "https://montevideo.gub.uy/areas-tematicas/turismo/teatro-solis",
+    "title": "Teatro Solís",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visit, point and published location checked against frozen evidence.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Intendencia de Montevideo",
+      "Wikidata contributors"
+    ],
+    "description": "The original Cabildo and Royal Gaol building now used as a public municipal history museum.",
+    "description_zh": "蒙得维的亚旧市政厅位于乌拉圭，保留原址公众参观出处及地图代表点。",
+    "details": "The original Cabildo and Royal Gaol building now used as a public municipal history museum.",
+    "geography": {
+      "authority_id": "supplement:auth:uy-public:Q257698",
+      "countries": [
+        "UY"
+      ],
+      "note": "Named public heritage place in Montevideo.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipality identifies the building as the historic Cabildo and Royal Gaol.",
+        "id": "auth:uy-public:Q257698:uy-cabildo-identity.html",
+        "license": null,
+        "publisher": "Intendencia de Montevideo",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 aa8692cdd6de393f517d68ae8315303040c2a9bee02d6127a8ebae62dc256d70.",
+        "title": "Cabildo de Montevideo public heritage record",
+        "uri": "https://montevideo.gub.uy/areas-tematicas/cultura-y-tiempo-libre/museo-historico-cabildo-de-montevideo"
+      }
+    },
+    "id": "auth:uy-public:Q257698",
+    "location_precision": null,
+    "names": [
+      "蒙得维的亚旧市政厅",
+      "Cabildo de Montevideo"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -56.20286111,
+      -34.90658333
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipality identifies the building as the historic Cabildo and Royal Gaol.",
+        "id": "auth:uy-public:Q257698:uy-cabildo-identity.html",
+        "license": null,
+        "publisher": "Intendencia de Montevideo",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 aa8692cdd6de393f517d68ae8315303040c2a9bee02d6127a8ebae62dc256d70.",
+        "title": "Cabildo de Montevideo public heritage record",
+        "uri": "https://montevideo.gub.uy/areas-tematicas/cultura-y-tiempo-libre/museo-historico-cabildo-de-montevideo"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipality publishes opening arrangements for the museum at this address.",
+        "id": "auth:uy-public:Q257698:uy-cabildo.html",
+        "license": null,
+        "publisher": "Intendencia de Montevideo",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 6fab1f70865700be195f8b6665c245176c3b0a0ea6e81ad25830e0d62d347fa3.",
+        "title": "Cabildo de Montevideo public heritage record",
+        "uri": "https://www.montevideo.gub.uy/institucional/dependencias/museo-historico-cabildo"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -56.20286111, latitude -34.90658333.",
+        "id": "wikidata:Q257698",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2473963744, statement Q257698$AB85D174-2C7F-4D35-A083-59CBCD8EC1DB.",
+        "title": "Cabildo de Montevideo representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q257698.json"
+      }
+    ],
+    "source_uri": "https://montevideo.gub.uy/areas-tematicas/cultura-y-tiempo-libre/museo-historico-cabildo-de-montevideo",
+    "title": "Cabildo de Montevideo",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visit, point and published location checked against frozen evidence.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Intendencia de Maldonado",
+      "Ministerio de Educación y Cultura, Uruguay",
+      "Wikidata contributors"
+    ],
+    "description": "The original Cuartel de Dragones of Maldonado, with access scoped to announced public heritage activities.",
+    "description_zh": "马尔多纳多龙骑兵营位于乌拉圭，保留原址公众参观出处及地图代表点。",
+    "details": "The original Cuartel de Dragones of Maldonado, with access scoped to announced public heritage activities.",
+    "geography": {
+      "authority_id": "supplement:auth:uy-public:Q42969242",
+      "countries": [
+        "UY"
+      ],
+      "note": "Named public heritage place in Maldonado.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The department reports public exhibitions and designates the historic site at 25 de Mayo.",
+        "id": "auth:uy-public:Q42969242:uy-dragones-live.html",
+        "license": null,
+        "publisher": "Intendencia de Maldonado",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 4d785677ca8a9baaed4c76aead08cbe2a35968003baeafcde7efbcced2d052e1.",
+        "title": "Cuartel de Dragones de Maldonado public heritage record",
+        "uri": "https://maldonado.gub.uy/noticias/continua-ciclo-conferencias-cuartel-dragones"
+      }
+    },
+    "id": "auth:uy-public:Q42969242",
+    "location_precision": null,
+    "names": [
+      "马尔多纳多龙骑兵营",
+      "Cuartel de Dragones de Maldonado"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -54.9588433499858,
+      -34.91000687496538
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The department reports public exhibitions and designates the historic site at 25 de Mayo.",
+        "id": "auth:uy-public:Q42969242:uy-dragones-live.html",
+        "license": null,
+        "publisher": "Intendencia de Maldonado",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 4d785677ca8a9baaed4c76aead08cbe2a35968003baeafcde7efbcced2d052e1.",
+        "title": "Cuartel de Dragones de Maldonado public heritage record",
+        "uri": "https://maldonado.gub.uy/noticias/continua-ciclo-conferencias-cuartel-dragones"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry lists a public heritage activity and identifies Cuartel de Dragones in Maldonado.",
+        "id": "auth:uy-public:Q42969242:uy-piria-2026.html",
+        "license": null,
+        "publisher": "Ministerio de Educación y Cultura, Uruguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 f57276a5f0df2601e025a6e863b8ea6977fabe3bb0feef54789df4b94b8feed0.",
+        "title": "Cuartel de Dragones de Maldonado public heritage record",
+        "uri": "https://www.gub.uy/ministerio-educacion-cultura/patrimonio-uruguay/guia-actividades-dia-del-patrimonio-2026/region-este/maldonado"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -54.9588433499858, latitude -34.91000687496538.",
+        "id": "wikidata:Q42969242",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2571817156, statement Q42969242$00d88f3a-4b68-b35f-2175-3173288562d7.",
+        "title": "Cuartel de Dragones de Maldonado representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q42969242.json"
+      }
+    ],
+    "source_uri": "https://maldonado.gub.uy/noticias/continua-ciclo-conferencias-cuartel-dragones",
+    "title": "Cuartel de Dragones de Maldonado",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visit, point and published location checked against frozen evidence.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Intendencia de Maldonado",
+      "Ministerio de Educación y Cultura, Uruguay",
+      "Wikidata contributors"
+    ],
+    "description": "The original Piria residence near Piriápolis and parts of the castle grounds open to visitors.",
+    "description_zh": "皮里亚城堡位于乌拉圭，保留原址公众参观出处及地图代表点。",
+    "details": "The original Piria residence near Piriápolis and parts of the castle grounds open to visitors.",
+    "geography": {
+      "authority_id": "supplement:auth:uy-public:Q5391343",
+      "countries": [
+        "UY"
+      ],
+      "note": "Named public heritage place in Piriápolis, Maldonado.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The department publishes visitation information for the former Piria residence.",
+        "id": "auth:uy-public:Q5391343:uy-piria.html",
+        "license": null,
+        "publisher": "Intendencia de Maldonado",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 cdcb239085bd4259ed1f1a64f682756fb2d884980278c7857920f932b5d64d39.",
+        "title": "Castillo de Piria public heritage record",
+        "uri": "https://maldonado.gub.uy/noticias/idm-invita-disfrutar-distintas-opciones-culturales-semana-turismo"
+      }
+    },
+    "id": "auth:uy-public:Q5391343",
+    "location_precision": null,
+    "names": [
+      "皮里亚城堡",
+      "Castillo de Piria"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -55.251675,
+      -34.82868611
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The department publishes visitation information for the former Piria residence.",
+        "id": "auth:uy-public:Q5391343:uy-piria.html",
+        "license": null,
+        "publisher": "Intendencia de Maldonado",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 cdcb239085bd4259ed1f1a64f682756fb2d884980278c7857920f932b5d64d39.",
+        "title": "Castillo de Piria public heritage record",
+        "uri": "https://maldonado.gub.uy/noticias/idm-invita-disfrutar-distintas-opciones-culturales-semana-turismo"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The government heritage record identifies the original castle and its grounds.",
+        "id": "auth:uy-public:Q5391343:uy-piria-register.pdf",
+        "license": null,
+        "publisher": "Ministerio de Educación y Cultura, Uruguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 407b31dbd7f3cc4b72945ec5d4acc928d32fb535345707e6aa4950482531905e.",
+        "title": "Castillo de Piria public heritage record",
+        "uri": "https://www.gub.uy/ministerio-educacion-cultura/sites/ministerio-educacion-cultura/files/2020-06/Listado_MH_Maldonado.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -55.251675, latitude -34.82868611.",
+        "id": "wikidata:Q5391343",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2557661152, statement Q5391343$2B4BEDF6-5EE1-42DA-9B16-1ACC4DBEC0CF.",
+        "title": "Castillo de Piria representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5391343.json"
+      }
+    ],
+    "source_uri": "https://maldonado.gub.uy/noticias/idm-invita-disfrutar-distintas-opciones-culturales-semana-turismo",
+    "title": "Castillo de Piria",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visit, point and published location checked against frozen evidence.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministerio de Defensa Nacional, Uruguay",
+      "Wikidata contributors"
+    ],
+    "description": "The original Cerro Fortress and its military museum visitor area atop Cerro de Montevideo.",
+    "description_zh": "阿蒂加斯将军堡位于乌拉圭，保留原址公众参观出处及地图代表点。",
+    "details": "The original Cerro Fortress and its military museum visitor area atop Cerro de Montevideo.",
+    "geography": {
+      "authority_id": "supplement:auth:uy-public:Q5472521",
+      "countries": [
+        "UY"
+      ],
+      "note": "Named public heritage place in Montevideo.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry identifies the historic fort as a military museum and gives visit information.",
+        "id": "auth:uy-public:Q5472521:uy-cerro.html",
+        "license": null,
+        "publisher": "Ministerio de Defensa Nacional, Uruguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 41bd5d2088988bb1c7eab2b004227562a37b7cbd9bd67599b5b365c71b97fcf3.",
+        "title": "Fortaleza General Artigas public heritage record",
+        "uri": "https://www.gub.uy/ministerio-defensa-nacional/comunicacion/noticias/museo-fortaleza-gral-artigas-es-ultima-gran-obra-ingenieria-militar-espanola"
+      }
+    },
+    "id": "auth:uy-public:Q5472521",
+    "location_precision": null,
+    "names": [
+      "阿蒂加斯将军堡",
+      "Fortaleza General Artigas"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -56.26,
+      -34.88833333
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry identifies the historic fort as a military museum and gives visit information.",
+        "id": "auth:uy-public:Q5472521:uy-cerro.html",
+        "license": null,
+        "publisher": "Ministerio de Defensa Nacional, Uruguay",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 41bd5d2088988bb1c7eab2b004227562a37b7cbd9bd67599b5b365c71b97fcf3.",
+        "title": "Fortaleza General Artigas public heritage record",
+        "uri": "https://www.gub.uy/ministerio-defensa-nacional/comunicacion/noticias/museo-fortaleza-gral-artigas-es-ultima-gran-obra-ingenieria-militar-espanola"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -56.26, latitude -34.88833333.",
+        "id": "wikidata:Q5472521",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2521314439, statement Q5472521$B83EE746-1DBC-4487-B1A7-79427CC5119D.",
+        "title": "Fortaleza General Artigas representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5472521.json"
+      }
+    ],
+    "source_uri": "https://www.gub.uy/ministerio-defensa-nacional/comunicacion/noticias/museo-fortaleza-gral-artigas-es-ultima-gran-obra-ingenieria-militar-espanola",
+    "title": "Fortaleza General Artigas",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visit, point and published location checked against frozen evidence.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Universo Pittamiglio",
+      "Wikidata contributors"
+    ],
+    "description": "The distinctive original Pittamiglio house in Montevideo. Access is scoped to the areas of the official visitor tour.",
+    "description_zh": "蒙得维的亚皮塔米利奥城堡位于乌拉圭，保留原址公众参观出处及地图代表点。",
+    "details": "The distinctive original Pittamiglio house in Montevideo. Access is scoped to the areas of the official visitor tour.",
+    "geography": {
+      "authority_id": "supplement:auth:uy-public:Q5756981",
+      "countries": [
+        "UY"
+      ],
+      "note": "Named public heritage place in Rambla Gandhi 633, Montevideo.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The site operator gives visit arrangements and the Montevideo street address.",
+        "id": "auth:uy-public:Q5756981:uy-pittamiglio.html",
+        "license": null,
+        "publisher": "Universo Pittamiglio",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 7dce68df331c355ce01ee3580ccb84e45cc9d030d23b54c629ede363854e45f0.",
+        "title": "Castillo Pittamiglio de Montevideo public heritage record",
+        "uri": "https://universopittamiglio.com/agenda.php?s=dias-y-horarios"
+      }
+    },
+    "id": "auth:uy-public:Q5756981",
+    "location_precision": null,
+    "names": [
+      "蒙得维的亚皮塔米利奥城堡",
+      "Castillo Pittamiglio de Montevideo"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -56.149769,
+      -34.921032
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The site operator gives visit arrangements and the Montevideo street address.",
+        "id": "auth:uy-public:Q5756981:uy-pittamiglio.html",
+        "license": null,
+        "publisher": "Universo Pittamiglio",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 7dce68df331c355ce01ee3580ccb84e45cc9d030d23b54c629ede363854e45f0.",
+        "title": "Castillo Pittamiglio de Montevideo public heritage record",
+        "uri": "https://universopittamiglio.com/agenda.php?s=dias-y-horarios"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -56.149769, latitude -34.921032.",
+        "id": "wikidata:Q5756981",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2473912836, statement Q5756981$e4ed04e9-4e0b-1631-bafa-aab8aa7db54c.",
+        "title": "Castillo Pittamiglio de Montevideo representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5756981.json"
+      }
+    ],
+    "source_uri": "https://universopittamiglio.com/agenda.php?s=dias-y-horarios",
+    "title": "Castillo Pittamiglio de Montevideo",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visit, point and published location checked against frozen evidence.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Dirección de Turismo de Rocha",
+      "Wikidata contributors"
+    ],
+    "description": "The original fort with its public military heritage exhibits, separate from the nearby ethnographic museum.",
+    "description_zh": "圣米格尔堡位于乌拉圭，保留原址公众参观出处及地图代表点。",
+    "details": "The original fort with its public military heritage exhibits, separate from the nearby ethnographic museum.",
+    "geography": {
+      "authority_id": "supplement:auth:uy-public:Q937058",
+      "countries": [
+        "UY"
+      ],
+      "note": "Named public heritage place in 18 de Julio, Rocha.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The official visitor page gives the public visiting hours for the historic fort.",
+        "id": "auth:uy-public:Q937058:uy-san-miguel-tour.html",
+        "license": null,
+        "publisher": "Dirección de Turismo de Rocha",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 6ed734dfb29873c856aab067ef1447da34366aeb0ab03e6fb5981216af57f77c.",
+        "title": "Fuerte de San Miguel public heritage record",
+        "uri": "https://turismorocha.gub.uy/atractivos/historicos/fuerte-de-san-miguel"
+      }
+    },
+    "id": "auth:uy-public:Q937058",
+    "location_precision": null,
+    "names": [
+      "圣米格尔堡",
+      "Fuerte de San Miguel"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -53.538848,
+      -33.689401
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The official visitor page gives the public visiting hours for the historic fort.",
+        "id": "auth:uy-public:Q937058:uy-san-miguel-tour.html",
+        "license": null,
+        "publisher": "Dirección de Turismo de Rocha",
+        "revision": "Snapshot retrieved 2026-11-28, SHA-256 6ed734dfb29873c856aab067ef1447da34366aeb0ab03e6fb5981216af57f77c.",
+        "title": "Fuerte de San Miguel public heritage record",
+        "uri": "https://turismorocha.gub.uy/atractivos/historicos/fuerte-de-san-miguel"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -53.538848, latitude -33.689401.",
+        "id": "wikidata:Q937058",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2456473939, statement Q937058$49D5AFFE-DE80-4F93-BAE0-4B50A24F1855.",
+        "title": "Fuerte de San Miguel representative coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q937058.json"
+      }
+    ],
+    "source_uri": "https://turismorocha.gub.uy/atractivos/historicos/fuerte-de-san-miguel",
+    "title": "Fuerte de San Miguel",
+    "types": [
+      "historic-site"
+    ]
+  }
+]

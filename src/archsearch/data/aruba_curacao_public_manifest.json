@@ -1,0 +1,22 @@
+{
+  "base_count": 5314,
+  "base_ids_sha256": "5aefc75e03ca6fa76038c67db7d723b9692416e2c24d4f6fe547b9e5e3f69b78",
+  "base_sites_sha256": "162e1415f19b0eec66ae7dd7c79d4130468754a56c93d2df98441cb9a8c2e180",
+  "cohort_version": "aruba-curacao-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 3,
+    "total": 5317
+  },
+  "files": {
+    "aruba_curacao_public_review.json": {
+      "sha256": "6fe929a6ed6d8d837b747407872b9cd3a808e2b1eb6df86d066d2da178773279"
+    },
+    "aruba_curacao_public_sites.json": {
+      "sha256": "81e5601808e6659d904d13dc16cb4e76d4238fdbafc4651d6f2402fbb60ea40d"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Three verified public built heritage locations in Aruba and Curacao, using two original CC0 statements and a single GeoNames CC BY 4.0 coordinate."
+}

@@ -1,0 +1,22 @@
+{
+  "base_count": 4462,
+  "base_ids_sha256": "6a33d9b8ce88f310162227bd09733f83eaad7ecedff774183d25348618e2caeb",
+  "base_sites_sha256": "4d7b8ac755e13b18f6340cff5efcb9b4168abe01df8bba4c2758e97041c391a6",
+  "cohort_version": "southern-cone-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 8,
+    "total": 4470
+  },
+  "files": {
+    "southern_public_review.json": {
+      "sha256": "97706bbef72a4c30d511fdf5ba73bb5e782b3e535eb44759741e0864f1f503d8"
+    },
+    "southern_public_sites.json": {
+      "sha256": "8606c50ab848729252bc30c9c711e5c4cecd6410a7cbc5eb26ba9d820aa4e17f"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Eight publicly interpreted archaeological or historical places in Chile and Argentina, with independently verified visitor scope and reusable coordinates."
+}

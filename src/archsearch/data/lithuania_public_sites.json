@@ -1,0 +1,926 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public access, exact register record, and authority representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Go Vilnius / City of Vilnius",
+      "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra"
+    ],
+    "description": "Medininkai Castle retains its fortified enclosure and presents a museum exhibition in its restored tower.",
+    "description_zh": "立陶宛梅迪宁凯城堡保留围合要塞的遗迹，修复后的塔楼内设博物馆展览。",
+    "details": "Medininkai Castle retains its fortified enclosure and presents a museum exhibition in its restored tower.",
+    "geography": {
+      "authority_id": "supplement:auth:lt-kvr:1030",
+      "countries": [
+        "LT"
+      ],
+      "note": "Public heritage representative point in Medininkai, Vilnius County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Medininkai Castle retains its fortified enclosure and presents a museum exhibition in its restored tower.",
+        "id": "auth:lt-kvr:1030:visit",
+        "license": null,
+        "publisher": "Go Vilnius / City of Vilnius",
+        "revision": "Retrieved 2026-11-28; SHA-256 3a974e62b797bc5114b56e258d675ceb5eed2661a848ab95977e9e91b002f679.",
+        "title": "Public visitor information for Medininkai Castle",
+        "uri": "https://www.govilnius.lt/visit-vilnius/places/medininkai-castle"
+      }
+    },
+    "id": "auth:lt-kvr:1030",
+    "location_precision": null,
+    "names": [
+      "Medininkų pilis"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      25.650061427296038,
+      54.53949059122489
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Medininkai Castle retains its fortified enclosure and presents a museum exhibition in its restored tower.",
+        "id": "auth:lt-kvr:1030:visit",
+        "license": null,
+        "publisher": "Go Vilnius / City of Vilnius",
+        "revision": "Retrieved 2026-11-28; SHA-256 3a974e62b797bc5114b56e258d675ceb5eed2661a848ab95977e9e91b002f679.",
+        "title": "Public visitor information for Medininkai Castle",
+        "uri": "https://www.govilnius.lt/visit-vilnius/places/medininkai-castle"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Medininkų pilies ir kitų statinių komplekso Medininkų pilis. Government WGS84 representative point for the named register unit.",
+        "id": "auth:lt-kvr:1030:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra",
+        "revision": "Retrieved 2026-11-28; SHA-256 7de533d1c13f82239ec40e78884c60a07ee682b741b13ea58d852595aedfd94c.",
+        "title": "KVR heritage point 1030",
+        "uri": "https://osp-sdg.stat.gov.lt/arcgis/rest/services/KPD/kvr_taskai_enriched/FeatureServer/0/query?where=unikalus_kodas+IN+%28%271030%27%2C%272047%27%2C%273234%27%2C%273679%27%2C%275223%27%2C%2722329%27%2C%2722713%27%2C%2722716%27%2C%2722719%27%2C%2722835%27%2C%2723532%27%2C%2724547%27%2C%2729964%27%2C%2739218%27%29&outFields=unikalus_kodas%2Cpavadinimas%2Cklasifikatorius%2Cstatusas%2Cadresas%2Ctipas%2Creiksmingumas%2Cviesas%2Cnuoroda%2Csav_pav&outSR=4326&returnGeometry=true&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.govilnius.lt/visit-vilnius/places/medininkai-castle",
+    "title": "Medininkai Castle",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public access, exact register record, and authority representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "State Service for Protected Areas / Panemuniai Regional Park",
+      "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra"
+    ],
+    "description": "Seredžius Hillfort overlooks the Nemunas valley and is listed as a public visit site in Panemuniai Regional Park.",
+    "description_zh": "立陶宛塞雷兹尤斯山堡俯瞰涅曼河谷，列入帕内穆尼艾地区公园的访客名录。",
+    "details": "Seredžius Hillfort overlooks the Nemunas valley and is listed as a public visit site in Panemuniai Regional Park.",
+    "geography": {
+      "authority_id": "supplement:auth:lt-kvr:2047",
+      "countries": [
+        "LT"
+      ],
+      "note": "Public heritage representative point in Seredžius, Tauragė County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Seredžius Hillfort overlooks the Nemunas valley and is listed as a public visit site in Panemuniai Regional Park.",
+        "id": "auth:lt-kvr:2047:visit",
+        "license": null,
+        "publisher": "State Service for Protected Areas / Panemuniai Regional Park",
+        "revision": "Retrieved 2026-11-28; SHA-256 875f4120fced866cd7ce278c1fd1d5a7cd1f9961bbf40e3451e08663b86c328a.",
+        "title": "Public visitor information for Seredžius Hillfort",
+        "uri": "https://saugoma.lt/lt/objektai/objektai-seredziaus-piliakalnis-palemono-kalnas"
+      }
+    },
+    "id": "auth:lt-kvr:2047",
+    "location_precision": null,
+    "names": [
+      "Seredžiaus piliakalnis"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      23.406326179612087,
+      55.080206078691006
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Seredžius Hillfort overlooks the Nemunas valley and is listed as a public visit site in Panemuniai Regional Park.",
+        "id": "auth:lt-kvr:2047:visit",
+        "license": null,
+        "publisher": "State Service for Protected Areas / Panemuniai Regional Park",
+        "revision": "Retrieved 2026-11-28; SHA-256 875f4120fced866cd7ce278c1fd1d5a7cd1f9961bbf40e3451e08663b86c328a.",
+        "title": "Public visitor information for Seredžius Hillfort",
+        "uri": "https://saugoma.lt/lt/objektai/objektai-seredziaus-piliakalnis-palemono-kalnas"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Seredžiaus piliakalnio su gyvenviete piliakalnis, vad. Palemono kalnu. Government WGS84 representative point for the named register unit.",
+        "id": "auth:lt-kvr:2047:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra",
+        "revision": "Retrieved 2026-11-28; SHA-256 7de533d1c13f82239ec40e78884c60a07ee682b741b13ea58d852595aedfd94c.",
+        "title": "KVR heritage point 2047",
+        "uri": "https://osp-sdg.stat.gov.lt/arcgis/rest/services/KPD/kvr_taskai_enriched/FeatureServer/0/query?where=unikalus_kodas+IN+%28%271030%27%2C%272047%27%2C%273234%27%2C%273679%27%2C%275223%27%2C%2722329%27%2C%2722713%27%2C%2722716%27%2C%2722719%27%2C%2722835%27%2C%2723532%27%2C%2724547%27%2C%2729964%27%2C%2739218%27%29&outFields=unikalus_kodas%2Cpavadinimas%2Cklasifikatorius%2Cstatusas%2Cadresas%2Ctipas%2Creiksmingumas%2Cviesas%2Cnuoroda%2Csav_pav&outSR=4326&returnGeometry=true&f=geojson"
+      }
+    ],
+    "source_uri": "https://saugoma.lt/lt/objektai/objektai-seredziaus-piliakalnis-palemono-kalnas",
+    "title": "Seredžius Hillfort",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public access, exact register record, and authority representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Pažaislis Culture and Tourism Centre",
+      "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra"
+    ],
+    "description": "The historic Church of the Visitation at Pažaislis Monastery receives visitors at times published by its cultural centre.",
+    "description_zh": "立陶宛帕扎伊斯利斯修道院的圣母往见教堂按文化中心公布的安排向访客开放。",
+    "details": "The historic Church of the Visitation at Pažaislis Monastery receives visitors at times published by its cultural centre.",
+    "geography": {
+      "authority_id": "supplement:auth:lt-kvr:22329",
+      "countries": [
+        "LT"
+      ],
+      "note": "Public heritage representative point in Pažaislis, Kaunas.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The historic Church of the Visitation at Pažaislis Monastery receives visitors at times published by its cultural centre.",
+        "id": "auth:lt-kvr:22329:visit",
+        "license": null,
+        "publisher": "Pažaislis Culture and Tourism Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 8ffbb40f0f92e54501ec7162e5de8285c60ed271758a34b874ea9448363be1e8.",
+        "title": "Public visitor information for Pažaislis Monastery Church of the Visitation",
+        "uri": "https://www.pazaislis.org/lankytojams"
+      }
+    },
+    "id": "auth:lt-kvr:22329",
+    "location_precision": null,
+    "names": [
+      "Pažaislio vienuolyno Apsilankymo bažnyčia"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      24.022342549545357,
+      54.87631554271941
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The historic Church of the Visitation at Pažaislis Monastery receives visitors at times published by its cultural centre.",
+        "id": "auth:lt-kvr:22329:visit",
+        "license": null,
+        "publisher": "Pažaislis Culture and Tourism Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 8ffbb40f0f92e54501ec7162e5de8285c60ed271758a34b874ea9448363be1e8.",
+        "title": "Public visitor information for Pažaislis Monastery Church of the Visitation",
+        "uri": "https://www.pazaislis.org/lankytojams"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Pažaislio kamaldulių vienuolyno ansamblio Švč. Mergelės Marijos Apsilankymo bažnyčia. Government WGS84 representative point for the named register unit.",
+        "id": "auth:lt-kvr:22329:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra",
+        "revision": "Retrieved 2026-11-28; SHA-256 7de533d1c13f82239ec40e78884c60a07ee682b741b13ea58d852595aedfd94c.",
+        "title": "KVR heritage point 22329",
+        "uri": "https://osp-sdg.stat.gov.lt/arcgis/rest/services/KPD/kvr_taskai_enriched/FeatureServer/0/query?where=unikalus_kodas+IN+%28%271030%27%2C%272047%27%2C%273234%27%2C%273679%27%2C%275223%27%2C%2722329%27%2C%2722713%27%2C%2722716%27%2C%2722719%27%2C%2722835%27%2C%2723532%27%2C%2724547%27%2C%2729964%27%2C%2739218%27%29&outFields=unikalus_kodas%2Cpavadinimas%2Cklasifikatorius%2Cstatusas%2Cadresas%2Ctipas%2Creiksmingumas%2Cviesas%2Cnuoroda%2Csav_pav&outSR=4326&returnGeometry=true&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.pazaislis.org/lankytojams",
+    "title": "Pažaislis Monastery Church of the Visitation",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public access, exact register record, and authority representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Žaliasis regionas / Jurbarkas Tourism",
+      "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra"
+    ],
+    "description": "Raudonė's historic residential castle includes a rebuilt public lookout tower overlooking the Nemunas area.",
+    "description_zh": "立陶宛劳多内的历史居住城堡保留原址建筑，复建的塔楼列为公众观景点。",
+    "details": "Raudonė's historic residential castle includes a rebuilt public lookout tower overlooking the Nemunas area.",
+    "geography": {
+      "authority_id": "supplement:auth:lt-kvr:22713",
+      "countries": [
+        "LT"
+      ],
+      "note": "Public heritage representative point in Raudonė, Tauragė County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Raudonė's historic residential castle includes a rebuilt public lookout tower overlooking the Nemunas area.",
+        "id": "auth:lt-kvr:22713:visit",
+        "license": null,
+        "publisher": "Žaliasis regionas / Jurbarkas Tourism",
+        "revision": "Retrieved 2026-11-28; SHA-256 9342babd060ebfca1900e06f2dc31d6164f221b41673ab1d514780004e4f93cc.",
+        "title": "Public visitor information for Raudonė Castle",
+        "uri": "https://www.zaliasisregionas.lt/en/landmarks/castle-of-raudone-1723639154"
+      }
+    },
+    "id": "auth:lt-kvr:22713",
+    "location_precision": null,
+    "names": [
+      "Raudonės rezidencinė pilis"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      23.13066612664537,
+      55.0969277787304
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Raudonė's historic residential castle includes a rebuilt public lookout tower overlooking the Nemunas area.",
+        "id": "auth:lt-kvr:22713:visit",
+        "license": null,
+        "publisher": "Žaliasis regionas / Jurbarkas Tourism",
+        "revision": "Retrieved 2026-11-28; SHA-256 9342babd060ebfca1900e06f2dc31d6164f221b41673ab1d514780004e4f93cc.",
+        "title": "Public visitor information for Raudonė Castle",
+        "uri": "https://www.zaliasisregionas.lt/en/landmarks/castle-of-raudone-1723639154"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Raudonės rezidencinės pilies komplekso Raudonės rezidencinė pilis. Government WGS84 representative point for the named register unit.",
+        "id": "auth:lt-kvr:22713:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra",
+        "revision": "Retrieved 2026-11-28; SHA-256 7de533d1c13f82239ec40e78884c60a07ee682b741b13ea58d852595aedfd94c.",
+        "title": "KVR heritage point 22713",
+        "uri": "https://osp-sdg.stat.gov.lt/arcgis/rest/services/KPD/kvr_taskai_enriched/FeatureServer/0/query?where=unikalus_kodas+IN+%28%271030%27%2C%272047%27%2C%273234%27%2C%273679%27%2C%275223%27%2C%2722329%27%2C%2722713%27%2C%2722716%27%2C%2722719%27%2C%2722835%27%2C%2723532%27%2C%2724547%27%2C%2729964%27%2C%2739218%27%29&outFields=unikalus_kodas%2Cpavadinimas%2Cklasifikatorius%2Cstatusas%2Cadresas%2Ctipas%2Creiksmingumas%2Cviesas%2Cnuoroda%2Csav_pav&outSR=4326&returnGeometry=true&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.zaliasisregionas.lt/en/landmarks/castle-of-raudone-1723639154",
+    "title": "Raudonė Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public access, exact register record, and authority representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Vilnius Academy of Arts / Panemunė Castle",
+      "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra"
+    ],
+    "description": "The Vilnius Academy of Arts operates a museum and gallery in the historic palace of Panemunė Castle.",
+    "description_zh": "立陶宛潘埃穆内城堡的原址宫殿由维尔纽斯艺术学院运营，设博物馆和展览空间。",
+    "details": "The Vilnius Academy of Arts operates a museum and gallery in the historic palace of Panemunė Castle.",
+    "geography": {
+      "authority_id": "supplement:auth:lt-kvr:22716",
+      "countries": [
+        "LT"
+      ],
+      "note": "Public heritage representative point in Pilis I, Tauragė County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Vilnius Academy of Arts operates a museum and gallery in the historic palace of Panemunė Castle.",
+        "id": "auth:lt-kvr:22716:visit",
+        "license": null,
+        "publisher": "Vilnius Academy of Arts / Panemunė Castle",
+        "revision": "Retrieved 2026-11-28; SHA-256 5b25d0a0d7718fbd7dc70209264e9edf8556d7c57d2bd48ff1ee9ed8517fb1cb.",
+        "title": "Public visitor information for Panemunė Castle Palace",
+        "uri": "https://panemunespilis.com/en/home/?lang=en"
+      }
+    },
+    "id": "auth:lt-kvr:22716",
+    "location_precision": null,
+    "names": [
+      "Panemunės pilies rūmai"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      22.986530600795145,
+      55.09912601837005
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Vilnius Academy of Arts operates a museum and gallery in the historic palace of Panemunė Castle.",
+        "id": "auth:lt-kvr:22716:visit",
+        "license": null,
+        "publisher": "Vilnius Academy of Arts / Panemunė Castle",
+        "revision": "Retrieved 2026-11-28; SHA-256 5b25d0a0d7718fbd7dc70209264e9edf8556d7c57d2bd48ff1ee9ed8517fb1cb.",
+        "title": "Public visitor information for Panemunė Castle Palace",
+        "uri": "https://panemunespilis.com/en/home/?lang=en"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Panemunės pilies, vad. Gelgaudų, Vytėnų pilies rūmai. Government WGS84 representative point for the named register unit.",
+        "id": "auth:lt-kvr:22716:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra",
+        "revision": "Retrieved 2026-11-28; SHA-256 7de533d1c13f82239ec40e78884c60a07ee682b741b13ea58d852595aedfd94c.",
+        "title": "KVR heritage point 22716",
+        "uri": "https://osp-sdg.stat.gov.lt/arcgis/rest/services/KPD/kvr_taskai_enriched/FeatureServer/0/query?where=unikalus_kodas+IN+%28%271030%27%2C%272047%27%2C%273234%27%2C%273679%27%2C%275223%27%2C%2722329%27%2C%2722713%27%2C%2722716%27%2C%2722719%27%2C%2722835%27%2C%2723532%27%2C%2724547%27%2C%2729964%27%2C%2739218%27%29&outFields=unikalus_kodas%2Cpavadinimas%2Cklasifikatorius%2Cstatusas%2Cadresas%2Ctipas%2Creiksmingumas%2Cviesas%2Cnuoroda%2Csav_pav&outSR=4326&returnGeometry=true&f=geojson"
+      }
+    ],
+    "source_uri": "https://panemunespilis.com/en/home/?lang=en",
+    "title": "Panemunė Castle Palace",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public access, exact register record, and authority representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Trakai Tourism Information Centre",
+      "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra"
+    ],
+    "description": "The publicly presented Peninsula Castle ruins share a historic site with the former Dominican complex and its museum exhibition.",
+    "description_zh": "立陶宛特拉凯半岛城堡原址遗迹对公众开放，范围内另有原多明我会修道院的宗教艺术展览。",
+    "details": "The publicly presented Peninsula Castle ruins share a historic site with the former Dominican complex and its museum exhibition.",
+    "geography": {
+      "authority_id": "supplement:auth:lt-kvr:22719",
+      "countries": [
+        "LT"
+      ],
+      "note": "Public heritage representative point in Trakai, Vilnius County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The publicly presented Peninsula Castle ruins share a historic site with the former Dominican complex and its museum exhibition.",
+        "id": "auth:lt-kvr:22719:visit",
+        "license": null,
+        "publisher": "Trakai Tourism Information Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 5a72700b25b2a275a51fdbb7ebeaa2ee0f4517ee298f6e0cedc95469dee5cde2.",
+        "title": "Public visitor information for Trakai Peninsula Castle Ruins",
+        "uri": "https://www.trakai-visit.lt/sakralinio-meno-ekspozicija-2/"
+      }
+    },
+    "id": "auth:lt-kvr:22719",
+    "location_precision": null,
+    "names": [
+      "Trakų pusiasalio pilis"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      24.93739842088821,
+      54.64629662701932
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The publicly presented Peninsula Castle ruins share a historic site with the former Dominican complex and its museum exhibition.",
+        "id": "auth:lt-kvr:22719:visit",
+        "license": null,
+        "publisher": "Trakai Tourism Information Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 5a72700b25b2a275a51fdbb7ebeaa2ee0f4517ee298f6e0cedc95469dee5cde2.",
+        "title": "Public visitor information for Trakai Peninsula Castle Ruins",
+        "uri": "https://www.trakai-visit.lt/sakralinio-meno-ekspozicija-2/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Trakų pusiasalio pilies liekanų ir kitų statinių komplekso pilies liekanos. Government WGS84 representative point for the named register unit.",
+        "id": "auth:lt-kvr:22719:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra",
+        "revision": "Retrieved 2026-11-28; SHA-256 7de533d1c13f82239ec40e78884c60a07ee682b741b13ea58d852595aedfd94c.",
+        "title": "KVR heritage point 22719",
+        "uri": "https://osp-sdg.stat.gov.lt/arcgis/rest/services/KPD/kvr_taskai_enriched/FeatureServer/0/query?where=unikalus_kodas+IN+%28%271030%27%2C%272047%27%2C%273234%27%2C%273679%27%2C%275223%27%2C%2722329%27%2C%2722713%27%2C%2722716%27%2C%2722719%27%2C%2722835%27%2C%2723532%27%2C%2724547%27%2C%2729964%27%2C%2739218%27%29&outFields=unikalus_kodas%2Cpavadinimas%2Cklasifikatorius%2Cstatusas%2Cadresas%2Ctipas%2Creiksmingumas%2Cviesas%2Cnuoroda%2Csav_pav&outSR=4326&returnGeometry=true&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.trakai-visit.lt/sakralinio-meno-ekspozicija-2/",
+    "title": "Trakai Peninsula Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public access, exact register record, and authority representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Biržai Region Museum Sėla",
+      "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra"
+    ],
+    "description": "The restored palace of Biržai Castle houses public exhibits of the Biržai Region Museum Sėla.",
+    "description_zh": "立陶宛比尔扎伊城堡的宫殿原址经过修复，现为塞拉地区博物馆的公众展览场所之一。",
+    "details": "The restored palace of Biržai Castle houses public exhibits of the Biržai Region Museum Sėla.",
+    "geography": {
+      "authority_id": "supplement:auth:lt-kvr:22835",
+      "countries": [
+        "LT"
+      ],
+      "note": "Public heritage representative point in Biržai, Panevėžys County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The restored palace of Biržai Castle houses public exhibits of the Biržai Region Museum Sėla.",
+        "id": "auth:lt-kvr:22835:visit",
+        "license": null,
+        "publisher": "Biržai Region Museum Sėla",
+        "revision": "Retrieved 2026-11-28; SHA-256 aae1c70cf08c1688467ebf1b4c872f4ce2c130112301ef86af2eb5f2a02c8462.",
+        "title": "Public visitor information for Biržai Castle Palace",
+        "uri": "https://www.birzumuziejus.lt/visit-us/"
+      }
+    },
+    "id": "auth:lt-kvr:22835",
+    "location_precision": null,
+    "names": [
+      "Biržų pilies rūmai"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      24.75345765569058,
+      56.204869256250966
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The restored palace of Biržai Castle houses public exhibits of the Biržai Region Museum Sėla.",
+        "id": "auth:lt-kvr:22835:visit",
+        "license": null,
+        "publisher": "Biržai Region Museum Sėla",
+        "revision": "Retrieved 2026-11-28; SHA-256 aae1c70cf08c1688467ebf1b4c872f4ce2c130112301ef86af2eb5f2a02c8462.",
+        "title": "Public visitor information for Biržai Castle Palace",
+        "uri": "https://www.birzumuziejus.lt/visit-us/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Biržų pilies rūmai. Government WGS84 representative point for the named register unit.",
+        "id": "auth:lt-kvr:22835:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra",
+        "revision": "Retrieved 2026-11-28; SHA-256 7de533d1c13f82239ec40e78884c60a07ee682b741b13ea58d852595aedfd94c.",
+        "title": "KVR heritage point 22835",
+        "uri": "https://osp-sdg.stat.gov.lt/arcgis/rest/services/KPD/kvr_taskai_enriched/FeatureServer/0/query?where=unikalus_kodas+IN+%28%271030%27%2C%272047%27%2C%273234%27%2C%273679%27%2C%275223%27%2C%2722329%27%2C%2722713%27%2C%2722716%27%2C%2722719%27%2C%2722835%27%2C%2723532%27%2C%2724547%27%2C%2729964%27%2C%2739218%27%29&outFields=unikalus_kodas%2Cpavadinimas%2Cklasifikatorius%2Cstatusas%2Cadresas%2Ctipas%2Creiksmingumas%2Cviesas%2Cnuoroda%2Csav_pav&outSR=4326&returnGeometry=true&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.birzumuziejus.lt/visit-us/",
+    "title": "Biržai Castle Palace",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public access, exact register record, and authority representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "History Museum of Lithuania Minor",
+      "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra"
+    ],
+    "description": "A public exhibition of the Klaipėda Castle Museum is housed in its surviving Friedrich Bastion postern.",
+    "description_zh": "立陶宛克莱佩达城堡博物馆在保存下来的腓特烈堡垒出入口通道内设公众展览。",
+    "details": "A public exhibition of the Klaipėda Castle Museum is housed in its surviving Friedrich Bastion postern.",
+    "geography": {
+      "authority_id": "supplement:auth:lt-kvr:23532",
+      "countries": [
+        "LT"
+      ],
+      "note": "Public heritage representative point in Klaipėda.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "A public exhibition of the Klaipėda Castle Museum is housed in its surviving Friedrich Bastion postern.",
+        "id": "auth:lt-kvr:23532:visit",
+        "license": null,
+        "publisher": "History Museum of Lithuania Minor",
+        "revision": "Retrieved 2026-11-28; SHA-256 96005dd101f180698ad7a40c509ff55e849bbd322729f746e184dad33fe67b33.",
+        "title": "Public visitor information for Klaipėda Castle Museum at Friedrich Bastion",
+        "uri": "https://www.mlimuziejus.lt/en/museum/castle-museum/"
+      }
+    },
+    "id": "auth:lt-kvr:23532",
+    "location_precision": null,
+    "names": [
+      "Klaipėdos pilies muziejus, Fridricho bastionas"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      21.13018834118021,
+      55.70648274827757
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "A public exhibition of the Klaipėda Castle Museum is housed in its surviving Friedrich Bastion postern.",
+        "id": "auth:lt-kvr:23532:visit",
+        "license": null,
+        "publisher": "History Museum of Lithuania Minor",
+        "revision": "Retrieved 2026-11-28; SHA-256 96005dd101f180698ad7a40c509ff55e849bbd322729f746e184dad33fe67b33.",
+        "title": "Public visitor information for Klaipėda Castle Museum at Friedrich Bastion",
+        "uri": "https://www.mlimuziejus.lt/en/museum/castle-museum/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Klaipėdos pilies ir bastionų komplekso princo Fridricho bastionas su poterna. Government WGS84 representative point for the named register unit.",
+        "id": "auth:lt-kvr:23532:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra",
+        "revision": "Retrieved 2026-11-28; SHA-256 7de533d1c13f82239ec40e78884c60a07ee682b741b13ea58d852595aedfd94c.",
+        "title": "KVR heritage point 23532",
+        "uri": "https://osp-sdg.stat.gov.lt/arcgis/rest/services/KPD/kvr_taskai_enriched/FeatureServer/0/query?where=unikalus_kodas+IN+%28%271030%27%2C%272047%27%2C%273234%27%2C%273679%27%2C%275223%27%2C%2722329%27%2C%2722713%27%2C%2722716%27%2C%2722719%27%2C%2722835%27%2C%2723532%27%2C%2724547%27%2C%2729964%27%2C%2739218%27%29&outFields=unikalus_kodas%2Cpavadinimas%2Cklasifikatorius%2Cstatusas%2Cadresas%2Ctipas%2Creiksmingumas%2Cviesas%2Cnuoroda%2Csav_pav&outSR=4326&returnGeometry=true&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.mlimuziejus.lt/en/museum/castle-museum/",
+    "title": "Klaipėda Castle Museum at Friedrich Bastion",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public access, exact register record, and authority representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Trakai Tourism Information Centre",
+      "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra"
+    ],
+    "description": "The central palace of Trakai Island Castle houses the public Trakai History Museum exhibitions on Lake Galvė.",
+    "description_zh": "立陶宛特拉凯岛城堡位于加尔韦湖，修复后的中央宫殿设特拉凯历史博物馆展览。",
+    "details": "The central palace of Trakai Island Castle houses the public Trakai History Museum exhibitions on Lake Galvė.",
+    "geography": {
+      "authority_id": "supplement:auth:lt-kvr:29964",
+      "countries": [
+        "LT"
+      ],
+      "note": "Public heritage representative point in Trakai, Vilnius County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The central palace of Trakai Island Castle houses the public Trakai History Museum exhibitions on Lake Galvė.",
+        "id": "auth:lt-kvr:29964:visit",
+        "license": null,
+        "publisher": "Trakai Tourism Information Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 2930ad8c7de80f88ba16ab31cc56c4b5580b2977e83c6b4adabbdb5cfdf09f41.",
+        "title": "Public visitor information for Trakai Island Castle",
+        "uri": "https://www.trakai-visit.lt/en/trakai-island-castle/"
+      }
+    },
+    "id": "auth:lt-kvr:29964",
+    "location_precision": null,
+    "names": [
+      "Trakų salos pilis"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      24.93405331102181,
+      54.65274721961398
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The central palace of Trakai Island Castle houses the public Trakai History Museum exhibitions on Lake Galvė.",
+        "id": "auth:lt-kvr:29964:visit",
+        "license": null,
+        "publisher": "Trakai Tourism Information Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 2930ad8c7de80f88ba16ab31cc56c4b5580b2977e83c6b4adabbdb5cfdf09f41.",
+        "title": "Public visitor information for Trakai Island Castle",
+        "uri": "https://www.trakai-visit.lt/en/trakai-island-castle/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Trakų salos pilies komplekso rūmai. Government WGS84 representative point for the named register unit.",
+        "id": "auth:lt-kvr:29964:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra",
+        "revision": "Retrieved 2026-11-28; SHA-256 7de533d1c13f82239ec40e78884c60a07ee682b741b13ea58d852595aedfd94c.",
+        "title": "KVR heritage point 29964",
+        "uri": "https://osp-sdg.stat.gov.lt/arcgis/rest/services/KPD/kvr_taskai_enriched/FeatureServer/0/query?where=unikalus_kodas+IN+%28%271030%27%2C%272047%27%2C%273234%27%2C%273679%27%2C%275223%27%2C%2722329%27%2C%2722713%27%2C%2722716%27%2C%2722719%27%2C%2722835%27%2C%2723532%27%2C%2724547%27%2C%2729964%27%2C%2739218%27%29&outFields=unikalus_kodas%2Cpavadinimas%2Cklasifikatorius%2Cstatusas%2Cadresas%2Ctipas%2Creiksmingumas%2Cviesas%2Cnuoroda%2Csav_pav&outSR=4326&returnGeometry=true&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.trakai-visit.lt/en/trakai-island-castle/",
+    "title": "Trakai Island Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public access, exact register record, and authority representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Skuodas Information Centre",
+      "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra"
+    ],
+    "description": "Apuolė Hillfort is a public walking destination at the meeting of the Luoba and Brukis waterways.",
+    "description_zh": "立陶宛斯库奥达斯区阿普奥莱山堡位于卢奥巴河和布鲁基斯溪汇合处，可沿公共步道参观。",
+    "details": "Apuolė Hillfort is a public walking destination at the meeting of the Luoba and Brukis waterways.",
+    "geography": {
+      "authority_id": "supplement:auth:lt-kvr:3234",
+      "countries": [
+        "LT"
+      ],
+      "note": "Public heritage representative point in Apuolė, Klaipėda County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Apuolė Hillfort is a public walking destination at the meeting of the Luoba and Brukis waterways.",
+        "id": "auth:lt-kvr:3234:visit",
+        "license": null,
+        "publisher": "Skuodas Information Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 4b6d1edf80f7353dc309b9177fa27144b01cdc447eefcc72a6ff330673c37ef6.",
+        "title": "Public visitor information for Apuolė Hillfort",
+        "uri": "https://www.infoskuodas.lt/lankytinos-vietos/apuoles-piliakalnis/"
+      }
+    },
+    "id": "auth:lt-kvr:3234",
+    "location_precision": null,
+    "names": [
+      "Apuolės piliakalnis"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      21.678450297530095,
+      56.24644394975685
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Apuolė Hillfort is a public walking destination at the meeting of the Luoba and Brukis waterways.",
+        "id": "auth:lt-kvr:3234:visit",
+        "license": null,
+        "publisher": "Skuodas Information Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 4b6d1edf80f7353dc309b9177fa27144b01cdc447eefcc72a6ff330673c37ef6.",
+        "title": "Public visitor information for Apuolė Hillfort",
+        "uri": "https://www.infoskuodas.lt/lankytinos-vietos/apuoles-piliakalnis/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Apuolės piliakalnio su gyvenviete piliakalnis. Government WGS84 representative point for the named register unit.",
+        "id": "auth:lt-kvr:3234:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra",
+        "revision": "Retrieved 2026-11-28; SHA-256 7de533d1c13f82239ec40e78884c60a07ee682b741b13ea58d852595aedfd94c.",
+        "title": "KVR heritage point 3234",
+        "uri": "https://osp-sdg.stat.gov.lt/arcgis/rest/services/KPD/kvr_taskai_enriched/FeatureServer/0/query?where=unikalus_kodas+IN+%28%271030%27%2C%272047%27%2C%273234%27%2C%273679%27%2C%275223%27%2C%2722329%27%2C%2722713%27%2C%2722716%27%2C%2722719%27%2C%2722835%27%2C%2723532%27%2C%2724547%27%2C%2729964%27%2C%2739218%27%29&outFields=unikalus_kodas%2Cpavadinimas%2Cklasifikatorius%2Cstatusas%2Cadresas%2Ctipas%2Creiksmingumas%2Cviesas%2Cnuoroda%2Csav_pav&outSR=4326&returnGeometry=true&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.infoskuodas.lt/lankytinos-vietos/apuoles-piliakalnis/",
+    "title": "Apuolė Hillfort",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public access, exact register record, and authority representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Kaunas Ninth Fort Museum",
+      "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra"
+    ],
+    "description": "The original fortification houses the current museum's guided exhibition on Kaunas Fortress and its defences.",
+    "description_zh": "立陶宛考纳斯第九堡博物馆在原址半卡波尼耶火力工事内提供导览，介绍要塞及其防御设施。",
+    "details": "The original fortification houses the current museum's guided exhibition on Kaunas Fortress and its defences.",
+    "geography": {
+      "authority_id": "supplement:auth:lt-kvr:39218",
+      "countries": [
+        "LT"
+      ],
+      "note": "Public heritage representative point in Šilainiai, Kaunas.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The original fortification houses the current museum's guided exhibition on Kaunas Fortress and its defences.",
+        "id": "auth:lt-kvr:39218:visit",
+        "license": null,
+        "publisher": "Kaunas Ninth Fort Museum",
+        "revision": "Retrieved 2026-11-28; SHA-256 8389804c2f7954dbec737107b21caa654e004757412ecf5035914f3c4d2db934.",
+        "title": "Public visitor information for Kaunas Ninth Fort Museum at the Half-Caponier",
+        "uri": "https://www.9fortomuziejus.lt/ekskursijos/"
+      }
+    },
+    "id": "auth:lt-kvr:39218",
+    "location_precision": null,
+    "names": [
+      "Kauno IX forto muziejus, puskaponieris"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      23.87152764327646,
+      54.94534250222627
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The original fortification houses the current museum's guided exhibition on Kaunas Fortress and its defences.",
+        "id": "auth:lt-kvr:39218:visit",
+        "license": null,
+        "publisher": "Kaunas Ninth Fort Museum",
+        "revision": "Retrieved 2026-11-28; SHA-256 8389804c2f7954dbec737107b21caa654e004757412ecf5035914f3c4d2db934.",
+        "title": "Public visitor information for Kaunas Ninth Fort Museum at the Half-Caponier",
+        "uri": "https://www.9fortomuziejus.lt/ekskursijos/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Kauno tvirtovės 9-ojo forto ir Memorialo nacizmo aukų atminimui puskaponieris. Government WGS84 representative point for the named register unit.",
+        "id": "auth:lt-kvr:39218:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra",
+        "revision": "Retrieved 2026-11-28; SHA-256 7de533d1c13f82239ec40e78884c60a07ee682b741b13ea58d852595aedfd94c.",
+        "title": "KVR heritage point 39218",
+        "uri": "https://osp-sdg.stat.gov.lt/arcgis/rest/services/KPD/kvr_taskai_enriched/FeatureServer/0/query?where=unikalus_kodas+IN+%28%271030%27%2C%272047%27%2C%273234%27%2C%273679%27%2C%275223%27%2C%2722329%27%2C%2722713%27%2C%2722716%27%2C%2722719%27%2C%2722835%27%2C%2723532%27%2C%2724547%27%2C%2729964%27%2C%2739218%27%29&outFields=unikalus_kodas%2Cpavadinimas%2Cklasifikatorius%2Cstatusas%2Cadresas%2Ctipas%2Creiksmingumas%2Cviesas%2Cnuoroda%2Csav_pav&outSR=4326&returnGeometry=true&f=geojson"
+      }
+    ],
+    "source_uri": "https://www.9fortomuziejus.lt/ekskursijos/",
+    "title": "Kaunas Ninth Fort Museum at the Half-Caponier",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public access, exact register record, and authority representative point.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Kretinga District Tourism Information Centre",
+      "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra"
+    ],
+    "description": "The historic Kartena hillfort is a public archaeology destination across the Minija River from the modern town.",
+    "description_zh": "立陶宛卡尔泰纳山堡位于米尼亚河对岸，与现代城镇分隔，是开放的考古参观点。",
+    "details": "The historic Kartena hillfort is a public archaeology destination across the Minija River from the modern town.",
+    "geography": {
+      "authority_id": "supplement:auth:lt-kvr:5223",
+      "countries": [
+        "LT"
+      ],
+      "note": "Public heritage representative point in Kartena, Klaipėda County.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The historic Kartena hillfort is a public archaeology destination across the Minija River from the modern town.",
+        "id": "auth:lt-kvr:5223:visit",
+        "license": null,
+        "publisher": "Kretinga District Tourism Information Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 9746bd37927f0201588daeafb1b017269f8f0e9b60f2d1a0f08e060216e89c5f.",
+        "title": "Public visitor information for Kartena Hillfort",
+        "uri": "https://visitkretinga.lt/what-to-do/places-to-visit/kartena-hillfort-historical-archeological-complex/"
+      }
+    },
+    "id": "auth:lt-kvr:5223",
+    "location_precision": null,
+    "names": [
+      "Kartenos piliakalnis"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      21.475662860340464,
+      55.910166402600225
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The historic Kartena hillfort is a public archaeology destination across the Minija River from the modern town.",
+        "id": "auth:lt-kvr:5223:visit",
+        "license": null,
+        "publisher": "Kretinga District Tourism Information Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 9746bd37927f0201588daeafb1b017269f8f0e9b60f2d1a0f08e060216e89c5f.",
+        "title": "Public visitor information for Kartena Hillfort",
+        "uri": "https://visitkretinga.lt/what-to-do/places-to-visit/kartena-hillfort-historical-archeological-complex/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Kartenos piliakalnio su gyvenviete piliakalnis, vad. Pilimi. Government WGS84 representative point for the named register unit.",
+        "id": "auth:lt-kvr:5223:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "Kultūros paveldo departamentas prie Kultūros ministerijos and Valstybės duomenų agentūra",
+        "revision": "Retrieved 2026-11-28; SHA-256 7de533d1c13f82239ec40e78884c60a07ee682b741b13ea58d852595aedfd94c.",
+        "title": "KVR heritage point 5223",
+        "uri": "https://osp-sdg.stat.gov.lt/arcgis/rest/services/KPD/kvr_taskai_enriched/FeatureServer/0/query?where=unikalus_kodas+IN+%28%271030%27%2C%272047%27%2C%273234%27%2C%273679%27%2C%275223%27%2C%2722329%27%2C%2722713%27%2C%2722716%27%2C%2722719%27%2C%2722835%27%2C%2723532%27%2C%2724547%27%2C%2729964%27%2C%2739218%27%29&outFields=unikalus_kodas%2Cpavadinimas%2Cklasifikatorius%2Cstatusas%2Cadresas%2Ctipas%2Creiksmingumas%2Cviesas%2Cnuoroda%2Csav_pav&outSR=4326&returnGeometry=true&f=geojson"
+      }
+    ],
+    "source_uri": "https://visitkretinga.lt/what-to-do/places-to-visit/kartena-hillfort-historical-archeological-complex/",
+    "title": "Kartena Hillfort",
+    "types": [
+      "archaeological-site"
+    ]
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "base_count": 4436,
+  "base_ids_sha256": "8b4452dfafa576ad18e454c893e4209f7ca556bde768c70964114645863d51f2",
+  "base_sites_sha256": "2c4b9fd7116f2d3ddc5a6b34bdfcdc8269c9933c73561964663d84455492197f",
+  "cohort_version": "sri-lanka-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 4,
+    "total": 4440
+  },
+  "files": {
+    "sri_lanka_public_review.json": {
+      "sha256": "c70da6586e71c743f37f43dbe8a3c5c8fd4e9ba3ffd771d6ac14a4ba5f3ae3d9"
+    },
+    "sri_lanka_public_sites.json": {
+      "sha256": "0b369ab2c8cf1e7bfc3054a7cada630153a8855a90ec204a1148307c208f4489"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Four Sri Lankan historical sites individually evidenced in the national public visitor report and matched to active structured coordinates."
+}

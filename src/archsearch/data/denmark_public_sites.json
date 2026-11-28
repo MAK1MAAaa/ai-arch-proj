@@ -1,0 +1,1080 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public visitor scope, entity identity, reusable representative point, and independent spatial corroboration.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "VisitDenmark and the Danish Castle Centre",
+      "Wikidata contributors"
+    ],
+    "description": "The Danish Castle Centre presents Vordingborg Castle's ruins and the surviving Goose Tower as part of its public visitor route.",
+    "description_zh": "丹麦城堡中心在沃尔丁堡原址展示城堡遗迹和保存下来的鹅塔，游客可以沿开放路线参观。",
+    "details": "The Danish Castle Centre presents Vordingborg Castle's ruins and the surviving Goose Tower as part of its public visitor route.",
+    "geography": {
+      "authority_id": "supplement:auth:dk-public:Q1014431",
+      "countries": [
+        "DK"
+      ],
+      "note": "Public heritage representative point in Vordingborg, Zealand.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Danish Castle Centre presents Vordingborg Castle's ruins and the surviving Goose Tower as part of its public visitor route.",
+        "id": "auth:dk-public:Q1014431:visit",
+        "license": null,
+        "publisher": "VisitDenmark and the Danish Castle Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 01d45ad28322f89117d30347cae0adc2aae2d6c87ba02ed27fef528c3c524e70.",
+        "title": "Public visitor information for Vordingborg Castle Ruins",
+        "uri": "https://www.visitdenmark.com/denmark/plan-your-trip/the-danish-castle-centre-gdk1078406"
+      }
+    },
+    "id": "auth:dk-public:Q1014431",
+    "location_precision": null,
+    "names": [
+      "Vordingborg Slotsruin"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      11.9117,
+      55.0069
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Danish Castle Centre presents Vordingborg Castle's ruins and the surviving Goose Tower as part of its public visitor route.",
+        "id": "auth:dk-public:Q1014431:visit",
+        "license": null,
+        "publisher": "VisitDenmark and the Danish Castle Centre",
+        "revision": "Retrieved 2026-11-28; SHA-256 01d45ad28322f89117d30347cae0adc2aae2d6c87ba02ed27fef528c3c524e70.",
+        "title": "Public visitor information for Vordingborg Castle Ruins",
+        "uri": "https://www.visitdenmark.com/denmark/plan-your-trip/the-danish-castle-centre-gdk1078406"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 11.9117, latitude 55.0069.",
+        "id": "auth:dk-public:Q1014431:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2561513562; P625 q1014431$AAFF81AE-40B5-46E7-91E7-E16801C5272E.",
+        "title": "Vordingborg Castle Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1014431.json"
+      }
+    ],
+    "source_uri": "https://www.visitdenmark.com/denmark/plan-your-trip/the-danish-castle-centre-gdk1078406",
+    "title": "Vordingborg Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public visitor scope, entity identity, reusable representative point, and independent spatial corroboration.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Danish Nature Agency / Naturstyrelsen",
+      "Wikidata contributors"
+    ],
+    "description": "The publicly managed Hald ruins include the historic fortification with a tower on the peninsula beside Hald Lake.",
+    "description_zh": "丹麦哈尔德湖畔的堡垒原址遗迹与塔楼由丹麦自然管理局维护，可沿公共路线参观。",
+    "details": "The publicly managed Hald ruins include the historic fortification with a tower on the peninsula beside Hald Lake.",
+    "geography": {
+      "authority_id": "supplement:auth:dk-public:Q12315026",
+      "countries": [
+        "DK"
+      ],
+      "note": "Public heritage representative point in Hald Sø, Viborg Municipality.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The publicly managed Hald ruins include the historic fortification with a tower on the peninsula beside Hald Lake.",
+        "id": "auth:dk-public:Q12315026:visit",
+        "license": null,
+        "publisher": "Danish Nature Agency / Naturstyrelsen",
+        "revision": "Retrieved 2026-11-28; SHA-256 0289d05ce8f05692c3f02f526ab548abe602d459856bff85edcacd466a08b351.",
+        "title": "Public visitor information for Hald Castle Ruins",
+        "uri": "https://naturstyrelsen.dk/ny-natur/andre-naturprojekter/de-fem-halder"
+      }
+    },
+    "id": "auth:dk-public:Q12315026",
+    "location_precision": null,
+    "names": [
+      "Hald Ruin"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      9.3558856277626,
+      56.390657030735
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The publicly managed Hald ruins include the historic fortification with a tower on the peninsula beside Hald Lake.",
+        "id": "auth:dk-public:Q12315026:visit",
+        "license": null,
+        "publisher": "Danish Nature Agency / Naturstyrelsen",
+        "revision": "Retrieved 2026-11-28; SHA-256 0289d05ce8f05692c3f02f526ab548abe602d459856bff85edcacd466a08b351.",
+        "title": "Public visitor information for Hald Castle Ruins",
+        "uri": "https://naturstyrelsen.dk/ny-natur/andre-naturprojekter/de-fem-halder"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 9.3558856277626, latitude 56.390657030735.",
+        "id": "auth:dk-public:Q12315026:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2574342528; P625 Q12315026$36ECB633-D5BE-4FDB-99F3-5AA4447EFCAC.",
+        "title": "Hald Castle Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12315026.json"
+      }
+    ],
+    "source_uri": "https://naturstyrelsen.dk/ny-natur/andre-naturprojekter/de-fem-halder",
+    "title": "Hald Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public visitor scope, entity identity, reusable representative point, and independent spatial corroboration.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Museum Skanderborg",
+      "Wikidata contributors"
+    ],
+    "description": "Museum Skanderborg operates seasonal public visits through the surviving Øm Abbey ruins and its interpretation park.",
+    "description_zh": "丹麦厄姆修道院保留原址遗迹，斯坎讷堡博物馆按季节开放遗址公园。",
+    "details": "Museum Skanderborg operates seasonal public visits through the surviving Øm Abbey ruins and its interpretation park.",
+    "geography": {
+      "authority_id": "supplement:auth:dk-public:Q1776356",
+      "countries": [
+        "DK"
+      ],
+      "note": "Public heritage representative point in Ry, Skanderborg Municipality.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Museum Skanderborg operates seasonal public visits through the surviving Øm Abbey ruins and its interpretation park.",
+        "id": "auth:dk-public:Q1776356:visit",
+        "license": null,
+        "publisher": "Museum Skanderborg",
+        "revision": "Retrieved 2026-11-28; SHA-256 3738489ba077293c395c58bdfb36702f3806dafbbccbcef99050b69de3879b78.",
+        "title": "Public visitor information for Øm Abbey Ruins",
+        "uri": "https://museumskanderborg.dk/omkloster/planlaeg-dit-besoeg/"
+      }
+    },
+    "id": "auth:dk-public:Q1776356",
+    "location_precision": null,
+    "names": [
+      "Øm Kloster"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      9.7494,
+      56.0523
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Museum Skanderborg operates seasonal public visits through the surviving Øm Abbey ruins and its interpretation park.",
+        "id": "auth:dk-public:Q1776356:visit",
+        "license": null,
+        "publisher": "Museum Skanderborg",
+        "revision": "Retrieved 2026-11-28; SHA-256 3738489ba077293c395c58bdfb36702f3806dafbbccbcef99050b69de3879b78.",
+        "title": "Public visitor information for Øm Abbey Ruins",
+        "uri": "https://museumskanderborg.dk/omkloster/planlaeg-dit-besoeg/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 9.7494, latitude 56.0523.",
+        "id": "auth:dk-public:Q1776356:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2569866619; P625 Q1776356$021D6FAF-924D-43CA-BCC0-527744D5C175.",
+        "title": "Øm Abbey Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1776356.json"
+      }
+    ],
+    "source_uri": "https://museumskanderborg.dk/omkloster/planlaeg-dit-besoeg/",
+    "title": "Øm Abbey Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public visitor scope, entity identity, reusable representative point, and independent spatial corroboration.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "The Royal Danish Collection",
+      "Wikidata contributors"
+    ],
+    "description": "Rosenborg Castle opens its historic rooms and royal collection to visitors on the museum's published schedule.",
+    "description_zh": "丹麦哥本哈根罗森堡城堡按皇家收藏机构公布的安排开放历史馆室与馆藏。",
+    "details": "Rosenborg Castle opens its historic rooms and royal collection to visitors on the museum's published schedule.",
+    "geography": {
+      "authority_id": "supplement:auth:dk-public:Q206101",
+      "countries": [
+        "DK"
+      ],
+      "note": "Public heritage representative point in Copenhagen.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Rosenborg Castle opens its historic rooms and royal collection to visitors on the museum's published schedule.",
+        "id": "auth:dk-public:Q206101:visit",
+        "license": null,
+        "publisher": "The Royal Danish Collection",
+        "revision": "Retrieved 2026-11-28; SHA-256 b271d18ee4e5b0c9b9de6f23131391f887a1d1cfd47c67736f08bdc3fd4bd236.",
+        "title": "Public visitor information for Rosenborg Castle",
+        "uri": "https://denkongeligesamling.dk/en/rosenborg-castle/plan-your-visit/opening-hours/"
+      }
+    },
+    "id": "auth:dk-public:Q206101",
+    "location_precision": null,
+    "names": [
+      "Rosenborg Slot"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      12.57748,
+      55.68566
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Rosenborg Castle opens its historic rooms and royal collection to visitors on the museum's published schedule.",
+        "id": "auth:dk-public:Q206101:visit",
+        "license": null,
+        "publisher": "The Royal Danish Collection",
+        "revision": "Retrieved 2026-11-28; SHA-256 b271d18ee4e5b0c9b9de6f23131391f887a1d1cfd47c67736f08bdc3fd4bd236.",
+        "title": "Public visitor information for Rosenborg Castle",
+        "uri": "https://denkongeligesamling.dk/en/rosenborg-castle/plan-your-visit/opening-hours/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 12.57748, latitude 55.68566.",
+        "id": "auth:dk-public:Q206101:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2560618453; P625 q206101$E1E4C072-FD98-4088-97D7-D5219980860C.",
+        "title": "Rosenborg Castle Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q206101.json"
+      }
+    ],
+    "source_uri": "https://denkongeligesamling.dk/en/rosenborg-castle/plan-your-visit/opening-hours/",
+    "title": "Rosenborg Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public visitor scope, entity identity, reusable representative point, and independent spatial corroboration.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "The Royal Danish Collection",
+      "Wikidata contributors"
+    ],
+    "description": "The restored royal castle of Koldinghus houses public collections and exhibitions operated by the Royal Danish Collection.",
+    "description_zh": "丹麦科灵胡斯皇家城堡在原址修复，现由丹麦皇家收藏机构运营公众展览。",
+    "details": "The restored royal castle of Koldinghus houses public collections and exhibitions operated by the Royal Danish Collection.",
+    "geography": {
+      "authority_id": "supplement:auth:dk-public:Q3347392",
+      "countries": [
+        "DK"
+      ],
+      "note": "Public heritage representative point in Kolding, Southern Denmark.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The restored royal castle of Koldinghus houses public collections and exhibitions operated by the Royal Danish Collection.",
+        "id": "auth:dk-public:Q3347392:visit",
+        "license": null,
+        "publisher": "The Royal Danish Collection",
+        "revision": "Retrieved 2026-11-28; SHA-256 5c45c5752f39b76e371f4ceca08199a53e224450fee215b8a703225ca65e9875.",
+        "title": "Public visitor information for Koldinghus Castle",
+        "uri": "https://denkongeligesamling.dk/en/koldinghus/"
+      }
+    },
+    "id": "auth:dk-public:Q3347392",
+    "location_precision": null,
+    "names": [
+      "Koldinghus"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      9.474167,
+      55.491667
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The restored royal castle of Koldinghus houses public collections and exhibitions operated by the Royal Danish Collection.",
+        "id": "auth:dk-public:Q3347392:visit",
+        "license": null,
+        "publisher": "The Royal Danish Collection",
+        "revision": "Retrieved 2026-11-28; SHA-256 5c45c5752f39b76e371f4ceca08199a53e224450fee215b8a703225ca65e9875.",
+        "title": "Public visitor information for Koldinghus Castle",
+        "uri": "https://denkongeligesamling.dk/en/koldinghus/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 9.474167, latitude 55.491667.",
+        "id": "auth:dk-public:Q3347392:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2561449119; P625 q3347392$A8A14717-B140-4A84-9976-8D6666B8D66D.",
+        "title": "Koldinghus Castle Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3347392.json"
+      }
+    ],
+    "source_uri": "https://denkongeligesamling.dk/en/koldinghus/",
+    "title": "Koldinghus Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public visitor scope, entity identity, reusable representative point, and independent spatial corroboration.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Park Kongernes Nordsjælland",
+      "Wikidata contributors"
+    ],
+    "description": "The Danish national park lists the surviving Gurre Castle ruins near the southwestern end of Lake Gurre.",
+    "description_zh": "丹麦古雷城堡遗址位于古雷湖西南端，列入国家公园的开放参观点。",
+    "details": "The Danish national park lists the surviving Gurre Castle ruins near the southwestern end of Lake Gurre.",
+    "geography": {
+      "authority_id": "supplement:auth:dk-public:Q3431547",
+      "countries": [
+        "DK"
+      ],
+      "note": "Public heritage representative point in Gurre, Helsingør Municipality.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Danish national park lists the surviving Gurre Castle ruins near the southwestern end of Lake Gurre.",
+        "id": "auth:dk-public:Q3431547:visit",
+        "license": null,
+        "publisher": "National Park Kongernes Nordsjælland",
+        "revision": "Retrieved 2026-11-28; SHA-256 6bb1ddc73091c23103d0d4ae54b148576b8737ce80d3580ebf314625b7739150.",
+        "title": "Public visitor information for Gurre Castle Ruins",
+        "uri": "https://eng.nationalparkkongernesnordsjaelland.dk/discover-destinations/ruins"
+      }
+    },
+    "id": "auth:dk-public:Q3431547",
+    "location_precision": null,
+    "names": [
+      "Gurre Slotsruin"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      12.505245656744,
+      56.019498736571
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Danish national park lists the surviving Gurre Castle ruins near the southwestern end of Lake Gurre.",
+        "id": "auth:dk-public:Q3431547:visit",
+        "license": null,
+        "publisher": "National Park Kongernes Nordsjælland",
+        "revision": "Retrieved 2026-11-28; SHA-256 6bb1ddc73091c23103d0d4ae54b148576b8737ce80d3580ebf314625b7739150.",
+        "title": "Public visitor information for Gurre Castle Ruins",
+        "uri": "https://eng.nationalparkkongernesnordsjaelland.dk/discover-destinations/ruins"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 12.505245656744, latitude 56.019498736571.",
+        "id": "auth:dk-public:Q3431547:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2574342457; P625 Q3431547$6321E5C6-13FA-44EC-8B03-36E9986E04D9.",
+        "title": "Gurre Castle Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3431547.json"
+      }
+    ],
+    "source_uri": "https://eng.nationalparkkongernesnordsjaelland.dk/discover-destinations/ruins",
+    "title": "Gurre Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public visitor scope, entity identity, reusable representative point, and independent spatial corroboration.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "The Royal Danish Collection",
+      "Wikidata contributors"
+    ],
+    "description": "The public underground exhibition preserves ruins of Absalon's Castle and the later Copenhagen Castle beneath Christiansborg Palace.",
+    "description_zh": "丹麦克里斯蒂安堡宫下方的公众展区保留阿布萨隆城堡及后期哥本哈根城堡的遗迹。",
+    "details": "The public underground exhibition preserves ruins of Absalon's Castle and the later Copenhagen Castle beneath Christiansborg Palace.",
+    "geography": {
+      "authority_id": "supplement:auth:dk-public:Q4585653",
+      "countries": [
+        "DK"
+      ],
+      "note": "Public heritage representative point in Slotsholmen, Copenhagen.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The public underground exhibition preserves ruins of Absalon's Castle and the later Copenhagen Castle beneath Christiansborg Palace.",
+        "id": "auth:dk-public:Q4585653:visit",
+        "license": null,
+        "publisher": "The Royal Danish Collection",
+        "revision": "Retrieved 2026-11-28; SHA-256 3563aa7f40e25fcbd3129ed53b8ec10166b8255b59ac4d37e1d141c20eaab076.",
+        "title": "Public visitor information for Absalon's Castle Ruins under Christiansborg",
+        "uri": "https://denkongeligesamling.dk/en/christiansborg-palace/interior-and-objects/the-ruins-under-christiansborg-palace/"
+      }
+    },
+    "id": "auth:dk-public:Q4585653",
+    "location_precision": null,
+    "names": [
+      "Absalons Borg under Christiansborg"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      12.58055556,
+      55.67638889
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The public underground exhibition preserves ruins of Absalon's Castle and the later Copenhagen Castle beneath Christiansborg Palace.",
+        "id": "auth:dk-public:Q4585653:visit",
+        "license": null,
+        "publisher": "The Royal Danish Collection",
+        "revision": "Retrieved 2026-11-28; SHA-256 3563aa7f40e25fcbd3129ed53b8ec10166b8255b59ac4d37e1d141c20eaab076.",
+        "title": "Public visitor information for Absalon's Castle Ruins under Christiansborg",
+        "uri": "https://denkongeligesamling.dk/en/christiansborg-palace/interior-and-objects/the-ruins-under-christiansborg-palace/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 12.58055556, latitude 55.67638889.",
+        "id": "auth:dk-public:Q4585653:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2574342462; P625 Q4585653$63A1A4CE-60E4-448A-9328-BEA8D3935CA4.",
+        "title": "Absalon's Castle Ruins under Christiansborg Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4585653.json"
+      }
+    ],
+    "source_uri": "https://denkongeligesamling.dk/en/christiansborg-palace/interior-and-objects/the-ruins-under-christiansborg-palace/",
+    "title": "Absalon's Castle Ruins under Christiansborg",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public visitor scope, entity identity, reusable representative point, and independent spatial corroboration.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Museum Sønderjylland",
+      "Wikidata contributors"
+    ],
+    "description": "The public museum in Sønderborg Castle presents the history of the Danish border region in the original castle precinct.",
+    "description_zh": "丹麦森讷堡城堡原址的博物馆对公众开放，展示丹麦边境地区的历史。",
+    "details": "The public museum in Sønderborg Castle presents the history of the Danish border region in the original castle precinct.",
+    "geography": {
+      "authority_id": "supplement:auth:dk-public:Q473434",
+      "countries": [
+        "DK"
+      ],
+      "note": "Public heritage representative point in Sønderborg, Southern Denmark.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The public museum in Sønderborg Castle presents the history of the Danish border region in the original castle precinct.",
+        "id": "auth:dk-public:Q473434:visit",
+        "license": null,
+        "publisher": "Museum Sønderjylland",
+        "revision": "Retrieved 2026-11-28; SHA-256 c2e394fe0623e1c513a19ed06bc9cbe81e8683ef2eb47029290cf39b04fe6ea0.",
+        "title": "Public visitor information for Sønderborg Castle",
+        "uri": "https://msj.dk/en/soenderborg-castle/"
+      }
+    },
+    "id": "auth:dk-public:Q473434",
+    "location_precision": null,
+    "names": [
+      "Sønderborg Slot"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      9.7836111111111,
+      54.906944444444
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The public museum in Sønderborg Castle presents the history of the Danish border region in the original castle precinct.",
+        "id": "auth:dk-public:Q473434:visit",
+        "license": null,
+        "publisher": "Museum Sønderjylland",
+        "revision": "Retrieved 2026-11-28; SHA-256 c2e394fe0623e1c513a19ed06bc9cbe81e8683ef2eb47029290cf39b04fe6ea0.",
+        "title": "Public visitor information for Sønderborg Castle",
+        "uri": "https://msj.dk/en/soenderborg-castle/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 9.7836111111111, latitude 54.906944444444.",
+        "id": "auth:dk-public:Q473434:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2574342406; P625 q473434$EFA3E2E2-E528-43AF-8F63-DC23AE21935D.",
+        "title": "Sønderborg Castle Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q473434.json"
+      }
+    ],
+    "source_uri": "https://msj.dk/en/soenderborg-castle/",
+    "title": "Sønderborg Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public visitor scope, entity identity, reusable representative point, and independent spatial corroboration.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Park Kongernes Nordsjælland",
+      "Wikidata contributors"
+    ],
+    "description": "The open-air ruins at Asserbo include remains of a historic monastic property later developed as a fortified estate.",
+    "description_zh": "丹麦阿瑟博现存露天遗迹曾为修道院地产，后发展为设防庄园。",
+    "details": "The open-air ruins at Asserbo include remains of a historic monastic property later developed as a fortified estate.",
+    "geography": {
+      "authority_id": "supplement:auth:dk-public:Q4808744",
+      "countries": [
+        "DK"
+      ],
+      "note": "Public heritage representative point in Tisvilde Hegn, North Zealand.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The open-air ruins at Asserbo include remains of a historic monastic property later developed as a fortified estate.",
+        "id": "auth:dk-public:Q4808744:visit",
+        "license": null,
+        "publisher": "National Park Kongernes Nordsjælland",
+        "revision": "Retrieved 2026-11-28; SHA-256 6bb1ddc73091c23103d0d4ae54b148576b8737ce80d3580ebf314625b7739150.",
+        "title": "Public visitor information for Asserbo Castle and Charterhouse Ruins",
+        "uri": "https://eng.nationalparkkongernesnordsjaelland.dk/discover-destinations/ruins"
+      }
+    },
+    "id": "auth:dk-public:Q4808744",
+    "location_precision": null,
+    "names": [
+      "Asserbo Slotsruin"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      12.052804149136,
+      56.024036786497
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The open-air ruins at Asserbo include remains of a historic monastic property later developed as a fortified estate.",
+        "id": "auth:dk-public:Q4808744:visit",
+        "license": null,
+        "publisher": "National Park Kongernes Nordsjælland",
+        "revision": "Retrieved 2026-11-28; SHA-256 6bb1ddc73091c23103d0d4ae54b148576b8737ce80d3580ebf314625b7739150.",
+        "title": "Public visitor information for Asserbo Castle and Charterhouse Ruins",
+        "uri": "https://eng.nationalparkkongernesnordsjaelland.dk/discover-destinations/ruins"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 12.052804149136, latitude 56.024036786497.",
+        "id": "auth:dk-public:Q4808744:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2561098461; P625 Q4808744$85EB519F-CD41-41E1-82B4-7B6F6EEF6B36.",
+        "title": "Asserbo Castle and Charterhouse Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4808744.json"
+      }
+    ],
+    "source_uri": "https://eng.nationalparkkongernesnordsjaelland.dk/discover-destinations/ruins",
+    "title": "Asserbo Castle and Charterhouse Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public visitor scope, entity identity, reusable representative point, and independent spatial corroboration.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Danish Nature Agency / Naturstyrelsen",
+      "Wikidata contributors"
+    ],
+    "description": "The Danish Nature Agency publishes public walking access to the ruins of Søborg Castle beside the restored lake.",
+    "description_zh": "丹麦索堡城堡遗址靠近恢复后的湖泊，丹麦自然管理局公布了公共步行路线。",
+    "details": "The Danish Nature Agency publishes public walking access to the ruins of Søborg Castle beside the restored lake.",
+    "geography": {
+      "authority_id": "supplement:auth:dk-public:Q4994552",
+      "countries": [
+        "DK"
+      ],
+      "note": "Public heritage representative point in Søborg, Gribskov Municipality.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Danish Nature Agency publishes public walking access to the ruins of Søborg Castle beside the restored lake.",
+        "id": "auth:dk-public:Q4994552:visit",
+        "license": null,
+        "publisher": "Danish Nature Agency / Naturstyrelsen",
+        "revision": "Retrieved 2026-11-28; SHA-256 1bd93be39e622bd08cd3af01b1ce8db8254de1d9ebbddf71b46c35472a48fca1.",
+        "title": "Public visitor information for Søborg Castle Ruins",
+        "uri": "https://naturstyrelsen.dk/find-et-naturomraade/naturguider/hovedstaden-og-nordsjaelland/soeborg-soe/praktisk"
+      }
+    },
+    "id": "auth:dk-public:Q4994552",
+    "location_precision": null,
+    "names": [
+      "Søborg Slotsruin"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      12.310165035894,
+      56.090775621133
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Danish Nature Agency publishes public walking access to the ruins of Søborg Castle beside the restored lake.",
+        "id": "auth:dk-public:Q4994552:visit",
+        "license": null,
+        "publisher": "Danish Nature Agency / Naturstyrelsen",
+        "revision": "Retrieved 2026-11-28; SHA-256 1bd93be39e622bd08cd3af01b1ce8db8254de1d9ebbddf71b46c35472a48fca1.",
+        "title": "Public visitor information for Søborg Castle Ruins",
+        "uri": "https://naturstyrelsen.dk/find-et-naturomraade/naturguider/hovedstaden-og-nordsjaelland/soeborg-soe/praktisk"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 12.310165035894, latitude 56.090775621133.",
+        "id": "auth:dk-public:Q4994552:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2574342463; P625 Q4994552$D6E85C29-2D26-4E11-92AA-C520EF108556.",
+        "title": "Søborg Castle Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4994552.json"
+      }
+    ],
+    "source_uri": "https://naturstyrelsen.dk/find-et-naturomraade/naturguider/hovedstaden-og-nordsjaelland/soeborg-soe/praktisk",
+    "title": "Søborg Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public visitor scope, entity identity, reusable representative point, and independent spatial corroboration.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Museum Salling",
+      "Wikidata contributors"
+    ],
+    "description": "Museum Salling admits visitors to the historic Spøttrup Castle on a seasonal ticketed schedule.",
+    "description_zh": "丹麦斯珀楚普城堡的原址由萨灵博物馆运营，按季节和售票安排开放。",
+    "details": "Museum Salling admits visitors to the historic Spøttrup Castle on a seasonal ticketed schedule.",
+    "geography": {
+      "authority_id": "supplement:auth:dk-public:Q643731",
+      "countries": [
+        "DK"
+      ],
+      "note": "Public heritage representative point in Spøttrup, Central Denmark.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Museum Salling admits visitors to the historic Spøttrup Castle on a seasonal ticketed schedule.",
+        "id": "auth:dk-public:Q643731:visit",
+        "license": null,
+        "publisher": "Museum Salling",
+        "revision": "Retrieved 2026-11-28; SHA-256 d5496478b2f4d7da46cf3fff649382482e48af090aa6b8324b44d3d05d0696e0.",
+        "title": "Public visitor information for Spøttrup Castle",
+        "uri": "https://www.en.spottrupborg.dk/opening-hours-and-prices/"
+      }
+    },
+    "id": "auth:dk-public:Q643731",
+    "location_precision": null,
+    "names": [
+      "Spøttrup Borg"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      8.78269444,
+      56.63961111
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Museum Salling admits visitors to the historic Spøttrup Castle on a seasonal ticketed schedule.",
+        "id": "auth:dk-public:Q643731:visit",
+        "license": null,
+        "publisher": "Museum Salling",
+        "revision": "Retrieved 2026-11-28; SHA-256 d5496478b2f4d7da46cf3fff649382482e48af090aa6b8324b44d3d05d0696e0.",
+        "title": "Public visitor information for Spøttrup Castle",
+        "uri": "https://www.en.spottrupborg.dk/opening-hours-and-prices/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 8.78269444, latitude 56.63961111.",
+        "id": "auth:dk-public:Q643731:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2574342410; P625 Q643731$F7064EF1-D794-4AA7-8AD6-C667E7755944.",
+        "title": "Spøttrup Castle Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q643731.json"
+      }
+    ],
+    "source_uri": "https://www.en.spottrupborg.dk/opening-hours-and-prices/",
+    "title": "Spøttrup Castle",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public visitor scope, entity identity, reusable representative point, and independent spatial corroboration.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Danish Nature Agency / Naturstyrelsen",
+      "Wikidata contributors"
+    ],
+    "description": "The hilltop ruins of Hammershus on Bornholm are open to visitors and interpreted by the Danish Nature Agency.",
+    "description_zh": "丹麦博恩霍尔姆岛的哈默斯胡斯城堡山顶遗址向公众开放，由丹麦自然管理局负责介绍与维护。",
+    "details": "The hilltop ruins of Hammershus on Bornholm are open to visitors and interpreted by the Danish Nature Agency.",
+    "geography": {
+      "authority_id": "supplement:auth:dk-public:Q700384",
+      "countries": [
+        "DK"
+      ],
+      "note": "Public heritage representative point in Allinge, Bornholm.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The hilltop ruins of Hammershus on Bornholm are open to visitors and interpreted by the Danish Nature Agency.",
+        "id": "auth:dk-public:Q700384:visit",
+        "license": null,
+        "publisher": "Danish Nature Agency / Naturstyrelsen",
+        "revision": "Retrieved 2026-11-28; SHA-256 e6166bf2a777a951521df442c08a366eee87801f11a98255c3647eeecbb854de.",
+        "title": "Public visitor information for Hammershus Castle Ruins",
+        "uri": "https://naturstyrelsen.dk/find-et-naturomraade/naturguider/bornholm/hammershus/praktisk"
+      }
+    },
+    "id": "auth:dk-public:Q700384",
+    "location_precision": null,
+    "names": [
+      "Hammershus Slotsruin"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      14.755814574273,
+      55.271150759805
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The hilltop ruins of Hammershus on Bornholm are open to visitors and interpreted by the Danish Nature Agency.",
+        "id": "auth:dk-public:Q700384:visit",
+        "license": null,
+        "publisher": "Danish Nature Agency / Naturstyrelsen",
+        "revision": "Retrieved 2026-11-28; SHA-256 e6166bf2a777a951521df442c08a366eee87801f11a98255c3647eeecbb854de.",
+        "title": "Public visitor information for Hammershus Castle Ruins",
+        "uri": "https://naturstyrelsen.dk/find-et-naturomraade/naturguider/bornholm/hammershus/praktisk"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 14.755814574273, latitude 55.271150759805.",
+        "id": "auth:dk-public:Q700384:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2574342412; P625 Q700384$34CED9A3-DE49-40C9-B39B-4968FD6AE3DC.",
+        "title": "Hammershus Castle Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q700384.json"
+      }
+    ],
+    "source_uri": "https://naturstyrelsen.dk/find-et-naturomraade/naturguider/bornholm/hammershus/praktisk",
+    "title": "Hammershus Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public visitor scope, entity identity, reusable representative point, and independent spatial corroboration.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Park Mols Bjerge",
+      "Wikidata contributors"
+    ],
+    "description": "A historic causeway leads to the publicly visitable ruins of Kalø Castle on its peninsula.",
+    "description_zh": "丹麦卡洛城堡的原址遗迹位于半岛，由古堤道连接，可沿公共路线参观。",
+    "details": "A historic causeway leads to the publicly visitable ruins of Kalø Castle on its peninsula.",
+    "geography": {
+      "authority_id": "supplement:auth:dk-public:Q753714",
+      "countries": [
+        "DK"
+      ],
+      "note": "Public heritage representative point in Rønde, Central Denmark.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "A historic causeway leads to the publicly visitable ruins of Kalø Castle on its peninsula.",
+        "id": "auth:dk-public:Q753714:visit",
+        "license": null,
+        "publisher": "National Park Mols Bjerge",
+        "revision": "Retrieved 2026-11-28; SHA-256 d5e51d82fff7b8571a7cc33b0129634e70cb481b83120c60c8caf5dcab060392.",
+        "title": "Public visitor information for Kalø Castle Ruins",
+        "uri": "https://eng.nationalparkmolsbjerge.dk/experience-the-national-park/kaloe"
+      }
+    },
+    "id": "auth:dk-public:Q753714",
+    "location_precision": null,
+    "names": [
+      "Kalø Slotsruin"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      10.467071163486,
+      56.274521527161
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "A historic causeway leads to the publicly visitable ruins of Kalø Castle on its peninsula.",
+        "id": "auth:dk-public:Q753714:visit",
+        "license": null,
+        "publisher": "National Park Mols Bjerge",
+        "revision": "Retrieved 2026-11-28; SHA-256 d5e51d82fff7b8571a7cc33b0129634e70cb481b83120c60c8caf5dcab060392.",
+        "title": "Public visitor information for Kalø Castle Ruins",
+        "uri": "https://eng.nationalparkmolsbjerge.dk/experience-the-national-park/kaloe"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 10.467071163486, latitude 56.274521527161.",
+        "id": "auth:dk-public:Q753714:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2574342414; P625 Q753714$9F4E74C8-D8F4-4711-B3BE-4D2157D48285.",
+        "title": "Kalø Castle Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q753714.json"
+      }
+    ],
+    "source_uri": "https://eng.nationalparkmolsbjerge.dk/experience-the-national-park/kaloe",
+    "title": "Kalø Castle Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed public visitor scope, entity identity, reusable representative point, and independent spatial corroboration.",
+      "note": "No dated phase was assessed for this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "VisitDenmark / Destination Vadehavskysten",
+      "Wikidata contributors"
+    ],
+    "description": "The public castle mound at Ribe retains the moated site and remains of the former royal Riberhus Castle.",
+    "description_zh": "丹麦里伯的里伯胡斯城堡遗址保留城堡基址和护城沟，可在开放的遗址丘上参观。",
+    "details": "The public castle mound at Ribe retains the moated site and remains of the former royal Riberhus Castle.",
+    "geography": {
+      "authority_id": "supplement:auth:dk-public:Q825076",
+      "countries": [
+        "DK"
+      ],
+      "note": "Public heritage representative point in Ribe, Esbjerg Municipality.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The public castle mound at Ribe retains the moated site and remains of the former royal Riberhus Castle.",
+        "id": "auth:dk-public:Q825076:visit",
+        "license": null,
+        "publisher": "VisitDenmark / Destination Vadehavskysten",
+        "revision": "Retrieved 2026-11-28; SHA-256 fd8f8490473bb2af7212aa955940039f6b4ae43162e096d2579ff8fc149c3385.",
+        "title": "Public visitor information for Riberhus Castle Mound and Ruins",
+        "uri": "https://www.visitdenmark.dk/danmark/explore/riberhus-slotsruin-tidligere-kongeslot-i-ribe-gdk646835"
+      }
+    },
+    "id": "auth:dk-public:Q825076",
+    "location_precision": null,
+    "names": [
+      "Riberhus Slotsbanke"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      8.7565550652738,
+      55.330872789203
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The public castle mound at Ribe retains the moated site and remains of the former royal Riberhus Castle.",
+        "id": "auth:dk-public:Q825076:visit",
+        "license": null,
+        "publisher": "VisitDenmark / Destination Vadehavskysten",
+        "revision": "Retrieved 2026-11-28; SHA-256 fd8f8490473bb2af7212aa955940039f6b4ae43162e096d2579ff8fc149c3385.",
+        "title": "Public visitor information for Riberhus Castle Mound and Ruins",
+        "uri": "https://www.visitdenmark.dk/danmark/explore/riberhus-slotsruin-tidligere-kongeslot-i-ribe-gdk646835"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 8.7565550652738, latitude 55.330872789203.",
+        "id": "auth:dk-public:Q825076:coordinate",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2574342416; P625 Q825076$B98B5ABA-88B1-401E-8E66-B6E485F19CB5.",
+        "title": "Riberhus Castle Mound and Ruins Wikidata representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q825076.json"
+      }
+    ],
+    "source_uri": "https://www.visitdenmark.dk/danmark/explore/riberhus-slotsruin-tidligere-kongeslot-i-ribe-gdk646835",
+    "title": "Riberhus Castle Mound and Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  }
+]

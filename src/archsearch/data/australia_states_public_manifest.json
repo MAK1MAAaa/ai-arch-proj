@@ -1,0 +1,22 @@
+{
+  "base_count": 5286,
+  "base_ids_sha256": "9b7e476b4e6a50a0b2560ef719b2073411fe231cddd51b95ba335b148807f2ee",
+  "base_sites_sha256": "d9fcd6d70f3bb05918409c7685f97b01c1f5d5f6bdbdc4409fd838a42127cb0d",
+  "cohort_version": "australia-states-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 23,
+    "total": 5309
+  },
+  "files": {
+    "australia_states_public_review.json": {
+      "sha256": "2e487c2d906f67ba67331531e6ae152b2ba3b95583747869a0391f4976dfbd5c"
+    },
+    "australia_states_public_sites.json": {
+      "sha256": "f870368a6fdca60b34dd6ff97ad2b20d296c350cee23555455013ce46cf44df3"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Twenty-three documented historic places in South Australia, New South Wales, Queensland, Victoria, Tasmania and the Australian Capital Territory, using separately licensed original coordinates and matching public visitor scope."
+}

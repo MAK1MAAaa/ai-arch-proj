@@ -1,0 +1,2403 @@
+{
+  "base_count": 4713,
+  "base_ids_sha256": "9733731365e2e917ad84c1c9a8337aee8cb3dfdb1b2cb09182e0c077654d11a6",
+  "base_sites_sha256": "88eaba41b68c59ac62ff94d459c9e47c632da82762e93ee59451ec2a2ca72f19",
+  "cohort_version": "japan-public-heritage-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          136.25166666667,
+          35.276388888889
+        ],
+        "precision": null,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1012374.json",
+        "statement_id": "q1012374$AF4AEBE2-F324-4807-B7A4-4EAF9D198051"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original Hikone Castle property and surviving historic keep, within the public area listed by the site operator.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Hikone Castle",
+          "Wikidata contributors"
+        ],
+        "description": "The original Hikone Castle property and surviving historic keep, within the public area listed by the site operator.",
+        "description_zh": "滋贺县彦根城及现存历史天守，记录范围为管理方公布的公众参观区。",
+        "details": "The original Hikone Castle property and surviving historic keep, within the public area listed by the site operator.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q1012374",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Shiga Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The original Hikone Castle property and surviving historic keep, within the public area listed by the site operator.",
+            "id": "auth:jp-public:Q1012374:public-0",
+            "license": null,
+            "publisher": "Hikone Castle",
+            "revision": "Retrieved 2026-11-28; SHA-256 08a1689c931b818c4ff68de22ae1011295ebdec7ddd97daecc213649600c75a3.",
+            "title": "Hikone Castle official place and public access record",
+            "uri": "https://hikonecastle.com/infomation.html"
+          }
+        },
+        "id": "auth:jp-public:Q1012374",
+        "location_precision": null,
+        "names": [
+          "彦根城",
+          "彦根城"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          136.25166666667,
+          35.276388888889
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The original Hikone Castle property and surviving historic keep, within the public area listed by the site operator.",
+            "id": "auth:jp-public:Q1012374:public-0",
+            "license": null,
+            "publisher": "Hikone Castle",
+            "revision": "Retrieved 2026-11-28; SHA-256 08a1689c931b818c4ff68de22ae1011295ebdec7ddd97daecc213649600c75a3.",
+            "title": "Hikone Castle official place and public access record",
+            "uri": "https://hikonecastle.com/infomation.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 136.25166666667, latitude 35.276388888889.",
+            "id": "wikidata:Q1012374",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2538673891, statement q1012374$AF4AEBE2-F324-4807-B7A4-4EAF9D198051.",
+            "title": "Hikone Castle representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1012374.json"
+          }
+        ],
+        "source_uri": "https://hikonecastle.com/infomation.html",
+        "title": "Hikone Castle",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1012374-public.html",
+          "sha256": "08a1689c931b818c4ff68de22ae1011295ebdec7ddd97daecc213649600c75a3",
+          "uri": "https://hikonecastle.com/infomation.html"
+        },
+        {
+          "filename": "Q1012374.json",
+          "sha256": "edf61baf433a0b1438001ffc2912b78af2fea12590ce28f413335d28728a1e36",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1012374.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          130.384,
+          33.325
+        ],
+        "precision": 0.010750957185085,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1049645.json",
+        "statement_id": "Q1049645$76884358-F65D-4FB5-96E4-5D7CE715512C"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "A Yayoi settlement archaeological landscape preserved in a public historical park, including visitor areas with reconstructed structures.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Yoshinogari Historical Park",
+          "Wikidata contributors"
+        ],
+        "description": "A Yayoi settlement archaeological landscape preserved in a public historical park, including visitor areas with reconstructed structures.",
+        "description_zh": "佐贺县弥生时代聚落遗址，现设公开历史公园，展示考古发现及复原建筑。",
+        "details": "A Yayoi settlement archaeological landscape preserved in a public historical park, including visitor areas with reconstructed structures.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q1049645",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Saga Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "A Yayoi settlement archaeological landscape preserved in a public historical park, including visitor areas with reconstructed structures.",
+            "id": "auth:jp-public:Q1049645:public-0",
+            "license": null,
+            "publisher": "Yoshinogari Historical Park",
+            "revision": "Retrieved 2026-11-28; SHA-256 1613c74eadd9067e4d19505d74c743bc35df681f843df25713c568104ff82ce4.",
+            "title": "Yoshinogari Archaeological Site official place and public access record",
+            "uri": "https://www.yoshinogari.jp/en/information/use/"
+          }
+        },
+        "id": "auth:jp-public:Q1049645",
+        "location_precision": null,
+        "names": [
+          "吉野ヶ里遺跡",
+          "吉野里遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          130.384,
+          33.325
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "A Yayoi settlement archaeological landscape preserved in a public historical park, including visitor areas with reconstructed structures.",
+            "id": "auth:jp-public:Q1049645:public-0",
+            "license": null,
+            "publisher": "Yoshinogari Historical Park",
+            "revision": "Retrieved 2026-11-28; SHA-256 1613c74eadd9067e4d19505d74c743bc35df681f843df25713c568104ff82ce4.",
+            "title": "Yoshinogari Archaeological Site official place and public access record",
+            "uri": "https://www.yoshinogari.jp/en/information/use/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "A Yayoi settlement archaeological landscape preserved in a public historical park, including visitor areas with reconstructed structures.",
+            "id": "auth:jp-public:Q1049645:public-1",
+            "license": null,
+            "publisher": "Yoshinogari Historical Park",
+            "revision": "Retrieved 2026-11-28; SHA-256 d012f31a86373e222176f57a6b2c1f66e5e1acaf3c60b9d6d11153f14e91cb4f.",
+            "title": "Yoshinogari Archaeological Site official place and public access record",
+            "uri": "https://www.yoshinogari.jp/en/faq/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 130.384, latitude 33.325.",
+            "id": "wikidata:Q1049645",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2567331125, statement Q1049645$76884358-F65D-4FB5-96E4-5D7CE715512C.",
+            "title": "Yoshinogari Archaeological Site representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1049645.json"
+          }
+        ],
+        "source_uri": "https://www.yoshinogari.jp/en/information/use/",
+        "title": "Yoshinogari Archaeological Site",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1049645-public.html",
+          "sha256": "1613c74eadd9067e4d19505d74c743bc35df681f843df25713c568104ff82ce4",
+          "uri": "https://www.yoshinogari.jp/en/information/use/"
+        },
+        {
+          "filename": "Q1049645-identity.html",
+          "sha256": "d012f31a86373e222176f57a6b2c1f66e5e1acaf3c60b9d6d11153f14e91cb4f",
+          "uri": "https://www.yoshinogari.jp/en/faq/"
+        },
+        {
+          "filename": "Q1049645.json",
+          "sha256": "6d66b3383c2ce41dff685f0879fc09fca97cd30d356378f8763bc9824a30bef9",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1049645.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          130.302153,
+          33.245744
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1071095.json",
+        "statement_id": "Q1071095$10ED9666-1BD2-4317-BEB9-8EA1CB5B50AB"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The Saga Castle inner precinct with historic gate remains and publicly interpreted reconstructed buildings.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Saga Prefectural Saga Castle History Museum",
+          "Wikidata contributors"
+        ],
+        "description": "The Saga Castle inner precinct with historic gate remains and publicly interpreted reconstructed buildings.",
+        "description_zh": "佐贺城本丸原址保留历史门楼与复建建筑，县立历史馆公开展示。",
+        "details": "The Saga Castle inner precinct with historic gate remains and publicly interpreted reconstructed buildings.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q1071095",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Saga Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The Saga Castle inner precinct with historic gate remains and publicly interpreted reconstructed buildings.",
+            "id": "auth:jp-public:Q1071095:public-0",
+            "license": null,
+            "publisher": "Saga Prefectural Saga Castle History Museum",
+            "revision": "Retrieved 2026-11-28; SHA-256 8c2f332c6005c01954a7e9c74d8cc8df9c747a7f8363498b015bd495105e1573.",
+            "title": "Saga Castle Site official place and public access record",
+            "uri": "https://www.saga-museum.jp/sagajou/"
+          }
+        },
+        "id": "auth:jp-public:Q1071095",
+        "location_precision": null,
+        "names": [
+          "佐賀城跡",
+          "佐贺城遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          130.302153,
+          33.245744
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The Saga Castle inner precinct with historic gate remains and publicly interpreted reconstructed buildings.",
+            "id": "auth:jp-public:Q1071095:public-0",
+            "license": null,
+            "publisher": "Saga Prefectural Saga Castle History Museum",
+            "revision": "Retrieved 2026-11-28; SHA-256 8c2f332c6005c01954a7e9c74d8cc8df9c747a7f8363498b015bd495105e1573.",
+            "title": "Saga Castle Site official place and public access record",
+            "uri": "https://www.saga-museum.jp/sagajou/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The Saga Castle inner precinct with historic gate remains and publicly interpreted reconstructed buildings.",
+            "id": "auth:jp-public:Q1071095:public-1",
+            "license": null,
+            "publisher": "Saga Prefectural Saga Castle History Museum",
+            "revision": "Retrieved 2026-11-28; SHA-256 4eaace2455b07892fdddfeec7c3a6e0fd7a0a70698232ac0bcb458309057423a.",
+            "title": "Saga Castle Site official place and public access record",
+            "uri": "https://saga-museum.jp/sagajou/navi/ja/1.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 130.302153, latitude 33.245744.",
+            "id": "wikidata:Q1071095",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2408065806, statement Q1071095$10ED9666-1BD2-4317-BEB9-8EA1CB5B50AB.",
+            "title": "Saga Castle Site representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1071095.json"
+          }
+        ],
+        "source_uri": "https://www.saga-museum.jp/sagajou/",
+        "title": "Saga Castle Site",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1071095-public.html",
+          "sha256": "8c2f332c6005c01954a7e9c74d8cc8df9c747a7f8363498b015bd495105e1573",
+          "uri": "https://www.saga-museum.jp/sagajou/"
+        },
+        {
+          "filename": "Q1071095-identity.html",
+          "sha256": "4eaace2455b07892fdddfeec7c3a6e0fd7a0a70698232ac0bcb458309057423a",
+          "uri": "https://saga-museum.jp/sagajou/navi/ja/1.html"
+        },
+        {
+          "filename": "Q1071095.json",
+          "sha256": "f224112ac6ef29eae9dbc2e7bce99df0252f8f18ae1578d3129bf321b31f5322",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1071095.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          135.594158,
+          34.850254
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11376795.json",
+        "statement_id": "Q11376795$E28AD5E3-3436-4DF5-AE0A-FD9A5451EFB3"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original Imashirozuka mound within its publicly accessible heritage park, with interpretation of archaeological finds.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Takatsuki City",
+          "Wikidata contributors"
+        ],
+        "description": "The original Imashirozuka mound within its publicly accessible heritage park, with interpretation of archaeological finds.",
+        "description_zh": "大阪府高槻市今城冢古坟原址，现设公共遗址公园，展示考古资料。",
+        "details": "The original Imashirozuka mound within its publicly accessible heritage park, with interpretation of archaeological finds.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q11376795",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Osaka Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The original Imashirozuka mound within its publicly accessible heritage park, with interpretation of archaeological finds.",
+            "id": "auth:jp-public:Q11376795:public-0",
+            "license": null,
+            "publisher": "Takatsuki City",
+            "revision": "Retrieved 2026-11-28; SHA-256 4d752d78a89e42dafbe5cc143265b80f361a65bb61efbc635acdb8a5cad88958.",
+            "title": "Imashirozuka Kofun official place and public access record",
+            "uri": "https://www.city.takatsuki.osaka.jp/site/history/4648.html"
+          }
+        },
+        "id": "auth:jp-public:Q11376795",
+        "location_precision": null,
+        "names": [
+          "今城塚古墳",
+          "今城冢古坟"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          135.594158,
+          34.850254
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The original Imashirozuka mound within its publicly accessible heritage park, with interpretation of archaeological finds.",
+            "id": "auth:jp-public:Q11376795:public-0",
+            "license": null,
+            "publisher": "Takatsuki City",
+            "revision": "Retrieved 2026-11-28; SHA-256 4d752d78a89e42dafbe5cc143265b80f361a65bb61efbc635acdb8a5cad88958.",
+            "title": "Imashirozuka Kofun official place and public access record",
+            "uri": "https://www.city.takatsuki.osaka.jp/site/history/4648.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The original Imashirozuka mound within its publicly accessible heritage park, with interpretation of archaeological finds.",
+            "id": "auth:jp-public:Q11376795:public-1",
+            "license": null,
+            "publisher": "Takatsuki City",
+            "revision": "Retrieved 2026-11-28; SHA-256 5de9ed2140e314f9fcb465da047871dc1ed5fd5672128ef4e91f8493605248bc.",
+            "title": "Imashirozuka Kofun official place and public access record",
+            "uri": "https://www.city.takatsuki.osaka.jp/site/history/4569.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 135.594158, latitude 34.850254.",
+            "id": "wikidata:Q11376795",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2551642158, statement Q11376795$E28AD5E3-3436-4DF5-AE0A-FD9A5451EFB3.",
+            "title": "Imashirozuka Kofun representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11376795.json"
+          }
+        ],
+        "source_uri": "https://www.city.takatsuki.osaka.jp/site/history/4648.html",
+        "title": "Imashirozuka Kofun",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q11376795-public.html",
+          "sha256": "4d752d78a89e42dafbe5cc143265b80f361a65bb61efbc635acdb8a5cad88958",
+          "uri": "https://www.city.takatsuki.osaka.jp/site/history/4648.html"
+        },
+        {
+          "filename": "Q11376795-identity.html",
+          "sha256": "5de9ed2140e314f9fcb465da047871dc1ed5fd5672128ef4e91f8493605248bc",
+          "uri": "https://www.city.takatsuki.osaka.jp/site/history/4569.html"
+        },
+        {
+          "filename": "Q11376795.json",
+          "sha256": "c453ed14ab268a23e91d19bfd9eb3fa0fc14e630399c7db583f094981dc23652",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11376795.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          135.2301,
+          34.2236
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11475228.json",
+        "statement_id": "Q11475228$590EDA21-A6FC-410D-AFEB-1D40A6CB54A1"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Designated public areas of the Iwase Senzuka burial mound group within the Kii Fudoki-no-Oka archaeological park.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Wakayama Prefecture Tourism Federation",
+          "Wakayama Prefecture",
+          "Wikidata contributors"
+        ],
+        "description": "Designated public areas of the Iwase Senzuka burial mound group within the Kii Fudoki-no-Oka archaeological park.",
+        "description_zh": "和歌山县纪伊风土记之丘内的岩桥千冢古坟群，记录范围为管理方公开展示的遗址区域。",
+        "details": "Designated public areas of the Iwase Senzuka burial mound group within the Kii Fudoki-no-Oka archaeological park.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q11475228",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Wakayama Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Designated public areas of the Iwase Senzuka burial mound group within the Kii Fudoki-no-Oka archaeological park.",
+            "id": "auth:jp-public:Q11475228:public-0",
+            "license": null,
+            "publisher": "Wakayama Prefecture Tourism Federation",
+            "revision": "Retrieved 2026-11-28; SHA-256 34850e2cba5a19056a633323dbd7dadcc7a4491656d0352277dbbb9009cde96b.",
+            "title": "Iwase Senzuka Kofun Cluster official place and public access record",
+            "uri": "https://visitwakayama.jp/en/attractions/detail_3071.html"
+          }
+        },
+        "id": "auth:jp-public:Q11475228",
+        "location_precision": null,
+        "names": [
+          "岩橋千塚古墳群",
+          "岩桥千冢古坟群"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          135.2301,
+          34.2236
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Designated public areas of the Iwase Senzuka burial mound group within the Kii Fudoki-no-Oka archaeological park.",
+            "id": "auth:jp-public:Q11475228:public-0",
+            "license": null,
+            "publisher": "Wakayama Prefecture Tourism Federation",
+            "revision": "Retrieved 2026-11-28; SHA-256 34850e2cba5a19056a633323dbd7dadcc7a4491656d0352277dbbb9009cde96b.",
+            "title": "Iwase Senzuka Kofun Cluster official place and public access record",
+            "uri": "https://visitwakayama.jp/en/attractions/detail_3071.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Designated public areas of the Iwase Senzuka burial mound group within the Kii Fudoki-no-Oka archaeological park.",
+            "id": "auth:jp-public:Q11475228:public-1",
+            "license": null,
+            "publisher": "Wakayama Prefecture",
+            "revision": "Retrieved 2026-11-28; SHA-256 2aa4a1bc6da0244d4029c3f7b8ee6bf9437745ae561bbc490417b45495ae59e2.",
+            "title": "Iwase Senzuka Kofun Cluster official place and public access record",
+            "uri": "https://www.pref.wakayama.lg.jp/faq/answer/faq_o27032.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 135.2301, latitude 34.2236.",
+            "id": "wikidata:Q11475228",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2561298885, statement Q11475228$590EDA21-A6FC-410D-AFEB-1D40A6CB54A1.",
+            "title": "Iwase Senzuka Kofun Cluster representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11475228.json"
+          }
+        ],
+        "source_uri": "https://visitwakayama.jp/en/attractions/detail_3071.html",
+        "title": "Iwase Senzuka Kofun Cluster",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q11475228-public.html",
+          "sha256": "34850e2cba5a19056a633323dbd7dadcc7a4491656d0352277dbbb9009cde96b",
+          "uri": "https://visitwakayama.jp/en/attractions/detail_3071.html"
+        },
+        {
+          "filename": "Q11475228-identity.html",
+          "sha256": "2aa4a1bc6da0244d4029c3f7b8ee6bf9437745ae561bbc490417b45495ae59e2",
+          "uri": "https://www.pref.wakayama.lg.jp/faq/answer/faq_o27032.html"
+        },
+        {
+          "filename": "Q11475228.json",
+          "sha256": "8dd0a7d32dec84dd60a6d0a4a1a11ccd496f79c553272303358f8af5b57d5998",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11475228.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          141.106389,
+          39.68625
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11491083.json",
+        "statement_id": "Q11491083$6612D1B5-6157-4750-81B1-20D4FC6299F6"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological park at the original Shiwa Castle site, including reconstructed features displayed on the site.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Morioka City",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological park at the original Shiwa Castle site, including reconstructed features displayed on the site.",
+        "description_zh": "岩手县盛冈市志波城原址所在的公共考古公园，包含原址复原展示。",
+        "details": "Public archaeological park at the original Shiwa Castle site, including reconstructed features displayed on the site.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q11491083",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Iwate Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public archaeological park at the original Shiwa Castle site, including reconstructed features displayed on the site.",
+            "id": "auth:jp-public:Q11491083:public-0",
+            "license": null,
+            "publisher": "Morioka City",
+            "revision": "Retrieved 2026-11-28; SHA-256 533725a1beef869120e9b70274ccc570d8d7108e67219077a1f210ba5ca29e91.",
+            "title": "Shiwa Castle Ruins official place and public access record",
+            "uri": "https://www.city.morioka.iwate.jp/kanko_sports_bunka/rkeishi_bunkazai/shiwajou/1009509.html"
+          }
+        },
+        "id": "auth:jp-public:Q11491083",
+        "location_precision": null,
+        "names": [
+          "志波城跡",
+          "志波城遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          141.106389,
+          39.68625
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public archaeological park at the original Shiwa Castle site, including reconstructed features displayed on the site.",
+            "id": "auth:jp-public:Q11491083:public-0",
+            "license": null,
+            "publisher": "Morioka City",
+            "revision": "Retrieved 2026-11-28; SHA-256 533725a1beef869120e9b70274ccc570d8d7108e67219077a1f210ba5ca29e91.",
+            "title": "Shiwa Castle Ruins official place and public access record",
+            "uri": "https://www.city.morioka.iwate.jp/kanko_sports_bunka/rkeishi_bunkazai/shiwajou/1009509.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 141.106389, latitude 39.68625.",
+            "id": "wikidata:Q11491083",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2509401603, statement Q11491083$6612D1B5-6157-4750-81B1-20D4FC6299F6.",
+            "title": "Shiwa Castle Ruins representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11491083.json"
+          }
+        ],
+        "source_uri": "https://www.city.morioka.iwate.jp/kanko_sports_bunka/rkeishi_bunkazai/shiwajou/1009509.html",
+        "title": "Shiwa Castle Ruins",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q11491083-public.html",
+          "sha256": "533725a1beef869120e9b70274ccc570d8d7108e67219077a1f210ba5ca29e91",
+          "uri": "https://www.city.morioka.iwate.jp/kanko_sports_bunka/rkeishi_bunkazai/shiwajou/1009509.html"
+        },
+        {
+          "filename": "Q11491083.json",
+          "sha256": "cbe4dc8dc3e19fb7ab7b073226e387012cb7ea78db8a297c82f914bb23d5d5b2",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11491083.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          136.93916666667,
+          35.388333333333
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1155484.json",
+        "statement_id": "q1155484$D3544CE2-E53E-4AEE-8F0C-7133ED73D56E"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original historic Inuyama Castle keep and its public visitor areas documented by the castle operator.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Inuyama Castle",
+          "Wikidata contributors"
+        ],
+        "description": "The original historic Inuyama Castle keep and its public visitor areas documented by the castle operator.",
+        "description_zh": "爱知县犬山城天守及管理方公布的公共参观区域。",
+        "details": "The original historic Inuyama Castle keep and its public visitor areas documented by the castle operator.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q1155484",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Aichi Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The original historic Inuyama Castle keep and its public visitor areas documented by the castle operator.",
+            "id": "auth:jp-public:Q1155484:public-0",
+            "license": null,
+            "publisher": "Inuyama Castle",
+            "revision": "Retrieved 2026-11-28; SHA-256 a31a3da4b6f75bbdf5c95b0d811d7b9a655de108b8fb067c097e414835d4e082.",
+            "title": "Inuyama Castle official place and public access record",
+            "uri": "https://inuyama-castle.jp/guidance/"
+          }
+        },
+        "id": "auth:jp-public:Q1155484",
+        "location_precision": null,
+        "names": [
+          "犬山城",
+          "犬山城"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          136.93916666667,
+          35.388333333333
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The original historic Inuyama Castle keep and its public visitor areas documented by the castle operator.",
+            "id": "auth:jp-public:Q1155484:public-0",
+            "license": null,
+            "publisher": "Inuyama Castle",
+            "revision": "Retrieved 2026-11-28; SHA-256 a31a3da4b6f75bbdf5c95b0d811d7b9a655de108b8fb067c097e414835d4e082.",
+            "title": "Inuyama Castle official place and public access record",
+            "uri": "https://inuyama-castle.jp/guidance/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 136.93916666667, latitude 35.388333333333.",
+            "id": "wikidata:Q1155484",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2538672087, statement q1155484$D3544CE2-E53E-4AEE-8F0C-7133ED73D56E.",
+            "title": "Inuyama Castle representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1155484.json"
+          }
+        ],
+        "source_uri": "https://inuyama-castle.jp/guidance/",
+        "title": "Inuyama Castle",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1155484-public.html",
+          "sha256": "a31a3da4b6f75bbdf5c95b0d811d7b9a655de108b8fb067c097e414835d4e082",
+          "uri": "https://inuyama-castle.jp/guidance/"
+        },
+        {
+          "filename": "Q1155484.json",
+          "sha256": "32a9afdb8022c84287eb74d51e42686dc8587932e6ba74fcc42b303bd3f0d4a9",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1155484.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          140.08134159,
+          39.74025935
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11595283.json",
+        "statement_id": "Q11595283$CEE11239-BFC5-40F8-9763-45D59920DDE9"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The archaeological site of Akita's ancient administrative and defensive complex, with elements reconstructed on the original site for public interpretation.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Akita City",
+          "Wikidata contributors"
+        ],
+        "description": "The archaeological site of Akita's ancient administrative and defensive complex, with elements reconstructed on the original site for public interpretation.",
+        "description_zh": "秋田市古代行政与防御遗址，部分发掘遗构在原址复原并向公众展示。",
+        "details": "The archaeological site of Akita's ancient administrative and defensive complex, with elements reconstructed on the original site for public interpretation.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q11595283",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Akita Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The archaeological site of Akita's ancient administrative and defensive complex, with elements reconstructed on the original site for public interpretation.",
+            "id": "auth:jp-public:Q11595283:public-0",
+            "license": null,
+            "publisher": "Akita City",
+            "revision": "Retrieved 2026-11-28; SHA-256 1eed1f9b9ef0e3def91fa416d3abc33442bc876054e25798b4258057652949cb.",
+            "title": "Akita Castle Ruins official place and public access record",
+            "uri": "https://www.city.akita.lg.jp/kanko/kanrenshisetsu/1003616/1002308.html"
+          }
+        },
+        "id": "auth:jp-public:Q11595283",
+        "location_precision": null,
+        "names": [
+          "秋田城跡",
+          "秋田城遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          140.08134159,
+          39.74025935
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The archaeological site of Akita's ancient administrative and defensive complex, with elements reconstructed on the original site for public interpretation.",
+            "id": "auth:jp-public:Q11595283:public-0",
+            "license": null,
+            "publisher": "Akita City",
+            "revision": "Retrieved 2026-11-28; SHA-256 1eed1f9b9ef0e3def91fa416d3abc33442bc876054e25798b4258057652949cb.",
+            "title": "Akita Castle Ruins official place and public access record",
+            "uri": "https://www.city.akita.lg.jp/kanko/kanrenshisetsu/1003616/1002308.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 140.08134159, latitude 39.74025935.",
+            "id": "wikidata:Q11595283",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2571824533, statement Q11595283$CEE11239-BFC5-40F8-9763-45D59920DDE9.",
+            "title": "Akita Castle Ruins representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11595283.json"
+          }
+        ],
+        "source_uri": "https://www.city.akita.lg.jp/kanko/kanrenshisetsu/1003616/1002308.html",
+        "title": "Akita Castle Ruins",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q11595283-public.html",
+          "sha256": "1eed1f9b9ef0e3def91fa416d3abc33442bc876054e25798b4258057652949cb",
+          "uri": "https://www.city.akita.lg.jp/kanko/kanrenshisetsu/1003616/1002308.html"
+        },
+        {
+          "filename": "Q11595283.json",
+          "sha256": "e547bd8c446e8df2f2e99509796b1862a7c5e83906b92695876a4db1472efb5b",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11595283.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          130.51514444,
+          33.51454167
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q144845.json",
+        "statement_id": "Q144845$240E6597-B527-428A-B354-74262AF5CFED"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The site of the central Dazaifu administrative offices in Kyushu, with foundations presented to visitors in the protected historic area.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Dazaifu City",
+          "Wikidata contributors"
+        ],
+        "description": "The site of the central Dazaifu administrative offices in Kyushu, with foundations presented to visitors in the protected historic area.",
+        "description_zh": "福冈县古代九州行政机构大宰府的政厅遗址，公众可了解原址保留的建筑基础。",
+        "details": "The site of the central Dazaifu administrative offices in Kyushu, with foundations presented to visitors in the protected historic area.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q144845",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Fukuoka Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The site of the central Dazaifu administrative offices in Kyushu, with foundations presented to visitors in the protected historic area.",
+            "id": "auth:jp-public:Q144845:public-0",
+            "license": null,
+            "publisher": "Dazaifu City",
+            "revision": "Retrieved 2026-11-28; SHA-256 53e4b829a8e3d52d419c2d8f487b790709c8176aa6d0772133e7e0f27df5ae98.",
+            "title": "Dazaifu Government Office Ruins official place and public access record",
+            "uri": "https://www.city.dazaifu.lg.jp/site/kanko/11415.html"
+          }
+        },
+        "id": "auth:jp-public:Q144845",
+        "location_precision": null,
+        "names": [
+          "大宰府政庁跡",
+          "大宰府政厅遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          130.51514444,
+          33.51454167
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The site of the central Dazaifu administrative offices in Kyushu, with foundations presented to visitors in the protected historic area.",
+            "id": "auth:jp-public:Q144845:public-0",
+            "license": null,
+            "publisher": "Dazaifu City",
+            "revision": "Retrieved 2026-11-28; SHA-256 53e4b829a8e3d52d419c2d8f487b790709c8176aa6d0772133e7e0f27df5ae98.",
+            "title": "Dazaifu Government Office Ruins official place and public access record",
+            "uri": "https://www.city.dazaifu.lg.jp/site/kanko/11415.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The site of the central Dazaifu administrative offices in Kyushu, with foundations presented to visitors in the protected historic area.",
+            "id": "auth:jp-public:Q144845:public-1",
+            "license": null,
+            "publisher": "Dazaifu City",
+            "revision": "Retrieved 2026-11-28; SHA-256 5eb43a2662f72f4522eb5dda51f242b2bd962d957ba3d2abece1f5ec5175cb96.",
+            "title": "Dazaifu Government Office Ruins official place and public access record",
+            "uri": "https://www.city.dazaifu.lg.jp/site/kanko/16914.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 130.51514444, latitude 33.51454167.",
+            "id": "wikidata:Q144845",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2569139243, statement Q144845$240E6597-B527-428A-B354-74262AF5CFED.",
+            "title": "Dazaifu Government Office Ruins representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q144845.json"
+          }
+        ],
+        "source_uri": "https://www.city.dazaifu.lg.jp/site/kanko/11415.html",
+        "title": "Dazaifu Government Office Ruins",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q144845-public.html",
+          "sha256": "53e4b829a8e3d52d419c2d8f487b790709c8176aa6d0772133e7e0f27df5ae98",
+          "uri": "https://www.city.dazaifu.lg.jp/site/kanko/11415.html"
+        },
+        {
+          "filename": "Q144845-identity.html",
+          "sha256": "5eb43a2662f72f4522eb5dda51f242b2bd962d957ba3d2abece1f5ec5175cb96",
+          "uri": "https://www.city.dazaifu.lg.jp/site/kanko/16914.html"
+        },
+        {
+          "filename": "Q144845.json",
+          "sha256": "5afeff782d1d66a1e0fe5611ef277f07cab54c17543719c0e2a7d95faa79246c",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q144845.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          133.05055555556,
+          35.474977777778
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q151776.json",
+        "statement_id": "q151776$DF4D8C4A-0F02-4D69-B324-A79F3B7638BE"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Matsue Castle and its historic surviving keep, with public access documented by the site operator.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Matsue Castle",
+          "Wikidata contributors"
+        ],
+        "description": "Matsue Castle and its historic surviving keep, with public access documented by the site operator.",
+        "description_zh": "岛根县松江城及现存历史天守，管理方有公开的参观说明。",
+        "details": "Matsue Castle and its historic surviving keep, with public access documented by the site operator.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q151776",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Shimane Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Matsue Castle and its historic surviving keep, with public access documented by the site operator.",
+            "id": "auth:jp-public:Q151776:public-0",
+            "license": null,
+            "publisher": "Matsue Castle",
+            "revision": "Retrieved 2026-11-28; SHA-256 84025af7863b22b7b3a9f527ee11e42bb13dcd1bee7a75bf13575292129a428d.",
+            "title": "Matsue Castle official place and public access record",
+            "uri": "https://www.matsue-castle.jp/userguide/index"
+          }
+        },
+        "id": "auth:jp-public:Q151776",
+        "location_precision": null,
+        "names": [
+          "松江城",
+          "松江城"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          133.05055555556,
+          35.474977777778
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Matsue Castle and its historic surviving keep, with public access documented by the site operator.",
+            "id": "auth:jp-public:Q151776:public-0",
+            "license": null,
+            "publisher": "Matsue Castle",
+            "revision": "Retrieved 2026-11-28; SHA-256 84025af7863b22b7b3a9f527ee11e42bb13dcd1bee7a75bf13575292129a428d.",
+            "title": "Matsue Castle official place and public access record",
+            "uri": "https://www.matsue-castle.jp/userguide/index"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 133.05055555556, latitude 35.474977777778.",
+            "id": "wikidata:Q151776",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2559717501, statement q151776$DF4D8C4A-0F02-4D69-B324-A79F3B7638BE.",
+            "title": "Matsue Castle representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q151776.json"
+          }
+        ],
+        "source_uri": "https://www.matsue-castle.jp/userguide/index",
+        "title": "Matsue Castle",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q151776-public.html",
+          "sha256": "84025af7863b22b7b3a9f527ee11e42bb13dcd1bee7a75bf13575292129a428d",
+          "uri": "https://www.matsue-castle.jp/userguide/index"
+        },
+        {
+          "filename": "Q151776.json",
+          "sha256": "fc8ed71ef63bcd1741e7e82dde7d89523db5dc97dac902cccfff7eebb1294655",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q151776.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          139.47944444,
+          36.12833333
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2213580.json",
+        "statement_id": "Q2213580$EA7EDE38-CD64-4956-A614-E58283D082A0"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The documented Sakitama burial mound cluster displayed in a public archaeological park at Gyōda.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Saitama Prefectural Museum of the Sakitama Ancient Burial Mounds",
+          "Gyōda City",
+          "Wikidata contributors"
+        ],
+        "description": "The documented Sakitama burial mound cluster displayed in a public archaeological park at Gyōda.",
+        "description_zh": "埼玉县行田市的埼玉古坟群，县立博物馆设有面向公众的遗址展示和参观资料。",
+        "details": "The documented Sakitama burial mound cluster displayed in a public archaeological park at Gyōda.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q2213580",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Saitama Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The documented Sakitama burial mound cluster displayed in a public archaeological park at Gyōda.",
+            "id": "auth:jp-public:Q2213580:public-0",
+            "license": null,
+            "publisher": "Saitama Prefectural Museum of the Sakitama Ancient Burial Mounds",
+            "revision": "Retrieved 2026-11-28; SHA-256 a32fafec96246513f834d72c04809cf8767db65f0a9c6aba6d96db31846562b5.",
+            "title": "Sakitama Kofun Cluster official place and public access record",
+            "uri": "https://sakitama-sansaku.spec.ed.jp/en_e01"
+          }
+        },
+        "id": "auth:jp-public:Q2213580",
+        "location_precision": null,
+        "names": [
+          "埼玉古墳群",
+          "埼玉古坟群"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          139.47944444,
+          36.12833333
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The documented Sakitama burial mound cluster displayed in a public archaeological park at Gyōda.",
+            "id": "auth:jp-public:Q2213580:public-0",
+            "license": null,
+            "publisher": "Saitama Prefectural Museum of the Sakitama Ancient Burial Mounds",
+            "revision": "Retrieved 2026-11-28; SHA-256 a32fafec96246513f834d72c04809cf8767db65f0a9c6aba6d96db31846562b5.",
+            "title": "Sakitama Kofun Cluster official place and public access record",
+            "uri": "https://sakitama-sansaku.spec.ed.jp/en_e01"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The documented Sakitama burial mound cluster displayed in a public archaeological park at Gyōda.",
+            "id": "auth:jp-public:Q2213580:public-1",
+            "license": null,
+            "publisher": "Gyōda City",
+            "revision": "Retrieved 2026-11-28; SHA-256 8739f5ac6708fc771291508ef168f2a26ea911cb917404286aec730a336faae0.",
+            "title": "Sakitama Kofun Cluster official place and public access record",
+            "uri": "https://www.city.gyoda.lg.jp/soshiki/shougaigakusyubu/bunkazaihogo/gyomu/rekishi_bunkazai/1/2336.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 139.47944444, latitude 36.12833333.",
+            "id": "wikidata:Q2213580",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2559797791, statement Q2213580$EA7EDE38-CD64-4956-A614-E58283D082A0.",
+            "title": "Sakitama Kofun Cluster representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2213580.json"
+          }
+        ],
+        "source_uri": "https://sakitama-sansaku.spec.ed.jp/en_e01",
+        "title": "Sakitama Kofun Cluster",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q2213580-public.html",
+          "sha256": "a32fafec96246513f834d72c04809cf8767db65f0a9c6aba6d96db31846562b5",
+          "uri": "https://sakitama-sansaku.spec.ed.jp/en_e01"
+        },
+        {
+          "filename": "Q2213580-identity.html",
+          "sha256": "8739f5ac6708fc771291508ef168f2a26ea911cb917404286aec730a336faae0",
+          "uri": "https://www.city.gyoda.lg.jp/soshiki/shougaigakusyubu/bunkazaihogo/gyomu/rekishi_bunkazai/1/2336.html"
+        },
+        {
+          "filename": "Q2213580.json",
+          "sha256": "b394a9f5c055b2092f59b6af135761dd188b28540ab3ab8726f70223f8e4af94",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2213580.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          133.800194,
+          34.286191
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q250658.json",
+        "statement_id": "q250658$80088A70-9EF8-4720-B74C-9C2649D01DBC"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Marugame Castle's historic built remains, including the surviving keep; the municipality documents the public visitor scope.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Marugame City",
+          "Wikidata contributors"
+        ],
+        "description": "Marugame Castle's historic built remains, including the surviving keep; the municipality documents the public visitor scope.",
+        "description_zh": "香川县丸龟城现存历史建筑与石垣，参观范围依据丸龟市发布的说明。",
+        "details": "Marugame Castle's historic built remains, including the surviving keep; the municipality documents the public visitor scope.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q250658",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Kagawa Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Marugame Castle's historic built remains, including the surviving keep; the municipality documents the public visitor scope.",
+            "id": "auth:jp-public:Q250658:public-0",
+            "license": null,
+            "publisher": "Marugame City",
+            "revision": "Retrieved 2026-11-28; SHA-256 beab2828f85a15adb278de743adfc26380902c8538515c5c793b310c30eaa865.",
+            "title": "Marugame Castle official place and public access record",
+            "uri": "https://www.city.marugame.lg.jp/site/castle/7454.html"
+          }
+        },
+        "id": "auth:jp-public:Q250658",
+        "location_precision": null,
+        "names": [
+          "丸亀城",
+          "丸龟城"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          133.800194,
+          34.286191
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Marugame Castle's historic built remains, including the surviving keep; the municipality documents the public visitor scope.",
+            "id": "auth:jp-public:Q250658:public-0",
+            "license": null,
+            "publisher": "Marugame City",
+            "revision": "Retrieved 2026-11-28; SHA-256 beab2828f85a15adb278de743adfc26380902c8538515c5c793b310c30eaa865.",
+            "title": "Marugame Castle official place and public access record",
+            "uri": "https://www.city.marugame.lg.jp/site/castle/7454.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 133.800194, latitude 34.286191.",
+            "id": "wikidata:Q250658",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2538673570, statement q250658$80088A70-9EF8-4720-B74C-9C2649D01DBC.",
+            "title": "Marugame Castle representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q250658.json"
+          }
+        ],
+        "source_uri": "https://www.city.marugame.lg.jp/site/castle/7454.html",
+        "title": "Marugame Castle",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q250658-public.html",
+          "sha256": "beab2828f85a15adb278de743adfc26380902c8538515c5c793b310c30eaa865",
+          "uri": "https://www.city.marugame.lg.jp/site/castle/7454.html"
+        },
+        {
+          "filename": "Q250658.json",
+          "sha256": "259196bd10c1d9daf927ec7572828ebd2d78c0bd1dc5d9a007e8d2acc41357b6",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q250658.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          136.296,
+          35.9995
+        ],
+        "precision": 0.011103717163739,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2968274.json",
+        "statement_id": "Q2968274$C83708FA-F02D-4E0D-9DC3-98938EC878BE"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original Asakura castle-town archaeological landscape. The prefectural museum presents named public ruins and a reconstructed street within the area.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Fukui Prefectural Ichijodani Asakura Family Site Museum",
+          "Wikidata contributors"
+        ],
+        "description": "The original Asakura castle-town archaeological landscape. The prefectural museum presents named public ruins and a reconstructed street within the area.",
+        "description_zh": "福井县一乘谷的朝仓氏城下町遗址，县立博物馆提供公开遗址和复原街区的参观资料。",
+        "details": "The original Asakura castle-town archaeological landscape. The prefectural museum presents named public ruins and a reconstructed street within the area.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q2968274",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Fukui Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The original Asakura castle-town archaeological landscape. The prefectural museum presents named public ruins and a reconstructed street within the area.",
+            "id": "auth:jp-public:Q2968274:public-0",
+            "license": null,
+            "publisher": "Fukui Prefectural Ichijodani Asakura Family Site Museum",
+            "revision": "Retrieved 2026-11-28; SHA-256 e9be20bcf5074a4204056e271e0a401a3df64510d20dc3d54af7b84b0a6e77db.",
+            "title": "Ichijōdani Asakura Family Historic Ruins official place and public access record",
+            "uri": "https://asakura-museum.pref.fukui.lg.jp/site/walk"
+          }
+        },
+        "id": "auth:jp-public:Q2968274",
+        "location_precision": null,
+        "names": [
+          "一乗谷朝倉氏遺跡",
+          "一乘谷朝仓氏遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          136.296,
+          35.9995
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The original Asakura castle-town archaeological landscape. The prefectural museum presents named public ruins and a reconstructed street within the area.",
+            "id": "auth:jp-public:Q2968274:public-0",
+            "license": null,
+            "publisher": "Fukui Prefectural Ichijodani Asakura Family Site Museum",
+            "revision": "Retrieved 2026-11-28; SHA-256 e9be20bcf5074a4204056e271e0a401a3df64510d20dc3d54af7b84b0a6e77db.",
+            "title": "Ichijōdani Asakura Family Historic Ruins official place and public access record",
+            "uri": "https://asakura-museum.pref.fukui.lg.jp/site/walk"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The original Asakura castle-town archaeological landscape. The prefectural museum presents named public ruins and a reconstructed street within the area.",
+            "id": "auth:jp-public:Q2968274:public-1",
+            "license": null,
+            "publisher": "Fukui Prefectural Ichijodani Asakura Family Site Museum",
+            "revision": "Retrieved 2026-11-28; SHA-256 8b0a55e0dd71f923a785b71202fdf5093920cec52577e25be785cdab06ce430b.",
+            "title": "Ichijōdani Asakura Family Historic Ruins official place and public access record",
+            "uri": "https://asakura-museum.pref.fukui.lg.jp/about/guidance"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 136.296, latitude 35.9995.",
+            "id": "wikidata:Q2968274",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2490616137, statement Q2968274$C83708FA-F02D-4E0D-9DC3-98938EC878BE.",
+            "title": "Ichijōdani Asakura Family Historic Ruins representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2968274.json"
+          }
+        ],
+        "source_uri": "https://asakura-museum.pref.fukui.lg.jp/site/walk",
+        "title": "Ichijōdani Asakura Family Historic Ruins",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q2968274-public.html",
+          "sha256": "e9be20bcf5074a4204056e271e0a401a3df64510d20dc3d54af7b84b0a6e77db",
+          "uri": "https://asakura-museum.pref.fukui.lg.jp/site/walk"
+        },
+        {
+          "filename": "Q2968274-identity.html",
+          "sha256": "8b0a55e0dd71f923a785b71202fdf5093920cec52577e25be785cdab06ce430b",
+          "uri": "https://asakura-museum.pref.fukui.lg.jp/about/guidance"
+        },
+        {
+          "filename": "Q2968274.json",
+          "sha256": "067476bb506a8baa1706aa3f8b0a1a2b6118d80ed4596a6b124e26c9851b2afb",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2968274.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          133.622325,
+          34.80908889
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q577273.json",
+        "statement_id": "Q577273$6AA70A9C-0447-4B4F-8E41-8A3EC2A25ED8"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original hilltop castle property at Takahashi, with a surviving keep and a defined public visitor area.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Bitchū Matsuyama Castle",
+          "Wikidata contributors"
+        ],
+        "description": "The original hilltop castle property at Takahashi, with a surviving keep and a defined public visitor area.",
+        "description_zh": "冈山县高梁市备中松山城遗存与现存天守，管理方发布公开参观范围。",
+        "details": "The original hilltop castle property at Takahashi, with a surviving keep and a defined public visitor area.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q577273",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Okayama Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The original hilltop castle property at Takahashi, with a surviving keep and a defined public visitor area.",
+            "id": "auth:jp-public:Q577273:public-0",
+            "license": null,
+            "publisher": "Bitchū Matsuyama Castle",
+            "revision": "Retrieved 2026-11-28; SHA-256 b52952957ab50b241ce48140f97d1dc2e3fdf786b26de7f377c7113285af5553.",
+            "title": "Bitchū Matsuyama Castle official place and public access record",
+            "uri": "https://www.bitchumatsuyamacastle.jp/guide/"
+          }
+        },
+        "id": "auth:jp-public:Q577273",
+        "location_precision": null,
+        "names": [
+          "備中松山城",
+          "备中松山城"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          133.622325,
+          34.80908889
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The original hilltop castle property at Takahashi, with a surviving keep and a defined public visitor area.",
+            "id": "auth:jp-public:Q577273:public-0",
+            "license": null,
+            "publisher": "Bitchū Matsuyama Castle",
+            "revision": "Retrieved 2026-11-28; SHA-256 b52952957ab50b241ce48140f97d1dc2e3fdf786b26de7f377c7113285af5553.",
+            "title": "Bitchū Matsuyama Castle official place and public access record",
+            "uri": "https://www.bitchumatsuyamacastle.jp/guide/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 133.622325, latitude 34.80908889.",
+            "id": "wikidata:Q577273",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2468373207, statement Q577273$6AA70A9C-0447-4B4F-8E41-8A3EC2A25ED8.",
+            "title": "Bitchū Matsuyama Castle representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q577273.json"
+          }
+        ],
+        "source_uri": "https://www.bitchumatsuyamacastle.jp/guide/",
+        "title": "Bitchū Matsuyama Castle",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q577273-public.html",
+          "sha256": "b52952957ab50b241ce48140f97d1dc2e3fdf786b26de7f377c7113285af5553",
+          "uri": "https://www.bitchumatsuyamacastle.jp/guide/"
+        },
+        {
+          "filename": "Q577273.json",
+          "sha256": "df2e63cdab1fecf78a2207704b2c701c95cf375e6709d080dd7bd53bbbe89d15",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q577273.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          130.70597222222,
+          32.806063888889
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q613355.json",
+        "statement_id": "q613355$CCDAEEE0-8495-4309-9DEF-1DE5C4824AF2"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic castle property with designated public viewing routes and reconstructed keep. The visitor scope follows the operator's restoration access arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Kumamoto Castle Management Office",
+          "Wikidata contributors"
+        ],
+        "description": "The historic castle property with designated public viewing routes and reconstructed keep. The visitor scope follows the operator's restoration access arrangements.",
+        "description_zh": "熊本城原址保留历史城防遗存及复建天守，修复期间按管理方公布区域参观。",
+        "details": "The historic castle property with designated public viewing routes and reconstructed keep. The visitor scope follows the operator's restoration access arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q613355",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Kumamoto Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The historic castle property with designated public viewing routes and reconstructed keep. The visitor scope follows the operator's restoration access arrangements.",
+            "id": "auth:jp-public:Q613355:public-0",
+            "license": null,
+            "publisher": "Kumamoto Castle Management Office",
+            "revision": "Retrieved 2026-11-28; SHA-256 eaaefb2de3076c0d8b14af59dbd9bd2a06abf7a06564b35b33c844d49169585e.",
+            "title": "Kumamoto Castle official place and public access record",
+            "uri": "https://castle.kumamoto-guide.jp/en/admission/"
+          }
+        },
+        "id": "auth:jp-public:Q613355",
+        "location_precision": null,
+        "names": [
+          "熊本城",
+          "熊本城"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          130.70597222222,
+          32.806063888889
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The historic castle property with designated public viewing routes and reconstructed keep. The visitor scope follows the operator's restoration access arrangements.",
+            "id": "auth:jp-public:Q613355:public-0",
+            "license": null,
+            "publisher": "Kumamoto Castle Management Office",
+            "revision": "Retrieved 2026-11-28; SHA-256 eaaefb2de3076c0d8b14af59dbd9bd2a06abf7a06564b35b33c844d49169585e.",
+            "title": "Kumamoto Castle official place and public access record",
+            "uri": "https://castle.kumamoto-guide.jp/en/admission/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The historic castle property with designated public viewing routes and reconstructed keep. The visitor scope follows the operator's restoration access arrangements.",
+            "id": "auth:jp-public:Q613355:public-1",
+            "license": null,
+            "publisher": "Kumamoto Castle Management Office",
+            "revision": "Retrieved 2026-11-28; SHA-256 af010e54d637832a2912d48f6f16df469eb1f1d7497c9c2c32e32f0453c4f419.",
+            "title": "Kumamoto Castle official place and public access record",
+            "uri": "https://castle.kumamoto-guide.jp/en/about/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 130.70597222222, latitude 32.806063888889.",
+            "id": "wikidata:Q613355",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2546324153, statement q613355$CCDAEEE0-8495-4309-9DEF-1DE5C4824AF2.",
+            "title": "Kumamoto Castle representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q613355.json"
+          }
+        ],
+        "source_uri": "https://castle.kumamoto-guide.jp/en/admission/",
+        "title": "Kumamoto Castle",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q613355-public.html",
+          "sha256": "eaaefb2de3076c0d8b14af59dbd9bd2a06abf7a06564b35b33c844d49169585e",
+          "uri": "https://castle.kumamoto-guide.jp/en/admission/"
+        },
+        {
+          "filename": "Q613355-identity.html",
+          "sha256": "af010e54d637832a2912d48f6f16df469eb1f1d7497c9c2c32e32f0453c4f419",
+          "uri": "https://castle.kumamoto-guide.jp/en/about/"
+        },
+        {
+          "filename": "Q613355.json",
+          "sha256": "678c647469a66756e9030b9ca0ef26ae5fc67c21cfca158c327e740e752e59ad",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q613355.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          138.40805555556,
+          34.956111111111
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q673607.json",
+        "statement_id": "q673607$e017c510-4ff7-5a4d-8ebc-6f5c27966d4c"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The publicly interpreted Toro settlement and rice-field site where excavations identified dwellings, wet-rice fields and recovered material.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Shizuoka City",
+          "Wikidata contributors"
+        ],
+        "description": "The publicly interpreted Toro settlement and rice-field site where excavations identified dwellings, wet-rice fields and recovered material.",
+        "description_zh": "静冈市登吕聚落及稻田遗址，市政府资料记载水田、居住址及出土遗物，公众可参观遗址展示。",
+        "details": "The publicly interpreted Toro settlement and rice-field site where excavations identified dwellings, wet-rice fields and recovered material.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q673607",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Shizuoka Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The publicly interpreted Toro settlement and rice-field site where excavations identified dwellings, wet-rice fields and recovered material.",
+            "id": "auth:jp-public:Q673607:public-0",
+            "license": null,
+            "publisher": "Shizuoka City",
+            "revision": "Retrieved 2026-11-28; SHA-256 28d7f9bd7ec56adb96fa791ffb24cb2917cf21cc113df741bc7740a34429cad8.",
+            "title": "Toro Archaeological Site official place and public access record",
+            "uri": "https://www.city.shizuoka.lg.jp/s5984/s005527.html"
+          }
+        },
+        "id": "auth:jp-public:Q673607",
+        "location_precision": null,
+        "names": [
+          "登呂遺跡",
+          "登吕遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          138.40805555556,
+          34.956111111111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The publicly interpreted Toro settlement and rice-field site where excavations identified dwellings, wet-rice fields and recovered material.",
+            "id": "auth:jp-public:Q673607:public-0",
+            "license": null,
+            "publisher": "Shizuoka City",
+            "revision": "Retrieved 2026-11-28; SHA-256 28d7f9bd7ec56adb96fa791ffb24cb2917cf21cc113df741bc7740a34429cad8.",
+            "title": "Toro Archaeological Site official place and public access record",
+            "uri": "https://www.city.shizuoka.lg.jp/s5984/s005527.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 138.40805555556, latitude 34.956111111111.",
+            "id": "wikidata:Q673607",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2519897227, statement q673607$e017c510-4ff7-5a4d-8ebc-6f5c27966d4c.",
+            "title": "Toro Archaeological Site representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q673607.json"
+          }
+        ],
+        "source_uri": "https://www.city.shizuoka.lg.jp/s5984/s005527.html",
+        "title": "Toro Archaeological Site",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q673607-public.html",
+          "sha256": "28d7f9bd7ec56adb96fa791ffb24cb2917cf21cc113df741bc7740a34429cad8",
+          "uri": "https://www.city.shizuoka.lg.jp/s5984/s005527.html"
+        },
+        {
+          "filename": "Q673607.json",
+          "sha256": "7ed25f43e1e590b25e96fda6fe13888a891914f63fe5d59e4e38fe401b959b32",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q673607.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          137.96916666667,
+          36.238888888889
+        ],
+        "precision": null,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q739612.json",
+        "statement_id": "q739612$5D94F87F-61D1-4166-BDCA-1DD884F6F66D"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Matsumoto Castle's original keep complex as listed in Matsumoto City's public site guidance.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Matsumoto City",
+          "Wikidata contributors"
+        ],
+        "description": "Matsumoto Castle's original keep complex as listed in Matsumoto City's public site guidance.",
+        "description_zh": "长野县松本城现存天守建筑群，松本市发布公众参观资料。",
+        "details": "Matsumoto Castle's original keep complex as listed in Matsumoto City's public site guidance.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q739612",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Nagano Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Matsumoto Castle's original keep complex as listed in Matsumoto City's public site guidance.",
+            "id": "auth:jp-public:Q739612:public-0",
+            "license": null,
+            "publisher": "Matsumoto City",
+            "revision": "Retrieved 2026-11-28; SHA-256 c136de55da2d894517e2e7e1af2e44fe5085bfae77b92906df01fca9e6e562c3.",
+            "title": "Matsumoto Castle official place and public access record",
+            "uri": "https://www.city.matsumoto.nagano.jp/soshiki/135/4118.html"
+          }
+        },
+        "id": "auth:jp-public:Q739612",
+        "location_precision": null,
+        "names": [
+          "松本城",
+          "松本城"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          137.96916666667,
+          36.238888888889
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Matsumoto Castle's original keep complex as listed in Matsumoto City's public site guidance.",
+            "id": "auth:jp-public:Q739612:public-0",
+            "license": null,
+            "publisher": "Matsumoto City",
+            "revision": "Retrieved 2026-11-28; SHA-256 c136de55da2d894517e2e7e1af2e44fe5085bfae77b92906df01fca9e6e562c3.",
+            "title": "Matsumoto Castle official place and public access record",
+            "uri": "https://www.city.matsumoto.nagano.jp/soshiki/135/4118.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 137.96916666667, latitude 36.238888888889.",
+            "id": "wikidata:Q739612",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2574792937, statement q739612$5D94F87F-61D1-4166-BDCA-1DD884F6F66D.",
+            "title": "Matsumoto Castle representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q739612.json"
+          }
+        ],
+        "source_uri": "https://www.city.matsumoto.nagano.jp/soshiki/135/4118.html",
+        "title": "Matsumoto Castle",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q739612-public.html",
+          "sha256": "c136de55da2d894517e2e7e1af2e44fe5085bfae77b92906df01fca9e6e562c3",
+          "uri": "https://www.city.matsumoto.nagano.jp/soshiki/135/4118.html"
+        },
+        {
+          "filename": "Q739612.json",
+          "sha256": "c3ffebf1204ff2e4d43d7392759ee65932fcfa2dbb19580fceb8917d5cafce7c",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q739612.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          136.13936111111,
+          35.156022222222
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q786888.json",
+        "statement_id": "q786888$C7FE645C-BBAD-4217-BA5D-1ACA0CFFA8E3"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The remains of Azuchi Castle identified by the city tourism organization, with public access limited to the designated castle site paths.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ōmihachiman Tourism Organization",
+          "Wikidata contributors"
+        ],
+        "description": "The remains of Azuchi Castle identified by the city tourism organization, with public access limited to the designated castle site paths.",
+        "description_zh": "滋贺县近江八幡市的安土城遗址，收录管理方指定的公开参观区域。",
+        "details": "The remains of Azuchi Castle identified by the city tourism organization, with public access limited to the designated castle site paths.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q786888",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Shiga Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The remains of Azuchi Castle identified by the city tourism organization, with public access limited to the designated castle site paths.",
+            "id": "auth:jp-public:Q786888:public-0",
+            "license": null,
+            "publisher": "Ōmihachiman Tourism Organization",
+            "revision": "Retrieved 2026-11-28; SHA-256 a02baf3fd93c72b7e7edd8145719296d0c32dea73cf4f563c9cbf6ee5cc6fdd1.",
+            "title": "Azuchi Castle Ruins official place and public access record",
+            "uri": "https://www.omi8.com/spot/detail_1217.html"
+          }
+        },
+        "id": "auth:jp-public:Q786888",
+        "location_precision": null,
+        "names": [
+          "安土城跡",
+          "安土城遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          136.13936111111,
+          35.156022222222
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The remains of Azuchi Castle identified by the city tourism organization, with public access limited to the designated castle site paths.",
+            "id": "auth:jp-public:Q786888:public-0",
+            "license": null,
+            "publisher": "Ōmihachiman Tourism Organization",
+            "revision": "Retrieved 2026-11-28; SHA-256 a02baf3fd93c72b7e7edd8145719296d0c32dea73cf4f563c9cbf6ee5cc6fdd1.",
+            "title": "Azuchi Castle Ruins official place and public access record",
+            "uri": "https://www.omi8.com/spot/detail_1217.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 136.13936111111, latitude 35.156022222222.",
+            "id": "wikidata:Q786888",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2512685835, statement q786888$C7FE645C-BBAD-4217-BA5D-1ACA0CFFA8E3.",
+            "title": "Azuchi Castle Ruins representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q786888.json"
+          }
+        ],
+        "source_uri": "https://www.omi8.com/spot/detail_1217.html",
+        "title": "Azuchi Castle Ruins",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q786888-public.html",
+          "sha256": "a02baf3fd93c72b7e7edd8145719296d0c32dea73cf4f563c9cbf6ee5cc6fdd1",
+          "uri": "https://www.omi8.com/spot/detail_1217.html"
+        },
+        {
+          "filename": "Q786888.json",
+          "sha256": "86fe25078856285d231f8db56e3086f6fad61a162286e57cba4fe80a72b8a441",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q786888.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          134.829,
+          35.3005
+        ],
+        "precision": 0.011006977813866,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q8013060.json",
+        "statement_id": "Q8013060$4DCD1142-AE97-4E13-AA45-81E59ECA0011"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The publicly interpreted mountain castle ruins, with visitable areas and seasonal access specified by Asago City.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Asago City",
+          "Wikidata contributors"
+        ],
+        "description": "The publicly interpreted mountain castle ruins, with visitable areas and seasonal access specified by Asago City.",
+        "description_zh": "兵库县朝来市的山城遗址，公开参观路线和季节限制以市政府资料为准。",
+        "details": "The publicly interpreted mountain castle ruins, with visitable areas and seasonal access specified by Asago City.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q8013060",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Hyōgo Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The publicly interpreted mountain castle ruins, with visitable areas and seasonal access specified by Asago City.",
+            "id": "auth:jp-public:Q8013060:public-0",
+            "license": null,
+            "publisher": "Asago City",
+            "revision": "Retrieved 2026-11-28; SHA-256 5aa8d3fa50d0c7cf71069e43b313d6619888a830fa14df6bd18c7e1d1a3ef24a.",
+            "title": "Takeda Castle Ruins official place and public access record",
+            "uri": "https://www.city.asago.hyogo.jp/site/takeda/3090.html"
+          }
+        },
+        "id": "auth:jp-public:Q8013060",
+        "location_precision": null,
+        "names": [
+          "竹田城跡",
+          "竹田城遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          134.829,
+          35.3005
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The publicly interpreted mountain castle ruins, with visitable areas and seasonal access specified by Asago City.",
+            "id": "auth:jp-public:Q8013060:public-0",
+            "license": null,
+            "publisher": "Asago City",
+            "revision": "Retrieved 2026-11-28; SHA-256 5aa8d3fa50d0c7cf71069e43b313d6619888a830fa14df6bd18c7e1d1a3ef24a.",
+            "title": "Takeda Castle Ruins official place and public access record",
+            "uri": "https://www.city.asago.hyogo.jp/site/takeda/3090.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The publicly interpreted mountain castle ruins, with visitable areas and seasonal access specified by Asago City.",
+            "id": "auth:jp-public:Q8013060:public-1",
+            "license": null,
+            "publisher": "Asago City",
+            "revision": "Retrieved 2026-11-28; SHA-256 c53ee0cb9ea70516f46e5ed7dc232bcb0dd5d3097ce4f19463428e98ec9a0efe.",
+            "title": "Takeda Castle Ruins official place and public access record",
+            "uri": "https://www.city.asago.hyogo.jp/site/takeda/25623.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 134.829, latitude 35.3005.",
+            "id": "wikidata:Q8013060",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2512694550, statement Q8013060$4DCD1142-AE97-4E13-AA45-81E59ECA0011.",
+            "title": "Takeda Castle Ruins representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q8013060.json"
+          }
+        ],
+        "source_uri": "https://www.city.asago.hyogo.jp/site/takeda/3090.html",
+        "title": "Takeda Castle Ruins",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q8013060-public.html",
+          "sha256": "5aa8d3fa50d0c7cf71069e43b313d6619888a830fa14df6bd18c7e1d1a3ef24a",
+          "uri": "https://www.city.asago.hyogo.jp/site/takeda/3090.html"
+        },
+        {
+          "filename": "Q8013060-identity.html",
+          "sha256": "c53ee0cb9ea70516f46e5ed7dc232bcb0dd5d3097ce4f19463428e98ec9a0efe",
+          "uri": "https://www.city.asago.hyogo.jp/site/takeda/25623.html"
+        },
+        {
+          "filename": "Q8013060.json",
+          "sha256": "433cc264f6eabfffe6d12517710da56f99a44a31a49e418aea73d041c05a3bf2",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q8013060.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active WGS84 claim for the stated named original site.",
+        "point": [
+          140.98833333,
+          38.30666667
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q870867.json",
+        "statement_id": "Q870867$C6B1F7EA-CF5A-4BE4-B211-118A882AF556"
+      },
+      "independent_review": {
+        "method": "Independent review compared exact licensed Wikidata coordinates and native precision, original government archaeology or visitor material, foundations and reconstructed details, and the official UNESCO component and tentative-list records.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original Tagajō administrative and defensive archaeological site. Public features shown by the city include the administrative compound site and reconstructed south gate.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed public point and site identity against source records.",
+          "note": "No independently reviewed date is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tagajō City",
+          "Wikidata contributors"
+        ],
+        "description": "The original Tagajō administrative and defensive archaeological site. Public features shown by the city include the administrative compound site and reconstructed south gate.",
+        "description_zh": "宫城县多贺城的古代行政与防御遗址，市政府资料展示政厅遗址与复原南门。",
+        "details": "The original Tagajō administrative and defensive archaeological site. Public features shown by the city include the administrative compound site and reconstructed south gate.",
+        "geography": {
+          "authority_id": "supplement:auth:jp-public:Q870867",
+          "countries": [
+            "JP"
+          ],
+          "note": "Public heritage place in Miyagi Prefecture, Japan.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The original Tagajō administrative and defensive archaeological site. Public features shown by the city include the administrative compound site and reconstructed south gate.",
+            "id": "auth:jp-public:Q870867:public-0",
+            "license": null,
+            "publisher": "Tagajō City",
+            "revision": "Retrieved 2026-11-28; SHA-256 a7ed3b9ac5cf1d3ebdedc0541179a5f80464ea6c9a4e70f2155ab50cdc8576ef.",
+            "title": "Tagajō Castle Ruins official place and public access record",
+            "uri": "https://www.city.tagajo.miyagi.jp/bunkakanko/documents/eigo.pdf"
+          }
+        },
+        "id": "auth:jp-public:Q870867",
+        "location_precision": null,
+        "names": [
+          "多賀城跡",
+          "多贺城遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          140.98833333,
+          38.30666667
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The original Tagajō administrative and defensive archaeological site. Public features shown by the city include the administrative compound site and reconstructed south gate.",
+            "id": "auth:jp-public:Q870867:public-0",
+            "license": null,
+            "publisher": "Tagajō City",
+            "revision": "Retrieved 2026-11-28; SHA-256 a7ed3b9ac5cf1d3ebdedc0541179a5f80464ea6c9a4e70f2155ab50cdc8576ef.",
+            "title": "Tagajō Castle Ruins official place and public access record",
+            "uri": "https://www.city.tagajo.miyagi.jp/bunkakanko/documents/eigo.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The original Tagajō administrative and defensive archaeological site. Public features shown by the city include the administrative compound site and reconstructed south gate.",
+            "id": "auth:jp-public:Q870867:public-1",
+            "license": null,
+            "publisher": "Tagajō City",
+            "revision": "Retrieved 2026-11-28; SHA-256 13e4097ef7f438e922ecaef222125bfc8dd2648cc231f437d6d4830017f301ff.",
+            "title": "Tagajō Castle Ruins official place and public access record",
+            "uri": "https://www.city.tagajo.miyagi.jp/bunkazai/shiseki/nanmon.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 140.98833333, latitude 38.30666667.",
+            "id": "wikidata:Q870867",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata 2516713762, statement Q870867$C6B1F7EA-CF5A-4BE4-B211-118A882AF556.",
+            "title": "Tagajō Castle Ruins representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q870867.json"
+          }
+        ],
+        "source_uri": "https://www.city.tagajo.miyagi.jp/bunkakanko/documents/eigo.pdf",
+        "title": "Tagajō Castle Ruins",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q870867-public.pdf",
+          "sha256": "a7ed3b9ac5cf1d3ebdedc0541179a5f80464ea6c9a4e70f2155ab50cdc8576ef",
+          "uri": "https://www.city.tagajo.miyagi.jp/bunkakanko/documents/eigo.pdf"
+        },
+        {
+          "filename": "Q870867-identity.html",
+          "sha256": "13e4097ef7f438e922ecaef222125bfc8dd2648cc231f437d6d4830017f301ff",
+          "uri": "https://www.city.tagajo.miyagi.jp/bunkazai/shiseki/nanmon.html"
+        },
+        {
+          "filename": "Q870867.json",
+          "sha256": "8f45b78842debf8cb314a12e9d12aff7cf24ffac9545f34e5c608077e967a5d5",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q870867.json"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Publicly interpreted Japanese archaeological sites and castle properties, matched to government or operator evidence and individually checked against existing World Heritage locations and components."
+}

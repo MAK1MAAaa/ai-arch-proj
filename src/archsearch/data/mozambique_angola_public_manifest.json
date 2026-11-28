@@ -1,0 +1,22 @@
+{
+  "base_count": 5177,
+  "base_ids_sha256": "3b1ecc168e21072d67104d91433ce9855e0b8a65c6aba2de397f86739a485171",
+  "base_sites_sha256": "1d56d1e423e97918e463c18fac2347fd4d64d1e946943008dd46bb0b8b271829",
+  "cohort_version": "mozambique-angola-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 8,
+    "total": 5185
+  },
+  "files": {
+    "mozambique_angola_public_review.json": {
+      "sha256": "70555a0df4b3d72d71b94dad0416228e1c6c3a6617b76fef3082a1e7e1b694f5"
+    },
+    "mozambique_angola_public_sites.json": {
+      "sha256": "1e70cbcb19a9cdeb553f2fe5c27089adb49b038ec2d717b0a8fc68cb760fd760"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Three managed historic public sites in Mozambique and five in Angola with original structure scope and open-source positions."
+}

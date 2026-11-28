@@ -1,0 +1,22 @@
+{
+  "base_count": 5158,
+  "base_ids_sha256": "a4582d48740959f24d348a805683bd8cb71974c74384d34dc4e6fbe484d5b94e",
+  "base_sites_sha256": "0ef0fa92e22dc73e9bd0ea262c4c9d9e47a5de4a38e4fec790e47d3d1bb76978",
+  "cohort_version": "china-archaeological-parks-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 6,
+    "total": 5164
+  },
+  "files": {
+    "china_archparks_public_review.json": {
+      "sha256": "4412393fe2062a79ac1303f58a21adf097a490b7a31910beac658a000e76cf1a"
+    },
+    "china_archparks_public_sites.json": {
+      "sha256": "233f60efda3b4d48575ceffbc2828f517a48d4cf8adec7a5bfd19065b6082e05"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Six named archaeological visitor parks in China, checked at each public site scale."
+}

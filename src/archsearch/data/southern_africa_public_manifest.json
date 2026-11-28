@@ -1,0 +1,22 @@
+{
+  "base_count": 4733,
+  "base_ids_sha256": "edacbb04dabde7e53f36be6400be8f0452e8e5a66d3145eb4d4b7d64ab77a74d",
+  "base_sites_sha256": "f6fb5e96730fcc3e1d0c295252642d132d3f77d5eccfbef4c72b16542350e63c",
+  "cohort_version": "namibia-botswana-zimbabwe-zambia-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 10,
+    "total": 4743
+  },
+  "files": {
+    "southern_africa_public_review.json": {
+      "sha256": "33fcb3cb5cbf8714af1ca4688a9f80bd74b283eacd92695223d0d47a16d9cc51"
+    },
+    "southern_africa_public_sites.json": {
+      "sha256": "e928b56e4f9be402f3b0699fef6f8a3c445a6df414368d6c01a92a4c5aebea31"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Named public heritage locations in Namibia, Botswana, Zimbabwe and Zambia, with documented visitor scope and confirmed original coordinates or representative points."
+}

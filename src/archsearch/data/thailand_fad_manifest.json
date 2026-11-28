@@ -1,0 +1,22 @@
+{
+  "base_count": 4318,
+  "base_ids_sha256": "86b2634fc4a4d2dd322f1fc38520a22184695cb08f858640521c0bcd441d25a7",
+  "base_sites_sha256": "d4a83f601c54d22143c757253f3f6dbb099b815ddcce8d2c86f3840661a0eaf8",
+  "cohort_version": "thailand-fad-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 17,
+    "total": 4335
+  },
+  "files": {
+    "thailand_fad_review.json": {
+      "sha256": "1cc7aecfdb0cb1b2925e15c4dc4c6587b8d6451b19a1a2e63929fc371f0fc44c"
+    },
+    "thailand_fad_sites.json": {
+      "sha256": "9ee26d0b20abf35338d93430a812c06df435bffe827654d4081154d1670c08d4"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "17 registered cultural sites whose official tourism access record and registered heritage location match by identity and locality, with a location discrepancy below 150 metres."
+}

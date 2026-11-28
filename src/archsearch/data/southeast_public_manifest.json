@@ -1,0 +1,22 @@
+{
+  "base_count": 4514,
+  "base_ids_sha256": "52c2a18303541b9948e5b08d184cc0963fff96ea317e24052f05a7cbfe467b1b",
+  "base_sites_sha256": "d5754c5f208d803bcf7dee28b5beafdfa6d978f99093695c58382572b0ec50e3",
+  "cohort_version": "vietnam-cambodia-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 28,
+    "total": 4542
+  },
+  "files": {
+    "southeast_public_review.json": {
+      "sha256": "5cb9406321605edf6c7a3fb96affc7a9fba9519712605caf6484fdd14dff348b"
+    },
+    "southeast_public_sites.json": {
+      "sha256": "261a0aa22efe6beb61a518944538dcddeee6d416e4c866813dd543da7ccdc974"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Nineteen places in Vietnam and nine places in Cambodia from official public visitor sources with original CC0 site coordinates. Dương Long was excluded during active restoration."
+}

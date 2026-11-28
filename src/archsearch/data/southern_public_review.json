@@ -1,0 +1,1058 @@
+{
+  "base_count": 4462,
+  "base_ids_sha256": "6a33d9b8ce88f310162227bd09733f83eaad7ecedff774183d25348618e2caeb",
+  "base_sites_sha256": "4d7b8ac755e13b18f6340cff5efcb9b4168abe01df8bba4c2758e97041c391a6",
+  "cohort_version": "southern-cone-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Open IGN reference point for the named archaeological reserve. Public access relates to signed visitor areas in the reserve.",
+        "point": [
+          -63.92931086,
+          -30.0967002
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://wms.ign.gob.ar/geoserver/ign/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ign%3Apuntos_de_asentamientos_y_edificios_AL201&outputFormat=application%2Fjson&srsName=EPSG%3A4326",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Verified every frozen source archive, original Wikidata P625 or IGN AL201 geometry, publisher terms and modern visitor access. Excluded earlier UNESCO components, unclear location matches and duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "One named reserve marker. No individual shelter or nonpublic archaeological location is added.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Compared scope and locality in the frozen IGN and Córdoba visitor evidence.",
+          "note": "The adopted catalogue point does not give an independently verified historical phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Instituto Geográfico Nacional de la República Argentina",
+          "Agencia Córdoba Turismo"
+        ],
+        "description": "Public archaeological reserve in northern Córdoba, Argentina, with guided interpretation of rock art.",
+        "description_zh": "阿根廷科尔多瓦北部塞罗科罗拉多考古保护区，指定公众参观区域提供岩画解说。",
+        "details": "Open IGN reference point for the named archaeological reserve. Public access relates to signed visitor areas in the reserve.",
+        "geography": {
+          "authority_id": "supplement:auth:public-americas:ar-cerro-colorado",
+          "countries": [
+            "AR"
+          ],
+          "note": "Modern location from the geographically indexed public sources.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Yacimientos Arqueológicos Cerro Colorado; 423613.",
+            "id": "ar-ign:interest:423613",
+            "license": "IGN free reuse with attribution",
+            "publisher": "Instituto Geográfico Nacional de la República Argentina",
+            "revision": "Official WFS AL201 original WGS84 point, snapshot 2026-11-28; source metadata last updated 2021-11-23.",
+            "title": "IGN national public Sites of Interest — Yacimientos Arqueológicos Cerro Colorado",
+            "uri": "https://wms.ign.gob.ar/geoserver/ign/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ign%3Apuntos_de_asentamientos_y_edificios_AL201&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+          }
+        },
+        "id": "auth:public-americas:ar-cerro-colorado",
+        "location_precision": null,
+        "names": [
+          "Reserva Cultural y Natural Cerro Colorado",
+          "Yacimientos Arqueológicos Cerro Colorado",
+          "Museo Arqueológico Cerro Colorado"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -63.92931086,
+          -30.0967002
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Yacimientos Arqueológicos Cerro Colorado; 423613.",
+            "id": "ar-ign:interest:423613",
+            "license": "IGN free reuse with attribution",
+            "publisher": "Instituto Geográfico Nacional de la República Argentina",
+            "revision": "Official WFS AL201 original WGS84 point, snapshot 2026-11-28; source metadata last updated 2021-11-23.",
+            "title": "IGN national public Sites of Interest — Yacimientos Arqueológicos Cerro Colorado",
+            "uri": "https://wms.ign.gob.ar/geoserver/ign/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ign%3Apuntos_de_asentamientos_y_edificios_AL201&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Reserva Cultural y Natural Cerro Colorado.",
+            "id": "ar-cordoba:cerro-colorado",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Agencia Córdoba Turismo",
+            "revision": "Official public visitor listing; SHA-256 8954e8fb4de4a3d6f78be4a2a1054e2a7da6eff097b2c9a1f9a0727b72d9e4bc",
+            "title": "Reserva Cultural y Natural Cerro Colorado visitor entry",
+            "uri": "https://cordobaturismo.gov.ar/experiencias/reserva-cultural-y-natural-cerro-colorado/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Libre uso de la información, cumpliendo con la cita adecuada.",
+            "id": "ar-ign:interest:terms",
+            "license": "IGN free reuse with attribution",
+            "publisher": "Instituto Geográfico Nacional de la República Argentina",
+            "revision": "Official IGN metadata created 2021-10-06, updated 2021-11-23.",
+            "title": "IGN Sites of Interest metadata and permission",
+            "uri": "https://www.ign.gob.ar/capas-sig/metadata/sitio_de_interes.pdf"
+          }
+        ],
+        "source_uri": "https://cordobaturismo.gov.ar/experiencias/reserva-cultural-y-natural-cerro-colorado/",
+        "title": "Reserva Cultural y Natural Cerro Colorado",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "southern-source/ar-ign-interest.geojson",
+          "sha256": "19bb1eda6034edd110c4f27fbc9de9fda4113dc8135c031d5a86dbd4e4cc8d34",
+          "uri": "https://wms.ign.gob.ar/geoserver/ign/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ign%3Apuntos_de_asentamientos_y_edificios_AL201&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+        },
+        {
+          "filename": "southern-source/ar-cerro-visit.html",
+          "sha256": "8954e8fb4de4a3d6f78be4a2a1054e2a7da6eff097b2c9a1f9a0727b72d9e4bc",
+          "uri": "https://cordobaturismo.gov.ar/experiencias/reserva-cultural-y-natural-cerro-colorado/"
+        },
+        {
+          "filename": "southern-source/ar-ign-metadata.pdf",
+          "sha256": "542ad081cbe78eb0f0fb74ade45a34eff48aa1e0ec99866368e34ef1976ab5f4",
+          "uri": "https://www.ign.gob.ar/capas-sig/metadata/sitio_de_interes.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+        "point": [
+          -66.03688,
+          -26.464794
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q735774.json",
+        "statement_id": "Q735774$51AD8F6C-9416-4170-B847-B40E5B009FE8"
+      },
+      "independent_review": {
+        "method": "Verified every frozen source archive, original Wikidata P625 or IGN AL201 geometry, publisher terms and modern visitor access. Excluded earlier UNESCO components, unclear location matches and duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point represents the historic settlement grounds; the public interpretation centre and tourist arrival point lie roughly 270 m away.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Checked the scope of the adopted public location and visitor evidence.",
+          "note": "The evidence was checked for place identity and access. A historical stage remains unverified for this point batch.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ciudad Sagrada de Quilmes",
+          "Visit Argentina",
+          "Wikidata contributors"
+        ],
+        "description": "Publicly interpreted archaeological settlement in the Valles Calchaquíes, Tucumán.",
+        "description_zh": "阿根廷图库曼省卡尔查基谷地的基尔梅斯历史聚落遗址，面向公众开放。",
+        "details": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:public-americas:ar-quilmes",
+          "countries": [
+            "AR"
+          ],
+          "note": "Modern location: Tafí del Valle, Tucumán.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "recorrida autónoma del sitio arqueológico",
+            "id": "ar-quilmes:ref-1",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ciudad Sagrada de Quilmes",
+            "revision": "Frozen authority or published-site reference; SHA-256 8993097f6a862d42f8e28e3409317692d69267048c43d702bfc06007739fee54",
+            "title": "Site operator’s official public visiting information",
+            "uri": "https://www.ruinasdequilmes.com/english"
+          }
+        },
+        "id": "auth:public-americas:ar-quilmes",
+        "location_precision": null,
+        "names": [
+          "Ciudad Sagrada de Quilmes",
+          "Ruinas de Quilmes",
+          "Ruinas de los Quilmes"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -66.03688,
+          -26.464794
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "recorrida autónoma del sitio arqueológico",
+            "id": "ar-quilmes:ref-1",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ciudad Sagrada de Quilmes",
+            "revision": "Frozen authority or published-site reference; SHA-256 8993097f6a862d42f8e28e3409317692d69267048c43d702bfc06007739fee54",
+            "title": "Site operator’s official public visiting information",
+            "uri": "https://www.ruinasdequilmes.com/english"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Ciudad Sagrada de los Quilmes",
+            "id": "ar-quilmes:ref-2",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Visit Argentina",
+            "revision": "Frozen authority or published-site reference; SHA-256 89d942603f16dbb3a073023b5ca2df16a91e117e1274493ef780585130f7771a",
+            "title": "National tourism visitor listing and site map",
+            "uri": "https://www.argentina.travel/actividades/ciudad-sagrada-de-los-quilmes"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Ciudad Sagrada de Quilmes; public coordinate statement.",
+            "id": "wd:Q735774",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2569417793; SHA-256 f05f3c6c9c01d8648460aa0f97049698064aa2e3eba451fa24ba4950d5ce05b7",
+            "title": "Wikidata structured location — Ciudad Sagrada de Quilmes",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q735774.json"
+          }
+        ],
+        "source_uri": "https://www.ruinasdequilmes.com/english",
+        "title": "Ciudad Sagrada de Quilmes",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "southern-source/ar-quilmes-official.html",
+          "sha256": "8993097f6a862d42f8e28e3409317692d69267048c43d702bfc06007739fee54",
+          "uri": "https://www.ruinasdequilmes.com/english"
+        },
+        {
+          "filename": "southern-source/ar-quilmes-national.html",
+          "sha256": "89d942603f16dbb3a073023b5ca2df16a91e117e1274493ef780585130f7771a",
+          "uri": "https://www.argentina.travel/actividades/ciudad-sagrada-de-los-quilmes"
+        },
+        {
+          "filename": "southern-source/Q735774.json",
+          "sha256": "f05f3c6c9c01d8648460aa0f97049698064aa2e3eba451fa24ba4950d5ce05b7",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q735774.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+        "point": [
+          -72.6197,
+          -51.5656
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1483271.json",
+        "statement_id": "Q1483271$6C1DA07D-27B8-42F4-9E03-0172B5B2EA7B"
+      },
+      "independent_review": {
+        "method": "Verified every frozen source archive, original Wikidata P625 or IGN AL201 geometry, publisher terms and modern visitor access. Excluded earlier UNESCO components, unclear location matches and duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The location is the public main-cave monument. Some segments of the trail have explicit restrictions in 2026, without closing the visit to the monument.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Checked the scope of the adopted public location and visitor evidence.",
+          "note": "The evidence was checked for place identity and access. A historical stage remains unverified for this point batch.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Corporación Nacional Forestal de Chile",
+          "Monumento Natural Cueva del Milodón",
+          "Consejo de Monumentos Nacionales de Chile",
+          "Wikidata contributors"
+        ],
+        "description": "Public cave monument in Chilean Patagonia with evidence of ancient human occupation.",
+        "description_zh": "智利巴塔哥尼亚的米洛东洞穴遗址，保留古人类活动证据并设有公众参观路线。",
+        "details": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:public-americas:cl-milodon",
+          "countries": [
+            "CL"
+          ],
+          "note": "Modern location: Natales, Última Esperanza, Magallanes.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "no impide realizar el recorrido",
+            "id": "cl-milodon:ref-1",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Corporación Nacional Forestal de Chile",
+            "revision": "Frozen authority or published-site reference; SHA-256 4826c272530bd000219354f985cb53ecd76c87e85c1f91a73da3658c32795d95",
+            "title": "Official monument visitor and archaeological descriptions",
+            "uri": "https://www.conaf.cl/parque_nacionales/monumento-natural-cueva-del-milodon/"
+          }
+        },
+        "id": "auth:public-americas:cl-milodon",
+        "location_precision": null,
+        "names": [
+          "Monumento Natural Cueva del Milodón",
+          "Cueva del Milodón",
+          "Milodon Cave"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -72.6197,
+          -51.5656
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "no impide realizar el recorrido",
+            "id": "cl-milodon:ref-1",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Corporación Nacional Forestal de Chile",
+            "revision": "Frozen authority or published-site reference; SHA-256 4826c272530bd000219354f985cb53ecd76c87e85c1f91a73da3658c32795d95",
+            "title": "Official monument visitor and archaeological descriptions",
+            "uri": "https://www.conaf.cl/parque_nacionales/monumento-natural-cueva-del-milodon/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "51º 34",
+            "id": "cl-milodon:ref-2",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Monumento Natural Cueva del Milodón",
+            "revision": "Frozen authority or published-site reference; SHA-256 154c93ec3569c7c58ccec02f2cec1059018225915516752cab00a1afb88d82b8",
+            "title": "Visitor access and geographic location",
+            "uri": "https://cuevadelmilodon.cl/ubicacion-y-accesos/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Cueva del Milodón",
+            "id": "cl-milodon:ref-3",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Consejo de Monumentos Nacionales de Chile",
+            "revision": "Frozen authority or published-site reference; SHA-256 cae4054628d469056ef11f80a2ecdc17a0f0f34cb9ff519babf11913feabfcea",
+            "title": "Description of the designated cave and human occupation",
+            "uri": "https://www.monumentos.gob.cl/sites/default/files/2024-12/Apuntes%20milodon%20Ok.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Monumento Natural Cueva del Milodón; public coordinate statement.",
+            "id": "wd:Q1483271",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2508118357; SHA-256 c18a4a460eaafe05418255a2d01333eccc537de602344142c60c8e8cc22fe2c3",
+            "title": "Wikidata structured location — Monumento Natural Cueva del Milodón",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1483271.json"
+          }
+        ],
+        "source_uri": "https://www.conaf.cl/parque_nacionales/monumento-natural-cueva-del-milodon/",
+        "title": "Monumento Natural Cueva del Milodón",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "southern-source/cl-milodon.html",
+          "sha256": "4826c272530bd000219354f985cb53ecd76c87e85c1f91a73da3658c32795d95",
+          "uri": "https://www.conaf.cl/parque_nacionales/monumento-natural-cueva-del-milodon/"
+        },
+        {
+          "filename": "southern-source/cl-milodon-location.html",
+          "sha256": "154c93ec3569c7c58ccec02f2cec1059018225915516752cab00a1afb88d82b8",
+          "uri": "https://cuevadelmilodon.cl/ubicacion-y-accesos/"
+        },
+        {
+          "filename": "southern-source/cl-milodon-heritage.pdf",
+          "sha256": "cae4054628d469056ef11f80a2ecdc17a0f0f34cb9ff519babf11913feabfcea",
+          "uri": "https://www.monumentos.gob.cl/sites/default/files/2024-12/Apuntes%20milodon%20Ok.pdf"
+        },
+        {
+          "filename": "southern-source/Q1483271.json",
+          "sha256": "c18a4a460eaafe05418255a2d01333eccc537de602344142c60c8e8cc22fe2c3",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1483271.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+        "point": [
+          -73.402845,
+          -39.869753
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q18809829.json",
+        "statement_id": "Q18809829$037A2C28-59B6-4F87-A299-9292CAE25268"
+      },
+      "independent_review": {
+        "method": "Verified every frozen source archive, original Wikidata P625 or IGN AL201 geometry, publisher terms and modern visitor access. Excluded earlier UNESCO components, unclear location matches and duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The location represents the public museum at the original Niebla fort. The named visitor destination is separately verified in the museum page.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Checked the scope of the adopted public location and visitor evidence.",
+          "note": "The evidence was checked for place identity and access. A historical stage remains unverified for this point batch.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Museo de Sitio Castillo de Niebla",
+          "Wikidata contributors"
+        ],
+        "description": "Original historic fortifications in Niebla, Valdivia, open as a public site museum.",
+        "description_zh": "智利洛斯里奥斯大区瓦尔迪维亚涅夫拉的历史防御工事，现向公众开放为原址博物馆。",
+        "details": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:public-americas:cl-niebla",
+          "countries": [
+            "CL"
+          ],
+          "note": "Modern location: Niebla, Valdivia, Los Ríos.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "es gratuita",
+            "id": "cl-niebla:ref-1",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Museo de Sitio Castillo de Niebla",
+            "revision": "Frozen authority or published-site reference; SHA-256 7d8f5d5cf59c48225b51674708207f9f60b3c6b439d24f9da190878205fa129e",
+            "title": "Official visit information for the archaeological site museum",
+            "uri": "https://www.castillodeniebla.gob.cl/servicios/informacion-para-tu-visita"
+          }
+        },
+        "id": "auth:public-americas:cl-niebla",
+        "location_precision": null,
+        "names": [
+          "Castillo de Niebla",
+          "Fuerte de Niebla",
+          "Museo de Sitio Castillo de Niebla"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -73.402845,
+          -39.869753
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "es gratuita",
+            "id": "cl-niebla:ref-1",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Museo de Sitio Castillo de Niebla",
+            "revision": "Frozen authority or published-site reference; SHA-256 7d8f5d5cf59c48225b51674708207f9f60b3c6b439d24f9da190878205fa129e",
+            "title": "Official visit information for the archaeological site museum",
+            "uri": "https://www.castillodeniebla.gob.cl/servicios/informacion-para-tu-visita"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Castillo de Niebla; public coordinate statement.",
+            "id": "wd:Q18809829",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2359034595; SHA-256 7f56e994c3fa11a304ca7adf6e181425a5d3706e3605bee31a35809d3cb1c748",
+            "title": "Wikidata structured location — Castillo de Niebla",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q18809829.json"
+          }
+        ],
+        "source_uri": "https://www.castillodeniebla.gob.cl/servicios/informacion-para-tu-visita",
+        "title": "Castillo de Niebla",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "southern-source/cl-niebla-visit.html",
+          "sha256": "7d8f5d5cf59c48225b51674708207f9f60b3c6b439d24f9da190878205fa129e",
+          "uri": "https://www.castillodeniebla.gob.cl/servicios/informacion-para-tu-visita"
+        },
+        {
+          "filename": "southern-source/Q18809829.json",
+          "sha256": "7f56e994c3fa11a304ca7adf6e181425a5d3706e3605bee31a35809d3cb1c748",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q18809829.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+        "point": [
+          -69.67366111,
+          -20.61917778
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5839946.json",
+        "statement_id": "Q5839946$B1D2941D-1EC2-4ACB-9E56-20A2E94CC18B"
+      },
+      "independent_review": {
+        "method": "Verified every frozen source archive, original Wikidata P625 or IGN AL201 geometry, publisher terms and modern visitor access. Excluded earlier UNESCO components, unclear location matches and duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The marker matches the heritage catalogue’s archaeological site. The ticketing route covers the designated public geoglyph sector of the reserve.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Checked the scope of the adopted public location and visitor evidence.",
+          "note": "The evidence was checked for place identity and access. A historical stage remains unverified for this point batch.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Corporación Nacional Forestal de Chile",
+          "Portal Chile Patrimonios",
+          "Wikidata contributors"
+        ],
+        "description": "Public geoglyph site in the Pampa del Tamarugal reserve near Pozo Almonte.",
+        "description_zh": "智利塔拉帕卡大区波索阿尔蒙特的平塔多斯地画遗址，设有公众参观区。",
+        "details": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:public-americas:cl-pintados",
+          "countries": [
+            "CL"
+          ],
+          "note": "Modern location: Pozo Almonte, Tarapacá.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Sector Geoglifos de Pintados",
+            "id": "cl-pintados:ref-1",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Corporación Nacional Forestal de Chile",
+            "revision": "Frozen authority or published-site reference; SHA-256 c49e4cf5a3767b5a1d22113c7723f055521883cad40c57b8ae1183ed2d4ea1ff",
+            "title": "Official public admission for the Geoglifos de Pintados sector",
+            "uri": "https://www.pasesparques.cl/es/pozo-almonte-589/reserva-nacional-pampa-del-tamarugal-3436"
+          }
+        },
+        "id": "auth:public-americas:cl-pintados",
+        "location_precision": null,
+        "names": [
+          "Geoglifos de Pintados",
+          "Complejo Arqueológico Geoglifos de Pintados",
+          "Pintados Geoglyphs"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -69.67366111,
+          -20.61917778
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Sector Geoglifos de Pintados",
+            "id": "cl-pintados:ref-1",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Corporación Nacional Forestal de Chile",
+            "revision": "Frozen authority or published-site reference; SHA-256 c49e4cf5a3767b5a1d22113c7723f055521883cad40c57b8ae1183ed2d4ea1ff",
+            "title": "Official public admission for the Geoglifos de Pintados sector",
+            "uri": "https://www.pasesparques.cl/es/pozo-almonte-589/reserva-nacional-pampa-del-tamarugal-3436"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Geoglifos de Pintados",
+            "id": "cl-pintados:ref-2",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Portal Chile Patrimonios",
+            "revision": "Frozen authority or published-site reference; SHA-256 8b0da259db3585e1cdbb306a5ebb4969ecd34d4a3bfe8d9d770f5cf921d4f4ca",
+            "title": "Heritage place register 01PMN-3487 map",
+            "uri": "https://www.chilepatrimonios.gob.cl/ficha?doi=01PMN-3487"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Geoglifos de Pintados; public coordinate statement.",
+            "id": "wd:Q5839946",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2527144207; SHA-256 a4ca408568a38fcdb10a676039e36376c35d63550aeca54bcc2bc82ca827a540",
+            "title": "Wikidata structured location — Geoglifos de Pintados",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5839946.json"
+          }
+        ],
+        "source_uri": "https://www.pasesparques.cl/es/pozo-almonte-589/reserva-nacional-pampa-del-tamarugal-3436",
+        "title": "Geoglifos de Pintados",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "southern-source/cl-pintados-operator.html",
+          "sha256": "c49e4cf5a3767b5a1d22113c7723f055521883cad40c57b8ae1183ed2d4ea1ff",
+          "uri": "https://www.pasesparques.cl/es/pozo-almonte-589/reserva-nacional-pampa-del-tamarugal-3436"
+        },
+        {
+          "filename": "southern-source/cl-pintados-register.html",
+          "sha256": "8b0da259db3585e1cdbb306a5ebb4969ecd34d4a3bfe8d9d770f5cf921d4f4ca",
+          "uri": "https://www.chilepatrimonios.gob.cl/ficha?doi=01PMN-3487"
+        },
+        {
+          "filename": "southern-source/Q5839946.json",
+          "sha256": "a4ca408568a38fcdb10a676039e36376c35d63550aeca54bcc2bc82ca827a540",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5839946.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+        "point": [
+          -68.21444445,
+          -22.89083334
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2988995.json",
+        "statement_id": "Q2988995$9FBE12AA-908A-47EC-B85A-38BD069848BB"
+      },
+      "independent_review": {
+        "method": "Verified every frozen source archive, original Wikidata P625 or IGN AL201 geometry, publisher terms and modern visitor access. Excluded earlier UNESCO components, unclear location matches and duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The recorded locale is Quitor in San Pedro de Atacama, distinct from Lasana and other similarly named fortifications. Follow local site visitor conditions.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Checked the scope of the adopted public location and visitor evidence.",
+          "note": "The evidence was checked for place identity and access. A historical stage remains unverified for this point batch.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Servicio Nacional de Turismo de Chile",
+          "Wikidata contributors"
+        ],
+        "description": "Pre-Inca hilltop fortification with public visits in San Pedro de Atacama.",
+        "description_zh": "智利阿塔卡马圣佩德罗的基托尔山顶古堡，属于前印加考古遗址并向公众开放。",
+        "details": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:public-americas:cl-quitor",
+          "countries": [
+            "CL"
+          ],
+          "note": "Modern location: San Pedro de Atacama, Antofagasta.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Pukará de Quitor",
+            "id": "cl-quitor:ref-1",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Servicio Nacional de Turismo de Chile",
+            "revision": "Frozen authority or published-site reference; SHA-256 3fccac35060c050d2e190785780d050da7682e6c22721c4dd8ba178d194f1d41",
+            "title": "Official tourist map and public archaeological itinerary for Pukará de Quitor",
+            "uri": "https://chile.travel/itinerarios/asombrate-con-cada-rincon-de-san-pedro-de-atacama/"
+          }
+        },
+        "id": "auth:public-americas:cl-quitor",
+        "location_precision": null,
+        "names": [
+          "Pukará de Quitor",
+          "Pucará de Quitor",
+          "Fortaleza de Quitor"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -68.21444445,
+          -22.89083334
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Pukará de Quitor",
+            "id": "cl-quitor:ref-1",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Servicio Nacional de Turismo de Chile",
+            "revision": "Frozen authority or published-site reference; SHA-256 3fccac35060c050d2e190785780d050da7682e6c22721c4dd8ba178d194f1d41",
+            "title": "Official tourist map and public archaeological itinerary for Pukará de Quitor",
+            "uri": "https://chile.travel/itinerarios/asombrate-con-cada-rincon-de-san-pedro-de-atacama/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Pukará de Quitor",
+            "id": "cl-quitor:ref-2",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Servicio Nacional de Turismo de Chile",
+            "revision": "Frozen authority or published-site reference; SHA-256 6c7f3d8164dd5e0790d3e4a88884f604919ad097772150759cb285f689a54695",
+            "title": "Government tourism description of the original archaeological site",
+            "uri": "https://chile.travel/blog/que-hacer-en-san-pedro-de-atacama-y-sus-alrededores-2/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Pukará de Quitor; public coordinate statement.",
+            "id": "wd:Q2988995",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2490848057; SHA-256 0a16d38422ce1ad0024ad20849d7b75ca82d523d878de8119c60e7cb28bbea6a",
+            "title": "Wikidata structured location — Pukará de Quitor",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2988995.json"
+          }
+        ],
+        "source_uri": "https://chile.travel/itinerarios/asombrate-con-cada-rincon-de-san-pedro-de-atacama/",
+        "title": "Pukará de Quitor",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "southern-source/cl-quitor-visit.html",
+          "sha256": "3fccac35060c050d2e190785780d050da7682e6c22721c4dd8ba178d194f1d41",
+          "uri": "https://chile.travel/itinerarios/asombrate-con-cada-rincon-de-san-pedro-de-atacama/"
+        },
+        {
+          "filename": "southern-source/cl-quitor-alt.html",
+          "sha256": "6c7f3d8164dd5e0790d3e4a88884f604919ad097772150759cb285f689a54695",
+          "uri": "https://chile.travel/blog/que-hacer-en-san-pedro-de-atacama-y-sus-alrededores-2/"
+        },
+        {
+          "filename": "southern-source/Q2988995.json",
+          "sha256": "0a16d38422ce1ad0024ad20849d7b75ca82d523d878de8119c60e7cb28bbea6a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2988995.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+        "point": [
+          -68.2425,
+          -22.9681
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2493479.json",
+        "statement_id": "Q2493479$97CE4A84-59F8-4EED-B3AC-43CDC18127F6"
+      },
+      "independent_review": {
+        "method": "Verified every frozen source archive, original Wikidata P625 or IGN AL201 geometry, publisher terms and modern visitor access. Excluded earlier UNESCO components, unclear location matches and duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "One location for the publicly interpreted village ruins in the Tulor area. The source describes local community visitor arrangements and a separate route of access.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Checked the scope of the adopted public location and visitor evidence.",
+          "note": "The evidence was checked for place identity and access. A historical stage remains unverified for this point batch.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Servicio Nacional de Turismo de Chile",
+          "Wikimedia Commons original photographer",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological village site in San Pedro de Atacama, managed with the Coyo community.",
+        "description_zh": "智利阿塔卡马圣佩德罗的图洛尔古村落遗址，科约社区参与管理并向公众开放。",
+        "details": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:public-americas:cl-tulor",
+          "countries": [
+            "CL"
+          ],
+          "note": "Modern location: Coyo, San Pedro de Atacama, Antofagasta.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "La visita a la Aldea de Tulor",
+            "id": "cl-tulor:ref-1",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Servicio Nacional de Turismo de Chile",
+            "revision": "Frozen authority or published-site reference; SHA-256 ff4a9ca27c0fb2c2018566abee934bacf10bbf09492b41b6e643f241ba9da003",
+            "title": "Current visitor information for Aldea de Tulor",
+            "uri": "https://chile.travel/blog/aldea-de-tulor-el-pueblo-de-atacama-que-estuvo-1-700-anos-escondido-bajo-la-arena/"
+          }
+        },
+        "id": "auth:public-americas:cl-tulor",
+        "location_precision": null,
+        "names": [
+          "Aldea de Tulor",
+          "Tulor",
+          "Tulor-1",
+          "Parque Arqueológico de Tulor"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -68.2425,
+          -22.9681
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "La visita a la Aldea de Tulor",
+            "id": "cl-tulor:ref-1",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Servicio Nacional de Turismo de Chile",
+            "revision": "Frozen authority or published-site reference; SHA-256 ff4a9ca27c0fb2c2018566abee934bacf10bbf09492b41b6e643f241ba9da003",
+            "title": "Current visitor information for Aldea de Tulor",
+            "uri": "https://chile.travel/blog/aldea-de-tulor-el-pueblo-de-atacama-que-estuvo-1-700-anos-escondido-bajo-la-arena/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Camera location",
+            "id": "cl-tulor:ref-2",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Wikimedia Commons original photographer",
+            "revision": "Frozen authority or published-site reference; SHA-256 e3ff0793854dce33882e4db2c970b9fc6658c629c3ec6fafdc7ed193839f8518",
+            "title": "Public georeferenced photo metadata for Aldea de Tulor",
+            "uri": "https://commons.wikimedia.org/wiki/File:Aldea_de_Tulor.jpg"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Aldea de Tulor; public coordinate statement.",
+            "id": "wd:Q2493479",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2127815935; SHA-256 ebabd327d32472c6cfe1ceedf38a451ef89f0d6275d8929adc21aca6ec1186f6",
+            "title": "Wikidata structured location — Aldea de Tulor",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2493479.json"
+          }
+        ],
+        "source_uri": "https://chile.travel/blog/aldea-de-tulor-el-pueblo-de-atacama-que-estuvo-1-700-anos-escondido-bajo-la-arena/",
+        "title": "Aldea de Tulor",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "southern-source/cl-tulor-visit.html",
+          "sha256": "ff4a9ca27c0fb2c2018566abee934bacf10bbf09492b41b6e643f241ba9da003",
+          "uri": "https://chile.travel/blog/aldea-de-tulor-el-pueblo-de-atacama-que-estuvo-1-700-anos-escondido-bajo-la-arena/"
+        },
+        {
+          "filename": "southern-source/cl-tulor-photopage.html",
+          "sha256": "e3ff0793854dce33882e4db2c970b9fc6658c629c3ec6fafdc7ed193839f8518",
+          "uri": "https://commons.wikimedia.org/wiki/File:Aldea_de_Tulor.jpg"
+        },
+        {
+          "filename": "southern-source/Q2493479.json",
+          "sha256": "ebabd327d32472c6cfe1ceedf38a451ef89f0d6275d8929adc21aca6ec1186f6",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2493479.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+        "point": [
+          -71.378848,
+          -30.704005
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6159212.json",
+        "statement_id": "Q6159212$2F997999-3BBC-41A5-A87F-41B6C12A4A23"
+      },
+      "independent_review": {
+        "method": "Verified every frozen source archive, original Wikidata P625 or IGN AL201 geometry, publisher terms and modern visitor access. Excluded earlier UNESCO components, unclear location matches and duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The selected coordinate is verified at the same publicly interpreted archaeological park. The point represents the wider park and carries no archaeological precision label.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Checked the scope of the adopted public location and visitor evidence.",
+          "note": "The evidence was checked for place identity and access. A historical stage remains unverified for this point batch.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "SERNATUR Región de Coquimbo",
+          "Servicio Nacional de Turismo de Chile",
+          "Wikimedia Commons original photographer",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological park with rock carvings and other carved stone features near Ovalle.",
+        "description_zh": "智利科金博大区奥瓦列附近的恩坎托谷考古公园，指定公共区域可见岩刻和其他石刻遗存。",
+        "details": "Wikidata CC0 place point independently compared with the named public institution, site map or field study. The coordinate is a site-level representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:public-americas:cl-valle-del-encanto",
+          "countries": [
+            "CL"
+          ],
+          "note": "Modern location: Ovalle, Limarí, Coquimbo.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Valle del Encanto",
+            "id": "cl-valle-del-encanto:ref-1",
+            "license": "Public reference; source content rights retained",
+            "publisher": "SERNATUR Región de Coquimbo",
+            "revision": "Frozen authority or published-site reference; SHA-256 1e6fc618951f0b2b90c63278a204645bbb4c9eb84f9052593b04a510994f2508",
+            "title": "June 2026 public site report, listing Valle del Encanto as open",
+            "uri": "https://turismoregiondecoquimbo.cl/wp-content/uploads/2026/06/REPORTE-VIAJERO-2026-Junio_compressed.pdf"
+          }
+        },
+        "id": "auth:public-americas:cl-valle-del-encanto",
+        "location_precision": null,
+        "names": [
+          "Valle del Encanto",
+          "Valle de El Encanto",
+          "Parque Arqueológico Valle del Encanto"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -71.378848,
+          -30.704005
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Valle del Encanto",
+            "id": "cl-valle-del-encanto:ref-1",
+            "license": "Public reference; source content rights retained",
+            "publisher": "SERNATUR Región de Coquimbo",
+            "revision": "Frozen authority or published-site reference; SHA-256 1e6fc618951f0b2b90c63278a204645bbb4c9eb84f9052593b04a510994f2508",
+            "title": "June 2026 public site report, listing Valle del Encanto as open",
+            "uri": "https://turismoregiondecoquimbo.cl/wp-content/uploads/2026/06/REPORTE-VIAJERO-2026-Junio_compressed.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Valle del Encanto",
+            "id": "cl-valle-del-encanto:ref-2",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Servicio Nacional de Turismo de Chile",
+            "revision": "Frozen authority or published-site reference; SHA-256 1c987e4a97ffe79fca47a17fa3b89334895a42ab6fa645b365034b8e41c01608",
+            "title": "Official archaeological site description and visitor context",
+            "uri": "https://www.sernatur.cl/conoce-los-atractivos-turisticos-que-puedes-visitar-en-la-zona-centro-y-sur-de-chile/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Camera location",
+            "id": "cl-valle-del-encanto:ref-3",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Wikimedia Commons original photographer",
+            "revision": "Frozen authority or published-site reference; SHA-256 8e97e1304ce3367b6ea7717ffdf279758b40a33fa12acaa9aa2b79dc6975351c",
+            "title": "Public georeferenced photo metadata for Valle del Encanto",
+            "uri": "https://commons.wikimedia.org/wiki/File:Encanto1.JPG"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Valle del Encanto; public coordinate statement.",
+            "id": "wd:Q6159212",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2063350625; SHA-256 009c6a9f07224831e1ab9abe05e1776d1f2c6c1f1bf29cf5fe41d132afad4751",
+            "title": "Wikidata structured location — Valle del Encanto",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6159212.json"
+          }
+        ],
+        "source_uri": "https://turismoregiondecoquimbo.cl/wp-content/uploads/2026/06/REPORTE-VIAJERO-2026-Junio_compressed.pdf",
+        "title": "Valle del Encanto",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "southern-source/cl-encanto-guide.pdf",
+          "sha256": "1e6fc618951f0b2b90c63278a204645bbb4c9eb84f9052593b04a510994f2508",
+          "uri": "https://turismoregiondecoquimbo.cl/wp-content/uploads/2026/06/REPORTE-VIAJERO-2026-Junio_compressed.pdf"
+        },
+        {
+          "filename": "southern-source/cl-encanto-early-scope.html",
+          "sha256": "1c987e4a97ffe79fca47a17fa3b89334895a42ab6fa645b365034b8e41c01608",
+          "uri": "https://www.sernatur.cl/conoce-los-atractivos-turisticos-que-puedes-visitar-en-la-zona-centro-y-sur-de-chile/"
+        },
+        {
+          "filename": "southern-source/cl-encanto-photopage.html",
+          "sha256": "8e97e1304ce3367b6ea7717ffdf279758b40a33fa12acaa9aa2b79dc6975351c",
+          "uri": "https://commons.wikimedia.org/wiki/File:Encanto1.JPG"
+        },
+        {
+          "filename": "southern-source/Q6159212.json",
+          "sha256": "009c6a9f07224831e1ab9abe05e1776d1f2c6c1f1bf29cf5fe41d132afad4751",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6159212.json"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Eight publicly interpreted archaeological or historical places in Chile and Argentina, with independently verified visitor scope and reusable coordinates."
+}

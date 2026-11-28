@@ -1,0 +1,22 @@
+{
+  "base_count": 5334,
+  "base_ids_sha256": "7922f11c7435e1d8da72aedc77827b805ac62f3c38823289b640a85b7280d069",
+  "base_sites_sha256": "b2ee1072538f43f7a0fd2e037ddfe2ba37ae179f05108a62aefde5ecf4a1a18b",
+  "cohort_version": "north-atlantic-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 3,
+    "total": 5337
+  },
+  "files": {
+    "north_atlantic_public_review.json": {
+      "sha256": "375ead02b502955389328fd29cebdb8faf2d5cb50c3eae78ec440e84b0677e57"
+    },
+    "north_atlantic_public_sites.json": {
+      "sha256": "5e7a363d694c20db6656f7dc5c1ae51889300105812a41948d7b9e399980149a"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Three separately identified public heritage places in the Faroe Islands, Greenland and Iceland. Uses original CC0 assertions and independently verified current visitor scope."
+}
