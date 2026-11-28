@@ -1,0 +1,22 @@
+{
+  "base_count": 4343,
+  "base_ids_sha256": "bbb26cdfc0efa178e5980754d8a95aef68a5b5171d526a5f3488fecf80c45702",
+  "base_sites_sha256": "323313e06ee543e20cf84f87033fffb324fdbea13335cf6b695d278fd16c2ab0",
+  "cohort_version": "scotland-hes-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 31,
+    "total": 4374
+  },
+  "files": {
+    "scotland_hes_review.json": {
+      "sha256": "1db3d61d10a10bc8d59c6fb725b21a99b7b564a46da46578c896b4551e902e86"
+    },
+    "scotland_hes_sites.json": {
+      "sha256": "b8b553b4026ce9ac1f2def85457fd85c300f6651e636d96e1f5db8797dd04723"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "31 HES Properties in Care points with individually verified public access and representative coordinates from the official WGS84 service."
+}

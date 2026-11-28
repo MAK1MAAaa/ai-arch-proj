@@ -95,6 +95,7 @@ def test_public_point_search_catalogue_and_provenance(
             ("FI", "auth:fi-vark:", 11),
             ("GB", "auth:gb-cadw:", 111),
             ("TH", "auth:th-fad:", 17),
+            ("GB", "auth:gb-hes-pic:", 31),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -102,3 +103,11 @@ def test_public_point_search_catalogue_and_provenance(
             assert all(point["repr_point"] is not None for point in added)
         assert client.get("/api/sites/auth:gb-cadw:PE373").status_code == 404
         assert client.get("/api/sites/auth:fi-vark:100270").status_code == 404
+        assert client.get("/api/sites/auth:gb-hes-pic:PIC077").status_code == 404
+        lochleven = client.get("/api/sites/auth:gb-hes-pic:PIC030").json()
+        assert lochleven["repr_point"] == [-3.3921612556552567, 56.20086363535327]
+        assert lochleven["source_refs"][0]["license"] == "UK Open Government Licence v3.0"
+        malindi = client.get("/api/sites/wd:Q42840468").json()
+        assert malindi["repr_point"] == [40.12965, -3.22395]
+        assert malindi["geography"]["countries"] == ["KE"]
+        assert malindi["chronology"]["status"] == "insufficient"

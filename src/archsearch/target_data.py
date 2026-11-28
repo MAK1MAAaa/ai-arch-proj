@@ -103,8 +103,23 @@ THAILAND_FAD = NamedPlaceCohort(
     "1cc7aecfdb0cb1b2925e15c4dc4c6587b8d6451b19a1a2e63929fc371f0fc44c",
     "9ee26d0b20abf35338d93430a812c06df435bffe827654d4081154d1670c08d4",
 )
+AFRICA_VISIT = NamedPlaceCohort(
+    "africa-public-visit-v1",
+    "global-v21",
+    "africa_visit",
+    "184d58133b5930819d4209057789071e0998c8a88b09434934403364a7fd3d76",
+    "f16570a0fe066763579adadc8b440622378bce8cffa3bd23e4a7a10ab6788155",
+)
+SCOTLAND_HES = NamedPlaceCohort(
+    "scotland-hes-public-v1",
+    "global-v21",
+    "scotland_hes",
+    "1db3d61d10a10bc8d59c6fb725b21a99b7b564a46da46578c896b4551e902e86",
+    "b8b553b4026ce9ac1f2def85457fd85c300f6651e636d96e1f5db8797dd04723",
+)
 POINT_COHORTS = (
     IRELAND, ANDALUCIA, TAIWAN_ICULTURE, MEXICO_SIC, FINLAND_VARK, WALES_CADW, THAILAND_FAD,
+    AFRICA_VISIT, SCOTLAND_HES,
 )
 
 
