@@ -185,7 +185,7 @@ def test_public_point_search_catalogue_and_provenance(
             ("PL", "auth:pl-public:", 20),
             ("CV", "auth:cv-public:", 4),
             ("CM", "auth:cm-public:", 4),
-            ("CO", "auth:co-public:", 6),
+            ("CO", "auth:co-public:", 5),
             ("VE", "auth:ve-public:", 4),
             ("CN", "auth:cn-public:", 10),
             ("TR", "auth:tr-public:", 13),
@@ -248,6 +248,7 @@ def test_public_point_search_catalogue_and_provenance(
             for source in bushiribana["source_refs"]
         )
         assert client.get("/api/sites/auth:aw-public:Q610796").status_code == 404
+        assert client.get("/api/sites/auth:co-public:Q86967247").status_code == 404
         kremnica = client.get("/api/sites/auth:sk-public:Q20851893").json()
         assert kremnica["repr_point"] == [18.917613888889, 48.706213888889]
         assert kremnica["chronology"]["status"] == "insufficient"

@@ -1,16 +1,16 @@
 {
-  "base_count": 5315,
-  "base_ids_sha256": "0bd220178abea012457a211fc5966022466ce9a51c62a8b0049fb131a5aeed71",
-  "base_sites_sha256": "1ad399b4a9520ea79261f7b5e190c6950fccf2bb7f2e346c0f2b43af31286c9c",
+  "base_count": 5314,
+  "base_ids_sha256": "5aefc75e03ca6fa76038c67db7d723b9692416e2c24d4f6fe547b9e5e3f69b78",
+  "base_sites_sha256": "162e1415f19b0eec66ae7dd7c79d4130468754a56c93d2df98441cb9a8c2e180",
   "cohort_version": "aruba-curacao-public-v1",
   "corpus_version": "global-v21",
   "counts": {
     "added": 3,
-    "total": 5318
+    "total": 5317
   },
   "files": {
     "aruba_curacao_public_review.json": {
-      "sha256": "6f15c4ae4a59d80eeb8178e1ff87b50010372ae6e0dccef5932ad32832077c0c"
+      "sha256": "6fe929a6ed6d8d837b747407872b9cd3a808e2b1eb6df86d066d2da178773279"
     },
     "aruba_curacao_public_sites.json": {
       "sha256": "81e5601808e6659d904d13dc16cb4e76d4238fdbafc4651d6f2402fbb60ea40d"

@@ -1,16 +1,16 @@
 {
-  "base_count": 5254,
-  "base_ids_sha256": "0abd8ae5b2a13ebd741dd4cfaec306e6f8a05119ce76740dc57b2c36c0450800",
-  "base_sites_sha256": "4c8980de6ee60da50025e9b4f54ac9a048b309df7df41037e6abe29f828502a1",
+  "base_count": 5253,
+  "base_ids_sha256": "4977efe45c274d6b4bb3de1412928d359df0bf1c3141d7d3a95c19b4e30cdf36",
+  "base_sites_sha256": "f6a1d000f94e9b1ba7b005dc174361936ec92132126fbc43c2b693a4f3f9505a",
   "cohort_version": "sahel-public-v1",
   "corpus_version": "global-v21",
   "counts": {
     "added": 3,
-    "total": 5257
+    "total": 5256
   },
   "files": {
     "sahel_public_review.json": {
-      "sha256": "c1c6fa71225d6cec6df784c382141f8c25dd85c52eb78339320d18d9e7e5d583"
+      "sha256": "d1b70eff079b89f7ecdbf12e5fa757bca94f76e0e4d51b9aa5b63a35d7044cc2"
     },
     "sahel_public_sites.json": {
       "sha256": "6808461cc7cb4a092917f6d38564670e77a7795c2518d6bd5870cbe017f4c31a"

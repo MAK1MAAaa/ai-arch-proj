@@ -1,7 +1,7 @@
 {
   "base_count": 5149,
   "base_ids_sha256": "4a8463e9ae8cb1d085ce3849cb32c6a07a5a15a21fdc6525520f973f7a785f6d",
-  "base_sites_sha256": "8d00baccf9c6ff8ac8eb58d4c314c0621a667db6334e4bc820313c8d41129389",
+  "base_sites_sha256": "8d7e0f2b40e9b8704f43f9d5ffad67e1e4f82c400a381ad2f6037ca80de624a5",
   "cohort_version": "colombia-venezuela-public-v1",
   "corpus_version": "global-v21",
   "records": [
@@ -118,13 +118,13 @@
           },
           {
             "accessed": "2026-11-28",
-            "excerpt": "The department included the museum among venues for its September 2026 Festival Macondo programme.",
-            "id": "auth:co-public:Q127694594:co-gabo-magdalena-20260905-web.txt",
+            "excerpt": "The foundation describes the Aracataca reconstruction and publishes visitor hours.",
+            "id": "auth:co-public:Q127694594:co-gabo-foundation.html",
             "license": null,
-            "publisher": "Gobernación del Magdalena",
-            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 62093f4b267e823764387a380072817e3c4798d9f04c8fab564d2592e60d0902.",
-            "title": "Public Festival Macondo programme, September 2026",
-            "uri": "https://www.gobernaciondelmagdalena.gov.co/el-universo-de-gabo-y-escalona-cobra-vida-con-el-festival-macondo/"
+            "publisher": "Fundación Gabriel García Márquez",
+            "revision": "Original publisher HTML checked 2026-11-28; SHA-256 98b5e59c6eba15ffe83219b0968f1f1cc3a9f9bcc1afab83f7020cb57c812a19.",
+            "title": "Foundation visitor information and reconstruction",
+            "uri": "https://www.gabrielgarciamarquezfundacion.com/casa-museo-gabriel-garc%C3%ADa-m%C3%A1rquez"
           }
         ],
         "source_uri": "https://www.unimagdalena.edu.co/PresentacionMicrositio/Micrositios/2087",
@@ -155,9 +155,9 @@
           "uri": "https://www.museonacional.gov.co/noticias/Paginas/Ette_Naka.aspx"
         },
         {
-          "filename": "co-gabo-magdalena-20260905-web.txt",
-          "sha256": "62093f4b267e823764387a380072817e3c4798d9f04c8fab564d2592e60d0902",
-          "uri": "https://www.gobernaciondelmagdalena.gov.co/el-universo-de-gabo-y-escalona-cobra-vida-con-el-festival-macondo/"
+          "filename": "co-gabo-foundation.html",
+          "sha256": "98b5e59c6eba15ffe83219b0968f1f1cc3a9f9bcc1afab83f7020cb57c812a19",
+          "uri": "https://www.gabrielgarciamarquezfundacion.com/casa-museo-gabriel-garc%C3%ADa-m%C3%A1rquez"
         }
       ]
     },
@@ -337,13 +337,13 @@
           ],
           "source": {
             "accessed": "2026-11-28",
-            "excerpt": "The Boyacá tourism service names the bridge, its setting by the Teatinos River and the associated public memorial precinct.",
-            "id": "auth:co-public:Q3396894:co-puente-web.txt",
+            "excerpt": "Colombia Travel identifies the Teatinos River crossing and the monuments at Campo de Boyacá.",
+            "id": "auth:co-public:Q3396894:co-puente-national-visitor.html",
             "license": null,
-            "publisher": "Sistema de Información Turística de Boyacá",
-            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 4c89ad2397410d3a2baebf63551deefec30797df7aa2af48fdbd9754f91f7947.",
-            "title": "Puente de Boyacá visitor precinct visitor scope and site identity",
-            "uri": "https://situr.boyaca.gov.co/atractivo-turistico/puente-de-boyaca-2/"
+            "publisher": "ProColombia",
+            "revision": "Original publisher HTML checked 2026-11-28; SHA-256 7ddb8d5a01bae393422ca817e0ff48336f065c71e639e438fb65da09f6323028.",
+            "title": "National tourism description of Boyacá Bridge and monuments",
+            "uri": "https://colombia.travel/ja/node/4486"
           }
         },
         "id": "auth:co-public:Q3396894",
@@ -361,16 +361,6 @@
         "source_refs": [
           {
             "accessed": "2026-11-28",
-            "excerpt": "The Boyacá tourism service names the bridge, its setting by the Teatinos River and the associated public memorial precinct.",
-            "id": "auth:co-public:Q3396894:co-puente-web.txt",
-            "license": null,
-            "publisher": "Sistema de Información Turística de Boyacá",
-            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 4c89ad2397410d3a2baebf63551deefec30797df7aa2af48fdbd9754f91f7947.",
-            "title": "Puente de Boyacá visitor precinct visitor scope and site identity",
-            "uri": "https://situr.boyaca.gov.co/atractivo-turistico/puente-de-boyaca-2/"
-          },
-          {
-            "accessed": "2026-11-28",
             "excerpt": "Longitude -73.43027778, latitude 5.45055556.",
             "id": "wikidata:Q3396894",
             "license": "CC0",
@@ -381,13 +371,23 @@
           },
           {
             "accessed": "2026-11-28",
-            "excerpt": "The department announced visitor arrangements at the historic site for 28 November 2026 to 16 January 2027.",
-            "id": "auth:co-public:Q3396894:co-boyaca-governor-20261127-web.txt",
+            "excerpt": "Colombia Travel identifies the Teatinos River crossing and the monuments at Campo de Boyacá.",
+            "id": "auth:co-public:Q3396894:co-puente-national-visitor.html",
             "license": null,
-            "publisher": "Gobernación de Boyacá, Boyacá 95.6 FM",
-            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 453aad886bc291cb95071dab966b9cd24573a3ea4afec74ffd5cbc75c5c06d3f.",
-            "title": "Puente de Boyacá, public programme 2026",
-            "uri": "https://956fm.boyaca.gov.co/con-mas-de-12-millones-de-luces-el-puente-de-boyaca-realiza-su-emblematico-encendido-navideno-y-le-da-la-bienvenida-a-turistas/"
+            "publisher": "ProColombia",
+            "revision": "Original publisher HTML checked 2026-11-28; SHA-256 7ddb8d5a01bae393422ca817e0ff48336f065c71e639e438fb65da09f6323028.",
+            "title": "National tourism description of Boyacá Bridge and monuments",
+            "uri": "https://colombia.travel/ja/node/4486"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The departmental government documents a public Christmas event at the same Puente de Boyacá precinct in 2025.",
+            "id": "auth:co-public:Q3396894:co-puente-boyaca-state-visitor.html",
+            "license": null,
+            "publisher": "Gobernación de Boyacá",
+            "revision": "Original publisher HTML checked 2026-11-28; SHA-256 d01614c0a2bd61e902922e492c18b9c8d935f953d9192e00ea0f2902424167a8.",
+            "title": "Boyacá public event at the bridge memorial precinct",
+            "uri": "https://www.boyaca.gov.co/mas-de-40-000-personas-se-dieron-cita-en-el-encendido-del-alumbrado-navideno-en-boyaca/"
           }
         ],
         "source_uri": "https://situr.boyaca.gov.co/atractivo-turistico/puente-de-boyaca-2/",
@@ -403,14 +403,14 @@
           "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3396894.json"
         },
         {
-          "filename": "co-puente-web.txt",
-          "sha256": "4c89ad2397410d3a2baebf63551deefec30797df7aa2af48fdbd9754f91f7947",
-          "uri": "https://situr.boyaca.gov.co/atractivo-turistico/puente-de-boyaca-2/"
+          "filename": "co-puente-national-visitor.html",
+          "sha256": "7ddb8d5a01bae393422ca817e0ff48336f065c71e639e438fb65da09f6323028",
+          "uri": "https://colombia.travel/ja/node/4486"
         },
         {
-          "filename": "co-boyaca-governor-20261127-web.txt",
-          "sha256": "453aad886bc291cb95071dab966b9cd24573a3ea4afec74ffd5cbc75c5c06d3f",
-          "uri": "https://956fm.boyaca.gov.co/con-mas-de-12-millones-de-luces-el-puente-de-boyaca-realiza-su-emblematico-encendido-navideno-y-le-da-la-bienvenida-a-turistas/"
+          "filename": "co-puente-boyaca-state-visitor.html",
+          "sha256": "d01614c0a2bd61e902922e492c18b9c8d935f953d9192e00ea0f2902424167a8",
+          "uri": "https://www.boyaca.gov.co/mas-de-40-000-personas-se-dieron-cita-en-el-encendido-del-alumbrado-navideno-en-boyaca/"
         }
       ]
     },
@@ -464,13 +464,13 @@
           ],
           "source": {
             "accessed": "2026-11-28",
-            "excerpt": "The managing foundation publishes current hours, ticket arrangements and rules for visits to the quinta.",
-            "id": "auth:co-public:Q3414570:co-quinta-admit-web.txt",
+            "excerpt": "The city tourism institute includes the Quinta de San Pedro Alejandrino and publishes entrance information.",
+            "id": "auth:co-public:Q3414570:co-quinta-santamarta-visitor.html",
             "license": null,
-            "publisher": "Fundación Museo Bolivariano",
-            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 79363c7893d73a1a9432ff25276318a6f9f01fad68f86637e2a90e9896bc49d7.",
-            "title": "Quinta de San Pedro Alejandrino visitor scope and site identity",
-            "uri": "https://www.museobolivariano.org.co/horariosytarifas/"
+            "publisher": "Instituto Distrital de Turismo de Santa Marta (INDETUR)",
+            "revision": "Original publisher HTML checked 2026-11-28; SHA-256 e6a32292132a6d2441fbd7b1bfd672dbe615cf3bcbafbdd47aa42db40dbecca4.",
+            "title": "Santa Marta ticketed visitor estate",
+            "uri": "https://indetur.gov.co/preguntas-frecuentes/"
           }
         },
         "id": "auth:co-public:Q3414570",
@@ -486,16 +486,6 @@
         ],
         "source_kind": "supplement",
         "source_refs": [
-          {
-            "accessed": "2026-11-28",
-            "excerpt": "The managing foundation publishes current hours, ticket arrangements and rules for visits to the quinta.",
-            "id": "auth:co-public:Q3414570:co-quinta-admit-web.txt",
-            "license": null,
-            "publisher": "Fundación Museo Bolivariano",
-            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 79363c7893d73a1a9432ff25276318a6f9f01fad68f86637e2a90e9896bc49d7.",
-            "title": "Quinta de San Pedro Alejandrino visitor scope and site identity",
-            "uri": "https://www.museobolivariano.org.co/horariosytarifas/"
-          },
           {
             "accessed": "2026-11-28",
             "excerpt": "The ministry museum catalogue identifies the original hacienda and its managing foundation.",
@@ -515,6 +505,16 @@
             "revision": "Wikidata revision 2520144021; P625 Q3414570$991E7286-177F-44F7-8C65-4DD1DA02A132.",
             "title": "Quinta de San Pedro Alejandrino representative point",
             "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3414570.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The city tourism institute includes the Quinta de San Pedro Alejandrino and publishes entrance information.",
+            "id": "auth:co-public:Q3414570:co-quinta-santamarta-visitor.html",
+            "license": null,
+            "publisher": "Instituto Distrital de Turismo de Santa Marta (INDETUR)",
+            "revision": "Original publisher HTML checked 2026-11-28; SHA-256 e6a32292132a6d2441fbd7b1bfd672dbe615cf3bcbafbdd47aa42db40dbecca4.",
+            "title": "Santa Marta ticketed visitor estate",
+            "uri": "https://indetur.gov.co/preguntas-frecuentes/"
           }
         ],
         "source_uri": "https://www.museobolivariano.org.co/horariosytarifas/",
@@ -530,14 +530,14 @@
           "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3414570.json"
         },
         {
-          "filename": "co-quinta-admit-web.txt",
-          "sha256": "79363c7893d73a1a9432ff25276318a6f9f01fad68f86637e2a90e9896bc49d7",
-          "uri": "https://www.museobolivariano.org.co/horariosytarifas/"
-        },
-        {
           "filename": "co-quinta-ministry.html",
           "sha256": "93cbcc7547bd3d7cfb11ff3d9e6985ac7b9da8a9812091994caba6dfe0fcb382",
           "uri": "https://simco.museoscolombianos.gov.co/Home/Museo?personaJuridicaId=490"
+        },
+        {
+          "filename": "co-quinta-santamarta-visitor.html",
+          "sha256": "e6a32292132a6d2441fbd7b1bfd672dbe615cf3bcbafbdd47aa42db40dbecca4",
+          "uri": "https://indetur.gov.co/preguntas-frecuentes/"
         }
       ]
     },
@@ -674,148 +674,6 @@
         "method": "wikidata",
         "note": "Unmodified Wikidata WGS84 representative point. ",
         "point": [
-          -76.6051089,
-          2.4444506
-        ],
-        "precision": 1e-07,
-        "rank": "normal",
-        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q86967247.json",
-        "statement_id": "Q86967247$3591aba3-4d81-ac20-bd9c-732256386862"
-      },
-      "independent_review": {
-        "method": "Independent agent checked original identity and public visitor extent, exact CC0 claims and precision, verified source snapshots, corpus identities and coordinate overlap, and registered World Heritage footprints.",
-        "reviewed_at": "2026-11-28",
-        "reviewer": "Codex independent source audit",
-        "status": "approved"
-      },
-      "scope_note": "The historic masonry bridge over the Río Molino in Popayán. Scope covers the original crossing and the public approach in the historic centre.",
-      "site": {
-        "chronology": {
-          "default_phase_id": null,
-          "method": "Named original site and official visitor scope checked.",
-          "note": "No independently reviewed dated phase is assigned.",
-          "phases": [],
-          "reviewed_at": "2026-11-28",
-          "status": "insufficient"
-        },
-        "contributors": [
-          "Alcaldía de Popayán",
-          "ICOMOS Colombia",
-          "Wikidata contributors"
-        ],
-        "description": "The historic masonry bridge over the Río Molino in Popayán. Scope covers the original crossing and the public approach in the historic centre.",
-        "description_zh": "波帕扬乌米利亚德罗桥位于哥伦比亚。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
-        "details": "The historic masonry bridge over the Río Molino in Popayán. Scope covers the original crossing and the public approach in the historic centre.",
-        "geography": {
-          "authority_id": "supplement:auth:co-public:Q86967247",
-          "countries": [
-            "CO"
-          ],
-          "note": "Named original location. Representative point only.",
-          "point_count": 1,
-          "regions": [
-            "latin-america-caribbean"
-          ],
-          "source": {
-            "accessed": "2026-11-28",
-            "excerpt": "The municipality names the historic bridge and describes its placement between the heritage centre and the Bolívar neighbourhood.",
-            "id": "auth:co-public:Q86967247:co-popayan-web.txt",
-            "license": null,
-            "publisher": "Alcaldía de Popayán",
-            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 3ee8455ded70e80232772ac9c0b90d796506e8159cf35e5f44b86a2785945c12.",
-            "title": "Puente del Humilladero visitor scope and site identity",
-            "uri": "https://www.popayan.gov.co/SecretariasyEntidades/Turismo/Paginas/Lugares-emblem%C3%A1ticos.aspx"
-          }
-        },
-        "id": "auth:co-public:Q86967247",
-        "location_precision": null,
-        "names": [
-          "波帕扬乌米利亚德罗桥"
-        ],
-        "period_evidence": [],
-        "periods": [],
-        "repr_point": [
-          -76.6051089,
-          2.4444506
-        ],
-        "source_kind": "supplement",
-        "source_refs": [
-          {
-            "accessed": "2026-11-28",
-            "excerpt": "The municipality names the historic bridge and describes its placement between the heritage centre and the Bolívar neighbourhood.",
-            "id": "auth:co-public:Q86967247:co-popayan-web.txt",
-            "license": null,
-            "publisher": "Alcaldía de Popayán",
-            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 3ee8455ded70e80232772ac9c0b90d796506e8159cf35e5f44b86a2785945c12.",
-            "title": "Puente del Humilladero visitor scope and site identity",
-            "uri": "https://www.popayan.gov.co/SecretariasyEntidades/Turismo/Paginas/Lugares-emblem%C3%A1ticos.aspx"
-          },
-          {
-            "accessed": "2026-11-28",
-            "excerpt": "The heritage record identifies the bridge on Carrera 6, between calles 1 and 2.",
-            "id": "auth:co-public:Q86967247:co-popayan-icomos.html",
-            "license": null,
-            "publisher": "ICOMOS Colombia",
-            "revision": "Frozen source file 2026-11-28. SHA-256 aa56aee067578d4686af1bab2b3cfea679a6866a01f1b4c190c5dbed09de50e6.",
-            "title": "Puente del Humilladero visitor scope and site identity",
-            "uri": "https://www.icomoscolombia.org/bic/587"
-          },
-          {
-            "accessed": "2026-11-28",
-            "excerpt": "Longitude -76.6051089, latitude 2.4444506.",
-            "id": "wikidata:Q86967247",
-            "license": "CC0",
-            "publisher": "Wikidata contributors",
-            "revision": "Wikidata revision 2522494820; P625 Q86967247$3591aba3-4d81-ac20-bd9c-732256386862.",
-            "title": "Puente del Humilladero representative point",
-            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q86967247.json"
-          },
-          {
-            "accessed": "2026-11-28",
-            "excerpt": "The municipal protection order suspends vehicle passage and identifies the same historic bridge as a cultural and tourism space.",
-            "id": "auth:co-public:Q86967247:co-popayan-pedestrian-web.txt",
-            "license": null,
-            "publisher": "Alcaldía de Popayán",
-            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 03ab38a69945bf0b1dbb92a82230120a61cae2c14916e6c6c4eab4e9e3fb98b1.",
-            "title": "Traffic restrictions at Puente del Humilladero",
-            "uri": "https://www.popayan.gov.co/NuestraAlcaldia/SaladePrensa/Paginas/Alcald%C3%ADa-toma-medida-para-proteger-el-Puente-del-Humilladero.aspx"
-          }
-        ],
-        "source_uri": "https://www.popayan.gov.co/SecretariasyEntidades/Turismo/Paginas/Lugares-emblem%C3%A1ticos.aspx",
-        "title": "Puente del Humilladero",
-        "types": [
-          "historic-site"
-        ]
-      },
-      "source_files": [
-        {
-          "filename": "Q86967247.json",
-          "sha256": "c0b01b2bd2e65efe82ba7bf2b755287db95d7689a4e794a2b414331fac2de66a",
-          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q86967247.json"
-        },
-        {
-          "filename": "co-popayan-web.txt",
-          "sha256": "3ee8455ded70e80232772ac9c0b90d796506e8159cf35e5f44b86a2785945c12",
-          "uri": "https://www.popayan.gov.co/SecretariasyEntidades/Turismo/Paginas/Lugares-emblem%C3%A1ticos.aspx"
-        },
-        {
-          "filename": "co-popayan-icomos.html",
-          "sha256": "aa56aee067578d4686af1bab2b3cfea679a6866a01f1b4c190c5dbed09de50e6",
-          "uri": "https://www.icomoscolombia.org/bic/587"
-        },
-        {
-          "filename": "co-popayan-pedestrian-web.txt",
-          "sha256": "03ab38a69945bf0b1dbb92a82230120a61cae2c14916e6c6c4eab4e9e3fb98b1",
-          "uri": "https://www.popayan.gov.co/NuestraAlcaldia/SaladePrensa/Paginas/Alcald%C3%ADa-toma-medida-para-proteger-el-Puente-del-Humilladero.aspx"
-        }
-      ]
-    },
-    {
-      "coordinate": {
-        "globe": "http://www.wikidata.org/entity/Q2",
-        "method": "wikidata",
-        "note": "Unmodified Wikidata WGS84 representative point. ",
-        "point": [
           -64.171347,
           10.46207
         ],
@@ -894,16 +752,6 @@
           },
           {
             "accessed": "2026-11-28",
-            "excerpt": "The August 2026 report identifies the exact fort as a stop on the public Sucre Tour launched by the public transport and tourism bodies.",
-            "id": "auth:ve-public:Q5558033:ve-eminencia-route-2026-web.txt",
-            "license": null,
-            "publisher": "Prensa Oriente, reporting Transucre, Corsotur and Inatur",
-            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 3b02972e50ea0bc381055d07b9eae956e3816580f43df3b97a8135da055d91b4.",
-            "title": "Castillo San Antonio de la Eminencia visitor precinct visitor scope and site identity",
-            "uri": "https://prensa.prensaoriente.com.ve/2026/08/22/sucre-inauguraron-en-cumana-autobus-turistico-con-rutas-por-sitios-historicos-y-playas/"
-          },
-          {
-            "accessed": "2026-11-28",
             "excerpt": "Longitude -64.171347, latitude 10.46207.",
             "id": "wikidata:Q5558033",
             "license": "CC0",
@@ -911,6 +759,26 @@
             "revision": "Wikidata revision 2301856388; P625 Q5558033$E4FA0F48-DDC9-4340-A0E3-DBE20405ED95.",
             "title": "Castillo San Antonio de la Eminencia visitor precinct representative point",
             "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5558033.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Prensa Oriente reports that the Transucre, Corsotur and Inatur service includes a stop at this fortress.",
+            "id": "auth:ve-public:Q5558033:ve-eminencia-route-publisher-archive.html",
+            "license": null,
+            "publisher": "Prensa Oriente",
+            "revision": "Original publisher HTML checked 2026-11-28; SHA-256 f8f0fd9bf211e9d375f43fb28535cc7b28e14e4a4569a357dffde04328813755.",
+            "title": "Original published report on the 2026 Cumaná visitor route",
+            "uri": "https://www.prensaoriente.com.ve/2026/08/22/sucre-inauguraron-en-cumana-autobus-turistico-con-rutas-por-sitios-historicos-y-playas"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry guide identifies the fort among Cumaná’s historic visitor attractions.",
+            "id": "auth:ve-public:Q5558033:ve-eminencia-ministry-visitor.pdf",
+            "license": null,
+            "publisher": "Ministerio del Poder Popular para el Turismo",
+            "revision": "Viajando, issue 43, 2 August 2017, physical page 2; original PDF SHA-256 874379fd831d20b3d23d8ef66e01403c1ed77d62b97c1252496b85101bfcc33b.",
+            "title": "Viajando ministry visitor guide to Cumaná",
+            "uri": "https://www.mintur.gob.ve/documents/viajandos/oPPg2tmKomfiQck5Cvnzaqvlbl9Pxxptnp1sLcsl.pdf"
           }
         ],
         "source_uri": "https://turismosucre.com.ve/cumana/castillosanantonio/",
@@ -931,9 +799,14 @@
           "uri": "https://turismosucre.com.ve/cumana/castillosanantonio/"
         },
         {
-          "filename": "ve-eminencia-route-2026-web.txt",
-          "sha256": "3b02972e50ea0bc381055d07b9eae956e3816580f43df3b97a8135da055d91b4",
-          "uri": "https://prensa.prensaoriente.com.ve/2026/08/22/sucre-inauguraron-en-cumana-autobus-turistico-con-rutas-por-sitios-historicos-y-playas/"
+          "filename": "ve-eminencia-route-publisher-archive.html",
+          "sha256": "f8f0fd9bf211e9d375f43fb28535cc7b28e14e4a4569a357dffde04328813755",
+          "uri": "https://www.prensaoriente.com.ve/2026/08/22/sucre-inauguraron-en-cumana-autobus-turistico-con-rutas-por-sitios-historicos-y-playas"
+        },
+        {
+          "filename": "ve-eminencia-ministry-visitor.pdf",
+          "sha256": "874379fd831d20b3d23d8ef66e01403c1ed77d62b97c1252496b85101bfcc33b",
+          "uri": "https://www.mintur.gob.ve/documents/viajandos/oPPg2tmKomfiQck5Cvnzaqvlbl9Pxxptnp1sLcsl.pdf"
         }
       ]
     },
@@ -1320,5 +1193,5 @@
     }
   ],
   "schema_version": 1,
-  "selection": "Six public cultural places in Colombia and four public historic fort precincts in Venezuela, with documented visitor route scope."
+  "selection": "Nine documented historic places in Colombia and Venezuela with original CC0 coordinates and published visitor evidence. Sites with uncertain current public scope are held."
 }

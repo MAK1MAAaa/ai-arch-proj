@@ -1,16 +1,16 @@
 {
-  "base_count": 5265,
-  "base_ids_sha256": "e1e4126e734269533676ebc398ad1dd76c597055ec99d1c1cc5cb6963104326e",
-  "base_sites_sha256": "5018c41bf69a85b5592e40eea75449b8aa3669a9afb28157eaf732fc490f92c1",
+  "base_count": 5264,
+  "base_ids_sha256": "1344cd73b5070ed54ea03480b858acf23a28e0a548d8e0247f560eb36269e51b",
+  "base_sites_sha256": "eb233b601f5b75c388ebece286c271d589a2d7f0de5471903bfa98cf2f5de73e",
   "cohort_version": "indian-ocean-public-v1",
   "corpus_version": "global-v21",
   "counts": {
     "added": 8,
-    "total": 5273
+    "total": 5272
   },
   "files": {
     "indian_ocean_public_review.json": {
-      "sha256": "0d5690910080ceef17b03a37c44e40ff9c1c2e17519b424007cccacbe27a3910"
+      "sha256": "5aed9d6df147cc4ef90fde0fc4e2df92f281ec576bb97787b171804161aac226"
     },
     "indian_ocean_public_sites.json": {
       "sha256": "252ca22fce76856bd79dc2524db864ff59a3e4059c20edd03e2344c5b8551d73"

@@ -1,7 +1,7 @@
 {
-  "base_count": 5227,
-  "base_ids_sha256": "7751a6628aa8ed78f12064483b661bde7586dcf4609a6d64c011647903dae5c4",
-  "base_sites_sha256": "ef41c92470b034f0910e5ffa82fdb2d6628874d5952bdf60d46716b3594ba512",
+  "base_count": 5226,
+  "base_ids_sha256": "0fffb8de5865d88531c87ffa1f844ac5dbf95d7a65316224f456fc1010bbe883",
+  "base_sites_sha256": "12f8d4b30440c580161a1b7d5913cea3eb099f8885a7d6431660f255ef137b61",
   "cohort_version": "bolivia-argentina-public-v1",
   "corpus_version": "global-v21",
   "records": [
@@ -828,13 +828,13 @@
           ],
           "source": {
             "accessed": "2026-11-28",
-            "excerpt": "The municipal agenda identifies the historic house, its street number and its public 2026 exhibition programme.",
-            "id": "auth:bo-public:Q125446679:bo-murillo-agenda-web.txt",
+            "excerpt": "City cultural map feature 12 names Museo Casa de Murillo at Apolinar Jaén 790.",
+            "id": "auth:bo-public:Q125446679:independent-primary-confirmation",
             "license": null,
             "publisher": "Gobierno Autónomo Municipal de La Paz",
-            "revision": "Normalized government verification note 2026-11-28. SHA-256 5d0371341a5dbce04464b8bd0919041cd1db3bcc679e0a68a5aa5b374a437e32.",
-            "title": "Museo Casa de Murillo public scope and original location",
-            "uri": "https://lapaz.bo/agendajiwaki/evento/exposicion-bienes-culturales-referentes-a-la-gesta-libertaria-de-1809/"
+            "revision": "Independent snapshot 2026-11-28; SHA-256 c8e2fa540f4d1f1055b6e7a2533f9eba3d2af7368e02e992850deb65daf5df21.",
+            "title": "Museo Casa de Murillo primary confirmation",
+            "uri": "https://sitservicios.lapaz.bo/sit/mapacultural/mapa/data/infrArtisticaCultural3.js"
           }
         },
         "id": "auth:bo-public:Q125446679",
@@ -850,26 +850,6 @@
         ],
         "source_kind": "supplement",
         "source_refs": [
-          {
-            "accessed": "2026-11-28",
-            "excerpt": "The municipal agenda identifies the historic house, its street number and its public 2026 exhibition programme.",
-            "id": "auth:bo-public:Q125446679:bo-murillo-agenda-web.txt",
-            "license": null,
-            "publisher": "Gobierno Autónomo Municipal de La Paz",
-            "revision": "Normalized government verification note 2026-11-28. SHA-256 5d0371341a5dbce04464b8bd0919041cd1db3bcc679e0a68a5aa5b374a437e32.",
-            "title": "Museo Casa de Murillo public scope and original location",
-            "uri": "https://lapaz.bo/agendajiwaki/evento/exposicion-bienes-culturales-referentes-a-la-gesta-libertaria-de-1809/"
-          },
-          {
-            "accessed": "2026-11-28",
-            "excerpt": "The cultural infrastructure map identifies the Murillo house museum separately from the other Jáen street museums.",
-            "id": "auth:bo-public:Q125446679:bo-lapaz-map-web.txt",
-            "license": null,
-            "publisher": "Gobierno Autónomo Municipal de La Paz",
-            "revision": "Normalized government verification note 2026-11-28. SHA-256 93af13587554c7c89534b80091f15b4da69eb88d69eaefd82022c1bb60e5be82.",
-            "title": "Museo Casa de Murillo public scope and original location",
-            "uri": "https://sitservicios.lapaz.bo/sit/mapacultural/mapa/ArtisticoCultural.html?IdSubcategoria=9"
-          },
           {
             "accessed": "2026-11-28",
             "excerpt": "Longitude -68.135578, latitude -16.492123.",
@@ -889,6 +869,26 @@
             "revision": "Independent snapshot 2026-11-28; SHA-256 c8e2fa540f4d1f1055b6e7a2533f9eba3d2af7368e02e992850deb65daf5df21.",
             "title": "Museo Casa de Murillo primary confirmation",
             "uri": "https://sitservicios.lapaz.bo/sit/mapacultural/mapa/data/infrArtisticaCultural3.js"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal programme lists Museo Casa de Murillo, its visitor address and planned public exhibitions.",
+            "id": "auth:bo-public:Q125446679:gamlp-museums-programme",
+            "license": null,
+            "publisher": "Gobierno Autónomo Municipal de La Paz",
+            "revision": "Original GAMLP-branded publication, hosted by Movida de Altura; page 7, SHA-256 f7380254320f62267cfd99340e5ff8647ba493d24b2437d590918bd6ef963780. The event dates were subsequently rescheduled.",
+            "title": "2026 Municipal museums visitor programme",
+            "uri": "https://movidadealtura.com/wp-content/uploads/2026/05/Programa-XX-Larga-Noche-de-Museos-2026.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official viewer loads the museum and cultural venue register.",
+            "id": "auth:bo-public:Q125446679:gamlp-culture-map",
+            "license": null,
+            "publisher": "Gobierno Autónomo Municipal de La Paz",
+            "revision": "Original publisher response received 2026-11-28; SHA-256 891cfed2ff9d49e8c4679957a489589dd313337ccac49cf3f89708aa28e60b14.",
+            "title": "Municipal cultural infrastructure map",
+            "uri": "https://sitservicios.lapaz.bo/sit/mapacultural/mapa/ArtisticoCultural.html?IdSubcategoria=9"
           }
         ],
         "source_uri": "https://lapaz.bo/agendajiwaki/evento/exposicion-bienes-culturales-referentes-a-la-gesta-libertaria-de-1809/",
@@ -904,19 +904,19 @@
           "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q125446679.json"
         },
         {
-          "filename": "bo-murillo-agenda-web.txt",
-          "sha256": "5d0371341a5dbce04464b8bd0919041cd1db3bcc679e0a68a5aa5b374a437e32",
-          "uri": "https://lapaz.bo/agendajiwaki/evento/exposicion-bienes-culturales-referentes-a-la-gesta-libertaria-de-1809/"
-        },
-        {
-          "filename": "bo-lapaz-map-web.txt",
-          "sha256": "93af13587554c7c89534b80091f15b4da69eb88d69eaefd82022c1bb60e5be82",
-          "uri": "https://sitservicios.lapaz.bo/sit/mapacultural/mapa/ArtisticoCultural.html?IdSubcategoria=9"
-        },
-        {
           "filename": "independent-murillo-city-map-data.js",
           "sha256": "c8e2fa540f4d1f1055b6e7a2533f9eba3d2af7368e02e992850deb65daf5df21",
           "uri": "https://sitservicios.lapaz.bo/sit/mapacultural/mapa/data/infrArtisticaCultural3.js"
+        },
+        {
+          "filename": "independent-murillo-government-map.html",
+          "sha256": "891cfed2ff9d49e8c4679957a489589dd313337ccac49cf3f89708aa28e60b14",
+          "uri": "https://sitservicios.lapaz.bo/sit/mapacultural/mapa/ArtisticoCultural.html?IdSubcategoria=9"
+        },
+        {
+          "filename": "bo-gamlp-programa-museos-2026.pdf",
+          "sha256": "f7380254320f62267cfd99340e5ff8647ba493d24b2437d590918bd6ef963780",
+          "uri": "https://movidadealtura.com/wp-content/uploads/2026/05/Programa-XX-Larga-Noche-de-Museos-2026.pdf"
         }
       ]
     },
@@ -969,13 +969,13 @@
           ],
           "source": {
             "accessed": "2026-11-28",
-            "excerpt": "The municipal calendar lists a publicly scheduled 2026 exhibition at this venue.",
-            "id": "auth:bo-public:Q17187013:bo-quirquincho-agenda-web.txt",
+            "excerpt": "Official cultural infrastructure feature 13 identifies Museo Tambo Quirquincho at Evaristo Valle, Plaza Alonso de Mendoza.",
+            "id": "auth:bo-public:Q17187013:gamlp-named-venue",
             "license": null,
             "publisher": "Gobierno Autónomo Municipal de La Paz",
-            "revision": "Normalized government verification note 2026-11-28. SHA-256 984432f15d999f3c23701142e8eda6270314d1350f3b19a16b4ae3063985e78b.",
-            "title": "Tambo Quirquincho public scope and original location",
-            "uri": "https://lapaz.bo/agendajiwaki/buscar-eventos/"
+            "revision": "Original publisher response received 2026-11-28; SHA-256 c8e2fa540f4d1f1055b6e7a2533f9eba3d2af7368e02e992850deb65daf5df21.",
+            "title": "Municipal cultural infrastructure, named venue record",
+            "uri": "https://sitservicios.lapaz.bo/sit/mapacultural/mapa/data/infrArtisticaCultural3.js"
           }
         },
         "id": "auth:bo-public:Q17187013",
@@ -993,26 +993,6 @@
         "source_refs": [
           {
             "accessed": "2026-11-28",
-            "excerpt": "The municipal calendar lists a publicly scheduled 2026 exhibition at this venue.",
-            "id": "auth:bo-public:Q17187013:bo-quirquincho-agenda-web.txt",
-            "license": null,
-            "publisher": "Gobierno Autónomo Municipal de La Paz",
-            "revision": "Normalized government verification note 2026-11-28. SHA-256 984432f15d999f3c23701142e8eda6270314d1350f3b19a16b4ae3063985e78b.",
-            "title": "Tambo Quirquincho public scope and original location",
-            "uri": "https://lapaz.bo/agendajiwaki/buscar-eventos/"
-          },
-          {
-            "accessed": "2026-11-28",
-            "excerpt": "The venue history identifies the former colonial inn and records the municipal restoration and adoption for museum use.",
-            "id": "auth:bo-public:Q17187013:bo-quirquincho-history-web.txt",
-            "license": null,
-            "publisher": "Gobierno Autónomo Municipal de La Paz",
-            "revision": "Normalized government verification note 2026-11-28. SHA-256 c32c62bcb5af6624ad9f736395e5c66deb7d59c679bf106d382eacc12eee184b.",
-            "title": "Tambo Quirquincho public scope and original location",
-            "uri": "https://lapaz.bo/agendajiwaki/tambo-quirquincho/"
-          },
-          {
-            "accessed": "2026-11-28",
             "excerpt": "Longitude -68.1380776, latitude -16.4935899.",
             "id": "wikidata:Q17187013",
             "license": "CC0",
@@ -1020,9 +1000,49 @@
             "revision": "Wikidata revision 2548519864; P625 Q17187013$74398cb8-44d3-14b3-55c4-a5fae5d9d9c3.",
             "title": "Tambo Quirquincho representative point",
             "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q17187013.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal programme lists Museo Tambo Quirquincho, its visitor address and planned public exhibitions.",
+            "id": "auth:bo-public:Q17187013:gamlp-museums-programme",
+            "license": null,
+            "publisher": "Gobierno Autónomo Municipal de La Paz",
+            "revision": "Original GAMLP-branded publication, hosted by Movida de Altura; page 19–20, SHA-256 f7380254320f62267cfd99340e5ff8647ba493d24b2437d590918bd6ef963780. The event dates were subsequently rescheduled.",
+            "title": "2026 Municipal museums visitor programme",
+            "uri": "https://movidadealtura.com/wp-content/uploads/2026/05/Programa-XX-Larga-Noche-de-Museos-2026.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official viewer loads the museum and cultural venue register.",
+            "id": "auth:bo-public:Q17187013:gamlp-culture-map",
+            "license": null,
+            "publisher": "Gobierno Autónomo Municipal de La Paz",
+            "revision": "Original publisher response received 2026-11-28; SHA-256 891cfed2ff9d49e8c4679957a489589dd313337ccac49cf3f89708aa28e60b14.",
+            "title": "Municipal cultural infrastructure map",
+            "uri": "https://sitservicios.lapaz.bo/sit/mapacultural/mapa/ArtisticoCultural.html?IdSubcategoria=9"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Official cultural infrastructure feature 13 identifies Museo Tambo Quirquincho at Evaristo Valle, Plaza Alonso de Mendoza.",
+            "id": "auth:bo-public:Q17187013:gamlp-named-venue",
+            "license": null,
+            "publisher": "Gobierno Autónomo Municipal de La Paz",
+            "revision": "Original publisher response received 2026-11-28; SHA-256 c8e2fa540f4d1f1055b6e7a2533f9eba3d2af7368e02e992850deb65daf5df21.",
+            "title": "Municipal cultural infrastructure, named venue record",
+            "uri": "https://sitservicios.lapaz.bo/sit/mapacultural/mapa/data/infrArtisticaCultural3.js"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal heritage dataset independently names Museo Tambo Quirquincho at Evaristo Valle, Plaza Alonso de Mendoza.",
+            "id": "auth:bo-public:Q17187013:gamlp-heritage-register",
+            "license": null,
+            "publisher": "Gobierno Autónomo Municipal de La Paz",
+            "revision": "Original publisher response received 2026-11-28; SHA-256 24ab48afc62c66466d763a55f3a0d9ac4476f88649291ab14dbff92cabe20231.",
+            "title": "Municipal heritage layer, identified historic venue",
+            "uri": "https://sitservicios.lapaz.bo/sit/mapacultural/mapa/data/infrPatrimonio3.js"
           }
         ],
-        "source_uri": "https://lapaz.bo/agendajiwaki/buscar-eventos/",
+        "source_uri": "https://lapaz.bo/agendajiwaki/tambo-quirquincho/",
         "title": "Tambo Quirquincho",
         "types": [
           "historic-site"
@@ -1035,14 +1055,24 @@
           "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q17187013.json"
         },
         {
-          "filename": "bo-quirquincho-agenda-web.txt",
-          "sha256": "984432f15d999f3c23701142e8eda6270314d1350f3b19a16b4ae3063985e78b",
-          "uri": "https://lapaz.bo/agendajiwaki/buscar-eventos/"
+          "filename": "independent-murillo-government-map.html",
+          "sha256": "891cfed2ff9d49e8c4679957a489589dd313337ccac49cf3f89708aa28e60b14",
+          "uri": "https://sitservicios.lapaz.bo/sit/mapacultural/mapa/ArtisticoCultural.html?IdSubcategoria=9"
         },
         {
-          "filename": "bo-quirquincho-history-web.txt",
-          "sha256": "c32c62bcb5af6624ad9f736395e5c66deb7d59c679bf106d382eacc12eee184b",
-          "uri": "https://lapaz.bo/agendajiwaki/tambo-quirquincho/"
+          "filename": "bo-gamlp-programa-museos-2026.pdf",
+          "sha256": "f7380254320f62267cfd99340e5ff8647ba493d24b2437d590918bd6ef963780",
+          "uri": "https://movidadealtura.com/wp-content/uploads/2026/05/Programa-XX-Larga-Noche-de-Museos-2026.pdf"
+        },
+        {
+          "filename": "independent-murillo-city-map-data.js",
+          "sha256": "c8e2fa540f4d1f1055b6e7a2533f9eba3d2af7368e02e992850deb65daf5df21",
+          "uri": "https://sitservicios.lapaz.bo/sit/mapacultural/mapa/data/infrArtisticaCultural3.js"
+        },
+        {
+          "filename": "bo-gamlp-patrimonial-data.js",
+          "sha256": "24ab48afc62c66466d763a55f3a0d9ac4476f88649291ab14dbff92cabe20231",
+          "uri": "https://sitservicios.lapaz.bo/sit/mapacultural/mapa/data/infrPatrimonio3.js"
         }
       ]
     },
