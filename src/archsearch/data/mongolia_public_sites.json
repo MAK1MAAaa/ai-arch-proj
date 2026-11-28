@@ -1,0 +1,732 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Frozen public visitor sources and original site identity checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ulaanbaatar Tourism Department",
+      "Wikidata contributors"
+    ],
+    "description": "The original hilltop war memorial and public steps leading to it, excluding other attractions on Zaisan Hill.",
+    "description_zh": "宰桑战争纪念碑位于蒙古国。收录原址内有出处的公众参观范围和地图代表点。",
+    "details": "The public hilltop memorial precinct, including the upper statue and visitor approach. The point is a precinct reference near the statue.",
+    "geography": {
+      "authority_id": "supplement:auth:mn-public:Q144444",
+      "countries": [
+        "MN"
+      ],
+      "note": "Named public heritage place in Ulaanbaatar.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The city distinguishes the hilltop war memorial from Buddha Park and describes the public route to it.",
+        "id": "auth:mn-public:Q144444:mn-ub-guide.pdf",
+        "license": null,
+        "publisher": "Ulaanbaatar Tourism Department",
+        "revision": "Frozen 2026-11-28, SHA-256 dbf91013e2b3ca849024db1d3fe22a9659a4769e6654fccd625ff4478fb1140c.",
+        "title": "Zaisan War Memorial public scope and site identity",
+        "uri": "https://tourism.ub.gov.mn/wp-content/uploads/Ulaanbaatar-english-2025-hewleh_compressed.pdf"
+      }
+    },
+    "id": "auth:mn-public:Q144444",
+    "location_precision": null,
+    "names": [
+      "宰桑战争纪念碑",
+      "Zaisan War Memorial"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      106.91583333333,
+      47.884166666667
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The city distinguishes the hilltop war memorial from Buddha Park and describes the public route to it.",
+        "id": "auth:mn-public:Q144444:mn-ub-guide.pdf",
+        "license": null,
+        "publisher": "Ulaanbaatar Tourism Department",
+        "revision": "Frozen 2026-11-28, SHA-256 dbf91013e2b3ca849024db1d3fe22a9659a4769e6654fccd625ff4478fb1140c.",
+        "title": "Zaisan War Memorial public scope and site identity",
+        "uri": "https://tourism.ub.gov.mn/wp-content/uploads/Ulaanbaatar-english-2025-hewleh_compressed.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The city guide describes the historical Zaisan monument and how visitors reach it.",
+        "id": "auth:mn-public:Q144444:mn-ub-tour.pdf",
+        "license": null,
+        "publisher": "Ulaanbaatar Tourism Department",
+        "revision": "Frozen 2026-11-28, SHA-256 1d7409e3b4a08c07f04f40b633d4a9541c0a3db5c62ce5c36c274a88bf84a229.",
+        "title": "Zaisan War Memorial public scope and site identity",
+        "uri": "https://tourism.ub.gov.mn/wp-content/uploads/English01.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 106.91583333333, latitude 47.884166666667.",
+        "id": "wikidata:Q144444",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2459730567, statement q144444$E5E6DF51-D127-4A54-9703-95C592BA5A3F.",
+        "title": "Zaisan War Memorial representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q144444.json"
+      }
+    ],
+    "source_uri": "https://tourism.ub.gov.mn/wp-content/uploads/Ulaanbaatar-english-2025-hewleh_compressed.pdf",
+    "title": "Zaisan War Memorial",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Frozen public visitor sources and original site identity checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Töv Province Museum",
+      "Mongolian National News Agency MONTSAME",
+      "Mongolian.Travel",
+      "Wikidata contributors"
+    ],
+    "description": "The monastery ruins north of Zuunmod and their on-site museum, limited to the existing public heritage precinct.",
+    "description_zh": "曼殊寺考古遗址公开区位于蒙古国。收录原址内有出处的公众参观范围和地图代表点。",
+    "details": "The monastery ruins north of Zuunmod and their on-site museum, limited to the existing public heritage precinct.",
+    "geography": {
+      "authority_id": "supplement:auth:mn-public:Q148612",
+      "countries": [
+        "MN"
+      ],
+      "note": "Named public heritage place in near Zuunmod, Töv.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator lists Manzushir as a branch museum and identifies the monastery ruins and original location.",
+        "id": "auth:mn-public:Q148612:mn-manz-operator.html",
+        "license": null,
+        "publisher": "Töv Province Museum",
+        "revision": "Frozen 2026-11-28, SHA-256 f4af42a0cf1625bc86db69df130a52553bda2cb58c14e551ee429d60a4403268.",
+        "title": "Manzushir Monastery public archaeological precinct public scope and site identity",
+        "uri": "https://en.tuvprovincemuseum.mn/branch-museum"
+      }
+    },
+    "id": "auth:mn-public:Q148612",
+    "location_precision": null,
+    "names": [
+      "曼殊寺考古遗址公开区",
+      "Manzushir Monastery public archaeological precinct"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      106.99302,
+      47.76363
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator lists Manzushir as a branch museum and identifies the monastery ruins and original location.",
+        "id": "auth:mn-public:Q148612:mn-manz-operator.html",
+        "license": null,
+        "publisher": "Töv Province Museum",
+        "revision": "Frozen 2026-11-28, SHA-256 f4af42a0cf1625bc86db69df130a52553bda2cb58c14e551ee429d60a4403268.",
+        "title": "Manzushir Monastery public archaeological precinct public scope and site identity",
+        "uri": "https://en.tuvprovincemuseum.mn/branch-museum"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The account identifies the in-place restored temple museum and its protected original ruins.",
+        "id": "auth:mn-public:Q148612:mn-manz-museum.html",
+        "license": null,
+        "publisher": "Mongolian National News Agency MONTSAME",
+        "revision": "Frozen 2026-11-28, SHA-256 704ae071bcece4941c2924255b877a4f18f4f57b8e073109e811ff9a18753957.",
+        "title": "Manzushir Monastery public archaeological precinct public scope and site identity",
+        "uri": "https://montsame.mn/mn/article/mpost-186134"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism operator describes visitors at the historic ruin precinct and museum.",
+        "id": "auth:mn-public:Q148612:mn-manz-visitor.html",
+        "license": null,
+        "publisher": "Mongolian.Travel",
+        "revision": "Frozen 2026-11-28, SHA-256 e197eb93eb2e2dfeb02884fd202074c3c5c9f2028af09182c33b0afc82cba0d5.",
+        "title": "Manzushir Monastery public archaeological precinct public scope and site identity",
+        "uri": "https://www.mongolian.travel/manzushir-monastery/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 106.99302, latitude 47.76363.",
+        "id": "wikidata:Q148612",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2389106746, statement q148612$02AC0B74-2877-4080-8833-4F98C0A807A9.",
+        "title": "Manzushir Monastery public archaeological precinct representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q148612.json"
+      }
+    ],
+    "source_uri": "https://en.tuvprovincemuseum.mn/branch-museum",
+    "title": "Manzushir Monastery public archaeological precinct",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Frozen public visitor sources and original site identity checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Bogd Khaan Palace Museum",
+      "National Center for Cultural Heritage of Mongolia",
+      "Wikidata contributors"
+    ],
+    "description": "The surviving winter palace and the publicly visitable palace-museum grounds in Ulaanbaatar.",
+    "description_zh": "博格达汗冬宫位于蒙古国。收录原址内有出处的公众参观范围和地图代表点。",
+    "details": "The surviving winter palace and the publicly visitable palace-museum grounds in Ulaanbaatar.",
+    "geography": {
+      "authority_id": "supplement:auth:mn-public:Q1579833",
+      "countries": [
+        "MN"
+      ],
+      "note": "Named public heritage place in Ulaanbaatar.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator identifies the winter palace and its museum of historic architecture.",
+        "id": "auth:mn-public:Q1579833:mn-bogd-operator.html",
+        "license": null,
+        "publisher": "Bogd Khaan Palace Museum",
+        "revision": "Frozen 2026-11-28, SHA-256 5384e3baed431d55f9541be1d4539e970f29f9112b5b6a20b4deeab4f637df97.",
+        "title": "Winter Palace of the Bogd Khan public scope and site identity",
+        "uri": "https://bogdkhaanpalacemuseum.com/about/"
+      }
+    },
+    "id": "auth:mn-public:Q1579833",
+    "location_precision": null,
+    "names": [
+      "博格达汗冬宫",
+      "Winter Palace of the Bogd Khan"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      106.90666666667,
+      47.8975
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator identifies the winter palace and its museum of historic architecture.",
+        "id": "auth:mn-public:Q1579833:mn-bogd-operator.html",
+        "license": null,
+        "publisher": "Bogd Khaan Palace Museum",
+        "revision": "Frozen 2026-11-28, SHA-256 5384e3baed431d55f9541be1d4539e970f29f9112b5b6a20b4deeab4f637df97.",
+        "title": "Winter Palace of the Bogd Khan public scope and site identity",
+        "uri": "https://bogdkhaanpalacemuseum.com/about/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum announced public visiting days for its own grounds in autumn 2026.",
+        "id": "auth:mn-public:Q1579833:mn-bogd-public-2026.html",
+        "license": null,
+        "publisher": "Bogd Khaan Palace Museum",
+        "revision": "Frozen 2026-11-28, SHA-256 9bbe8aac084f64684b37c9ee21e5f5016c8ac143f1f4bc1990ef9a90ebd25d09.",
+        "title": "Winter Palace of the Bogd Khan public scope and site identity",
+        "uri": "https://bogdkhaanpalacemuseum.com/1490/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national museum inventory identifies the Green Palace and associated buildings.",
+        "id": "auth:mn-public:Q1579833:mn-bogd-heritage.html",
+        "license": null,
+        "publisher": "National Center for Cultural Heritage of Mongolia",
+        "revision": "Frozen 2026-11-28, SHA-256 ae98b0ad0301dbf6896a98a5cc46e35fa08339d80d0ae9d64966adfc63420fb2.",
+        "title": "Winter Palace of the Bogd Khan public scope and site identity",
+        "uri": "https://ncch.gov.mn/Museum/2"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 106.90666666667, latitude 47.8975.",
+        "id": "wikidata:Q1579833",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2549840971, statement q1579833$0A6A435D-E767-42BE-81CB-C25E7DDCB651.",
+        "title": "Winter Palace of the Bogd Khan representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1579833.json"
+      }
+    ],
+    "source_uri": "https://bogdkhaanpalacemuseum.com/about/",
+    "title": "Winter Palace of the Bogd Khan",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Frozen public visitor sources and original site identity checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ulaanbaatar Tourism Department",
+      "Wikidata contributors"
+    ],
+    "description": "The historic temple complex in downtown Ulaanbaatar, limited to the public temple museum and its visitor precinct.",
+    "description_zh": "乔金喇嘛庙博物馆位于蒙古国。收录原址内有出处的公众参观范围和地图代表点。",
+    "details": "The historic temple complex in downtown Ulaanbaatar, limited to the public temple museum and its visitor precinct.",
+    "geography": {
+      "authority_id": "supplement:auth:mn-public:Q2093410",
+      "countries": [
+        "MN"
+      ],
+      "note": "Named public heritage place in Ulaanbaatar.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The city guide lists the original temple complex as a visitable museum.",
+        "id": "auth:mn-public:Q2093410:mn-ub-guide.pdf",
+        "license": null,
+        "publisher": "Ulaanbaatar Tourism Department",
+        "revision": "Frozen 2026-11-28, SHA-256 dbf91013e2b3ca849024db1d3fe22a9659a4769e6654fccd625ff4478fb1140c.",
+        "title": "Choijin Lama Temple Museum public scope and site identity",
+        "uri": "https://tourism.ub.gov.mn/wp-content/uploads/Ulaanbaatar-english-2025-hewleh_compressed.pdf"
+      }
+    },
+    "id": "auth:mn-public:Q2093410",
+    "location_precision": null,
+    "names": [
+      "乔金喇嘛庙博物馆",
+      "Choijin Lama Temple Museum"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      106.91833333,
+      47.915
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The city guide lists the original temple complex as a visitable museum.",
+        "id": "auth:mn-public:Q2093410:mn-ub-guide.pdf",
+        "license": null,
+        "publisher": "Ulaanbaatar Tourism Department",
+        "revision": "Frozen 2026-11-28, SHA-256 dbf91013e2b3ca849024db1d3fe22a9659a4769e6654fccd625ff4478fb1140c.",
+        "title": "Choijin Lama Temple Museum public scope and site identity",
+        "uri": "https://tourism.ub.gov.mn/wp-content/uploads/Ulaanbaatar-english-2025-hewleh_compressed.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The city's English-language heritage guide identifies the existing temple museum.",
+        "id": "auth:mn-public:Q2093410:mn-ub-tour.pdf",
+        "license": null,
+        "publisher": "Ulaanbaatar Tourism Department",
+        "revision": "Frozen 2026-11-28, SHA-256 1d7409e3b4a08c07f04f40b633d4a9541c0a3db5c62ce5c36c274a88bf84a229.",
+        "title": "Choijin Lama Temple Museum public scope and site identity",
+        "uri": "https://tourism.ub.gov.mn/wp-content/uploads/English01.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 106.91833333, latitude 47.915.",
+        "id": "wikidata:Q2093410",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2460433697, statement Q2093410$7C8F4F7F-6E40-47FF-8F45-331C86556731.",
+        "title": "Choijin Lama Temple Museum representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2093410.json"
+      }
+    ],
+    "source_uri": "https://tourism.ub.gov.mn/wp-content/uploads/Ulaanbaatar-english-2025-hewleh_compressed.pdf",
+    "title": "Choijin Lama Temple Museum",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Frozen public visitor sources and original site identity checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ulaanbaatar Tourism Department",
+      "ICOM Committee for Conservation",
+      "Wikidata contributors"
+    ],
+    "description": "The historic building conserved as the Fine Arts Zanabazar Museum, limited to the original building with its public museum galleries.",
+    "description_zh": "扎纳巴扎尔美术博物馆历史建筑位于蒙古国。收录原址内有出处的公众参观范围和地图代表点。",
+    "details": "The historic building conserved as the Fine Arts Zanabazar Museum, limited to the original building with its public museum galleries.",
+    "geography": {
+      "authority_id": "supplement:auth:mn-public:Q2370206",
+      "countries": [
+        "MN"
+      ],
+      "note": "Named public heritage place in Ulaanbaatar.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal visitor guide lists the public Zanabazar Museum of Fine Arts.",
+        "id": "auth:mn-public:Q2370206:mn-ub-guide.pdf",
+        "license": null,
+        "publisher": "Ulaanbaatar Tourism Department",
+        "revision": "Frozen 2026-11-28, SHA-256 dbf91013e2b3ca849024db1d3fe22a9659a4769e6654fccd625ff4478fb1140c.",
+        "title": "Fine Arts Zanabazar Museum historic building public scope and site identity",
+        "uri": "https://tourism.ub.gov.mn/wp-content/uploads/Ulaanbaatar-english-2025-hewleh_compressed.pdf"
+      }
+    },
+    "id": "auth:mn-public:Q2370206",
+    "location_precision": null,
+    "names": [
+      "扎纳巴扎尔美术博物馆历史建筑",
+      "Fine Arts Zanabazar Museum historic building"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      106.9097,
+      47.9202
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal visitor guide lists the public Zanabazar Museum of Fine Arts.",
+        "id": "auth:mn-public:Q2370206:mn-ub-guide.pdf",
+        "license": null,
+        "publisher": "Ulaanbaatar Tourism Department",
+        "revision": "Frozen 2026-11-28, SHA-256 dbf91013e2b3ca849024db1d3fe22a9659a4769e6654fccd625ff4478fb1140c.",
+        "title": "Fine Arts Zanabazar Museum historic building public scope and site identity",
+        "uri": "https://tourism.ub.gov.mn/wp-content/uploads/Ulaanbaatar-english-2025-hewleh_compressed.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The conservation account identifies the historic mansion presently used for the museum and its exhibition galleries.",
+        "id": "auth:mn-public:Q2370206:mn-zana-icom.pdf",
+        "license": null,
+        "publisher": "ICOM Committee for Conservation",
+        "revision": "Frozen 2026-11-28, SHA-256 d78d6f3f3088873e919edb66ce97c3e7dd6854abb9b777288942954bff0e71c5.",
+        "title": "Fine Arts Zanabazar Museum historic building public scope and site identity",
+        "uri": "https://www.icom-cc.org/dlfile.aspx?file=https%3A%2F%2Fwww.icom-cc.org%2Fdocs%2Fcontent%2FThe-Ethnographic-Conservation-Newsletter-29_MAY-2008.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 106.9097, latitude 47.9202.",
+        "id": "wikidata:Q2370206",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2510773679, statement Q2370206$b0ee31f0-4b70-b71f-66d2-63f8e71e93a1.",
+        "title": "Fine Arts Zanabazar Museum historic building representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2370206.json"
+      }
+    ],
+    "source_uri": "https://tourism.ub.gov.mn/wp-content/uploads/Ulaanbaatar-english-2025-hewleh_compressed.pdf",
+    "title": "Fine Arts Zanabazar Museum historic building",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Frozen public visitor sources and original site identity checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Mongolia's World Heritage Tentative List submission",
+      "Arts Council of Mongolia and CyArk",
+      "Mongolian.Travel",
+      "Wikidata contributors"
+    ],
+    "description": "The preserved monastic precinct in the Iven valley, limited to the supported visitor scope at the monastery.",
+    "description_zh": "庆宁寺公开参观区位于蒙古国。收录原址内有出处的公众参观范围和地图代表点。",
+    "details": "The preserved monastic precinct in the Iven valley, limited to the supported visitor scope at the monastery.",
+    "geography": {
+      "authority_id": "supplement:auth:mn-public:Q2593920",
+      "countries": [
+        "MN"
+      ],
+      "note": "Named public heritage place in Baruunbüren, Selenge.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The submission identifies the monastery in Selenge as an individual tentative heritage property.",
+        "id": "auth:mn-public:Q2593920:mn-amar-whc-tentative.html",
+        "license": null,
+        "publisher": "Mongolia's World Heritage Tentative List submission",
+        "revision": "Frozen 2026-11-28, SHA-256 4efa3b50f400f747f800eca6205bbcf4b9c53f3f9f183ec5f52786a4b9e48ddd.",
+        "title": "Amarbayasgalant Monastery public precinct public scope and site identity",
+        "uri": "https://whc.unesco.org/en/tentativelists/5947/"
+      }
+    },
+    "id": "auth:mn-public:Q2593920",
+    "location_precision": null,
+    "names": [
+      "庆宁寺公开参观区",
+      "Amarbayasgalant Monastery public precinct"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      105.085,
+      49.48
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The submission identifies the monastery in Selenge as an individual tentative heritage property.",
+        "id": "auth:mn-public:Q2593920:mn-amar-whc-tentative.html",
+        "license": null,
+        "publisher": "Mongolia's World Heritage Tentative List submission",
+        "revision": "Frozen 2026-11-28, SHA-256 4efa3b50f400f747f800eca6205bbcf4b9c53f3f9f183ec5f52786a4b9e48ddd.",
+        "title": "Amarbayasgalant Monastery public precinct public scope and site identity",
+        "uri": "https://whc.unesco.org/en/tentativelists/5947/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The conservation team documents the original monastery and its principal courtyard and structures.",
+        "id": "auth:mn-public:Q2593920:mn-amar-project.html",
+        "license": null,
+        "publisher": "Arts Council of Mongolia and CyArk",
+        "revision": "Frozen 2026-11-28, SHA-256 b887440889407b69dbb2c8584a4907c8a04c1066c22fdd894cbb8bdbe1e9d8d2.",
+        "title": "Amarbayasgalant Monastery public precinct public scope and site identity",
+        "uri": "https://tapestry.cyark.org/content/amarbayasgalant/about?content=alt&lang=mon"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The visitor itinerary states that the monastery is visitable and identifies the original complex.",
+        "id": "auth:mn-public:Q2593920:mn-amar-visitor.html",
+        "license": null,
+        "publisher": "Mongolian.Travel",
+        "revision": "Frozen 2026-11-28, SHA-256 d77dbd4534c0613b08f8ffd4aec441b1b6477f6449d2059ce9223cf6a2c98717.",
+        "title": "Amarbayasgalant Monastery public precinct public scope and site identity",
+        "uri": "https://www.mongolian.travel/amarbaysgalant-monastery/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 105.085, latitude 49.48.",
+        "id": "wikidata:Q2593920",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2526993325, statement q2593920$0CE2CBD4-013F-4205-B20B-0729EE640C72.",
+        "title": "Amarbayasgalant Monastery public precinct representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2593920.json"
+      }
+    ],
+    "source_uri": "https://whc.unesco.org/en/tentativelists/5947/",
+    "title": "Amarbayasgalant Monastery public precinct",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Frozen public visitor sources and original site identity checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Mongolian National News Agency MONTSAME",
+      "Wikidata contributors"
+    ],
+    "description": "The historical Khamar Monastery precinct with its public visitor grounds. The separate Shambhala Energy Centre is outside this record.",
+    "description_zh": "哈玛尔寺公开参观区位于蒙古国。收录原址内有出处的公众参观范围和地图代表点。",
+    "details": "The historical Khamar Monastery precinct with its public visitor grounds. The separate Shambhala Energy Centre is outside this record.",
+    "geography": {
+      "authority_id": "supplement:auth:mn-public:Q6399902",
+      "countries": [
+        "MN"
+      ],
+      "note": "Named public heritage place in near Sainshand, Dornogovi.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "A November 2026 dispatch names the monastery and the Shambhala Energy Centre as separate stops.",
+        "id": "auth:mn-public:Q6399902:mn-khamar-visitor-2026.html",
+        "license": null,
+        "publisher": "Mongolian National News Agency MONTSAME",
+        "revision": "Frozen 2026-11-28, SHA-256 0d162e629bbe50820adebb1c64d32cb57fcc7303e479398a7a695ddf51258872.",
+        "title": "Khamar Monastery public precinct public scope and site identity",
+        "uri": "https://montsame.mn/mn/article/1Be8-mBbr_HukKHIg1ZbP"
+      }
+    },
+    "id": "auth:mn-public:Q6399902",
+    "location_precision": null,
+    "names": [
+      "哈玛尔寺公开参观区",
+      "Khamar Monastery public precinct"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      110.27347222222222,
+      44.59722222222222
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "A November 2026 dispatch names the monastery and the Shambhala Energy Centre as separate stops.",
+        "id": "auth:mn-public:Q6399902:mn-khamar-visitor-2026.html",
+        "license": null,
+        "publisher": "Mongolian National News Agency MONTSAME",
+        "revision": "Frozen 2026-11-28, SHA-256 0d162e629bbe50820adebb1c64d32cb57fcc7303e479398a7a695ddf51258872.",
+        "title": "Khamar Monastery public precinct public scope and site identity",
+        "uri": "https://montsame.mn/mn/article/1Be8-mBbr_HukKHIg1ZbP"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 110.27347222222222, latitude 44.59722222222222.",
+        "id": "wikidata:Q6399902",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2485935437, statement q6399902$B8B30482-D0D1-4150-B291-C17493C3A7EB.",
+        "title": "Khamar Monastery public precinct representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6399902.json"
+      }
+    ],
+    "source_uri": "https://montsame.mn/mn/article/1Be8-mBbr_HukKHIg1ZbP",
+    "title": "Khamar Monastery public precinct",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Frozen public visitor sources and original site identity checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ulaanbaatar Tourism Department",
+      "Wikidata contributors"
+    ],
+    "description": "The historic active monastery, represented by the publicly described pilgrim route and visitor precinct around the central temples.",
+    "description_zh": "甘丹寺公开参观区位于蒙古国。收录原址内有出处的公众参观范围和地图代表点。",
+    "details": "The historic active monastery, represented by the publicly described pilgrim route and visitor precinct around the central temples.",
+    "geography": {
+      "authority_id": "supplement:auth:mn-public:Q965633",
+      "countries": [
+        "MN"
+      ],
+      "note": "Named public heritage place in Ulaanbaatar.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The city visitor guide describes the monastery courtyards, temples and the publicly used pilgrim path.",
+        "id": "auth:mn-public:Q965633:mn-ub-guide.pdf",
+        "license": null,
+        "publisher": "Ulaanbaatar Tourism Department",
+        "revision": "Frozen 2026-11-28, SHA-256 dbf91013e2b3ca849024db1d3fe22a9659a4769e6654fccd625ff4478fb1140c.",
+        "title": "Gandantegchinlen Monastery visitor precinct public scope and site identity",
+        "uri": "https://tourism.ub.gov.mn/wp-content/uploads/Ulaanbaatar-english-2025-hewleh_compressed.pdf"
+      }
+    },
+    "id": "auth:mn-public:Q965633",
+    "location_precision": null,
+    "names": [
+      "甘丹寺公开参观区",
+      "Gandantegchinlen Monastery visitor precinct"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      106.895,
+      47.923055555556
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The city visitor guide describes the monastery courtyards, temples and the publicly used pilgrim path.",
+        "id": "auth:mn-public:Q965633:mn-ub-guide.pdf",
+        "license": null,
+        "publisher": "Ulaanbaatar Tourism Department",
+        "revision": "Frozen 2026-11-28, SHA-256 dbf91013e2b3ca849024db1d3fe22a9659a4769e6654fccd625ff4478fb1140c.",
+        "title": "Gandantegchinlen Monastery visitor precinct public scope and site identity",
+        "uri": "https://tourism.ub.gov.mn/wp-content/uploads/Ulaanbaatar-english-2025-hewleh_compressed.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The city heritage route identifies the historic Gandantegchinlen Monastery.",
+        "id": "auth:mn-public:Q965633:mn-ub-tour.pdf",
+        "license": null,
+        "publisher": "Ulaanbaatar Tourism Department",
+        "revision": "Frozen 2026-11-28, SHA-256 1d7409e3b4a08c07f04f40b633d4a9541c0a3db5c62ce5c36c274a88bf84a229.",
+        "title": "Gandantegchinlen Monastery visitor precinct public scope and site identity",
+        "uri": "https://tourism.ub.gov.mn/wp-content/uploads/English01.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 106.895, latitude 47.923055555556.",
+        "id": "wikidata:Q965633",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2379211413, statement q965633$100F7439-C3C3-4041-A806-EB739E22844B.",
+        "title": "Gandantegchinlen Monastery visitor precinct representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q965633.json"
+      }
+    ],
+    "source_uri": "https://tourism.ub.gov.mn/wp-content/uploads/Ulaanbaatar-english-2025-hewleh_compressed.pdf",
+    "title": "Gandantegchinlen Monastery visitor precinct",
+    "types": [
+      "historic-site"
+    ]
+  }
+]

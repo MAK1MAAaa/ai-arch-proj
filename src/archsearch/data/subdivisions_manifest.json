@@ -8,10 +8,10 @@
   },
   "files": {
     "subdivision_review.json": {
-      "sha256": "4d2fac9ba5310652672d45249492c6f77d52e097de38a2c2fb6249a843b071f1"
+      "sha256": "a1626ae2cd64a81219bee328f9b106e10b036a1a355353b33bb6881b595bf0a4"
     },
     "subdivisions.json": {
-      "sha256": "dbb675dda8ea10ccd18d46eb3eaf79d90e652eea41619cf57f8322566bcefff8"
+      "sha256": "dd6f7670bb4c96987dd05a89601d9328e3fa18e5fe92831e86122670f24f319b"
     }
   },
   "hong_kong_spec_sha256": "b0bcbe915c46bf611aab9b35b76c4365eb398a1032cf7705aa8302448611bf7a",
@@ -19,9 +19,9 @@
   "merimee_spec_sha256": "f6b41e4368d1b31082502bf501f93e576cb6718c22a0c9e807b49480a64c9709",
   "minas_spec_sha256": "def84d9b4c6a5c0c04794779337614dfb563e9b5b1d224d927c906d0721c7dca",
   "policy": "Reviewed Canadian whole-object provinces, Hong Kong source-feature districts, Iepha-MG original-record municipality values and Mérimée original communes. Explicit record-to-object links only; no geocoding, boundary, chronology or text inference.",
-  "review_sha256": "4d2fac9ba5310652672d45249492c6f77d52e097de38a2c2fb6249a843b071f1",
+  "review_sha256": "a1626ae2cd64a81219bee328f9b106e10b036a1a355353b33bb6881b595bf0a4",
   "schema_version": 1,
-  "source_facts_sha256": "1bd2d4377db5f8e6e67596072b6bb061b890d171d800ada18270ce90720018a2",
+  "source_facts_sha256": "259f69f3e459daf2dccad3e324f2f1c7c51bedf768f4b5b774e7d52e3c5fc002",
   "source_review_sha256": "f96f4ef463ef7001912ee1293e08f9b99bae62c73608f40270ea0122096e18f8",
   "version": "source-subdivisions-v9"
 }

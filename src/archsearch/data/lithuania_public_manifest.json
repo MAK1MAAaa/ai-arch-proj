@@ -1,0 +1,22 @@
+{
+  "base_count": 4947,
+  "base_ids_sha256": "6f0e260a05b04660eeebf33087aece86847c0bbb16d60b59b3cbb8f2635c7fd0",
+  "base_sites_sha256": "4f5f4d61fcb20307ee5857d331402992ed1ee6503bf792984efe453fd5e7d5af",
+  "cohort_version": "lithuania-kvr-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 12,
+    "total": 4959
+  },
+  "files": {
+    "lithuania_public_review.json": {
+      "sha256": "155e8c069beb5799d9a5c9031584a8c0aa9bec9a402a77ea3a81c7afd1885d91"
+    },
+    "lithuania_public_sites.json": {
+      "sha256": "7deef1f035aae55549a6af934c6112c2095dd9928db2d5c2a71687010deba52b"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Public Lithuanian archaeological and historic properties matched to original KVR national register points with current named-site visit evidence."
+}

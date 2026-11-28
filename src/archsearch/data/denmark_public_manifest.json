@@ -1,0 +1,22 @@
+{
+  "base_count": 4959,
+  "base_ids_sha256": "913da6026c9143ed69c7306797f71b39cedd5c3a591398b6566ddb06b697e68f",
+  "base_sites_sha256": "fe306e802c5e2d48ff5169a6a86ce9010f3bdcdb32045954cdc21f550ab1d80b",
+  "cohort_version": "denmark-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 14,
+    "total": 4973
+  },
+  "files": {
+    "denmark_public_review.json": {
+      "sha256": "336d0724e43bef33e6ea3a589603f1da09f4a61e0df5162715aaa0bdbeab29f7"
+    },
+    "denmark_public_sites.json": {
+      "sha256": "5256b7831484ab2c6fb673151404e64847df2423835052570310cf13426ba3b9"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Public Danish archaeological and historic visitor properties distinguished by current administrations from other registered castles, UNESCO components and restricted buildings."
+}

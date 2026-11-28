@@ -163,6 +163,9 @@ def test_public_point_search_catalogue_and_provenance(
             ("QA", "auth:qa-public:", 1),
             ("GE", "auth:ge-public:", 10),
             ("AM", "auth:am-public:", 10),
+            ("LT", "auth:lt-kvr:", 12),
+            ("DK", "auth:dk-public:", 14),
+            ("MN", "auth:mn-public:", 8),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -350,3 +353,20 @@ def test_public_point_search_catalogue_and_provenance(
         )
         vardzia = client.get("/api/sites/auth:ge-public:Q691813").json()
         assert vardzia["chronology"]["phases"] == []
+
+        lake_castle = client.get("/api/sites/auth:lt-kvr:29964").json()
+        peninsula_castle = client.get("/api/sites/auth:lt-kvr:22719").json()
+        assert lake_castle["repr_point"] == [24.93405331102181, 54.65274721961398]
+        assert lake_castle["repr_point"] != peninsula_castle["repr_point"]
+        assert any(
+            ref["license"] == "CC BY 4.0" and "Valstybės duomenų agentūra" in ref["publisher"]
+            for ref in lake_castle["source_refs"]
+        )
+        assert client.get("/api/sites/auth:lt-kvr:3679").status_code == 404
+        assert client.get("/api/sites/auth:lt-kvr:24547").status_code == 404
+        vordingborg = client.get("/api/sites/auth:dk-public:Q1014431").json()
+        assert vordingborg["repr_point"] == [11.9117, 55.0069]
+        manzushir = client.get("/api/sites/auth:mn-public:Q148612").json()
+        assert manzushir["repr_point"] == [106.99302, 47.76363]
+        assert manzushir["chronology"]["phases"] == []
+        assert client.get("/api/sites/auth:mn-public:Q2368924").status_code == 404

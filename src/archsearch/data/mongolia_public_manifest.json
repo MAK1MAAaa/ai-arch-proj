@@ -1,0 +1,22 @@
+{
+  "base_count": 4973,
+  "base_ids_sha256": "d35258316544b9ef982b7e3c203c480bcb8213124df6a10d183c571f323ed7f0",
+  "base_sites_sha256": "e663077ba7d7f5d1d65c5a44f259164a522e80df6f701409282779702cae1b3e",
+  "cohort_version": "mongolia-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 8,
+    "total": 4981
+  },
+  "files": {
+    "mongolia_public_review.json": {
+      "sha256": "12f942adc28f479545a567c8e2934309b4e33ae4e61c0745ff2d3408aa20938c"
+    },
+    "mongolia_public_sites.json": {
+      "sha256": "f8cfc5e1fe21c38d5b1dba8477009591242616fcf508548d405628caf8acc2ff"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Public Mongolian heritage precincts on current visitor routes, including preserved or reconstructed monastery complexes and historic public buildings; World Heritage components and unresolved points are excluded."
+}
