@@ -216,12 +216,41 @@ MOROCCO_PUBLIC = NamedPlaceCohort(
     "b344ca464c90c8df4fab286604bdbcfacfa6e800d8f909233dcf69e77d260f65",
     "4a7d7186e52702bb0eb7c01ff2a28237d9f1cf7363f250e8e6fe9a4bc00acc9a",
 )
+NORTH_CENTRAL_PUBLIC = NamedPlaceCohort(
+    "north-central-america-public-v1",
+    "global-v21",
+    "north_central_public",
+    "e23c43b1b7a06fc8716472613810bc05c841b0bd1c72c489e7bc87d0b08a4bae",
+    "0c484da970e39f89bda49cecb495eee01f16df5c195f058e031290e00073c692",
+)
+PACIFIC_ISLANDS_PUBLIC = NamedPlaceCohort(
+    "pacific-islands-public-v1",
+    "global-v21",
+    "pacific_islands_public",
+    "b61c75a75a93a2eaf1d6bee29f28311aa4e62a4e8c938cbd483b407dd0125d48",
+    "f48e2fad24bab384a826c9885413f4ce6e7298f03f0d82c6bbb524e3207fd87b",
+)
+EAST_AFRICA_PUBLIC = NamedPlaceCohort(
+    "tanzania-uganda-public-v1",
+    "global-v21",
+    "east_africa_public",
+    "c68fd862dd7caad2f6e351159c186c9072dacc9bd3e5fa21c928947776e3d904",
+    "2522b3601149e8289d86fdf75bbac046d4afd362df00017bab3a8aaaf10907b9",
+)
+KENYA_PUBLIC = NamedPlaceCohort(
+    "kenya-nmk-public-v1",
+    "global-v21",
+    "kenya_public",
+    "c5334adb77f40a3f3127ce99654541e11fd0036961e5b44761062c66ce3027e0",
+    "24a0ce444669cfb70e31856df0f3429ee6e14da741e40d570a7d1bd6857d6a9e",
+)
 POINT_COHORTS = (
     IRELAND, ANDALUCIA, TAIWAN_ICULTURE, MEXICO_SIC, FINLAND_VARK, WALES_CADW, THAILAND_FAD,
     AFRICA_VISIT, SCOTLAND_HES, CARIBBEAN_NRHP, PERU_PUBLIC, INDIA_ASI, INDIA_ASI_NEXT,
     SRI_LANKA_PUBLIC, SOUTH_ASIA_PUBLIC, CENTRAL_AMERICA_PUBLIC, SOUTHERN_PUBLIC,
     NEW_ZEALAND_PUBLIC, EGYPT_PUBLIC, SOUTHEAST_PUBLIC, CARIBBEAN_ISLANDS_PUBLIC,
-    TUNISIA_PUBLIC, MOROCCO_PUBLIC,
+    TUNISIA_PUBLIC, MOROCCO_PUBLIC, NORTH_CENTRAL_PUBLIC, PACIFIC_ISLANDS_PUBLIC,
+    EAST_AFRICA_PUBLIC, KENYA_PUBLIC,
 )
 
 

@@ -1,0 +1,22 @@
+{
+  "base_count": 4619,
+  "base_ids_sha256": "2bacaf6ae0d4daf53b8cccf486fb28f107e56fc8baaaa2ddc6b06844f28fdb73",
+  "base_sites_sha256": "791dedf99a50e14f4037009d0d756d11dff06dd461e1bcb985ef8602a04ffe22",
+  "cohort_version": "tanzania-uganda-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 13,
+    "total": 4632
+  },
+  "files": {
+    "east_africa_public_review.json": {
+      "sha256": "c68fd862dd7caad2f6e351159c186c9072dacc9bd3e5fa21c928947776e3d904"
+    },
+    "east_africa_public_sites.json": {
+      "sha256": "2522b3601149e8289d86fdf75bbac046d4afd362df00017bab3a8aaaf10907b9"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Thirteen independently verified public historical or archaeological sites in Tanzania and Uganda, with checked site identity and visitor scope."
+}

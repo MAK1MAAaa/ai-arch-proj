@@ -77,10 +77,10 @@ def test_canadian_derivatives_rebuild_twice_without_raw_downloads(tmp_path: Path
 def test_canadian_catalogue_and_selected_original_point_do_not_infer_years(tmp_path: Path) -> None:
     with TestClient(create_app(home=tmp_path)) as client:
         coverage = client.get("/api/coverage").json()
-        assert coverage["total"] == 4586 and coverage["corpus_version"] == "global-v21"
+        assert coverage["total"] == 4638 and coverage["corpus_version"] == "global-v21"
         assert len(coverage["countries"]) == 214 and len(coverage["regions"]) == 7
         assert coverage["chronology"] == {
-            "reviewed": 156, "insufficient": 1133, "not_reviewed": 3297,
+            "reviewed": 156, "insufficient": 1185, "not_reviewed": 3297,
         }
         assert coverage["spatial_locations"]["points"] == 5851
         page = client.get("/api/sites", params={"country": "CA", "limit": 50}).json()
@@ -100,7 +100,7 @@ def test_canadian_catalogue_and_selected_original_point_do_not_infer_years(tmp_p
         for identifier in ("60", "257", "770", "1779", "1780", "17353"):
             assert client.get("/api/sites/auth:ca-dfhd:" + identifier).status_code == 404
         state = client.get("/api/status").json()
-        assert state["corpus"]["count"] == 4586 and not state["semantic"]["ready"]
+        assert state["corpus"]["count"] == 4638 and not state["semantic"]["ready"]
         assert state["registered_areas"]["sites"] == 197
 
 
@@ -109,7 +109,7 @@ def test_canadian_diagnostics_leave_relevance_metrics_unconfirmed(tmp_path: Path
     pairs = load_queries(queries)
     assert [pair.id for pair in pairs] == [f"ca{index:02d}" for index in range(1, 21)]
     report = evaluate_corpus(tmp_path / "no-model", tmp_path / "report.json", queries=queries)
-    assert report["corpus_count"] == 4586 and report["metrics"] is None
+    assert report["corpus_count"] == 4638 and report["metrics"] is None
     assert report["qrels"]["confirmed"] is False and not report["runs_complete"]
     assert set(report["runs"]) == {"bm25_zh", "bm25_en", "semantic_zh", "semantic_en"}
     assert all(row["error"] is None for key, run in report["runs"].items()

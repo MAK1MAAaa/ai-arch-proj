@@ -1,0 +1,3151 @@
+{
+  "base_count": 4586,
+  "base_ids_sha256": "c51095e0021acf96141dd27b5400275d558923a412e39fb0ea5e64f055706b4a",
+  "base_sites_sha256": "402a3d20687190a94aea72ceefccb33f53acb2e6819c39c38f809f64e28ccc23",
+  "cohort_version": "north-central-america-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -89.117591666667,
+          16.763927777778
+        ],
+        "precision": null,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1035336.json",
+        "statement_id": "q1035336$5EDE48D1-F7B3-4301-8BBD-76782F32D8AD"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological reserve at the Maya city in the Chiquibul area.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Institute of Culture and History, Belize",
+          "Attorney General’s Ministry, Belize",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological reserve at the Maya city in the Chiquibul area.",
+        "description_zh": "卡拉科尔玛雅遗址位于伯利兹，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public archaeological reserve at the Maya city in the Chiquibul area.",
+        "geography": {
+          "authority_id": "supplement:auth:bz-public:Q1035336",
+          "countries": [
+            "BZ"
+          ],
+          "note": "Public site in Cayo District, Belize.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Caracol in Cayo District.",
+            "id": "bz-caracol:visit:1",
+            "license": null,
+            "publisher": "National Institute of Culture and History, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b.",
+            "title": "Official archaeological reserves ticketing",
+            "uri": "https://ticketing.nichbelize.org/site-tickets/"
+          }
+        },
+        "id": "auth:bz-public:Q1035336",
+        "location_precision": null,
+        "names": [
+          "卡拉科尔玛雅遗址",
+          "Caracol",
+          "El Caracol"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -89.117591666667,
+          16.763927777778
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Caracol in Cayo District.",
+            "id": "bz-caracol:visit:1",
+            "license": null,
+            "publisher": "National Institute of Culture and History, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b.",
+            "title": "Official archaeological reserves ticketing",
+            "uri": "https://ticketing.nichbelize.org/site-tickets/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Caracol in Cayo District.",
+            "id": "bz-caracol:visit:2",
+            "license": null,
+            "publisher": "Attorney General’s Ministry, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 be63b5e32d9cc60d8964ba8e7fcca3dc179e86a4447fde9513828a9466b7eadc.",
+            "title": "National Institute of Culture and History Admission Fees and Opening Hours Rules 2025",
+            "uri": "https://www.agm.gov.bz/uploads/laws/67fe89693f1f5_SI_No._013_of_2025_National_Institute_of_Culture_and_History__Admission_Fees_and_Opening_Hours__Rules__2025.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -89.117591666667, latitude 16.763927777778",
+            "id": "wikidata:Q1035336",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2460725258. P625 q1035336$5EDE48D1-F7B3-4301-8BBD-76782F32D8AD.",
+            "title": "Caracol representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1035336.json"
+          }
+        ],
+        "source_uri": "https://ticketing.nichbelize.org/site-tickets/",
+        "title": "Caracol",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q1035336.json",
+          "sha256": "2ed26a955eabfdf5c66fe6280f2fe1639dbc5633edb42fd9ef1ae18eb22f1557",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1035336.json"
+        },
+        {
+          "filename": "north-central-source/bz-ticket.html",
+          "sha256": "88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b",
+          "uri": "https://ticketing.nichbelize.org/site-tickets/"
+        },
+        {
+          "filename": "north-central-source/bz-laws.pdf",
+          "sha256": "be63b5e32d9cc60d8964ba8e7fcca3dc179e86a4447fde9513828a9466b7eadc",
+          "uri": "https://www.agm.gov.bz/uploads/laws/67fe89693f1f5_SI_No._013_of_2025_National_Institute_of_Culture_and_History__Admission_Fees_and_Opening_Hours__Rules__2025.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -88.35202778,
+          18.35833056
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1056179.json",
+        "statement_id": "Q1056179$C0FBB0E3-1C86-4464-B2D2-4FB8185F835C"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological reserve on the Corozal Bay peninsula. The representative point denotes the central ruins.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Institute of Culture and History, Belize",
+          "Attorney General’s Ministry, Belize",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological reserve on the Corozal Bay peninsula. The representative point denotes the central ruins.",
+        "description_zh": "塞罗斯玛雅遗址位于伯利兹，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public archaeological reserve on the Corozal Bay peninsula. The representative point denotes the central ruins.",
+        "geography": {
+          "authority_id": "supplement:auth:bz-public:Q1056179",
+          "countries": [
+            "BZ"
+          ],
+          "note": "Public site in Corozal District, Belize.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Cerro Maya in Corozal District.",
+            "id": "bz-cerros:visit:1",
+            "license": null,
+            "publisher": "National Institute of Culture and History, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b.",
+            "title": "Official archaeological reserves ticketing",
+            "uri": "https://ticketing.nichbelize.org/site-tickets/"
+          }
+        },
+        "id": "auth:bz-public:Q1056179",
+        "location_precision": null,
+        "names": [
+          "塞罗斯玛雅遗址",
+          "Cerro Maya",
+          "Cerros",
+          "Cerro Maya Archaeological Reserve"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -88.35202778,
+          18.35833056
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Cerro Maya in Corozal District.",
+            "id": "bz-cerros:visit:1",
+            "license": null,
+            "publisher": "National Institute of Culture and History, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b.",
+            "title": "Official archaeological reserves ticketing",
+            "uri": "https://ticketing.nichbelize.org/site-tickets/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Cerro Maya in Corozal District.",
+            "id": "bz-cerros:visit:2",
+            "license": null,
+            "publisher": "Attorney General’s Ministry, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 be63b5e32d9cc60d8964ba8e7fcca3dc179e86a4447fde9513828a9466b7eadc.",
+            "title": "National Institute of Culture and History Admission Fees and Opening Hours Rules 2025",
+            "uri": "https://www.agm.gov.bz/uploads/laws/67fe89693f1f5_SI_No._013_of_2025_National_Institute_of_Culture_and_History__Admission_Fees_and_Opening_Hours__Rules__2025.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -88.35202778, latitude 18.35833056",
+            "id": "wikidata:Q1056179",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2549920179. P625 Q1056179$C0FBB0E3-1C86-4464-B2D2-4FB8185F835C.",
+            "title": "Cerro Maya representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1056179.json"
+          }
+        ],
+        "source_uri": "https://ticketing.nichbelize.org/site-tickets/",
+        "title": "Cerro Maya",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q1056179.json",
+          "sha256": "e0eac8cdc1e4a16d15ba7d65ee7121df8da213b7204b1a2c066310d6b499aa73",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1056179.json"
+        },
+        {
+          "filename": "north-central-source/bz-ticket.html",
+          "sha256": "88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b",
+          "uri": "https://ticketing.nichbelize.org/site-tickets/"
+        },
+        {
+          "filename": "north-central-source/bz-laws.pdf",
+          "sha256": "be63b5e32d9cc60d8964ba8e7fcca3dc179e86a4447fde9513828a9466b7eadc",
+          "uri": "https://www.agm.gov.bz/uploads/laws/67fe89693f1f5_SI_No._013_of_2025_National_Institute_of_Culture_and_History__Admission_Fees_and_Opening_Hours__Rules__2025.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -89.142212,
+          17.090194
+        ],
+        "precision": 2.777777777777778e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1646630.json",
+        "statement_id": "q1646630$7DF6A929-88F1-42A5-A4BE-91E692378B40"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological reserve at the Maya city across the Mopan River from San José Succotz.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Institute of Culture and History, Belize",
+          "Attorney General’s Ministry, Belize",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological reserve at the Maya city across the Mopan River from San José Succotz.",
+        "description_zh": "舒南图尼奇位于伯利兹，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public archaeological reserve at the Maya city across the Mopan River from San José Succotz.",
+        "geography": {
+          "authority_id": "supplement:auth:bz-public:Q1646630",
+          "countries": [
+            "BZ"
+          ],
+          "note": "Public site in San José Succotz, Cayo District, Belize.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Xunantunich in San José Succotz, Cayo District.",
+            "id": "bz-xunantunich:visit:1",
+            "license": null,
+            "publisher": "National Institute of Culture and History, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b.",
+            "title": "Official archaeological reserves ticketing",
+            "uri": "https://ticketing.nichbelize.org/site-tickets/"
+          }
+        },
+        "id": "auth:bz-public:Q1646630",
+        "location_precision": null,
+        "names": [
+          "舒南图尼奇",
+          "Xunantunich"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -89.142212,
+          17.090194
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Xunantunich in San José Succotz, Cayo District.",
+            "id": "bz-xunantunich:visit:1",
+            "license": null,
+            "publisher": "National Institute of Culture and History, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b.",
+            "title": "Official archaeological reserves ticketing",
+            "uri": "https://ticketing.nichbelize.org/site-tickets/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Xunantunich in San José Succotz, Cayo District.",
+            "id": "bz-xunantunich:visit:2",
+            "license": null,
+            "publisher": "Attorney General’s Ministry, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 be63b5e32d9cc60d8964ba8e7fcca3dc179e86a4447fde9513828a9466b7eadc.",
+            "title": "National Institute of Culture and History Admission Fees and Opening Hours Rules 2025",
+            "uri": "https://www.agm.gov.bz/uploads/laws/67fe89693f1f5_SI_No._013_of_2025_National_Institute_of_Culture_and_History__Admission_Fees_and_Opening_Hours__Rules__2025.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -89.142212, latitude 17.090194",
+            "id": "wikidata:Q1646630",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2549953868. P625 q1646630$7DF6A929-88F1-42A5-A4BE-91E692378B40.",
+            "title": "Xunantunich representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1646630.json"
+          }
+        ],
+        "source_uri": "https://ticketing.nichbelize.org/site-tickets/",
+        "title": "Xunantunich",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q1646630.json",
+          "sha256": "ecdc0d8e84dbc6b0e7a2a0efa9e974b242d6dc2cb9446bc752884d5fba178498",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1646630.json"
+        },
+        {
+          "filename": "north-central-source/bz-ticket.html",
+          "sha256": "88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b",
+          "uri": "https://ticketing.nichbelize.org/site-tickets/"
+        },
+        {
+          "filename": "north-central-source/bz-laws.pdf",
+          "sha256": "be63b5e32d9cc60d8964ba8e7fcca3dc179e86a4447fde9513828a9466b7eadc",
+          "uri": "https://www.agm.gov.bz/uploads/laws/67fe89693f1f5_SI_No._013_of_2025_National_Institute_of_Culture_and_History__Admission_Fees_and_Opening_Hours__Rules__2025.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -88.395,
+          18.40222222
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7419844.json",
+        "statement_id": "Q7419844$3005D716-4E5A-4F16-9526-523901B1C06E"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological reserve within the Santa Rita Maya site in northwestern Corozal Town. The point denotes the visited archaeological core.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Institute of Culture and History, Belize",
+          "Attorney General’s Ministry, Belize",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological reserve within the Santa Rita Maya site in northwestern Corozal Town. The point denotes the visited archaeological core.",
+        "description_zh": "圣丽塔科罗萨尔遗址位于伯利兹，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public archaeological reserve within the Santa Rita Maya site in northwestern Corozal Town. The point denotes the visited archaeological core.",
+        "geography": {
+          "authority_id": "supplement:auth:bz-public:Q7419844",
+          "countries": [
+            "BZ"
+          ],
+          "note": "Public site in Corozal Town, Corozal District, Belize.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Santa Rita Corozal in Corozal Town, Corozal District.",
+            "id": "bz-santa-rita:visit:1",
+            "license": null,
+            "publisher": "National Institute of Culture and History, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b.",
+            "title": "Official archaeological reserves ticketing",
+            "uri": "https://ticketing.nichbelize.org/site-tickets/"
+          }
+        },
+        "id": "auth:bz-public:Q7419844",
+        "location_precision": null,
+        "names": [
+          "圣丽塔科罗萨尔遗址",
+          "Santa Rita Corozal",
+          "Santa Rita Archaeological Reserve"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -88.395,
+          18.40222222
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Santa Rita Corozal in Corozal Town, Corozal District.",
+            "id": "bz-santa-rita:visit:1",
+            "license": null,
+            "publisher": "National Institute of Culture and History, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b.",
+            "title": "Official archaeological reserves ticketing",
+            "uri": "https://ticketing.nichbelize.org/site-tickets/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Santa Rita Corozal in Corozal Town, Corozal District.",
+            "id": "bz-santa-rita:visit:2",
+            "license": null,
+            "publisher": "Attorney General’s Ministry, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 be63b5e32d9cc60d8964ba8e7fcca3dc179e86a4447fde9513828a9466b7eadc.",
+            "title": "National Institute of Culture and History Admission Fees and Opening Hours Rules 2025",
+            "uri": "https://www.agm.gov.bz/uploads/laws/67fe89693f1f5_SI_No._013_of_2025_National_Institute_of_Culture_and_History__Admission_Fees_and_Opening_Hours__Rules__2025.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -88.395, latitude 18.40222222",
+            "id": "wikidata:Q7419844",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2432183258. P625 Q7419844$3005D716-4E5A-4F16-9526-523901B1C06E.",
+            "title": "Santa Rita Corozal representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7419844.json"
+          }
+        ],
+        "source_uri": "https://ticketing.nichbelize.org/site-tickets/",
+        "title": "Santa Rita Corozal",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q7419844.json",
+          "sha256": "eca4652bbf48a1f965bf5c6619ae80fc9a4b6d22e1f4af02ca7135eeac3e585b",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7419844.json"
+        },
+        {
+          "filename": "north-central-source/bz-ticket.html",
+          "sha256": "88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b",
+          "uri": "https://ticketing.nichbelize.org/site-tickets/"
+        },
+        {
+          "filename": "north-central-source/bz-laws.pdf",
+          "sha256": "be63b5e32d9cc60d8964ba8e7fcca3dc179e86a4447fde9513828a9466b7eadc",
+          "uri": "https://www.agm.gov.bz/uploads/laws/67fe89693f1f5_SI_No._013_of_2025_National_Institute_of_Culture_and_History__Admission_Fees_and_Opening_Hours__Rules__2025.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -88.34425,
+          16.82592
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7455147.json",
+        "statement_id": "Q7455147$c1fa1304-e0bb-47b7-bc6e-340f9ea1d5c1"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public historical reserve preserving the remnants of a steam-powered sugar mill near the Sittee River.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Institute of Culture and History, Belize",
+          "Attorney General’s Ministry, Belize",
+          "Wikidata contributors"
+        ],
+        "description": "Public historical reserve preserving the remnants of a steam-powered sugar mill near the Sittee River.",
+        "description_zh": "瑟蓬糖厂遗址位于伯利兹，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public historical reserve preserving the remnants of a steam-powered sugar mill near the Sittee River.",
+        "geography": {
+          "authority_id": "supplement:auth:bz-public:Q7455147",
+          "countries": [
+            "BZ"
+          ],
+          "note": "Public site in Stann Creek District, Belize.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Serpon Sugar Mill in Stann Creek District.",
+            "id": "bz-serpon:visit:1",
+            "license": null,
+            "publisher": "National Institute of Culture and History, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b.",
+            "title": "Official archaeological reserves ticketing",
+            "uri": "https://ticketing.nichbelize.org/site-tickets/"
+          }
+        },
+        "id": "auth:bz-public:Q7455147",
+        "location_precision": null,
+        "names": [
+          "瑟蓬糖厂遗址",
+          "Serpon Sugar Mill",
+          "Serpon Sugar Mill Archaeological Reserve"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -88.34425,
+          16.82592
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Serpon Sugar Mill in Stann Creek District.",
+            "id": "bz-serpon:visit:1",
+            "license": null,
+            "publisher": "National Institute of Culture and History, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b.",
+            "title": "Official archaeological reserves ticketing",
+            "uri": "https://ticketing.nichbelize.org/site-tickets/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Serpon Sugar Mill in Stann Creek District.",
+            "id": "bz-serpon:visit:2",
+            "license": null,
+            "publisher": "Attorney General’s Ministry, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 be63b5e32d9cc60d8964ba8e7fcca3dc179e86a4447fde9513828a9466b7eadc.",
+            "title": "National Institute of Culture and History Admission Fees and Opening Hours Rules 2025",
+            "uri": "https://www.agm.gov.bz/uploads/laws/67fe89693f1f5_SI_No._013_of_2025_National_Institute_of_Culture_and_History__Admission_Fees_and_Opening_Hours__Rules__2025.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -88.34425, latitude 16.82592",
+            "id": "wikidata:Q7455147",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2325878495. P625 Q7455147$c1fa1304-e0bb-47b7-bc6e-340f9ea1d5c1.",
+            "title": "Serpon Sugar Mill representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7455147.json"
+          }
+        ],
+        "source_uri": "https://ticketing.nichbelize.org/site-tickets/",
+        "title": "Serpon Sugar Mill",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q7455147.json",
+          "sha256": "e7d71f77a627f505e7c98aa254696e82ca38bebbc7ba19f8f75a181f7e69942f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7455147.json"
+        },
+        {
+          "filename": "north-central-source/bz-ticket.html",
+          "sha256": "88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b",
+          "uri": "https://ticketing.nichbelize.org/site-tickets/"
+        },
+        {
+          "filename": "north-central-source/bz-laws.pdf",
+          "sha256": "be63b5e32d9cc60d8964ba8e7fcca3dc179e86a4447fde9513828a9466b7eadc",
+          "uri": "https://www.agm.gov.bz/uploads/laws/67fe89693f1f5_SI_No._013_of_2025_National_Institute_of_Culture_and_History__Admission_Fees_and_Opening_Hours__Rules__2025.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -88.65245773118806,
+          17.764318837181673
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q968562.json",
+        "statement_id": "q968562$FFFAE781-2D75-4AC0-A957-B25BB70C13EF"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological reserve at the Maya settlement on New River Lagoon.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Institute of Culture and History, Belize",
+          "Attorney General’s Ministry, Belize",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological reserve at the Maya settlement on New River Lagoon.",
+        "description_zh": "拉马奈位于伯利兹，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public archaeological reserve at the Maya settlement on New River Lagoon.",
+        "geography": {
+          "authority_id": "supplement:auth:bz-public:Q968562",
+          "countries": [
+            "BZ"
+          ],
+          "note": "Public site in Orange Walk District, Belize.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Lamanai in Orange Walk District.",
+            "id": "bz-lamanai:visit:1",
+            "license": null,
+            "publisher": "National Institute of Culture and History, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b.",
+            "title": "Official archaeological reserves ticketing",
+            "uri": "https://ticketing.nichbelize.org/site-tickets/"
+          }
+        },
+        "id": "auth:bz-public:Q968562",
+        "location_precision": null,
+        "names": [
+          "拉马奈",
+          "Lamanai"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -88.65245773118806,
+          17.764318837181673
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Lamanai in Orange Walk District.",
+            "id": "bz-lamanai:visit:1",
+            "license": null,
+            "publisher": "National Institute of Culture and History, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b.",
+            "title": "Official archaeological reserves ticketing",
+            "uri": "https://ticketing.nichbelize.org/site-tickets/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Lamanai in Orange Walk District.",
+            "id": "bz-lamanai:visit:2",
+            "license": null,
+            "publisher": "Attorney General’s Ministry, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 be63b5e32d9cc60d8964ba8e7fcca3dc179e86a4447fde9513828a9466b7eadc.",
+            "title": "National Institute of Culture and History Admission Fees and Opening Hours Rules 2025",
+            "uri": "https://www.agm.gov.bz/uploads/laws/67fe89693f1f5_SI_No._013_of_2025_National_Institute_of_Culture_and_History__Admission_Fees_and_Opening_Hours__Rules__2025.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -88.65245773118806, latitude 17.764318837181673",
+            "id": "wikidata:Q968562",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2549836646. P625 q968562$FFFAE781-2D75-4AC0-A957-B25BB70C13EF.",
+            "title": "Lamanai representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q968562.json"
+          }
+        ],
+        "source_uri": "https://ticketing.nichbelize.org/site-tickets/",
+        "title": "Lamanai",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q968562.json",
+          "sha256": "c2c33dcbd70bb90e31dc75afbdd0d77002df64973b84101adeaeeb2bed03b6ce",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q968562.json"
+        },
+        {
+          "filename": "north-central-source/bz-ticket.html",
+          "sha256": "88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b",
+          "uri": "https://ticketing.nichbelize.org/site-tickets/"
+        },
+        {
+          "filename": "north-central-source/bz-laws.pdf",
+          "sha256": "be63b5e32d9cc60d8964ba8e7fcca3dc179e86a4447fde9513828a9466b7eadc",
+          "uri": "https://www.agm.gov.bz/uploads/laws/67fe89693f1f5_SI_No._013_of_2025_National_Institute_of_Culture_and_History__Admission_Fees_and_Opening_Hours__Rules__2025.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "GeoNames CC BY 4.0 feature coordinate. Its placement was independently checked inside the mapped site footprint (OpenStreetMap way 251521093, used only for comparison), OpenStreetMap way 251521093, used only for comparison.",
+        "point": [
+          -88.95955,
+          16.28203
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://sws.geonames.org/3581772/about.rdf",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public Maya archaeological reserve near San Pedro Columbia, Toledo District, Belize. The marker represents the public archaeological property.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public archaeological identity and licensed GeoNames coordinate checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Institute of Culture and History, Belize",
+          "Attorney General’s Ministry, Belize",
+          "GeoNames"
+        ],
+        "description": "Public Maya archaeological reserve near San Pedro Columbia, Toledo District, Belize. The marker represents the public archaeological property.",
+        "description_zh": "卢班通位于伯利兹，为公开参观的玛雅考古保护区。地图显示 GeoNames 公开遗址代表点。",
+        "details": "Public Maya archaeological reserve near San Pedro Columbia, Toledo District, Belize. The marker represents the public archaeological property.",
+        "geography": {
+          "authority_id": "supplement:auth:bz-public:geonames-3581772",
+          "countries": [
+            "BZ"
+          ],
+          "note": "Public site near San Pedro Columbia, Toledo District, Belize.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The authority lists the Lubaantun archaeological reserve for public visitation.",
+            "id": "bz-geonames-3581772:visit:1",
+            "license": null,
+            "publisher": "National Institute of Culture and History, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b.",
+            "title": "Official archaeological reserves ticketing",
+            "uri": "https://ticketing.nichbelize.org/site-tickets/"
+          }
+        },
+        "id": "auth:bz-public:geonames-3581772",
+        "location_precision": null,
+        "names": [
+          "卢班通",
+          "Lubaantun",
+          "Lubaantún",
+          "Maya Ruins of Lubaantun"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -88.95955,
+          16.28203
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The authority lists the Lubaantun archaeological reserve for public visitation.",
+            "id": "bz-geonames-3581772:visit:1",
+            "license": null,
+            "publisher": "National Institute of Culture and History, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b.",
+            "title": "Official archaeological reserves ticketing",
+            "uri": "https://ticketing.nichbelize.org/site-tickets/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The authority lists the Lubaantun archaeological reserve for public visitation.",
+            "id": "bz-geonames-3581772:visit:2",
+            "license": null,
+            "publisher": "Attorney General’s Ministry, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 be63b5e32d9cc60d8964ba8e7fcca3dc179e86a4447fde9513828a9466b7eadc.",
+            "title": "National Institute of Culture and History Admission Fees and Opening Hours Rules 2025",
+            "uri": "https://www.agm.gov.bz/uploads/laws/67fe89693f1f5_SI_No._013_of_2025_National_Institute_of_Culture_and_History__Admission_Fees_and_Opening_Hours__Rules__2025.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -88.95955, latitude 16.28203",
+            "id": "geonames:3581772",
+            "license": "CC BY 4.0",
+            "publisher": "GeoNames",
+            "revision": "GeoNames feature 3581772, modified 2016-02-16.",
+            "title": "Lubaantun representative coordinates",
+            "uri": "https://sws.geonames.org/3581772/about.rdf"
+          }
+        ],
+        "source_uri": "https://ticketing.nichbelize.org/site-tickets/",
+        "title": "Lubaantun",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/bz-ticket.html",
+          "sha256": "88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b",
+          "uri": "https://ticketing.nichbelize.org/site-tickets/"
+        },
+        {
+          "filename": "north-central-source/bz-laws.pdf",
+          "sha256": "be63b5e32d9cc60d8964ba8e7fcca3dc179e86a4447fde9513828a9466b7eadc",
+          "uri": "https://www.agm.gov.bz/uploads/laws/67fe89693f1f5_SI_No._013_of_2025_National_Institute_of_Culture_and_History__Admission_Fees_and_Opening_Hours__Rules__2025.pdf"
+        },
+        {
+          "filename": "north-central-source/geonames-3581772.rdf",
+          "sha256": "4bbef817033d9fa314788894e5d32c363770b6aee7e48bb38bf4a39e455e5d99",
+          "uri": "https://sws.geonames.org/3581772/about.rdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "GeoNames CC BY 4.0 feature coordinate. Its placement was independently checked inside the reserve outline, OpenStreetMap way 1257061859, used only for comparison.",
+        "point": [
+          -89.07371,
+          17.14596
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://sws.geonames.org/3582494/about.rdf",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public Maya archaeological reserve San Ignacio, Cayo District, Belize. The marker represents the public archaeological property.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public archaeological identity and licensed GeoNames coordinate checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Institute of Culture and History, Belize",
+          "Attorney General’s Ministry, Belize",
+          "GeoNames"
+        ],
+        "description": "Public Maya archaeological reserve San Ignacio, Cayo District, Belize. The marker represents the public archaeological property.",
+        "description_zh": "卡哈帕奇位于伯利兹，为公开参观的玛雅考古保护区。地图显示 GeoNames 公开遗址代表点。",
+        "details": "Public Maya archaeological reserve San Ignacio, Cayo District, Belize. The marker represents the public archaeological property.",
+        "geography": {
+          "authority_id": "supplement:auth:bz-public:geonames-3582494",
+          "countries": [
+            "BZ"
+          ],
+          "note": "Public site San Ignacio, Cayo District, Belize.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The authority lists the Cahal Pech archaeological reserve for public visitation.",
+            "id": "bz-geonames-3582494:visit:1",
+            "license": null,
+            "publisher": "National Institute of Culture and History, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b.",
+            "title": "Official archaeological reserves ticketing",
+            "uri": "https://ticketing.nichbelize.org/site-tickets/"
+          }
+        },
+        "id": "auth:bz-public:geonames-3582494",
+        "location_precision": null,
+        "names": [
+          "卡哈帕奇",
+          "Cahal Pech",
+          "Cahal Pech Archaeological Reserve"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -89.07371,
+          17.14596
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The authority lists the Cahal Pech archaeological reserve for public visitation.",
+            "id": "bz-geonames-3582494:visit:1",
+            "license": null,
+            "publisher": "National Institute of Culture and History, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b.",
+            "title": "Official archaeological reserves ticketing",
+            "uri": "https://ticketing.nichbelize.org/site-tickets/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The authority lists the Cahal Pech archaeological reserve for public visitation.",
+            "id": "bz-geonames-3582494:visit:2",
+            "license": null,
+            "publisher": "Attorney General’s Ministry, Belize",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 be63b5e32d9cc60d8964ba8e7fcca3dc179e86a4447fde9513828a9466b7eadc.",
+            "title": "National Institute of Culture and History Admission Fees and Opening Hours Rules 2025",
+            "uri": "https://www.agm.gov.bz/uploads/laws/67fe89693f1f5_SI_No._013_of_2025_National_Institute_of_Culture_and_History__Admission_Fees_and_Opening_Hours__Rules__2025.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -89.07371, latitude 17.14596",
+            "id": "geonames:3582494",
+            "license": "CC BY 4.0",
+            "publisher": "GeoNames",
+            "revision": "GeoNames feature 3582494, modified 2016-02-16.",
+            "title": "Cahal Pech representative coordinates",
+            "uri": "https://sws.geonames.org/3582494/about.rdf"
+          }
+        ],
+        "source_uri": "https://ticketing.nichbelize.org/site-tickets/",
+        "title": "Cahal Pech",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/bz-ticket.html",
+          "sha256": "88e0c73f403d95ce5bbcf2f52fa7fc096a1e9fb11d20263a1484537235a7c81b",
+          "uri": "https://ticketing.nichbelize.org/site-tickets/"
+        },
+        {
+          "filename": "north-central-source/bz-laws.pdf",
+          "sha256": "be63b5e32d9cc60d8964ba8e7fcca3dc179e86a4447fde9513828a9466b7eadc",
+          "uri": "https://www.agm.gov.bz/uploads/laws/67fe89693f1f5_SI_No._013_of_2025_National_Institute_of_Culture_and_History__Admission_Fees_and_Opening_Hours__Rules__2025.pdf"
+        },
+        {
+          "filename": "north-central-source/geonames-3582494.rdf",
+          "sha256": "c1b0a739a1b80ef0abd9a29f342a2bfd057cd2fc756ef0ca92d1eb288cab6f26",
+          "uri": "https://sws.geonames.org/3582494/about.rdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -90.5491,
+          14.6328
+        ],
+        "precision": null,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1081581.json",
+        "statement_id": "q1081581$1DFB6149-BA88-4E38-B44C-C4B2CE074D88"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point denotes the public archaeological park within the wider Kaminaljuyú archaeological area in Guatemala City.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura y Deportes de Guatemala",
+          "Wikidata contributors"
+        ],
+        "description": "The point denotes the public archaeological park within the wider Kaminaljuyú archaeological area in Guatemala City.",
+        "description_zh": "卡米纳尔胡尤位于危地马拉，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "The point denotes the public archaeological park within the wider Kaminaljuyú archaeological area in Guatemala City.",
+        "geography": {
+          "authority_id": "supplement:auth:gt-public:Q1081581",
+          "countries": [
+            "GT"
+          ],
+          "note": "Public site in Guatemala City, Guatemala.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Kaminaljuyú in Guatemala City.",
+            "id": "gt-kaminal:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura y Deportes de Guatemala",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 18f51378ea1374af90920b1b0340810f14ac7e87d21453e6e08e780a0e5f4aca.",
+            "title": "Opening of the Kaminaljuyú acropolis lower plaza to visitors",
+            "uri": "https://noticias.mcd.gob.gt/2025/09/12/inauguran-el-ingreso-de-una-joya-arqueologica-escondida-en-kaminaljuyu/"
+          }
+        },
+        "id": "auth:gt-public:Q1081581",
+        "location_precision": null,
+        "names": [
+          "卡米纳尔胡尤",
+          "Kaminaljuyú",
+          "Kaminaljuyu"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -90.5491,
+          14.6328
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Kaminaljuyú in Guatemala City.",
+            "id": "gt-kaminal:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura y Deportes de Guatemala",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 18f51378ea1374af90920b1b0340810f14ac7e87d21453e6e08e780a0e5f4aca.",
+            "title": "Opening of the Kaminaljuyú acropolis lower plaza to visitors",
+            "uri": "https://noticias.mcd.gob.gt/2025/09/12/inauguran-el-ingreso-de-una-joya-arqueologica-escondida-en-kaminaljuyu/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Kaminaljuyú in Guatemala City.",
+            "id": "gt-kaminal:visit:2",
+            "license": null,
+            "publisher": "Ministerio de Cultura y Deportes de Guatemala",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 2676ce27b2104f439e8b833f1d9a35699ff6caf43b8810ef7a605284eb6c3e41.",
+            "title": "Public archaeology park visitation announcement",
+            "uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -90.5491, latitude 14.6328",
+            "id": "wikidata:Q1081581",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2549922619. P625 q1081581$1DFB6149-BA88-4E38-B44C-C4B2CE074D88.",
+            "title": "Kaminaljuyú representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1081581.json"
+          }
+        ],
+        "source_uri": "https://noticias.mcd.gob.gt/2025/09/12/inauguran-el-ingreso-de-una-joya-arqueologica-escondida-en-kaminaljuyu/",
+        "title": "Kaminaljuyú",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q1081581.json",
+          "sha256": "1d2c4080ff921e8082b021bb1aaefbb470b03dd9f8de631057b5fe201c9afc2f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1081581.json"
+        },
+        {
+          "filename": "north-central-source/gt-kaminal.html",
+          "sha256": "18f51378ea1374af90920b1b0340810f14ac7e87d21453e6e08e780a0e5f4aca",
+          "uri": "https://noticias.mcd.gob.gt/2025/09/12/inauguran-el-ingreso-de-una-joya-arqueologica-escondida-en-kaminaljuyu/"
+        },
+        {
+          "filename": "north-central-source/gt-open.html",
+          "sha256": "2676ce27b2104f439e8b833f1d9a35699ff6caf43b8810ef7a605284eb6c3e41",
+          "uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -91.492744444444,
+          15.333794444444
+        ],
+        "precision": null,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q139979.json",
+        "statement_id": "q139979$7E95A4F2-345A-435F-83DC-4631A1B2B6A7"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological park at the Maya fortress and settlement near Huehuetenango.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura y Deportes de Guatemala",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological park at the Maya fortress and settlement near Huehuetenango.",
+        "description_zh": "萨库莱乌位于危地马拉，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public archaeological park at the Maya fortress and settlement near Huehuetenango.",
+        "geography": {
+          "authority_id": "supplement:auth:gt-public:Q139979",
+          "countries": [
+            "GT"
+          ],
+          "note": "Public site in Huehuetenango, Guatemala.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Zaculeu in Huehuetenango.",
+            "id": "gt-zaculeu:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura y Deportes de Guatemala",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 2676ce27b2104f439e8b833f1d9a35699ff6caf43b8810ef7a605284eb6c3e41.",
+            "title": "Public archaeology park visitation announcement",
+            "uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/"
+          }
+        },
+        "id": "auth:gt-public:Q139979",
+        "location_precision": null,
+        "names": [
+          "萨库莱乌",
+          "Zaculeu",
+          "Zaculeú"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -91.492744444444,
+          15.333794444444
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Zaculeu in Huehuetenango.",
+            "id": "gt-zaculeu:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura y Deportes de Guatemala",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 2676ce27b2104f439e8b833f1d9a35699ff6caf43b8810ef7a605284eb6c3e41.",
+            "title": "Public archaeology park visitation announcement",
+            "uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -91.492744444444, latitude 15.333794444444",
+            "id": "wikidata:Q139979",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2328943323. P625 q139979$7E95A4F2-345A-435F-83DC-4631A1B2B6A7.",
+            "title": "Zaculeu representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q139979.json"
+          }
+        ],
+        "source_uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/",
+        "title": "Zaculeu",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q139979.json",
+          "sha256": "7e9ffb8cd0ec19a88cae49018b13e00308d6621f9b3b71792afd7a8eeb6d4b7e",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q139979.json"
+        },
+        {
+          "filename": "north-central-source/gt-open.html",
+          "sha256": "2676ce27b2104f439e8b833f1d9a35699ff6caf43b8810ef7a605284eb6c3e41",
+          "uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -91.171989,
+          15.023528
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q15063939.json",
+        "statement_id": "Q15063939$5DAC26D2-ABF5-4B94-99D4-FC9BB9314853"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological park at the historic K’iche’ center. Access is limited to the areas opened by the site administration.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura y Deportes de Guatemala",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological park at the historic K’iche’ center. Access is limited to the areas opened by the site administration.",
+        "description_zh": "库马尔卡赫位于危地马拉，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public archaeological park at the historic K’iche’ center. Access is limited to the areas opened by the site administration.",
+        "geography": {
+          "authority_id": "supplement:auth:gt-public:Q15063939",
+          "countries": [
+            "GT"
+          ],
+          "note": "Public site in Santa Cruz del Quiché, Guatemala.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Q’umarkaj in Santa Cruz del Quiché.",
+            "id": "gt-qmarkaj:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura y Deportes de Guatemala",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 f2c15d41e13045adc41ab407893138ec01ea387be8cf3bd22526169d52c20867.",
+            "title": "2026 reopening of Q’umarkaj archaeological site",
+            "uri": "https://noticias.mcd.gob.gt/2026/05/06/sitio-arqueologico-qumarkaj-retoma-actividades-con-mayor-seguridad/"
+          }
+        },
+        "id": "auth:gt-public:Q15063939",
+        "location_precision": null,
+        "names": [
+          "库马尔卡赫",
+          "Q’umarkaj",
+          "Qʼumarkaj",
+          "Gumarcaaj",
+          "Utatlán"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -91.171989,
+          15.023528
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Q’umarkaj in Santa Cruz del Quiché.",
+            "id": "gt-qmarkaj:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura y Deportes de Guatemala",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 f2c15d41e13045adc41ab407893138ec01ea387be8cf3bd22526169d52c20867.",
+            "title": "2026 reopening of Q’umarkaj archaeological site",
+            "uri": "https://noticias.mcd.gob.gt/2026/05/06/sitio-arqueologico-qumarkaj-retoma-actividades-con-mayor-seguridad/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Q’umarkaj in Santa Cruz del Quiché.",
+            "id": "gt-qmarkaj:visit:2",
+            "license": null,
+            "publisher": "Ministerio de Cultura y Deportes de Guatemala",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 2676ce27b2104f439e8b833f1d9a35699ff6caf43b8810ef7a605284eb6c3e41.",
+            "title": "Public archaeology park visitation announcement",
+            "uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -91.171989, latitude 15.023528",
+            "id": "wikidata:Q15063939",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2234113719. P625 Q15063939$5DAC26D2-ABF5-4B94-99D4-FC9BB9314853.",
+            "title": "Q’umarkaj representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q15063939.json"
+          }
+        ],
+        "source_uri": "https://noticias.mcd.gob.gt/2026/05/06/sitio-arqueologico-qumarkaj-retoma-actividades-con-mayor-seguridad/",
+        "title": "Q’umarkaj",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q15063939.json",
+          "sha256": "8d30052e277425dfab26ab4eeebd38339f82bb60e7e3aff5db33eddcf7c173ec",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q15063939.json"
+        },
+        {
+          "filename": "north-central-source/gt-qmarkaj.html",
+          "sha256": "f2c15d41e13045adc41ab407893138ec01ea387be8cf3bd22526169d52c20867",
+          "uri": "https://noticias.mcd.gob.gt/2026/05/06/sitio-arqueologico-qumarkaj-retoma-actividades-con-mayor-seguridad/"
+        },
+        {
+          "filename": "north-central-source/gt-open.html",
+          "sha256": "2676ce27b2104f439e8b833f1d9a35699ff6caf43b8810ef7a605284eb6c3e41",
+          "uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -90.061111111111,
+          16.511666666667
+        ],
+        "precision": null,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1534212.json",
+        "statement_id": "q1534212$2D2D64B2-12F9-4FA0-92D9-113F52E0E3BF"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological park of the ancient Maya settlement on the Pasión River. The point represents the ruins sector rather than the administrative visitor map point farther north.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura y Deportes de Guatemala",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological park of the ancient Maya settlement on the Pasión River. The point represents the ruins sector rather than the administrative visitor map point farther north.",
+        "description_zh": "塞瓦尔遗址位于危地马拉，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public archaeological park of the ancient Maya settlement on the Pasión River. The point represents the ruins sector rather than the administrative visitor map point farther north.",
+        "geography": {
+          "authority_id": "supplement:auth:gt-public:Q1534212",
+          "countries": [
+            "GT"
+          ],
+          "note": "Public site in Sayaxché, Petén, Guatemala.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for El Ceibal in Sayaxché, Petén.",
+            "id": "gt-ceibal:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura y Deportes de Guatemala",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 2676ce27b2104f439e8b833f1d9a35699ff6caf43b8810ef7a605284eb6c3e41.",
+            "title": "Public archaeology park visitation announcement",
+            "uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/"
+          }
+        },
+        "id": "auth:gt-public:Q1534212",
+        "location_precision": null,
+        "names": [
+          "塞瓦尔遗址",
+          "El Ceibal",
+          "Seibal",
+          "Ceibal"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -90.061111111111,
+          16.511666666667
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for El Ceibal in Sayaxché, Petén.",
+            "id": "gt-ceibal:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura y Deportes de Guatemala",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 2676ce27b2104f439e8b833f1d9a35699ff6caf43b8810ef7a605284eb6c3e41.",
+            "title": "Public archaeology park visitation announcement",
+            "uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -90.061111111111, latitude 16.511666666667",
+            "id": "wikidata:Q1534212",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2569290255. P625 q1534212$2D2D64B2-12F9-4FA0-92D9-113F52E0E3BF.",
+            "title": "El Ceibal representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1534212.json"
+          }
+        ],
+        "source_uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/",
+        "title": "El Ceibal",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q1534212.json",
+          "sha256": "175b902c416c44f501a19a249c1bd6b5969eabfb3bb9c7aeaa819683141c16b8",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1534212.json"
+        },
+        {
+          "filename": "north-central-source/gt-open.html",
+          "sha256": "2676ce27b2104f439e8b833f1d9a35699ff6caf43b8810ef7a605284eb6c3e41",
+          "uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -89.4,
+          17.07222222
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1540906.json",
+        "statement_id": "Q1540906$73D3CE4F-5311-44B3-81BE-AD86AFF5C7B6"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public Maya archaeological site of Yaxhá within the Yaxhá–Nakum–Naranjo National Park. The point denotes the Yaxhá ruins and their visitor trails.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Instituto Guatemalteco de Turismo",
+          "Ministerio de Cultura y Deportes de Guatemala",
+          "Wikidata contributors"
+        ],
+        "description": "Public Maya archaeological site of Yaxhá within the Yaxhá–Nakum–Naranjo National Park. The point denotes the Yaxhá ruins and their visitor trails.",
+        "description_zh": "亚什阿位于危地马拉，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public Maya archaeological site of Yaxhá within the Yaxhá–Nakum–Naranjo National Park. The point denotes the Yaxhá ruins and their visitor trails.",
+        "geography": {
+          "authority_id": "supplement:auth:gt-public:Q1540906",
+          "countries": [
+            "GT"
+          ],
+          "note": "Public site in Petén, Guatemala.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Yaxhá in Petén.",
+            "id": "gt-yaxha:visit:1",
+            "license": null,
+            "publisher": "Instituto Guatemalteco de Turismo",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 b23a4ec2ca7b97a465f49fd826b22a2c94e6006fdf534910c68406ae16c16732.",
+            "title": "Public visitor guide for Yaxhá",
+            "uri": "https://visitguatemala.gt/en/archaeological-sites/yaxha/"
+          }
+        },
+        "id": "auth:gt-public:Q1540906",
+        "location_precision": null,
+        "names": [
+          "亚什阿",
+          "Yaxhá",
+          "Yaxha"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -89.4,
+          17.07222222
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Yaxhá in Petén.",
+            "id": "gt-yaxha:visit:1",
+            "license": null,
+            "publisher": "Instituto Guatemalteco de Turismo",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 b23a4ec2ca7b97a465f49fd826b22a2c94e6006fdf534910c68406ae16c16732.",
+            "title": "Public visitor guide for Yaxhá",
+            "uri": "https://visitguatemala.gt/en/archaeological-sites/yaxha/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Yaxhá in Petén.",
+            "id": "gt-yaxha:visit:2",
+            "license": null,
+            "publisher": "Ministerio de Cultura y Deportes de Guatemala",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 a8be73951f142fd0b727ec92a8ef64ffaa107505b0de4d3fc56a736c290366b7.",
+            "title": "Public archaeological park visitor guide",
+            "uri": "https://noticias.mcd.gob.gt/2025/12/12/explora-el-patrimonio-el-mcd-te-invita-a-visitar-sitios-arqueologicos-y-museos-en-las-fiestas-de-fin-de-ano/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -89.4, latitude 17.07222222",
+            "id": "wikidata:Q1540906",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2553277096. P625 Q1540906$73D3CE4F-5311-44B3-81BE-AD86AFF5C7B6.",
+            "title": "Yaxhá representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1540906.json"
+          }
+        ],
+        "source_uri": "https://visitguatemala.gt/en/archaeological-sites/yaxha/",
+        "title": "Yaxhá",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q1540906.json",
+          "sha256": "03b4b56c1ef3aa615650716632e28c33e1e9cb3a47a856b64e05894faece4fe9",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1540906.json"
+        },
+        {
+          "filename": "north-central-source/gt-yaxha.html",
+          "sha256": "b23a4ec2ca7b97a465f49fd826b22a2c94e6006fdf534910c68406ae16c16732",
+          "uri": "https://visitguatemala.gt/en/archaeological-sites/yaxha/"
+        },
+        {
+          "filename": "north-central-source/gt-endofyear.html",
+          "sha256": "a8be73951f142fd0b727ec92a8ef64ffaa107505b0de4d3fc56a736c290366b7",
+          "uri": "https://noticias.mcd.gob.gt/2025/12/12/explora-el-patrimonio-el-mcd-te-invita-a-visitar-sitios-arqueologicos-y-museos-en-las-fiestas-de-fin-de-ano/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -90.9962,
+          14.7358
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q263509.json",
+        "statement_id": "Q263509$54AB8AB5-19C9-460F-8D65-A64F87B83D86"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological park at the historical Kaqchikel Maya settlement near Tecpán.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura y Deportes de Guatemala",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological park at the historical Kaqchikel Maya settlement near Tecpán.",
+        "description_zh": "伊希姆切位于危地马拉，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public archaeological park at the historical Kaqchikel Maya settlement near Tecpán.",
+        "geography": {
+          "authority_id": "supplement:auth:gt-public:Q263509",
+          "countries": [
+            "GT"
+          ],
+          "note": "Public site in Tecpán, Chimaltenango, Guatemala.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Iximché in Tecpán, Chimaltenango.",
+            "id": "gt-iximche:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura y Deportes de Guatemala",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 2676ce27b2104f439e8b833f1d9a35699ff6caf43b8810ef7a605284eb6c3e41.",
+            "title": "Public archaeology park visitation announcement",
+            "uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/"
+          }
+        },
+        "id": "auth:gt-public:Q263509",
+        "location_precision": null,
+        "names": [
+          "伊希姆切",
+          "Iximché",
+          "Iximche"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -90.9962,
+          14.7358
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Iximché in Tecpán, Chimaltenango.",
+            "id": "gt-iximche:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura y Deportes de Guatemala",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 2676ce27b2104f439e8b833f1d9a35699ff6caf43b8810ef7a605284eb6c3e41.",
+            "title": "Public archaeology park visitation announcement",
+            "uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -90.9962, latitude 14.7358",
+            "id": "wikidata:Q263509",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2569064983. P625 Q263509$54AB8AB5-19C9-460F-8D65-A64F87B83D86.",
+            "title": "Iximché representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q263509.json"
+          }
+        ],
+        "source_uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/",
+        "title": "Iximché",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q263509.json",
+          "sha256": "5318350d339c12c28738032d6e38372ce3eabbb376b44dbd1d637b6124001d94",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q263509.json"
+        },
+        {
+          "filename": "north-central-source/gt-open.html",
+          "sha256": "2676ce27b2104f439e8b833f1d9a35699ff6caf43b8810ef7a605284eb6c3e41",
+          "uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -90.664166666667,
+          14.871666666667
+        ],
+        "precision": null,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q652792.json",
+        "statement_id": "q652792$861B6BF3-E8A3-426A-8920-13A9EE4D669E"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological park in San Martín Jilotepeque. The representative point denotes the ruins that the official visitor guide names Chuwa Nima’ Ab’aj.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura y Deportes de Guatemala",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological park in San Martín Jilotepeque. The representative point denotes the ruins that the official visitor guide names Chuwa Nima’ Ab’aj.",
+        "description_zh": "米斯科别霍位于危地马拉，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public archaeological park in San Martín Jilotepeque. The representative point denotes the ruins that the official visitor guide names Chuwa Nima’ Ab’aj.",
+        "geography": {
+          "authority_id": "supplement:auth:gt-public:Q652792",
+          "countries": [
+            "GT"
+          ],
+          "note": "Public site in San Martín Jilotepeque, Chimaltenango, Guatemala.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Chuwa Nima’ Ab’aj (Mixco Viejo) in San Martín Jilotepeque, Chimaltenango.",
+            "id": "gt-mixco:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura y Deportes de Guatemala",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 2676ce27b2104f439e8b833f1d9a35699ff6caf43b8810ef7a605284eb6c3e41.",
+            "title": "Public archaeology park visitation announcement",
+            "uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/"
+          }
+        },
+        "id": "auth:gt-public:Q652792",
+        "location_precision": null,
+        "names": [
+          "米斯科别霍",
+          "Chuwa Nima’ Ab’aj (Mixco Viejo)",
+          "Mixco Viejo"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -90.664166666667,
+          14.871666666667
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Chuwa Nima’ Ab’aj (Mixco Viejo) in San Martín Jilotepeque, Chimaltenango.",
+            "id": "gt-mixco:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura y Deportes de Guatemala",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 2676ce27b2104f439e8b833f1d9a35699ff6caf43b8810ef7a605284eb6c3e41.",
+            "title": "Public archaeology park visitation announcement",
+            "uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -90.664166666667, latitude 14.871666666667",
+            "id": "wikidata:Q652792",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2569227570. P625 q652792$861B6BF3-E8A3-426A-8920-13A9EE4D669E.",
+            "title": "Chuwa Nima’ Ab’aj (Mixco Viejo) representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q652792.json"
+          }
+        ],
+        "source_uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/",
+        "title": "Chuwa Nima’ Ab’aj (Mixco Viejo)",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q652792.json",
+          "sha256": "d3de5fc0bc6ac5cd9d2d68de2aaef8e01b5193fcfed2cca94026665d35bdd36e",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q652792.json"
+        },
+        {
+          "filename": "north-central-source/gt-open.html",
+          "sha256": "2676ce27b2104f439e8b833f1d9a35699ff6caf43b8810ef7a605284eb6c3e41",
+          "uri": "https://noticias.mcd.gob.gt/2025/03/31/el-ministerio-de-cultura-y-deportes-te-invita-a-sus-actividades-de-semana-santa/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -90.51322778,
+          14.64294167
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6974722.json",
+        "statement_id": "Q6974722$14EACFE6-C201-4F5E-B543-510A08DDAA88"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original National Palace on Guatemala City’s central square offers a designated public guided route.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura y Deportes de Guatemala",
+          "Wikidata contributors"
+        ],
+        "description": "The original National Palace on Guatemala City’s central square offers a designated public guided route.",
+        "description_zh": "危地马拉国家文化宫位于危地马拉，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "The original National Palace on Guatemala City’s central square offers a designated public guided route.",
+        "geography": {
+          "authority_id": "supplement:auth:gt-public:Q6974722",
+          "countries": [
+            "GT"
+          ],
+          "note": "Public site in Guatemala City, Guatemala.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Palacio Nacional de la Cultura in Guatemala City.",
+            "id": "gt-palace:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura y Deportes de Guatemala",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 46170c441b1b322cbc4a6fba8018d371f5eb1cef1bc429be35ff130e61ba0892.",
+            "title": "Palacio Nacional de la Cultura: public guided routes",
+            "uri": "https://culturaguate.gob.gt/palacio-nacional-de-la-cultura/"
+          }
+        },
+        "id": "auth:gt-public:Q6974722",
+        "location_precision": null,
+        "names": [
+          "危地马拉国家文化宫",
+          "Palacio Nacional de la Cultura",
+          "Palacio Nacional",
+          "National Palace of Culture"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -90.51322778,
+          14.64294167
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Palacio Nacional de la Cultura in Guatemala City.",
+            "id": "gt-palace:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura y Deportes de Guatemala",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 46170c441b1b322cbc4a6fba8018d371f5eb1cef1bc429be35ff130e61ba0892.",
+            "title": "Palacio Nacional de la Cultura: public guided routes",
+            "uri": "https://culturaguate.gob.gt/palacio-nacional-de-la-cultura/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -90.51322778, latitude 14.64294167",
+            "id": "wikidata:Q6974722",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2553286997. P625 Q6974722$14EACFE6-C201-4F5E-B543-510A08DDAA88.",
+            "title": "Palacio Nacional de la Cultura representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6974722.json"
+          }
+        ],
+        "source_uri": "https://culturaguate.gob.gt/palacio-nacional-de-la-cultura/",
+        "title": "Palacio Nacional de la Cultura",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q6974722.json",
+          "sha256": "b6ba0e31a8696e6a7bcc5053d1521233ed6bd9a4c393c1b35d4be4abe3f1fe2e",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6974722.json"
+        },
+        {
+          "filename": "north-central-source/gt-palace.html",
+          "sha256": "46170c441b1b322cbc4a6fba8018d371f5eb1cef1bc429be35ff130e61ba0892",
+          "uri": "https://culturaguate.gob.gt/palacio-nacional-de-la-cultura/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -88.04025833333333,
+          15.778902777777779
+        ],
+        "precision": 2.777777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1438892.json",
+        "statement_id": "Q1438892$256E1EB9-E705-4691-82C4-06965C7AA0B5"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public colonial fortress at Omoa. The point denotes the main fortress rather than the entire listed cultural and natural landscape.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Instituto Hondureño de Antropología e Historia",
+          "Wikidata contributors"
+        ],
+        "description": "Public colonial fortress at Omoa. The point denotes the main fortress rather than the entire listed cultural and natural landscape.",
+        "description_zh": "奥莫阿圣费尔南多要塞位于洪都拉斯，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public colonial fortress at Omoa. The point denotes the main fortress rather than the entire listed cultural and natural landscape.",
+        "geography": {
+          "authority_id": "supplement:auth:hn-public:Q1438892",
+          "countries": [
+            "HN"
+          ],
+          "note": "Public site in Omoa, Cortés Department, Honduras.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Fortaleza San Fernando de Omoa in Omoa, Cortés Department.",
+            "id": "hn-omoa:visit:1",
+            "license": null,
+            "publisher": "Instituto Hondureño de Antropología e Historia",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 a5d2edbd73bf7bc4ecbd3b0bb90529c743fcc19472b204029892bf217694a36b.",
+            "title": "Fortaleza San Fernando de Omoa",
+            "uri": "https://ihah.hn/fortaleza-san-fernando-de-omoa/"
+          }
+        },
+        "id": "auth:hn-public:Q1438892",
+        "location_precision": null,
+        "names": [
+          "奥莫阿圣费尔南多要塞",
+          "Fortaleza San Fernando de Omoa",
+          "Fortaleza de San Fernando"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -88.04025833333333,
+          15.778902777777779
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Fortaleza San Fernando de Omoa in Omoa, Cortés Department.",
+            "id": "hn-omoa:visit:1",
+            "license": null,
+            "publisher": "Instituto Hondureño de Antropología e Historia",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 a5d2edbd73bf7bc4ecbd3b0bb90529c743fcc19472b204029892bf217694a36b.",
+            "title": "Fortaleza San Fernando de Omoa",
+            "uri": "https://ihah.hn/fortaleza-san-fernando-de-omoa/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Fortaleza San Fernando de Omoa in Omoa, Cortés Department.",
+            "id": "hn-omoa:visit:2",
+            "license": null,
+            "publisher": "Instituto Hondureño de Antropología e Historia",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 2b39c698b40b36a164ea3088d79338e2a68c22964649f09ccc2495440f88d2bc.",
+            "title": "2024 visitor and site management report",
+            "uri": "https://ihah.hn/wp-content/uploads/2025/02/INFORME-LOGROS-2024-VERSION-FINAL.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -88.04025833333333, latitude 15.778902777777779",
+            "id": "wikidata:Q1438892",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2470708800. P625 Q1438892$256E1EB9-E705-4691-82C4-06965C7AA0B5.",
+            "title": "Fortaleza San Fernando de Omoa representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1438892.json"
+          }
+        ],
+        "source_uri": "https://ihah.hn/fortaleza-san-fernando-de-omoa/",
+        "title": "Fortaleza San Fernando de Omoa",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q1438892.json",
+          "sha256": "4da25a175f1731b50101d72d4f949f06be401f2301a61fe184dca41d4259ae1c",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1438892.json"
+        },
+        {
+          "filename": "north-central-source/hn-omoa.html",
+          "sha256": "a5d2edbd73bf7bc4ecbd3b0bb90529c743fcc19472b204029892bf217694a36b",
+          "uri": "https://ihah.hn/fortaleza-san-fernando-de-omoa/"
+        },
+        {
+          "filename": "north-central-source/hn-visits.pdf",
+          "sha256": "2b39c698b40b36a164ea3088d79338e2a68c22964649f09ccc2495440f88d2bc",
+          "uri": "https://ihah.hn/wp-content/uploads/2025/02/INFORME-LOGROS-2024-VERSION-FINAL.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -88.792166666667,
+          15.110277777778
+        ],
+        "precision": 2.7777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3720992.json",
+        "statement_id": "Q3720992$a420263d-4f77-2f34-ee00-ae284ac1a6e7"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological park in the Florida Valley near La Jigua. The park is a distinct site from the main historic Maya city of Copán.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Instituto Hondureño de Antropología e Historia",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological park in the Florida Valley near La Jigua. The park is a distinct site from the main historic Maya city of Copán.",
+        "description_zh": "埃尔普恩特考古公园位于洪都拉斯，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public archaeological park in the Florida Valley near La Jigua. The park is a distinct site from the main historic Maya city of Copán.",
+        "geography": {
+          "authority_id": "supplement:auth:hn-public:Q3720992",
+          "countries": [
+            "HN"
+          ],
+          "note": "Public site in La Jigua, Copán Department, Honduras.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Arqueológico El Puente in La Jigua, Copán Department.",
+            "id": "hn-puente:visit:1",
+            "license": null,
+            "publisher": "Instituto Hondureño de Antropología e Historia",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 4c07aece2af6230cbf586a98c1c001a21b8508b58aa356efa303a80597d2fb1a.",
+            "title": "Parque Arqueológico El Puente",
+            "uri": "https://ihah.hn/parque-arqueologico-el-puente/"
+          }
+        },
+        "id": "auth:hn-public:Q3720992",
+        "location_precision": null,
+        "names": [
+          "埃尔普恩特考古公园",
+          "Parque Arqueológico El Puente",
+          "El Puente Maya site"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -88.792166666667,
+          15.110277777778
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Arqueológico El Puente in La Jigua, Copán Department.",
+            "id": "hn-puente:visit:1",
+            "license": null,
+            "publisher": "Instituto Hondureño de Antropología e Historia",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 4c07aece2af6230cbf586a98c1c001a21b8508b58aa356efa303a80597d2fb1a.",
+            "title": "Parque Arqueológico El Puente",
+            "uri": "https://ihah.hn/parque-arqueologico-el-puente/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Arqueológico El Puente in La Jigua, Copán Department.",
+            "id": "hn-puente:visit:2",
+            "license": null,
+            "publisher": "Instituto Hondureño de Antropología e Historia",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 2b39c698b40b36a164ea3088d79338e2a68c22964649f09ccc2495440f88d2bc.",
+            "title": "2024 visitor and site management report",
+            "uri": "https://ihah.hn/wp-content/uploads/2025/02/INFORME-LOGROS-2024-VERSION-FINAL.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -88.792166666667, latitude 15.110277777778",
+            "id": "wikidata:Q3720992",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2458085920. P625 Q3720992$a420263d-4f77-2f34-ee00-ae284ac1a6e7.",
+            "title": "Parque Arqueológico El Puente representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3720992.json"
+          }
+        ],
+        "source_uri": "https://ihah.hn/parque-arqueologico-el-puente/",
+        "title": "Parque Arqueológico El Puente",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q3720992.json",
+          "sha256": "36d3dd1cad5a6a8dd91e437debcf63bc9ed79f0ba8547f3b800463eeee2cfc63",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3720992.json"
+        },
+        {
+          "filename": "north-central-source/hn-puente.html",
+          "sha256": "4c07aece2af6230cbf586a98c1c001a21b8508b58aa356efa303a80597d2fb1a",
+          "uri": "https://ihah.hn/parque-arqueologico-el-puente/"
+        },
+        {
+          "filename": "north-central-source/hn-visits.pdf",
+          "sha256": "2b39c698b40b36a164ea3088d79338e2a68c22964649f09ccc2495440f88d2bc",
+          "uri": "https://ihah.hn/wp-content/uploads/2025/02/INFORME-LOGROS-2024-VERSION-FINAL.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -85.95259444444444,
+          15.921094444444444
+        ],
+        "precision": 2.777777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5864169.json",
+        "statement_id": "Q5864169$3a8c27b9-4121-8748-f632-79b31c129929"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public colonial fortress in the historic center of Trujillo. The point denotes the fort complex.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Instituto Hondureño de Antropología e Historia",
+          "Wikidata contributors"
+        ],
+        "description": "Public colonial fortress in the historic center of Trujillo. The point denotes the fort complex.",
+        "description_zh": "特鲁希略圣巴巴拉要塞位于洪都拉斯，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public colonial fortress in the historic center of Trujillo. The point denotes the fort complex.",
+        "geography": {
+          "authority_id": "supplement:auth:hn-public:Q5864169",
+          "countries": [
+            "HN"
+          ],
+          "note": "Public site in Trujillo, Colón Department, Honduras.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Fortaleza Santa Bárbara in Trujillo, Colón Department.",
+            "id": "hn-trujillo:visit:1",
+            "license": null,
+            "publisher": "Instituto Hondureño de Antropología e Historia",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 f2a31c50c0cd178f0b6ffaf68b20615df3eb5eaec668c0fffeccbccbea975f99.",
+            "title": "Fortaleza Santa Bárbara",
+            "uri": "https://ihah.hn/fortaleza-santa-barbara/"
+          }
+        },
+        "id": "auth:hn-public:Q5864169",
+        "location_precision": null,
+        "names": [
+          "特鲁希略圣巴巴拉要塞",
+          "Fortaleza Santa Bárbara",
+          "Fortaleza de Santa Bárbara",
+          "Santa Bárbara fortress"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -85.95259444444444,
+          15.921094444444444
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Fortaleza Santa Bárbara in Trujillo, Colón Department.",
+            "id": "hn-trujillo:visit:1",
+            "license": null,
+            "publisher": "Instituto Hondureño de Antropología e Historia",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 f2a31c50c0cd178f0b6ffaf68b20615df3eb5eaec668c0fffeccbccbea975f99.",
+            "title": "Fortaleza Santa Bárbara",
+            "uri": "https://ihah.hn/fortaleza-santa-barbara/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Fortaleza Santa Bárbara in Trujillo, Colón Department.",
+            "id": "hn-trujillo:visit:2",
+            "license": null,
+            "publisher": "Instituto Hondureño de Antropología e Historia",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 2b39c698b40b36a164ea3088d79338e2a68c22964649f09ccc2495440f88d2bc.",
+            "title": "2024 visitor and site management report",
+            "uri": "https://ihah.hn/wp-content/uploads/2025/02/INFORME-LOGROS-2024-VERSION-FINAL.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -85.95259444444444, latitude 15.921094444444444",
+            "id": "wikidata:Q5864169",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2387494352. P625 Q5864169$3a8c27b9-4121-8748-f632-79b31c129929.",
+            "title": "Fortaleza Santa Bárbara representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5864169.json"
+          }
+        ],
+        "source_uri": "https://ihah.hn/fortaleza-santa-barbara/",
+        "title": "Fortaleza Santa Bárbara",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q5864169.json",
+          "sha256": "7d30004ec0470243d0b6b6e2e93bfd9ec3e71e4e5749ccc34a00c4ff7ec32819",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5864169.json"
+        },
+        {
+          "filename": "north-central-source/hn-trujillo.html",
+          "sha256": "f2a31c50c0cd178f0b6ffaf68b20615df3eb5eaec668c0fffeccbccbea975f99",
+          "uri": "https://ihah.hn/fortaleza-santa-barbara/"
+        },
+        {
+          "filename": "north-central-source/hn-visits.pdf",
+          "sha256": "2b39c698b40b36a164ea3088d79338e2a68c22964649f09ccc2495440f88d2bc",
+          "uri": "https://ihah.hn/wp-content/uploads/2025/02/INFORME-LOGROS-2024-VERSION-FINAL.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -88.02273,
+          14.94155
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6683012.json",
+        "statement_id": "Q6683012$0c42a707-4452-424c-3634-9b6ceeec9180"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological park near Lake Yojoa. The representative point denotes the visitor area of the ancient settlement.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Instituto Hondureño de Antropología e Historia",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological park near Lake Yojoa. The representative point denotes the visitor area of the ancient settlement.",
+        "description_zh": "洛斯纳兰霍斯考古公园位于洪都拉斯，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public archaeological park near Lake Yojoa. The representative point denotes the visitor area of the ancient settlement.",
+        "geography": {
+          "authority_id": "supplement:auth:hn-public:Q6683012",
+          "countries": [
+            "HN"
+          ],
+          "note": "Public site in Lake Yojoa, Cortés Department, Honduras.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Eco-Arqueológico Los Naranjos in Lake Yojoa, Cortés Department.",
+            "id": "hn-naranjos:visit:1",
+            "license": null,
+            "publisher": "Instituto Hondureño de Antropología e Historia",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 9ccc758d730ab011a55327bdde8657b28b43740f5f8f72bfbe36b4ebda66d16f.",
+            "title": "Parque Eco-Arqueológico Los Naranjos",
+            "uri": "https://ihah.hn/parque-los-naranjos/"
+          }
+        },
+        "id": "auth:hn-public:Q6683012",
+        "location_precision": null,
+        "names": [
+          "洛斯纳兰霍斯考古公园",
+          "Parque Eco-Arqueológico Los Naranjos",
+          "Los Naranjos"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -88.02273,
+          14.94155
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Eco-Arqueológico Los Naranjos in Lake Yojoa, Cortés Department.",
+            "id": "hn-naranjos:visit:1",
+            "license": null,
+            "publisher": "Instituto Hondureño de Antropología e Historia",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 9ccc758d730ab011a55327bdde8657b28b43740f5f8f72bfbe36b4ebda66d16f.",
+            "title": "Parque Eco-Arqueológico Los Naranjos",
+            "uri": "https://ihah.hn/parque-los-naranjos/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Eco-Arqueológico Los Naranjos in Lake Yojoa, Cortés Department.",
+            "id": "hn-naranjos:visit:2",
+            "license": null,
+            "publisher": "Instituto Hondureño de Antropología e Historia",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 2b39c698b40b36a164ea3088d79338e2a68c22964649f09ccc2495440f88d2bc.",
+            "title": "2024 visitor and site management report",
+            "uri": "https://ihah.hn/wp-content/uploads/2025/02/INFORME-LOGROS-2024-VERSION-FINAL.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -88.02273, latitude 14.94155",
+            "id": "wikidata:Q6683012",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2489891639. P625 Q6683012$0c42a707-4452-424c-3634-9b6ceeec9180.",
+            "title": "Parque Eco-Arqueológico Los Naranjos representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6683012.json"
+          }
+        ],
+        "source_uri": "https://ihah.hn/parque-los-naranjos/",
+        "title": "Parque Eco-Arqueológico Los Naranjos",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q6683012.json",
+          "sha256": "35b9ec7baac3a4f4ca45b1bd687e608ccc7e6b84a3d4e3aed2a27fc171d85a14",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6683012.json"
+        },
+        {
+          "filename": "north-central-source/hn-naranjos.html",
+          "sha256": "9ccc758d730ab011a55327bdde8657b28b43740f5f8f72bfbe36b4ebda66d16f",
+          "uri": "https://ihah.hn/parque-los-naranjos/"
+        },
+        {
+          "filename": "north-central-source/hn-visits.pdf",
+          "sha256": "2b39c698b40b36a164ea3088d79338e2a68c22964649f09ccc2495440f88d2bc",
+          "uri": "https://ihah.hn/wp-content/uploads/2025/02/INFORME-LOGROS-2024-VERSION-FINAL.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -85.87686388888889,
+          14.906555555555556
+        ],
+        "precision": 2.777777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7679447.json",
+        "statement_id": "Q7679447$93ce8352-4107-5267-06bf-2f6837b5bb19"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological cave park in the Talgua River valley. The point locates the named park, with visitation limited to officially designated areas.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Instituto Hondureño de Antropología e Historia",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological cave park in the Talgua River valley. The point locates the named park, with visitation limited to officially designated areas.",
+        "description_zh": "塔尔瓜洞穴考古公园位于洪都拉斯，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public archaeological cave park in the Talgua River valley. The point locates the named park, with visitation limited to officially designated areas.",
+        "geography": {
+          "authority_id": "supplement:auth:hn-public:Q7679447",
+          "countries": [
+            "HN"
+          ],
+          "note": "Public site in Catacamas, Olancho Department, Honduras.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Eco-Arqueológico Cuevas de Talgua in Catacamas, Olancho Department.",
+            "id": "hn-talgua:visit:1",
+            "license": null,
+            "publisher": "Instituto Hondureño de Antropología e Historia",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 82a123326bef5d9aa85f279739a31b680223bc7a79df8dd22d4f89935571aea2.",
+            "title": "Parque Eco-Arqueológico Cuevas de Talgua",
+            "uri": "https://ihah.hn/parque-eco-arqueologico-cuevas-de-talgua/"
+          }
+        },
+        "id": "auth:hn-public:Q7679447",
+        "location_precision": null,
+        "names": [
+          "塔尔瓜洞穴考古公园",
+          "Parque Eco-Arqueológico Cuevas de Talgua",
+          "Cuevas de Talgua",
+          "Talgua caves"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -85.87686388888889,
+          14.906555555555556
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Eco-Arqueológico Cuevas de Talgua in Catacamas, Olancho Department.",
+            "id": "hn-talgua:visit:1",
+            "license": null,
+            "publisher": "Instituto Hondureño de Antropología e Historia",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 82a123326bef5d9aa85f279739a31b680223bc7a79df8dd22d4f89935571aea2.",
+            "title": "Parque Eco-Arqueológico Cuevas de Talgua",
+            "uri": "https://ihah.hn/parque-eco-arqueologico-cuevas-de-talgua/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Eco-Arqueológico Cuevas de Talgua in Catacamas, Olancho Department.",
+            "id": "hn-talgua:visit:2",
+            "license": null,
+            "publisher": "Instituto Hondureño de Antropología e Historia",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 2b39c698b40b36a164ea3088d79338e2a68c22964649f09ccc2495440f88d2bc.",
+            "title": "2024 visitor and site management report",
+            "uri": "https://ihah.hn/wp-content/uploads/2025/02/INFORME-LOGROS-2024-VERSION-FINAL.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -85.87686388888889, latitude 14.906555555555556",
+            "id": "wikidata:Q7679447",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2498002837. P625 Q7679447$93ce8352-4107-5267-06bf-2f6837b5bb19.",
+            "title": "Parque Eco-Arqueológico Cuevas de Talgua representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7679447.json"
+          }
+        ],
+        "source_uri": "https://ihah.hn/parque-eco-arqueologico-cuevas-de-talgua/",
+        "title": "Parque Eco-Arqueológico Cuevas de Talgua",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q7679447.json",
+          "sha256": "d0fbdbf9fcc7cc8cf582f3f5ea626711ab17475099256ad06ed20d5107f3429b",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7679447.json"
+        },
+        {
+          "filename": "north-central-source/hn-talgua.html",
+          "sha256": "82a123326bef5d9aa85f279739a31b680223bc7a79df8dd22d4f89935571aea2",
+          "uri": "https://ihah.hn/parque-eco-arqueologico-cuevas-de-talgua/"
+        },
+        {
+          "filename": "north-central-source/hn-visits.pdf",
+          "sha256": "2b39c698b40b36a164ea3088d79338e2a68c22964649f09ccc2495440f88d2bc",
+          "uri": "https://ihah.hn/wp-content/uploads/2025/02/INFORME-LOGROS-2024-VERSION-FINAL.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -89.38914444444444,
+          13.800616666666667
+        ],
+        "precision": 2.777777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2000719.json",
+        "statement_id": "Q2000719$96967C60-EC9F-4C94-88E3-B1F3A7E6522A"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological park at the San Andrés ceremonial center in the Zapotitán Valley. Distinct from the Joya de Cerén property.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura de El Salvador",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological park at the San Andrés ceremonial center in the Zapotitán Valley. Distinct from the Joya de Cerén property.",
+        "description_zh": "圣安德烈斯考古公园位于萨尔瓦多，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public archaeological park at the San Andrés ceremonial center in the Zapotitán Valley. Distinct from the Joya de Cerén property.",
+        "geography": {
+          "authority_id": "supplement:auth:sv-public:Q2000719",
+          "countries": [
+            "SV"
+          ],
+          "note": "Public site in Zapotitán Valley, La Libertad Department, El Salvador.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Arqueológico San Andrés in Zapotitán Valley, La Libertad Department.",
+            "id": "sv-andres:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura de El Salvador",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 3c64ef31f1fda2cb5d6e3f1c981cb036c92b483aaa43194431f6fae80ea33520.",
+            "title": "Parque Arqueológico San Andrés",
+            "uri": "https://www.cultura.gob.sv/parque-arqueologico-san-andres/"
+          }
+        },
+        "id": "auth:sv-public:Q2000719",
+        "location_precision": null,
+        "names": [
+          "圣安德烈斯考古公园",
+          "Parque Arqueológico San Andrés",
+          "San Andrés, El Salvador"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -89.38914444444444,
+          13.800616666666667
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Arqueológico San Andrés in Zapotitán Valley, La Libertad Department.",
+            "id": "sv-andres:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura de El Salvador",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 3c64ef31f1fda2cb5d6e3f1c981cb036c92b483aaa43194431f6fae80ea33520.",
+            "title": "Parque Arqueológico San Andrés",
+            "uri": "https://www.cultura.gob.sv/parque-arqueologico-san-andres/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Arqueológico San Andrés in Zapotitán Valley, La Libertad Department.",
+            "id": "sv-andres:visit:2",
+            "license": null,
+            "publisher": "Ministerio de Cultura de El Salvador",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 142a9fdf8fccecb2beb4a311e0de04fbe8ed231a868d97cd759c786f2247b9d6.",
+            "title": "August 2026 public archaeology park agenda",
+            "uri": "https://www.cultura.gob.sv/conoce-la-agenda-cultural-del-1-al-9-de-agosto/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -89.38914444444444, latitude 13.800616666666667",
+            "id": "wikidata:Q2000719",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2508104344. P625 Q2000719$96967C60-EC9F-4C94-88E3-B1F3A7E6522A.",
+            "title": "Parque Arqueológico San Andrés representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2000719.json"
+          }
+        ],
+        "source_uri": "https://www.cultura.gob.sv/parque-arqueologico-san-andres/",
+        "title": "Parque Arqueológico San Andrés",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q2000719.json",
+          "sha256": "48e5080701bd2b20e852735b53f9f55ce9db9d777dfe75215d8fa5634d83710a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2000719.json"
+        },
+        {
+          "filename": "north-central-source/sv-andres.html",
+          "sha256": "3c64ef31f1fda2cb5d6e3f1c981cb036c92b483aaa43194431f6fae80ea33520",
+          "uri": "https://www.cultura.gob.sv/parque-arqueologico-san-andres/"
+        },
+        {
+          "filename": "north-central-source/sv-agenda.html",
+          "sha256": "142a9fdf8fccecb2beb4a311e0de04fbe8ed231a868d97cd759c786f2247b9d6",
+          "uri": "https://www.cultura.gob.sv/conoce-la-agenda-cultural-del-1-al-9-de-agosto/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -89.67212222222223,
+          13.988894444444444
+        ],
+        "precision": 2.777777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3388840.json",
+        "statement_id": "Q3388840$77977685-D9F4-4A89-AE3E-F1CCC859EE6E"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological park within the wider Chalchuapa site area. This park is separately managed from nearby Tazumal and denotes the excavated Casa Blanca portion.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura de El Salvador",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological park within the wider Chalchuapa site area. This park is separately managed from nearby Tazumal and denotes the excavated Casa Blanca portion.",
+        "description_zh": "卡萨布兰卡考古公园位于萨尔瓦多，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public archaeological park within the wider Chalchuapa site area. This park is separately managed from nearby Tazumal and denotes the excavated Casa Blanca portion.",
+        "geography": {
+          "authority_id": "supplement:auth:sv-public:Q3388840",
+          "countries": [
+            "SV"
+          ],
+          "note": "Public site in Chalchuapa, Santa Ana Department, El Salvador.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Arqueológico Casa Blanca in Chalchuapa, Santa Ana Department.",
+            "id": "sv-blanca:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura de El Salvador",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 d11019f7a54b8cc03ed0440a4a1784617b2cac6a1688efba48b7bbad6302e80d.",
+            "title": "Parque Arqueológico Casa Blanca",
+            "uri": "https://www.cultura.gob.sv/parque-arqueologico-casa-blanca/"
+          }
+        },
+        "id": "auth:sv-public:Q3388840",
+        "location_precision": null,
+        "names": [
+          "卡萨布兰卡考古公园",
+          "Parque Arqueológico Casa Blanca",
+          "Casa Blanca, El Salvador"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -89.67212222222223,
+          13.988894444444444
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Arqueológico Casa Blanca in Chalchuapa, Santa Ana Department.",
+            "id": "sv-blanca:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura de El Salvador",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 d11019f7a54b8cc03ed0440a4a1784617b2cac6a1688efba48b7bbad6302e80d.",
+            "title": "Parque Arqueológico Casa Blanca",
+            "uri": "https://www.cultura.gob.sv/parque-arqueologico-casa-blanca/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Arqueológico Casa Blanca in Chalchuapa, Santa Ana Department.",
+            "id": "sv-blanca:visit:2",
+            "license": null,
+            "publisher": "Ministerio de Cultura de El Salvador",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 142a9fdf8fccecb2beb4a311e0de04fbe8ed231a868d97cd759c786f2247b9d6.",
+            "title": "August 2026 public archaeology park agenda",
+            "uri": "https://www.cultura.gob.sv/conoce-la-agenda-cultural-del-1-al-9-de-agosto/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -89.67212222222223, latitude 13.988894444444444",
+            "id": "wikidata:Q3388840",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2341821478. P625 Q3388840$77977685-D9F4-4A89-AE3E-F1CCC859EE6E.",
+            "title": "Parque Arqueológico Casa Blanca representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3388840.json"
+          }
+        ],
+        "source_uri": "https://www.cultura.gob.sv/parque-arqueologico-casa-blanca/",
+        "title": "Parque Arqueológico Casa Blanca",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q3388840.json",
+          "sha256": "0268f19b728f4f6843b15773c90d3d7dbb46eb4c95f295300032519223409a30",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3388840.json"
+        },
+        {
+          "filename": "north-central-source/sv-blanca.html",
+          "sha256": "d11019f7a54b8cc03ed0440a4a1784617b2cac6a1688efba48b7bbad6302e80d",
+          "uri": "https://www.cultura.gob.sv/parque-arqueologico-casa-blanca/"
+        },
+        {
+          "filename": "north-central-source/sv-agenda.html",
+          "sha256": "142a9fdf8fccecb2beb4a311e0de04fbe8ed231a868d97cd759c786f2247b9d6",
+          "uri": "https://www.cultura.gob.sv/conoce-la-agenda-cultural-del-1-al-9-de-agosto/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -89.16506944444444,
+          13.981205555555556
+        ],
+        "precision": 2.777777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5769252.json",
+        "statement_id": "Q5769252$09be57f9-4755-503c-9f51-b3fb59024650"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological park at the ancient settlement north of Aguilares.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura de El Salvador",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological park at the ancient settlement north of Aguilares.",
+        "description_zh": "锡瓦坦考古公园位于萨尔瓦多，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public archaeological park at the ancient settlement north of Aguilares.",
+        "geography": {
+          "authority_id": "supplement:auth:sv-public:Q5769252",
+          "countries": [
+            "SV"
+          ],
+          "note": "Public site in Aguilares, San Salvador Department, El Salvador.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Arqueológico Cihuatán in Aguilares, San Salvador Department.",
+            "id": "sv-cihuatan:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura de El Salvador",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 7f7c6e3f5b564a4e29ddca1865d6bd1a6f474e1ef438af8abe84ac30241401f5.",
+            "title": "Parque Arqueológico Cihuatán",
+            "uri": "https://www.cultura.gob.sv/parque-arqueologico-cihuatan/"
+          }
+        },
+        "id": "auth:sv-public:Q5769252",
+        "location_precision": null,
+        "names": [
+          "锡瓦坦考古公园",
+          "Parque Arqueológico Cihuatán",
+          "Cihuatán"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -89.16506944444444,
+          13.981205555555556
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Arqueológico Cihuatán in Aguilares, San Salvador Department.",
+            "id": "sv-cihuatan:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura de El Salvador",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 7f7c6e3f5b564a4e29ddca1865d6bd1a6f474e1ef438af8abe84ac30241401f5.",
+            "title": "Parque Arqueológico Cihuatán",
+            "uri": "https://www.cultura.gob.sv/parque-arqueologico-cihuatan/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Arqueológico Cihuatán in Aguilares, San Salvador Department.",
+            "id": "sv-cihuatan:visit:2",
+            "license": null,
+            "publisher": "Ministerio de Cultura de El Salvador",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 142a9fdf8fccecb2beb4a311e0de04fbe8ed231a868d97cd759c786f2247b9d6.",
+            "title": "August 2026 public archaeology park agenda",
+            "uri": "https://www.cultura.gob.sv/conoce-la-agenda-cultural-del-1-al-9-de-agosto/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -89.16506944444444, latitude 13.981205555555556",
+            "id": "wikidata:Q5769252",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2491546649. P625 Q5769252$09be57f9-4755-503c-9f51-b3fb59024650.",
+            "title": "Parque Arqueológico Cihuatán representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5769252.json"
+          }
+        ],
+        "source_uri": "https://www.cultura.gob.sv/parque-arqueologico-cihuatan/",
+        "title": "Parque Arqueológico Cihuatán",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q5769252.json",
+          "sha256": "ac3b3a922800428fd4956dab0069f47754df6b3e454e33840afb3b022ea65c72",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5769252.json"
+        },
+        {
+          "filename": "north-central-source/sv-cihuatan.html",
+          "sha256": "7f7c6e3f5b564a4e29ddca1865d6bd1a6f474e1ef438af8abe84ac30241401f5",
+          "uri": "https://www.cultura.gob.sv/parque-arqueologico-cihuatan/"
+        },
+        {
+          "filename": "north-central-source/sv-agenda.html",
+          "sha256": "142a9fdf8fccecb2beb4a311e0de04fbe8ed231a868d97cd759c786f2247b9d6",
+          "uri": "https://www.cultura.gob.sv/conoce-la-agenda-cultural-del-1-al-9-de-agosto/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Wikidata coordinate for the publicly documented heritage property, as a representative point.",
+        "point": [
+          -89.67441666666667,
+          13.979555555555555
+        ],
+        "precision": 2.777777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q690372.json",
+        "statement_id": "Q690372$4170f124-4b30-6bb3-b350-e937052c82b8"
+      },
+      "independent_review": {
+        "method": "Checked authentic visitor evidence and appropriately licensed coordinates for each individually named old property. Compared older records and UNESCO components, resolved adjacent archaeological parks and documented the choice between multiple points.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public archaeological park and monumental group at Tazumal, a separate archaeological sector and visitor area from Casa Blanca.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage identity and Wikidata coordinates checked against frozen sources.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura de El Salvador",
+          "Wikidata contributors"
+        ],
+        "description": "Public archaeological park and monumental group at Tazumal, a separate archaeological sector and visitor area from Casa Blanca.",
+        "description_zh": "塔苏马尔考古公园位于萨尔瓦多，具有官方公众参观依据。地图标示公开遗产场所的代表点。",
+        "details": "Public archaeological park and monumental group at Tazumal, a separate archaeological sector and visitor area from Casa Blanca.",
+        "geography": {
+          "authority_id": "supplement:auth:sv-public:Q690372",
+          "countries": [
+            "SV"
+          ],
+          "note": "Public site in Chalchuapa, Santa Ana Department, El Salvador.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Arqueológico Tazumal in Chalchuapa, Santa Ana Department.",
+            "id": "sv-tazumal:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura de El Salvador",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 ec3d422907238ef7866605ee2efb95c824952ed86055c8dde93f7f01967b9172.",
+            "title": "Parque Arqueológico Tazumal",
+            "uri": "https://www.cultura.gob.sv/parque-arqueologico-tazumal/"
+          }
+        },
+        "id": "auth:sv-public:Q690372",
+        "location_precision": null,
+        "names": [
+          "塔苏马尔考古公园",
+          "Parque Arqueológico Tazumal",
+          "Tazumal"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -89.67441666666667,
+          13.979555555555555
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Arqueológico Tazumal in Chalchuapa, Santa Ana Department.",
+            "id": "sv-tazumal:visit:1",
+            "license": null,
+            "publisher": "Ministerio de Cultura de El Salvador",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 ec3d422907238ef7866605ee2efb95c824952ed86055c8dde93f7f01967b9172.",
+            "title": "Parque Arqueológico Tazumal",
+            "uri": "https://www.cultura.gob.sv/parque-arqueologico-tazumal/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public visitor source for Parque Arqueológico Tazumal in Chalchuapa, Santa Ana Department.",
+            "id": "sv-tazumal:visit:2",
+            "license": null,
+            "publisher": "Ministerio de Cultura de El Salvador",
+            "revision": "Public visitor source retrieved 2026-11-28. SHA-256 142a9fdf8fccecb2beb4a311e0de04fbe8ed231a868d97cd759c786f2247b9d6.",
+            "title": "August 2026 public archaeology park agenda",
+            "uri": "https://www.cultura.gob.sv/conoce-la-agenda-cultural-del-1-al-9-de-agosto/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -89.67441666666667, latitude 13.979555555555555",
+            "id": "wikidata:Q690372",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2545440945. P625 Q690372$4170f124-4b30-6bb3-b350-e937052c82b8.",
+            "title": "Parque Arqueológico Tazumal representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q690372.json"
+          }
+        ],
+        "source_uri": "https://www.cultura.gob.sv/parque-arqueologico-tazumal/",
+        "title": "Parque Arqueológico Tazumal",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "north-central-source/Q690372.json",
+          "sha256": "97ef7271ee8a6d99312b36c7da4785f464b05acf090e4b2b1a4f1924d5b64eed",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q690372.json"
+        },
+        {
+          "filename": "north-central-source/sv-tazumal.html",
+          "sha256": "ec3d422907238ef7866605ee2efb95c824952ed86055c8dde93f7f01967b9172",
+          "uri": "https://www.cultura.gob.sv/parque-arqueologico-tazumal/"
+        },
+        {
+          "filename": "north-central-source/sv-agenda.html",
+          "sha256": "142a9fdf8fccecb2beb4a311e0de04fbe8ed231a868d97cd759c786f2247b9d6",
+          "uri": "https://www.cultura.gob.sv/conoce-la-agenda-cultural-del-1-al-9-de-agosto/"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Twenty-five independently verified public cultural places in Belize, Guatemala, Honduras and El Salvador."
+}

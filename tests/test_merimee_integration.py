@@ -93,8 +93,8 @@ def test_statistical_area_mapping_preserves_old_source_region_and_components(
     assert client.get("/api/sites/auth:fr-merimee:PA97400023").status_code == 404
     assert client.get("/api/sites/auth:fr-merimee:PA97400026").status_code == 200
     coverage = client.get("/api/coverage").json()
-    assert coverage["total"] == 4586 and len(coverage["countries"]) == 214
-    assert coverage["locations"] == {"mapped": 4190, "polar": 3, "unknown": 393}
+    assert coverage["total"] == 4638 and len(coverage["countries"]) == 214
+    assert coverage["locations"] == {"mapped": 4242, "polar": 3, "unknown": 393}
 
 
 def test_source_wgs84_axis_and_missing_points_do_not_become_guessed_centres(
@@ -148,5 +148,5 @@ def test_original_name_bm25_works_without_model_and_evaluation_stays_unscored(
     query_file = Path(__file__).parents[1] / "src/archsearch/data/queries-merimee.json"
     assert [q.id for q in load_queries(query_file)] == [f"me{i:02}" for i in range(1, 21)]
     report = evaluate_corpus(tmp_path / "no-model", tmp_path / "rankings.json", queries=query_file)
-    assert report["corpus_count"] == 4586 and report["metrics"] is None
+    assert report["corpus_count"] == 4638 and report["metrics"] is None
     assert not report["qrels"]["confirmed"] and not report["runs_complete"]

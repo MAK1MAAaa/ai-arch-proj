@@ -1,0 +1,536 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Identity and public visitor source review",
+      "note": "This coordinate batch establishes no individually verified historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Museums of Kenya",
+      "Wikidata contributors"
+    ],
+    "description": "The Malindi Heritage Complex Museum occupies the former District Collector’s Office in Malindi.",
+    "description_zh": "马林迪遗产博物馆主馆设于马林迪原地区征收官办公楼。地图定位这座历史建筑的代表点。",
+    "details": "The representative point identifies the former District Collector’s Office, now used as the main Malindi Heritage Complex Museum.",
+    "geography": {
+      "authority_id": "supplement:auth:ke-public:Q15036547",
+      "countries": [
+        "KE"
+      ],
+      "note": "Modern locality follows the National Museums of Kenya source.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum authority identifies the named heritage property in its public visitor information.",
+        "id": "ke-nmk:malindi-museum",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Public visitor page",
+        "title": "National Museums of Kenya visitor site — Malindi Museum Heritage Complex",
+        "uri": "https://nmk.go.ke/malindi-museum/"
+      }
+    },
+    "id": "auth:ke-public:Q15036547",
+    "location_precision": null,
+    "names": [
+      "Malindi Heritage Complex Museum",
+      "马林迪遗产博物馆主馆",
+      "Malindi Museum (main building)"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      40.121813,
+      -3.215922
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum authority identifies the named heritage property in its public visitor information.",
+        "id": "ke-nmk:malindi-museum",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Public visitor page",
+        "title": "National Museums of Kenya visitor site — Malindi Museum Heritage Complex",
+        "uri": "https://nmk.go.ke/malindi-museum/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "2026 public admission information for the museum and heritage network.",
+        "id": "ke-nmk-admission",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Publishes revised rates effective 2026-05-07",
+        "title": "National Museums of Kenya revised admission list",
+        "uri": "https://nmk.go.ke/revision-of-heritage-facilities-admission-fees/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Original recorded Earth coordinate.",
+        "id": "wikidata:Q15036547",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2384578102",
+        "title": "Wikidata structured place — Malindi Museum",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q15036547.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The project records the former District Collector’s Office, separately documented from the House of Columns.",
+        "id": "comparison:ke-old-museum-catalogue:malindi",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Long-running museum site retrieved 2026-11-28",
+        "title": "Malindi Museum historical buildings",
+        "uri": "https://museums.or.ke/malindi-museum/"
+      }
+    ],
+    "source_uri": "https://nmk.go.ke/malindi-museum/",
+    "title": "Malindi Heritage Complex Museum",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Identity and public visitor source review",
+      "note": "This coordinate batch establishes no individually verified historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Museums of Kenya",
+      "Wikidata contributors"
+    ],
+    "description": "The public museum is housed in the historic administrative building in Meru.",
+    "description_zh": "梅鲁博物馆。主管机构发布公众到访信息。",
+    "details": "The public museum is housed in the historic administrative building in Meru. The site visitor information defines the accessible property.",
+    "geography": {
+      "authority_id": "supplement:auth:ke-public:Q15036549",
+      "countries": [
+        "KE"
+      ],
+      "note": "Modern locality follows the National Museums of Kenya source.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum authority identifies the named heritage property in its public visitor information.",
+        "id": "ke-nmk:meru-museum",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Public visitor page",
+        "title": "National Museums of Kenya visitor site — Meru Museum",
+        "uri": "https://nmk.go.ke/meru-museum/"
+      }
+    },
+    "id": "auth:ke-public:Q15036549",
+    "location_precision": null,
+    "names": [
+      "梅鲁博物馆"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      37.6508,
+      0.0475
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum authority identifies the named heritage property in its public visitor information.",
+        "id": "ke-nmk:meru-museum",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Public visitor page",
+        "title": "National Museums of Kenya visitor site — Meru Museum",
+        "uri": "https://nmk.go.ke/meru-museum/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "2026 public admission information for the museum and heritage network.",
+        "id": "ke-nmk-admission",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Publishes revised rates effective 2026-05-07",
+        "title": "National Museums of Kenya revised admission list",
+        "uri": "https://nmk.go.ke/revision-of-heritage-facilities-admission-fees/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Original recorded Earth coordinate.",
+        "id": "wikidata:Q15036549",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2387973965",
+        "title": "Wikidata structured place — Meru Museum",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q15036549.json"
+      }
+    ],
+    "source_uri": "https://nmk.go.ke/meru-museum/",
+    "title": "Meru Museum",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Identity and public visitor source review",
+      "note": "This coordinate batch establishes no individually verified historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Museums of Kenya",
+      "Wikidata contributors"
+    ],
+    "description": "The public archaeological hill and museum are located near Nakuru.",
+    "description_zh": "海拉克斯山史前遗址。主管机构发布公众到访信息。",
+    "details": "The public archaeological hill and museum are located near Nakuru. The site visitor information defines the accessible property.",
+    "geography": {
+      "authority_id": "supplement:auth:ke-public:Q1641561",
+      "countries": [
+        "KE"
+      ],
+      "note": "Modern locality follows the National Museums of Kenya source.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum authority identifies the named heritage property in its public visitor information.",
+        "id": "ke-nmk:hyrax-hill-prehistoric-site",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Public visitor page",
+        "title": "National Museums of Kenya visitor site — Hyrax Hill Prehistoric Site",
+        "uri": "https://nmk.go.ke/hyrax-hill-prehistoric-site/"
+      }
+    },
+    "id": "auth:ke-public:Q1641561",
+    "location_precision": null,
+    "names": [
+      "海拉克斯山史前遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      36.1049664,
+      -0.2814559
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum authority identifies the named heritage property in its public visitor information.",
+        "id": "ke-nmk:hyrax-hill-prehistoric-site",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Public visitor page",
+        "title": "National Museums of Kenya visitor site — Hyrax Hill Prehistoric Site",
+        "uri": "https://nmk.go.ke/hyrax-hill-prehistoric-site/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "2026 public admission information for the museum and heritage network.",
+        "id": "ke-nmk-admission",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Publishes revised rates effective 2026-05-07",
+        "title": "National Museums of Kenya revised admission list",
+        "uri": "https://nmk.go.ke/revision-of-heritage-facilities-admission-fees/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Original recorded Earth coordinate.",
+        "id": "wikidata:Q1641561",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2569497806",
+        "title": "Wikidata structured place — Hyrax Hill",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1641561.json"
+      }
+    ],
+    "source_uri": "https://nmk.go.ke/hyrax-hill-prehistoric-site/",
+    "title": "Hyrax Hill Prehistoric Site",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Identity and public visitor source review",
+      "note": "This coordinate batch establishes no individually verified historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Museums of Kenya",
+      "Wikidata contributors"
+    ],
+    "description": "The public museum occupies the former farmhouse in the Karen area of Nairobi.",
+    "description_zh": "卡伦·布里克森故居博物馆。主管机构发布公众到访信息。",
+    "details": "The public museum occupies the former farmhouse in the Karen area of Nairobi. The site visitor information defines the accessible property.",
+    "geography": {
+      "authority_id": "supplement:auth:ke-public:Q367631",
+      "countries": [
+        "KE"
+      ],
+      "note": "Modern locality follows the National Museums of Kenya source.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum authority identifies the named heritage property in its public visitor information.",
+        "id": "ke-nmk:karen-blixen-museum",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Public visitor page",
+        "title": "National Museums of Kenya visitor site — Karen Blixen Museum",
+        "uri": "https://nmk.go.ke/karen-blixen-museum/"
+      }
+    },
+    "id": "auth:ke-public:Q367631",
+    "location_precision": null,
+    "names": [
+      "卡伦·布里克森故居博物馆"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      36.7125,
+      -1.35194444
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum authority identifies the named heritage property in its public visitor information.",
+        "id": "ke-nmk:karen-blixen-museum",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Public visitor page",
+        "title": "National Museums of Kenya visitor site — Karen Blixen Museum",
+        "uri": "https://nmk.go.ke/karen-blixen-museum/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "2026 public admission information for the museum and heritage network.",
+        "id": "ke-nmk-admission",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Publishes revised rates effective 2026-05-07",
+        "title": "National Museums of Kenya revised admission list",
+        "uri": "https://nmk.go.ke/revision-of-heritage-facilities-admission-fees/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Original recorded Earth coordinate.",
+        "id": "wikidata:Q367631",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2549994894",
+        "title": "Wikidata structured place — Karen Blixen Museum",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q367631.json"
+      }
+    ],
+    "source_uri": "https://nmk.go.ke/karen-blixen-museum/",
+    "title": "Karen Blixen Museum",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Identity and public visitor source review",
+      "note": "This coordinate batch establishes no individually verified historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Museums of Kenya",
+      "Wikidata contributors"
+    ],
+    "description": "The public archaeological property on Manda Island includes the ruins of Takwa.",
+    "description_zh": "塔夸遗址。主管机构发布公众到访信息。",
+    "details": "The public archaeological site is the named Takwa ruins on Manda Island, a separate heritage property from Lamu Old Town.",
+    "geography": {
+      "authority_id": "supplement:auth:ke-public:Q972260",
+      "countries": [
+        "KE"
+      ],
+      "note": "Modern locality follows the National Museums of Kenya source.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum authority identifies the named heritage property in its public visitor information.",
+        "id": "ke-nmk:takwa-ruins",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Public visitor page",
+        "title": "National Museums of Kenya visitor site — Takwa Ruins",
+        "uri": "https://nmk.go.ke/takwa-ruins/"
+      }
+    },
+    "id": "auth:ke-public:Q972260",
+    "location_precision": null,
+    "names": [
+      "塔夸遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      40.958333333333,
+      -2.2983333333333
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum authority identifies the named heritage property in its public visitor information.",
+        "id": "ke-nmk:takwa-ruins",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Public visitor page",
+        "title": "National Museums of Kenya visitor site — Takwa Ruins",
+        "uri": "https://nmk.go.ke/takwa-ruins/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "2026 public admission information for the museum and heritage network.",
+        "id": "ke-nmk-admission",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Publishes revised rates effective 2026-05-07",
+        "title": "National Museums of Kenya revised admission list",
+        "uri": "https://nmk.go.ke/revision-of-heritage-facilities-admission-fees/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Original recorded Earth coordinate.",
+        "id": "wikidata:Q972260",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2435574969",
+        "title": "Wikidata structured place — Takwa",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q972260.json"
+      }
+    ],
+    "source_uri": "https://nmk.go.ke/takwa-ruins/",
+    "title": "Takwa Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Identity and public visitor source review",
+      "note": "This coordinate batch establishes no individually verified historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Museums of Kenya",
+      "GeoNames contributors"
+    ],
+    "description": "National Museums of Kenya provides public interpretation at the named prehistoric site in the Rift Valley.",
+    "description_zh": "奥洛尔盖赛利史前遗址。主管机构发布公众到访信息。",
+    "details": "National Museums of Kenya provides public interpretation at the named prehistoric site in the Rift Valley. The site visitor information defines the accessible property.",
+    "geography": {
+      "authority_id": "supplement:auth:ke-public:geonames-182034",
+      "countries": [
+        "KE"
+      ],
+      "note": "Modern locality follows the National Museums of Kenya source.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum authority identifies the named heritage property in its public visitor information.",
+        "id": "ke-nmk:olorgesailie-prehistoric-site",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Public visitor page",
+        "title": "National Museums of Kenya visitor site — Olorgesailie Prehistoric Site",
+        "uri": "https://nmk.go.ke/olorgesailie-prehistoric-site/"
+      }
+    },
+    "id": "auth:ke-public:geonames-182034",
+    "location_precision": null,
+    "names": [
+      "奥洛尔盖赛利史前遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      36.44602,
+      -1.57763
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum authority identifies the named heritage property in its public visitor information.",
+        "id": "ke-nmk:olorgesailie-prehistoric-site",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Public visitor page",
+        "title": "National Museums of Kenya visitor site — Olorgesailie Prehistoric Site",
+        "uri": "https://nmk.go.ke/olorgesailie-prehistoric-site/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "2026 public admission information for the museum and heritage network.",
+        "id": "ke-nmk-admission",
+        "license": null,
+        "publisher": "National Museums of Kenya",
+        "revision": "Publishes revised rates effective 2026-05-07",
+        "title": "National Museums of Kenya revised admission list",
+        "uri": "https://nmk.go.ke/revision-of-heritage-facilities-admission-fees/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "KE; S.ANS; Olorgasailie National Monument; 182034.",
+        "id": "geonames:182034",
+        "license": "CC BY 4.0",
+        "publisher": "GeoNames contributors",
+        "revision": "Source row last modified 2018-04-06; retrieved 2026-11-28",
+        "title": "GeoNames gazetteer point — Olorgasailie National Monument",
+        "uri": "https://download.geonames.org/export/dump/KE.zip"
+      }
+    ],
+    "source_uri": "https://nmk.go.ke/olorgesailie-prehistoric-site/",
+    "title": "Olorgesailie Prehistoric Site",
+    "types": [
+      "archaeological-site"
+    ]
+  }
+]

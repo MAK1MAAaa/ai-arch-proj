@@ -1,0 +1,981 @@
+{
+  "base_count": 4611,
+  "base_ids_sha256": "07c7524de4c59cf91b08efda9fc7a23153349f8b0b20b2a9cae407b0b4d0a171",
+  "base_sites_sha256": "b85ba61b1b60d53d4bba391cd60cff68f5557033c4ad08d10fc1adda36559276",
+  "cohort_version": "pacific-islands-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata P625 representative point; independent placement check reported in QA.",
+        "point": [
+          178.4247,
+          -18.1491
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4275602.json",
+        "statement_id": "q4275602$5A624021-BDE9-4272-967C-5AAED8EE849B"
+      },
+      "independent_review": {
+        "method": "Checked each frozen official visitor archive, selected CC0 statement, GeoNames RDF or two named published GPS entries against the exact original. Compared all earlier corpus and component points, reviewed fine-grained site scope and retained the stated licenses.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point marks the named historic garden and public paths. The neighboring Albert Park is separately named and mapped by the National Trust.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public record and representative point checked against frozen source evidence.",
+          "note": "This update provides no independently reviewed dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Trust of Fiji",
+          "Wikidata contributors"
+        ],
+        "description": "Historic public botanical gardens with heritage structures in Suva, Fiji.",
+        "description_zh": "苏瓦瑟斯顿历史花园位于斐济，保留官方公众参观出处及已核对的地图代表点。",
+        "details": "The point marks the named historic garden and public paths. The neighboring Albert Park is separately named and mapped by the National Trust.",
+        "geography": {
+          "authority_id": "supplement:auth:fj-public:Q4275602",
+          "countries": [
+            "FJ"
+          ],
+          "note": "Public heritage property in Suva, Viti Levu.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official trail identifies Thurston Gardens as a separately managed publicly visited heritage stop.",
+            "id": "auth:fj-public:Q4275602:fj-walk.pdf",
+            "license": null,
+            "publisher": "National Trust of Fiji",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 7c0fe0b0493f7f1c3b246b50207cc1877b95036fa95f44afd472063c26a13dee.",
+            "title": "Suva heritage walking trail",
+            "uri": "https://nationaltrust.org.fj/wp-content/uploads/2022/06/NTOF-Suva-walking-Trail.pdf"
+          }
+        },
+        "id": "auth:fj-public:Q4275602",
+        "location_precision": null,
+        "names": [
+          "苏瓦瑟斯顿历史花园",
+          "Thurston Gardens",
+          "Suva Botanical Gardens"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          178.4247,
+          -18.1491
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official trail identifies Thurston Gardens as a separately managed publicly visited heritage stop.",
+            "id": "auth:fj-public:Q4275602:fj-walk.pdf",
+            "license": null,
+            "publisher": "National Trust of Fiji",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 7c0fe0b0493f7f1c3b246b50207cc1877b95036fa95f44afd472063c26a13dee.",
+            "title": "Suva heritage walking trail",
+            "uri": "https://nationaltrust.org.fj/wp-content/uploads/2022/06/NTOF-Suva-walking-Trail.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 178.4247, latitude -18.1491.",
+            "id": "wikidata:Q4275602",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2570688050, statement q4275602$5A624021-BDE9-4272-967C-5AAED8EE849B.",
+            "title": "Thurston Gardens representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4275602.json"
+          }
+        ],
+        "source_uri": "https://nationaltrust.org.fj/wp-content/uploads/2022/06/NTOF-Suva-walking-Trail.pdf",
+        "title": "Thurston Gardens",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "fj-walk.pdf",
+          "sha256": "7c0fe0b0493f7f1c3b246b50207cc1877b95036fa95f44afd472063c26a13dee",
+          "uri": "https://nationaltrust.org.fj/wp-content/uploads/2022/06/NTOF-Suva-walking-Trail.pdf"
+        },
+        {
+          "filename": "Q4275602.json",
+          "sha256": "0b13ed28d6f84ec9d7e633024fdf7bf2de7ba67d2952772b76e2abebeb32bebf",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4275602.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "GeoNames feature point in WGS84, provided under CC BY 4.0.",
+        "point": [
+          178.42486,
+          -18.14716
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://sws.geonames.org/11202460/about.rdf",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Checked each frozen official visitor archive, selected CC0 statement, GeoNames RDF or two named published GPS entries against the exact original. Compared all earlier corpus and component points, reviewed fine-grained site scope and retained the stated licenses.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point is within the field of the heritage park. Public use follows event arrangements. Thurston Gardens is a different visitor area.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public record and representative point checked against frozen source evidence.",
+          "note": "This update provides no independently reviewed dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Trust of Fiji",
+          "Parliament of the Republic of Fiji",
+          "GeoNames"
+        ],
+        "description": "Public historic civic park in Suva, Fiji, where the Southern Cross aircraft landed on the trans-Pacific flight.",
+        "description_zh": "苏瓦艾伯特公园位于斐济，保留官方公众参观出处及已核对的地图代表点。",
+        "details": "The point is within the field of the heritage park. Public use follows event arrangements. Thurston Gardens is a different visitor area.",
+        "geography": {
+          "authority_id": "supplement:auth:fj-public:geonames-11202460",
+          "countries": [
+            "FJ"
+          ],
+          "note": "Public heritage property in Suva, Viti Levu.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official trail identifies the historic park and its role in the Southern Cross landing.",
+            "id": "auth:fj-public:geonames-11202460:fj-walk.pdf",
+            "license": null,
+            "publisher": "National Trust of Fiji",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 7c0fe0b0493f7f1c3b246b50207cc1877b95036fa95f44afd472063c26a13dee.",
+            "title": "Suva heritage walking trail",
+            "uri": "https://nationaltrust.org.fj/wp-content/uploads/2022/06/NTOF-Suva-walking-Trail.pdf"
+          }
+        },
+        "id": "auth:fj-public:geonames-11202460",
+        "location_precision": null,
+        "names": [
+          "苏瓦艾伯特公园",
+          "Albert Park",
+          "Suva Albert Park"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          178.42486,
+          -18.14716
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official trail identifies the historic park and its role in the Southern Cross landing.",
+            "id": "auth:fj-public:geonames-11202460:fj-walk.pdf",
+            "license": null,
+            "publisher": "National Trust of Fiji",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 7c0fe0b0493f7f1c3b246b50207cc1877b95036fa95f44afd472063c26a13dee.",
+            "title": "Suva heritage walking trail",
+            "uri": "https://nationaltrust.org.fj/wp-content/uploads/2022/06/NTOF-Suva-walking-Trail.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The debate describes Albert Park as a public cultural and civic site and reports public events.",
+            "id": "auth:fj-public:geonames-11202460:fj-albert-2026.pdf",
+            "license": null,
+            "publisher": "Parliament of the Republic of Fiji",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 03c6d7a2adbe388263be2d90dc6ac2bb1d2a2553e9e43c09c9dbf0b7c0d467c2.",
+            "title": "Parliamentary debate of 2 October 2026",
+            "uri": "https://www.parliament.gov.fj/wp-content/uploads/2026/10/Daily-Hansard-Friday-2nd-October-2026-1.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 178.42486, latitude -18.14716.",
+            "id": "geonames:11202460",
+            "license": "CC BY 4.0",
+            "publisher": "GeoNames",
+            "revision": "geonames:11202460, revised 2019-04-27.",
+            "title": "Albert Park representative coordinates",
+            "uri": "https://sws.geonames.org/11202460/about.rdf"
+          }
+        ],
+        "source_uri": "https://nationaltrust.org.fj/wp-content/uploads/2022/06/NTOF-Suva-walking-Trail.pdf",
+        "title": "Albert Park",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "fj-walk.pdf",
+          "sha256": "7c0fe0b0493f7f1c3b246b50207cc1877b95036fa95f44afd472063c26a13dee",
+          "uri": "https://nationaltrust.org.fj/wp-content/uploads/2022/06/NTOF-Suva-walking-Trail.pdf"
+        },
+        {
+          "filename": "fj-albert-2026.pdf",
+          "sha256": "03c6d7a2adbe388263be2d90dc6ac2bb1d2a2553e9e43c09c9dbf0b7c0d467c2",
+          "uri": "https://www.parliament.gov.fj/wp-content/uploads/2026/10/Daily-Hansard-Friday-2nd-October-2026-1.pdf"
+        },
+        {
+          "filename": "geonames-11202460.rdf",
+          "sha256": "7041fb734cd413bf6b8c27cb2326c127c4c773df1394ae820c1515cba7004329",
+          "uri": "https://sws.geonames.org/11202460/about.rdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Directly published coordinate in the named CC BY-SA 4.0 visitor listing. Independent map feature and government tourism source identify the same publicly described landmark.",
+        "point": [
+          -175.130268,
+          -21.192191
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://en.wikivoyage.org/w/index.php?title=Tongatapu&oldid=5431943",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Checked each frozen official visitor archive, selected CC0 statement, GeoNames RDF or two named published GPS entries against the exact original. Compared all earlier corpus and component points, reviewed fine-grained site scope and retained the stated licenses.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public historical marker commemorating Cook’s landing beside Fangaʻuta Lagoon in 1777. The modern visitor marker represents the named heritage site.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public record and representative point checked against frozen source evidence.",
+          "note": "This update provides no independently reviewed dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tonga Tourism Authority",
+          "Wikivoyage contributors"
+        ],
+        "description": "Public historical marker commemorating Cook’s landing beside Fangaʻuta Lagoon in 1777. The modern visitor marker represents the named heritage site.",
+        "description_zh": "库克船长登陆纪念地位于汤加塔布岛，点位对应政府游客资料中的公开纪念地。",
+        "details": "Public historical marker commemorating Cook’s landing beside Fangaʻuta Lagoon in 1777. The modern visitor marker represents the named heritage site.",
+        "geography": {
+          "authority_id": "supplement:auth:to-public:cook-landing-memorial",
+          "countries": [
+            "TO"
+          ],
+          "note": "Public named landmark in Alaki, Tongatapu, Tonga.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official visitor portal lists Captain Cook Landing Site in Tongatapu.",
+            "id": "auth:to-public:cook-landing-memorial:authority",
+            "license": null,
+            "publisher": "Tonga Tourism Authority",
+            "revision": "Named government visitor listing retrieved 2026-11-28.",
+            "title": "Captain Cook Landing Site",
+            "uri": "https://www.tongatourism.travel/see-and-do/captain-cook-landing-site"
+          }
+        },
+        "id": "auth:to-public:cook-landing-memorial",
+        "location_precision": null,
+        "names": [
+          "库克船长登陆纪念地",
+          "Captain Cook Landing Site"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -175.130268,
+          -21.192191
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official visitor portal lists Captain Cook Landing Site in Tongatapu.",
+            "id": "auth:to-public:cook-landing-memorial:authority",
+            "license": null,
+            "publisher": "Tonga Tourism Authority",
+            "revision": "Named government visitor listing retrieved 2026-11-28.",
+            "title": "Captain Cook Landing Site",
+            "uri": "https://www.tongatourism.travel/see-and-do/captain-cook-landing-site"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -175.130268, latitude -21.192191.",
+            "id": "wikivoyage:5431943:cook-landing-memorial",
+            "license": "CC BY-SA 4.0",
+            "publisher": "Wikivoyage contributors",
+            "revision": "Tongatapu permanent revision 5431943. Only the named listing’s coordinate is retained.",
+            "title": "Tongatapu listing for Captain Cook Landing Site",
+            "uri": "https://en.wikivoyage.org/w/index.php?title=Tongatapu&oldid=5431943"
+          }
+        ],
+        "source_uri": "https://www.tongatourism.travel/see-and-do/captain-cook-landing-site",
+        "title": "Captain Cook Landing Site",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "to-cook.html",
+          "sha256": "26e9c82bc5f5af6bbfa749ec2b916b3b51a9d1b88e49b336e56a09e544b18c55",
+          "uri": "https://www.tongatourism.travel/see-and-do/captain-cook-landing-site"
+        },
+        {
+          "filename": "to-wikivoyage.html",
+          "sha256": "18783608b6d2a6f48bd2de8c16437493edf5aa8923ce7bcfba8f4533b89ab2e2",
+          "uri": "https://en.wikivoyage.org/w/index.php?title=Tongatapu&oldid=5431943"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Directly published coordinate in the named CC BY-SA 4.0 visitor listing. Independent map feature and government tourism source identify the same publicly described landmark.",
+        "point": [
+          -175.323642,
+          -21.064047
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://en.wikivoyage.org/w/index.php?title=Tongatapu&oldid=5431943",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Checked each frozen official visitor archive, selected CC0 statement, GeoNames RDF or two named published GPS entries against the exact original. Compared all earlier corpus and component points, reviewed fine-grained site scope and retained the stated licenses.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public coastal landmark and commemorative plaque associated with the Tasman encounter at Haʻatafu. The point denotes the named visitor monument.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public record and representative point checked against frozen source evidence.",
+          "note": "This update provides no independently reviewed dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tonga Tourism Authority",
+          "Wikivoyage contributors"
+        ],
+        "description": "Public coastal landmark and commemorative plaque associated with the Tasman encounter at Haʻatafu. The point denotes the named visitor monument.",
+        "description_zh": "阿贝尔·塔斯曼登陆纪念地位于汤加塔布岛，点位对应政府游客资料中的公开纪念地。",
+        "details": "Public coastal landmark and commemorative plaque associated with the Tasman encounter at Haʻatafu. The point denotes the named visitor monument.",
+        "geography": {
+          "authority_id": "supplement:auth:to-public:tasman-landing-memorial",
+          "countries": [
+            "TO"
+          ],
+          "note": "Public named landmark in Ha’atafu, Tongatapu, Tonga.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official visitor portal lists Abel Tasman Landing Site in Tongatapu.",
+            "id": "auth:to-public:tasman-landing-memorial:authority",
+            "license": null,
+            "publisher": "Tonga Tourism Authority",
+            "revision": "Named government visitor listing retrieved 2026-11-28.",
+            "title": "Abel Tasman Landing Site",
+            "uri": "https://www.tongatourism.travel/see-and-do/abel-tasman-landing-site"
+          }
+        },
+        "id": "auth:to-public:tasman-landing-memorial",
+        "location_precision": null,
+        "names": [
+          "阿贝尔·塔斯曼登陆纪念地",
+          "Abel Tasman Landing Site"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -175.323642,
+          -21.064047
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official visitor portal lists Abel Tasman Landing Site in Tongatapu.",
+            "id": "auth:to-public:tasman-landing-memorial:authority",
+            "license": null,
+            "publisher": "Tonga Tourism Authority",
+            "revision": "Named government visitor listing retrieved 2026-11-28.",
+            "title": "Abel Tasman Landing Site",
+            "uri": "https://www.tongatourism.travel/see-and-do/abel-tasman-landing-site"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -175.323642, latitude -21.064047.",
+            "id": "wikivoyage:5431943:tasman-landing-memorial",
+            "license": "CC BY-SA 4.0",
+            "publisher": "Wikivoyage contributors",
+            "revision": "Tongatapu permanent revision 5431943. Only the named listing’s coordinate is retained.",
+            "title": "Tongatapu listing for Abel Tasman Landing Site",
+            "uri": "https://en.wikivoyage.org/w/index.php?title=Tongatapu&oldid=5431943"
+          }
+        ],
+        "source_uri": "https://www.tongatourism.travel/see-and-do/abel-tasman-landing-site",
+        "title": "Abel Tasman Landing Site",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "to-tasman.html",
+          "sha256": "7ec96629f5325b1b93bd574b0cc44a96992b8b0bc00c9e843eb2a01ca82e8f4d",
+          "uri": "https://www.tongatourism.travel/see-and-do/abel-tasman-landing-site"
+        },
+        {
+          "filename": "to-wikivoyage.html",
+          "sha256": "18783608b6d2a6f48bd2de8c16437493edf5aa8923ce7bcfba8f4533b89ab2e2",
+          "uri": "https://en.wikivoyage.org/w/index.php?title=Tongatapu&oldid=5431943"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata P625 representative point; independent placement check reported in QA.",
+        "point": [
+          167.2458333,
+          -15.52583333
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1343406.json",
+        "statement_id": "Q1343406$C64999DC-D319-4E83-9C25-F3B419FFCB62"
+      },
+      "independent_review": {
+        "method": "Checked each frozen official visitor archive, selected CC0 statement, GeoNames RDF or two named published GPS entries against the exact original. Compared all earlier corpus and component points, reviewed fine-grained site scope and retained the stated licenses.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The marker represents the published heritage area off the coast. Access follows the locally designated diving or snorkeling arrangements. SS President Coolidge is a separate wreck site.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public record and representative point checked against frozen source evidence.",
+          "note": "This update provides no independently reviewed dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Vanuatu Tourism Office",
+          "Government of Vanuatu, hosted by the Pacific Community",
+          "Wikidata contributors"
+        ],
+        "description": "Publicly interpreted historic underwater area off Espiritu Santo where discarded World War II equipment remains.",
+        "description_zh": "百万美元角水下遗址位于瓦努阿图，保留官方公众参观出处及已核对的地图代表点。",
+        "details": "The marker represents the published heritage area off the coast. Access follows the locally designated diving or snorkeling arrangements. SS President Coolidge is a separate wreck site.",
+        "geography": {
+          "authority_id": "supplement:auth:vu-public:Q1343406",
+          "countries": [
+            "VU"
+          ],
+          "note": "Public heritage property in Luganville, Espiritu Santo.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism office identifies Million Dollar Point as a separately named visitor site for guided marine visits.",
+            "id": "auth:vu-public:Q1343406:vu-santo.html",
+            "license": null,
+            "publisher": "Vanuatu Tourism Office",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 03ae57d15a0abdf1d163bb71691f8d9d83c07fe9a0f4a7dbaf4e625d21559774.",
+            "title": "Espiritu Santo public World War II heritage visitor information",
+            "uri": "https://www.vanuatu.travel/en/blog/exploring-espiritu-santo-wwii-heritage"
+          }
+        },
+        "id": "auth:vu-public:Q1343406",
+        "location_precision": null,
+        "names": [
+          "百万美元角水下遗址",
+          "Million Dollar Point",
+          "One Million Dollar Point"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          167.2458333,
+          -15.52583333
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism office identifies Million Dollar Point as a separately named visitor site for guided marine visits.",
+            "id": "auth:vu-public:Q1343406:vu-santo.html",
+            "license": null,
+            "publisher": "Vanuatu Tourism Office",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 03ae57d15a0abdf1d163bb71691f8d9d83c07fe9a0f4a7dbaf4e625d21559774.",
+            "title": "Espiritu Santo public World War II heritage visitor information",
+            "uri": "https://www.vanuatu.travel/en/blog/exploring-espiritu-santo-wwii-heritage"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The Marine Reserve declaration names Million Dollar Point within the protected waters.",
+            "id": "auth:vu-public:Q1343406:vu-marine-act.pdf",
+            "license": null,
+            "publisher": "Government of Vanuatu, hosted by the Pacific Community",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 ff3c89b8107b1dac2d0cfe08d917f5095a7e0536cda20e3ec20bd799d19fb778.",
+            "title": "Marine reserve provisions for Santo",
+            "uri": "https://coastfish.spc.int/Countries/Vanuatu/vanuatu.leg.ffa.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 167.2458333, latitude -15.52583333.",
+            "id": "wikidata:Q1343406",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2270427696, statement Q1343406$C64999DC-D319-4E83-9C25-F3B419FFCB62.",
+            "title": "Million Dollar Point representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1343406.json"
+          }
+        ],
+        "source_uri": "https://www.vanuatu.travel/en/blog/exploring-espiritu-santo-wwii-heritage",
+        "title": "Million Dollar Point",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "vu-santo.html",
+          "sha256": "03ae57d15a0abdf1d163bb71691f8d9d83c07fe9a0f4a7dbaf4e625d21559774",
+          "uri": "https://www.vanuatu.travel/en/blog/exploring-espiritu-santo-wwii-heritage"
+        },
+        {
+          "filename": "vu-marine-act.pdf",
+          "sha256": "ff3c89b8107b1dac2d0cfe08d917f5095a7e0536cda20e3ec20bd799d19fb778",
+          "uri": "https://coastfish.spc.int/Countries/Vanuatu/vanuatu.leg.ffa.pdf"
+        },
+        {
+          "filename": "Q1343406.json",
+          "sha256": "ad82586a83286cf09a958ee0c38284a90b5bd99f7ed918ca0d4fc517878cb161",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1343406.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata P625 representative point; independent placement check reported in QA.",
+        "point": [
+          167.23521667,
+          -15.5242
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7394233.json",
+        "statement_id": "Q7394233$B18D009B-682F-489D-9624-E1D64B8B0712"
+      },
+      "independent_review": {
+        "method": "Checked each frozen official visitor archive, selected CC0 statement, GeoNames RDF or two named published GPS entries against the exact original. Compared all earlier corpus and component points, reviewed fine-grained site scope and retained the stated licenses.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point marks the wreck itself within the marine reserve, distinct from Million Dollar Point and the shore approach. Entry follows official and licensed-operator arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public record and representative point checked against frozen source evidence.",
+          "note": "This update provides no independently reviewed dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Vanuatu Tourism Office",
+          "Government of Vanuatu, hosted by the Pacific Community",
+          "Wikidata contributors"
+        ],
+        "description": "Historic shipwreck off Espiritu Santo, interpreted through designated guided visitor dives.",
+        "description_zh": "柯立芝总统号沉船遗址位于瓦努阿图，保留官方公众参观出处及已核对的地图代表点。",
+        "details": "The point marks the wreck itself within the marine reserve, distinct from Million Dollar Point and the shore approach. Entry follows official and licensed-operator arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:vu-public:Q7394233",
+          "countries": [
+            "VU"
+          ],
+          "note": "Public heritage property in Luganville, Espiritu Santo.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism office lists the wreck as a named visitor site and describes guided diving access.",
+            "id": "auth:vu-public:Q7394233:vu-santo-dives.html",
+            "license": null,
+            "publisher": "Vanuatu Tourism Office",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 442b4bd1bffd5b91c833f817fca41cafc6c2c87d524bb1c0565c154b339eec12.",
+            "title": "Visitor information for historic wreck dives at Espiritu Santo",
+            "uri": "https://www.vanuatu.travel/en/blog/top-wreck-dives-in-espiritu-santo"
+          }
+        },
+        "id": "auth:vu-public:Q7394233",
+        "location_precision": null,
+        "names": [
+          "柯立芝总统号沉船遗址",
+          "Wreck of SS President Coolidge",
+          "SS President Coolidge",
+          "President Coolidge wreck"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          167.23521667,
+          -15.5242
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism office lists the wreck as a named visitor site and describes guided diving access.",
+            "id": "auth:vu-public:Q7394233:vu-santo-dives.html",
+            "license": null,
+            "publisher": "Vanuatu Tourism Office",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 442b4bd1bffd5b91c833f817fca41cafc6c2c87d524bb1c0565c154b339eec12.",
+            "title": "Visitor information for historic wreck dives at Espiritu Santo",
+            "uri": "https://www.vanuatu.travel/en/blog/top-wreck-dives-in-espiritu-santo"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The Marine Reserve declaration names President Coolidge within the protected waters.",
+            "id": "auth:vu-public:Q7394233:vu-marine-act.pdf",
+            "license": null,
+            "publisher": "Government of Vanuatu, hosted by the Pacific Community",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 ff3c89b8107b1dac2d0cfe08d917f5095a7e0536cda20e3ec20bd799d19fb778.",
+            "title": "Marine reserve provisions for Santo",
+            "uri": "https://coastfish.spc.int/Countries/Vanuatu/vanuatu.leg.ffa.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 167.23521667, latitude -15.5242.",
+            "id": "wikidata:Q7394233",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2333348291, statement Q7394233$B18D009B-682F-489D-9624-E1D64B8B0712.",
+            "title": "Wreck of SS President Coolidge representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7394233.json"
+          }
+        ],
+        "source_uri": "https://www.vanuatu.travel/en/blog/top-wreck-dives-in-espiritu-santo",
+        "title": "Wreck of SS President Coolidge",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "vu-santo-dives.html",
+          "sha256": "442b4bd1bffd5b91c833f817fca41cafc6c2c87d524bb1c0565c154b339eec12",
+          "uri": "https://www.vanuatu.travel/en/blog/top-wreck-dives-in-espiritu-santo"
+        },
+        {
+          "filename": "vu-marine-act.pdf",
+          "sha256": "ff3c89b8107b1dac2d0cfe08d917f5095a7e0536cda20e3ec20bd799d19fb778",
+          "uri": "https://coastfish.spc.int/Countries/Vanuatu/vanuatu.leg.ffa.pdf"
+        },
+        {
+          "filename": "Q7394233.json",
+          "sha256": "d06ebe2b5318673c2cd27a399e3a5857ef8e011b685920d5393652979f681099",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7394233.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata P625 representative point; independent placement check reported in QA.",
+        "point": [
+          -171.7629,
+          -13.8397
+        ],
+        "precision": null,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q106628284.json",
+        "statement_id": "Q106628284$7397adf9-4d50-4e91-a275-bb239897be9b"
+      },
+      "independent_review": {
+        "method": "Checked each frozen official visitor archive, selected CC0 statement, GeoNames RDF or two named published GPS entries against the exact original. Compared all earlier corpus and component points, reviewed fine-grained site scope and retained the stated licenses.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point denotes the original Malifa school building now used as the museum. The source’s invalid negative precision is left unspecified.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public record and representative point checked against frozen source evidence.",
+          "note": "This update provides no independently reviewed dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Samoa Tourism Authority",
+          "Wikidata contributors"
+        ],
+        "description": "Public national museum housed in a former German school building in Apia, Samoa.",
+        "description_zh": "萨摩亚国家博物馆旧校舍位于萨摩亚，保留官方公众参观出处及已核对的地图代表点。",
+        "details": "The point denotes the original Malifa school building now used as the museum. The source’s invalid negative precision is left unspecified.",
+        "geography": {
+          "authority_id": "supplement:auth:ws-public:Q106628284",
+          "countries": [
+            "WS"
+          ],
+          "note": "Public heritage property in Malifa, Apia, Upolu.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism authority identifies the museum as open to visitors in a former German school on Vaitele Street.",
+            "id": "auth:ws-public:Q106628284:ws-tourism-museum.html",
+            "license": null,
+            "publisher": "Samoa Tourism Authority",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 852b2a9d970e9f46500060a1bcce96cd1baba4e66a4519a0f00b8f9a6dae5e10.",
+            "title": "Apia visitor information",
+            "uri": "https://samoa.travel/discover/the-islands-of-samoa/upolu-island/apia/"
+          }
+        },
+        "id": "auth:ws-public:Q106628284",
+        "location_precision": null,
+        "names": [
+          "萨摩亚国家博物馆旧校舍",
+          "Falemata’aga – Museum of Samoa",
+          "Museum of Samoa",
+          "Falemataʻaga",
+          "Former German school in Malifa"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -171.7629,
+          -13.8397
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism authority identifies the museum as open to visitors in a former German school on Vaitele Street.",
+            "id": "auth:ws-public:Q106628284:ws-tourism-museum.html",
+            "license": null,
+            "publisher": "Samoa Tourism Authority",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 852b2a9d970e9f46500060a1bcce96cd1baba4e66a4519a0f00b8f9a6dae5e10.",
+            "title": "Apia visitor information",
+            "uri": "https://samoa.travel/discover/the-islands-of-samoa/upolu-island/apia/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -171.7629, latitude -13.8397.",
+            "id": "wikidata:Q106628284",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2478099773, statement Q106628284$7397adf9-4d50-4e91-a275-bb239897be9b.",
+            "title": "Falemata’aga – Museum of Samoa representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q106628284.json"
+          }
+        ],
+        "source_uri": "https://samoa.travel/discover/the-islands-of-samoa/upolu-island/apia/",
+        "title": "Falemata’aga – Museum of Samoa",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "ws-tourism-museum.html",
+          "sha256": "852b2a9d970e9f46500060a1bcce96cd1baba4e66a4519a0f00b8f9a6dae5e10",
+          "uri": "https://samoa.travel/discover/the-islands-of-samoa/upolu-island/apia/"
+        },
+        {
+          "filename": "Q106628284.json",
+          "sha256": "b764e836e9f7d3311fd78db958a25248622d146e791292d4e550b230ae14c377",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q106628284.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Active Wikidata P625 representative point; independent placement check reported in QA.",
+        "point": [
+          -171.76555555555555,
+          -13.866666666666667
+        ],
+        "precision": 0.0002777777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q106913447.json",
+        "statement_id": "Q106913447$996096ef-460f-5759-15a8-36966fcdb736"
+      },
+      "independent_review": {
+        "method": "Checked each frozen official visitor archive, selected CC0 statement, GeoNames RDF or two named published GPS entries against the exact original. Compared all earlier corpus and component points, reviewed fine-grained site scope and retained the stated licenses.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point is the original house and its public museum grounds. The linked reserve also describes the separate summit trail, which receives no added point.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public record and representative point checked against frozen source evidence.",
+          "note": "This update provides no independently reviewed dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Samoa Tourism Authority",
+          "Robert Louis Stevenson literary research site",
+          "Wikidata contributors"
+        ],
+        "description": "Public museum in Robert Louis Stevenson’s restored former residence at Vailima in Samoa.",
+        "description_zh": "韦利马史蒂文森故居位于萨摩亚，保留官方公众参观出处及已核对的地图代表点。",
+        "details": "The point is the original house and its public museum grounds. The linked reserve also describes the separate summit trail, which receives no added point.",
+        "geography": {
+          "authority_id": "supplement:auth:ws-public:Q106913447",
+          "countries": [
+            "WS"
+          ],
+          "note": "Public heritage property in Vailima, Apia, Upolu.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism authority identifies the original Vailima mansion and offers visitor tours of the museum.",
+            "id": "auth:ws-public:Q106913447:ws-tourism-reserve.html",
+            "license": null,
+            "publisher": "Samoa Tourism Authority",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 8863473cdcc03cb74a69eb86240d421f057c748606a9e4f8070e2a23003c87d0.",
+            "title": "Vailima National Reserve visitor information",
+            "uri": "https://samoa.travel/plan-book/activities/vailima-national-reserve/"
+          }
+        },
+        "id": "auth:ws-public:Q106913447",
+        "location_precision": null,
+        "names": [
+          "韦利马史蒂文森故居",
+          "Villa Vailima",
+          "Robert Louis Stevenson Museum",
+          "Villa Vailima restored residence"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -171.76555555555555,
+          -13.866666666666667
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tourism authority identifies the original Vailima mansion and offers visitor tours of the museum.",
+            "id": "auth:ws-public:Q106913447:ws-tourism-reserve.html",
+            "license": null,
+            "publisher": "Samoa Tourism Authority",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 8863473cdcc03cb74a69eb86240d421f057c748606a9e4f8070e2a23003c87d0.",
+            "title": "Vailima National Reserve visitor information",
+            "uri": "https://samoa.travel/plan-book/activities/vailima-national-reserve/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The preservation foundation opened the restored residence to the public in 1994.",
+            "id": "auth:ws-public:Q106913447:ws-vailima-foundation.html",
+            "license": null,
+            "publisher": "Robert Louis Stevenson literary research site",
+            "revision": "Snapshot retrieved 2026-11-28, SHA-256 3eaf10cfbda9ee8e753191eb51ce2c40271fa33f23721f1ab53cbfa013b97227.",
+            "title": "Robert Louis Stevenson Museum in Vailima",
+            "uri": "https://robert-louis-stevenson.org/109-samoa-museum-western-samoa/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -171.76555555555555, latitude -13.866666666666667.",
+            "id": "wikidata:Q106913447",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2516017539, statement Q106913447$996096ef-460f-5759-15a8-36966fcdb736.",
+            "title": "Villa Vailima representative coordinates",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q106913447.json"
+          }
+        ],
+        "source_uri": "https://samoa.travel/plan-book/activities/vailima-national-reserve/",
+        "title": "Villa Vailima",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "ws-tourism-reserve.html",
+          "sha256": "8863473cdcc03cb74a69eb86240d421f057c748606a9e4f8070e2a23003c87d0",
+          "uri": "https://samoa.travel/plan-book/activities/vailima-national-reserve/"
+        },
+        {
+          "filename": "ws-vailima-foundation.html",
+          "sha256": "3eaf10cfbda9ee8e753191eb51ce2c40271fa33f23721f1ab53cbfa013b97227",
+          "uri": "https://robert-louis-stevenson.org/109-samoa-museum-western-samoa/"
+        },
+        {
+          "filename": "Q106913447.json",
+          "sha256": "154e3959019b3797afe09609433b307e8743e5033def24ae307b2a36566b4338",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q106913447.json"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Eight government-documented public cultural properties in Tonga, Samoa, Fiji and Vanuatu with independently verified original points."
+}

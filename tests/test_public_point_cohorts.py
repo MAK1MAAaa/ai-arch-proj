@@ -117,6 +117,17 @@ def test_public_point_search_catalogue_and_provenance(
             ("KN", "auth:kn-public:", 2),
             ("TN", "auth:tn-public:", 8),
             ("MA", "auth:ma-public:", 8),
+            ("BZ", "auth:bz-public:", 8),
+            ("GT", "auth:gt-public:", 8),
+            ("HN", "auth:hn-public:", 5),
+            ("SV", "auth:sv-public:", 4),
+            ("TO", "auth:to-public:", 2),
+            ("WS", "auth:ws-public:", 2),
+            ("FJ", "auth:fj-public:", 2),
+            ("VU", "auth:vu-public:", 2),
+            ("TZ", "auth:tz-public:", 5),
+            ("UG", "auth:ug-public:", 8),
+            ("KE", "auth:ke-public:", 6),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -171,3 +182,14 @@ def test_public_point_search_catalogue_and_provenance(
         lixus = client.get("/api/sites/auth:ma-public:Q923835").json()
         assert lixus["repr_point"] == [-6.109951512805376, 35.2002398463664]
         assert "M. Euzennat" in lixus["contributors"]
+        lubaantun = client.get("/api/sites/auth:bz-public:geonames-3581772").json()
+        assert lubaantun["repr_point"] == [-88.95955, 16.28203]
+        cook = client.get("/api/sites/auth:to-public:cook-landing-memorial").json()
+        assert cook["repr_point"] == [-175.130268, -21.192191]
+        assert "CC BY-SA 4.0" in {source["license"] for source in cook["source_refs"]}
+        mtoni = client.get("/api/sites/auth:tz-public:geonames-11791590").json()
+        assert mtoni["repr_point"] == [39.21337, -6.13553]
+        assert client.get("/api/sites/auth:tz-public:geonames-161342").status_code == 404
+        olorgesailie = client.get("/api/sites/auth:ke-public:geonames-182034").json()
+        assert olorgesailie["repr_point"] == [36.44602, -1.57763]
+        assert client.get("/api/sites/auth:ke-public:geonames-193774").status_code == 404
