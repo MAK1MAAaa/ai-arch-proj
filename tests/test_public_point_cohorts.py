@@ -143,6 +143,10 @@ def test_public_point_search_catalogue_and_provenance(
             ("BW", "auth:bw-public:", 2),
             ("ZW", "auth:zw-public:", 1),
             ("ZM", "auth:zm-public:", 2),
+            ("ID", "auth:id-public:", 19),
+            ("KG", "auth:kg-public:", 6),
+            ("TJ", "auth:tj-public:", 2),
+            ("GB", "auth:gb-dfc-hed:", 60),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -259,3 +263,24 @@ def test_public_point_search_catalogue_and_provenance(
         harare_heroes = client.get("/api/sites/auth:zw-public:Q6973056").json()
         assert harare_heroes["geography"]["countries"] == ["ZW"]
         assert harare_heroes["repr_point"] != windhoek_heroes["repr_point"]
+        leang = client.get("/api/sites/auth:id-public:Q19944351").json()
+        assert leang["repr_point"] == [119.67572, -4.97922]
+        assert leang["chronology"]["status"] == "insufficient"
+        goa_gajah = client.get("/api/sites/auth:id-public:Q2037360").json()
+        assert goa_gajah["repr_point"] == [115.286333, -8.523389]
+        assert "south of the Pekerisan World Heritage component" in goa_gajah["details"]
+        koshoy = client.get("/api/sites/auth:kg-public:Q2512688").json()
+        assert koshoy["repr_point"] == [75.69861, 41.12372]
+        assert any(
+            ref["license"] == "CC BY 4.0" and "/11888204/" in ref["uri"]
+            for ref in koshoy["source_refs"]
+        )
+        tynan = client.get("/api/sites/auth:gb-dfc-hed:ARM011-014").json()
+        assert tynan["repr_point"] == [-6.82300740947656, 54.3299912169035]
+        assert "现展示位置" in tynan["description_zh"]
+        assert any(
+            ref["publisher"] == "Historic Environment Division, Department for Communities"
+            and ref["license"] == "UK Open Government Licence v3.0"
+            and "Crown copyright" in ref["excerpt"]
+            for ref in tynan["source_refs"]
+        )
