@@ -1,0 +1,22 @@
+{
+  "base_count": 5121,
+  "base_ids_sha256": "3ffb7306a9359b680e990c738648c1e792278ac82549b19a81c3a740053d07a7",
+  "base_sites_sha256": "c38ba33963ba8699b95ac31cda0e7e92159188b1b8bafed1c1f1beef2d990809",
+  "cohort_version": "poland-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 20,
+    "total": 5141
+  },
+  "files": {
+    "poland_public_review.json": {
+      "sha256": "7381d6b8f382d0686f55429f2eeab715fa2206a2643997b9ebaf627b6b60da1d"
+    },
+    "poland_public_sites.json": {
+      "sha256": "e582adffbd9a74107d0e88a53706cb72d3d2d1f6bae51e9e54d0f626361702e0"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Nineteen public historic places and one archaeological reservation across nine Polish provinces, with current access and source-overlap screening."
+}

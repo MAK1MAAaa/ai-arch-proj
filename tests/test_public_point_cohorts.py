@@ -181,6 +181,11 @@ def test_public_point_search_catalogue_and_provenance(
             ("DZ", "auth:dz-public:", 5),
             ("SE", "auth:se-public:", 26),
             ("SE", "auth:se-raa:", 2),
+            ("PL", "auth:pl-public:", 20),
+            ("CV", "auth:cv-public:", 4),
+            ("CM", "auth:cm-public:", 4),
+            ("CO", "auth:co-public:", 6),
+            ("VE", "auth:ve-public:", 4),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -462,3 +467,18 @@ def test_public_point_search_catalogue_and_provenance(
             ref["license"] == "CC BY-SA 4.0" and "oldid=1386365601" in ref["uri"]
             for ref in rodberget["source_refs"]
         )
+
+        frombork = client.get("/api/sites/auth:pl-public:Q478321").json()
+        assert frombork["repr_point"] == [19.68166667, 54.35708333]
+        assert any(
+            ref["uri"] == "https://bilety.muzeumfrombork.pl/" for ref in frombork["source_refs"]
+        )
+        batoufam = client.get("/api/sites/auth:cm-public:Q30744186").json()
+        assert "public forecourt" in batoufam["details"]
+        assert client.get("/api/sites/auth:cv-public:Q106807076").status_code == 404
+
+        gabo = client.get("/api/sites/auth:co-public:Q127694594").json()
+        assert "reconstructed childhood house" in gabo["details"]
+        assert any(ref["publisher"] == "Museo Nacional de Colombia" for ref in gabo["source_refs"])
+        cumana = client.get("/api/sites/auth:ve-public:Q5558033").json()
+        assert "publicly approached exterior" in cumana["details"]

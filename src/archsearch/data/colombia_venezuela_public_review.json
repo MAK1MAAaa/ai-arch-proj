@@ -1,0 +1,1324 @@
+{
+  "base_count": 5149,
+  "base_ids_sha256": "4a8463e9ae8cb1d085ce3849cb32c6a07a5a15a21fdc6525520f973f7a785f6d",
+  "base_sites_sha256": "8d00baccf9c6ff8ac8eb58d4c314c0621a667db6334e4bc820313c8d41129389",
+  "cohort_version": "colombia-venezuela-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified Wikidata WGS84 representative point. ",
+        "point": [
+          -74.19277453355811,
+          10.592378708258476
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q127694594.json",
+        "statement_id": "Q127694594$087df600-42a8-a6e4-4974-99b06a413780"
+      },
+      "independent_review": {
+        "method": "Independent agent checked original identity and public visitor extent, exact CC0 claims and precision, verified source snapshots, corpus identities and coordinate overlap, and registered World Heritage footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The reconstructed childhood house on the historic family property in Aracataca. The managed public visit is to that site and its museum rooms.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named original site and official visitor scope checked.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Universidad del Magdalena",
+          "Wikidata contributors"
+        ],
+        "description": "The reconstructed childhood house on the historic family property in Aracataca. The managed public visit is to that site and its museum rooms.",
+        "description_zh": "加夫列尔·加西亚·马尔克斯故居博物馆位于哥伦比亚。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+        "details": "The reconstructed childhood house on the historic family property in Aracataca. The managed public visit is to that site and its museum rooms.",
+        "geography": {
+          "authority_id": "supplement:auth:co-public:Q127694594",
+          "countries": [
+            "CO"
+          ],
+          "note": "Named original location. Representative point only.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The university identifies the museum at the former family home in Aracataca and its regular visitor role.",
+            "id": "auth:co-public:Q127694594:co-gabo-operator.html",
+            "license": null,
+            "publisher": "Universidad del Magdalena",
+            "revision": "Frozen source file 2026-11-28. SHA-256 eabe660b17c6c31820897cbe35dd402658b30e1115bfe78478afe58664c9485a.",
+            "title": "Casa Museo Gabriel García Márquez visitor scope and site identity",
+            "uri": "https://www.unimagdalena.edu.co/PresentacionMicrositio/Micrositios/2087"
+          }
+        },
+        "id": "auth:co-public:Q127694594",
+        "location_precision": null,
+        "names": [
+          "加夫列尔·加西亚·马尔克斯故居博物馆"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -74.19277453355811,
+          10.592378708258476
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The university identifies the museum at the former family home in Aracataca and its regular visitor role.",
+            "id": "auth:co-public:Q127694594:co-gabo-operator.html",
+            "license": null,
+            "publisher": "Universidad del Magdalena",
+            "revision": "Frozen source file 2026-11-28. SHA-256 eabe660b17c6c31820897cbe35dd402658b30e1115bfe78478afe58664c9485a.",
+            "title": "Casa Museo Gabriel García Márquez visitor scope and site identity",
+            "uri": "https://www.unimagdalena.edu.co/PresentacionMicrositio/Micrositios/2087"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operating university documents the museum's public reopening after the pandemic closure.",
+            "id": "auth:co-public:Q127694594:co-gabo.html",
+            "license": null,
+            "publisher": "Universidad del Magdalena",
+            "revision": "Frozen source file 2026-11-28. SHA-256 14c44dbbfbae5f811bc921297736cd8b5b95052ee1f14d4f3c6abf6cc2c15c85.",
+            "title": "Casa Museo Gabriel García Márquez visitor scope and site identity",
+            "uri": "https://www.unimagdalena.edu.co/presentacionPublicacion/VerNoticia/132785"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -74.19277453355811, latitude 10.592378708258476.",
+            "id": "wikidata:Q127694594",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2530471572; P625 Q127694594$087df600-42a8-a6e4-4974-99b06a413780.",
+            "title": "Casa Museo Gabriel García Márquez representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q127694594.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The National Museum published dates for the Nara Tayeriya exhibition at this house museum in 2026.",
+            "id": "auth:co-public:Q127694594:co-gabo-national-2026.html",
+            "license": null,
+            "publisher": "Museo Nacional de Colombia",
+            "revision": "Frozen source file 2026-11-28. SHA-256 e804e8a856cc1ff8dab42065c4161756545dfceee9a1953314f8fc8c008296c8.",
+            "title": "Nara Tayeriya at the Casa Museo Gabriel García Márquez",
+            "uri": "https://www.museonacional.gov.co/noticias/Paginas/Ette_Naka.aspx"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The department included the museum among venues for its September 2026 Festival Macondo programme.",
+            "id": "auth:co-public:Q127694594:co-gabo-magdalena-20260905-web.txt",
+            "license": null,
+            "publisher": "Gobernación del Magdalena",
+            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 62093f4b267e823764387a380072817e3c4798d9f04c8fab564d2592e60d0902.",
+            "title": "Public Festival Macondo programme, September 2026",
+            "uri": "https://www.gobernaciondelmagdalena.gov.co/el-universo-de-gabo-y-escalona-cobra-vida-con-el-festival-macondo/"
+          }
+        ],
+        "source_uri": "https://www.unimagdalena.edu.co/PresentacionMicrositio/Micrositios/2087",
+        "title": "Casa Museo Gabriel García Márquez",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q127694594.json",
+          "sha256": "7bf8fc9f453a272e6d4c79ca8319fec0300d9fa772bdbf97471779e53841f50d",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q127694594.json"
+        },
+        {
+          "filename": "co-gabo-operator.html",
+          "sha256": "eabe660b17c6c31820897cbe35dd402658b30e1115bfe78478afe58664c9485a",
+          "uri": "https://www.unimagdalena.edu.co/PresentacionMicrositio/Micrositios/2087"
+        },
+        {
+          "filename": "co-gabo.html",
+          "sha256": "14c44dbbfbae5f811bc921297736cd8b5b95052ee1f14d4f3c6abf6cc2c15c85",
+          "uri": "https://www.unimagdalena.edu.co/presentacionPublicacion/VerNoticia/132785"
+        },
+        {
+          "filename": "co-gabo-national-2026.html",
+          "sha256": "e804e8a856cc1ff8dab42065c4161756545dfceee9a1953314f8fc8c008296c8",
+          "uri": "https://www.museonacional.gov.co/noticias/Paginas/Ette_Naka.aspx"
+        },
+        {
+          "filename": "co-gabo-magdalena-20260905-web.txt",
+          "sha256": "62093f4b267e823764387a380072817e3c4798d9f04c8fab564d2592e60d0902",
+          "uri": "https://www.gobernaciondelmagdalena.gov.co/el-universo-de-gabo-y-escalona-cobra-vida-con-el-festival-macondo/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified Wikidata WGS84 representative point. The reusable point is the separately listed mineralogical museum within the historic mine visitor complex. The mine's general Wikidata item Q23007996 does not supply a point.",
+        "point": [
+          -73.874638,
+          5.063888
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q137205548.json",
+        "statement_id": "Q137205548$6b431c81-414a-7aa3-5cdf-73476fcc95dc"
+      },
+      "independent_review": {
+        "method": "Independent agent checked original identity and public visitor extent, exact CC0 claims and precision, verified source snapshots, corpus identities and coordinate overlap, and registered World Heritage footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic salt mine in Nemocón and its managed visitor entrance. Admission covers the designated underground tour, subject to the operator's conditions.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named original site and official visitor scope checked.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Nemocón tourist mine ticketing service",
+          "Gobernación de Cundinamarca",
+          "Wikidata contributors"
+        ],
+        "description": "The historic salt mine in Nemocón and its managed visitor entrance. Admission covers the designated underground tour, subject to the operator's conditions.",
+        "description_zh": "内莫孔历史盐矿参观区位于哥伦比亚。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+        "details": "The historic salt mine in Nemocón and its managed visitor entrance. Admission covers the designated underground tour, subject to the operator's conditions.",
+        "geography": {
+          "authority_id": "supplement:auth:co-public:Q137205548",
+          "countries": [
+            "CO"
+          ],
+          "note": "Named original location. Representative point only.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official ticketing channel describes the managed tour of the original mine.",
+            "id": "auth:co-public:Q137205548:co-nemocon.html",
+            "license": null,
+            "publisher": "Nemocón tourist mine ticketing service",
+            "revision": "Frozen source file 2026-11-28. SHA-256 6af3c4874687538e21b6afc1a751c7f35584d3110b3ec10a34d92870ddd2a824.",
+            "title": "Mina de Sal de Nemocón historic visitor complex visitor scope and site identity",
+            "uri": "https://nemoconturistica.com/"
+          }
+        },
+        "id": "auth:co-public:Q137205548",
+        "location_precision": null,
+        "names": [
+          "内莫孔历史盐矿参观区"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -73.874638,
+          5.063888
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official ticketing channel describes the managed tour of the original mine.",
+            "id": "auth:co-public:Q137205548:co-nemocon.html",
+            "license": null,
+            "publisher": "Nemocón tourist mine ticketing service",
+            "revision": "Frozen source file 2026-11-28. SHA-256 6af3c4874687538e21b6afc1a751c7f35584d3110b3ec10a34d92870ddd2a824.",
+            "title": "Mina de Sal de Nemocón historic visitor complex visitor scope and site identity",
+            "uri": "https://nemoconturistica.com/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The departmental broadcaster distinguishes the historic mine and the currently operated underground visitor route.",
+            "id": "auth:co-public:Q137205548:co-nemocon-cundinamarca.html",
+            "license": null,
+            "publisher": "Gobernación de Cundinamarca",
+            "revision": "Frozen source file 2026-11-28. SHA-256 5ff1a1ca323b6bf894f9096cdba39d242800a27984436d600db06a1e79cbdadb.",
+            "title": "Mina de Sal de Nemocón historic visitor complex visitor scope and site identity",
+            "uri": "https://eldoradoradio.cundinamarca.gov.co/noticias/mina-de-sal-de-nemocon-invita-a-recorrer-mas-de-500-anos-de-historia-bajo-tierra/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -73.874638, latitude 5.063888.",
+            "id": "wikidata:Q137205548",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2555942253; P625 Q137205548$6b431c81-414a-7aa3-5cdf-73476fcc95dc.",
+            "title": "Mina de Sal de Nemocón historic visitor complex representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q137205548.json"
+          }
+        ],
+        "source_uri": "https://nemoconturistica.com/",
+        "title": "Mina de Sal de Nemocón historic visitor complex",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q137205548.json",
+          "sha256": "ddfc90b1d9df34b08fa08cf1c383d27b4a26b51b87390584a25558e6a8e13ea2",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q137205548.json"
+        },
+        {
+          "filename": "co-nemocon.html",
+          "sha256": "6af3c4874687538e21b6afc1a751c7f35584d3110b3ec10a34d92870ddd2a824",
+          "uri": "https://nemoconturistica.com/"
+        },
+        {
+          "filename": "co-nemocon-cundinamarca.html",
+          "sha256": "5ff1a1ca323b6bf894f9096cdba39d242800a27984436d600db06a1e79cbdadb",
+          "uri": "https://eldoradoradio.cundinamarca.gov.co/noticias/mina-de-sal-de-nemocon-invita-a-recorrer-mas-de-500-anos-de-historia-bajo-tierra/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified Wikidata WGS84 representative point. ",
+        "point": [
+          -73.43027778,
+          5.45055556
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3396894.json",
+        "statement_id": "Q3396894$2905F6DC-CAEB-45BA-BA1F-966737AE1CF0"
+      },
+      "independent_review": {
+        "method": "Independent agent checked original identity and public visitor extent, exact CC0 claims and precision, verified source snapshots, corpus identities and coordinate overlap, and registered World Heritage footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic Teatinos River crossing and the publicly interpreted memorial precinct at Campo de Boyacá in Ventaquemada. The record covers the visited crossing and public monuments on the original battlefield site.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named original site and official visitor scope checked.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Sistema de Información Turística de Boyacá",
+          "Wikidata contributors"
+        ],
+        "description": "The historic Teatinos River crossing and the publicly interpreted memorial precinct at Campo de Boyacá in Ventaquemada. The record covers the visited crossing and public monuments on the original battlefield site.",
+        "description_zh": "博亚卡桥纪念区位于哥伦比亚。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+        "details": "The historic Teatinos River crossing and the publicly interpreted memorial precinct at Campo de Boyacá in Ventaquemada. The record covers the visited crossing and public monuments on the original battlefield site.",
+        "geography": {
+          "authority_id": "supplement:auth:co-public:Q3396894",
+          "countries": [
+            "CO"
+          ],
+          "note": "Named original location. Representative point only.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The Boyacá tourism service names the bridge, its setting by the Teatinos River and the associated public memorial precinct.",
+            "id": "auth:co-public:Q3396894:co-puente-web.txt",
+            "license": null,
+            "publisher": "Sistema de Información Turística de Boyacá",
+            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 4c89ad2397410d3a2baebf63551deefec30797df7aa2af48fdbd9754f91f7947.",
+            "title": "Puente de Boyacá visitor precinct visitor scope and site identity",
+            "uri": "https://situr.boyaca.gov.co/atractivo-turistico/puente-de-boyaca-2/"
+          }
+        },
+        "id": "auth:co-public:Q3396894",
+        "location_precision": null,
+        "names": [
+          "博亚卡桥纪念区"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -73.43027778,
+          5.45055556
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The Boyacá tourism service names the bridge, its setting by the Teatinos River and the associated public memorial precinct.",
+            "id": "auth:co-public:Q3396894:co-puente-web.txt",
+            "license": null,
+            "publisher": "Sistema de Información Turística de Boyacá",
+            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 4c89ad2397410d3a2baebf63551deefec30797df7aa2af48fdbd9754f91f7947.",
+            "title": "Puente de Boyacá visitor precinct visitor scope and site identity",
+            "uri": "https://situr.boyaca.gov.co/atractivo-turistico/puente-de-boyaca-2/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -73.43027778, latitude 5.45055556.",
+            "id": "wikidata:Q3396894",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2427251415; P625 Q3396894$2905F6DC-CAEB-45BA-BA1F-966737AE1CF0.",
+            "title": "Puente de Boyacá visitor precinct representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3396894.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The department announced visitor arrangements at the historic site for 28 November 2026 to 16 January 2027.",
+            "id": "auth:co-public:Q3396894:co-boyaca-governor-20261127-web.txt",
+            "license": null,
+            "publisher": "Gobernación de Boyacá, Boyacá 95.6 FM",
+            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 453aad886bc291cb95071dab966b9cd24573a3ea4afec74ffd5cbc75c5c06d3f.",
+            "title": "Puente de Boyacá, public programme 2026",
+            "uri": "https://956fm.boyaca.gov.co/con-mas-de-12-millones-de-luces-el-puente-de-boyaca-realiza-su-emblematico-encendido-navideno-y-le-da-la-bienvenida-a-turistas/"
+          }
+        ],
+        "source_uri": "https://situr.boyaca.gov.co/atractivo-turistico/puente-de-boyaca-2/",
+        "title": "Puente de Boyacá visitor precinct",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q3396894.json",
+          "sha256": "9624c97cd8c26799a475d353d9630e330a7c6e78a4d7cc1e8114b91cd2603d58",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3396894.json"
+        },
+        {
+          "filename": "co-puente-web.txt",
+          "sha256": "4c89ad2397410d3a2baebf63551deefec30797df7aa2af48fdbd9754f91f7947",
+          "uri": "https://situr.boyaca.gov.co/atractivo-turistico/puente-de-boyaca-2/"
+        },
+        {
+          "filename": "co-boyaca-governor-20261127-web.txt",
+          "sha256": "453aad886bc291cb95071dab966b9cd24573a3ea4afec74ffd5cbc75c5c06d3f",
+          "uri": "https://956fm.boyaca.gov.co/con-mas-de-12-millones-de-luces-el-puente-de-boyaca-realiza-su-emblematico-encendido-navideno-y-le-da-la-bienvenida-a-turistas/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified Wikidata WGS84 representative point. ",
+        "point": [
+          -74.17916667,
+          11.22805556
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3414570.json",
+        "statement_id": "Q3414570$991E7286-177F-44F7-8C65-4DD1DA02A132"
+      },
+      "independent_review": {
+        "method": "Independent agent checked original identity and public visitor extent, exact CC0 claims and precision, verified source snapshots, corpus identities and coordinate overlap, and registered World Heritage footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original historic estate in Santa Marta and its ticketed visitor precinct. The estate and museum route are presented as one place.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named original site and official visitor scope checked.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Fundación Museo Bolivariano",
+          "Sistema de Información de Museos Colombianos",
+          "Wikidata contributors"
+        ],
+        "description": "The original historic estate in Santa Marta and its ticketed visitor precinct. The estate and museum route are presented as one place.",
+        "description_zh": "圣佩德罗亚历杭德里诺庄园位于哥伦比亚。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+        "details": "The original historic estate in Santa Marta and its ticketed visitor precinct. The estate and museum route are presented as one place.",
+        "geography": {
+          "authority_id": "supplement:auth:co-public:Q3414570",
+          "countries": [
+            "CO"
+          ],
+          "note": "Named original location. Representative point only.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The managing foundation publishes current hours, ticket arrangements and rules for visits to the quinta.",
+            "id": "auth:co-public:Q3414570:co-quinta-admit-web.txt",
+            "license": null,
+            "publisher": "Fundación Museo Bolivariano",
+            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 79363c7893d73a1a9432ff25276318a6f9f01fad68f86637e2a90e9896bc49d7.",
+            "title": "Quinta de San Pedro Alejandrino visitor scope and site identity",
+            "uri": "https://www.museobolivariano.org.co/horariosytarifas/"
+          }
+        },
+        "id": "auth:co-public:Q3414570",
+        "location_precision": null,
+        "names": [
+          "圣佩德罗亚历杭德里诺庄园"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -74.17916667,
+          11.22805556
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The managing foundation publishes current hours, ticket arrangements and rules for visits to the quinta.",
+            "id": "auth:co-public:Q3414570:co-quinta-admit-web.txt",
+            "license": null,
+            "publisher": "Fundación Museo Bolivariano",
+            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 79363c7893d73a1a9432ff25276318a6f9f01fad68f86637e2a90e9896bc49d7.",
+            "title": "Quinta de San Pedro Alejandrino visitor scope and site identity",
+            "uri": "https://www.museobolivariano.org.co/horariosytarifas/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry museum catalogue identifies the original hacienda and its managing foundation.",
+            "id": "auth:co-public:Q3414570:co-quinta-ministry.html",
+            "license": null,
+            "publisher": "Sistema de Información de Museos Colombianos",
+            "revision": "Frozen source file 2026-11-28. SHA-256 93cbcc7547bd3d7cfb11ff3d9e6985ac7b9da8a9812091994caba6dfe0fcb382.",
+            "title": "Quinta de San Pedro Alejandrino visitor scope and site identity",
+            "uri": "https://simco.museoscolombianos.gov.co/Home/Museo?personaJuridicaId=490"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -74.17916667, latitude 11.22805556.",
+            "id": "wikidata:Q3414570",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2520144021; P625 Q3414570$991E7286-177F-44F7-8C65-4DD1DA02A132.",
+            "title": "Quinta de San Pedro Alejandrino representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3414570.json"
+          }
+        ],
+        "source_uri": "https://www.museobolivariano.org.co/horariosytarifas/",
+        "title": "Quinta de San Pedro Alejandrino",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q3414570.json",
+          "sha256": "b67d0eed091dc61527c608e2299b7bdaeffabece6b2d24cf33162310a45c88a5",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3414570.json"
+        },
+        {
+          "filename": "co-quinta-admit-web.txt",
+          "sha256": "79363c7893d73a1a9432ff25276318a6f9f01fad68f86637e2a90e9896bc49d7",
+          "uri": "https://www.museobolivariano.org.co/horariosytarifas/"
+        },
+        {
+          "filename": "co-quinta-ministry.html",
+          "sha256": "93cbcc7547bd3d7cfb11ff3d9e6985ac7b9da8a9812091994caba6dfe0fcb382",
+          "uri": "https://simco.museoscolombianos.gov.co/Home/Museo?personaJuridicaId=490"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified Wikidata WGS84 representative point. The park-level record uses the Wikidata entity for Parque Grancolombiano, distinct from the house or temple building statements.",
+        "point": [
+          -72.462787,
+          7.82982
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5774422.json",
+        "statement_id": "Q5774422$7582877F-D995-40D5-8D1A-CACDDDA29B60"
+      },
+      "independent_review": {
+        "method": "Independent agent checked original identity and public visitor extent, exact CC0 claims and precision, verified source snapshots, corpus identities and coordinate overlap, and registered World Heritage footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The public historic park at Villa del Rosario, centered on the surviving Congress temple precinct. Museum interiors elsewhere in the wider historical complex follow their own admission arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named original site and official visitor scope checked.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Área Metropolitana de Cúcuta",
+          "Museo Libre Pensamiento",
+          "Wikidata contributors"
+        ],
+        "description": "The public historic park at Villa del Rosario, centered on the surviving Congress temple precinct. Museum interiors elsewhere in the wider historical complex follow their own admission arrangements.",
+        "description_zh": "大哥伦比亚公园历史区位于哥伦比亚。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+        "details": "The public historic park at Villa del Rosario, centered on the surviving Congress temple precinct. Museum interiors elsewhere in the wider historical complex follow their own admission arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:co-public:Q5774422",
+          "countries": [
+            "CO"
+          ],
+          "note": "Named original location. Representative point only.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The metropolitan authority identifies the Congress temple ruins, Santander house and other historical structures together as the regional historic precinct.",
+            "id": "auth:co-public:Q5774422:co-rosario-area.html",
+            "license": null,
+            "publisher": "Área Metropolitana de Cúcuta",
+            "revision": "Frozen source file 2026-11-28. SHA-256 c372ee70bb299d37047bc6f88a544a4235c3ee4becbcda5488d96bb4bc95fdc1.",
+            "title": "Parque Grancolombiano public historic precinct visitor scope and site identity",
+            "uri": "https://amc.gov.co/amc/villa-del-rosario/"
+          }
+        },
+        "id": "auth:co-public:Q5774422",
+        "location_precision": null,
+        "names": [
+          "大哥伦比亚公园历史区"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -72.462787,
+          7.82982
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The metropolitan authority identifies the Congress temple ruins, Santander house and other historical structures together as the regional historic precinct.",
+            "id": "auth:co-public:Q5774422:co-rosario-area.html",
+            "license": null,
+            "publisher": "Área Metropolitana de Cúcuta",
+            "revision": "Frozen source file 2026-11-28. SHA-256 c372ee70bb299d37047bc6f88a544a4235c3ee4becbcda5488d96bb4bc95fdc1.",
+            "title": "Parque Grancolombiano public historic precinct visitor scope and site identity",
+            "uri": "https://amc.gov.co/amc/villa-del-rosario/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operating local museum identifies the adjacent named historical visitor corridor and documents a 2026 public activity organised with the municipality and department.",
+            "id": "auth:co-public:Q5774422:co-rosario-current.html",
+            "license": null,
+            "publisher": "Museo Libre Pensamiento",
+            "revision": "Frozen source file 2026-11-28. SHA-256 0653efdf3d515c397363bcc5b1db218bbadcdb0e9e9c6ca9c2dde0a220afd455.",
+            "title": "Parque Grancolombiano public historic precinct visitor scope and site identity",
+            "uri": "https://museolibrepensamiento.com/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -72.462787, latitude 7.82982.",
+            "id": "wikidata:Q5774422",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 1950468167; P625 Q5774422$7582877F-D995-40D5-8D1A-CACDDDA29B60.",
+            "title": "Parque Grancolombiano public historic precinct representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5774422.json"
+          }
+        ],
+        "source_uri": "https://amc.gov.co/amc/villa-del-rosario/",
+        "title": "Parque Grancolombiano public historic precinct",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q5774422.json",
+          "sha256": "940de5d63703f6e5295cd57357bf644bc29f555d8f79167f8db69dc608b9bab5",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5774422.json"
+        },
+        {
+          "filename": "co-rosario-area.html",
+          "sha256": "c372ee70bb299d37047bc6f88a544a4235c3ee4becbcda5488d96bb4bc95fdc1",
+          "uri": "https://amc.gov.co/amc/villa-del-rosario/"
+        },
+        {
+          "filename": "co-rosario-current.html",
+          "sha256": "0653efdf3d515c397363bcc5b1db218bbadcdb0e9e9c6ca9c2dde0a220afd455",
+          "uri": "https://museolibrepensamiento.com/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified Wikidata WGS84 representative point. ",
+        "point": [
+          -76.6051089,
+          2.4444506
+        ],
+        "precision": 1e-07,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q86967247.json",
+        "statement_id": "Q86967247$3591aba3-4d81-ac20-bd9c-732256386862"
+      },
+      "independent_review": {
+        "method": "Independent agent checked original identity and public visitor extent, exact CC0 claims and precision, verified source snapshots, corpus identities and coordinate overlap, and registered World Heritage footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic masonry bridge over the Río Molino in Popayán. Scope covers the original crossing and the public approach in the historic centre.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named original site and official visitor scope checked.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Alcaldía de Popayán",
+          "ICOMOS Colombia",
+          "Wikidata contributors"
+        ],
+        "description": "The historic masonry bridge over the Río Molino in Popayán. Scope covers the original crossing and the public approach in the historic centre.",
+        "description_zh": "波帕扬乌米利亚德罗桥位于哥伦比亚。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+        "details": "The historic masonry bridge over the Río Molino in Popayán. Scope covers the original crossing and the public approach in the historic centre.",
+        "geography": {
+          "authority_id": "supplement:auth:co-public:Q86967247",
+          "countries": [
+            "CO"
+          ],
+          "note": "Named original location. Representative point only.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipality names the historic bridge and describes its placement between the heritage centre and the Bolívar neighbourhood.",
+            "id": "auth:co-public:Q86967247:co-popayan-web.txt",
+            "license": null,
+            "publisher": "Alcaldía de Popayán",
+            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 3ee8455ded70e80232772ac9c0b90d796506e8159cf35e5f44b86a2785945c12.",
+            "title": "Puente del Humilladero visitor scope and site identity",
+            "uri": "https://www.popayan.gov.co/SecretariasyEntidades/Turismo/Paginas/Lugares-emblem%C3%A1ticos.aspx"
+          }
+        },
+        "id": "auth:co-public:Q86967247",
+        "location_precision": null,
+        "names": [
+          "波帕扬乌米利亚德罗桥"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -76.6051089,
+          2.4444506
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipality names the historic bridge and describes its placement between the heritage centre and the Bolívar neighbourhood.",
+            "id": "auth:co-public:Q86967247:co-popayan-web.txt",
+            "license": null,
+            "publisher": "Alcaldía de Popayán",
+            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 3ee8455ded70e80232772ac9c0b90d796506e8159cf35e5f44b86a2785945c12.",
+            "title": "Puente del Humilladero visitor scope and site identity",
+            "uri": "https://www.popayan.gov.co/SecretariasyEntidades/Turismo/Paginas/Lugares-emblem%C3%A1ticos.aspx"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The heritage record identifies the bridge on Carrera 6, between calles 1 and 2.",
+            "id": "auth:co-public:Q86967247:co-popayan-icomos.html",
+            "license": null,
+            "publisher": "ICOMOS Colombia",
+            "revision": "Frozen source file 2026-11-28. SHA-256 aa56aee067578d4686af1bab2b3cfea679a6866a01f1b4c190c5dbed09de50e6.",
+            "title": "Puente del Humilladero visitor scope and site identity",
+            "uri": "https://www.icomoscolombia.org/bic/587"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -76.6051089, latitude 2.4444506.",
+            "id": "wikidata:Q86967247",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2522494820; P625 Q86967247$3591aba3-4d81-ac20-bd9c-732256386862.",
+            "title": "Puente del Humilladero representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q86967247.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal protection order suspends vehicle passage and identifies the same historic bridge as a cultural and tourism space.",
+            "id": "auth:co-public:Q86967247:co-popayan-pedestrian-web.txt",
+            "license": null,
+            "publisher": "Alcaldía de Popayán",
+            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 03ab38a69945bf0b1dbb92a82230120a61cae2c14916e6c6c4eab4e9e3fb98b1.",
+            "title": "Traffic restrictions at Puente del Humilladero",
+            "uri": "https://www.popayan.gov.co/NuestraAlcaldia/SaladePrensa/Paginas/Alcald%C3%ADa-toma-medida-para-proteger-el-Puente-del-Humilladero.aspx"
+          }
+        ],
+        "source_uri": "https://www.popayan.gov.co/SecretariasyEntidades/Turismo/Paginas/Lugares-emblem%C3%A1ticos.aspx",
+        "title": "Puente del Humilladero",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q86967247.json",
+          "sha256": "c0b01b2bd2e65efe82ba7bf2b755287db95d7689a4e794a2b414331fac2de66a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q86967247.json"
+        },
+        {
+          "filename": "co-popayan-web.txt",
+          "sha256": "3ee8455ded70e80232772ac9c0b90d796506e8159cf35e5f44b86a2785945c12",
+          "uri": "https://www.popayan.gov.co/SecretariasyEntidades/Turismo/Paginas/Lugares-emblem%C3%A1ticos.aspx"
+        },
+        {
+          "filename": "co-popayan-icomos.html",
+          "sha256": "aa56aee067578d4686af1bab2b3cfea679a6866a01f1b4c190c5dbed09de50e6",
+          "uri": "https://www.icomoscolombia.org/bic/587"
+        },
+        {
+          "filename": "co-popayan-pedestrian-web.txt",
+          "sha256": "03ab38a69945bf0b1dbb92a82230120a61cae2c14916e6c6c4eab4e9e3fb98b1",
+          "uri": "https://www.popayan.gov.co/NuestraAlcaldia/SaladePrensa/Paginas/Alcald%C3%ADa-toma-medida-para-proteger-el-Puente-del-Humilladero.aspx"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified Wikidata WGS84 representative point. ",
+        "point": [
+          -64.171347,
+          10.46207
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5558033.json",
+        "statement_id": "Q5558033$E4FA0F48-DDC9-4340-A0E3-DBE20405ED95"
+      },
+      "independent_review": {
+        "method": "Independent agent checked original identity and public visitor extent, exact CC0 claims and precision, verified source snapshots, corpus identities and coordinate overlap, and registered World Heritage footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original hilltop fortress at Cumaná, represented by the published named point. Visitor evidence covers the historic tour stop and publicly approached exterior; interior entry follows separate arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named original site and official visitor scope checked.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "CEPITUR Sucre visitor portal",
+          "Prensa Oriente, reporting Transucre, Corsotur and Inatur",
+          "Wikidata contributors"
+        ],
+        "description": "The original fortress on the hill at Cumaná. Scope covers the managed historic stop and the visitor area designated by its custodian.",
+        "description_zh": "圣安东尼奥德拉埃米嫩西亚城堡参观区位于委内瑞拉。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+        "details": "The original hilltop fortress at Cumaná, represented by the published named point. Visitor evidence covers the historic tour stop and publicly approached exterior; interior entry follows separate arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:ve-public:Q5558033",
+          "countries": [
+            "VE"
+          ],
+          "note": "Named original location. Representative point only.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism organisation identifies the original hilltop fort; a subsequent tourism itinerary independently names it as a public route stop.",
+            "id": "auth:ve-public:Q5558033:ve-cum-sanjuan.html",
+            "license": null,
+            "publisher": "CEPITUR Sucre visitor portal",
+            "revision": "Frozen source file 2026-11-28. SHA-256 bdcfeb8f4aeebf52a6d9689576b688c0af44fda327c606e09cca3759070cd4f7.",
+            "title": "Castillo San Antonio de la Eminencia visitor precinct visitor scope and site identity",
+            "uri": "https://turismosucre.com.ve/cumana/castillosanantonio/"
+          }
+        },
+        "id": "auth:ve-public:Q5558033",
+        "location_precision": null,
+        "names": [
+          "圣安东尼奥德拉埃米嫩西亚城堡参观区"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -64.171347,
+          10.46207
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism organisation identifies the original hilltop fort; a subsequent tourism itinerary independently names it as a public route stop.",
+            "id": "auth:ve-public:Q5558033:ve-cum-sanjuan.html",
+            "license": null,
+            "publisher": "CEPITUR Sucre visitor portal",
+            "revision": "Frozen source file 2026-11-28. SHA-256 bdcfeb8f4aeebf52a6d9689576b688c0af44fda327c606e09cca3759070cd4f7.",
+            "title": "Castillo San Antonio de la Eminencia visitor precinct visitor scope and site identity",
+            "uri": "https://turismosucre.com.ve/cumana/castillosanantonio/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The August 2026 report identifies the exact fort as a stop on the public Sucre Tour launched by the public transport and tourism bodies.",
+            "id": "auth:ve-public:Q5558033:ve-eminencia-route-2026-web.txt",
+            "license": null,
+            "publisher": "Prensa Oriente, reporting Transucre, Corsotur and Inatur",
+            "revision": "Normalized source webpage excerpt 2026-11-28. SHA-256 3b02972e50ea0bc381055d07b9eae956e3816580f43df3b97a8135da055d91b4.",
+            "title": "Castillo San Antonio de la Eminencia visitor precinct visitor scope and site identity",
+            "uri": "https://prensa.prensaoriente.com.ve/2026/08/22/sucre-inauguraron-en-cumana-autobus-turistico-con-rutas-por-sitios-historicos-y-playas/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -64.171347, latitude 10.46207.",
+            "id": "wikidata:Q5558033",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2301856388; P625 Q5558033$E4FA0F48-DDC9-4340-A0E3-DBE20405ED95.",
+            "title": "Castillo San Antonio de la Eminencia visitor precinct representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5558033.json"
+          }
+        ],
+        "source_uri": "https://turismosucre.com.ve/cumana/castillosanantonio/",
+        "title": "Castillo San Antonio de la Eminencia visitor precinct",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q5558033.json",
+          "sha256": "eab7a241d2bad70042ff786eb924cd00b06aa47bf8ad8d67936f9a75847b8398",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5558033.json"
+        },
+        {
+          "filename": "ve-cum-sanjuan.html",
+          "sha256": "bdcfeb8f4aeebf52a6d9689576b688c0af44fda327c606e09cca3759070cd4f7",
+          "uri": "https://turismosucre.com.ve/cumana/castillosanantonio/"
+        },
+        {
+          "filename": "ve-eminencia-route-2026-web.txt",
+          "sha256": "3b02972e50ea0bc381055d07b9eae956e3816580f43df3b97a8135da055d91b4",
+          "uri": "https://prensa.prensaoriente.com.ve/2026/08/22/sucre-inauguraron-en-cumana-autobus-turistico-con-rutas-por-sitios-historicos-y-playas/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified Wikidata WGS84 representative point. ",
+        "point": [
+          -63.798485,
+          10.997513
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6406733.json",
+        "statement_id": "Q6406733$A1D924BD-E9F1-40A6-A128-AE93487C0092"
+      },
+      "independent_review": {
+        "method": "Independent agent checked original identity and public visitor extent, exact CC0 claims and precision, verified source snapshots, corpus identities and coordinate overlap, and registered World Heritage footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original colonial fort on Pampatar Bay, Margarita. Public access is limited to the fort's managed visitor route.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named original site and official visitor scope checked.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio del Poder Popular para el Turismo",
+          "Sociedad Venezolana de Orquideología travel programme",
+          "Wikidata contributors"
+        ],
+        "description": "The original colonial fort on Pampatar Bay, Margarita. Public access is limited to the fort's managed visitor route.",
+        "description_zh": "圣卡洛斯·德博罗梅奥城堡位于委内瑞拉。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+        "details": "The original colonial fort on Pampatar Bay, Margarita. Public access is limited to the fort's managed visitor route.",
+        "geography": {
+          "authority_id": "supplement:auth:ve-public:Q6406733",
+          "countries": [
+            "VE"
+          ],
+          "note": "Named original location. Representative point only.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry names the fort in a promoted itinerary. The dated tour programme separately confirms the visit.",
+            "id": "auth:ve-public:Q6406733:ve-borromeo-cruise.html",
+            "license": null,
+            "publisher": "Ministerio del Poder Popular para el Turismo",
+            "revision": "Frozen source file 2026-11-28. SHA-256 6655a540fc4ce1e5bb50fbd930de38ecafc30c03c6a479c04261b5bff4c4de48.",
+            "title": "Castillo San Carlos de Borromeo visitor scope and site identity",
+            "uri": "https://www.mintur.gob.ve/news/a15eb46a-3536-4bc6-8b61-530c10b0a383"
+          }
+        },
+        "id": "auth:ve-public:Q6406733",
+        "location_precision": null,
+        "names": [
+          "圣卡洛斯·德博罗梅奥城堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -63.798485,
+          10.997513
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry names the fort in a promoted itinerary. The dated tour programme separately confirms the visit.",
+            "id": "auth:ve-public:Q6406733:ve-borromeo-cruise.html",
+            "license": null,
+            "publisher": "Ministerio del Poder Popular para el Turismo",
+            "revision": "Frozen source file 2026-11-28. SHA-256 6655a540fc4ce1e5bb50fbd930de38ecafc30c03c6a479c04261b5bff4c4de48.",
+            "title": "Castillo San Carlos de Borromeo visitor scope and site identity",
+            "uri": "https://www.mintur.gob.ve/news/a15eb46a-3536-4bc6-8b61-530c10b0a383"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The organiser's published Pampatar route includes the named castle visitor stop.",
+            "id": "auth:ve-public:Q6406733:ve-margarita-operator.pdf",
+            "license": null,
+            "publisher": "Sociedad Venezolana de Orquideología travel programme",
+            "revision": "Frozen source file 2026-11-28. SHA-256 3a73f46e23dbf4e4592b3cebe5131ecca21e4ca60002d642c45daa5bdb62208d.",
+            "title": "Castillo San Carlos de Borromeo visitor scope and site identity",
+            "uri": "https://svo.org.ve/wp-content/uploads/2025/03/PAQUETE-SVO-332-PRECIO-GANCHO-1.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -63.798485, latitude 10.997513.",
+            "id": "wikidata:Q6406733",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2459934744; P625 Q6406733$A1D924BD-E9F1-40A6-A128-AE93487C0092.",
+            "title": "Castillo San Carlos de Borromeo representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6406733.json"
+          }
+        ],
+        "source_uri": "https://www.mintur.gob.ve/news/a15eb46a-3536-4bc6-8b61-530c10b0a383",
+        "title": "Castillo San Carlos de Borromeo",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q6406733.json",
+          "sha256": "59c971f4cc27e07c0eca4d6e342f0967c01b8bf99deb300360db999d04f8ed84",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6406733.json"
+        },
+        {
+          "filename": "ve-borromeo-cruise.html",
+          "sha256": "6655a540fc4ce1e5bb50fbd930de38ecafc30c03c6a479c04261b5bff4c4de48",
+          "uri": "https://www.mintur.gob.ve/news/a15eb46a-3536-4bc6-8b61-530c10b0a383"
+        },
+        {
+          "filename": "ve-margarita-operator.pdf",
+          "sha256": "3a73f46e23dbf4e4592b3cebe5131ecca21e4ca60002d642c45daa5bdb62208d",
+          "uri": "https://svo.org.ve/wp-content/uploads/2025/03/PAQUETE-SVO-332-PRECIO-GANCHO-1.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified Wikidata WGS84 representative point. A 2022 wall failure was reported. The later official and organised route evidence supports the public precinct only.",
+        "point": [
+          -63.8672699,
+          11.0268767
+        ],
+        "precision": 1e-07,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7419927.json",
+        "statement_id": "Q7419927$9b969450-4454-d262-de23-4a021bf4ef17"
+      },
+      "independent_review": {
+        "method": "Independent agent checked original identity and public visitor extent, exact CC0 claims and precision, verified source snapshots, corpus identities and coordinate overlap, and registered World Heritage footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original hilltop castle at La Asunción, Margarita. The documented visit covers the public approach and custodian-approved visitor area.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named original site and official visitor scope checked.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio del Poder Popular para el Turismo",
+          "Sociedad Venezolana de Orquideología travel programme",
+          "Wikidata contributors"
+        ],
+        "description": "The original hilltop castle at La Asunción, Margarita. The documented visit covers the public approach and custodian-approved visitor area.",
+        "description_zh": "圣罗莎城堡参观区位于委内瑞拉。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+        "details": "The original hilltop castle at La Asunción, Margarita. The documented visit covers the public approach and custodian-approved visitor area.",
+        "geography": {
+          "authority_id": "supplement:auth:ve-public:Q7419927",
+          "countries": [
+            "VE"
+          ],
+          "note": "Named original location. Representative point only.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies Castillo de Santa Rosa in the Margarita historical visitor route.",
+            "id": "auth:ve-public:Q7419927:ve-santarosa-mintur.html",
+            "license": null,
+            "publisher": "Ministerio del Poder Popular para el Turismo",
+            "revision": "Frozen source file 2026-11-28. SHA-256 c89f52cab63a48d5651cb45c6af655732997385f7f0be134c73f64a9f329b1cf.",
+            "title": "Castillo de Santa Rosa visitor precinct visitor scope and site identity",
+            "uri": "https://www.mintur.gob.ve/news/9f63bf8e-247d-49e4-8e1e-e8eca12110b1"
+          }
+        },
+        "id": "auth:ve-public:Q7419927",
+        "location_precision": null,
+        "names": [
+          "圣罗莎城堡参观区"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -63.8672699,
+          11.0268767
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies Castillo de Santa Rosa in the Margarita historical visitor route.",
+            "id": "auth:ve-public:Q7419927:ve-santarosa-mintur.html",
+            "license": null,
+            "publisher": "Ministerio del Poder Popular para el Turismo",
+            "revision": "Frozen source file 2026-11-28. SHA-256 c89f52cab63a48d5651cb45c6af655732997385f7f0be134c73f64a9f329b1cf.",
+            "title": "Castillo de Santa Rosa visitor precinct visitor scope and site identity",
+            "uri": "https://www.mintur.gob.ve/news/9f63bf8e-247d-49e4-8e1e-e8eca12110b1"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The organiser lists a Castillo de Santa Rosa visitor stop in La Asunción on its published route.",
+            "id": "auth:ve-public:Q7419927:ve-margarita-operator.pdf",
+            "license": null,
+            "publisher": "Sociedad Venezolana de Orquideología travel programme",
+            "revision": "Frozen source file 2026-11-28. SHA-256 3a73f46e23dbf4e4592b3cebe5131ecca21e4ca60002d642c45daa5bdb62208d.",
+            "title": "Castillo de Santa Rosa visitor precinct visitor scope and site identity",
+            "uri": "https://svo.org.ve/wp-content/uploads/2025/03/PAQUETE-SVO-332-PRECIO-GANCHO-1.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -63.8672699, latitude 11.0268767.",
+            "id": "wikidata:Q7419927",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2459933353; P625 Q7419927$9b969450-4454-d262-de23-4a021bf4ef17.",
+            "title": "Castillo de Santa Rosa visitor precinct representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7419927.json"
+          }
+        ],
+        "source_uri": "https://www.mintur.gob.ve/news/9f63bf8e-247d-49e4-8e1e-e8eca12110b1",
+        "title": "Castillo de Santa Rosa visitor precinct",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q7419927.json",
+          "sha256": "04e4f5468cc3b82bf8db6b96eae2cba96c3cacdcbaa76fa69c9fd66596e67ca0",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7419927.json"
+        },
+        {
+          "filename": "ve-santarosa-mintur.html",
+          "sha256": "c89f52cab63a48d5651cb45c6af655732997385f7f0be134c73f64a9f329b1cf",
+          "uri": "https://www.mintur.gob.ve/news/9f63bf8e-247d-49e4-8e1e-e8eca12110b1"
+        },
+        {
+          "filename": "ve-margarita-operator.pdf",
+          "sha256": "3a73f46e23dbf4e4592b3cebe5131ecca21e4ca60002d642c45daa5bdb62208d",
+          "uri": "https://svo.org.ve/wp-content/uploads/2025/03/PAQUETE-SVO-332-PRECIO-GANCHO-1.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified Wikidata WGS84 representative point. ",
+        "point": [
+          -68.016667,
+          10.4625
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q743316.json",
+        "statement_id": "Q743316$9B37655B-FF35-4906-AA03-DF939F71E913"
+      },
+      "independent_review": {
+        "method": "Independent agent checked original identity and public visitor extent, exact CC0 claims and precision, verified source snapshots, corpus identities and coordinate overlap, and registered World Heritage footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The decommissioned hilltop fort and visitor viewpoint above Puerto Cabello on the managed historic route. Access to the interior depends on the custodian's entry arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named original site and official visitor scope checked.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio del Poder Popular para el Turismo",
+          "Noticias 24 Carabobo",
+          "Wikidata contributors"
+        ],
+        "description": "The decommissioned hilltop fort and visitor viewpoint above Puerto Cabello on the managed historic route. Access to the interior depends on the custodian's entry arrangements.",
+        "description_zh": "索拉诺堡参观区位于委内瑞拉。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+        "details": "The decommissioned hilltop fort and visitor viewpoint above Puerto Cabello on the managed historic route. Access to the interior depends on the custodian's entry arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:ve-public:Q743316",
+          "countries": [
+            "VE"
+          ],
+          "note": "Named original location. Representative point only.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry includes the hilltop Fortín Solano in the historic Puerto Cabello visitor itinerary.",
+            "id": "auth:ve-public:Q743316:ve-solano-mintur.html",
+            "license": null,
+            "publisher": "Ministerio del Poder Popular para el Turismo",
+            "revision": "Frozen source file 2026-11-28. SHA-256 4917e19e857506281400ae9021405c9df661df841568872fd13347d82d8d46b5.",
+            "title": "Fortín Solano visitor precinct visitor scope and site identity",
+            "uri": "https://www.mintur.gob.ve/news/a07509bc-1dce-498b-9770-f4167e79894f"
+          }
+        },
+        "id": "auth:ve-public:Q743316",
+        "location_precision": null,
+        "names": [
+          "索拉诺堡参观区"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -68.016667,
+          10.4625
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry includes the hilltop Fortín Solano in the historic Puerto Cabello visitor itinerary.",
+            "id": "auth:ve-public:Q743316:ve-solano-mintur.html",
+            "license": null,
+            "publisher": "Ministerio del Poder Popular para el Turismo",
+            "revision": "Frozen source file 2026-11-28. SHA-256 4917e19e857506281400ae9021405c9df661df841568872fd13347d82d8d46b5.",
+            "title": "Fortín Solano visitor precinct visitor scope and site identity",
+            "uri": "https://www.mintur.gob.ve/news/a07509bc-1dce-498b-9770-f4167e79894f"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The 2026 local report describes visiting the fort as part of the public historic circuit.",
+            "id": "auth:ve-public:Q743316:ve-solano-op.html",
+            "license": null,
+            "publisher": "Noticias 24 Carabobo",
+            "revision": "Frozen source file 2026-11-28. SHA-256 72361200c33bd6be089e1e95baf371aa71cbd429868059cfb1320aa353c7d84b.",
+            "title": "Fortín Solano visitor precinct visitor scope and site identity",
+            "uri": "https://noticias24carabobo.com/plan-fin-semana-recorrido-fortin-solano/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -68.016667, latitude 10.4625.",
+            "id": "wikidata:Q743316",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2480107182; P625 Q743316$9B37655B-FF35-4906-AA03-DF939F71E913.",
+            "title": "Fortín Solano visitor precinct representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q743316.json"
+          }
+        ],
+        "source_uri": "https://www.mintur.gob.ve/news/a07509bc-1dce-498b-9770-f4167e79894f",
+        "title": "Fortín Solano visitor precinct",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q743316.json",
+          "sha256": "ecad6aaf361b8d9ca3fd6c71958e0977292bb4ed8a626ba8fb1e41dec3e48602",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q743316.json"
+        },
+        {
+          "filename": "ve-solano-mintur.html",
+          "sha256": "4917e19e857506281400ae9021405c9df661df841568872fd13347d82d8d46b5",
+          "uri": "https://www.mintur.gob.ve/news/a07509bc-1dce-498b-9770-f4167e79894f"
+        },
+        {
+          "filename": "ve-solano-op.html",
+          "sha256": "72361200c33bd6be089e1e95baf371aa71cbd429868059cfb1320aa353c7d84b",
+          "uri": "https://noticias24carabobo.com/plan-fin-semana-recorrido-fortin-solano/"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Six public cultural places in Colombia and four public historic fort precincts in Venezuela, with documented visitor route scope."
+}

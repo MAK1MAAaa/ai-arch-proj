@@ -1,0 +1,22 @@
+{
+  "base_count": 5149,
+  "base_ids_sha256": "4a8463e9ae8cb1d085ce3849cb32c6a07a5a15a21fdc6525520f973f7a785f6d",
+  "base_sites_sha256": "8d00baccf9c6ff8ac8eb58d4c314c0621a667db6334e4bc820313c8d41129389",
+  "cohort_version": "colombia-venezuela-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 10,
+    "total": 5159
+  },
+  "files": {
+    "colombia_venezuela_public_review.json": {
+      "sha256": "2a10b468689730d3b81d86da85b245cb2106bd0efd34923109d609d2f6ddfb26"
+    },
+    "colombia_venezuela_public_sites.json": {
+      "sha256": "43e227b340b75613bd285982d38ad0246e21f97eb86d15b2d145e5a1aee2e999"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Six public cultural places in Colombia and four public historic fort precincts in Venezuela, with documented visitor route scope."
+}

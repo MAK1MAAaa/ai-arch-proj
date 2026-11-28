@@ -1,0 +1,1213 @@
+{
+  "base_count": 5141,
+  "base_ids_sha256": "d87e9feb5d6191dce434d57e735fa495e2bd8cd1dddeaa553371be2c56d8e130",
+  "base_sites_sha256": "9abfe07e16d87a228b26d0e2050f7ced7c626f382e0d0a451fd3dc1e04e684e9",
+  "cohort_version": "cabo-verde-cameroon-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          11.51569,
+          3.86039
+        ],
+        "precision": 0.0090035814174447,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16335742.json",
+        "statement_id": "Q16335742$92FED556-D390-4B6C-8FF8-14FE384B683C"
+      },
+      "independent_review": {
+        "method": "Independent agent checked current operator and authority material, licensed native coordinate claims or source geometry, declared public visitor scope and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The representative point is in the in-place historical museum building. The institution publishes visitor booking and exhibitions for its managed spaces.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Museum of Cameroon",
+          "Ministry of Arts and Culture, Cameroon",
+          "Wikidata contributors"
+        ],
+        "description": "Cameroon’s National Museum presents public exhibitions in the former presidential palace in Yaoundé.",
+        "description_zh": "喀麦隆国家博物馆位于雅温得旧总统府原建筑，向公众开放展览。",
+        "details": "The representative point is in the in-place historical museum building. The institution publishes visitor booking and exhibitions for its managed spaces.",
+        "geography": {
+          "authority_id": "supplement:auth:cm-public:Q16335742",
+          "countries": [
+            "CM"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator presents its bookable guided visits in the historic former presidential palace.",
+            "id": "auth:cm-public:Q16335742:evidence:1",
+            "license": null,
+            "publisher": "National Museum of Cameroon",
+            "revision": "Retrieved 2026-11-28; SHA-256 7d4b97c6f64749e26fb834489ce561c98233c1cac9dffa372d599cf9014e7abf.",
+            "title": "National Museum public booking",
+            "uri": "https://cameroon-nationalmuseum.cm/"
+          }
+        },
+        "id": "auth:cm-public:Q16335742",
+        "location_precision": null,
+        "names": [
+          "喀麦隆国家博物馆旧总统府",
+          "Cameroon National Museum at the former presidential palace",
+          "Musée national du Cameroun",
+          "Ancien Palais Présidentiel de Yaoundé",
+          "National Museum of Cameroon"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          11.51569,
+          3.86039
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator presents its bookable guided visits in the historic former presidential palace.",
+            "id": "auth:cm-public:Q16335742:evidence:1",
+            "license": null,
+            "publisher": "National Museum of Cameroon",
+            "revision": "Retrieved 2026-11-28; SHA-256 7d4b97c6f64749e26fb834489ce561c98233c1cac9dffa372d599cf9014e7abf.",
+            "title": "National Museum public booking",
+            "uri": "https://cameroon-nationalmuseum.cm/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum identifies the central building, its garden and holdings inside the former palace complex.",
+            "id": "auth:cm-public:Q16335742:evidence:2",
+            "license": null,
+            "publisher": "National Museum of Cameroon",
+            "revision": "Retrieved 2026-11-28; SHA-256 82f588293af7f4be94307a5e1e963ba89f6f37078027c44c5f1e08e469995814.",
+            "title": "Former presidential palace and museum property",
+            "uri": "https://cameroon-nationalmuseum.cm/a-propos-du-musee-national-cameroun/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry records a public fair at the museum esplanade in August 2026.",
+            "id": "auth:cm-public:Q16335742:evidence:3",
+            "license": null,
+            "publisher": "Ministry of Arts and Culture, Cameroon",
+            "revision": "Retrieved 2026-11-28; SHA-256 baddf7931e452a17f9c4d5ccff256c8397beb5e20a3b308b3d16c5f6a2f67a69.",
+            "title": "August 2026 public event at the National Museum",
+            "uri": "https://minac.gov.cm/fr/le-ministere/le-ministre/a-la-une/142-9eme-edition-du-salon-international-de-lartisanat-du-cameroun-siarc"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 11.51569, latitude 3.86039.",
+            "id": "auth:cm-public:Q16335742:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 1466322ffc0076deff4c8bea664743d4b1c43f36244fbdcdaf4034372e7dc1a9.",
+            "title": "Cameroon National Museum at the former presidential palace coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16335742.json"
+          }
+        ],
+        "source_uri": "https://cameroon-nationalmuseum.cm/",
+        "title": "Cameroon National Museum at the former presidential palace",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/cm-national-museum-oper.html",
+          "sha256": "7d4b97c6f64749e26fb834489ce561c98233c1cac9dffa372d599cf9014e7abf",
+          "uri": "https://cameroon-nationalmuseum.cm/"
+        },
+        {
+          "filename": "source/cm-museum-building.html",
+          "sha256": "82f588293af7f4be94307a5e1e963ba89f6f37078027c44c5f1e08e469995814",
+          "uri": "https://cameroon-nationalmuseum.cm/a-propos-du-musee-national-cameroun/"
+        },
+        {
+          "filename": "source/cm-museum-august-public.html",
+          "sha256": "baddf7931e452a17f9c4d5ccff256c8397beb5e20a3b308b3d16c5f6a2f67a69",
+          "uri": "https://minac.gov.cm/fr/le-ministere/le-ministre/a-la-une/142-9eme-edition-du-salon-international-de-lartisanat-du-cameroun-siarc"
+        },
+        {
+          "filename": "source/Q16335742.json",
+          "sha256": "1466322ffc0076deff4c8bea664743d4b1c43f36244fbdcdaf4034372e7dc1a9",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16335742.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          10.9013,
+          5.73291
+        ],
+        "precision": 0.0090283092139053,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16510034.json",
+        "statement_id": "Q16510034$15F18CEF-9443-4A4C-8303-C284C8A26E07"
+      },
+      "independent_review": {
+        "method": "Independent agent checked current operator and authority material, licensed native coordinate claims or source geometry, declared public visitor scope and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point is at the approach to the historic royal palace in Foumban. A guided route identifies its designated public portions. Private court areas and the separate modern museum building are outside the record’s scope.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Office Régional du Tourisme de l’Ouest Cameroun",
+          "Ministry of Arts and Culture, Cameroon",
+          "Wikidata contributors"
+        ],
+        "description": "The historical royal palace of Foumban is included in the regional guided cultural route.",
+        "description_zh": "丰班的历史巴蒙王宫原址列入区域有向导的文化游线。",
+        "details": "The point is at the approach to the historic royal palace in Foumban. A guided route identifies its designated public portions. Private court areas and the separate modern museum building are outside the record’s scope.",
+        "geography": {
+          "authority_id": "supplement:auth:cm-public:Q16510034",
+          "countries": [
+            "CM"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator includes the named original palace and explicitly distinguishes the museum in the bookable itinerary.",
+            "id": "auth:cm-public:Q16510034:evidence:1",
+            "license": null,
+            "publisher": "Office Régional du Tourisme de l’Ouest Cameroun",
+            "revision": "Retrieved 2026-11-28; SHA-256 3a105488cfb428af6684a8448687626f5e707a51397bb6ad552cfc3824ea38cc.",
+            "title": "Public guided route to the Foumban royal palace",
+            "uri": "https://tourismeouestcameroun.com/idees-sejours/la-route-des-chefferies/"
+          }
+        },
+        "id": "auth:cm-public:Q16510034",
+        "location_precision": null,
+        "names": [
+          "丰班巴蒙王宫公开参观区",
+          "Foumban Bamoun Royal Palace visitor grounds",
+          "Palais des Sultans Bamouns",
+          "Foumban Royal Palace",
+          "Palais des Rois Bamoun"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          10.9013,
+          5.73291
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator includes the named original palace and explicitly distinguishes the museum in the bookable itinerary.",
+            "id": "auth:cm-public:Q16510034:evidence:1",
+            "license": null,
+            "publisher": "Office Régional du Tourisme de l’Ouest Cameroun",
+            "revision": "Retrieved 2026-11-28; SHA-256 3a105488cfb428af6684a8448687626f5e707a51397bb6ad552cfc3824ea38cc.",
+            "title": "Public guided route to the Foumban royal palace",
+            "uri": "https://tourismeouestcameroun.com/idees-sejours/la-route-des-chefferies/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The regional programme identifies the Bamoun royal palace as the venue for named recurring cultural events.",
+            "id": "auth:cm-public:Q16510034:evidence:2",
+            "license": null,
+            "publisher": "Office Régional du Tourisme de l’Ouest Cameroun",
+            "revision": "Retrieved 2026-11-28; SHA-256 9a1de99e5a882614208e84e3716624d9e57f3a2a919baabcc90fd48741ece105.",
+            "title": "Public palace esplanade cultural events",
+            "uri": "https://tourismeouestcameroun.com/wp-content/uploads/2025/07/AGENDA-CULTUREL-ORTOC.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry records the Bamoun foundation’s 2026 festival preparations in Foumban.",
+            "id": "auth:cm-public:Q16510034:evidence:3",
+            "license": null,
+            "publisher": "Ministry of Arts and Culture, Cameroon",
+            "revision": "Retrieved 2026-11-28; SHA-256 d8969dc72a0cfbf1785a9d2e189eb0f6e3b58c9f2da06f62efe35357f4ae72b2.",
+            "title": "2026 Foumban cultural festival official programme preparations",
+            "uri": "https://minac.gov.cm/fr/le-ministere/le-ministre/a-la-une/95-549e-edition-du-nguon-mme-fatimatou-poumie-directrice-executif-de-la-fondation-nguon-recue-en-audience-au-minac"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 10.9013, latitude 5.73291.",
+            "id": "auth:cm-public:Q16510034:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 33c046a9066bd602abb720ef39d8d0a3b7587a29c23f35fd2fc8366c5ee81a82.",
+            "title": "Foumban Bamoun Royal Palace visitor grounds coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16510034.json"
+          }
+        ],
+        "source_uri": "https://tourismeouestcameroun.com/idees-sejours/la-route-des-chefferies/",
+        "title": "Foumban Bamoun Royal Palace visitor grounds",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/cm-ortoc-tour.html",
+          "sha256": "3a105488cfb428af6684a8448687626f5e707a51397bb6ad552cfc3824ea38cc",
+          "uri": "https://tourismeouestcameroun.com/idees-sejours/la-route-des-chefferies/"
+        },
+        {
+          "filename": "source/cm-ortoc-recent-agenda.pdf",
+          "sha256": "9a1de99e5a882614208e84e3716624d9e57f3a2a919baabcc90fd48741ece105",
+          "uri": "https://tourismeouestcameroun.com/wp-content/uploads/2025/07/AGENDA-CULTUREL-ORTOC.pdf"
+        },
+        {
+          "filename": "source/cm-2026-nguon-minac.html",
+          "sha256": "d8969dc72a0cfbf1785a9d2e189eb0f6e3b58c9f2da06f62efe35357f4ae72b2",
+          "uri": "https://minac.gov.cm/fr/le-ministere/le-ministre/a-la-une/95-549e-edition-du-nguon-mme-fatimatou-poumie-directrice-executif-de-la-fondation-nguon-recue-en-audience-au-minac"
+        },
+        {
+          "filename": "source/Q16510034.json",
+          "sha256": "33c046a9066bd602abb720ef39d8d0a3b7587a29c23f35fd2fc8366c5ee81a82",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16510034.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          10.46952,
+          5.263016
+        ],
+        "precision": 0.0090211851177913,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q30744186.json",
+        "statement_id": "Q30744186$CB405A32-DD8D-4748-AD90-F94FC14A0A85"
+      },
+      "independent_review": {
+        "method": "Independent agent checked current operator and authority material, licensed native coordinate claims or source geometry, declared public visitor scope and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The representative point is near the visitor entrance within the named compound. The record covers the supervised open-air exhibition and public forecourt.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Office Régional du Tourisme de l’Ouest Cameroun",
+          "UNESCO World Heritage Centre, State Party submission",
+          "Wikidata contributors"
+        ],
+        "description": "The historic Batoufam chiefdom is presented on a public cultural route through its designated outdoor heritage area.",
+        "description_zh": "巴图法姆历史酋长领地设有公开游线，访客可按管理方安排参观指定的露天历史区域。",
+        "details": "The representative point is near the visitor entrance within the named compound. The record covers the supervised open-air exhibition and public forecourt.",
+        "geography": {
+          "authority_id": "supplement:auth:cm-public:Q30744186",
+          "countries": [
+            "CM"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official regional cultural circuit specifically offers the Batoufam outdoor heritage exhibition.",
+            "id": "auth:cm-public:Q30744186:evidence:1",
+            "license": null,
+            "publisher": "Office Régional du Tourisme de l’Ouest Cameroun",
+            "revision": "Retrieved 2026-11-28; SHA-256 3a105488cfb428af6684a8448687626f5e707a51397bb6ad552cfc3824ea38cc.",
+            "title": "Public open-air route in Batoufam",
+            "uri": "https://tourismeouestcameroun.com/idees-sejours/la-route-des-chefferies/"
+          }
+        },
+        "id": "auth:cm-public:Q30744186",
+        "location_precision": null,
+        "names": [
+          "巴图法姆传统酋长领地公开庭院",
+          "Batoufam Chiefdom public heritage court",
+          "Chefferie de Batoufam",
+          "Palais des Rois de Batoufam",
+          "Batoufam Chiefdom"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          10.46952,
+          5.263016
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official regional cultural circuit specifically offers the Batoufam outdoor heritage exhibition.",
+            "id": "auth:cm-public:Q30744186:evidence:1",
+            "license": null,
+            "publisher": "Office Régional du Tourisme de l’Ouest Cameroun",
+            "revision": "Retrieved 2026-11-28; SHA-256 3a105488cfb428af6684a8448687626f5e707a51397bb6ad552cfc3824ea38cc.",
+            "title": "Public open-air route in Batoufam",
+            "uri": "https://tourismeouestcameroun.com/idees-sejours/la-route-des-chefferies/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The regional events list names the Batoufam chiefdom esplanade as the venue of its cultural festival.",
+            "id": "auth:cm-public:Q30744186:evidence:2",
+            "license": null,
+            "publisher": "Office Régional du Tourisme de l’Ouest Cameroun",
+            "revision": "Retrieved 2026-11-28; SHA-256 9a1de99e5a882614208e84e3716624d9e57f3a2a919baabcc90fd48741ece105.",
+            "title": "Batoufam visitor venue",
+            "uri": "https://tourismeouestcameroun.com/wp-content/uploads/2025/07/AGENDA-CULTUREL-ORTOC.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The State Party identifies the Batoufam great house as a constituent of the uninscribed Grassfields serial proposal.",
+            "id": "auth:cm-public:Q30744186:evidence:3",
+            "license": null,
+            "publisher": "UNESCO World Heritage Centre, State Party submission",
+            "revision": "Retrieved 2026-11-28; SHA-256 285bc04bf99d47b44d54cea2462cdaa0d8ff76ab1a3d7721e379b951039a3880.",
+            "title": "Batoufam constituent of a tentative Grassfields property",
+            "uri": "https://whc.unesco.org/en/tentativelists/6332/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 10.46952, latitude 5.263016.",
+            "id": "auth:cm-public:Q30744186:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 04addb30c45cde015d1c3116bc4e6c5767c31af820656b184b96f216d8ff5ce6.",
+            "title": "Batoufam Chiefdom public heritage court coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q30744186.json"
+          }
+        ],
+        "source_uri": "https://tourismeouestcameroun.com/idees-sejours/la-route-des-chefferies/",
+        "title": "Batoufam Chiefdom public heritage court",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/cm-ortoc-tour.html",
+          "sha256": "3a105488cfb428af6684a8448687626f5e707a51397bb6ad552cfc3824ea38cc",
+          "uri": "https://tourismeouestcameroun.com/idees-sejours/la-route-des-chefferies/"
+        },
+        {
+          "filename": "source/cm-ortoc-recent-agenda.pdf",
+          "sha256": "9a1de99e5a882614208e84e3716624d9e57f3a2a919baabcc90fd48741ece105",
+          "uri": "https://tourismeouestcameroun.com/wp-content/uploads/2025/07/AGENDA-CULTUREL-ORTOC.pdf"
+        },
+        {
+          "filename": "source/cm-unesco-6332-components.html",
+          "sha256": "285bc04bf99d47b44d54cea2462cdaa0d8ff76ab1a3d7721e379b951039a3880",
+          "uri": "https://whc.unesco.org/en/tentativelists/6332/"
+        },
+        {
+          "filename": "source/Q30744186.json",
+          "sha256": "04addb30c45cde015d1c3116bc4e6c5767c31af820656b184b96f216d8ff5ce6",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q30744186.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          9.68713,
+          4.04339
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3891237.json",
+        "statement_id": "Q3891237$2B5D6FD3-892B-43D3-8FEE-0E0E7FCD2653"
+      },
+      "independent_review": {
+        "method": "Independent agent checked current operator and authority material, licensed native coordinate claims or source geometry, declared public visitor scope and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The building is represented as an exterior stop on the public Bonanjo heritage route, with interpretation from streets and public paths.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Vestiges de l’Architecture Allemande au Cameroun",
+          "Les Ateliers and Communauté Urbaine de Douala",
+          "VisitCameroun independent destination guide",
+          "Wikidata contributors"
+        ],
+        "description": "The original Bell dynasty palace in Bonanjo is a visible stop on the city’s heritage route.",
+        "description_zh": "博南乔的贝尔诸王宫为历史原建筑，公众可沿城市遗产线路从街道观看外观和标牌。",
+        "details": "The building is represented as an exterior stop on the public Bonanjo heritage route, with interpretation from streets and public paths.",
+        "geography": {
+          "authority_id": "supplement:auth:cm-public:Q3891237",
+          "countries": [
+            "CM"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The architecture inventory identifies the original named palace building, La Pagode, and its address.",
+            "id": "auth:cm-public:Q3891237:evidence:1",
+            "license": null,
+            "publisher": "Vestiges de l’Architecture Allemande au Cameroun",
+            "revision": "Retrieved 2026-11-28; SHA-256 67b5f244e43a582807e92c8a6980d097f3313adca108f5b2ccc967bea7496df6.",
+            "title": "Palais des Rois Bell building at Bonanjo",
+            "uri": "https://vaac.cm/infrastructure/palais-des-rois-bell/"
+          }
+        },
+        "id": "auth:cm-public:Q3891237",
+        "location_precision": null,
+        "names": [
+          "杜阿拉贝尔诸王宫外观",
+          "Bell Kings’ Palace exterior, Douala",
+          "Palais des Rois Bell",
+          "Ancien Palais des Rois Bell",
+          "La Pagode de Douala"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          9.68713,
+          4.04339
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The architecture inventory identifies the original named palace building, La Pagode, and its address.",
+            "id": "auth:cm-public:Q3891237:evidence:1",
+            "license": null,
+            "publisher": "Vestiges de l’Architecture Allemande au Cameroun",
+            "revision": "Retrieved 2026-11-28; SHA-256 67b5f244e43a582807e92c8a6980d097f3313adca108f5b2ccc967bea7496df6.",
+            "title": "Palais des Rois Bell building at Bonanjo",
+            "uri": "https://vaac.cm/infrastructure/palais-des-rois-bell/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The published urban survey records the original palace, its later occupancy and the historic Bonanjo setting.",
+            "id": "auth:cm-public:Q3891237:evidence:2",
+            "license": null,
+            "publisher": "Les Ateliers and Communauté Urbaine de Douala",
+            "revision": "Retrieved 2026-11-28; SHA-256 048ea99c93894930fc860a2d18e805b7f3ea523f274b28b535fa4fb663266c51.",
+            "title": "Bonanjo historic townscape survey",
+            "uri": "https://www.ateliers.org/media/workshop/documents/document_de_contexte_douala_2016_light.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The November 2026 guide lists La Pagode on the Bonanjo route and limits general sightseeing to the exterior.",
+            "id": "auth:cm-public:Q3891237:evidence:3",
+            "license": null,
+            "publisher": "VisitCameroun independent destination guide",
+            "revision": "Retrieved 2026-11-28; SHA-256 edac5d8c3c36a3131a8b870ae4d39d61d656c7a455f3b3baf5d032ac2ba8d70b.",
+            "title": "External visitor route at La Pagode",
+            "uri": "https://visitcameroun.com/douala/things-to-do/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 9.68713, latitude 4.04339.",
+            "id": "auth:cm-public:Q3891237:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 f5fbc0c2e7e0cd77f669898bdc2637946c0e1c8397437f41ab284c61ebfd6c62.",
+            "title": "Bell Kings’ Palace exterior, Douala coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3891237.json"
+          }
+        ],
+        "source_uri": "https://vaac.cm/infrastructure/palais-des-rois-bell/",
+        "title": "Bell Kings’ Palace exterior, Douala",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/cm-pagode-heredity.html",
+          "sha256": "67b5f244e43a582807e92c8a6980d097f3313adca108f5b2ccc967bea7496df6",
+          "uri": "https://vaac.cm/infrastructure/palais-des-rois-bell/"
+        },
+        {
+          "filename": "source/cm-pagode-published-conservation.pdf",
+          "sha256": "048ea99c93894930fc860a2d18e805b7f3ea523f274b28b535fa4fb663266c51",
+          "uri": "https://www.ateliers.org/media/workshop/documents/document_de_contexte_douala_2016_light.pdf"
+        },
+        {
+          "filename": "source/cm-pagode-exterior-2026.html",
+          "sha256": "edac5d8c3c36a3131a8b870ae4d39d61d656c7a455f3b3baf5d032ac2ba8d70b",
+          "uri": "https://visitcameroun.com/douala/things-to-do/"
+        },
+        {
+          "filename": "source/Q3891237.json",
+          "sha256": "f5fbc0c2e7e0cd77f669898bdc2637946c0e1c8397437f41ab284c61ebfd6c62",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3891237.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          -23.50914167,
+          14.90043056
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10280150.json",
+        "statement_id": "Q10280150$B42658A6-6806-4376-80C8-95CD6A4E4C67"
+      },
+      "independent_review": {
+        "method": "Independent agent checked current operator and authority material, licensed native coordinate claims or source geometry, declared public visitor scope and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point represents the restored lighthouse visitor precinct. The public scope follows interpretation areas and exterior access under site management.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Inforpress, reporting the heritage authority or site staff",
+          "Boletim Oficial da República de Cabo Verde",
+          "Wikidata contributors"
+        ],
+        "description": "The historic lighthouse precinct in Praia has a public interpretation centre.",
+        "description_zh": "普拉亚的历史灯塔原址设有公共解说中心。",
+        "details": "The point represents the restored lighthouse visitor precinct. The public scope follows interpretation areas and exterior access under site management.",
+        "geography": {
+          "authority_id": "supplement:auth:cv-public:Q10280150",
+          "countries": [
+            "CV"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The assigned lighthouse guide reports welcoming visitors after the restoration.",
+            "id": "auth:cv-public:Q10280150:evidence:1",
+            "license": null,
+            "publisher": "Inforpress, reporting the heritage authority or site staff",
+            "revision": "Retrieved 2026-11-28; SHA-256 6c32bb300d295adafd7656f4de5be32c3505127531623b9af68684aadc2bdd21.",
+            "title": "Guided visitors at the historic lighthouse",
+            "uri": "https://inforpress.cv/pt/frequentador-do-farol-dona-maria-pia-afirma-que-monumento-nunca-foi-feliz-no-restauro"
+          }
+        },
+        "id": "auth:cv-public:Q10280150",
+        "location_precision": null,
+        "names": [
+          "多娜玛丽亚·皮娅灯塔参观区",
+          "Dona Maria Pia Lighthouse visitor site",
+          "Farol D. Maria Pia",
+          "Farol de D. Maria Pia",
+          "Centro Interpretativo do Farol D. Maria Pia"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -23.50914167,
+          14.90043056
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The assigned lighthouse guide reports welcoming visitors after the restoration.",
+            "id": "auth:cv-public:Q10280150:evidence:1",
+            "license": null,
+            "publisher": "Inforpress, reporting the heritage authority or site staff",
+            "revision": "Retrieved 2026-11-28; SHA-256 6c32bb300d295adafd7656f4de5be32c3505127531623b9af68684aadc2bdd21.",
+            "title": "Guided visitors at the historic lighthouse",
+            "uri": "https://inforpress.cv/pt/frequentador-do-farol-dona-maria-pia-afirma-que-monumento-nunca-foi-feliz-no-restauro"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official record designates the in-place operating lighthouse and its protected surroundings.",
+            "id": "auth:cv-public:Q10280150:evidence:2",
+            "license": null,
+            "publisher": "Boletim Oficial da República de Cabo Verde",
+            "revision": "Retrieved 2026-11-28; SHA-256 8df804048d60175efe81d59b902f5fdf8b9093f478f4631bb035a24685d97f84.",
+            "title": "National cultural heritage designation",
+            "uri": "https://boe.incv.cv/Bulletins/Download/13498"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national agency names the on-site interpretation centre and reports documented visitors.",
+            "id": "auth:cv-public:Q10280150:evidence:3",
+            "license": null,
+            "publisher": "Inforpress, reporting the heritage authority or site staff",
+            "revision": "Retrieved 2026-11-28; SHA-256 acfce57372dc29fe56a93775e58568c173685b3dbda6f1656cbaa468a8a80f2c.",
+            "title": "National heritage agency’s lighthouse admission figures",
+            "uri": "https://inforpress.cv/en/article-7676"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude -23.50914167, latitude 14.90043056.",
+            "id": "auth:cv-public:Q10280150:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 5ea9955463bd106e2190041cdfe06e73206040a92bf02a8b6e4e6e6950700565.",
+            "title": "Dona Maria Pia Lighthouse visitor site coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10280150.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The institute lists documented public visitor totals for the Dona Maria Pia interpretation centre.",
+            "id": "auth:cv-public:Q10280150:reopening-public-record",
+            "license": null,
+            "publisher": "Instituto do Património Cultural (Cabo Verde)",
+            "revision": "Retrieved 2026-11-28; SHA-256 aa4c3827269356b58a2de299686fb0efcf049c24c8c14b14451c90fb0087b6ab.",
+            "title": "Cabo Verde heritage museum visitor statistics",
+            "uri": "https://ipc.cv/noticias/museus-de-cabo-verde-registam-mais-de-45-mil-visitantes-em-2025/"
+          }
+        ],
+        "source_uri": "https://inforpress.cv/pt/frequentador-do-farol-dona-maria-pia-afirma-que-monumento-nunca-foi-feliz-no-restauro",
+        "title": "Dona Maria Pia Lighthouse visitor site",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/cv-lighthouse-guide.html",
+          "sha256": "6c32bb300d295adafd7656f4de5be32c3505127531623b9af68684aadc2bdd21",
+          "uri": "https://inforpress.cv/pt/frequentador-do-farol-dona-maria-pia-afirma-que-monumento-nunca-foi-feliz-no-restauro"
+        },
+        {
+          "filename": "source/cv-lighthouse-gazette.pdf",
+          "sha256": "8df804048d60175efe81d59b902f5fdf8b9093f478f4631bb035a24685d97f84",
+          "uri": "https://boe.incv.cv/Bulletins/Download/13498"
+        },
+        {
+          "filename": "source/cv-ipc-museum-visitors-2026.html",
+          "sha256": "acfce57372dc29fe56a93775e58568c173685b3dbda6f1656cbaa468a8a80f2c",
+          "uri": "https://inforpress.cv/en/article-7676"
+        },
+        {
+          "filename": "source/Q10280150.json",
+          "sha256": "5ea9955463bd106e2190041cdfe06e73206040a92bf02a8b6e4e6e6950700565",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10280150.json"
+        },
+        {
+          "filename": "source/independent-dona-maria-ipc-record.html",
+          "sha256": "aa4c3827269356b58a2de299686fb0efcf049c24c8c14b14451c90fb0087b6ab",
+          "uri": "https://ipc.cv/noticias/museus-de-cabo-verde-registam-mais-de-45-mil-visitantes-em-2025/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          -23.74388888888889,
+          15.264166666666666
+        ],
+        "precision": 0.0002777777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1031493.json",
+        "statement_id": "q1031493$4137A411-C451-4873-A670-639407F6E675"
+      },
+      "independent_review": {
+        "method": "Independent agent checked current operator and authority material, licensed native coordinate claims or source geometry, declared public visitor scope and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point represents the penitentiary museum precinct at Chão Bom. The managed route connects the historical entrance and designated outside and inside spaces.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Instituto do Património Cultural, Cabo Verde",
+          "Boletim Oficial da República de Cabo Verde",
+          "Inforpress, reporting the heritage authority or site staff",
+          "Wikidata contributors"
+        ],
+        "description": "The public museum follows an interpreted route through the surviving former colonial detention camp at Chão Bom.",
+        "description_zh": "抵抗博物馆位于尚邦旧集中营原址，访客沿公开游线参观历史建筑和展览。",
+        "details": "The point represents the penitentiary museum precinct at Chão Bom. The managed route connects the historical entrance and designated outside and inside spaces.",
+        "geography": {
+          "authority_id": "supplement:auth:cv-public:Q1031493",
+          "countries": [
+            "CV"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator lists hours and the public route through the surviving former detention camp.",
+            "id": "auth:cv-public:Q1031493:evidence:1",
+            "license": null,
+            "publisher": "Instituto do Património Cultural, Cabo Verde",
+            "revision": "Retrieved 2026-11-28; SHA-256 5da3233c40bcfa5da16aae8364da05ead664ea1658997a9a2f9d8aef9b7c42c3.",
+            "title": "Tarrafal Resistance Museum visit",
+            "uri": "https://ipc.cv/museus/museu-da-resistencia/"
+          }
+        },
+        "id": "auth:cv-public:Q1031493",
+        "location_precision": null,
+        "names": [
+          "塔拉法尔旧集中营抵抗博物馆",
+          "Tarrafal Resistance Museum at the former camp",
+          "Campo de Concentração do Tarrafal",
+          "Museu da Resistência do Tarrafal",
+          "Campo do Tarrafal"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -23.74388888888889,
+          15.264166666666666
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator lists hours and the public route through the surviving former detention camp.",
+            "id": "auth:cv-public:Q1031493:evidence:1",
+            "license": null,
+            "publisher": "Instituto do Património Cultural, Cabo Verde",
+            "revision": "Retrieved 2026-11-28; SHA-256 5da3233c40bcfa5da16aae8364da05ead664ea1658997a9a2f9d8aef9b7c42c3.",
+            "title": "Tarrafal Resistance Museum visit",
+            "uri": "https://ipc.cv/museus/museu-da-resistencia/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The 20 March 2026 resolution defines the protected former camp museum zone and buffer.",
+            "id": "auth:cv-public:Q1031493:evidence:2",
+            "license": null,
+            "publisher": "Boletim Oficial da República de Cabo Verde",
+            "revision": "Retrieved 2026-11-28; SHA-256 979934f74f75f44117f6fa5a8e955d342a628c261d13720cdee7f0aa291838ad.",
+            "title": "Protected former camp museum precinct",
+            "uri": "https://boe.incv.cv/Bulletins/Download/33965"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The coordinator reports ongoing work on the interpretation plan for the existing museum and its tentative nomination.",
+            "id": "auth:cv-public:Q1031493:evidence:3",
+            "license": null,
+            "publisher": "Inforpress, reporting the heritage authority or site staff",
+            "revision": "Retrieved 2026-11-28; SHA-256 5e0bcccb5d08a03cb253d89d10b2c87c55239f25ba6107c747f4b0abdefa7c19.",
+            "title": "November 2026 current museum and tentative status",
+            "uri": "https://www.inforpress.cv/pt/campo-de-concentracao-do-tarrafal-ipc-com-atelie-de-validacao-estrategica-e-interpretacao-para-museu-da-resistencia"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude -23.74388888888889, latitude 15.264166666666666.",
+            "id": "auth:cv-public:Q1031493:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 62bf9461265a7d46f51511f2fc81b0047408cd9e358439d8fb10920001a13eb9.",
+            "title": "Tarrafal Resistance Museum at the former camp coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1031493.json"
+          }
+        ],
+        "source_uri": "https://ipc.cv/museus/museu-da-resistencia/",
+        "title": "Tarrafal Resistance Museum at the former camp",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/cv-tarrafal-oper.html",
+          "sha256": "5da3233c40bcfa5da16aae8364da05ead664ea1658997a9a2f9d8aef9b7c42c3",
+          "uri": "https://ipc.cv/museus/museu-da-resistencia/"
+        },
+        {
+          "filename": "source/cv-tarrafal-2026-gazette.pdf",
+          "sha256": "979934f74f75f44117f6fa5a8e955d342a628c261d13720cdee7f0aa291838ad",
+          "uri": "https://boe.incv.cv/Bulletins/Download/33965"
+        },
+        {
+          "filename": "source/cv-tarrafal-nov-2026.html",
+          "sha256": "5e0bcccb5d08a03cb253d89d10b2c87c55239f25ba6107c747f4b0abdefa7c19",
+          "uri": "https://www.inforpress.cv/pt/campo-de-concentracao-do-tarrafal-ipc-com-atelie-de-validacao-estrategica-e-interpretacao-para-museu-da-resistencia"
+        },
+        {
+          "filename": "source/Q1031493.json",
+          "sha256": "62bf9461265a7d46f51511f2fc81b0047408cd9e358439d8fb10920001a13eb9",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1031493.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          -23.5072,
+          14.9209
+        ],
+        "precision": 0.001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3330560.json",
+        "statement_id": "Q3330560$43813658-CE40-4BDF-AF78-7E525BE694E9"
+      },
+      "independent_review": {
+        "method": "Independent agent checked current operator and authority material, licensed native coordinate claims or source geometry, declared public visitor scope and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point refers to the public museum building at No. 45 Avenida 5 de Julho within the historic Plateau district.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Instituto do Património Cultural, Cabo Verde",
+          "ISCTE University Institute of Lisbon, primary architectural field study",
+          "Inforpress, reporting the heritage authority or site staff",
+          "Wikidata contributors"
+        ],
+        "description": "The public ethnographic museum uses a surviving historical house on Avenida 5 de Julho in Praia’s Plateau district.",
+        "description_zh": "普拉亚民族志博物馆位于普拉托区七月五日大道的历史民居原建筑，设有面向公众的展览。",
+        "details": "The point refers to the public museum building at No. 45 Avenida 5 de Julho within the historic Plateau district.",
+        "geography": {
+          "authority_id": "supplement:auth:cv-public:Q3330560",
+          "countries": [
+            "CV"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator publishes hours, admission and the named museum building address at No. 45.",
+            "id": "auth:cv-public:Q3330560:evidence:1",
+            "license": null,
+            "publisher": "Instituto do Património Cultural, Cabo Verde",
+            "revision": "Retrieved 2026-11-28; SHA-256 006f751b276b4ed3d319beaf0a63c9af4285e6dff736b2725952d0440ca7ce91.",
+            "title": "Praia Ethnographic Museum visit",
+            "uri": "https://ipc.cv/museus/museu-etnografico-da-praia/"
+          }
+        },
+        "id": "auth:cv-public:Q3330560",
+        "location_precision": null,
+        "names": [
+          "普拉亚民族志博物馆旧民居",
+          "Praia Ethnographic Museum historic house",
+          "Museu Etnográfico da Praia",
+          "Praia Ethnographic Museum"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -23.5072,
+          14.9209
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator publishes hours, admission and the named museum building address at No. 45.",
+            "id": "auth:cv-public:Q3330560:evidence:1",
+            "license": null,
+            "publisher": "Instituto do Património Cultural, Cabo Verde",
+            "revision": "Retrieved 2026-11-28; SHA-256 006f751b276b4ed3d319beaf0a63c9af4285e6dff736b2725952d0440ca7ce91.",
+            "title": "Praia Ethnographic Museum visit",
+            "uri": "https://ipc.cv/museus/museu-etnografico-da-praia/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The field research identifies the museum as occupying a historic private house.",
+            "id": "auth:cv-public:Q3330560:evidence:2",
+            "license": null,
+            "publisher": "ISCTE University Institute of Lisbon, primary architectural field study",
+            "revision": "Retrieved 2026-11-28; SHA-256 67751b9f5294f853aa2a3d6f6417a761f6442e989257ebde9cf0dc00956d533e.",
+            "title": "Architectural survey of the Praia Plateau",
+            "uri": "https://repositorio.iscte-iul.pt/server/api/core/bitstreams/5f283092-94a6-44de-96fe-08c9ee3fc33f/content"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national heritage agency separately reports visitors for the Praia ethnographic museum.",
+            "id": "auth:cv-public:Q3330560:evidence:3",
+            "license": null,
+            "publisher": "Inforpress, reporting the heritage authority or site staff",
+            "revision": "Retrieved 2026-11-28; SHA-256 acfce57372dc29fe56a93775e58568c173685b3dbda6f1656cbaa468a8a80f2c.",
+            "title": "National heritage agency’s museum visitor statistics",
+            "uri": "https://inforpress.cv/en/article-7676"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude -23.5072, latitude 14.9209.",
+            "id": "auth:cv-public:Q3330560:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 e33784a3814934996489c30c63ac08bdd2554f2f2ada4154339b9c4b767c9c04.",
+            "title": "Praia Ethnographic Museum historic house coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3330560.json"
+          }
+        ],
+        "source_uri": "https://ipc.cv/museus/museu-etnografico-da-praia/",
+        "title": "Praia Ethnographic Museum historic house",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/cv-ethnography-oper.html",
+          "sha256": "006f751b276b4ed3d319beaf0a63c9af4285e6dff736b2725952d0440ca7ce91",
+          "uri": "https://ipc.cv/museus/museu-etnografico-da-praia/"
+        },
+        {
+          "filename": "source/cv-praia-building-university.pdf",
+          "sha256": "67751b9f5294f853aa2a3d6f6417a761f6442e989257ebde9cf0dc00956d533e",
+          "uri": "https://repositorio.iscte-iul.pt/server/api/core/bitstreams/5f283092-94a6-44de-96fe-08c9ee3fc33f/content"
+        },
+        {
+          "filename": "source/cv-ipc-museum-visitors-2026.html",
+          "sha256": "acfce57372dc29fe56a93775e58568c173685b3dbda6f1656cbaa468a8a80f2c",
+          "uri": "https://inforpress.cv/en/article-7676"
+        },
+        {
+          "filename": "source/Q3330560.json",
+          "sha256": "e33784a3814934996489c30c63ac08bdd2554f2f2ada4154339b9c4b767c9c04",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3330560.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          -22.9009,
+          16.7726
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q65688954.json",
+        "statement_id": "Q65688954$79F14229-FDA6-40CC-AA71-4D92DB42D1FD"
+      },
+      "independent_review": {
+        "method": "Independent agent checked current operator and authority material, licensed native coordinate claims or source geometry, declared public visitor scope and corpus duplicates.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The WGS84 point is a representative point inside the mapped historic salt pans. Visitors follow managed routes. The location refers to the industrial heritage landscape.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Instituto do Património Cultural, Cabo Verde",
+          "Visit Cabo Verde, national destination portal",
+          "Krioula Tour, Sal Island tour operator",
+          "UNESCO World Heritage Centre, State Party submission",
+          "Wikidata contributors"
+        ],
+        "description": "The surviving historic salt pans occupy the crater of Pedra de Lume on Sal Island. Managed visits reach the open-air saltworks.",
+        "description_zh": "萨尔岛佩德拉德卢梅的历史盐田位于火山口内，管理方开放指定的露天参观范围。",
+        "details": "The WGS84 point is a representative point inside the mapped historic salt pans. Visitors follow managed routes. The location refers to the industrial heritage landscape.",
+        "geography": {
+          "authority_id": "supplement:auth:cv-public:Q65688954",
+          "countries": [
+            "CV"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national agency identifies the historic salt extraction landscape inside the crater.",
+            "id": "auth:cv-public:Q65688954:evidence:1",
+            "license": null,
+            "publisher": "Instituto do Património Cultural, Cabo Verde",
+            "revision": "Retrieved 2026-11-28; SHA-256 6d6df659b339a60ac834d74ac986a3ce141038a582976c8f4c16f428bfff81e9.",
+            "title": "National heritage inventory for the Pedra de Lume saltworks",
+            "uri": "https://ipc.cv/cv/monumento-e-sitio/salinas-de-pedra-de-lume-patrimonio-nacional/"
+          }
+        },
+        "id": "auth:cv-public:Q65688954",
+        "location_precision": null,
+        "names": [
+          "佩德拉德卢梅历史盐场",
+          "Pedra de Lume historic saltworks",
+          "Salinas de Pedra de Lume",
+          "Salines de Pedra de Lume",
+          "Pedra de Lume salt ponds"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -22.9009,
+          16.7726
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national agency identifies the historic salt extraction landscape inside the crater.",
+            "id": "auth:cv-public:Q65688954:evidence:1",
+            "license": null,
+            "publisher": "Instituto do Património Cultural, Cabo Verde",
+            "revision": "Retrieved 2026-11-28; SHA-256 6d6df659b339a60ac834d74ac986a3ce141038a582976c8f4c16f428bfff81e9.",
+            "title": "National heritage inventory for the Pedra de Lume saltworks",
+            "uri": "https://ipc.cv/cv/monumento-e-sitio/salinas-de-pedra-de-lume-patrimonio-nacional/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national destination portal identifies guided visits to the historic saltworks.",
+            "id": "auth:cv-public:Q65688954:evidence:2",
+            "license": null,
+            "publisher": "Visit Cabo Verde, national destination portal",
+            "revision": "Retrieved 2026-11-28; SHA-256 7184fe447dd3324935550c16a9b8618d3d589f2c50382a6599479897df4cb1bf.",
+            "title": "Public routes to the Pedra de Lume saltworks",
+            "uri": "https://www.visit-caboverde.com/ilhas/ilha-do-sal"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator lists access to the saltworks as a stop on its open island excursion.",
+            "id": "auth:cv-public:Q65688954:evidence:3",
+            "license": null,
+            "publisher": "Krioula Tour, Sal Island tour operator",
+            "revision": "Retrieved 2026-11-28; SHA-256 8a7f1d27127bc636ad4d4f34e33701ea2180087a87558bf5a20e9afc7ec2dcdd.",
+            "title": "Saltworks visit on a local guided circuit",
+            "uri": "https://krioulatour.cv/island-tour"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The State Party nominates the salt exploitation landscape in the crater as a mixed property.",
+            "id": "auth:cv-public:Q65688954:evidence:4",
+            "license": null,
+            "publisher": "UNESCO World Heritage Centre, State Party submission",
+            "revision": "Retrieved 2026-11-28; SHA-256 427f56bcf4284b229d0cb5681803319bc37c15f184f50d10e92bf0cd2724f328.",
+            "title": "Tentative heritage designation 6106",
+            "uri": "https://whc.unesco.org/en/tentativelists/6106/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude -22.9009, latitude 16.7726.",
+            "id": "auth:cv-public:Q65688954:evidence:5",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 8729e4286a2fef7038b1b155e7fb37d4db21f265cc0d0ecaf249edd0758be4d2.",
+            "title": "Pedra de Lume historic saltworks coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q65688954.json"
+          }
+        ],
+        "source_uri": "https://ipc.cv/cv/monumento-e-sitio/salinas-de-pedra-de-lume-patrimonio-nacional/",
+        "title": "Pedra de Lume historic saltworks",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/cv-salinas-ipc.html",
+          "sha256": "6d6df659b339a60ac834d74ac986a3ce141038a582976c8f4c16f428bfff81e9",
+          "uri": "https://ipc.cv/cv/monumento-e-sitio/salinas-de-pedra-de-lume-patrimonio-nacional/"
+        },
+        {
+          "filename": "source/cv-salinas-government-tour.html",
+          "sha256": "7184fe447dd3324935550c16a9b8618d3d589f2c50382a6599479897df4cb1bf",
+          "uri": "https://www.visit-caboverde.com/ilhas/ilha-do-sal"
+        },
+        {
+          "filename": "source/cv-salinas-island-operator.html",
+          "sha256": "8a7f1d27127bc636ad4d4f34e33701ea2180087a87558bf5a20e9afc7ec2dcdd",
+          "uri": "https://krioulatour.cv/island-tour"
+        },
+        {
+          "filename": "source/cv-salinas-whc-6106.html",
+          "sha256": "427f56bcf4284b229d0cb5681803319bc37c15f184f50d10e92bf0cd2724f328",
+          "uri": "https://whc.unesco.org/en/tentativelists/6106/"
+        },
+        {
+          "filename": "source/Q65688954.json",
+          "sha256": "8729e4286a2fef7038b1b155e7fb37d4db21f265cc0d0ecaf249edd0758be4d2",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q65688954.json"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Four public places each in Cabo Verde and Cameroon, with documented visitor scope and source-overlap screening."
+}

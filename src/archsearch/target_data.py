@@ -448,6 +448,27 @@ SWEDEN_PUBLIC = NamedPlaceCohort(
     "eae9fa1ac05584db8915e67154129063936470295b9b91d71e0e9d0a3b3a333d",
     "bfd265bd401279e427f2b6333c45c5a52cf38532929489b2ac13c7ab362dfae3",
 )
+POLAND_PUBLIC = NamedPlaceCohort(
+    "poland-public-v1",
+    "global-v21",
+    "poland_public",
+    "7381d6b8f382d0686f55429f2eeab715fa2206a2643997b9ebaf627b6b60da1d",
+    "e582adffbd9a74107d0e88a53706cb72d3d2d1f6bae51e9e54d0f626361702e0",
+)
+CABO_CAMEROON_PUBLIC = NamedPlaceCohort(
+    "cabo-verde-cameroon-public-v1",
+    "global-v21",
+    "cabo_cameroon_public",
+    "0d1a823707d402c4aeab563be57b9d6d0664cfc5c73e6008c33352ce9305e0b8",
+    "014e10b427dbef555cb7524579ab6033ef054bee1f77b26a7696bf3207ce6ed7",
+)
+COLOMBIA_VENEZUELA_PUBLIC = NamedPlaceCohort(
+    "colombia-venezuela-public-v1",
+    "global-v21",
+    "colombia_venezuela_public",
+    "2a10b468689730d3b81d86da85b245cb2106bd0efd34923109d609d2f6ddfb26",
+    "43e227b340b75613bd285982d38ad0246e21f97eb86d15b2d145e5a1aee2e999",
+)
 POINT_COHORTS = (
     IRELAND, ANDALUCIA, TAIWAN_ICULTURE, MEXICO_SIC, FINLAND_VARK, WALES_CADW, THAILAND_FAD,
     AFRICA_VISIT, SCOTLAND_HES, CARIBBEAN_NRHP, PERU_PUBLIC, INDIA_ASI, INDIA_ASI_NEXT,
@@ -474,6 +495,9 @@ POINT_COHORTS = (
     LAOS_BHUTAN_PUBLIC,
     ALGERIA_PUBLIC,
     SWEDEN_PUBLIC,
+    POLAND_PUBLIC,
+    CABO_CAMEROON_PUBLIC,
+    COLOMBIA_VENEZUELA_PUBLIC,
 )
 
 
