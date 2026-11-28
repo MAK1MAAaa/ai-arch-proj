@@ -766,7 +766,7 @@ def test_real_combined_source_groups_preserve_world5632_sequence_and_individual_
     coverage = index.spatial_coverage()
     assert coverage is not None and coverage.ready
     assert (coverage.records, coverage.points, coverage.distinct_points,
-            coverage.duplicate_points, coverage.display_points) == (1239, 5851, 5546, 305, 9341)
+            coverage.duplicate_points, coverage.display_points) == (1239, 5851, 5546, 305, 9346)
     groups = {group.version: group for group in coverage.source_groups}
     assert set(groups) == {"world-locations-v1", "protection-locations-v1",
                            "nps-pacific-locations-v1"}
@@ -798,7 +798,7 @@ def test_actual_warehouse_point_does_not_match_arqa_as_an_original_cultural_site
     assert index.page(bbox=SpatialBounds.from_csv("-180,-90,180,90")).total == (
         locations.mapped + locations.polar
     )
-    assert index.coverage().locations.model_dump() == {"mapped": 4938, "polar": 3, "unknown": 393}
+    assert index.coverage().locations.model_dump() == {"mapped": 4943, "polar": 3, "unknown": 393}
 
 
 def test_false_overlap_flag_and_component_rows_are_not_fabricated_as_new_sites() -> None:

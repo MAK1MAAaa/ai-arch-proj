@@ -1,0 +1,22 @@
+{
+  "base_count": 5337,
+  "base_ids_sha256": "d0957f40665dcd93c85d6392a2fa1b49424f69ed2a88315b86e28274a135d83c",
+  "base_sites_sha256": "e6e25586e260b133884ac5af78f1eb9c18e12bc51c559a1fc0e9a89d584a07b7",
+  "cohort_version": "sri-lanka-inland-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 2,
+    "total": 5339
+  },
+  "files": {
+    "sri_lanka_inland_public_review.json": {
+      "sha256": "aafd926cce9be45daec151a961dcf73e488fc6a44eee877089b11aeccdca881d"
+    },
+    "sri_lanka_inland_public_sites.json": {
+      "sha256": "cdc0fe3a47494682657aca261459e30a142757a6dba68d8ea37169dcf9d576ed"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Two publicly documented archaeological sites in inland Sri Lanka. Uses original CC0 position of Maligawila and a licensed original object location for Dedigama."
+}

@@ -589,6 +589,21 @@ NORTHERN_SOUTH_AMERICA_PUBLIC = NamedPlaceCohort(
     "00d7ccd1947386fc1ef2555f38fb3ae710c35a184fd88b16e735df0432f935f3",
     "10e0ce6e840477aa2901f53e6cf4ffb7c83d0bfd83ea2172cee8d6aeacf4a03c",
 )
+NORTH_ATLANTIC_PUBLIC = NamedPlaceCohort(
+    "north-atlantic-public-v1",
+    "global-v21",
+    "north_atlantic_public",
+    "375ead02b502955389328fd29cebdb8faf2d5cb50c3eae78ec440e84b0677e57",
+    "5e7a363d694c20db6656f7dc5c1ae51889300105812a41948d7b9e399980149a",
+    country_labels=(("FO", "Faroe Islands"), ("GL", "Greenland")),
+)
+SRI_LANKA_INLAND_PUBLIC = NamedPlaceCohort(
+    "sri-lanka-inland-public-v1",
+    "global-v21",
+    "sri_lanka_inland_public",
+    "aafd926cce9be45daec151a961dcf73e488fc6a44eee877089b11aeccdca881d",
+    "cdc0fe3a47494682657aca261459e30a142757a6dba68d8ea37169dcf9d576ed",
+)
 POINT_COHORTS = (
     IRELAND, ANDALUCIA, TAIWAN_ICULTURE, MEXICO_SIC, FINLAND_VARK, WALES_CADW, THAILAND_FAD,
     AFRICA_VISIT, SCOTLAND_HES, CARIBBEAN_NRHP, PERU_PUBLIC, INDIA_ASI, INDIA_ASI_NEXT,
@@ -635,6 +650,8 @@ POINT_COHORTS = (
     ARUBA_CURACAO_PUBLIC,
     SLOVAKIA_AUSTRIA_PUBLIC,
     NORTHERN_SOUTH_AMERICA_PUBLIC,
+    NORTH_ATLANTIC_PUBLIC,
+    SRI_LANKA_INLAND_PUBLIC,
 )
 
 

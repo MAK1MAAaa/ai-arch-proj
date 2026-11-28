@@ -8,7 +8,7 @@
 
 ## 当前范围
 
-当前语料`global-v21`共5334条，覆盖218个来源国家／地区标签和7个资料分组，详见[公共文化点位补充](#公共文化点位补充)。基础检索使用本地CPU运行`multilingual-e5-small`，并提供BM25切换；现在可选Ollama／OpenAI兼容API进行查询改写与RRF排名融合。模型设置、启动和实际限制见[LLM查询增强说明](llm-search.md)，生成内容不替代来源证据。
+当前语料`global-v21`共5339条，覆盖220个来源国家／地区标签和7个资料分组，详见[公共文化点位补充](#公共文化点位补充)。基础检索使用本地CPU运行`multilingual-e5-small`，并提供BM25切换；现在可选Ollama／OpenAI兼容API进行查询改写与RRF排名融合。模型设置、启动和实际限制见[LLM查询增强说明](llm-search.md)，生成内容不替代来源证据。
 
 ### 公共文化点位补充
 
@@ -89,6 +89,8 @@
 - 阿鲁巴和库拉索公共文化点位 3 条。 [来源与许可](../src/archsearch/data/ARUBA-CURACAO-PUBLIC-LICENSE.md)
 - 斯洛伐克公共文化点位 9 条，奥地利 5 条。 [来源与许可](../src/archsearch/data/SLOVAKIA-AUSTRIA-PUBLIC-LICENSE.md)
 - 苏里南公共文化点位 1 条，厄瓜多尔 2 条。 [来源与许可](../src/archsearch/data/NORTHERN-SOUTH-AMERICA-PUBLIC-LICENSE.md)
+- 北大西洋公共文化点位 3 条，分布于法罗群岛、格陵兰和冰岛。 [来源与许可](../src/archsearch/data/NORTH-ATLANTIC-PUBLIC-LICENSE.md)
+- 斯里兰卡内陆公共考古点位 2 条。 [来源与许可](../src/archsearch/data/SRI-LANKA-INLAND-PUBLIC-LICENSE.md)
 
 需要重建时使用仓库中的冻结复核文件。准备语义索引时可复用本地 E5 模型。
 
@@ -211,7 +213,7 @@ uv run --no-sync archsearch prepare
 uv run --no-sync archsearch coverage
 ```
 
-输出包括5334条来源统计、218个可筛国家／地区、7个资料分组、三态断代计数（156条已核验、1881条证据不足、3297条尚未核验），以及固定世界遗产名录覆盖1033／1033和ATS历史名录91／91。代表点单独统计为4938条主图可显示、3条极区点和393条暂无采用代表点；空值包含来源真实位置未知、地址披露限制、仅有登记范围或尚未采纳可信数字点等不同情况，以逐条说明为准。三个来源组共1239个身份、5851条来源点、5546个不同坐标、305次同身份重合；补绘原代表点后为9341个逻辑点，原始点列完整保留，并按当前视口和缩放，在所需的世界副本中显示单点或聚合；聚合数字表示定位点数，不是遗址数量。新加坡77个、Mérimée既有442个及122个扩充提供者点以参考代表点保存，新墓使用明确注明角色的教堂参考点，不增加上述三组源点序列计数；Iepha-MG新增133项无来源坐标，不生成地图点。海牙源175行及NPS156个源身份的审核结果单列，不作为新增或完整全球分母。完整来源缓存不进Git；可从固定归档重新生成派生文件：
+输出包括5339条来源统计、220个可筛国家／地区、7个资料分组、三态断代计数（156条已核验、1886条证据不足、3297条尚未核验），以及固定世界遗产名录覆盖1033／1033和ATS历史名录91／91。代表点单独统计为4943条主图可显示、3条极区点和393条暂无采用代表点；空值包含来源真实位置未知、地址披露限制、仅有登记范围或尚未采纳可信数字点等不同情况，以逐条说明为准。三个来源组共1239个身份、5851条来源点、5546个不同坐标、305次同身份重合；补绘原代表点后为9346个逻辑点，原始点列完整保留，并按当前视口和缩放，在所需的世界副本中显示单点或聚合；聚合数字表示定位点数，不是遗址数量。新加坡77个、Mérimée既有442个及122个扩充提供者点以参考代表点保存，新墓使用明确注明角色的教堂参考点，不增加上述三组源点序列计数；Iepha-MG新增133项无来源坐标，不生成地图点。海牙源175行及NPS156个源身份的审核结果单列，不作为新增或完整全球分母。完整来源缓存不进Git；可从固定归档重新生成派生文件：
 
 ```powershell
 uv run --no-sync python -m archsearch.catalogue_data --rebuild --download
@@ -233,7 +235,7 @@ Canada 目录支持13个来源省／地区：992个加拿大对象都有经过�
 
 读取所选遗址并确认详情与工作区的语料版本一致后，可导出资料。详情响应头为 `X-ArchSearch-Corpus-Version`。地图年份尚在请求中时，文件分别保存最后成功显示的年份和所选阶段。详情加载失败或地图范围尚未恢复时，按钮暂不可用。
 
-地区索引 `source-subdivisions-v9` 与5334条语料身份及来源国家字段绑定，完整保留既有202个选项、1836条关联和证据，独立于共享检索文本和E5向量保存。加拿大原993条整体省区关联、香港139条来源要素地区关联及巴西133条原登记市镇关联保持不变，角色分别说明。v5中的449项Mérimée原市镇关联及全部旧179个选项、1714条关联和证据顺序完整保留；v6依据独立的extension来源合同追加122条GF／YT／PM原记录关联与23个全文选项，合计202个选项、1836条关联、1834个不同对象。多市镇值不拆分，同COG的不同原拼写不自动合并，原Region不被现代统计区域覆盖。新加坡没有来源区级字段，不补造行政区。单独重建地区侧车无需下载模型；缺失或损坏时仅禁用该条件，清除条件后基础目录和检索仍可用。
+地区索引 `source-subdivisions-v9` 与5339条语料身份及来源国家字段绑定，完整保留既有202个选项、1836条关联和证据，独立于共享检索文本和E5向量保存。加拿大原993条整体省区关联、香港139条来源要素地区关联及巴西133条原登记市镇关联保持不变，角色分别说明。v5中的449项Mérimée原市镇关联及全部旧179个选项、1714条关联和证据顺序完整保留；v6依据独立的extension来源合同追加122条GF／YT／PM原记录关联与23个全文选项，合计202个选项、1836条关联、1834个不同对象。多市镇值不拆分，同COG的不同原拼写不自动合并，原Region不被现代统计区域覆盖。新加坡没有来源区级字段，不补造行政区。单独重建地区侧车无需下载模型；缺失或损坏时仅禁用该条件，清除条件后基础目录和检索仍可用。
 
 ```powershell
 # 使用随代码分发的冻结复核字段重建，不联网
@@ -311,7 +313,7 @@ API允许公元前3400年至公元2024年，负数表示公元前，不提供0�
 
 ### 语料构成
 
-当前语料 `global-v21` 共5334条：保留原500条Pleiades、100条已策展全球资料、934条文化／混合遗产名录记录及91条南极条约秘书处（ATS）正式历史遗址或纪念物，另有38处国家补充、26处北方／岛屿／内陆补充、11处南美文化遗址、95处海牙文化财产名录中的文化原址或历史建筑、5处非洲文化资料、7处太平洋／非洲内陆文化资料、133处NPS太平洋登记文化资料、59处澳大利亚国家遗产名录文化对象、977处加拿大历史文化资料、140项香港整体古迹、77项新加坡NHB古迹、133项巴西Iepha-MG文化登记资料，以及Mérimée既有449项加勒比／留尼汪名录范围、122项法属圭亚那／马约特／圣皮埃尔和密克隆名录范围、1处经来源核验的莎士比亚墓、7处圭亚那文化资料及前述公共文化点位。覆盖218个来源国家／地区标签和7个资料分组，其中南极为独立分类，不作主权归属标注。地图保留世界遗产5632条、海牙107条和NPS112条可绘来源定位记录，它们不增加遗址条目数。提供本地多语言语义检索、全库目录、原文证据与历史地图联动；这不是全球所有遗址或所有国家与属地的完整清单。
+当前语料 `global-v21` 共5339条：保留原500条Pleiades、100条已策展全球资料、934条文化／混合遗产名录记录及91条南极条约秘书处（ATS）正式历史遗址或纪念物，另有38处国家补充、26处北方／岛屿／内陆补充、11处南美文化遗址、95处海牙文化财产名录中的文化原址或历史建筑、5处非洲文化资料、7处太平洋／非洲内陆文化资料、133处NPS太平洋登记文化资料、59处澳大利亚国家遗产名录文化对象、977处加拿大历史文化资料、140项香港整体古迹、77项新加坡NHB古迹、133项巴西Iepha-MG文化登记资料，以及Mérimée既有449项加勒比／留尼汪名录范围、122项法属圭亚那／马约特／圣皮埃尔和密克隆名录范围、1处经来源核验的莎士比亚墓、7处圭亚那文化资料及前述公共文化点位。覆盖220个来源国家／地区标签和7个资料分组，其中南极为独立分类，不作主权归属标注。地图保留世界遗产5632条、海牙107条和NPS112条可绘来源定位记录，它们不增加遗址条目数。提供本地多语言语义检索、全库目录、原文证据与历史地图联动；这不是全球所有遗址或所有国家与属地的完整清单。
 
 ### 通用来源与分发许可
 
@@ -337,7 +339,7 @@ Leaflet 1.9.4按其BSD-2-Clause许可本地分发，许可位于`src/archsearch/
 # 从随仓库分发的已复核事实离线重建；普通安装不需要原网页缓存
 uv run --no-sync python -m archsearch.merimee_extension_data --rebuild
 uv run --no-sync python -m archsearch.subdivisions --rebuild
-# 升级后重建5334×384索引，再启动或重启服务；固定模型可离线复用
+# 升级后重建5339×384索引，再启动或重启服务；固定模型可离线复用
 uv run --no-sync archsearch prepare
 uv run --no-sync archsearch serve
 # 仅在持有完整固定来源缓存时执行
@@ -351,7 +353,7 @@ uv run --no-sync archsearch evaluate --queries src/archsearch/data/queries-merim
 
 ### 圭亚那文化遗址与年代证据
 
-`guyana-named-places-v1` 增加7条国家信托机构资料。圭亚那（GY）目录由1条增至8条。保留了斯塔布鲁克市场现厅1881年开放、西兰迪亚堡1744年竣工、圣乔治座堂1894年祝圣与1763年起义纪念碑1976年揭幕等事件。凯克欧弗阿尔堡约1616年的建筑记录，以及拿骚堡1629至1630年的迁址记录，分别保留约略和区间精度。岩刻群保留断代未确定。来源详情中可核对各事件的摘录与范围。[来源与许可](../src/archsearch/data/GUYANA-LICENSE.md)
+`guyana-named-places-v1` 增加7条国家信托机构资料。圭亚那（GY）目录由1条增至8条。保留了斯塔布鲁克市场现厅1886年开放、西兰迪亚堡1744年竣工、圣乔治座堂1894年祝圣与1763年起义纪念碑1976年揭幕等事件。凯克欧弗阿尔堡约1616年的建筑记录，以及拿骚堡1629至1630年的迁址记录，分别保留约略和区间精度。岩刻群保留断代未确定。来源详情中可核对各事件的摘录与范围。[来源与许可](../src/archsearch/data/GUYANA-LICENSE.md)
 
 在“全库浏览”选择“拉丁美洲与加勒比”和“圭亚那”，可逐条查看。已有源身份、原文、代表点和检索文本由清单校验。离线重建规范化资料并更新本地索引后重启服务。
 
@@ -373,7 +375,7 @@ uv run --no-sync archsearch prepare
 资料按[Licence Ouverte / Open Licence2.0](https://www.data.gouv.fr/pages/legal/licences/etalab-2-0)保留法国文化部、数据集、取得日2026-11-05及加工说明；外链照片和附件不在本批许可声明内。具体冻结来源、精度和范围限制见[来源说明](../src/archsearch/data/MERIMEE-LICENSE.md)，本地实际结果见[本批验收](merimee-validation.md)。
 
 ```powershell
-# 更新后重建5334×384索引，并重启服务；固定模型可离线复用
+# 更新后重建5339×384索引，并重启服务；固定模型可离线复用
 uv run --no-sync archsearch prepare
 uv run --no-sync archsearch serve
 # 只从随仓库分发的冻结复核事实离线重建
@@ -401,7 +403,7 @@ uv run --no-sync archsearch evaluate --queries src/archsearch/data/queries-merim
 本批源字段没有坐标，133项代表点、精度及历史阶段均保持未知；选择后保留地图视角和年份，不生成市镇中心。地图矩形条件会排除这些无点记录，清除矩形即可恢复目录。原有地图点序列及来源范围不变。页面与导出保留Iepha-MG署名及CC BY 4.0链接；这不是最新完整法定名录声明。
 
 ```powershell
-# 升级后重建5334×384索引并重启；已下载固定模型可离线复用
+# 升级后重建5339×384索引并重启；已下载固定模型可离线复用
 uv run --no-sync archsearch prepare
 uv run --no-sync archsearch serve
 # 只从随代码分发的冻结复核事实重建，不需要原网页
@@ -427,7 +429,7 @@ uv run --no-sync archsearch evaluate --queries src/archsearch/data/queries-minas
 较长的来源hash编号可在390px详情中完整换行，原编号、分享链接及导出值保持原样。
 
 ```powershell
-# 更新语料后重建5334×384索引，再启动或重启；既有固定模型可离线复用
+# 更新语料后重建5339×384索引，再启动或重启；既有固定模型可离线复用
 uv run --no-sync archsearch prepare
 uv run --no-sync archsearch serve
 # 从随仓库分发的已核字段离线重建，不需要原网页
@@ -455,7 +457,7 @@ uv run --no-sync archsearch evaluate --queries src/archsearch/data/queries-singa
 全部140条未采用代表点，保留空值；这不表示地点实际未知。法定古迹宣布年份仅为现代元数据，不转换成建造、使用年代或历史阶段，选择后保留历史地图年份。多边形不进入代表点／来源点矩形匹配；限定地图范围时这些无点资料会被排除，清除范围可恢复。
 
 ```powershell
-# 本次升级重建5334×384索引，可离线复用已有固定模型；然后重启服务
+# 本次升级重建5339×384索引，可离线复用已有固定模型；然后重启服务
 uv run --no-sync archsearch prepare
 uv run --no-sync archsearch serve
 # 从随代码分发的固定复核字段离线重建，不需要原网页
@@ -490,7 +492,7 @@ uv run --no-sync archsearch prepare
 uv run --no-sync archsearch evaluate --queries src/archsearch/data/queries-canada.json --output .archsearch/reports/evaluation-canada.json
 ```
 
-升级须重建5334×384索引并重启服务，可离线复用固定模型；旧1999条索引会被明确拒绝，BM25仍可用。政府发布数据适用 Open Government Licence – Canada，Wikidata结构化声明适用CC0，其他网页及第三方内容保留各自权利。参考点保留原始坐标声明、版本及角色，不是精确发掘坐标，不从范围计算中心。[来源与加工](../src/archsearch/data/CANADA-LICENSE.md)和[本批验收](canada-validation.md)保留具体边界与实际失败排名。新增20对中英检索诊断不预填相关性，未确认人工标注的指标继续为`null`。中文E5仍会漏检新资料，原名BM25和国家目录可直接使用。
+升级须重建5339×384索引并重启服务，可离线复用固定模型；旧1999条索引会被明确拒绝，BM25仍可用。政府发布数据适用 Open Government Licence – Canada，Wikidata结构化声明适用CC0，其他网页及第三方内容保留各自权利。参考点保留原始坐标声明、版本及角色，不是精确发掘坐标，不从范围计算中心。[来源与加工](../src/archsearch/data/CANADA-LICENSE.md)和[本批验收](canada-validation.md)保留具体边界与实际失败排名。新增20对中英检索诊断不预填相关性，未确认人工标注的指标继续为`null`。中文E5仍会漏检新资料，原名BM25和国家目录可直接使用。
 
 ![加拿大资料目录与1930年历史参照](canada-preview.png)
 
@@ -517,7 +519,7 @@ uv run --no-sync python -m archsearch.nps_data --verify-source-cache .archsearch
 uv run --no-sync archsearch evaluate --queries src/archsearch/data/queries-nps-pacific.json --output .archsearch/reports/evaluation-nps-pacific.json
 ```
 
-普通安装不需要原始网页或范围缓存。派生资料随仓库分发；缺失或损坏NPS定位侧车时，全库点层明确退回代表点，基础检索仍可用，重建侧车后重启。升级须重建5334×384索引，可离线复用既有固定模型；旧1807条索引会明确失效。来源采用政府结构化登记事实，提名文件、图片、第三方文本保留各自权利，不统一套用CC0或DataHub许可。见[来源与加工](../src/archsearch/data/NPS-LICENSE.md)及[验收记录](nps-pacific-validation.md)。新增20对中英主题诊断没有人工相关性标注，指标继续为`null`。
+普通安装不需要原始网页或范围缓存。派生资料随仓库分发；缺失或损坏NPS定位侧车时，全库点层明确退回代表点，基础检索仍可用，重建侧车后重启。升级须重建5339×384索引，可离线复用既有固定模型；旧1807条索引会明确失效。来源采用政府结构化登记事实，提名文件、图片、第三方文本保留各自权利，不统一套用CC0或DataHub许可。见[来源与加工](../src/archsearch/data/NPS-LICENSE.md)及[验收记录](nps-pacific-validation.md)。新增20对中英主题诊断没有人工相关性标注，指标继续为`null`。
 
 ### 澳大利亚文化资料与现代登记范围
 
@@ -565,7 +567,7 @@ uv run --no-sync python -m archsearch.pacific_data --verify-source-cache .archse
 uv run --no-sync archsearch evaluate --queries src/archsearch/data/queries-pacific.json --output .archsearch/reports/evaluation-pacific.json
 ```
 
-重建只编译冻结复核事实；升级后重新`prepare`生成5334×384索引并重启服务，可离线复用已下载模型，旧1800条索引会明确失效，BM25保持可用。导出增加本批版本和混合权利说明，不套用其他名录许可。[来源与加工](../src/archsearch/data/PACIFIC-LICENSE.md)及[验收记录](pacific-validation.md)保留定位限制和真实交互证据。新增20对中英诊断不预填相关性，所有未确认标注的评测指标继续为`null`。 首七个专名诊断中，中文E5均未进Top10，英文E5均第1；失败问题完整保留。原文专名可明确使用BM25或地区目录访问，不会隐式切换检索方式。
+重建只编译冻结复核事实；升级后重新`prepare`生成5339×384索引并重启服务，可离线复用已下载模型，旧1800条索引会明确失效，BM25保持可用。导出增加本批版本和混合权利说明，不套用其他名录许可。[来源与加工](../src/archsearch/data/PACIFIC-LICENSE.md)及[验收记录](pacific-validation.md)保留定位限制和真实交互证据。新增20对中英诊断不预填相关性，所有未确认标注的评测指标继续为`null`。 首七个专名诊断中，中文E5均未进Top10，英文E5均第1；失败问题完整保留。原文专名可明确使用BM25或地区目录访问，不会隐式切换检索方式。
 
 ### 非洲内陆文化资料补充
 
@@ -583,7 +585,7 @@ uv run --no-sync python -m archsearch.africa_data --verify-source-cache .archsea
 uv run --no-sync archsearch evaluate --queries src/archsearch/data/queries-africa.json --output .archsearch/reports/evaluation-africa.json
 ```
 
-重建只编译随代码分发的冻结复核事实。升级后重新`prepare`生成5334×384向量并重启服务，已下载模型可以离线复用，旧1795条索引会被明确拒绝；BM25保持可用。[来源与许可](../src/archsearch/data/AFRICA-LICENSE.md)和[验收记录](africa-validation.md)保留范围与点位限制。新增20对中英诊断是面向该批的专名及主题探测，不是盲测或相关性确认，所有指标继续为`null`。 本批五个中英专名对照中，中文E5四条未进Top10，失败排名完整保留；原文专名较稀少时可明确选择BM25，并结合国家／地区筛选或直接打开目录。
+重建只编译随代码分发的冻结复核事实。升级后重新`prepare`生成5339×384向量并重启服务，已下载模型可以离线复用，旧1795条索引会被明确拒绝；BM25保持可用。[来源与许可](../src/archsearch/data/AFRICA-LICENSE.md)和[验收记录](africa-validation.md)保留范围与点位限制。新增20对中英诊断是面向该批的专名及主题探测，不是盲测或相关性确认，所有指标继续为`null`。 本批五个中英专名对照中，中文E5四条未进Top10，失败排名完整保留；原文专名较稀少时可明确选择BM25，并结合国家／地区筛选或直接打开目录。
 
 ### 海牙名录中的文化原址与历史建筑
 
@@ -604,7 +606,7 @@ uv run --no-sync archsearch prepare
 uv run --no-sync python -m archsearch.protection_data --verify-source-cache .archsearch/downloads/protection-supplement-v1
 ```
 
-普通运行只读随代码分发的冻结复核、资料、定位侧车和清单。完整源导出、官方登记PDF及机构页面缓存不进入Git；DataHub资料衍生遵循同方式共享，辅助来源不被自动重新许可。升级须重新`prepare`生成5334×384向量并重启服务，已有模型可离线复用。[许可与来源](../src/archsearch/data/PROTECTION-LICENSE.md)及[验收记录](protection-validation.md)说明完整175行审查、地图与检索证据和仍待核的范围。
+普通运行只读随代码分发的冻结复核、资料、定位侧车和清单。完整源导出、官方登记PDF及机构页面缓存不进入Git；DataHub资料衍生遵循同方式共享，辅助来源不被自动重新许可。升级须重新`prepare`生成5339×384向量并重启服务，已有模型可离线复用。[许可与来源](../src/archsearch/data/PROTECTION-LICENSE.md)及[验收记录](protection-validation.md)说明完整175行审查、地图与检索证据和仍待核的范围。
 
 新增[20对海牙资料诊断查询](../src/archsearch/data/queries-protection.json)，连同既有四套问题分别比较BM25／E5 × 中文／英文，仍不预填相关性。来源只有名称而没有历史描述的条目，E5可能漏掉稀有专名；“寻找 Menjez 的巨石墓群”即未进Top10，失败问题仍在诊断中。界面的“Menjez 原名 · BM25”明确表示按完整来源名称使用关键词基线，点击才同步切换单选模式并发起一次检索，模型未准备时同样可用；它不是语义失败后的隐式降级。原检索模式、来源点范围、年份和历史阶段仍分别保存。
 
@@ -629,7 +631,7 @@ uv run --no-sync archsearch prepare
 uv run --no-sync python -m archsearch.southamerica_data --verify-source-cache .archsearch/downloads/southamerica-supplement-v1
 ```
 
-普通安装只需随代码分发的冻结复核、规范化资料与清单，无需完整来源缓存；重建是对已审查事实的确定性编译。该批最初扩展到1700条；当前重新`prepare`生成5334×384向量，已下载模型可离线复用，旧1689／1700条索引会明确失效；BM25保持可用。[来源与许可](../src/archsearch/data/SOUTHAMERICA-LICENSE.md)和[本批验收](southamerica-validation.md)保留具体来源限制与检查结果。
+普通安装只需随代码分发的冻结复核、规范化资料与清单，无需完整来源缓存；重建是对已审查事实的确定性编译。该批最初扩展到1700条；当前重新`prepare`生成5339×384向量，已下载模型可离线复用，旧1689／1700条索引会明确失效；BM25保持可用。[来源与许可](../src/archsearch/data/SOUTHAMERICA-LICENSE.md)和[本批验收](southamerica-validation.md)保留具体来源限制与检查结果。
 
 新增[20对南美诊断查询](../src/archsearch/data/queries-southamerica.json)，含命名地点发现与地区主题。它用于BM25／E5 × 中文／英文的排名、耗时比较，不是代表性盲测；四套问题各自有独立标注合同，未确认相关性前指标均为`null`。
 
@@ -662,7 +664,7 @@ uv run --no-sync archsearch prepare
 uv run --no-sync python -m archsearch.regional_data --verify-source-cache .archsearch/downloads/regional-supplement-v1
 ```
 
-重建只编译随代码分发的冻结复核事实；普通安装不需要原始页面或PDF缓存。`regional_supplement_review.json`、`regional_sites.json`与`regional_manifest.json`分别保存复核、规范化记录与来源合同，固定排序前缀为`regional-supplement-v1:`。该批首次扩充到1689条；当前完整语料，重新`prepare`生成5334×384索引，已下载模型可以离线复用。个别来源点缺失不影响基本检索、目录、分享和导出。[许可与加工](../src/archsearch/data/REGIONAL-LICENSE.md)逐条保留权利边界。
+重建只编译随代码分发的冻结复核事实；普通安装不需要原始页面或PDF缓存。`regional_supplement_review.json`、`regional_sites.json`与`regional_manifest.json`分别保存复核、规范化记录与来源合同，固定排序前缀为`regional-supplement-v1:`。该批首次扩充到1689条；当前完整语料，重新`prepare`生成5339×384索引，已下载模型可以离线复用。个别来源点缺失不影响基本检索、目录、分享和导出。[许可与加工](../src/archsearch/data/REGIONAL-LICENSE.md)逐条保留权利边界。
 
 [区域验收记录](regional-coverage-validation.md)说明完整来源审查、中文匹配修复、真实离线浏览器和同口径空间诊断。632个固定粗网格样点中距现有资料点超过1000km的数量由129降至34；这不是全球面积或考古覆盖率，许多小岛不在该网格内。
 
@@ -680,7 +682,7 @@ uv run --no-sync archsearch evaluate --queries src/archsearch/data/queries-regio
 
 35条有可核代表点，基里巴斯Betio海岸观察员纪念物、瑙鲁Anibare旧日军碉堡与Father Kayser纪念标记、纽埃Nukai Peniamina墓3条暂未取得可信公开数字坐标，保留 `repr_point=null`。这表示当前资料缺少可核坐标，不宣称遗址真实位置不明；这些记录仍可检索、筛选、分享和导出，“定位选中”不可用，也不会补零坐标或岛屿中心点。瑙鲁来源为拟议遗产名录，不表述为已正式指定保护地。来源国家是记录关联，不根据代表点推断疆域归属。
 
-独立代理该批复核的是文化对象、来源关联、坐标与许可，未完成新增断代阶段复核，因此新增38条全部为“断代尚未核验”，不触发自动切年。该批完成时为149条阶段已核验、451条证据不足、1063条尚未核验；当前连同其余扩充、NPS、澳大利亚、加拿大、香港、新加坡、巴西及Mérimée批次为3297条尚未核验。新增检索文本使用原始描述、国家关联事实和资格短摘录；审计中提及的被排除对象不进入检索文档。原1625条规范化记录及检索文档保持不变，该批扩至1663条；当前完整索引为5334×384。
+独立代理该批复核的是文化对象、来源关联、坐标与许可，未完成新增断代阶段复核，因此新增38条全部为“断代尚未核验”，不触发自动切年。该批完成时为149条阶段已核验、451条证据不足、1063条尚未核验；当前连同其余扩充、NPS、澳大利亚、加拿大、香港、新加坡、巴西及Mérimée批次为3297条尚未核验。新增检索文本使用原始描述、国家关联事实和资格短摘录；审计中提及的被排除对象不进入检索文档。原1625条规范化记录及检索文档保持不变，该批扩至1663条；当前完整索引为5339×384。
 
 随代码分发的冻结复核清单可完全离线重建：
 
@@ -732,7 +734,7 @@ uv run --no-sync archsearch prepare
 
 ### 模型与本地数据准备
 
-浏览器打开 `http://127.0.0.1:8000/`，API状态地址为 `/api/status`。首次准备下载固定版本E5模型（单份权重约471MB）并构建5334×384向量，需要联网。升级语料后须重新运行 `prepare`，旧索引会被明确识别为失效；已下载模型可离线复用。基础检索后续只使用本地资源；首次查询包含模型加载，后续复用编码器。基础E5采用CPU推理，运行不需要Node.js或外部模型API密钥；可选LLM由Ollama或明确配置的API提供，见[模型设置](llm-search.md)。
+浏览器打开 `http://127.0.0.1:8000/`，API状态地址为 `/api/status`。首次准备下载固定版本E5模型（单份权重约471MB）并构建5339×384向量，需要联网。升级语料后须重新运行 `prepare`，旧索引会被明确识别为失效；已下载模型可离线复用。基础检索后续只使用本地资源；首次查询包含模型加载，后续复用编码器。基础E5采用CPU推理，运行不需要Node.js或外部模型API密钥；可选LLM由Ollama或明确配置的API提供，见[模型设置](llm-search.md)。
 
 `/api/status` 的语义就绪状态表示本地资源已校验，首次查询可以按需加载编码器。模型加载、编码和 RRF 多查询评分与状态读取使用独立的锁。一次语义检索始终核对同一份模型和向量，发现准备中的资源变化时返回可重试的 503。BM25 可独立运行。
 

@@ -100,7 +100,7 @@ def test_public_point_search_catalogue_and_provenance(
             ("VI", "auth:nps-caribbean:", 2),
             ("PE", "auth:pe-mincul:", 9),
             ("IN", "auth:in-public:", 51),
-            ("LK", "auth:lk-public:", 4),
+            ("LK", "auth:lk-public:", 6),
             ("BD", "auth:bd-public:", 6),
             ("NP", "auth:np-public:", 2),
             ("PK", "auth:pk-public:", 5),
@@ -212,6 +212,9 @@ def test_public_point_search_catalogue_and_provenance(
             ("CW", "auth:cw-public:", 1),
             ("SK", "auth:sk-public:", 9),
             ("AT", "auth:at-public:", 5),
+            ("FO", "auth:fo-public:", 1),
+            ("GL", "auth:gl-public:", 1),
+            ("IS", "auth:is-public:", 1),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -257,6 +260,19 @@ def test_public_point_search_catalogue_and_provenance(
         rumicucho = client.get("/api/sites/auth:ec-public:Q6090782").json()
         assert rumicucho["repr_point"] == [-78.43145357121273, 0.011500124966946818]
         assert rumicucho["geography"]["countries"] == ["EC"]
+        assert {"id": "FO", "label": "Faroe Islands", "count": 1} in countries
+        assert {"id": "GL", "label": "Greenland", "count": 1} in countries
+        nuuk = client.get("/api/sites/auth:gl-public:Q3117388").json()
+        assert nuuk["repr_point"] == [-51.7462, 64.1772]
+        assert nuuk["geography"]["countries"] == ["GL"]
+        dedigama = client.get("/api/sites/auth:lk-public:dedigama-kotawehera").json()
+        assert dedigama["repr_point"] == [80.26273888888889, 7.208569444444445]
+        assert any(
+            source["license"] == "CC BY-SA 4.0"
+            and "Kasun buddika senanayaka" in source["publisher"]
+            for source in dedigama["source_refs"]
+        )
+        assert client.get("/api/sites/auth:fo-public:Q1187793").status_code == 404
         lochleven = client.get("/api/sites/auth:gb-hes-pic:PIC030").json()
         assert lochleven["repr_point"] == [-3.3921612556552567, 56.20086363535327]
         assert lochleven["source_refs"][0]["license"] == "UK Open Government Licence v3.0"
