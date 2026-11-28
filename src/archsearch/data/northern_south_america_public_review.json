@@ -1,0 +1,412 @@
+{
+  "base_count": 5331,
+  "base_ids_sha256": "c08c7042b56e44b147f3739331fb66079fbc1219aa0d914ca4d27034dd192473",
+  "base_sites_sha256": "fb7363778ecfa4918d6ac70036947121050b7c137160056572cc4a2d80fc16f3",
+  "cohort_version": "northern-south-america-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The original Wikidata point lies inside the named site museum footprint. It represents the publicly documented facility over OGSE-80.",
+        "point": [
+          -80.86755295920157,
+          -2.2333689391512186
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q56383882.json?revision=2558338687",
+        "statement_id": "Q56383882$1b7aa326-44c9-f79d-189d-f46bd340116b"
+      },
+      "independent_review": {
+        "method": "Independently downloaded fixed original CC0 coordinate assertions, compared public visitor scope and nearby heritage identities against publisher snapshots, complete UNESCO Qhapaq Nan Ecuador component tables and named heritage area diagnostics; no structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The public site museum built above the Las Vegas archaeological site OGSE-80, Santa Elena. The representative point serves the museum's designated exhibitions and interpretation of the original archaeological site.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original site and its public visitor scope checked.",
+          "note": "No independently reviewed dated phase was assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Red de Museos del Ecuador / Museo Nacional del Ecuador",
+          "GAD Municipal de Santa Elena",
+          "Wikidata contributors"
+        ],
+        "description": "The public site museum built above the Las Vegas archaeological site OGSE-80, Santa Elena. The representative point serves the museum's designated exhibitions and interpretation of the original archaeological site.",
+        "description_zh": "苏姆帕恋人遗址博物馆位于厄瓜多尔。地图所示为经核对的历史原址代表点，参观范围以主管方公告为准。",
+        "details": "The public site museum built above the Las Vegas archaeological site OGSE-80, Santa Elena. The representative point serves the museum's designated exhibitions and interpretation of the original archaeological site.",
+        "geography": {
+          "authority_id": "supplement:auth:ec-public:Q56383882",
+          "countries": [
+            "EC"
+          ],
+          "note": "Original site representative point with documented current country.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national museum network identifies the museum as built over OGSE-80 and describes the four public visitor exhibits.",
+            "id": "auth:ec-public:Q56383882:ec-sumpa-network.html",
+            "license": null,
+            "publisher": "Red de Museos del Ecuador / Museo Nacional del Ecuador",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 34874781bd8d99c747d59aa4b67ff872586193167c48fbaa76bc5262face5fc9.",
+            "title": "Museo de Sitio Amantes de Sumpa original location and visitor scope",
+            "uri": "https://colecciones-ecuador.skin-web.org/es/pagina/museo-amantes-de-sumpa/6a86d3d0382a0e1107b13083?v=mosaic"
+          }
+        },
+        "id": "auth:ec-public:Q56383882",
+        "location_precision": null,
+        "names": [
+          "苏姆帕恋人遗址博物馆",
+          "Museo Los Amantes de Sumpa",
+          "Sitio Arqueológico Las Vegas (OGSE-80)"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -80.86755295920157,
+          -2.2333689391512186
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national museum network identifies the museum as built over OGSE-80 and describes the four public visitor exhibits.",
+            "id": "auth:ec-public:Q56383882:ec-sumpa-network.html",
+            "license": null,
+            "publisher": "Red de Museos del Ecuador / Museo Nacional del Ecuador",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 34874781bd8d99c747d59aa4b67ff872586193167c48fbaa76bc5262face5fc9.",
+            "title": "Museo de Sitio Amantes de Sumpa original location and visitor scope",
+            "uri": "https://colecciones-ecuador.skin-web.org/es/pagina/museo-amantes-de-sumpa/6a86d3d0382a0e1107b13083?v=mosaic"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipal visitor guide lists the site museum and its archaeological interpretation at Santa Elena.",
+            "id": "auth:ec-public:Q56383882:ec-sumpa-guia-municipal.pdf",
+            "license": null,
+            "publisher": "GAD Municipal de Santa Elena",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 24ec494e572926a7003615d344a1d27581717c51bfc40e224646828d529ae8b1.",
+            "title": "Museo de Sitio Amantes de Sumpa original location and visitor scope",
+            "uri": "https://www.gadse.gob.ec/gadse/wp-content/uploads/2020/05/Guia-Ballenas-SE-2021.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -80.86755295920157, latitude -2.2333689391512186.",
+            "id": "wikidata:Q56383882",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2558338687; P625 Q56383882$1b7aa326-44c9-f79d-189d-f46bd340116b.",
+            "title": "Museo de Sitio Amantes de Sumpa representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q56383882.json?revision=2558338687"
+          }
+        ],
+        "source_uri": "https://colecciones-ecuador.skin-web.org/es/pagina/museo-amantes-de-sumpa/6a86d3d0382a0e1107b13083?v=mosaic",
+        "title": "Museo de Sitio Amantes de Sumpa",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q56383882.json",
+          "sha256": "3b138d92039a16f3d057b6a526832c12e9a9954d8f047821697156280ece5384",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q56383882.json?revision=2558338687"
+        },
+        {
+          "filename": "ec-sumpa-network.html",
+          "sha256": "34874781bd8d99c747d59aa4b67ff872586193167c48fbaa76bc5262face5fc9",
+          "uri": "https://colecciones-ecuador.skin-web.org/es/pagina/museo-amantes-de-sumpa/6a86d3d0382a0e1107b13083?v=mosaic"
+        },
+        {
+          "filename": "ec-sumpa-guia-municipal.pdf",
+          "sha256": "24ec494e572926a7003615d344a1d27581717c51bfc40e224646828d529ae8b1",
+          "uri": "https://www.gadse.gob.ec/gadse/wp-content/uploads/2020/05/Guia-Ballenas-SE-2021.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The unmodified Wikidata point lies inside the named archaeological enclosure, near the public entrance. Source angular precision is a declared value without a surveyed accuracy implication.",
+        "point": [
+          -78.43145357121273,
+          0.011500124966946818
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6090782.json?revision=2558337565",
+        "statement_id": "Q6090782$82b4fcf7-4429-5002-73d6-416efc8314a3"
+      },
+      "independent_review": {
+        "method": "Independently downloaded fixed original CC0 coordinate assertions, compared public visitor scope and nearby heritage identities against publisher snapshots, complete UNESCO Qhapaq Nan Ecuador component tables and named heritage area diagnostics; no structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original pre-Hispanic hilltop fort and five stone terraces at San Antonio de Pichincha. The public visit follows the locally managed entrance and visitor paths set out for the archaeological property.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original site and its public visitor scope checked.",
+          "note": "No independently reviewed dated phase was assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "GAD Parroquial de San Antonio de Pichincha",
+          "Wikidata contributors"
+        ],
+        "description": "The original pre-Hispanic hilltop fort and five stone terraces at San Antonio de Pichincha. The public visit follows the locally managed entrance and visitor paths set out for the archaeological property.",
+        "description_zh": "鲁米库乔山堡遗址位于厄瓜多尔。地图所示为经核对的历史原址代表点，参观范围以主管方公告为准。",
+        "details": "The original pre-Hispanic hilltop fort and five stone terraces at San Antonio de Pichincha. The public visit follows the locally managed entrance and visitor paths set out for the archaeological property.",
+        "geography": {
+          "authority_id": "supplement:auth:ec-public:Q6090782",
+          "countries": [
+            "EC"
+          ],
+          "note": "Original site representative point with documented current country.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The parish tourism authority identifies the original ruins, their five terraces and the historic hill location.",
+            "id": "auth:ec-public:Q6090782:ec-rumicucho-municipal.html",
+            "license": null,
+            "publisher": "GAD Parroquial de San Antonio de Pichincha",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 876d6a884be548deaca6793cdbb95d538acc492ee3d7d6a5a30226fa30154755.",
+            "title": "Pucará de Rumicucho original location and visitor scope",
+            "uri": "https://gadsap.gob.ec/lugares-turisticos/"
+          }
+        },
+        "id": "auth:ec-public:Q6090782",
+        "location_precision": null,
+        "names": [
+          "鲁米库乔山堡遗址",
+          "Pucará Rumicucho",
+          "Lulubamba"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -78.43145357121273,
+          0.011500124966946818
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The parish tourism authority identifies the original ruins, their five terraces and the historic hill location.",
+            "id": "auth:ec-public:Q6090782:ec-rumicucho-municipal.html",
+            "license": null,
+            "publisher": "GAD Parroquial de San Antonio de Pichincha",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 876d6a884be548deaca6793cdbb95d538acc492ee3d7d6a5a30226fa30154755.",
+            "title": "Pucará de Rumicucho original location and visitor scope",
+            "uri": "https://gadsap.gob.ec/lugares-turisticos/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The parish plan lists the state-owned hillfort and its access route toward Hacienda de Tanlagua, separately from the historic road.",
+            "id": "auth:ec-public:Q6090782:ec-rumicucho-pdot.pdf",
+            "license": null,
+            "publisher": "GAD Parroquial de San Antonio de Pichincha",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 5ee1e3a66e916bc02d8d4f2a00ac2b26304a2a39367feec03684242517bd9285.",
+            "title": "Pucará de Rumicucho original location and visitor scope",
+            "uri": "https://gadsap.gob.ec/wp-content/uploads/TRANSPARENCIA/PLAN-DE-DESARROLLO-TERRITORIAL.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -78.43145357121273, latitude 0.011500124966946818.",
+            "id": "wikidata:Q6090782",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2558337565; P625 Q6090782$82b4fcf7-4429-5002-73d6-416efc8314a3.",
+            "title": "Pucará de Rumicucho representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6090782.json?revision=2558337565"
+          }
+        ],
+        "source_uri": "https://gadsap.gob.ec/lugares-turisticos/",
+        "title": "Pucará de Rumicucho",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q6090782.json",
+          "sha256": "1a0d130a7927ec360385119f77056a304b183c15cb6067b008a67ffa041329f7",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6090782.json?revision=2558337565"
+        },
+        {
+          "filename": "ec-rumicucho-municipal.html",
+          "sha256": "876d6a884be548deaca6793cdbb95d538acc492ee3d7d6a5a30226fa30154755",
+          "uri": "https://gadsap.gob.ec/lugares-turisticos/"
+        },
+        {
+          "filename": "ec-rumicucho-pdot.pdf",
+          "sha256": "5ee1e3a66e916bc02d8d4f2a00ac2b26304a2a39367feec03684242517bd9285",
+          "uri": "https://gadsap.gob.ec/wp-content/uploads/TRANSPARENCIA/PLAN-DE-DESARROLLO-TERRITORIAL.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The raw Wikidata fort point lies inside the pentagonal enclosure. The open-air museum's Q100530088 point is co-located and describes the same visitor site.",
+        "point": [
+          -55.09167,
+          5.88806
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2476520.json?revision=2512673629",
+        "statement_id": "Q2476520$A5A77AAA-BE9D-47FF-8042-BB8A632F1824"
+      },
+      "independent_review": {
+        "method": "Independently downloaded fixed original CC0 coordinate assertions, compared public visitor scope and nearby heritage identities against publisher snapshots, complete UNESCO Qhapaq Nan Ecuador component tables and named heritage area diagnostics; no structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original pentagonal fort at the confluence of the Suriname and Commewijne rivers. Its open-air museum covers the designated fort grounds and historical structures, including the former prison exhibition.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Original site and its public visitor scope checked.",
+          "note": "No independently reviewed dated phase was assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Directoraat Toerisme, Ministry of Transport, Communications and Tourism of Suriname",
+          "Ministry of Education, Science and Culture of Suriname",
+          "Wikidata contributors"
+        ],
+        "description": "The original pentagonal fort at the confluence of the Suriname and Commewijne rivers. Its open-air museum covers the designated fort grounds and historical structures, including the former prison exhibition.",
+        "description_zh": "新阿姆斯特丹堡位于苏里南。地图所示为经核对的历史原址代表点，参观范围以主管方公告为准。",
+        "details": "The original pentagonal fort at the confluence of the Suriname and Commewijne rivers. Its open-air museum covers the designated fort grounds and historical structures, including the former prison exhibition.",
+        "geography": {
+          "authority_id": "supplement:auth:sr-public:Q2476520",
+          "countries": [
+            "SR"
+          ],
+          "note": "Original site representative point with documented current country.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official destination guide identifies the original five-pointed fort, its open-air museum and the converted prison exhibition.",
+            "id": "auth:sr-public:Q2476520:sr-fort-operator.html",
+            "license": null,
+            "publisher": "Directoraat Toerisme, Ministry of Transport, Communications and Tourism of Suriname",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 a4038126db473c7bb0ff630eb556b0c4a954ef17239a70dcb51ddded1cba2848.",
+            "title": "Fort Nieuw-Amsterdam original location and visitor scope",
+            "uri": "https://suriname.travel/commewijne/"
+          }
+        },
+        "id": "auth:sr-public:Q2476520",
+        "location_precision": null,
+        "names": [
+          "新阿姆斯特丹堡",
+          "Openluchtmuseum Fort Nieuw Amsterdam",
+          "Fort Nieuw Amsterdam"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -55.09167,
+          5.88806
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official destination guide identifies the original five-pointed fort, its open-air museum and the converted prison exhibition.",
+            "id": "auth:sr-public:Q2476520:sr-fort-operator.html",
+            "license": null,
+            "publisher": "Directoraat Toerisme, Ministry of Transport, Communications and Tourism of Suriname",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 a4038126db473c7bb0ff630eb556b0c4a954ef17239a70dcb51ddded1cba2848.",
+            "title": "Fort Nieuw-Amsterdam original location and visitor scope",
+            "uri": "https://suriname.travel/commewijne/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The government tourism portal records World Tourism Day at Fort Nieuw Amsterdam in September 2025.",
+            "id": "auth:sr-public:Q2476520:sr-fort-2025-visit.html",
+            "license": null,
+            "publisher": "Directoraat Toerisme, Ministry of Transport, Communications and Tourism of Suriname",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 7e81ba9b8c244289fa91b99ba82f58ad5180301f3446d3362a1ebfc8839cc382.",
+            "title": "Fort Nieuw-Amsterdam original location and visitor scope",
+            "uri": "https://suriname.travel/world-tourism-day-celebrated-at-fort-nieuw-amsterdam-commewijne/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The published education museum list gives the visitor location on Wilhelminastraat, Nieuw Amsterdam.",
+            "id": "auth:sr-public:Q2476520:sr-fort-ministry-teacher.pdf",
+            "license": null,
+            "publisher": "Ministry of Education, Science and Culture of Suriname",
+            "revision": "Frozen unmodified file 2026-11-28; SHA-256 d452e0105b91742794e433ee90a2f01f788dbf53d5279e527271c0d2107d9d53.",
+            "title": "Fort Nieuw-Amsterdam original location and visitor scope",
+            "uri": "https://gov.sr/wp-content/uploads/2025/02/wij-en-ons-verleden-leerj-7-leerkrachtenboek.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -55.09167, latitude 5.88806.",
+            "id": "wikidata:Q2476520",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2512673629; P625 Q2476520$A5A77AAA-BE9D-47FF-8042-BB8A632F1824.",
+            "title": "Fort Nieuw-Amsterdam representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2476520.json?revision=2512673629"
+          }
+        ],
+        "source_uri": "https://suriname.travel/commewijne/",
+        "title": "Fort Nieuw-Amsterdam",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q2476520.json",
+          "sha256": "b5b86b3b0a6da8d7c9c5549c491a91077727b94c0505ccd8dd1c4c119aac5a4a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2476520.json?revision=2512673629"
+        },
+        {
+          "filename": "sr-fort-operator.html",
+          "sha256": "a4038126db473c7bb0ff630eb556b0c4a954ef17239a70dcb51ddded1cba2848",
+          "uri": "https://suriname.travel/commewijne/"
+        },
+        {
+          "filename": "sr-fort-2025-visit.html",
+          "sha256": "7e81ba9b8c244289fa91b99ba82f58ad5180301f3446d3362a1ebfc8839cc382",
+          "uri": "https://suriname.travel/world-tourism-day-celebrated-at-fort-nieuw-amsterdam-commewijne/"
+        },
+        {
+          "filename": "sr-fort-ministry-teacher.pdf",
+          "sha256": "d452e0105b91742794e433ee90a2f01f788dbf53d5279e527271c0d2107d9d53",
+          "uri": "https://gov.sr/wp-content/uploads/2025/02/wij-en-ons-verleden-leerj-7-leerkrachtenboek.pdf"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Three documented publicly visited cultural places in Suriname and Ecuador, representing an original fort, an archaeological museum on the excavation site and a public fortress enclosure."
+}

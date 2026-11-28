@@ -133,7 +133,8 @@ def test_public_point_search_catalogue_and_provenance(
             ("KZ", "auth:kz-public:", 3),
             ("UZ", "auth:uz-public:", 8),
             ("GB", "auth:gb-nhle:", 29),
-            ("EC", "auth:ec-public:", 2),
+            ("EC", "auth:ec-public:", 4),
+            ("SR", "auth:sr-public:", 1),
             ("BO", "auth:bo-public:", 7),
             ("AR", "auth:ar-public:", 6),
             ("BR", "auth:br-public:", 3),
@@ -253,6 +254,9 @@ def test_public_point_search_catalogue_and_provenance(
         assert kremnica["repr_point"] == [18.917613888889, 48.706213888889]
         assert kremnica["chronology"]["status"] == "insufficient"
         assert kremnica["chronology"]["phases"] == []
+        rumicucho = client.get("/api/sites/auth:ec-public:Q6090782").json()
+        assert rumicucho["repr_point"] == [-78.43145357121273, 0.011500124966946818]
+        assert rumicucho["geography"]["countries"] == ["EC"]
         lochleven = client.get("/api/sites/auth:gb-hes-pic:PIC030").json()
         assert lochleven["repr_point"] == [-3.3921612556552567, 56.20086363535327]
         assert lochleven["source_refs"][0]["license"] == "UK Open Government Licence v3.0"

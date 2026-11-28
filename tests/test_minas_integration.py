@@ -136,5 +136,5 @@ def test_paired_diagnostics_leave_unconfirmed_relevance_metrics_null(tmp_path: P
                                                          for number in range(1, 21)]
     result = evaluate_corpus(tmp_path / "missing-model", tmp_path / "rankings.json",
                              queries=queries)
-    assert result["corpus_count"] == 5331 and result["metrics"] is None
+    assert result["corpus_count"] == 5334 and result["metrics"] is None
     assert not result["qrels"]["confirmed"] and not result["runs_complete"]
