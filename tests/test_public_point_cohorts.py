@@ -134,7 +134,8 @@ def test_public_point_search_catalogue_and_provenance(
             ("UZ", "auth:uz-public:", 8),
             ("GB", "auth:gb-nhle:", 29),
             ("EC", "auth:ec-public:", 2),
-            ("BO", "auth:bo-public:", 3),
+            ("BO", "auth:bo-public:", 7),
+            ("AR", "auth:ar-public:", 6),
             ("BR", "auth:br-public:", 3),
             ("GY", "auth:gy-public:", 3),
             ("NO", "auth:no-askeladden:", 8),
@@ -147,7 +148,7 @@ def test_public_point_search_catalogue_and_provenance(
             ("KG", "auth:kg-public:", 6),
             ("TJ", "auth:tj-public:", 2),
             ("GB", "auth:gb-dfc-hed:", 60),
-            ("SN", "auth:sn-public:", 5),
+            ("SN", "auth:sn-public:", 8),
             ("BJ", "auth:bj-public:", 4),
             ("TG", "auth:tg-public:", 4),
             ("GH", "auth:gh-public:", 5),
@@ -186,11 +187,16 @@ def test_public_point_search_catalogue_and_provenance(
             ("CM", "auth:cm-public:", 4),
             ("CO", "auth:co-public:", 6),
             ("VE", "auth:ve-public:", 4),
-            ("CN", "auth:cn-public:", 6),
+            ("CN", "auth:cn-public:", 10),
             ("TR", "auth:tr-public:", 13),
             ("MZ", "auth:mz-public:", 3),
             ("AO", "auth:ao-public:", 5),
             ("CZ", "auth:cz-npu:", 28),
+            ("SL", "auth:sl-public:", 2),
+            ("LR", "auth:lr-public:", 1),
+            ("GM", "auth:gm-public:", 3),
+            ("AU", "auth:au-ga2012:", 14),
+            ("AU", "auth:au-public:", 3),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -514,3 +520,42 @@ def test_public_point_search_catalogue_and_provenance(
             and ref["publisher"] == "Geoportál památkové péče, Národní památkový ústav"
             for ref in zvikov["source_refs"]
         )
+
+        dakar = client.get("/api/sites/auth:sn-public:geonames-10401826").json()
+        assert dakar["repr_point"] == [-17.43323, 14.67565]
+        assert any(
+            ref["publisher"] == "GeoNames" and ref["license"] == "CC BY 4.0"
+            for ref in dakar["source_refs"]
+        )
+        pavilion = client.get("/api/sites/auth:lr-public:Q1053549").json()
+        assert "scheduled tours" in pavilion["details"]
+
+        hemudu = client.get("/api/sites/auth:cn-public:Q11142035").json()
+        assert hemudu["repr_point"] == [121.345725, 29.96259722]
+        assert "designated exhibits" in hemudu["details"]
+        kiln = client.get("/api/sites/auth:cn-public:Q10883697").json()
+        assert kiln["repr_point"] == [103.445959, 30.400709]
+        assert any(
+            "Q10883697.json" in ref["uri"] and ref["license"] == "CC0"
+            for ref in kiln["source_refs"]
+        )
+
+        tucuman = client.get("/api/sites/auth:ar-public:Q5364487").json()
+        assert "original session hall was retained" in tucuman["details"]
+        assert "reconstructed in place" in tucuman["details"]
+        sarmiento = client.get("/api/sites/auth:ar-public:Q5754443").json()
+        assert sarmiento["repr_point"] == [-68.528917, -31.534806]
+        assert client.get("/api/sites/auth:ar-public:Q951509").status_code == 404
+
+        stuart = client.get("/api/sites/auth:au-ga2012:NT23649").json()
+        assert "December to February" in stuart["details"]
+        assert any(
+            ref["license"] == "CC BY 3.0 AU"
+            and ref["publisher"] == "Commonwealth of Australia (Geoscience Australia)"
+            for ref in stuart["source_refs"]
+        )
+        cossack = client.get("/api/sites/auth:au-ga2012:WA100187892").json()
+        assert cossack["repr_point"] == [117.1886, -20.67833]
+        assert "outdoor Heritage Trail" in cossack["details"]
+        gwalia = client.get("/api/sites/auth:au-public:Q5623251").json()
+        assert "Little Pink Camp" in gwalia["details"]

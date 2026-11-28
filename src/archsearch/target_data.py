@@ -497,6 +497,34 @@ CZECH_PUBLIC = NamedPlaceCohort(
     "b34809991abf5ca5041969dd84a79d7651db974c370aa3e04f4ddc5dfa3fdfe6",
     "59d2a789bf812aeffffcb2f934d8819f5112fc4c06a93ded8a7edb378dd9d786",
 )
+WEST_AFRICAN_COASTAL_PUBLIC = NamedPlaceCohort(
+    "west-african-coastal-public-v1",
+    "global-v21",
+    "west_african_coastal_public",
+    "18b7cdbe54944da3b51aae82eb6b13427f420fa3edfa4ff4add20eab02376127",
+    "5568c062da59a16c5df39f5c66fd0c97855d2ff7a66f285700b9f5973f4c9453",
+)
+CHINA_REGIONAL_PUBLIC = NamedPlaceCohort(
+    "china-regional-public-v1",
+    "global-v21",
+    "china_regional_public",
+    "063df8bbbbc81e3e00ebed932a48cdf9d081a4d0a318b89b680de9921460c113",
+    "98a90e11ac7051f6a3d728fab25190207c300db2ce0f9c815945cd0118cd2e16",
+)
+BOLIVIA_ARGENTINA_PUBLIC = NamedPlaceCohort(
+    "bolivia-argentina-public-v1",
+    "global-v21",
+    "bolivia_argentina_public",
+    "15983ef52b5b66a8ad481e5a9b609b93a5d7c7d7dc5cc548ff44c3720db17ce5",
+    "714607926c726c82579d5be06dc7f2f42f7c248c9b96d612eef8cbd36320b1c3",
+)
+AUSTRALIA_NT_WA_PUBLIC = NamedPlaceCohort(
+    "australia-nt-wa-public-v1",
+    "global-v21",
+    "australia_nt_wa_public",
+    "f439c427045d7828ba2e6729d9e8a9b35e6c0c02f1f5eb0800dc58ac80253b92",
+    "928ad6a553d1ec8ee19924a508b552bdac24585434c89116352e2fcabf513dd9",
+)
 POINT_COHORTS = (
     IRELAND, ANDALUCIA, TAIWAN_ICULTURE, MEXICO_SIC, FINLAND_VARK, WALES_CADW, THAILAND_FAD,
     AFRICA_VISIT, SCOTLAND_HES, CARIBBEAN_NRHP, PERU_PUBLIC, INDIA_ASI, INDIA_ASI_NEXT,
@@ -530,6 +558,10 @@ POINT_COHORTS = (
     ANATOLIA_INLAND_PUBLIC,
     MOZAMBIQUE_ANGOLA_PUBLIC,
     CZECH_PUBLIC,
+    WEST_AFRICAN_COASTAL_PUBLIC,
+    CHINA_REGIONAL_PUBLIC,
+    BOLIVIA_ARGENTINA_PUBLIC,
+    AUSTRALIA_NT_WA_PUBLIC,
 )
 
 

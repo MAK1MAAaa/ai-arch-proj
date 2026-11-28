@@ -1,0 +1,886 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and public visitor scope checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Universidad Nacional de La Plata",
+      "Wikidata contributors"
+    ],
+    "description": "The historic purpose-built university museum in Paseo del Bosque, La Plata. The public scope covers ticketed galleries and the museum's announced visitor routes.",
+    "description_zh": "拉普拉塔博物馆历史馆舍位于阿根廷。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+    "details": "The historic purpose-built university museum in Paseo del Bosque, La Plata. The public scope covers ticketed galleries and the museum's announced visitor routes.",
+    "geography": {
+      "authority_id": "supplement:auth:ar-public:Q1798541",
+      "countries": [
+        "AR"
+      ],
+      "note": "Named original location. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The university museum publishes current hours, tours and its GPS position in Paseo del Bosque.",
+        "id": "auth:ar-public:Q1798541:ar-laplata-operator.html",
+        "license": null,
+        "publisher": "Universidad Nacional de La Plata",
+        "revision": "Frozen source file 2026-11-28. SHA-256 27afa8a830c8be6bd21a0053eae2f62e802439ae6550a4b8c9301d4cdcba429e.",
+        "title": "Museo de La Plata historic building public scope and original location",
+        "uri": "https://www.museo.fcnym.unlp.edu.ar/"
+      }
+    },
+    "id": "auth:ar-public:Q1798541",
+    "location_precision": null,
+    "names": [
+      "拉普拉塔博物馆历史馆舍"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -57.93541666666667,
+      -34.909
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The university museum publishes current hours, tours and its GPS position in Paseo del Bosque.",
+        "id": "auth:ar-public:Q1798541:ar-laplata-operator.html",
+        "license": null,
+        "publisher": "Universidad Nacional de La Plata",
+        "revision": "Frozen source file 2026-11-28. SHA-256 27afa8a830c8be6bd21a0053eae2f62e802439ae6550a4b8c9301d4cdcba429e.",
+        "title": "Museo de La Plata historic building public scope and original location",
+        "uri": "https://www.museo.fcnym.unlp.edu.ar/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator's admission service identifies the same on-site museum and publishes bookable public entry.",
+        "id": "auth:ar-public:Q1798541:ar-laplata-tickets.html",
+        "license": null,
+        "publisher": "Universidad Nacional de La Plata",
+        "revision": "Frozen source file 2026-11-28. SHA-256 77c824c749bfbb2cba28539fc0c4c7735281b35f59f51c6a3c7f4c8c47375375.",
+        "title": "Museo de La Plata historic building public scope and original location",
+        "uri": "https://entradas.museo.fcnym.unlp.edu.ar/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -57.93541666666667, latitude -34.909.",
+        "id": "wikidata:Q1798541",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2523181191; P625 Q1798541$139EB132-5A4D-442C-9B04-443A302A6E53.",
+        "title": "Museo de La Plata historic building representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1798541.json"
+      }
+    ],
+    "source_uri": "https://www.museo.fcnym.unlp.edu.ar/",
+    "title": "Museo de La Plata historic building",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and public visitor scope checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Secretaría de Cultura de la Nación, Argentina",
+      "Wikidata contributors"
+    ],
+    "description": "The original residence of Justo José de Urquiza near Caseros, Entre Ríos, and its historic gardens. The public visit covers the national museum's designated grounds and rooms. The representative point lies in the grounds.",
+    "description_zh": "圣何塞宫历史庄园位于阿根廷。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+    "details": "The original residence of Justo José de Urquiza near Caseros, Entre Ríos, and its historic gardens. The public visit covers the national museum's designated grounds and rooms. The representative point lies in the grounds.",
+    "geography": {
+      "authority_id": "supplement:auth:ar-public:Q2483110",
+      "countries": [
+        "AR"
+      ],
+      "note": "Named original location. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The 27 November 2026 announcement lists public hours and an on-site exhibition in the north wing of the rear courtyard.",
+        "id": "auth:ar-public:Q2483110:ar-palacio-dec-2026.html",
+        "license": null,
+        "publisher": "Secretaría de Cultura de la Nación, Argentina",
+        "revision": "Frozen source file 2026-11-28. SHA-256 bd6d485295a0462bd542d61deb3c18e0d796ff3a6b51a55e09887390b4cb1d6d.",
+        "title": "Palacio San José historic estate public scope and original location",
+        "uri": "https://www.argentina.gob.ar/noticias/artes-visuales-en-diciembre-0"
+      }
+    },
+    "id": "auth:ar-public:Q2483110",
+    "location_precision": null,
+    "names": [
+      "圣何塞宫历史庄园"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -58.52287222,
+      -32.42722222
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The 27 November 2026 announcement lists public hours and an on-site exhibition in the north wing of the rear courtyard.",
+        "id": "auth:ar-public:Q2483110:ar-palacio-dec-2026.html",
+        "license": null,
+        "publisher": "Secretaría de Cultura de la Nación, Argentina",
+        "revision": "Frozen source file 2026-11-28. SHA-256 bd6d485295a0462bd542d61deb3c18e0d796ff3a6b51a55e09887390b4cb1d6d.",
+        "title": "Palacio San José historic estate public scope and original location",
+        "uri": "https://www.argentina.gob.ar/noticias/artes-visuales-en-diciembre-0"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national monument account describes the original residence and its historical gardens as part of the same estate.",
+        "id": "auth:ar-public:Q2483110:ar-palacio-monument.html",
+        "license": null,
+        "publisher": "Secretaría de Cultura de la Nación, Argentina",
+        "revision": "Frozen source file 2026-11-28. SHA-256 e7d82fc99b8c1dd985d18d2233fd09284ec850104348339db80200c67d7d95b5.",
+        "title": "Palacio San José historic estate public scope and original location",
+        "uri": "https://www.argentina.gob.ar/node/416475"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -58.52287222, latitude -32.42722222.",
+        "id": "wikidata:Q2483110",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2493489497; P625 Q2483110$AD3BFDD6-9A2B-46C3-AFE8-B5AAD8208FDA.",
+        "title": "Palacio San José historic estate representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2483110.json"
+      }
+    ],
+    "source_uri": "https://www.argentina.gob.ar/noticias/artes-visuales-en-diciembre-0",
+    "title": "Palacio San José historic estate",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and public visitor scope checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ente Autárquico Tucumán Turismo",
+      "Secretaría de Cultura de la Nación, Argentina",
+      "Wikidata contributors"
+    ],
+    "description": "The historic independence site on Congreso de Tucumán in San Miguel de Tucumán. The original session hall was retained, and other portions of the house were reconstructed in place in 1943. Visits follow the museum's public route.",
+    "description_zh": "图库曼独立历史馆位于阿根廷。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+    "details": "The historic independence site on Congreso de Tucumán in San Miguel de Tucumán. The original session hall was retained, and other portions of the house were reconstructed in place in 1943. Visits follow the museum's public route.",
+    "geography": {
+      "authority_id": "supplement:auth:ar-public:Q5364487",
+      "countries": [
+        "AR"
+      ],
+      "note": "Named original location. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial tourism authority lists the named house museum as a public visitor destination.",
+        "id": "auth:ar-public:Q5364487:ar-tucuman.html",
+        "license": null,
+        "publisher": "Ente Autárquico Tucumán Turismo",
+        "revision": "Frozen source file 2026-11-28. SHA-256 d130b1e67725a70edd3a99d0b316456e2f3140de045d2054a4822dc395838b89.",
+        "title": "Museo Casa Histórica de la Independencia public scope and original location",
+        "uri": "https://www.tucumanturismo.gob.ar/articulos/articulo/121/museo-casa-historica-de-la-independencia"
+      }
+    },
+    "id": "auth:ar-public:Q5364487",
+    "location_precision": null,
+    "names": [
+      "图库曼独立历史馆"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -65.20375,
+      -26.833166666667
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial tourism authority lists the named house museum as a public visitor destination.",
+        "id": "auth:ar-public:Q5364487:ar-tucuman.html",
+        "license": null,
+        "publisher": "Ente Autárquico Tucumán Turismo",
+        "revision": "Frozen source file 2026-11-28. SHA-256 d130b1e67725a70edd3a99d0b316456e2f3140de045d2054a4822dc395838b89.",
+        "title": "Museo Casa Histórica de la Independencia public scope and original location",
+        "uri": "https://www.tucumanturismo.gob.ar/articulos/articulo/121/museo-casa-historica-de-la-independencia"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national monument record identifies the 1816 session site, the retained hall and the 1943 reconstruction.",
+        "id": "auth:ar-public:Q5364487:ar-tucuman-monument.html",
+        "license": null,
+        "publisher": "Secretaría de Cultura de la Nación, Argentina",
+        "revision": "Frozen source file 2026-11-28. SHA-256 19f1593923869c7534f34666d822561d4094e34dc91135bffaa576b114758d51.",
+        "title": "Museo Casa Histórica de la Independencia public scope and original location",
+        "uri": "https://www.argentina.gob.ar/node/412295"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -65.20375, latitude -26.833166666667.",
+        "id": "wikidata:Q5364487",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2513551705; P625 Q5364487$32eba57f-4fc5-3fd5-890f-297bfad25322.",
+        "title": "Museo Casa Histórica de la Independencia representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5364487.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The preserved original session hall remains inside the portion reconstructed at the historic site in 1943.",
+        "id": "auth:ar-public:Q5364487:independent-primary-confirmation",
+        "license": null,
+        "publisher": "Secretaría de Cultura de la Nación, Argentina",
+        "revision": "Independent snapshot 2026-11-28; SHA-256 28c5af3c47d6ef2926b15bc4ed200fa8a0f1875e62d38677c9d34c56ca6efeb2.",
+        "title": "Museo Casa Histórica de la Independencia primary confirmation",
+        "uri": "https://www.argentina.gob.ar/noticias/la-casa-historica-de-tucuman-el-escenario-donde-nacio-la-independencia-argentina"
+      }
+    ],
+    "source_uri": "https://www.tucumanturismo.gob.ar/articulos/articulo/121/museo-casa-historica-de-la-independencia",
+    "title": "Museo Casa Histórica de la Independencia",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and public visitor scope checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Museo Casa Rosada, Argentina",
+      "Secretaría de Cultura de la Nación, Argentina",
+      "Wikidata contributors"
+    ],
+    "description": "The historic maternal house and birthplace at Sarmiento Sur 21 in San Juan. Public access covers the museum rooms and published exhibitions.",
+    "description_zh": "多明戈·福斯蒂诺·萨米恩托故居位于阿根廷。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+    "details": "The historic maternal house and birthplace at Sarmiento Sur 21 in San Juan. Public access covers the museum rooms and published exhibitions.",
+    "geography": {
+      "authority_id": "supplement:auth:ar-public:Q5754443",
+      "countries": [
+        "AR"
+      ],
+      "note": "Named original location. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The national service identifies the original preserved maternal house.",
+        "id": "auth:ar-public:Q5754443:ar-sarmiento-monument.html",
+        "license": null,
+        "publisher": "Museo Casa Rosada, Argentina",
+        "revision": "Frozen source file 2026-11-28. SHA-256 3caa63317987d24621044bb415d4bb874735187e7957ce4671540acb17bc6f48.",
+        "title": "Casa Natal de Domingo Faustino Sarmiento public scope and original location",
+        "uri": "https://www.argentina.gob.ar/secretariageneral/museo-casa-rosada/museo-y-biblioteca-casa-natal-de-domingo-faustino-sarmiento"
+      }
+    },
+    "id": "auth:ar-public:Q5754443",
+    "location_precision": null,
+    "names": [
+      "多明戈·福斯蒂诺·萨米恩托故居"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -68.528917,
+      -31.534806
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national service identifies the original preserved maternal house.",
+        "id": "auth:ar-public:Q5754443:ar-sarmiento-monument.html",
+        "license": null,
+        "publisher": "Museo Casa Rosada, Argentina",
+        "revision": "Frozen source file 2026-11-28. SHA-256 3caa63317987d24621044bb415d4bb874735187e7957ce4671540acb17bc6f48.",
+        "title": "Casa Natal de Domingo Faustino Sarmiento public scope and original location",
+        "uri": "https://www.argentina.gob.ar/secretariageneral/museo-casa-rosada/museo-y-biblioteca-casa-natal-de-domingo-faustino-sarmiento"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The October 2026 announcement identifies the historical house and its public exhibition at the address.",
+        "id": "auth:ar-public:Q5754443:ar-sarmiento-oct.html",
+        "license": null,
+        "publisher": "Secretaría de Cultura de la Nación, Argentina",
+        "revision": "Frozen source file 2026-11-28. SHA-256 9d8ec124cd63061304ba4ba2aa87f0cb217ba6a64bfd4f906e24bade073b6494.",
+        "title": "Casa Natal de Domingo Faustino Sarmiento public scope and original location",
+        "uri": "https://www.argentina.gob.ar/noticias/la-casa-natal-de-sarmiento-recrea-la-experiencia-del-sufragio-de-1868"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -68.528917, latitude -31.534806.",
+        "id": "wikidata:Q5754443",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2544113432; P625 Q5754443$7DBE2562-5E0A-4659-8198-5850A9865475.",
+        "title": "Casa Natal de Domingo Faustino Sarmiento representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5754443.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Public visits are offered at the original maternal house and declared national monument on Sarmiento Sur 21.",
+        "id": "auth:ar-public:Q5754443:independent-primary-confirmation",
+        "license": null,
+        "publisher": "Museo y Biblioteca Casa Natal de Domingo Faustino Sarmiento",
+        "revision": "Independent snapshot 2026-11-28; SHA-256 f62c2a7424a6951c65a7b1647500a0a3ff34801e25949fa0f5f9c5eed0daae00.",
+        "title": "Casa Natal de Domingo Faustino Sarmiento primary confirmation",
+        "uri": "https://www.argentina.gob.ar/node/417682"
+      }
+    ],
+    "source_uri": "https://www.argentina.gob.ar/secretariageneral/museo-casa-rosada/museo-y-biblioteca-casa-natal-de-domingo-faustino-sarmiento",
+    "title": "Casa Natal de Domingo Faustino Sarmiento",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and public visitor scope checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Museo Provincial Molino Forclaz",
+      "Secretaría de Cultura de Entre Ríos",
+      "Wikidata contributors"
+    ],
+    "description": "The original Forclaz farm and milling complex in Entre Ríos. Visitors can see the windmill, the farm buildings and the separate animal-powered mill on the museum's approved public route.",
+    "description_zh": "福尔克拉斯历史磨坊群位于阿根廷。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+    "details": "The original Forclaz farm and milling complex in Entre Ríos. Visitors can see the windmill, the farm buildings and the separate animal-powered mill on the museum's approved public route.",
+    "geography": {
+      "authority_id": "supplement:auth:ar-public:Q6020915",
+      "countries": [
+        "AR"
+      ],
+      "note": "Named original location. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator publishes public guided visit arrangements.",
+        "id": "auth:ar-public:Q6020915:ar-molino.html",
+        "license": null,
+        "publisher": "Museo Provincial Molino Forclaz",
+        "revision": "Frozen source file 2026-11-28. SHA-256 45ce4480e165520cd5cb7d7e76d0499618eb8b0eab76d059dd122e2775b592d7.",
+        "title": "Molino Forclaz historic mill complex public scope and original location",
+        "uri": "https://molinoforclaz.com/visitas/"
+      }
+    },
+    "id": "auth:ar-public:Q6020915",
+    "location_precision": null,
+    "names": [
+      "福尔克拉斯历史磨坊群"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -58.186805555556,
+      -32.217083333333
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator publishes public guided visit arrangements.",
+        "id": "auth:ar-public:Q6020915:ar-molino.html",
+        "license": null,
+        "publisher": "Museo Provincial Molino Forclaz",
+        "revision": "Frozen source file 2026-11-28. SHA-256 45ce4480e165520cd5cb7d7e76d0499618eb8b0eab76d059dd122e2775b592d7.",
+        "title": "Molino Forclaz historic mill complex public scope and original location",
+        "uri": "https://molinoforclaz.com/visitas/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The January 2026 notice names both mills and the other buildings as a single visitor complex.",
+        "id": "auth:ar-public:Q6020915:ar-molino-provincia.html",
+        "license": null,
+        "publisher": "Secretaría de Cultura de Entre Ríos",
+        "revision": "Frozen source file 2026-11-28. SHA-256 2af248822f7905d6fa230e6c00c8531d6832459313ed6535a4bf42b10234811a.",
+        "title": "Molino Forclaz historic mill complex public scope and original location",
+        "uri": "https://www.entrerios.gov.ar/cultura/invitan-a-las-visitas-guiadas-y-teatralizadas-del-molino-forclaz/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -58.186805555556, latitude -32.217083333333.",
+        "id": "wikidata:Q6020915",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2573901120; P625 Q6020915$90b5e6fc-4c26-d26e-31cf-15b5b2334baf.",
+        "title": "Molino Forclaz historic mill complex representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6020915.json"
+      }
+    ],
+    "source_uri": "https://molinoforclaz.com/visitas/",
+    "title": "Molino Forclaz historic mill complex",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and public visitor scope checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministerio de Educación y Cultura de Salta",
+      "Wikidata contributors"
+    ],
+    "description": "The historic Cabildo at Caseros 549 in Salta, occupied by the Museo Histórico del Norte. Public access covers its guided exhibit route in the Cabildo building.",
+    "description_zh": "萨尔塔旧市政厅位于阿根廷。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+    "details": "The historic Cabildo at Caseros 549 in Salta, occupied by the Museo Histórico del Norte. Public access covers its guided exhibit route in the Cabildo building.",
+    "geography": {
+      "authority_id": "supplement:auth:ar-public:Q8254481",
+      "countries": [
+        "AR"
+      ],
+      "note": "Named original location. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The April 2026 notice identifies the Cabildo and publishes its regular guided admission. It lists the Uriburu house and Posta de Yatasto as distinct premises.",
+        "id": "auth:ar-public:Q8254481:ar-cabildo-provincia.html",
+        "license": null,
+        "publisher": "Ministerio de Educación y Cultura de Salta",
+        "revision": "Frozen source file 2026-11-28. SHA-256 d42d9dad542ee08d865e99ddd8d7d17438addd6828f13dd9d74b44b2ae0c6808.",
+        "title": "Cabildo de Salta public scope and original location",
+        "uri": "https://culturasalta.gov.ar/historia-viva-en-tres-escenarios-el-museo-historico-del-norte-invita-a-descubrir-el-pasado-argentino-y-salteno/"
+      }
+    },
+    "id": "auth:ar-public:Q8254481",
+    "location_precision": null,
+    "names": [
+      "萨尔塔旧市政厅"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -65.410778,
+      -24.789917
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The April 2026 notice identifies the Cabildo and publishes its regular guided admission. It lists the Uriburu house and Posta de Yatasto as distinct premises.",
+        "id": "auth:ar-public:Q8254481:ar-cabildo-provincia.html",
+        "license": null,
+        "publisher": "Ministerio de Educación y Cultura de Salta",
+        "revision": "Frozen source file 2026-11-28. SHA-256 d42d9dad542ee08d865e99ddd8d7d17438addd6828f13dd9d74b44b2ae0c6808.",
+        "title": "Cabildo de Salta public scope and original location",
+        "uri": "https://culturasalta.gov.ar/historia-viva-en-tres-escenarios-el-museo-historico-del-norte-invita-a-descubrir-el-pasado-argentino-y-salteno/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -65.410778, latitude -24.789917.",
+        "id": "wikidata:Q8254481",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 1834098088; P625 Q8254481$CBA89C1B-F541-4F19-9BA3-C7FA6D922A8A.",
+        "title": "Cabildo de Salta representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q8254481.json"
+      }
+    ],
+    "source_uri": "https://culturasalta.gov.ar/historia-viva-en-tres-escenarios-el-museo-historico-del-norte-invita-a-descubrir-el-pasado-argentino-y-salteno/",
+    "title": "Cabildo de Salta",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and public visitor scope checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Gobierno Autónomo Municipal de La Paz",
+      "Wikidata contributors"
+    ],
+    "description": "The historic house identified by the city with Pedro Domingo Murillo at Apolinar Jaén 790, La Paz. The public scope covers the city's announced museum exhibitions.",
+    "description_zh": "穆里略故居博物馆位于玻利维亚。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+    "details": "The historic house identified by the city with Pedro Domingo Murillo at Apolinar Jaén 790, La Paz. The public scope covers the city's announced museum exhibitions.",
+    "geography": {
+      "authority_id": "supplement:auth:bo-public:Q125446679",
+      "countries": [
+        "BO"
+      ],
+      "note": "Named original location. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal agenda identifies the historic house, its street number and its public 2026 exhibition programme.",
+        "id": "auth:bo-public:Q125446679:bo-murillo-agenda-web.txt",
+        "license": null,
+        "publisher": "Gobierno Autónomo Municipal de La Paz",
+        "revision": "Normalized government verification note 2026-11-28. SHA-256 5d0371341a5dbce04464b8bd0919041cd1db3bcc679e0a68a5aa5b374a437e32.",
+        "title": "Museo Casa de Murillo public scope and original location",
+        "uri": "https://lapaz.bo/agendajiwaki/evento/exposicion-bienes-culturales-referentes-a-la-gesta-libertaria-de-1809/"
+      }
+    },
+    "id": "auth:bo-public:Q125446679",
+    "location_precision": null,
+    "names": [
+      "穆里略故居博物馆"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -68.135578,
+      -16.492123
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal agenda identifies the historic house, its street number and its public 2026 exhibition programme.",
+        "id": "auth:bo-public:Q125446679:bo-murillo-agenda-web.txt",
+        "license": null,
+        "publisher": "Gobierno Autónomo Municipal de La Paz",
+        "revision": "Normalized government verification note 2026-11-28. SHA-256 5d0371341a5dbce04464b8bd0919041cd1db3bcc679e0a68a5aa5b374a437e32.",
+        "title": "Museo Casa de Murillo public scope and original location",
+        "uri": "https://lapaz.bo/agendajiwaki/evento/exposicion-bienes-culturales-referentes-a-la-gesta-libertaria-de-1809/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The cultural infrastructure map identifies the Murillo house museum separately from the other Jáen street museums.",
+        "id": "auth:bo-public:Q125446679:bo-lapaz-map-web.txt",
+        "license": null,
+        "publisher": "Gobierno Autónomo Municipal de La Paz",
+        "revision": "Normalized government verification note 2026-11-28. SHA-256 93af13587554c7c89534b80091f15b4da69eb88d69eaefd82022c1bb60e5be82.",
+        "title": "Museo Casa de Murillo public scope and original location",
+        "uri": "https://sitservicios.lapaz.bo/sit/mapacultural/mapa/ArtisticoCultural.html?IdSubcategoria=9"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -68.135578, latitude -16.492123.",
+        "id": "wikidata:Q125446679",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2512865309; P625 Q125446679$7F4DBC98-8DA3-4A8E-B48A-10DFB6DA66CA.",
+        "title": "Museo Casa de Murillo representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q125446679.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "City cultural map feature 12 names Museo Casa de Murillo at Apolinar Jaén 790.",
+        "id": "auth:bo-public:Q125446679:independent-primary-confirmation",
+        "license": null,
+        "publisher": "Gobierno Autónomo Municipal de La Paz",
+        "revision": "Independent snapshot 2026-11-28; SHA-256 c8e2fa540f4d1f1055b6e7a2533f9eba3d2af7368e02e992850deb65daf5df21.",
+        "title": "Museo Casa de Murillo primary confirmation",
+        "uri": "https://sitservicios.lapaz.bo/sit/mapacultural/mapa/data/infrArtisticaCultural3.js"
+      }
+    ],
+    "source_uri": "https://lapaz.bo/agendajiwaki/evento/exposicion-bienes-culturales-referentes-a-la-gesta-libertaria-de-1809/",
+    "title": "Museo Casa de Murillo",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and public visitor scope checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Gobierno Autónomo Municipal de La Paz",
+      "Wikidata contributors"
+    ],
+    "description": "The historic colonial inn site by Plaza Alonso de Mendoza in La Paz. The restored municipal museum offers public exhibitions according to the city's calendar.",
+    "description_zh": "基尔金乔驿站博物馆位于玻利维亚。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+    "details": "The historic colonial inn site by Plaza Alonso de Mendoza in La Paz. The restored municipal museum offers public exhibitions according to the city's calendar.",
+    "geography": {
+      "authority_id": "supplement:auth:bo-public:Q17187013",
+      "countries": [
+        "BO"
+      ],
+      "note": "Named original location. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal calendar lists a publicly scheduled 2026 exhibition at this venue.",
+        "id": "auth:bo-public:Q17187013:bo-quirquincho-agenda-web.txt",
+        "license": null,
+        "publisher": "Gobierno Autónomo Municipal de La Paz",
+        "revision": "Normalized government verification note 2026-11-28. SHA-256 984432f15d999f3c23701142e8eda6270314d1350f3b19a16b4ae3063985e78b.",
+        "title": "Tambo Quirquincho public scope and original location",
+        "uri": "https://lapaz.bo/agendajiwaki/buscar-eventos/"
+      }
+    },
+    "id": "auth:bo-public:Q17187013",
+    "location_precision": null,
+    "names": [
+      "基尔金乔驿站博物馆"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -68.1380776,
+      -16.4935899
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal calendar lists a publicly scheduled 2026 exhibition at this venue.",
+        "id": "auth:bo-public:Q17187013:bo-quirquincho-agenda-web.txt",
+        "license": null,
+        "publisher": "Gobierno Autónomo Municipal de La Paz",
+        "revision": "Normalized government verification note 2026-11-28. SHA-256 984432f15d999f3c23701142e8eda6270314d1350f3b19a16b4ae3063985e78b.",
+        "title": "Tambo Quirquincho public scope and original location",
+        "uri": "https://lapaz.bo/agendajiwaki/buscar-eventos/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The venue history identifies the former colonial inn and records the municipal restoration and adoption for museum use.",
+        "id": "auth:bo-public:Q17187013:bo-quirquincho-history-web.txt",
+        "license": null,
+        "publisher": "Gobierno Autónomo Municipal de La Paz",
+        "revision": "Normalized government verification note 2026-11-28. SHA-256 c32c62bcb5af6624ad9f736395e5c66deb7d59c679bf106d382eacc12eee184b.",
+        "title": "Tambo Quirquincho public scope and original location",
+        "uri": "https://lapaz.bo/agendajiwaki/tambo-quirquincho/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -68.1380776, latitude -16.4935899.",
+        "id": "wikidata:Q17187013",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2548519864; P625 Q17187013$74398cb8-44d3-14b3-55c4-a5fae5d9d9c3.",
+        "title": "Tambo Quirquincho representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q17187013.json"
+      }
+    ],
+    "source_uri": "https://lapaz.bo/agendajiwaki/buscar-eventos/",
+    "title": "Tambo Quirquincho",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and public visitor scope checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Tarija Turismo",
+      "Universidad Autónoma Juan Misael Saracho",
+      "Wikidata contributors"
+    ],
+    "description": "The historic Casa Dorada at Ingavi and General Trigo in Tarija. The museum and cultural centre offer scheduled tours of approved public areas.",
+    "description_zh": "塔里哈金色宅邸位于玻利维亚。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+    "details": "The historic Casa Dorada at Ingavi and General Trigo in Tarija. The museum and cultural centre offer scheduled tours of approved public areas.",
+    "geography": {
+      "authority_id": "supplement:auth:bo-public:Q42311485",
+      "countries": [
+        "BO"
+      ],
+      "note": "Named original location. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The city tourism portal identifies the named house, its exact corner and guided admission arrangements.",
+        "id": "auth:bo-public:Q42311485:bo-casa-dorada.html",
+        "license": null,
+        "publisher": "Tarija Turismo",
+        "revision": "Frozen source file 2026-11-28. SHA-256 db7255a72616c4c4b41d4deb6953170f0270b8d3e5800d477b9033b091b68866.",
+        "title": "Casa Dorada de Tarija public scope and original location",
+        "uri": "https://tarijaturismo.com/casa-de-la-cultura/"
+      }
+    },
+    "id": "auth:bo-public:Q42311485",
+    "location_precision": null,
+    "names": [
+      "塔里哈金色宅邸"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -64.7340014,
+      -21.5324879
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The city tourism portal identifies the named house, its exact corner and guided admission arrangements.",
+        "id": "auth:bo-public:Q42311485:bo-casa-dorada.html",
+        "license": null,
+        "publisher": "Tarija Turismo",
+        "revision": "Frozen source file 2026-11-28. SHA-256 db7255a72616c4c4b41d4deb6953170f0270b8d3e5800d477b9033b091b68866.",
+        "title": "Casa Dorada de Tarija public scope and original location",
+        "uri": "https://tarijaturismo.com/casa-de-la-cultura/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The university documents the historic Casa Dorada visitor museum and its cultural programme.",
+        "id": "auth:bo-public:Q42311485:bo-tarija-university.pdf",
+        "license": null,
+        "publisher": "Universidad Autónoma Juan Misael Saracho",
+        "revision": "Frozen source file 2026-11-28. SHA-256 c88860b06e7bf1e653758a9b217cae576fec4115dfd8a1eb4b79a5cda5ae17eb.",
+        "title": "Casa Dorada de Tarija public scope and original location",
+        "uri": "https://www.uajms.edu.bo/wp-content/uploads/2024/04/Informe-de-Gestion-UAJMS-2023.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -64.7340014, latitude -21.5324879.",
+        "id": "wikidata:Q42311485",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2548525193; P625 Q42311485$94f69225-475c-dab5-086c-dcadd8c32ad1.",
+        "title": "Casa Dorada de Tarija representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q42311485.json"
+      }
+    ],
+    "source_uri": "https://tarijaturismo.com/casa-de-la-cultura/",
+    "title": "Casa Dorada de Tarija",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and public visitor scope checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Fundación Simón I. Patiño",
+      "Wikidata contributors"
+    ],
+    "description": "The historic palace commissioned by Simón I. Patiño at Queru Queru, Cochabamba, and its historic gardens. The managing foundation offers scheduled building and garden tours. The representative point lies in the grounds.",
+    "description_zh": "波塔莱斯宫与历史花园位于玻利维亚。地图点位表示经核对的原址代表点，参观以主管方公布的范围为准。",
+    "details": "The historic palace commissioned by Simón I. Patiño at Queru Queru, Cochabamba, and its historic gardens. The managing foundation offers scheduled building and garden tours. The representative point lies in the grounds.",
+    "geography": {
+      "authority_id": "supplement:auth:bo-public:Q42795447",
+      "countries": [
+        "BO"
+      ],
+      "note": "Named original location. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "latin-america-caribbean"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The foundation identifies the original palace and gardens and specifies guided access to both. It records that the Patiño family did not reside there.",
+        "id": "auth:bo-public:Q42795447:bo-portales.html",
+        "license": null,
+        "publisher": "Fundación Simón I. Patiño",
+        "revision": "Frozen source file 2026-11-28. SHA-256 fd965f27f45061fa68bd87ae53268f9ec00ef912baf6f0fa6b682362b16d0d05.",
+        "title": "Palacio Portales and historic gardens public scope and original location",
+        "uri": "https://patino.org/es/lugares/palacio-portales/"
+      }
+    },
+    "id": "auth:bo-public:Q42795447",
+    "location_precision": null,
+    "names": [
+      "波塔莱斯宫与历史花园"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -66.1533935,
+      -17.374924
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The foundation identifies the original palace and gardens and specifies guided access to both. It records that the Patiño family did not reside there.",
+        "id": "auth:bo-public:Q42795447:bo-portales.html",
+        "license": null,
+        "publisher": "Fundación Simón I. Patiño",
+        "revision": "Frozen source file 2026-11-28. SHA-256 fd965f27f45061fa68bd87ae53268f9ec00ef912baf6f0fa6b682362b16d0d05.",
+        "title": "Palacio Portales and historic gardens public scope and original location",
+        "uri": "https://patino.org/es/lugares/palacio-portales/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -66.1533935, latitude -17.374924.",
+        "id": "wikidata:Q42795447",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2548515499; P625 Q42795447$A29C701F-964D-4CB6-BF8B-062F3CFFE80A.",
+        "title": "Palacio Portales and historic gardens representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q42795447.json"
+      }
+    ],
+    "source_uri": "https://patino.org/es/lugares/palacio-portales/",
+    "title": "Palacio Portales and historic gardens",
+    "types": [
+      "historic-site"
+    ]
+  }
+]

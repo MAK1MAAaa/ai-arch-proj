@@ -85,10 +85,10 @@ def test_three_statistical_area_directories_paginate_without_country_inference(
         assert all(s["repr_point"] is not None and s["geography"]["countries"] == [area]
                    for p in pages for s in p["sites"])
     coverage = client.get("/api/coverage").json()
-    assert coverage["corpus_version"] == "global-v21" and coverage["total"] == 5214
+    assert coverage["corpus_version"] == "global-v21" and coverage["total"] == 5254
     assert len(coverage["countries"]) == 216
-    assert coverage["locations"] == {"mapped": 4818, "polar": 3, "unknown": 393}
-    assert coverage["spatial_locations"]["display_points"] == 9221
+    assert coverage["locations"] == {"mapped": 4858, "polar": 3, "unknown": 393}
+    assert coverage["spatial_locations"]["display_points"] == 9261
     assert client.get("/api/sites/auth:fr-merimee:PA97300012").status_code == 404
     whole = client.get("/api/sites/auth:fr-merimee:PA97300021").json()
     assert whole["title"] == "Entités archéologiques de l’Inselberg de la Mamilipann"
@@ -146,5 +146,5 @@ def test_new_diagnostic_queries_preserve_the_unconfirmed_relevance_gate(tmp_path
     queries = cohort.DATA_DIR / "queries-merimee-extension.json"
     assert [p.id for p in load_queries(queries)] == [f"mx{i:02}" for i in range(1, 21)]
     report = evaluate_corpus(tmp_path / "no-model", tmp_path / "rankings.json", queries=queries)
-    assert report["corpus_count"] == 5214 and report["metrics"] is None
+    assert report["corpus_count"] == 5254 and report["metrics"] is None
     assert not report["qrels"]["confirmed"] and not report["runs_complete"]

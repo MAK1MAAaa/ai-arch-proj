@@ -1,0 +1,22 @@
+{
+  "base_count": 5223,
+  "base_ids_sha256": "88b462fa2efefaa662b5db0c9e27e1ebff2d3fec4be8c4a25d9cd10ee7e566b2",
+  "base_sites_sha256": "cfadfc9cbc4b62caf5d0cf9d0f4003817d6e24a17056940bc2c3c12bcc5d98f6",
+  "cohort_version": "china-regional-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 4,
+    "total": 5227
+  },
+  "files": {
+    "china_regional_public_review.json": {
+      "sha256": "063df8bbbbc81e3e00ebed932a48cdf9d081a4d0a318b89b680de9921460c113"
+    },
+    "china_regional_public_sites.json": {
+      "sha256": "98a90e11ac7051f6a3d728fab25190207c300db2ce0f9c815945cd0118cd2e16"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Four verified public precincts at original Chinese heritage sites in Zhejiang, Chongqing, Guizhou and Sichuan."
+}

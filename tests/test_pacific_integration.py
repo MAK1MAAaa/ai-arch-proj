@@ -69,15 +69,15 @@ def test_real_api_dot_identifier_country_browse_null_bounds_and_keyword_mode(
 ) -> None:
     with TestClient(create_app(home=tmp_path)) as client:
         coverage = client.get("/api/coverage").json()
-        assert coverage["total"] == 5214 and coverage["corpus_version"] == "global-v21"
+        assert coverage["total"] == 5254 and coverage["corpus_version"] == "global-v21"
         assert len(coverage["countries"]) == 216 and len(coverage["regions"]) == 7
-        assert coverage["locations"] == {"mapped": 4818, "polar": 3, "unknown": 393}
+        assert coverage["locations"] == {"mapped": 4858, "polar": 3, "unknown": 393}
         assert coverage["chronology"] == {
-            "reviewed": 156, "insufficient": 1761, "not_reviewed": 3297,
+            "reviewed": 156, "insufficient": 1801, "not_reviewed": 3297,
         }
         spatial = coverage["spatial_locations"]
         assert (spatial["records"], spatial["points"], spatial["display_points"]) == (
-            1239, 5851, 9221,
+            1239, 5851, 9261,
         )
         assert len(spatial["source_groups"]) == 3
         assert not client.get("/api/status").json()["semantic"]["ready"]
@@ -110,7 +110,7 @@ def test_pacific_diagnostics_keep_metrics_unconfirmed_without_a_model(tmp_path: 
     assert len(pairs) == len({pair.id for pair in pairs}) == 20
     assert [pair.id for pair in pairs] == [f"p{index:02d}" for index in range(1, 21)]
     report = evaluate_corpus(tmp_path / "missing-model", tmp_path / "report.json", queries=queries)
-    assert report["corpus_count"] == 5214 and report["metrics"] is None
+    assert report["corpus_count"] == 5254 and report["metrics"] is None
     assert report["qrels"]["confirmed"] is False and report["runs_complete"] is False
     assert set(report["runs"]) == {"bm25_zh", "bm25_en", "semantic_zh", "semantic_en"}
     assert all(row["error"] is None for key, run in report["runs"].items()
