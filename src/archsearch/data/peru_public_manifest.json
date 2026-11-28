@@ -1,0 +1,22 @@
+{
+  "base_count": 4381,
+  "base_ids_sha256": "178c8c1d29e908e64b5a55cd6d3ae5e9a8527bb2759c387a0d97f2762c5423c8",
+  "base_sites_sha256": "c7df4832379915bd39175183744e4a3a824757b1274d96ac3ed914ae2a90e84e",
+  "cohort_version": "peru-mincul-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 9,
+    "total": 4390
+  },
+  "files": {
+    "peru_public_review.json": {
+      "sha256": "fd042f30ff3f8719364f132e085b2d019c08d10920833e18ed62ef0fd37eba77"
+    },
+    "peru_public_sites.json": {
+      "sha256": "b77b25d193ba22505e0255a93863e794eb2ab8a70e822a5f8f83d7c1708f1dcf"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Nine historic properties and archaeological visitor sites with individually confirmed Ministry of Culture public listings and retained Wikidata CC0 location statements."
+}

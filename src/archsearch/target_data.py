@@ -117,9 +117,53 @@ SCOTLAND_HES = NamedPlaceCohort(
     "1db3d61d10a10bc8d59c6fb725b21a99b7b564a46da46578c896b4551e902e86",
     "b8b553b4026ce9ac1f2def85457fd85c300f6651e636d96e1f5db8797dd04723",
 )
+CARIBBEAN_NRHP = NamedPlaceCohort(
+    "caribbean-nrhp-public-v1",
+    "global-v21",
+    "caribbean_nrhp",
+    "697c34f8caf877b70fda7f2f7b47d1803ce8bbad414d8c8a40d936480916c88c",
+    "8899b0b29eec454e2e7f1f71241c02a01ee809319dafb49dc8992ae0c1f3e2d3",
+    country_labels=(("PR", "Puerto Rico"), ("VI", "United States Virgin Islands")),
+)
+PERU_PUBLIC = NamedPlaceCohort(
+    "peru-mincul-public-v1",
+    "global-v21",
+    "peru_public",
+    "fd042f30ff3f8719364f132e085b2d019c08d10920833e18ed62ef0fd37eba77",
+    "b77b25d193ba22505e0255a93863e794eb2ab8a70e822a5f8f83d7c1708f1dcf",
+)
+INDIA_ASI = NamedPlaceCohort(
+    "india-asi-public-v1",
+    "global-v21",
+    "india_asi",
+    "df0e2c551a3a2a96686f0b595221bdb935d3c4d930d80442474c4b93e8763d37",
+    "3647c59d3957018304bd9226faa2faa9792648de152aa27eeeb2684fcfc49c4d",
+)
+INDIA_ASI_NEXT = NamedPlaceCohort(
+    "india-asi-public-v2",
+    "global-v21",
+    "india_asi_next",
+    "71a5d01e639267be7c014e654d14a0e290dc16a765a10a8012049e3d45d1dbd8",
+    "5fc2ecb2d575c6b6ae51fbab98cc03f5b250bda39589751363ff71d31f66c7a6",
+)
+SRI_LANKA_PUBLIC = NamedPlaceCohort(
+    "sri-lanka-public-v1",
+    "global-v21",
+    "sri_lanka_public",
+    "c70da6586e71c743f37f43dbe8a3c5c8fd4e9ba3ffd771d6ac14a4ba5f3ae3d9",
+    "0b369ab2c8cf1e7bfc3054a7cada630153a8855a90ec204a1148307c208f4489",
+)
+SOUTH_ASIA_PUBLIC = NamedPlaceCohort(
+    "south-asia-bd-np-pk-public-v1",
+    "global-v21",
+    "south_asia_public",
+    "70cd25abac05104b6f7be6661a50a8dd5105c5117377433436331d676d7a72b9",
+    "298a855b6905f736f209ab6674587f77953df0106341997c7913143eb49e23f0",
+)
 POINT_COHORTS = (
     IRELAND, ANDALUCIA, TAIWAN_ICULTURE, MEXICO_SIC, FINLAND_VARK, WALES_CADW, THAILAND_FAD,
-    AFRICA_VISIT, SCOTLAND_HES,
+    AFRICA_VISIT, SCOTLAND_HES, CARIBBEAN_NRHP, PERU_PUBLIC, INDIA_ASI, INDIA_ASI_NEXT,
+    SRI_LANKA_PUBLIC, SOUTH_ASIA_PUBLIC,
 )
 
 

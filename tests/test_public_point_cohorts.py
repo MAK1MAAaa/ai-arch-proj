@@ -96,6 +96,14 @@ def test_public_point_search_catalogue_and_provenance(
             ("GB", "auth:gb-cadw:", 111),
             ("TH", "auth:th-fad:", 17),
             ("GB", "auth:gb-hes-pic:", 31),
+            ("PR", "auth:nps-caribbean:", 5),
+            ("VI", "auth:nps-caribbean:", 2),
+            ("PE", "auth:pe-mincul:", 9),
+            ("IN", "auth:in-public:", 46),
+            ("LK", "auth:lk-public:", 4),
+            ("BD", "auth:bd-public:", 6),
+            ("NP", "auth:np-public:", 2),
+            ("PK", "auth:pk-public:", 5),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -111,3 +119,19 @@ def test_public_point_search_catalogue_and_provenance(
         assert malindi["repr_point"] == [40.12965, -3.22395]
         assert malindi["geography"]["countries"] == ["KE"]
         assert malindi["chronology"]["status"] == "insufficient"
+        assert {"id": "PR", "label": "Puerto Rico", "count": 5} in countries
+        assert {"id": "VI", "label": "United States Virgin Islands", "count": 2} in countries
+        lighthouse = client.get("/api/sites/auth:nps-caribbean:81000560").json()
+        assert lighthouse["repr_point"] == [-67.270805, 18.361977777777778]
+        assert client.get("/api/sites/auth:nps-caribbean:97001269").status_code == 404
+        tucume = client.get("/api/sites/auth:pe-mincul:350").json()
+        assert tucume["title"] == "Museo de Sitio Túcume"
+        assert tucume["source_refs"][1]["license"] == "CC0"
+        island = client.get("/api/sites/auth:in-public:Q749108").json()
+        assert island["repr_point"] == [79.23930405, 16.52031987]
+        assert "水库岛" in island["description_zh"] and "迁建" in island["description_zh"]
+        ritigala = client.get("/api/sites/auth:lk-public:Q126650014").json()
+        assert ritigala["repr_point"] == [80.66461, 8.11834]
+        assert ritigala["chronology"]["phases"] == []
+        katas_raj = client.get("/api/sites/auth:pk-public:Q3629175").json()
+        assert "organized pilgrimage admission" in katas_raj["details"]

@@ -1,0 +1,22 @@
+{
+  "base_count": 4440,
+  "base_ids_sha256": "5b6e67be0f723b3ec0fe267ca28c81f1ca8dc4590e26dfd10fdf5e232c72033a",
+  "base_sites_sha256": "63b5ea96077c4ad07c9aa50ee9123ffbd99a7e7ee5d77dc94681bd6c27ee4052",
+  "cohort_version": "south-asia-bd-np-pk-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 13,
+    "total": 4453
+  },
+  "files": {
+    "south_asia_public_review.json": {
+      "sha256": "70cd25abac05104b6f7be6661a50a8dd5105c5117377433436331d676d7a72b9"
+    },
+    "south_asia_public_sites.json": {
+      "sha256": "298a855b6905f736f209ab6674587f77953df0106341997c7913143eb49e23f0"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Thirteen public cultural places with primary government visit evidence and retained Wikidata representative points in Bangladesh, Nepal and Pakistan."
+}

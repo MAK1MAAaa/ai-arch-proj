@@ -1,0 +1,1036 @@
+{
+  "base_count": 4381,
+  "base_ids_sha256": "178c8c1d29e908e64b5a55cd6d3ae5e9a8527bb2759c387a0d97f2762c5423c8",
+  "base_sites_sha256": "c7df4832379915bd39175183744e4a3a824757b1274d96ac3ed914ae2a90e84e",
+  "cohort_version": "peru-mincul-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "point": [
+          -76.934444,
+          -12.048056
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2615433.json",
+        "statement_id": "Q2615433$95F08051-6819-4EF5-B588-193ECB52CA27"
+      },
+      "independent_review": {
+        "method": "Checked the Ministry visitor records and public location context, all original source SHA-256 values and exact active Wikidata Earth statement values. Compared against existing corpus names and all representative or auxiliary source point identities.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The publicly named property has its own Ministry of Culture visitor listing. The adopted coordinates come from the matching Wikimedia entity; the Ministry map supports the same locality.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Checked the relevant frozen visitor and structured location evidence.",
+          "note": "This point slice has no verified historical phases. Dates of a museum opening do not date its archaeological site.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura del Perú",
+          "Wikidata contributors"
+        ],
+        "description": "Publicly interpreted archaeological site and Arturo Jiménez Borja site museum in Ate, Lima.",
+        "description_zh": "秘鲁利马阿特的普鲁丘科考古遗址与遗址博物馆。",
+        "details": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "geography": {
+          "authority_id": "supplement:auth:pe-mincul:334",
+          "countries": [
+            "PE"
+          ],
+          "note": "Modern region, province and district follow the Ministry visitor listing.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Lima, Lima, Ate; Abierto.",
+            "id": "pe-mincul:museo:334",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 726f2825680069b46db5b9ed9a01b837e72da28b4f5e3bfd801bb20f71bb374d",
+            "title": "MINCUL public visitor entry — Museo de Sitio \"Arturo Jiménez Borja\" - Puruchuco",
+            "uri": "https://museos.cultura.pe/node/334"
+          }
+        },
+        "id": "auth:pe-mincul:334",
+        "location_precision": null,
+        "names": [
+          "Puruchuco",
+          "Museo de Sitio Arturo Jiménez Borja",
+          "Zona Arqueológica de Puruchuco",
+          "Museo de Sitio \"Arturo Jiménez Borja\" - Puruchuco"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -76.934444,
+          -12.048056
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Lima, Lima, Ate; Abierto.",
+            "id": "pe-mincul:museo:334",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 726f2825680069b46db5b9ed9a01b837e72da28b4f5e3bfd801bb20f71bb374d",
+            "title": "MINCUL public visitor entry — Museo de Sitio \"Arturo Jiménez Borja\" - Puruchuco",
+            "uri": "https://museos.cultura.pe/node/334"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Puruchuco; public coordinate statement.",
+            "id": "wd:Q2615433",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2510876301; SHA-256 eb41c34ad125dc62d9c8f21755c59fb2c45accf2f65056e5f69e685bd85d1fbc",
+            "title": "Wikidata structured location — Puruchuco",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2615433.json"
+          }
+        ],
+        "source_uri": "https://museos.cultura.pe/node/334",
+        "title": "Puruchuco",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "peru-source/visitor-19.html",
+          "sha256": "726f2825680069b46db5b9ed9a01b837e72da28b4f5e3bfd801bb20f71bb374d",
+          "uri": "https://museos.cultura.pe/node/334"
+        },
+        {
+          "filename": "peru-source/Q2615433.json",
+          "sha256": "eb41c34ad125dc62d9c8f21755c59fb2c45accf2f65056e5f69e685bd85d1fbc",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2615433.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "point": [
+          -77.0403,
+          -12.0972
+        ],
+        "precision": 0.0091871678730286,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9005094.json",
+        "statement_id": "Q9005094$31892705-87E0-4D20-AE3A-079DB1024CC8"
+      },
+      "independent_review": {
+        "method": "Checked the Ministry visitor records and public location context, all original source SHA-256 values and exact active Wikidata Earth statement values. Compared against existing corpus names and all representative or auxiliary source point identities.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The publicly named property has its own Ministry of Culture visitor listing. The adopted coordinates come from the matching Wikimedia entity; the Ministry map supports the same locality.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Checked the relevant frozen visitor and structured location evidence.",
+          "note": "This point slice has no verified historical phases. Dates of a museum opening do not date its archaeological site.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura del Perú",
+          "Wikidata contributors"
+        ],
+        "description": "Pre-Hispanic archaeological site with a public site museum in San Isidro, Lima.",
+        "description_zh": "秘鲁利马圣伊西德罗的瓦亚马尔卡古遗址及公众博物馆。",
+        "details": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "geography": {
+          "authority_id": "supplement:auth:pe-mincul:344",
+          "countries": [
+            "PE"
+          ],
+          "note": "Modern region, province and district follow the Ministry visitor listing.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Lima, Lima, San Isidro; Abierto.",
+            "id": "pe-mincul:museo:344",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 485129a55c48f45d16e3dbd6f13f81d2fa8c1b94bb8b6fce9bc345245ef54f64",
+            "title": "MINCUL public visitor entry — Museo de Sitio Huallamarca",
+            "uri": "https://museos.cultura.pe/node/344"
+          }
+        },
+        "id": "auth:pe-mincul:344",
+        "location_precision": null,
+        "names": [
+          "Huaca Huallamarca",
+          "Museo de Sitio Huallamarca",
+          "Huallamarca",
+          "Pan de Azúcar"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -77.0403,
+          -12.0972
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Lima, Lima, San Isidro; Abierto.",
+            "id": "pe-mincul:museo:344",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 485129a55c48f45d16e3dbd6f13f81d2fa8c1b94bb8b6fce9bc345245ef54f64",
+            "title": "MINCUL public visitor entry — Museo de Sitio Huallamarca",
+            "uri": "https://museos.cultura.pe/node/344"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Huaca Huallamarca; public coordinate statement.",
+            "id": "wd:Q9005094",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2574771717; SHA-256 c1fbfcc135bde8bd33383408808f84798d29b0ff4bb5207f81d8864f1b1c4581",
+            "title": "Wikidata structured location — Huaca Huallamarca",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9005094.json"
+          }
+        ],
+        "source_uri": "https://museos.cultura.pe/node/344",
+        "title": "Huaca Huallamarca",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "peru-source/visitor-25.html",
+          "sha256": "485129a55c48f45d16e3dbd6f13f81d2fa8c1b94bb8b6fce9bc345245ef54f64",
+          "uri": "https://museos.cultura.pe/node/344"
+        },
+        {
+          "filename": "peru-source/Q9005094.json",
+          "sha256": "c1fbfcc135bde8bd33383408808f84798d29b0ff4bb5207f81d8864f1b1c4581",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9005094.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "point": [
+          -77.03388889,
+          -12.11111111
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q677387.json",
+        "statement_id": "Q677387$E11A6F37-3B5C-470F-BF4F-3E2A9998C759"
+      },
+      "independent_review": {
+        "method": "Checked the Ministry visitor records and public location context, all original source SHA-256 values and exact active Wikidata Earth statement values. Compared against existing corpus names and all representative or auxiliary source point identities.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The publicly named property has its own Ministry of Culture visitor listing. The adopted coordinates come from the matching Wikimedia entity; the Ministry map supports the same locality.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Checked the relevant frozen visitor and structured location evidence.",
+          "note": "This point slice has no verified historical phases. Dates of a museum opening do not date its archaeological site.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura del Perú",
+          "Wikidata contributors"
+        ],
+        "description": "Pre-Hispanic archaeological site and public site museum in Miraflores, Lima.",
+        "description_zh": "秘鲁利马米拉弗洛雷斯的普克利亚纳古遗址与公众博物馆。",
+        "details": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "geography": {
+          "authority_id": "supplement:auth:pe-mincul:349",
+          "countries": [
+            "PE"
+          ],
+          "note": "Modern region, province and district follow the Ministry visitor listing.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Lima, Lima, Miraflores; Abierto.",
+            "id": "pe-mincul:museo:349",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 6e3772907f317c49d4007789a5f22ea22efa815445591e08464284673fb7500d",
+            "title": "MINCUL public visitor entry — Museo de Sitio Pucllana",
+            "uri": "https://museos.cultura.pe/node/349"
+          }
+        },
+        "id": "auth:pe-mincul:349",
+        "location_precision": null,
+        "names": [
+          "Huaca Pucllana",
+          "Huaca Juliana",
+          "Museo de Sitio Huaca Pucllana",
+          "Museo de Sitio Pucllana"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -77.03388889,
+          -12.11111111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Lima, Lima, Miraflores; Abierto.",
+            "id": "pe-mincul:museo:349",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 6e3772907f317c49d4007789a5f22ea22efa815445591e08464284673fb7500d",
+            "title": "MINCUL public visitor entry — Museo de Sitio Pucllana",
+            "uri": "https://museos.cultura.pe/node/349"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Huaca Pucllana; public coordinate statement.",
+            "id": "wd:Q677387",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2574771799; SHA-256 e7d61c82e27e3535ee18da9d7577f027ca190056a9742a0ecec9be3652a4b411",
+            "title": "Wikidata structured location — Huaca Pucllana",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q677387.json"
+          }
+        ],
+        "source_uri": "https://museos.cultura.pe/node/349",
+        "title": "Huaca Pucllana",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "peru-source/visitor-24.html",
+          "sha256": "6e3772907f317c49d4007789a5f22ea22efa815445591e08464284673fb7500d",
+          "uri": "https://museos.cultura.pe/node/349"
+        },
+        {
+          "filename": "peru-source/Q677387.json",
+          "sha256": "e7d61c82e27e3535ee18da9d7577f027ca190056a9742a0ecec9be3652a4b411",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q677387.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "point": [
+          -79.847459,
+          -6.513472
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q26205260.json",
+        "statement_id": "Q26205260$cfb2b58c-42bf-5dea-c2dd-6a7fb906389c"
+      },
+      "independent_review": {
+        "method": "Checked the Ministry visitor records and public location context, all original source SHA-256 values and exact active Wikidata Earth statement values. Compared against existing corpus names and all representative or auxiliary source point identities.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The publicly named property has its own Ministry of Culture visitor listing. The adopted coordinates come from the matching Wikimedia entity; the Ministry map supports the same locality. Point and title refer to the site museum within the archaeological complex, not its pyramid footprints.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Checked the relevant frozen visitor and structured location evidence.",
+          "note": "This point slice has no verified historical phases. Dates of a museum opening do not date its archaeological site.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura del Perú",
+          "Wikidata contributors"
+        ],
+        "description": "Public site museum within the Túcume archaeological complex.",
+        "description_zh": "秘鲁兰巴耶克图库梅考古遗址区内的公众博物馆。",
+        "details": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "geography": {
+          "authority_id": "supplement:auth:pe-mincul:350",
+          "countries": [
+            "PE"
+          ],
+          "note": "Modern region, province and district follow the Ministry visitor listing.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Lambayeque, Lambayeque, Túcume; Abierto.",
+            "id": "pe-mincul:museo:350",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 0a9f104b3c7eddd2f36d7a86a90aeba985b37f11ee62f7fd2898f1ffe9dec090",
+            "title": "MINCUL public visitor entry — Museo de Sitio Túcume",
+            "uri": "https://museos.cultura.pe/museos/museo-de-sitio-t%C3%BAcume"
+          }
+        },
+        "id": "auth:pe-mincul:350",
+        "location_precision": null,
+        "names": [
+          "Museo de Sitio Túcume",
+          "Complejo Arqueológico de Túcume",
+          "Museo Túcume",
+          "Pyramids of Túcume"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -79.847459,
+          -6.513472
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Lambayeque, Lambayeque, Túcume; Abierto.",
+            "id": "pe-mincul:museo:350",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 0a9f104b3c7eddd2f36d7a86a90aeba985b37f11ee62f7fd2898f1ffe9dec090",
+            "title": "MINCUL public visitor entry — Museo de Sitio Túcume",
+            "uri": "https://museos.cultura.pe/museos/museo-de-sitio-t%C3%BAcume"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Museo de Sitio Túcume; public coordinate statement.",
+            "id": "wd:Q26205260",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2573605581; SHA-256 14208a7dab52e10f0b1fa7e39cd86dda41464b152d2f050e60f641eca5d5cdc4",
+            "title": "Wikidata structured location — Museo de Sitio Túcume",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q26205260.json"
+          }
+        ],
+        "source_uri": "https://museos.cultura.pe/museos/museo-de-sitio-t%C3%BAcume",
+        "title": "Museo de Sitio Túcume",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "peru-source/visitor-51.html",
+          "sha256": "0a9f104b3c7eddd2f36d7a86a90aeba985b37f11ee62f7fd2898f1ffe9dec090",
+          "uri": "https://museos.cultura.pe/museos/museo-de-sitio-t%C3%BAcume"
+        },
+        {
+          "filename": "peru-source/Q26205260.json",
+          "sha256": "14208a7dab52e10f0b1fa7e39cd86dda41464b152d2f050e60f641eca5d5cdc4",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q26205260.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "point": [
+          -75.2060688888889,
+          -12.117458888888889
+        ],
+        "precision": 0.000277778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9005122.json",
+        "statement_id": "Q9005122$6dc0ce20-46ff-3843-9d96-c9ee039ef972"
+      },
+      "independent_review": {
+        "method": "Checked the Ministry visitor records and public location context, all original source SHA-256 values and exact active Wikidata Earth statement values. Compared against existing corpus names and all representative or auxiliary source point identities.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The publicly named property has its own Ministry of Culture visitor listing. The adopted coordinates come from the matching Wikimedia entity; the Ministry map supports the same locality.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Checked the relevant frozen visitor and structured location evidence.",
+          "note": "This point slice has no verified historical phases. Dates of a museum opening do not date its archaeological site.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura del Perú",
+          "Wikidata contributors"
+        ],
+        "description": "Archaeological sanctuary with a public site museum in Huancán, Junín.",
+        "description_zh": "秘鲁胡宁大区万坎的瓦里维尔卡考古圣所及公众遗址博物馆。",
+        "details": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "geography": {
+          "authority_id": "supplement:auth:pe-mincul:352",
+          "countries": [
+            "PE"
+          ],
+          "note": "Modern region, province and district follow the Ministry visitor listing.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Junín, Huancayo, Huancán; Abierto.",
+            "id": "pe-mincul:museo:352",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 f2ca6099a4c473c04b93717ffa016f0af7cf49386f1cafb975a1f70151697506",
+            "title": "MINCUL public visitor entry — Museo de Sitio Wari Willka",
+            "uri": "https://museos.cultura.pe/museos/museo-de-sitio-wari-willka"
+          }
+        },
+        "id": "auth:pe-mincul:352",
+        "location_precision": null,
+        "names": [
+          "Wari Willka",
+          "Huarihuilca",
+          "Museo de Sitio Wari Willka",
+          "Wariwillka"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -75.2060688888889,
+          -12.117458888888889
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Junín, Huancayo, Huancán; Abierto.",
+            "id": "pe-mincul:museo:352",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 f2ca6099a4c473c04b93717ffa016f0af7cf49386f1cafb975a1f70151697506",
+            "title": "MINCUL public visitor entry — Museo de Sitio Wari Willka",
+            "uri": "https://museos.cultura.pe/museos/museo-de-sitio-wari-willka"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Wari Willka; public coordinate statement.",
+            "id": "wd:Q9005122",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2225906549; SHA-256 883a12fd772bf33ec6ac7c357e43599b1da53cd4a1d2780774308c0aff30c868",
+            "title": "Wikidata structured location — Wari Willka",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9005122.json"
+          }
+        ],
+        "source_uri": "https://museos.cultura.pe/museos/museo-de-sitio-wari-willka",
+        "title": "Wari Willka",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "peru-source/visitor-22.html",
+          "sha256": "f2ca6099a4c473c04b93717ffa016f0af7cf49386f1cafb975a1f70151697506",
+          "uri": "https://museos.cultura.pe/museos/museo-de-sitio-wari-willka"
+        },
+        {
+          "filename": "peru-source/Q9005122.json",
+          "sha256": "883a12fd772bf33ec6ac7c357e43599b1da53cd4a1d2780774308c0aff30c868",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9005122.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "point": [
+          -76.27944444,
+          -9.93083333
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2669852.json",
+        "statement_id": "Q2669852$875B5564-9A2D-480D-AC35-3C3E421BA89A"
+      },
+      "independent_review": {
+        "method": "Checked the Ministry visitor records and public location context, all original source SHA-256 values and exact active Wikidata Earth statement values. Compared against existing corpus names and all representative or auxiliary source point identities.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The publicly named property has its own Ministry of Culture visitor listing. The adopted coordinates come from the matching Wikimedia entity; the Ministry map supports the same locality.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Checked the relevant frozen visitor and structured location evidence.",
+          "note": "This point slice has no verified historical phases. Dates of a museum opening do not date its archaeological site.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura del Perú",
+          "Wikidata contributors"
+        ],
+        "description": "Archaeological complex with a public interpretation hall near Huánuco.",
+        "description_zh": "秘鲁瓦努科附近的科托什考古遗址群，设有公众展厅。",
+        "details": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "geography": {
+          "authority_id": "supplement:auth:pe-mincul:388",
+          "countries": [
+            "PE"
+          ],
+          "note": "Modern region, province and district follow the Ministry visitor listing.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Huánuco, Huánuco, Huánuco; Abierto.",
+            "id": "pe-mincul:museo:388",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 429be1679b1034997e40c5e279ed01ace7f5e245b39c0a6cde91999d80663506",
+            "title": "MINCUL public visitor entry — Sala de Exhibición de la Zona Arqueológica Monumental de Kotosh",
+            "uri": "https://museos.cultura.pe/museos/sala-de-exhibici%C3%B3n-de-la-zona-arqueol%C3%B3gica-monumental-de-kotosh"
+          }
+        },
+        "id": "auth:pe-mincul:388",
+        "location_precision": null,
+        "names": [
+          "Zona Arqueológica Monumental de Kotosh",
+          "Kotosh",
+          "Sala de Exhibición de la Zona Arqueológica Monumental de Kotosh"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -76.27944444,
+          -9.93083333
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Huánuco, Huánuco, Huánuco; Abierto.",
+            "id": "pe-mincul:museo:388",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 429be1679b1034997e40c5e279ed01ace7f5e245b39c0a6cde91999d80663506",
+            "title": "MINCUL public visitor entry — Sala de Exhibición de la Zona Arqueológica Monumental de Kotosh",
+            "uri": "https://museos.cultura.pe/museos/sala-de-exhibici%C3%B3n-de-la-zona-arqueol%C3%B3gica-monumental-de-kotosh"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Zona Arqueológica Monumental de Kotosh; public coordinate statement.",
+            "id": "wd:Q2669852",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2508617266; SHA-256 f765018bedd70a2055e583c1cb41ed83d438578a4e1cf5f28b5689b13db7c3bb",
+            "title": "Wikidata structured location — Zona Arqueológica Monumental de Kotosh",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2669852.json"
+          }
+        ],
+        "source_uri": "https://museos.cultura.pe/museos/sala-de-exhibici%C3%B3n-de-la-zona-arqueol%C3%B3gica-monumental-de-kotosh",
+        "title": "Zona Arqueológica Monumental de Kotosh",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "peru-source/visitor-38.html",
+          "sha256": "429be1679b1034997e40c5e279ed01ace7f5e245b39c0a6cde91999d80663506",
+          "uri": "https://museos.cultura.pe/museos/sala-de-exhibici%C3%B3n-de-la-zona-arqueol%C3%B3gica-monumental-de-kotosh"
+        },
+        {
+          "filename": "peru-source/Q2669852.json",
+          "sha256": "f765018bedd70a2055e583c1cb41ed83d438578a4e1cf5f28b5689b13db7c3bb",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2669852.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "point": [
+          -75.829167,
+          -13.705278
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1513848.json",
+        "statement_id": "q1513848$E26BDB99-BBDB-45FA-B0E4-434B31BD01E7"
+      },
+      "independent_review": {
+        "method": "Checked the Ministry visitor records and public location context, all original source SHA-256 values and exact active Wikidata Earth statement values. Compared against existing corpus names and all representative or auxiliary source point identities.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The publicly named property has its own Ministry of Culture visitor listing. The adopted coordinates come from the matching Wikimedia entity; the Ministry map supports the same locality.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Checked the relevant frozen visitor and structured location evidence.",
+          "note": "This point slice has no verified historical phases. Dates of a museum opening do not date its archaeological site.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura del Perú",
+          "Wikidata contributors"
+        ],
+        "description": "Archaeological site with a public interpretation hall in Humay, Ica.",
+        "description_zh": "秘鲁伊卡大区乌迈的坦博科罗拉多考古遗址，设有公众展厅。",
+        "details": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "geography": {
+          "authority_id": "supplement:auth:pe-mincul:391",
+          "countries": [
+            "PE"
+          ],
+          "note": "Modern region, province and district follow the Ministry visitor listing.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Ica, Pisco, Humay; Abierto.",
+            "id": "pe-mincul:museo:391",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 01853526ccbed6132cd0713d98b67d48f0b6115644dcc6a08b62e2b99423576c",
+            "title": "MINCUL public visitor entry — Sala de Exhibición del Sitio Arqueológico \"Tambo Colorado\"",
+            "uri": "https://museos.cultura.pe/museos/sala-de-exhibici%C3%B3n-del-sitio-arqueol%C3%B3gico-tambo-colorado"
+          }
+        },
+        "id": "auth:pe-mincul:391",
+        "location_precision": null,
+        "names": [
+          "Tambo Colorado",
+          "Sitio Arqueológico Tambo Colorado",
+          "Sala de Exhibición del Sitio Arqueológico Tambo Colorado",
+          "Sala de Exhibición del Sitio Arqueológico \"Tambo Colorado\""
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -75.829167,
+          -13.705278
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Ica, Pisco, Humay; Abierto.",
+            "id": "pe-mincul:museo:391",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 01853526ccbed6132cd0713d98b67d48f0b6115644dcc6a08b62e2b99423576c",
+            "title": "MINCUL public visitor entry — Sala de Exhibición del Sitio Arqueológico \"Tambo Colorado\"",
+            "uri": "https://museos.cultura.pe/museos/sala-de-exhibici%C3%B3n-del-sitio-arqueol%C3%B3gico-tambo-colorado"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Tambo Colorado; public coordinate statement.",
+            "id": "wd:Q1513848",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2123387500; SHA-256 66d78488a4a2a8be320cb9a85e4f24644dbfde83bbf2146557fc91540168d5ab",
+            "title": "Wikidata structured location — Tambo Colorado",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1513848.json"
+          }
+        ],
+        "source_uri": "https://museos.cultura.pe/museos/sala-de-exhibici%C3%B3n-del-sitio-arqueol%C3%B3gico-tambo-colorado",
+        "title": "Tambo Colorado",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "peru-source/visitor-40.html",
+          "sha256": "01853526ccbed6132cd0713d98b67d48f0b6115644dcc6a08b62e2b99423576c",
+          "uri": "https://museos.cultura.pe/museos/sala-de-exhibici%C3%B3n-del-sitio-arqueol%C3%B3gico-tambo-colorado"
+        },
+        {
+          "filename": "peru-source/Q1513848.json",
+          "sha256": "66d78488a4a2a8be320cb9a85e4f24644dbfde83bbf2146557fc91540168d5ab",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1513848.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "point": [
+          -69.4572508,
+          -16.2151176
+        ],
+        "precision": 1e-07,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q27033313.json",
+        "statement_id": "Q27033313$34633f37-4596-9a59-49cd-9ab76f60da04"
+      },
+      "independent_review": {
+        "method": "Checked the Ministry visitor records and public location context, all original source SHA-256 values and exact active Wikidata Earth statement values. Compared against existing corpus names and all representative or auxiliary source point identities.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The publicly named property has its own Ministry of Culture visitor listing. The adopted coordinates come from the matching Wikimedia entity; the Ministry map supports the same locality.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Checked the relevant frozen visitor and structured location evidence.",
+          "note": "This point slice has no verified historical phases. Dates of a museum opening do not date its archaeological site.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura del Perú",
+          "Wikidata contributors"
+        ],
+        "description": "Historic church open as a public museum in Juli, Puno.",
+        "description_zh": "秘鲁普诺大区胡利的历史教堂，现作为博物馆开放。",
+        "details": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "geography": {
+          "authority_id": "supplement:auth:pe-mincul:396",
+          "countries": [
+            "PE"
+          ],
+          "note": "Modern region, province and district follow the Ministry visitor listing.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Puno, Chucuito, Juli; Abierto.",
+            "id": "pe-mincul:museo:396",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 a64fc2867c3df671039a3e9f48f4971faf92fff80c4a22f246edc1572a038759",
+            "title": "MINCUL public visitor entry — Templo Museo \"Nuestra Señora de la Asunción\"",
+            "uri": "https://museos.cultura.pe/node/396"
+          }
+        },
+        "id": "auth:pe-mincul:396",
+        "location_precision": null,
+        "names": [
+          "Iglesia de Nuestra Señora de la Asunción de Juli",
+          "Iglesia de Nuestra Señora de la Asunción",
+          "Templo Museo Nuestra Señora de la Asunción",
+          "Templo Museo \"Nuestra Señora de la Asunción\""
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -69.4572508,
+          -16.2151176
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Puno, Chucuito, Juli; Abierto.",
+            "id": "pe-mincul:museo:396",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 a64fc2867c3df671039a3e9f48f4971faf92fff80c4a22f246edc1572a038759",
+            "title": "MINCUL public visitor entry — Templo Museo \"Nuestra Señora de la Asunción\"",
+            "uri": "https://museos.cultura.pe/node/396"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Iglesia de Nuestra Señora de la Asunción de Juli; public coordinate statement.",
+            "id": "wd:Q27033313",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2573449555; SHA-256 209c40cb774de6611b2bedaa4a9d9c055e8a465d686470de0415e54805ce2bcd",
+            "title": "Wikidata structured location — Iglesia de Nuestra Señora de la Asunción de Juli",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q27033313.json"
+          }
+        ],
+        "source_uri": "https://museos.cultura.pe/node/396",
+        "title": "Iglesia de Nuestra Señora de la Asunción de Juli",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "peru-source/visitor-4.html",
+          "sha256": "a64fc2867c3df671039a3e9f48f4971faf92fff80c4a22f246edc1572a038759",
+          "uri": "https://museos.cultura.pe/node/396"
+        },
+        {
+          "filename": "peru-source/Q27033313.json",
+          "sha256": "209c40cb774de6611b2bedaa4a9d9c055e8a465d686470de0415e54805ce2bcd",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q27033313.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "point": [
+          -69.45833333,
+          -16.21055556
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5910558.json",
+        "statement_id": "Q5910558$66A23E9D-D3A8-4ED1-BAAC-983963EA0E2D"
+      },
+      "independent_review": {
+        "method": "Checked the Ministry visitor records and public location context, all original source SHA-256 values and exact active Wikidata Earth statement values. Compared against existing corpus names and all representative or auxiliary source point identities.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The publicly named property has its own Ministry of Culture visitor listing. The adopted coordinates come from the matching Wikimedia entity; the Ministry map supports the same locality.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Checked the relevant frozen visitor and structured location evidence.",
+          "note": "This point slice has no verified historical phases. Dates of a museum opening do not date its archaeological site.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministerio de Cultura del Perú",
+          "Wikidata contributors"
+        ],
+        "description": "Historic church open as a public museum in Juli, Puno.",
+        "description_zh": "秘鲁普诺大区胡利的圣胡安德莱特兰历史教堂，现作为博物馆开放。",
+        "details": "Wikidata CC0 location point cross-checked against the official public visitor map location at the same named property. The marker represents the stated site or visitor building and carries no survey accuracy guarantee.",
+        "geography": {
+          "authority_id": "supplement:auth:pe-mincul:397",
+          "countries": [
+            "PE"
+          ],
+          "note": "Modern region, province and district follow the Ministry visitor listing.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "Puno, Chucuito, Juli; Abierto.",
+            "id": "pe-mincul:museo:397",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 f45f66af14d0ad8f4085f31aedd10d9555f8c67d0fa51a169b49dc7c047c59dd",
+            "title": "MINCUL public visitor entry — Templo Museo \"San Juan de Letrán\"",
+            "uri": "https://museos.cultura.pe/museos/templo-museo-san-juan-de-letr%C3%A1n"
+          }
+        },
+        "id": "auth:pe-mincul:397",
+        "location_precision": null,
+        "names": [
+          "Iglesia de San Juan de Letrán de Juli",
+          "Iglesia de San Juan de Letrán",
+          "Templo Museo San Juan de Letrán",
+          "Templo Museo \"San Juan de Letrán\""
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -69.45833333,
+          -16.21055556
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Puno, Chucuito, Juli; Abierto.",
+            "id": "pe-mincul:museo:397",
+            "license": "Public reference; source content rights retained",
+            "publisher": "Ministerio de Cultura del Perú",
+            "revision": "Frozen public visitor catalogue entry; SHA-256 f45f66af14d0ad8f4085f31aedd10d9555f8c67d0fa51a169b49dc7c047c59dd",
+            "title": "MINCUL public visitor entry — Templo Museo \"San Juan de Letrán\"",
+            "uri": "https://museos.cultura.pe/museos/templo-museo-san-juan-de-letr%C3%A1n"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Iglesia de San Juan de Letrán de Juli; public coordinate statement.",
+            "id": "wd:Q5910558",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "2573531177; SHA-256 95630b97728a6f4bfccdf386cad5745543e765c8e02b38a117a9f3c8e680d21a",
+            "title": "Wikidata structured location — Iglesia de San Juan de Letrán de Juli",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5910558.json"
+          }
+        ],
+        "source_uri": "https://museos.cultura.pe/museos/templo-museo-san-juan-de-letr%C3%A1n",
+        "title": "Iglesia de San Juan de Letrán de Juli",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "peru-source/visitor-5.html",
+          "sha256": "f45f66af14d0ad8f4085f31aedd10d9555f8c67d0fa51a169b49dc7c047c59dd",
+          "uri": "https://museos.cultura.pe/museos/templo-museo-san-juan-de-letr%C3%A1n"
+        },
+        {
+          "filename": "peru-source/Q5910558.json",
+          "sha256": "95630b97728a6f4bfccdf386cad5745543e765c8e02b38a117a9f3c8e680d21a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5910558.json"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Nine historic properties and archaeological visitor sites with individually confirmed Ministry of Culture public listings and retained Wikidata CC0 location statements."
+}
