@@ -52,6 +52,14 @@ GUYANA = NamedPlaceCohort(
     "b60e4d13bd63e7ea1a74085a4931925fba0c7910d76778497346819923618904",
     "42309086e8ed2a5f01f92e68d6bd09529dc28ea5b75d2946348fb578a5831a80",
 )
+IRELAND = NamedPlaceCohort(
+    "ireland-public-monuments-v1",
+    "global-v21",
+    "ireland_nms",
+    "be4cfaff8cb0aec3818dabf42eecda07b0fe3635439bbe9912988c9782deeb99",
+    "323e9e5300416db7337fb177df017b60f6d35edddbd7970168c86537b17c7902",
+)
+POINT_COHORTS = (IRELAND,)
 
 
 class TargetDataError(RuntimeError):
@@ -186,14 +194,31 @@ def rebuild_targets(
 
 
 def main() -> None:
-    from archsearch.corpus import load_named_places_v1_corpus, load_pre_targets_corpus
+    from archsearch.corpus import (
+        load_guyana_corpus,
+        load_named_places_v1_corpus,
+        load_pre_targets_corpus,
+    )
 
     parser = argparse.ArgumentParser(description="重建已复核的专名地点资料")
     parser.add_argument("--output", type=Path, default=DATA_DIR)
-    parser.add_argument("--guyana", action="store_true", help="重建圭亚那批次")
+    batches = parser.add_mutually_exclusive_group()
+    batches.add_argument("--guyana", action="store_true", help="重建圭亚那批次")
+    batches.add_argument(
+        "--cohort", choices=[cohort.file_prefix for cohort in POINT_COHORTS],
+        help="重建指定的公共点位批次",
+    )
     args = parser.parse_args()
-    base = load_named_places_v1_corpus() if args.guyana else load_pre_targets_corpus()
-    cohort = GUYANA if args.guyana else ORIGINAL
+    if args.cohort:
+        base = load_guyana_corpus()
+        for cohort in POINT_COHORTS:
+            if cohort.file_prefix == args.cohort:
+                break
+            base = load_targets(base, cohort=cohort)
+    elif args.guyana:
+        base, cohort = load_named_places_v1_corpus(), GUYANA
+    else:
+        base, cohort = load_pre_targets_corpus(), ORIGINAL
     print(json.dumps(rebuild_targets(base, args.output, cohort=cohort),
                      ensure_ascii=False, indent=2))
 

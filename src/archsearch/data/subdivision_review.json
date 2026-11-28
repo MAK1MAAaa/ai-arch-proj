@@ -1,8 +1,8 @@
 {
   "canada_spec_sha256": "4cfdd4fb896c2769de3d77daaf481fdb1544fc79d0e6d8db4911d97d8ad8afbc",
-  "corpus_countries_sha256": "6237adc98c7ce2b727b3cad755e12f4d1b10d5ea98a05f407649a8332ee3ac1e",
-  "corpus_ids_sha256": "37b86cfe27e2d4b1f213ab06d5b036d8ca8828d9fcc620359435b5ab44890c7b",
-  "corpus_version": "global-v20",
+  "corpus_countries_sha256": "9592d9ddc6d709503589fe7ee1f00c27226dd93349e9c3fec7f56e714b5a9dca",
+  "corpus_ids_sha256": "265ab2f6855a3c73dab089ac2da318cbbb52b2720e2cbb459199c802d8e76eb9",
+  "corpus_version": "global-v21",
   "extra_memberships": [
     {
       "artifact": {
@@ -74206,5 +74206,5 @@
       "label": "Dzaoudzi"
     }
   ],
-  "version": "source-subdivisions-v8"
+  "version": "source-subdivisions-v9"
 }

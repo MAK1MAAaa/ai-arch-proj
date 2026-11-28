@@ -1,0 +1,22 @@
+{
+  "base_count": 3905,
+  "base_ids_sha256": "3632639b6db35d7fdd7dedf16c9f4a1e2c748ba343df5a69ca536f815af20316",
+  "base_sites_sha256": "45a2ee476b84146b8a235f987bfc0843252e0445ecc926c5ee490e6e6c94e17d",
+  "cohort_version": "ireland-public-monuments-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 90,
+    "total": 3995
+  },
+  "files": {
+    "ireland_nms_review.json": {
+      "sha256": "be4cfaff8cb0aec3818dabf42eecda07b0fe3635439bbe9912988c9782deeb99"
+    },
+    "ireland_nms_sites.json": {
+      "sha256": "323e9e5300416db7337fb177df017b60f6d35edddbd7970168c86537b17c7902"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "90 cultural monuments from the official 94-row public visitor catalogue; three overlaps with existing UNESCO coverage and one predominantly natural visitor cave excluded."
+}
