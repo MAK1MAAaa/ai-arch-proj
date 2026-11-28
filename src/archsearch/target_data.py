@@ -160,10 +160,39 @@ SOUTH_ASIA_PUBLIC = NamedPlaceCohort(
     "70cd25abac05104b6f7be6661a50a8dd5105c5117377433436331d676d7a72b9",
     "298a855b6905f736f209ab6674587f77953df0106341997c7913143eb49e23f0",
 )
+CENTRAL_AMERICA_PUBLIC = NamedPlaceCohort(
+    "public-central-america-colombia-v1",
+    "global-v21",
+    "central_america_public",
+    "03aa02e5faf3c14747413a1a62e0d431a5a28509b3398690851973a60d7ee517",
+    "1fd5f68277153eff34d2e7d48d52ddc956ee3c22ed9432759891e350c1b5388f",
+)
+SOUTHERN_PUBLIC = NamedPlaceCohort(
+    "southern-cone-public-v1",
+    "global-v21",
+    "southern_public",
+    "97706bbef72a4c30d511fdf5ba73bb5e782b3e535eb44759741e0864f1f503d8",
+    "8606c50ab848729252bc30c9c711e5c4cecd6410a7cbc5eb26ba9d820aa4e17f",
+)
+NEW_ZEALAND_PUBLIC = NamedPlaceCohort(
+    "new-zealand-public-v1",
+    "global-v21",
+    "new_zealand_public",
+    "ca03ffffdb79bb4c43d3f22e5d0bbf1884bf8cac213cb9df77b6bee4f77b3dc3",
+    "dba29f8e7562b2df0f30787353a143f3c8b78cb05938a00af8fac9c4ea3534dd",
+)
+EGYPT_PUBLIC = NamedPlaceCohort(
+    "egypt-mota-public-v1",
+    "global-v21",
+    "egypt_public",
+    "89a99e29afb86070b703281471219c5454ea127554ac9b9da83b0382cb6df3d6",
+    "fbfb0317e370df2f3f0fd4601ca2f6a00a130d10324733cdbc106f1bbb815c3e",
+)
 POINT_COHORTS = (
     IRELAND, ANDALUCIA, TAIWAN_ICULTURE, MEXICO_SIC, FINLAND_VARK, WALES_CADW, THAILAND_FAD,
     AFRICA_VISIT, SCOTLAND_HES, CARIBBEAN_NRHP, PERU_PUBLIC, INDIA_ASI, INDIA_ASI_NEXT,
-    SRI_LANKA_PUBLIC, SOUTH_ASIA_PUBLIC,
+    SRI_LANKA_PUBLIC, SOUTH_ASIA_PUBLIC, CENTRAL_AMERICA_PUBLIC, SOUTHERN_PUBLIC,
+    NEW_ZEALAND_PUBLIC, EGYPT_PUBLIC,
 )
 
 

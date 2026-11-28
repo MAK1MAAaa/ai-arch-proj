@@ -1,0 +1,1646 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The surviving temple at Esna is presented to visitors under Esna Temple.",
+    "description_zh": "埃斯纳城内供公众参观的克努姆神庙。",
+    "details": "The point is the Temple of Khnum at Esna. The published ticket also includes admission to Wikalat al-Giddawy.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q1131024",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Esna Temple Esna.",
+        "id": "eg-mota:visitor:EsnaTemple",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/EsnaTemple",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q1131024",
+    "location_precision": null,
+    "names": [
+      "Temple of Khnum",
+      "Esna Temple",
+      "埃斯纳神庙"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      32.55622222,
+      25.29341667
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Esna Temple Esna.",
+        "id": "eg-mota:visitor:EsnaTemple",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/EsnaTemple",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q1131024",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2550101764",
+        "title": "Wikidata location — Temple of Khnum",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1131024.json"
+      }
+    ],
+    "source_uri": "https://www.egymonuments.com/details/EsnaTemple",
+    "title": "Temple of Khnum at Esna",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The theatre is a named visitor property within the archaeological site of Kom el-Dikka.",
+    "description_zh": "亚历山大科姆迪卡考古区内的罗马剧场。",
+    "details": "The public Roman theatre is in the separately named Kom el-Dikka archaeological site in Alexandria.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q12192976",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Ancient Roman Theatre Alexandria.",
+        "id": "eg-mota:visitor:RomanAmphitheatre",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/RomanAmphitheatre",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q12192976",
+    "location_precision": null,
+    "names": [
+      "Ancient Roman Theatre",
+      "Kom el-Dikka Odeion",
+      "亚历山大罗马剧场"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      29.90405,
+      31.19463
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Ancient Roman Theatre Alexandria.",
+        "id": "eg-mota:visitor:RomanAmphitheatre",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/RomanAmphitheatre",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q12192976",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2474736735",
+        "title": "Wikidata location — Roman Theatre of Alexandria",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12192976.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The theatre is a named visitor property within the archaeological site of Kom el-Dikka.",
+        "id": "eg-mota:profile:RomanAmphitheatre",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Frozen official property or visitor reference",
+        "title": "Egypt Ministry of Tourism and Antiquities property reference",
+        "uri": "https://egymonuments.gov.eg/en/archaeological-sites/kom-el-dikka"
+      }
+    ],
+    "source_uri": "https://egymonuments.gov.eg/en/archaeological-sites/kom-el-dikka",
+    "title": "Roman Theatre of Alexandria",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The public double temple at Kom Ombo stands on the Nile in Aswan Governorate.",
+    "description_zh": "阿斯旺省尼罗河畔康翁波的公众古神庙遗址。",
+    "details": "The point denotes the named public cultural property; current visits are governed by the official operator.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q1243401",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Kom Ombo Temple Aswan.",
+        "id": "eg-mota:visitor:KomOmboTemple",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/KomOmboTemple",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q1243401",
+    "location_precision": null,
+    "names": [
+      "Kom Ombo Temple",
+      "康翁波神庙"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      32.928055555556,
+      24.451944444444
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Kom Ombo Temple Aswan.",
+        "id": "eg-mota:visitor:KomOmboTemple",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/KomOmboTemple",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q1243401",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2521619898",
+        "title": "Wikidata location — Temple of Kom Ombo",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1243401.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The public double temple at Kom Ombo stands on the Nile in Aswan Governorate.",
+        "id": "eg-mota:profile:KomOmboTemple",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Frozen official property or visitor reference",
+        "title": "Egypt Ministry of Tourism and Antiquities property reference",
+        "uri": "https://egymonuments.gov.eg/en/monuments/kom-ombo-temple/"
+      }
+    ],
+    "source_uri": "https://egymonuments.gov.eg/en/monuments/kom-ombo-temple/",
+    "title": "Temple of Kom Ombo",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The public museum occupies the former palace of Fatma al-Zahra in Alexandria.",
+    "description_zh": "亚历山大法蒂玛·扎赫拉旧宫内的皇家珠宝博物馆。",
+    "details": "The point covers the historic palace building now occupied by the Royal Jewelry Museum.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q1323293",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Royal Jewellery Museum Alexandria.",
+        "id": "eg-mota:visitor:RoyalJewelleryMuseum",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/RoyalJewelleryMuseum",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q1323293",
+    "location_precision": null,
+    "names": [
+      "Royal Jewellery Museum",
+      "亚历山大皇家珠宝博物馆"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      29.963,
+      31.2407
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Royal Jewellery Museum Alexandria.",
+        "id": "eg-mota:visitor:RoyalJewelleryMuseum",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/RoyalJewelleryMuseum",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q1323293",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2467685963",
+        "title": "Wikidata location — Royal Jewelry Museum",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1323293.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The public museum occupies the former palace of Fatma al-Zahra in Alexandria.",
+        "id": "eg-mota:profile:RoyalJewelleryMuseum",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Frozen official property or visitor reference",
+        "title": "Egypt Ministry of Tourism and Antiquities property reference",
+        "uri": "https://egymonuments.gov.eg/museums/royal-jewelry-museum/"
+      }
+    ],
+    "source_uri": "https://egymonuments.gov.eg/museums/royal-jewelry-museum/",
+    "title": "Royal Jewelry Museum",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The point denotes the named pyramid at Meidum in Beni Suef Governorate.",
+    "description_zh": "贝尼苏韦夫省迈杜姆金字塔。",
+    "details": "The point covers Meidum Pyramid in Beni Suef. The nearest recorded component of the Memphis World Heritage property is more than 52 km away.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q13444093",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists The Pyramids of Meidum Beni Suef.",
+        "id": "eg-mota:visitor:ThePyramidsofMeidum",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/ThePyramidsofMeidum",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q13444093",
+    "location_precision": null,
+    "names": [
+      "Pyramid of Meidum",
+      "Maydum Pyramid",
+      "迈杜姆金字塔"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      31.15694444,
+      29.38833333
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists The Pyramids of Meidum Beni Suef.",
+        "id": "eg-mota:visitor:ThePyramidsofMeidum",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/ThePyramidsofMeidum",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q13444093",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2543417441",
+        "title": "Wikidata location — Meidum Pyramid",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q13444093.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The point denotes the named pyramid at Meidum in Beni Suef Governorate.",
+        "id": "eg-mota:profile:ThePyramidsofMeidum",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Frozen official property or visitor reference",
+        "title": "Egypt Ministry of Tourism and Antiquities property reference",
+        "uri": "https://egymonuments.gov.eg/en/monuments/the-pyramid-of-meidum"
+      }
+    ],
+    "source_uri": "https://egymonuments.gov.eg/en/monuments/the-pyramid-of-meidum",
+    "title": "Meidum Pyramid",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The named historic fortress sits on the coast of Alexandria at the entrance to the Eastern Harbour.",
+    "description_zh": "亚历山大东港入口处的凯特贝堡。",
+    "details": "The point denotes the named public cultural property; current visits are governed by the official operator.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q1938065",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Qaitbay Citadel Alexandria.",
+        "id": "eg-mota:visitor:CitadelofQaitbay",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/CitadelofQaitbay",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q1938065",
+    "location_precision": null,
+    "names": [
+      "Qaitbay Citadel",
+      "凯特贝堡"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      29.8852,
+      31.213
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Qaitbay Citadel Alexandria.",
+        "id": "eg-mota:visitor:CitadelofQaitbay",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/CitadelofQaitbay",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q1938065",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2541791577",
+        "title": "Wikidata location — Citadel of Qaitbay",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1938065.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The named historic fortress sits on the coast of Alexandria at the entrance to the Eastern Harbour.",
+        "id": "eg-mota:profile:CitadelofQaitbay",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Frozen official property or visitor reference",
+        "title": "Egypt Ministry of Tourism and Antiquities property reference",
+        "uri": "https://egymonuments.gov.eg/en/news/opening-of-the-qaitbay-citadel-visitor-center-in-alexandria"
+      }
+    ],
+    "source_uri": "https://egymonuments.gov.eg/en/news/opening-of-the-qaitbay-citadel-visitor-center-in-alexandria",
+    "title": "Citadel of Qaitbay",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The public ruins of ancient Tanis are at San al-Hagar in Sharqia Governorate.",
+    "description_zh": "东部省萨恩哈杰尔的塔尼斯古城遗址。",
+    "details": "The public portal names the Tanis archaeological site at San al-Hagar in Al-Sharqia.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q210598",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Tanis (San al-Hagar) Al-Sharqia.",
+        "id": "eg-mota:visitor:Tanis(Sanal-Hagar)",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/Tanis%28Sanal-Hagar%29",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q210598",
+    "location_precision": null,
+    "names": [
+      "Tanis",
+      "San al-Hagar",
+      "塔尼斯遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      31.88,
+      30.976944444444
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Tanis (San al-Hagar) Al-Sharqia.",
+        "id": "eg-mota:visitor:Tanis(Sanal-Hagar)",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/Tanis%28Sanal-Hagar%29",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q210598",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2574072668",
+        "title": "Wikidata location — Tanis",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q210598.json"
+      }
+    ],
+    "source_uri": "https://www.egymonuments.com/details/Tanis%28Sanal-Hagar%29",
+    "title": "Tanis Archaeological Site",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The named burial complex is a separately presented archaeological site in Alexandria.",
+    "description_zh": "亚历山大城的科姆舒卡法地下墓群。",
+    "details": "The point is the public catacomb property at Kom el-Shoqafa, which has separate admission from the nearby Serapeum.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q2671839",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Catacombs Alexandria.",
+        "id": "eg-mota:visitor:KomelShoqafaCatacombs",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/KomelShoqafaCatacombs",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q2671839",
+    "location_precision": null,
+    "names": [
+      "Kom el-Shoqafa",
+      "Catacombs of Kom El Shoqafa",
+      "科姆舒卡法地下墓群"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      29.904722,
+      31.186944
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Catacombs Alexandria.",
+        "id": "eg-mota:visitor:KomelShoqafaCatacombs",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/KomelShoqafaCatacombs",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q2671839",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2560999768",
+        "title": "Wikidata location — Catacombs of Kom el Shoqafa",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2671839.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The named burial complex is a separately presented archaeological site in Alexandria.",
+        "id": "eg-mota:profile:KomelShoqafaCatacombs",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Frozen official property or visitor reference",
+        "title": "Egypt Ministry of Tourism and Antiquities property reference",
+        "uri": "https://egymonuments.gov.eg/archaeological-sites/alexandria/"
+      }
+    ],
+    "source_uri": "https://egymonuments.gov.eg/archaeological-sites/alexandria/",
+    "title": "Catacombs of Kom el-Shoqafa",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The public archaeological site in Alexandria includes the remains of the Serapeum next to the standing column.",
+    "description_zh": "亚历山大城的塞拉皮斯神庙遗址，邻近留存石柱。",
+    "details": "The point covers the Serapeum of Alexandria and its ticketed precinct near the Pillar of Diocletian. The adjacent Kom el-Shoqafa Catacombs have a separate ticket.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q521646",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Serapeum of Alexandria Alexandria.",
+        "id": "eg-mota:visitor:SerapeumofAlexandria",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/SerapeumofAlexandria",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q521646",
+    "location_precision": null,
+    "names": [
+      "Alexandria Serapeum",
+      "亚历山大塞拉皮斯神庙"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      29.89694,
+      31.18194
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Serapeum of Alexandria Alexandria.",
+        "id": "eg-mota:visitor:SerapeumofAlexandria",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/SerapeumofAlexandria",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q521646",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2521617055",
+        "title": "Wikidata location — Serapeum of Alexandria",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q521646.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The public archaeological site in Alexandria includes the remains of the Serapeum next to the standing column.",
+        "id": "eg-mota:profile:SerapeumofAlexandria",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Frozen official property or visitor reference",
+        "title": "Egypt Ministry of Tourism and Antiquities property reference",
+        "uri": "https://egymonuments.gov.eg/archaeological-sites/alexandria/"
+      }
+    ],
+    "source_uri": "https://egymonuments.gov.eg/archaeological-sites/alexandria/",
+    "title": "Serapeum of Alexandria",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The visitor catalogue names the ancient city site in Minya Governorate.",
+    "description_zh": "明亚省的阿玛尔奈古城遗址。",
+    "details": "The public heritage catalogue lists the Amarna archaeological area. The 2024 ministry schedule lists the Royal Tomb as a separate admission.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q5736",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Amarna Minya.",
+        "id": "eg-mota:visitor:Amarna",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/Amarna",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q5736",
+    "location_precision": null,
+    "names": [
+      "Akhetaten",
+      "Tell el-Amarna",
+      "阿玛尔奈",
+      "阿赫塔顿"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      30.905555555556,
+      27.661666666667
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Amarna Minya.",
+        "id": "eg-mota:visitor:Amarna",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/Amarna",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q5736",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2575506542",
+        "title": "Wikidata location — Amarna",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5736.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The visitor catalogue names the ancient city site in Minya Governorate.",
+        "id": "eg-mota:profile:Amarna",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Frozen official property or visitor reference",
+        "title": "Egypt Ministry of Tourism and Antiquities property reference",
+        "uri": "https://egymonuments.gov.eg/collections/amarna/"
+      }
+    ],
+    "source_uri": "https://egymonuments.gov.eg/collections/amarna/",
+    "title": "Amarna",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The recorded public temple is the named sanctuary at Edfu on the west bank of the Nile.",
+    "description_zh": "尼罗河西岸埃德富的荷鲁斯神庙。",
+    "details": "The point denotes the named public cultural property; current visits are governed by the official operator.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q613037",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists The Temple Of Horus Edfu.",
+        "id": "eg-mota:visitor:TheTempleOfHorusAtEdfu",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/TheTempleOfHorusAtEdfu",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q613037",
+    "location_precision": null,
+    "names": [
+      "Edfu Temple",
+      "Temple of Edfu",
+      "埃德富神庙"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      32.873333333333,
+      24.977777777778
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists The Temple Of Horus Edfu.",
+        "id": "eg-mota:visitor:TheTempleOfHorusAtEdfu",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/TheTempleOfHorusAtEdfu",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q613037",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2532236368",
+        "title": "Wikidata location — Temple of Edfu",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q613037.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The recorded public temple is the named sanctuary at Edfu on the west bank of the Nile.",
+        "id": "eg-mota:profile:TheTempleOfHorusAtEdfu",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Frozen official property or visitor reference",
+        "title": "Egypt Ministry of Tourism and Antiquities property reference",
+        "uri": "https://egymonuments.gov.eg/monuments/temple-of-edfu/"
+      }
+    ],
+    "source_uri": "https://egymonuments.gov.eg/monuments/temple-of-edfu/",
+    "title": "Temple of Horus at Edfu",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The public catalogue names the tomb group in Minya Governorate separately from other nearby sites.",
+    "description_zh": "明亚省公开参观名录中的弗雷泽墓群。",
+    "details": "The point denotes the named public cultural property; current visits are governed by the official operator.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q675047",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Fraser Tombs Minya.",
+        "id": "eg-mota:visitor:FraserTombs",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/FraserTombs",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q675047",
+    "location_precision": null,
+    "names": [
+      "Fraser Tombs at Tihna el-Gebel",
+      "弗雷泽墓群"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      30.776938888889,
+      28.161938888889
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Fraser Tombs Minya.",
+        "id": "eg-mota:visitor:FraserTombs",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/FraserTombs",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q675047",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2150335032",
+        "title": "Wikidata location — Fraser Tombs",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q675047.json"
+      }
+    ],
+    "source_uri": "https://www.egymonuments.com/details/FraserTombs",
+    "title": "Fraser Tombs",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The named tomb group is a separately catalogued public archaeological site in Asyut Governorate.",
+    "description_zh": "艾斯尤特省的梅尔墓群。",
+    "details": "The point denotes the named public cultural property; current visits are governed by the official operator.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q690841",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Meir Monumental Tombs Assuit.",
+        "id": "eg-mota:visitor:MeirMonumentalTombs",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/MeirMonumentalTombs",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q690841",
+    "location_precision": null,
+    "names": [
+      "Meir Necropolis",
+      "Meir Tombs",
+      "梅尔墓群"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      30.711666666667,
+      27.409722222222
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Meir Monumental Tombs Assuit.",
+        "id": "eg-mota:visitor:MeirMonumentalTombs",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/MeirMonumentalTombs",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q690841",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2564126683",
+        "title": "Wikidata location — Meir",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q690841.json"
+      }
+    ],
+    "source_uri": "https://www.egymonuments.com/details/MeirMonumentalTombs",
+    "title": "Meir Monumental Tombs",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The public archaeological property in Minya Governorate is catalogued under its own name.",
+    "description_zh": "明亚省的图纳杰贝勒考古遗址。",
+    "details": "The point denotes the named public cultural property; current visits are governed by the official operator.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q734370",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Tuna el-Gebel Minya.",
+        "id": "eg-mota:visitor:Tunael-Gebel",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/Tunael-Gebel",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q734370",
+    "location_precision": null,
+    "names": [
+      "Tuna al-Gabal",
+      "图纳杰贝勒"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      30.704444444444444,
+      27.738333333333333
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Tuna el-Gebel Minya.",
+        "id": "eg-mota:visitor:Tunael-Gebel",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/Tunael-Gebel",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q734370",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2464736517",
+        "title": "Wikidata location — Tuna el-Gebel",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q734370.json"
+      }
+    ],
+    "source_uri": "https://www.egymonuments.com/details/Tunael-Gebel",
+    "title": "Tuna el-Gebel",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The temple complex near Qena is the public archaeological site containing the principal Hathor sanctuary.",
+    "description_zh": "位于基纳附近的丹德拉神庙群，包含哈托尔神庙。",
+    "details": "The point denotes the named public cultural property; current visits are governed by the official operator.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q735254",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Dandarah Temple Qena.",
+        "id": "eg-mota:visitor:DandarahTemple",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/DandarahTemple",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q735254",
+    "location_precision": null,
+    "names": [
+      "Temple of Dendera",
+      "Dandarah Temple",
+      "丹德拉神庙"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      32.670278,
+      26.141667
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Dandarah Temple Qena.",
+        "id": "eg-mota:visitor:DandarahTemple",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/DandarahTemple",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q735254",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2539070198",
+        "title": "Wikidata location — Dendera Temple complex",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q735254.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The temple complex near Qena is the public archaeological site containing the principal Hathor sanctuary.",
+        "id": "eg-mota:profile:DandarahTemple",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Frozen official property or visitor reference",
+        "title": "Egypt Ministry of Tourism and Antiquities property reference",
+        "uri": "https://egymonuments.gov.eg/monuments/temple-of-dendera/"
+      }
+    ],
+    "source_uri": "https://egymonuments.gov.eg/monuments/temple-of-dendera/",
+    "title": "Dendera Temple Complex",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The public directory records this Abydos enclosure as its own visitor property.",
+    "description_zh": "阿拜多斯的舒奈特·扎比卜围墙遗址，官方访客目录单独列名。",
+    "details": "The point covers the early dynastic enclosure at Abydos. The published official tariff groups Shunet el-Zebib with Kom al-Sultan and lists the Temple of Sety separately.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q7505051",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Shunet El Zebib Sohag.",
+        "id": "eg-mota:visitor:ShunetElZebib",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/ShunetElZebib",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q7505051",
+    "location_precision": null,
+    "names": [
+      "Shunet al-Zebib",
+      "舒奈特·扎比卜"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      31.90777778,
+      26.18944444
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Shunet El Zebib Sohag.",
+        "id": "eg-mota:visitor:ShunetElZebib",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/ShunetElZebib",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q7505051",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2561318326",
+        "title": "Wikidata location — Shunet el Zebib",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7505051.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The public directory records this Abydos enclosure as its own visitor property.",
+        "id": "eg-mota:profile:ShunetElZebib",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Frozen official property or visitor reference",
+        "title": "Egypt Ministry of Tourism and Antiquities property reference",
+        "uri": "https://egymonuments.gov.eg/en/historical-periods/early-dynastic-period"
+      }
+    ],
+    "source_uri": "https://egymonuments.gov.eg/en/historical-periods/early-dynastic-period",
+    "title": "Shunet el-Zebib",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The public Sheikh Hamad archaeological area is associated with the southern Athribis site near Sohag.",
+    "description_zh": "索哈杰附近的谢赫哈马德考古区，对应上埃及阿特里比斯遗址。",
+    "details": "The ticket card names the site after El Sheikh Hamad in Sohag. The ministry archaeological record gives its ancient name Athribis.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q755738",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Sheikh Hamad Area Sohag.",
+        "id": "eg-mota:visitor:ElSheikhHamad",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/ElSheikhHamad",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q755738",
+    "location_precision": null,
+    "names": [
+      "Upper Egypt Athribis",
+      "Sheikh Hamad Area",
+      "上埃及阿特里比斯"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      31.6653,
+      26.511375
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Sheikh Hamad Area Sohag.",
+        "id": "eg-mota:visitor:ElSheikhHamad",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/ElSheikhHamad",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q755738",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2569363502",
+        "title": "Wikidata location — Athribis",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q755738.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry identifies El Sheikh Hamad in Sohag as the archaeological site of Athribis.",
+        "id": "comparison:eg-athribis-ministry",
+        "license": null,
+        "publisher": "Egypt Ministry of Tourism and Antiquities",
+        "revision": "Named archaeology site entry",
+        "title": "El Sheikh Hamad (Athribis)",
+        "uri": "https://egymonuments.gov.eg/en/archaeological-sites/el-sheikh-hamad-athribis"
+      }
+    ],
+    "source_uri": "https://www.egymonuments.com/details/ElSheikhHamad",
+    "title": "Athribis near Sohag",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The restored palace is a historic property in the Heliopolis district of Cairo.",
+    "description_zh": "开罗赫利奥波利斯区的恩潘男爵宫。",
+    "details": "The point denotes the named public cultural property; current visits are governed by the official operator.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q808618",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Baron Empain Palace Cairo.",
+        "id": "eg-mota:visitor:BaronEmpainPalace",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/BaronEmpainPalace",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q808618",
+    "location_precision": null,
+    "names": [
+      "Baron Palace",
+      "恩潘男爵宫"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      31.330278,
+      30.086667
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Baron Empain Palace Cairo.",
+        "id": "eg-mota:visitor:BaronEmpainPalace",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/BaronEmpainPalace",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q808618",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2465690338",
+        "title": "Wikidata location — Baron Empain Palace",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q808618.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The restored palace is a historic property in the Heliopolis district of Cairo.",
+        "id": "eg-mota:profile:BaronEmpainPalace",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Frozen official property or visitor reference",
+        "title": "Egypt Ministry of Tourism and Antiquities property reference",
+        "uri": "https://egymonuments.gov.eg/monuments/baron-empain-palace"
+      }
+    ],
+    "source_uri": "https://egymonuments.gov.eg/monuments/baron-empain-palace",
+    "title": "Baron Empain Palace",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Checked the public visitor listing and corresponding identity",
+      "note": "This point batch establishes no individually reviewed historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Tourism and Antiquities, Egypt",
+      "Wikidata contributors"
+    ],
+    "description": "The public record denotes the ancient tomb area in Minya Governorate.",
+    "description_zh": "明亚省的贝尼哈桑墓群。",
+    "details": "The representative point is the ancient rock-cut necropolis at Beni Hasan in Minya, at the cliff terrace described by the heritage sources.",
+    "geography": {
+      "authority_id": "supplement:auth:eg-public:Q817286",
+      "countries": [
+        "EG"
+      ],
+      "note": "The official visitor directory places this property in Egypt.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Beni Hassan Tomb Minya.",
+        "id": "eg-mota:visitor:BeniHassanTomb",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/BeniHassanTomb",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      }
+    },
+    "id": "auth:eg-public:Q817286",
+    "location_precision": null,
+    "names": [
+      "Beni Hasan",
+      "Beni Hassan Tombs",
+      "贝尼哈桑墓群"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      30.875280555556,
+      27.931388888889
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Ministry's public directory lists Beni Hassan Tomb Minya.",
+        "id": "eg-mota:visitor:BeniHassanTomb",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Official catalogue path https://www.egymonuments.com/details/BeniHassanTomb",
+        "title": "EgyMonuments official public visitor directory",
+        "uri": "https://www.egymonuments.com/locations"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published Earth representative point.",
+        "id": "wikidata:Q817286",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "2575415631",
+        "title": "Wikidata location — Beni Hasan",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q817286.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The public record denotes the ancient tomb area in Minya Governorate.",
+        "id": "eg-mota:profile:BeniHassanTomb",
+        "license": "Public reference; source content rights retained",
+        "publisher": "Ministry of Tourism and Antiquities, Egypt",
+        "revision": "Frozen official property or visitor reference",
+        "title": "Egypt Ministry of Tourism and Antiquities property reference",
+        "uri": "https://egymonuments.gov.eg/archaeological-sites/beni-hasan/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The scholarly geographical index identifies the rock-cut cemetery. Its published reference point is 3.6 m from the adopted statement.",
+        "id": "comparative:cnr-beni-hasan",
+        "license": null,
+        "publisher": "CNR Cultural Heritage Linked Open Data Environment",
+        "revision": "DHeLO item 1594, linked Pleiades 112509596",
+        "title": "Beni Hasan",
+        "uri": "https://chloe.cnr.it/s/DHeLO/item/1594"
+      }
+    ],
+    "source_uri": "https://egymonuments.gov.eg/archaeological-sites/beni-hasan/",
+    "title": "Beni Hasan Necropolis",
+    "types": [
+      "archaeological-site"
+    ]
+  }
+]

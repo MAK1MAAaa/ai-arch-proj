@@ -1,0 +1,22 @@
+{
+  "base_count": 4495,
+  "base_ids_sha256": "4d58df297c71bf734cbe686e468e1bfd547a16f0cb1d5c26057550ac8a0dd934",
+  "base_sites_sha256": "76783cb4f4dda76389186606359add037120784938344887dbe7ca58a98a67b9",
+  "cohort_version": "egypt-mota-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 19,
+    "total": 4514
+  },
+  "files": {
+    "egypt_public_review.json": {
+      "sha256": "89a99e29afb86070b703281471219c5454ea127554ac9b9da83b0382cb6df3d6"
+    },
+    "egypt_public_sites.json": {
+      "sha256": "fbfb0317e370df2f3f0fd4601ca2f6a00a130d10324733cdbc106f1bbb815c3e"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Nineteen Egypt Ministry of Tourism and Antiquities public cultural properties with independently verified operator identity, representative coordinates and component exclusions."
+}

@@ -104,6 +104,13 @@ def test_public_point_search_catalogue_and_provenance(
             ("BD", "auth:bd-public:", 6),
             ("NP", "auth:np-public:", 2),
             ("PK", "auth:pk-public:", 5),
+            ("CR", "auth:public-americas:cr-", 4),
+            ("PA", "auth:public-americas:pa-", 1),
+            ("CO", "auth:public-americas:co-", 4),
+            ("CL", "auth:public-americas:cl-", 6),
+            ("AR", "auth:public-americas:ar-", 2),
+            ("NZ", "auth:nz-public:", 25),
+            ("EG", "auth:eg-public:", 19),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -135,3 +142,11 @@ def test_public_point_search_catalogue_and_provenance(
         assert ritigala["chronology"]["phases"] == []
         katas_raj = client.get("/api/sites/auth:pk-public:Q3629175").json()
         assert "organized pilgrimage admission" in katas_raj["details"]
+        cerro = client.get("/api/sites/auth:public-americas:ar-cerro-colorado").json()
+        assert cerro["repr_point"] == [-63.92931086, -30.0967002]
+        assert cerro["source_refs"][0]["license"] == "IGN free reuse with attribution"
+        assert client.get("/api/sites/auth:public-americas:ar-gaboto").status_code == 404
+        pencarrow = client.get("/api/sites/auth:nz-public:Q2068609").json()
+        assert pencarrow["repr_point"] == [174.849917, -41.35893]
+        beni_hasan = client.get("/api/sites/auth:eg-public:Q817286").json()
+        assert beni_hasan["repr_point"] == [30.875280555556, 27.931388888889]

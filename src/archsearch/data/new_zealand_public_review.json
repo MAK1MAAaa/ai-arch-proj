@@ -1,0 +1,2811 @@
+{
+  "base_count": 4470,
+  "base_ids_sha256": "a4c77ce1cc2f7ee4ab6c570bcea9b3a07bd78029a511e09716aeb28a74013136",
+  "base_sites_sha256": "636b26eddeae9ffe2b2ad9efdb487a95038ec5c7ac6e26cb29d0ff3e3b89d4c5",
+  "cohort_version": "new-zealand-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          173.755028,
+          -39.276222
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1034389.json",
+        "statement_id": "Q1034389$B29562AB-0849-4F8E-921B-B1835B059C8E"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The tourism authority identifies the historic lighthouse as a coastal visitor landmark. The site refers to the tower exterior and does not imply entry into the structure.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Venture Taranaki",
+          "Wikidata contributors"
+        ],
+        "description": "Cape Egmont Lighthouse is a publicly interpreted heritage place, Pungarehu, Taranaki, Aotearoa New Zealand.",
+        "description_zh": "埃格蒙特角灯塔位于新西兰 Pungarehu, Taranaki。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The tourism authority identifies the historic lighthouse as a coastal visitor landmark. The site refers to the tower exterior and does not imply entry into the structure. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q1034389",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Pungarehu, Taranaki.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Pungarehu, Taranaki.",
+            "id": "nz-visitor:cape-egmont-lighthouse",
+            "license": null,
+            "publisher": "Venture Taranaki",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 b2a85b2eb13da3c69e4bf800e51d219ba2f21fdf5d66aee6a590c28736fcdf26",
+            "title": "Cape Egmont Lighthouse · public visitor information",
+            "uri": "https://www.taranaki.co.nz/explore/listing/cape-egmont-lighthouse"
+          }
+        },
+        "id": "auth:nz-public:Q1034389",
+        "location_precision": null,
+        "names": [
+          "埃格蒙特角灯塔",
+          "Cape Egmont Lighthouse"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          173.755028,
+          -39.276222
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Pungarehu, Taranaki.",
+            "id": "nz-visitor:cape-egmont-lighthouse",
+            "license": null,
+            "publisher": "Venture Taranaki",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 b2a85b2eb13da3c69e4bf800e51d219ba2f21fdf5d66aee6a590c28736fcdf26",
+            "title": "Cape Egmont Lighthouse · public visitor information",
+            "uri": "https://www.taranaki.co.nz/explore/listing/cape-egmont-lighthouse"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 173.755028, latitude -39.276222",
+            "id": "wikidata:Q1034389",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 1967658570; P625 statement Q1034389$B29562AB-0849-4F8E-921B-B1835B059C8E",
+            "title": "Cape Egmont Lighthouse · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1034389.json"
+          }
+        ],
+        "source_uri": "https://www.taranaki.co.nz/explore/listing/cape-egmont-lighthouse",
+        "title": "Cape Egmont Lighthouse",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "cape-egmont-lighthouse.html",
+          "sha256": "b2a85b2eb13da3c69e4bf800e51d219ba2f21fdf5d66aee6a590c28736fcdf26",
+          "uri": "https://www.taranaki.co.nz/explore/listing/cape-egmont-lighthouse"
+        },
+        {
+          "filename": "Q1034389.json",
+          "sha256": "3bc67554ffa7504b074d247da76c1d4f112b3e3ae6d93f8b0e2d50cd72ef66fa",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1034389.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          171.4662,
+          -41.74945
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1034422.json",
+        "statement_id": "Q1034422$F29BA22B-2FED-48E3-AA86-84EAACAD3158"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The Department of Conservation documents the outdoor walkway and lookout beside the historic lighthouse.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Department of Conservation Te Papa Atawhai",
+          "Wikidata contributors"
+        ],
+        "description": "Cape Foulwind Lighthouse is a publicly interpreted heritage place, near Westport, West Coast, Aotearoa New Zealand.",
+        "description_zh": "福尔温德角灯塔位于新西兰 near Westport, West Coast。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The Department of Conservation documents the outdoor walkway and lookout beside the historic lighthouse. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q1034422",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: near Westport, West Coast.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near near Westport, West Coast.",
+            "id": "nz-visitor:cape-foulwind",
+            "license": null,
+            "publisher": "Department of Conservation Te Papa Atawhai",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 ba53102aab58434f7b4a5ceaf02a73e2cd152506bea80a7c157c0c9fccbcc368",
+            "title": "Cape Foulwind Lighthouse · public visitor information",
+            "uri": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/west-coast/places/westport/things-to-do/tracks/cape-foulwind-walkway"
+          }
+        },
+        "id": "auth:nz-public:Q1034422",
+        "location_precision": null,
+        "names": [
+          "福尔温德角灯塔",
+          "Cape Foulwind Lighthouse"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          171.4662,
+          -41.74945
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near near Westport, West Coast.",
+            "id": "nz-visitor:cape-foulwind",
+            "license": null,
+            "publisher": "Department of Conservation Te Papa Atawhai",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 ba53102aab58434f7b4a5ceaf02a73e2cd152506bea80a7c157c0c9fccbcc368",
+            "title": "Cape Foulwind Lighthouse · public visitor information",
+            "uri": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/west-coast/places/westport/things-to-do/tracks/cape-foulwind-walkway"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 171.4662, latitude -41.74945",
+            "id": "wikidata:Q1034422",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2561744850; P625 statement Q1034422$F29BA22B-2FED-48E3-AA86-84EAACAD3158",
+            "title": "Cape Foulwind Lighthouse · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1034422.json"
+          }
+        ],
+        "source_uri": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/west-coast/places/westport/things-to-do/tracks/cape-foulwind-walkway",
+        "title": "Cape Foulwind Lighthouse",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "cape-foulwind.html",
+          "sha256": "ba53102aab58434f7b4a5ceaf02a73e2cd152506bea80a7c157c0c9fccbcc368",
+          "uri": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/west-coast/places/westport/things-to-do/tracks/cape-foulwind-walkway"
+        },
+        {
+          "filename": "Q1034422.json",
+          "sha256": "1290ec8942a8b6d70213805e360b6436de5711d88356a60215f48224d96cae60",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1034422.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          173.56865,
+          -35.354844444444446
+        ],
+        "precision": 2.777777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q112872140.json",
+        "statement_id": "Q112872140$52270877-5286-40cc-9afe-4a0b5d204b87"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The public heritage property has seasonal opening; some periods offer prearranged group visits.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Heritage New Zealand Pouhere Taonga",
+          "Wikidata contributors"
+        ],
+        "description": "Māngungu Mission is a publicly interpreted heritage place, Horeke, Northland, Aotearoa New Zealand.",
+        "description_zh": "芒翁古传教站位于新西兰 Horeke, Northland。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The public heritage property has seasonal opening; some periods offer prearranged group visits. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q112872140",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Horeke, Northland.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Horeke, Northland.",
+            "id": "nz-visitor:mangungu-mission",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 4519aeae1e6b8fa2ccd072611858f89221d793ebf9c0034d850ecc8fb81e5e3b",
+            "title": "Māngungu Mission · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/northland/mangungu-mission/"
+          }
+        },
+        "id": "auth:nz-public:Q112872140",
+        "location_precision": null,
+        "names": [
+          "芒翁古传教站",
+          "Māngungu Mission"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          173.56865,
+          -35.354844444444446
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Horeke, Northland.",
+            "id": "nz-visitor:mangungu-mission",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 4519aeae1e6b8fa2ccd072611858f89221d793ebf9c0034d850ecc8fb81e5e3b",
+            "title": "Māngungu Mission · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/northland/mangungu-mission/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 173.56865, latitude -35.354844444444446",
+            "id": "wikidata:Q112872140",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2520416863; P625 statement Q112872140$52270877-5286-40cc-9afe-4a0b5d204b87",
+            "title": "Māngungu Mission · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q112872140.json"
+          }
+        ],
+        "source_uri": "https://www.visitheritage.co.nz/visit/northland/mangungu-mission",
+        "title": "Māngungu Mission",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "mangungu-mission.html",
+          "sha256": "4519aeae1e6b8fa2ccd072611858f89221d793ebf9c0034d850ecc8fb81e5e3b",
+          "uri": "https://www.visitheritage.co.nz/visit/northland/mangungu-mission/"
+        },
+        {
+          "filename": "Q112872140.json",
+          "sha256": "5e6d5d10bba8e6a176327928afac305422142fde4c9b7f65ed16305765cbb618",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q112872140.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          172.727,
+          -43.6064
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12061420.json",
+        "statement_id": "q12061420$DAAAD36A-76DA-4BCB-AFB0-A2F3F8AB43BB"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point covers the publicly interpreted timeball grounds and reconstructed tower site. The tower interior is closed.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Heritage New Zealand Pouhere Taonga",
+          "Wikidata contributors"
+        ],
+        "description": "Lyttelton Timeball Station is a publicly interpreted heritage place, Lyttelton, Canterbury, Aotearoa New Zealand.",
+        "description_zh": "利特尔顿报时球站位于新西兰 Lyttelton, Canterbury。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The point covers the publicly interpreted timeball grounds and reconstructed tower site. The tower interior is closed. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q12061420",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Lyttelton, Canterbury.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Lyttelton, Canterbury.",
+            "id": "nz-visitor:lyttelton-timeball",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 237c5fffb59068ad9712ff82cb63b5f67a32a80de5d3cbfb70f52e51b4b23807",
+            "title": "Lyttelton Timeball Station · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/upper-south-island/lyttelton-timeball/"
+          }
+        },
+        "id": "auth:nz-public:Q12061420",
+        "location_precision": null,
+        "names": [
+          "利特尔顿报时球站",
+          "Lyttelton Timeball Station"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          172.727,
+          -43.6064
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Lyttelton, Canterbury.",
+            "id": "nz-visitor:lyttelton-timeball",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 237c5fffb59068ad9712ff82cb63b5f67a32a80de5d3cbfb70f52e51b4b23807",
+            "title": "Lyttelton Timeball Station · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/upper-south-island/lyttelton-timeball/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 172.727, latitude -43.6064",
+            "id": "wikidata:Q12061420",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2106417566; P625 statement q12061420$DAAAD36A-76DA-4BCB-AFB0-A2F3F8AB43BB",
+            "title": "Lyttelton Timeball Station · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12061420.json"
+          }
+        ],
+        "source_uri": "https://www.visitheritage.co.nz/visit/upper-south-island/lyttelton-timeball",
+        "title": "Lyttelton Timeball Station",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "lyttelton-timeball.html",
+          "sha256": "237c5fffb59068ad9712ff82cb63b5f67a32a80de5d3cbfb70f52e51b4b23807",
+          "uri": "https://www.visitheritage.co.nz/visit/upper-south-island/lyttelton-timeball/"
+        },
+        {
+          "filename": "Q12061420.json",
+          "sha256": "5fdcbab7c5d164baa180ba459420765fe865fadd561f5ad6883ba13c44a99e47",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12061420.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          177.003386,
+          -37.949984
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q123310193.json",
+        "statement_id": "Q123310193$d3e89b58-4e4b-f6db-ef0c-1ae8cecff43e"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The Ngāti Awa operator publishes the meeting house address and accepts enquiries for hosted cultural experiences. Visits follow the host's arrangements and tikanga.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Te Rūnanga o Ngāti Awa",
+          "Wikidata contributors"
+        ],
+        "description": "Mataatua Wharenui is a publicly interpreted heritage place, Whakatāne, Bay of Plenty, Aotearoa New Zealand.",
+        "description_zh": "马塔阿图阿会堂位于新西兰 Whakatāne, Bay of Plenty。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The Ngāti Awa operator publishes the meeting house address and accepts enquiries for hosted cultural experiences. Visits follow the host's arrangements and tikanga. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q123310193",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Whakatāne, Bay of Plenty.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Whakatāne, Bay of Plenty.",
+            "id": "nz-visitor:mataatua-contact",
+            "license": null,
+            "publisher": "Te Rūnanga o Ngāti Awa",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 ac56a9f8747fa47549cafbc94ef84b1ca13f64c0d50793abb2a5a7dd906f7dda",
+            "title": "Mataatua Wharenui · public visitor information",
+            "uri": "https://www.mataatua.com/contact-us"
+          }
+        },
+        "id": "auth:nz-public:Q123310193",
+        "location_precision": null,
+        "names": [
+          "马塔阿图阿会堂",
+          "Mataatua Wharenui"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          177.003386,
+          -37.949984
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Whakatāne, Bay of Plenty.",
+            "id": "nz-visitor:mataatua-contact",
+            "license": null,
+            "publisher": "Te Rūnanga o Ngāti Awa",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 ac56a9f8747fa47549cafbc94ef84b1ca13f64c0d50793abb2a5a7dd906f7dda",
+            "title": "Mataatua Wharenui · public visitor information",
+            "uri": "https://www.mataatua.com/contact-us"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 177.003386, latitude -37.949984",
+            "id": "wikidata:Q123310193",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2263779268; P625 statement Q123310193$d3e89b58-4e4b-f6db-ef0c-1ae8cecff43e",
+            "title": "Mataatua Wharenui · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q123310193.json"
+          }
+        ],
+        "source_uri": "https://www.mataatua.com/contact-us",
+        "title": "Mataatua Wharenui",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "mataatua-contact.html",
+          "sha256": "ac56a9f8747fa47549cafbc94ef84b1ca13f64c0d50793abb2a5a7dd906f7dda",
+          "uri": "https://www.mataatua.com/contact-us"
+        },
+        {
+          "filename": "Q123310193.json",
+          "sha256": "e76b746f307f34586c27d24bb5a8e2ece615cb9a9bed8c5485adf5729e226829",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q123310193.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          172.588132,
+          -43.523637
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1247141.json",
+        "statement_id": "Q1247141$1B6D65EA-52B4-4812-A460-8C66CA082615"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The public museum in Kate Sheppard's former address publishes visitor guidance and current opening times.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Heritage New Zealand Pouhere Taonga",
+          "Wikidata contributors"
+        ],
+        "description": "Te Whare Waiutuutu Kate Sheppard House is a publicly interpreted heritage place, Ilam, Christchurch, Aotearoa New Zealand.",
+        "description_zh": "凯特·谢泼德故居位于新西兰 Ilam, Christchurch。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The public museum in Kate Sheppard's former address publishes visitor guidance and current opening times. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q1247141",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Ilam, Christchurch.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Ilam, Christchurch.",
+            "id": "nz-visitor:te-whare-waiutuutu-kate-sheppard-house",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 7324de6621a9867a74416271dac41fa3d18cf71fb7230f597ae58e25f15d5eee",
+            "title": "Te Whare Waiutuutu Kate Sheppard House · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/upper-south-island/te-whare-waiutuutu-kate-sheppard-house/"
+          }
+        },
+        "id": "auth:nz-public:Q1247141",
+        "location_precision": null,
+        "names": [
+          "凯特·谢泼德故居",
+          "Te Whare Waiutuutu Kate Sheppard House"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          172.588132,
+          -43.523637
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Ilam, Christchurch.",
+            "id": "nz-visitor:te-whare-waiutuutu-kate-sheppard-house",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 7324de6621a9867a74416271dac41fa3d18cf71fb7230f597ae58e25f15d5eee",
+            "title": "Te Whare Waiutuutu Kate Sheppard House · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/upper-south-island/te-whare-waiutuutu-kate-sheppard-house/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 172.588132, latitude -43.523637",
+            "id": "wikidata:Q1247141",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 1845898833; P625 statement Q1247141$1B6D65EA-52B4-4812-A460-8C66CA082615",
+            "title": "Te Whare Waiutuutu Kate Sheppard House · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1247141.json"
+          }
+        ],
+        "source_uri": "https://www.visitheritage.co.nz/visit/upper-south-island/te-whare-waiutuutu-kate-sheppard-house",
+        "title": "Te Whare Waiutuutu Kate Sheppard House",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "te-whare-waiutuutu-kate-sheppard-house.html",
+          "sha256": "7324de6621a9867a74416271dac41fa3d18cf71fb7230f597ae58e25f15d5eee",
+          "uri": "https://www.visitheritage.co.nz/visit/upper-south-island/te-whare-waiutuutu-kate-sheppard-house/"
+        },
+        {
+          "filename": "Q1247141.json",
+          "sha256": "06094425ccdfb4a44b163ea178fe2e5ede751fd40fe1f9039ff3d686a9f3652d",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1247141.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          168.828944,
+          -44.937629
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16930956.json",
+        "statement_id": "Q16930956$DE770EA3-C8E2-4C27-B67B-F66A4A1E8A4C"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The government identifies the interpreted public settlement and restored huts by Bush Creek.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Department of Conservation Te Papa Atawhai",
+          "Wikidata contributors"
+        ],
+        "description": "Arrowtown Chinese Settlement is a publicly interpreted heritage place, Arrowtown, Otago, Aotearoa New Zealand.",
+        "description_zh": "箭镇华人定居点遗址位于新西兰 Arrowtown, Otago。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The government identifies the interpreted public settlement and restored huts by Bush Creek. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q16930956",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Arrowtown, Otago.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Arrowtown, Otago.",
+            "id": "nz-visitor:arrowtown-chinese-settlement",
+            "license": null,
+            "publisher": "Department of Conservation Te Papa Atawhai",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 ffda7356b41ef450dc3f37e08c6ef3c2c8ce7675885dbd11efb575ce7157edda",
+            "title": "Arrowtown Chinese Settlement · public visitor information",
+            "uri": "https://www.doc.govt.nz/chinese-settlement"
+          }
+        },
+        "id": "auth:nz-public:Q16930956",
+        "location_precision": null,
+        "names": [
+          "箭镇华人定居点遗址",
+          "Arrowtown Chinese Settlement"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          168.828944,
+          -44.937629
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Arrowtown, Otago.",
+            "id": "nz-visitor:arrowtown-chinese-settlement",
+            "license": null,
+            "publisher": "Department of Conservation Te Papa Atawhai",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 ffda7356b41ef450dc3f37e08c6ef3c2c8ce7675885dbd11efb575ce7157edda",
+            "title": "Arrowtown Chinese Settlement · public visitor information",
+            "uri": "https://www.doc.govt.nz/chinese-settlement"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 168.828944, latitude -44.937629",
+            "id": "wikidata:Q16930956",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2560633695; P625 statement Q16930956$DE770EA3-C8E2-4C27-B67B-F66A4A1E8A4C",
+            "title": "Arrowtown Chinese Settlement · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16930956.json"
+          }
+        ],
+        "source_uri": "https://www.doc.govt.nz/chinese-settlement",
+        "title": "Arrowtown Chinese Settlement",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "arrowtown-chinese-settlement.html",
+          "sha256": "ffda7356b41ef450dc3f37e08c6ef3c2c8ce7675885dbd11efb575ce7157edda",
+          "uri": "https://www.doc.govt.nz/chinese-settlement"
+        },
+        {
+          "filename": "Q16930956.json",
+          "sha256": "8e8ef0cff4f83b032455f4bbb8cfd61036c48094bd8fce539d9a5da57802d791",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16930956.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          169.818,
+          -46.4481
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1768822.json",
+        "statement_id": "q1768822$40807450-B435-45DC-8743-DE0AD4224AE8"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point identifies the historic tower by the public lookout; the visitor listing covers outdoor access.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Department of Conservation Te Papa Atawhai",
+          "Wikidata contributors"
+        ],
+        "description": "Nugget Point Lighthouse is a publicly interpreted heritage place, Tokatā, Otago, Aotearoa New Zealand.",
+        "description_zh": "努盖特角历史灯塔位于新西兰 Tokatā, Otago。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The point identifies the historic tower by the public lookout; the visitor listing covers outdoor access. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q1768822",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Tokatā, Otago.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Tokatā, Otago.",
+            "id": "nz-visitor:nugget-lighthouse",
+            "license": null,
+            "publisher": "Department of Conservation Te Papa Atawhai",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 dc5b609ef15f4c99308fcebc49d94a005d4ea6ab4936ad09ffa72d9a16ab109f",
+            "title": "Nugget Point Lighthouse · public visitor information",
+            "uri": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/catlins-coastal-area/things-to-do/nugget-point-tokata-walks/"
+          }
+        },
+        "id": "auth:nz-public:Q1768822",
+        "location_precision": null,
+        "names": [
+          "努盖特角历史灯塔",
+          "Nugget Point Lighthouse"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          169.818,
+          -46.4481
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Tokatā, Otago.",
+            "id": "nz-visitor:nugget-lighthouse",
+            "license": null,
+            "publisher": "Department of Conservation Te Papa Atawhai",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 dc5b609ef15f4c99308fcebc49d94a005d4ea6ab4936ad09ffa72d9a16ab109f",
+            "title": "Nugget Point Lighthouse · public visitor information",
+            "uri": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/catlins-coastal-area/things-to-do/nugget-point-tokata-walks/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 169.818, latitude -46.4481",
+            "id": "wikidata:Q1768822",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2565471572; P625 statement q1768822$40807450-B435-45DC-8743-DE0AD4224AE8",
+            "title": "Nugget Point Lighthouse · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1768822.json"
+          }
+        ],
+        "source_uri": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/catlins-coastal-area/things-to-do/nugget-point-tokata-walks/",
+        "title": "Nugget Point Lighthouse",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "nugget-lighthouse.html",
+          "sha256": "dc5b609ef15f4c99308fcebc49d94a005d4ea6ab4936ad09ffa72d9a16ab109f",
+          "uri": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/otago/places/catlins-coastal-area/things-to-do/nugget-point-tokata-walks/"
+        },
+        {
+          "filename": "Q1768822.json",
+          "sha256": "f4149dcdb7c719dfbe388a1e17ae59bd998a1545058c995ec5763390ef9a15d1",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1768822.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          173.9623132,
+          -35.2175876
+        ],
+        "precision": 1e-07,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1939039.json",
+        "statement_id": "Q1939039$2BC44410-7A78-4BA2-A739-8EEE2539A086"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point is for Kemp House, a named public heritage building in the Kerikeri Mission Station. The neighboring Stone Store is outside the record's scope.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Heritage New Zealand Pouhere Taonga",
+          "Wikidata contributors"
+        ],
+        "description": "Kerikeri Mission House (Kemp House) is a publicly interpreted heritage place, Kerikeri, Northland, Aotearoa New Zealand.",
+        "description_zh": "凯里凯里传教站肯普故居位于新西兰 Kerikeri, Northland。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The point is for Kemp House, a named public heritage building in the Kerikeri Mission Station. The neighboring Stone Store is outside the record's scope. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q1939039",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Kerikeri, Northland.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Kerikeri, Northland.",
+            "id": "nz-visitor:kerikeri-mission-station",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 f27d98e487f315aabaafeb75036599a6c0a7cec7df27adc5fbf53d46c259377f",
+            "title": "Kerikeri Mission House (Kemp House) · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/northland/kerikeri-mission-station/"
+          }
+        },
+        "id": "auth:nz-public:Q1939039",
+        "location_precision": null,
+        "names": [
+          "凯里凯里传教站肯普故居",
+          "Kerikeri Mission House"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          173.9623132,
+          -35.2175876
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Kerikeri, Northland.",
+            "id": "nz-visitor:kerikeri-mission-station",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 f27d98e487f315aabaafeb75036599a6c0a7cec7df27adc5fbf53d46c259377f",
+            "title": "Kerikeri Mission House (Kemp House) · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/northland/kerikeri-mission-station/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 173.9623132, latitude -35.2175876",
+            "id": "wikidata:Q1939039",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2518519846; P625 statement Q1939039$2BC44410-7A78-4BA2-A739-8EEE2539A086",
+            "title": "Kerikeri Mission House (Kemp House) · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1939039.json"
+          }
+        ],
+        "source_uri": "https://www.visitheritage.co.nz/visit/northland/kerikeri-mission-station",
+        "title": "Kerikeri Mission House (Kemp House)",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "kerikeri-mission-station.html",
+          "sha256": "f27d98e487f315aabaafeb75036599a6c0a7cec7df27adc5fbf53d46c259377f",
+          "uri": "https://www.visitheritage.co.nz/visit/northland/kerikeri-mission-station/"
+        },
+        {
+          "filename": "Q1939039.json",
+          "sha256": "e9ce86575c10a1d312a948431b521c2f331f45a5491b4624cec7400de58cd14a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1939039.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          174.849917,
+          -41.35893
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2068609.json",
+        "statement_id": "Q2068609$BA8EA284-AA7B-4B62-90EE-42148D64DF91"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point identifies the historic upper lighthouse. The outdoor visitor site is accessible; the tower interior is closed.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Heritage New Zealand Pouhere Taonga",
+          "Wikidata contributors"
+        ],
+        "description": "Pencarrow Head Lighthouse is a publicly interpreted heritage place, Pencarrow Head, Wellington region, Aotearoa New Zealand.",
+        "description_zh": "彭卡罗角灯塔位于新西兰 Pencarrow Head, Wellington region。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The point identifies the historic upper lighthouse. The outdoor visitor site is accessible; the tower interior is closed. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q2068609",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Pencarrow Head, Wellington region.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Pencarrow Head, Wellington region.",
+            "id": "nz-visitor:pencarrow-lighthouse",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 e76663e29044698aa1c9d5ee698898c8eab340636e36f46337cb8f7cd85d8376",
+            "title": "Pencarrow Head Lighthouse · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/wellington/pencarrow-lighthouse/"
+          }
+        },
+        "id": "auth:nz-public:Q2068609",
+        "location_precision": null,
+        "names": [
+          "彭卡罗角灯塔",
+          "Pencarrow Head Lighthouse"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          174.849917,
+          -41.35893
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Pencarrow Head, Wellington region.",
+            "id": "nz-visitor:pencarrow-lighthouse",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 e76663e29044698aa1c9d5ee698898c8eab340636e36f46337cb8f7cd85d8376",
+            "title": "Pencarrow Head Lighthouse · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/wellington/pencarrow-lighthouse/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 174.849917, latitude -41.35893",
+            "id": "wikidata:Q2068609",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2560868328; P625 statement Q2068609$BA8EA284-AA7B-4B62-90EE-42148D64DF91",
+            "title": "Pencarrow Head Lighthouse · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2068609.json"
+          }
+        ],
+        "source_uri": "https://www.visitheritage.co.nz/visit/wellington/pencarrow-lighthouse",
+        "title": "Pencarrow Head Lighthouse",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "pencarrow-lighthouse.html",
+          "sha256": "e76663e29044698aa1c9d5ee698898c8eab340636e36f46337cb8f7cd85d8376",
+          "uri": "https://www.visitheritage.co.nz/visit/wellington/pencarrow-lighthouse/"
+        },
+        {
+          "filename": "Q2068609.json",
+          "sha256": "230940fdb4474f1780f36d8ec03772467c732415fdd80636ff7cc1ad391bd29d",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2068609.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          176.357,
+          -38.2123
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2398235.json",
+        "statement_id": "q2398235$A2F2A88B-C8E7-481C-8A36-95398A8788DD"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The site operator publishes admission to the interpreted archaeology of the former settlement. The point represents the named former village as a whole.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Buried Village of Te Wairoa",
+          "Wikidata contributors"
+        ],
+        "description": "Te Wairoa Buried Village is a publicly interpreted heritage place, near Rotorua, Bay of Plenty, Aotearoa New Zealand.",
+        "description_zh": "特怀罗阿掩埋村遗址位于新西兰 near Rotorua, Bay of Plenty。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The site operator publishes admission to the interpreted archaeology of the former settlement. The point represents the named former village as a whole. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q2398235",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: near Rotorua, Bay of Plenty.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near near Rotorua, Bay of Plenty.",
+            "id": "nz-visitor:te-wairoa-visit",
+            "license": null,
+            "publisher": "Buried Village of Te Wairoa",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 bc8a6e264c93731f81c26762942990653890e516c4b5d80e13d387b9fed7e9f8",
+            "title": "Te Wairoa Buried Village · public visitor information",
+            "uri": "https://www.buriedvillage.co.nz/what-to-expect/entry-prices-opening-hours"
+          }
+        },
+        "id": "auth:nz-public:Q2398235",
+        "location_precision": null,
+        "names": [
+          "特怀罗阿掩埋村遗址",
+          "Te Wairoa"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          176.357,
+          -38.2123
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near near Rotorua, Bay of Plenty.",
+            "id": "nz-visitor:te-wairoa-visit",
+            "license": null,
+            "publisher": "Buried Village of Te Wairoa",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 bc8a6e264c93731f81c26762942990653890e516c4b5d80e13d387b9fed7e9f8",
+            "title": "Te Wairoa Buried Village · public visitor information",
+            "uri": "https://www.buriedvillage.co.nz/what-to-expect/entry-prices-opening-hours"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 176.357, latitude -38.2123",
+            "id": "wikidata:Q2398235",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2494126223; P625 statement q2398235$A2F2A88B-C8E7-481C-8A36-95398A8788DD",
+            "title": "Te Wairoa Buried Village · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2398235.json"
+          }
+        ],
+        "source_uri": "https://www.buriedvillage.co.nz/what-to-expect/entry-prices-opening-hours",
+        "title": "Te Wairoa Buried Village",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "te-wairoa-visit.html",
+          "sha256": "bc8a6e264c93731f81c26762942990653890e516c4b5d80e13d387b9fed7e9f8",
+          "uri": "https://www.buriedvillage.co.nz/what-to-expect/entry-prices-opening-hours"
+        },
+        {
+          "filename": "Q2398235.json",
+          "sha256": "a0a3163663fd9b45dedeedeb93133a5ea53c4cae3824a4572ade477f039854d7",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2398235.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          173.284,
+          -41.276
+        ],
+        "precision": 0.001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5108772.json",
+        "statement_id": "q5108772$0559DFA5-BFAD-4B8C-9614-1F3014D8C5A1"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The cathedral operator publishes public visiting hours for the active heritage church in Nelson.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Christ Church Cathedral, Nelson",
+          "Wikidata contributors"
+        ],
+        "description": "Christ Church Cathedral, Nelson is a publicly interpreted heritage place, Nelson, Aotearoa New Zealand.",
+        "description_zh": "纳尔逊基督教堂座堂位于新西兰 Nelson。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The cathedral operator publishes public visiting hours for the active heritage church in Nelson. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q5108772",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Nelson.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Nelson.",
+            "id": "nz-visitor:nelson-cathedral",
+            "license": null,
+            "publisher": "Christ Church Cathedral, Nelson",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 c13aff5320d4f33700446acbf81411b10cbdc8d7f8ba012d9a9cfcdcfbc5b2dd",
+            "title": "Christ Church Cathedral, Nelson · public visitor information",
+            "uri": "https://www.nelsoncathedral.nz/your-visit"
+          }
+        },
+        "id": "auth:nz-public:Q5108772",
+        "location_precision": null,
+        "names": [
+          "纳尔逊基督教堂座堂",
+          "Christ Church Cathedral"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          173.284,
+          -41.276
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Nelson.",
+            "id": "nz-visitor:nelson-cathedral",
+            "license": null,
+            "publisher": "Christ Church Cathedral, Nelson",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 c13aff5320d4f33700446acbf81411b10cbdc8d7f8ba012d9a9cfcdcfbc5b2dd",
+            "title": "Christ Church Cathedral, Nelson · public visitor information",
+            "uri": "https://www.nelsoncathedral.nz/your-visit"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 173.284, latitude -41.276",
+            "id": "wikidata:Q5108772",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2465430775; P625 statement q5108772$0559DFA5-BFAD-4B8C-9614-1F3014D8C5A1",
+            "title": "Christ Church Cathedral, Nelson · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5108772.json"
+          }
+        ],
+        "source_uri": "https://www.nelsoncathedral.nz/your-visit",
+        "title": "Christ Church Cathedral, Nelson",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "nelson-cathedral.html",
+          "sha256": "c13aff5320d4f33700446acbf81411b10cbdc8d7f8ba012d9a9cfcdcfbc5b2dd",
+          "uri": "https://www.nelsoncathedral.nz/your-visit"
+        },
+        {
+          "filename": "Q5108772.json",
+          "sha256": "06a542374db7b40b30f71af47b981cf3b2e0e99f6b9851831ac60596ccd11aa3",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5108772.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          167.715075,
+          -46.030086
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5132506.json",
+        "statement_id": "Q5132506$81E77FE6-1800-4E22-97F9-14AA448CF26A"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point identifies the historic bridge at the public DOC visitor site on the Waiau River.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Department of Conservation Te Papa Atawhai",
+          "Wikidata contributors"
+        ],
+        "description": "Clifden Suspension Bridge is a publicly interpreted heritage place, Clifden, Southland, Aotearoa New Zealand.",
+        "description_zh": "克利夫登历史悬索桥位于新西兰 Clifden, Southland。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The point identifies the historic bridge at the public DOC visitor site on the Waiau River. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q5132506",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Clifden, Southland.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Clifden, Southland.",
+            "id": "nz-visitor:clifden-bridge",
+            "license": null,
+            "publisher": "Department of Conservation Te Papa Atawhai",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 301a0e420642ddda88e8054a7b8b20b960ca4d76e07ae5ea5dd935ea3741b554",
+            "title": "Clifden Suspension Bridge · public visitor information",
+            "uri": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/southland/places/clifden-area/clifden-suspension-bridge/"
+          }
+        },
+        "id": "auth:nz-public:Q5132506",
+        "location_precision": null,
+        "names": [
+          "克利夫登历史悬索桥",
+          "Clifden Suspension Bridge"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          167.715075,
+          -46.030086
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Clifden, Southland.",
+            "id": "nz-visitor:clifden-bridge",
+            "license": null,
+            "publisher": "Department of Conservation Te Papa Atawhai",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 301a0e420642ddda88e8054a7b8b20b960ca4d76e07ae5ea5dd935ea3741b554",
+            "title": "Clifden Suspension Bridge · public visitor information",
+            "uri": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/southland/places/clifden-area/clifden-suspension-bridge/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 167.715075, latitude -46.030086",
+            "id": "wikidata:Q5132506",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2352175305; P625 statement Q5132506$81E77FE6-1800-4E22-97F9-14AA448CF26A",
+            "title": "Clifden Suspension Bridge · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5132506.json"
+          }
+        ],
+        "source_uri": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/southland/places/clifden-area/clifden-suspension-bridge/",
+        "title": "Clifden Suspension Bridge",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "clifden-bridge.html",
+          "sha256": "301a0e420642ddda88e8054a7b8b20b960ca4d76e07ae5ea5dd935ea3741b554",
+          "uri": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/southland/places/clifden-area/clifden-suspension-bridge/"
+        },
+        {
+          "filename": "Q5132506.json",
+          "sha256": "b2b1a733fb89cb5a2c88a9339bb09447baa6127e79932421a83e861c0a034a16",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5132506.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          169.68197,
+          -45.88118
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5515501.json",
+        "statement_id": "Q5515501$32CE38CE-5A99-40BA-9FE4-D18C0F741E9D"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point represents the public interpreted historic reserve and its goldfield heritage, without identifying individual workings.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Department of Conservation Te Papa Atawhai",
+          "Wikidata contributors"
+        ],
+        "description": "Gabriel's Gully Historic Reserve is a publicly interpreted heritage place, near Lawrence, Otago, Aotearoa New Zealand.",
+        "description_zh": "加布里埃尔峡谷历史保护区位于新西兰 near Lawrence, Otago。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The point represents the public interpreted historic reserve and its goldfield heritage, without identifying individual workings. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q5515501",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: near Lawrence, Otago.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near near Lawrence, Otago.",
+            "id": "nz-visitor:gabriels-gully",
+            "license": null,
+            "publisher": "Department of Conservation Te Papa Atawhai",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 041cac5038db3cf4f671025e8b14b61433fb867a3e7ca01a581ea1f8187a521c",
+            "title": "Gabriel's Gully Historic Reserve · public visitor information",
+            "uri": "https://www.doc.govt.nz/gabriels-gully"
+          }
+        },
+        "id": "auth:nz-public:Q5515501",
+        "location_precision": null,
+        "names": [
+          "加布里埃尔峡谷历史保护区",
+          "Gabriel's Gully"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          169.68197,
+          -45.88118
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near near Lawrence, Otago.",
+            "id": "nz-visitor:gabriels-gully",
+            "license": null,
+            "publisher": "Department of Conservation Te Papa Atawhai",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 041cac5038db3cf4f671025e8b14b61433fb867a3e7ca01a581ea1f8187a521c",
+            "title": "Gabriel's Gully Historic Reserve · public visitor information",
+            "uri": "https://www.doc.govt.nz/gabriels-gully"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 169.68197, latitude -45.88118",
+            "id": "wikidata:Q5515501",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2570308352; P625 statement Q5515501$32CE38CE-5A99-40BA-9FE4-D18C0F741E9D",
+            "title": "Gabriel's Gully Historic Reserve · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5515501.json"
+          }
+        ],
+        "source_uri": "https://www.doc.govt.nz/gabriels-gully",
+        "title": "Gabriel's Gully Historic Reserve",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "gabriels-gully.html",
+          "sha256": "041cac5038db3cf4f671025e8b14b61433fb867a3e7ca01a581ea1f8187a521c",
+          "uri": "https://www.doc.govt.nz/gabriels-gully"
+        },
+        {
+          "filename": "Q5515501.json",
+          "sha256": "cf9aaddbde1b472bac4647a5781dad87f1d19a423e02e8882985d9a5fb225379",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5515501.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          176.258,
+          -38.1358
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5588837.json",
+        "statement_id": "q5588837$9552691D-8BF3-45C9-A27E-F767266C422C"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point represents the historic public gardens. The record covers the public garden setting and makes no claim about opening of the individual heritage buildings.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "RotoruaNZ",
+          "Wikidata contributors"
+        ],
+        "description": "Government Gardens is a publicly interpreted heritage place, Rotorua, Bay of Plenty, Aotearoa New Zealand.",
+        "description_zh": "罗托鲁瓦政府花园位于新西兰 Rotorua, Bay of Plenty。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The point represents the historic public gardens. The record covers the public garden setting and makes no claim about opening of the individual heritage buildings. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q5588837",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Rotorua, Bay of Plenty.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Rotorua, Bay of Plenty.",
+            "id": "nz-visitor:government-gardens",
+            "license": null,
+            "publisher": "RotoruaNZ",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 b6a1173173ddb1221adf6665bb1582f17ad75bc38b9f8a081b414fcfdc03df33",
+            "title": "Government Gardens · public visitor information",
+            "uri": "https://www.rotoruanz.com/visit/things-to-do/government-gardens?categoryPageAlias=public-places-spaces"
+          }
+        },
+        "id": "auth:nz-public:Q5588837",
+        "location_precision": null,
+        "names": [
+          "罗托鲁瓦政府花园",
+          "Government Gardens"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          176.258,
+          -38.1358
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Rotorua, Bay of Plenty.",
+            "id": "nz-visitor:government-gardens",
+            "license": null,
+            "publisher": "RotoruaNZ",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 b6a1173173ddb1221adf6665bb1582f17ad75bc38b9f8a081b414fcfdc03df33",
+            "title": "Government Gardens · public visitor information",
+            "uri": "https://www.rotoruanz.com/visit/things-to-do/government-gardens?categoryPageAlias=public-places-spaces"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 176.258, latitude -38.1358",
+            "id": "wikidata:Q5588837",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2487402325; P625 statement q5588837$9552691D-8BF3-45C9-A27E-F767266C422C",
+            "title": "Government Gardens · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5588837.json"
+          }
+        ],
+        "source_uri": "https://www.rotoruanz.com/visit/things-to-do/government-gardens?categoryPageAlias=public-places-spaces",
+        "title": "Government Gardens",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "government-gardens.html",
+          "sha256": "b6a1173173ddb1221adf6665bb1582f17ad75bc38b9f8a081b414fcfdc03df33",
+          "uri": "https://www.rotoruanz.com/visit/things-to-do/government-gardens?categoryPageAlias=public-places-spaces"
+        },
+        {
+          "filename": "Q5588837.json",
+          "sha256": "a652be581a69dc3657e0aad2d7ae304d12e383d944ec8dcf476b6391ee0e9483",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5588837.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          174.775,
+          -36.8718
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5760046.json",
+        "statement_id": "q5760046$AF5B787B-FFA6-4ABB-B930-A83B0408ADF9"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The publicly visited heritage house publishes opening times and allows garden visits during those hours.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Heritage New Zealand Pouhere Taonga",
+          "Wikidata contributors"
+        ],
+        "description": "Highwic is a publicly interpreted heritage place, Newmarket, Auckland, Aotearoa New Zealand.",
+        "description_zh": "海威克历史宅邸位于新西兰 Newmarket, Auckland。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The publicly visited heritage house publishes opening times and allows garden visits during those hours. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q5760046",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Newmarket, Auckland.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Newmarket, Auckland.",
+            "id": "nz-visitor:highwic",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 2ea9f8acdc294144c43da85fcd8ba7799fe3677c7ba8efc74cf67ded70b39095",
+            "title": "Highwic · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/auckland/highwic/"
+          }
+        },
+        "id": "auth:nz-public:Q5760046",
+        "location_precision": null,
+        "names": [
+          "海威克历史宅邸",
+          "Highwic"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          174.775,
+          -36.8718
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Newmarket, Auckland.",
+            "id": "nz-visitor:highwic",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 2ea9f8acdc294144c43da85fcd8ba7799fe3677c7ba8efc74cf67ded70b39095",
+            "title": "Highwic · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/auckland/highwic/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 174.775, latitude -36.8718",
+            "id": "wikidata:Q5760046",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2570216897; P625 statement q5760046$AF5B787B-FFA6-4ABB-B930-A83B0408ADF9",
+            "title": "Highwic · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5760046.json"
+          }
+        ],
+        "source_uri": "https://www.visitheritage.co.nz/visit/auckland/highwic",
+        "title": "Highwic",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "highwic.html",
+          "sha256": "2ea9f8acdc294144c43da85fcd8ba7799fe3677c7ba8efc74cf67ded70b39095",
+          "uri": "https://www.visitheritage.co.nz/visit/auckland/highwic/"
+        },
+        {
+          "filename": "Q5760046.json",
+          "sha256": "f11b2beeab80418591b45427a969f77c2a0c212e76aa70bd2c743f98e224fd7a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5760046.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          168.899,
+          -45.009
+        ],
+        "precision": 0.001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6379691.json",
+        "statement_id": "q6379691$96000427-4EC9-41A8-A11F-680F9F84D288"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point is for the preserved heritage suspension bridge on the public walking and cycling route.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Tohu Whenua",
+          "Wikidata contributors"
+        ],
+        "description": "Kawarau Gorge Suspension Bridge is a publicly interpreted heritage place, Kawarau Gorge, Otago, Aotearoa New Zealand.",
+        "description_zh": "卡瓦劳峡谷历史悬索桥位于新西兰 Kawarau Gorge, Otago。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The point is for the preserved heritage suspension bridge on the public walking and cycling route. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q6379691",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Kawarau Gorge, Otago.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Kawarau Gorge, Otago.",
+            "id": "nz-visitor:kawarau-suspension-bridge",
+            "license": null,
+            "publisher": "Tohu Whenua",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 b122a8445cfcbf9dca9efa7efab000307a6204156c5e1d4744051f11de2c81c4",
+            "title": "Kawarau Gorge Suspension Bridge · public visitor information",
+            "uri": "https://tohuwhenua.nz/kawarau"
+          }
+        },
+        "id": "auth:nz-public:Q6379691",
+        "location_precision": null,
+        "names": [
+          "卡瓦劳峡谷历史悬索桥",
+          "Kawarau Gorge Suspension Bridge"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          168.899,
+          -45.009
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Kawarau Gorge, Otago.",
+            "id": "nz-visitor:kawarau-suspension-bridge",
+            "license": null,
+            "publisher": "Tohu Whenua",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 b122a8445cfcbf9dca9efa7efab000307a6204156c5e1d4744051f11de2c81c4",
+            "title": "Kawarau Gorge Suspension Bridge · public visitor information",
+            "uri": "https://tohuwhenua.nz/kawarau"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 168.899, latitude -45.009",
+            "id": "wikidata:Q6379691",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2519043218; P625 statement q6379691$96000427-4EC9-41A8-A11F-680F9F84D288",
+            "title": "Kawarau Gorge Suspension Bridge · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6379691.json"
+          }
+        ],
+        "source_uri": "https://tohuwhenua.nz/kawarau",
+        "title": "Kawarau Gorge Suspension Bridge",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "kawarau-suspension-bridge.html",
+          "sha256": "b122a8445cfcbf9dca9efa7efab000307a6204156c5e1d4744051f11de2c81c4",
+          "uri": "https://tohuwhenua.nz/kawarau"
+        },
+        {
+          "filename": "Q6379691.json",
+          "sha256": "ac374a32d205cef18904ff3e06cd36013ca0c4a4c8ca2864fc9863c1a5301430",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6379691.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          174.78041667,
+          -41.27625
+        ],
+        "precision": 2.777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q751768.json",
+        "statement_id": "Q751768$BD74628F-8AC2-4D5D-BD34-BBBF56B4F51E"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The publicly visited former cathedral also hosts events. Temporary closures are listed by the site operator.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Heritage New Zealand Pouhere Taonga",
+          "Wikidata contributors"
+        ],
+        "description": "Old St Paul's is a publicly interpreted heritage place, Thorndon, Wellington, Aotearoa New Zealand.",
+        "description_zh": "旧圣保罗教堂位于新西兰 Thorndon, Wellington。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The publicly visited former cathedral also hosts events. Temporary closures are listed by the site operator. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q751768",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Thorndon, Wellington.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Thorndon, Wellington.",
+            "id": "nz-visitor:old-st-pauls",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 5af7f98933c3780a7eb181de2fe820a6f86413cba8e117044285bbf1ae83583c",
+            "title": "Old St Paul's · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/wellington/old-st-pauls/"
+          }
+        },
+        "id": "auth:nz-public:Q751768",
+        "location_precision": null,
+        "names": [
+          "旧圣保罗教堂",
+          "Old St Paul's"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          174.78041667,
+          -41.27625
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Thorndon, Wellington.",
+            "id": "nz-visitor:old-st-pauls",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 5af7f98933c3780a7eb181de2fe820a6f86413cba8e117044285bbf1ae83583c",
+            "title": "Old St Paul's · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/wellington/old-st-pauls/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 174.78041667, latitude -41.27625",
+            "id": "wikidata:Q751768",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2435584455; P625 statement Q751768$BD74628F-8AC2-4D5D-BD34-BBBF56B4F51E",
+            "title": "Old St Paul's · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q751768.json"
+          }
+        ],
+        "source_uri": "https://www.visitheritage.co.nz/visit/wellington/old-st-pauls",
+        "title": "Old St Paul's",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "old-st-pauls.html",
+          "sha256": "5af7f98933c3780a7eb181de2fe820a6f86413cba8e117044285bbf1ae83583c",
+          "uri": "https://www.visitheritage.co.nz/visit/wellington/old-st-pauls/"
+        },
+        {
+          "filename": "Q751768.json",
+          "sha256": "4e5d3cfac57676861148d6500f40d2472bc73cdf97a86b461578ee8760d06e5c",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q751768.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          174.724626,
+          -36.890017
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q76853346.json",
+        "statement_id": "Q76853346$6664A2AB-F61A-4E29-8CD1-DD478FCE42ED"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The public historic house and garden publish visiting times.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Heritage New Zealand Pouhere Taonga",
+          "Wikidata contributors"
+        ],
+        "description": "Alberton is a publicly interpreted heritage place, Mount Albert, Auckland, Aotearoa New Zealand.",
+        "description_zh": "阿尔伯顿历史宅邸位于新西兰 Mount Albert, Auckland。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The public historic house and garden publish visiting times. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q76853346",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Mount Albert, Auckland.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Mount Albert, Auckland.",
+            "id": "nz-visitor:alberton",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 b0c8e7b920b18a7f191af3aa54b8b260ac28dcad5e812c9976d159cd97571700",
+            "title": "Alberton · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/auckland/alberton/"
+          }
+        },
+        "id": "auth:nz-public:Q76853346",
+        "location_precision": null,
+        "names": [
+          "阿尔伯顿历史宅邸",
+          "Alberton"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          174.724626,
+          -36.890017
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Mount Albert, Auckland.",
+            "id": "nz-visitor:alberton",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 b0c8e7b920b18a7f191af3aa54b8b260ac28dcad5e812c9976d159cd97571700",
+            "title": "Alberton · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/auckland/alberton/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 174.724626, latitude -36.890017",
+            "id": "wikidata:Q76853346",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2574916029; P625 statement Q76853346$6664A2AB-F61A-4E29-8CD1-DD478FCE42ED",
+            "title": "Alberton · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q76853346.json"
+          }
+        ],
+        "source_uri": "https://www.visitheritage.co.nz/visit/auckland/alberton",
+        "title": "Alberton",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "alberton.html",
+          "sha256": "b0c8e7b920b18a7f191af3aa54b8b260ac28dcad5e812c9976d159cd97571700",
+          "uri": "https://www.visitheritage.co.nz/visit/auckland/alberton/"
+        },
+        {
+          "filename": "Q76853346.json",
+          "sha256": "9eb64257ce78cffadbbf6ead133b589450790df4bcffa5a85c8b0ad4b515fa11",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q76853346.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          173.8763638888889,
+          -35.31655277777777
+        ],
+        "precision": 2.777777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7691011.json",
+        "statement_id": "Q7691011$4d256c64-e439-44c7-9c2f-3f8c44424f73"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The public heritage visit covers the mission house and public grounds. Some farm areas have restricted access.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Heritage New Zealand Pouhere Taonga",
+          "Wikidata contributors"
+        ],
+        "description": "Te Waimate Mission is a publicly interpreted heritage place, Waimate North, Northland, Aotearoa New Zealand.",
+        "description_zh": "特怀马特传教站位于新西兰 Waimate North, Northland。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The public heritage visit covers the mission house and public grounds. Some farm areas have restricted access. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q7691011",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Waimate North, Northland.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Waimate North, Northland.",
+            "id": "nz-visitor:te-waimate-mission",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 cce2b5f9672985c1b47c92844a64d0a72794f7317487f3a90b88a067c6457dad",
+            "title": "Te Waimate Mission · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/northland/te-waimate-mission/"
+          }
+        },
+        "id": "auth:nz-public:Q7691011",
+        "location_precision": null,
+        "names": [
+          "特怀马特传教站",
+          "Te Waimate mission"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          173.8763638888889,
+          -35.31655277777777
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Waimate North, Northland.",
+            "id": "nz-visitor:te-waimate-mission",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 cce2b5f9672985c1b47c92844a64d0a72794f7317487f3a90b88a067c6457dad",
+            "title": "Te Waimate Mission · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/northland/te-waimate-mission/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 173.8763638888889, latitude -35.31655277777777",
+            "id": "wikidata:Q7691011",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2520063580; P625 statement Q7691011$4d256c64-e439-44c7-9c2f-3f8c44424f73",
+            "title": "Te Waimate Mission · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7691011.json"
+          }
+        ],
+        "source_uri": "https://www.visitheritage.co.nz/visit/northland/te-waimate-mission",
+        "title": "Te Waimate Mission",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "te-waimate-mission.html",
+          "sha256": "cce2b5f9672985c1b47c92844a64d0a72794f7317487f3a90b88a067c6457dad",
+          "uri": "https://www.visitheritage.co.nz/visit/northland/te-waimate-mission/"
+        },
+        {
+          "filename": "Q7691011.json",
+          "sha256": "b881245c45cff1f3dd445a92a5128e76b282a2da5fffd9e23f3fba40e066d33b",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7691011.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          173.505483,
+          -35.394382
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q77976314.json",
+        "statement_id": "Q77976314$1B96F284-A509-422F-887B-F687A2534B34"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "This historic house museum publishes seasonal visitor access and group arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Heritage New Zealand Pouhere Taonga",
+          "Wikidata contributors"
+        ],
+        "description": "Clendon House is a publicly interpreted heritage place, Rawene, Northland, Aotearoa New Zealand.",
+        "description_zh": "克伦登故居位于新西兰 Rawene, Northland。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "This historic house museum publishes seasonal visitor access and group arrangements. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q77976314",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Rawene, Northland.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Rawene, Northland.",
+            "id": "nz-visitor:clendon-house",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 87e5a44f02b132e2bcf227987566c7157835bbf8243cfe9e51c846bb15887b07",
+            "title": "Clendon House · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/northland/clendon-house/"
+          }
+        },
+        "id": "auth:nz-public:Q77976314",
+        "location_precision": null,
+        "names": [
+          "克伦登故居",
+          "Clendon House"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          173.505483,
+          -35.394382
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Rawene, Northland.",
+            "id": "nz-visitor:clendon-house",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 87e5a44f02b132e2bcf227987566c7157835bbf8243cfe9e51c846bb15887b07",
+            "title": "Clendon House · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/northland/clendon-house/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 173.505483, latitude -35.394382",
+            "id": "wikidata:Q77976314",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2520410176; P625 statement Q77976314$1B96F284-A509-422F-887B-F687A2534B34",
+            "title": "Clendon House · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q77976314.json"
+          }
+        ],
+        "source_uri": "https://www.visitheritage.co.nz/visit/northland/clendon-house",
+        "title": "Clendon House",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "clendon-house.html",
+          "sha256": "87e5a44f02b132e2bcf227987566c7157835bbf8243cfe9e51c846bb15887b07",
+          "uri": "https://www.visitheritage.co.nz/visit/northland/clendon-house/"
+        },
+        {
+          "filename": "Q77976314.json",
+          "sha256": "a407837a453186a800ad93bb3e49eb3643a6d38776e097ffb40dd41725478bf6",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q77976314.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          174.020488,
+          -35.216811
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q79301020.json",
+        "statement_id": "Q79301020$CC103F35-4394-401E-AE6B-A6AE62500CA4"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Heritage New Zealand describes the publicly visited outdoor ruins of the former Edmonds family property.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Heritage New Zealand Pouhere Taonga",
+          "Wikidata contributors"
+        ],
+        "description": "Edmonds Ruins is a publicly interpreted heritage place, near Kerikeri, Northland, Aotearoa New Zealand.",
+        "description_zh": "埃德蒙兹故居遗址位于新西兰 near Kerikeri, Northland。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "Heritage New Zealand describes the publicly visited outdoor ruins of the former Edmonds family property. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q79301020",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: near Kerikeri, Northland.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near near Kerikeri, Northland.",
+            "id": "nz-visitor:edmonds-ruins",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 d2f28edb694dd91987763423ac6e2680d9deb488f6b92e92c4dbaf3ec433f5c3",
+            "title": "Edmonds Ruins · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/northland/edmonds-ruins/"
+          }
+        },
+        "id": "auth:nz-public:Q79301020",
+        "location_precision": null,
+        "names": [
+          "埃德蒙兹故居遗址",
+          "Edmonds Ruins"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          174.020488,
+          -35.216811
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near near Kerikeri, Northland.",
+            "id": "nz-visitor:edmonds-ruins",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 d2f28edb694dd91987763423ac6e2680d9deb488f6b92e92c4dbaf3ec433f5c3",
+            "title": "Edmonds Ruins · public visitor information",
+            "uri": "https://www.visitheritage.co.nz/visit/northland/edmonds-ruins/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 174.020488, latitude -35.216811",
+            "id": "wikidata:Q79301020",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2143995148; P625 statement Q79301020$CC103F35-4394-401E-AE6B-A6AE62500CA4",
+            "title": "Edmonds Ruins · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q79301020.json"
+          }
+        ],
+        "source_uri": "https://www.visitheritage.co.nz/visit/northland/edmonds-ruins",
+        "title": "Edmonds Ruins",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "edmonds-ruins.html",
+          "sha256": "d2f28edb694dd91987763423ac6e2680d9deb488f6b92e92c4dbaf3ec433f5c3",
+          "uri": "https://www.visitheritage.co.nz/visit/northland/edmonds-ruins/"
+        },
+        {
+          "filename": "Q79301020.json",
+          "sha256": "efb91bc55c8cec405716b7b5dddf711d0e7d5ac5e77964c04ed79ebb9df140db",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q79301020.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          170.963771,
+          -42.718172
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q79309596.json",
+        "statement_id": "Q79309596$DD394B1B-C60E-485D-88DF-7427473F6D83"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The heritage site is the visible memorial tower standing on the public road at the Sewell and Weld Street junction.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Heritage New Zealand Pouhere Taonga",
+          "Wikidata contributors"
+        ],
+        "description": "Hokitika Memorial Clock Tower is a publicly interpreted heritage place, Hokitika, West Coast, Aotearoa New Zealand.",
+        "description_zh": "霍基蒂卡纪念钟楼位于新西兰 Hokitika, West Coast。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The heritage site is the visible memorial tower standing on the public road at the Sewell and Weld Street junction. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q79309596",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Hokitika, West Coast.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Hokitika, West Coast.",
+            "id": "nz-visitor:hokitika-clock-register",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 6aecff0411f22042d7789fcee4780486986be5909f302e3b6db395cb2d8acdd5",
+            "title": "Hokitika Memorial Clock Tower · public visitor information",
+            "uri": "https://www.heritage.org.nz/list-details/5054/Listing"
+          }
+        },
+        "id": "auth:nz-public:Q79309596",
+        "location_precision": null,
+        "names": [
+          "霍基蒂卡纪念钟楼",
+          "Hokitika Clock Tower"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          170.963771,
+          -42.718172
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Hokitika, West Coast.",
+            "id": "nz-visitor:hokitika-clock-register",
+            "license": null,
+            "publisher": "Heritage New Zealand Pouhere Taonga",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 6aecff0411f22042d7789fcee4780486986be5909f302e3b6db395cb2d8acdd5",
+            "title": "Hokitika Memorial Clock Tower · public visitor information",
+            "uri": "https://www.heritage.org.nz/list-details/5054/Listing"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 170.963771, latitude -42.718172",
+            "id": "wikidata:Q79309596",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 1731616468; P625 statement Q79309596$DD394B1B-C60E-485D-88DF-7427473F6D83",
+            "title": "Hokitika Memorial Clock Tower · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q79309596.json"
+          }
+        ],
+        "source_uri": "https://www.heritage.org.nz/list-details/5054/Listing",
+        "title": "Hokitika Memorial Clock Tower",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "hokitika-clock-register.html",
+          "sha256": "6aecff0411f22042d7789fcee4780486986be5909f302e3b6db395cb2d8acdd5",
+          "uri": "https://www.heritage.org.nz/list-details/5054/Listing"
+        },
+        {
+          "filename": "Q79309596.json",
+          "sha256": "3199fdf56e899ccb57c9f77fb2a8347638ceb7984ec405fa2c86149d6994c623",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q79309596.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          174.08176,
+          -35.265872
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q79311796.json",
+        "statement_id": "Q79311796$F2F24828-FC56-450A-803B-424E95FE1686"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point represents the publicly operated Treaty Grounds at a visitor-complex level.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Waitangi National Trust",
+          "Wikidata contributors"
+        ],
+        "description": "Waitangi Treaty Grounds is a publicly interpreted heritage place, Waitangi, Northland, Aotearoa New Zealand.",
+        "description_zh": "怀唐伊条约纪念地位于新西兰 Waitangi, Northland。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The point represents the publicly operated Treaty Grounds at a visitor-complex level. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q79311796",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Waitangi, Northland.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Waitangi, Northland.",
+            "id": "nz-visitor:waitangi-visit",
+            "license": null,
+            "publisher": "Waitangi National Trust",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 304c6d5a77fba5d4d7aafeaca2956c94928c2164106c4801564bb1f8947f2fe9",
+            "title": "Waitangi Treaty Grounds · public visitor information",
+            "uri": "https://www.waitangi.org.nz/visit/opening-hours"
+          }
+        },
+        "id": "auth:nz-public:Q79311796",
+        "location_precision": null,
+        "names": [
+          "怀唐伊条约纪念地",
+          "Waitangi Treaty Grounds"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          174.08176,
+          -35.265872
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Waitangi, Northland.",
+            "id": "nz-visitor:waitangi-visit",
+            "license": null,
+            "publisher": "Waitangi National Trust",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 304c6d5a77fba5d4d7aafeaca2956c94928c2164106c4801564bb1f8947f2fe9",
+            "title": "Waitangi Treaty Grounds · public visitor information",
+            "uri": "https://www.waitangi.org.nz/visit/opening-hours"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 174.08176, latitude -35.265872",
+            "id": "wikidata:Q79311796",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2106407838; P625 statement Q79311796$F2F24828-FC56-450A-803B-424E95FE1686",
+            "title": "Waitangi Treaty Grounds · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q79311796.json"
+          }
+        ],
+        "source_uri": "https://www.waitangi.org.nz/visit/opening-hours",
+        "title": "Waitangi Treaty Grounds",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "waitangi-visit.html",
+          "sha256": "304c6d5a77fba5d4d7aafeaca2956c94928c2164106c4801564bb1f8947f2fe9",
+          "uri": "https://www.waitangi.org.nz/visit/opening-hours"
+        },
+        {
+          "filename": "Q79311796.json",
+          "sha256": "c7cb49a26687f45dc3be58c3c59abd17028b64a316d23ee96f57c1e7b62f2674",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q79311796.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Earth representative point from the matching Wikidata item. The site operator identifies public visitor scope.",
+        "point": [
+          174.972,
+          -39.2709
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q913679.json",
+        "statement_id": "q913679$97C4C57C-8C95-4F76-8EE2-62DE752AD2D0"
+      },
+      "independent_review": {
+        "method": "Checked each original archive, exact active Wikidata Earth statement, visit restrictions and existing representative or component points. Verified named property identity, distinct international homonyms and outdoor, reconstructed or hosted-visit scope.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The Department of Conservation maintains the named historic bridge for visitors on the Whanganui Journey.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Reviewed the named publicly interpreted heritage place and published representative point.",
+          "note": "This point-only review records no dated historical stage.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Department of Conservation Te Papa Atawhai",
+          "Wikidata contributors"
+        ],
+        "description": "Bridge to Nowhere is a publicly interpreted heritage place, Whanganui National Park, Manawatū-Whanganui, Aotearoa New Zealand.",
+        "description_zh": "无径之桥位于新西兰 Whanganui National Park, Manawatū-Whanganui。运营方发布了这处文化遗产的公众参观资料。",
+        "details": "The Department of Conservation maintains the named historic bridge for visitors on the Whanganui Journey. The map shows one representative point.",
+        "geography": {
+          "authority_id": "supplement:auth:nz-public:Q913679",
+          "countries": [
+            "NZ"
+          ],
+          "note": "Current locality in the visitor information: Whanganui National Park, Manawatū-Whanganui.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Whanganui National Park, Manawatū-Whanganui.",
+            "id": "nz-visitor:bridge-to-nowhere",
+            "license": null,
+            "publisher": "Department of Conservation Te Papa Atawhai",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 c810b6f04e3eaf6aa22f8a9f7607011d8fc8074ed299370c793f4065f5b3bf57",
+            "title": "Bridge to Nowhere · public visitor information",
+            "uri": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/manawatu-whanganui/places/whanganui-national-park/bridge-to-nowhere/"
+          }
+        },
+        "id": "auth:nz-public:Q913679",
+        "location_precision": null,
+        "names": [
+          "无径之桥",
+          "Bridge to Nowhere"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          174.972,
+          -39.2709
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator provides public visitor information for this named heritage place near Whanganui National Park, Manawatū-Whanganui.",
+            "id": "nz-visitor:bridge-to-nowhere",
+            "license": null,
+            "publisher": "Department of Conservation Te Papa Atawhai",
+            "revision": "Published page reviewed 2026-11-28; SHA-256 c810b6f04e3eaf6aa22f8a9f7607011d8fc8074ed299370c793f4065f5b3bf57",
+            "title": "Bridge to Nowhere · public visitor information",
+            "uri": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/manawatu-whanganui/places/whanganui-national-park/bridge-to-nowhere/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 174.972, latitude -39.2709",
+            "id": "wikidata:Q913679",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2352362139; P625 statement q913679$97C4C57C-8C95-4F76-8EE2-62DE752AD2D0",
+            "title": "Bridge to Nowhere · representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q913679.json"
+          }
+        ],
+        "source_uri": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/manawatu-whanganui/places/whanganui-national-park/bridge-to-nowhere/",
+        "title": "Bridge to Nowhere",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "bridge-to-nowhere.html",
+          "sha256": "c810b6f04e3eaf6aa22f8a9f7607011d8fc8074ed299370c793f4065f5b3bf57",
+          "uri": "https://www.doc.govt.nz/parks-and-recreation/places-to-go/manawatu-whanganui/places/whanganui-national-park/bridge-to-nowhere/"
+        },
+        {
+          "filename": "Q913679.json",
+          "sha256": "0ffa1518155c84565e3b20012e11c96f0cd103f52f3e008e004daf013e89349a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q913679.json"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Twenty-five public cultural properties and archaeological places in Aotearoa New Zealand with checked visitor sources and retained Wikidata points."
+}

@@ -90,10 +90,10 @@ def test_country_catalogue_preserves_original_points_without_inventing_districts
     assert client.get("/api/subdivisions?country=CA").json()["assigned"] == 992
     assert client.get("/api/subdivisions?country=HK").json()["assigned"] == 138
     coverage = client.get("/api/coverage").json()
-    assert coverage["total"] == 4453 and len(coverage["countries"]) == 214
-    assert coverage["locations"] == {"mapped": 4057, "polar": 3, "unknown": 393}
+    assert coverage["total"] == 4514 and len(coverage["countries"]) == 214
+    assert coverage["locations"] == {"mapped": 4118, "polar": 3, "unknown": 393}
     assert coverage["chronology"] == {
-        "reviewed": 156, "insufficient": 1000, "not_reviewed": 3297,
+        "reviewed": 156, "insufficient": 1061, "not_reviewed": 3297,
     }
 
 
@@ -150,5 +150,5 @@ def test_twenty_paired_diagnostics_do_not_create_relevance_judgments(tmp_path: P
         f"sg{number:02d}" for number in range(1, 21)
     ]
     report = evaluate_corpus(tmp_path / "no-model", tmp_path / "sg-rankings.json", queries=queries)
-    assert report["corpus_count"] == 4453 and report["metrics"] is None
+    assert report["corpus_count"] == 4514 and report["metrics"] is None
     assert not report["qrels"]["confirmed"] and not report["runs_complete"]

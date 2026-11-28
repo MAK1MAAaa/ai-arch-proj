@@ -1,0 +1,22 @@
+{
+  "base_count": 4470,
+  "base_ids_sha256": "a4c77ce1cc2f7ee4ab6c570bcea9b3a07bd78029a511e09716aeb28a74013136",
+  "base_sites_sha256": "636b26eddeae9ffe2b2ad9efdb487a95038ec5c7ac6e26cb29d0ff3e3b89d4c5",
+  "cohort_version": "new-zealand-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 25,
+    "total": 4495
+  },
+  "files": {
+    "new_zealand_public_review.json": {
+      "sha256": "ca03ffffdb79bb4c43d3f22e5d0bbf1884bf8cac213cb9df77b6bee4f77b3dc3"
+    },
+    "new_zealand_public_sites.json": {
+      "sha256": "dba29f8e7562b2df0f30787353a143f3c8b78cb05938a00af8fac9c4ea3534dd"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Twenty-five public cultural properties and archaeological places in Aotearoa New Zealand with checked visitor sources and retained Wikidata points."
+}

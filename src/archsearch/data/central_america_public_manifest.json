@@ -1,0 +1,22 @@
+{
+  "base_count": 4453,
+  "base_ids_sha256": "18199e52c65739fdfa7b96dd056a3c7d0ee5f3f49dceccd7f02e19a132e3dc00",
+  "base_sites_sha256": "722ac5a1add90e90b11711312b114387d8e4fbb893ca73a4c60fb274658180f3",
+  "cohort_version": "public-central-america-colombia-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 9,
+    "total": 4462
+  },
+  "files": {
+    "central_america_public_review.json": {
+      "sha256": "03aa02e5faf3c14747413a1a62e0d431a5a28509b3398690851973a60d7ee517"
+    },
+    "central_america_public_sites.json": {
+      "sha256": "1fd5f68277153eff34d2e7d48d52ddc956ee3c22ed9432759891e350c1b5388f"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Nine publicly interpreted cultural places in Costa Rica, Panama and Colombia, with official scope evidence and structured representative points."
+}
