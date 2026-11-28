@@ -1,0 +1,1319 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and official visitor scope checked.",
+      "note": "No independently reviewed dated historical phase is assigned in this batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Bhutan Department of Tourism",
+      "Haa Dzongkhag Administration",
+      "Wikidata contributors"
+    ],
+    "description": "The original temple precinct in Paro. Access is limited to the custodian's permitted visitor areas and times, including temporary ritual closures.",
+    "description_zh": "吉楚拉康寺公开区位于不丹，点位表示具名原址。现场参观范围以所列主管方资料为准。",
+    "details": "The original temple precinct in Paro. Access is limited to the custodian's permitted visitor areas and times, including temporary ritual closures.",
+    "geography": {
+      "authority_id": "supplement:auth:bt-public:Q1795009",
+      "countries": [
+        "BT"
+      ],
+      "note": "Named original place. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism ministry names Kyichu in its managed monument admissions notice.",
+        "id": "auth:bt-public:Q1795009:bt-tickets.pdf",
+        "license": null,
+        "publisher": "Bhutan Department of Tourism",
+        "revision": "Frozen source file 2026-11-28, SHA-256 a2fcbc09df006103270569ea99253626c627aca582e534782a02c807b9ee1eb6.",
+        "title": "Kyichu Lhakhang public precinct public visit and identity",
+        "uri": "https://a.storyblok.com/f/171618/x/3598a444f8/entry-fee-for-monument-sites.pdf"
+      }
+    },
+    "id": "auth:bt-public:Q1795009",
+    "location_precision": null,
+    "names": [
+      "སྐྱིད་ཆུ་ལྷ་ཁང་",
+      "吉楚拉康寺公开区"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      89.37555556,
+      27.44111111
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism ministry names Kyichu in its managed monument admissions notice.",
+        "id": "auth:bt-public:Q1795009:bt-tickets.pdf",
+        "license": null,
+        "publisher": "Bhutan Department of Tourism",
+        "revision": "Frozen source file 2026-11-28, SHA-256 a2fcbc09df006103270569ea99253626c627aca582e534782a02c807b9ee1eb6.",
+        "title": "Kyichu Lhakhang public precinct public visit and identity",
+        "uri": "https://a.storyblok.com/f/171618/x/3598a444f8/entry-fee-for-monument-sites.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The district government identifies the historic Kyichu Lhakhang as the specific temple at Paro.",
+        "id": "auth:bt-public:Q1795009:bt-haa-bali.html",
+        "license": null,
+        "publisher": "Haa Dzongkhag Administration",
+        "revision": "Frozen source file 2026-11-28, SHA-256 46790c4a1149520974d4696e5e0ed57d60e84cd15a22e88e2aa15c7e8ce3bf2c.",
+        "title": "Kyichu Lhakhang public precinct public visit and identity",
+        "uri": "https://haa.gov.bt/tourism/bali-lhakhang/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 89.37555556, latitude 27.44111111.",
+        "id": "wikidata:Q1795009",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2568326729, statement Q1795009$65E3C1BF-7522-45B3-95B4-B43CC2353AE2.",
+        "title": "Kyichu Lhakhang public precinct representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1795009.json"
+      }
+    ],
+    "source_uri": "https://a.storyblok.com/f/171618/x/3598a444f8/entry-fee-for-monument-sites.pdf",
+    "title": "Kyichu Lhakhang public precinct",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and official visitor scope checked.",
+      "note": "No independently reviewed dated historical phase is assigned in this batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Bhutan Department of Tourism",
+      "Wikidata contributors"
+    ],
+    "description": "The historic dzong complex in Thimphu. Scope is limited to the admitted visitor route as directed by the religious and government custodians.",
+    "description_zh": "扎西曲宗许可参观区位于不丹，点位表示具名原址。现场参观范围以所列主管方资料为准。",
+    "details": "The historic dzong complex in Thimphu. Scope is limited to the admitted visitor route as directed by the religious and government custodians.",
+    "geography": {
+      "authority_id": "supplement:auth:bt-public:Q1896299",
+      "countries": [
+        "BT"
+      ],
+      "note": "Named original place. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism ministry names Tashichho Dzong in its managed monument admissions notice.",
+        "id": "auth:bt-public:Q1896299:bt-tickets.pdf",
+        "license": null,
+        "publisher": "Bhutan Department of Tourism",
+        "revision": "Frozen source file 2026-11-28, SHA-256 a2fcbc09df006103270569ea99253626c627aca582e534782a02c807b9ee1eb6.",
+        "title": "Tashichho Dzong permitted visitor precinct public visit and identity",
+        "uri": "https://a.storyblok.com/f/171618/x/3598a444f8/entry-fee-for-monument-sites.pdf"
+      }
+    },
+    "id": "auth:bt-public:Q1896299",
+    "location_precision": null,
+    "names": [
+      "བཀྲ་ཤིས་ཆོས་རྫོང་",
+      "扎西曲宗许可参观区"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      89.635,
+      27.489444444444
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism ministry names Tashichho Dzong in its managed monument admissions notice.",
+        "id": "auth:bt-public:Q1896299:bt-tickets.pdf",
+        "license": null,
+        "publisher": "Bhutan Department of Tourism",
+        "revision": "Frozen source file 2026-11-28, SHA-256 a2fcbc09df006103270569ea99253626c627aca582e534782a02c807b9ee1eb6.",
+        "title": "Tashichho Dzong permitted visitor precinct public visit and identity",
+        "uri": "https://a.storyblok.com/f/171618/x/3598a444f8/entry-fee-for-monument-sites.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The government publishes religious monument visitor rules; admission arrangements apply to designated visitor access.",
+        "id": "auth:bt-public:Q1896299:bt-tourist-announcements.html",
+        "license": null,
+        "publisher": "Bhutan Department of Tourism",
+        "revision": "Frozen source file 2026-11-28, SHA-256 37c9641ae55e3835f69d692db00ed7291749f37222aad26e7fd1d43b01c32547.",
+        "title": "Tashichho Dzong permitted visitor precinct public visit and identity",
+        "uri": "https://bhutan.travel/announcements"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 89.635, latitude 27.489444444444.",
+        "id": "wikidata:Q1896299",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2485961676, statement q1896299$30B9FE58-1D3D-4942-B724-8E287E223A8B.",
+        "title": "Tashichho Dzong permitted visitor precinct representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1896299.json"
+      }
+    ],
+    "source_uri": "https://a.storyblok.com/f/171618/x/3598a444f8/entry-fee-for-monument-sites.pdf",
+    "title": "Tashichho Dzong permitted visitor precinct",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and official visitor scope checked.",
+      "note": "No independently reviewed dated historical phase is assigned in this batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Bumthang Dzongkhag Administration",
+      "Bhutan Department of Tourism",
+      "Wikidata contributors"
+    ],
+    "description": "The historic Jambay temple in Bumthang. Public access concerns the designated visitor and festival precinct, following the religious custodian's rules.",
+    "description_zh": "强巴拉康寺公开区位于不丹，点位表示具名原址。现场参观范围以所列主管方资料为准。",
+    "details": "The historic Jambay temple in Bumthang. Public access concerns the designated visitor and festival precinct, following the religious custodian's rules.",
+    "geography": {
+      "authority_id": "supplement:auth:bt-public:Q2079524",
+      "countries": [
+        "BT"
+      ],
+      "note": "Named original place. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The district visitor site identifies the historic Jambay Temple in Bumthang.",
+        "id": "auth:bt-public:Q2079524:bt-jambay-county.html",
+        "license": null,
+        "publisher": "Bumthang Dzongkhag Administration",
+        "revision": "Frozen source file 2026-11-28, SHA-256 99cd5625beb9c4d0a452a09050e7104857947e23e82b18a9e6a7d29daae9cae9.",
+        "title": "Jambay Lhakhang public precinct public visit and identity",
+        "uri": "https://bumthang.gov.bt/tourism/jambay-lhakhang/"
+      }
+    },
+    "id": "auth:bt-public:Q2079524",
+    "location_precision": null,
+    "names": [
+      "བྱམས་པའི་ལྷ་ཁང་",
+      "强巴拉康寺公开区"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      90.73361111,
+      27.57527778
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The district visitor site identifies the historic Jambay Temple in Bumthang.",
+        "id": "auth:bt-public:Q2079524:bt-jambay-county.html",
+        "license": null,
+        "publisher": "Bumthang Dzongkhag Administration",
+        "revision": "Frozen source file 2026-11-28, SHA-256 99cd5625beb9c4d0a452a09050e7104857947e23e82b18a9e6a7d29daae9cae9.",
+        "title": "Jambay Lhakhang public precinct public visit and identity",
+        "uri": "https://bumthang.gov.bt/tourism/jambay-lhakhang/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism ministry's visitor notice specifies admission treatment for Jambay Lhakhang.",
+        "id": "auth:bt-public:Q2079524:bt-tickets.pdf",
+        "license": null,
+        "publisher": "Bhutan Department of Tourism",
+        "revision": "Frozen source file 2026-11-28, SHA-256 a2fcbc09df006103270569ea99253626c627aca582e534782a02c807b9ee1eb6.",
+        "title": "Jambay Lhakhang public precinct public visit and identity",
+        "uri": "https://a.storyblok.com/f/171618/x/3598a444f8/entry-fee-for-monument-sites.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 90.73361111, latitude 27.57527778.",
+        "id": "wikidata:Q2079524",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2408812624, statement Q2079524$9D74BA59-0C67-4489-898E-BC7DB31602AD.",
+        "title": "Jambay Lhakhang public precinct representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2079524.json"
+      }
+    ],
+    "source_uri": "https://bumthang.gov.bt/tourism/jambay-lhakhang/",
+    "title": "Jambay Lhakhang public precinct",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and official visitor scope checked.",
+      "note": "No independently reviewed dated historical phase is assigned in this batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Bhutan Department of Tourism",
+      "Wikidata contributors"
+    ],
+    "description": "The original Simtokha fortress-monastery site outside central Thimphu. The record describes the designated visitor approach and any areas open with the custodian's permission.",
+    "description_zh": "辛托卡宗公开区位于不丹，点位表示具名原址。现场参观范围以所列主管方资料为准。",
+    "details": "The original Simtokha fortress-monastery site outside central Thimphu. The record describes the designated visitor approach and any areas open with the custodian's permission.",
+    "geography": {
+      "authority_id": "supplement:auth:bt-public:Q2080429",
+      "countries": [
+        "BT"
+      ],
+      "note": "Named original place. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism ministry names Simtokha Dzong in its monument visitor arrangements.",
+        "id": "auth:bt-public:Q2080429:bt-tickets.pdf",
+        "license": null,
+        "publisher": "Bhutan Department of Tourism",
+        "revision": "Frozen source file 2026-11-28, SHA-256 a2fcbc09df006103270569ea99253626c627aca582e534782a02c807b9ee1eb6.",
+        "title": "Simtokha Dzong public precinct public visit and identity",
+        "uri": "https://a.storyblok.com/f/171618/x/3598a444f8/entry-fee-for-monument-sites.pdf"
+      }
+    },
+    "id": "auth:bt-public:Q2080429",
+    "location_precision": null,
+    "names": [
+      "Semtokha Dzong",
+      "辛托卡宗公开区"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      89.669444444444,
+      27.438055555556
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism ministry names Simtokha Dzong in its monument visitor arrangements.",
+        "id": "auth:bt-public:Q2080429:bt-tickets.pdf",
+        "license": null,
+        "publisher": "Bhutan Department of Tourism",
+        "revision": "Frozen source file 2026-11-28, SHA-256 a2fcbc09df006103270569ea99253626c627aca582e534782a02c807b9ee1eb6.",
+        "title": "Simtokha Dzong public precinct public visit and identity",
+        "uri": "https://a.storyblok.com/f/171618/x/3598a444f8/entry-fee-for-monument-sites.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Admissions and guidance for designated religious monuments are published by the Department of Tourism.",
+        "id": "auth:bt-public:Q2080429:bt-tourist-announcements.html",
+        "license": null,
+        "publisher": "Bhutan Department of Tourism",
+        "revision": "Frozen source file 2026-11-28, SHA-256 37c9641ae55e3835f69d692db00ed7291749f37222aad26e7fd1d43b01c32547.",
+        "title": "Simtokha Dzong public precinct public visit and identity",
+        "uri": "https://bhutan.travel/announcements"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 89.669444444444, latitude 27.438055555556.",
+        "id": "wikidata:Q2080429",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2429097434, statement q2080429$0B74251D-CFFF-459A-B949-975DD3044422.",
+        "title": "Simtokha Dzong public precinct representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2080429.json"
+      }
+    ],
+    "source_uri": "https://a.storyblok.com/f/171618/x/3598a444f8/entry-fee-for-monument-sites.pdf",
+    "title": "Simtokha Dzong public precinct",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and official visitor scope checked.",
+      "note": "No independently reviewed dated historical phase is assigned in this batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Bhutan Department of Tourism",
+      "Wikidata contributors"
+    ],
+    "description": "The working historic Chimi temple and its public approach in Punakha. Entry follows the published visitor system and custodial permissions.",
+    "description_zh": "切米拉康寺公开区位于不丹，点位表示具名原址。现场参观范围以所列主管方资料为准。",
+    "details": "The working historic Chimi temple and its public approach in Punakha. Entry follows the published visitor system and custodial permissions.",
+    "geography": {
+      "authority_id": "supplement:auth:bt-public:Q5099371",
+      "countries": [
+        "BT"
+      ],
+      "note": "Named original place. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The official visitor guide lists Chimi Lhakhang as a monastery to visit.",
+        "id": "auth:bt-public:Q5099371:bt-tourist-wellbeing.html",
+        "license": null,
+        "publisher": "Bhutan Department of Tourism",
+        "revision": "Frozen source file 2026-11-28, SHA-256 8033b316936aa5c2ef1f0b6828e0f462b090222f96f5bc4487109bf89634e95b.",
+        "title": "Chimi Lhakhang public precinct public visit and identity",
+        "uri": "https://bhutan.travel/experiences-wellness-and-wellbeing"
+      }
+    },
+    "id": "auth:bt-public:Q5099371",
+    "location_precision": null,
+    "names": [
+      "Chhimi Lhakhang",
+      "切米拉康寺公开区"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      89.8782,
+      27.527
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The official visitor guide lists Chimi Lhakhang as a monastery to visit.",
+        "id": "auth:bt-public:Q5099371:bt-tourist-wellbeing.html",
+        "license": null,
+        "publisher": "Bhutan Department of Tourism",
+        "revision": "Frozen source file 2026-11-28, SHA-256 8033b316936aa5c2ef1f0b6828e0f462b090222f96f5bc4487109bf89634e95b.",
+        "title": "Chimi Lhakhang public precinct public visit and identity",
+        "uri": "https://bhutan.travel/experiences-wellness-and-wellbeing"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The official route includes the walking visit to the named original temple.",
+        "id": "auth:bt-public:Q5099371:bt-tourist-cycling.html",
+        "license": null,
+        "publisher": "Bhutan Department of Tourism",
+        "revision": "Frozen source file 2026-11-28, SHA-256 c6dcc9745e93b3721e4991495793d72edf8c7a6616e344f792d532724bb7687a.",
+        "title": "Chimi Lhakhang public precinct public visit and identity",
+        "uri": "https://bhutan.travel/journal/editorial/cycling-holidays-in-bhutan"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism ministry names Chhimi Lhakhang in its managed monument admissions notice.",
+        "id": "auth:bt-public:Q5099371:bt-tickets.pdf",
+        "license": null,
+        "publisher": "Bhutan Department of Tourism",
+        "revision": "Frozen source file 2026-11-28, SHA-256 a2fcbc09df006103270569ea99253626c627aca582e534782a02c807b9ee1eb6.",
+        "title": "Chimi Lhakhang public precinct public visit and identity",
+        "uri": "https://a.storyblok.com/f/171618/x/3598a444f8/entry-fee-for-monument-sites.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 89.8782, latitude 27.527.",
+        "id": "wikidata:Q5099371",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2464143614, statement Q5099371$67a540ea-4fb9-049e-1cf2-8787faedd351.",
+        "title": "Chimi Lhakhang public precinct representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5099371.json"
+      }
+    ],
+    "source_uri": "https://bhutan.travel/experiences-wellness-and-wellbeing",
+    "title": "Chimi Lhakhang public precinct",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and official visitor scope checked.",
+      "note": "No independently reviewed dated historical phase is assigned in this batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Bhutan Department of Tourism",
+      "Wikidata contributors"
+    ],
+    "description": "The national memorial stupa in Thimphu. The public scope covers the stupa courtyard and circumambulation under the posted visit arrangements.",
+    "description_zh": "廷布国家纪念塔位于不丹，点位表示具名原址。现场参观范围以所列主管方资料为准。",
+    "details": "The national memorial stupa in Thimphu. The public scope covers the stupa courtyard and circumambulation under the posted visit arrangements.",
+    "geography": {
+      "authority_id": "supplement:auth:bt-public:Q864865",
+      "countries": [
+        "BT"
+      ],
+      "note": "Named original place. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The official tourism portal identifies the monument and describes the prayer-wheel and circumambulation route.",
+        "id": "auth:bt-public:Q864865:bt-memorial-tourism.html",
+        "license": null,
+        "publisher": "Bhutan Department of Tourism",
+        "revision": "Frozen source file 2026-11-28, SHA-256 400bb318226bfa9421fa6c32aa884b580d9aa1a34b9a52f1100b6d64dbd00122.",
+        "title": "National Memorial Chorten public visit and identity",
+        "uri": "https://bhutan.travel/journal/editorial/reaching-for-the-stars"
+      }
+    },
+    "id": "auth:bt-public:Q864865",
+    "location_precision": null,
+    "names": [
+      "National Memorial Choeten",
+      "廷布国家纪念塔"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      89.63777778,
+      27.46638889
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The official tourism portal identifies the monument and describes the prayer-wheel and circumambulation route.",
+        "id": "auth:bt-public:Q864865:bt-memorial-tourism.html",
+        "license": null,
+        "publisher": "Bhutan Department of Tourism",
+        "revision": "Frozen source file 2026-11-28, SHA-256 400bb318226bfa9421fa6c32aa884b580d9aa1a34b9a52f1100b6d64dbd00122.",
+        "title": "National Memorial Chorten public visit and identity",
+        "uri": "https://bhutan.travel/journal/editorial/reaching-for-the-stars"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism ministry names the Memorial Chorten in its managed monument admissions notice.",
+        "id": "auth:bt-public:Q864865:bt-tickets.pdf",
+        "license": null,
+        "publisher": "Bhutan Department of Tourism",
+        "revision": "Frozen source file 2026-11-28, SHA-256 a2fcbc09df006103270569ea99253626c627aca582e534782a02c807b9ee1eb6.",
+        "title": "National Memorial Chorten public visit and identity",
+        "uri": "https://a.storyblok.com/f/171618/x/3598a444f8/entry-fee-for-monument-sites.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 89.63777778, latitude 27.46638889.",
+        "id": "wikidata:Q864865",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2181826386, statement Q864865$B6E43DDD-251D-47DD-8A79-88A4A98A5BF5.",
+        "title": "National Memorial Chorten representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q864865.json"
+      }
+    ],
+    "source_uri": "https://bhutan.travel/journal/editorial/reaching-for-the-stars",
+    "title": "National Memorial Chorten",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and official visitor scope checked.",
+      "note": "No independently reviewed dated historical phase is assigned in this batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Lao Tourism Marketing Department",
+      "Wikidata contributors"
+    ],
+    "description": "Historic worship site in Savannakhet. Public scope covers the visitor and festival grounds around the stupa, subject to local religious and conservation rules.",
+    "description_zh": "因杭塔公开区位于老挝，点位表示具名原址。现场参观范围以所列主管方资料为准。",
+    "details": "Historic worship site in Savannakhet. Public scope covers the visitor and festival grounds around the stupa, subject to local religious and conservation rules. Current official festival listings identify the public gathering grounds; restoration can restrict access near the structure.",
+    "geography": {
+      "authority_id": "supplement:auth:la-public:Q107363306",
+      "countries": [
+        "LA"
+      ],
+      "note": "Named original place. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial tourism guide identifies the named original stupa and conditions for entry to the religious grounds.",
+        "id": "auth:la-public:Q107363306:la-savannakhet-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 ed8f9724866ced4758115b48a93dfbd36a6a2bfeb219fb943adb0265a5b3e292.",
+        "title": "That Ing Hang Stupa public precinct public visit and identity",
+        "uri": "https://www.tourismlaos.org/central-provinces/savannakhet-province/"
+      }
+    },
+    "id": "auth:la-public:Q107363306",
+    "location_precision": null,
+    "names": [
+      "ພຣະທາດອີງຮັງ",
+      "因杭塔公开区"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      104.85121017754865,
+      16.608783679092273
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial tourism guide identifies the named original stupa and conditions for entry to the religious grounds.",
+        "id": "auth:la-public:Q107363306:la-savannakhet-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 ed8f9724866ced4758115b48a93dfbd36a6a2bfeb219fb943adb0265a5b3e292.",
+        "title": "That Ing Hang Stupa public precinct public visit and identity",
+        "uri": "https://www.tourismlaos.org/central-provinces/savannakhet-province/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The 2026 visitor calendar identifies the public festival grounds at the named stupa.",
+        "id": "auth:la-public:Q107363306:la-inghang-2026-web.txt",
+        "license": null,
+        "publisher": "Tourism Laos",
+        "revision": "Retrieved 2026-11-28; SHA-256 4fbf41260b71c3807e8bf1ac3599e841b3e42c430ae474ddf9233408a94ff859.",
+        "title": "That Ing Hang current festival venue",
+        "uri": "https://www.tourismlaos.org/event/that-inghang-festival-in-savannakhet-province-2/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 104.85121017754865, latitude 16.608783679092273.",
+        "id": "wikidata:Q107363306",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2520685614, statement Q107363306$60f16779-4be3-9241-bf31-1d689815e597.",
+        "title": "That Ing Hang Stupa public precinct representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q107363306.json"
+      }
+    ],
+    "source_uri": "https://www.tourismlaos.org/central-provinces/savannakhet-province/",
+    "title": "That Ing Hang Stupa public precinct",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and official visitor scope checked.",
+      "note": "No independently reviewed dated historical phase is assigned in this batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Lao Tourism Marketing Department",
+      "Lao News Agency",
+      "Wikidata contributors"
+    ],
+    "description": "The working Vientiane temple's publicly described shrine precinct and exterior visitor route. Access follows custodial and religious restrictions.",
+    "description_zh": "西孟寺公开区位于老挝，点位表示具名原址。现场参观范围以所列主管方资料为准。",
+    "details": "The working Vientiane temple's publicly described shrine precinct and exterior visitor route. Access follows custodial and religious restrictions.",
+    "geography": {
+      "authority_id": "supplement:auth:la-public:Q1441659",
+      "countries": [
+        "LA"
+      ],
+      "note": "Named original place. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The site is on the city's named Buddhist site route and is the departure precinct for the annual procession.",
+        "id": "auth:la-public:Q1441659:la-vientiane-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 90df2f0f6e1e0a970471133ca3612a4ece6c562ae9dc2ce9ab855a9c1f68be0b.",
+        "title": "Wat Si Muang public precinct public visit and identity",
+        "uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/"
+      }
+    },
+    "id": "auth:la-public:Q1441659",
+    "location_precision": null,
+    "names": [
+      "ວັດສີເມືອງ",
+      "西孟寺公开区"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      102.617,
+      17.9579
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The site is on the city's named Buddhist site route and is the departure precinct for the annual procession.",
+        "id": "auth:la-public:Q1441659:la-vientiane-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 90df2f0f6e1e0a970471133ca3612a4ece6c562ae9dc2ce9ab855a9c1f68be0b.",
+        "title": "Wat Si Muang public precinct public visit and identity",
+        "uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The 2026 visitor listing identifies Wat Si Muang as a living religious place.",
+        "id": "auth:la-public:Q1441659:la-kpl-capital.html",
+        "license": null,
+        "publisher": "Lao News Agency",
+        "revision": "Frozen source file 2026-11-28, SHA-256 39dca7612a345c71ae4e80cd8f0541b62550bf57e41804c7e988802da232d77b.",
+        "title": "Wat Si Muang public precinct public visit and identity",
+        "uri": "https://kpl.gov.la/EN/Detail.aspx?id=106044"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 102.617, latitude 17.9579.",
+        "id": "wikidata:Q1441659",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2440764792, statement Q1441659$93339806-9776-4C20-9B8A-E935BFBB6A19.",
+        "title": "Wat Si Muang public precinct representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1441659.json"
+      }
+    ],
+    "source_uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/",
+    "title": "Wat Si Muang public precinct",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and official visitor scope checked.",
+      "note": "No independently reviewed dated historical phase is assigned in this batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Lao Tourism Marketing Department",
+      "Lao News Agency",
+      "Wikidata contributors"
+    ],
+    "description": "Historic temple on its original site in central Vientiane. Public visitation follows the posted ticket schedule for the historic complex and its cloister.",
+    "description_zh": "西萨格寺位于老挝，点位表示具名原址。现场参观范围以所列主管方资料为准。",
+    "details": "Historic temple on its original site in central Vientiane. Public visitation follows the posted ticket schedule for the historic complex and its cloister.",
+    "geography": {
+      "authority_id": "supplement:auth:la-public:Q1442048",
+      "countries": [
+        "LA"
+      ],
+      "note": "Named original place. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism department describes the surviving temple and cloister and publishes admission and visiting times.",
+        "id": "auth:la-public:Q1442048:la-vientiane-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 90df2f0f6e1e0a970471133ca3612a4ece6c562ae9dc2ce9ab855a9c1f68be0b.",
+        "title": "Wat Si Saket public visit and identity",
+        "uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/"
+      }
+    },
+    "id": "auth:la-public:Q1442048",
+    "location_precision": null,
+    "names": [
+      "ວັດສີສະເກດ",
+      "西萨格寺"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      102.61111111111111,
+      17.96306111111111
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism department describes the surviving temple and cloister and publishes admission and visiting times.",
+        "id": "auth:la-public:Q1442048:la-vientiane-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 90df2f0f6e1e0a970471133ca3612a4ece6c562ae9dc2ce9ab855a9c1f68be0b.",
+        "title": "Wat Si Saket public visit and identity",
+        "uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national news service names Wat Sisaket as a Vientiane visitor site in August 2026.",
+        "id": "auth:la-public:Q1442048:la-kpl-capital.html",
+        "license": null,
+        "publisher": "Lao News Agency",
+        "revision": "Frozen source file 2026-11-28, SHA-256 39dca7612a345c71ae4e80cd8f0541b62550bf57e41804c7e988802da232d77b.",
+        "title": "Wat Si Saket public visit and identity",
+        "uri": "https://kpl.gov.la/EN/Detail.aspx?id=106044"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 102.61111111111111, latitude 17.96306111111111.",
+        "id": "wikidata:Q1442048",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2549876081, statement q1442048$6C15C809-F803-4EDD-BE17-04D96C67770D.",
+        "title": "Wat Si Saket representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1442048.json"
+      }
+    ],
+    "source_uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/",
+    "title": "Wat Si Saket",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and official visitor scope checked.",
+      "note": "No independently reviewed dated historical phase is assigned in this batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Lao Tourism Marketing Department",
+      "Lao News Agency",
+      "Wikidata contributors"
+    ],
+    "description": "Former royal temple rebuilt on its original Vientiane site and now used as a museum. The public scope is the museum and its visitor terrace.",
+    "description_zh": "万象玉佛寺博物馆位于老挝，点位表示具名原址。现场参观范围以所列主管方资料为准。",
+    "details": "Former royal temple rebuilt on its original Vientiane site and now used as a museum. The public scope is the museum and its visitor terrace.",
+    "geography": {
+      "authority_id": "supplement:auth:la-public:Q1442509",
+      "countries": [
+        "LA"
+      ],
+      "note": "Named original place. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism department identifies the original royal temple site, the later reconstruction, and the museum and terrace visit.",
+        "id": "auth:la-public:Q1442509:la-vientiane-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 90df2f0f6e1e0a970471133ca3612a4ece6c562ae9dc2ce9ab855a9c1f68be0b.",
+        "title": "Ho Phra Keo Museum public visit and identity",
+        "uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/"
+      }
+    },
+    "id": "auth:la-public:Q1442509",
+    "location_precision": null,
+    "names": [
+      "ຫໍພະແກ້ວ",
+      "万象玉佛寺博物馆"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      102.61166666667,
+      17.961388888889
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism department identifies the original royal temple site, the later reconstruction, and the museum and terrace visit.",
+        "id": "auth:la-public:Q1442509:la-vientiane-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 90df2f0f6e1e0a970471133ca3612a4ece6c562ae9dc2ce9ab855a9c1f68be0b.",
+        "title": "Ho Phra Keo Museum public visit and identity",
+        "uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national news agency identifies Ho Phra Keo as the former royal temple and current museum.",
+        "id": "auth:la-public:Q1442509:la-kpl-capital.html",
+        "license": null,
+        "publisher": "Lao News Agency",
+        "revision": "Frozen source file 2026-11-28, SHA-256 39dca7612a345c71ae4e80cd8f0541b62550bf57e41804c7e988802da232d77b.",
+        "title": "Ho Phra Keo Museum public visit and identity",
+        "uri": "https://kpl.gov.la/EN/Detail.aspx?id=106044"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 102.61166666667, latitude 17.961388888889.",
+        "id": "wikidata:Q1442509",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2474997126, statement q1442509$4C892270-67EC-44F5-B5A4-3E9A0B896506.",
+        "title": "Ho Phra Keo Museum representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1442509.json"
+      }
+    ],
+    "source_uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/",
+    "title": "Ho Phra Keo Museum",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and official visitor scope checked.",
+      "note": "No independently reviewed dated historical phase is assigned in this batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Lao Tourism Marketing Department",
+      "Lao News Agency",
+      "Wikidata contributors"
+    ],
+    "description": "The in-place postwar memorial on Lane Xang Avenue. Public scope covers the visitor plaza and the monument route when the posted admission is operating.",
+    "description_zh": "万象凯旋门位于老挝，点位表示具名原址。现场参观范围以所列主管方资料为准。",
+    "details": "The in-place postwar memorial on Lane Xang Avenue. Public scope covers the visitor plaza and the monument route when the posted admission is operating.",
+    "geography": {
+      "authority_id": "supplement:auth:la-public:Q1442518",
+      "countries": [
+        "LA"
+      ],
+      "note": "Named original place. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism department describes access to the original monument and its visitor stairs.",
+        "id": "auth:la-public:Q1442518:la-vientiane-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 90df2f0f6e1e0a970471133ca3612a4ece6c562ae9dc2ce9ab855a9c1f68be0b.",
+        "title": "Patuxai Victory Monument public visit and identity",
+        "uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/"
+      }
+    },
+    "id": "auth:la-public:Q1442518",
+    "location_precision": null,
+    "names": [
+      "ປະຕູໄຊ",
+      "万象凯旋门"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      102.61861111111,
+      17.970555555556
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism department describes access to the original monument and its visitor stairs.",
+        "id": "auth:la-public:Q1442518:la-vientiane-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 90df2f0f6e1e0a970471133ca3612a4ece6c562ae9dc2ce9ab855a9c1f68be0b.",
+        "title": "Patuxai Victory Monument public visit and identity",
+        "uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national news service identifies the monument and its public park as a Vientiane visitor place.",
+        "id": "auth:la-public:Q1442518:la-kpl-capital.html",
+        "license": null,
+        "publisher": "Lao News Agency",
+        "revision": "Frozen source file 2026-11-28, SHA-256 39dca7612a345c71ae4e80cd8f0541b62550bf57e41804c7e988802da232d77b.",
+        "title": "Patuxai Victory Monument public visit and identity",
+        "uri": "https://kpl.gov.la/EN/Detail.aspx?id=106044"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 102.61861111111, latitude 17.970555555556.",
+        "id": "wikidata:Q1442518",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2558734254, statement q1442518$47583EC7-5963-40AC-87D4-F769219FA69B.",
+        "title": "Patuxai Victory Monument representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1442518.json"
+      }
+    ],
+    "source_uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/",
+    "title": "Patuxai Victory Monument",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and official visitor scope checked.",
+      "note": "No independently reviewed dated historical phase is assigned in this batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Lao Tourism Marketing Department",
+      "Wikidata contributors"
+    ],
+    "description": "The ruins and surviving seated Buddha on the original Muang Khoun temple site, covered by the provincial visitor trail.",
+    "description_zh": "芒坤皮亚瓦寺遗址位于老挝，点位表示具名原址。现场参观范围以所列主管方资料为准。",
+    "details": "The ruins and surviving seated Buddha on the original Muang Khoun temple site, covered by the provincial visitor trail.",
+    "geography": {
+      "authority_id": "supplement:auth:la-public:Q25706380",
+      "countries": [
+        "LA"
+      ],
+      "note": "Named original place. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The old Phuan centre itinerary describes an on-site trail to Vat Phiawat and the surviving Buddha.",
+        "id": "auth:la-public:Q25706380:la-xiangkhouang-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 2ed1d5548389d67c460b87ddaa5180e45032946e61070d7dd4a749c903df64f3.",
+        "title": "Wat Phia Wat ruins public visit and identity",
+        "uri": "https://www.tourismlaos.org/northern-provinces/xiangkhouang-province/"
+      }
+    },
+    "id": "auth:la-public:Q25706380",
+    "location_precision": null,
+    "names": [
+      "ວັດເພຍວັດ",
+      "芒坤皮亚瓦寺遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      103.37,
+      19.328055555555554
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The old Phuan centre itinerary describes an on-site trail to Vat Phiawat and the surviving Buddha.",
+        "id": "auth:la-public:Q25706380:la-xiangkhouang-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 2ed1d5548389d67c460b87ddaa5180e45032946e61070d7dd4a749c903df64f3.",
+        "title": "Wat Phia Wat ruins public visit and identity",
+        "uri": "https://www.tourismlaos.org/northern-provinces/xiangkhouang-province/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 103.37, latitude 19.328055555555554.",
+        "id": "wikidata:Q25706380",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2458300241, statement Q25706380$0018f9b7-4c4d-293d-ee9b-13ddb46de76a.",
+        "title": "Wat Phia Wat ruins representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q25706380.json"
+      }
+    ],
+    "source_uri": "https://www.tourismlaos.org/northern-provinces/xiangkhouang-province/",
+    "title": "Wat Phia Wat ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and official visitor scope checked.",
+      "note": "No independently reviewed dated historical phase is assigned in this batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Lao Tourism Marketing Department",
+      "Wikidata contributors"
+    ],
+    "description": "The surviving freestanding stupa at the city roundabout near Talat Sao. Exterior street-side viewing is the public scope.",
+    "description_zh": "万象黑塔位于老挝，点位表示具名原址。现场参观范围以所列主管方资料为准。",
+    "details": "The surviving freestanding stupa at the city roundabout near Talat Sao. Exterior street-side viewing is the public scope. A preservation initiative has been published for the stupa; follow current street-side access arrangements.",
+    "geography": {
+      "authority_id": "supplement:auth:la-public:Q4466863",
+      "countries": [
+        "LA"
+      ],
+      "note": "Named original place. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism department identifies the stupa in the public streetscape near the morning market and documents continued local visits.",
+        "id": "auth:la-public:Q4466863:la-vientiane-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 90df2f0f6e1e0a970471133ca3612a4ece6c562ae9dc2ce9ab855a9c1f68be0b.",
+        "title": "That Dam (Black Stupa) public visit and identity",
+        "uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/"
+      }
+    },
+    "id": "auth:la-public:Q4466863",
+    "location_precision": null,
+    "names": [
+      "ທາດດຳ",
+      "万象黑塔"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      102.611,
+      17.966
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism department identifies the stupa in the public streetscape near the morning market and documents continued local visits.",
+        "id": "auth:la-public:Q4466863:la-vientiane-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 90df2f0f6e1e0a970471133ca3612a4ece6c562ae9dc2ce9ab855a9c1f68be0b.",
+        "title": "That Dam (Black Stupa) public visit and identity",
+        "uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 102.611, latitude 17.966.",
+        "id": "wikidata:Q4466863",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2561019612, statement Q4466863$397E6E30-1092-4231-8606-9A6A356738A9.",
+        "title": "That Dam (Black Stupa) representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4466863.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Lao tourism authority describes a preservation initiative at the named stupa.",
+        "id": "auth:la-public:Q4466863:scope-update",
+        "license": null,
+        "publisher": "Tourism Laos",
+        "revision": "Retrieved 2026-11-28; SHA-256 d38a9772bd2961111e5b2ef464e1ee8e0bdc955dc998b2c58c97791f7ec408e3.",
+        "title": "Black Stupa preservation plan",
+        "uri": "https://www.tourismlaos.org/2025/06/04/vientiane-discusses-restoration-plan-of-historic-black-stupa/"
+      }
+    ],
+    "source_uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/",
+    "title": "That Dam (Black Stupa)",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and official visitor scope checked.",
+      "note": "No independently reviewed dated historical phase is assigned in this batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Lao Tourism Marketing Department",
+      "Lao News Agency",
+      "Wikidata contributors"
+    ],
+    "description": "The in-place twentieth-century sculpture garden beside the Mekong, with public circulation within the ticketed garden.",
+    "description_zh": "香昆佛像公园位于老挝，点位表示具名原址。现场参观范围以所列主管方资料为准。",
+    "details": "The in-place twentieth-century sculpture garden beside the Mekong, with public circulation within the ticketed garden.",
+    "geography": {
+      "authority_id": "supplement:auth:la-public:Q655853",
+      "countries": [
+        "LA"
+      ],
+      "note": "Named original place. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism department identifies the sculpture garden under both names and publishes public hours and admission.",
+        "id": "auth:la-public:Q655853:la-vientiane-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 90df2f0f6e1e0a970471133ca3612a4ece6c562ae9dc2ce9ab855a9c1f68be0b.",
+        "title": "Buddha Park (Xieng Khuan) public visit and identity",
+        "uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/"
+      }
+    },
+    "id": "auth:la-public:Q655853",
+    "location_precision": null,
+    "names": [
+      "ສວນວັດທະນະທຳຊຽງຄວນ",
+      "香昆佛像公园"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      102.76509722222222,
+      17.91225
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism department identifies the sculpture garden under both names and publishes public hours and admission.",
+        "id": "auth:la-public:Q655853:la-vientiane-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 90df2f0f6e1e0a970471133ca3612a4ece6c562ae9dc2ce9ab855a9c1f68be0b.",
+        "title": "Buddha Park (Xieng Khuan) public visit and identity",
+        "uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The 2026 visitor listing identifies the Mekong-side park and its Buddhist and Hindu-inspired sculptures.",
+        "id": "auth:la-public:Q655853:la-kpl-capital.html",
+        "license": null,
+        "publisher": "Lao News Agency",
+        "revision": "Frozen source file 2026-11-28, SHA-256 39dca7612a345c71ae4e80cd8f0541b62550bf57e41804c7e988802da232d77b.",
+        "title": "Buddha Park (Xieng Khuan) public visit and identity",
+        "uri": "https://kpl.gov.la/EN/Detail.aspx?id=106044"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 102.76509722222222, latitude 17.91225.",
+        "id": "wikidata:Q655853",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2572547300, statement Q655853$0a639f38-4c37-ef59-3b24-142b3d50cee5.",
+        "title": "Buddha Park (Xieng Khuan) representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q655853.json"
+      }
+    ],
+    "source_uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/",
+    "title": "Buddha Park (Xieng Khuan)",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Named original site and official visitor scope checked.",
+      "note": "No independently reviewed dated historical phase is assigned in this batch.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Lao Tourism Marketing Department",
+      "Wikidata contributors"
+    ],
+    "description": "Original temple site in central Vientiane. Public scope is outside the working temple on the named city walking route, subject to local visitation rules.",
+    "description_zh": "翁德寺外部位于老挝，点位表示具名原址。现场参观范围以所列主管方资料为准。",
+    "details": "Original temple site in central Vientiane. Public scope is outside the working temple on the named city walking route, subject to local visitation rules.",
+    "geography": {
+      "authority_id": "supplement:auth:la-public:Q7972946",
+      "countries": [
+        "LA"
+      ],
+      "note": "Named original place. Representative point only.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism department identifies Wat Ong Teu separately on the capital's walkable Buddhist heritage route.",
+        "id": "auth:la-public:Q7972946:la-vientiane-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 90df2f0f6e1e0a970471133ca3612a4ece6c562ae9dc2ce9ab855a9c1f68be0b.",
+        "title": "Wat Ong Teu Mahawihan exterior public visit and identity",
+        "uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/"
+      }
+    },
+    "id": "auth:la-public:Q7972946",
+    "location_precision": null,
+    "names": [
+      "ວັດອົງຕື້",
+      "翁德寺外部"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      102.604,
+      17.9656
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism department identifies Wat Ong Teu separately on the capital's walkable Buddhist heritage route.",
+        "id": "auth:la-public:Q7972946:la-vientiane-web.txt",
+        "license": null,
+        "publisher": "Lao Tourism Marketing Department",
+        "revision": "Frozen normalized government webpage excerpt 2026-11-28, SHA-256 90df2f0f6e1e0a970471133ca3612a4ece6c562ae9dc2ce9ab855a9c1f68be0b.",
+        "title": "Wat Ong Teu Mahawihan exterior public visit and identity",
+        "uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 102.604, latitude 17.9656.",
+        "id": "wikidata:Q7972946",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2485936050, statement Q7972946$0BC07625-63E0-4A32-A1D8-1A31923872A0.",
+        "title": "Wat Ong Teu Mahawihan exterior representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7972946.json"
+      }
+    ],
+    "source_uri": "https://www.tourismlaos.org/central-provinces/vientiane-capital/",
+    "title": "Wat Ong Teu Mahawihan exterior",
+    "types": [
+      "historic-site"
+    ]
+  }
+]

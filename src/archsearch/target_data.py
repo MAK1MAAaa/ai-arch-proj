@@ -427,6 +427,27 @@ RWANDA_PUBLIC = NamedPlaceCohort(
     "30ac9e7813737a75cb340a4207571be2fec5ecf8b861d8688e8fedfeb51c9dbb",
     "4d3f008417a47a089c3631fe25e56fc200a9b0d2b30b9ab1f49f8df5e516bb0f",
 )
+LAOS_BHUTAN_PUBLIC = NamedPlaceCohort(
+    "laos-bhutan-public-v1",
+    "global-v21",
+    "laos_bhutan_public",
+    "5e62bbdaf524f2556dd0deb8d416241a52e2410f4dd6fc5fd0bfed679b990d2a",
+    "85d98c35f18dbc6c710303817ba629a8d37116de41ca6b9465532798414ce74c",
+)
+ALGERIA_PUBLIC = NamedPlaceCohort(
+    "algeria-public-v1",
+    "global-v21",
+    "algeria_public",
+    "ec4836b0427e3f0deec415097138d4f446f8745deabd5aa5a0068f671271c577",
+    "09f369cd3f52df723d8654364332d926b583ac30c11b47b061f4da58d67f8c88",
+)
+SWEDEN_PUBLIC = NamedPlaceCohort(
+    "sweden-public-v1",
+    "global-v21",
+    "sweden_public",
+    "eae9fa1ac05584db8915e67154129063936470295b9b91d71e0e9d0a3b3a333d",
+    "bfd265bd401279e427f2b6333c45c5a52cf38532929489b2ac13c7ab362dfae3",
+)
 POINT_COHORTS = (
     IRELAND, ANDALUCIA, TAIWAN_ICULTURE, MEXICO_SIC, FINLAND_VARK, WALES_CADW, THAILAND_FAD,
     AFRICA_VISIT, SCOTLAND_HES, CARIBBEAN_NRHP, PERU_PUBLIC, INDIA_ASI, INDIA_ASI_NEXT,
@@ -450,6 +471,9 @@ POINT_COHORTS = (
     KOREA_GANGWON_PUBLIC,
     BULGARIA_SERBIA_PUBLIC,
     RWANDA_PUBLIC,
+    LAOS_BHUTAN_PUBLIC,
+    ALGERIA_PUBLIC,
+    SWEDEN_PUBLIC,
 )
 
 

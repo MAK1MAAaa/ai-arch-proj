@@ -1,0 +1,22 @@
+{
+  "base_count": 5073,
+  "base_ids_sha256": "06b0c6ad98cdc8cdb84fe70365c6aa1d7499e65bfc8d902ec55f44f4c54e4b64",
+  "base_sites_sha256": "7a32619e29bcec12cb0c0c82047b0d6efc0f2a0012ca2f9c12f43646d5b444c7",
+  "cohort_version": "laos-bhutan-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 15,
+    "total": 5088
+  },
+  "files": {
+    "laos_bhutan_public_review.json": {
+      "sha256": "5e62bbdaf524f2556dd0deb8d416241a52e2410f4dd6fc5fd0bfed679b990d2a"
+    },
+    "laos_bhutan_public_sites.json": {
+      "sha256": "85d98c35f18dbc6c710303817ba629a8d37116de41ca6b9465532798414ce74c"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Public cultural and archaeological places in Laos and Bhutan, preserving named original or rebuilt heritage precincts, public exterior routes and managed tour arrangements."
+}

@@ -176,6 +176,11 @@ def test_public_point_search_catalogue_and_provenance(
             ("BG", "auth:bg-public:", 9),
             ("RS", "auth:rs-public:", 10),
             ("RW", "auth:rw-public:", 4),
+            ("LA", "auth:la-public:", 9),
+            ("BT", "auth:bt-public:", 6),
+            ("DZ", "auth:dz-public:", 5),
+            ("SE", "auth:se-public:", 26),
+            ("SE", "auth:se-raa:", 2),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -429,3 +434,31 @@ def test_public_point_search_catalogue_and_provenance(
         )
         assert client.get("/api/sites/auth:bi-public:Q2688645").status_code == 404
         assert client.get("/api/sites/wd:Q5564954").status_code == 200
+
+        dam = client.get("/api/sites/auth:la-public:Q4466863").json()
+        assert "street-side" in dam["details"]
+        assert any(
+            "/2025/06/04/" in ref["uri"] for ref in dam["source_refs"]
+        )
+        tashichho = client.get("/api/sites/auth:bt-public:Q1896299").json()
+        assert "admitted visitor route" in tashichho["details"]
+        ahmed_bey = client.get("/api/sites/auth:dz-public:geonames-11127626").json()
+        assert ahmed_bey["repr_point"] == [6.61188, 36.36763]
+        assert any(
+            ref["license"] == "CC BY 4.0" and ref["uri"].endswith("/11127626/about.rdf")
+            for ref in ahmed_bey["source_refs"]
+        )
+        assert client.get("/api/sites/auth:dz-public:Q524667").status_code == 404
+
+        froso = client.get("/api/sites/auth:se-raa:f6ed31ce-2941-4171-a738-6e7edf22003d").json()
+        assert froso["repr_point"] == [14.52025393, 63.17912709]
+        assert any(
+            ref["license"] == "CC0" and ref["publisher"] == "Riksantikvarieämbetet"
+            for ref in froso["source_refs"]
+        )
+        rodberget = client.get("/api/sites/auth:se-public:rodbergsfortet").json()
+        assert rodberget["repr_point"] == [21.6572, 65.7911]
+        assert any(
+            ref["license"] == "CC BY-SA 4.0" and "oldid=1386365601" in ref["uri"]
+            for ref in rodberget["source_refs"]
+        )

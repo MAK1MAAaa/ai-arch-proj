@@ -1,0 +1,527 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Algerian Cultural Heritage Atlas",
+      "Tlemcen Tourism Office",
+      "Office National du Tourisme, Algeria",
+      "Wikidata contributors",
+      "Tourism and Handicrafts Directorate of Tlemcen",
+      "Office National de Gestion et d’Exploitation des Biens Culturels Protégés"
+    ],
+    "description": "The original Mansourah mosque ruins and standing minaret can be seen on the outdoor visitor route west of Tlemcen.",
+    "description_zh": "特莱姆森以西的曼苏拉露天游线上可见原址清真寺遗迹和存留宣礼塔。",
+    "details": "The point represents the mosque ruins seen from the public open-air minaret approach. On-site access is locally managed; the record covers the standing minaret and adjacent mosque ruins.",
+    "geography": {
+      "authority_id": "supplement:auth:dz-public:Q12242783",
+      "countries": [
+        "DZ"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The heritage atlas identifies the standing historical minaret and adjoining mosque site.",
+        "id": "auth:dz-public:Q12242783:evidence:1",
+        "license": null,
+        "publisher": "Algerian Cultural Heritage Atlas",
+        "revision": "Retrieved 2026-11-28; SHA-256 1d5e83a86bd27c0783da8c53e361323ff1d9a349457b70fe3289768f09b75645.",
+        "title": "Le Minaret de Mansourah",
+        "uri": "https://cartes.patrimoineculturelalgerien.org/fr/lieu/13-tlemcen/103"
+      }
+    },
+    "id": "auth:dz-public:Q12242783",
+    "location_precision": null,
+    "names": [
+      "曼苏拉清真寺及宣礼塔遗址",
+      "Mansourah Mosque and Minaret Ruins",
+      "Ruines de la mosquée de Mansourah",
+      "Minaret de Mansourah",
+      "منصورة تلمسان"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.3389,
+      34.87092
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The heritage atlas identifies the standing historical minaret and adjoining mosque site.",
+        "id": "auth:dz-public:Q12242783:evidence:1",
+        "license": null,
+        "publisher": "Algerian Cultural Heritage Atlas",
+        "revision": "Retrieved 2026-11-28; SHA-256 1d5e83a86bd27c0783da8c53e361323ff1d9a349457b70fe3289768f09b75645.",
+        "title": "Le Minaret de Mansourah",
+        "uri": "https://cartes.patrimoineculturelalgerien.org/fr/lieu/13-tlemcen/103"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The local visitor service describes the historical Mansourah ruins.",
+        "id": "auth:dz-public:Q12242783:evidence:2",
+        "license": null,
+        "publisher": "Tlemcen Tourism Office",
+        "revision": "Retrieved 2026-11-28; SHA-256 cab84293ed34716520197918461db43def6c72917f46340ecb513d74764f9fcf.",
+        "title": "Tlemcen cultural visitor sites",
+        "uri": "https://office-tourisme-tlemcen.dz/monuments.html"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national tourism office identifies the named ruin and published public interpretation.",
+        "id": "auth:dz-public:Q12242783:evidence:3",
+        "license": null,
+        "publisher": "Office National du Tourisme, Algeria",
+        "revision": "Retrieved 2026-11-28; SHA-256 cb8cf0292f5c312ac22b1112a019906c2219604493986a5540a2730a466d06b4.",
+        "title": "National tourism presentation of Mansourah",
+        "uri": "https://www.ont.dz/fr/about/virtual-tours/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native Wikidata coordinate declaration P625. Longitude -1.3389, latitude 34.87092.",
+        "id": "auth:dz-public:Q12242783:evidence:4",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Retrieved 2026-11-28; SHA-256 160b17aad616defbf3a6286c8e32c14b426fa45425fe5d2c590b161f7a56446a.",
+        "title": "Mansourah Mosque and Minaret Ruins coordinate assertion",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12242783.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial tourism office presents the surviving mosque minaret and sections of the medieval enclosure.",
+        "id": "auth:dz-public:Q12242783:evidence:5",
+        "license": null,
+        "publisher": "Tourism and Handicrafts Directorate of Tlemcen",
+        "revision": "Retrieved 2026-11-28; SHA-256 a9f26e4eec00c9c413c6ccbfa010b43d274b96468fbb28b752b8bb8aa7144c77.",
+        "title": "Mansourah on the provincial visitor list",
+        "uri": "https://www.dta-tlemcen.dz/catalogue_detail.php?id=51&lg=fr&r=el_mansourah"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national management office identifies the Mansourah enclosure and standing mosque minaret at the original site.",
+        "id": "auth:dz-public:Q12242783:evidence:6",
+        "license": null,
+        "publisher": "Office National de Gestion et d’Exploitation des Biens Culturels Protégés",
+        "revision": "Retrieved 2026-11-28; SHA-256 cda330625723e20b0ea1ded49b0056c31b835aefcaee4e883720c181763dad15.",
+        "title": "Mansourah site management record",
+        "uri": "https://ogebc.dz/mansourah/"
+      }
+    ],
+    "source_uri": "https://cartes.patrimoineculturelalgerien.org/fr/lieu/13-tlemcen/103",
+    "title": "Mansourah Mosque and Minaret Ruins",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Algerian Cultural Heritage Atlas",
+      "Tlemcen Tourism Office",
+      "Musée Public National d’Archéologie Islamique de Tlemcen",
+      "Wikidata contributors",
+      "Tourism and Handicrafts Directorate of Tlemcen"
+    ],
+    "description": "The historic Sidi Boumediene mosque and its exterior approach are part of the El Eubbad visitor circuit.",
+    "description_zh": "西迪·布迈迪安历史清真寺位于艾勒乌巴德游览线路上。公开参观范围为外部及沿街入口，宗教建筑内部以当地安排为准。",
+    "details": "The representative point identifies the historic mosque precinct. The described public visit covers the exterior and street approach to the entrance in El Eubbad. Religious interiors follow local access rules.",
+    "geography": {
+      "authority_id": "supplement:auth:dz-public:Q3324878",
+      "countries": [
+        "DZ"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The cultural heritage record identifies the mosque and monumental ensemble in El Eubbad.",
+        "id": "auth:dz-public:Q3324878:evidence:1",
+        "license": null,
+        "publisher": "Algerian Cultural Heritage Atlas",
+        "revision": "Retrieved 2026-11-28; SHA-256 1c631f6406a06f53120b08e7319fb530e1bc166d77a6c1d3bdc27aa147a4fa12.",
+        "title": "Mosquée Sidi Boumediene",
+        "uri": "https://cartes.patrimoineculturelalgerien.org/fr/lieu/13-tlemcen/96"
+      }
+    },
+    "id": "auth:dz-public:Q3324878",
+    "location_precision": null,
+    "names": [
+      "西迪·布迈迪安清真寺历史区",
+      "Sidi Boumediene Mosque heritage precinct",
+      "Mosquée Sidi Boumediene",
+      "Mosquée d'El Eubbad",
+      "مسجد أبي مدين"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.2895833333333333,
+      34.87777777777778
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The cultural heritage record identifies the mosque and monumental ensemble in El Eubbad.",
+        "id": "auth:dz-public:Q3324878:evidence:1",
+        "license": null,
+        "publisher": "Algerian Cultural Heritage Atlas",
+        "revision": "Retrieved 2026-11-28; SHA-256 1c631f6406a06f53120b08e7319fb530e1bc166d77a6c1d3bdc27aa147a4fa12.",
+        "title": "Mosquée Sidi Boumediene",
+        "uri": "https://cartes.patrimoineculturelalgerien.org/fr/lieu/13-tlemcen/96"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Tlemcen visitor information describes the named Sidi Boumediene monuments.",
+        "id": "auth:dz-public:Q3324878:evidence:2",
+        "license": null,
+        "publisher": "Tlemcen Tourism Office",
+        "revision": "Retrieved 2026-11-28; SHA-256 cab84293ed34716520197918461db43def6c72917f46340ecb513d74764f9fcf.",
+        "title": "Tlemcen cultural visitor sites",
+        "uri": "https://office-tourisme-tlemcen.dz/monuments.html"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The local museum identifies the mosque and adjoining historic ensemble.",
+        "id": "auth:dz-public:Q3324878:evidence:3",
+        "license": null,
+        "publisher": "Musée Public National d’Archéologie Islamique de Tlemcen",
+        "revision": "Retrieved 2026-11-28; SHA-256 9f7f668e60c2e13ac515be633b5ce394a963088e6abaab38fa72157e39c4dfb9.",
+        "title": "Historical monuments in Tlemcen",
+        "uri": "https://mait.dz/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native Wikidata coordinate declaration P625. Longitude -1.2895833333333333, latitude 34.87777777777778.",
+        "id": "auth:dz-public:Q3324878:evidence:4",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Retrieved 2026-11-28; SHA-256 8884752cec0d9ebc07ef0a72645e91f54c5108eee6918679306f4160e6921ee4.",
+        "title": "Sidi Boumediene Mosque heritage precinct coordinate assertion",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3324878.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The provincial tourism catalogue identifies the named El Eubbad mosque and nearby historic monuments.",
+        "id": "auth:dz-public:Q3324878:evidence:5",
+        "license": null,
+        "publisher": "Tourism and Handicrafts Directorate of Tlemcen",
+        "revision": "Retrieved 2026-11-28; SHA-256 86af640661ba92e9ae9e06489e6f5ba5854f07e33cb82ce467decbcfcc685811.",
+        "title": "El Eubbad monuments on the provincial visitor list",
+        "uri": "https://dta-tlemcen.dz/catalogue_detail.php?id=52&lg=fr&r=le_quartier_del_eubbad"
+      }
+    ],
+    "source_uri": "https://cartes.patrimoineculturelalgerien.org/fr/lieu/13-tlemcen/96",
+    "title": "Sidi Boumediene Mosque heritage precinct",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Algerian Cultural Heritage Atlas",
+      "Tlemcen Tourism Office",
+      "Algérie Presse Service, reporting venue operators and public institutions",
+      "Wikidata contributors",
+      "Algerian Scientific Journal Platform, review Aasour"
+    ],
+    "description": "Tlemcen’s historic citadel includes surviving remains and a royal palace rebuilt on the excavated site, now used for public cultural visits.",
+    "description_zh": "特莱姆森迈什瓦尔城堡保留历史遗存，王宫在考古原址上复建，公众可按管理方安排参观及观展。",
+    "details": "The historic citadel precinct includes surviving remains and the reconstructed palace on the excavation site. Public visits and exhibitions follow the managed cultural route.",
+    "geography": {
+      "authority_id": "supplement:auth:dz-public:Q3360854",
+      "countries": [
+        "DZ"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The historic heritage record identifies the fortified royal palace and current cultural uses.",
+        "id": "auth:dz-public:Q3360854:evidence:1",
+        "license": null,
+        "publisher": "Algerian Cultural Heritage Atlas",
+        "revision": "Retrieved 2026-11-28; SHA-256 f4428bc56851c78061bf7d1a1db407ea5cc3930f1364ccc3522783c187132f4a.",
+        "title": "Palais royal du Mechouar",
+        "uri": "https://cartes.patrimoineculturelalgerien.org/fr/lieu/13-tlemcen/95"
+      }
+    },
+    "id": "auth:dz-public:Q3360854",
+    "location_precision": null,
+    "names": [
+      "迈什瓦尔王宫参观区",
+      "El Mechouar Palace visitor precinct",
+      "Palais royal du Mechouar",
+      "القصر الملكي الزياني",
+      "Mechouar Citadel"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.30859,
+      34.8809
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The historic heritage record identifies the fortified royal palace and current cultural uses.",
+        "id": "auth:dz-public:Q3360854:evidence:1",
+        "license": null,
+        "publisher": "Algerian Cultural Heritage Atlas",
+        "revision": "Retrieved 2026-11-28; SHA-256 f4428bc56851c78061bf7d1a1db407ea5cc3930f1364ccc3522783c187132f4a.",
+        "title": "Palais royal du Mechouar",
+        "uri": "https://cartes.patrimoineculturelalgerien.org/fr/lieu/13-tlemcen/95"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The visitor service names the Mechouar museum and its traditional clothing interpretation.",
+        "id": "auth:dz-public:Q3360854:evidence:2",
+        "license": null,
+        "publisher": "Tlemcen Tourism Office",
+        "revision": "Retrieved 2026-11-28; SHA-256 cab84293ed34716520197918461db43def6c72917f46340ecb513d74764f9fcf.",
+        "title": "Tlemcen cultural visitor sites",
+        "uri": "https://office-tourisme-tlemcen.dz/monuments.html"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national news service reports a heritage exhibition in the citadel.",
+        "id": "auth:dz-public:Q3360854:evidence:3",
+        "license": null,
+        "publisher": "Algérie Presse Service, reporting venue operators and public institutions",
+        "revision": "Retrieved 2026-11-28; SHA-256 ede6845ddb0de36c7bcf98a692552fddf31232ca880c3979b58adadf5a5632d4.",
+        "title": "Public exhibitions at the Mechouar citadel in 2026",
+        "uri": "https://www.aps.dz/fr/culture/patrimoine/mpa0wyr2-ouverture-d-une-exposition-de-peintures-sur-le-costume-traditionnel-et-le-tapis-algerien"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native Wikidata coordinate declaration P625. Longitude -1.30859, latitude 34.8809.",
+        "id": "auth:dz-public:Q3360854:evidence:4",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Retrieved 2026-11-28; SHA-256 b93c3a3c8f15eaf79538f9632b1d88d8500e738d8a6a2c0fd4521a24c59695ba.",
+        "title": "El Mechouar Palace visitor precinct coordinate assertion",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3360854.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The field research distinguishes the excavated palace from the conservation and reconstruction work on the site.",
+        "id": "auth:dz-public:Q3360854:evidence:5",
+        "license": null,
+        "publisher": "Algerian Scientific Journal Platform, review Aasour",
+        "revision": "Retrieved 2026-11-28; SHA-256 7c87805204784abccdf10e7f63265d5c47d81995a50d69bfc2d8885bc0da06d7.",
+        "title": "Archaeology and rehabilitation of El Mechouar",
+        "uri": "https://asjp.cerist.dz/en/article/281144"
+      }
+    ],
+    "source_uri": "https://cartes.patrimoineculturelalgerien.org/fr/lieu/13-tlemcen/95",
+    "title": "El Mechouar Palace visitor precinct",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Algérie Presse Service, reporting venue operators and public institutions",
+      "Wikidata contributors"
+    ],
+    "description": "The surviving historic arena in Oran is operated as a public cultural and visitor property.",
+    "description_zh": "奥兰现存的历史竞技场原建筑向公众开放，由当地机构接待游客。",
+    "details": "The point lies within the named arena building. The current tourism access described by the public operator applies to its designated visitor areas.",
+    "geography": {
+      "authority_id": "supplement:auth:dz-public:Q36698475",
+      "countries": [
+        "DZ"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency reports sustained public visits described by the provincial operator Jardin d’Attractions.",
+        "id": "auth:dz-public:Q36698475:evidence:1",
+        "license": null,
+        "publisher": "Algérie Presse Service, reporting venue operators and public institutions",
+        "revision": "Retrieved 2026-11-28; SHA-256 2993fac3bf9a335af51e3b6187508897405b8cd18894ac71319d196a87888414.",
+        "title": "Tourist admission at Oran Arena in 2026",
+        "uri": "https://www.aps.dz/fr/culture/patrimoine/mr4phmwp-les-arenes-d-oran-attirent-les-visiteurs-locaux-et-les-touristes-etrangers"
+      }
+    },
+    "id": "auth:dz-public:Q36698475",
+    "location_precision": null,
+    "names": [
+      "奥兰历史竞技场",
+      "Oran Arena",
+      "Arènes d'Oran",
+      "حلبة مصارعة الثيران بوهران"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -0.66680555555556,
+      35.685888888889
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The agency reports sustained public visits described by the provincial operator Jardin d’Attractions.",
+        "id": "auth:dz-public:Q36698475:evidence:1",
+        "license": null,
+        "publisher": "Algérie Presse Service, reporting venue operators and public institutions",
+        "revision": "Retrieved 2026-11-28; SHA-256 2993fac3bf9a335af51e3b6187508897405b8cd18894ac71319d196a87888414.",
+        "title": "Tourist admission at Oran Arena in 2026",
+        "uri": "https://www.aps.dz/fr/culture/patrimoine/mr4phmwp-les-arenes-d-oran-attirent-les-visiteurs-locaux-et-les-touristes-etrangers"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native Wikidata coordinate declaration P625. Longitude -0.66680555555556, latitude 35.685888888889.",
+        "id": "auth:dz-public:Q36698475:evidence:2",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Retrieved 2026-11-28; SHA-256 02b3d62c3f5880dc6569313d22ffc89d0b3cb61c3c30214ed18da52b1088b3ca.",
+        "title": "Oran Arena coordinate assertion",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q36698475.json"
+      }
+    ],
+    "source_uri": "https://www.aps.dz/fr/culture/patrimoine/mr4phmwp-les-arenes-d-oran-attirent-les-visiteurs-locaux-et-les-touristes-etrangers",
+    "title": "Oran Arena",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Algérie Presse Service, reporting venue operators and public institutions",
+      "Algerian Cultural Heritage Atlas",
+      "GeoNames"
+    ],
+    "description": "The historic palace of Ahmad Bey houses a public museum of traditional art in Constantine.",
+    "description_zh": "君士坦丁的艾哈迈德贝伊旧宫原建筑，现开放传统艺术公共博物馆。",
+    "details": "The publicly operated palace museum is in the original Ahmed Bey residence in Constantine. The GeoNames point is within the original palace footprint.",
+    "geography": {
+      "authority_id": "supplement:auth:dz-public:geonames-11127626",
+      "countries": [
+        "DZ"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The national news service reports 2026 public admission figures provided by the museum.",
+        "id": "auth:dz-public:geonames-11127626:evidence:1",
+        "license": null,
+        "publisher": "Algérie Presse Service, reporting venue operators and public institutions",
+        "revision": "Retrieved 2026-11-28; SHA-256 37fe9f78c5cc5be2884c64a80b725edcf634da2c62924169947d26b637b59525.",
+        "title": "Current visitors to Ahmed Bey Palace",
+        "uri": "https://www.aps.dz/fr/culture/patrimoine/mtue3kik-le-palais-ahmed-bey-a-attire-pres-de-15-000-visiteurs-durant-le-1er-semestre-2026"
+      }
+    },
+    "id": "auth:dz-public:geonames-11127626",
+    "location_precision": null,
+    "names": [
+      "艾哈迈德贝伊宫",
+      "Ahmed Bey Palace at Constantine",
+      "Palais Ahmed Bey",
+      "Palais du Bey de Constantine",
+      "قصر أحمد باي"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      6.61188,
+      36.36763
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national news service reports 2026 public admission figures provided by the museum.",
+        "id": "auth:dz-public:geonames-11127626:evidence:1",
+        "license": null,
+        "publisher": "Algérie Presse Service, reporting venue operators and public institutions",
+        "revision": "Retrieved 2026-11-28; SHA-256 37fe9f78c5cc5be2884c64a80b725edcf634da2c62924169947d26b637b59525.",
+        "title": "Current visitors to Ahmed Bey Palace",
+        "uri": "https://www.aps.dz/fr/culture/patrimoine/mtue3kik-le-palais-ahmed-bey-a-attire-pres-de-15-000-visiteurs-durant-le-1er-semestre-2026"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The atlas identifies the protected palace and its public cultural museum use.",
+        "id": "auth:dz-public:geonames-11127626:evidence:2",
+        "license": null,
+        "publisher": "Algerian Cultural Heritage Atlas",
+        "revision": "Retrieved 2026-11-28; SHA-256 9759650ca617e4f7cc970e3029a2cdf70fab8144b2e3e0c8d246154e45e0b374.",
+        "title": "Palais du Bey in Constantine",
+        "uri": "https://cartes.patrimoineculturelalgerien.org/fr/lieu/25-constantine/130"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Exact published monument coordinates for the palace at Constantine. Attribution: GeoNames.",
+        "id": "auth:dz-public:geonames-11127626:evidence:3",
+        "license": "CC BY 4.0",
+        "publisher": "GeoNames",
+        "revision": "Retrieved 2026-11-28; SHA-256 f5b2f9f3206020c22644e5b790bce94b019876fbe37d46b40c3f834088a29152.",
+        "title": "Palais du Bey representative point",
+        "uri": "https://sws.geonames.org/11127626/about.rdf"
+      }
+    ],
+    "source_uri": "https://www.aps.dz/fr/culture/patrimoine/mtue3kik-le-palais-ahmed-bey-a-attire-pres-de-15-000-visiteurs-durant-le-1er-semestre-2026",
+    "title": "Ahmed Bey Palace at Constantine",
+    "types": [
+      "historic-site"
+    ]
+  }
+]
