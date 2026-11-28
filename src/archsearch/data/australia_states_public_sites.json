@@ -1,0 +1,2056 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Queensland Parks and Wildlife Service",
+      "Commonwealth of Australia (Geoscience Australia)"
+    ],
+    "description": "Queensland’s coastal defence fort is preserved in a public national park with scheduled visits.",
+    "description_zh": "昆士兰的利顿堡海岸防御工事保存于国家公园内，按管理方日程开放。",
+    "details": "Queensland’s coastal defence fort is preserved in a public national park with scheduled visits.",
+    "geography": {
+      "authority_id": "supplement:auth:au-ga2012:QLD39464",
+      "countries": [
+        "AU"
+      ],
+      "note": "Native place point within the mapped historic fort and public park; adjoining separately managed facilities are outside this site.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Published place point QLD39464 from the 2012 archive, feature RESV.",
+        "id": "auth:au-ga2012:QLD39464:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "Commonwealth of Australia (Geoscience Australia)",
+        "revision": "Gazetteer 2012 archive, 2013 release guide; national place-name record QLD39464.",
+        "title": "Gazetteer of Australia 2012 native place point",
+        "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+      }
+    },
+    "id": "auth:au-ga2012:QLD39464",
+    "location_precision": null,
+    "names": [
+      "Fort Lytton National Park",
+      "利顿堡国家公园",
+      "FORT LYTTON NATIONAL PARK"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      153.1510578,
+      -27.4106248
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Queensland’s coastal defence fort is preserved in a public national park with scheduled visits.",
+        "id": "auth:au-ga2012:QLD39464:visit",
+        "license": null,
+        "publisher": "Queensland Parks and Wildlife Service",
+        "revision": "Snapshot 2026-11-28; SHA-256 441dcf1569161e07d6cb598345e4e2cf02af9b383d9aa8471c5b6cfdde122dec.",
+        "title": "Fort Lytton National Park visitor information",
+        "uri": "https://parks.qld.gov.au/parks/fort-lytton"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published place point QLD39464 from the 2012 archive, feature RESV.",
+        "id": "auth:au-ga2012:QLD39464:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "Commonwealth of Australia (Geoscience Australia)",
+        "revision": "Gazetteer 2012 archive, 2013 release guide; national place-name record QLD39464.",
+        "title": "Gazetteer of Australia 2012 native place point",
+        "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Coordinate and name data reused under CC BY 3.0 AU. Terms: https://creativecommons.org/licenses/by/3.0/au/",
+        "id": "auth:au-ga2012:QLD39464:license",
+        "license": null,
+        "publisher": "Commonwealth of Australia (Geoscience Australia)",
+        "revision": "Snapshot 2026-11-28; SHA-256 4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c.",
+        "title": "Reuse conditions and attribution",
+        "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The 2012 package documentation specifies CC BY 3.0 Australia.",
+        "id": "auth:au-ga2012:QLD39464:catalogue",
+        "license": null,
+        "publisher": "Commonwealth of Australia (Geoscience Australia)",
+        "revision": "Snapshot 2026-11-28; SHA-256 497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408.",
+        "title": "Gazetteer of Australia 2012 catalogue metadata",
+        "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+      }
+    ],
+    "source_uri": "https://parks.qld.gov.au/parks/fort-lytton",
+    "title": "Fort Lytton National Park",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Parks and Wildlife Service South Australia",
+      "Commonwealth of Australia (Geoscience Australia)"
+    ],
+    "description": "The public conservation park preserves the historic Martindale Hall and its grounds near Mintaro.",
+    "description_zh": "明塔罗附近的公共保护园区保留了马丁代尔历史庄园及其庭园。",
+    "details": "The public conservation park preserves the historic Martindale Hall and its grounds near Mintaro.",
+    "geography": {
+      "authority_id": "supplement:auth:au-ga2012:SA0002675",
+      "countries": [
+        "AU"
+      ],
+      "note": "Original public park place point within the named visitor grounds, about 40 metres from the mansion. The homestead namesakes and other outlying points were rejected.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Published place point SA0002675 from the 2012 archive, feature HMSD.",
+        "id": "auth:au-ga2012:SA0002675:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "Commonwealth of Australia (Geoscience Australia)",
+        "revision": "Gazetteer 2012 archive, 2013 release guide; national place-name record SA0002675.",
+        "title": "Gazetteer of Australia 2012 native place point",
+        "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+      }
+    },
+    "id": "auth:au-ga2012:SA0002675",
+    "location_precision": null,
+    "names": [
+      "Martindale Hall and Grounds",
+      "马丁代尔庄园",
+      "Martindale Hall"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      138.72883,
+      -33.93768
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The public conservation park preserves the historic Martindale Hall and its grounds near Mintaro.",
+        "id": "auth:au-ga2012:SA0002675:visit",
+        "license": null,
+        "publisher": "National Parks and Wildlife Service South Australia",
+        "revision": "Snapshot 2026-11-28; SHA-256 f089a0574b7eb2244efe4de02e37fe03295017f0a7ab8cf72c215ec58e82e3c6.",
+        "title": "Martindale Hall and Grounds visitor information",
+        "uri": "https://www.parks.sa.gov.au/parks/martindale-hall-conservation-park"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published place point SA0002675 from the 2012 archive, feature HMSD.",
+        "id": "auth:au-ga2012:SA0002675:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "Commonwealth of Australia (Geoscience Australia)",
+        "revision": "Gazetteer 2012 archive, 2013 release guide; national place-name record SA0002675.",
+        "title": "Gazetteer of Australia 2012 native place point",
+        "uri": "https://d28rz98at9flks.cloudfront.net/76695/GazetteerOfAustralia2012Package.zip"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Coordinate and name data reused under CC BY 3.0 AU. Terms: https://creativecommons.org/licenses/by/3.0/au/",
+        "id": "auth:au-ga2012:SA0002675:license",
+        "license": null,
+        "publisher": "Commonwealth of Australia (Geoscience Australia)",
+        "revision": "Snapshot 2026-11-28; SHA-256 4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c.",
+        "title": "Reuse conditions and attribution",
+        "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The 2012 package documentation specifies CC BY 3.0 Australia.",
+        "id": "auth:au-ga2012:SA0002675:catalogue",
+        "license": null,
+        "publisher": "Commonwealth of Australia (Geoscience Australia)",
+        "revision": "Snapshot 2026-11-28; SHA-256 497f66d8938c19212c79ffb2e567359c3cbbdb1f33cf918924f5ac898eafa408.",
+        "title": "Gazetteer of Australia 2012 catalogue metadata",
+        "uri": "https://ecat.ga.gov.au/geonetwork/srv/api/records/e19a92fa-257c-159d-e044-00144fdd4fa6"
+      }
+    ],
+    "source_uri": "https://www.parks.sa.gov.au/parks/martindale-hall-conservation-park",
+    "title": "Martindale Hall and Grounds",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Museums of History NSW",
+      "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)"
+    ],
+    "description": "The public estate interprets a historic rural homestead, gardens, farm buildings and the old schoolhouse.",
+    "description_zh": "劳斯山庄园的公开参观涵盖乡间旧宅、庭园、农业建筑和旧校舍。",
+    "details": "The public estate interprets a historic rural homestead, gardens, farm buildings and the old schoolhouse.",
+    "geography": {
+      "authority_id": "supplement:auth:au-nsw-shr:5044989",
+      "countries": [
+        "AU"
+      ],
+      "note": "State-listed grounds point within the same rural museum parcel, about 55 metres from the house. Visitor scope follows the operator’s designated routes and ground-floor access.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Published State Heritage Register point 5044989, NSW listing 00002.",
+        "id": "auth:au-nsw-shr:5044989:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)",
+        "revision": "State Heritage Register Centroids source; HOITEMID 5044989; layer version timestamp 1790330231000.",
+        "title": "State Heritage Register publisher point",
+        "uri": "https://mapprod3.environment.nsw.gov.au/arcgis/rest/services/EDP/SHR_Centroids/MapServer/0/query?f=json&where=upper%28ITEMNAME%29+LIKE+%27%25VAUCLUSE+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROSE+SEIDLER+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROUSE+HILL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+BAY+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+FARM%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25TRIAL+BAY+GAOL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25SMOKY+CAPE+LIGHT%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25FORT+SCRATCHLEY%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25COAL+RIVER+PRECINCT%25%27&outSR=4283&outFields=HOITEMID%2CITEMNAME%2CADDRESS%2CLGA%2CLISTINGNO%2CLong_%2CLat%2CPLANNO%2CVERDATE&returnGeometry=true&resultRecordCount=100"
+      }
+    },
+    "id": "auth:au-nsw-shr:5044989",
+    "location_precision": null,
+    "names": [
+      "Rouse Hill Estate",
+      "劳斯山庄园",
+      "Rouse Hill House and Farm"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      150.90762831300003,
+      -33.67581586099993
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The public estate interprets a historic rural homestead, gardens, farm buildings and the old schoolhouse.",
+        "id": "auth:au-nsw-shr:5044989:visit",
+        "license": null,
+        "publisher": "Museums of History NSW",
+        "revision": "Snapshot 2026-11-28; SHA-256 4eeb90c2ae35e8995b35b38ec90c760b4ec667be8139b60f3d4a3461b2c162c9.",
+        "title": "Rouse Hill Estate visitor information",
+        "uri": "https://mhnsw.au/visit-us/rouse-hill-estate/plan-your-visit/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published State Heritage Register point 5044989, NSW listing 00002.",
+        "id": "auth:au-nsw-shr:5044989:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)",
+        "revision": "State Heritage Register Centroids source; HOITEMID 5044989; layer version timestamp 1790330231000.",
+        "title": "State Heritage Register publisher point",
+        "uri": "https://mapprod3.environment.nsw.gov.au/arcgis/rest/services/EDP/SHR_Centroids/MapServer/0/query?f=json&where=upper%28ITEMNAME%29+LIKE+%27%25VAUCLUSE+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROSE+SEIDLER+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROUSE+HILL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+BAY+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+FARM%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25TRIAL+BAY+GAOL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25SMOKY+CAPE+LIGHT%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25FORT+SCRATCHLEY%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25COAL+RIVER+PRECINCT%25%27&outSR=4283&outFields=HOITEMID%2CITEMNAME%2CADDRESS%2CLGA%2CLISTINGNO%2CLong_%2CLat%2CPLANNO%2CVERDATE&returnGeometry=true&resultRecordCount=100"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Coordinate and name data reused under CC BY 4.0. Terms: https://creativecommons.org/licenses/by/4.0/",
+        "id": "auth:au-nsw-shr:5044989:license",
+        "license": null,
+        "publisher": "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 91a25c2996747cad6fac298dd3853fca670800c57a6d59a9fed9941a8d83b93c.",
+        "title": "Reuse conditions and attribution",
+        "uri": "https://www.environment.nsw.gov.au/about-us/copyright-and-disclaimer"
+      }
+    ],
+    "source_uri": "https://mhnsw.au/visit-us/rouse-hill-estate/plan-your-visit/",
+    "title": "Rouse Hill Estate",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Museums of History NSW",
+      "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)"
+    ],
+    "description": "The public historic estate at Vaucluse preserves a house museum, stables and gardens.",
+    "description_zh": "沃克吕兹历史庄园保留了旧宅博物馆、马厩和庭园，并对公众开放。",
+    "details": "The public historic estate at Vaucluse preserves a house museum, stables and gardens.",
+    "geography": {
+      "authority_id": "supplement:auth:au-nsw-shr:5045008",
+      "countries": [
+        "AU"
+      ],
+      "note": "The state point is within the registered visitor grounds by the stables; 40.74 metres from the main house. The namesake near Strickland House was excluded.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Published State Heritage Register point 5045008, NSW listing 00955.",
+        "id": "auth:au-nsw-shr:5045008:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)",
+        "revision": "State Heritage Register Centroids source; HOITEMID 5045008; layer version timestamp 1790330231000.",
+        "title": "State Heritage Register publisher point",
+        "uri": "https://mapprod3.environment.nsw.gov.au/arcgis/rest/services/EDP/SHR_Centroids/MapServer/0/query?f=json&where=upper%28ITEMNAME%29+LIKE+%27%25VAUCLUSE+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROSE+SEIDLER+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROUSE+HILL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+BAY+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+FARM%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25TRIAL+BAY+GAOL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25SMOKY+CAPE+LIGHT%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25FORT+SCRATCHLEY%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25COAL+RIVER+PRECINCT%25%27&outSR=4283&outFields=HOITEMID%2CITEMNAME%2CADDRESS%2CLGA%2CLISTINGNO%2CLong_%2CLat%2CPLANNO%2CVERDATE&returnGeometry=true&resultRecordCount=100"
+      }
+    },
+    "id": "auth:au-nsw-shr:5045008",
+    "location_precision": null,
+    "names": [
+      "Vaucluse House and Estate",
+      "沃克吕兹旧宅与园区",
+      "Vaucluse House"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      151.27416041700008,
+      -33.855988115999935
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The public historic estate at Vaucluse preserves a house museum, stables and gardens.",
+        "id": "auth:au-nsw-shr:5045008:visit",
+        "license": null,
+        "publisher": "Museums of History NSW",
+        "revision": "Snapshot 2026-11-28; SHA-256 ede1fa3b47d9ed99aaaeae0dd3443406a0704eda87998e0409db6d0acb3b33bd.",
+        "title": "Vaucluse House and Estate visitor information",
+        "uri": "https://mhnsw.au/visit-us/vaucluse-house/plan-your-visit/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published State Heritage Register point 5045008, NSW listing 00955.",
+        "id": "auth:au-nsw-shr:5045008:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)",
+        "revision": "State Heritage Register Centroids source; HOITEMID 5045008; layer version timestamp 1790330231000.",
+        "title": "State Heritage Register publisher point",
+        "uri": "https://mapprod3.environment.nsw.gov.au/arcgis/rest/services/EDP/SHR_Centroids/MapServer/0/query?f=json&where=upper%28ITEMNAME%29+LIKE+%27%25VAUCLUSE+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROSE+SEIDLER+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROUSE+HILL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+BAY+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+FARM%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25TRIAL+BAY+GAOL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25SMOKY+CAPE+LIGHT%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25FORT+SCRATCHLEY%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25COAL+RIVER+PRECINCT%25%27&outSR=4283&outFields=HOITEMID%2CITEMNAME%2CADDRESS%2CLGA%2CLISTINGNO%2CLong_%2CLat%2CPLANNO%2CVERDATE&returnGeometry=true&resultRecordCount=100"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Coordinate and name data reused under CC BY 4.0. Terms: https://creativecommons.org/licenses/by/4.0/",
+        "id": "auth:au-nsw-shr:5045008:license",
+        "license": null,
+        "publisher": "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 91a25c2996747cad6fac298dd3853fca670800c57a6d59a9fed9941a8d83b93c.",
+        "title": "Reuse conditions and attribution",
+        "uri": "https://www.environment.nsw.gov.au/about-us/copyright-and-disclaimer"
+      }
+    ],
+    "source_uri": "https://mhnsw.au/visit-us/vaucluse-house/plan-your-visit/",
+    "title": "Vaucluse House and Estate",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Museums of History NSW",
+      "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)"
+    ],
+    "description": "The public house museum preserves Rose Seidler House and its modernist design in Wahroonga.",
+    "description_zh": "瓦龙加的罗斯·塞德勒住宅保存了现代主义设计与室内陈设，按馆方安排开放。",
+    "details": "The public house museum preserves Rose Seidler House and its modernist design in Wahroonga.",
+    "geography": {
+      "authority_id": "supplement:auth:au-nsw-shr:5045033",
+      "countries": [
+        "AU"
+      ],
+      "note": "Published point inside the named house at 71 Clissold Road. The Wikidata alternative has invalid negative coordinate precision.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Published State Heritage Register point 5045033, NSW listing 00261.",
+        "id": "auth:au-nsw-shr:5045033:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)",
+        "revision": "State Heritage Register Centroids source; HOITEMID 5045033; layer version timestamp 1790330231000.",
+        "title": "State Heritage Register publisher point",
+        "uri": "https://mapprod3.environment.nsw.gov.au/arcgis/rest/services/EDP/SHR_Centroids/MapServer/0/query?f=json&where=upper%28ITEMNAME%29+LIKE+%27%25VAUCLUSE+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROSE+SEIDLER+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROUSE+HILL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+BAY+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+FARM%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25TRIAL+BAY+GAOL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25SMOKY+CAPE+LIGHT%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25FORT+SCRATCHLEY%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25COAL+RIVER+PRECINCT%25%27&outSR=4283&outFields=HOITEMID%2CITEMNAME%2CADDRESS%2CLGA%2CLISTINGNO%2CLong_%2CLat%2CPLANNO%2CVERDATE&returnGeometry=true&resultRecordCount=100"
+      }
+    },
+    "id": "auth:au-nsw-shr:5045033",
+    "location_precision": null,
+    "names": [
+      "Rose Seidler House",
+      "罗斯·塞德勒住宅"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      151.14192108100008,
+      -33.709684518999936
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The public house museum preserves Rose Seidler House and its modernist design in Wahroonga.",
+        "id": "auth:au-nsw-shr:5045033:visit",
+        "license": null,
+        "publisher": "Museums of History NSW",
+        "revision": "Snapshot 2026-11-28; SHA-256 101bb4a217d7a63636e4da535e683a7948f46a94d56f92cab111e010078f688e.",
+        "title": "Rose Seidler House visitor information",
+        "uri": "https://mhnsw.au/visit-us/rose-seidler-house/plan-your-visit/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published State Heritage Register point 5045033, NSW listing 00261.",
+        "id": "auth:au-nsw-shr:5045033:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)",
+        "revision": "State Heritage Register Centroids source; HOITEMID 5045033; layer version timestamp 1790330231000.",
+        "title": "State Heritage Register publisher point",
+        "uri": "https://mapprod3.environment.nsw.gov.au/arcgis/rest/services/EDP/SHR_Centroids/MapServer/0/query?f=json&where=upper%28ITEMNAME%29+LIKE+%27%25VAUCLUSE+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROSE+SEIDLER+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROUSE+HILL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+BAY+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+FARM%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25TRIAL+BAY+GAOL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25SMOKY+CAPE+LIGHT%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25FORT+SCRATCHLEY%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25COAL+RIVER+PRECINCT%25%27&outSR=4283&outFields=HOITEMID%2CITEMNAME%2CADDRESS%2CLGA%2CLISTINGNO%2CLong_%2CLat%2CPLANNO%2CVERDATE&returnGeometry=true&resultRecordCount=100"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Coordinate and name data reused under CC BY 4.0. Terms: https://creativecommons.org/licenses/by/4.0/",
+        "id": "auth:au-nsw-shr:5045033:license",
+        "license": null,
+        "publisher": "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 91a25c2996747cad6fac298dd3853fca670800c57a6d59a9fed9941a8d83b93c.",
+        "title": "Reuse conditions and attribution",
+        "uri": "https://www.environment.nsw.gov.au/about-us/copyright-and-disclaimer"
+      }
+    ],
+    "source_uri": "https://mhnsw.au/visit-us/rose-seidler-house/plan-your-visit/",
+    "title": "Rose Seidler House",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Museums of History NSW",
+      "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)"
+    ],
+    "description": "The house museum preserves the historic Elizabeth Bay House at 7 Onslow Avenue.",
+    "description_zh": "位于翁斯洛大道 7 号的伊丽莎白湾历史宅邸，现作为开放的旧宅博物馆。",
+    "details": "The house museum preserves the historic Elizabeth Bay House at 7 Onslow Avenue.",
+    "geography": {
+      "authority_id": "supplement:auth:au-nsw-shr:5045185",
+      "countries": [
+        "AU"
+      ],
+      "note": "The state point is inside the actual visitor building. The separately listed grotto, nearby reserve and Wikidata point in a neighbouring building were excluded.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Published State Heritage Register point 5045185, NSW listing 00006.",
+        "id": "auth:au-nsw-shr:5045185:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)",
+        "revision": "State Heritage Register Centroids source; HOITEMID 5045185; layer version timestamp 1790330231000.",
+        "title": "State Heritage Register publisher point",
+        "uri": "https://mapprod3.environment.nsw.gov.au/arcgis/rest/services/EDP/SHR_Centroids/MapServer/0/query?f=json&where=upper%28ITEMNAME%29+LIKE+%27%25VAUCLUSE+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROSE+SEIDLER+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROUSE+HILL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+BAY+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+FARM%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25TRIAL+BAY+GAOL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25SMOKY+CAPE+LIGHT%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25FORT+SCRATCHLEY%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25COAL+RIVER+PRECINCT%25%27&outSR=4283&outFields=HOITEMID%2CITEMNAME%2CADDRESS%2CLGA%2CLISTINGNO%2CLong_%2CLat%2CPLANNO%2CVERDATE&returnGeometry=true&resultRecordCount=100"
+      }
+    },
+    "id": "auth:au-nsw-shr:5045185",
+    "location_precision": null,
+    "names": [
+      "Elizabeth Bay House",
+      "伊丽莎白湾旧宅"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      151.22643045200005,
+      -33.87010736999997
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The house museum preserves the historic Elizabeth Bay House at 7 Onslow Avenue.",
+        "id": "auth:au-nsw-shr:5045185:visit",
+        "license": null,
+        "publisher": "Museums of History NSW",
+        "revision": "Snapshot 2026-11-28; SHA-256 155961a2d0b164742135a97240282ff5ae38a09ac4c5edd3f1e38322bb7f8a63.",
+        "title": "Elizabeth Bay House visitor information",
+        "uri": "https://mhnsw.au/visit-us/elizabeth-bay-house/plan-your-visit/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published State Heritage Register point 5045185, NSW listing 00006.",
+        "id": "auth:au-nsw-shr:5045185:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)",
+        "revision": "State Heritage Register Centroids source; HOITEMID 5045185; layer version timestamp 1790330231000.",
+        "title": "State Heritage Register publisher point",
+        "uri": "https://mapprod3.environment.nsw.gov.au/arcgis/rest/services/EDP/SHR_Centroids/MapServer/0/query?f=json&where=upper%28ITEMNAME%29+LIKE+%27%25VAUCLUSE+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROSE+SEIDLER+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROUSE+HILL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+BAY+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+FARM%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25TRIAL+BAY+GAOL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25SMOKY+CAPE+LIGHT%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25FORT+SCRATCHLEY%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25COAL+RIVER+PRECINCT%25%27&outSR=4283&outFields=HOITEMID%2CITEMNAME%2CADDRESS%2CLGA%2CLISTINGNO%2CLong_%2CLat%2CPLANNO%2CVERDATE&returnGeometry=true&resultRecordCount=100"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Coordinate and name data reused under CC BY 4.0. Terms: https://creativecommons.org/licenses/by/4.0/",
+        "id": "auth:au-nsw-shr:5045185:license",
+        "license": null,
+        "publisher": "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 91a25c2996747cad6fac298dd3853fca670800c57a6d59a9fed9941a8d83b93c.",
+        "title": "Reuse conditions and attribution",
+        "uri": "https://www.environment.nsw.gov.au/about-us/copyright-and-disclaimer"
+      }
+    ],
+    "source_uri": "https://mhnsw.au/visit-us/elizabeth-bay-house/plan-your-visit/",
+    "title": "Elizabeth Bay House",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Museums of History NSW",
+      "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)"
+    ],
+    "description": "The early homestead and gardens at Elizabeth Farm are interpreted as a public historic property in Rosehill.",
+    "description_zh": "罗斯希尔的伊丽莎白农庄保留了早期宅邸和花园，设有公众参观与历史解说。",
+    "details": "The early homestead and gardens at Elizabeth Farm are interpreted as a public historic property in Rosehill.",
+    "geography": {
+      "authority_id": "supplement:auth:au-nsw-shr:5051394",
+      "countries": [
+        "AU"
+      ],
+      "note": "State listing 00001 places the marker within the visitor garden at 70 Alice Street. Separately listed public reserve 00285 was excluded.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Published State Heritage Register point 5051394, NSW listing 00001.",
+        "id": "auth:au-nsw-shr:5051394:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)",
+        "revision": "State Heritage Register Centroids source; HOITEMID 5051394; layer version timestamp 1790330231000.",
+        "title": "State Heritage Register publisher point",
+        "uri": "https://mapprod3.environment.nsw.gov.au/arcgis/rest/services/EDP/SHR_Centroids/MapServer/0/query?f=json&where=upper%28ITEMNAME%29+LIKE+%27%25VAUCLUSE+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROSE+SEIDLER+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROUSE+HILL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+BAY+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+FARM%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25TRIAL+BAY+GAOL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25SMOKY+CAPE+LIGHT%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25FORT+SCRATCHLEY%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25COAL+RIVER+PRECINCT%25%27&outSR=4283&outFields=HOITEMID%2CITEMNAME%2CADDRESS%2CLGA%2CLISTINGNO%2CLong_%2CLat%2CPLANNO%2CVERDATE&returnGeometry=true&resultRecordCount=100"
+      }
+    },
+    "id": "auth:au-nsw-shr:5051394",
+    "location_precision": null,
+    "names": [
+      "Elizabeth Farm",
+      "伊丽莎白农庄"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      151.01789422900004,
+      -33.82107168499992
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The early homestead and gardens at Elizabeth Farm are interpreted as a public historic property in Rosehill.",
+        "id": "auth:au-nsw-shr:5051394:visit",
+        "license": null,
+        "publisher": "Museums of History NSW",
+        "revision": "Snapshot 2026-11-28; SHA-256 2ab61c3f0f2004a778e7ec3ae10d6f077727d8331e921db866448c5a2847f552.",
+        "title": "Elizabeth Farm visitor information",
+        "uri": "https://mhnsw.au/visit-us/elizabeth-farm/plan-your-visit/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Published State Heritage Register point 5051394, NSW listing 00001.",
+        "id": "auth:au-nsw-shr:5051394:coordinate",
+        "license": "CC BY 4.0",
+        "publisher": "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)",
+        "revision": "State Heritage Register Centroids source; HOITEMID 5051394; layer version timestamp 1790330231000.",
+        "title": "State Heritage Register publisher point",
+        "uri": "https://mapprod3.environment.nsw.gov.au/arcgis/rest/services/EDP/SHR_Centroids/MapServer/0/query?f=json&where=upper%28ITEMNAME%29+LIKE+%27%25VAUCLUSE+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROSE+SEIDLER+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ROUSE+HILL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+BAY+HOUSE%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25ELIZABETH+FARM%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25TRIAL+BAY+GAOL%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25SMOKY+CAPE+LIGHT%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25FORT+SCRATCHLEY%25%27+OR+upper%28ITEMNAME%29+LIKE+%27%25COAL+RIVER+PRECINCT%25%27&outSR=4283&outFields=HOITEMID%2CITEMNAME%2CADDRESS%2CLGA%2CLISTINGNO%2CLong_%2CLat%2CPLANNO%2CVERDATE&returnGeometry=true&resultRecordCount=100"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Coordinate and name data reused under CC BY 4.0. Terms: https://creativecommons.org/licenses/by/4.0/",
+        "id": "auth:au-nsw-shr:5051394:license",
+        "license": null,
+        "publisher": "State of New South Wales (Department of Climate Change, Energy, the Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 91a25c2996747cad6fac298dd3853fca670800c57a6d59a9fed9941a8d83b93c.",
+        "title": "Reuse conditions and attribution",
+        "uri": "https://www.environment.nsw.gov.au/about-us/copyright-and-disclaimer"
+      }
+    ],
+    "source_uri": "https://mhnsw.au/visit-us/elizabeth-farm/plan-your-visit/",
+    "title": "Elizabeth Farm",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Trust of Australia (Tasmania)",
+      "Wikidata contributors"
+    ],
+    "description": "The National Trust offers guided visits to the original prison chapel and associated historic interiors at the Hobart Penitentiary.",
+    "description_zh": "塔斯马尼亚国家信托在霍巴特旧监狱的原礼拜堂和相邻历史室内空间提供公众导览。",
+    "details": "The National Trust offers guided visits to the original prison chapel and associated historic interiors at the Hobart Penitentiary.",
+    "geography": {
+      "authority_id": "supplement:auth:au-public:Q122442018",
+      "countries": [
+        "AU"
+      ],
+      "note": "Original chapel point falls inside the surviving building and state statutory site 12092. The source retains declared coordinate precision of 0.001 degrees.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Earth coordinate statement for Q122442018.",
+        "id": "wikidata:Q122442018",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Revision 2131271615; P625 Q122442018$AB4A3B7C-EB2B-4E60-94ED-95785012C375.",
+        "title": "Original Wikidata location of Q122442018",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q122442018.json"
+      }
+    },
+    "id": "auth:au-public:Q122442018",
+    "location_precision": null,
+    "names": [
+      "Hobart Penitentiary Chapel",
+      "霍巴特监狱礼拜堂",
+      "Penitentiary Chapel"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      147.3269,
+      -42.8773
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The National Trust offers guided visits to the original prison chapel and associated historic interiors at the Hobart Penitentiary.",
+        "id": "auth:au-public:Q122442018:visit",
+        "license": null,
+        "publisher": "National Trust of Australia (Tasmania)",
+        "revision": "Snapshot 2026-11-28; SHA-256 273182df1e8bea546e705da305b74262650bab5b149dc02066e687368d903785.",
+        "title": "Hobart Penitentiary Chapel visitor information",
+        "uri": "https://www.nationaltrust.org.au/places/penitentiary/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Earth coordinate statement for Q122442018.",
+        "id": "wikidata:Q122442018",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Revision 2131271615; P625 Q122442018$AB4A3B7C-EB2B-4E60-94ED-95785012C375.",
+        "title": "Original Wikidata location of Q122442018",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q122442018.json"
+      }
+    ],
+    "source_uri": "https://www.nationaltrust.org.au/places/penitentiary/",
+    "title": "Hobart Penitentiary Chapel",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Trust of Australia (Victoria)",
+      "Wikidata contributors"
+    ],
+    "description": "The preserved South Yarra house and pleasure garden are open for public visits, with house entry by guided tour.",
+    "description_zh": "南雅拉的科莫旧宅与花园向公众开放，宅邸内部由导览带领参观。",
+    "details": "The preserved South Yarra house and pleasure garden are open for public visits, with house entry by guided tour.",
+    "geography": {
+      "authority_id": "supplement:auth:au-public:Q4348856",
+      "countries": [
+        "AU"
+      ],
+      "note": "The original point falls inside the named public garden grounds and state registration H0205, about one metre from the mansion building.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Earth coordinate statement for Q4348856.",
+        "id": "wikidata:Q4348856",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Revision 2539351451; P625 q4348856$959DEA85-A01A-4E6E-9D75-67E967E30CCD.",
+        "title": "Original Wikidata location of Q4348856",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Barwon+Park+Mansion%7CLake+View+House%7CGulf+Station%7CBarwon+Grange%7CMcCrae+Homestead%7CMulberry+Hill%7CMott%E2%80%99s+Cottage%7CBarwon+Park%7CMott%27s+Cottage%7CLake+View%7CThe+Heights+%28Newtown%29%7CComo+House%7CRippon+Lea+Estate%7CMcCrae+Cottage&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+      }
+    },
+    "id": "auth:au-public:Q4348856",
+    "location_precision": null,
+    "names": [
+      "Como House and Garden",
+      "科莫旧宅与花园",
+      "Como House"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      145.004,
+      -37.8381
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The preserved South Yarra house and pleasure garden are open for public visits, with house entry by guided tour.",
+        "id": "auth:au-public:Q4348856:visit",
+        "license": null,
+        "publisher": "National Trust of Australia (Victoria)",
+        "revision": "Snapshot 2026-11-28; SHA-256 192dee5cbf8d81bdd0bdee2de46feaaafcb809637c2b9d66dba901857af9a996.",
+        "title": "Como House and Garden visitor information",
+        "uri": "https://www.nationaltrust.org.au/places/como-house-and-garden/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Earth coordinate statement for Q4348856.",
+        "id": "wikidata:Q4348856",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Revision 2539351451; P625 q4348856$959DEA85-A01A-4E6E-9D75-67E967E30CCD.",
+        "title": "Original Wikidata location of Q4348856",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Barwon+Park+Mansion%7CLake+View+House%7CGulf+Station%7CBarwon+Grange%7CMcCrae+Homestead%7CMulberry+Hill%7CMott%E2%80%99s+Cottage%7CBarwon+Park%7CMott%27s+Cottage%7CLake+View%7CThe+Heights+%28Newtown%29%7CComo+House%7CRippon+Lea+Estate%7CMcCrae+Cottage&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+      }
+    ],
+    "source_uri": "https://www.nationaltrust.org.au/places/como-house-and-garden/",
+    "title": "Como House and Garden",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "NSW National Parks and Wildlife Service",
+      "Wikidata contributors"
+    ],
+    "description": "The former Trial Bay Gaol in Arakoon National Park retains its prison walls and buildings for public interpretation.",
+    "description_zh": "阿拉孔国家公园的特赖尔湾旧监狱保留了围墙和建筑，设有公众历史解说。",
+    "details": "The former Trial Bay Gaol in Arakoon National Park retains its prison walls and buildings for public interpretation.",
+    "geography": {
+      "authority_id": "supplement:auth:au-public:Q55642432",
+      "countries": [
+        "AU"
+      ],
+      "note": "Active Earth point within named visitor gaol. The state register point is for gaol, breakwater and environs and is not used as the gaol visitor location.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Earth coordinate statement for Q55642432.",
+        "id": "wikidata:Q55642432",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Revision 2307640985; P625 Q55642432$64365042-40f9-389e-2627-09733cad0b85.",
+        "title": "Original Wikidata location of Q55642432",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Adelaide+Gaol%7CMartindale+Hall%7CFort+Glanville+Conservation+Park%7CCape+Willoughby+Lighthouse%7CCape+Borda+Lighthouse%7CCape+du+Couedic+Lighthouse%7CTrial+Bay+Gaol%7CSmoky+Cape+Lighthouse%7CFort+Scratchley%7CVaucluse+House%7CElizabeth+Farm%7CRouse+Hill+Estate%7CElizabeth+Bay+House&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+      }
+    },
+    "id": "auth:au-public:Q55642432",
+    "location_precision": null,
+    "names": [
+      "Trial Bay Gaol",
+      "特赖尔湾旧监狱"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      153.070252,
+      -30.877175
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The former Trial Bay Gaol in Arakoon National Park retains its prison walls and buildings for public interpretation.",
+        "id": "auth:au-public:Q55642432:visit",
+        "license": null,
+        "publisher": "NSW National Parks and Wildlife Service",
+        "revision": "Snapshot 2026-11-28; SHA-256 92357cb79acda2200c796b69fab69fbd4b112c330f5029c3de2d3e67063da26b.",
+        "title": "Trial Bay Gaol visitor information",
+        "uri": "https://www.nationalparks.nsw.gov.au/things-to-do/historic-buildings-places/trial-bay-gaol/visitor-info"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Earth coordinate statement for Q55642432.",
+        "id": "wikidata:Q55642432",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Revision 2307640985; P625 Q55642432$64365042-40f9-389e-2627-09733cad0b85.",
+        "title": "Original Wikidata location of Q55642432",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Adelaide+Gaol%7CMartindale+Hall%7CFort+Glanville+Conservation+Park%7CCape+Willoughby+Lighthouse%7CCape+Borda+Lighthouse%7CCape+du+Couedic+Lighthouse%7CTrial+Bay+Gaol%7CSmoky+Cape+Lighthouse%7CFort+Scratchley%7CVaucluse+House%7CElizabeth+Farm%7CRouse+Hill+Estate%7CElizabeth+Bay+House&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+      }
+    ],
+    "source_uri": "https://www.nationalparks.nsw.gov.au/things-to-do/historic-buildings-places/trial-bay-gaol/visitor-info",
+    "title": "Trial Bay Gaol",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "ACT Historic Places",
+      "Wikidata contributors"
+    ],
+    "description": "This preserved Canberra household forms a historic house museum operated through ACT Historic Places.",
+    "description_zh": "这座保存下来的堪培拉家宅由首都领地历史遗址机构运营，作为旧宅博物馆开放。",
+    "details": "This preserved Canberra household forms a historic house museum operated through ACT Historic Places.",
+    "geography": {
+      "authority_id": "supplement:auth:au-public:Q60740054",
+      "countries": [
+        "AU"
+      ],
+      "note": "Single Earth point within the named house at 24 Mugga Way and matching registered ACT Heritage place 75.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Earth coordinate statement for Q60740054.",
+        "id": "wikidata:Q60740054",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Revision 2452387990; P625 Q60740054$246bb910-44d2-4dc1-4e23-e379a145d658.",
+        "title": "Original Wikidata location of Q60740054",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Mugga-Mugga+Cottage%7CCalthorpes%27+House%7CMartindale+Hall+Conservation+Park%7CFort+Glanville%7CHobart+Convict+Penitentiary%7CHobart+Penitentiary+Chapel%7CState+Coal+Mine+%28Wonthaggi%29%7CWalhalla%2C+Victoria%7CLong+Tunnel+Extended+Gold+Mine%7COld+Government+House+%28Queensland%29%7CHighfield+House%2C+Stanley%7CHighfield+House+%28Tasmania%29%7CLow+Head+Lighthouse&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+      }
+    },
+    "id": "auth:au-public:Q60740054",
+    "location_precision": null,
+    "names": [
+      "Calthorpes' House",
+      "卡尔索普家宅"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      149.12124,
+      -35.32651
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "This preserved Canberra household forms a historic house museum operated through ACT Historic Places.",
+        "id": "auth:au-public:Q60740054:visit",
+        "license": null,
+        "publisher": "ACT Historic Places",
+        "revision": "Snapshot 2026-11-28; SHA-256 173802d13c90f73d108290820a8a8896e315ffb3907205fed9b2f18c421d09f9.",
+        "title": "Calthorpes' House visitor information",
+        "uri": "https://www.historicplaces.com.au/calthorpes-house"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Earth coordinate statement for Q60740054.",
+        "id": "wikidata:Q60740054",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Revision 2452387990; P625 Q60740054$246bb910-44d2-4dc1-4e23-e379a145d658.",
+        "title": "Original Wikidata location of Q60740054",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Mugga-Mugga+Cottage%7CCalthorpes%27+House%7CMartindale+Hall+Conservation+Park%7CFort+Glanville%7CHobart+Convict+Penitentiary%7CHobart+Penitentiary+Chapel%7CState+Coal+Mine+%28Wonthaggi%29%7CWalhalla%2C+Victoria%7CLong+Tunnel+Extended+Gold+Mine%7COld+Government+House+%28Queensland%29%7CHighfield+House%2C+Stanley%7CHighfield+House+%28Tasmania%29%7CLow+Head+Lighthouse&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+      }
+    ],
+    "source_uri": "https://www.historicplaces.com.au/calthorpes-house",
+    "title": "Calthorpes' House",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Trust of Australia (Victoria)",
+      "Wikidata contributors"
+    ],
+    "description": "Barwon Park is a preserved bluestone mansion and public historic property offering guided visits near Winchelsea.",
+    "description_zh": "温切尔西附近的巴旺公园庄园保留了青石宅邸，公众可参加导览。",
+    "details": "Barwon Park is a preserved bluestone mansion and public historic property offering guided visits near Winchelsea.",
+    "geography": {
+      "authority_id": "supplement:auth:au-public:Q66768638",
+      "countries": [
+        "AU"
+      ],
+      "note": "Original point inside the actual visitor mansion and Victorian Heritage Register site H0365. Other Australian Barwon Parks are namesakes.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Earth coordinate statement for Q66768638.",
+        "id": "wikidata:Q66768638",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Revision 2529915160; P625 Q66768638$1925CEF8-ED43-4246-B94A-17C7CFAB1803.",
+        "title": "Original Wikidata location of Q66768638",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Barwon+Park+Mansion%7CLake+View+House%7CGulf+Station%7CBarwon+Grange%7CMcCrae+Homestead%7CMulberry+Hill%7CMott%E2%80%99s+Cottage%7CBarwon+Park%7CMott%27s+Cottage%7CLake+View%7CThe+Heights+%28Newtown%29%7CComo+House%7CRippon+Lea+Estate%7CMcCrae+Cottage&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+      }
+    },
+    "id": "auth:au-public:Q66768638",
+    "location_precision": null,
+    "names": [
+      "Barwon Park Mansion",
+      "巴旺公园庄园",
+      "Barwon Park"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      143.99543176022974,
+      -38.224781062417826
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Barwon Park is a preserved bluestone mansion and public historic property offering guided visits near Winchelsea.",
+        "id": "auth:au-public:Q66768638:visit",
+        "license": null,
+        "publisher": "National Trust of Australia (Victoria)",
+        "revision": "Snapshot 2026-11-28; SHA-256 06420b20df8cee4b76bcc40c8705028d3311f4edecdee41cb568af9a1ea9ded5.",
+        "title": "Barwon Park Mansion visitor information",
+        "uri": "https://www.nationaltrust.org.au/places/barwon-park/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Earth coordinate statement for Q66768638.",
+        "id": "wikidata:Q66768638",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Revision 2529915160; P625 Q66768638$1925CEF8-ED43-4246-B94A-17C7CFAB1803.",
+        "title": "Original Wikidata location of Q66768638",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Barwon+Park+Mansion%7CLake+View+House%7CGulf+Station%7CBarwon+Grange%7CMcCrae+Homestead%7CMulberry+Hill%7CMott%E2%80%99s+Cottage%7CBarwon+Park%7CMott%27s+Cottage%7CLake+View%7CThe+Heights+%28Newtown%29%7CComo+House%7CRippon+Lea+Estate%7CMcCrae+Cottage&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+      }
+    ],
+    "source_uri": "https://www.nationaltrust.org.au/places/barwon-park/",
+    "title": "Barwon Park Mansion",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Trust of Australia (Victoria)",
+      "Wikidata contributors"
+    ],
+    "description": "The historic homestead and garden on the Mornington Peninsula open on scheduled public days.",
+    "description_zh": "莫宁顿半岛的麦克雷历史农庄及庭园按指定日期开放。",
+    "details": "The historic homestead and garden on the Mornington Peninsula open on scheduled public days.",
+    "geography": {
+      "authority_id": "supplement:auth:au-public:Q6800677",
+      "countries": [
+        "AU"
+      ],
+      "note": "Original point is within state registration H0291 on the current public homestead property, approximately 25 metres from the main historic building.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Earth coordinate statement for Q6800677.",
+        "id": "wikidata:Q6800677",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Revision 2561205584; P625 Q6800677$90F91CDD-83A1-4B29-AD35-2B7BBF7FD5B0.",
+        "title": "Original Wikidata location of Q6800677",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Barwon+Park+Mansion%7CLake+View+House%7CGulf+Station%7CBarwon+Grange%7CMcCrae+Homestead%7CMulberry+Hill%7CMott%E2%80%99s+Cottage%7CBarwon+Park%7CMott%27s+Cottage%7CLake+View%7CThe+Heights+%28Newtown%29%7CComo+House%7CRippon+Lea+Estate%7CMcCrae+Cottage&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+      }
+    },
+    "id": "auth:au-public:Q6800677",
+    "location_precision": null,
+    "names": [
+      "McCrae Homestead",
+      "麦克雷农庄"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      144.93138889,
+      -38.34972222
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The historic homestead and garden on the Mornington Peninsula open on scheduled public days.",
+        "id": "auth:au-public:Q6800677:visit",
+        "license": null,
+        "publisher": "National Trust of Australia (Victoria)",
+        "revision": "Snapshot 2026-11-28; SHA-256 45b00df31ae24bd7fcc84377d5e23bb79efc216e0b6b4b1d1a84d1911b59403c.",
+        "title": "McCrae Homestead visitor information",
+        "uri": "https://www.nationaltrust.org.au/places/mccrae-homestead/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Earth coordinate statement for Q6800677.",
+        "id": "wikidata:Q6800677",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Revision 2561205584; P625 Q6800677$90F91CDD-83A1-4B29-AD35-2B7BBF7FD5B0.",
+        "title": "Original Wikidata location of Q6800677",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Barwon+Park+Mansion%7CLake+View+House%7CGulf+Station%7CBarwon+Grange%7CMcCrae+Homestead%7CMulberry+Hill%7CMott%E2%80%99s+Cottage%7CBarwon+Park%7CMott%27s+Cottage%7CLake+View%7CThe+Heights+%28Newtown%29%7CComo+House%7CRippon+Lea+Estate%7CMcCrae+Cottage&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+      }
+    ],
+    "source_uri": "https://www.nationaltrust.org.au/places/mccrae-homestead/",
+    "title": "McCrae Homestead",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Richmond Gaol visitor operator",
+      "Wikidata contributors"
+    ],
+    "description": "The former Richmond Gaol retains its historic buildings for public visits.",
+    "description_zh": "里士满旧监狱保留了原有建筑，现对公众开放。",
+    "details": "The former Richmond Gaol retains its historic buildings for public visits.",
+    "geography": {
+      "authority_id": "supplement:auth:au-public:Q7330833",
+      "countries": [
+        "AU"
+      ],
+      "note": "Original point inside state heritage site 12015 and the current gaol visitor property. The separately listed Richmond Bridge is outside this venue.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Earth coordinate statement for Q7330833.",
+        "id": "wikidata:Q7330833",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Revision 2496780982; P625 q7330833$FC59B599-10F2-4ACB-B902-F259F28CCA49.",
+        "title": "Original Wikidata location of Q7330833",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Rose+Seidler+House%7CFort+Lytton+National+Park%7CSt+Helena+Island+National+Park%7COld+Government+House%2C+Queensland%7CState+Coal+Mine%7CLong+Tunnel+Extended+Mine%7COld+Melbourne+Gaol%7CRoss+Female+Factory%7CHighfield+Historic+Site%7CRichmond+Gaol%7CHobart+Penitentiary%7CLow+Head+Pilot+Station%7CLanyon+Homestead&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+      }
+    },
+    "id": "auth:au-public:Q7330833",
+    "location_precision": null,
+    "names": [
+      "Richmond Gaol",
+      "塔斯马尼亚里士满旧监狱"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      147.4389,
+      -42.7364
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The former Richmond Gaol retains its historic buildings for public visits.",
+        "id": "auth:au-public:Q7330833:visit",
+        "license": null,
+        "publisher": "Richmond Gaol visitor operator",
+        "revision": "Snapshot 2026-11-28; SHA-256 fcdd4ffddb534028b20624c9f308a6c623df21d5a66803d6c5e973cca52ae776.",
+        "title": "Richmond Gaol visitor information",
+        "uri": "https://richmondgaol.com.au/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Earth coordinate statement for Q7330833.",
+        "id": "wikidata:Q7330833",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Revision 2496780982; P625 q7330833$FC59B599-10F2-4ACB-B902-F259F28CCA49.",
+        "title": "Original Wikidata location of Q7330833",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Rose+Seidler+House%7CFort+Lytton+National+Park%7CSt+Helena+Island+National+Park%7COld+Government+House%2C+Queensland%7CState+Coal+Mine%7CLong+Tunnel+Extended+Mine%7COld+Melbourne+Gaol%7CRoss+Female+Factory%7CHighfield+Historic+Site%7CRichmond+Gaol%7CHobart+Penitentiary%7CLow+Head+Pilot+Station%7CLanyon+Homestead&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+      }
+    ],
+    "source_uri": "https://richmondgaol.com.au/",
+    "title": "Richmond Gaol",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "NSW National Parks and Wildlife Service",
+      "Wikidata contributors"
+    ],
+    "description": "The historic lighthouse is approached on a public track. Scheduled ranger-guided visits give access to the lighthouse.",
+    "description_zh": "公众可沿步道到达斯莫基角灯塔，塔内参观按公园管理方的导览安排开放。",
+    "details": "The historic lighthouse is approached on a public track. Scheduled ranger-guided visits give access to the lighthouse.",
+    "geography": {
+      "authority_id": "supplement:auth:au-public:Q7546135",
+      "countries": [
+        "AU"
+      ],
+      "note": "Point is at the mapped tower and public lookout rather than the separately operated keeper cottages in the group listing.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Earth coordinate statement for Q7546135.",
+        "id": "wikidata:Q7546135",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Revision 2348463748; P625 q7546135$A9A209C0-D789-4626-987A-BE396F7EAA76.",
+        "title": "Original Wikidata location of Q7546135",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Adelaide+Gaol%7CMartindale+Hall%7CFort+Glanville+Conservation+Park%7CCape+Willoughby+Lighthouse%7CCape+Borda+Lighthouse%7CCape+du+Couedic+Lighthouse%7CTrial+Bay+Gaol%7CSmoky+Cape+Lighthouse%7CFort+Scratchley%7CVaucluse+House%7CElizabeth+Farm%7CRouse+Hill+Estate%7CElizabeth+Bay+House&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+      }
+    },
+    "id": "auth:au-public:Q7546135",
+    "location_precision": null,
+    "names": [
+      "Smoky Cape Lighthouse",
+      "斯莫基角灯塔"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      153.087374,
+      -30.922876
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The historic lighthouse is approached on a public track. Scheduled ranger-guided visits give access to the lighthouse.",
+        "id": "auth:au-public:Q7546135:visit",
+        "license": null,
+        "publisher": "NSW National Parks and Wildlife Service",
+        "revision": "Snapshot 2026-11-28; SHA-256 c45044a680cef3cc5f15930dccab993a3943a6f09814d7954ba804e75143ed49.",
+        "title": "Smoky Cape Lighthouse visitor information",
+        "uri": "https://www.nationalparks.nsw.gov.au/things-to-do/historic-buildings-places/smoky-cape-lighthouse"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Earth coordinate statement for Q7546135.",
+        "id": "wikidata:Q7546135",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Revision 2348463748; P625 q7546135$A9A209C0-D789-4626-987A-BE396F7EAA76.",
+        "title": "Original Wikidata location of Q7546135",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&sites=enwiki&titles=Adelaide+Gaol%7CMartindale+Hall%7CFort+Glanville+Conservation+Park%7CCape+Willoughby+Lighthouse%7CCape+Borda+Lighthouse%7CCape+du+Couedic+Lighthouse%7CTrial+Bay+Gaol%7CSmoky+Cape+Lighthouse%7CFort+Scratchley%7CVaucluse+House%7CElizabeth+Farm%7CRouse+Hill+Estate%7CElizabeth+Bay+House&redirects=yes&props=labels%7Caliases%7Csitelinks%7Cclaims%7Cinfo&format=json"
+      }
+    ],
+    "source_uri": "https://www.nationalparks.nsw.gov.au/things-to-do/historic-buildings-places/smoky-cape-lighthouse",
+    "title": "Smoky Cape Lighthouse",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Parks and Wildlife Service South Australia",
+      "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)"
+    ],
+    "description": "A self-guided visit covers the historic lightstation settlement and its maritime interpretation precinct.",
+    "description_zh": "博尔达角灯站的历史聚落设有自助参观和海事历史解说。",
+    "details": "A self-guided visit covers the historic lightstation settlement and its maritime interpretation precinct.",
+    "geography": {
+      "authority_id": "supplement:auth:au-sa-shr:16021",
+      "countries": [
+        "AU"
+      ],
+      "note": "Selected the published western part of the two-point heritage record beside the lighthouse grounds. The eastern point identifies a separately managed keeper’s residence. Source accuracy class L retained in audit.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Original state heritage point 16021, SHR 10399; published accuracy L.",
+        "id": "auth:au-sa-shr:16021:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "SAHeritagePlacesPoints_GDA2020.geojson; snapshot 2026-11-28; state item 16021; CC BY 3.0 AU from the archive License.txt.",
+        "title": "SA Heritage Places state register point",
+        "uri": "https://www.dptiapps.com.au/dataportal/SAHeritagePlaces_geojson.zip"
+      }
+    },
+    "id": "auth:au-sa-shr:16021",
+    "location_precision": null,
+    "names": [
+      "Cape Borda Lightstation",
+      "博尔达角灯站"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      136.59325850800008,
+      -35.75273757799994
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "A self-guided visit covers the historic lightstation settlement and its maritime interpretation precinct.",
+        "id": "auth:au-sa-shr:16021:visit",
+        "license": null,
+        "publisher": "National Parks and Wildlife Service South Australia",
+        "revision": "Snapshot 2026-11-28; SHA-256 c12207fd7618221ca46ddfe604be239d7aef55d53380cc3af9ec9f233fa44b7a.",
+        "title": "Cape Borda Lightstation visitor information",
+        "uri": "https://www.parks.sa.gov.au/parks/cape-borda-lightstation"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Original state heritage point 16021, SHR 10399; published accuracy L.",
+        "id": "auth:au-sa-shr:16021:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "SAHeritagePlacesPoints_GDA2020.geojson; snapshot 2026-11-28; state item 16021; CC BY 3.0 AU from the archive License.txt.",
+        "title": "SA Heritage Places state register point",
+        "uri": "https://www.dptiapps.com.au/dataportal/SAHeritagePlaces_geojson.zip"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Coordinate and name data reused under CC BY 3.0 AU. Terms: https://creativecommons.org/licenses/by/3.0/au/",
+        "id": "auth:au-sa-shr:16021:license",
+        "license": null,
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c.",
+        "title": "Reuse conditions and attribution",
+        "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "State heritage points are recorded within digitised site footprints.",
+        "id": "auth:au-sa-shr:16021:method",
+        "license": null,
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 1b422cc802d788e7b8fee50f483f758eeec508591340535902e05e893687834d.",
+        "title": "SA Heritage Places published point and accuracy metadata",
+        "uri": "https://www.location.sa.gov.au/LMS/Reports/ReportMetadata.aspx?p_no=1576&pa=dpti&pu=y"
+      }
+    ],
+    "source_uri": "https://www.parks.sa.gov.au/parks/cape-borda-lightstation",
+    "title": "Cape Borda Lightstation",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Parks and Wildlife Service South Australia",
+      "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)"
+    ],
+    "description": "The historic lighthouse can be viewed from the public heritage trail in Flinders Chase National Park. Visitor access is exterior.",
+    "description_zh": "弗林德斯蔡斯国家公园的公共历史步道可近距离观看这座灯塔。参观限于外部。",
+    "details": "The historic lighthouse can be viewed from the public heritage trail in Flinders Chase National Park. Visitor access is exterior.",
+    "geography": {
+      "authority_id": "supplement:auth:au-sa-shr:16024",
+      "countries": [
+        "AU"
+      ],
+      "note": "The single state-listed lighthouse location is approximately eight metres from the public Lighthouse Heritage Walk. The point represents the historical object visible from the trail.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Original state heritage point 16024, SHR 10398; published accuracy H.",
+        "id": "auth:au-sa-shr:16024:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "SAHeritagePlacesPoints_GDA2020.geojson; snapshot 2026-11-28; state item 16024; CC BY 3.0 AU from the archive License.txt.",
+        "title": "SA Heritage Places state register point",
+        "uri": "https://www.dptiapps.com.au/dataportal/SAHeritagePlaces_geojson.zip"
+      }
+    },
+    "id": "auth:au-sa-shr:16024",
+    "location_precision": null,
+    "names": [
+      "Cape du Couedic Lighthouse",
+      "迪库埃迪克角灯塔",
+      "Cape du Couedic Lighthouse, Flinders Chase National Park"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      136.70518913,
+      -36.05799784799996
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The historic lighthouse can be viewed from the public heritage trail in Flinders Chase National Park. Visitor access is exterior.",
+        "id": "auth:au-sa-shr:16024:visit",
+        "license": null,
+        "publisher": "National Parks and Wildlife Service South Australia",
+        "revision": "Snapshot 2026-11-28; SHA-256 eb1569146a8d3815e5c4cd502c98b2321e31ab867199b755c044ac374ff5b20e.",
+        "title": "Cape du Couedic Lighthouse visitor information",
+        "uri": "https://www.parks.sa.gov.au/insider-tips/kangaroo-island-lighthouses"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Original state heritage point 16024, SHR 10398; published accuracy H.",
+        "id": "auth:au-sa-shr:16024:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "SAHeritagePlacesPoints_GDA2020.geojson; snapshot 2026-11-28; state item 16024; CC BY 3.0 AU from the archive License.txt.",
+        "title": "SA Heritage Places state register point",
+        "uri": "https://www.dptiapps.com.au/dataportal/SAHeritagePlaces_geojson.zip"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Coordinate and name data reused under CC BY 3.0 AU. Terms: https://creativecommons.org/licenses/by/3.0/au/",
+        "id": "auth:au-sa-shr:16024:license",
+        "license": null,
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c.",
+        "title": "Reuse conditions and attribution",
+        "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "State heritage points are recorded within digitised site footprints.",
+        "id": "auth:au-sa-shr:16024:method",
+        "license": null,
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 1b422cc802d788e7b8fee50f483f758eeec508591340535902e05e893687834d.",
+        "title": "SA Heritage Places published point and accuracy metadata",
+        "uri": "https://www.location.sa.gov.au/LMS/Reports/ReportMetadata.aspx?p_no=1576&pa=dpti&pu=y"
+      }
+    ],
+    "source_uri": "https://www.parks.sa.gov.au/insider-tips/kangaroo-island-lighthouses",
+    "title": "Cape du Couedic Lighthouse",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Parks and Wildlife Service South Australia",
+      "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)"
+    ],
+    "description": "The Cape Willoughby lightstation has a visitor centre, guided lighthouse access and a heritage walk.",
+    "description_zh": "威洛比角灯站设有游客中心及历史步道，灯塔按导览安排开放。",
+    "details": "The Cape Willoughby lightstation has a visitor centre, guided lighthouse access and a heritage walk.",
+    "geography": {
+      "authority_id": "supplement:auth:au-sa-shr:16048",
+      "countries": [
+        "AU"
+      ],
+      "note": "Single state point in the registered tower listing within the public conservation park. The nearby keepers’ buildings have separate functions.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Original state heritage point 16048, SHR 10391; published accuracy H.",
+        "id": "auth:au-sa-shr:16048:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "SAHeritagePlacesPoints_GDA2020.geojson; snapshot 2026-11-28; state item 16048; CC BY 3.0 AU from the archive License.txt.",
+        "title": "SA Heritage Places state register point",
+        "uri": "https://www.dptiapps.com.au/dataportal/SAHeritagePlaces_geojson.zip"
+      }
+    },
+    "id": "auth:au-sa-shr:16048",
+    "location_precision": null,
+    "names": [
+      "Cape Willoughby Lighthouse",
+      "威洛比角灯塔"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      138.13282530700008,
+      -35.842818086999955
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Cape Willoughby lightstation has a visitor centre, guided lighthouse access and a heritage walk.",
+        "id": "auth:au-sa-shr:16048:visit",
+        "license": null,
+        "publisher": "National Parks and Wildlife Service South Australia",
+        "revision": "Snapshot 2026-11-28; SHA-256 9bdf43c962f61b9a988c6cb36a941ed44e9aa9e4cdcce2f92b360b986f77bbb9.",
+        "title": "Cape Willoughby Lighthouse visitor information",
+        "uri": "https://www.parks.sa.gov.au/parks/cape-willoughby-conservation-park"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Original state heritage point 16048, SHR 10391; published accuracy H.",
+        "id": "auth:au-sa-shr:16048:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "SAHeritagePlacesPoints_GDA2020.geojson; snapshot 2026-11-28; state item 16048; CC BY 3.0 AU from the archive License.txt.",
+        "title": "SA Heritage Places state register point",
+        "uri": "https://www.dptiapps.com.au/dataportal/SAHeritagePlaces_geojson.zip"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Coordinate and name data reused under CC BY 3.0 AU. Terms: https://creativecommons.org/licenses/by/3.0/au/",
+        "id": "auth:au-sa-shr:16048:license",
+        "license": null,
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c.",
+        "title": "Reuse conditions and attribution",
+        "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "State heritage points are recorded within digitised site footprints.",
+        "id": "auth:au-sa-shr:16048:method",
+        "license": null,
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 1b422cc802d788e7b8fee50f483f758eeec508591340535902e05e893687834d.",
+        "title": "SA Heritage Places published point and accuracy metadata",
+        "uri": "https://www.location.sa.gov.au/LMS/Reports/ReportMetadata.aspx?p_no=1576&pa=dpti&pu=y"
+      }
+    ],
+    "source_uri": "https://www.parks.sa.gov.au/parks/cape-willoughby-conservation-park",
+    "title": "Cape Willoughby Lighthouse",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "South Australian Tourism Commission",
+      "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)"
+    ],
+    "description": "The main Kanyaka Station ruins are a public stop along Flinders Ranges Way, preserving remnants of a historic pastoral homestead.",
+    "description_zh": "卡尼亚卡牧站主遗址位于弗林德斯山脉公路旁，游客可看见早期牧业农庄建筑遗存。",
+    "details": "The main Kanyaka Station ruins are a public stop along Flinders Ranges Way, preserving remnants of a historic pastoral homestead.",
+    "geography": {
+      "authority_id": "supplement:auth:au-sa-shr:16351",
+      "countries": [
+        "AU"
+      ],
+      "note": "Selected the Northern homestead ruin complex identified by the official visitor route and state shape; the record’s three other locations represent other parts of the larger listing. Source accuracy class L retained in audit.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Original state heritage point 16351, SHR 10192; published accuracy L.",
+        "id": "auth:au-sa-shr:16351:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "SAHeritagePlacesPoints_GDA2020.geojson; snapshot 2026-11-28; state item 16351; CC BY 3.0 AU from the archive License.txt.",
+        "title": "SA Heritage Places state register point",
+        "uri": "https://www.dptiapps.com.au/dataportal/SAHeritagePlaces_geojson.zip"
+      }
+    },
+    "id": "auth:au-sa-shr:16351",
+    "location_precision": null,
+    "names": [
+      "Kanyaka Station Main Ruins",
+      "卡尼亚卡牧站主遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      138.29939430100012,
+      -32.072772063999935
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The main Kanyaka Station ruins are a public stop along Flinders Ranges Way, preserving remnants of a historic pastoral homestead.",
+        "id": "auth:au-sa-shr:16351:visit",
+        "license": null,
+        "publisher": "South Australian Tourism Commission",
+        "revision": "Snapshot 2026-11-28; SHA-256 dbc46f2564e048673d00642a56f0a95c71db16aa0268e87fd4cdfa1a5f27cc69.",
+        "title": "Kanyaka Station Main Ruins visitor information",
+        "uri": "https://southaustralia.com/products/flinders-ranges-and-outback/attraction/kanyaka-ruins-station"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Original state heritage point 16351, SHR 10192; published accuracy L.",
+        "id": "auth:au-sa-shr:16351:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "SAHeritagePlacesPoints_GDA2020.geojson; snapshot 2026-11-28; state item 16351; CC BY 3.0 AU from the archive License.txt.",
+        "title": "SA Heritage Places state register point",
+        "uri": "https://www.dptiapps.com.au/dataportal/SAHeritagePlaces_geojson.zip"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Coordinate and name data reused under CC BY 3.0 AU. Terms: https://creativecommons.org/licenses/by/3.0/au/",
+        "id": "auth:au-sa-shr:16351:license",
+        "license": null,
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c.",
+        "title": "Reuse conditions and attribution",
+        "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "State heritage points are recorded within digitised site footprints.",
+        "id": "auth:au-sa-shr:16351:method",
+        "license": null,
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 1b422cc802d788e7b8fee50f483f758eeec508591340535902e05e893687834d.",
+        "title": "SA Heritage Places published point and accuracy metadata",
+        "uri": "https://www.location.sa.gov.au/LMS/Reports/ReportMetadata.aspx?p_no=1576&pa=dpti&pu=y"
+      }
+    ],
+    "source_uri": "https://southaustralia.com/products/flinders-ranges-and-outback/attraction/kanyaka-ruins-station",
+    "title": "Kanyaka Station Main Ruins",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Trust of South Australia",
+      "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)"
+    ],
+    "description": "The historic hotel and former post office retain public interpretation and exhibits near the Murray River.",
+    "description_zh": "这座历史旅店曾兼作邮局，现向访客展示默里河沿岸交通及通信史。",
+    "details": "The historic hotel and former post office retain public interpretation and exhibits near the Murray River.",
+    "geography": {
+      "authority_id": "supplement:auth:au-sa-shr:16371",
+      "countries": [
+        "AU"
+      ],
+      "note": "Single state point inside the heritage property and near the original visitor building; linked wetland trails are outside the identity.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Original state heritage point 16371, SHR 10278; published accuracy H.",
+        "id": "auth:au-sa-shr:16371:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "SAHeritagePlacesPoints_GDA2020.geojson; snapshot 2026-11-28; state item 16371; CC BY 3.0 AU from the archive License.txt.",
+        "title": "SA Heritage Places state register point",
+        "uri": "https://www.dptiapps.com.au/dataportal/SAHeritagePlaces_geojson.zip"
+      }
+    },
+    "id": "auth:au-sa-shr:16371",
+    "location_precision": null,
+    "names": [
+      "Overland Corner Hotel",
+      "奥弗兰角旅店旧址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      140.3400846710001,
+      -34.15240400399995
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The historic hotel and former post office retain public interpretation and exhibits near the Murray River.",
+        "id": "auth:au-sa-shr:16371:visit",
+        "license": null,
+        "publisher": "National Trust of South Australia",
+        "revision": "Snapshot 2026-11-28; SHA-256 d4cfae0eb569ea3709d0b341c2ae05e0155bb49a09f057fb246b958d41dd283d.",
+        "title": "Overland Corner Hotel visitor information",
+        "uri": "https://www.nationaltrust.org.au/places/overland-corner-hotel/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Original state heritage point 16371, SHR 10278; published accuracy H.",
+        "id": "auth:au-sa-shr:16371:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "SAHeritagePlacesPoints_GDA2020.geojson; snapshot 2026-11-28; state item 16371; CC BY 3.0 AU from the archive License.txt.",
+        "title": "SA Heritage Places state register point",
+        "uri": "https://www.dptiapps.com.au/dataportal/SAHeritagePlaces_geojson.zip"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Coordinate and name data reused under CC BY 3.0 AU. Terms: https://creativecommons.org/licenses/by/3.0/au/",
+        "id": "auth:au-sa-shr:16371:license",
+        "license": null,
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c.",
+        "title": "Reuse conditions and attribution",
+        "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "State heritage points are recorded within digitised site footprints.",
+        "id": "auth:au-sa-shr:16371:method",
+        "license": null,
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 1b422cc802d788e7b8fee50f483f758eeec508591340535902e05e893687834d.",
+        "title": "SA Heritage Places published point and accuracy metadata",
+        "uri": "https://www.location.sa.gov.au/LMS/Reports/ReportMetadata.aspx?p_no=1576&pa=dpti&pu=y"
+      }
+    ],
+    "source_uri": "https://www.nationaltrust.org.au/places/overland-corner-hotel/",
+    "title": "Overland Corner Hotel",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Trust of South Australia",
+      "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)"
+    ],
+    "description": "The original log homestead, packing shed and orchard form the public Olivewood history museum in Renmark.",
+    "description_zh": "伦马克的原木农庄、包装工棚和果园组成奥利夫伍德公共历史博物馆。",
+    "details": "The original log homestead, packing shed and orchard form the public Olivewood history museum in Renmark.",
+    "geography": {
+      "authority_id": "supplement:auth:au-sa-shr:16374",
+      "countries": [
+        "AU"
+      ],
+      "note": "Single state point within the mapped and registered visitor estate at Renmark Avenue and Twenty-first Street.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Original state heritage point 16374, SHR 10281; published accuracy H.",
+        "id": "auth:au-sa-shr:16374:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "SAHeritagePlacesPoints_GDA2020.geojson; snapshot 2026-11-28; state item 16374; CC BY 3.0 AU from the archive License.txt.",
+        "title": "SA Heritage Places state register point",
+        "uri": "https://www.dptiapps.com.au/dataportal/SAHeritagePlaces_geojson.zip"
+      }
+    },
+    "id": "auth:au-sa-shr:16374",
+    "location_precision": null,
+    "names": [
+      "Olivewood Historic Homestead and Museum",
+      "奥利夫伍德农庄博物馆"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      140.73468757800003,
+      -34.18054272999996
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The original log homestead, packing shed and orchard form the public Olivewood history museum in Renmark.",
+        "id": "auth:au-sa-shr:16374:visit",
+        "license": null,
+        "publisher": "National Trust of South Australia",
+        "revision": "Snapshot 2026-11-28; SHA-256 f92cc7cbd4405afe1856af64c0b8806cf42fab193e137d05a552b226f726fb86.",
+        "title": "Olivewood Historic Homestead and Museum visitor information",
+        "uri": "https://www.nationaltrust.org.au/places/olivewood/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Original state heritage point 16374, SHR 10281; published accuracy H.",
+        "id": "auth:au-sa-shr:16374:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "SAHeritagePlacesPoints_GDA2020.geojson; snapshot 2026-11-28; state item 16374; CC BY 3.0 AU from the archive License.txt.",
+        "title": "SA Heritage Places state register point",
+        "uri": "https://www.dptiapps.com.au/dataportal/SAHeritagePlaces_geojson.zip"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Coordinate and name data reused under CC BY 3.0 AU. Terms: https://creativecommons.org/licenses/by/3.0/au/",
+        "id": "auth:au-sa-shr:16374:license",
+        "license": null,
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c.",
+        "title": "Reuse conditions and attribution",
+        "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "State heritage points are recorded within digitised site footprints.",
+        "id": "auth:au-sa-shr:16374:method",
+        "license": null,
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 1b422cc802d788e7b8fee50f483f758eeec508591340535902e05e893687834d.",
+        "title": "SA Heritage Places published point and accuracy metadata",
+        "uri": "https://www.location.sa.gov.au/LMS/Reports/ReportMetadata.aspx?p_no=1576&pa=dpti&pu=y"
+      }
+    ],
+    "source_uri": "https://www.nationaltrust.org.au/places/olivewood/",
+    "title": "Olivewood Historic Homestead and Museum",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Parks and Wildlife Service South Australia",
+      "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)"
+    ],
+    "description": "The former Adelaide Gaol retains its enclosed prison grounds, cell blocks and other historic features for public visits.",
+    "description_zh": "阿德莱德旧监狱保留了监狱围墙、牢房及其他历史设施，现向公众开放。",
+    "details": "The former Adelaide Gaol retains its enclosed prison grounds, cell blocks and other historic features for public visits.",
+    "geography": {
+      "authority_id": "supplement:auth:au-sa-shr:1695",
+      "countries": [
+        "AU"
+      ],
+      "note": "Primary state heritage location in the named gaol visitor precinct at 18 Gaol Road. The nearby mapped Adelaide Park Lands boundary is separate.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Original state heritage point 1695, SHR 10937; published accuracy H.",
+        "id": "auth:au-sa-shr:1695:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "SAHeritagePlacesPoints_GDA2020.geojson; snapshot 2026-11-28; state item 1695; CC BY 3.0 AU from the archive License.txt.",
+        "title": "SA Heritage Places state register point",
+        "uri": "https://www.dptiapps.com.au/dataportal/SAHeritagePlaces_geojson.zip"
+      }
+    },
+    "id": "auth:au-sa-shr:1695",
+    "location_precision": null,
+    "names": [
+      "Adelaide Gaol",
+      "阿德莱德旧监狱",
+      "Former Adelaide Gaol"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      138.5847233500001,
+      -34.91728345599995
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The former Adelaide Gaol retains its enclosed prison grounds, cell blocks and other historic features for public visits.",
+        "id": "auth:au-sa-shr:1695:visit",
+        "license": null,
+        "publisher": "National Parks and Wildlife Service South Australia",
+        "revision": "Snapshot 2026-11-28; SHA-256 78b2cecc0a731b13e3990849b92f045658bff0cc0fa062f11908aef078a4d031.",
+        "title": "Adelaide Gaol visitor information",
+        "uri": "https://www.adelaidegaol.sa.gov.au/visiting-the-gaol/visitor-information"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Original state heritage point 1695, SHR 10937; published accuracy H.",
+        "id": "auth:au-sa-shr:1695:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "SAHeritagePlacesPoints_GDA2020.geojson; snapshot 2026-11-28; state item 1695; CC BY 3.0 AU from the archive License.txt.",
+        "title": "SA Heritage Places state register point",
+        "uri": "https://www.dptiapps.com.au/dataportal/SAHeritagePlaces_geojson.zip"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Coordinate and name data reused under CC BY 3.0 AU. Terms: https://creativecommons.org/licenses/by/3.0/au/",
+        "id": "auth:au-sa-shr:1695:license",
+        "license": null,
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c.",
+        "title": "Reuse conditions and attribution",
+        "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "State heritage points are recorded within digitised site footprints.",
+        "id": "auth:au-sa-shr:1695:method",
+        "license": null,
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 1b422cc802d788e7b8fee50f483f758eeec508591340535902e05e893687834d.",
+        "title": "SA Heritage Places published point and accuracy metadata",
+        "uri": "https://www.location.sa.gov.au/LMS/Reports/ReportMetadata.aspx?p_no=1576&pa=dpti&pu=y"
+      }
+    ],
+    "source_uri": "https://www.adelaidegaol.sa.gov.au/visiting-the-gaol/visitor-information",
+    "title": "Adelaide Gaol",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Matched a public visitor site to a licensed original place point.",
+      "note": "No new historical phases assigned in this point update.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Parks and Wildlife Service South Australia",
+      "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)"
+    ],
+    "description": "The coastal fort preserves its defensive work and opens on scheduled public days.",
+    "description_zh": "格兰维尔堡保留了海岸防御工事，在指定开放日可参观。",
+    "details": "The coastal fort preserves its defensive work and opens on scheduled public days.",
+    "geography": {
+      "authority_id": "supplement:auth:au-sa-shr:9258",
+      "countries": [
+        "AU"
+      ],
+      "note": "Single primary state heritage point inside the named fort structure. The adjacent caravan site is separate.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Original state heritage point 9258, SHR 10569; published accuracy H.",
+        "id": "auth:au-sa-shr:9258:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "SAHeritagePlacesPoints_GDA2020.geojson; snapshot 2026-11-28; state item 9258; CC BY 3.0 AU from the archive License.txt.",
+        "title": "SA Heritage Places state register point",
+        "uri": "https://www.dptiapps.com.au/dataportal/SAHeritagePlaces_geojson.zip"
+      }
+    },
+    "id": "auth:au-sa-shr:9258",
+    "location_precision": null,
+    "names": [
+      "Fort Glanville",
+      "格兰维尔堡",
+      "Fort Glanville, Fort Glanville Conservation Park"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      138.47746910800004,
+      -34.850942775999954
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The coastal fort preserves its defensive work and opens on scheduled public days.",
+        "id": "auth:au-sa-shr:9258:visit",
+        "license": null,
+        "publisher": "National Parks and Wildlife Service South Australia",
+        "revision": "Snapshot 2026-11-28; SHA-256 89cf9621334d4c29744fa711bce0bf69ffa0223917b30fec5f092edd9eda5f7f.",
+        "title": "Fort Glanville visitor information",
+        "uri": "https://www.parks.sa.gov.au/parks/fort-glanville-conservation-park"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Original state heritage point 9258, SHR 10569; published accuracy H.",
+        "id": "auth:au-sa-shr:9258:coordinate",
+        "license": "CC BY 3.0 AU",
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "SAHeritagePlacesPoints_GDA2020.geojson; snapshot 2026-11-28; state item 9258; CC BY 3.0 AU from the archive License.txt.",
+        "title": "SA Heritage Places state register point",
+        "uri": "https://www.dptiapps.com.au/dataportal/SAHeritagePlaces_geojson.zip"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Coordinate and name data reused under CC BY 3.0 AU. Terms: https://creativecommons.org/licenses/by/3.0/au/",
+        "id": "auth:au-sa-shr:9258:license",
+        "license": null,
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 4ec7192e22f47340fa358df07e57c84d4c86b33c89f03669681dd8c33d2b8f6c.",
+        "title": "Reuse conditions and attribution",
+        "uri": "https://creativecommons.org/licenses/by/3.0/au/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "State heritage points are recorded within digitised site footprints.",
+        "id": "auth:au-sa-shr:9258:method",
+        "license": null,
+        "publisher": "State of South Australia (Department for Housing and Urban Development and Department for Environment and Water)",
+        "revision": "Snapshot 2026-11-28; SHA-256 1b422cc802d788e7b8fee50f483f758eeec508591340535902e05e893687834d.",
+        "title": "SA Heritage Places published point and accuracy metadata",
+        "uri": "https://www.location.sa.gov.au/LMS/Reports/ReportMetadata.aspx?p_no=1576&pa=dpti&pu=y"
+      }
+    ],
+    "source_uri": "https://www.parks.sa.gov.au/parks/fort-glanville-conservation-park",
+    "title": "Fort Glanville",
+    "types": [
+      "historic-site"
+    ]
+  }
+]

@@ -53,10 +53,10 @@ def test_published_text_derivatives_rebuild_twice_without_network(tmp_path: Path
 def test_norfolk_is_additional_source_membership_and_area_is_not_a_point(tmp_path: Path) -> None:
     with TestClient(create_app(home=tmp_path)) as client:
         coverage = client.get("/api/coverage").json()
-        assert coverage["total"] == 5273 and coverage["corpus_version"] == "global-v21"
+        assert coverage["total"] == 5310 and coverage["corpus_version"] == "global-v21"
         assert len(coverage["countries"]) == 216 and len(coverage["regions"]) == 7
         countries = {row["id"]: row["count"] for row in coverage["countries"]}
-        assert countries["AU"] == 90 and countries["NF"] == 1
+        assert countries["AU"] == 113 and countries["NF"] == 1
         nf = client.get("/api/sites", params={"country": "NF"}).json()
         assert nf["total"] == 1 and nf["sites"][0]["id"] == "auth:au-nhl:106167"
         sirius = client.get("/api/sites/auth:au-nhl:106167").json()

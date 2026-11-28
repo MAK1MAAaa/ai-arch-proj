@@ -201,8 +201,11 @@ def test_public_point_search_catalogue_and_provenance(
             ("SC", "auth:sc-public:", 2),
             ("MG", "auth:mg-public:", 1),
             ("MV", "auth:mv-public:", 1),
-            ("AU", "auth:au-ga2012:", 14),
-            ("AU", "auth:au-public:", 3),
+            ("AU", "auth:au-ga2012:", 16),
+            ("AU", "auth:au-public:", 11),
+            ("AU", "auth:au-sa-shr:", 8),
+            ("AU", "auth:au-nsw-shr:", 5),
+            ("US", "auth:us-southwest:", 14),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -217,6 +220,19 @@ def test_public_point_search_catalogue_and_provenance(
             source["license"] == "CC BY-SA 4.0"
             and source["publisher"] == "Andreas Faessler via Wikimedia Commons"
             for source in utheemu["source_refs"]
+        )
+        painted_hand = client.get("/api/sites/auth:us-southwest:co-painted").json()
+        assert painted_hand["repr_point"] == [-108.972199, 37.45454]
+        assert any(
+            source["license"] == "U.S. public domain (federal agency data)"
+            and "Bureau of Land Management" in source["publisher"]
+            for source in painted_hand["source_refs"]
+        )
+        elizabeth_farm = client.get("/api/sites/auth:au-nsw-shr:5051394").json()
+        assert elizabeth_farm["repr_point"] == [151.01789422900004, -33.82107168499992]
+        assert any(
+            source["license"] == "CC BY 4.0" and "New South Wales" in source["publisher"]
+            for source in elizabeth_farm["source_refs"]
         )
         lochleven = client.get("/api/sites/auth:gb-hes-pic:PIC030").json()
         assert lochleven["repr_point"] == [-3.3921612556552567, 56.20086363535327]
