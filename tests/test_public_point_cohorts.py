@@ -99,7 +99,7 @@ def test_public_point_search_catalogue_and_provenance(
             ("PR", "auth:nps-caribbean:", 5),
             ("VI", "auth:nps-caribbean:", 2),
             ("PE", "auth:pe-mincul:", 9),
-            ("IN", "auth:in-public:", 46),
+            ("IN", "auth:in-public:", 51),
             ("LK", "auth:lk-public:", 4),
             ("BD", "auth:bd-public:", 6),
             ("NP", "auth:np-public:", 2),
@@ -178,7 +178,7 @@ def test_public_point_search_catalogue_and_provenance(
             ("RS", "auth:rs-public:", 10),
             ("RW", "auth:rw-public:", 4),
             ("LA", "auth:la-public:", 9),
-            ("BT", "auth:bt-public:", 6),
+            ("BT", "auth:bt-public:", 9),
             ("DZ", "auth:dz-public:", 5),
             ("SE", "auth:se-public:", 26),
             ("SE", "auth:se-raa:", 2),
@@ -195,6 +195,12 @@ def test_public_point_search_catalogue_and_provenance(
             ("SL", "auth:sl-public:", 2),
             ("LR", "auth:lr-public:", 1),
             ("GM", "auth:gm-public:", 3),
+            ("MR", "auth:mr-public:", 1),
+            ("ML", "auth:ml-public:", 2),
+            ("MU", "auth:mu-public:", 4),
+            ("SC", "auth:sc-public:", 2),
+            ("MG", "auth:mg-public:", 1),
+            ("MV", "auth:mv-public:", 1),
             ("AU", "auth:au-ga2012:", 14),
             ("AU", "auth:au-public:", 3),
         ):
@@ -205,6 +211,13 @@ def test_public_point_search_catalogue_and_provenance(
         assert client.get("/api/sites/auth:gb-cadw:PE373").status_code == 404
         assert client.get("/api/sites/auth:fi-vark:100270").status_code == 404
         assert client.get("/api/sites/auth:gb-hes-pic:PIC077").status_code == 404
+        utheemu = client.get("/api/sites/auth:mv-public:utheemu-ganduvaru").json()
+        assert utheemu["repr_point"] == [73.11231944444444, 6.8367305555555555]
+        assert any(
+            source["license"] == "CC BY-SA 4.0"
+            and source["publisher"] == "Andreas Faessler via Wikimedia Commons"
+            for source in utheemu["source_refs"]
+        )
         lochleven = client.get("/api/sites/auth:gb-hes-pic:PIC030").json()
         assert lochleven["repr_point"] == [-3.3921612556552567, 56.20086363535327]
         assert lochleven["source_refs"][0]["license"] == "UK Open Government Licence v3.0"

@@ -1,0 +1,754 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Office National du Tourisme de Madagascar",
+      "NewsMada, reporting the Rova visitor programme",
+      "Wikidata contributors"
+    ],
+    "description": "The original fortified royal enclosure and publicly interpreted palace precinct in Antananarivo’s upper town.",
+    "description_zh": "塔那那利佛上城王室围城原址及管理方公开开放的王宫展览区域。",
+    "details": "The point represents the named original Rova enclosure. Public scope is limited to the announced palace interpretation and courtyard routes; restoration phases and separate structures have independent access.",
+    "geography": {
+      "authority_id": "supplement:auth:mg-public:Q1290337",
+      "countries": [
+        "MG"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism office records the reopening of the royal Rova and identifies the restored museum at the original site.",
+        "id": "auth:mg-public:Q1290337:evidence:1",
+        "license": null,
+        "publisher": "Office National du Tourisme de Madagascar",
+        "revision": "Retrieved 2026-11-28; SHA-256 9cff93d006162645f7bec610195b9199d08831834bf21b9fdb75b97b1ed06b9d.",
+        "title": "Official report on the museum reopening",
+        "uri": "https://madagascar-tourisme.com/wp-content/uploads/2023/07/Lettres-de-veille-Juin-2023.pdf"
+      }
+    },
+    "id": "auth:mg-public:Q1290337",
+    "location_precision": null,
+    "names": [
+      "塔那那利佛王宫遗址",
+      "Rova of Antananarivo historic visitor precinct",
+      "Rovan’i Madagasikara",
+      "Rovan'i Manjakamiadana",
+      "Palais de la Reine",
+      "Rova d’Antananarivo"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      47.532222222222,
+      -18.923611111111
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism office records the reopening of the royal Rova and identifies the restored museum at the original site.",
+        "id": "auth:mg-public:Q1290337:evidence:1",
+        "license": null,
+        "publisher": "Office National du Tourisme de Madagascar",
+        "revision": "Retrieved 2026-11-28; SHA-256 9cff93d006162645f7bec610195b9199d08831834bf21b9fdb75b97b1ed06b9d.",
+        "title": "Official report on the museum reopening",
+        "uri": "https://madagascar-tourisme.com/wp-content/uploads/2023/07/Lettres-de-veille-Juin-2023.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The recent report documents a published visitor programme in the royal courtyard, distinct from the separate new structures.",
+        "id": "auth:mg-public:Q1290337:evidence:2",
+        "license": null,
+        "publisher": "NewsMada, reporting the Rova visitor programme",
+        "revision": "Retrieved 2026-11-28; SHA-256 e6e4dc59f197731d185164c778f174e444ff2cfda5d2220f528d35872867534b.",
+        "title": "September 2026 public courtyard visits",
+        "uri": "https://newsmada.com/2026/09/14/patrimoine-la-cour-du-rovani-madagasikara-sillumine-pour-les-visites-nocturnes/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native Wikidata coordinate declaration P625. Longitude 47.532222222222, latitude -18.923611111111.",
+        "id": "auth:mg-public:Q1290337:evidence:3",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Retrieved 2026-11-28; SHA-256 6cdae8ea9a8eefadf7700be2d6d60ab753d14487faf640b658c301aaa2c3c770.",
+        "title": "Rova of Antananarivo historic visitor precinct coordinate assertion",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1290337.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national tourism office lists public admission to the royal exhibition and names the weekly maintenance closure.",
+        "id": "auth:mg-public:Q1290337:evidence:4",
+        "license": null,
+        "publisher": "Office National du Tourisme de Madagascar",
+        "revision": "Retrieved 2026-11-28; SHA-256 d1411782b53df6843d9b3d34f351557df5267ad3ac22608c54bac140a265e147.",
+        "title": "Public royal exhibition in the Rova",
+        "uri": "https://madagascar-tourisme.com/fr/une-exposition-sur-les-pieces-historiques-royales-a-decouvrir-au-palais-de-la-reine/"
+      }
+    ],
+    "source_uri": "https://madagascar-tourisme.com/wp-content/uploads/2023/07/Lettres-de-veille-Juin-2023.pdf",
+    "title": "Rova of Antananarivo historic visitor precinct",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "L’Aventure du Sucre",
+      "Wikidata contributors"
+    ],
+    "description": "The public museum in the restored in-place industrial factory at Beau Plan, Pamplemousses.",
+    "description_zh": "毛里求斯庞普勒穆斯博普朗原址糖厂，现由运营方开放其旧厂房内的历史展览。",
+    "details": "The original point represents the factory visitor premises close to the historic factory. Admission includes the designated museum route and advertised exhibit spaces.",
+    "geography": {
+      "authority_id": "supplement:auth:mu-public:Q18923518",
+      "countries": [
+        "MU"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator identifies the museum within the original restored Beau Plan sugar factory and describes the public route.",
+        "id": "auth:mu-public:Q18923518:evidence:1",
+        "license": null,
+        "publisher": "L’Aventure du Sucre",
+        "revision": "Retrieved 2026-11-28; SHA-256 5d20583c77ecfa30d66abd8f0030892c6fc40b6b6002907b48e0bc942972ef4f.",
+        "title": "The museum and its former industrial premises",
+        "uri": "https://aventuredusucre.com/the-museum/"
+      }
+    },
+    "id": "auth:mu-public:Q18923518",
+    "location_precision": null,
+    "names": [
+      "博普朗旧糖厂",
+      "L’Aventure du Sucre, former Beau Plan factory",
+      "L'Aventure du Sucre",
+      "Ancienne sucrerie de Beau Plan",
+      "Beau Plan Sugar Factory"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      57.574163,
+      -20.098129
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator identifies the museum within the original restored Beau Plan sugar factory and describes the public route.",
+        "id": "auth:mu-public:Q18923518:evidence:1",
+        "license": null,
+        "publisher": "L’Aventure du Sucre",
+        "revision": "Retrieved 2026-11-28; SHA-256 5d20583c77ecfa30d66abd8f0030892c6fc40b6b6002907b48e0bc942972ef4f.",
+        "title": "The museum and its former industrial premises",
+        "uri": "https://aventuredusucre.com/the-museum/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator publishes the late 2026 itinerary and public exhibition arrangements.",
+        "id": "auth:mu-public:Q18923518:evidence:2",
+        "license": null,
+        "publisher": "L’Aventure du Sucre",
+        "revision": "Retrieved 2026-11-28; SHA-256 0dff3824c5fabe903b51f95d41e61634132c769d90bcf86f7a3ff545617b821b.",
+        "title": "Current public exhibitions at Beau Plan",
+        "uri": "https://aventuredusucre.com/activite-culturelle-a-maurice-exposition-temporaire-sur-jeanne-barret/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native Wikidata coordinate declaration P625. Longitude 57.574163, latitude -20.098129.",
+        "id": "auth:mu-public:Q18923518:evidence:3",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Retrieved 2026-11-28; SHA-256 d73ad16f64486388f4f9b8297dcc8cff8d9bf8e54802df5268ec30b120e743b0.",
+        "title": "L’Aventure du Sucre, former Beau Plan factory coordinate assertion",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q18923518.json"
+      }
+    ],
+    "source_uri": "https://aventuredusucre.com/the-museum/",
+    "title": "L’Aventure du Sucre, former Beau Plan factory",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Prime Minister’s Office, Mauritius",
+      "Ministry of Arts and Culture, Mauritius",
+      "Wikidata contributors",
+      "Ministry of Finance, Republic of Mauritius"
+    ],
+    "description": "Grand Bassin is a long-established pilgrimage landscape with publicly managed religious events at the lake’s shore.",
+    "description_zh": "大盆地圣湖是毛里求斯历史悠久的朝圣地，主管方公布过沿湖公开活动和参访安排。",
+    "details": "The point represents the named sacred lake as a landscape. The recorded public scope consists of the published pilgrimage approaches and shore visitor areas.",
+    "geography": {
+      "authority_id": "supplement:auth:mu-public:Q2338515",
+      "countries": [
+        "MU"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The authorities describe the sacred lake and preparations for visitors and pilgrims at the original landscape.",
+        "id": "auth:mu-public:Q2338515:evidence:1",
+        "license": null,
+        "publisher": "Prime Minister’s Office, Mauritius",
+        "revision": "Retrieved 2026-11-28; SHA-256 9875eb8f816aba89524eb17e01b691e5bddba7b7ec5c9871b31eb33ff51ee227.",
+        "title": "2026 visitor arrangements at Grand Bassin",
+        "uri": "https://primeminister.govmu.org/pm/?p=4044"
+      }
+    },
+    "id": "auth:mu-public:Q2338515",
+    "location_precision": null,
+    "names": [
+      "大盆地圣湖",
+      "Ganga Talao (Grand Bassin)",
+      "Ganga Talao",
+      "Grand Bassin",
+      "Grand Bassin Sacred Lake"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      57.491944444444,
+      -20.418055555556
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The authorities describe the sacred lake and preparations for visitors and pilgrims at the original landscape.",
+        "id": "auth:mu-public:Q2338515:evidence:1",
+        "license": null,
+        "publisher": "Prime Minister’s Office, Mauritius",
+        "revision": "Retrieved 2026-11-28; SHA-256 9875eb8f816aba89524eb17e01b691e5bddba7b7ec5c9871b31eb33ff51ee227.",
+        "title": "2026 visitor arrangements at Grand Bassin",
+        "uri": "https://primeminister.govmu.org/pm/?p=4044"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The ministry names the spiritual sanctuary at Grand Bassin as a place of public pilgrimage and cultural visits.",
+        "id": "auth:mu-public:Q2338515:evidence:2",
+        "license": null,
+        "publisher": "Ministry of Arts and Culture, Mauritius",
+        "revision": "Retrieved 2026-11-28; SHA-256 6670c2222c46a8808420df0445ade60306bf76fff1964572d8d46c6cfa4a4d59.",
+        "title": "Public cultural visit to Ganga Talao",
+        "uri": "https://culture.govmu.org/mach/?p=5257"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native Wikidata coordinate declaration P625. Longitude 57.491944444444, latitude -20.418055555556.",
+        "id": "auth:mu-public:Q2338515:evidence:3",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Retrieved 2026-11-28; SHA-256 8c920fa38f8dfc9869e7706a63750eb8bac0d2f5f9bc201c277d865619f1ce3c.",
+        "title": "Ganga Talao (Grand Bassin) coordinate assertion",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2338515.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national budget records the designation of the named Grand Bassin sanctuary as a National Heritage Site.",
+        "id": "auth:mu-public:Q2338515:evidence:4",
+        "license": null,
+        "publisher": "Ministry of Finance, Republic of Mauritius",
+        "revision": "Retrieved 2026-11-28; SHA-256 16a22fba6db5bc9c13580d9db33ba8a83bb3cf7a13eec1dc1ac3e44781f23dc9.",
+        "title": "National heritage designation of Ganga Talao Spiritual Sanctuary",
+        "uri": "https://mof.govmu.org/Documents/Budget2024_25/2024_25_V_21_1_Arts.pdf"
+      }
+    ],
+    "source_uri": "https://primeminister.govmu.org/pm/?p=4044",
+    "title": "Ganga Talao (Grand Bassin)",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Domaine de Labourdonnais",
+      "Wikidata contributors"
+    ],
+    "description": "The preserved historic house and interpretation route within the Labourdonnais estate near Mapou.",
+    "description_zh": "毛里求斯马普一带的拉布尔多内历史庄园宅邸及获准的公共参观范围。",
+    "details": "The published marker is within the named public historic estate and represents the château at site scale. The original coordinate precision is coarse. Visit scope follows the managed house and gardens.",
+    "geography": {
+      "authority_id": "supplement:auth:mu-public:Q2969605",
+      "countries": [
+        "MU"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The August 2026 route map identifies the historic château, its garden route and visitor hours.",
+        "id": "auth:mu-public:Q2969605:evidence:1",
+        "license": null,
+        "publisher": "Domaine de Labourdonnais",
+        "revision": "Retrieved 2026-11-28; SHA-256 ccdabbe9c380cec6b3e8cb29717a4e66ff904faf70dfff0d5f2372be7b736fbd.",
+        "title": "Château de Labourdonnais estate map and public visitor route",
+        "uri": "https://domainedelabourdonnais.com/wp-content/uploads/2026/08/Chateau-de-Labourdonnais-Map-2026-Aug.pdf"
+      }
+    },
+    "id": "auth:mu-public:Q2969605",
+    "location_precision": null,
+    "names": [
+      "拉布尔多内庄园宅邸",
+      "Château de Labourdonnais",
+      "Domaine de Labourdonnais",
+      "Labourdonnais historic house"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      57.6176,
+      -20.0718
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The August 2026 route map identifies the historic château, its garden route and visitor hours.",
+        "id": "auth:mu-public:Q2969605:evidence:1",
+        "license": null,
+        "publisher": "Domaine de Labourdonnais",
+        "revision": "Retrieved 2026-11-28; SHA-256 ccdabbe9c380cec6b3e8cb29717a4e66ff904faf70dfff0d5f2372be7b736fbd.",
+        "title": "Château de Labourdonnais estate map and public visitor route",
+        "uri": "https://domainedelabourdonnais.com/wp-content/uploads/2026/08/Chateau-de-Labourdonnais-Map-2026-Aug.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native Wikidata coordinate declaration P625. Longitude 57.6176, latitude -20.0718.",
+        "id": "auth:mu-public:Q2969605:evidence:2",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Retrieved 2026-11-28; SHA-256 ba5170102d522f8a1b36e8e36faf3a2882f3028d6069c1f839d9935b0b72030a.",
+        "title": "Château de Labourdonnais coordinate assertion",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2969605.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator advertises self-guided and guided château and garden visits.",
+        "id": "auth:mu-public:Q2969605:evidence:3",
+        "license": null,
+        "publisher": "Domaine de Labourdonnais",
+        "revision": "Retrieved 2026-11-28; SHA-256 44c632001dc2ece8f917ac4eff1d95c19e6c6ba98ffc7b2c2ad040126b785e5c.",
+        "title": "Château de Labourdonnais visitor admission",
+        "uri": "https://domainedelabourdonnais.com/fr/book-your-tickets-4/"
+      }
+    ],
+    "source_uri": "https://domainedelabourdonnais.com/wp-content/uploads/2026/08/Chateau-de-Labourdonnais-Map-2026-Aug.pdf",
+    "title": "Château de Labourdonnais",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Mauritius Government Information Service",
+      "Wikidata contributors",
+      "Ministry of Tourism, Republic of Mauritius"
+    ],
+    "description": "The original hilltop fortress in Port Louis, conserved as a heritage site with published visitor events.",
+    "description_zh": "路易港原址山堡。国家遗产基金公布过用于公众参观的开放日。",
+    "details": "The source point lies within the named historic enclosure. The scope is the fort and its published public access arrangements, including designated heritage open days.",
+    "geography": {
+      "authority_id": "supplement:auth:mu-public:Q2974395",
+      "countries": [
+        "MU"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The National Heritage Fund names La Citadelle among the original places opened to the public for the April 2026 programme.",
+        "id": "auth:mu-public:Q2974395:evidence:1",
+        "license": null,
+        "publisher": "Mauritius Government Information Service",
+        "revision": "Retrieved 2026-11-28; SHA-256 c625e7ec598db0e70e689b0ab8f5010a251577f4dd4170b9a6e471e192f88a56.",
+        "title": "2026 national heritage open days",
+        "uri": "https://gis.govmu.org/gis/?id=508&page_id=4356"
+      }
+    },
+    "id": "auth:mu-public:Q2974395",
+    "location_precision": null,
+    "names": [
+      "阿德莱德堡",
+      "Fort Adelaide (La Citadelle)",
+      "La Citadelle",
+      "Citadelle de Port-Louis",
+      "Fort Adelaide"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      57.510166,
+      -20.163658
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The National Heritage Fund names La Citadelle among the original places opened to the public for the April 2026 programme.",
+        "id": "auth:mu-public:Q2974395:evidence:1",
+        "license": null,
+        "publisher": "Mauritius Government Information Service",
+        "revision": "Retrieved 2026-11-28; SHA-256 c625e7ec598db0e70e689b0ab8f5010a251577f4dd4170b9a6e471e192f88a56.",
+        "title": "2026 national heritage open days",
+        "uri": "https://gis.govmu.org/gis/?id=508&page_id=4356"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native Wikidata coordinate declaration P625. Longitude 57.510166, latitude -20.163658.",
+        "id": "auth:mu-public:Q2974395:evidence:2",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Retrieved 2026-11-28; SHA-256 ae6ff791cc9484e1a1dad037e865f3e584702ab490aefbf63ef4051a67f1fefd.",
+        "title": "Fort Adelaide (La Citadelle) coordinate assertion",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2974395.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The tourism ministry directs visitors to the fort above Port Louis.",
+        "id": "auth:mu-public:Q2974395:evidence:3",
+        "license": null,
+        "publisher": "Ministry of Tourism, Republic of Mauritius",
+        "revision": "Retrieved 2026-11-28; SHA-256 f33c0116b2d868d9e72fc650e61f2915b3b9ba593a9feacd77715891eee43475.",
+        "title": "Fort Adelaide current visitor destination",
+        "uri": "https://tourism.govmu.org/Pages/Services/Tourist-Sites.aspx"
+      }
+    ],
+    "source_uri": "https://gis.govmu.org/gis/?id=508&page_id=4356",
+    "title": "Fort Adelaide (La Citadelle)",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Visit Maldives",
+      "Office of the President, Maldives",
+      "Andreas Faessler via Wikimedia Commons"
+    ],
+    "description": "The original former royal residence interpreted as a museum in Utheemu, northern Maldives.",
+    "description_zh": "马尔代夫北部乌泰穆岛的历史王族故居原址和现有博物馆参观范围。",
+    "details": "The coordinate represents a documented courtyard-scale viewpoint at the historic Ganduvaru visitor precinct. Access follows the management’s published museum route.",
+    "geography": {
+      "authority_id": "supplement:auth:mv-public:utheemu-ganduvaru",
+      "countries": [
+        "MV"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The national tourism authority identifies the historic residence, the present museum and its visitor scope.",
+        "id": "auth:mv-public:utheemu-ganduvaru:evidence:1",
+        "license": null,
+        "publisher": "Visit Maldives",
+        "revision": "Retrieved 2026-11-28; SHA-256 400bda5c26d2711a4dce9d0399892cc3afdcca6bb33ac3a70f33cca609a0da82.",
+        "title": "Utheemu Ganduvaru as a public museum",
+        "uri": "https://visitmaldives.com/en/experience/historic-haa-alifu-haa-dhaalu-for-lovers-of-history-and-tales-of-adventure"
+      }
+    },
+    "id": "auth:mv-public:utheemu-ganduvaru",
+    "location_precision": null,
+    "names": [
+      "Utheemu Ganduvaru",
+      "乌泰穆甘杜瓦鲁故居",
+      "Utheemu palace"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      73.11231944444444,
+      6.8367305555555555
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national tourism authority identifies the historic residence, the present museum and its visitor scope.",
+        "id": "auth:mv-public:utheemu-ganduvaru:evidence:1",
+        "license": null,
+        "publisher": "Visit Maldives",
+        "revision": "Retrieved 2026-11-28; SHA-256 400bda5c26d2711a4dce9d0399892cc3afdcca6bb33ac3a70f33cca609a0da82.",
+        "title": "Utheemu Ganduvaru as a public museum",
+        "uri": "https://visitmaldives.com/en/experience/historic-haa-alifu-haa-dhaalu-for-lovers-of-history-and-tales-of-adventure"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The President’s Office identifies the original residence and the island community’s role in its historical protection.",
+        "id": "auth:mv-public:utheemu-ganduvaru:evidence:2",
+        "license": null,
+        "publisher": "Office of the President, Maldives",
+        "revision": "Retrieved 2026-11-28; SHA-256 59013e047cc55e8f1d5a1a67776e51c73091f04b17590e631fe8894fa028e758.",
+        "title": "Heritage identity of Utheemu Ganduvaru",
+        "uri": "https://presidency.gov.mv/Press/Article/34696"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Camera viewpoint recorded on Utheemu05 by Andreas Faessler, CC BY-SA 4.0. Original longitude and latitude converted from degrees, minutes and seconds. The source photograph is not distributed.",
+        "id": "auth:mv-public:utheemu-ganduvaru:evidence:3",
+        "license": "CC BY-SA 4.0",
+        "publisher": "Andreas Faessler via Wikimedia Commons",
+        "revision": "Retrieved 2026-11-28; SHA-256 d6430958ca64ab7036b126b34d9657c3c5c5877ff9e2c96a27e9cd4fcf8f1e5f.",
+        "title": "Utheemu05, fixed revision camera position",
+        "uri": "https://commons.wikimedia.org/w/index.php?title=File:Utheemu05.jpg&oldid=1232075280"
+      }
+    ],
+    "source_uri": "https://visitmaldives.com/en/experience/historic-haa-alifu-haa-dhaalu-for-lovers-of-history-and-tales-of-adventure",
+    "title": "Utheemu Ganduvaru historic residence",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Seychelles Heritage Foundation",
+      "Takamaka visitor operator",
+      "Wikidata contributors"
+    ],
+    "description": "The historic Mahé estate restored to accommodate a museum and managed visitor routes.",
+    "description_zh": "马埃岛历史庄园内由运营方公开展示的旧宅邸、园地和遗存参观区。",
+    "details": "The point represents the original estate’s main house precinct. The public heritage trail follows the exhibition, ruins and visitor areas managed by the operator.",
+    "geography": {
+      "authority_id": "supplement:auth:sc-public:Q125330368",
+      "countries": [
+        "SC"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The foundation identifies the named historic estate and the licensed operator responsible for the visitor programme.",
+        "id": "auth:sc-public:Q125330368:evidence:1",
+        "license": null,
+        "publisher": "Seychelles Heritage Foundation",
+        "revision": "Retrieved 2026-11-28; SHA-256 6d346e1b7d9158c2f5b51878ab547aa134d44284ba18d32ac6a6fb2ccfca63ee.",
+        "title": "La Plaine St André heritage property",
+        "uri": "https://www.seyheritage.sc/index.php/heritage-sites/la-plaine-st-andre"
+      }
+    },
+    "id": "auth:sc-public:Q125330368",
+    "location_precision": null,
+    "names": [
+      "圣安德烈旧庄园",
+      "La Plaine St André historic estate",
+      "La Plaine St. André",
+      "La Plaine Saint-André",
+      "La Grande Maison"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      55.523092,
+      -4.719424
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The foundation identifies the named historic estate and the licensed operator responsible for the visitor programme.",
+        "id": "auth:sc-public:Q125330368:evidence:1",
+        "license": null,
+        "publisher": "Seychelles Heritage Foundation",
+        "revision": "Retrieved 2026-11-28; SHA-256 6d346e1b7d9158c2f5b51878ab547aa134d44284ba18d32ac6a6fb2ccfca63ee.",
+        "title": "La Plaine St André heritage property",
+        "uri": "https://www.seyheritage.sc/index.php/heritage-sites/la-plaine-st-andre"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator describes current public access to the original historic precinct including exhibition, garden and ruins.",
+        "id": "auth:sc-public:Q125330368:evidence:2",
+        "license": null,
+        "publisher": "Takamaka visitor operator",
+        "revision": "Retrieved 2026-11-28; SHA-256 ae1ecfc615663f45a2cf8894f48a5e9c7c65dfcd916e6a0a3eae916c73f9befb.",
+        "title": "Current guided and self-guided access",
+        "uri": "https://www.takamakarum.com/our-home"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native Wikidata coordinate declaration P625. Longitude 55.523092, latitude -4.719424.",
+        "id": "auth:sc-public:Q125330368:evidence:3",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Retrieved 2026-11-28; SHA-256 6d59a534bcc391d1f92c7077195ec276141c5cfd7af03c12a9149a9c6e8f2336.",
+        "title": "La Plaine St André historic estate coordinate assertion",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q125330368.json"
+      }
+    ],
+    "source_uri": "https://www.seyheritage.sc/index.php/heritage-sites/la-plaine-st-andre",
+    "title": "La Plaine St André historic estate",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Seychelles National Museums",
+      "Wikidata contributors"
+    ],
+    "description": "The former Supreme Court building in Victoria, restored as the Seychelles National Museum of History.",
+    "description_zh": "维多利亚原址的旧最高法院建筑，现为塞舌尔国家历史博物馆。",
+    "details": "The source point lies within the named restored historic building opposite the Clock Tower. The scope is the museum exhibitions and admission route at the former court.",
+    "geography": {
+      "authority_id": "supplement:auth:sc-public:Q133278751",
+      "countries": [
+        "SC"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "africa"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The authority gives the former Supreme Court building opposite the Clock Tower as the current museum address.",
+        "id": "auth:sc-public:Q133278751:evidence:1",
+        "license": null,
+        "publisher": "Seychelles National Museums",
+        "revision": "Retrieved 2026-11-28; SHA-256 5963e280f2b2bca5191eb8739a66e529fe792302a13b4254d8f9e26558329d36.",
+        "title": "Current location in the former Supreme Court",
+        "uri": "https://seychellesnationalmuseums.org/1746-2/"
+      }
+    },
+    "id": "auth:sc-public:Q133278751",
+    "location_precision": null,
+    "names": [
+      "塞舌尔旧最高法院与国家历史博物馆",
+      "Former Supreme Court, Seychelles National Museum of History",
+      "National Museum of History",
+      "Ex-Supreme Court Building",
+      "Former Palais de Justice of Victoria"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      55.4525894984871,
+      -4.623405829588577
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The authority gives the former Supreme Court building opposite the Clock Tower as the current museum address.",
+        "id": "auth:sc-public:Q133278751:evidence:1",
+        "license": null,
+        "publisher": "Seychelles National Museums",
+        "revision": "Retrieved 2026-11-28; SHA-256 5963e280f2b2bca5191eb8739a66e529fe792302a13b4254d8f9e26558329d36.",
+        "title": "Current location in the former Supreme Court",
+        "uri": "https://seychellesnationalmuseums.org/1746-2/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum lists its current admission days and access arrangements for ordinary and group visitors.",
+        "id": "auth:sc-public:Q133278751:evidence:2",
+        "license": null,
+        "publisher": "Seychelles National Museums",
+        "revision": "Retrieved 2026-11-28; SHA-256 6fbbfe233087b7dbc3d38d77a4e64bafe71c07766f26cad660b7060b3b1908f3.",
+        "title": "Current public access",
+        "uri": "https://seychellesnationalmuseums.org/visiting/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native Wikidata coordinate declaration P625. Longitude 55.4525894984871, latitude -4.623405829588577.",
+        "id": "auth:sc-public:Q133278751:evidence:3",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Retrieved 2026-11-28; SHA-256 a67c1fbd477ebab0e056d99de31eb95d853f4ad13c070128933bb8a09db8981b.",
+        "title": "Former Supreme Court, Seychelles National Museum of History coordinate assertion",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q133278751.json"
+      }
+    ],
+    "source_uri": "https://seychellesnationalmuseums.org/1746-2/",
+    "title": "Former Supreme Court, Seychelles National Museum of History",
+    "types": [
+      "historic-site"
+    ]
+  }
+]
