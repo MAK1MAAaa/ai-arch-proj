@@ -128,6 +128,10 @@ def test_public_point_search_catalogue_and_provenance(
             ("TZ", "auth:tz-public:", 5),
             ("UG", "auth:ug-public:", 8),
             ("KE", "auth:ke-public:", 6),
+            ("UY", "auth:uy-public:", 11),
+            ("PY", "auth:py-public:", 5),
+            ("KZ", "auth:kz-public:", 3),
+            ("UZ", "auth:uz-public:", 8),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -193,3 +197,24 @@ def test_public_point_search_catalogue_and_provenance(
         olorgesailie = client.get("/api/sites/auth:ke-public:geonames-182034").json()
         assert olorgesailie["repr_point"] == [36.44602, -1.57763]
         assert client.get("/api/sites/auth:ke-public:geonames-193774").status_code == 404
+        rivera = client.get("/api/sites/auth:uy-public:Q1046504").json()
+        lavalleja = client.get("/api/sites/auth:uy-public:Q1046478").json()
+        assert rivera["repr_point"] == [-56.20673, -34.90703]
+        assert lavalleja["repr_point"] == [-56.20783333, -34.90630556]
+        assert any(
+            ref["license"] == "CC BY-SA 4.0" and "oldid=5441415" in ref["uri"]
+            for ref in rivera["source_refs"]
+        )
+        manzana = client.get("/api/sites/auth:py-public:Q3300173").json()
+        assert manzana["repr_point"] == [-57.638192, -25.277991]
+        assert any(
+            ref["license"] == "CC BY-SA 4.0" and "oldid=5433614" in ref["uri"]
+            for ref in manzana["source_refs"]
+        )
+        otrar = client.get("/api/sites/auth:kz-public:Q956911").json()
+        assert otrar["repr_point"] == [68.3029696, 42.8514829]
+        assert otrar["chronology"]["status"] == "insufficient"
+        ming_urik = client.get("/api/sites/auth:uz-public:Q122676365").json()
+        assert ming_urik["repr_point"] == [69.28598013644901, 41.29831008865522]
+        assert ming_urik["source_kind"] == "supplement"
+        assert any(ref["license"] == "CC0" for ref in ming_urik["source_refs"])
