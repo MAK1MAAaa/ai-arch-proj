@@ -186,6 +186,11 @@ def test_public_point_search_catalogue_and_provenance(
             ("CM", "auth:cm-public:", 4),
             ("CO", "auth:co-public:", 6),
             ("VE", "auth:ve-public:", 4),
+            ("CN", "auth:cn-public:", 6),
+            ("TR", "auth:tr-public:", 13),
+            ("MZ", "auth:mz-public:", 3),
+            ("AO", "auth:ao-public:", 5),
+            ("CZ", "auth:cz-npu:", 28),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -482,3 +487,30 @@ def test_public_point_search_catalogue_and_provenance(
         assert any(ref["publisher"] == "Museo Nacional de Colombia" for ref in gabo["source_refs"])
         cumana = client.get("/api/sites/auth:ve-public:Q5558033").json()
         assert "publicly approached exterior" in cumana["details"]
+
+        taosi = client.get("/api/sites/auth:cn-public:Q217859").json()
+        assert taosi["repr_point"] == [111.49005555555556, 35.89286111111111]
+        assert "coarse declared precision" in taosi["details"]
+        assert client.get("/api/sites/auth:cn-public:Q1196056").status_code == 404
+
+        kultepe = client.get("/api/sites/auth:tr-public:Q538605").json()
+        assert "original historic mound" in kultepe["details"]
+        assert any("site museum as closed" in ref["excerpt"] for ref in kultepe["source_refs"])
+
+        maputo_station = client.get("/api/sites/auth:mz-public:geonames-9254055").json()
+        assert maputo_station["repr_point"] == [32.56436, -25.97108]
+        assert any(
+            ref["publisher"] == "GeoNames" and ref["license"] == "CC BY 4.0"
+            for ref in maputo_station["source_refs"]
+        )
+        maputo_fort = client.get("/api/sites/auth:mz-public:Q10283622").json()
+        assert "reconstruction on the original" in maputo_fort["details"]
+
+        zvikov = client.get("/api/sites/auth:cz-npu:690850").json()
+        assert zvikov["repr_point"] == [14.192495033393621, 49.43898378714071]
+        assert "gate can limit access" in zvikov["details"]
+        assert any(
+            ref["license"] == "CC BY-SA 4.0"
+            and ref["publisher"] == "Geoportál památkové péče, Národní památkový ústav"
+            for ref in zvikov["source_refs"]
+        )

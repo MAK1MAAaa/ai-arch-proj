@@ -469,6 +469,34 @@ COLOMBIA_VENEZUELA_PUBLIC = NamedPlaceCohort(
     "2a10b468689730d3b81d86da85b245cb2106bd0efd34923109d609d2f6ddfb26",
     "43e227b340b75613bd285982d38ad0246e21f97eb86d15b2d145e5a1aee2e999",
 )
+CHINA_ARCHPARKS_PUBLIC = NamedPlaceCohort(
+    "china-archaeological-parks-public-v1",
+    "global-v21",
+    "china_archparks_public",
+    "056956fad9b540c8fc5a3db39ed2fc01b51ab482a5f2fb83672f0b0e25fbb74e",
+    "233f60efda3b4d48575ceffbc2828f517a48d4cf8adec7a5bfd19065b6082e05",
+)
+ANATOLIA_INLAND_PUBLIC = NamedPlaceCohort(
+    "anatolia-inland-public-v1",
+    "global-v21",
+    "anatolia_inland_public",
+    "7d6936abaf1342ff5b8a0d583f5c783c5c5c225b1cc66f7b90066d581509d04d",
+    "29aaedadaa2b5444cbbd8377a3d62d751f44d576ee9c369754d5acb8495906bd",
+)
+MOZAMBIQUE_ANGOLA_PUBLIC = NamedPlaceCohort(
+    "mozambique-angola-public-v1",
+    "global-v21",
+    "mozambique_angola_public",
+    "7c983e8b10ab3419e1217dba3a7e344dbf5791defd5059e64d2930971452bdf7",
+    "1e70cbcb19a9cdeb553f2fe5c27089adb49b038ec2d717b0a8fc68cb760fd760",
+)
+CZECH_PUBLIC = NamedPlaceCohort(
+    "czech-public-v1",
+    "global-v21",
+    "czech_public",
+    "b34809991abf5ca5041969dd84a79d7651db974c370aa3e04f4ddc5dfa3fdfe6",
+    "59d2a789bf812aeffffcb2f934d8819f5112fc4c06a93ded8a7edb378dd9d786",
+)
 POINT_COHORTS = (
     IRELAND, ANDALUCIA, TAIWAN_ICULTURE, MEXICO_SIC, FINLAND_VARK, WALES_CADW, THAILAND_FAD,
     AFRICA_VISIT, SCOTLAND_HES, CARIBBEAN_NRHP, PERU_PUBLIC, INDIA_ASI, INDIA_ASI_NEXT,
@@ -498,6 +526,10 @@ POINT_COHORTS = (
     POLAND_PUBLIC,
     CABO_CAMEROON_PUBLIC,
     COLOMBIA_VENEZUELA_PUBLIC,
+    CHINA_ARCHPARKS_PUBLIC,
+    ANATOLIA_INLAND_PUBLIC,
+    MOZAMBIQUE_ANGOLA_PUBLIC,
+    CZECH_PUBLIC,
 )
 
 

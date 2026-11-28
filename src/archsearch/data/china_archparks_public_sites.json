@@ -1,0 +1,518 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "西安市文化和旅游局",
+      "Wikidata contributors"
+    ],
+    "description": "Designated archaeology visitor grounds at the original Han Yangling imperial mausoleum complex near Xianyang.",
+    "description_zh": "位于咸阳的汉阳陵原址，开放的考古展示包括相关博物馆与遗址参观区域。",
+    "details": "The published representative point lies in the South Gate of the original park's public interpretation precinct. Admission follows the operator's designated route.",
+    "geography": {
+      "authority_id": "supplement:auth:cn-public:Q1350906",
+      "countries": [
+        "CN"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "官方名录逐项列出汉阳陵博物馆及参观安排。",
+        "id": "auth:cn-public:Q1350906:evidence:1",
+        "license": null,
+        "publisher": "西安市文化和旅游局",
+        "revision": "Retrieved 2026-11-28; SHA-256 281d7cded424bfc10b1590a9c03bd229e31717e48b806c5d697606454f04acf7.",
+        "title": "汉阳陵博物馆与开放登记",
+        "uri": "https://wlj.xa.gov.cn/wbdw/bwgjs/1.html"
+      }
+    },
+    "id": "auth:cn-public:Q1350906",
+    "location_precision": null,
+    "names": [
+      "汉阳陵国家考古遗址公园",
+      "Han Yangling Archaeological Park",
+      "汉景帝阳陵",
+      "Yangling Mausoleum of Han",
+      "Han Yang Ling"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      108.94071111,
+      34.44379722
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "官方名录逐项列出汉阳陵博物馆及参观安排。",
+        "id": "auth:cn-public:Q1350906:evidence:1",
+        "license": null,
+        "publisher": "西安市文化和旅游局",
+        "revision": "Retrieved 2026-11-28; SHA-256 281d7cded424bfc10b1590a9c03bd229e31717e48b806c5d697606454f04acf7.",
+        "title": "汉阳陵博物馆与开放登记",
+        "uri": "https://wlj.xa.gov.cn/wbdw/bwgjs/1.html"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native Wikidata coordinate declaration P625. Longitude 108.94071111, latitude 34.44379722.",
+        "id": "auth:cn-public:Q1350906:evidence:2",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Retrieved 2026-11-28; SHA-256 ed3b0184e410f8d35d6d75050eeb6b6544afdfa347a27c2fa396312a11ffcd44.",
+        "title": "Han Yangling Archaeological Park coordinate assertion",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1350906.json"
+      }
+    ],
+    "source_uri": "https://wlj.xa.gov.cn/wbdw/bwgjs/1.html",
+    "title": "Han Yangling Archaeological Park",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "苏州工业园区公共文化中心",
+      "Wikidata contributors"
+    ],
+    "description": "The publicly opened core of a Neolithic settlement park in Suzhou, with original site interpretation and agricultural displays.",
+    "description_zh": "苏州草鞋山史前遗址的开放核心区，设有现场展示、主题展厅与古稻田场景复原。",
+    "details": "The representative point is inside the mapped public park. The listed visit scope covers designated original site interpretation and display areas.",
+    "geography": {
+      "authority_id": "supplement:auth:cn-public:Q15950689",
+      "countries": [
+        "CN"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "主管机构公布考古公园已开放核心区、管理安排及其现场展示。",
+        "id": "auth:cn-public:Q15950689:evidence:1",
+        "license": null,
+        "publisher": "苏州工业园区公共文化中心",
+        "revision": "Retrieved 2026-11-28; SHA-256 5c40a5a8df68c244218f692876349726ff99053cc341e230572effe52a391e4d.",
+        "title": "草鞋山考古遗址公园简介及开放",
+        "uri": "https://pcc.sipac.gov.cn/main/venue-map/venue-detail/8cc197ef3627a091602c3ee25bb0d34b"
+      }
+    },
+    "id": "auth:cn-public:Q15950689",
+    "location_precision": null,
+    "names": [
+      "草鞋山考古遗址公园",
+      "Caoxieshan Archaeological Park",
+      "草鞋山遗址",
+      "Caoxieshan Site"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      120.79406,
+      31.37462
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "主管机构公布考古公园已开放核心区、管理安排及其现场展示。",
+        "id": "auth:cn-public:Q15950689:evidence:1",
+        "license": null,
+        "publisher": "苏州工业园区公共文化中心",
+        "revision": "Retrieved 2026-11-28; SHA-256 5c40a5a8df68c244218f692876349726ff99053cc341e230572effe52a391e4d.",
+        "title": "草鞋山考古遗址公园简介及开放",
+        "uri": "https://pcc.sipac.gov.cn/main/venue-map/venue-detail/8cc197ef3627a091602c3ee25bb0d34b"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native Wikidata coordinate declaration P625. Longitude 120.79406, latitude 31.37462.",
+        "id": "auth:cn-public:Q15950689:evidence:2",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Retrieved 2026-11-28; SHA-256 5aac08d1b485e9380a28e16766283e33f1a6c1435bcb8f25d73e90b84be2cc35.",
+        "title": "Caoxieshan Archaeological Park coordinate assertion",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q15950689.json"
+      }
+    ],
+    "source_uri": "https://pcc.sipac.gov.cn/main/venue-map/venue-detail/8cc197ef3627a091602c3ee25bb0d34b",
+    "title": "Caoxieshan Archaeological Park",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "武汉市文化和旅游局",
+      "盘龙城遗址博物院",
+      "Wikidata contributors"
+    ],
+    "description": "The publicly interpreted remains of the original Bronze Age city at Panlongcheng, in Wuhan's Huangpi district.",
+    "description_zh": "武汉黄陂盘龙城原址的公开考古园区，展示古城遗存与发掘成果。",
+    "details": "The marker is within the named historic city remains and national park. Visit scope follows the published heritage exhibition areas.",
+    "geography": {
+      "authority_id": "supplement:auth:cn-public:Q217684",
+      "countries": [
+        "CN"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "公开遗址展示区由盘龙城遗址博物院管理。",
+        "id": "auth:cn-public:Q217684:evidence:1",
+        "license": null,
+        "publisher": "武汉市文化和旅游局",
+        "revision": "Retrieved 2026-11-28; SHA-256 3280c5b5cbeaee8e8a8b99320abcae44bc52cd2efb75cffe163489ccf42f430b.",
+        "title": "盘龙城遗址博物院及考古公园",
+        "uri": "https://wlj.wuhan.gov.cn/zfxxgk/fdzdgknr/jgjj/zsdw/202008/t20200827_1437236.shtml"
+      }
+    },
+    "id": "auth:cn-public:Q217684",
+    "location_precision": null,
+    "names": [
+      "盘龙城国家考古遗址公园",
+      "Panlongcheng Archaeological Park",
+      "盘龙城遗址",
+      "Panlongcheng City Ruins"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      114.26555555555555,
+      30.694444444444443
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "公开遗址展示区由盘龙城遗址博物院管理。",
+        "id": "auth:cn-public:Q217684:evidence:1",
+        "license": null,
+        "publisher": "武汉市文化和旅游局",
+        "revision": "Retrieved 2026-11-28; SHA-256 3280c5b5cbeaee8e8a8b99320abcae44bc52cd2efb75cffe163489ccf42f430b.",
+        "title": "盘龙城遗址博物院及考古公园",
+        "uri": "https://wlj.wuhan.gov.cn/zfxxgk/fdzdgknr/jgjj/zsdw/202008/t20200827_1437236.shtml"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "博物院 2026 年预算说明涉及遗址区和新馆区的对外开放。",
+        "id": "auth:cn-public:Q217684:evidence:2",
+        "license": null,
+        "publisher": "盘龙城遗址博物院",
+        "revision": "Retrieved 2026-11-28; SHA-256 8cfc76311d78d77953469b2337748c8339d66bf1639094d5be752f082e1e46ec.",
+        "title": "盘龙城遗址区开放管理资料",
+        "uri": "https://wlj.wuhan.gov.cn/ztzl_27/zxzt/swljbmyjsjsgjfyjsxx/ysxxgk/202602/P020260227408434109707.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native Wikidata coordinate declaration P625. Longitude 114.26555555555555, latitude 30.694444444444443.",
+        "id": "auth:cn-public:Q217684:evidence:3",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Retrieved 2026-11-28; SHA-256 146f88ba2b969c8970be382dada3cbf9863455fe205c340e665ec8da90fe57d2.",
+        "title": "Panlongcheng Archaeological Park coordinate assertion",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q217684.json"
+      }
+    ],
+    "source_uri": "https://wlj.wuhan.gov.cn/zfxxgk/fdzdgknr/jgjj/zsdw/202008/t20200827_1437236.shtml",
+    "title": "Panlongcheng Archaeological Park",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "大同市人民政府门户网站",
+      "晋城市人民政府门户网站",
+      "Wikidata contributors"
+    ],
+    "description": "Archaeological interpretation within the original Taosi settlement in Xiangfen, with designated displays of site remains.",
+    "description_zh": "襄汾陶寺原址的考古展示园区，包括管理方开放的城址及专题展示。",
+    "details": "The original source marker has coarse declared precision and serves as a broad park reference, within the verified public visitor park, at park scale.",
+    "geography": {
+      "authority_id": "supplement:auth:cn-public:Q217859",
+      "countries": [
+        "CN"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "开放的展示区包括遗址博物馆、天文考古馆、宫城墙、宫殿区及考古发掘展示。",
+        "id": "auth:cn-public:Q217859:evidence:1",
+        "license": null,
+        "publisher": "大同市人民政府门户网站",
+        "revision": "Retrieved 2026-11-28; SHA-256 6890b324dd7a8a03a0cf74afd4d731cf144a0cb50825faff219034abf5a15286.",
+        "title": "陶寺国家考古遗址公园公布开放区域",
+        "uri": "https://www.dt.gov.cn/dtszf/sxyw/202507/5d1793edfd364054bf03b86369e381e4.shtml"
+      }
+    },
+    "id": "auth:cn-public:Q217859",
+    "location_precision": null,
+    "names": [
+      "陶寺国家考古遗址公园",
+      "Taosi Archaeological Park",
+      "陶寺遗址",
+      "陶寺遺址",
+      "Taosi Archaeological Site"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      111.49005555555556,
+      35.89286111111111
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "开放的展示区包括遗址博物馆、天文考古馆、宫城墙、宫殿区及考古发掘展示。",
+        "id": "auth:cn-public:Q217859:evidence:1",
+        "license": null,
+        "publisher": "大同市人民政府门户网站",
+        "revision": "Retrieved 2026-11-28; SHA-256 6890b324dd7a8a03a0cf74afd4d731cf144a0cb50825faff219034abf5a15286.",
+        "title": "陶寺国家考古遗址公园公布开放区域",
+        "uri": "https://www.dt.gov.cn/dtszf/sxyw/202507/5d1793edfd364054bf03b86369e381e4.shtml"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "公告确认向公众开放的遗址博物馆及预约要求。",
+        "id": "auth:cn-public:Q217859:evidence:2",
+        "license": null,
+        "publisher": "晋城市人民政府门户网站",
+        "revision": "Retrieved 2026-11-28; SHA-256 2a2dc98fba4aef5811e44dcefca6a6ab6597272a4e77dd1fa787a482703db6b2.",
+        "title": "陶寺遗址博物馆开放与预约",
+        "uri": "https://www.jcgov.gov.cn/dtxx/zxts/202411/t20241115_2062361.shtml"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native Wikidata coordinate declaration P625. Longitude 111.49005555555556, latitude 35.89286111111111.",
+        "id": "auth:cn-public:Q217859:evidence:3",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Retrieved 2026-11-28; SHA-256 b4579b04c374807f177edcc1d1ea65913c50e0bdd0b6091a40989b3c98bfef0a.",
+        "title": "Taosi Archaeological Park coordinate assertion",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q217859.json"
+      }
+    ],
+    "source_uri": "https://www.dt.gov.cn/dtszf/sxyw/202507/5d1793edfd364054bf03b86369e381e4.shtml",
+    "title": "Taosi Archaeological Park",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "西安市文物局",
+      "Wikidata contributors"
+    ],
+    "description": "The original Banpo settlement remains in Xi'an are interpreted within the publicly operated Banpo Museum site.",
+    "description_zh": "西安半坡博物馆范围内公开展示的半坡聚落原址。",
+    "details": "The published marker lies in the mapped Banpo Museum archaeological site. Public admission follows the municipal museum's visitor arrangements.",
+    "geography": {
+      "authority_id": "supplement:auth:cn-public:Q806929",
+      "countries": [
+        "CN"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "市文物局公布半坡博物馆的遗址保护展示职责和开放安排。",
+        "id": "auth:cn-public:Q806929:evidence:1",
+        "license": null,
+        "publisher": "西安市文物局",
+        "revision": "Retrieved 2026-11-28; SHA-256 affa97f387f60606ac87a793cd0e383ee53e8bcb10024be4c8a2f556b9768b9c.",
+        "title": "西安半坡博物馆与参观安排",
+        "uri": "https://wwj.xa.gov.cn/xxgk/zzjg/zsdw/607d3361f8fd1c207308c324.html"
+      }
+    },
+    "id": "auth:cn-public:Q806929",
+    "location_precision": null,
+    "names": [
+      "半坡遗址",
+      "Banpo Archaeological Site",
+      "半坡博物馆",
+      "西安半坡遗址",
+      "Banpo Site",
+      "Banpo Museum"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      109.0475,
+      34.27444444
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "市文物局公布半坡博物馆的遗址保护展示职责和开放安排。",
+        "id": "auth:cn-public:Q806929:evidence:1",
+        "license": null,
+        "publisher": "西安市文物局",
+        "revision": "Retrieved 2026-11-28; SHA-256 affa97f387f60606ac87a793cd0e383ee53e8bcb10024be4c8a2f556b9768b9c.",
+        "title": "西安半坡博物馆与参观安排",
+        "uri": "https://wwj.xa.gov.cn/xxgk/zzjg/zsdw/607d3361f8fd1c207308c324.html"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "半坡遗址列为国家级古遗址。",
+        "id": "auth:cn-public:Q806929:evidence:2",
+        "license": null,
+        "publisher": "西安市文物局",
+        "revision": "Retrieved 2026-11-28; SHA-256 bf5613f9c1787efcbc45f009ce3836827c19049601d34e0f972048ac2ca5c591.",
+        "title": "西安全国重点文物保护单位名录",
+        "uri": "https://wwj.xa.gov.cn/xxgk/wbxx/5fbb551ff8fd1c59664b3711.html"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native Wikidata coordinate declaration P625. Longitude 109.0475, latitude 34.27444444.",
+        "id": "auth:cn-public:Q806929:evidence:3",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Retrieved 2026-11-28; SHA-256 34298a8c4cc3cd84d66ba0e5dbab3931b9de054a171ca44457d8c36c8132e2a7.",
+        "title": "Banpo Archaeological Site coordinate assertion",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q806929.json"
+      }
+    ],
+    "source_uri": "https://wwj.xa.gov.cn/xxgk/zzjg/zsdw/607d3361f8fd1c207308c324.html",
+    "title": "Banpo Archaeological Site",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public heritage place and point-source review.",
+      "note": "This point update does not assign a dated phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "澧县人民政府门户网站",
+      "Wikidata contributors"
+    ],
+    "description": "Original historic settlement remains in Li County's publicly managed Chengtoushan archaeological park.",
+    "description_zh": "澧县城头山国家考古遗址公园内对访客公开介绍的史前城址。",
+    "details": "The exact original point is a park representative. The historic settlement scope excludes separate modern recreation attractions that serve the same destination.",
+    "geography": {
+      "authority_id": "supplement:auth:cn-public:Q834417",
+      "countries": [
+        "CN"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "政府门户介绍城头山遗址公园常态参观及农耕考古展示。",
+        "id": "auth:cn-public:Q834417:evidence:1",
+        "license": null,
+        "publisher": "澧县人民政府门户网站",
+        "revision": "Retrieved 2026-11-28; SHA-256 d846169f8a3152b9dee21d81232c87be881b6a465822e617a289a466ba092909.",
+        "title": "城头山旅游景区文旅与参观范围",
+        "uri": "https://www.li-xian.gov.cn/xwzx/bmgz/content_78225175"
+      }
+    },
+    "id": "auth:cn-public:Q834417",
+    "location_precision": null,
+    "names": [
+      "城头山国家考古遗址公园",
+      "Chengtoushan Archaeological Park",
+      "城头山遗址",
+      "Chengtoushan Site"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      111.65555556,
+      29.69166667
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "政府门户介绍城头山遗址公园常态参观及农耕考古展示。",
+        "id": "auth:cn-public:Q834417:evidence:1",
+        "license": null,
+        "publisher": "澧县人民政府门户网站",
+        "revision": "Retrieved 2026-11-28; SHA-256 d846169f8a3152b9dee21d81232c87be881b6a465822e617a289a466ba092909.",
+        "title": "城头山旅游景区文旅与参观范围",
+        "uri": "https://www.li-xian.gov.cn/xwzx/bmgz/content_78225175"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Native Wikidata coordinate declaration P625. Longitude 111.65555556, latitude 29.69166667.",
+        "id": "auth:cn-public:Q834417:evidence:2",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Retrieved 2026-11-28; SHA-256 6307adab4568a73f0d4e3d05559af2329fff2e5997a0086ce624033d1e8c4035.",
+        "title": "Chengtoushan Archaeological Park coordinate assertion",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q834417.json"
+      }
+    ],
+    "source_uri": "https://www.li-xian.gov.cn/xwzx/bmgz/content_78225175",
+    "title": "Chengtoushan Archaeological Park",
+    "types": [
+      "archaeological-site"
+    ]
+  }
+]

@@ -1,0 +1,1639 @@
+{
+  "base_count": 5165,
+  "base_ids_sha256": "c8ca36b662601a8f9d5c7d8d1e7f3573d4b9b38455fd0594976a2f788de8b593",
+  "base_sites_sha256": "4e8d55dae2ee5032bcfae695202c279995f3ff47b982062bd7c7e4a593d640e2",
+  "cohort_version": "anatolia-inland-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified CC0 WGS84 representative point.",
+        "point": [
+          41.5385,
+          37.321777777778
+        ],
+        "precision": 2.7777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1434981.json",
+        "statement_id": "q1434981$4CE8A906-5680-4C6A-BC14-EA456154F5D8"
+      },
+      "independent_review": {
+        "method": "Independent agent checked source hashes, named points and public opening against the current ministry calendar, authority publications and independently measured original footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original and working Mor Gabriel monastery near Midyat. The visitor scope covers the designated areas subject to the custodian's posted hours and religious closures.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Official visitor place and original-site identity checked.",
+          "note": "No independently reviewed dated historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Mardin Provincial Directorate of Culture and Tourism",
+          "Türkiye Ministry of Culture and Tourism",
+          "Wikidata contributors"
+        ],
+        "description": "The original and working Mor Gabriel monastery near Midyat. The visitor scope covers the designated areas subject to the custodian's posted hours and religious closures.",
+        "description_zh": "莫尔加布里埃尔修道院参观区位于土耳其。地图标记表示经核对的遗址代表点，开放范围以主管方公布的线路为准。",
+        "details": "The original and working Mor Gabriel monastery near Midyat. The visitor scope covers the designated areas subject to the custodian's posted hours and religious closures.",
+        "geography": {
+          "authority_id": "supplement:auth:tr-public:Q1434981",
+          "countries": [
+            "TR"
+          ],
+          "note": "Named public heritage site in Mardin Province.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial directorate publishes the monastery location and visitor hours except for religious holidays.",
+            "id": "auth:tr-public:Q1434981:tr-mor-local.html",
+            "license": null,
+            "publisher": "Mardin Provincial Directorate of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 5c26428ee48aec022fb078d0d937ad24a3796f1e46c1554145110726a6cbf3b3.",
+            "title": "Mor Gabriel Manastırı visitor precinct visitor scope and place identity",
+            "uri": "https://mardin.ktb.gov.tr/TR-373466/mor-gabriel-manastiri.html"
+          }
+        },
+        "id": "auth:tr-public:Q1434981",
+        "location_precision": null,
+        "names": [
+          "莫尔加布里埃尔修道院参观区"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          41.5385,
+          37.321777777778
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial directorate publishes the monastery location and visitor hours except for religious holidays.",
+            "id": "auth:tr-public:Q1434981:tr-mor-local.html",
+            "license": null,
+            "publisher": "Mardin Provincial Directorate of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 5c26428ee48aec022fb078d0d937ad24a3796f1e46c1554145110726a6cbf3b3.",
+            "title": "Mor Gabriel Manastırı visitor precinct visitor scope and place identity",
+            "uri": "https://mardin.ktb.gov.tr/TR-373466/mor-gabriel-manastiri.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide identifies the named Midyat monastery and its historic structures.",
+            "id": "auth:tr-public:Q1434981:tr-mor-ministry.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 07451687248d87c44d5b5a1d564e979c94721209473e8c0a7dafbc4ce265ad14.",
+            "title": "Mor Gabriel Manastırı visitor precinct visitor scope and place identity",
+            "uri": "https://www.ktb.gov.tr/EN-36217/where-to-visit.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 41.5385, latitude 37.321777777778.",
+            "id": "wikidata:Q1434981",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2573792745; original P625 q1434981$4CE8A906-5680-4C6A-BC14-EA456154F5D8.",
+            "title": "Mor Gabriel Manastırı visitor precinct representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1434981.json"
+          }
+        ],
+        "source_uri": "https://mardin.ktb.gov.tr/TR-373466/mor-gabriel-manastiri.html",
+        "title": "Mor Gabriel Manastırı visitor precinct",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1434981.json",
+          "sha256": "4ca8d91c7c3cd220c544df34a4f3c77e9ca784a740f7528b15ad007304338eba",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1434981.json"
+        },
+        {
+          "filename": "tr-mor-local.html",
+          "sha256": "5c26428ee48aec022fb078d0d937ad24a3796f1e46c1554145110726a6cbf3b3",
+          "uri": "https://mardin.ktb.gov.tr/TR-373466/mor-gabriel-manastiri.html"
+        },
+        {
+          "filename": "tr-mor-ministry.html",
+          "sha256": "07451687248d87c44d5b5a1d564e979c94721209473e8c0a7dafbc4ce265ad14",
+          "uri": "https://www.ktb.gov.tr/EN-36217/where-to-visit.html"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified CC0 WGS84 representative point.",
+        "point": [
+          41.272049,
+          39.906395
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q15818405.json",
+        "statement_id": "Q15818405$CF7716B0-4ACA-4300-90C5-48C3FEAD47D7"
+      },
+      "independent_review": {
+        "method": "Independent agent checked source hashes, named points and public opening against the current ministry calendar, authority publications and independently measured original footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The in-place Yakutiye madrasa in Erzurum, housing the Turkish-Islamic Art and Ethnography Museum. Scope covers the museum visitor areas inside the original historic building.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Official visitor place and original-site identity checked.",
+          "note": "No independently reviewed dated historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Türkiye Ministry of Culture and Tourism",
+          "Türkiye Ministry of National Education",
+          "Wikidata contributors"
+        ],
+        "description": "The in-place Yakutiye madrasa in Erzurum, housing the Turkish-Islamic Art and Ethnography Museum. Scope covers the museum visitor areas inside the original historic building.",
+        "description_zh": "雅库提耶经学院位于土耳其。地图标记表示经核对的遗址代表点，开放范围以主管方公布的线路为准。",
+        "details": "The in-place Yakutiye madrasa in Erzurum, housing the Turkish-Islamic Art and Ethnography Museum. Scope covers the museum visitor areas inside the original historic building.",
+        "geography": {
+          "authority_id": "supplement:auth:tr-public:Q15818405",
+          "countries": [
+            "TR"
+          ],
+          "note": "Named public heritage site in Erzurum Province.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The cultural ministry explicitly locates the museum in the original Yakutiye madrasa and describes its onsite exhibition areas.",
+            "id": "auth:tr-public:Q15818405:tr-yakutiye-museum.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 05d0483d78261e35e898d6b7272f744ad1f61bba42cdbd221073f1e3e6326587.",
+            "title": "Yakutiye Medresesi visitor scope and place identity",
+            "uri": "https://turkishmuseums.kprod.kultur.gov.tr/museum/detail/2041-erzurum-turk-islam-eserleri-ve-etnografya-muzesi/2041/1"
+          }
+        },
+        "id": "auth:tr-public:Q15818405",
+        "location_precision": null,
+        "names": [
+          "雅库提耶经学院"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          41.272049,
+          39.906395
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The cultural ministry explicitly locates the museum in the original Yakutiye madrasa and describes its onsite exhibition areas.",
+            "id": "auth:tr-public:Q15818405:tr-yakutiye-museum.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 05d0483d78261e35e898d6b7272f744ad1f61bba42cdbd221073f1e3e6326587.",
+            "title": "Yakutiye Medresesi visitor scope and place identity",
+            "uri": "https://turkishmuseums.kprod.kultur.gov.tr/museum/detail/2041-erzurum-turk-islam-eserleri-ve-etnografya-muzesi/2041/1"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official local visitor programme lists opening times for the madrasa museum.",
+            "id": "auth:tr-public:Q15818405:tr-yakutiye-school.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of National Education",
+            "revision": "Frozen 2026-11-28. SHA-256 00659c2e38445acea2a719558145d73f7186868860e9aa87ba3b5a9e4399e975.",
+            "title": "Yakutiye Medresesi visitor scope and place identity",
+            "uri": "https://okuldisiogrenme.eba.gov.tr/mekan-detay/yakutiye-medresesi-ve-muzesi-1778"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 41.272049, latitude 39.906395.",
+            "id": "wikidata:Q15818405",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2573795035; original P625 Q15818405$CF7716B0-4ACA-4300-90C5-48C3FEAD47D7.",
+            "title": "Yakutiye Medresesi representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q15818405.json"
+          }
+        ],
+        "source_uri": "https://turkishmuseums.kprod.kultur.gov.tr/museum/detail/2041-erzurum-turk-islam-eserleri-ve-etnografya-muzesi/2041/1",
+        "title": "Yakutiye Medresesi",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q15818405.json",
+          "sha256": "4e703f2d9ba0cf737a0e09e6ba6a811edb8f4838277a90a9bc00e6c15a370c33",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q15818405.json"
+        },
+        {
+          "filename": "tr-yakutiye-museum.html",
+          "sha256": "05d0483d78261e35e898d6b7272f744ad1f61bba42cdbd221073f1e3e6326587",
+          "uri": "https://turkishmuseums.kprod.kultur.gov.tr/museum/detail/2041-erzurum-turk-islam-eserleri-ve-etnografya-muzesi/2041/1"
+        },
+        {
+          "filename": "tr-yakutiye-school.html",
+          "sha256": "00659c2e38445acea2a719558145d73f7186868860e9aa87ba3b5a9e4399e975",
+          "uri": "https://okuldisiogrenme.eba.gov.tr/mekan-detay/yakutiye-medresesi-ve-muzesi-1778"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified CC0 WGS84 representative point.",
+        "point": [
+          40.792611111111,
+          37.299388888889
+        ],
+        "precision": 2.7777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1776325.json",
+        "statement_id": "q1776325$030D115F-2CCF-4399-8C27-2662ADC12430"
+      },
+      "independent_review": {
+        "method": "Independent agent checked source hashes, named points and public opening against the current ministry calendar, authority publications and independently measured original footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The working Mor Hananyo monastery near Mardin. Scope covers the custodian's admitted monastery route, subject to worship and operating hours.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Official visitor place and original-site identity checked.",
+          "note": "No independently reviewed dated historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Mardin Provincial Directorate of Culture and Tourism",
+          "Wikidata contributors"
+        ],
+        "description": "The working Mor Hananyo monastery near Mardin. Scope covers the custodian's admitted monastery route, subject to worship and operating hours.",
+        "description_zh": "德鲁扎法兰修道院参观区位于土耳其。地图标记表示经核对的遗址代表点，开放范围以主管方公布的线路为准。",
+        "details": "The working Mor Hananyo monastery near Mardin. Scope covers the custodian's admitted monastery route, subject to worship and operating hours.",
+        "geography": {
+          "authority_id": "supplement:auth:tr-public:Q1776325",
+          "countries": [
+            "TR"
+          ],
+          "note": "Named public heritage site in Mardin Province.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial authority identifies the named monastery, publishes public admission, and distinguishes its continuing ecclesiastical use.",
+            "id": "auth:tr-public:Q1776325:tr-deyr-visit.html",
+            "license": null,
+            "publisher": "Mardin Provincial Directorate of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 64d51d6238a0110ba26b7c73070b0fb5e3a01d720bf55e4528879052fb1146ac.",
+            "title": "Deyrulzafaran Manastırı visitor precinct visitor scope and place identity",
+            "uri": "https://mardin.ktb.gov.tr/TR-373254/deyrulzafaran-manastiri.html"
+          }
+        },
+        "id": "auth:tr-public:Q1776325",
+        "location_precision": null,
+        "names": [
+          "德鲁扎法兰修道院参观区"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          40.792611111111,
+          37.299388888889
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial authority identifies the named monastery, publishes public admission, and distinguishes its continuing ecclesiastical use.",
+            "id": "auth:tr-public:Q1776325:tr-deyr-visit.html",
+            "license": null,
+            "publisher": "Mardin Provincial Directorate of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 64d51d6238a0110ba26b7c73070b0fb5e3a01d720bf55e4528879052fb1146ac.",
+            "title": "Deyrulzafaran Manastırı visitor precinct visitor scope and place identity",
+            "uri": "https://mardin.ktb.gov.tr/TR-373254/deyrulzafaran-manastiri.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial cultural route names the monastery as a distinct managed visit.",
+            "id": "auth:tr-public:Q1776325:tr-mardin-routes.html",
+            "license": null,
+            "publisher": "Mardin Provincial Directorate of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 a4853310e8262742c9368eb26192f5f2fa5e0805223c4289835dc719d49cec5e.",
+            "title": "Deyrulzafaran Manastırı visitor precinct visitor scope and place identity",
+            "uri": "https://mardin.ktb.gov.tr/TR-373151/mardin-rotalar.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 40.792611111111, latitude 37.299388888889.",
+            "id": "wikidata:Q1776325",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2550050143; original P625 q1776325$030D115F-2CCF-4399-8C27-2662ADC12430.",
+            "title": "Deyrulzafaran Manastırı visitor precinct representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1776325.json"
+          }
+        ],
+        "source_uri": "https://mardin.ktb.gov.tr/TR-373254/deyrulzafaran-manastiri.html",
+        "title": "Deyrulzafaran Manastırı visitor precinct",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q1776325.json",
+          "sha256": "16703b974f4261e9ec2ebee19593c466f0bfe28cd17c40e212375adb8ad43e89",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1776325.json"
+        },
+        {
+          "filename": "tr-deyr-visit.html",
+          "sha256": "64d51d6238a0110ba26b7c73070b0fb5e3a01d720bf55e4528879052fb1146ac",
+          "uri": "https://mardin.ktb.gov.tr/TR-373254/deyrulzafaran-manastiri.html"
+        },
+        {
+          "filename": "tr-mardin-routes.html",
+          "sha256": "a4853310e8262742c9368eb26192f5f2fa5e0805223c4289835dc719d49cec5e",
+          "uri": "https://mardin.ktb.gov.tr/TR-373151/mardin-rotalar.html"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified CC0 WGS84 representative point.",
+        "point": [
+          43.46111111,
+          38.35297222
+        ],
+        "precision": 2.777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q272699.json",
+        "statement_id": "Q272699$7E2A5240-DF37-4FA5-BFA6-25E428BBBE7A"
+      },
+      "independent_review": {
+        "method": "Independent agent checked source hashes, named points and public opening against the current ministry calendar, authority publications and independently measured original footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original Urartian fortress near Çavuştepe in Gürpınar. The record covers the managed visitor route and published open areas of the historic fortress.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Official visitor place and original-site identity checked.",
+          "note": "No independently reviewed dated historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Türkiye Ministry of Culture and Tourism",
+          "Wikidata contributors"
+        ],
+        "description": "The original Urartian fortress near Çavuştepe in Gürpınar. The record covers the managed visitor route and published open areas of the historic fortress.",
+        "description_zh": "恰武什泰佩堡遗址位于土耳其。地图标记表示经核对的遗址代表点，开放范围以主管方公布的线路为准。",
+        "details": "The original Urartian fortress near Çavuştepe in Gürpınar. The record covers the managed visitor route and published open areas of the historic fortress.",
+        "geography": {
+          "authority_id": "supplement:auth:tr-public:Q272699",
+          "countries": [
+            "TR"
+          ],
+          "note": "Named public heritage site in Van Province.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies the upper and lower fortress at the original Gürpınar site and its visitor arrangements.",
+            "id": "auth:tr-public:Q272699:tr-cavus-ministry.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 2050c2c1784907799f4dca1d899fc1b0f01513410fc532224cee06de91825d14.",
+            "title": "Çavuştepe Kalesi visitor scope and place identity",
+            "uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=VCK01"
+          }
+        },
+        "id": "auth:tr-public:Q272699",
+        "location_precision": null,
+        "names": [
+          "恰武什泰佩堡遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          43.46111111,
+          38.35297222
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies the upper and lower fortress at the original Gürpınar site and its visitor arrangements.",
+            "id": "auth:tr-public:Q272699:tr-cavus-ministry.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 2050c2c1784907799f4dca1d899fc1b0f01513410fc532224cee06de91825d14.",
+            "title": "Çavuştepe Kalesi visitor scope and place identity",
+            "uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=VCK01"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The 2026–2027 winter admission list names Çavuştepe Kalesi as a visitable site.",
+            "id": "auth:tr-public:Q272699:tr-winter-hours.xlsx",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 be0890fd504bfc6aa8a82332c3071bb52e171c321800214f87120022a9bf37f1.",
+            "title": "Çavuştepe Kalesi visitor scope and place identity",
+            "uri": "https://kvmgm.ktb.gov.tr/Eklenti/152996,muze-ve-orenyerleri-ziyaret-saatleri-2026-2027-1-ekim-1-mayisxlsx.xlsx?0"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 43.46111111, latitude 38.35297222.",
+            "id": "wikidata:Q272699",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2569105580; original P625 Q272699$7E2A5240-DF37-4FA5-BFA6-25E428BBBE7A.",
+            "title": "Çavuştepe Kalesi representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q272699.json"
+          }
+        ],
+        "source_uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=VCK01",
+        "title": "Çavuştepe Kalesi",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q272699.json",
+          "sha256": "53a7fee15ccd6769479050ea7d7ecb456b4af58500542c1a84ff783a6709b0e9",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q272699.json"
+        },
+        {
+          "filename": "tr-cavus-ministry.html",
+          "sha256": "2050c2c1784907799f4dca1d899fc1b0f01513410fc532224cee06de91825d14",
+          "uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=VCK01"
+        },
+        {
+          "filename": "tr-winter-hours.xlsx",
+          "sha256": "be0890fd504bfc6aa8a82332c3071bb52e171c321800214f87120022a9bf37f1",
+          "uri": "https://kvmgm.ktb.gov.tr/Eklenti/152996,muze-ve-orenyerleri-ziyaret-saatleri-2026-2027-1-ekim-1-mayisxlsx.xlsx?0"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified CC0 WGS84 representative point.",
+        "point": [
+          43.34,
+          38.5025
+        ],
+        "precision": 0.0002777777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3187042.json",
+        "statement_id": "Q3187042$3937742A-66E8-4E2A-A383-453EA2A2EDE1"
+      },
+      "independent_review": {
+        "method": "Independent agent checked source hashes, named points and public opening against the current ministry calendar, authority publications and independently measured original footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The in-place citadel of Van on the rocky ridge. Public access follows the designated castle visitor route. The surrounding Old Van archaeological remains and the separate Van Museum have distinct access arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Official visitor place and original-site identity checked.",
+          "note": "No independently reviewed dated historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Türkiye Ministry of Culture and Tourism",
+          "Wikidata contributors"
+        ],
+        "description": "The in-place citadel of Van on the rocky ridge. Public access follows the designated castle visitor route. The surrounding Old Van archaeological remains and the separate Van Museum have distinct access arrangements.",
+        "description_zh": "凡城城堡位于土耳其。地图标记表示经核对的遗址代表点，开放范围以主管方公布的线路为准。",
+        "details": "The in-place citadel of Van on the rocky ridge. Public access follows the designated castle visitor route. The surrounding Old Van archaeological remains and the separate Van Museum have distinct access arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:tr-public:Q3187042",
+          "countries": [
+            "TR"
+          ],
+          "note": "Named public heritage site in Van Province.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies Van Castle and the separately managed visitor route on the original citadel ridge.",
+            "id": "auth:tr-public:Q3187042:tr-van-ministry.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 93791eef28a24b8f9cfb809bbad062376ba75d2bd79aceba107108c139d4394e.",
+            "title": "Van Kalesi visitor scope and place identity",
+            "uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=VKA02"
+          }
+        },
+        "id": "auth:tr-public:Q3187042",
+        "location_precision": null,
+        "names": [
+          "凡城城堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          43.34,
+          38.5025
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies Van Castle and the separately managed visitor route on the original citadel ridge.",
+            "id": "auth:tr-public:Q3187042:tr-van-ministry.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 93791eef28a24b8f9cfb809bbad062376ba75d2bd79aceba107108c139d4394e.",
+            "title": "Van Kalesi visitor scope and place identity",
+            "uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=VKA02"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The 2026–2027 winter admission list identifies Van Kalesi as an open original-site venue.",
+            "id": "auth:tr-public:Q3187042:tr-winter-hours.xlsx",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 be0890fd504bfc6aa8a82332c3071bb52e171c321800214f87120022a9bf37f1.",
+            "title": "Van Kalesi visitor scope and place identity",
+            "uri": "https://kvmgm.ktb.gov.tr/Eklenti/152996,muze-ve-orenyerleri-ziyaret-saatleri-2026-2027-1-ekim-1-mayisxlsx.xlsx?0"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 43.34, latitude 38.5025.",
+            "id": "wikidata:Q3187042",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2573792888; original P625 Q3187042$3937742A-66E8-4E2A-A383-453EA2A2EDE1.",
+            "title": "Van Kalesi representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3187042.json"
+          }
+        ],
+        "source_uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=VKA02",
+        "title": "Van Kalesi",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q3187042.json",
+          "sha256": "4c7ee257fe165f26122374272a36188a72c0cee51a84299062d8f53d68333a5b",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3187042.json"
+        },
+        {
+          "filename": "tr-van-ministry.html",
+          "sha256": "93791eef28a24b8f9cfb809bbad062376ba75d2bd79aceba107108c139d4394e",
+          "uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=VKA02"
+        },
+        {
+          "filename": "tr-winter-hours.xlsx",
+          "sha256": "be0890fd504bfc6aa8a82332c3071bb52e171c321800214f87120022a9bf37f1",
+          "uri": "https://kvmgm.ktb.gov.tr/Eklenti/152996,muze-ve-orenyerleri-ziyaret-saatleri-2026-2027-1-ekim-1-mayisxlsx.xlsx?0"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified CC0 WGS84 representative point.",
+        "point": [
+          41.20373,
+          38.15348
+        ],
+        "precision": 0.01,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3397053.json",
+        "statement_id": "q3397053$FCF3F038-6FC9-4946-98AC-74FC75A3D61B"
+      },
+      "independent_review": {
+        "method": "Independent agent checked source hashes, named points and public opening against the current ministry calendar, authority publications and independently measured original footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original historic bridge on the Batman River near Silvan. The recorded public scope covers the bridge as an outdoor heritage attraction and its visitor approach.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Official visitor place and original-site identity checked.",
+          "note": "No independently reviewed dated historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Türkiye Ministry of Culture and Tourism",
+          "Wikidata contributors"
+        ],
+        "description": "The original historic bridge on the Batman River near Silvan. The recorded public scope covers the bridge as an outdoor heritage attraction and its visitor approach.",
+        "description_zh": "马拉巴迪桥位于土耳其。地图标记表示经核对的遗址代表点，开放范围以主管方公布的线路为准。",
+        "details": "The original historic bridge on the Batman River near Silvan. The recorded public scope covers the bridge as an outdoor heritage attraction and its visitor approach.",
+        "geography": {
+          "authority_id": "supplement:auth:tr-public:Q3397053",
+          "countries": [
+            "TR"
+          ],
+          "note": "Named public heritage site in Diyarbakır Province.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry's cultural portal identifies the historic bridge at Silvan as a named public visitor attraction.",
+            "id": "auth:tr-public:Q3397053:tr-malabadi-gov.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 51ef47a0343224ac670fdfa4e103bccd05ed38154acbf87e496edc0c2ff306a3.",
+            "title": "Malabadi Köprüsü visitor scope and place identity",
+            "uri": "https://www.kulturportali.gov.tr/turkiye/diyarbakir/gezilecekyer/malabad-koprusu"
+          }
+        },
+        "id": "auth:tr-public:Q3397053",
+        "location_precision": null,
+        "names": [
+          "马拉巴迪桥"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          41.20373,
+          38.15348
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry's cultural portal identifies the historic bridge at Silvan as a named public visitor attraction.",
+            "id": "auth:tr-public:Q3397053:tr-malabadi-gov.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 51ef47a0343224ac670fdfa4e103bccd05ed38154acbf87e496edc0c2ff306a3.",
+            "title": "Malabadi Köprüsü visitor scope and place identity",
+            "uri": "https://www.kulturportali.gov.tr/turkiye/diyarbakir/gezilecekyer/malabad-koprusu"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 41.20373, latitude 38.15348.",
+            "id": "wikidata:Q3397053",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2513544442; original P625 q3397053$FCF3F038-6FC9-4946-98AC-74FC75A3D61B.",
+            "title": "Malabadi Köprüsü representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3397053.json"
+          }
+        ],
+        "source_uri": "https://www.kulturportali.gov.tr/turkiye/diyarbakir/gezilecekyer/malabad-koprusu",
+        "title": "Malabadi Köprüsü",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q3397053.json",
+          "sha256": "4ca0a6f519857bf524a942022afcbced552571a938e8caa25a107eea60e40f18",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3397053.json"
+        },
+        {
+          "filename": "tr-malabadi-gov.html",
+          "sha256": "51ef47a0343224ac670fdfa4e103bccd05ed38154acbf87e496edc0c2ff306a3",
+          "uri": "https://www.kulturportali.gov.tr/turkiye/diyarbakir/gezilecekyer/malabad-koprusu"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified CC0 WGS84 representative point.",
+        "point": [
+          33.5467,
+          38.2479
+        ],
+        "precision": 0.01,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3503565.json",
+        "statement_id": "Q3503565$8E2ABCAB-0C67-4E41-81C3-A2BD5EC6E56A"
+      },
+      "independent_review": {
+        "method": "Independent agent checked source hashes, named points and public opening against the current ministry calendar, authority publications and independently measured original footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic Sultanhanı caravanserai in Aksaray Province. Public scope consists of the managed caravanserai route on the original historic plot.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Official visitor place and original-site identity checked.",
+          "note": "No independently reviewed dated historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Türkiye Ministry of National Education",
+          "Association of Turkish Travel Agencies",
+          "Wikidata contributors"
+        ],
+        "description": "The historic Sultanhanı caravanserai in Aksaray Province. Public scope consists of the managed caravanserai route on the original historic plot.",
+        "description_zh": "阿克萨赖苏丹哈尼驿站位于土耳其。地图标记表示经核对的遗址代表点，开放范围以主管方公布的线路为准。",
+        "details": "The historic Sultanhanı caravanserai in Aksaray Province. Public scope consists of the managed caravanserai route on the original historic plot.",
+        "geography": {
+          "authority_id": "supplement:auth:tr-public:Q3503565",
+          "countries": [
+            "TR"
+          ],
+          "note": "Named public heritage site in Aksaray Province.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official school visit register names the Aksaray caravanserai and provides visitor days and hours.",
+            "id": "auth:tr-public:Q3503565:tr-sultan-school.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of National Education",
+            "revision": "Frozen 2026-11-28. SHA-256 033f39e6568c1ff0807d2878f653d67c0aff09c79146ec9a3fbba1233b1e4a31.",
+            "title": "Sultanhanı Kervansarayı (Aksaray) visitor scope and place identity",
+            "uri": "https://okuldisiogrenme.eba.gov.tr/mekan-detay/sultanhani-kervansarayi-151"
+          }
+        },
+        "id": "auth:tr-public:Q3503565",
+        "location_precision": null,
+        "names": [
+          "阿克萨赖苏丹哈尼驿站"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          33.5467,
+          38.2479
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official school visit register names the Aksaray caravanserai and provides visitor days and hours.",
+            "id": "auth:tr-public:Q3503565:tr-sultan-school.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of National Education",
+            "revision": "Frozen 2026-11-28. SHA-256 033f39e6568c1ff0807d2878f653d67c0aff09c79146ec9a3fbba1233b1e4a31.",
+            "title": "Sultanhanı Kervansarayı (Aksaray) visitor scope and place identity",
+            "uri": "https://okuldisiogrenme.eba.gov.tr/mekan-detay/sultanhani-kervansarayi-151"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The visitor notice identifies the named Aksaray caravanserai and the managed access arrangement.",
+            "id": "auth:tr-public:Q3503565:tr-sultan-routing.html",
+            "license": null,
+            "publisher": "Association of Turkish Travel Agencies",
+            "revision": "Frozen 2026-11-28. SHA-256 25b5e15f893676059ad528f9373952515c925d959724298ccdd3f2d2647f4df8.",
+            "title": "Sultanhanı Kervansarayı (Aksaray) visitor scope and place identity",
+            "uri": "https://www.tursab.org.tr/duyurular/sultanhani-kervansarayi-ziyaret-saatleri-hakkinda-duyuru"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 33.5467, latitude 38.2479.",
+            "id": "wikidata:Q3503565",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2546506916; original P625 Q3503565$8E2ABCAB-0C67-4E41-81C3-A2BD5EC6E56A.",
+            "title": "Sultanhanı Kervansarayı (Aksaray) representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3503565.json"
+          }
+        ],
+        "source_uri": "https://okuldisiogrenme.eba.gov.tr/mekan-detay/sultanhani-kervansarayi-151",
+        "title": "Sultanhanı Kervansarayı (Aksaray)",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q3503565.json",
+          "sha256": "740acd43633e77ba589e424e1be5262c6671e07211a725578063762ba1e918f7",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3503565.json"
+        },
+        {
+          "filename": "tr-sultan-school.html",
+          "sha256": "033f39e6568c1ff0807d2878f653d67c0aff09c79146ec9a3fbba1233b1e4a31",
+          "uri": "https://okuldisiogrenme.eba.gov.tr/mekan-detay/sultanhani-kervansarayi-151"
+        },
+        {
+          "filename": "tr-sultan-routing.html",
+          "sha256": "25b5e15f893676059ad528f9373952515c925d959724298ccdd3f2d2647f4df8",
+          "uri": "https://www.tursab.org.tr/duyurular/sultanhani-kervansarayi-ziyaret-saatleri-hakkinda-duyuru"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified CC0 WGS84 representative point.",
+        "point": [
+          35.633333333333,
+          38.85
+        ],
+        "precision": null,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q538605.json",
+        "statement_id": "q538605$84B010A5-BE73-4451-8AF6-92F40FA0A9EE"
+      },
+      "independent_review": {
+        "method": "Independent agent checked source hashes, named points and public opening against the current ministry calendar, authority publications and independently measured original footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original historic mound and designated public archaeology route at Kültepe near Karahöyük, including the publicly presented Kaniş–Karum precinct. The separate museum building has its own closure status.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Official visitor place and original-site identity checked.",
+          "note": "No independently reviewed dated historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Türkiye Ministry of Culture and Tourism",
+          "Wikidata contributors"
+        ],
+        "description": "The original historic mound and designated public archaeology route at Kültepe near Karahöyük, including the publicly presented Kaniş–Karum precinct. The separate museum building has its own closure status.",
+        "description_zh": "屈尔泰佩古城遗址位于土耳其。地图标记表示经核对的遗址代表点，开放范围以主管方公布的线路为准。",
+        "details": "The original historic mound and designated public archaeology route at Kültepe near Karahöyük, including the publicly presented Kaniş–Karum precinct. The separate museum building has its own closure status.",
+        "geography": {
+          "authority_id": "supplement:auth:tr-public:Q538605",
+          "countries": [
+            "TR"
+          ],
+          "note": "Named public heritage site in Kayseri Province.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies the Kaniş–Karum original archaeological landscape outside Kayseri.",
+            "id": "auth:tr-public:Q538605:tr-kultepe-ministry.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 8a1e945ed8bfaf3f8f45b69b9148672dbc08bdfff61eeb85d63c312231c3fc7a.",
+            "title": "Kültepe Örenyeri visitor scope and place identity",
+            "uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=KKO01"
+          }
+        },
+        "id": "auth:tr-public:Q538605",
+        "location_precision": null,
+        "names": [
+          "屈尔泰佩古城遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          35.633333333333,
+          38.85
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies the Kaniş–Karum original archaeological landscape outside Kayseri.",
+            "id": "auth:tr-public:Q538605:tr-kultepe-ministry.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 8a1e945ed8bfaf3f8f45b69b9148672dbc08bdfff61eeb85d63c312231c3fc7a.",
+            "title": "Kültepe Örenyeri visitor scope and place identity",
+            "uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=KKO01"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The winter timetable separately lists the original archaeological area as visitable, and the site museum as closed.",
+            "id": "auth:tr-public:Q538605:tr-winter-hours.xlsx",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 be0890fd504bfc6aa8a82332c3071bb52e171c321800214f87120022a9bf37f1.",
+            "title": "Kültepe Örenyeri visitor scope and place identity",
+            "uri": "https://kvmgm.ktb.gov.tr/Eklenti/152996,muze-ve-orenyerleri-ziyaret-saatleri-2026-2027-1-ekim-1-mayisxlsx.xlsx?0"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 35.633333333333, latitude 38.85.",
+            "id": "wikidata:Q538605",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2573791084; original P625 q538605$84B010A5-BE73-4451-8AF6-92F40FA0A9EE.",
+            "title": "Kültepe Örenyeri representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q538605.json"
+          }
+        ],
+        "source_uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=KKO01",
+        "title": "Kültepe Örenyeri",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q538605.json",
+          "sha256": "e7545d5c6f5262b5322c6cbda3dbc11a4c6c8fb3917318da7e55962b8ef6a234",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q538605.json"
+        },
+        {
+          "filename": "tr-kultepe-ministry.html",
+          "sha256": "8a1e945ed8bfaf3f8f45b69b9148672dbc08bdfff61eeb85d63c312231c3fc7a",
+          "uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=KKO01"
+        },
+        {
+          "filename": "tr-winter-hours.xlsx",
+          "sha256": "be0890fd504bfc6aa8a82332c3071bb52e171c321800214f87120022a9bf37f1",
+          "uri": "https://kvmgm.ktb.gov.tr/Eklenti/152996,muze-ve-orenyerleri-ziyaret-saatleri-2026-2027-1-ekim-1-mayisxlsx.xlsx?0"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified CC0 WGS84 representative point.",
+        "point": [
+          34.695575,
+          40.233895
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q558861.json",
+        "statement_id": "Q558861$31A8E2B6-25F3-431C-A6DD-69F059687CDD"
+      },
+      "independent_review": {
+        "method": "Independent agent checked source hashes, named points and public opening against the current ministry calendar, authority publications and independently measured original footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original archaeological mound and managed open-air visitor area at Alacahöyük. The adjacent museum is separately listed by the operator.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Official visitor place and original-site identity checked.",
+          "note": "No independently reviewed dated historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Türkiye Ministry of Culture and Tourism",
+          "Wikidata contributors"
+        ],
+        "description": "The original archaeological mound and managed open-air visitor area at Alacahöyük. The adjacent museum is separately listed by the operator.",
+        "description_zh": "阿拉贾霍裕克遗址位于土耳其。地图标记表示经核对的遗址代表点，开放范围以主管方公布的线路为准。",
+        "details": "The original archaeological mound and managed open-air visitor area at Alacahöyük. The adjacent museum is separately listed by the operator.",
+        "geography": {
+          "authority_id": "supplement:auth:tr-public:Q558861",
+          "countries": [
+            "TR"
+          ],
+          "note": "Named public heritage site in Çorum Province.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies the original archaeological area at Alacahöyük and its on-site visitor management.",
+            "id": "auth:tr-public:Q558861:tr-alaca-ministry.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 9774e29b68533d4f24ef3ce418a84fce197c20c6e2c6015591658834aa8a3dd7.",
+            "title": "Alacahöyük Örenyeri visitor scope and place identity",
+            "uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=ALC02"
+          }
+        },
+        "id": "auth:tr-public:Q558861",
+        "location_precision": null,
+        "names": [
+          "阿拉贾霍裕克遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          34.695575,
+          40.233895
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies the original archaeological area at Alacahöyük and its on-site visitor management.",
+            "id": "auth:tr-public:Q558861:tr-alaca-ministry.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 9774e29b68533d4f24ef3ce418a84fce197c20c6e2c6015591658834aa8a3dd7.",
+            "title": "Alacahöyük Örenyeri visitor scope and place identity",
+            "uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=ALC02"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The winter schedule has separately named lines for the historic archaeological area and the museum.",
+            "id": "auth:tr-public:Q558861:tr-winter-hours.xlsx",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 be0890fd504bfc6aa8a82332c3071bb52e171c321800214f87120022a9bf37f1.",
+            "title": "Alacahöyük Örenyeri visitor scope and place identity",
+            "uri": "https://kvmgm.ktb.gov.tr/Eklenti/152996,muze-ve-orenyerleri-ziyaret-saatleri-2026-2027-1-ekim-1-mayisxlsx.xlsx?0"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 34.695575, latitude 40.233895.",
+            "id": "wikidata:Q558861",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2573791783; original P625 Q558861$31A8E2B6-25F3-431C-A6DD-69F059687CDD.",
+            "title": "Alacahöyük Örenyeri representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q558861.json"
+          }
+        ],
+        "source_uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=ALC02",
+        "title": "Alacahöyük Örenyeri",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q558861.json",
+          "sha256": "cb9be4a4b13bed013b259505d7d87f041d13f45bda3208d73ae24ff84fe548a5",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q558861.json"
+        },
+        {
+          "filename": "tr-alaca-ministry.html",
+          "sha256": "9774e29b68533d4f24ef3ce418a84fce197c20c6e2c6015591658834aa8a3dd7",
+          "uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=ALC02"
+        },
+        {
+          "filename": "tr-winter-hours.xlsx",
+          "sha256": "be0890fd504bfc6aa8a82332c3071bb52e171c321800214f87120022a9bf37f1",
+          "uri": "https://kvmgm.ktb.gov.tr/Eklenti/152996,muze-ve-orenyerleri-ziyaret-saatleri-2026-2027-1-ekim-1-mayisxlsx.xlsx?0"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified CC0 WGS84 representative point.",
+        "point": [
+          37.016727,
+          39.744291
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5626500.json",
+        "statement_id": "Q5626500$260FDC5E-E15A-41B9-B718-9066D66ADD41"
+      },
+      "independent_review": {
+        "method": "Independent agent checked source hashes, named points and public opening against the current ministry calendar, authority publications and independently measured original footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original Gök Medrese in Sivas and its publicly managed foundation museum. Admission covers the museum route within the historic building and its immediate visitor approach.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Official visitor place and original-site identity checked.",
+          "note": "No independently reviewed dated historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Türkiye General Directorate of Foundations",
+          "TR Dizin research index",
+          "Wikidata contributors"
+        ],
+        "description": "The original Gök Medrese in Sivas and its publicly managed foundation museum. Admission covers the museum route within the historic building and its immediate visitor approach.",
+        "description_zh": "锡瓦斯蓝色经学院位于土耳其。地图标记表示经核对的遗址代表点，开放范围以主管方公布的线路为准。",
+        "details": "The original Gök Medrese in Sivas and its publicly managed foundation museum. Admission covers the museum route within the historic building and its immediate visitor approach.",
+        "geography": {
+          "authority_id": "supplement:auth:tr-public:Q5626500",
+          "countries": [
+            "TR"
+          ],
+          "note": "Named public heritage site in Sivas Province.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The managing directorate describes the public museum and its exhibition areas inside the original madrasa in Sivas.",
+            "id": "auth:tr-public:Q5626500:tr-sivas-gok-vgm.html",
+            "license": null,
+            "publisher": "Türkiye General Directorate of Foundations",
+            "revision": "Frozen 2026-11-28. SHA-256 2062eee7f8c8ef16e844f9caa83952802858675abe4255822e18e4ccac7032e7.",
+            "title": "Gök Medrese (Sivas) visitor scope and place identity",
+            "uri": "https://www.vgm.gov.tr/faaliyetler/kulturel-faaliyetler/muzeler"
+          }
+        },
+        "id": "auth:tr-public:Q5626500",
+        "location_precision": null,
+        "names": [
+          "锡瓦斯蓝色经学院"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          37.016727,
+          39.744291
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The managing directorate describes the public museum and its exhibition areas inside the original madrasa in Sivas.",
+            "id": "auth:tr-public:Q5626500:tr-sivas-gok-vgm.html",
+            "license": null,
+            "publisher": "Türkiye General Directorate of Foundations",
+            "revision": "Frozen 2026-11-28. SHA-256 2062eee7f8c8ef16e844f9caa83952802858675abe4255822e18e4ccac7032e7.",
+            "title": "Gök Medrese (Sivas) visitor scope and place identity",
+            "uri": "https://www.vgm.gov.tr/faaliyetler/kulturel-faaliyetler/muzeler"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The research record distinguishes the original Sivas building, the restoration and its reopening as an onsite foundation museum.",
+            "id": "auth:tr-public:Q5626500:tr-sivas-gok-research.html",
+            "license": null,
+            "publisher": "TR Dizin research index",
+            "revision": "Frozen 2026-11-28. SHA-256 6d77d9971407506d0b731ca4fecf07b4d6ae970623ae7f9d5b042c61ff372f3c.",
+            "title": "Gök Medrese (Sivas) visitor scope and place identity",
+            "uri": "https://search.trdizin.gov.tr/tr/yayin/detay/1173985"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 37.016727, latitude 39.744291.",
+            "id": "wikidata:Q5626500",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2573792404; original P625 Q5626500$260FDC5E-E15A-41B9-B718-9066D66ADD41.",
+            "title": "Gök Medrese (Sivas) representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5626500.json"
+          }
+        ],
+        "source_uri": "https://www.vgm.gov.tr/faaliyetler/kulturel-faaliyetler/muzeler",
+        "title": "Gök Medrese (Sivas)",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q5626500.json",
+          "sha256": "a59b1a1f3885e38584cc04cfa2dd6ed605bfaeffdf9b4898830bab4f202f2aa7",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5626500.json"
+        },
+        {
+          "filename": "tr-sivas-gok-vgm.html",
+          "sha256": "2062eee7f8c8ef16e844f9caa83952802858675abe4255822e18e4ccac7032e7",
+          "uri": "https://www.vgm.gov.tr/faaliyetler/kulturel-faaliyetler/muzeler"
+        },
+        {
+          "filename": "tr-sivas-gok-research.html",
+          "sha256": "6d77d9971407506d0b731ca4fecf07b4d6ae970623ae7f9d5b042c61ff372f3c",
+          "uri": "https://search.trdizin.gov.tr/tr/yayin/detay/1173985"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified CC0 WGS84 representative point.",
+        "point": [
+          39.3027,
+          37.0916
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5996986.json",
+        "statement_id": "Q5996986$FDBFCD1F-084E-4EF5-A335-FF909CEB90E6"
+      },
+      "independent_review": {
+        "method": "Independent agent checked source hashes, named points and public opening against the current ministry calendar, authority publications and independently measured original footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The source point refers to the named archaeological precinct as a whole. Only the designated visitor trail is described; other excavation sectors have separate access rules.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Official visitor place and original-site identity checked.",
+          "note": "No independently reviewed dated historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Türkiye Ministry of National Education",
+          "Türkiye Ministry of Culture and Tourism",
+          "Wikidata contributors"
+        ],
+        "description": "The original archaeological site at Karahantepe in Haliliye. Access follows the marked visitor precinct and responsible authority's conditions. Excavation-only sectors remain outside the recorded scope.",
+        "description_zh": "卡拉汉台佩考古遗址位于土耳其。地图标记表示经核对的遗址代表点，开放范围以主管方公布的线路为准。",
+        "details": "The source point refers to the named archaeological precinct as a whole. Only the designated visitor trail is described; other excavation sectors have separate access rules.",
+        "geography": {
+          "authority_id": "supplement:auth:tr-public:Q5996986",
+          "countries": [
+            "TR"
+          ],
+          "note": "Named public heritage site in Şanlıurfa Province.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official visit programme identifies the designated Karahantepe archaeological place and describes its public route and access precautions.",
+            "id": "auth:tr-public:Q5996986:tr-karahan-schools.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of National Education",
+            "revision": "Frozen 2026-11-28. SHA-256 365ab33f57c0add4f3eb3a2cb50db7b73cb234260d7d174378fff4e3195c62ea.",
+            "title": "Karahantepe Örenyeri visitor scope and place identity",
+            "uri": "https://okuldisiogrenme.eba.gov.tr/mekan-detay/sanliurfa-karahan-tepe-arkeolojik-alan-oren-yeri-7038"
+          }
+        },
+        "id": "auth:tr-public:Q5996986",
+        "location_precision": null,
+        "names": [
+          "卡拉汉台佩考古遗址"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          39.3027,
+          37.0916
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official visit programme identifies the designated Karahantepe archaeological place and describes its public route and access precautions.",
+            "id": "auth:tr-public:Q5996986:tr-karahan-schools.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of National Education",
+            "revision": "Frozen 2026-11-28. SHA-256 365ab33f57c0add4f3eb3a2cb50db7b73cb234260d7d174378fff4e3195c62ea.",
+            "title": "Karahantepe Örenyeri visitor scope and place identity",
+            "uri": "https://okuldisiogrenme.eba.gov.tr/mekan-detay/sanliurfa-karahan-tepe-arkeolojik-alan-oren-yeri-7038"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The current winter timetable independently identifies the original Karahantepe archaeological site as active.",
+            "id": "auth:tr-public:Q5996986:tr-winter-hours.xlsx",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 be0890fd504bfc6aa8a82332c3071bb52e171c321800214f87120022a9bf37f1.",
+            "title": "Karahantepe Örenyeri visitor scope and place identity",
+            "uri": "https://kvmgm.ktb.gov.tr/Eklenti/152996,muze-ve-orenyerleri-ziyaret-saatleri-2026-2027-1-ekim-1-mayisxlsx.xlsx?0"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 39.3027, latitude 37.0916.",
+            "id": "wikidata:Q5996986",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2562274871; original P625 Q5996986$FDBFCD1F-084E-4EF5-A335-FF909CEB90E6.",
+            "title": "Karahantepe Örenyeri representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5996986.json"
+          }
+        ],
+        "source_uri": "https://okuldisiogrenme.eba.gov.tr/mekan-detay/sanliurfa-karahan-tepe-arkeolojik-alan-oren-yeri-7038",
+        "title": "Karahantepe Örenyeri",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q5996986.json",
+          "sha256": "2b3566dc38b52f438bb14d5f21cab41f065ae13f8ba0864c972c206cadc8a103",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5996986.json"
+        },
+        {
+          "filename": "tr-karahan-schools.html",
+          "sha256": "365ab33f57c0add4f3eb3a2cb50db7b73cb234260d7d174378fff4e3195c62ea",
+          "uri": "https://okuldisiogrenme.eba.gov.tr/mekan-detay/sanliurfa-karahan-tepe-arkeolojik-alan-oren-yeri-7038"
+        },
+        {
+          "filename": "tr-winter-hours.xlsx",
+          "sha256": "be0890fd504bfc6aa8a82332c3071bb52e171c321800214f87120022a9bf37f1",
+          "uri": "https://kvmgm.ktb.gov.tr/Eklenti/152996,muze-ve-orenyerleri-ziyaret-saatleri-2026-2027-1-ekim-1-mayisxlsx.xlsx?0"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified CC0 WGS84 representative point.",
+        "point": [
+          39.2574,
+          38.7034
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6017381.json",
+        "statement_id": "Q6017381$e113d982-4ef0-d532-b056-589a5a7b10f5"
+      },
+      "independent_review": {
+        "method": "Independent agent checked source hashes, named points and public opening against the current ministry calendar, authority publications and independently measured original footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic original castle and managed visitor archaeological precinct above Harput. Entry follows the published site arrangements and any on-site zone restrictions.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Official visitor place and original-site identity checked.",
+          "note": "No independently reviewed dated historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Türkiye Ministry of Culture and Tourism",
+          "Wikidata contributors"
+        ],
+        "description": "The historic original castle and managed visitor archaeological precinct above Harput. Entry follows the published site arrangements and any on-site zone restrictions.",
+        "description_zh": "哈尔普特城堡位于土耳其。地图标记表示经核对的遗址代表点，开放范围以主管方公布的线路为准。",
+        "details": "The historic original castle and managed visitor archaeological precinct above Harput. Entry follows the published site arrangements and any on-site zone restrictions.",
+        "geography": {
+          "authority_id": "supplement:auth:tr-public:Q6017381",
+          "countries": [
+            "TR"
+          ],
+          "note": "Named public heritage site in Elazığ Province.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry distinguishes the original Harput citadel and described archaeological remains.",
+            "id": "auth:tr-public:Q6017381:tr-harput-ministry.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 607d921fafc414b78d9ca39ff2fd2901332abd5a7e4255f033ad1c3dfdf97998.",
+            "title": "Harput Kalesi visitor scope and place identity",
+            "uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=HPK01"
+          }
+        },
+        "id": "auth:tr-public:Q6017381",
+        "location_precision": null,
+        "names": [
+          "哈尔普特城堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          39.2574,
+          38.7034
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry distinguishes the original Harput citadel and described archaeological remains.",
+            "id": "auth:tr-public:Q6017381:tr-harput-ministry.html",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 607d921fafc414b78d9ca39ff2fd2901332abd5a7e4255f033ad1c3dfdf97998.",
+            "title": "Harput Kalesi visitor scope and place identity",
+            "uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=HPK01"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The winter admission schedule names Harput Kalesi and gives the active visitor hours.",
+            "id": "auth:tr-public:Q6017381:tr-winter-hours.xlsx",
+            "license": null,
+            "publisher": "Türkiye Ministry of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 be0890fd504bfc6aa8a82332c3071bb52e171c321800214f87120022a9bf37f1.",
+            "title": "Harput Kalesi visitor scope and place identity",
+            "uri": "https://kvmgm.ktb.gov.tr/Eklenti/152996,muze-ve-orenyerleri-ziyaret-saatleri-2026-2027-1-ekim-1-mayisxlsx.xlsx?0"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 39.2574, latitude 38.7034.",
+            "id": "wikidata:Q6017381",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2564061938; original P625 Q6017381$e113d982-4ef0-d532-b056-589a5a7b10f5.",
+            "title": "Harput Kalesi representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6017381.json"
+          }
+        ],
+        "source_uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=HPK01",
+        "title": "Harput Kalesi",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q6017381.json",
+          "sha256": "a17dcbdfb1271445c3813c83c0c0a462d1503731b42ae978203288d9b2867172",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q6017381.json"
+        },
+        {
+          "filename": "tr-harput-ministry.html",
+          "sha256": "607d921fafc414b78d9ca39ff2fd2901332abd5a7e4255f033ad1c3dfdf97998",
+          "uri": "https://muze.gov.tr/muze-detay?DistId=MRK&SectionId=HPK01"
+        },
+        {
+          "filename": "tr-winter-hours.xlsx",
+          "sha256": "be0890fd504bfc6aa8a82332c3071bb52e171c321800214f87120022a9bf37f1",
+          "uri": "https://kvmgm.ktb.gov.tr/Eklenti/152996,muze-ve-orenyerleri-ziyaret-saatleri-2026-2027-1-ekim-1-mayisxlsx.xlsx?0"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified CC0 WGS84 representative point.",
+        "point": [
+          41.278357,
+          39.905806
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q8077698.json",
+        "statement_id": "Q8077698$30896341-1EDB-40EE-90B5-C74EABB252CB"
+      },
+      "independent_review": {
+        "method": "Independent agent checked source hashes, named points and public opening against the current ministry calendar, authority publications and independently measured original footprints.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original Erzurum double-minaret madrasa and its public foundation museum precinct. The site is independent from the nearby fortress and from the madrasa with a similar name in Sivas.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Official visitor place and original-site identity checked.",
+          "note": "No independently reviewed dated historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Erzurum Provincial Directorate of Culture and Tourism",
+          "Wikidata contributors"
+        ],
+        "description": "The original Erzurum double-minaret madrasa and its public foundation museum precinct. The site is independent from the nearby fortress and from the madrasa with a similar name in Sivas.",
+        "description_zh": "埃尔祖鲁姆双尖塔经学院位于土耳其。地图标记表示经核对的遗址代表点，开放范围以主管方公布的线路为准。",
+        "details": "The original Erzurum double-minaret madrasa and its public foundation museum precinct. The site is independent from the nearby fortress and from the madrasa with a similar name in Sivas.",
+        "geography": {
+          "authority_id": "supplement:auth:tr-public:Q8077698",
+          "countries": [
+            "TR"
+          ],
+          "note": "Named public heritage site in Erzurum Province.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial authority identifies the historic structure and opening of the foundation museum to visitors.",
+            "id": "auth:tr-public:Q8077698:tr-erzurum-cifte-local.html",
+            "license": null,
+            "publisher": "Erzurum Provincial Directorate of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 da83794dba006eff6585bfc415521d52b6930c8f42c7eef57abe94c03f7ff276.",
+            "title": "Çifte Minareli Medrese (Erzurum) visitor scope and place identity",
+            "uri": "https://erzurum.ktb.gov.tr/TR-437323/cifte-minareli-medrese-vakif-eserleri-muzesi.html"
+          }
+        },
+        "id": "auth:tr-public:Q8077698",
+        "location_precision": null,
+        "names": [
+          "埃尔祖鲁姆双尖塔经学院"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          41.278357,
+          39.905806
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial authority identifies the historic structure and opening of the foundation museum to visitors.",
+            "id": "auth:tr-public:Q8077698:tr-erzurum-cifte-local.html",
+            "license": null,
+            "publisher": "Erzurum Provincial Directorate of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 da83794dba006eff6585bfc415521d52b6930c8f42c7eef57abe94c03f7ff276.",
+            "title": "Çifte Minareli Medrese (Erzurum) visitor scope and place identity",
+            "uri": "https://erzurum.ktb.gov.tr/TR-437323/cifte-minareli-medrese-vakif-eserleri-muzesi.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The province names the original Çifte Minareli Medrese and Erzurum Castle as distinct stops on its public route.",
+            "id": "auth:tr-public:Q8077698:tr-erzurum-routes.html",
+            "license": null,
+            "publisher": "Erzurum Provincial Directorate of Culture and Tourism",
+            "revision": "Frozen 2026-11-28. SHA-256 07c17626fdec0a1d48ecd4435062da96a94682f7308c9b428356d8653228dc51.",
+            "title": "Çifte Minareli Medrese (Erzurum) visitor scope and place identity",
+            "uri": "https://erzurum.ktb.gov.tr/TR-279608/gezi-guzergahlarimiz.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 41.278357, latitude 39.905806.",
+            "id": "wikidata:Q8077698",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2573794591; original P625 Q8077698$30896341-1EDB-40EE-90B5-C74EABB252CB.",
+            "title": "Çifte Minareli Medrese (Erzurum) representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q8077698.json"
+          }
+        ],
+        "source_uri": "https://erzurum.ktb.gov.tr/TR-437323/cifte-minareli-medrese-vakif-eserleri-muzesi.html",
+        "title": "Çifte Minareli Medrese (Erzurum)",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q8077698.json",
+          "sha256": "1f1037e5c35d3d2b0b41a72eb26d5538f46299cbe250cf8ad797d9f1b2d93be2",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q8077698.json"
+        },
+        {
+          "filename": "tr-erzurum-cifte-local.html",
+          "sha256": "da83794dba006eff6585bfc415521d52b6930c8f42c7eef57abe94c03f7ff276",
+          "uri": "https://erzurum.ktb.gov.tr/TR-437323/cifte-minareli-medrese-vakif-eserleri-muzesi.html"
+        },
+        {
+          "filename": "tr-erzurum-routes.html",
+          "sha256": "07c17626fdec0a1d48ecd4435062da96a94682f7308c9b428356d8653228dc51",
+          "uri": "https://erzurum.ktb.gov.tr/TR-279608/gezi-guzergahlarimiz.html"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Thirteen archaeological sites, historical buildings and managed visitor precincts across inland Anatolia."
+}

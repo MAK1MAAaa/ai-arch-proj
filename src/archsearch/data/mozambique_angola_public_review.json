@@ -1,0 +1,1167 @@
+{
+  "base_count": 5178,
+  "base_ids_sha256": "e2222e3885f810620650e95ce75ebcd27f7e6aedd6567ecbdfec91c7acc25a4a",
+  "base_sites_sha256": "7448c0d65dd75efb0c2454f4826f424288deaa34b9e4e0e6d29aa9c1b94f740f",
+  "cohort_version": "mozambique-angola-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          13.227844,
+          -8.813547
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10333588.json",
+        "statement_id": "Q10333588$507b5af8-4084-0a54-58ce-e146bbf9a868"
+      },
+      "independent_review": {
+        "method": "Independent agent reviewed authorities, GeoNames linked data and licensed native Wikidata claims, visitor footprint and special scope for a reconstruction, relocated structure and restricted venues.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point identifies the named historic museum venue. Visitor scope covers exhibitions and advertised cultural events, according to the venue programme.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Government of Angola",
+          "UNESCO Museum journal, issue XLI/1",
+          "Wikidata contributors",
+          "Jornal de Angola"
+        ],
+        "description": "The Angola National Museum of Anthropology occupies a historic building on Rua Frederich Engels in Luanda.",
+        "description_zh": "安哥拉国家人类学博物馆设于卢安达弗雷德里希·恩格斯街的历史建筑内。",
+        "details": "The point identifies the named historic museum venue. Visitor scope covers exhibitions and advertised cultural events, according to the venue programme.",
+        "geography": {
+          "authority_id": "supplement:auth:ao-public:Q10333588",
+          "countries": [
+            "AO"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The government reports active weekly cultural programming for museum visitors.",
+            "id": "auth:ao-public:Q10333588:evidence:1",
+            "license": null,
+            "publisher": "Government of Angola",
+            "revision": "Retrieved 2026-11-28; SHA-256 9c1fd4db91a0991e93ff7ed9d494bc6ddbc3ab82c570ee2b3f2bf0b2d03b0340.",
+            "title": "Angola cultural heritage and museum programmes, October 2026",
+            "uri": "https://www.governo.gov.ao/noticias/3243/cultura/patrimonio-cultural/monumentos-e-sitios-historicos-nacionais-vao-ser-construidos-e-conservados"
+          }
+        },
+        "id": "auth:ao-public:Q10333588",
+        "location_precision": null,
+        "names": [
+          "卢安达国家人类学博物馆",
+          "National Museum of Anthropology, Luanda",
+          "Museu Nacional de Antropologia",
+          "Museu Nacional de Antropologia de Luanda"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          13.227844,
+          -8.813547
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The government reports active weekly cultural programming for museum visitors.",
+            "id": "auth:ao-public:Q10333588:evidence:1",
+            "license": null,
+            "publisher": "Government of Angola",
+            "revision": "Retrieved 2026-11-28; SHA-256 9c1fd4db91a0991e93ff7ed9d494bc6ddbc3ab82c570ee2b3f2bf0b2d03b0340.",
+            "title": "Angola cultural heritage and museum programmes, October 2026",
+            "uri": "https://www.governo.gov.ao/noticias/3243/cultura/patrimonio-cultural/monumentos-e-sitios-historicos-nacionais-vao-ser-construidos-e-conservados"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The article identifies the original historic building that houses the National Museum of Anthropology.",
+            "id": "auth:ao-public:Q10333588:evidence:2",
+            "license": null,
+            "publisher": "UNESCO Museum journal, issue XLI/1",
+            "revision": "Retrieved 2026-11-28; SHA-256 2b30a362b2c0b9c20f40d08a3dc40ad590df4ba6d46afe04dcfdb2948e5fb294.",
+            "title": "A look at Angolan museums",
+            "uri": "https://obra-gruesa.cultura.gob.cl/wp-content/uploads/2024/10/Art_education_1989-2.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 13.227844, latitude -8.813547.",
+            "id": "auth:ao-public:Q10333588:evidence:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 71e5b2f193988a0f0082921d681824680fe2b31ebc5528a30b03cb0baa1f6ba2.",
+            "title": "National Museum of Anthropology, Luanda coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10333588.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The November 2026 anniversary programme included public cultural and educational content at the anthropology museum.",
+            "id": "auth:ao-public:Q10333588:independent-visitor",
+            "license": null,
+            "publisher": "Jornal de Angola",
+            "revision": "Frozen 2026-11-28. SHA-256 72a64efc442b516dfd75e5f831a62f45a449ff621bbb7f966c4777090baf5e71.",
+            "title": "National Museum of Anthropology, Luanda visitor confirmation",
+            "uri": "https://jornaldeangola.ao/noticias/5/cultura/699223/museu-de-antropologia-assinala-50-anos-com-jornadas-culturais"
+          }
+        ],
+        "source_uri": "https://www.governo.gov.ao/noticias/3243/cultura/patrimonio-cultural/monumentos-e-sitios-historicos-nacionais-vao-ser-construidos-e-conservados",
+        "title": "National Museum of Anthropology, Luanda",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ao-government-oct2026.html",
+          "sha256": "9c1fd4db91a0991e93ff7ed9d494bc6ddbc3ab82c570ee2b3f2bf0b2d03b0340",
+          "uri": "https://www.governo.gov.ao/noticias/3243/cultura/patrimonio-cultural/monumentos-e-sitios-historicos-nacionais-vao-ser-construidos-e-conservados"
+        },
+        {
+          "filename": "source/ao-historic-museums-unesco.pdf",
+          "sha256": "2b30a362b2c0b9c20f40d08a3dc40ad590df4ba6d46afe04dcfdb2948e5fb294",
+          "uri": "https://obra-gruesa.cultura.gob.cl/wp-content/uploads/2024/10/Art_education_1989-2.pdf"
+        },
+        {
+          "filename": "source/Q10333588.json",
+          "sha256": "71e5b2f193988a0f0082921d681824680fe2b31ebc5528a30b03cb0baa1f6ba2",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10333588.json"
+        },
+        {
+          "filename": "source/independent-ao-antropologia-2026.html",
+          "sha256": "72a64efc442b516dfd75e5f831a62f45a449ff621bbb7f966c4777090baf5e71",
+          "uri": "https://jornaldeangola.ao/noticias/5/cultura/699223/museu-de-antropologia-assinala-50-anos-com-jornadas-culturais"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Unmodified representative coordinate for the historic fortress and museum vicinity. The mapped wide perimeter is used only as identity evidence. Current museum access comes from the official tourism and operator evidence.",
+        "point": [
+          13.223222222222,
+          -8.8078611111111
+        ],
+        "precision": 2.7777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1408988.json",
+        "statement_id": "Q1408988$1B28EAEF-3593-496D-88EC-3A03D97789CA"
+      },
+      "independent_review": {
+        "method": "Independent agent reviewed authorities, GeoNames linked data and licensed native Wikidata claims, visitor footprint and special scope for a reconstruction, relocated structure and restricted venues.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic São Miguel fortress monument and the designated public Museum of Military History route in Luanda. Admission follows the museum's arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Government of Luanda Province",
+          "Instituto Regulador da Construção e Obras Públicas",
+          "Wikidata contributors"
+        ],
+        "description": "The historic São Miguel fortress in Luanda now houses Angola’s Museum of Military History.",
+        "description_zh": "卢安达的圣米格尔堡历史原址设有安哥拉军事历史博物馆。",
+        "details": "The historic São Miguel fortress monument and the designated public Museum of Military History route in Luanda. Admission follows the museum's arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:ao-public:Q1408988",
+          "countries": [
+            "AO"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial tourism director names the military museum among Luanda’s major visitor destinations.",
+            "id": "auth:ao-public:Q1408988:evidence:1",
+            "license": null,
+            "publisher": "Government of Luanda Province",
+            "revision": "Retrieved 2026-11-28; SHA-256 adcf9ad79cdd0129b80ecf02b89543ff2006aefbe6ebda1b421a004f5dd46602.",
+            "title": "Luanda cultural and tourism visitor sites",
+            "uri": "https://luanda.gov.ao/web/noticias/cultura-e-turismo-directora-provincial-da-cultura-e-turismo-destaca-potencial-turistico-de-luanda"
+          }
+        },
+        "id": "auth:ao-public:Q1408988",
+        "location_precision": null,
+        "names": [
+          "卢安达圣米格尔堡",
+          "Fortress of São Miguel, Luanda",
+          "Fortaleza de São Miguel de Luanda",
+          "Museu de História Militar",
+          "Fort São Miguel"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          13.223222222222,
+          -8.8078611111111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial tourism director names the military museum among Luanda’s major visitor destinations.",
+            "id": "auth:ao-public:Q1408988:evidence:1",
+            "license": null,
+            "publisher": "Government of Luanda Province",
+            "revision": "Retrieved 2026-11-28; SHA-256 adcf9ad79cdd0129b80ecf02b89543ff2006aefbe6ebda1b421a004f5dd46602.",
+            "title": "Luanda cultural and tourism visitor sites",
+            "uri": "https://luanda.gov.ao/web/noticias/cultura-e-turismo-directora-provincial-da-cultura-e-turismo-destaca-potencial-turistico-de-luanda"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The institute documents an actual visit at the museum and identifies the venue as São Miguel Fortress.",
+            "id": "auth:ao-public:Q1408988:evidence:2",
+            "license": null,
+            "publisher": "Instituto Regulador da Construção e Obras Públicas",
+            "revision": "Retrieved 2026-11-28; SHA-256 82497f38f8611cc96a9bb4a79793c3ca0bb24b4b7c195d02c21a51eaf97f796f.",
+            "title": "Visit to the Museum of Military History in April 2026",
+            "uri": "https://ircop.gov.ao/ircop-realiza-visita-ao-museu-de-historia-militar-no-ambito-do-vo-aniversario/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 13.223222222222, latitude -8.8078611111111.",
+            "id": "auth:ao-public:Q1408988:evidence:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 ce43646908c5e8303118b7c853af4c75d116d6f9951bd0dde1ff361b8c3ee29f.",
+            "title": "Fortress of São Miguel, Luanda coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1408988.json"
+          }
+        ],
+        "source_uri": "https://luanda.gov.ao/web/noticias/cultura-e-turismo-directora-provincial-da-cultura-e-turismo-destaca-potencial-turistico-de-luanda",
+        "title": "Fortress of São Miguel, Luanda",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ao-luanda-province.html",
+          "sha256": "adcf9ad79cdd0129b80ecf02b89543ff2006aefbe6ebda1b421a004f5dd46602",
+          "uri": "https://luanda.gov.ao/web/noticias/cultura-e-turismo-directora-provincial-da-cultura-e-turismo-destaca-potencial-turistico-de-luanda"
+        },
+        {
+          "filename": "source/ao-military-museum-2026.html",
+          "sha256": "82497f38f8611cc96a9bb4a79793c3ca0bb24b4b7c195d02c21a51eaf97f796f",
+          "uri": "https://ircop.gov.ao/ircop-realiza-visita-ao-museu-de-historia-militar-no-ambito-do-vo-aniversario/"
+        },
+        {
+          "filename": "source/Q1408988.json",
+          "sha256": "ce43646908c5e8303118b7c853af4c75d116d6f9951bd0dde1ff361b8c3ee29f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1408988.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          20.834777777777777,
+          -7.378833333333333
+        ],
+        "precision": 2.777777777777778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q60580210.json",
+        "statement_id": "Q60580210$6852860b-8c93-44f8-8b60-03d892628746"
+      },
+      "independent_review": {
+        "method": "Independent agent reviewed authorities, GeoNames linked data and licensed native Wikidata claims, visitor footprint and special scope for a reconstruction, relocated structure and restricted venues.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic Dundo Regional Museum building and its designated public exhibition areas under the provincial visitor arrangements. The separate storage works fall outside the exhibition scope.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Government of Lunda Norte Province",
+          "UNESCO Museum journal, issue XLI/1",
+          "Government of Angola",
+          "Wikidata contributors"
+        ],
+        "description": "The historic Dundo museum building in Lunda Norte contains public displays of Lunda and Cokwe material culture.",
+        "description_zh": "北隆达省栋多博物馆的历史馆舍向公众展示隆达与乔奎人的物质文化。",
+        "details": "The historic Dundo Regional Museum building and its designated public exhibition areas under the provincial visitor arrangements. The separate storage works fall outside the exhibition scope.",
+        "geography": {
+          "authority_id": "supplement:auth:ao-public:Q60580210",
+          "countries": [
+            "AO"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The governor’s public information states visitors can see museum collections at the historic Dundo Museum.",
+            "id": "auth:ao-public:Q60580210:evidence:1",
+            "license": null,
+            "publisher": "Government of Lunda Norte Province",
+            "revision": "Retrieved 2026-11-28; SHA-256 a4f70e5411ce7f8ac7b8b7bed9819beeb84cf362d7b300e20a07ed64d5e98b28.",
+            "title": "Public museum visits in Lunda Norte",
+            "uri": "https://lundanorte.gov.ao/web/mensagem-titular"
+          }
+        },
+        "id": "auth:ao-public:Q60580210",
+        "location_precision": null,
+        "names": [
+          "栋多地区博物馆",
+          "Dundo Regional Museum",
+          "Museu Regional do Dundo",
+          "Museu do Dundo",
+          "Dundo Ethnographic Museum"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          20.834777777777777,
+          -7.378833333333333
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The governor’s public information states visitors can see museum collections at the historic Dundo Museum.",
+            "id": "auth:ao-public:Q60580210:evidence:1",
+            "license": null,
+            "publisher": "Government of Lunda Norte Province",
+            "revision": "Retrieved 2026-11-28; SHA-256 a4f70e5411ce7f8ac7b8b7bed9819beeb84cf362d7b300e20a07ed64d5e98b28.",
+            "title": "Public museum visits in Lunda Norte",
+            "uri": "https://lundanorte.gov.ao/web/mensagem-titular"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The article distinguishes the original collection and the dedicated historical museum building.",
+            "id": "auth:ao-public:Q60580210:evidence:2",
+            "license": null,
+            "publisher": "UNESCO Museum journal, issue XLI/1",
+            "revision": "Retrieved 2026-11-28; SHA-256 2b30a362b2c0b9c20f40d08a3dc40ad590df4ba6d46afe04dcfdb2948e5fb294.",
+            "title": "A look at Angolan museums",
+            "uri": "https://obra-gruesa.cultura.gob.cl/wp-content/uploads/2024/10/Art_education_1989-2.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The October update specifies work on the museum’s storage facility.",
+            "id": "auth:ao-public:Q60580210:evidence:3",
+            "license": null,
+            "publisher": "Government of Angola",
+            "revision": "Retrieved 2026-11-28; SHA-256 9c1fd4db91a0991e93ff7ed9d494bc6ddbc3ab82c570ee2b3f2bf0b2d03b0340.",
+            "title": "Cultural heritage works, October 2026",
+            "uri": "https://www.governo.gov.ao/noticias/3243/cultura/patrimonio-cultural/monumentos-e-sitios-historicos-nacionais-vao-ser-construidos-e-conservados"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 20.834777777777777, latitude -7.378833333333333.",
+            "id": "auth:ao-public:Q60580210:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 059142869feef6ce35d494f1d50fa3041e338068acc58fff10880d1ee6eb1fd0.",
+            "title": "Dundo Regional Museum coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q60580210.json"
+          }
+        ],
+        "source_uri": "https://lundanorte.gov.ao/web/mensagem-titular",
+        "title": "Dundo Regional Museum",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ao-dundo-government-visit.html",
+          "sha256": "a4f70e5411ce7f8ac7b8b7bed9819beeb84cf362d7b300e20a07ed64d5e98b28",
+          "uri": "https://lundanorte.gov.ao/web/mensagem-titular"
+        },
+        {
+          "filename": "source/ao-historic-museums-unesco.pdf",
+          "sha256": "2b30a362b2c0b9c20f40d08a3dc40ad590df4ba6d46afe04dcfdb2948e5fb294",
+          "uri": "https://obra-gruesa.cultura.gob.cl/wp-content/uploads/2024/10/Art_education_1989-2.pdf"
+        },
+        {
+          "filename": "source/ao-government-oct2026.html",
+          "sha256": "9c1fd4db91a0991e93ff7ed9d494bc6ddbc3ab82c570ee2b3f2bf0b2d03b0340",
+          "uri": "https://www.governo.gov.ao/noticias/3243/cultura/patrimonio-cultural/monumentos-e-sitios-historicos-nacionais-vao-ser-construidos-e-conservados"
+        },
+        {
+          "filename": "source/Q60580210.json",
+          "sha256": "059142869feef6ce35d494f1d50fa3041e338068acc58fff10880d1ee6eb1fd0",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q60580210.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original unmodified Wikidata WGS84 claim. Both original claims are in the same historic building. One is retained to represent the site.",
+        "point": [
+          13.235713,
+          -8.812152
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7128887.json",
+        "statement_id": "Q7128887$fffcc4b4-4f1a-e3bc-5db2-e7c2098e9060"
+      },
+      "independent_review": {
+        "method": "Independent agent reviewed authorities, GeoNames linked data and licensed native Wikidata claims, visitor footprint and special scope for a reconstruction, relocated structure and restricted venues.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic iron building at Mutamba. Visitor access follows the dates and admission conditions of announced cultural events.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Agência Nacional das Indústrias Culturais e Criativas",
+          "Government of Angola",
+          "Wikidata contributors"
+        ],
+        "description": "Luanda’s historic iron palace serves as a venue for cultural performances, exhibitions and other public events.",
+        "description_zh": "卢安达历史铁宫现在举办演出、展览和其他公共文化活动。",
+        "details": "The historic iron building at Mutamba. Visitor access follows the dates and admission conditions of announced cultural events.",
+        "geography": {
+          "authority_id": "supplement:auth:ao-public:Q7128887",
+          "countries": [
+            "AO"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The agency lists cultural events at the palace with ticket or invitation access.",
+            "id": "auth:ao-public:Q7128887:evidence:1",
+            "license": null,
+            "publisher": "Agência Nacional das Indústrias Culturais e Criativas",
+            "revision": "Retrieved 2026-11-28; SHA-256 3797822beb7819e29e3ecf2890016570b477dfe74e21986c8fbfd457cbeb88bf.",
+            "title": "Palácio de Ferro programme, November 2026",
+            "uri": "https://anicc.gov.ao/web/eventos"
+          }
+        },
+        "id": "auth:ao-public:Q7128887",
+        "location_precision": null,
+        "names": [
+          "卢安达铁宫",
+          "Palácio de Ferro, Luanda",
+          "Palácio de Ferro",
+          "Luanda Iron Palace"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          13.235713,
+          -8.812152
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The agency lists cultural events at the palace with ticket or invitation access.",
+            "id": "auth:ao-public:Q7128887:evidence:1",
+            "license": null,
+            "publisher": "Agência Nacional das Indústrias Culturais e Criativas",
+            "revision": "Retrieved 2026-11-28; SHA-256 3797822beb7819e29e3ecf2890016570b477dfe74e21986c8fbfd457cbeb88bf.",
+            "title": "Palácio de Ferro programme, November 2026",
+            "uri": "https://anicc.gov.ao/web/eventos"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The government names the current venue manager and the programme based at the palace.",
+            "id": "auth:ao-public:Q7128887:evidence:2",
+            "license": null,
+            "publisher": "Government of Angola",
+            "revision": "Retrieved 2026-11-28; SHA-256 71cd1e7a4ce823af21631de32858d24dc6da277bdffdb72053dd4b55a62c0609.",
+            "title": "Onart and the Palácio de Ferro cultural programme",
+            "uri": "https://scm.gov.ao/web/noticias/projecto-cultural-mbanza-yetu-o-pa%C3%ADs-interliga-angola"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 13.235713, latitude -8.812152.",
+            "id": "auth:ao-public:Q7128887:evidence:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 84f9e6e59f8f83cca8ea294346f3c3c5a72a2b90d274a2cce2140b44782dc946.",
+            "title": "Palácio de Ferro, Luanda coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7128887.json"
+          }
+        ],
+        "source_uri": "https://anicc.gov.ao/web/eventos",
+        "title": "Palácio de Ferro, Luanda",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ao-anicc-events.html",
+          "sha256": "3797822beb7819e29e3ecf2890016570b477dfe74e21986c8fbfd457cbeb88bf",
+          "uri": "https://anicc.gov.ao/web/eventos"
+        },
+        {
+          "filename": "source/ao-iron-public-program.html",
+          "sha256": "71cd1e7a4ce823af21631de32858d24dc6da277bdffdb72053dd4b55a62c0609",
+          "uri": "https://scm.gov.ao/web/noticias/projecto-cultural-mbanza-yetu-o-pa%C3%ADs-interliga-angola"
+        },
+        {
+          "filename": "source/Q7128887.json",
+          "sha256": "84f9e6e59f8f83cca8ea294346f3c3c5a72a2b90d274a2cce2140b44782dc946",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7128887.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          13.105016,
+          -8.958843
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q868140.json",
+        "statement_id": "Q868140$eea207f0-469e-00dd-7508-98307f9cd4d9"
+      },
+      "independent_review": {
+        "method": "Independent agent reviewed authorities, GeoNames linked data and licensed native Wikidata claims, visitor footprint and special scope for a reconstruction, relocated structure and restricted venues.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic Capela da Casa Grande and designated National Museum of Slavery exhibitions and public programmes at Morro da Cruz.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministry of Culture, Angola",
+          "Government of Luanda Province",
+          "Ministry of Culture, Angola, via LexLink",
+          "Wikidata contributors",
+          "Lugânzi exhibition organiser"
+        ],
+        "description": "At Morro da Cruz, a historic chapel forms the core of Angola’s museum documenting the transatlantic slave trade.",
+        "description_zh": "莫罗达克鲁斯的历史礼拜堂是安哥拉国家奴隶制博物馆的核心，馆内介绍跨大西洋奴隶贸易的历史。",
+        "details": "The historic Capela da Casa Grande and designated National Museum of Slavery exhibitions and public programmes at Morro da Cruz.",
+        "geography": {
+          "authority_id": "supplement:auth:ao-public:Q868140",
+          "countries": [
+            "AO"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies the museum in the seventeenth-century Capela da Casa Grande.",
+            "id": "auth:ao-public:Q868140:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Culture, Angola",
+            "revision": "Retrieved 2026-11-28; SHA-256 2ad38332f40760ed5d7d9570a675f858f78da6564506026e1b01bae578745712.",
+            "title": "National Museum of Slavery and Capela da Casa Grande",
+            "uri": "https://mincult.gov.ao/home"
+          }
+        },
+        "id": "auth:ao-public:Q868140",
+        "location_precision": null,
+        "names": [
+          "大宅礼拜堂与安哥拉国家奴隶制博物馆",
+          "Capela da Casa Grande and National Museum of Slavery",
+          "Capela da Casa Grande",
+          "Museu Nacional da Escravatura",
+          "National Museum of Slavery, Luanda"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          13.105016,
+          -8.958843
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The ministry identifies the museum in the seventeenth-century Capela da Casa Grande.",
+            "id": "auth:ao-public:Q868140:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Culture, Angola",
+            "revision": "Retrieved 2026-11-28; SHA-256 2ad38332f40760ed5d7d9570a675f858f78da6564506026e1b01bae578745712.",
+            "title": "National Museum of Slavery and Capela da Casa Grande",
+            "uri": "https://mincult.gov.ao/home"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The provincial tourism director lists the museum as a visitor destination.",
+            "id": "auth:ao-public:Q868140:evidence:2",
+            "license": null,
+            "publisher": "Government of Luanda Province",
+            "revision": "Retrieved 2026-11-28; SHA-256 adcf9ad79cdd0129b80ecf02b89543ff2006aefbe6ebda1b421a004f5dd46602.",
+            "title": "Luanda cultural and tourism visitor sites",
+            "uri": "https://luanda.gov.ao/web/noticias/cultura-e-turismo-directora-provincial-da-cultura-e-turismo-destaca-potencial-turistico-de-luanda"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The November 2018 order authorizes reopening and revokes the earlier temporary closure.",
+            "id": "auth:ao-public:Q868140:evidence:3",
+            "license": null,
+            "publisher": "Ministry of Culture, Angola, via LexLink",
+            "revision": "Retrieved 2026-11-28; SHA-256 4df4e40736cec108f342579da3320a4d47e99f10364f108a58064c4895fc239a.",
+            "title": "Order 239/18 authorizing reopening",
+            "uri": "https://www.lexlink.eu/legislacao/geral/14793/ia-serie/por-tipo-de-documentolegal/2018/174"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 13.105016, latitude -8.958843.",
+            "id": "auth:ao-public:Q868140:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 74c8d65a9a76e9bc3f344cdedfe9eec5a702609308093d0cb11a871891779a46.",
+            "title": "Capela da Casa Grande and National Museum of Slavery coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q868140.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The organiser publishes the dates and visitor hours for its public programme at the National Museum of Slavery from November to December 2026.",
+            "id": "auth:ao-public:Q868140:independent-visitor",
+            "license": null,
+            "publisher": "Lugânzi exhibition organiser",
+            "revision": "Frozen 2026-11-28. SHA-256 1ecf6228ba9d4b3c19dc3a27f129e5dbf245817abc4886c85d80c8d17f2a5d3b.",
+            "title": "Capela da Casa Grande and National Museum of Slavery visitor confirmation",
+            "uri": "https://www.luganzi.net/"
+          }
+        ],
+        "source_uri": "https://mincult.gov.ao/home",
+        "title": "Capela da Casa Grande and National Museum of Slavery",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ao-ministry-museums.html",
+          "sha256": "2ad38332f40760ed5d7d9570a675f858f78da6564506026e1b01bae578745712",
+          "uri": "https://mincult.gov.ao/home"
+        },
+        {
+          "filename": "source/ao-luanda-province.html",
+          "sha256": "adcf9ad79cdd0129b80ecf02b89543ff2006aefbe6ebda1b421a004f5dd46602",
+          "uri": "https://luanda.gov.ao/web/noticias/cultura-e-turismo-directora-provincial-da-cultura-e-turismo-destaca-potencial-turistico-de-luanda"
+        },
+        {
+          "filename": "source/ao-slavery-reopened.html",
+          "sha256": "4df4e40736cec108f342579da3320a4d47e99f10364f108a58064c4895fc239a",
+          "uri": "https://www.lexlink.eu/legislacao/geral/14793/ia-serie/por-tipo-de-documentolegal/2018/174"
+        },
+        {
+          "filename": "source/Q868140.json",
+          "sha256": "74c8d65a9a76e9bc3f344cdedfe9eec5a702609308093d0cb11a871891779a46",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q868140.json"
+        },
+        {
+          "filename": "source/independent-luganzi-visit.html",
+          "sha256": "1ecf6228ba9d4b3c19dc3a27f129e5dbf245817abc4886c85d80c8d17f2a5d3b",
+          "uri": "https://www.luganzi.net/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          32.570664833333,
+          -25.97493
+        ],
+        "precision": 2.778e-07,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10283622.json",
+        "statement_id": "Q10283622$DF4F13E1-BC0B-4E5F-A473-AEFAD8670FEA"
+      },
+      "independent_review": {
+        "method": "Independent agent reviewed authorities, GeoNames linked data and licensed native Wikidata claims, visitor footprint and special scope for a reconstruction, relocated structure and restricted venues.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The twentieth-century reconstruction on the original Maputo fort footprint houses a public museum. The university’s scheduled guided visits require advance arrangement.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Universidade Eduardo Mondlane",
+          "Instituto Nacional do Turismo, Mozambique",
+          "Wikidata contributors"
+        ],
+        "description": "Maputo’s historic waterfront fort site houses a public museum within its twentieth-century reconstruction.",
+        "description_zh": "马普托滨水历史堡垒原址上现存二十世纪重建的堡垒，内部设有公众博物馆。",
+        "details": "The twentieth-century reconstruction on the original Maputo fort footprint houses a public museum. The university’s scheduled guided visits require advance arrangement.",
+        "geography": {
+          "authority_id": "supplement:auth:mz-public:Q10283622",
+          "countries": [
+            "MZ"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The university describes the original site, the reconstructed fortress and public visiting arrangements.",
+            "id": "auth:mz-public:Q10283622:evidence:1",
+            "license": null,
+            "publisher": "Universidade Eduardo Mondlane",
+            "revision": "Retrieved 2026-11-28; SHA-256 4942fc8849ce4bc0ffd04dfba97caf4e473dabc9a7234f4a8c40ec0dba5c87a5.",
+            "title": "Fortaleza de Maputo visitor information",
+            "uri": "https://uem.mz/fortaleza-de-maputo/"
+          }
+        },
+        "id": "auth:mz-public:Q10283622",
+        "location_precision": null,
+        "names": [
+          "马普托堡垒",
+          "Maputo Fortress",
+          "Fortaleza de Maputo",
+          "Fortaleza da Nossa Senhora da Conceição"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          32.570664833333,
+          -25.97493
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The university describes the original site, the reconstructed fortress and public visiting arrangements.",
+            "id": "auth:mz-public:Q10283622:evidence:1",
+            "license": null,
+            "publisher": "Universidade Eduardo Mondlane",
+            "revision": "Retrieved 2026-11-28; SHA-256 4942fc8849ce4bc0ffd04dfba97caf4e473dabc9a7234f4a8c40ec0dba5c87a5.",
+            "title": "Fortaleza de Maputo visitor information",
+            "uri": "https://uem.mz/fortaleza-de-maputo/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national destination directory describes visiting the fortress museum and its designated exhibition rooms.",
+            "id": "auth:mz-public:Q10283622:evidence:2",
+            "license": null,
+            "publisher": "Instituto Nacional do Turismo, Mozambique",
+            "revision": "Retrieved 2026-11-28; SHA-256 602d779e42961e60cb3bf1b9a72d43a2af4b607eb0245e7ae354c0c60bca26be.",
+            "title": "Maputo fortress on the visitor route",
+            "uri": "https://fikani.visitmozambique.gov.mz/onde-ir/cidades/maputo/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 32.570664833333, latitude -25.97493.",
+            "id": "auth:mz-public:Q10283622:evidence:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 3d537a172ccd5f96840f1fedbbcc60590e348e0f202b26b2cdd12299322e8a54.",
+            "title": "Maputo Fortress coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10283622.json"
+          }
+        ],
+        "source_uri": "https://uem.mz/fortaleza-de-maputo/",
+        "title": "Maputo Fortress",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/mz-uem-fort-direct.html",
+          "sha256": "4942fc8849ce4bc0ffd04dfba97caf4e473dabc9a7234f4a8c40ec0dba5c87a5",
+          "uri": "https://uem.mz/fortaleza-de-maputo/"
+        },
+        {
+          "filename": "source/mz-tourism-fikani.html",
+          "sha256": "602d779e42961e60cb3bf1b9a72d43a2af4b607eb0245e7ae354c0c60bca26be",
+          "uri": "https://fikani.visitmozambique.gov.mz/onde-ir/cidades/maputo/"
+        },
+        {
+          "filename": "source/Q10283622.json",
+          "sha256": "3d537a172ccd5f96840f1fedbbcc60590e348e0f202b26b2cdd12299322e8a54",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q10283622.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          32.572888,
+          -25.970489
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9698289.json",
+        "statement_id": "Q9698289$e2253670-4ef7-bfeb-27d1-42b43d4eef27"
+      },
+      "independent_review": {
+        "method": "Independent agent reviewed authorities, GeoNames linked data and licensed native Wikidata claims, visitor footprint and special scope for a reconstruction, relocated structure and restricted venues.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The surviving prefabricated iron building at its current protected site beside Tunduru Garden. The building was moved within Maputo. The record covers the current exterior and custodian-approved visits.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Imprensa Nacional de Moçambique",
+          "Instituto Nacional do Turismo, Mozambique",
+          "Lusa, interviewing the venue manager",
+          "Wikidata contributors",
+          "Agenda Cultural Municipal de Maputo"
+        ],
+        "description": "The surviving prefabricated iron house is installed next to Tunduru Botanical Garden and receives visitors.",
+        "description_zh": "现存的预制铁屋位于通杜鲁植物园旁，接待参观者。",
+        "details": "The surviving prefabricated iron building at its current protected site beside Tunduru Garden. The building was moved within Maputo. The record covers the current exterior and custodian-approved visits.",
+        "geography": {
+          "authority_id": "supplement:auth:mz-public:Q9698289",
+          "countries": [
+            "MZ"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The government gazette names the protected iron house and its current district.",
+            "id": "auth:mz-public:Q9698289:evidence:1",
+            "license": null,
+            "publisher": "Imprensa Nacional de Moçambique",
+            "revision": "Retrieved 2026-11-28; SHA-256 388b7f8421c4b69df645859c87aa31bdfa8fd2271d40a42257df0270d8f2a69c.",
+            "title": "Decree 70/2023: classification of Casa de Ferro",
+            "uri": "https://www.inm.gov.mz/pt-br/node/18251"
+          }
+        },
+        "id": "auth:mz-public:Q9698289",
+        "location_precision": null,
+        "names": [
+          "马普托铁屋",
+          "Casa de Ferro, Maputo",
+          "Casa de Ferro",
+          "Maputo Iron House"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          32.572888,
+          -25.970489
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The government gazette names the protected iron house and its current district.",
+            "id": "auth:mz-public:Q9698289:evidence:1",
+            "license": null,
+            "publisher": "Imprensa Nacional de Moçambique",
+            "revision": "Retrieved 2026-11-28; SHA-256 388b7f8421c4b69df645859c87aa31bdfa8fd2271d40a42257df0270d8f2a69c.",
+            "title": "Decree 70/2023: classification of Casa de Ferro",
+            "uri": "https://www.inm.gov.mz/pt-br/node/18251"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The destination directory places the visitor attraction beside the botanical garden.",
+            "id": "auth:mz-public:Q9698289:evidence:2",
+            "license": null,
+            "publisher": "Instituto Nacional do Turismo, Mozambique",
+            "revision": "Retrieved 2026-11-28; SHA-256 602d779e42961e60cb3bf1b9a72d43a2af4b607eb0245e7ae354c0c60bca26be.",
+            "title": "Casa de Ferro visitor information",
+            "uri": "https://fikani.visitmozambique.gov.mz/onde-ir/cidades/maputo/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The manager describes current school and tourist visits, relocation history and planned maintenance.",
+            "id": "auth:mz-public:Q9698289:evidence:3",
+            "license": null,
+            "publisher": "Lusa, interviewing the venue manager",
+            "revision": "Retrieved 2026-11-28; SHA-256 9b4bed5a7a17f68cc0072ab4b549b12f7f69b3ae0e51d3d80f2fa35d088e8592.",
+            "title": "Casa de Ferro manager interview, June 2026",
+            "uri": "https://www.noticiasaominuto.com/cultura/2998830/casa-de-ferro-de-maputo-procura-nova-vida-a-chegar-aos-135-anos"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 32.572888, latitude -25.970489.",
+            "id": "auth:mz-public:Q9698289:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 f5fe8e519e57da0610aa005bf49ecf3185fcf42abdb86744a45d393fdc5d646f.",
+            "title": "Casa de Ferro, Maputo coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9698289.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The municipality’s cultural venue inventory identifies the remaining prefabricated iron building at the current visitor location.",
+            "id": "auth:mz-public:Q9698289:independent-visitor",
+            "license": null,
+            "publisher": "Agenda Cultural Municipal de Maputo",
+            "revision": "Frozen 2026-11-28. SHA-256 a549355b7467f2571582182c3432a256d96da74e8824a5c0bd6bf429df7ca66e.",
+            "title": "Casa de Ferro, Maputo visitor confirmation",
+            "uri": "https://acmm.co.mz/local-cultural/casa-de-ferro"
+          }
+        ],
+        "source_uri": "https://www.inm.gov.mz/pt-br/node/18251",
+        "title": "Casa de Ferro, Maputo",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/mz-house-law.html",
+          "sha256": "388b7f8421c4b69df645859c87aa31bdfa8fd2271d40a42257df0270d8f2a69c",
+          "uri": "https://www.inm.gov.mz/pt-br/node/18251"
+        },
+        {
+          "filename": "source/mz-tourism-fikani.html",
+          "sha256": "602d779e42961e60cb3bf1b9a72d43a2af4b607eb0245e7ae354c0c60bca26be",
+          "uri": "https://fikani.visitmozambique.gov.mz/onde-ir/cidades/maputo/"
+        },
+        {
+          "filename": "source/mz-house-manager-2026.html",
+          "sha256": "9b4bed5a7a17f68cc0072ab4b549b12f7f69b3ae0e51d3d80f2fa35d088e8592",
+          "uri": "https://www.noticiasaominuto.com/cultura/2998830/casa-de-ferro-de-maputo-procura-nova-vida-a-chegar-aos-135-anos"
+        },
+        {
+          "filename": "source/Q9698289.json",
+          "sha256": "f5fe8e519e57da0610aa005bf49ecf3185fcf42abdb86744a45d393fdc5d646f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q9698289.json"
+        },
+        {
+          "filename": "source/independent-mz-casa-municipal.html",
+          "sha256": "a549355b7467f2571582182c3432a256d96da74e8824a5c0bd6bf429df7ca66e",
+          "uri": "https://acmm.co.mz/local-cultural/casa-de-ferro"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "GeoNames RDF original WGS84 coordinate for the named historic Maputo railway station. This is the station building representative point. Attribution: GeoNames, CC BY 4.0.",
+        "point": [
+          32.56436,
+          -25.97108
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://sws.geonames.org/9254055/about.rdf",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independent agent reviewed authorities, GeoNames linked data and licensed native Wikidata claims, visitor footprint and special scope for a reconstruction, relocated structure and restricted venues.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic central station building and its CFM museum at Praça dos Trabalhadores. The marker is for the station building. Visiting follows CFM's museum and guided station-building arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Instituto Nacional do Turismo, Mozambique",
+          "Instituto Nacional de Estatística, Mozambique",
+          "GeoNames",
+          "Portos e Caminhos de Ferro de Moçambique"
+        ],
+        "description": "The historic railway station continues in use and houses the CFM visitor museum in Maputo.",
+        "description_zh": "马普托中央火车站的历史建筑仍在使用，站内设有莫桑比克铁路公司博物馆。",
+        "details": "The historic central station building and its CFM museum at Praça dos Trabalhadores. The marker is for the station building. Visiting follows CFM's museum and guided station-building arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:mz-public:geonames-9254055",
+          "countries": [
+            "MZ"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The destination directory describes museum visits in the historic central station and public exhibitions.",
+            "id": "auth:mz-public:geonames-9254055:evidence:1",
+            "license": null,
+            "publisher": "Instituto Nacional do Turismo, Mozambique",
+            "revision": "Retrieved 2026-11-28; SHA-256 602d779e42961e60cb3bf1b9a72d43a2af4b607eb0245e7ae354c0c60bca26be.",
+            "title": "Visit Maputo Central Railway Station and its museum",
+            "uri": "https://fikani.visitmozambique.gov.mz/onde-ir/cidades/maputo/"
+          }
+        },
+        "id": "auth:mz-public:geonames-9254055",
+        "location_precision": null,
+        "names": [
+          "马普托中央火车站",
+          "Maputo Central Railway Station and CFM Museum",
+          "Estação Central dos Caminhos de Ferro",
+          "Museu dos CFM",
+          "Estação Ferroviária de Maputo"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          32.56436,
+          -25.97108
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The destination directory describes museum visits in the historic central station and public exhibitions.",
+            "id": "auth:mz-public:geonames-9254055:evidence:1",
+            "license": null,
+            "publisher": "Instituto Nacional do Turismo, Mozambique",
+            "revision": "Retrieved 2026-11-28; SHA-256 602d779e42961e60cb3bf1b9a72d43a2af4b607eb0245e7ae354c0c60bca26be.",
+            "title": "Visit Maputo Central Railway Station and its museum",
+            "uri": "https://fikani.visitmozambique.gov.mz/onde-ir/cidades/maputo/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The statistical report records the actual public visit counts for the CFM museum.",
+            "id": "auth:mz-public:geonames-9254055:evidence:2",
+            "license": null,
+            "publisher": "Instituto Nacional de Estatística, Mozambique",
+            "revision": "Retrieved 2026-11-28; SHA-256 3a421fd3a26e8a7e5d9e62f79188f97d2487e7513b06a37248957707bdd501d9.",
+            "title": "Cultural Visitor Statistics 2024",
+            "uri": "https://www.ine.gov.mz/documents/20119/45075/Estatisticas%20de%20Cultura%202024%20.pdf/2c567a1c-83ac-98b1-2fb6-ddd4b95c7ecb?download=true&t=1771234748473&version=1.0"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original GeoNames coordinates for the named Maputo historic station. Attribution: GeoNames.",
+            "id": "auth:mz-public:geonames-9254055:evidence:3",
+            "license": "CC BY 4.0",
+            "publisher": "GeoNames",
+            "revision": "Retrieved 2026-11-28; SHA-256 26850453fd8ff0d15a023dadefaf85a4545a46768033128c0abe1c4e13d3eb23.",
+            "title": "Maputo Railway Station representative point",
+            "uri": "https://sws.geonames.org/9254055/about.rdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The railway operator names the Central Station as its museum venue and publishes actual exhibition and station-building guided visits.",
+            "id": "auth:mz-public:geonames-9254055:independent-visitor",
+            "license": null,
+            "publisher": "Portos e Caminhos de Ferro de Moçambique",
+            "revision": "Frozen 2026-11-28. SHA-256 78dc72ac0e402ae34f795ad4e32416065ff6f478f48d83e67e49daa6097436f0.",
+            "title": "Maputo Central Railway Station and CFM Museum visitor confirmation",
+            "uri": "https://webcfm.dotcom.co.mz/index.php/pt/sobre-o-cfm/museu-dos-cfm"
+          }
+        ],
+        "source_uri": "https://fikani.visitmozambique.gov.mz/onde-ir/cidades/maputo/",
+        "title": "Maputo Central Railway Station and CFM Museum",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/mz-tourism-fikani.html",
+          "sha256": "602d779e42961e60cb3bf1b9a72d43a2af4b607eb0245e7ae354c0c60bca26be",
+          "uri": "https://fikani.visitmozambique.gov.mz/onde-ir/cidades/maputo/"
+        },
+        {
+          "filename": "source/mz-ine-culture-2024.pdf",
+          "sha256": "3a421fd3a26e8a7e5d9e62f79188f97d2487e7513b06a37248957707bdd501d9",
+          "uri": "https://www.ine.gov.mz/documents/20119/45075/Estatisticas%20de%20Cultura%202024%20.pdf/2c567a1c-83ac-98b1-2fb6-ddd4b95c7ecb?download=true&t=1771234748473&version=1.0"
+        },
+        {
+          "filename": "source/mz-gn-9254055.rdf",
+          "sha256": "26850453fd8ff0d15a023dadefaf85a4545a46768033128c0abe1c4e13d3eb23",
+          "uri": "https://sws.geonames.org/9254055/about.rdf"
+        },
+        {
+          "filename": "source/independent-mzmuseu-cfm.html",
+          "sha256": "78dc72ac0e402ae34f795ad4e32416065ff6f478f48d83e67e49daa6097436f0",
+          "uri": "https://webcfm.dotcom.co.mz/index.php/pt/sobre-o-cfm/museu-dos-cfm"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Three managed historic public sites in Mozambique and five in Angola with original structure scope and open-source positions."
+}

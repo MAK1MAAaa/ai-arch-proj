@@ -1,0 +1,22 @@
+{
+  "base_count": 5186,
+  "base_ids_sha256": "419bea53871d72d94f46fdce7d067e36376cd950e8f7c2c01daadc89ec26f25c",
+  "base_sites_sha256": "f8ab8846521ef83eaf86e66243136fde01a731cb21f8e8221863bb76f1b3a0a8",
+  "cohort_version": "czech-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 28,
+    "total": 5214
+  },
+  "files": {
+    "czech_public_review.json": {
+      "sha256": "b34809991abf5ca5041969dd84a79d7651db974c370aa3e04f4ddc5dfa3fdfe6"
+    },
+    "czech_public_sites.json": {
+      "sha256": "59d2a789bf812aeffffcb2f934d8819f5112fc4c06a93ded8a7edb378dd9d786"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Twenty-eight public historic places in twelve regions of Czechia with heritage registry main definition points."
+}
