@@ -1,0 +1,22 @@
+{
+  "base_count": 4899,
+  "base_ids_sha256": "6ff4f0902b08c15cd4230fdac89bcb4da99a751e28bce1264755e2660942eaae",
+  "base_sites_sha256": "44de7dee024028e146161cbe6fc8b5cf2780c9b14b190e9860967a8e464ef6fb",
+  "cohort_version": "albania-north-macedonia-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 17,
+    "total": 4916
+  },
+  "files": {
+    "balkan_public_review.json": {
+      "sha256": "d9ca3c0608284442dab7b4ef959c10a18909478d9e56a3bace9ff0f330048349"
+    },
+    "balkan_public_sites.json": {
+      "sha256": "a7cde0e92650c8eefae6590e07090d6d7e899fa2ea28f38d76c4120affd58bd6"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Public Albanian and North Macedonian archaeological and historic properties with exact licensed source coordinates and independent official scope checks."
+}

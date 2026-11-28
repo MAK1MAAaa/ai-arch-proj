@@ -1,0 +1,22 @@
+{
+  "base_count": 4874,
+  "base_ids_sha256": "18bce420f8d016c8d9ecb166436f579507ab40898c31463fdc4a908f70a870db",
+  "base_sites_sha256": "a4d7a6ed306e6fc604509229de7cc1c6bdf6549af420064f012fb2bb70452678",
+  "cohort_version": "estonia-latvia-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 25,
+    "total": 4899
+  },
+  "files": {
+    "baltic_public_review.json": {
+      "sha256": "46f94420053f7996e609d1ccb4b830e3bc4d021c61eb05c4490b6ab428a94676"
+    },
+    "baltic_public_sites.json": {
+      "sha256": "8d67bbc07f2c9053809a2bb00810bd54072cbb0879f8b613ac44e306e7c36761"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Public Estonian and Latvian archaeological and historic sites matched to national monuments registers, using exact published coordinate evidence and an independent check of visitor scope and existing World Heritage components."
+}

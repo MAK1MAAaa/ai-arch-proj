@@ -154,6 +154,15 @@ def test_public_point_search_catalogue_and_provenance(
             ("NG", "auth:ng-public:", 5),
             ("PH", "auth:ph-public:", 10),
             ("MY", "auth:my-public:", 11),
+            ("EE", "auth:ee-kpois:", 11),
+            ("LV", "auth:lv-public:", 14),
+            ("AL", "auth:al-public:", 12),
+            ("MK", "auth:mk-public:", 5),
+            ("OM", "auth:om-public:", 6),
+            ("BH", "auth:bh-public:", 4),
+            ("QA", "auth:qa-public:", 1),
+            ("GE", "auth:ge-public:", 10),
+            ("AM", "auth:am-public:", 10),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -310,3 +319,34 @@ def test_public_point_search_catalogue_and_provenance(
             ref["license"] == "CC BY-SA 4.0" and "oldid=1270866590" in ref["uri"]
             for ref in hose["source_refs"]
         )
+
+        narva = client.get("/api/sites/auth:ee-kpois:14002").json()
+        assert narva["repr_point"] == [28.20188898, 59.37551092]
+        assert "CC BY 4.0" in {ref["license"] for ref in narva["source_refs"]}
+        bauska = client.get("/api/sites/auth:lv-public:6166").json()
+        assert bauska["repr_point"] == [24.173611111111, 56.403611111111]
+        assert bauska["chronology"]["status"] == "insufficient"
+
+        amantia = client.get("/api/sites/auth:al-public:Q454510").json()
+        assert amantia["repr_point"] == [19.70013984739374, 40.379004524474105]
+        assert any(
+            ref["license"] == "CC BY 3.0" and ref["uri"].endswith("/481715")
+            for ref in amantia["source_refs"]
+        )
+        sunaysilah = client.get("/api/sites/auth:om-public:GN8508062").json()
+        assert sunaysilah["repr_point"] == [59.50413, 22.57939]
+        assert any(
+            ref["license"] == "CC BY 4.0" and "/8508062/" in ref["uri"]
+            for ref in sunaysilah["source_refs"]
+        )
+        palace = client.get("/api/sites/auth:qa-public:Q65117843").json()
+        assert palace["title"] == "Old Amiri Palace"
+        assert palace["repr_point"] == [51.54830555555555, 25.287916666666668]
+        garni = client.get("/api/sites/auth:am-public:Q684072").json()
+        assert garni["repr_point"] == [44.73015, 40.11233]
+        assert any(
+            ref["license"] == "CC BY 4.0" and ref["uri"].endswith("/11336259/about.rdf")
+            for ref in garni["source_refs"]
+        )
+        vardzia = client.get("/api/sites/auth:ge-public:Q691813").json()
+        assert vardzia["chronology"]["phases"] == []
