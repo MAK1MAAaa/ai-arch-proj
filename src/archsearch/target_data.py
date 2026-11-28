@@ -560,6 +560,28 @@ AUSTRALIA_STATES_PUBLIC = NamedPlaceCohort(
     "50dbd48e4628daed2bbd0484c0e2fbb707ac6b01fbffd08574561e2c389e6747",
     "f870368a6fdca60b34dd6ff97ad2b20d296c350cee23555455013ce46cf44df3",
 )
+AZERBAIJAN_PUBLIC = NamedPlaceCohort(
+    "azerbaijan-public-v1",
+    "global-v21",
+    "azerbaijan_public",
+    "12468baf20681e77b5e84e5dcb888de2b2a4ea1a30344770c6b05802da9b2e3a",
+    "9d950bf1eddbf201b566e5b3deb6cdfe984eb7462fdebf90c2abf1c54f75f9da",
+)
+ARUBA_CURACAO_PUBLIC = NamedPlaceCohort(
+    "aruba-curacao-public-v1",
+    "global-v21",
+    "aruba_curacao_public",
+    "6f15c4ae4a59d80eeb8178e1ff87b50010372ae6e0dccef5932ad32832077c0c",
+    "81e5601808e6659d904d13dc16cb4e76d4238fdbafc4651d6f2402fbb60ea40d",
+    country_labels=(("AW", "Aruba"), ("CW", "Curaçao")),
+)
+SLOVAKIA_AUSTRIA_PUBLIC = NamedPlaceCohort(
+    "slovakia-austria-public-v1",
+    "global-v21",
+    "slovakia_austria_public",
+    "395d118aa3b7b178aa9f8b6565a907e7deffc9e2f8b0caad0b6d90ba890ff28c",
+    "55100c98fa83e034e8fd55142a6da8f08270d94bbfd8a91a3e64a876b2217f51",
+)
 POINT_COHORTS = (
     IRELAND, ANDALUCIA, TAIWAN_ICULTURE, MEXICO_SIC, FINLAND_VARK, WALES_CADW, THAILAND_FAD,
     AFRICA_VISIT, SCOTLAND_HES, CARIBBEAN_NRHP, PERU_PUBLIC, INDIA_ASI, INDIA_ASI_NEXT,
@@ -602,6 +624,9 @@ POINT_COHORTS = (
     INDIAN_OCEAN_PUBLIC,
     US_SOUTHWEST_PUBLIC,
     AUSTRALIA_STATES_PUBLIC,
+    AZERBAIJAN_PUBLIC,
+    ARUBA_CURACAO_PUBLIC,
+    SLOVAKIA_AUSTRIA_PUBLIC,
 )
 
 

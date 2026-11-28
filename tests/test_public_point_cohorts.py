@@ -206,6 +206,11 @@ def test_public_point_search_catalogue_and_provenance(
             ("AU", "auth:au-sa-shr:", 8),
             ("AU", "auth:au-nsw-shr:", 5),
             ("US", "auth:us-southwest:", 14),
+            ("AZ", "auth:az-public:", 5),
+            ("AW", "auth:aw-public:", 2),
+            ("CW", "auth:cw-public:", 1),
+            ("SK", "auth:sk-public:", 9),
+            ("AT", "auth:at-public:", 5),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -234,6 +239,19 @@ def test_public_point_search_catalogue_and_provenance(
             source["license"] == "CC BY 4.0" and "New South Wales" in source["publisher"]
             for source in elizabeth_farm["source_refs"]
         )
+        assert {"id": "AW", "label": "Aruba", "count": 2} in countries
+        assert {"id": "CW", "label": "Curaçao", "count": 1} in countries
+        bushiribana = client.get("/api/sites/auth:aw-public:geonames-10280574").json()
+        assert bushiribana["repr_point"] == [-69.97677, 12.55355]
+        assert any(
+            source["license"] == "CC BY 4.0" and source["publisher"] == "GeoNames"
+            for source in bushiribana["source_refs"]
+        )
+        assert client.get("/api/sites/auth:aw-public:Q610796").status_code == 404
+        kremnica = client.get("/api/sites/auth:sk-public:Q20851893").json()
+        assert kremnica["repr_point"] == [18.917613888889, 48.706213888889]
+        assert kremnica["chronology"]["status"] == "insufficient"
+        assert kremnica["chronology"]["phases"] == []
         lochleven = client.get("/api/sites/auth:gb-hes-pic:PIC030").json()
         assert lochleven["repr_point"] == [-3.3921612556552567, 56.20086363535327]
         assert lochleven["source_refs"][0]["license"] == "UK Open Government Licence v3.0"

@@ -1,0 +1,729 @@
+{
+  "base_count": 5310,
+  "base_ids_sha256": "338896cf42c6c39721322e5d6cbd2005cbd7770217c0bb1e91d57da3619eda36",
+  "base_sites_sha256": "fd4b4db8374cb587fd6769e05889b6de0fad050d8eb93175a5d2a9170b2ddd7d",
+  "cohort_version": "azerbaijan-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          46.4246717023214,
+          40.71475211302467
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12849004.json?revision=2563926454",
+        "statement_id": "Q12849004$1ABFEDB3-CA47-426A-B16D-FC0EC0BED9D2"
+      },
+      "independent_review": {
+        "method": "Independently checked original source hashes and Wikidata statements, UNESCO adopted buffers and official site identities, current visitor areas and named facilities, plus whole corpus proximity; no structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The point represents the visitor courtyard of the named Ganja shrine. Access follows the site's religious arrangements.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "No individually reviewed historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ganja City Executive Authority",
+          "Wikidata contributors"
+        ],
+        "description": "A restored religious ensemble around the blue-domed mausoleum, used as a public pilgrimage site in Ganja.",
+        "description_zh": "占贾蓝顶陵墓周边修复后的宗教建筑群，仍是公开朝访地点。",
+        "details": "The point represents the visitor courtyard of the named Ganja shrine. Access follows the site's religious arrangements.",
+        "geography": {
+          "authority_id": "supplement:auth:az-public:Q12849004",
+          "countries": [
+            "AZ"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The authority records an entrance portal and visitor services in the restored religious complex around the mausoleum.",
+            "id": "auth:az-public:Q12849004:evidence:1",
+            "license": null,
+            "publisher": "Ganja City Executive Authority",
+            "revision": "Retrieved 2026-11-28; SHA-256 b580eee235436754f59902bba2c0ae417564a9d1094c13075bf8263ea439373d.",
+            "title": "Ganja religious complex and visitor facilities",
+            "uri": "https://ganja-ih.gov.az/az/news/336.html"
+          }
+        },
+        "id": "auth:az-public:Q12849004",
+        "location_precision": null,
+        "names": [
+          "Imamzadeh Mausoleum and Religious Complex, Ganja",
+          "Gəncə İmamzadə ziyarətgahı",
+          "İmamzadə Türbəsi Gəncə",
+          "占贾伊玛目扎德陵及宗教建筑群"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          46.4246717023214,
+          40.71475211302467
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The authority records an entrance portal and visitor services in the restored religious complex around the mausoleum.",
+            "id": "auth:az-public:Q12849004:evidence:1",
+            "license": null,
+            "publisher": "Ganja City Executive Authority",
+            "revision": "Retrieved 2026-11-28; SHA-256 b580eee235436754f59902bba2c0ae417564a9d1094c13075bf8263ea439373d.",
+            "title": "Ganja religious complex and visitor facilities",
+            "uri": "https://ganja-ih.gov.az/az/news/336.html"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native P625 declaration, revision 2563926454. Longitude 46.4246717023214, latitude 40.71475211302467.",
+            "id": "auth:az-public:Q12849004:evidence:2",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 eb42323860605146972fd5c24e040c4ee58d99ec6e651d0f7b8a2b019358ab07.",
+            "title": "Imamzadeh Mausoleum and Religious Complex, Ganja coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12849004.json?revision=2563926454"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The city identifies the cemetery surrounding the religious pilgrimage complex.",
+            "id": "auth:az-public:Q12849004:ind-ind-az-ganja-cemetery.html",
+            "license": null,
+            "publisher": "Ganja City Executive Authority",
+            "revision": "Independent source snapshot a7b20d6736963b745982ca19e5a3d250e39168c2fd4a7bf6ba8a2f130bf51da3",
+            "title": "Municipal report distinguishes shrine and cemetery",
+            "uri": "https://ganja-ih.gov.az/az/news/imamzade-qebirstanliginda-imecilik-aksiyasi-teskil-olunub.html"
+          }
+        ],
+        "source_uri": "https://ganja-ih.gov.az/az/news/336.html",
+        "title": "Imamzadeh Mausoleum and Religious Complex, Ganja",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ganja-imamzade-state.html",
+          "sha256": "b580eee235436754f59902bba2c0ae417564a9d1094c13075bf8263ea439373d",
+          "uri": "https://ganja-ih.gov.az/az/news/336.html"
+        },
+        {
+          "filename": "source/Q12849004.json",
+          "sha256": "eb42323860605146972fd5c24e040c4ee58d99ec6e651d0f7b8a2b019358ab07",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12849004.json?revision=2563926454"
+        },
+        {
+          "filename": "source/ind-az-ganja-cemetery.html",
+          "sha256": "a7b20d6736963b745982ca19e5a3d250e39168c2fd4a7bf6ba8a2f130bf51da3",
+          "uri": "https://ganja-ih.gov.az/az/news/imamzade-qebirstanliginda-imecilik-aksiyasi-teskil-olunub.html"
+        },
+        {
+          "filename": "source/ind-az-wikidata-license.html",
+          "sha256": "7b89955535188f2f5f3cf88d6fc8427127592dac9decd68c0c1c22b50ed789a8",
+          "uri": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          45.695513861103365,
+          39.19401578534411
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2512493.json?revision=2548370790",
+        "statement_id": "q2512493$00646FC7-6B70-47A7-9A7F-1BAD1A56EC9B"
+      },
+      "independent_review": {
+        "method": "Independently checked original source hashes and Wikidata statements, UNESCO adopted buffers and official site identities, current visitor areas and named facilities, plus whole corpus proximity; no structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The source point is within the named reconstructed hilltop enclosure. The public summit steps connect it to the separately located museum below.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "No individually reviewed historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ministry of Foreign Affairs of Azerbaijan, Embassy in Bulgaria",
+          "Wikidata contributors"
+        ],
+        "description": "The reconstructed fortress enclosure occupies the historic hilltop stronghold above Julfa.",
+        "description_zh": "朱尔法附近的山顶要塞，现存游览范围包括原址重建的堡垒围墙及阶梯。",
+        "details": "The source point is within the named reconstructed hilltop enclosure. The public summit steps connect it to the separately located museum below.",
+        "geography": {
+          "authority_id": "supplement:auth:az-public:Q2512493",
+          "countries": [
+            "AZ"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The Nakhchivan cultural guide identifies Alinja as a fortress atop the mountain in Julfa.",
+            "id": "auth:az-public:Q2512493:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Foreign Affairs of Azerbaijan, Embassy in Bulgaria",
+            "revision": "Retrieved 2026-11-28; SHA-256 58538f2872ade99c8a3d83cea43fcadfc241b4cf88e0a2754f6e9b8ebab92727.",
+            "title": "Nakhchivan cultural heritage visitor brochure",
+            "uri": "https://sofia.mfa.gov.az/files/file/broshura_naxchivan_1_.pdf"
+          }
+        },
+        "id": "auth:az-public:Q2512493",
+        "location_precision": null,
+        "names": [
+          "Alinja Fortress",
+          "Əlincə qalası",
+          "Alinjagala",
+          "阿林贾堡"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          45.695513861103365,
+          39.19401578534411
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The Nakhchivan cultural guide identifies Alinja as a fortress atop the mountain in Julfa.",
+            "id": "auth:az-public:Q2512493:evidence:1",
+            "license": null,
+            "publisher": "Ministry of Foreign Affairs of Azerbaijan, Embassy in Bulgaria",
+            "revision": "Retrieved 2026-11-28; SHA-256 58538f2872ade99c8a3d83cea43fcadfc241b4cf88e0a2754f6e9b8ebab92727.",
+            "title": "Nakhchivan cultural heritage visitor brochure",
+            "uri": "https://sofia.mfa.gov.az/files/file/broshura_naxchivan_1_.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native P625 declaration, revision 2548370790. Longitude 45.695513861103365, latitude 39.19401578534411.",
+            "id": "auth:az-public:Q2512493:evidence:2",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 0c573d4c9ac50996ef1b5b37d01d61d86dd478b179d7023228f9668c02936462.",
+            "title": "Alinja Fortress coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2512493.json?revision=2548370790"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The regional ministry records the public opening of the fortress and the separate history museum.",
+            "id": "auth:az-public:Q2512493:ind-ind-az-alinja-museum.html",
+            "license": null,
+            "publisher": "Ministry of Culture of the Nakhchivan Autonomous Republic",
+            "revision": "Independent source snapshot d4f30e15793dec628c92f20ba8fe69b4d265730a079ce3032b59246ee98a5194",
+            "title": "Alinja hilltop monument and museum",
+            "uri": "https://nculture.gov.az/li-nc-qala-tari-x-m-d-ni-yy-t-muzeyi"
+          }
+        ],
+        "source_uri": "https://sofia.mfa.gov.az/files/file/broshura_naxchivan_1_.pdf",
+        "title": "Alinja Fortress",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/alinja-mfa.pdf",
+          "sha256": "58538f2872ade99c8a3d83cea43fcadfc241b4cf88e0a2754f6e9b8ebab92727",
+          "uri": "https://sofia.mfa.gov.az/files/file/broshura_naxchivan_1_.pdf"
+        },
+        {
+          "filename": "source/Q2512493.json",
+          "sha256": "0c573d4c9ac50996ef1b5b37d01d61d86dd478b179d7023228f9668c02936462",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2512493.json?revision=2548370790"
+        },
+        {
+          "filename": "source/ind-az-alinja-museum.html",
+          "sha256": "d4f30e15793dec628c92f20ba8fe69b4d265730a079ce3032b59246ee98a5194",
+          "uri": "https://nculture.gov.az/li-nc-qala-tari-x-m-d-ni-yy-t-muzeyi"
+        },
+        {
+          "filename": "source/ind-az-wikidata-license.html",
+          "sha256": "7b89955535188f2f5f3cf88d6fc8427127592dac9decd68c0c1c22b50ed789a8",
+          "uri": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          46.43270928122271,
+          40.685502980739386
+        ],
+        "precision": 1e-08,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2627383.json?revision=2565852474",
+        "statement_id": "q2627383$5FB36324-B7F3-4201-BCE6-4F878B4ECBDB"
+      },
+      "independent_review": {
+        "method": "Independently checked original source hashes and Wikidata statements, UNESCO adopted buffers and official site identities, current visitor areas and named facilities, plus whole corpus proximity; no structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The source point lies inside the mausoleum footprint and within the named public complex. The associated museum across the road is a separate mapped facility.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "No individually reviewed historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "State Migration Service of Azerbaijan",
+          "Wikidata contributors"
+        ],
+        "description": "The protected Nizami Ganjavi mausoleum complex includes the poet’s crypt and a visitor square.",
+        "description_zh": "占贾的尼扎米纪念陵墓与访客广场。对街博物馆属于单独场馆。",
+        "details": "The source point lies inside the mausoleum footprint and within the named public complex. The associated museum across the road is a separate mapped facility.",
+        "geography": {
+          "authority_id": "supplement:auth:az-public:Q2627383",
+          "countries": [
+            "AZ"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The State Migration Service records a visit to the poet’s mausoleum and distinguishes it from the separate Nizami Ganjavi Museum.",
+            "id": "auth:az-public:Q2627383:evidence:1",
+            "license": null,
+            "publisher": "State Migration Service of Azerbaijan",
+            "revision": "Retrieved 2026-11-28; SHA-256 d2b4edc7b7682ec64cf4667aa887e59738909e67443467b27793d3a4dce7cfb6.",
+            "title": "Public authority visit and site identification",
+            "uri": "https://www.migration.gov.az/en/news_detail/14676"
+          }
+        },
+        "id": "auth:az-public:Q2627383",
+        "location_precision": null,
+        "names": [
+          "Nizami Ganjavi Mausoleum",
+          "Nizami Gəncəvi məqbərəsi",
+          "Nizami Gandjevi Mausoleum",
+          "尼扎米陵墓"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          46.43270928122271,
+          40.685502980739386
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The State Migration Service records a visit to the poet’s mausoleum and distinguishes it from the separate Nizami Ganjavi Museum.",
+            "id": "auth:az-public:Q2627383:evidence:1",
+            "license": null,
+            "publisher": "State Migration Service of Azerbaijan",
+            "revision": "Retrieved 2026-11-28; SHA-256 d2b4edc7b7682ec64cf4667aa887e59738909e67443467b27793d3a4dce7cfb6.",
+            "title": "Public authority visit and site identification",
+            "uri": "https://www.migration.gov.az/en/news_detail/14676"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native P625 declaration, revision 2565852474. Longitude 46.43270928122271, latitude 40.685502980739386.",
+            "id": "auth:az-public:Q2627383:evidence:2",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 6cc20933e028d8ed71c9542bb407cf1957f158ee2c23dbbf33202d4baf3a5237.",
+            "title": "Nizami Ganjavi Mausoleum coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2627383.json?revision=2565852474"
+          }
+        ],
+        "source_uri": "https://www.migration.gov.az/en/news_detail/14676",
+        "title": "Nizami Ganjavi Mausoleum",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ganja-nizami-migration.html",
+          "sha256": "d2b4edc7b7682ec64cf4667aa887e59738909e67443467b27793d3a4dce7cfb6",
+          "uri": "https://www.migration.gov.az/en/news_detail/14676"
+        },
+        {
+          "filename": "source/Q2627383.json",
+          "sha256": "6cc20933e028d8ed71c9542bb407cf1957f158ee2c23dbbf33202d4baf3a5237",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2627383.json?revision=2565852474"
+        },
+        {
+          "filename": "source/ind-az-wikidata-license.html",
+          "sha256": "7b89955535188f2f5f3cf88d6fc8427127592dac9decd68c0c1c22b50ed789a8",
+          "uri": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          49.84012222222223,
+          40.36947777777778
+        ],
+        "precision": 2.777777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2664428.json?revision=2561084900",
+        "statement_id": "Q2664428$a1d31227-af76-45ee-ae0d-a99c565342c5"
+      },
+      "independent_review": {
+        "method": "Independently checked original source hashes and Wikidata statements, UNESCO adopted buffers and official site identities, current visitor areas and named facilities, plus whole corpus proximity; no structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The source point falls inside the present visitor mansion at 4 Taghiyev Street, beyond the Walled City property's adopted buffer. The museum used a different building in the earlier period.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "No individually reviewed historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Museum of History of Azerbaijan",
+          "Icherisheher Reserve, via UNESCO World Heritage Centre",
+          "Wikidata contributors"
+        ],
+        "description": "The National Museum of History of Azerbaijan occupies the former Taghiyev family residence in central Baku.",
+        "description_zh": "阿塞拜疆国家历史博物馆位于巴库塔吉耶夫家族的原宅邸，按场馆安排开放。",
+        "details": "The source point falls inside the present visitor mansion at 4 Taghiyev Street, beyond the Walled City property's adopted buffer. The museum used a different building in the earlier period.",
+        "geography": {
+          "authority_id": "supplement:auth:az-public:Q2664428",
+          "countries": [
+            "AZ"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum identifies its current building as the family house of Haji Zeynal Abdin Taghiyev.",
+            "id": "auth:az-public:Q2664428:evidence:1",
+            "license": null,
+            "publisher": "National Museum of History of Azerbaijan",
+            "revision": "Retrieved 2026-11-28; SHA-256 7bb3986c0666b2bc86c90787a9bc4e0e8af6763e9da6c57a4e47ce88356694b3.",
+            "title": "History and original address of the Taghiyev Mansion",
+            "uri": "https://www.azhistorymuseum.gov.az/en/about/3"
+          }
+        },
+        "id": "auth:az-public:Q2664428",
+        "location_precision": null,
+        "names": [
+          "Taghiyev Mansion, National Museum of History of Azerbaijan",
+          "Tağıyevin sarayı",
+          "Milli Azərbaycan Tarixi Muzeyi",
+          "塔吉耶夫宅邸与阿塞拜疆国家历史博物馆"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          49.84012222222223,
+          40.36947777777778
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum identifies its current building as the family house of Haji Zeynal Abdin Taghiyev.",
+            "id": "auth:az-public:Q2664428:evidence:1",
+            "license": null,
+            "publisher": "National Museum of History of Azerbaijan",
+            "revision": "Retrieved 2026-11-28; SHA-256 7bb3986c0666b2bc86c90787a9bc4e0e8af6763e9da6c57a4e47ce88356694b3.",
+            "title": "History and original address of the Taghiyev Mansion",
+            "uri": "https://www.azhistorymuseum.gov.az/en/about/3"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The current visitor page lists exhibition hours and admissions.",
+            "id": "auth:az-public:Q2664428:evidence:2",
+            "license": null,
+            "publisher": "National Museum of History of Azerbaijan",
+            "revision": "Retrieved 2026-11-28; SHA-256 4206cc164e8c06c30e3c22ca4e151423cd86a4855cf5a54544fb030aa91362a8.",
+            "title": "Current official exhibition and visiting schedule",
+            "uri": "https://www.azhistorymuseum.gov.az/en/visit_plan"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The adopted protection map uses different streets around the eastern and northern borders of the buffer.",
+            "id": "auth:az-public:Q2664428:evidence:3",
+            "license": null,
+            "publisher": "Icherisheher Reserve, via UNESCO World Heritage Centre",
+            "revision": "Retrieved 2026-11-28; SHA-256 1c9fc8e7ce34cbd95a4c32d24386247ecbc39472ecb127fd4f551b920dd03743.",
+            "title": "Adopted buffer zone map for Walled City of Baku",
+            "uri": "https://whc.unesco.org/document/135566"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native P625 declaration, revision 2561084900. Longitude 49.84012222222223, latitude 40.36947777777778.",
+            "id": "auth:az-public:Q2664428:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 868ba0f15948988df4f6106115bbc40797aaca09f7cdbdadb16017cf72d57f64.",
+            "title": "Taghiyev Mansion, National Museum of History of Azerbaijan coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2664428.json?revision=2561084900"
+          }
+        ],
+        "source_uri": "https://www.azhistorymuseum.gov.az/en/about/3",
+        "title": "Taghiyev Mansion, National Museum of History of Azerbaijan",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/national-history-museum-building.html",
+          "sha256": "7bb3986c0666b2bc86c90787a9bc4e0e8af6763e9da6c57a4e47ce88356694b3",
+          "uri": "https://www.azhistorymuseum.gov.az/en/about/3"
+        },
+        {
+          "filename": "source/national-history-museum-visitor.html",
+          "sha256": "4206cc164e8c06c30e3c22ca4e151423cd86a4855cf5a54544fb030aa91362a8",
+          "uri": "https://www.azhistorymuseum.gov.az/en/visit_plan"
+        },
+        {
+          "filename": "source/baku-whc-135566-map.jpg",
+          "sha256": "1c9fc8e7ce34cbd95a4c32d24386247ecbc39472ecb127fd4f551b920dd03743",
+          "uri": "https://whc.unesco.org/document/135566"
+        },
+        {
+          "filename": "source/Q2664428.json",
+          "sha256": "868ba0f15948988df4f6106115bbc40797aaca09f7cdbdadb16017cf72d57f64",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2664428.json?revision=2561084900"
+        },
+        {
+          "filename": "source/ind-az-wikidata-license.html",
+          "sha256": "7b89955535188f2f5f3cf88d6fc8427127592dac9decd68c0c1c22b50ed789a8",
+          "uri": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          50.008611111111,
+          40.415555555556
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q754560.json?revision=2558536458",
+        "statement_id": "q754560$87F73F1D-52D6-4CD8-A005-A279979B7456"
+      },
+      "independent_review": {
+        "method": "Independently checked original source hashes and Wikidata statements, UNESCO adopted buffers and official site identities, current visitor areas and named facilities, plus whole corpus proximity; no structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The source point lies inside the named fire-temple enclosure, within the area covered by published reserve admission. The World Heritage entry is a tentative-list submission.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "No individually reviewed historical phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Ateshgah Temple State Historical and Architectural Reserve",
+          "Reserve Management Center, State Tourism Agency of Azerbaijan",
+          "Azerbaijan National Commission for UNESCO, via UNESCO World Heritage Centre",
+          "Wikidata contributors"
+        ],
+        "description": "The historic fire-temple enclosure in Surakhany is visited as a state historical and architectural reserve.",
+        "description_zh": "苏拉哈尼的历史火庙院落现由国家历史建筑保护区管理，提供公众参观。",
+        "details": "The source point lies inside the named fire-temple enclosure, within the area covered by published reserve admission. The World Heritage entry is a tentative-list submission.",
+        "geography": {
+          "authority_id": "supplement:auth:az-public:Q754560",
+          "countries": [
+            "AZ"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The reserve welcomes visitors daily, including weekends and holidays.",
+            "id": "auth:az-public:Q754560:evidence:1",
+            "license": null,
+            "publisher": "Ateshgah Temple State Historical and Architectural Reserve",
+            "revision": "Retrieved 2026-11-28; SHA-256 1459d745e6054dafd69c9c42e6b0bd578e0d604b07d826f807254c42611c97b8.",
+            "title": "Ateshgah Reserve official visitor rules",
+            "uri": "https://ateshgahtemple.az/en/post/580"
+          }
+        },
+        "id": "auth:az-public:Q754560",
+        "location_precision": null,
+        "names": [
+          "Ateshgah Fire Temple, Surakhany",
+          "Atəşgah Məbədi",
+          "Atashgyakh Temple",
+          "阿泰什加火庙"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          50.008611111111,
+          40.415555555556
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The reserve welcomes visitors daily, including weekends and holidays.",
+            "id": "auth:az-public:Q754560:evidence:1",
+            "license": null,
+            "publisher": "Ateshgah Temple State Historical and Architectural Reserve",
+            "revision": "Retrieved 2026-11-28; SHA-256 1459d745e6054dafd69c9c42e6b0bd578e0d604b07d826f807254c42611c97b8.",
+            "title": "Ateshgah Reserve official visitor rules",
+            "uri": "https://ateshgahtemple.az/en/post/580"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The admissions page lists Ateshgah Temple Reserve separately.",
+            "id": "auth:az-public:Q754560:evidence:2",
+            "license": null,
+            "publisher": "Reserve Management Center, State Tourism Agency of Azerbaijan",
+            "revision": "Retrieved 2026-11-28; SHA-256 9af1603f9cc20e1b057c10acfacbe3884fdab7f526f5ab7e445541e86004f67e.",
+            "title": "State visitor admission for Ateshgah",
+            "uri": "https://www.heritage.org.az/en/tickets"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national tentative submission identifies the temple-museum at Surakhany.",
+            "id": "auth:az-public:Q754560:evidence:3",
+            "license": null,
+            "publisher": "Azerbaijan National Commission for UNESCO, via UNESCO World Heritage Centre",
+            "revision": "Retrieved 2026-11-28; SHA-256 cad5f4a8dfe0baaa113fb22c5b3af7117f9eb9c11122004e0e13c3760e3387a3.",
+            "title": "Azerbaijan tentative submission for Atashgyakh",
+            "uri": "https://whc.unesco.org/en/tentativelists/1172/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native P625 declaration, revision 2558536458. Longitude 50.008611111111, latitude 40.415555555556.",
+            "id": "auth:az-public:Q754560:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 ba1451919c6ca59dceb00ebe8afe55755413878251b12b8db3e208b0566889cf.",
+            "title": "Ateshgah Fire Temple, Surakhany coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q754560.json?revision=2558536458"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Public admission is offered at the reserve.",
+            "id": "auth:az-public:Q754560:ind-ind-az-ateshgah-operator-visitor.pdf",
+            "license": null,
+            "publisher": "Reserves Management Center",
+            "revision": "Independent source snapshot f9c9fd37b15e3befad83d786277c95d50a0740c94b5c3009f146c5d1889540d3",
+            "title": "Fire temple public reserve visit information",
+            "uri": "https://www.heritage.org.az/storage/2023/10/30/tx3Sgmi5wn7x6D1WyoxvsMsVHXJHWCVWDKefaF0p.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Current reserve visitor information lists a ticket including Ateshgah.",
+            "id": "auth:az-public:Q754560:ind-ind-az-ateshgah-combo.html",
+            "license": null,
+            "publisher": "Reserves Management Center",
+            "revision": "Independent source snapshot 2cfaf0aedfb8f99e71c0238bab7fb4245d7e2b4a0a47dfd881bd8200505753c4",
+            "title": "State reserves combined visitor ticket",
+            "uri": "https://yanardag.heritage.org.az/en/plan/index"
+          }
+        ],
+        "source_uri": "https://ateshgahtemple.az/en/post/580",
+        "title": "Ateshgah Fire Temple, Surakhany",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/az-ateshgah-operator.html",
+          "sha256": "1459d745e6054dafd69c9c42e6b0bd578e0d604b07d826f807254c42611c97b8",
+          "uri": "https://ateshgahtemple.az/en/post/580"
+        },
+        {
+          "filename": "source/az-ateshgah-state-ticket.html",
+          "sha256": "9af1603f9cc20e1b057c10acfacbe3884fdab7f526f5ab7e445541e86004f67e",
+          "uri": "https://www.heritage.org.az/en/tickets"
+        },
+        {
+          "filename": "source/atashgah-whc.html",
+          "sha256": "cad5f4a8dfe0baaa113fb22c5b3af7117f9eb9c11122004e0e13c3760e3387a3",
+          "uri": "https://whc.unesco.org/en/tentativelists/1172/"
+        },
+        {
+          "filename": "source/Q754560.json",
+          "sha256": "ba1451919c6ca59dceb00ebe8afe55755413878251b12b8db3e208b0566889cf",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q754560.json?revision=2558536458"
+        },
+        {
+          "filename": "source/ind-az-ateshgah-operator-visitor.pdf",
+          "sha256": "f9c9fd37b15e3befad83d786277c95d50a0740c94b5c3009f146c5d1889540d3",
+          "uri": "https://www.heritage.org.az/storage/2023/10/30/tx3Sgmi5wn7x6D1WyoxvsMsVHXJHWCVWDKefaF0p.pdf"
+        },
+        {
+          "filename": "source/ind-az-ateshgah-combo.html",
+          "sha256": "2cfaf0aedfb8f99e71c0238bab7fb4245d7e2b4a0a47dfd881bd8200505753c4",
+          "uri": "https://yanardag.heritage.org.az/en/plan/index"
+        },
+        {
+          "filename": "source/ind-az-wikidata-license.html",
+          "sha256": "7b89955535188f2f5f3cf88d6fc8427127592dac9decd68c0c1c22b50ed789a8",
+          "uri": "https://www.wikidata.org/wiki/Wikidata:Licensing"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Five publicly interpreted historic places in Azerbaijan using original CC0 Wikidata position claims, verified visitor scopes and official site identification."
+}

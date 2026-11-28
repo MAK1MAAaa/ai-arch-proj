@@ -1,0 +1,428 @@
+{
+  "base_count": 5315,
+  "base_ids_sha256": "0bd220178abea012457a211fc5966022466ce9a51c62a8b0049fb131a5aeed71",
+  "base_sites_sha256": "1ad399b4a9520ea79261f7b5e190c6950fccf2bb7f2e346c0f2b43af31286c9c",
+  "cohort_version": "aruba-curacao-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The museum's CC0 point falls inside the surviving historic Ecury building complex. Exhibits may include objects from other places; the point represents the original family dwelling site.",
+        "point": [
+          -70.038196,
+          12.520948
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4785386.json",
+        "statement_id": "Q4785386$94FA1D2E-9E1B-40A5-8613-A60AC831338C"
+      },
+      "independent_review": {
+        "method": "Independently recomputed original GeoNames RDF and Wikidata points, compared current site visitor extents, UNESCO adopted protections and whole corpus identity; no structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic Ecury family home complex in central Oranjestad, restored in place and now occupied by the National Archaeological Museum Aruba. Public access covers the operator's designated exhibition routes within the historic buildings.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named original site and public scope were checked.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "National Archaeological Museum Aruba",
+          "Aruba Tourism Authority",
+          "Wikidata contributors"
+        ],
+        "description": "The historic Ecury family home complex in central Oranjestad, restored in place and now occupied by the National Archaeological Museum Aruba. Public access covers the operator's designated exhibition routes within the historic buildings.",
+        "description_zh": "奥拉涅斯塔德埃屈里家族历史宅院位于阿鲁巴。地图所示为经核对的历史原址代表点，参观范围以主管方公告为准。",
+        "details": "The historic Ecury family home complex in central Oranjestad, restored in place and now occupied by the National Archaeological Museum Aruba. Public access covers the operator's designated exhibition routes within the historic buildings.",
+        "geography": {
+          "authority_id": "supplement:auth:aw-public:Q4785386",
+          "countries": [
+            "AW"
+          ],
+          "note": "Publicly documented modern island or area identity; original-site representative point.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum identifies the restored original family complex and advertises the current programme on the premises.",
+            "id": "auth:aw-public:Q4785386:aw-ecury-operator.html",
+            "license": null,
+            "publisher": "National Archaeological Museum Aruba",
+            "revision": "Snapshot 2026-11-28; SHA-256 ab4435c90367b527cb89e1dec113a995ecd59ebb6ef9074f783e1194cb12e067.",
+            "title": "Historic Ecury house complex, Oranjestad public visit and original site",
+            "uri": "https://manaruba.org/home"
+          }
+        },
+        "id": "auth:aw-public:Q4785386",
+        "location_precision": null,
+        "names": [
+          "奥拉涅斯塔德埃屈里家族历史宅院",
+          "Ecury complex",
+          "National Archaeological Museum Aruba",
+          "Museo Arqueologico Nacional Aruba"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -70.038196,
+          12.520948
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum identifies the restored original family complex and advertises the current programme on the premises.",
+            "id": "auth:aw-public:Q4785386:aw-ecury-operator.html",
+            "license": null,
+            "publisher": "National Archaeological Museum Aruba",
+            "revision": "Snapshot 2026-11-28; SHA-256 ab4435c90367b527cb89e1dec113a995ecd59ebb6ef9074f783e1194cb12e067.",
+            "title": "Historic Ecury house complex, Oranjestad public visit and original site",
+            "uri": "https://manaruba.org/home"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum provides regular weekday public admission and separately describes group tour arrangements.",
+            "id": "auth:aw-public:Q4785386:aw-ecury-hours.html",
+            "license": null,
+            "publisher": "National Archaeological Museum Aruba",
+            "revision": "Snapshot 2026-11-28; SHA-256 c1158663534d58867a937267b862e068cb76b500ae94efe37145f7e11a89f6fc.",
+            "title": "Historic Ecury house complex, Oranjestad public visit and original site",
+            "uri": "https://manaruba.org/faq"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The authority confirms the museum address at Schelpstraat 36–38 and the original family buildings.",
+            "id": "auth:aw-public:Q4785386:aw-ecury-ata.html",
+            "license": null,
+            "publisher": "Aruba Tourism Authority",
+            "revision": "Snapshot 2026-11-28; SHA-256 eed3e4bc35da24ce7a12a1a72f1325400a506f878c0bdef23d22da787d57ee82.",
+            "title": "Historic Ecury house complex, Oranjestad public visit and original site",
+            "uri": "https://www.aruba.com/us/explore/archaeological-museum"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -70.038196, latitude 12.520948.",
+            "id": "wikidata:Q4785386",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2550003107; P625 Q4785386$94FA1D2E-9E1B-40A5-8613-A60AC831338C.",
+            "title": "Historic Ecury house complex, Oranjestad representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4785386.json"
+          }
+        ],
+        "source_uri": "https://manaruba.org/home",
+        "title": "Historic Ecury house complex, Oranjestad",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q4785386.json",
+          "sha256": "f67f9099e5da95078e626551fa5d365b8b11ee32665ecda1765b262ca19a8b13",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4785386.json"
+        },
+        {
+          "filename": "aw-ecury-operator.html",
+          "sha256": "ab4435c90367b527cb89e1dec113a995ecd59ebb6ef9074f783e1194cb12e067",
+          "uri": "https://manaruba.org/home"
+        },
+        {
+          "filename": "aw-ecury-hours.html",
+          "sha256": "c1158663534d58867a937267b862e068cb76b500ae94efe37145f7e11a89f6fc",
+          "uri": "https://manaruba.org/faq"
+        },
+        {
+          "filename": "aw-ecury-ata.html",
+          "sha256": "eed3e4bc35da24ce7a12a1a72f1325400a506f878c0bdef23d22da787d57ee82",
+          "uri": "https://www.aruba.com/us/explore/archaeological-museum"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "The released GeoNames feature is named Bushiribana Ruins and coded S.RUIN. Its unmodified point is 11.1 metres outside the surviving wall outline, suitable as an outdoor complex representative point.",
+        "point": [
+          -69.97677,
+          12.55355
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://sws.geonames.org/10280574/about.rdf",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "Independently recomputed original GeoNames RDF and Wikidata points, compared current site visitor extents, UNESCO adopted protections and whole corpus identity; no structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The original nineteenth-century Bushiribana gold-processing works on the north coast of Aruba. The public visit is limited here to viewing the surviving stone ruins from the open visitor area described by the Aruba Tourism Authority.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named original site and public scope were checked.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Aruba Tourism Authority",
+          "Stichting Monumentenfonds Aruba",
+          "GeoNames"
+        ],
+        "description": "The original nineteenth-century Bushiribana gold-processing works on the north coast of Aruba. The public visit is limited here to viewing the surviving stone ruins from the open visitor area described by the Aruba Tourism Authority.",
+        "description_zh": "布希里巴纳炼金厂遗址位于阿鲁巴。地图所示为经核对的历史原址代表点，参观范围以主管方公告为准。",
+        "details": "The original nineteenth-century Bushiribana gold-processing works on the north coast of Aruba. The public visit is limited here to viewing the surviving stone ruins from the open visitor area described by the Aruba Tourism Authority.",
+        "geography": {
+          "authority_id": "supplement:auth:aw-public:geonames-10280574",
+          "countries": [
+            "AW"
+          ],
+          "note": "Publicly documented modern island or area identity; original-site representative point.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The visitor authority identifies the original mill ruin as an outdoor public sightseeing site.",
+            "id": "auth:aw-public:geonames-10280574:aw-bushiribana-ata.html",
+            "license": null,
+            "publisher": "Aruba Tourism Authority",
+            "revision": "Snapshot 2026-11-28; SHA-256 c3c660dbf4ae3821df34a91b617c51b854b4d1bf4964cb1ee494d09d920dd808.",
+            "title": "Bushiribana Gold Smelter Ruins public visit and original site",
+            "uri": "https://www.aruba.com/us/explore/bushiribana-gold-mill-ruins"
+          }
+        },
+        "id": "auth:aw-public:geonames-10280574",
+        "location_precision": null,
+        "names": [
+          "布希里巴纳炼金厂遗址",
+          "Bushiribana Ruins",
+          "Bushiribana Gold Mill Ruins"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -69.97677,
+          12.55355
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The visitor authority identifies the original mill ruin as an outdoor public sightseeing site.",
+            "id": "auth:aw-public:geonames-10280574:aw-bushiribana-ata.html",
+            "license": null,
+            "publisher": "Aruba Tourism Authority",
+            "revision": "Snapshot 2026-11-28; SHA-256 c3c660dbf4ae3821df34a91b617c51b854b4d1bf4964cb1ee494d09d920dd808.",
+            "title": "Bushiribana Gold Smelter Ruins public visit and original site",
+            "uri": "https://www.aruba.com/us/explore/bushiribana-gold-mill-ruins"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The monument foundation verifies the exact named ruin in Bushiribana, Matavidiri and its Government of Aruba ownership.",
+            "id": "auth:aw-public:geonames-10280574:aw-bushiribana-register.html",
+            "license": null,
+            "publisher": "Stichting Monumentenfonds Aruba",
+            "revision": "Snapshot 2026-11-28; SHA-256 75aded0f9cf9ff15614438f2ff039b4f61ce36f371904c7a27a21e5e1ee1267c.",
+            "title": "Bushiribana Gold Smelter Ruins public visit and original site",
+            "uri": "https://monumentenfondsaruba.org/bushiribana-goldmill-1872/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -69.97677, latitude 12.55355.",
+            "id": "geonames:10280574",
+            "license": "CC BY 4.0",
+            "publisher": "GeoNames",
+            "revision": "GeoNames feature 10280574; native WGS84 RDF; SHA-256 9c8afee5c1530bd264d69eb4e237c4679620f6d153899e52dea89f9ceb3ee148.",
+            "title": "Bushiribana Gold Smelter Ruins representative point",
+            "uri": "https://sws.geonames.org/10280574/about.rdf"
+          }
+        ],
+        "source_uri": "https://www.aruba.com/us/explore/bushiribana-gold-mill-ruins",
+        "title": "Bushiribana Gold Smelter Ruins",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "aw-bushiribana-geonames.rdf",
+          "sha256": "9c8afee5c1530bd264d69eb4e237c4679620f6d153899e52dea89f9ceb3ee148",
+          "uri": "https://sws.geonames.org/10280574/about.rdf"
+        },
+        {
+          "filename": "aw-bushiribana-ata.html",
+          "sha256": "c3c660dbf4ae3821df34a91b617c51b854b4d1bf4964cb1ee494d09d920dd808",
+          "uri": "https://www.aruba.com/us/explore/bushiribana-gold-mill-ruins"
+        },
+        {
+          "filename": "aw-bushiribana-register.html",
+          "sha256": "75aded0f9cf9ff15614438f2ff039b4f61ce36f371904c7a27a21e5e1ee1267c",
+          "uri": "https://monumentenfondsaruba.org/bushiribana-goldmill-1872/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The original point is inside Landhuis Savonet. The matching Museum Savonet marker Q56405727 differs by less than one metre. This point denotes the house and its managed visit.",
+        "point": [
+          -69.10604166666667,
+          12.350552777777779
+        ],
+        "precision": 2.777777777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q124248498.json",
+        "statement_id": "Q124248498$7b54823e-4a3f-12de-ab88-04d466ea13a2"
+      },
+      "independent_review": {
+        "method": "Independently recomputed original GeoNames RDF and Wikidata points, compared current site visitor extents, UNESCO adopted protections and whole corpus identity; no structured dates assigned.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic plantation house at the Savonet entrance to Christoffelpark, occupied by the Savonet Museum. Public access covers the operator's museum rooms and designated historic buildings and routes. Interpretation includes plantation slavery and the lives of workers and families.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named original site and public scope were checked.",
+          "note": "No independently reviewed dated phase is assigned.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Carmabi Foundation / Christoffelpark",
+          "Wikidata contributors"
+        ],
+        "description": "The historic plantation house at the Savonet entrance to Christoffelpark, occupied by the Savonet Museum. Public access covers the operator's museum rooms and designated historic buildings and routes. Interpretation includes plantation slavery and the lives of workers and families.",
+        "description_zh": "萨沃内特种植园历史主屋位于库拉索。地图所示为经核对的历史原址代表点，参观范围以主管方公告为准。",
+        "details": "The historic plantation house at the Savonet entrance to Christoffelpark, occupied by the Savonet Museum. Public access covers the operator's museum rooms and designated historic buildings and routes. Interpretation includes plantation slavery and the lives of workers and families.",
+        "geography": {
+          "authority_id": "supplement:auth:cw-public:Q124248498",
+          "countries": [
+            "CW"
+          ],
+          "note": "Publicly documented modern island or area identity; original-site representative point.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator locates the museum in the original historic plantation house on Weg naar Westpunt and describes the public museum tour.",
+            "id": "auth:cw-public:Q124248498:cw-savonet-operator.html",
+            "license": null,
+            "publisher": "Carmabi Foundation / Christoffelpark",
+            "revision": "Snapshot 2026-11-28; SHA-256 d574e2369497e872e4f6bf13082c8ae4fbb7cd4abeaf862a413ad5c00f3e8e5c.",
+            "title": "Landhuis Savonet public visit and original site",
+            "uri": "https://www.christoffelpark.org/nl_NL/savonet-museum"
+          }
+        },
+        "id": "auth:cw-public:Q124248498",
+        "location_precision": null,
+        "names": [
+          "萨沃内特种植园历史主屋",
+          "Savonet Museum",
+          "Plantation House Savonet"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -69.10604166666667,
+          12.350552777777779
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator locates the museum in the original historic plantation house on Weg naar Westpunt and describes the public museum tour.",
+            "id": "auth:cw-public:Q124248498:cw-savonet-operator.html",
+            "license": null,
+            "publisher": "Carmabi Foundation / Christoffelpark",
+            "revision": "Snapshot 2026-11-28; SHA-256 d574e2369497e872e4f6bf13082c8ae4fbb7cd4abeaf862a413ad5c00f3e8e5c.",
+            "title": "Landhuis Savonet public visit and original site",
+            "uri": "https://www.christoffelpark.org/nl_NL/savonet-museum"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator separately states current daily museum-only admission and park hours.",
+            "id": "auth:cw-public:Q124248498:cw-savonet-hours.html",
+            "license": null,
+            "publisher": "Carmabi Foundation / Christoffelpark",
+            "revision": "Snapshot 2026-11-28; SHA-256 c16c3c4acee8c8bc4f36d115bbe4f4f12c608ae75fdb7e31bbf3e3bea02528ce.",
+            "title": "Landhuis Savonet public visit and original site",
+            "uri": "https://www.christoffelpark.org/nl_NL/opening-hours-fees"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The 27 September 2026 programme explicitly admitted the public to Savonet Museum and designated demonstrations on site.",
+            "id": "auth:cw-public:Q124248498:cw-savonet-2026-open-day.html",
+            "license": null,
+            "publisher": "Carmabi Foundation / Christoffelpark",
+            "revision": "Snapshot 2026-11-28; SHA-256 dbc39db2a644616a4896fd9f49683aa983a9dd95944203fcc43945cb80a20786.",
+            "title": "Landhuis Savonet public visit and original site",
+            "uri": "https://www.christoffelpark.org/nl_NL/christoffelpark-dia-habri"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude -69.10604166666667, latitude 12.350552777777779.",
+            "id": "wikidata:Q124248498",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2063310180; P625 Q124248498$7b54823e-4a3f-12de-ab88-04d466ea13a2.",
+            "title": "Landhuis Savonet representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q124248498.json"
+          }
+        ],
+        "source_uri": "https://www.christoffelpark.org/nl_NL/savonet-museum",
+        "title": "Landhuis Savonet",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "Q124248498.json",
+          "sha256": "40444050ca3d6fe97e0c50a96f20d129a55de15d1d52f937824584203e0b73a3",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q124248498.json"
+        },
+        {
+          "filename": "cw-savonet-operator.html",
+          "sha256": "d574e2369497e872e4f6bf13082c8ae4fbb7cd4abeaf862a413ad5c00f3e8e5c",
+          "uri": "https://www.christoffelpark.org/nl_NL/savonet-museum"
+        },
+        {
+          "filename": "cw-savonet-hours.html",
+          "sha256": "c16c3c4acee8c8bc4f36d115bbe4f4f12c608ae75fdb7e31bbf3e3bea02528ce",
+          "uri": "https://www.christoffelpark.org/nl_NL/opening-hours-fees"
+        },
+        {
+          "filename": "cw-savonet-2026-open-day.html",
+          "sha256": "dbc39db2a644616a4896fd9f49683aa983a9dd95944203fcc43945cb80a20786",
+          "uri": "https://www.christoffelpark.org/nl_NL/christoffelpark-dia-habri"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Three verified public built heritage locations in Aruba and Curacao, using two original CC0 statements and a single GeoNames CC BY 4.0 coordinate."
+}
