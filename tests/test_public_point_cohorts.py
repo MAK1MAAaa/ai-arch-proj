@@ -132,6 +132,12 @@ def test_public_point_search_catalogue_and_provenance(
             ("PY", "auth:py-public:", 5),
             ("KZ", "auth:kz-public:", 3),
             ("UZ", "auth:uz-public:", 8),
+            ("GB", "auth:gb-nhle:", 29),
+            ("EC", "auth:ec-public:", 2),
+            ("BO", "auth:bo-public:", 3),
+            ("BR", "auth:br-public:", 3),
+            ("GY", "auth:gy-public:", 3),
+            ("NO", "auth:no-askeladden:", 8),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -218,3 +224,22 @@ def test_public_point_search_catalogue_and_provenance(
         assert ming_urik["repr_point"] == [69.28598013644901, 41.29831008865522]
         assert ming_urik["source_kind"] == "supplement"
         assert any(ref["license"] == "CC0" for ref in ming_urik["source_refs"])
+        dunstanburgh = client.get("/api/sites/auth:gb-nhle:1153477").json()
+        assert dunstanburgh["repr_point"] == [-1.595110996673, 55.4893096027667]
+        assert any(
+            ref["license"] == "UK Open Government Licence v3.0"
+            and "Ordnance Survey data" in ref["excerpt"]
+            for ref in dunstanburgh["source_refs"]
+        )
+        whalley = client.get("/api/sites/auth:gb-nhle:1362365").json()
+        assert "Its interior is closed" in whalley["details"]
+        parliament = client.get("/api/sites/auth:gy-public:Q7138904").json()
+        assert any(
+            "parliament.gov.gy/about-parliament/access-to-the-public-buildings/" in ref["uri"]
+            for ref in parliament["source_refs"]
+        )
+        assert parliament["chronology"]["phases"] == []
+        assert client.get("/api/sites/auth:br-public:Q48884405").status_code == 404
+        fredriksten = client.get("/api/sites/auth:no-askeladden:122685").json()
+        assert fredriksten["repr_point"] == [11.39722, 59.11981]
+        assert {"NLOD 1.0", "CC0"}.issubset(ref["license"] for ref in fredriksten["source_refs"])

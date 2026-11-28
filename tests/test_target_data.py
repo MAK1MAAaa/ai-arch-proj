@@ -162,11 +162,12 @@ def test_guyana_batch_rebuilds_with_original_corpus_unchanged(
 
 
 def test_guyana_catalogue_keeps_source_scopes_and_distinct_event_precision(tmp_path: Path) -> None:
+    expected_total = 11
     with TestClient(create_app(home=tmp_path)) as client:
         page = client.get("/api/sites", params={
             "country": "GY", "region": "latin-america-caribbean", "limit": 50,
         }).json()
-        assert page["corpus_version"] == CORPUS_VERSION and page["total"] == 8
+        assert page["corpus_version"] == CORPUS_VERSION and page["total"] == expected_total
         prefixes = "auth:gy-ntg:"
         records = {
             site["id"].removeprefix(prefixes): site for site in page["sites"]
@@ -201,4 +202,5 @@ def test_guyana_catalogue_keeps_source_scopes_and_distinct_event_precision(tmp_p
         assert results["results"][0]["site"]["id"] == prefixes + "stabroek-market"
         facets = client.get("/api/subdivisions?country=GY").json()
         assert facets["ready"] and facets["subdivision_version"] == "source-subdivisions-v9"
-        assert not facets["supported"] and facets["assigned"] == 0 and facets["unassigned"] == 8
+        assert not facets["supported"] and facets["assigned"] == 0
+        assert facets["unassigned"] == expected_total

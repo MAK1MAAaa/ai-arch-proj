@@ -1,0 +1,1058 @@
+{
+  "base_count": 4705,
+  "base_ids_sha256": "867a67964552874ad3335682e10dbcec8341b704bfaec5b0c51db21facf5529b",
+  "base_sites_sha256": "8ddaad1b8f9c807d81b9a3502ff1205583040a06d6e7aea46d832314897d6f10",
+  "cohort_version": "norway-askeladden-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth coordinate. It falls inside the public Askeladden locality 109883; the official geometry was used only to verify identity.",
+        "point": [
+          31.0953,
+          70.37207
+        ],
+        "precision": 1e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1476429.json",
+        "statement_id": "Q1476429$80EE3A8A-6FC1-4445-9F2A-17DF1E695B9C"
+      },
+      "independent_review": {
+        "method": "Independently verified exact CC0 Wikidata statements and hashes, point-in-polygon checks in the original NLOD national registry geometry, positive official visitor scope, and exclusion of duplicates or restricted areas.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public historic star-shaped fortress on Vardø. The official grounds schedule includes winter hours.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Heritage identity, public access and original coordinate were checked.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Forsvarsbygg",
+          "Riksantikvaren",
+          "Wikidata contributors"
+        ],
+        "description": "Public historic star-shaped fortress on Vardø. The official grounds schedule includes winter hours.",
+        "description_zh": "瓦尔德胡斯要塞位于挪威，具有官方公众参观依据。地图标注遗产场所的代表点。",
+        "details": "Public historic star-shaped fortress on Vardø. The official grounds schedule includes winter hours.",
+        "geography": {
+          "authority_id": "supplement:auth:no-askeladden:109883",
+          "countries": [
+            "NO"
+          ],
+          "note": "Public heritage property in Vardø, Finnmark, Norway.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The public operator identifies the documented heritage property and visitor arrangements.",
+            "id": "auth:no-askeladden:109883:source:0",
+            "license": null,
+            "publisher": "Forsvarsbygg",
+            "revision": "Retrieved 2026-11-28. SHA-256 f458e6d1f1cfef985687e7ce7a69f0d36d929be62e634b62dcaaa769baf8eb45.",
+            "title": "Vardøhus Fortress public visitor information",
+            "uri": "https://www.forsvarsbygg.no/en/festningene/vardohus-fortress"
+          }
+        },
+        "id": "auth:no-askeladden:109883",
+        "location_precision": null,
+        "names": [
+          "瓦尔德胡斯要塞",
+          "Vardøhus Fortress",
+          "Vardøhus festning"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          31.0953,
+          70.37207
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public operator identifies the documented heritage property and visitor arrangements.",
+            "id": "auth:no-askeladden:109883:source:0",
+            "license": null,
+            "publisher": "Forsvarsbygg",
+            "revision": "Retrieved 2026-11-28. SHA-256 f458e6d1f1cfef985687e7ce7a69f0d36d929be62e634b62dcaaa769baf8eb45.",
+            "title": "Vardøhus Fortress public visitor information",
+            "uri": "https://www.forsvarsbygg.no/en/festningene/vardohus-fortress"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Contains data under the Norwegian Licence for Open Government Data (NLOD) distributed by Riksantikvaren.",
+            "id": "auth:no-askeladden:109883:source:1",
+            "license": "NLOD 1.0",
+            "publisher": "Riksantikvaren",
+            "revision": "Retrieved 2026-11-28. SHA-256 f70e40588fba62d698fea4b27429263fc2dfbfd8446c59ce6b7c133c2dbfafd0.",
+            "title": "Askeladden public record 109883",
+            "uri": "https://wfs.geonorge.no/skwms1/wfs.kulturminner?service=WFS&request=GetFeature&version=2.0.0&typeNames=app%3ALokalitet&srsName=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&FILTER=%3Cfes%3AFilter+xmlns%3Afes%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22+xmlns%3Aapp%3D%22http%3A%2F%2Fskjema.geonorge.no%2FSOSI%2Fproduktspesifikasjon%2FKulturminner%2F20220101%22%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3EkulturminneId%3C%2Ffes%3AValueReference%3E%3Cfes%3ALiteral%3E109883%3C%2Ffes%3ALiteral%3E%3C%2Ffes%3APropertyIsEqualTo%3E%3C%2Ffes%3AFilter%3E"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 31.0953, latitude 70.37207.",
+            "id": "auth:no-askeladden:109883:source:2",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2544792655. P625 Q1476429$80EE3A8A-6FC1-4445-9F2A-17DF1E695B9C.",
+            "title": "Vardøhus Fortress representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1476429.json"
+          }
+        ],
+        "source_uri": "https://www.forsvarsbygg.no/en/festningene/vardohus-fortress",
+        "title": "Vardøhus Fortress",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visit-vardohus-fortress.html",
+          "sha256": "f458e6d1f1cfef985687e7ce7a69f0d36d929be62e634b62dcaaa769baf8eb45",
+          "uri": "https://www.forsvarsbygg.no/en/festningene/vardohus-fortress"
+        },
+        {
+          "filename": "source/askeladden-109883.xml",
+          "sha256": "f70e40588fba62d698fea4b27429263fc2dfbfd8446c59ce6b7c133c2dbfafd0",
+          "uri": "https://wfs.geonorge.no/skwms1/wfs.kulturminner?service=WFS&request=GetFeature&version=2.0.0&typeNames=app%3ALokalitet&srsName=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&FILTER=%3Cfes%3AFilter+xmlns%3Afes%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22+xmlns%3Aapp%3D%22http%3A%2F%2Fskjema.geonorge.no%2FSOSI%2Fproduktspesifikasjon%2FKulturminner%2F20220101%22%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3EkulturminneId%3C%2Ffes%3AValueReference%3E%3Cfes%3ALiteral%3E109883%3C%2Ffes%3ALiteral%3E%3C%2Ffes%3APropertyIsEqualTo%3E%3C%2Ffes%3AFilter%3E"
+        },
+        {
+          "filename": "source/Q1476429.json",
+          "sha256": "4f6b33a8c063ebd4d4c0b4d6655ddf943711ff53d52eb2c88223cc9569f71a6c",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1476429.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth coordinate. It falls inside the public Askeladden locality 114218; the official geometry was used only to verify identity.",
+        "point": [
+          10.03916667,
+          58.99666667
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5499579.json",
+        "statement_id": "Q5499579$C1845F59-740D-4CA9-91E2-7CDF6597C69E"
+      },
+      "independent_review": {
+        "method": "Independently verified exact CC0 Wikidata statements and hashes, point-in-polygon checks in the original NLOD national registry geometry, positive official visitor scope, and exclusion of duplicates or restricted areas.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic naval yard in Stavern, now a public cultural venue. The marker represents the yard as a whole.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Heritage identity, public access and original coordinate were checked.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Forsvarsbygg",
+          "Riksantikvaren",
+          "Wikidata contributors"
+        ],
+        "description": "Historic naval yard in Stavern, now a public cultural venue. The marker represents the yard as a whole.",
+        "description_zh": "弗雷德里克斯韦恩旧海军造船厂位于挪威，具有官方公众参观依据。地图标注遗产场所的代表点。",
+        "details": "Historic naval yard in Stavern, now a public cultural venue. The marker represents the yard as a whole.",
+        "geography": {
+          "authority_id": "supplement:auth:no-askeladden:114218",
+          "countries": [
+            "NO"
+          ],
+          "note": "Public heritage property in Stavern, Vestfold, Norway.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The public operator identifies the documented heritage property and visitor arrangements.",
+            "id": "auth:no-askeladden:114218:source:0",
+            "license": null,
+            "publisher": "Forsvarsbygg",
+            "revision": "Retrieved 2026-11-28. SHA-256 62a682a0bc1d610072ebd12403fd0ffbd2f924f71ceb26adb92a586c0527f02b.",
+            "title": "Fredriksvern Naval Yard public visitor information",
+            "uri": "https://www.forsvarsbygg.no/en/festningene/fredriksvern-naval-yard"
+          }
+        },
+        "id": "auth:no-askeladden:114218",
+        "location_precision": null,
+        "names": [
+          "弗雷德里克斯韦恩旧海军造船厂",
+          "Fredriksvern Naval Yard",
+          "Fredriksvern verft"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          10.03916667,
+          58.99666667
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public operator identifies the documented heritage property and visitor arrangements.",
+            "id": "auth:no-askeladden:114218:source:0",
+            "license": null,
+            "publisher": "Forsvarsbygg",
+            "revision": "Retrieved 2026-11-28. SHA-256 62a682a0bc1d610072ebd12403fd0ffbd2f924f71ceb26adb92a586c0527f02b.",
+            "title": "Fredriksvern Naval Yard public visitor information",
+            "uri": "https://www.forsvarsbygg.no/en/festningene/fredriksvern-naval-yard"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Contains data under the Norwegian Licence for Open Government Data (NLOD) distributed by Riksantikvaren.",
+            "id": "auth:no-askeladden:114218:source:1",
+            "license": "NLOD 1.0",
+            "publisher": "Riksantikvaren",
+            "revision": "Retrieved 2026-11-28. SHA-256 e4b2e04b0100c87a0bf1651084e8d3d7b8cdd196900664e04ba5033ea859244c.",
+            "title": "Askeladden public record 114218",
+            "uri": "https://wfs.geonorge.no/skwms1/wfs.kulturminner?service=WFS&request=GetFeature&version=2.0.0&typeNames=app%3ALokalitet&srsName=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&FILTER=%3Cfes%3AFilter+xmlns%3Afes%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22+xmlns%3Aapp%3D%22http%3A%2F%2Fskjema.geonorge.no%2FSOSI%2Fproduktspesifikasjon%2FKulturminner%2F20220101%22%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3EkulturminneId%3C%2Ffes%3AValueReference%3E%3Cfes%3ALiteral%3E114218%3C%2Ffes%3ALiteral%3E%3C%2Ffes%3APropertyIsEqualTo%3E%3C%2Ffes%3AFilter%3E"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 10.03916667, latitude 58.99666667.",
+            "id": "auth:no-askeladden:114218:source:2",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2272010470. P625 Q5499579$C1845F59-740D-4CA9-91E2-7CDF6597C69E.",
+            "title": "Fredriksvern Naval Yard representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5499579.json"
+          }
+        ],
+        "source_uri": "https://www.forsvarsbygg.no/en/festningene/fredriksvern-naval-yard",
+        "title": "Fredriksvern Naval Yard",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visit-fredriksvern-naval-yard.html",
+          "sha256": "62a682a0bc1d610072ebd12403fd0ffbd2f924f71ceb26adb92a586c0527f02b",
+          "uri": "https://www.forsvarsbygg.no/en/festningene/fredriksvern-naval-yard"
+        },
+        {
+          "filename": "source/askeladden-114218.xml",
+          "sha256": "e4b2e04b0100c87a0bf1651084e8d3d7b8cdd196900664e04ba5033ea859244c",
+          "uri": "https://wfs.geonorge.no/skwms1/wfs.kulturminner?service=WFS&request=GetFeature&version=2.0.0&typeNames=app%3ALokalitet&srsName=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&FILTER=%3Cfes%3AFilter+xmlns%3Afes%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22+xmlns%3Aapp%3D%22http%3A%2F%2Fskjema.geonorge.no%2FSOSI%2Fproduktspesifikasjon%2FKulturminner%2F20220101%22%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3EkulturminneId%3C%2Ffes%3AValueReference%3E%3Cfes%3ALiteral%3E114218%3C%2Ffes%3ALiteral%3E%3C%2Ffes%3APropertyIsEqualTo%3E%3C%2Ffes%3AFilter%3E"
+        },
+        {
+          "filename": "source/Q5499579.json",
+          "sha256": "13c66f763853c0b2e03f9661c1dafab5a99a442e45490375b34b3e88533e65f2",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5499579.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth coordinate. It falls inside the public Askeladden locality 122685; the official geometry was used only to verify identity.",
+        "point": [
+          11.39722,
+          59.11981
+        ],
+        "precision": 2.77778e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1408884.json",
+        "statement_id": "q1408884$111EC501-B9F2-43AC-BEB0-057FF36C0D9E"
+      },
+      "independent_review": {
+        "method": "Independently verified exact CC0 Wikidata statements and hashes, point-in-polygon checks in the original NLOD national registry geometry, positive official visitor scope, and exclusion of duplicates or restricted areas.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Open public grounds of the historic fortress at Halden. The museums have separate opening hours.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Heritage identity, public access and original coordinate were checked.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Forsvarsbygg",
+          "Riksantikvaren",
+          "Wikidata contributors"
+        ],
+        "description": "Open public grounds of the historic fortress at Halden. The museums have separate opening hours.",
+        "description_zh": "弗雷德里克斯滕要塞位于挪威，具有官方公众参观依据。地图标注遗产场所的代表点。",
+        "details": "Open public grounds of the historic fortress at Halden. The museums have separate opening hours.",
+        "geography": {
+          "authority_id": "supplement:auth:no-askeladden:122685",
+          "countries": [
+            "NO"
+          ],
+          "note": "Public heritage property in Halden, Østfold, Norway.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The public operator identifies the documented heritage property and visitor arrangements.",
+            "id": "auth:no-askeladden:122685:source:0",
+            "license": null,
+            "publisher": "Forsvarsbygg",
+            "revision": "Retrieved 2026-11-28. SHA-256 7ea2272c2837e6727fd6aae968b9e3843fb72c6dc799925741c5fade668b4cba.",
+            "title": "Fredriksten Fortress public visitor information",
+            "uri": "https://www.forsvarsbygg.no/en/festningene/fredriksten-fortress"
+          }
+        },
+        "id": "auth:no-askeladden:122685",
+        "location_precision": null,
+        "names": [
+          "弗雷德里克斯滕要塞",
+          "Fredriksten Fortress",
+          "Fredriksten festning"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          11.39722,
+          59.11981
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public operator identifies the documented heritage property and visitor arrangements.",
+            "id": "auth:no-askeladden:122685:source:0",
+            "license": null,
+            "publisher": "Forsvarsbygg",
+            "revision": "Retrieved 2026-11-28. SHA-256 7ea2272c2837e6727fd6aae968b9e3843fb72c6dc799925741c5fade668b4cba.",
+            "title": "Fredriksten Fortress public visitor information",
+            "uri": "https://www.forsvarsbygg.no/en/festningene/fredriksten-fortress"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Contains data under the Norwegian Licence for Open Government Data (NLOD) distributed by Riksantikvaren.",
+            "id": "auth:no-askeladden:122685:source:1",
+            "license": "NLOD 1.0",
+            "publisher": "Riksantikvaren",
+            "revision": "Retrieved 2026-11-28. SHA-256 3621f69cfb1d2deda56c709b74f5c3150dd2b692f458846bebbb4e6e9e646b71.",
+            "title": "Askeladden public record 122685",
+            "uri": "https://wfs.geonorge.no/skwms1/wfs.kulturminner?service=WFS&request=GetFeature&version=2.0.0&typeNames=app%3ALokalitet&srsName=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&FILTER=%3Cfes%3AFilter+xmlns%3Afes%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22+xmlns%3Aapp%3D%22http%3A%2F%2Fskjema.geonorge.no%2FSOSI%2Fproduktspesifikasjon%2FKulturminner%2F20220101%22%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3EkulturminneId%3C%2Ffes%3AValueReference%3E%3Cfes%3ALiteral%3E122685%3C%2Ffes%3ALiteral%3E%3C%2Ffes%3APropertyIsEqualTo%3E%3C%2Ffes%3AFilter%3E"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 11.39722, latitude 59.11981.",
+            "id": "auth:no-askeladden:122685:source:2",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2488966342. P625 q1408884$111EC501-B9F2-43AC-BEB0-057FF36C0D9E.",
+            "title": "Fredriksten Fortress representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1408884.json"
+          }
+        ],
+        "source_uri": "https://www.forsvarsbygg.no/en/festningene/fredriksten-fortress",
+        "title": "Fredriksten Fortress",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visit-fredriksten-fortress.html",
+          "sha256": "7ea2272c2837e6727fd6aae968b9e3843fb72c6dc799925741c5fade668b4cba",
+          "uri": "https://www.forsvarsbygg.no/en/festningene/fredriksten-fortress"
+        },
+        {
+          "filename": "source/askeladden-122685.xml",
+          "sha256": "3621f69cfb1d2deda56c709b74f5c3150dd2b692f458846bebbb4e6e9e646b71",
+          "uri": "https://wfs.geonorge.no/skwms1/wfs.kulturminner?service=WFS&request=GetFeature&version=2.0.0&typeNames=app%3ALokalitet&srsName=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&FILTER=%3Cfes%3AFilter+xmlns%3Afes%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22+xmlns%3Aapp%3D%22http%3A%2F%2Fskjema.geonorge.no%2FSOSI%2Fproduktspesifikasjon%2FKulturminner%2F20220101%22%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3EkulturminneId%3C%2Ffes%3AValueReference%3E%3Cfes%3ALiteral%3E122685%3C%2Ffes%3ALiteral%3E%3C%2Ffes%3APropertyIsEqualTo%3E%3C%2Ffes%3AFilter%3E"
+        },
+        {
+          "filename": "source/Q1408884.json",
+          "sha256": "122438ab1e67fb455eab66ebaf683a460cb338f9374d231ef23fb83f5eee7f8b",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1408884.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth coordinate. It falls inside the public Askeladden locality 127247; the official geometry was used only to verify identity.",
+        "point": [
+          12.01161,
+          60.19952
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4994285.json",
+        "statement_id": "Q4994285$72C5D35F-90D0-4EB6-B523-8AAA634513B4"
+      },
+      "independent_review": {
+        "method": "Independently verified exact CC0 Wikidata statements and hashes, point-in-polygon checks in the original NLOD national registry geometry, positive official visitor scope, and exclusion of duplicates or restricted areas.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic fortress with public grounds above Kongsvinger.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Heritage identity, public access and original coordinate were checked.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Forsvarsbygg",
+          "Riksantikvaren",
+          "Wikidata contributors"
+        ],
+        "description": "Historic fortress with public grounds above Kongsvinger.",
+        "description_zh": "孔斯温厄尔要塞位于挪威，具有官方公众参观依据。地图标注遗产场所的代表点。",
+        "details": "Historic fortress with public grounds above Kongsvinger.",
+        "geography": {
+          "authority_id": "supplement:auth:no-askeladden:127247",
+          "countries": [
+            "NO"
+          ],
+          "note": "Public heritage property in Kongsvinger, Innlandet, Norway.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The public operator identifies the documented heritage property and visitor arrangements.",
+            "id": "auth:no-askeladden:127247:source:0",
+            "license": null,
+            "publisher": "Forsvarsbygg",
+            "revision": "Retrieved 2026-11-28. SHA-256 5bc247e9e88eafc7661ea186c0575f566f854012902d4a5bd7486de06bda3543.",
+            "title": "Kongsvinger Fortress public visitor information",
+            "uri": "https://www.forsvarsbygg.no/en/festningene/kongsvinger-fortress"
+          }
+        },
+        "id": "auth:no-askeladden:127247",
+        "location_precision": null,
+        "names": [
+          "孔斯温厄尔要塞",
+          "Kongsvinger Fortress",
+          "Kongsvinger festning"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          12.01161,
+          60.19952
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public operator identifies the documented heritage property and visitor arrangements.",
+            "id": "auth:no-askeladden:127247:source:0",
+            "license": null,
+            "publisher": "Forsvarsbygg",
+            "revision": "Retrieved 2026-11-28. SHA-256 5bc247e9e88eafc7661ea186c0575f566f854012902d4a5bd7486de06bda3543.",
+            "title": "Kongsvinger Fortress public visitor information",
+            "uri": "https://www.forsvarsbygg.no/en/festningene/kongsvinger-fortress"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Contains data under the Norwegian Licence for Open Government Data (NLOD) distributed by Riksantikvaren.",
+            "id": "auth:no-askeladden:127247:source:1",
+            "license": "NLOD 1.0",
+            "publisher": "Riksantikvaren",
+            "revision": "Retrieved 2026-11-28. SHA-256 f0c8b657b092eb04d32db9f6ac6bdb31474d5be58c3f704cfae916911ce7d615.",
+            "title": "Askeladden public record 127247",
+            "uri": "https://wfs.geonorge.no/skwms1/wfs.kulturminner?service=WFS&request=GetFeature&version=2.0.0&typeNames=app%3ALokalitet&srsName=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&FILTER=%3Cfes%3AFilter+xmlns%3Afes%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22+xmlns%3Aapp%3D%22http%3A%2F%2Fskjema.geonorge.no%2FSOSI%2Fproduktspesifikasjon%2FKulturminner%2F20220101%22%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3EkulturminneId%3C%2Ffes%3AValueReference%3E%3Cfes%3ALiteral%3E127247%3C%2Ffes%3ALiteral%3E%3C%2Ffes%3APropertyIsEqualTo%3E%3C%2Ffes%3AFilter%3E"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 12.01161, latitude 60.19952.",
+            "id": "auth:no-askeladden:127247:source:2",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2313864367. P625 Q4994285$72C5D35F-90D0-4EB6-B523-8AAA634513B4.",
+            "title": "Kongsvinger Fortress representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4994285.json"
+          }
+        ],
+        "source_uri": "https://www.forsvarsbygg.no/en/festningene/kongsvinger-fortress",
+        "title": "Kongsvinger Fortress",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visit-kongsvinger-fortress.html",
+          "sha256": "5bc247e9e88eafc7661ea186c0575f566f854012902d4a5bd7486de06bda3543",
+          "uri": "https://www.forsvarsbygg.no/en/festningene/kongsvinger-fortress"
+        },
+        {
+          "filename": "source/askeladden-127247.xml",
+          "sha256": "f0c8b657b092eb04d32db9f6ac6bdb31474d5be58c3f704cfae916911ce7d615",
+          "uri": "https://wfs.geonorge.no/skwms1/wfs.kulturminner?service=WFS&request=GetFeature&version=2.0.0&typeNames=app%3ALokalitet&srsName=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&FILTER=%3Cfes%3AFilter+xmlns%3Afes%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22+xmlns%3Aapp%3D%22http%3A%2F%2Fskjema.geonorge.no%2FSOSI%2Fproduktspesifikasjon%2FKulturminner%2F20220101%22%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3EkulturminneId%3C%2Ffes%3AValueReference%3E%3Cfes%3ALiteral%3E127247%3C%2Ffes%3ALiteral%3E%3C%2Ffes%3APropertyIsEqualTo%3E%3C%2Ffes%3AFilter%3E"
+        },
+        {
+          "filename": "source/Q4994285.json",
+          "sha256": "edb624d95120b2191bbeb2d6753fc7b12c5b6bbd9f319ef18eb8a6359c8a896f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q4994285.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth coordinate. It falls inside the public Askeladden locality 156858; the official geometry was used only to verify identity.",
+        "point": [
+          7.96833333,
+          58.09194444
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1769786.json",
+        "statement_id": "Q1769786$F5C4372A-1042-4227-8864-58C8C916FDDF"
+      },
+      "independent_review": {
+        "method": "Independently verified exact CC0 Wikidata statements and hashes, point-in-polygon checks in the original NLOD national registry geometry, positive official visitor scope, and exclusion of duplicates or restricted areas.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Former coastal military site interpreted as a public heritage landscape. The on-site museum has separate opening hours.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Heritage identity, public access and original coordinate were checked.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Forsvarsbygg",
+          "Riksantikvaren",
+          "Wikidata contributors"
+        ],
+        "description": "Former coastal military site interpreted as a public heritage landscape. The on-site museum has separate opening hours.",
+        "description_zh": "默维克堡遗址位于挪威，具有官方公众参观依据。地图标注遗产场所的代表点。",
+        "details": "Former coastal military site interpreted as a public heritage landscape. The on-site museum has separate opening hours.",
+        "geography": {
+          "authority_id": "supplement:auth:no-askeladden:156858",
+          "countries": [
+            "NO"
+          ],
+          "note": "Public heritage property in Kristiansand, Agder, Norway.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The public operator identifies the documented heritage property and visitor arrangements.",
+            "id": "auth:no-askeladden:156858:source:0",
+            "license": null,
+            "publisher": "Forsvarsbygg",
+            "revision": "Retrieved 2026-11-28. SHA-256 cca5d1841f47828f4f116e7ed6ffe78428bb41876ef0850422a6878f584c5c9f.",
+            "title": "Møvik Fort public visitor information",
+            "uri": "https://www.forsvarsbygg.no/en/festningene/M%C3%B8vik-fort"
+          }
+        },
+        "id": "auth:no-askeladden:156858",
+        "location_precision": null,
+        "names": [
+          "默维克堡遗址",
+          "Møvik Fort",
+          "Møvik fort"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          7.96833333,
+          58.09194444
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public operator identifies the documented heritage property and visitor arrangements.",
+            "id": "auth:no-askeladden:156858:source:0",
+            "license": null,
+            "publisher": "Forsvarsbygg",
+            "revision": "Retrieved 2026-11-28. SHA-256 cca5d1841f47828f4f116e7ed6ffe78428bb41876ef0850422a6878f584c5c9f.",
+            "title": "Møvik Fort public visitor information",
+            "uri": "https://www.forsvarsbygg.no/en/festningene/M%C3%B8vik-fort"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Contains data under the Norwegian Licence for Open Government Data (NLOD) distributed by Riksantikvaren.",
+            "id": "auth:no-askeladden:156858:source:1",
+            "license": "NLOD 1.0",
+            "publisher": "Riksantikvaren",
+            "revision": "Retrieved 2026-11-28. SHA-256 e5c5aff52be70f98010a09b0ba24f9cabb83ead061eab75ce838a666c4225df6.",
+            "title": "Askeladden public record 156858",
+            "uri": "https://wfs.geonorge.no/skwms1/wfs.kulturminner?service=WFS&request=GetFeature&version=2.0.0&typeNames=app%3ALokalitet&srsName=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&FILTER=%3Cfes%3AFilter+xmlns%3Afes%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22+xmlns%3Aapp%3D%22http%3A%2F%2Fskjema.geonorge.no%2FSOSI%2Fproduktspesifikasjon%2FKulturminner%2F20220101%22%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3EkulturminneId%3C%2Ffes%3AValueReference%3E%3Cfes%3ALiteral%3E156858%3C%2Ffes%3ALiteral%3E%3C%2Ffes%3APropertyIsEqualTo%3E%3C%2Ffes%3AFilter%3E"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 7.96833333, latitude 58.09194444.",
+            "id": "auth:no-askeladden:156858:source:2",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2502386935. P625 Q1769786$F5C4372A-1042-4227-8864-58C8C916FDDF.",
+            "title": "Møvik Fort representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1769786.json"
+          }
+        ],
+        "source_uri": "https://www.forsvarsbygg.no/en/festningene/M%C3%B8vik-fort",
+        "title": "Møvik Fort",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visit-m%c3%b8vik-fort.html",
+          "sha256": "cca5d1841f47828f4f116e7ed6ffe78428bb41876ef0850422a6878f584c5c9f",
+          "uri": "https://www.forsvarsbygg.no/en/festningene/M%C3%B8vik-fort"
+        },
+        {
+          "filename": "source/askeladden-156858.xml",
+          "sha256": "e5c5aff52be70f98010a09b0ba24f9cabb83ead061eab75ce838a666c4225df6",
+          "uri": "https://wfs.geonorge.no/skwms1/wfs.kulturminner?service=WFS&request=GetFeature&version=2.0.0&typeNames=app%3ALokalitet&srsName=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&FILTER=%3Cfes%3AFilter+xmlns%3Afes%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22+xmlns%3Aapp%3D%22http%3A%2F%2Fskjema.geonorge.no%2FSOSI%2Fproduktspesifikasjon%2FKulturminner%2F20220101%22%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3EkulturminneId%3C%2Ffes%3AValueReference%3E%3Cfes%3ALiteral%3E156858%3C%2Ffes%3ALiteral%3E%3C%2Ffes%3APropertyIsEqualTo%3E%3C%2Ffes%3AFilter%3E"
+        },
+        {
+          "filename": "source/Q1769786.json",
+          "sha256": "33355c2b9cee2f1c8759c3c2537df76523081bb1013e38fb23cd942231c22d06",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1769786.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth coordinate. It falls inside the public Askeladden locality 173268; the official geometry was used only to verify identity.",
+        "point": [
+          10.606666666667,
+          59.673611111111
+        ],
+        "precision": null,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2033069.json",
+        "statement_id": "q2033069$BBA456F8-F5BB-4BF6-8483-9B1541D0F430"
+      },
+      "independent_review": {
+        "method": "Independently verified exact CC0 Wikidata statements and hashes, point-in-polygon checks in the original NLOD national registry geometry, positive official visitor scope, and exclusion of duplicates or restricted areas.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public cultural heritage grounds on the main fortress island. The winter museum is accessible by advance arrangement.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Heritage identity, public access and original coordinate were checked.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Forsvarsbygg",
+          "Riksantikvaren",
+          "Wikidata contributors"
+        ],
+        "description": "Public cultural heritage grounds on the main fortress island. The winter museum is accessible by advance arrangement.",
+        "description_zh": "奥斯卡斯堡要塞位于挪威，具有官方公众参观依据。地图标注遗产场所的代表点。",
+        "details": "Public cultural heritage grounds on the main fortress island. The winter museum is accessible by advance arrangement.",
+        "geography": {
+          "authority_id": "supplement:auth:no-askeladden:173268",
+          "countries": [
+            "NO"
+          ],
+          "note": "Public heritage property in Frogn, Akershus, Norway.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The public operator identifies the documented heritage property and visitor arrangements.",
+            "id": "auth:no-askeladden:173268:source:0",
+            "license": null,
+            "publisher": "Forsvarsbygg",
+            "revision": "Retrieved 2026-11-28. SHA-256 318715fe3c21e739f044bb9cf4a1d1342e61058fff8d3733a7b5b06353380590.",
+            "title": "Oscarsborg Fortress public visitor information",
+            "uri": "https://www.forsvarsbygg.no/en/festningene/oscarsborg-fortress"
+          }
+        },
+        "id": "auth:no-askeladden:173268",
+        "location_precision": null,
+        "names": [
+          "奥斯卡斯堡要塞",
+          "Oscarsborg Fortress",
+          "Oscarsborg festning"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          10.606666666667,
+          59.673611111111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public operator identifies the documented heritage property and visitor arrangements.",
+            "id": "auth:no-askeladden:173268:source:0",
+            "license": null,
+            "publisher": "Forsvarsbygg",
+            "revision": "Retrieved 2026-11-28. SHA-256 318715fe3c21e739f044bb9cf4a1d1342e61058fff8d3733a7b5b06353380590.",
+            "title": "Oscarsborg Fortress public visitor information",
+            "uri": "https://www.forsvarsbygg.no/en/festningene/oscarsborg-fortress"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public operator identifies the documented heritage property and visitor arrangements.",
+            "id": "auth:no-askeladden:173268:source:1",
+            "license": null,
+            "publisher": "Forsvarsbygg",
+            "revision": "Retrieved 2026-11-28. SHA-256 4b2e8f14debddf3a130fdbe9afca2f8a602e7e56fcdac825b25cb7a952ec87f8.",
+            "title": "Oscarsborg Fortress public visitor information",
+            "uri": "https://www.forsvarsbygg.no/en/festningene/oscarsborg-fortress/oscarsborg-ferry"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Contains data under the Norwegian Licence for Open Government Data (NLOD) distributed by Riksantikvaren.",
+            "id": "auth:no-askeladden:173268:source:2",
+            "license": "NLOD 1.0",
+            "publisher": "Riksantikvaren",
+            "revision": "Retrieved 2026-11-28. SHA-256 97e0f6059c42266dbe80d2dc34da67d916f42f27bf533fca780c5e065bf2b7a1.",
+            "title": "Askeladden public record 173268",
+            "uri": "https://wfs.geonorge.no/skwms1/wfs.kulturminner?service=WFS&request=GetFeature&version=2.0.0&typeNames=app%3ALokalitet&srsName=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&FILTER=%3Cfes%3AFilter+xmlns%3Afes%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22+xmlns%3Aapp%3D%22http%3A%2F%2Fskjema.geonorge.no%2FSOSI%2Fproduktspesifikasjon%2FKulturminner%2F20220101%22%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3EkulturminneId%3C%2Ffes%3AValueReference%3E%3Cfes%3ALiteral%3E173268%3C%2Ffes%3ALiteral%3E%3C%2Ffes%3APropertyIsEqualTo%3E%3C%2Ffes%3AFilter%3E"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 10.606666666667, latitude 59.673611111111.",
+            "id": "auth:no-askeladden:173268:source:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2485607455. P625 q2033069$BBA456F8-F5BB-4BF6-8483-9B1541D0F430.",
+            "title": "Oscarsborg Fortress representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2033069.json"
+          }
+        ],
+        "source_uri": "https://www.forsvarsbygg.no/en/festningene/oscarsborg-fortress",
+        "title": "Oscarsborg Fortress",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visit-oscarsborg-fortress.html",
+          "sha256": "318715fe3c21e739f044bb9cf4a1d1342e61058fff8d3733a7b5b06353380590",
+          "uri": "https://www.forsvarsbygg.no/en/festningene/oscarsborg-fortress"
+        },
+        {
+          "filename": "source/oscarsborg-ferry.html",
+          "sha256": "4b2e8f14debddf3a130fdbe9afca2f8a602e7e56fcdac825b25cb7a952ec87f8",
+          "uri": "https://www.forsvarsbygg.no/en/festningene/oscarsborg-fortress/oscarsborg-ferry"
+        },
+        {
+          "filename": "source/askeladden-173268.xml",
+          "sha256": "97e0f6059c42266dbe80d2dc34da67d916f42f27bf533fca780c5e065bf2b7a1",
+          "uri": "https://wfs.geonorge.no/skwms1/wfs.kulturminner?service=WFS&request=GetFeature&version=2.0.0&typeNames=app%3ALokalitet&srsName=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&FILTER=%3Cfes%3AFilter+xmlns%3Afes%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22+xmlns%3Aapp%3D%22http%3A%2F%2Fskjema.geonorge.no%2FSOSI%2Fproduktspesifikasjon%2FKulturminner%2F20220101%22%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3EkulturminneId%3C%2Ffes%3AValueReference%3E%3Cfes%3ALiteral%3E173268%3C%2Ffes%3ALiteral%3E%3C%2Ffes%3APropertyIsEqualTo%3E%3C%2Ffes%3AFilter%3E"
+        },
+        {
+          "filename": "source/Q2033069.json",
+          "sha256": "3a42097644cde6e35d5c899a6da9b69973b0fe4a1b23f8b9bce1ad3da586b0fb",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2033069.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth coordinate. It falls inside the public Askeladden locality 179983; the official geometry was used only to verify identity.",
+        "point": [
+          10.41055556,
+          63.42694444
+        ],
+        "precision": 0.00027777777777778,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2705932.json",
+        "statement_id": "Q2705932$C129EA1C-E487-4000-B156-80892AA838CE"
+      },
+      "independent_review": {
+        "method": "Independently verified exact CC0 Wikidata statements and hashes, point-in-polygon checks in the original NLOD national registry geometry, positive official visitor scope, and exclusion of duplicates or restricted areas.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic fortress in Trondheim. Daily grounds access follows the flag schedule and indoor visits are seasonal.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Heritage identity, public access and original coordinate were checked.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Forsvarsbygg",
+          "Riksantikvaren",
+          "Wikidata contributors"
+        ],
+        "description": "Historic fortress in Trondheim. Daily grounds access follows the flag schedule and indoor visits are seasonal.",
+        "description_zh": "克里斯蒂安斯滕要塞位于挪威，具有官方公众参观依据。地图标注遗产场所的代表点。",
+        "details": "Historic fortress in Trondheim. Daily grounds access follows the flag schedule and indoor visits are seasonal.",
+        "geography": {
+          "authority_id": "supplement:auth:no-askeladden:179983",
+          "countries": [
+            "NO"
+          ],
+          "note": "Public heritage property in Trondheim, Trøndelag, Norway.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The public operator identifies the documented heritage property and visitor arrangements.",
+            "id": "auth:no-askeladden:179983:source:0",
+            "license": null,
+            "publisher": "Forsvarsbygg",
+            "revision": "Retrieved 2026-11-28. SHA-256 9116c36ac9661a7838faf177f1142115858be1a2ce0b6c1f892d4dff4a620c10.",
+            "title": "Kristiansten Fortress public visitor information",
+            "uri": "https://www.forsvarsbygg.no/en/festningene/kristiansten-fortress"
+          }
+        },
+        "id": "auth:no-askeladden:179983",
+        "location_precision": null,
+        "names": [
+          "克里斯蒂安斯滕要塞",
+          "Kristiansten Fortress",
+          "Kristiansten festning"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          10.41055556,
+          63.42694444
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public operator identifies the documented heritage property and visitor arrangements.",
+            "id": "auth:no-askeladden:179983:source:0",
+            "license": null,
+            "publisher": "Forsvarsbygg",
+            "revision": "Retrieved 2026-11-28. SHA-256 9116c36ac9661a7838faf177f1142115858be1a2ce0b6c1f892d4dff4a620c10.",
+            "title": "Kristiansten Fortress public visitor information",
+            "uri": "https://www.forsvarsbygg.no/en/festningene/kristiansten-fortress"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Contains data under the Norwegian Licence for Open Government Data (NLOD) distributed by Riksantikvaren.",
+            "id": "auth:no-askeladden:179983:source:1",
+            "license": "NLOD 1.0",
+            "publisher": "Riksantikvaren",
+            "revision": "Retrieved 2026-11-28. SHA-256 d418609559df97a476eab98d2ac7985c4ea0f2af7ba8938c9078f15f9a97dfda.",
+            "title": "Askeladden public record 179983",
+            "uri": "https://wfs.geonorge.no/skwms1/wfs.kulturminner?service=WFS&request=GetFeature&version=2.0.0&typeNames=app%3ALokalitet&srsName=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&FILTER=%3Cfes%3AFilter+xmlns%3Afes%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22+xmlns%3Aapp%3D%22http%3A%2F%2Fskjema.geonorge.no%2FSOSI%2Fproduktspesifikasjon%2FKulturminner%2F20220101%22%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3EkulturminneId%3C%2Ffes%3AValueReference%3E%3Cfes%3ALiteral%3E179983%3C%2Ffes%3ALiteral%3E%3C%2Ffes%3APropertyIsEqualTo%3E%3C%2Ffes%3AFilter%3E"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 10.41055556, latitude 63.42694444.",
+            "id": "auth:no-askeladden:179983:source:2",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2408017252. P625 Q2705932$C129EA1C-E487-4000-B156-80892AA838CE.",
+            "title": "Kristiansten Fortress representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2705932.json"
+          }
+        ],
+        "source_uri": "https://www.forsvarsbygg.no/en/festningene/kristiansten-fortress",
+        "title": "Kristiansten Fortress",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/visit-kristiansten-fortress.html",
+          "sha256": "9116c36ac9661a7838faf177f1142115858be1a2ce0b6c1f892d4dff4a620c10",
+          "uri": "https://www.forsvarsbygg.no/en/festningene/kristiansten-fortress"
+        },
+        {
+          "filename": "source/askeladden-179983.xml",
+          "sha256": "d418609559df97a476eab98d2ac7985c4ea0f2af7ba8938c9078f15f9a97dfda",
+          "uri": "https://wfs.geonorge.no/skwms1/wfs.kulturminner?service=WFS&request=GetFeature&version=2.0.0&typeNames=app%3ALokalitet&srsName=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&FILTER=%3Cfes%3AFilter+xmlns%3Afes%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22+xmlns%3Aapp%3D%22http%3A%2F%2Fskjema.geonorge.no%2FSOSI%2Fproduktspesifikasjon%2FKulturminner%2F20220101%22%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3EkulturminneId%3C%2Ffes%3AValueReference%3E%3Cfes%3ALiteral%3E179983%3C%2Ffes%3ALiteral%3E%3C%2Ffes%3APropertyIsEqualTo%3E%3C%2Ffes%3AFilter%3E"
+        },
+        {
+          "filename": "source/Q2705932.json",
+          "sha256": "bb503d3265cb22c82b66f4cabbde5bb7cfa2cfc9b1c845949ef2c0f1eff75ecf",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2705932.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original active Earth coordinate. It falls inside the public Askeladden locality 90310; the official geometry was used only to verify identity.",
+        "point": [
+          10.96277778,
+          59.19777778
+        ],
+        "precision": 0.0001,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11981717.json",
+        "statement_id": "Q11981717$181901B6-24E7-43EC-8837-0F7124C4E215"
+      },
+      "independent_review": {
+        "method": "Independently verified exact CC0 Wikidata statements and hashes, point-in-polygon checks in the original NLOD national registry geometry, positive official visitor scope, and exclusion of duplicates or restricted areas.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic fort east of the old fortified town of Fredrikstad, independently presented as a public visitor site.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Heritage identity, public access and original coordinate were checked.",
+          "note": "No dated historical phase is assigned in this point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Østfoldmuseene",
+          "Riksantikvaren",
+          "Wikidata contributors"
+        ],
+        "description": "Historic fort east of the old fortified town of Fredrikstad, independently presented as a public visitor site.",
+        "description_zh": "孔斯滕堡位于挪威，具有官方公众参观依据。地图标注遗产场所的代表点。",
+        "details": "Historic fort east of the old fortified town of Fredrikstad, independently presented as a public visitor site.",
+        "geography": {
+          "authority_id": "supplement:auth:no-askeladden:90310",
+          "countries": [
+            "NO"
+          ],
+          "note": "Public heritage property in Fredrikstad, Østfold, Norway.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The public operator identifies the documented heritage property and visitor arrangements.",
+            "id": "auth:no-askeladden:90310:source:0",
+            "license": null,
+            "publisher": "Østfoldmuseene",
+            "revision": "Retrieved 2026-11-28. SHA-256 da96a64da104a6c68edf5d8f4d95eb39b3442b66ebe6862d563853cd7c4439c8.",
+            "title": "Kongsten Fort public visitor information",
+            "uri": "https://ostfoldmuseene.no/fredrikstad/omvisning-kongsten-fort"
+          }
+        },
+        "id": "auth:no-askeladden:90310",
+        "location_precision": null,
+        "names": [
+          "孔斯滕堡",
+          "Kongsten Fort",
+          "Kongsten fort"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          10.96277778,
+          59.19777778
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The public operator identifies the documented heritage property and visitor arrangements.",
+            "id": "auth:no-askeladden:90310:source:0",
+            "license": null,
+            "publisher": "Østfoldmuseene",
+            "revision": "Retrieved 2026-11-28. SHA-256 da96a64da104a6c68edf5d8f4d95eb39b3442b66ebe6862d563853cd7c4439c8.",
+            "title": "Kongsten Fort public visitor information",
+            "uri": "https://ostfoldmuseene.no/fredrikstad/omvisning-kongsten-fort"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Contains data under the Norwegian Licence for Open Government Data (NLOD) distributed by Riksantikvaren.",
+            "id": "auth:no-askeladden:90310:source:1",
+            "license": "NLOD 1.0",
+            "publisher": "Riksantikvaren",
+            "revision": "Retrieved 2026-11-28. SHA-256 b246eff741f0781b4788e466798cf2604ea99baf1782ac992653272acbf756f7.",
+            "title": "Askeladden public record 90310",
+            "uri": "https://wfs.geonorge.no/skwms1/wfs.kulturminner?service=WFS&request=GetFeature&version=2.0.0&typeNames=app%3ALokalitet&srsName=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&FILTER=%3Cfes%3AFilter+xmlns%3Afes%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22+xmlns%3Aapp%3D%22http%3A%2F%2Fskjema.geonorge.no%2FSOSI%2Fproduktspesifikasjon%2FKulturminner%2F20220101%22%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3EkulturminneId%3C%2Ffes%3AValueReference%3E%3Cfes%3ALiteral%3E90310%3C%2Ffes%3ALiteral%3E%3C%2Ffes%3APropertyIsEqualTo%3E%3C%2Ffes%3AFilter%3E"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Longitude 10.96277778, latitude 59.19777778.",
+            "id": "auth:no-askeladden:90310:source:2",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2517325081. P625 Q11981717$181901B6-24E7-43EC-8837-0F7124C4E215.",
+            "title": "Kongsten Fort representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11981717.json"
+          }
+        ],
+        "source_uri": "https://ostfoldmuseene.no/fredrikstad/omvisning-kongsten-fort",
+        "title": "Kongsten Fort",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/kongsten-museum.html",
+          "sha256": "da96a64da104a6c68edf5d8f4d95eb39b3442b66ebe6862d563853cd7c4439c8",
+          "uri": "https://ostfoldmuseene.no/fredrikstad/omvisning-kongsten-fort"
+        },
+        {
+          "filename": "source/askeladden-90310.xml",
+          "sha256": "b246eff741f0781b4788e466798cf2604ea99baf1782ac992653272acbf756f7",
+          "uri": "https://wfs.geonorge.no/skwms1/wfs.kulturminner?service=WFS&request=GetFeature&version=2.0.0&typeNames=app%3ALokalitet&srsName=urn%3Aogc%3Adef%3Acrs%3AEPSG%3A%3A4326&FILTER=%3Cfes%3AFilter+xmlns%3Afes%3D%22http%3A%2F%2Fwww.opengis.net%2Ffes%2F2.0%22+xmlns%3Aapp%3D%22http%3A%2F%2Fskjema.geonorge.no%2FSOSI%2Fproduktspesifikasjon%2FKulturminner%2F20220101%22%3E%3Cfes%3APropertyIsEqualTo%3E%3Cfes%3AValueReference%3EkulturminneId%3C%2Ffes%3AValueReference%3E%3Cfes%3ALiteral%3E90310%3C%2Ffes%3ALiteral%3E%3C%2Ffes%3APropertyIsEqualTo%3E%3C%2Ffes%3AFilter%3E"
+        },
+        {
+          "filename": "source/Q11981717.json",
+          "sha256": "d31c4762b132c2f932727a269ce2e055c2c6e9e8be582c39682ccb41e37bb26f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11981717.json"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Public historic fortifications and heritage properties in Norway with exact reuse-licensed points, official heritage area confirmation, and published visitor scope."
+}

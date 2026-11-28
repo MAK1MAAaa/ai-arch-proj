@@ -559,7 +559,7 @@ def test_real_api_preserves_source_country_labels_and_independent_supplement_cou
     response = bundled_client.get("/api/coverage")
     assert response.status_code == 200
     coverage = response.json()
-    assert coverage["corpus_version"] == "global-v21" and coverage["total"] == 4665
+    assert coverage["corpus_version"] == "global-v21" and coverage["total"] == 4713
     countries = {row["id"]: row for row in coverage["countries"]}
     assert len(countries) == 214
     labels = supplement.country_labels()
@@ -576,22 +576,22 @@ def test_real_api_preserves_source_country_labels_and_independent_supplement_cou
     assert len(previous["countries"]) == 159
     assert all(countries[row["id"]]["label"] == row["label"] for row in previous["countries"])
     assert {row["id"]: row["count"] for row in coverage["sources"]} == {
-        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 3040,
+        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 3088,
     }
-    assert coverage["locations"] == {"mapped": 4269, "polar": 3, "unknown": 393}
+    assert coverage["locations"] == {"mapped": 4317, "polar": 3, "unknown": 393}
     assert coverage["authority"]["covered"] == coverage["authority"]["eligible_total"] == 1033
     assert coverage["polar_authority"]["covered"] == 91
     spatial = coverage["spatial_locations"]
     assert spatial["ready"] and spatial["records"] == 1239 and spatial["points"] == 5851
-    assert spatial["display_points"] == 8672
+    assert spatial["display_points"] == 8720
     status = bundled_client.get("/api/status").json()
-    assert status["corpus"]["count"] == 4665 and status["corpus"]["version"] == "global-v21"
+    assert status["corpus"]["count"] == 4713 and status["corpus"]["version"] == "global-v21"
     assert status["semantic"]["ready"] is False and status["history"]["ready"] is False
 
 
 @pytest.mark.parametrize(("code", "identifier"), [
     ("KI", "auth:dva:betio-coast-watchers-memorial"),
-    ("NR", "auth:sprep:d6eab109-2e10-4665-b3c4-5bb94f6a8867"),
+    ("NR", "auth:sprep:d6eab109-2e10-4713-b3c4-5bb94f6a8867"),
     ("NU", "auth:commonwealth:67579"),
 ])
 def test_real_unknown_authority_records_remain_browsable_searchable_and_unmapped(
