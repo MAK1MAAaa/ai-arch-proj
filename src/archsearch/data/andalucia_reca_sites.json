@@ -1,0 +1,1957 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Dolmen la Pastora y Matarrubilla is listed under the RECA category Enclave in Valencina de la Concepción, SEVILLA, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 SEVILLA 省 Valencina de la Concepción。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000001.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000001",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Valencina de la Concepción (INE 41096), province SEVILLA.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Dolmen la Pastora y Matarrubilla | Enclave | Valencina de la Concepción, SEVILLA | DERA 11112200000001",
+        "id": "auth:es-dera:11112200000001",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000001",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000001",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -6.0646439,
+      37.41316895
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Dolmen la Pastora y Matarrubilla | Enclave | Valencina de la Concepción, SEVILLA | DERA 11112200000001",
+        "id": "auth:es-dera:11112200000001",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000001",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000001",
+    "title": "Dolmen la Pastora y Matarrubilla",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Castillo de Doña Blanca is listed under the RECA category Enclave in El Puerto de Santa María, CÁDIZ, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 CÁDIZ 省 El Puerto de Santa María。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000002.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000002",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality El Puerto de Santa María (INE 11027), province CÁDIZ.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Castillo de Doña Blanca | Enclave | El Puerto de Santa María, CÁDIZ | DERA 11112200000002",
+        "id": "auth:es-dera:11112200000002",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000002",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000002",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -6.15963846,
+      36.62733403
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Castillo de Doña Blanca | Enclave | El Puerto de Santa María, CÁDIZ | DERA 11112200000002",
+        "id": "auth:es-dera:11112200000002",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000002",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000002",
+    "title": "Castillo de Doña Blanca",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Baelo Claudia is listed under the RECA category Conjunto in Tarifa, CÁDIZ, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化综合体，位于西班牙 CÁDIZ 省 Tarifa。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000003.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000003",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Tarifa (INE 11035), province CÁDIZ.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Baelo Claudia | Conjunto | Tarifa, CÁDIZ | DERA 11112200000003",
+        "id": "auth:es-dera:11112200000003",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000003",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000003",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -5.77359404,
+      36.09108118
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Baelo Claudia | Conjunto | Tarifa, CÁDIZ | DERA 11112200000003",
+        "id": "auth:es-dera:11112200000003",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000003",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000003",
+    "title": "Baelo Claudia",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Alcazaba de Almería is listed under the RECA category Conjunto in Almería, ALMERÍA, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化综合体，位于西班牙 ALMERÍA 省 Almería。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000006.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000006",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Almería (INE 04013), province ALMERÍA.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Alcazaba de Almería | Conjunto | Almería, ALMERÍA | DERA 11112200000006",
+        "id": "auth:es-dera:11112200000006",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000006",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000006",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.47144469,
+      36.84089812
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Alcazaba de Almería | Conjunto | Almería, ALMERÍA | DERA 11112200000006",
+        "id": "auth:es-dera:11112200000006",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000006",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000006",
+    "title": "Alcazaba de Almería",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Carmona is listed under the RECA category Conjunto in Carmona, SEVILLA, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化综合体，位于西班牙 SEVILLA 省 Carmona。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000007.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000007",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Carmona (INE 41024), province SEVILLA.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Carmona | Conjunto | Carmona, SEVILLA | DERA 11112200000007",
+        "id": "auth:es-dera:11112200000007",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000007",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000007",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -5.65267155,
+      37.46731285
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Carmona | Conjunto | Carmona, SEVILLA | DERA 11112200000007",
+        "id": "auth:es-dera:11112200000007",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000007",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000007",
+    "title": "Carmona",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Cástulo is listed under the RECA category Conjunto in Linares, JAÉN, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化综合体，位于西班牙 JAÉN 省 Linares。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000008.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000008",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Linares (INE 23055), province JAÉN.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Cástulo | Conjunto | Linares, JAÉN | DERA 11112200000008",
+        "id": "auth:es-dera:11112200000008",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000008",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000008",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -3.62310268,
+      38.03515672
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Cástulo | Conjunto | Linares, JAÉN | DERA 11112200000008",
+        "id": "auth:es-dera:11112200000008",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000008",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000008",
+    "title": "Cástulo",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "San Isidoro del Campo is listed under the RECA category Enclave in Santiponce, SEVILLA, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 SEVILLA 省 Santiponce。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000009.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000009",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Santiponce (INE 41089), province SEVILLA.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "San Isidoro del Campo | Enclave | Santiponce, SEVILLA | DERA 11112200000009",
+        "id": "auth:es-dera:11112200000009",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000009",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000009",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -6.03657611,
+      37.43350036
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "San Isidoro del Campo | Enclave | Santiponce, SEVILLA | DERA 11112200000009",
+        "id": "auth:es-dera:11112200000009",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000009",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000009",
+    "title": "San Isidoro del Campo",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Baños árabes de Baza is listed under the RECA category Enclave in Baza, GRANADA, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 GRANADA 省 Baza。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000011.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000011",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Baza (INE 18023), province GRANADA.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Baños árabes de Baza | Enclave | Baza, GRANADA | DERA 11112200000011",
+        "id": "auth:es-dera:11112200000011",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000011",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000011",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.77005054,
+      37.48996882
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Baños árabes de Baza | Enclave | Baza, GRANADA | DERA 11112200000011",
+        "id": "auth:es-dera:11112200000011",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000011",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000011",
+    "title": "Baños árabes de Baza",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Turobriga is listed under the RECA category Enclave in Aroche, HUELVA, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 HUELVA 省 Aroche。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000012.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000012",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Aroche (INE 21008), province HUELVA.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Turobriga | Enclave | Aroche, HUELVA | DERA 11112200000012",
+        "id": "auth:es-dera:11112200000012",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000012",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000012",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -6.94844163,
+      37.97039165
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Turobriga | Enclave | Aroche, HUELVA | DERA 11112200000012",
+        "id": "auth:es-dera:11112200000012",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000012",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000012",
+    "title": "Turobriga",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Munigua is listed under the RECA category Enclave in Villanueva del Río y Minas, SEVILLA, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 SEVILLA 省 Villanueva del Río y Minas。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000013.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000013",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Villanueva del Río y Minas (INE 41099), province SEVILLA.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Munigua | Enclave | Villanueva del Río y Minas, SEVILLA | DERA 11112200000013",
+        "id": "auth:es-dera:11112200000013",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000013",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000013",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -5.74053233,
+      37.71377842
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Munigua | Enclave | Villanueva del Río y Minas, SEVILLA | DERA 11112200000013",
+        "id": "auth:es-dera:11112200000013",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000013",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000013",
+    "title": "Munigua",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Teatro romano Málaga is listed under the RECA category Enclave in Málaga, MÁLAGA, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 MÁLAGA 省 Málaga。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000015.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000015",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Málaga (INE 29067), province MÁLAGA.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Teatro romano Málaga | Enclave | Málaga, MÁLAGA | DERA 11112200000015",
+        "id": "auth:es-dera:11112200000015",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000015",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000015",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -4.41686557,
+      36.72129363
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Teatro romano Málaga | Enclave | Málaga, MÁLAGA | DERA 11112200000015",
+        "id": "auth:es-dera:11112200000015",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000015",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000015",
+    "title": "Teatro romano Málaga",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Carteia is listed under the RECA category Enclave in San Roque, CÁDIZ, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 CÁDIZ 省 San Roque。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000016.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000016",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality San Roque (INE 11033), province CÁDIZ.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Carteia | Enclave | San Roque, CÁDIZ | DERA 11112200000016",
+        "id": "auth:es-dera:11112200000016",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000016",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000016",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -5.40988456,
+      36.18499226
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Carteia | Enclave | San Roque, CÁDIZ | DERA 11112200000016",
+        "id": "auth:es-dera:11112200000016",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000016",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000016",
+    "title": "Carteia",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Acinipo is listed under the RECA category Enclave in Ronda, MÁLAGA, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 MÁLAGA 省 Ronda。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000018.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000018",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Ronda (INE 29084), province MÁLAGA.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Acinipo | Enclave | Ronda, MÁLAGA | DERA 11112200000018",
+        "id": "auth:es-dera:11112200000018",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000018",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000018",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -5.23883989,
+      36.83201566
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Acinipo | Enclave | Ronda, MÁLAGA | DERA 11112200000018",
+        "id": "auth:es-dera:11112200000018",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000018",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000018",
+    "title": "Acinipo",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Los Millares is listed under the RECA category Enclave in Santa Fe de Mondújar, ALMERÍA, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 ALMERÍA 省 Santa Fe de Mondújar。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000019.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000019",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Santa Fe de Mondújar (INE 04081), province ALMERÍA.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Los Millares | Enclave | Santa Fe de Mondújar, ALMERÍA | DERA 11112200000019",
+        "id": "auth:es-dera:11112200000019",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000019",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000019",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.5219844,
+      36.96491249
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Los Millares | Enclave | Santa Fe de Mondújar, ALMERÍA | DERA 11112200000019",
+        "id": "auth:es-dera:11112200000019",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000019",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000019",
+    "title": "Los Millares",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Villaricos is listed under the RECA category Enclave in Cuevas del Almanzora, ALMERÍA, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 ALMERÍA 省 Cuevas del Almanzora。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000020.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000020",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Cuevas del Almanzora (INE 04035), province ALMERÍA.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Villaricos | Enclave | Cuevas del Almanzora, ALMERÍA | DERA 11112200000020",
+        "id": "auth:es-dera:11112200000020",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000020",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000020",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -1.77611728,
+      37.24893114
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Villaricos | Enclave | Cuevas del Almanzora, ALMERÍA | DERA 11112200000020",
+        "id": "auth:es-dera:11112200000020",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000020",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000020",
+    "title": "Villaricos",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Puente de Tablas is listed under the RECA category Enclave in Jaén, JAÉN, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 JAÉN 省 Jaén。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000021.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000021",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Jaén (INE 23050), province JAÉN.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Puente de Tablas | Enclave | Jaén, JAÉN | DERA 11112200000021",
+        "id": "auth:es-dera:11112200000021",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000021",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000021",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -3.74763395,
+      37.81435336
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Puente de Tablas | Enclave | Jaén, JAÉN | DERA 11112200000021",
+        "id": "auth:es-dera:11112200000021",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000021",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000021",
+    "title": "Puente de Tablas",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Baños árabes de Ronda is listed under the RECA category Enclave in Ronda, MÁLAGA, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 MÁLAGA 省 Ronda。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000022.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000022",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Ronda (INE 29084), province MÁLAGA.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Baños árabes de Ronda | Enclave | Ronda, MÁLAGA | DERA 11112200000022",
+        "id": "auth:es-dera:11112200000022",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000022",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000022",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -5.16273596,
+      36.7390486
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Baños árabes de Ronda | Enclave | Ronda, MÁLAGA | DERA 11112200000022",
+        "id": "auth:es-dera:11112200000022",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000022",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000022",
+    "title": "Baños árabes de Ronda",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Factoría de Salazones is listed under the RECA category Enclave in Cádiz, CÁDIZ, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 CÁDIZ 省 Cádiz。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000023.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000023",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Cádiz (INE 11012), province CÁDIZ.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Factoría de Salazones | Enclave | Cádiz, CÁDIZ | DERA 11112200000023",
+        "id": "auth:es-dera:11112200000023",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000023",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000023",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -6.29760897,
+      36.53154044
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Factoría de Salazones | Enclave | Cádiz, CÁDIZ | DERA 11112200000023",
+        "id": "auth:es-dera:11112200000023",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000023",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000023",
+    "title": "Factoría de Salazones",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Dolmen de Soto is listed under the RECA category Enclave in Trigueros, HUELVA, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 HUELVA 省 Trigueros。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000024.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000024",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Trigueros (INE 21070), province HUELVA.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Dolmen de Soto | Enclave | Trigueros, HUELVA | DERA 11112200000024",
+        "id": "auth:es-dera:11112200000024",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000024",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000024",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -6.75150905,
+      37.35209862
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Dolmen de Soto | Enclave | Trigueros, HUELVA | DERA 11112200000024",
+        "id": "auth:es-dera:11112200000024",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000024",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000024",
+    "title": "Dolmen de Soto",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Itálica is listed under the RECA category Conjunto in Santiponce, SEVILLA, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化综合体，位于西班牙 SEVILLA 省 Santiponce。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000025.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000025",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Santiponce (INE 41089), province SEVILLA.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Itálica | Conjunto | Santiponce, SEVILLA | DERA 11112200000025",
+        "id": "auth:es-dera:11112200000025",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000025",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000025",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -6.04531279,
+      37.4418114
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Itálica | Conjunto | Santiponce, SEVILLA | DERA 11112200000025",
+        "id": "auth:es-dera:11112200000025",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000025",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000025",
+    "title": "Itálica",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Castillo de Vélez-Blanco is listed under the RECA category Enclave in Vélez-Blanco, ALMERÍA, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 ALMERÍA 省 Vélez-Blanco。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000026.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000026",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Vélez-Blanco (INE 04098), province ALMERÍA.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Castillo de Vélez-Blanco | Enclave | Vélez-Blanco, ALMERÍA | DERA 11112200000026",
+        "id": "auth:es-dera:11112200000026",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000026",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000026",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.09834026,
+      37.69092976
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Castillo de Vélez-Blanco | Enclave | Vélez-Blanco, ALMERÍA | DERA 11112200000026",
+        "id": "auth:es-dera:11112200000026",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000026",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000026",
+    "title": "Castillo de Vélez-Blanco",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Puerta de Almeria is listed under the RECA category Enclave in Almería, ALMERÍA, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 ALMERÍA 省 Almería。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000028.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000028",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Almería (INE 04013), province ALMERÍA.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Puerta de Almeria | Enclave | Almería, ALMERÍA | DERA 11112200000028",
+        "id": "auth:es-dera:11112200000028",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000028",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000028",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -2.46977246,
+      36.83694296
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Puerta de Almeria | Enclave | Almería, ALMERÍA | DERA 11112200000028",
+        "id": "auth:es-dera:11112200000028",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000028",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000028",
+    "title": "Puerta de Almeria",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Compared the official RECA point columns and accompanying technical description.",
+      "note": "The point layer documents catalogue identity and location; it does not date a historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Instituto de Estadística y Cartografía de Andalucía (IECA)",
+      "Junta de Andalucía"
+    ],
+    "description": "Teatro romano Cádiz is listed under the RECA category Enclave in Cádiz, CÁDIZ, Spain.",
+    "description_zh": "安达卢西亚文化场所网络（RECA）收录的文化遗址，位于西班牙 CÁDIZ 省 Cádiz。",
+    "details": "The source publishes one WGS84 coordinate in a singleton MultiPoint as the catalogue location. The coordinate is a representative catalogue point. Record ID 11112200000029.",
+    "geography": {
+      "authority_id": "supplement:auth:es-dera:11112200000029",
+      "countries": [
+        "ES"
+      ],
+      "note": "Modern source municipality Cádiz (INE 11012), province CÁDIZ.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Teatro romano Cádiz | Enclave | Cádiz, CÁDIZ | DERA 11112200000029",
+        "id": "auth:es-dera:11112200000029",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000029",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:es-dera:11112200000029",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -6.29360317,
+      36.52821243
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Teatro romano Cádiz | Enclave | Cádiz, CÁDIZ | DERA 11112200000029",
+        "id": "auth:es-dera:11112200000029",
+        "license": "CC BY 4.0",
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": "IECA data 2022-04-21; published 2023-01-30; id_dera 11112200000029",
+        "title": "Datos Espaciales de Referencia de Andalucía (DERA), 11_03_Reca_pun",
+        "uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:dera:reca",
+        "license": null,
+        "publisher": "Instituto de Estadística y Cartografía de Andalucía (IECA) / Junta de Andalucía",
+        "revision": null,
+        "title": "DERA 11_03_Reca_pun · ficha técnica y condiciones de reutilización",
+        "uri": "https://www.juntadeandalucia.es/institutodeestadisticaycartografia/dega/sites/default/files/docs/094-datos-espaciales-referencia-dera-informacion-basica-datos.pdf#page=135"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "scope:reca",
+        "license": null,
+        "publisher": "Junta de Andalucía",
+        "revision": null,
+        "title": "Red de Espacios Culturales de Andalucía · relación de lugares",
+        "uri": "https://www.juntadeandalucia.es/organismos/culturapatrimoniohistoricoydeporte/servicios/estadistica-cartografia/presentacion/paginas/ide-ccph.html"
+      }
+    ],
+    "source_uri": "https://www.ideandalucia.es/services/DERA_g11_patrimonio/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=DERA_g11_patrimonio%3Ag11_03_Reca_pun&outputFormat=application%2Fjson&srsName=EPSG%3A4326&resourceId=g11_03_Reca_pun.11112200000029",
+    "title": "Teatro romano Cádiz",
+    "types": [
+      "archaeological-site"
+    ]
+  }
+]

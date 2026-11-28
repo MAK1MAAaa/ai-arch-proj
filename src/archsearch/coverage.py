@@ -61,6 +61,8 @@ class CoverageRegistry:
 
 def load_registry(data_dir: Path = DATA_DIR) -> CoverageRegistry:
     """Read labels from the bundled source manifest, never from a network service."""
+    from archsearch.target_data import POINT_COHORTS
+
     path = Path(data_dir) / "catalogue_manifest.json"
     value = json.loads(path.read_text("utf-8")) if path.exists() else {}
     countries = {row["id"]: row["label"] for row in value.get("countries", [])}
@@ -120,6 +122,10 @@ def load_registry(data_dir: Path = DATA_DIR) -> CoverageRegistry:
         if countries.keys() & extension_countries.keys():
             raise MerimeeExtensionError("Mérimée extension labels cannot replace source labels")
         countries.update(extension_countries)
+    for cohort in POINT_COHORTS:
+        if cohort.country_labels and (Path(data_dir) / cohort.filenames[2]).exists():
+            for code, label in cohort.country_labels:
+                countries.setdefault(code, label)
     spatial = None
     spatial_error = None
     try:

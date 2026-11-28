@@ -64,3 +64,19 @@ def test_public_point_search_catalogue_and_provenance(
         ireland = client.get("/api/subdivisions?country=IE").json()
         assert ireland["ready"] and not ireland["supported"]
         assert ireland["assigned"] == 0 and ireland["unassigned"] == 92
+
+        spain = client.get("/api/catalogue?country=ES").json()
+        assert spain["total"] == 69
+        assert sum(point["id"].startswith("auth:es-dera:") for point in spain["points"]) == 23
+        taiwan = client.get("/api/catalogue?country=TW").json()
+        assert taiwan["total"] == len(taiwan["points"]) == 54
+        assert all(point["id"].startswith("auth:tw-moc:") for point in taiwan["points"])
+        countries = client.get("/api/coverage").json()["countries"]
+        assert {"id": "TW", "label": "Taiwan", "count": 54} in countries
+        detail = client.get("/api/sites/auth:tw-moc:19831228000008").json()
+        assert detail["title"] == "赤嵌樓"
+        assert detail["chronology"]["phases"] == []
+        assert all(
+            source["license"] == "Open Government Data License, version 1.0"
+            for source in detail["source_refs"]
+        )

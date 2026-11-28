@@ -1,0 +1,22 @@
+{
+  "base_count": 4018,
+  "base_ids_sha256": "18381e0f05663379023eeee9cd4367bc0337a28fb9132434542c2ec1a8d6c633",
+  "base_sites_sha256": "2be84485077dad249ac3f3f709659bb6e3b26b82770611eae14e06386f0b80cc",
+  "cohort_version": "taiwan-iculture-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 54,
+    "total": 4072
+  },
+  "files": {
+    "taiwan_iculture_review.json": {
+      "sha256": "0ddff3d9dd12b60cc7f54d23fef8c10ab4d514723c9f0119422fdf80db193075"
+    },
+    "taiwan_iculture_sites.json": {
+      "sha256": "860b2e16629089779e33699a8ba7f6bd06c3fdc020e934c88bc8ce824e4bb8ca"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "54 national monuments in the iCulture catalogue with explicit public visitor access and unique publisher coordinates, independently checked against per-item responses and existing records."
+}

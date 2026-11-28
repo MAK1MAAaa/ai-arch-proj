@@ -37,6 +37,7 @@ class NamedPlaceCohort:
     file_prefix: str
     review_sha256: str
     sites_sha256: str
+    country_labels: tuple[tuple[str, str], ...] = ()
 
     @property
     def filenames(self) -> tuple[str, str, str]:
@@ -59,7 +60,22 @@ IRELAND = NamedPlaceCohort(
     "be4cfaff8cb0aec3818dabf42eecda07b0fe3635439bbe9912988c9782deeb99",
     "323e9e5300416db7337fb177df017b60f6d35edddbd7970168c86537b17c7902",
 )
-POINT_COHORTS = (IRELAND,)
+ANDALUCIA = NamedPlaceCohort(
+    "andalucia-reca-v1",
+    "global-v21",
+    "andalucia_reca",
+    "b518958cec6782751bb246d32979c06b9186c493171bcc783defc73e2c6bdc75",
+    "35fff33b680ce7a40991976fee121bd0beeeba1800d09c82b8be04984c87f321",
+)
+TAIWAN_ICULTURE = NamedPlaceCohort(
+    "taiwan-iculture-v1",
+    "global-v21",
+    "taiwan_iculture",
+    "0ddff3d9dd12b60cc7f54d23fef8c10ab4d514723c9f0119422fdf80db193075",
+    "860b2e16629089779e33699a8ba7f6bd06c3fdc020e934c88bc8ce824e4bb8ca",
+    country_labels=(("TW", "Taiwan"),),
+)
+POINT_COHORTS = (IRELAND, ANDALUCIA, TAIWAN_ICULTURE)
 
 
 class TargetDataError(RuntimeError):
