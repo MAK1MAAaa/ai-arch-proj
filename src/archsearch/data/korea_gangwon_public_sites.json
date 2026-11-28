@@ -1,0 +1,1884 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Korea Tourism Organization",
+      "Korea Heritage Service"
+    ],
+    "description": "Historic Buddhist monastery with standing heritage, restored halls and designated visitor areas at the foot of Mount Odae.",
+    "description_zh": "平昌月精寺位于韩国江原特别自治道。地图所标为公开遗产的代表点，开放区域以主管方说明为准。",
+    "details": "Historic Buddhist monastery with standing heritage, restored halls and designated visitor areas at the foot of Mount Odae.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1113200480000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Pyeongchang, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The national guide names Woljeongsa and publishes public access for the temple, its historic pagoda and surrounding path.",
+        "id": "auth:kr-khs:1113200480000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 b8d3016e9aa344015304c75c4da3a426b6298cd90c43562c087effabd3fd7099.",
+        "title": "Woljeongsa Temple public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=110826"
+      }
+    },
+    "id": "auth:kr-khs:1113200480000",
+    "location_precision": null,
+    "names": [
+      "平昌月精寺",
+      "Woljeongsa Temple",
+      "평창 월정사 팔각 구층석탑"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      128.592070081831,
+      37.7316038064596
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national guide names Woljeongsa and publishes public access for the temple, its historic pagoda and surrounding path.",
+        "id": "auth:kr-khs:1113200480000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 b8d3016e9aa344015304c75c4da3a426b6298cd90c43562c087effabd3fd7099.",
+        "title": "Woljeongsa Temple public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=110826"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1113200480000; source WGS84 longitude 128.592070081831, latitude 37.7316038064596.",
+        "id": "auth:kr-khs:1113200480000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Woljeongsa Temple national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      }
+    ],
+    "source_uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=110826",
+    "title": "Woljeongsa Temple",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Korea Tourism Organization",
+      "Jeongseon County tourism",
+      "Korea Heritage Service"
+    ],
+    "description": "Historic Jeongamsa temple landscape in Gohan-eup, Jeongseon. Its publicly viewed Sumano Pagoda and temple route form one place.",
+    "description_zh": "旌善净岩寺及水玛瑙塔位于韩国江原特别自治道。地图所标为公开遗产的代表点，开放区域以主管方说明为准。",
+    "details": "Historic Jeongamsa temple landscape in Gohan-eup, Jeongseon. Its publicly viewed Sumano Pagoda and temple route form one place.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1113203320000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Jeongseon, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The Korean visitor listing specifies the Jeongseon site, public viewing status and route to the historic pagoda.",
+        "id": "auth:kr-khs:1113203320000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 16ee6b30e260622a08ca971fe49e4043e3724526ce029a9c39277087ed3e0370.",
+        "title": "Jeongamsa Temple and Sumano Pagoda public visitor scope",
+        "uri": "https://access.visitkorea.or.kr/ms/detail.do?cotId=32ea5dfc-f8b6-4a41-9ba1-4165847c4216"
+      }
+    },
+    "id": "auth:kr-khs:1113203320000",
+    "location_precision": null,
+    "names": [
+      "旌善净岩寺及水玛瑙塔",
+      "Jeongamsa Temple and Sumano Pagoda",
+      "정선 정암사 수마노탑",
+      "Jeongseon Jeongamsa",
+      "Sumanotap Pagoda"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      128.893162091149,
+      37.1822913176463
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Korean visitor listing specifies the Jeongseon site, public viewing status and route to the historic pagoda.",
+        "id": "auth:kr-khs:1113203320000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 16ee6b30e260622a08ca971fe49e4043e3724526ce029a9c39277087ed3e0370.",
+        "title": "Jeongamsa Temple and Sumano Pagoda public visitor scope",
+        "uri": "https://access.visitkorea.or.kr/ms/detail.do?cotId=32ea5dfc-f8b6-4a41-9ba1-4165847c4216"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The county identifies its own temple and protected pagoda at Hambaeksan-ro in Gohan.",
+        "id": "auth:kr-khs:1113203320000:access:2",
+        "license": null,
+        "publisher": "Jeongseon County tourism",
+        "revision": "Frozen 2026-11-28; SHA-256 4261dc786b2cde60638300c5fce24264fb62ab86098942dd3e9904a84ea80efa.",
+        "title": "Jeongamsa Temple and Sumano Pagoda public visitor scope",
+        "uri": "https://www.jeongseon.go.kr/tour/jeongseontour/cultural_heritage?contentSeq=254753&mode=read"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1113203320000; source WGS84 longitude 128.893162091149, latitude 37.1822913176463.",
+        "id": "auth:kr-khs:1113203320000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Jeongamsa Temple and Sumano Pagoda national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      }
+    ],
+    "source_uri": "https://access.visitkorea.or.kr/ms/detail.do?cotId=32ea5dfc-f8b6-4a41-9ba1-4165847c4216",
+    "title": "Jeongamsa Temple and Sumano Pagoda",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Korea Tourism Organization",
+      "Korea Heritage Service",
+      "Chuncheon Urban Corporation"
+    ],
+    "description": "Historic Cheongpyeongsa Temple and associated historical garden landscape. The representative point is the Hoejeonmun gate. Visits follow the currently available routes.",
+    "description_zh": "春川清平寺及历史园林按当期开放线路参观。代表点标记寺内回转门。",
+    "details": "Historic Cheongpyeongsa Temple and associated historical garden landscape. The representative point is the Hoejeonmun gate. Visits follow the currently available routes.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1123201640000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Chuncheon, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The national destination guide names the temple, surrounding historical landscape and public visiting information.",
+        "id": "auth:kr-khs:1123201640000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 14f68f519e26a46328fc452b009f9ea1b950b4a917a27a678863e0829ac6876d.",
+        "title": "Cheongpyeongsa Temple and Historical Garden public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=110988"
+      }
+    },
+    "id": "auth:kr-khs:1123201640000",
+    "location_precision": null,
+    "names": [
+      "春川清平寺及历史园林",
+      "Cheongpyeongsa Temple and Historical Garden",
+      "춘천 청평사 회전문",
+      "Chuncheon Cheongpyeongsa Temple",
+      "Cheongpyeongsa Temple"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      127.808931340218,
+      37.9861704676871
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national destination guide names the temple, surrounding historical landscape and public visiting information.",
+        "id": "auth:kr-khs:1123201640000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 14f68f519e26a46328fc452b009f9ea1b950b4a917a27a678863e0829ac6876d.",
+        "title": "Cheongpyeongsa Temple and Historical Garden public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=110988"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1123201640000; source WGS84 longitude 127.808931340218, latitude 37.9861704676871.",
+        "id": "auth:kr-khs:1123201640000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Cheongpyeongsa Temple and Historical Garden national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator identifies the visitor temple complex, historic gate, garden and public visit arrangements.",
+        "id": "auth:kr-khs:1123201640000:ind:ind-chuncheon-operator",
+        "license": null,
+        "publisher": "Chuncheon Urban Corporation",
+        "revision": "Frozen 2026-11-28. SHA-256 6337da7f44f32270b02b5ee989e64bb31a4c2eb200254d4eec4a6ce1fc80cf95.",
+        "title": "Independent public visitor scope",
+        "uri": "https://www.cuc.or.kr/cheongpyeong.do"
+      }
+    ],
+    "source_uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=110988",
+    "title": "Cheongpyeongsa Temple and Historical Garden",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Korea Tourism Organization",
+      "Korea Heritage Agency, Visit Korean Heritage Campaign",
+      "Korea Heritage Service"
+    ],
+    "description": "Standing historic residence within the public Ojukheon and municipal museum grounds. The original main house and its interpreted grounds form one record.",
+    "description_zh": "江陵乌竹轩位于韩国江原特别自治道。地图所标为公开遗产的代表点，开放区域以主管方说明为准。",
+    "details": "Standing historic residence within the public Ojukheon and municipal museum grounds. The original main house and its interpreted grounds form one record.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1123201650000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Gangneung, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The national guide identifies the original Ojukheon house and publishes visitor information for its museum complex.",
+        "id": "auth:kr-khs:1123201650000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 110e683581d616b93f522884ee49731279a7ce0da914670320dbd03c5c4a3517.",
+        "title": "Ojukheon House public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=110674"
+      }
+    },
+    "id": "auth:kr-khs:1123201650000",
+    "location_precision": null,
+    "names": [
+      "江陵乌竹轩",
+      "Ojukheon House",
+      "강릉 오죽헌"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      128.877502,
+      37.779217
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national guide identifies the original Ojukheon house and publishes visitor information for its museum complex.",
+        "id": "auth:kr-khs:1123201650000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 110e683581d616b93f522884ee49731279a7ce0da914670320dbd03c5c4a3517.",
+        "title": "Ojukheon House public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=110674"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "This national heritage itinerary documents the house and its public opening arrangements.",
+        "id": "auth:kr-khs:1123201650000:access:2",
+        "license": null,
+        "publisher": "Korea Heritage Agency, Visit Korean Heritage Campaign",
+        "revision": "Frozen 2026-11-28; SHA-256 3a713de080ffbcacb0cc7f8d09f05489df8b43996d623a0e22be7cae5dee2064.",
+        "title": "Ojukheon House public visitor scope",
+        "uri": "https://www.kh.or.kr/cms/content/view/1244"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1123201650000; source WGS84 longitude 128.877502, latitude 37.779217.",
+        "id": "auth:kr-khs:1123201650000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Ojukheon House national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      }
+    ],
+    "source_uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=110674",
+    "title": "Ojukheon House",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Korea Tourism Organization",
+      "Cheorwon County",
+      "Korea Heritage Service"
+    ],
+    "description": "Historical Buddhist temple and surviving pagoda in Cheorwon. Only the documented public grounds are represented; temple rules apply to more restricted areas.",
+    "description_zh": "铁原到彼岸寺位于韩国江原特别自治道。地图所标为公开遗产的代表点，开放区域以主管方说明为准。",
+    "details": "Historical Buddhist temple and surviving pagoda in Cheorwon. Only the documented public grounds are represented; temple rules apply to more restricted areas.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1123202230000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Cheorwon, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The official visitor page identifies the historical temple precinct and provides public visitor hours.",
+        "id": "auth:kr-khs:1123202230000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 9bb77a8e36d99238ea71d2dee247194f4309ac4dccedf93b6f9a7fd6d504f83b.",
+        "title": "Dopiansa Temple public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=81975"
+      }
+    },
+    "id": "auth:kr-khs:1123202230000",
+    "location_precision": null,
+    "names": [
+      "铁原到彼岸寺",
+      "Dopiansa Temple",
+      "철원 도피안사 삼층석탑"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      127.218097,
+      38.240405
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The official visitor page identifies the historical temple precinct and provides public visitor hours.",
+        "id": "auth:kr-khs:1123202230000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 9bb77a8e36d99238ea71d2dee247194f4309ac4dccedf93b6f9a7fd6d504f83b.",
+        "title": "Dopiansa Temple public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=81975"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The county identifies the original site of the preserved three-storey pagoda.",
+        "id": "auth:kr-khs:1123202230000:access:2",
+        "license": null,
+        "publisher": "Cheorwon County",
+        "revision": "Frozen 2026-11-28; SHA-256 df6390f23d96ef52fafa813453131bad158e3816eb18bd5a6c990c1c205dd1c3.",
+        "title": "Dopiansa Temple public visitor scope",
+        "uri": "https://www.cwg.go.kr/eng/contents.do?key=1088"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1123202230000; source WGS84 longitude 127.218097, latitude 38.240405.",
+        "id": "auth:kr-khs:1123202230000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Dopiansa Temple national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      }
+    ],
+    "source_uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=81975",
+    "title": "Dopiansa Temple",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Korea Tourism Organization",
+      "Korea Heritage Service"
+    ],
+    "description": "Historical Buddhist temple site in Yeongwol, with publicly designated visitor grounds and surviving materials of the former Heungnyeongsa temple.",
+    "description_zh": "宁越法兴寺位于韩国江原特别自治道。地图所标为公开遗产的代表点，开放区域以主管方说明为准。",
+    "details": "Historical Buddhist temple site in Yeongwol, with publicly designated visitor grounds and surviving materials of the former Heungnyeongsa temple.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1123206120000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Yeongwol, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The official destination guide identifies the historic Heungnyeongsa site as the present Beopheungsa and lists visitor arrangements.",
+        "id": "auth:kr-khs:1123206120000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 451f1c56952c0d890d740180872aa9865306c79d4c44dc89759f8cb4739eaf13.",
+        "title": "Beopheungsa Temple public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=89121"
+      }
+    },
+    "id": "auth:kr-khs:1123206120000",
+    "location_precision": null,
+    "names": [
+      "宁越法兴寺",
+      "Beopheungsa Temple",
+      "영월 흥녕사지 징효대사탑비",
+      "Heungnyeongsa Temple Site"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      128.260418197571,
+      37.3724297975271
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The official destination guide identifies the historic Heungnyeongsa site as the present Beopheungsa and lists visitor arrangements.",
+        "id": "auth:kr-khs:1123206120000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 451f1c56952c0d890d740180872aa9865306c79d4c44dc89759f8cb4739eaf13.",
+        "title": "Beopheungsa Temple public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=89121"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1123206120000; source WGS84 longitude 128.260418197571, latitude 37.3724297975271.",
+        "id": "auth:kr-khs:1123206120000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Beopheungsa Temple national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      }
+    ],
+    "source_uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=89121",
+    "title": "Beopheungsa Temple",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Korea Heritage Agency, Visit Korean Heritage Campaign",
+      "Korea Heritage Service"
+    ],
+    "description": "Historic pavilion overlooking Gyeongpo Lagoon. The point is for the public architectural landmark on its hillside site.",
+    "description_zh": "江陵镜浦台位于韩国江原特别自治道。地图所标为公开遗产的代表点，开放区域以主管方说明为准。",
+    "details": "Historic pavilion overlooking Gyeongpo Lagoon. The point is for the public architectural landmark on its hillside site.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1123220460000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Gangneung, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The national heritage route identifies Gyeongpodae Pavilion, its cultural associations and visitor arrangements.",
+        "id": "auth:kr-khs:1123220460000:access:1",
+        "license": null,
+        "publisher": "Korea Heritage Agency, Visit Korean Heritage Campaign",
+        "revision": "Frozen 2026-11-28; SHA-256 3a713de080ffbcacb0cc7f8d09f05489df8b43996d623a0e22be7cae5dee2064.",
+        "title": "Gyeongpodae Pavilion public visitor scope",
+        "uri": "https://www.kh.or.kr/cms/content/view/1244"
+      }
+    },
+    "id": "auth:kr-khs:1123220460000",
+    "location_precision": null,
+    "names": [
+      "江陵镜浦台",
+      "Gyeongpodae Pavilion",
+      "강릉 경포대"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      128.896645,
+      37.795103
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national heritage route identifies Gyeongpodae Pavilion, its cultural associations and visitor arrangements.",
+        "id": "auth:kr-khs:1123220460000:access:1",
+        "license": null,
+        "publisher": "Korea Heritage Agency, Visit Korean Heritage Campaign",
+        "revision": "Frozen 2026-11-28; SHA-256 3a713de080ffbcacb0cc7f8d09f05489df8b43996d623a0e22be7cae5dee2064.",
+        "title": "Gyeongpodae Pavilion public visitor scope",
+        "uri": "https://www.kh.or.kr/cms/content/view/1244"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1123220460000; source WGS84 longitude 128.896645, latitude 37.795103.",
+        "id": "auth:kr-khs:1123220460000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Gyeongpodae Pavilion national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      }
+    ],
+    "source_uri": "https://www.kh.or.kr/cms/content/view/1244",
+    "title": "Gyeongpodae Pavilion",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Pyeongchang County tourism",
+      "Korea Heritage Service",
+      "Odaesan Pilgrimage Route",
+      "Academy of Korean Studies"
+    ],
+    "description": "Historical archive location on Mount Odae, with surviving foundations and reconstructed archive buildings viewed from designated areas. The park controls access to the mountain routes.",
+    "description_zh": "平昌五台山史库旧址保留旧址石础与复建建筑，可在指定区域观看。山地探访按国立公园当期路线安排。",
+    "details": "Historical archive location on Mount Odae, with surviving foundations and reconstructed archive buildings viewed from designated areas. The park controls access to the mountain routes.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1333200370000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Pyeongchang, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The county visitor page identifies the original archive site, its surviving reconstruction and its public access status.",
+        "id": "auth:kr-khs:1333200370000:access:1",
+        "license": null,
+        "publisher": "Pyeongchang County tourism",
+        "revision": "Frozen 2026-11-28; SHA-256 5767f9f36e0933682c57f6d0f18651d0aee630dd997e5804739611b2511cd84d.",
+        "title": "Odaesan Historical Archives Site public visitor scope",
+        "uri": "https://tour.pc.go.kr/Home/H20000/H20200/placeDetail?curationGroup=2&order_column=1&page=1&pageSize=12&place_no=159&place_type=12&search_column=2&search_keyword=%EC%A1%B0%EC%84%A0%EC%8B%9C%EB%8C%80&viewType=gallery"
+      }
+    },
+    "id": "auth:kr-khs:1333200370000",
+    "location_precision": null,
+    "names": [
+      "平昌五台山史库旧址",
+      "Odaesan Historical Archives Site",
+      "평창 오대산사고",
+      "Odaesan Sagobon historic repository",
+      "Odaesan Sago"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      128.572435646035,
+      37.7562778390854
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The county visitor page identifies the original archive site, its surviving reconstruction and its public access status.",
+        "id": "auth:kr-khs:1333200370000:access:1",
+        "license": null,
+        "publisher": "Pyeongchang County tourism",
+        "revision": "Frozen 2026-11-28; SHA-256 5767f9f36e0933682c57f6d0f18651d0aee630dd997e5804739611b2511cd84d.",
+        "title": "Odaesan Historical Archives Site public visitor scope",
+        "uri": "https://tour.pc.go.kr/Home/H20000/H20200/placeDetail?curationGroup=2&order_column=1&page=1&pageSize=12&place_no=159&place_type=12&search_column=2&search_keyword=%EC%A1%B0%EC%84%A0%EC%8B%9C%EB%8C%80&viewType=gallery"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1333200370000; source WGS84 longitude 128.572435646035, latitude 37.7562778390854.",
+        "id": "auth:kr-khs:1333200370000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Odaesan Historical Archives Site national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The pilgrim route distinguishes the old archive location from Woljeongsa and the modern exhibition site.",
+        "id": "auth:kr-khs:1333200370000:ind:ind-odaesan-pilgrim-route",
+        "license": null,
+        "publisher": "Odaesan Pilgrimage Route",
+        "revision": "Frozen 2026-11-28. SHA-256 01fcc7c98f9630e8a74bc0ab1d4d9850421e4320589565a4af10aa3aef805001.",
+        "title": "Independent public visitor scope",
+        "uri": "https://www.odaesan.kr/page/seonjae-road.php"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The academy identifies the original archive at Yeongamsa and its surviving foundations.",
+        "id": "auth:kr-khs:1333200370000:ind:ind-odaesan-archive-aks",
+        "license": null,
+        "publisher": "Academy of Korean Studies",
+        "revision": "Frozen 2026-11-28. SHA-256 659c81735d413a19e691e7ef5d31603cc88922bb3dcf926ddd39b7287b1462e2.",
+        "title": "Independent public visitor scope",
+        "uri": "https://encykorea.aks.ac.kr/Article/E0038153"
+      }
+    ],
+    "source_uri": "https://tour.pc.go.kr/Home/H20000/H20200/placeDetail?curationGroup=2&order_column=1&page=1&pageSize=12&place_no=159&place_type=12&search_column=2&search_keyword=%EC%A1%B0%EC%84%A0%EC%8B%9C%EB%8C%80&viewType=gallery",
+    "title": "Odaesan Historical Archives Site",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Wonju City",
+      "Wonju City tourism",
+      "Korea Heritage Service"
+    ],
+    "description": "Preserved temple ruins in Buron-myeon with visible stone pagoda and site interpretation. The public route represents the entire archaeological property.",
+    "description_zh": "原州居顿寺遗址位于韩国江原特别自治道。地图所标为公开遗产的代表点，开放区域以主管方说明为准。",
+    "details": "Preserved temple ruins in Buron-myeon with visible stone pagoda and site interpretation. The public route represents the entire archaeological property.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1333201680000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Wonju, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal heritage listing identifies the former temple grounds and visible remains in Buron-myeon.",
+        "id": "auth:kr-khs:1333201680000:access:1",
+        "license": null,
+        "publisher": "Wonju City",
+        "revision": "Frozen 2026-11-28; SHA-256 c8414e965c0e8ee065460b3b57d20b41cb8800d8ace7683a996b2fa5528e634b.",
+        "title": "Geodonsa Temple Site public visitor scope",
+        "uri": "https://www.wonju.go.kr/www/selectBbsNttView.do?bbsNo=263&integrDeptCode=&key=4310&nttNo=313006&pageIndex=1&searchCnd=all&searchCtgry=&searchKrwd="
+      }
+    },
+    "id": "auth:kr-khs:1333201680000",
+    "location_precision": null,
+    "names": [
+      "原州居顿寺遗址",
+      "Geodonsa Temple Site",
+      "원주 거돈사지"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      127.792197218783,
+      37.1935907433446
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal heritage listing identifies the former temple grounds and visible remains in Buron-myeon.",
+        "id": "auth:kr-khs:1333201680000:access:1",
+        "license": null,
+        "publisher": "Wonju City",
+        "revision": "Frozen 2026-11-28; SHA-256 c8414e965c0e8ee065460b3b57d20b41cb8800d8ace7683a996b2fa5528e634b.",
+        "title": "Geodonsa Temple Site public visitor scope",
+        "uri": "https://www.wonju.go.kr/www/selectBbsNttView.do?bbsNo=263&integrDeptCode=&key=4310&nttNo=313006&pageIndex=1&searchCnd=all&searchCtgry=&searchKrwd="
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal heritage itinerary includes the original Geodonsa site as a public visitor stop.",
+        "id": "auth:kr-khs:1333201680000:access:2",
+        "license": null,
+        "publisher": "Wonju City tourism",
+        "revision": "Frozen 2026-11-28; SHA-256 2b0880476260ee016440615009cb6e98bc7e100edc7d20cfc0b370274414381a.",
+        "title": "Geodonsa Temple Site public visitor scope",
+        "uri": "https://www.wonju.go.kr/tour/contents.do?key=5511"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1333201680000; source WGS84 longitude 127.792197218783, latitude 37.1935907433446.",
+        "id": "auth:kr-khs:1333201680000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Geodonsa Temple Site national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      }
+    ],
+    "source_uri": "https://www.wonju.go.kr/www/selectBbsNttView.do?bbsNo=263&integrDeptCode=&key=4310&nttNo=313006&pageIndex=1&searchCnd=all&searchCtgry=&searchKrwd=",
+    "title": "Geodonsa Temple Site",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Gangneung City tourism",
+      "Korea cultural guide booking service",
+      "Korea Heritage Service"
+    ],
+    "description": "Former government office precinct with restored halls on the original grounds and surviving historic Imyeonggwan gate. Public areas and cultural programming share one site.",
+    "description_zh": "江陵大都护府官衙位于韩国江原特别自治道。地图所标为公开遗产的代表点，开放区域以主管方说明为准。",
+    "details": "Former government office precinct with restored halls on the original grounds and surviving historic Imyeonggwan gate. Public areas and cultural programming share one site.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1333203880000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Gangneung, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal guide identifies the original government grounds, surviving gate and public visitor arrangements.",
+        "id": "auth:kr-khs:1333203880000:access:1",
+        "license": null,
+        "publisher": "Gangneung City tourism",
+        "revision": "Frozen 2026-11-28; SHA-256 df2e093af2ce7f16499d5e096f1e28ab7a3104f32aad873e1ad39703bd6d915d.",
+        "title": "Gangneung Daedohobu Government Office public visitor scope",
+        "uri": "https://visitgangneung.net/pub/ruins.do?mode=v&seq=75"
+      }
+    },
+    "id": "auth:kr-khs:1333203880000",
+    "location_precision": null,
+    "names": [
+      "江陵大都护府官衙",
+      "Gangneung Daedohobu Government Office",
+      "강릉대도호부 관아",
+      "Gangneung Daedohobu Gwana",
+      "Imyeonggwan"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      128.89233,
+      37.752298
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal guide identifies the original government grounds, surviving gate and public visitor arrangements.",
+        "id": "auth:kr-khs:1333203880000:access:1",
+        "license": null,
+        "publisher": "Gangneung City tourism",
+        "revision": "Frozen 2026-11-28; SHA-256 df2e093af2ce7f16499d5e096f1e28ab7a3104f32aad873e1ad39703bd6d915d.",
+        "title": "Gangneung Daedohobu Government Office public visitor scope",
+        "uri": "https://visitgangneung.net/pub/ruins.do?mode=v&seq=75"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The guide service lists the precinct and explains the restoration of the former office.",
+        "id": "auth:kr-khs:1333203880000:access:2",
+        "license": null,
+        "publisher": "Korea cultural guide booking service",
+        "revision": "Frozen 2026-11-28; SHA-256 8d83fdb57979aaff4ac5a6b9e433a7855c7e0d1d98f1c4422d35fff689a73849.",
+        "title": "Gangneung Daedohobu Government Office public visitor scope",
+        "uri": "https://www.kctg.or.kr/tour/touristSiteView.do?tourist_cd=TOURIST_ID00010921"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1333203880000; source WGS84 longitude 128.892330, latitude 37.752298.",
+        "id": "auth:kr-khs:1333203880000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Gangneung Daedohobu Government Office national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      }
+    ],
+    "source_uri": "https://visitgangneung.net/pub/ruins.do?mode=v&seq=75",
+    "title": "Gangneung Daedohobu Government Office",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Yangyang County tourism",
+      "Osan-ri Prehistory Museum, Yangyang County",
+      "Korea Heritage Service"
+    ],
+    "description": "The original Neolithic archaeological property in Osan-ri, interpreted by Yangyang County's on-site museum and designated outdoor trail. The national representative point corresponds to the site's public parking area.",
+    "description_zh": "襄阳鳌山里史前遗址设有现场博物馆和指定室外探访路线。国家遗产代表点位于参观停车区域。",
+    "details": "The original Neolithic archaeological property in Osan-ri, interpreted by Yangyang County's on-site museum and designated outdoor trail. The national representative point corresponds to the site's public parking area.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1333203940000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Yangyang, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The county identifies the excavated Neolithic site and states that the visitor museum is beside it.",
+        "id": "auth:kr-khs:1333203940000:access:1",
+        "license": null,
+        "publisher": "Yangyang County tourism",
+        "revision": "Frozen 2026-11-28; SHA-256 6248b6a978f0c131fa46cdcd1c628392c62f942378c3c8c18d13004aea186b48.",
+        "title": "Osan-ri Archaeological Site public visitor scope",
+        "uri": "https://tour.yangyang.go.kr/pub/yycultural.do?mode=v&seq=87"
+      }
+    },
+    "id": "auth:kr-khs:1333203940000",
+    "location_precision": null,
+    "names": [
+      "襄阳鳌山里史前遗址",
+      "Osan-ri Archaeological Site",
+      "양양 오산리 유적"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      128.663051,
+      38.08718
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The county identifies the excavated Neolithic site and states that the visitor museum is beside it.",
+        "id": "auth:kr-khs:1333203940000:access:1",
+        "license": null,
+        "publisher": "Yangyang County tourism",
+        "revision": "Frozen 2026-11-28; SHA-256 6248b6a978f0c131fa46cdcd1c628392c62f942378c3c8c18d13004aea186b48.",
+        "title": "Osan-ri Archaeological Site public visitor scope",
+        "uri": "https://tour.yangyang.go.kr/pub/yycultural.do?mode=v&seq=87"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal museum publishes visitor hours and current access information.",
+        "id": "auth:kr-khs:1333203940000:access:2",
+        "license": null,
+        "publisher": "Osan-ri Prehistory Museum, Yangyang County",
+        "revision": "Frozen 2026-11-28; SHA-256 aa16db06d6ba3f527cc9a9437b0e6374091edb3c933162a3b96ea79aca81ead2.",
+        "title": "Osan-ri Archaeological Site public visitor scope",
+        "uri": "https://yangyang.go.kr/gw/osm"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1333203940000; source WGS84 longitude 128.663051, latitude 38.0871800.",
+        "id": "auth:kr-khs:1333203940000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Osan-ri Archaeological Site national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The authority identifies two visitor car parks and the public outdoor archaeological and lakeside visitor route.",
+        "id": "auth:kr-khs:1333203940000:ind:ind-osan-visitor-routes",
+        "license": null,
+        "publisher": "Osan-ri Prehistory Museum, Yangyang County",
+        "revision": "Frozen 2026-11-28. SHA-256 92e28d44b51d650167d92e8e71b24e110e64d9a2743d97c112d07a75a873f13e.",
+        "title": "Independent public visitor scope",
+        "uri": "https://www.yangyang.go.kr/gw/osm/intro_situation"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The county identifies the excavated original settlement beside its public archaeological exhibition and outdoor trail.",
+        "id": "auth:kr-khs:1333203940000:ind:ind-osan-county-grounds",
+        "license": null,
+        "publisher": "Yangyang County tourism",
+        "revision": "Frozen 2026-11-28. SHA-256 6008c59e87e4fd6e78df3ac53b4fd7a2c9afeb3a821b271f246542f163517217.",
+        "title": "Independent public visitor scope",
+        "uri": "https://tour.yangyang.go.kr/pub/vs_osanri.do"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The November 2026 notices list named routine closure dates for the still-operating museum.",
+        "id": "auth:kr-khs:1333203940000:ind:ind-osan-latest-notices",
+        "license": null,
+        "publisher": "Osan-ri Prehistory Museum, Yangyang County",
+        "revision": "Frozen 2026-11-28. SHA-256 6a8135f7007896503a9809a8fbec6e336f0e6c7ca54d505a5a6496996faba6bf.",
+        "title": "Independent public visitor scope",
+        "uri": "https://www.yangyang.go.kr/gw/osm/partyard_mnotice?mode=listForm&searchExpCnt=15"
+      }
+    ],
+    "source_uri": "https://tour.yangyang.go.kr/pub/yycultural.do?mode=v&seq=87",
+    "title": "Osan-ri Archaeological Site",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Korea Tourism Organization",
+      "Korea Heritage Service"
+    ],
+    "description": "Original seat of the former Gangwon provincial administration, with surviving and restored buildings on the publicly interpreted precinct.",
+    "description_zh": "原州江原监营位于韩国江原特别自治道。地图所标为公开遗产的代表点，开放区域以主管方说明为准。",
+    "details": "Original seat of the former Gangwon provincial administration, with surviving and restored buildings on the publicly interpreted precinct.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1333204390000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Wonju, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The official destination guide gives visitor information for the former provincial office grounds.",
+        "id": "auth:kr-khs:1333204390000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 ec4a62f2b63e79a4e2f8989f0a87ed1d9e820ff8d868cce525fa7499409b66e8.",
+        "title": "Gangwongamyeong Provincial Office public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=188458"
+      }
+    },
+    "id": "auth:kr-khs:1333204390000",
+    "location_precision": null,
+    "names": [
+      "原州江原监营",
+      "Gangwongamyeong Provincial Office",
+      "원주 강원감영"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      127.95037265622,
+      37.3479609626805
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The official destination guide gives visitor information for the former provincial office grounds.",
+        "id": "auth:kr-khs:1333204390000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 ec4a62f2b63e79a4e2f8989f0a87ed1d9e820ff8d868cce525fa7499409b66e8.",
+        "title": "Gangwongamyeong Provincial Office public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=188458"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1333204390000; source WGS84 longitude 127.95037265622, latitude 37.3479609626805.",
+        "id": "auth:kr-khs:1333204390000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Gangwongamyeong Provincial Office national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      }
+    ],
+    "source_uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=188458",
+    "title": "Gangwongamyeong Provincial Office",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Korea Tourism Organization",
+      "Korea Heritage Service"
+    ],
+    "description": "Original temple site in Haksan-ri with surviving stone features. One archaeological point represents the publicly presented remains.",
+    "description_zh": "江陵崛山寺遗址位于韩国江原特别自治道。地图所标为公开遗产的代表点，开放区域以主管方说明为准。",
+    "details": "Original temple site in Haksan-ri with surviving stone features. One archaeological point represents the publicly presented remains.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1333204480000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Gangneung, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The national visitor portal identifies the original site and visible stone features in Haksan-ri.",
+        "id": "auth:kr-khs:1333204480000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 31f81c3b884fcdad30bb5377bbc8813e7cffe557faea574d1ebe2190d4ab717e.",
+        "title": "Gulsansa Temple Site public visitor scope",
+        "uri": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=11658e1e-11dd-4a76-a2ef-67ab08c24fef"
+      }
+    },
+    "id": "auth:kr-khs:1333204480000",
+    "location_precision": null,
+    "names": [
+      "江陵崛山寺遗址",
+      "Gulsansa Temple Site",
+      "강릉 굴산사지"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      128.887881670091,
+      37.7067341046966
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national visitor portal identifies the original site and visible stone features in Haksan-ri.",
+        "id": "auth:kr-khs:1333204480000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 31f81c3b884fcdad30bb5377bbc8813e7cffe557faea574d1ebe2190d4ab717e.",
+        "title": "Gulsansa Temple Site public visitor scope",
+        "uri": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=11658e1e-11dd-4a76-a2ef-67ab08c24fef"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1333204480000; source WGS84 longitude 128.887881670091, latitude 37.7067341046966.",
+        "id": "auth:kr-khs:1333204480000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Gulsansa Temple Site national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      }
+    ],
+    "source_uri": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=11658e1e-11dd-4a76-a2ef-67ab08c24fef",
+    "title": "Gulsansa Temple Site",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Wonju City",
+      "Korea Heritage Service"
+    ],
+    "description": "Original Buddhist temple ruins beside the on-site visitor exhibition centre. Visitors can see the designated grounds and interpreted remains.",
+    "description_zh": "原州法泉寺遗址位于韩国江原特别自治道。地图所标为公开遗产的代表点，开放区域以主管方说明为准。",
+    "details": "Original Buddhist temple ruins beside the on-site visitor exhibition centre. Visitors can see the designated grounds and interpreted remains.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1333204660000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Wonju, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The city explains that visitors may see the former temple grounds, surviving stone inscription and onsite exhibitions.",
+        "id": "auth:kr-khs:1333204660000:access:1",
+        "license": null,
+        "publisher": "Wonju City",
+        "revision": "Frozen 2026-11-28; SHA-256 f82db77372aab034a85b6f6aeb8d399dab344ffffc7f7a7e5b5ca936dea1bfae.",
+        "title": "Beopcheonsa Temple Site public visitor scope",
+        "uri": "https://www.wonju.go.kr/tour/contents.do?key=6481"
+      }
+    },
+    "id": "auth:kr-khs:1333204660000",
+    "location_precision": null,
+    "names": [
+      "原州法泉寺遗址",
+      "Beopcheonsa Temple Site",
+      "원주 법천사지"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      127.7618608,
+      37.20912615
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The city explains that visitors may see the former temple grounds, surviving stone inscription and onsite exhibitions.",
+        "id": "auth:kr-khs:1333204660000:access:1",
+        "license": null,
+        "publisher": "Wonju City",
+        "revision": "Frozen 2026-11-28; SHA-256 f82db77372aab034a85b6f6aeb8d399dab344ffffc7f7a7e5b5ca936dea1bfae.",
+        "title": "Beopcheonsa Temple Site public visitor scope",
+        "uri": "https://www.wonju.go.kr/tour/contents.do?key=6481"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1333204660000; source WGS84 longitude 127.7618608, latitude 37.20912615.",
+        "id": "auth:kr-khs:1333204660000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Beopcheonsa Temple Site national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      }
+    ],
+    "source_uri": "https://www.wonju.go.kr/tour/contents.do?key=6481",
+    "title": "Beopcheonsa Temple Site",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Korea Tourism Organization",
+      "Korea Heritage Service"
+    ],
+    "description": "Historic coastal temple with repaired and reconstructed structures on its original grounds. Scoped to the designated public temple area.",
+    "description_zh": "襄阳洛山寺位于韩国江原特别自治道。地图所标为公开遗产的代表点，开放区域以主管方说明为准。",
+    "details": "Historic coastal temple with repaired and reconstructed structures on its original grounds. Scoped to the designated public temple area.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1333204950000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Yangyang, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The national tourism guide identifies the temple and publishes public visit information.",
+        "id": "auth:kr-khs:1333204950000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 44aa95783927ebe1c56b7ed6bfab8d344dc26fa36366c09df1e85f3decbc01bc.",
+        "title": "Naksansa Temple public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=111119"
+      }
+    },
+    "id": "auth:kr-khs:1333204950000",
+    "location_precision": null,
+    "names": [
+      "襄阳洛山寺",
+      "Naksansa Temple",
+      "양양 낙산사 일원",
+      "Naksansa Temple and Surroundings"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      128.628020874907,
+      38.1248985035004
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national tourism guide identifies the temple and publishes public visit information.",
+        "id": "auth:kr-khs:1333204950000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 44aa95783927ebe1c56b7ed6bfab8d344dc26fa36366c09df1e85f3decbc01bc.",
+        "title": "Naksansa Temple public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=111119"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1333204950000; source WGS84 longitude 128.628020874907, latitude 38.1248985035004.",
+        "id": "auth:kr-khs:1333204950000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Naksansa Temple national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      }
+    ],
+    "source_uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=111119",
+    "title": "Naksansa Temple",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Korea Tourism Organization",
+      "Korea Heritage Service"
+    ],
+    "description": "Historic pavilion on the rock above the Osipcheon. The published point represents the interpreted pavilion site and its river setting.",
+    "description_zh": "三陟竹西楼位于韩国江原特别自治道。地图所标为公开遗产的代表点，开放区域以主管方说明为准。",
+    "details": "Historic pavilion on the rock above the Osipcheon. The published point represents the interpreted pavilion site and its river setting.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1353200280000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Samcheok, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The official visitor listing identifies the historic riverside pavilion and publishes its public hours.",
+        "id": "auth:kr-khs:1353200280000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 62a2b906d7503fc84cf9997b6dd4b86c66e88766554aef2895eda5b9d657cc04.",
+        "title": "Jukseoru Pavilion public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=86300"
+      }
+    },
+    "id": "auth:kr-khs:1353200280000",
+    "location_precision": null,
+    "names": [
+      "三陟竹西楼",
+      "Jukseoru Pavilion",
+      "삼척 죽서루와 오십천"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      129.160504,
+      37.440894
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The official visitor listing identifies the historic riverside pavilion and publishes its public hours.",
+        "id": "auth:kr-khs:1353200280000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 62a2b906d7503fc84cf9997b6dd4b86c66e88766554aef2895eda5b9d657cc04.",
+        "title": "Jukseoru Pavilion public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=86300"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1353200280000; source WGS84 longitude 129.160504, latitude 37.440894.",
+        "id": "auth:kr-khs:1353200280000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Jukseoru Pavilion national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      }
+    ],
+    "source_uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=86300",
+    "title": "Jukseoru Pavilion",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Korea Tourism Organization",
+      "Korea Heritage Service",
+      "Yeongwol County"
+    ],
+    "description": "The Cheongnyeongpo riverside exile site of King Danjong, with public access to the pine and historical landscape by the managed ferry, subject to water level and hours.",
+    "description_zh": "宁越清泠浦为端宗流放旧址。代表点在观音松，公众按开放时段乘渡船参观，水位变化会影响渡船运行。",
+    "details": "The Cheongnyeongpo riverside exile site of King Danjong, with public access to the pine and historical landscape by the managed ferry, subject to water level and hours.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1363203490000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Yeongwol, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The official visitor guide identifies the historic exile site, its landscape and access by boat.",
+        "id": "auth:kr-khs:1363203490000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 08109bc1741fe77de05a447aa8bafb3e739e4079d76915265b6cf26550e59626.",
+        "title": "Cheongnyeongpo Exile Site public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=94178"
+      }
+    },
+    "id": "auth:kr-khs:1363203490000",
+    "location_precision": null,
+    "names": [
+      "宁越清泠浦旧址",
+      "Cheongnyeongpo Exile Site",
+      "영월 청령포 관음송",
+      "Cheongnyeongpo",
+      "Cheongnyeongpo Meandering Stream"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      128.443734326844,
+      37.1751621975521
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The official visitor guide identifies the historic exile site, its landscape and access by boat.",
+        "id": "auth:kr-khs:1363203490000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 08109bc1741fe77de05a447aa8bafb3e739e4079d76915265b6cf26550e59626.",
+        "title": "Cheongnyeongpo Exile Site public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=94178"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1363203490000; source WGS84 longitude 128.443734326844, latitude 37.1751621975521.",
+        "id": "auth:kr-khs:1363203490000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Cheongnyeongpo Exile Site national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The county page for the historic exile site gives ferry admission and its operating conditions.",
+        "id": "auth:kr-khs:1363203490000:ind:ind-cheongnyeongpo-ferry",
+        "license": null,
+        "publisher": "Yeongwol County",
+        "revision": "Frozen 2026-11-28. SHA-256 e9aadd8d011909472d174fe340bf1bad4efbe7d6b4be45b7e865f78754c53ed8.",
+        "title": "Independent public visitor scope",
+        "uri": "https://www.yw.go.kr/tour/selectTourCntntsWebView.do?ctgry=2&key=559&tourNo=199"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The county lists Gwaneumsong inside the accessible exile site and directs visitors to the ferry.",
+        "id": "auth:kr-khs:1363203490000:ind:ind-cheongnyeongpo-pine",
+        "license": null,
+        "publisher": "Yeongwol County",
+        "revision": "Frozen 2026-11-28. SHA-256 d0dbe81e19c039c782a73cf36b14a8f0d9d75c9316976d465a3a35b7a918f16d.",
+        "title": "Independent public visitor scope",
+        "uri": "https://www.yw.go.kr/tour/selectTourCntntsWebView.do?ctgry=15&key=586&tourNo=240"
+      }
+    ],
+    "source_uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=94178",
+    "title": "Cheongnyeongpo Exile Site",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Korea Tourism Organization",
+      "Korea Heritage Agency, Visit Korean Heritage Campaign",
+      "Korea Heritage Service"
+    ],
+    "description": "Protected limestone cave with preserved historic gold-mining workings in Hwaam. Visitors use the managed interpretation route through the heritage mine and cave complex.",
+    "description_zh": "旌善画岩洞历史金矿位于韩国江原特别自治道。地图所标为公开遗产的代表点，开放区域以主管方说明为准。",
+    "details": "Protected limestone cave with preserved historic gold-mining workings in Hwaam. Visitors use the managed interpretation route through the heritage mine and cave complex.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1363205570000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Jeongseon, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The national visitor page identifies both the historic gold mine and the designated public cave route.",
+        "id": "auth:kr-khs:1363205570000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 019f3cf3f096183ca44ee9ccb137b53c85ce1310981206cf1f22081cf6ee12f3.",
+        "title": "Hwaamdonggul Historic Gold Mine public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=95126"
+      }
+    },
+    "id": "auth:kr-khs:1363205570000",
+    "location_precision": null,
+    "names": [
+      "旌善画岩洞历史金矿",
+      "Hwaamdonggul Historic Gold Mine",
+      "정선 화암동굴",
+      "Hwaamdonggul Cave",
+      "Hwaam Cave"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      128.79019,
+      37.351165
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national visitor page identifies both the historic gold mine and the designated public cave route.",
+        "id": "auth:kr-khs:1363205570000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 019f3cf3f096183ca44ee9ccb137b53c85ce1310981206cf1f22081cf6ee12f3.",
+        "title": "Hwaamdonggul Historic Gold Mine public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=95126"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national heritage route explains former gold-mining uses and the managed public experience.",
+        "id": "auth:kr-khs:1363205570000:access:2",
+        "license": null,
+        "publisher": "Korea Heritage Agency, Visit Korean Heritage Campaign",
+        "revision": "Frozen 2026-11-28; SHA-256 7444d715e07234cf4daf29729edf712fceca836dbe7cb64c0553fae2d43e5731.",
+        "title": "Hwaamdonggul Historic Gold Mine public visitor scope",
+        "uri": "https://www.kh.or.kr/visit/en/road/12/view.do?key=2408220012"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1363205570000; source WGS84 longitude 128.790190, latitude 37.351165.",
+        "id": "auth:kr-khs:1363205570000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Hwaamdonggul Historic Gold Mine national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      }
+    ],
+    "source_uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=95126",
+    "title": "Hwaamdonggul Historic Gold Mine",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Korea Tourism Organization",
+      "Korea Heritage Agency, Visit Korean Heritage Campaign",
+      "Korea Heritage Service"
+    ],
+    "description": "Standing historic estate in Gangneung with designated guest facilities and public interpretation of Joseon-era domestic architecture.",
+    "description_zh": "江陵船桥庄位于韩国江原特别自治道。地图所标为公开遗产的代表点，开放区域以主管方说明为准。",
+    "details": "Standing historic estate in Gangneung with designated guest facilities and public interpretation of Joseon-era domestic architecture.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1483200050000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Gangneung, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The national tourism authority identifies the original preserved house and lists visitor arrangements.",
+        "id": "auth:kr-khs:1483200050000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 2bfc8a970d43e05f4c72af74090856ab78f7fb0c650d68ce4a22a18711248287.",
+        "title": "Seongyojang House public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=109336"
+      }
+    },
+    "id": "auth:kr-khs:1483200050000",
+    "location_precision": null,
+    "names": [
+      "江陵船桥庄",
+      "Seongyojang House",
+      "강릉 선교장"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      128.885068610492,
+      37.7863444846841
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national tourism authority identifies the original preserved house and lists visitor arrangements.",
+        "id": "auth:kr-khs:1483200050000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 2bfc8a970d43e05f4c72af74090856ab78f7fb0c650d68ce4a22a18711248287.",
+        "title": "Seongyojang House public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=109336"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national heritage itinerary lists public hours and describes the historic residence.",
+        "id": "auth:kr-khs:1483200050000:access:2",
+        "license": null,
+        "publisher": "Korea Heritage Agency, Visit Korean Heritage Campaign",
+        "revision": "Frozen 2026-11-28; SHA-256 3a713de080ffbcacb0cc7f8d09f05489df8b43996d623a0e22be7cae5dee2064.",
+        "title": "Seongyojang House public visitor scope",
+        "uri": "https://www.kh.or.kr/cms/content/view/1244"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1483200050000; source WGS84 longitude 128.885068610492, latitude 37.7863444846841.",
+        "id": "auth:kr-khs:1483200050000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Seongyojang House national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      }
+    ],
+    "source_uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=109336",
+    "title": "Seongyojang House",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Korea Tourism Organization",
+      "Korea Heritage Service"
+    ],
+    "description": "Living historic village in Goseong with traditional Yun and Ham family residences. The record covers the visitor area and public lanes; house access follows posted local arrangements.",
+    "description_zh": "高城王谷村位于韩国江原特别自治道。地图所标为公开遗产的代表点，开放区域以主管方说明为准。",
+    "details": "Living historic village in Goseong with traditional Yun and Ham family residences. The record covers the visitor area and public lanes; house access follows posted local arrangements.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:1483202350000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Goseong, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The national guide lists the historic village, surviving houses and public visiting information.",
+        "id": "auth:kr-khs:1483202350000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 f074e3e1213d472bcdc0b8ac9eb2d26d3e02ecb1819c1f4d51ddf84bdafbfa0e.",
+        "title": "Wanggok Village public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=186444"
+      }
+    },
+    "id": "auth:kr-khs:1483202350000",
+    "location_precision": null,
+    "names": [
+      "高城王谷村",
+      "Wanggok Village",
+      "고성 왕곡마을",
+      "Goseong Wanggok Village",
+      "Wangok Village"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      128.500103556448,
+      38.3399901498785
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national guide lists the historic village, surviving houses and public visiting information.",
+        "id": "auth:kr-khs:1483202350000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 f074e3e1213d472bcdc0b8ac9eb2d26d3e02ecb1819c1f4d51ddf84bdafbfa0e.",
+        "title": "Wanggok Village public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=186444"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Entry 1483202350000; source WGS84 longitude 128.500103556448, latitude 38.3399901498785.",
+        "id": "auth:kr-khs:1483202350000:coordinate",
+        "license": "Data.go.kr unrestricted public data (dataset 15034324)",
+        "publisher": "Korea Heritage Service",
+        "revision": "Korea Heritage Service list retrieved 2026-11-28. SHA-256 ae0ea84a13dc83421c3a232386bea6966ec5335b101d188b769c793acb6ef0a7.",
+        "title": "Wanggok Village national heritage coordinate",
+        "uri": "https://www.khs.go.kr/cha/SearchKindOpenapiList.do?pageUnit=1000&ccbaCtcd=51&ccbaCncl=N"
+      }
+    ],
+    "source_uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=186444",
+    "title": "Wanggok Village",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Official visitor scope and published named heritage position corroborated.",
+      "note": "This point update makes no assignment of historical phases.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Korea Tourism Organization",
+      "Korea Heritage Service",
+      "Wikidata contributors",
+      "Cheorwon County",
+      "Gangwon Special Self-Governing Province"
+    ],
+    "description": "The standing ruins are viewed from the county's public plaza and connected paths. The representative point marks the protected building footprint. Indoor visitation is restricted.",
+    "description_zh": "铁原原劳动党舍可从广场和相连步道观看外部。代表点标记原建筑，内部限制进入。",
+    "details": "The standing ruins are viewed from the county's public plaza and connected paths. The representative point marks the protected building footprint. Indoor visitation is restricted.",
+    "geography": {
+      "authority_id": "supplement:auth:kr-khs:4413200220000",
+      "countries": [
+        "KR"
+      ],
+      "note": "Published representative point in Cheorwon, Gangwon Special Self-Governing Province.",
+      "point_count": 1,
+      "regions": [
+        "asia-pacific"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The official visitor guide identifies the original building ruins and provides destination visit information.",
+        "id": "auth:kr-khs:4413200220000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 565c43545071e705357a9c862397e43b604d50c16764423a62e457347d4fe4cd.",
+        "title": "Former Korean Workers’ Party Headquarters, Cheorwon public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=106807"
+      }
+    },
+    "id": "auth:kr-khs:4413200220000",
+    "location_precision": null,
+    "names": [
+      "铁原原劳动党舍",
+      "Former Korean Workers’ Party Headquarters, Cheorwon",
+      "철원 노동당사",
+      "Nodongdangsa",
+      "Cheorwon Korean Workers’ Party Headquarters"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      127.20194444444445,
+      38.25527777777778
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The official visitor guide identifies the original building ruins and provides destination visit information.",
+        "id": "auth:kr-khs:4413200220000:access:1",
+        "license": null,
+        "publisher": "Korea Tourism Organization",
+        "revision": "Frozen 2026-11-28; SHA-256 565c43545071e705357a9c862397e43b604d50c16764423a62e457347d4fe4cd.",
+        "title": "Former Korean Workers’ Party Headquarters, Cheorwon public visitor scope",
+        "uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=106807"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national heritage entry identifies the original protected building and records its registered status.",
+        "id": "auth:kr-khs:4413200220000:access:2",
+        "license": null,
+        "publisher": "Korea Heritage Service",
+        "revision": "Frozen 2026-11-28; SHA-256 51a173f6535274b449eed9fb60de83e25fa95c74c3f01d389b18a223867884e3.",
+        "title": "Former Korean Workers’ Party Headquarters, Cheorwon public visitor scope",
+        "uri": "https://www.heritage.go.kr/heri/cul/culSelectDetail.do?ccbaCpno=4413200220000&pageNo=1_1_1_1"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 127.20194444444445, latitude 38.25527777777778.",
+        "id": "wikidata:Q12619027",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2539485412; P625 Q12619027$2686f765-49d0-0c04-f7cf-2ab85a9cbb39.",
+        "title": "Former Korean Workers’ Party Headquarters, Cheorwon coordinates",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q12619027.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The county confirms standing exterior-only viewing from the public plaza and linked paths.",
+        "id": "auth:kr-khs:4413200220000:ind:ind-cheorwon-county-exterior",
+        "license": null,
+        "publisher": "Cheorwon County",
+        "revision": "Frozen 2026-11-28. SHA-256 17a96765df45ee5f2f28bfdd03c9c84048ea7ef63f0c40c042f97fa399ddd46d.",
+        "title": "Independent public visitor scope",
+        "uri": "https://www.cwg.go.kr/tour/selectBbsNttView.do?bbsNo=77&key=669&nttNo=213503"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The 2026 public plan identifies the building as the historical centre of the visitor park and records expansion of public facilities.",
+        "id": "auth:kr-khs:4413200220000:ind:ind-cheorwon-plan-2026",
+        "license": null,
+        "publisher": "Gangwon Special Self-Governing Province",
+        "revision": "Frozen 2026-11-28. SHA-256 6af445f52ace0b97f83fbcb4fe303aab12f96c1b384e5e78b13259edcb5a160d.",
+        "title": "Independent public visitor scope",
+        "uri": "https://state.gwd.go.kr/upload/report/kw_nws_data/kw_mgr_5176_20260402131639.pdf"
+      }
+    ],
+    "source_uri": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=106807",
+    "title": "Former Korean Workers’ Party Headquarters, Cheorwon",
+    "types": [
+      "historic-site"
+    ]
+  }
+]

@@ -172,6 +172,10 @@ def test_public_point_search_catalogue_and_provenance(
             ("BM", "auth:bm-public:", 4),
             ("KY", "auth:ky-public:", 2),
             ("NU", "auth:nu-public:", 2),
+            ("KR", "auth:kr-khs:", 21),
+            ("BG", "auth:bg-public:", 9),
+            ("RS", "auth:rs-public:", 10),
+            ("RW", "auth:rw-public:", 4),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -402,3 +406,26 @@ def test_public_point_search_catalogue_and_provenance(
             for ref in cottle["source_refs"]
         )
         assert client.get("/api/sites/auth:ky-public:Q5471206").status_code == 404
+
+        osan = client.get("/api/sites/auth:kr-khs:1333203940000").json()
+        assert osan["repr_point"] == [128.663051, 38.08718]
+        assert "public parking area" in osan["details"]
+        assert any(ref["license"] and "15034324" in ref["license"]
+                   for ref in osan["source_refs"])
+        cheorwon = client.get("/api/sites/auth:kr-khs:4413200220000").json()
+        assert cheorwon["repr_point"] == [127.20194444444445, 38.25527777777778]
+        assert "public plaza" in cheorwon["details"]
+        assert any(ref["license"] == "CC0" for ref in cheorwon["source_refs"])
+        nicopolis = client.get("/api/sites/auth:bg-public:Q1987323").json()
+        assert nicopolis["repr_point"] == [25.612232, 43.217925]
+        assert "requires prior booking" in nicopolis["details"]
+        assert client.get("/api/sites/auth:bg-public:Q1943549").status_code == 404
+        assert client.get("/api/sites/501557").status_code == 200
+
+        rukari = client.get("/api/sites/auth:rw-public:Q16678454").json()
+        assert rukari["repr_point"] == [29.7399, -2.3603]
+        assert any(
+            ref["publisher"] == "Rwanda Cultural Heritage Academy" for ref in rukari["source_refs"]
+        )
+        assert client.get("/api/sites/auth:bi-public:Q2688645").status_code == 404
+        assert client.get("/api/sites/wd:Q5564954").status_code == 200

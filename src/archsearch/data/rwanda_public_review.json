@@ -1,0 +1,593 @@
+{
+  "base_count": 5069,
+  "base_ids_sha256": "6b0446525741e7c9419a27d8570458345b34ba9d7e72bcfd2827d3dddd7efe3b",
+  "base_sites_sha256": "9ebdad5a2d077f92e521fef32a588c4a31f1449926a220fcbba899717dbf9fc5",
+  "cohort_version": "rwanda-public-v1",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          30.05319444,
+          -1.94661111
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11295489.json",
+        "statement_id": "Q11295489$4C0087E0-D7B9-4CC7-800A-E217B40CEE40"
+      },
+      "independent_review": {
+        "method": "Independent agent rechecked original CC0 coordinates and current official public admission, separately verified original building identities, and matched the coarse Rukari marker to the operator documented royal palace visitor precinct.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The protected colonial-period building on KN 90 Street is the intended public museum. Rwanda Cultural Heritage Academy publishes admission and current visit guidance.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Rwanda Cultural Heritage Academy",
+          "Official Gazette of the Republic of Rwanda",
+          "Wikidata contributors"
+        ],
+        "description": "The original Kandt residence in Kigali presents public museum exhibitions about the colonial period.",
+        "description_zh": "位于基加利的坎特故居原建筑，公开展览介绍当地殖民时期历史。",
+        "details": "The protected colonial-period building on KN 90 Street is the intended public museum. Rwanda Cultural Heritage Academy publishes admission and current visit guidance.",
+        "geography": {
+          "authority_id": "supplement:auth:rw-public:Q11295489",
+          "countries": [
+            "RW"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national operator identifies Kandt House Museum on KN 90 Street in Kigali.",
+            "id": "auth:rw-public:Q11295489:evidence:1",
+            "license": null,
+            "publisher": "Rwanda Cultural Heritage Academy",
+            "revision": "Retrieved 2026-11-28; SHA-256 a52bbc0610f5d70f7ea584052acdfecd6e086b4db1e944c1f9937fa02b645fd2.",
+            "title": "Kandt House Museum",
+            "uri": "https://www.rwandaheritage.gov.rw/en/museum-and-heritages-sites-management-division-1"
+          }
+        },
+        "id": "auth:rw-public:Q11295489",
+        "location_precision": null,
+        "names": [
+          "坎特故居博物馆",
+          "Kandt House Museum",
+          "Kandt House",
+          "Kigali Kandt House"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          30.05319444,
+          -1.94661111
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national operator identifies Kandt House Museum on KN 90 Street in Kigali.",
+            "id": "auth:rw-public:Q11295489:evidence:1",
+            "license": null,
+            "publisher": "Rwanda Cultural Heritage Academy",
+            "revision": "Retrieved 2026-11-28; SHA-256 a52bbc0610f5d70f7ea584052acdfecd6e086b4db1e944c1f9937fa02b645fd2.",
+            "title": "Kandt House Museum",
+            "uri": "https://www.rwandaheritage.gov.rw/en/museum-and-heritages-sites-management-division-1"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Kandt House is listed as an exhibition venue with published museum admission.",
+            "id": "auth:rw-public:Q11295489:evidence:2",
+            "license": null,
+            "publisher": "Rwanda Cultural Heritage Academy",
+            "revision": "Retrieved 2026-11-28; SHA-256 b6f07cf180fda4cf3286baf42ca92652e7d52c6161fc7a8df97357303bf0d220.",
+            "title": "National museum admission",
+            "uri": "https://www.rwandaheritage.gov.rw/en/visit-national-museums"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Kandt House is a named architectural heritage property.",
+            "id": "auth:rw-public:Q11295489:evidence:3",
+            "license": null,
+            "publisher": "Official Gazette of the Republic of Rwanda",
+            "revision": "Retrieved 2026-11-28; SHA-256 3d2a60e0a70e61e7159b9db5eb1887151e60207edb660630ada1b5189f7823d7.",
+            "title": "Official historic heritage list",
+            "uri": "https://www.rwandaheritage.gov.rw/index.php?eID=dumpFile&f=92802&t=f&token=559794b33477a9c1bd9368e6e661bb643ad4a9dc"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 30.05319444, latitude -1.94661111.",
+            "id": "auth:rw-public:Q11295489:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 22b784510d53a25aca087c69cae3770cf708f5ed4bc973c63014dcfc0c64bed6.",
+            "title": "Kandt House Museum coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11295489.json"
+          }
+        ],
+        "source_uri": "https://www.rwandaheritage.gov.rw/en/museum-and-heritages-sites-management-division-1",
+        "title": "Kandt House Museum",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/rwanda-academy-properties.html",
+          "sha256": "a52bbc0610f5d70f7ea584052acdfecd6e086b4db1e944c1f9937fa02b645fd2",
+          "uri": "https://www.rwandaheritage.gov.rw/en/museum-and-heritages-sites-management-division-1"
+        },
+        {
+          "filename": "source/rwanda-academy-visit.html",
+          "sha256": "b6f07cf180fda4cf3286baf42ca92652e7d52c6161fc7a8df97357303bf0d220",
+          "uri": "https://www.rwandaheritage.gov.rw/en/visit-national-museums"
+        },
+        {
+          "filename": "source/rwanda-gazette.pdf",
+          "sha256": "3d2a60e0a70e61e7159b9db5eb1887151e60207edb660630ada1b5189f7823d7",
+          "uri": "https://www.rwandaheritage.gov.rw/index.php?eID=dumpFile&f=92802&t=f&token=559794b33477a9c1bd9368e6e661bb643ad4a9dc"
+        },
+        {
+          "filename": "source/Q11295489.json",
+          "sha256": "22b784510d53a25aca087c69cae3770cf708f5ed4bc973c63014dcfc0c64bed6",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q11295489.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          29.7399,
+          -2.3603
+        ],
+        "precision": 0.0017981561136079,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16678454.json",
+        "statement_id": "Q16678454$d41c4415-5a4e-449f-aa9c-969c9609bf0a"
+      },
+      "independent_review": {
+        "method": "Independent agent rechecked original CC0 coordinates and current official public admission, separately verified original building identities, and matched the coarse Rukari marker to the operator documented royal palace visitor precinct.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The representative point covers the managed Rukari museum precinct, including the in-place historical royal residence and the traditional houses reconstructed for interpretation. The source declares coarse positional precision.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Rwanda Cultural Heritage Academy",
+          "Official Gazette of the Republic of Rwanda",
+          "Wikidata contributors"
+        ],
+        "description": "The visitor complex at Rukari includes the historic royal residence and interpretation at reconstructed traditional residences.",
+        "description_zh": "鲁卡里王宫博物馆包含历史王室居所原建筑，以及供公众参观的复建传统房屋。坐标为园区代表点，来源标注的精度较粗。",
+        "details": "The representative point covers the managed Rukari museum precinct, including the in-place historical royal residence and the traditional houses reconstructed for interpretation. The source declares coarse positional precision.",
+        "geography": {
+          "authority_id": "supplement:auth:rw-public:Q16678454",
+          "countries": [
+            "RW"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator presents the Rukari museum and its historic and reconstructed royal residences.",
+            "id": "auth:rw-public:Q16678454:evidence:1",
+            "license": null,
+            "publisher": "Rwanda Cultural Heritage Academy",
+            "revision": "Retrieved 2026-11-28; SHA-256 a52bbc0610f5d70f7ea584052acdfecd6e086b4db1e944c1f9937fa02b645fd2.",
+            "title": "King’s Palace Museum Rukari",
+            "uri": "https://www.rwandaheritage.gov.rw/en/museum-and-heritages-sites-management-division-1"
+          }
+        },
+        "id": "auth:rw-public:Q16678454",
+        "location_precision": null,
+        "names": [
+          "鲁卡里王宫博物馆",
+          "King’s Palace Museum Rukari",
+          "Kings Palace Museum Rukari",
+          "King’s Palace Museum, Nyanza",
+          "Mu Rukari"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          29.7399,
+          -2.3603
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator presents the Rukari museum and its historic and reconstructed royal residences.",
+            "id": "auth:rw-public:Q16678454:evidence:1",
+            "license": null,
+            "publisher": "Rwanda Cultural Heritage Academy",
+            "revision": "Retrieved 2026-11-28; SHA-256 a52bbc0610f5d70f7ea584052acdfecd6e086b4db1e944c1f9937fa02b645fd2.",
+            "title": "King’s Palace Museum Rukari",
+            "uri": "https://www.rwandaheritage.gov.rw/en/museum-and-heritages-sites-management-division-1"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The Rukari venue has its own published visitor services and tickets.",
+            "id": "auth:rw-public:Q16678454:evidence:2",
+            "license": null,
+            "publisher": "Rwanda Cultural Heritage Academy",
+            "revision": "Retrieved 2026-11-28; SHA-256 b6f07cf180fda4cf3286baf42ca92652e7d52c6161fc7a8df97357303bf0d220.",
+            "title": "National museum admission",
+            "uri": "https://www.rwandaheritage.gov.rw/en/visit-national-museums"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Mu Rukari is named as a palace heritage precinct in Nyanza.",
+            "id": "auth:rw-public:Q16678454:evidence:3",
+            "license": null,
+            "publisher": "Official Gazette of the Republic of Rwanda",
+            "revision": "Retrieved 2026-11-28; SHA-256 3d2a60e0a70e61e7159b9db5eb1887151e60207edb660630ada1b5189f7823d7.",
+            "title": "Official historic heritage list",
+            "uri": "https://www.rwandaheritage.gov.rw/index.php?eID=dumpFile&f=92802&t=f&token=559794b33477a9c1bd9368e6e661bb643ad4a9dc"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 29.7399, latitude -2.3603.",
+            "id": "auth:rw-public:Q16678454:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 d04c4c70343a50ee55c78814b81a184ed1f3637ae94b4f78161d535ade160f3f.",
+            "title": "King’s Palace Museum Rukari coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16678454.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The academy describes the historic residence, reconstructed huts and managed public grounds of its King’s Palace Museum.",
+            "id": "auth:rw-public:Q16678454:evidence:5",
+            "license": null,
+            "publisher": "Rwanda Cultural Heritage Academy",
+            "revision": "Retrieved 2026-11-28; SHA-256 f3509143e18020e27a86746851316157a01dcfd0585f578b94f3754b8cf10f47.",
+            "title": "Rukari museum plan and aerial view",
+            "uri": "https://www.rwandaheritage.gov.rw/fileadmin/user_upload/RCHA/Educational_materials/FIVE_YEARS_ROLLING_STRATEGIC_PLAN____2022-2027_-_A5_Szie_BOOKLET__.pdf"
+          }
+        ],
+        "source_uri": "https://www.rwandaheritage.gov.rw/en/museum-and-heritages-sites-management-division-1",
+        "title": "King’s Palace Museum Rukari",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/rwanda-academy-properties.html",
+          "sha256": "a52bbc0610f5d70f7ea584052acdfecd6e086b4db1e944c1f9937fa02b645fd2",
+          "uri": "https://www.rwandaheritage.gov.rw/en/museum-and-heritages-sites-management-division-1"
+        },
+        {
+          "filename": "source/rwanda-academy-visit.html",
+          "sha256": "b6f07cf180fda4cf3286baf42ca92652e7d52c6161fc7a8df97357303bf0d220",
+          "uri": "https://www.rwandaheritage.gov.rw/en/visit-national-museums"
+        },
+        {
+          "filename": "source/rwanda-gazette.pdf",
+          "sha256": "3d2a60e0a70e61e7159b9db5eb1887151e60207edb660630ada1b5189f7823d7",
+          "uri": "https://www.rwandaheritage.gov.rw/index.php?eID=dumpFile&f=92802&t=f&token=559794b33477a9c1bd9368e6e661bb643ad4a9dc"
+        },
+        {
+          "filename": "source/Q16678454.json",
+          "sha256": "d04c4c70343a50ee55c78814b81a184ed1f3637ae94b4f78161d535ade160f3f",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16678454.json"
+        },
+        {
+          "filename": "source/independent-rcha-strategic-plan.pdf",
+          "sha256": "f3509143e18020e27a86746851316157a01dcfd0585f578b94f3754b8cf10f47",
+          "uri": "https://www.rwandaheritage.gov.rw/fileadmin/user_upload/RCHA/Educational_materials/FIVE_YEARS_ROLLING_STRATEGIC_PLAN____2022-2027_-_A5_Szie_BOOKLET__.pdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          30.17302778,
+          -1.97530556
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16678464.json",
+        "statement_id": "Q16678464$7B183A93-6BA0-4020-8C49-DD8F1514D997"
+      },
+      "independent_review": {
+        "method": "Independent agent rechecked original CC0 coordinates and current official public admission, separately verified original building identities, and matched the coarse Rukari marker to the operator documented royal palace visitor precinct.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The representative point is within the historic Kanombe museum property. The museum and its publicly interpreted premises are the recorded visitor scope.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Rwanda Cultural Heritage Academy",
+          "Wikidata contributors"
+        ],
+        "description": "The former presidential residence at Kanombe houses public Rwanda Art Museum galleries.",
+        "description_zh": "卡农贝旧官邸的原建筑现向公众开放卢旺达艺术博物馆展厅。",
+        "details": "The representative point is within the historic Kanombe museum property. The museum and its publicly interpreted premises are the recorded visitor scope.",
+        "geography": {
+          "authority_id": "supplement:auth:rw-public:Q16678464",
+          "countries": [
+            "RW"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The national operator identifies the former residence as the Rwanda Art Museum site.",
+            "id": "auth:rw-public:Q16678464:evidence:1",
+            "license": null,
+            "publisher": "Rwanda Cultural Heritage Academy",
+            "revision": "Retrieved 2026-11-28; SHA-256 a52bbc0610f5d70f7ea584052acdfecd6e086b4db1e944c1f9937fa02b645fd2.",
+            "title": "Rwanda Art Museum at Kanombe",
+            "uri": "https://www.rwandaheritage.gov.rw/en/museum-and-heritages-sites-management-division-1"
+          }
+        },
+        "id": "auth:rw-public:Q16678464",
+        "location_precision": null,
+        "names": [
+          "卡农贝旧官邸卢旺达艺术博物馆",
+          "Rwanda Art Museum at the historic Kanombe residence",
+          "Rwanda Art Museum",
+          "Kanombe Presidential Palace Museum",
+          "Musée d’Art du Rwanda"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          30.17302778,
+          -1.97530556
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national operator identifies the former residence as the Rwanda Art Museum site.",
+            "id": "auth:rw-public:Q16678464:evidence:1",
+            "license": null,
+            "publisher": "Rwanda Cultural Heritage Academy",
+            "revision": "Retrieved 2026-11-28; SHA-256 a52bbc0610f5d70f7ea584052acdfecd6e086b4db1e944c1f9937fa02b645fd2.",
+            "title": "Rwanda Art Museum at Kanombe",
+            "uri": "https://www.rwandaheritage.gov.rw/en/museum-and-heritages-sites-management-division-1"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Rwanda Art Museum has a separately named admission and exhibition entry.",
+            "id": "auth:rw-public:Q16678464:evidence:2",
+            "license": null,
+            "publisher": "Rwanda Cultural Heritage Academy",
+            "revision": "Retrieved 2026-11-28; SHA-256 b6f07cf180fda4cf3286baf42ca92652e7d52c6161fc7a8df97357303bf0d220.",
+            "title": "National museum admission",
+            "uri": "https://www.rwandaheritage.gov.rw/en/visit-national-museums"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 30.17302778, latitude -1.97530556.",
+            "id": "auth:rw-public:Q16678464:evidence:3",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 9df439a557da4f107bd1c66d38cffd7594e0150a8564f15ed012faac32d3123a.",
+            "title": "Rwanda Art Museum at the historic Kanombe residence coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16678464.json"
+          }
+        ],
+        "source_uri": "https://www.rwandaheritage.gov.rw/en/museum-and-heritages-sites-management-division-1",
+        "title": "Rwanda Art Museum at the historic Kanombe residence",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/rwanda-academy-properties.html",
+          "sha256": "a52bbc0610f5d70f7ea584052acdfecd6e086b4db1e944c1f9937fa02b645fd2",
+          "uri": "https://www.rwandaheritage.gov.rw/en/museum-and-heritages-sites-management-division-1"
+        },
+        {
+          "filename": "source/rwanda-academy-visit.html",
+          "sha256": "b6f07cf180fda4cf3286baf42ca92652e7d52c6161fc7a8df97357303bf0d220",
+          "uri": "https://www.rwandaheritage.gov.rw/en/visit-national-museums"
+        },
+        {
+          "filename": "source/Q16678464.json",
+          "sha256": "9df439a557da4f107bd1c66d38cffd7594e0150a8564f15ed012faac32d3123a",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q16678464.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Original WGS84 statement retained as a public heritage representative point.",
+        "point": [
+          29.74112,
+          -2.36908
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2110327.json",
+        "statement_id": "Q2110327$e92f91dd-4197-749a-b46c-05a0fa979aa3"
+      },
+      "independent_review": {
+        "method": "Independent agent rechecked original CC0 coordinates and current official public admission, separately verified original building identities, and matched the coarse Rukari marker to the operator documented royal palace visitor precinct.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The historic building at Rwesero is a separate property from the King's Palace Museum at Rukari. The national operator lists public gallery admission.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Public heritage place and point-source review.",
+          "note": "This point update does not assign a dated phase.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Rwanda Cultural Heritage Academy",
+          "Official Gazette of the Republic of Rwanda",
+          "Wikidata contributors"
+        ],
+        "description": "The public Kwigira Museum occupies the building commissioned as a royal palace on Rwesero Hill. The king died before its inauguration.",
+        "description_zh": "尼扬扎鲁韦塞罗山上原拟作为王宫的建筑，现为基维吉拉博物馆的公开展览场所。",
+        "details": "The historic building at Rwesero is a separate property from the King's Palace Museum at Rukari. The national operator lists public gallery admission.",
+        "geography": {
+          "authority_id": "supplement:auth:rw-public:Q2110327",
+          "countries": [
+            "RW"
+          ],
+          "note": "Named public heritage place.",
+          "point_count": 1,
+          "regions": [
+            "africa"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator identifies the building intended as a royal palace and now used by Kwigira Museum.",
+            "id": "auth:rw-public:Q2110327:evidence:1",
+            "license": null,
+            "publisher": "Rwanda Cultural Heritage Academy",
+            "revision": "Retrieved 2026-11-28; SHA-256 a52bbc0610f5d70f7ea584052acdfecd6e086b4db1e944c1f9937fa02b645fd2.",
+            "title": "Kwigira Museum in Rwesero",
+            "uri": "https://www.rwandaheritage.gov.rw/en/museum-and-heritages-sites-management-division-1"
+          }
+        },
+        "id": "auth:rw-public:Q2110327",
+        "location_precision": null,
+        "names": [
+          "鲁韦塞罗基维吉拉博物馆馆舍",
+          "Kwigira Museum at the historic Rwesero building",
+          "Kwigira Museum",
+          "Rwesero Art Museum",
+          "Kwigira Museum-Rwesero"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          29.74112,
+          -2.36908
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator identifies the building intended as a royal palace and now used by Kwigira Museum.",
+            "id": "auth:rw-public:Q2110327:evidence:1",
+            "license": null,
+            "publisher": "Rwanda Cultural Heritage Academy",
+            "revision": "Retrieved 2026-11-28; SHA-256 a52bbc0610f5d70f7ea584052acdfecd6e086b4db1e944c1f9937fa02b645fd2.",
+            "title": "Kwigira Museum in Rwesero",
+            "uri": "https://www.rwandaheritage.gov.rw/en/museum-and-heritages-sites-management-division-1"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Kwigira Museum's exhibition admission is listed separately.",
+            "id": "auth:rw-public:Q2110327:evidence:2",
+            "license": null,
+            "publisher": "Rwanda Cultural Heritage Academy",
+            "revision": "Retrieved 2026-11-28; SHA-256 b6f07cf180fda4cf3286baf42ca92652e7d52c6161fc7a8df97357303bf0d220.",
+            "title": "National museum admission",
+            "uri": "https://www.rwandaheritage.gov.rw/en/visit-national-museums"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Kwigira Museum and King's Palace Museum are identified as separate heritage attractions.",
+            "id": "auth:rw-public:Q2110327:evidence:3",
+            "license": null,
+            "publisher": "Official Gazette of the Republic of Rwanda",
+            "revision": "Retrieved 2026-11-28; SHA-256 79ebf0da87bf2e79c563d2bfe599398d8c9e32eb592d668248a892aa2f6efaa8.",
+            "title": "Nyanza land-use and heritage designations",
+            "uri": "https://www.minijust.gov.rw/fileadmin/user_upload/Minijust/Official_gazettes_2/____2026_Igazeti_ya_Leta/_UGUSHYINGO-November-Novembre/OG_n___Special_Quater_of_19.11.2026_NYANZA__Imikoreshereze_n_imitunganyirize_by_ubutaka.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Native Wikidata coordinate declaration P625. Longitude 29.74112, latitude -2.36908.",
+            "id": "auth:rw-public:Q2110327:evidence:4",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Retrieved 2026-11-28; SHA-256 b258a48ddf4318ac5d61bb5c57bae08579f239525a79b9706c240e5b8f3ceaa1.",
+            "title": "Kwigira Museum at the historic Rwesero building coordinate assertion",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2110327.json"
+          }
+        ],
+        "source_uri": "https://www.rwandaheritage.gov.rw/en/museum-and-heritages-sites-management-division-1",
+        "title": "Kwigira Museum at the historic Rwesero building",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/rwanda-academy-properties.html",
+          "sha256": "a52bbc0610f5d70f7ea584052acdfecd6e086b4db1e944c1f9937fa02b645fd2",
+          "uri": "https://www.rwandaheritage.gov.rw/en/museum-and-heritages-sites-management-division-1"
+        },
+        {
+          "filename": "source/rwanda-academy-visit.html",
+          "sha256": "b6f07cf180fda4cf3286baf42ca92652e7d52c6161fc7a8df97357303bf0d220",
+          "uri": "https://www.rwandaheritage.gov.rw/en/visit-national-museums"
+        },
+        {
+          "filename": "source/rwanda-nyanza-2026.pdf",
+          "sha256": "79ebf0da87bf2e79c563d2bfe599398d8c9e32eb592d668248a892aa2f6efaa8",
+          "uri": "https://www.minijust.gov.rw/fileadmin/user_upload/Minijust/Official_gazettes_2/____2026_Igazeti_ya_Leta/_UGUSHYINGO-November-Novembre/OG_n___Special_Quater_of_19.11.2026_NYANZA__Imikoreshereze_n_imitunganyirize_by_ubutaka.pdf"
+        },
+        {
+          "filename": "source/Q2110327.json",
+          "sha256": "b258a48ddf4318ac5d61bb5c57bae08579f239525a79b9706c240e5b8f3ceaa1",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2110327.json"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Four distinct Rwandan historic museums or museum precincts with official public admission and exact licensed original representative points."
+}

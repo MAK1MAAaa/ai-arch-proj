@@ -406,6 +406,27 @@ ISLANDS_SECOND_PUBLIC = NamedPlaceCohort(
     "2387d930517c66a1bac08047a70a8d752d718c514a5b146827e57ae416165ada",
     country_labels=(("BM", "Bermuda"), ("KY", "Cayman Islands")),
 )
+KOREA_GANGWON_PUBLIC = NamedPlaceCohort(
+    "korea-gangwon-public-v1",
+    "global-v21",
+    "korea_gangwon_public",
+    "b08490b90bab18cd11503a7cc5221ba127418f99752a8185a7b9bbc642f48fa3",
+    "3a356ee1eff9228aab550f5134175f8a3059292158665331b51674be6a811843",
+)
+BULGARIA_SERBIA_PUBLIC = NamedPlaceCohort(
+    "bulgaria-serbia-public-v1",
+    "global-v21",
+    "bulgaria_serbia_public",
+    "e9d8afcb0b54af67c7ae2b3b0ba075e80eadad75184d4ef12d8025224063ee38",
+    "98201c036b09e190d5ebe3b1d389437effbe93fae1b61a594d678b528581a0bb",
+)
+RWANDA_PUBLIC = NamedPlaceCohort(
+    "rwanda-public-v1",
+    "global-v21",
+    "rwanda_public",
+    "30ac9e7813737a75cb340a4207571be2fec5ecf8b861d8688e8fedfeb51c9dbb",
+    "4d3f008417a47a089c3631fe25e56fc200a9b0d2b30b9ab1f49f8df5e516bb0f",
+)
 POINT_COHORTS = (
     IRELAND, ANDALUCIA, TAIWAN_ICULTURE, MEXICO_SIC, FINLAND_VARK, WALES_CADW, THAILAND_FAD,
     AFRICA_VISIT, SCOTLAND_HES, CARIBBEAN_NRHP, PERU_PUBLIC, INDIA_ASI, INDIA_ASI_NEXT,
@@ -426,6 +447,9 @@ POINT_COHORTS = (
     PORTUGAL_PUBLIC,
     DANUBE_PUBLIC,
     ISLANDS_SECOND_PUBLIC,
+    KOREA_GANGWON_PUBLIC,
+    BULGARIA_SERBIA_PUBLIC,
+    RWANDA_PUBLIC,
 )
 
 

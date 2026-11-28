@@ -1,0 +1,22 @@
+{
+  "base_count": 5069,
+  "base_ids_sha256": "6b0446525741e7c9419a27d8570458345b34ba9d7e72bcfd2827d3dddd7efe3b",
+  "base_sites_sha256": "9ebdad5a2d077f92e521fef32a588c4a31f1449926a220fcbba899717dbf9fc5",
+  "cohort_version": "rwanda-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 4,
+    "total": 5073
+  },
+  "files": {
+    "rwanda_public_review.json": {
+      "sha256": "30ac9e7813737a75cb340a4207571be2fec5ecf8b861d8688e8fedfeb51c9dbb"
+    },
+    "rwanda_public_sites.json": {
+      "sha256": "4d3f008417a47a089c3631fe25e56fc200a9b0d2b30b9ab1f49f8df5e516bb0f"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Four distinct Rwandan historic museums or museum precincts with official public admission and exact licensed original representative points."
+}

@@ -1,0 +1,1783 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Regional Museum of History Shumen",
+      "Visit Shumen Municipal Tourist Information",
+      "Wikidata contributors"
+    ],
+    "description": "The original fortified archaeological remains and the public open-air museum west of Shumen.",
+    "description_zh": "舒门要塞考古遗址位于保加利亚，记录有出处的原址公众参观范围和地图代表点。",
+    "details": "The original fortified archaeological remains and the public open-air museum west of Shumen.",
+    "geography": {
+      "authority_id": "supplement:auth:bg-public:Q1408968",
+      "countries": [
+        "BG"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum gives distinct public seasonal hours for Shumen Fortress, Madara and Pliska.",
+        "id": "auth:bg-public:Q1408968:bg-shumen-hours.html",
+        "license": null,
+        "publisher": "Regional Museum of History Shumen",
+        "revision": "Frozen 2026-11-28, SHA-256 dee1815fdc66379b931ba8fc8871f844ff056cb549d45e23e83917b3eb465d30.",
+        "title": "Shumen Fortress Archaeological Site public scope and history",
+        "uri": "https://museum-shumen.eu/rabotno-vreme/"
+      }
+    },
+    "id": "auth:bg-public:Q1408968",
+    "location_precision": null,
+    "names": [
+      "Шуменска крепост",
+      "舒门要塞考古遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      26.89465,
+      43.26261
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum gives distinct public seasonal hours for Shumen Fortress, Madara and Pliska.",
+        "id": "auth:bg-public:Q1408968:bg-shumen-hours.html",
+        "license": null,
+        "publisher": "Regional Museum of History Shumen",
+        "revision": "Frozen 2026-11-28, SHA-256 dee1815fdc66379b931ba8fc8871f844ff056cb549d45e23e83917b3eb465d30.",
+        "title": "Shumen Fortress Archaeological Site public scope and history",
+        "uri": "https://museum-shumen.eu/rabotno-vreme/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal guide identifies the historic fortifications and their open-air museum.",
+        "id": "auth:bg-public:Q1408968:bg-shumen-open-air.html",
+        "license": null,
+        "publisher": "Visit Shumen Municipal Tourist Information",
+        "revision": "Frozen 2026-11-28, SHA-256 8aab403e1cd83c21f1c9c1223d01eab2cb472e260e2b270ec1f4f40adb1b7545.",
+        "title": "Shumen Fortress Archaeological Site public scope and history",
+        "uri": "https://visitshumen.bg/en/%D0%B7%D0%B0%D0%B1%D0%B5%D0%BB%D0%B5%D0%B6%D0%B8%D1%82%D0%B5%D0%BB%D0%BD%D0%BE%D1%81%D1%82%D0%B8/main/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 26.89465, latitude 43.26261.",
+        "id": "wikidata:Q1408968",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2487194019, statement Q1408968$CEFD3E81-B94F-49B2-9024-5B8AB3DFC158.",
+        "title": "Shumen Fortress Archaeological Site representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1408968.json"
+      }
+    ],
+    "source_uri": "https://museum-shumen.eu/rabotno-vreme/",
+    "title": "Shumen Fortress Archaeological Site",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Regional Museum of History Veliko Tarnovo",
+      "Wikidata contributors"
+    ],
+    "description": "The original archaeological reserve at Nikyup, represented in the public visitor area near the Odeon. The published winter programme requires prior booking from 1 December 2026 to 20 March 2027.",
+    "description_zh": "尼科波利斯考古保护区代表点位于古城音乐厅附近的游客区域。按主管方冬季公告，2026 年 12 月 1 日至 2027 年 3 月 20 日须预约参观。",
+    "details": "The original archaeological reserve at Nikyup, represented in the public visitor area near the Odeon. The published winter programme requires prior booking from 1 December 2026 to 20 March 2027.",
+    "geography": {
+      "authority_id": "supplement:auth:bg-public:Q1987323",
+      "countries": [
+        "BG"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum gives visitor instructions for the original Roman and Byzantine archaeological site.",
+        "id": "auth:bg-public:Q1987323:bg-nicopolis-operator.html",
+        "license": null,
+        "publisher": "Regional Museum of History Veliko Tarnovo",
+        "revision": "Frozen 2026-11-28, SHA-256 d4106c21a1db483db3a53d51c34415166687d0cf04c1312ac36393747cad70f2.",
+        "title": "Nicopolis ad Istrum Archaeological Reserve public scope and history",
+        "uri": "https://www.museumvt.com/en/catalog/archaeological-reserve--nicopolis-ad-istrum-?ulo=true"
+      }
+    },
+    "id": "auth:bg-public:Q1987323",
+    "location_precision": null,
+    "names": [
+      "Никополис ад Иструм",
+      "伊斯特鲁姆畔尼科波利斯遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      25.612232,
+      43.217925
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum gives visitor instructions for the original Roman and Byzantine archaeological site.",
+        "id": "auth:bg-public:Q1987323:bg-nicopolis-operator.html",
+        "license": null,
+        "publisher": "Regional Museum of History Veliko Tarnovo",
+        "revision": "Frozen 2026-11-28, SHA-256 d4106c21a1db483db3a53d51c34415166687d0cf04c1312ac36393747cad70f2.",
+        "title": "Nicopolis ad Istrum Archaeological Reserve public scope and history",
+        "uri": "https://www.museumvt.com/en/catalog/archaeological-reserve--nicopolis-ad-istrum-?ulo=true"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The autumn 2026 notice confirms admissions at the Nicopolis reserve.",
+        "id": "auth:bg-public:Q1987323:bg-tarnovo-2026.html",
+        "license": null,
+        "publisher": "Regional Museum of History Veliko Tarnovo",
+        "revision": "Frozen 2026-11-28, SHA-256 b572bda4ed0e01cf15dd275ce351e6d1c10164d11219923a41924ef34bd8b80e.",
+        "title": "Nicopolis ad Istrum Archaeological Reserve public scope and history",
+        "uri": "https://www.museumvt.com/%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%B8/%D0%BC%D1%83%D0%B7%D0%B5%D0%B9%D0%BD%D0%B8%D1%82%D0%B5-%D0%BE%D0%B1%D0%B5%D0%BA%D1%82%D0%B8-%D0%BF%D1%80%D0%B5%D0%BC%D0%B8%D0%BD%D0%B0%D0%B2%D0%B0%D1%82-%D0%BA%D1%8A%D0%BC-%D0%B5%D1%81%D0%B5%D0%BD%D0%BD%D0%BE-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BD%D0%BE-%D0%B2%D1%80%D0%B5%D0%BC%D0%B5"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 25.612232, latitude 43.217925.",
+        "id": "wikidata:Q1987323",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2553287656, statement Q1987323$27C84B58-204E-44CC-A07D-0C7FA8D142AC.",
+        "title": "Nicopolis ad Istrum Archaeological Reserve representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1987323.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The 2026–27 winter announcement specifies advance booking for Nicopolis ad Istrum from 1 December 2026 to 20 March 2027.",
+        "id": "auth:bg-public:Q1987323:review:3",
+        "license": null,
+        "publisher": "Regional Museum of History Veliko Tarnovo",
+        "revision": "Retrieved 2026-11-28; SHA-256 3b3ff12d04fcc4a5f37ec64da3e76e8e6e0ea34152d7dc6c9238eafe9bba0020.",
+        "title": "Nicopolis ad Istrum winter visitor arrangements",
+        "uri": "https://www.museumvt.com/%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%B8/%D0%B7%D0%B8%D0%BC%D0%BD%D0%BE-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BD%D0%BE-%D0%B2%D1%80%D0%B5%D0%BC%D0%B5-%D0%BD%D0%B0-%D0%BC%D1%83%D0%B7%D0%B5%D0%B9%D0%BD%D0%B8%D1%82%D0%B5-%D0%BE%D0%B1%D0%B5%D0%BA%D1%82%D0%B8-2026?ulo=true"
+      }
+    ],
+    "source_uri": "https://www.museumvt.com/en/catalog/archaeological-reserve--nicopolis-ad-istrum-?ulo=true",
+    "title": "Nicopolis ad Istrum Archaeological Reserve",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Visit Belogradchik",
+      "Ministry of Tourism of Bulgaria",
+      "Wikidata contributors"
+    ],
+    "description": "The public archaeological fortress at Belogradchik, with site access distinct from the surrounding rock landscape.",
+    "description_zh": "贝洛格拉奇克卡莱托要塞位于保加利亚，记录有出处的原址公众参观范围和地图代表点。",
+    "details": "The public archaeological fortress at Belogradchik, with site access distinct from the surrounding rock landscape.",
+    "geography": {
+      "authority_id": "supplement:auth:bg-public:Q2915222",
+      "countries": [
+        "BG"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The local visitor authority identifies the original fortress and visiting information.",
+        "id": "auth:bg-public:Q2915222:bg-belogradchik-visitor.html",
+        "license": null,
+        "publisher": "Visit Belogradchik",
+        "revision": "Frozen 2026-11-28, SHA-256 69c5252646a1ab486b20ef7556509789d1836fdf6fd0d6a6286b00ded3b397b6.",
+        "title": "Belogradchik Kaleto Fortress public scope and history",
+        "uri": "https://visitbelogradchik.bg/fortress-kaleto/"
+      }
+    },
+    "id": "auth:bg-public:Q2915222",
+    "location_precision": null,
+    "names": [
+      "Белоградчишка крепост Калето",
+      "贝洛格拉奇克卡莱托要塞"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      22.67722222,
+      43.62333333
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The local visitor authority identifies the original fortress and visiting information.",
+        "id": "auth:bg-public:Q2915222:bg-belogradchik-visitor.html",
+        "license": null,
+        "publisher": "Visit Belogradchik",
+        "revision": "Frozen 2026-11-28, SHA-256 69c5252646a1ab486b20ef7556509789d1836fdf6fd0d6a6286b00ded3b397b6.",
+        "title": "Belogradchik Kaleto Fortress public scope and history",
+        "uri": "https://visitbelogradchik.bg/fortress-kaleto/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The government documents the fortress itself as a visitor attraction.",
+        "id": "auth:bg-public:Q2915222:bg-belogradchik-ministry.html",
+        "license": null,
+        "publisher": "Ministry of Tourism of Bulgaria",
+        "revision": "Frozen 2026-11-28, SHA-256 29ab5aad250b2e050d9b7b67a0d9870c05bf69985c95f18b7af94b1a2fc588a5.",
+        "title": "Belogradchik Kaleto Fortress public scope and history",
+        "uri": "https://www.tourism.government.bg/en/content/belogradchik-fortress"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 22.67722222, latitude 43.62333333.",
+        "id": "wikidata:Q2915222",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2510713197, statement Q2915222$D07250D4-5516-4A8B-B3BE-19D1688E092A.",
+        "title": "Belogradchik Kaleto Fortress representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2915222.json"
+      }
+    ],
+    "source_uri": "https://visitbelogradchik.bg/fortress-kaleto/",
+    "title": "Belogradchik Kaleto Fortress",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Asenovgrad Municipal Tourism Enterprise",
+      "Bulgarian Tourist Union",
+      "Wikidata contributors"
+    ],
+    "description": "The public historic Petrič fortress ruins south of Asenovgrad and the original church precinct on the site.",
+    "description_zh": "阿森要塞位于保加利亚，记录有出处的原址公众参观范围和地图代表点。",
+    "details": "The public historic Petrič fortress ruins south of Asenovgrad and the original church precinct on the site.",
+    "geography": {
+      "authority_id": "supplement:auth:bg-public:Q2991256",
+      "countries": [
+        "BG"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The manager identifies conserved original ruins and publishes admission information.",
+        "id": "auth:bg-public:Q2991256:bg-asen-operator.html",
+        "license": null,
+        "publisher": "Asenovgrad Municipal Tourism Enterprise",
+        "revision": "Frozen 2026-11-28, SHA-256 62c917709dfce720569177e4ff9118f6cdb129246b6b68d0870e23ad4c69306f.",
+        "title": "Asen's Fortress public scope and history",
+        "uri": "https://www.optasenovgrad.com/asenova-krepost.html"
+      }
+    },
+    "id": "auth:bg-public:Q2991256",
+    "location_precision": null,
+    "names": [
+      "Асенова крепост",
+      "阿森要塞"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      24.873333333333,
+      41.986666666667
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The manager identifies conserved original ruins and publishes admission information.",
+        "id": "auth:bg-public:Q2991256:bg-asen-operator.html",
+        "license": null,
+        "publisher": "Asenovgrad Municipal Tourism Enterprise",
+        "revision": "Frozen 2026-11-28, SHA-256 62c917709dfce720569177e4ff9118f6cdb129246b6b68d0870e23ad4c69306f.",
+        "title": "Asen's Fortress public scope and history",
+        "uri": "https://www.optasenovgrad.com/asenova-krepost.html"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The visitor guide distinguishes the scheduled visitor hours by season and identifies the managing municipal enterprise.",
+        "id": "auth:bg-public:Q2991256:bg-asen-bts.html",
+        "license": null,
+        "publisher": "Bulgarian Tourist Union",
+        "revision": "Frozen 2026-11-28, SHA-256 f4937faa3b6729c9016309be27d157cb395c7ea4f1001fa9bd22f256e9f10304.",
+        "title": "Asen's Fortress public scope and history",
+        "uri": "https://www.btsbg.org/100nto/asenova-krepost"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 24.873333333333, latitude 41.986666666667.",
+        "id": "wikidata:Q2991256",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2346480765, statement q2991256$69BD7D29-C7F2-4D02-A83D-B7BDEFA6E06F.",
+        "title": "Asen's Fortress representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2991256.json"
+      }
+    ],
+    "source_uri": "https://www.optasenovgrad.com/asenova-krepost.html",
+    "title": "Asen's Fortress",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Regional Museum of History Ruse",
+      "Wikidata contributors"
+    ],
+    "description": "The designated visitor ruins on the fortified Cherven ridge, separate from the modern village and the Ivanovo rock-hewn churches.",
+    "description_zh": "切尔文中世纪古城遗址位于保加利亚，记录有出处的原址公众参观范围和地图代表点。",
+    "details": "The designated visitor ruins on the fortified Cherven ridge, separate from the modern village and the Ivanovo rock-hewn churches.",
+    "geography": {
+      "authority_id": "supplement:auth:bg-public:Q3366992",
+      "countries": [
+        "BG"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The visitor office lists Cherven as a distinct site and identifies public admissions in November 2026.",
+        "id": "auth:bg-public:Q3366992:bg-cherven-operator.html",
+        "license": null,
+        "publisher": "Regional Museum of History Ruse",
+        "revision": "Frozen 2026-11-28, SHA-256 287e1046e30122a597db8285e60b6f2f9033fd3d51951c808bf6ec8b1bba90eb.",
+        "title": "Medieval Town of Cherven archaeological site public scope and history",
+        "uri": "https://www.museumruse.com/visitors/"
+      }
+    },
+    "id": "auth:bg-public:Q3366992",
+    "location_precision": null,
+    "names": [
+      "Средновековен град Червен",
+      "切尔文中世纪古城遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      26.01764167,
+      43.62073056
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The visitor office lists Cherven as a distinct site and identifies public admissions in November 2026.",
+        "id": "auth:bg-public:Q3366992:bg-cherven-operator.html",
+        "license": null,
+        "publisher": "Regional Museum of History Ruse",
+        "revision": "Frozen 2026-11-28, SHA-256 287e1046e30122a597db8285e60b6f2f9033fd3d51951c808bf6ec8b1bba90eb.",
+        "title": "Medieval Town of Cherven archaeological site public scope and history",
+        "uri": "https://www.museumruse.com/visitors/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum identifies the fortified original ruins, distinct from Ivanovo monastery.",
+        "id": "auth:bg-public:Q3366992:bg-cherven-history.html",
+        "license": null,
+        "publisher": "Regional Museum of History Ruse",
+        "revision": "Frozen 2026-11-28, SHA-256 b4a0df0358142323c58f32cacdb00e75c9160f7143772fbe3b2f8ebe0315fed5.",
+        "title": "Medieval Town of Cherven archaeological site public scope and history",
+        "uri": "https://www.museumruse.com/portfolio-items/cherven/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 26.01764167, latitude 43.62073056.",
+        "id": "wikidata:Q3366992",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2484605245, statement Q3366992$50321E32-5CE9-492C-BA1A-F29F3D283E3B.",
+        "title": "Medieval Town of Cherven archaeological site representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3366992.json"
+      }
+    ],
+    "source_uri": "https://www.museumruse.com/visitors/",
+    "title": "Medieval Town of Cherven archaeological site",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Regional Museum of History Veliko Tarnovo",
+      "Wikidata contributors"
+    ],
+    "description": "The historic fortified Tsarevets hill and archaeological visitor route in Veliko Tarnovo.",
+    "description_zh": "察雷韦茨要塞位于保加利亚，记录有出处的原址公众参观范围和地图代表点。",
+    "details": "The historic fortified Tsarevets hill and archaeological visitor route in Veliko Tarnovo.",
+    "geography": {
+      "authority_id": "supplement:auth:bg-public:Q512147",
+      "countries": [
+        "BG"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum documents the original fortified hill and its visitor information.",
+        "id": "auth:bg-public:Q512147:bg-tsarevets-operator.html",
+        "license": null,
+        "publisher": "Regional Museum of History Veliko Tarnovo",
+        "revision": "Frozen 2026-11-28, SHA-256 d14cbaa38533851591540f5f556c37838e87b4a45704f9e60ab5fc83483f37de.",
+        "title": "Tsarevets Fortress public scope and history",
+        "uri": "https://www.museumvt.com/en/catalog/architectural-reserve--tsarevets-?ulo=true"
+      }
+    },
+    "id": "auth:bg-public:Q512147",
+    "location_precision": null,
+    "names": [
+      "Крепост Царевец",
+      "察雷韦茨要塞"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      25.6528,
+      43.0833
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum documents the original fortified hill and its visitor information.",
+        "id": "auth:bg-public:Q512147:bg-tsarevets-operator.html",
+        "license": null,
+        "publisher": "Regional Museum of History Veliko Tarnovo",
+        "revision": "Frozen 2026-11-28, SHA-256 d14cbaa38533851591540f5f556c37838e87b4a45704f9e60ab5fc83483f37de.",
+        "title": "Tsarevets Fortress public scope and history",
+        "uri": "https://www.museumvt.com/en/catalog/architectural-reserve--tsarevets-?ulo=true"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The autumn schedule gives current public admission to Tsarevets.",
+        "id": "auth:bg-public:Q512147:bg-tarnovo-2026.html",
+        "license": null,
+        "publisher": "Regional Museum of History Veliko Tarnovo",
+        "revision": "Frozen 2026-11-28, SHA-256 b572bda4ed0e01cf15dd275ce351e6d1c10164d11219923a41924ef34bd8b80e.",
+        "title": "Tsarevets Fortress public scope and history",
+        "uri": "https://www.museumvt.com/%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%B8/%D0%BC%D1%83%D0%B7%D0%B5%D0%B9%D0%BD%D0%B8%D1%82%D0%B5-%D0%BE%D0%B1%D0%B5%D0%BA%D1%82%D0%B8-%D0%BF%D1%80%D0%B5%D0%BC%D0%B8%D0%BD%D0%B0%D0%B2%D0%B0%D1%82-%D0%BA%D1%8A%D0%BC-%D0%B5%D1%81%D0%B5%D0%BD%D0%BD%D0%BE-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BD%D0%BE-%D0%B2%D1%80%D0%B5%D0%BC%D0%B5"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 25.6528, latitude 43.0833.",
+        "id": "wikidata:Q512147",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2528894379, statement Q512147$312A5911-9AC3-424B-A0E2-279B86001558.",
+        "title": "Tsarevets Fortress representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q512147.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum confirms visiting arrangements for Tsarevets, with shortened hours on New Year’s Eve and New Year’s Day.",
+        "id": "auth:bg-public:Q512147:review:3",
+        "license": null,
+        "publisher": "Regional Museum of History Veliko Tarnovo",
+        "revision": "Retrieved 2026-11-28; SHA-256 26966c64316d7f1b186de2db9028ad86e39fa316f7f437cf31add2f8497ba801.",
+        "title": "Tsarevets 2026–27 holiday visitor arrangements",
+        "uri": "https://www.museumvt.com/%D0%BD%D0%BE%D0%B2%D0%B8%D0%BD%D0%B8/%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BD%D0%BE-%D0%B2%D1%80%D0%B5%D0%BC%D0%B5-%D0%BF%D0%BE-%D0%BA%D0%BE%D0%BB%D0%B5%D0%B4%D0%BD%D0%B8%D1%82%D0%B5-%D0%B8-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%D0%B4%D0%B8%D1%88%D0%BD%D0%B8-%D0%BF%D1%80%D0%B0%D0%B7%D0%BD%D0%B8%D1%86%D0%B8-2026"
+      }
+    ],
+    "source_uri": "https://www.museumvt.com/en/catalog/architectural-reserve--tsarevets-?ulo=true",
+    "title": "Tsarevets Fortress",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Visit Shumen Municipal Tourist Information",
+      "Regional Museum of History Shumen",
+      "Wikidata contributors"
+    ],
+    "description": "The remains and restored elements of the Great Basilica on the original reserve site near Pliska, limited to the reserve's designated visitor route.",
+    "description_zh": "普利斯卡大巴西利卡遗址位于保加利亚，记录有出处的原址公众参观范围和地图代表点。",
+    "details": "The remains and restored elements of the Great Basilica on the original reserve site near Pliska, limited to the reserve's designated visitor route.",
+    "geography": {
+      "authority_id": "supplement:auth:bg-public:Q5598716",
+      "countries": [
+        "BG"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal guide identifies publicly visible remains of the Great Basilica in the historical reserve.",
+        "id": "auth:bg-public:Q5598716:bg-pliska-visitor.html",
+        "license": null,
+        "publisher": "Visit Shumen Municipal Tourist Information",
+        "revision": "Frozen 2026-11-28, SHA-256 b0ca8f50abd269a862380d8d937d9ba5b64d56cddc084164c8150e93cdf87bc8.",
+        "title": "Great Basilica of Pliska public scope and history",
+        "uri": "https://visitshumen.bg/en/%D0%B7%D0%B0%D0%B1%D0%B5%D0%BB%D0%B5%D0%B6%D0%B8%D1%82%D0%B5%D0%BB%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%BE%D0%BA%D0%BE%D0%BB%D0%BE-%D1%88%D1%83%D0%BC%D0%B5%D0%BD/pliska-national-historical-reserve/"
+      }
+    },
+    "id": "auth:bg-public:Q5598716",
+    "location_precision": null,
+    "names": [
+      "Голямата базилика в Плиска",
+      "普利斯卡大巴西利卡遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      27.13888889,
+      43.39861111
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal guide identifies publicly visible remains of the Great Basilica in the historical reserve.",
+        "id": "auth:bg-public:Q5598716:bg-pliska-visitor.html",
+        "license": null,
+        "publisher": "Visit Shumen Municipal Tourist Information",
+        "revision": "Frozen 2026-11-28, SHA-256 b0ca8f50abd269a862380d8d937d9ba5b64d56cddc084164c8150e93cdf87bc8.",
+        "title": "Great Basilica of Pliska public scope and history",
+        "uri": "https://visitshumen.bg/en/%D0%B7%D0%B0%D0%B1%D0%B5%D0%BB%D0%B5%D0%B6%D0%B8%D1%82%D0%B5%D0%BB%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%BE%D0%BA%D0%BE%D0%BB%D0%BE-%D1%88%D1%83%D0%BC%D0%B5%D0%BD/pliska-national-historical-reserve/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum publishes the Pliska archaeological reserve's seasonal hours.",
+        "id": "auth:bg-public:Q5598716:bg-shumen-hours.html",
+        "license": null,
+        "publisher": "Regional Museum of History Shumen",
+        "revision": "Frozen 2026-11-28, SHA-256 dee1815fdc66379b931ba8fc8871f844ff056cb549d45e23e83917b3eb465d30.",
+        "title": "Great Basilica of Pliska public scope and history",
+        "uri": "https://museum-shumen.eu/rabotno-vreme/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 27.13888889, latitude 43.39861111.",
+        "id": "wikidata:Q5598716",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2570995499, statement Q5598716$E9459B0B-BBC0-40E7-BE1E-99E8D899FA23.",
+        "title": "Great Basilica of Pliska representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5598716.json"
+      }
+    ],
+    "source_uri": "https://visitshumen.bg/en/%D0%B7%D0%B0%D0%B1%D0%B5%D0%BB%D0%B5%D0%B6%D0%B8%D1%82%D0%B5%D0%BB%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%BE%D0%BA%D0%BE%D0%BB%D0%BE-%D1%88%D1%83%D0%BC%D0%B5%D0%BD/pliska-national-historical-reserve/",
+    "title": "Great Basilica of Pliska",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Regional History Museum Vidin",
+      "Ministry of Tourism of Bulgaria",
+      "Wikidata contributors"
+    ],
+    "description": "The original medieval fortress and museum visitor route at Baba Vida, Vidin. The museum’s designated open areas define the visitor scope, which may change during conservation.",
+    "description_zh": "维丁巴巴维达中世纪堡垒及馆方开放的参观路线。修缮期间可参观范围以管理方安排为准。",
+    "details": "The original medieval fortress and museum visitor route at Baba Vida, Vidin. The museum’s designated open areas define the visitor scope, which may change during conservation.",
+    "geography": {
+      "authority_id": "supplement:auth:bg-public:Q59893",
+      "countries": [
+        "BG"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator lists the fortress museum and designated visiting schedule.",
+        "id": "auth:bg-public:Q59893:bg-baba-museum.html",
+        "license": null,
+        "publisher": "Regional History Museum Vidin",
+        "revision": "Frozen 2026-11-28, SHA-256 d076c54491acd2f5a36f4acf762ac0baf5a808a34297becf43c44bbb1dbb6bea.",
+        "title": "Baba Vida Fortress public scope and history",
+        "uri": "https://rimvidin.bg/baba-vida-fortress/"
+      }
+    },
+    "id": "auth:bg-public:Q59893",
+    "location_precision": null,
+    "names": [
+      "Крепост Баба Вида",
+      "巴巴维达要塞"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      22.886818,
+      43.993183
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator lists the fortress museum and designated visiting schedule.",
+        "id": "auth:bg-public:Q59893:bg-baba-museum.html",
+        "license": null,
+        "publisher": "Regional History Museum Vidin",
+        "revision": "Frozen 2026-11-28, SHA-256 d076c54491acd2f5a36f4acf762ac0baf5a808a34297becf43c44bbb1dbb6bea.",
+        "title": "Baba Vida Fortress public scope and history",
+        "uri": "https://rimvidin.bg/baba-vida-fortress/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The government identifies the surviving monument and its public on-site museum.",
+        "id": "auth:bg-public:Q59893:bg-baba-tour.html",
+        "license": null,
+        "publisher": "Ministry of Tourism of Bulgaria",
+        "revision": "Frozen 2026-11-28, SHA-256 d8f21fd221512df1c9ded55f7168e1865ff5ad823a5ba0f122befe30e2df81da.",
+        "title": "Baba Vida Fortress public scope and history",
+        "uri": "https://www.tourism.government.bg/en/content/baba-vida-fortress"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 22.886818, latitude 43.993183.",
+        "id": "wikidata:Q59893",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2574392230, statement q59893$3D879021-EFA7-47B9-B2E6-F6BABD35D8A8.",
+        "title": "Baba Vida Fortress representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q59893.json"
+      }
+    ],
+    "source_uri": "https://rimvidin.bg/baba-vida-fortress/",
+    "title": "Baba Vida Fortress",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Visit Shumen Municipal Tourist Information",
+      "Veliki Preslav Archaeological Museum",
+      "Wikidata contributors"
+    ],
+    "description": "The original exposed ruins of the Round or Golden Church within the public Veliki Preslav archaeological reserve.",
+    "description_zh": "大普雷斯拉夫圆形教堂遗址位于保加利亚，记录有出处的原址公众参观范围和地图代表点。",
+    "details": "The original exposed ruins of the Round or Golden Church within the public Veliki Preslav archaeological reserve.",
+    "geography": {
+      "authority_id": "supplement:auth:bg-public:Q7371012",
+      "countries": [
+        "BG"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal guide lists the Golden Church as an original monument visible at the reserve.",
+        "id": "auth:bg-public:Q7371012:bg-preslav-visitor.html",
+        "license": null,
+        "publisher": "Visit Shumen Municipal Tourist Information",
+        "revision": "Frozen 2026-11-28, SHA-256 cd39640229d637e7d292b9768a458564f31a2464a72d0e362f69ed194a2302e7.",
+        "title": "Round Church of Veliki Preslav public scope and history",
+        "uri": "https://visitshumen.bg/en/%D0%B7%D0%B0%D0%B1%D0%B5%D0%BB%D0%B5%D0%B6%D0%B8%D1%82%D0%B5%D0%BB%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%BE%D0%BA%D0%BE%D0%BB%D0%BE-%D1%88%D1%83%D0%BC%D0%B5%D0%BD/veliki-preslav-archaelogical-reserve/"
+      }
+    },
+    "id": "auth:bg-public:Q7371012",
+    "location_precision": null,
+    "names": [
+      "Кръгла църква във Велики Преслав",
+      "大普雷斯拉夫圆形教堂遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      26.81295,
+      43.1423
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal guide lists the Golden Church as an original monument visible at the reserve.",
+        "id": "auth:bg-public:Q7371012:bg-preslav-visitor.html",
+        "license": null,
+        "publisher": "Visit Shumen Municipal Tourist Information",
+        "revision": "Frozen 2026-11-28, SHA-256 cd39640229d637e7d292b9768a458564f31a2464a72d0e362f69ed194a2302e7.",
+        "title": "Round Church of Veliki Preslav public scope and history",
+        "uri": "https://visitshumen.bg/en/%D0%B7%D0%B0%D0%B1%D0%B5%D0%BB%D0%B5%D0%B6%D0%B8%D1%82%D0%B5%D0%BB%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%BE%D0%BA%D0%BE%D0%BB%D0%BE-%D1%88%D1%83%D0%BC%D0%B5%D0%BD/veliki-preslav-archaelogical-reserve/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The museum's research account distinguishes the Round Church ruins from the museums and other parts of Preslav.",
+        "id": "auth:bg-public:Q7371012:bg-preslav-research.html",
+        "license": null,
+        "publisher": "Veliki Preslav Archaeological Museum",
+        "revision": "Frozen 2026-11-28, SHA-256 d5d7539f8be031327f5393abbca735f1c3aec95946f589d597efc2d0ced464ef.",
+        "title": "Round Church of Veliki Preslav public scope and history",
+        "uri": "https://en.museum-velikipreslav.com/for-the-museum/researches.html"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 26.81295, latitude 43.1423.",
+        "id": "wikidata:Q7371012",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2552019922, statement Q7371012$3464EABB-D9EF-459C-B8D7-67431A1C0010.",
+        "title": "Round Church of Veliki Preslav representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7371012.json"
+      }
+    ],
+    "source_uri": "https://visitshumen.bg/en/%D0%B7%D0%B0%D0%B1%D0%B5%D0%BB%D0%B5%D0%B6%D0%B8%D1%82%D0%B5%D0%BB%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%BE%D0%BA%D0%BE%D0%BB%D0%BE-%D1%88%D1%83%D0%BC%D0%B5%D0%BD/veliki-preslav-archaelogical-reserve/",
+    "title": "Round Church of Veliki Preslav",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Manasija Monastery",
+      "Wikidata contributors"
+    ],
+    "description": "The publicly designated historical church and fortification grounds of the active Resava or Manasija Monastery near Despotovac.",
+    "description_zh": "马纳西亚修道院公开区位于塞尔维亚，记录有出处的原址公众参观范围和地图代表点。",
+    "details": "The publicly designated historical church and fortification grounds of the active Resava or Manasija Monastery near Despotovac.",
+    "geography": {
+      "authority_id": "supplement:auth:rs-public:Q1264703",
+      "countries": [
+        "RS"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The monastery identifies the surviving fortified historical complex.",
+        "id": "auth:rs-public:Q1264703:rs-manasija-operator.html",
+        "license": null,
+        "publisher": "Manasija Monastery",
+        "revision": "Frozen 2026-11-28, SHA-256 91b3f2ed5fa0c2fce19163e5edf46d202f58ca258cd99e94b3f185b115db7e82.",
+        "title": "Manasija Monastery public precinct public scope and history",
+        "uri": "https://manastirmanasija.rs/en/about"
+      }
+    },
+    "id": "auth:rs-public:Q1264703",
+    "location_precision": null,
+    "names": [
+      "Манастир Манасија",
+      "马纳西亚修道院公开区"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      21.469555555556,
+      44.100888888889
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The monastery identifies the surviving fortified historical complex.",
+        "id": "auth:rs-public:Q1264703:rs-manasija-operator.html",
+        "license": null,
+        "publisher": "Manasija Monastery",
+        "revision": "Frozen 2026-11-28, SHA-256 91b3f2ed5fa0c2fce19163e5edf46d202f58ca258cd99e94b3f185b115db7e82.",
+        "title": "Manasija Monastery public precinct public scope and history",
+        "uri": "https://manastirmanasija.rs/en/about"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator provides visit rules and arrangements for the grounds.",
+        "id": "auth:rs-public:Q1264703:rs-manasija-visit.html",
+        "license": null,
+        "publisher": "Manasija Monastery",
+        "revision": "Frozen 2026-11-28, SHA-256 e4bfc7f5e5761ab95db5febb02c3887437100946953b418e3aaeace449499a71.",
+        "title": "Manasija Monastery public precinct public scope and history",
+        "uri": "https://manastirmanasija.rs/kontakt"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 21.469555555556, latitude 44.100888888889.",
+        "id": "wikidata:Q1264703",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2525716296, statement q1264703$5B131874-20A2-45B1-8366-45077F9F23B4.",
+        "title": "Manasija Monastery public precinct representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1264703.json"
+      }
+    ],
+    "source_uri": "https://manastirmanasija.rs/en/about",
+    "title": "Manasija Monastery public precinct",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Žiča Monastery",
+      "Tourist Organization of Kraljevo",
+      "Wikidata contributors"
+    ],
+    "description": "The managed public approach and visiting precinct of the active Žiča monastery. The representative point is immediately outside the monastic enclosure. Worship and visitor rules apply.",
+    "description_zh": "日恰修道院仍在使用。代表点位于院墙外的公开参观区域，进院和宗教仪式范围按院方规定。",
+    "details": "The managed public approach and visiting precinct of the active Žiča monastery. The representative point is immediately outside the monastic enclosure. Worship and visitor rules apply.",
+    "geography": {
+      "authority_id": "supplement:auth:rs-public:Q1283823",
+      "countries": [
+        "RS"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator states the hours when the monastery receives visitors.",
+        "id": "auth:rs-public:Q1283823:rs-zica-operator.html",
+        "license": null,
+        "publisher": "Žiča Monastery",
+        "revision": "Frozen 2026-11-28, SHA-256 aee1e0d80f82de13982e42dd53f5b5fd262007f7f098b5d6dbb0d291b4384d43.",
+        "title": "Žiča Monastery public precinct public scope and history",
+        "uri": "https://prodavnica.zica.org.rs/sr/kontakt"
+      }
+    },
+    "id": "auth:rs-public:Q1283823",
+    "location_precision": null,
+    "names": [
+      "Манастир Жича",
+      "日察修道院公开区"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      20.645738888889,
+      43.6963
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator states the hours when the monastery receives visitors.",
+        "id": "auth:rs-public:Q1283823:rs-zica-operator.html",
+        "license": null,
+        "publisher": "Žiča Monastery",
+        "revision": "Frozen 2026-11-28, SHA-256 aee1e0d80f82de13982e42dd53f5b5fd262007f7f098b5d6dbb0d291b4384d43.",
+        "title": "Žiča Monastery public precinct public scope and history",
+        "uri": "https://prodavnica.zica.org.rs/sr/kontakt"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal guide identifies the historic original monastery and public visitor arrangements.",
+        "id": "auth:rs-public:Q1283823:rs-zica-kraljevo.html",
+        "license": null,
+        "publisher": "Tourist Organization of Kraljevo",
+        "revision": "Frozen 2026-11-28, SHA-256 4b3b62a65081b3ae5e224c8dac7c16f69cecec2bcedfd35d89e14ec294b6d10d.",
+        "title": "Žiča Monastery public precinct public scope and history",
+        "uri": "https://kraljevoturizam.rs/engleski/zica.html"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 20.645738888889, latitude 43.6963.",
+        "id": "wikidata:Q1283823",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2497102408, statement q1283823$4E61C795-77BA-4413-8B5E-7C50D138355B.",
+        "title": "Žiča Monastery public precinct representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q1283823.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The monastery publishes seasonal visitor hours and gives separate guidance for services and visits.",
+        "id": "auth:rs-public:Q1283823:review:3",
+        "license": null,
+        "publisher": "Žiča Monastery",
+        "revision": "Retrieved 2026-11-28; SHA-256 a10f5d69739d7a63b1f3b6cc3a84b13822ce1b525ec17f5e26d0707b233538a4.",
+        "title": "Žiča Monastery public visiting hours",
+        "uri": "https://zica.org.rs/o-manastiru/"
+      }
+    ],
+    "source_uri": "https://prodavnica.zica.org.rs/sr/kontakt",
+    "title": "Žiča Monastery public precinct",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Museum Leskovac",
+      "Ministry of Culture of France",
+      "World Heritage Centre",
+      "Wikidata contributors",
+      "National Assembly of the Republic of Serbia"
+    ],
+    "description": "The public visitor route through the in-place ruins of Caričin Grad near Lebane. Visitor scheduling is seasonal and archaeological work areas stay outside the visitor scope.",
+    "description_zh": "采里钦格勒考古遗址的原址公开游线，参观依当季运营安排，正在考古的区域不在本文所述范围。",
+    "details": "The public visitor route through the in-place ruins of Caričin Grad near Lebane. Visitor scheduling is seasonal and archaeological work areas stay outside the visitor scope.",
+    "geography": {
+      "authority_id": "supplement:auth:rs-public:Q164205",
+      "countries": [
+        "RS"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator lists dedicated public hours for the original archaeological site.",
+        "id": "auth:rs-public:Q164205:rs-caricin-operator.html",
+        "license": null,
+        "publisher": "National Museum Leskovac",
+        "revision": "Frozen 2026-11-28, SHA-256 8efc2318e61e37908bf0441f5e52b00095648daa39a3203bf80348c6aab2d2d0.",
+        "title": "Caričin Grad Archaeological Site public scope and history",
+        "uri": "https://muzejleskovac.rs/arheologija/"
+      }
+    },
+    "id": "auth:rs-public:Q164205",
+    "location_precision": null,
+    "names": [
+      "Археолошки локалитет Царичин град",
+      "查里钦格勒考古遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      21.67,
+      42.952
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator lists dedicated public hours for the original archaeological site.",
+        "id": "auth:rs-public:Q164205:rs-caricin-operator.html",
+        "license": null,
+        "publisher": "National Museum Leskovac",
+        "revision": "Frozen 2026-11-28, SHA-256 8efc2318e61e37908bf0441f5e52b00095648daa39a3203bf80348c6aab2d2d0.",
+        "title": "Caričin Grad Archaeological Site public scope and history",
+        "uri": "https://muzejleskovac.rs/arheologija/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Franco-Serbian research summary locates the original site at Caričin Grad.",
+        "id": "auth:rs-public:Q164205:rs-caricin-archaeology.html",
+        "license": null,
+        "publisher": "Ministry of Culture of France",
+        "revision": "Frozen 2026-11-28, SHA-256 e6c270dc4f564d33a49940a3e58fe16513d307842c63f0853a007799f2ee7647.",
+        "title": "Caričin Grad Archaeological Site public scope and history",
+        "uri": "https://archeologie.culture.gouv.fr/en/caricin-grad-justiniana-prima"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The original archaeological site has a tentative listing.",
+        "id": "auth:rs-public:Q164205:rs-caricin-tentative.html",
+        "license": null,
+        "publisher": "World Heritage Centre",
+        "revision": "Frozen 2026-11-28, SHA-256 98c385aa63934f51a41cb40d9081dc33fb39d896043322c0cdc793410fef5a79.",
+        "title": "Caričin Grad Archaeological Site public scope and history",
+        "uri": "https://whc.unesco.org/en/tentativelists/5539/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 21.67, latitude 42.952.",
+        "id": "wikidata:Q164205",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2549953649, statement Q164205$584FBB54-D211-4220-8ED5-D093AE8351FA.",
+        "title": "Caričin Grad Archaeological Site representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q164205.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The 23 April 2026 protection decision identifies the original archaeological site at Štulac and its conservation scope.",
+        "id": "auth:rs-public:Q164205:review:4",
+        "license": null,
+        "publisher": "National Assembly of the Republic of Serbia",
+        "revision": "Retrieved 2026-11-28; SHA-256 a5f0069e1c599d9394c7c4eb5d1555c3546ee5cbef78f0107e324c604ec4ad4f.",
+        "title": "2026 Caričin Grad protected archaeological area",
+        "uri": "https://www.parlament.gov.rs/upload/archive/files/lat/pdf/ostala_akta/14_saziv/RS21-26-lat..pdf"
+      }
+    ],
+    "source_uri": "https://muzejleskovac.rs/arheologija/",
+    "title": "Caričin Grad Archaeological Site",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "City of Novi Sad",
+      "Novi Sad Tourism Organisation",
+      "Wikidata contributors"
+    ],
+    "description": "The publicly described Upper Town and visitor areas on the plateau of the Petrovaradin Fortress.",
+    "description_zh": "彼得罗瓦拉丁要塞上城区位于塞尔维亚，记录有出处的原址公众参观范围和地图代表点。",
+    "details": "The publicly described Upper Town and visitor areas on the plateau of the Petrovaradin Fortress.",
+    "geography": {
+      "authority_id": "supplement:auth:rs-public:Q2586088",
+      "countries": [
+        "RS"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The city distinguishes the public fortification visits and supervised underground galleries.",
+        "id": "auth:rs-public:Q2586088:rs-petrovaradin-city.html",
+        "license": null,
+        "publisher": "City of Novi Sad",
+        "revision": "Frozen 2026-11-28, SHA-256 16deb9704ce6156e1ee2d0acb7c83249b02aa12fdf57fc8c4a6a53d0681edc0c.",
+        "title": "Petrovaradin Fortress Upper Town public scope and history",
+        "uri": "https://novisad.rs/eng/tourism"
+      }
+    },
+    "id": "auth:rs-public:Q2586088",
+    "location_precision": null,
+    "names": [
+      "Петроварадинска тврђава, Горњи град",
+      "彼得罗瓦拉丁要塞上城区"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      19.8625,
+      45.2525
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The city distinguishes the public fortification visits and supervised underground galleries.",
+        "id": "auth:rs-public:Q2586088:rs-petrovaradin-city.html",
+        "license": null,
+        "publisher": "City of Novi Sad",
+        "revision": "Frozen 2026-11-28, SHA-256 16deb9704ce6156e1ee2d0acb7c83249b02aa12fdf57fc8c4a6a53d0681edc0c.",
+        "title": "Petrovaradin Fortress Upper Town public scope and history",
+        "uri": "https://novisad.rs/eng/tourism"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The public guide positions the city museum and named historical sites on the upper plateau.",
+        "id": "auth:rs-public:Q2586088:rs-petrovaradin-map.pdf",
+        "license": null,
+        "publisher": "Novi Sad Tourism Organisation",
+        "revision": "Frozen 2026-11-28, SHA-256 2b1abcec39263fc53d8137eda93f1c44c2e16074bfb2ab159b695b6574d8bece.",
+        "title": "Petrovaradin Fortress Upper Town public scope and history",
+        "uri": "https://novisad.travel/wp-content/uploads/2024/12/Pamflet-Petrovaradinska-Tvrdjava-2024-Engleski.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 19.8625, latitude 45.2525.",
+        "id": "wikidata:Q2586088",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2481435196, statement Q2586088$A8FB2F3B-7FFD-49B3-9BE9-EA591ABA394C.",
+        "title": "Petrovaradin Fortress Upper Town representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2586088.json"
+      }
+    ],
+    "source_uri": "https://novisad.rs/eng/tourism",
+    "title": "Petrovaradin Fortress Upper Town",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Smederevo Tourism Organisation",
+      "SmederevoWelcome visitor service",
+      "Wikidata contributors"
+    ],
+    "description": "The historic walled fortress at Smederevo. The outer grounds and ticketed Small Town follow the site's published access terms.",
+    "description_zh": "斯梅代雷沃要塞位于塞尔维亚，记录有出处的原址公众参观范围和地图代表点。",
+    "details": "The historic walled fortress at Smederevo. The outer grounds and ticketed Small Town follow the site's published access terms.",
+    "geography": {
+      "authority_id": "supplement:auth:rs-public:Q2588696",
+      "countries": [
+        "RS"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal tourism authority distinguishes the public open grounds and the supervised admission to the Small Town.",
+        "id": "auth:rs-public:Q2588696:rs-smederevo-open-2026.html",
+        "license": null,
+        "publisher": "Smederevo Tourism Organisation",
+        "revision": "Frozen 2026-11-28, SHA-256 e52cf8df923c526f3592e49dada5804722385f6484dd85fe64e15f37629bb627.",
+        "title": "Smederevo Fortress public scope and history",
+        "uri": "https://visitsmederevo.com/destinacije/smederevska-tvrdjava/"
+      }
+    },
+    "id": "auth:rs-public:Q2588696",
+    "location_precision": null,
+    "names": [
+      "Смедеревска тврђава",
+      "斯梅代雷沃要塞"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      20.929166666667,
+      44.668611111111
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The municipal tourism authority distinguishes the public open grounds and the supervised admission to the Small Town.",
+        "id": "auth:rs-public:Q2588696:rs-smederevo-open-2026.html",
+        "license": null,
+        "publisher": "Smederevo Tourism Organisation",
+        "revision": "Frozen 2026-11-28, SHA-256 e52cf8df923c526f3592e49dada5804722385f6484dd85fe64e15f37629bb627.",
+        "title": "Smederevo Fortress public scope and history",
+        "uri": "https://visitsmederevo.com/destinacije/smederevska-tvrdjava/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The visitor service identifies guided visits arranged through the municipal tourism office.",
+        "id": "auth:rs-public:Q2588696:rs-smederevo-visitor.html",
+        "license": null,
+        "publisher": "SmederevoWelcome visitor service",
+        "revision": "Frozen 2026-11-28, SHA-256 8cb8b244ae8c6d8c1be6d0af6b8c43981ab3bd7987897bf8d9740e352aa83bdd.",
+        "title": "Smederevo Fortress public scope and history",
+        "uri": "https://www.smederevowelcome.com/discover-smederevo/attractions/smederevo-fortress"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 20.929166666667, latitude 44.668611111111.",
+        "id": "wikidata:Q2588696",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2515992809, statement q2588696$55C9920E-16F2-42A4-A528-70468D79C4FF.",
+        "title": "Smederevo Fortress representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2588696.json"
+      }
+    ],
+    "source_uri": "https://visitsmederevo.com/destinacije/smederevska-tvrdjava/",
+    "title": "Smederevo Fortress",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Golubac Fortress operator",
+      "Wikidata contributors"
+    ],
+    "description": "The preserved Danube fortress. Public access follows the operator's zone-specific routes, supervision and weather limits.",
+    "description_zh": "戈卢巴茨要塞位于塞尔维亚，记录有出处的原址公众参观范围和地图代表点。",
+    "details": "The preserved Danube fortress. Public access follows the operator's zone-specific routes, supervision and weather limits.",
+    "geography": {
+      "authority_id": "supplement:auth:rs-public:Q2625461",
+      "countries": [
+        "RS"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator publishes opening hours and tiered public visit zones.",
+        "id": "auth:rs-public:Q2625461:rs-golubac-operator.html",
+        "license": null,
+        "publisher": "Golubac Fortress operator",
+        "revision": "Frozen 2026-11-28, SHA-256 c14a1bedcb68ea07d76cb2c34c17ed2e4f593cc3f8b24ad73514b2730184b835.",
+        "title": "Golubac Fortress public scope and history",
+        "uri": "https://tvrdjavagolubackigrad.rs/eng/"
+      }
+    },
+    "id": "auth:rs-public:Q2625461",
+    "location_precision": null,
+    "names": [
+      "Голубачка тврђава",
+      "戈卢巴茨要塞"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      21.6784847,
+      44.6611873
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator publishes opening hours and tiered public visit zones.",
+        "id": "auth:rs-public:Q2625461:rs-golubac-operator.html",
+        "license": null,
+        "publisher": "Golubac Fortress operator",
+        "revision": "Frozen 2026-11-28, SHA-256 c14a1bedcb68ea07d76cb2c34c17ed2e4f593cc3f8b24ad73514b2730184b835.",
+        "title": "Golubac Fortress public scope and history",
+        "uri": "https://tvrdjavagolubackigrad.rs/eng/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The 2026 tariffs identify public admissions and defined visitor services.",
+        "id": "auth:rs-public:Q2625461:rs-golubac-2026.pdf",
+        "license": null,
+        "publisher": "Golubac Fortress operator",
+        "revision": "Frozen 2026-11-28, SHA-256 3a39fc1eac25aa7e28f2ed9faa0bcd9e368867dacb62eb3cd4ec1fc444a06883.",
+        "title": "Golubac Fortress public scope and history",
+        "uri": "https://tvrdjavagolubackigrad.rs/wp-content/uploads/2026/07/Cenovnik-2026.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 21.6784847, latitude 44.6611873.",
+        "id": "wikidata:Q2625461",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2497868035, statement q2625461$EAF2F43A-7C65-4F0A-B276-9DCC8C31F4BB.",
+        "title": "Golubac Fortress representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2625461.json"
+      }
+    ],
+    "source_uri": "https://tvrdjavagolubackigrad.rs/eng/",
+    "title": "Golubac Fortress",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Viminacium Limes Park",
+      "City of Požarevac Tourist Organization",
+      "World Heritage Centre",
+      "Wikidata contributors",
+      "Viminacium Archaeological Park"
+    ],
+    "description": "The publicly interpreted original amphitheatre within Viminacium Archaeological Park near Stari Kostolac. Only this named visitable archaeological precinct is represented.",
+    "description_zh": "维米纳基乌姆考古公园公开游线内的古罗马圆形剧场原址。此点仅代表剧场考古区。",
+    "details": "The publicly interpreted original amphitheatre within Viminacium Archaeological Park near Stari Kostolac. Only this named visitable archaeological precinct is represented.",
+    "geography": {
+      "authority_id": "supplement:auth:rs-public:Q28997289",
+      "countries": [
+        "RS"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator gives admission information and identifies the amphitheatre among the places on the visitor route.",
+        "id": "auth:rs-public:Q28997289:rs-vimin-operator.html",
+        "license": null,
+        "publisher": "Viminacium Limes Park",
+        "revision": "Frozen 2026-11-28, SHA-256 e921de5808751da4f69e7b0e1773e975e0d048ea68b7da15581fc121a5a27e64.",
+        "title": "Viminacium Amphitheatre archaeological precinct public scope and history",
+        "uri": "https://viminaciumpark.rs/"
+      }
+    },
+    "id": "auth:rs-public:Q28997289",
+    "location_precision": null,
+    "names": [
+      "Амфитеатар Виминацијума",
+      "维米纳基乌姆圆形剧场遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      21.22,
+      44.738
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator gives admission information and identifies the amphitheatre among the places on the visitor route.",
+        "id": "auth:rs-public:Q28997289:rs-vimin-operator.html",
+        "license": null,
+        "publisher": "Viminacium Limes Park",
+        "revision": "Frozen 2026-11-28, SHA-256 e921de5808751da4f69e7b0e1773e975e0d048ea68b7da15581fc121a5a27e64.",
+        "title": "Viminacium Amphitheatre archaeological precinct public scope and history",
+        "uri": "https://viminaciumpark.rs/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The city identifies the publicly operated archaeological park.",
+        "id": "auth:rs-public:Q28997289:rs-vimin-pozar.html",
+        "license": null,
+        "publisher": "City of Požarevac Tourist Organization",
+        "revision": "Frozen 2026-11-28, SHA-256 c8749ad4850477881badda54667a50e123d8f606d3bb065889688b9fcc1c66f8.",
+        "title": "Viminacium Amphitheatre archaeological precinct public scope and history",
+        "uri": "https://togp.rs/viminacijum/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The Serbian Lower Danube nomination including Viminacium remains on the Tentative List.",
+        "id": "auth:rs-public:Q28997289:rs-danube-tentative.html",
+        "license": null,
+        "publisher": "World Heritage Centre",
+        "revision": "Frozen 2026-11-28, SHA-256 fcb02675e6b823d8a9c5e81bc591fb8498466da05563ee99a7b4b5b489f781a9.",
+        "title": "Viminacium Amphitheatre archaeological precinct public scope and history",
+        "uri": "https://whc.unesco.org/en/tentativelists/6475/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 21.22, latitude 44.738.",
+        "id": "wikidata:Q28997289",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2464740220, statement Q28997289$5EF260A0-467A-432D-B1C6-7799611F6477.",
+        "title": "Viminacium Amphitheatre archaeological precinct representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q28997289.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator explicitly identifies the original amphitheatre remains among the places visitors can see on the archaeological park route.",
+        "id": "auth:rs-public:Q28997289:review:4",
+        "license": null,
+        "publisher": "Viminacium Archaeological Park",
+        "revision": "Retrieved 2026-11-28; SHA-256 71bcdea876413eb18d1bbb34ff7f377d4f5e72337bb9af7fc74e17e3af2a98a9.",
+        "title": "Public archaeological park itinerary",
+        "uri": "https://viminaciumpark.rs/2025/08/07/zasto-posetiti-arheoloski-park-viminacijum/"
+      }
+    ],
+    "source_uri": "https://viminaciumpark.rs/",
+    "title": "Viminacium Amphitheatre archaeological precinct",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Institute for Protection of Cultural Monuments Sremska Mitrovica",
+      "National Tourism Organisation of Serbia",
+      "Wikidata contributors"
+    ],
+    "description": "The covered, original palace ruins with a ticketed public visitor route in Sremska Mitrovica.",
+    "description_zh": "锡尔米乌姆皇宫考古遗址位于塞尔维亚，记录有出处的原址公众参观范围和地图代表点。",
+    "details": "The covered, original palace ruins with a ticketed public visitor route in Sremska Mitrovica.",
+    "geography": {
+      "authority_id": "supplement:auth:rs-public:Q31184181",
+      "countries": [
+        "RS"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The official manager publishes the palace site address, normal hours and admission.",
+        "id": "auth:rs-public:Q31184181:rs-sirmium-operator.html",
+        "license": null,
+        "publisher": "Institute for Protection of Cultural Monuments Sremska Mitrovica",
+        "revision": "Frozen 2026-11-28, SHA-256 d772969110688202674415c5916887ebc1d16a7d76f48ee56a93b4c0174720a4.",
+        "title": "Imperial Palace of Sirmium archaeological site public scope and history",
+        "uri": "https://zavodsm.rs/"
+      }
+    },
+    "id": "auth:rs-public:Q31184181",
+    "location_precision": null,
+    "names": [
+      "Царска палата Сирмијума",
+      "锡尔米乌姆皇宫考古遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      19.61011111111111,
+      44.96663888888889
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The official manager publishes the palace site address, normal hours and admission.",
+        "id": "auth:rs-public:Q31184181:rs-sirmium-operator.html",
+        "license": null,
+        "publisher": "Institute for Protection of Cultural Monuments Sremska Mitrovica",
+        "revision": "Frozen 2026-11-28, SHA-256 d772969110688202674415c5916887ebc1d16a7d76f48ee56a93b4c0174720a4.",
+        "title": "Imperial Palace of Sirmium archaeological site public scope and history",
+        "uri": "https://zavodsm.rs/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The national visitor guide identifies the exposed archaeological palace remains under the visitor shelter.",
+        "id": "auth:rs-public:Q31184181:rs-sirmium-culture.pdf",
+        "license": null,
+        "publisher": "National Tourism Organisation of Serbia",
+        "revision": "Frozen 2026-11-28, SHA-256 3b9ac46efc19388917da77305c3aef8ea719b870b071f41335bfcd62635fa7d5.",
+        "title": "Imperial Palace of Sirmium archaeological site public scope and history",
+        "uri": "https://www.serbia.travel/wp-content/uploads/2025/12/11-GRADOVI-SRBIJE.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 19.61011111111111, latitude 44.96663888888889.",
+        "id": "wikidata:Q31184181",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2575130763, statement Q31184181$0f846efa-4ce4-1496-d92d-7f43d2d41473.",
+        "title": "Imperial Palace of Sirmium archaeological site representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q31184181.json"
+      }
+    ],
+    "source_uri": "https://zavodsm.rs/",
+    "title": "Imperial Palace of Sirmium archaeological site",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Veliko Gradište Tourism Organisation",
+      "Wikidata contributors",
+      "Tourist Organization of Veliko Gradište"
+    ],
+    "description": "The public medieval fortress on the Danube bluff at Ram, under the municipal operator’s schedule. The separately proposed Roman road below the fort and auxiliary fort at Lederata are outside this record.",
+    "description_zh": "塞尔维亚拉姆多瑙河崖上的中世纪堡垒，参观遵循市镇运营方安排。堡下的罗马道路和莱德拉塔辅助堡不在这条记录内。",
+    "details": "The public medieval fortress on the Danube bluff at Ram, under the municipal operator’s schedule. The separately proposed Roman road below the fort and auxiliary fort at Lederata are outside this record.",
+    "geography": {
+      "authority_id": "supplement:auth:rs-public:Q3396212",
+      "countries": [
+        "RS"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator describes the public fortress visit, including the group booking rules.",
+        "id": "auth:rs-public:Q3396212:rs-ram-hours.html",
+        "license": null,
+        "publisher": "Veliko Gradište Tourism Organisation",
+        "revision": "Frozen 2026-11-28, SHA-256 3852906a5c2c59184329bd0f0de715a176782c4a276939f11027e5531d2f718f.",
+        "title": "Ram Fortress public scope and history",
+        "uri": "https://ramskatvrdjava.rs/dozivite/"
+      }
+    },
+    "id": "auth:rs-public:Q3396212",
+    "location_precision": null,
+    "names": [
+      "Рамска тврђава",
+      "拉姆要塞"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      21.33,
+      44.81277778
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator describes the public fortress visit, including the group booking rules.",
+        "id": "auth:rs-public:Q3396212:rs-ram-hours.html",
+        "license": null,
+        "publisher": "Veliko Gradište Tourism Organisation",
+        "revision": "Frozen 2026-11-28, SHA-256 3852906a5c2c59184329bd0f0de715a176782c4a276939f11027e5531d2f718f.",
+        "title": "Ram Fortress public scope and history",
+        "uri": "https://ramskatvrdjava.rs/dozivite/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator's tariff is specific to this historic fortress.",
+        "id": "auth:rs-public:Q3396212:rs-ram-tickets.pdf",
+        "license": null,
+        "publisher": "Veliko Gradište Tourism Organisation",
+        "revision": "Frozen 2026-11-28, SHA-256 14eb9ea782c625999ef53502f9f4add170bbf6101d49d96d681304ca6402b484.",
+        "title": "Ram Fortress public scope and history",
+        "uri": "https://ramskatvrdjava.rs/wp-content/uploads/2025/04/Cenovnik.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 21.33, latitude 44.81277778.",
+        "id": "wikidata:Q3396212",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2487149450, statement Q3396212$1A9C5364-9493-4F5F-8EC8-A8033909D40F.",
+        "title": "Ram Fortress representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3396212.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator treats Lederata as an older separate fort. Roman building material was reused in Ram’s later fortification.",
+        "id": "auth:rs-public:Q3396212:review:3",
+        "license": null,
+        "publisher": "Tourist Organization of Veliko Gradište",
+        "revision": "Retrieved 2026-11-28; SHA-256 43c1d3ae68396290acc90524cc272e886c84792d471132f4f23a90c277ca7d18.",
+        "title": "Municipal distinction between Lederata and Ram Fortress",
+        "uri": "https://ramskatvrdjava.rs/lederata/"
+      }
+    ],
+    "source_uri": "https://ramskatvrdjava.rs/dozivite/",
+    "title": "Ram Fortress",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Public visitor sources and named original site checked.",
+      "note": "No independently reviewed dated phase is assigned.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "National Museum Niš",
+      "Government of Serbia",
+      "Wikidata contributors",
+      "Pleiades gazetteer project"
+    ],
+    "description": "The designated public area of the original Mediana Roman residential complex near Niš.",
+    "description_zh": "梅迪亚纳考古遗址位于塞尔维亚，记录有出处的原址公众参观范围和地图代表点。",
+    "details": "The designated public area of the original Mediana Roman residential complex near Niš.",
+    "geography": {
+      "authority_id": "supplement:auth:rs-public:Q960839",
+      "countries": [
+        "RS"
+      ],
+      "note": "Named public heritage place.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator lists dedicated visitor hours for the Mediana Archaeological Park.",
+        "id": "auth:rs-public:Q960839:rs-mediana-operator.html",
+        "license": null,
+        "publisher": "National Museum Niš",
+        "revision": "Frozen 2026-11-28, SHA-256 ea3fc5590122fa7cf17a85cd8de20e2ffe1090bea60d3f4f7cb49ef02ef55447.",
+        "title": "Mediana Archaeological Park public scope and history",
+        "uri": "https://narodnimuzejnis.rs/en/za-posetioce/radno-vreme/"
+      }
+    },
+    "id": "auth:rs-public:Q960839",
+    "location_precision": null,
+    "names": [
+      "Археолошко налазиште Медијана",
+      "梅迪亚纳考古遗址"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      21.94888889,
+      43.31027778
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The operator lists dedicated visitor hours for the Mediana Archaeological Park.",
+        "id": "auth:rs-public:Q960839:rs-mediana-operator.html",
+        "license": null,
+        "publisher": "National Museum Niš",
+        "revision": "Frozen 2026-11-28, SHA-256 ea3fc5590122fa7cf17a85cd8de20e2ffe1090bea60d3f4f7cb49ef02ef55447.",
+        "title": "Mediana Archaeological Park public scope and history",
+        "uri": "https://narodnimuzejnis.rs/en/za-posetioce/radno-vreme/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The government reopening announcement confirms public access to the original site.",
+        "id": "auth:rs-public:Q960839:rs-mediana-gov.html",
+        "license": null,
+        "publisher": "Government of Serbia",
+        "revision": "Frozen 2026-11-28, SHA-256 e4b17a0c542bff4cd696e2bb310b89e95b760f1bb6c9ed3f95abfa5ee3559ab7.",
+        "title": "Mediana Archaeological Park public scope and history",
+        "uri": "https://www.srbija.gov.rs/vest/en/200026/mediana-archaeological-site-opened-in-nis.php"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude 21.94888889, latitude 43.31027778.",
+        "id": "wikidata:Q960839",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata revision 2493577480, statement Q960839$9C2B3497-FB79-40AF-9A8E-46694E9BFD5F.",
+        "title": "Mediana Archaeological Park representative point",
+        "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q960839.json"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The gazetteer distinguishes the suburban Roman imperial villa of Mediana from the Naissus urban centre.",
+        "id": "auth:rs-public:Q960839:review:3",
+        "license": null,
+        "publisher": "Pleiades gazetteer project",
+        "revision": "Retrieved 2026-11-28; SHA-256 628930e63ab6164efeec06eb8d6eadab34cce1a511d34290d5ae3fce22668814.",
+        "title": "Mediana archaeological identity in Brzi Brod",
+        "uri": "https://pleiades.stoa.org/news/blog/last-week-in-pleiades-26-june-3-july-2023"
+      }
+    ],
+    "source_uri": "https://narodnimuzejnis.rs/en/za-posetioce/radno-vreme/",
+    "title": "Mediana Archaeological Park",
+    "types": [
+      "archaeological-site"
+    ]
+  }
+]
