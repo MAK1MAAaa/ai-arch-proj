@@ -1,0 +1,1054 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Point-source review without selecting a historical phase.",
+      "note": "The corpus preserves the published location. No historical event phase was established for this point import.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Finnish Heritage Agency (Museovirasto)"
+    ],
+    "description": "Kuivaketveleen linnavuori is a nationally significant archaeological site in Taipalsaari, Finland.",
+    "description_zh": "芬兰文物局国家重要考古遗址名录（VARK）收录的遗址，位于 Etelä-Karjala 地区 Taipalsaari。",
+    "details": "The VARK point layer provides the published catalogue centre for this single registered heritage site. Registered type: puolustusvarustukset / muinaislinnat.",
+    "geography": {
+      "authority_id": "supplement:auth:fi-vark:100570",
+      "countries": [
+        "FI"
+      ],
+      "note": "Contemporary source municipality Taipalsaari, region Etelä-Karjala.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Kuivaketveleen Linnavuori | puolustusvarustukset | muinaislinnat | Taipalsaari, Etelä-Karjala",
+        "id": "auth:fi-vark:100570",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100570; ancient site record 831010018",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:fi-vark:100570",
+    "location_precision": null,
+    "names": [
+      "Kuivaketveleen linnavuori"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      28.11564193,
+      61.10910348
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Kuivaketveleen Linnavuori | puolustusvarustukset | muinaislinnat | Taipalsaari, Etelä-Karjala",
+        "id": "auth:fi-vark:100570",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100570; ancient site record 831010018",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Finnish Heritage Agency spatial data and CC BY 4.0 terms",
+        "uri": "https://www.museovirasto.fi/en/services-and-guidelines/data-systems/kulttuuriympaeristoen-tietojaerjestelmae/kulttuuriympaeristoen-paikkatietoaineistot"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "inventory:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Nationally significant archaeological sites VARK",
+        "uri": "https://www.museovirasto.fi/en/cultural-environment/archaeological-cultural-heritage/nationally-significant-archaeological-sites-vark"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "visitor:fi-vark:100570",
+        "license": null,
+        "publisher": "Taipalsaari Municipality",
+        "revision": null,
+        "title": "Kuivaketveleen linnavuori",
+        "uri": "https://www.taipalsaari.fi/fi/kulttuuri-ja-vapaa-aika/kulttuuri/taipalsaaren-kulttuuriperintoreitit/i-kirkonkyla-saimaanharju/13-kuivaketveleen-linnavuori"
+      }
+    ],
+    "source_uri": "https://www.kyppi.fi/vark.aspx?id=831010018",
+    "title": "Kuivaketveleen Linnavuori",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Point-source review without selecting a historical phase.",
+      "note": "The corpus preserves the published location. No historical event phase was established for this point import.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Finnish Heritage Agency (Museovirasto)"
+    ],
+    "description": "Svartholma Sea Fortress is a nationally significant archaeological site in Loviisa, Finland.",
+    "description_zh": "芬兰文物局国家重要考古遗址名录（VARK）收录的遗址，位于 Uusimaa 地区 Loviisa。",
+    "details": "The VARK point layer provides the published catalogue centre for this single registered heritage site. Registered type: puolustusvarustukset / linnoitukset.",
+    "geography": {
+      "authority_id": "supplement:auth:fi-vark:100649",
+      "countries": [
+        "FI"
+      ],
+      "note": "Contemporary source municipality Loviisa, region Uusimaa.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Svartholma | puolustusvarustukset | linnoitukset | Loviisa, Uusimaa",
+        "id": "auth:fi-vark:100649",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100649; ancient site record 1000001910",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:fi-vark:100649",
+    "location_precision": null,
+    "names": [
+      "Svartholma Sea Fortress"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      26.299226,
+      60.37924461
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Svartholma | puolustusvarustukset | linnoitukset | Loviisa, Uusimaa",
+        "id": "auth:fi-vark:100649",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100649; ancient site record 1000001910",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Finnish Heritage Agency spatial data and CC BY 4.0 terms",
+        "uri": "https://www.museovirasto.fi/en/services-and-guidelines/data-systems/kulttuuriympaeristoen-tietojaerjestelmae/kulttuuriympaeristoen-paikkatietoaineistot"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "inventory:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Nationally significant archaeological sites VARK",
+        "uri": "https://www.museovirasto.fi/en/cultural-environment/archaeological-cultural-heritage/nationally-significant-archaeological-sites-vark"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "visitor:fi-vark:100649",
+        "license": null,
+        "publisher": "Metsähallitus",
+        "revision": null,
+        "title": "Svartholma Sea Fortress",
+        "uri": "https://www.luontoon.fi/en/destinations/svartholma-sea-fortress"
+      }
+    ],
+    "source_uri": "https://www.kyppi.fi/vark.aspx?id=1000001910",
+    "title": "Svartholma",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Point-source review without selecting a historical phase.",
+      "note": "The corpus preserves the published location. No historical event phase was established for this point import.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Finnish Heritage Agency (Museovirasto)"
+    ],
+    "description": "Tenholan linnavuori is a nationally significant archaeological site in Hattula, Finland.",
+    "description_zh": "芬兰文物局国家重要考古遗址名录（VARK）收录的遗址，位于 Kanta-Häme 地区 Hattula。",
+    "details": "The VARK point layer provides the published catalogue centre for this single registered heritage site. Registered type: puolustusvarustukset / muinaislinnat.",
+    "geography": {
+      "authority_id": "supplement:auth:fi-vark:100786",
+      "countries": [
+        "FI"
+      ],
+      "note": "Contemporary source municipality Hattula, region Kanta-Häme.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Tenholan linnavuori | puolustusvarustukset | muinaislinnat | Hattula, Kanta-Häme",
+        "id": "auth:fi-vark:100786",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100786; ancient site record 82010019",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:fi-vark:100786",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      24.28790118,
+      61.09669118
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Tenholan linnavuori | puolustusvarustukset | muinaislinnat | Hattula, Kanta-Häme",
+        "id": "auth:fi-vark:100786",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100786; ancient site record 82010019",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Finnish Heritage Agency spatial data and CC BY 4.0 terms",
+        "uri": "https://www.museovirasto.fi/en/services-and-guidelines/data-systems/kulttuuriympaeristoen-tietojaerjestelmae/kulttuuriympaeristoen-paikkatietoaineistot"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "inventory:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Nationally significant archaeological sites VARK",
+        "uri": "https://www.museovirasto.fi/en/cultural-environment/archaeological-cultural-heritage/nationally-significant-archaeological-sites-vark"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "visitor:fi-vark:100786",
+        "license": null,
+        "publisher": "Hattula Municipality",
+        "revision": null,
+        "title": "Tenholan linnavuori",
+        "uri": "https://hattula.fi/visit-hattula-kohde/tenholan-linnavuori/"
+      }
+    ],
+    "source_uri": "https://www.kyppi.fi/vark.aspx?id=82010019",
+    "title": "Tenholan linnavuori",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Point-source review without selecting a historical phase.",
+      "note": "The corpus preserves the published location. No historical event phase was established for this point import.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Finnish Heritage Agency (Museovirasto)"
+    ],
+    "description": "Kastelli Giant's Church is a nationally significant archaeological site in Raahe, Finland.",
+    "description_zh": "芬兰文物局国家重要考古遗址名录（VARK）收录的遗址，位于 Pohjois-Pohjanmaa 地区 Raahe。",
+    "details": "The VARK point layer provides the published catalogue centre for this single registered heritage site. Registered type: asuinpaikat, kivirakenteet / asumuspainanteet, jätinkirkot, röykkiöt.",
+    "geography": {
+      "authority_id": "supplement:auth:fi-vark:100844",
+      "countries": [
+        "FI"
+      ],
+      "note": "Contemporary source municipality Raahe, region Pohjois-Pohjanmaa.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Kastelli Linnakangas | asuinpaikat, kivirakenteet | asumuspainanteet, jätinkirkot, röykkiöt | Raahe, Pohjois-Pohjanmaa",
+        "id": "auth:fi-vark:100844",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100844; ancient site record 582010001",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:fi-vark:100844",
+    "location_precision": null,
+    "names": [
+      "Kastelli Giant's Church"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      24.71122931,
+      64.6310645
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Kastelli Linnakangas | asuinpaikat, kivirakenteet | asumuspainanteet, jätinkirkot, röykkiöt | Raahe, Pohjois-Pohjanmaa",
+        "id": "auth:fi-vark:100844",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100844; ancient site record 582010001",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Finnish Heritage Agency spatial data and CC BY 4.0 terms",
+        "uri": "https://www.museovirasto.fi/en/services-and-guidelines/data-systems/kulttuuriympaeristoen-tietojaerjestelmae/kulttuuriympaeristoen-paikkatietoaineistot"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "inventory:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Nationally significant archaeological sites VARK",
+        "uri": "https://www.museovirasto.fi/en/cultural-environment/archaeological-cultural-heritage/nationally-significant-archaeological-sites-vark"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "visitor:fi-vark:100844",
+        "license": null,
+        "publisher": "City of Raahe",
+        "revision": null,
+        "title": "Kastelli Giant's Church",
+        "uri": "https://visitraahe.fi/en/kastelli-giants-church"
+      }
+    ],
+    "source_uri": "https://www.kyppi.fi/vark.aspx?id=582010001",
+    "title": "Kastelli Linnakangas",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Point-source review without selecting a historical phase.",
+      "note": "The corpus preserves the published location. No historical event phase was established for this point import.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Finnish Heritage Agency (Museovirasto)"
+    ],
+    "description": "Astuvansalmi rock paintings is a nationally significant archaeological site in Mikkeli, Finland.",
+    "description_zh": "芬兰文物局国家重要考古遗址名录（VARK）收录的遗址，位于 Etelä-Savo 地区 Mikkeli。",
+    "details": "The VARK point layer provides the published catalogue centre for this single registered heritage site. Registered type: taide, muistomerkit / kalliomaalaukset.",
+    "geography": {
+      "authority_id": "supplement:auth:fi-vark:100884",
+      "countries": [
+        "FI"
+      ],
+      "note": "Contemporary source municipality Mikkeli, region Etelä-Savo.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Astuvansalmi | taide, muistomerkit | kalliomaalaukset | Mikkeli, Etelä-Savo",
+        "id": "auth:fi-vark:100884",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100884; ancient site record 696010003",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:fi-vark:100884",
+    "location_precision": null,
+    "names": [
+      "Astuvansalmi rock paintings"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      27.54357886,
+      61.44426621
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Astuvansalmi | taide, muistomerkit | kalliomaalaukset | Mikkeli, Etelä-Savo",
+        "id": "auth:fi-vark:100884",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100884; ancient site record 696010003",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Finnish Heritage Agency spatial data and CC BY 4.0 terms",
+        "uri": "https://www.museovirasto.fi/en/services-and-guidelines/data-systems/kulttuuriympaeristoen-tietojaerjestelmae/kulttuuriympaeristoen-paikkatietoaineistot"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "inventory:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Nationally significant archaeological sites VARK",
+        "uri": "https://www.museovirasto.fi/en/cultural-environment/archaeological-cultural-heritage/nationally-significant-archaeological-sites-vark"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "visitor:fi-vark:100884",
+        "license": null,
+        "publisher": "Metsähallitus",
+        "revision": null,
+        "title": "Astuvansalmi rock paintings",
+        "uri": "https://www.luontoon.fi/en/articles/astuvansalmen-kalliomaalaukset-kurkistus-kivikautisten-pyyntiyhteisojen-maailmaan"
+      }
+    ],
+    "source_uri": "https://www.kyppi.fi/vark.aspx?id=696010003",
+    "title": "Astuvansalmi",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Point-source review without selecting a historical phase.",
+      "note": "The corpus preserves the published location. No historical event phase was established for this point import.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Finnish Heritage Agency (Museovirasto)"
+    ],
+    "description": "Kuusisto Bishop's Castle Ruins is a nationally significant archaeological site in Kaarina, Finland.",
+    "description_zh": "芬兰文物局国家重要考古遗址名录（VARK）收录的遗址，位于 Varsinais-Suomi 地区 Kaarina。",
+    "details": "The VARK point layer provides the published catalogue centre for this single registered heritage site. Registered type: puolustusvarustukset / kivilinnat.",
+    "geography": {
+      "authority_id": "supplement:auth:fi-vark:100897",
+      "countries": [
+        "FI"
+      ],
+      "note": "Contemporary source municipality Kaarina, region Varsinais-Suomi.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Kuusiston Piispanlinna | puolustusvarustukset | kivilinnat | Kaarina, Varsinais-Suomi",
+        "id": "auth:fi-vark:100897",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100897; ancient site record 202010036",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:fi-vark:100897",
+    "location_precision": null,
+    "names": [
+      "Kuusisto Bishop's Castle Ruins"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      22.47493731,
+      60.4077815
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Kuusiston Piispanlinna | puolustusvarustukset | kivilinnat | Kaarina, Varsinais-Suomi",
+        "id": "auth:fi-vark:100897",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100897; ancient site record 202010036",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Finnish Heritage Agency spatial data and CC BY 4.0 terms",
+        "uri": "https://www.museovirasto.fi/en/services-and-guidelines/data-systems/kulttuuriympaeristoen-tietojaerjestelmae/kulttuuriympaeristoen-paikkatietoaineistot"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "inventory:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Nationally significant archaeological sites VARK",
+        "uri": "https://www.museovirasto.fi/en/cultural-environment/archaeological-cultural-heritage/nationally-significant-archaeological-sites-vark"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "visitor:fi-vark:100897",
+        "license": null,
+        "publisher": "Metsähallitus",
+        "revision": null,
+        "title": "Kuusisto Bishop's Castle Ruins",
+        "uri": "https://www.luontoon.fi/en/destinations/kuusisto-bishops-castle-ruins"
+      }
+    ],
+    "source_uri": "https://www.kyppi.fi/vark.aspx?id=202010036",
+    "title": "Kuusiston Piispanlinna",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Point-source review without selecting a historical phase.",
+      "note": "The corpus preserves the published location. No historical event phase was established for this point import.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Finnish Heritage Agency (Museovirasto)"
+    ],
+    "description": "Pisamalahden linnavuori is a nationally significant archaeological site in Sulkava, Finland.",
+    "description_zh": "芬兰文物局国家重要考古遗址名录（VARK）收录的遗址，位于 Etelä-Savo 地区 Sulkava。",
+    "details": "The VARK point layer provides the published catalogue centre for this single registered heritage site. Registered type: puolustusvarustukset / muinaislinnat.",
+    "geography": {
+      "authority_id": "supplement:auth:fi-vark:100927",
+      "countries": [
+        "FI"
+      ],
+      "note": "Contemporary source municipality Sulkava, region Etelä-Savo.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Pisamalahden linnavuori | puolustusvarustukset | muinaislinnat | Sulkava, Etelä-Savo",
+        "id": "auth:fi-vark:100927",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100927; ancient site record 768010009",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:fi-vark:100927",
+    "location_precision": null,
+    "names": [],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      28.31916388,
+      61.75307248
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Pisamalahden linnavuori | puolustusvarustukset | muinaislinnat | Sulkava, Etelä-Savo",
+        "id": "auth:fi-vark:100927",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100927; ancient site record 768010009",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Finnish Heritage Agency spatial data and CC BY 4.0 terms",
+        "uri": "https://www.museovirasto.fi/en/services-and-guidelines/data-systems/kulttuuriympaeristoen-tietojaerjestelmae/kulttuuriympaeristoen-paikkatietoaineistot"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "inventory:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Nationally significant archaeological sites VARK",
+        "uri": "https://www.museovirasto.fi/en/cultural-environment/archaeological-cultural-heritage/nationally-significant-archaeological-sites-vark"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "visitor:fi-vark:100927",
+        "license": null,
+        "publisher": "Sulkava Municipality",
+        "revision": null,
+        "title": "Pisamalahden linnavuori",
+        "uri": "https://sulkava.fi/matkailu-ja-tapahtumat/sulkavan-nahtavyydet/luontokohteet/"
+      }
+    ],
+    "source_uri": "https://www.kyppi.fi/vark.aspx?id=768010009",
+    "title": "Pisamalahden linnavuori",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Point-source review without selecting a historical phase.",
+      "note": "The corpus preserves the published location. No historical event phase was established for this point import.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Finnish Heritage Agency (Museovirasto)"
+    ],
+    "description": "Kajaani Castle Ruins is a nationally significant archaeological site in Kajaani, Finland.",
+    "description_zh": "芬兰文物局国家重要考古遗址名录（VARK）收录的遗址，位于 Kainuu 地区 Kajaani。",
+    "details": "The VARK point layer provides the published catalogue centre for this single registered heritage site. Registered type: puolustusvarustukset / kivilinnat.",
+    "geography": {
+      "authority_id": "supplement:auth:fi-vark:100936",
+      "countries": [
+        "FI"
+      ],
+      "note": "Contemporary source municipality Kajaani, region Kainuu.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Kajaanin linna | puolustusvarustukset | kivilinnat | Kajaani, Kainuu",
+        "id": "auth:fi-vark:100936",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100936; ancient site record 1000002064",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:fi-vark:100936",
+    "location_precision": null,
+    "names": [
+      "Kajaani Castle Ruins"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      27.73278735,
+      64.22919646
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Kajaanin linna | puolustusvarustukset | kivilinnat | Kajaani, Kainuu",
+        "id": "auth:fi-vark:100936",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100936; ancient site record 1000002064",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Finnish Heritage Agency spatial data and CC BY 4.0 terms",
+        "uri": "https://www.museovirasto.fi/en/services-and-guidelines/data-systems/kulttuuriympaeristoen-tietojaerjestelmae/kulttuuriympaeristoen-paikkatietoaineistot"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "inventory:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Nationally significant archaeological sites VARK",
+        "uri": "https://www.museovirasto.fi/en/cultural-environment/archaeological-cultural-heritage/nationally-significant-archaeological-sites-vark"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "visitor:fi-vark:100936",
+        "license": null,
+        "publisher": "Metsähallitus",
+        "revision": null,
+        "title": "Kajaani Castle Ruins",
+        "uri": "https://www.luontoon.fi/en/destinations/kajaani-castle-ruins/activities-and-trails/hiking-and-outdoor-recreation"
+      }
+    ],
+    "source_uri": "https://www.kyppi.fi/vark.aspx?id=1000002064",
+    "title": "Kajaanin linna",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Point-source review without selecting a historical phase.",
+      "note": "The corpus preserves the published location. No historical event phase was established for this point import.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Finnish Heritage Agency (Museovirasto)"
+    ],
+    "description": "Turku Castle is a nationally significant archaeological site in Turku, Finland.",
+    "description_zh": "芬兰文物局国家重要考古遗址名录（VARK）收录的遗址，位于 Varsinais-Suomi 地区 Turku。",
+    "details": "The VARK point layer provides the published catalogue centre for this single registered heritage site. Registered type: puolustusvarustukset / kivilinnat.",
+    "geography": {
+      "authority_id": "supplement:auth:fi-vark:100958",
+      "countries": [
+        "FI"
+      ],
+      "note": "Contemporary source municipality Turku, region Varsinais-Suomi.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Turun linna | puolustusvarustukset | kivilinnat | Turku, Varsinais-Suomi",
+        "id": "auth:fi-vark:100958",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100958; ancient site record 1000019681",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:fi-vark:100958",
+    "location_precision": null,
+    "names": [
+      "Turku Castle"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      22.22920878,
+      60.43540251
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Turun linna | puolustusvarustukset | kivilinnat | Turku, Varsinais-Suomi",
+        "id": "auth:fi-vark:100958",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 100958; ancient site record 1000019681",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Finnish Heritage Agency spatial data and CC BY 4.0 terms",
+        "uri": "https://www.museovirasto.fi/en/services-and-guidelines/data-systems/kulttuuriympaeristoen-tietojaerjestelmae/kulttuuriympaeristoen-paikkatietoaineistot"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "inventory:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Nationally significant archaeological sites VARK",
+        "uri": "https://www.museovirasto.fi/en/cultural-environment/archaeological-cultural-heritage/nationally-significant-archaeological-sites-vark"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "visitor:fi-vark:100958",
+        "license": null,
+        "publisher": "City of Turku",
+        "revision": null,
+        "title": "Turku Castle",
+        "uri": "https://www.turku.fi/en/city-museum"
+      }
+    ],
+    "source_uri": "https://www.kyppi.fi/vark.aspx?id=1000019681",
+    "title": "Turun linna",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Point-source review without selecting a historical phase.",
+      "note": "The corpus preserves the published location. No historical event phase was established for this point import.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Finnish Heritage Agency (Museovirasto)"
+    ],
+    "description": "Olavinlinna Castle is a nationally significant archaeological site in Savonlinna, Finland.",
+    "description_zh": "芬兰文物局国家重要考古遗址名录（VARK）收录的遗址，位于 Etelä-Savo 地区 Savonlinna。",
+    "details": "The VARK point layer provides the published catalogue centre for this single registered heritage site. Registered type: puolustusvarustukset / kivilinnat.",
+    "geography": {
+      "authority_id": "supplement:auth:fi-vark:101067",
+      "countries": [
+        "FI"
+      ],
+      "note": "Contemporary source municipality Savonlinna, region Etelä-Savo.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Olavinlinna | puolustusvarustukset | kivilinnat | Savonlinna, Etelä-Savo",
+        "id": "auth:fi-vark:101067",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 101067; ancient site record 1000019735",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:fi-vark:101067",
+    "location_precision": null,
+    "names": [
+      "Olavinlinna Castle"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      28.90085297,
+      61.86403786
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Olavinlinna | puolustusvarustukset | kivilinnat | Savonlinna, Etelä-Savo",
+        "id": "auth:fi-vark:101067",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 101067; ancient site record 1000019735",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Finnish Heritage Agency spatial data and CC BY 4.0 terms",
+        "uri": "https://www.museovirasto.fi/en/services-and-guidelines/data-systems/kulttuuriympaeristoen-tietojaerjestelmae/kulttuuriympaeristoen-paikkatietoaineistot"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "inventory:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Nationally significant archaeological sites VARK",
+        "uri": "https://www.museovirasto.fi/en/cultural-environment/archaeological-cultural-heritage/nationally-significant-archaeological-sites-vark"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "visitor:fi-vark:101067",
+        "license": null,
+        "publisher": "The National Museum of Finland",
+        "revision": null,
+        "title": "Olavinlinna Castle",
+        "uri": "https://www.kansallismuseo.fi/en/olavinlinna/visit-olavinlinna"
+      }
+    ],
+    "source_uri": "https://www.kyppi.fi/vark.aspx?id=1000019735",
+    "title": "Olavinlinna",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Point-source review without selecting a historical phase.",
+      "note": "The corpus preserves the published location. No historical event phase was established for this point import.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Finnish Heritage Agency (Museovirasto)"
+    ],
+    "description": "Häme Castle is a nationally significant archaeological site in Hämeenlinna, Finland.",
+    "description_zh": "芬兰文物局国家重要考古遗址名录（VARK）收录的遗址，位于 Kanta-Häme 地区 Hämeenlinna。",
+    "details": "The VARK point layer provides the published catalogue centre for this single registered heritage site. Registered type: puolustusvarustukset / kivilinnat.",
+    "geography": {
+      "authority_id": "supplement:auth:fi-vark:101164",
+      "countries": [
+        "FI"
+      ],
+      "note": "Contemporary source municipality Hämeenlinna, region Kanta-Häme.",
+      "point_count": 1,
+      "regions": [
+        "europe-north-america"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "Hämeen linna | puolustusvarustukset | kivilinnat | Hämeenlinna, Kanta-Häme",
+        "id": "auth:fi-vark:101164",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 101164; ancient site record 1000006748",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      }
+    },
+    "id": "auth:fi-vark:101164",
+    "location_precision": null,
+    "names": [
+      "Häme Castle"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      24.45900265,
+      61.00349182
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Hämeen linna | puolustusvarustukset | kivilinnat | Hämeenlinna, Kanta-Häme",
+        "id": "auth:fi-vark:101164",
+        "license": "CC BY 4.0",
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": "2018–2024 inventory approved on 7 November 2024; VARK_ID 101164; ancient site record 1000006748",
+        "title": "VARK – valtakunnallisesti merkittävät arkeologiset kohteet, pisteet",
+        "uri": "https://geoserver.museovirasto.fi/geoserver/rajapinta_suojellut/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=rajapinta_suojellut%3Avark_pisteet&outputFormat=application%2Fjson&srsName=EPSG%3A4326"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "licence:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Finnish Heritage Agency spatial data and CC BY 4.0 terms",
+        "uri": "https://www.museovirasto.fi/en/services-and-guidelines/data-systems/kulttuuriympaeristoen-tietojaerjestelmae/kulttuuriympaeristoen-paikkatietoaineistot"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "inventory:fi-vark",
+        "license": null,
+        "publisher": "Finnish Heritage Agency (Museovirasto)",
+        "revision": null,
+        "title": "Nationally significant archaeological sites VARK",
+        "uri": "https://www.museovirasto.fi/en/cultural-environment/archaeological-cultural-heritage/nationally-significant-archaeological-sites-vark"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "visitor:fi-vark:101164",
+        "license": null,
+        "publisher": "The National Museum of Finland",
+        "revision": null,
+        "title": "Häme Castle",
+        "uri": "https://www.kansallismuseo.fi/en/haemeenlinna/exhibitions-2"
+      }
+    ],
+    "source_uri": "https://www.kyppi.fi/vark.aspx?id=1000006748",
+    "title": "Hämeen linna",
+    "types": [
+      "archaeological-site"
+    ]
+  }
+]

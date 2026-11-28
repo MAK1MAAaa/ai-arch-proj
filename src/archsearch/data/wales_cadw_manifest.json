@@ -1,0 +1,22 @@
+{
+  "base_count": 4207,
+  "base_ids_sha256": "5065dc5c923aefcb5d03360410f934eb6c8098377c6b96ae5d93e5491d271b29",
+  "base_sites_sha256": "4e0932a88a7cdabc0b96e61fcfde7284b1831d2d0a19401c943d595e0ca13dde",
+  "cohort_version": "wales-cadw-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 111,
+    "total": 4318
+  },
+  "files": {
+    "wales_cadw_review.json": {
+      "sha256": "800a7f09b32eb1d0a0e605895e42d60c5b6073a1ffe4a32470333669c3ecafd4"
+    },
+    "wales_cadw_sites.json": {
+      "sha256": "f142e838e97dcd2545fc52c36827f0dbc448722c8ef6a58a96d0cf42ef435eb7"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "111 official Cadw points for publicly interpreted monuments, including verified seasonal sites. Excludes unresolved overlaps, duplicate identities and the documented safety closure."
+}

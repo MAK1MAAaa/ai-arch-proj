@@ -82,7 +82,30 @@ MEXICO_SIC = NamedPlaceCohort(
     "45793ce985a6ba2dd4035c9b58d7786943872ee5287a97d4f77c18162fbd08b4",
     "9f1b3d27dfcfe2ed2b631e9f3cd140c8c660425fa4d2e5d4b2e46d7a87753286",
 )
-POINT_COHORTS = (IRELAND, ANDALUCIA, TAIWAN_ICULTURE, MEXICO_SIC)
+FINLAND_VARK = NamedPlaceCohort(
+    "finland-vark-public-v1",
+    "global-v21",
+    "finland_vark",
+    "9d487a5e46f31f671254b4ae7184a0c245c178265cdf53b83a97b11eaeb290b8",
+    "fb4e142b0f9517ae9e82328f8394c7d985692efb84a846b855cab476ce5270fa",
+)
+WALES_CADW = NamedPlaceCohort(
+    "wales-cadw-public-v1",
+    "global-v21",
+    "wales_cadw",
+    "800a7f09b32eb1d0a0e605895e42d60c5b6073a1ffe4a32470333669c3ecafd4",
+    "f142e838e97dcd2545fc52c36827f0dbc448722c8ef6a58a96d0cf42ef435eb7",
+)
+THAILAND_FAD = NamedPlaceCohort(
+    "thailand-fad-public-v1",
+    "global-v21",
+    "thailand_fad",
+    "1cc7aecfdb0cb1b2925e15c4dc4c6587b8d6451b19a1a2e63929fc371f0fc44c",
+    "9ee26d0b20abf35338d93430a812c06df435bffe827654d4081154d1670c08d4",
+)
+POINT_COHORTS = (
+    IRELAND, ANDALUCIA, TAIWAN_ICULTURE, MEXICO_SIC, FINLAND_VARK, WALES_CADW, THAILAND_FAD,
+)
 
 
 class TargetDataError(RuntimeError):

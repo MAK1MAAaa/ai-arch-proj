@@ -90,3 +90,15 @@ def test_public_point_search_catalogue_and_provenance(
         assert [source["license"] for source in vallecito["source_refs"]] == [
             "SIC open data attribution terms", "CC BY 4.0",
         ]
+
+        for country, prefix, count in (
+            ("FI", "auth:fi-vark:", 11),
+            ("GB", "auth:gb-cadw:", 111),
+            ("TH", "auth:th-fad:", 17),
+        ):
+            points = client.get(f"/api/catalogue?country={country}").json()["points"]
+            added = [point for point in points if point["id"].startswith(prefix)]
+            assert len(added) == count
+            assert all(point["repr_point"] is not None for point in added)
+        assert client.get("/api/sites/auth:gb-cadw:PE373").status_code == 404
+        assert client.get("/api/sites/auth:fi-vark:100270").status_code == 404
