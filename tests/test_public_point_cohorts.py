@@ -114,7 +114,7 @@ def test_public_point_search_catalogue_and_provenance(
             ("VN", "auth:vn-public:", 19),
             ("KH", "auth:kh-public:", 9),
             ("TT", "auth:tt-public:", 3),
-            ("KN", "auth:kn-public:", 2),
+            ("KN", "auth:kn-public:", 3),
             ("TN", "auth:tn-public:", 8),
             ("MA", "auth:ma-public:", 8),
             ("BZ", "auth:bz-public:", 8),
@@ -123,7 +123,7 @@ def test_public_point_search_catalogue_and_provenance(
             ("SV", "auth:sv-public:", 4),
             ("TO", "auth:to-public:", 2),
             ("WS", "auth:ws-public:", 2),
-            ("FJ", "auth:fj-public:", 2),
+            ("FJ", "auth:fj-public:", 3),
             ("VU", "auth:vu-public:", 2),
             ("TZ", "auth:tz-public:", 5),
             ("UG", "auth:ug-public:", 8),
@@ -166,6 +166,12 @@ def test_public_point_search_catalogue_and_provenance(
             ("LT", "auth:lt-kvr:", 12),
             ("DK", "auth:dk-public:", 14),
             ("MN", "auth:mn-public:", 8),
+            ("PT", "auth:pt-public:", 17),
+            ("MD", "auth:md-public:", 10),
+            ("RO", "auth:ro-public:", 10),
+            ("BM", "auth:bm-public:", 4),
+            ("KY", "auth:ky-public:", 2),
+            ("NU", "auth:nu-public:", 2),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -370,3 +376,29 @@ def test_public_point_search_catalogue_and_provenance(
         assert manzushir["repr_point"] == [106.99302, 47.76363]
         assert manzushir["chronology"]["phases"] == []
         assert client.get("/api/sites/auth:mn-public:Q2368924").status_code == 404
+
+        escoural = client.get("/api/sites/auth:pt-public:Q1127492").json()
+        assert "advance public reservations" in escoural["details"]
+        assert any(ref["license"] == "CC0" for ref in escoural["source_refs"])
+        cave_monastery = client.get("/api/sites/auth:md-public:Q22915390").json()
+        assert cave_monastery["repr_point"] == [28.96821, 47.30287]
+        assert "coarse source precision" in cave_monastery["details"]
+        pelisor = client.get("/api/sites/auth:ro-public:Q2561653").json()
+        assert pelisor["repr_point"] == [25.53915, 45.36057]
+        assert "its own ticketed route" in pelisor["details"]
+
+        assert {"id": "BM", "label": "Bermuda", "count": 4} in countries
+        assert {"id": "KY", "label": "Cayman Islands", "count": 2} in countries
+        talava = client.get("/api/sites/auth:nu-public:talava-arches").json()
+        assert talava["repr_point"] == [-169.87741666666668, -18.95925]
+        assert any(
+            ref["license"] == "Public domain" and "oldid=1100359806" in ref["uri"]
+            for ref in talava["source_refs"]
+        )
+        cottle = client.get("/api/sites/auth:kn-public:Q5175639").json()
+        assert cottle["repr_point"] == [-62.596046, 17.196505]
+        assert any(
+            ref["license"] == "CC BY-SA 4.0" and "oldid=238882391" in ref["uri"]
+            for ref in cottle["source_refs"]
+        )
+        assert client.get("/api/sites/auth:ky-public:Q5471206").status_code == 404

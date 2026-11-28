@@ -384,6 +384,28 @@ MONGOLIA_PUBLIC = NamedPlaceCohort(
     "12f942adc28f479545a567c8e2934309b4e33ae4e61c0745ff2d3408aa20938c",
     "f8cfc5e1fe21c38d5b1dba8477009591242616fcf508548d405628caf8acc2ff",
 )
+PORTUGAL_PUBLIC = NamedPlaceCohort(
+    "portugal-public-v1",
+    "global-v21",
+    "portugal_public",
+    "c8bbc1ee04978230f2d6d928e29b3d39c9145f2035d9c31398867610816aa7bf",
+    "7ea1297edd23f31cac514e984d32c3995c411bc552302dd31bdf5ed5f4c14803",
+)
+DANUBE_PUBLIC = NamedPlaceCohort(
+    "moldova-romania-public-v1",
+    "global-v21",
+    "danube_public",
+    "e90334e75042767c74f8d8b582684a41be2f8fa6d91b74e4b0f91792a8b0cccb",
+    "e50b7dd7c0a729238355a38888bf1b1b03c5f9620673c66722d227a3ac517bce",
+)
+ISLANDS_SECOND_PUBLIC = NamedPlaceCohort(
+    "public-pacific-and-atlantic-islands-v2",
+    "global-v21",
+    "islands_second_public",
+    "337dbbc84fa8ffa898a8393204848d5e667898f2d9d198cbc341f4099d51103c",
+    "2387d930517c66a1bac08047a70a8d752d718c514a5b146827e57ae416165ada",
+    country_labels=(("BM", "Bermuda"), ("KY", "Cayman Islands")),
+)
 POINT_COHORTS = (
     IRELAND, ANDALUCIA, TAIWAN_ICULTURE, MEXICO_SIC, FINLAND_VARK, WALES_CADW, THAILAND_FAD,
     AFRICA_VISIT, SCOTLAND_HES, CARIBBEAN_NRHP, PERU_PUBLIC, INDIA_ASI, INDIA_ASI_NEXT,
@@ -401,6 +423,9 @@ POINT_COHORTS = (
     LITHUANIA_PUBLIC,
     DENMARK_PUBLIC,
     MONGOLIA_PUBLIC,
+    PORTUGAL_PUBLIC,
+    DANUBE_PUBLIC,
+    ISLANDS_SECOND_PUBLIC,
 )
 
 

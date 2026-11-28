@@ -1,0 +1,1448 @@
+{
+  "base_count": 5018,
+  "base_ids_sha256": "035419a1e52e1c7545f30b22ce067ac3a701902c5b0c38d6237d4d01eeff4bd4",
+  "base_sites_sha256": "0bcfbf96a23fa2b1893f1f45653c8593d798d45616eab4e3e2198eac65519192",
+  "cohort_version": "public-pacific-and-atlantic-islands-v2",
+  "corpus_version": "global-v21",
+  "records": [
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "The GeoNames historical dockyard point locates the public complex near the heritage clock tower. Its museum, fort and other internal venues are not separately counted.",
+        "point": [
+          -64.83467,
+          32.32503
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://sws.geonames.org/11810624/about.rdf",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "An independent agent rechecked original GeoNames, Wikidata and permanent Wikimedia statements with exact native coordinates, point roles and reuse terms, visitor scope and World Heritage components. The displaced Fort George candidate was withheld.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic former Royal Navy dockyard on Ireland Island. One representative point covers the conservatively defined public dockyard, its interpreted historic buildings and visitor areas.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to source-backed visitor and coordinate identity.",
+          "note": "Historical phase not assigned in the point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Bermuda Royal Naval Dockyard operator",
+          "GeoNames"
+        ],
+        "description": "Historic former Royal Navy dockyard on Ireland Island. One representative point covers the conservatively defined public dockyard, its interpreted historic buildings and visitor areas.",
+        "description_zh": "百慕大皇家海军船坞位于百慕大。地图标注主管方公开参观地点的代表点。",
+        "details": "Historic former Royal Navy dockyard on Ireland Island. One representative point covers the conservatively defined public dockyard, its interpreted historic buildings and visitor areas.",
+        "geography": {
+          "authority_id": "supplement:auth:bm-public:GN11810624",
+          "countries": [
+            "BM"
+          ],
+          "note": "WGS84 representative point of the named original heritage venue.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The dockyard operator identifies the open historical buildings and visitor facilities as one area.",
+            "id": "auth:bm-public:GN11810624:evidence:1",
+            "license": null,
+            "publisher": "Bermuda Royal Naval Dockyard operator",
+            "revision": "Retrieved 2026-11-28; SHA-256 3ea6de5a4cb73e4472bca24d95f30578d0da2eb7b1e258a24315847756920e76.",
+            "title": "Royal Naval Dockyard, Bermuda identity and public access",
+            "uri": "https://dockyard.bm/dockyard/visit/"
+          }
+        },
+        "id": "auth:bm-public:GN11810624",
+        "location_precision": null,
+        "names": [
+          "百慕大皇家海军船坞",
+          "Royal Naval Dockyard, Bermuda",
+          "Royal Navy Dockyard",
+          "Bermuda Dockyard"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -64.83467,
+          32.32503
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The dockyard operator identifies the open historical buildings and visitor facilities as one area.",
+            "id": "auth:bm-public:GN11810624:evidence:1",
+            "license": null,
+            "publisher": "Bermuda Royal Naval Dockyard operator",
+            "revision": "Retrieved 2026-11-28; SHA-256 3ea6de5a4cb73e4472bca24d95f30578d0da2eb7b1e258a24315847756920e76.",
+            "title": "Royal Naval Dockyard, Bermuda identity and public access",
+            "uri": "https://dockyard.bm/dockyard/visit/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator explains how the original naval base buildings were restored and converted to public cultural uses.",
+            "id": "auth:bm-public:GN11810624:evidence:2",
+            "license": null,
+            "publisher": "Bermuda Royal Naval Dockyard operator",
+            "revision": "Retrieved 2026-11-28; SHA-256 74a06ced3c2eac81d29d0437f57621507da40fb048fa940a26c918c9a02c2cd3.",
+            "title": "Royal Naval Dockyard, Bermuda identity and public access",
+            "uri": "https://dockyard.bm/dockyard/visit/our-history/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude -64.83467, latitude 32.32503. GeoNames S.DCKY.",
+            "id": "geonames:11810624",
+            "license": "CC BY 4.0",
+            "publisher": "GeoNames",
+            "revision": "Retrieved 2026-11-28; SHA-256 d5d2857a36bbefaa051544de90f1cdf91f4935d20384327af4b09c9edaa997ae.",
+            "title": "Royal Navy Dockyard (historical) gazetteer record",
+            "uri": "https://sws.geonames.org/11810624/about.rdf"
+          }
+        ],
+        "source_uri": "https://dockyard.bm/dockyard/visit/",
+        "title": "Royal Naval Dockyard, Bermuda",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/bm-dockyard-public.html",
+          "sha256": "3ea6de5a4cb73e4472bca24d95f30578d0da2eb7b1e258a24315847756920e76",
+          "uri": "https://dockyard.bm/dockyard/visit/"
+        },
+        {
+          "filename": "source/bm-dockyard-history.html",
+          "sha256": "74a06ced3c2eac81d29d0437f57621507da40fb048fa940a26c918c9a02c2cd3",
+          "uri": "https://dockyard.bm/dockyard/visit/our-history/"
+        },
+        {
+          "filename": "source/gn-11810624.rdf",
+          "sha256": "d5d2857a36bbefaa051544de90f1cdf91f4935d20384327af4b09c9edaa997ae",
+          "uri": "https://sws.geonames.org/11810624/about.rdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "The named GeoNames fort point is inside the fort ruins and the associated public park. UNESCO’s St George entry describes it as a fort located outside that property.",
+        "point": [
+          -64.87222,
+          32.285
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://sws.geonames.org/3573047/about.rdf",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "An independent agent rechecked original GeoNames, Wikidata and permanent Wikimedia statements with exact native coordinates, point roles and reuse terms, visitor scope and World Heritage components. The displaced Fort George candidate was withheld.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Standing historic fort in Sandys Parish and its designated public park, represented by a point at the fort.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to source-backed visitor and coordinate identity.",
+          "note": "Historical phase not assigned in the point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Bermuda Tourism Authority",
+          "Bermuda Department of Parks",
+          "GeoNames"
+        ],
+        "description": "Standing historic fort in Sandys Parish and its designated public park, represented by a point at the fort.",
+        "description_zh": "百慕大斯科尔山堡位于百慕大。地图标注主管方公开参观地点的代表点。",
+        "details": "Standing historic fort in Sandys Parish and its designated public park, represented by a point at the fort.",
+        "geography": {
+          "authority_id": "supplement:auth:bm-public:GN3573047",
+          "countries": [
+            "BM"
+          ],
+          "note": "WGS84 representative point of the named original heritage venue.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official attraction page identifies Scaur Hill Fort and its public grounds as one visitor site.",
+            "id": "auth:bm-public:GN3573047:evidence:1",
+            "license": null,
+            "publisher": "Bermuda Tourism Authority",
+            "revision": "Retrieved 2026-11-28; SHA-256 88157a8c5a669128653cc4bd88a24f806fd5ab636c5fca3a6439d3260ed59eb3.",
+            "title": "Scaur Hill Fort identity and public access",
+            "uri": "https://www.gotobermuda.com/listings/cultural-attractions/scaur-hill-fort-and-park"
+          }
+        },
+        "id": "auth:bm-public:GN3573047",
+        "location_precision": null,
+        "names": [
+          "百慕大斯科尔山堡",
+          "Scaur Hill Fort",
+          "Fort Scaur",
+          "Scaur Hill Fort and Park"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -64.87222,
+          32.285
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official attraction page identifies Scaur Hill Fort and its public grounds as one visitor site.",
+            "id": "auth:bm-public:GN3573047:evidence:1",
+            "license": null,
+            "publisher": "Bermuda Tourism Authority",
+            "revision": "Retrieved 2026-11-28; SHA-256 88157a8c5a669128653cc4bd88a24f806fd5ab636c5fca3a6439d3260ed59eb3.",
+            "title": "Scaur Hill Fort identity and public access",
+            "uri": "https://www.gotobermuda.com/listings/cultural-attractions/scaur-hill-fort-and-park"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The department’s published information identifies its management and visit arrangements for the fort.",
+            "id": "auth:bm-public:GN3573047:evidence:2",
+            "license": null,
+            "publisher": "Bermuda Department of Parks",
+            "revision": "Retrieved 2026-11-28; SHA-256 bdfe7c6915b9c99b4b37d9c1c4fce40059a472389abaa253595b079501bbd668.",
+            "title": "Scaur Hill Fort identity and public access",
+            "uri": "https://www.ico.bm/wp-content/uploads/2022/04/Department-of-Parks-dated-Feb-2023.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude -64.87222, latitude 32.285. GeoNames S.FT.",
+            "id": "geonames:3573047",
+            "license": "CC BY 4.0",
+            "publisher": "GeoNames",
+            "revision": "Retrieved 2026-11-28; SHA-256 00cac0f5ad4ee7e3e4de9dc32871d9fad30f74303008180b6e16874cae9d2334.",
+            "title": "Scaur Fort gazetteer record",
+            "uri": "https://sws.geonames.org/3573047/about.rdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism authority identifies the daily public fort and park access.",
+            "id": "auth:bm-public:GN3573047:independent-visit",
+            "license": null,
+            "publisher": "Bermuda Tourism Authority",
+            "revision": "Retrieved 2026-11-28; SHA-256 fb41eac4ead4489d2be0cf64c6513344a1ca0685c07d7afacee505df7bfbf33e.",
+            "title": "Scaur Hill Fort and Park visitor guide",
+            "uri": "https://www.gotobermuda.com/plan/inspiration/article/exploring-scaur-hill-fort-park"
+          }
+        ],
+        "source_uri": "https://www.gotobermuda.com/listings/cultural-attractions/scaur-hill-fort-and-park",
+        "title": "Scaur Hill Fort",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/bm-go-fort-scaur.html",
+          "sha256": "88157a8c5a669128653cc4bd88a24f806fd5ab636c5fca3a6439d3260ed59eb3",
+          "uri": "https://www.gotobermuda.com/listings/cultural-attractions/scaur-hill-fort-and-park"
+        },
+        {
+          "filename": "source/bm-fort-management.pdf",
+          "sha256": "bdfe7c6915b9c99b4b37d9c1c4fce40059a472389abaa253595b079501bbd668",
+          "uri": "https://www.ico.bm/wp-content/uploads/2022/04/Department-of-Parks-dated-Feb-2023.pdf"
+        },
+        {
+          "filename": "source/gn-3573047.rdf",
+          "sha256": "00cac0f5ad4ee7e3e4de9dc32871d9fad30f74303008180b6e16874cae9d2334",
+          "uri": "https://sws.geonames.org/3573047/about.rdf"
+        },
+        {
+          "filename": "source/bm-go-fort-scaur-open.html",
+          "sha256": "fb41eac4ead4489d2be0cf64c6513344a1ca0685c07d7afacee505df7bfbf33e",
+          "uri": "https://www.gotobermuda.com/plan/inspiration/article/exploring-scaur-hill-fort-park"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The selected point is in the named fortress and park grounds, west of the St George World Heritage fortification system.",
+        "point": [
+          -64.7771,
+          32.29463
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q123505630.json",
+        "statement_id": "Q123505630$e1ede678-408a-f464-080e-50dbb930cb11"
+      },
+      "independent_review": {
+        "method": "An independent agent rechecked original GeoNames, Wikidata and permanent Wikimedia statements with exact native coordinates, point roles and reuse terms, visitor scope and World Heritage components. The displaced Fort George candidate was withheld.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Publicly managed Fort Hamilton, reopened in March 2026 after restoration; the fort, moat and gardens form one heritage visitor site.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to source-backed visitor and coordinate identity.",
+          "note": "Historical phase not assigned in the point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Bermuda Tourism Authority",
+          "Wikidata contributors"
+        ],
+        "description": "Historic fort and public gardens above Bermuda’s Hamilton Harbour. Publicly maintained fort, moat and visitor areas form one landmark.",
+        "description_zh": "百慕大汉密尔顿堡位于百慕大。地图标注主管方公开参观地点的代表点。",
+        "details": "Historic fort and public gardens above Bermuda’s Hamilton Harbour. Publicly maintained fort, moat and visitor areas form one landmark.",
+        "geography": {
+          "authority_id": "supplement:auth:bm-public:Q123505630",
+          "countries": [
+            "BM"
+          ],
+          "note": "WGS84 representative point of the named original heritage venue.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official tourism authority identifies Fort Hamilton and describes its public park and heritage visitor areas.",
+            "id": "auth:bm-public:Q123505630:evidence:1",
+            "license": null,
+            "publisher": "Bermuda Tourism Authority",
+            "revision": "Retrieved 2026-11-28; SHA-256 ed8b377e94bc7b44d3997b8489d29d5d3399ae266141470ee2097d548254de36.",
+            "title": "Fort Hamilton, Bermuda identity and public access",
+            "uri": "https://www.gotobermuda.com/listings/cultural-attractions/fort-hamilton"
+          }
+        },
+        "id": "auth:bm-public:Q123505630",
+        "location_precision": null,
+        "names": [
+          "百慕大汉密尔顿堡",
+          "Fort Hamilton, Bermuda",
+          "Fort Hamilton"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -64.7771,
+          32.29463
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official tourism authority identifies Fort Hamilton and describes its public park and heritage visitor areas.",
+            "id": "auth:bm-public:Q123505630:evidence:1",
+            "license": null,
+            "publisher": "Bermuda Tourism Authority",
+            "revision": "Retrieved 2026-11-28; SHA-256 ed8b377e94bc7b44d3997b8489d29d5d3399ae266141470ee2097d548254de36.",
+            "title": "Fort Hamilton, Bermuda identity and public access",
+            "uri": "https://www.gotobermuda.com/listings/cultural-attractions/fort-hamilton"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original longitude -64.7771, latitude 32.29463.",
+            "id": "wikidata:Q123505630",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2573966533; P625 Q123505630$e1ede678-408a-f464-080e-50dbb930cb11.",
+            "title": "Fort Hamilton, Bermuda representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q123505630.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Current official visitor guidance confirms public access to Fort Hamilton and its gardens.",
+            "id": "auth:bm-public:Q123505630:independent-visit",
+            "license": null,
+            "publisher": "Bermuda Tourism Authority",
+            "revision": "Retrieved 2026-11-28; SHA-256 c69755c56f920f88c4f2f1c890cee184c4295091e939d71ffa8111a68e62f60c.",
+            "title": "Pembroke parish visitor guide: Fort Hamilton",
+            "uri": "https://www.gotobermuda.com/plan/inspiration/article/pembroke-parish-an-insiders-guide-to-bermudas-city-and-centre"
+          }
+        ],
+        "source_uri": "https://www.gotobermuda.com/listings/cultural-attractions/fort-hamilton",
+        "title": "Fort Hamilton, Bermuda",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/bm-go-fort-hamilton.html",
+          "sha256": "ed8b377e94bc7b44d3997b8489d29d5d3399ae266141470ee2097d548254de36",
+          "uri": "https://www.gotobermuda.com/listings/cultural-attractions/fort-hamilton"
+        },
+        {
+          "filename": "source/Q123505630.json",
+          "sha256": "188c85c94191953d991ed6c0022fbb6aabfcda7973f5e74867c1316114be4dfb",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q123505630.json"
+        },
+        {
+          "filename": "independent-source/bm-hamilton-open.html",
+          "sha256": "c69755c56f920f88c4f2f1c890cee184c4295091e939d71ffa8111a68e62f60c",
+          "uri": "https://www.gotobermuda.com/plan/inspiration/article/pembroke-parish-an-insiders-guide-to-bermudas-city-and-centre"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Wikidata names the historic house on Verdmont Lane. The marker represents the documented property and its interpreted grounds.",
+        "point": [
+          -64.74091,
+          32.30885
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7921139.json",
+        "statement_id": "Q7921139$71dc1eda-31df-4115-9a01-ae965ed24093"
+      },
+      "independent_review": {
+        "method": "An independent agent rechecked original GeoNames, Wikidata and permanent Wikimedia statements with exact native coordinates, point roles and reuse terms, visitor scope and World Heritage components. The displaced Fort George candidate was withheld.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Public historic house museum and gardens on Collector’s Hill, Smith’s Parish. The original protected property interprets households and histories of enslavement.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to source-backed visitor and coordinate identity.",
+          "note": "Historical phase not assigned in the point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Bermuda Tourism Authority",
+          "Government of Bermuda",
+          "Wikidata contributors",
+          "Bermuda National Trust"
+        ],
+        "description": "Public historic house museum and gardens on Collector’s Hill, Smith’s Parish. The original protected property interprets households and histories of enslavement.",
+        "description_zh": "百慕大弗德蒙特历史宅邸位于百慕大。地图标注主管方公开参观地点的代表点。",
+        "details": "Public historic house museum and gardens on Collector’s Hill, Smith’s Parish. The original protected property interprets households and histories of enslavement.",
+        "geography": {
+          "authority_id": "supplement:auth:bm-public:Q7921139",
+          "countries": [
+            "BM"
+          ],
+          "note": "WGS84 representative point of the named original heritage venue.",
+          "point_count": 1,
+          "regions": [
+            "europe-north-america"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism authority describes public guided interpretation inside the historic house, surviving service buildings and garden.",
+            "id": "auth:bm-public:Q7921139:evidence:1",
+            "license": null,
+            "publisher": "Bermuda Tourism Authority",
+            "revision": "Retrieved 2026-11-28; SHA-256 2c4762dd949c8c0c7787a5a0d281e95391d3314d5017e7083536bcc16e7cb11a.",
+            "title": "Verdmont Historic House identity and public access",
+            "uri": "https://www.gotobermuda.com/listings/cultural-attractions/verdmont-museum-bermuda-national-trust"
+          }
+        },
+        "id": "auth:bm-public:Q7921139",
+        "location_precision": null,
+        "names": [
+          "百慕大弗德蒙特历史宅邸",
+          "Verdmont Historic House",
+          "Verdmont",
+          "Verdmont Historic House Museum and Garden"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -64.74091,
+          32.30885
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism authority describes public guided interpretation inside the historic house, surviving service buildings and garden.",
+            "id": "auth:bm-public:Q7921139:evidence:1",
+            "license": null,
+            "publisher": "Bermuda Tourism Authority",
+            "revision": "Retrieved 2026-11-28; SHA-256 2c4762dd949c8c0c7787a5a0d281e95391d3314d5017e7083536bcc16e7cb11a.",
+            "title": "Verdmont Historic House identity and public access",
+            "uri": "https://www.gotobermuda.com/listings/cultural-attractions/verdmont-museum-bermuda-national-trust"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The government identifies the original property as a public heritage museum operated by Bermuda National Trust.",
+            "id": "auth:bm-public:Q7921139:evidence:2",
+            "license": null,
+            "publisher": "Government of Bermuda",
+            "revision": "Retrieved 2026-11-28; SHA-256 7c08643b5632ec088abfffa2b20ca3ab3ff5ea99c056bb39154030fa39bf73b8.",
+            "title": "Verdmont Historic House identity and public access",
+            "uri": "https://www.gov.bm/news/minister-peets-visits-verdmont"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original longitude -64.74091, latitude 32.30885.",
+            "id": "wikidata:Q7921139",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 1866068254; P625 Q7921139$71dc1eda-31df-4115-9a01-ae965ed24093.",
+            "title": "Verdmont Historic House representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7921139.json"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The site operator identifies the original house at 6 Verdmont Lane and offers scheduled guided and self-guided visits.",
+            "id": "auth:bm-public:Q7921139:independent-visit",
+            "license": null,
+            "publisher": "Bermuda National Trust",
+            "revision": "Retrieved 2026-11-28; SHA-256 54f8d5d9167997ec9992e14fa3020dd3c851b428a70512e7b7f8b1efe747caf7.",
+            "title": "Verdmont Historic House Museum and Garden visitor arrangements",
+            "uri": "https://www.bnt.bm/heritage/historic_houses/"
+          }
+        ],
+        "source_uri": "https://www.gotobermuda.com/listings/cultural-attractions/verdmont-museum-bermuda-national-trust",
+        "title": "Verdmont Historic House",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/bm-verdmont-tourism.html",
+          "sha256": "2c4762dd949c8c0c7787a5a0d281e95391d3314d5017e7083536bcc16e7cb11a",
+          "uri": "https://www.gotobermuda.com/listings/cultural-attractions/verdmont-museum-bermuda-national-trust"
+        },
+        {
+          "filename": "source/bm-verdmont-primary.html",
+          "sha256": "7c08643b5632ec088abfffa2b20ca3ab3ff5ea99c056bb39154030fa39bf73b8",
+          "uri": "https://www.gov.bm/news/minister-peets-visits-verdmont"
+        },
+        {
+          "filename": "source/Q7921139.json",
+          "sha256": "367ee49682bd138ef19980ce5d1d593ee1962dc8cc1ae2b81b9f20a59e994d45",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7921139.json"
+        },
+        {
+          "filename": "independent-source/bm-verdmont-opening.html",
+          "sha256": "54f8d5d9167997ec9992e14fa3020dd3c851b428a70512e7b7f8b1efe747caf7",
+          "uri": "https://www.bnt.bm/heritage/historic_houses/"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "The GeoNames historic fortification point is at the named hillfort, separate from the Sigatoka Sand Dunes and Naroro village.",
+        "point": [
+          177.54175,
+          -18.13056
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://sws.geonames.org/11104422/about.rdf",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "An independent agent rechecked original GeoNames, Wikidata and permanent Wikimedia statements with exact native coordinates, point roles and reuse terms, visitor scope and World Heritage components. The displaced Fort George candidate was withheld.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic ridge fortification on the Sigatoka River near Naroro. Public access concerns designated conservation routes, as managed by local custodians.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to source-backed visitor and coordinate identity.",
+          "note": "Historical phase not assigned in the point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "iTaukei Land Trust Board",
+          "The Fiji Times, quoting site custodians",
+          "GeoNames"
+        ],
+        "description": "Historic ridge fortification on the Sigatoka River near Naroro. Public access concerns designated conservation routes, as managed by local custodians.",
+        "description_zh": "塔武尼山堡遗址位于斐济。地图标注主管方公开参观地点的代表点。",
+        "details": "Historic ridge fortification on the Sigatoka River near Naroro. Public access concerns designated conservation routes, as managed by local custodians.",
+        "geography": {
+          "authority_id": "supplement:auth:fj-public:GN11104422",
+          "countries": [
+            "FJ"
+          ],
+          "note": "WGS84 representative point of the named original heritage venue.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official land trust records the reopening of the Tavuni hillfort site.",
+            "id": "auth:fj-public:GN11104422:evidence:1",
+            "license": null,
+            "publisher": "iTaukei Land Trust Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 f437d0d49771f4332df39642be0de726776d33e984f9b1c5b42ed8cc22573b7d.",
+            "title": "Tavuni Hill Fort identity and public access",
+            "uri": "https://www.tltb.com.fj/wp-content/uploads/2024/05/TLTB-Newsletter-1st-Issue-2022.pdf"
+          }
+        },
+        "id": "auth:fj-public:GN11104422",
+        "location_precision": null,
+        "names": [
+          "塔武尼山堡遗址",
+          "Tavuni Hill Fort",
+          "Tavuni Fortification",
+          "Tavuni Archaeological and Botanical Park"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          177.54175,
+          -18.13056
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official land trust records the reopening of the Tavuni hillfort site.",
+            "id": "auth:fj-public:GN11104422:evidence:1",
+            "license": null,
+            "publisher": "iTaukei Land Trust Board",
+            "revision": "Retrieved 2026-11-28; SHA-256 f437d0d49771f4332df39642be0de726776d33e984f9b1c5b42ed8cc22573b7d.",
+            "title": "Tavuni Hill Fort identity and public access",
+            "uri": "https://www.tltb.com.fj/wp-content/uploads/2024/05/TLTB-Newsletter-1st-Issue-2022.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "A September 2026 account reports existing visits and community plans to improve public interpretation and facilities.",
+            "id": "auth:fj-public:GN11104422:evidence:2",
+            "license": null,
+            "publisher": "The Fiji Times, quoting site custodians",
+            "revision": "Retrieved 2026-11-28; SHA-256 f9b928607d4091e98fdb367c73e37538fe7350b79675ad3dc1f7e3905c3fd992.",
+            "title": "Tavuni Hill Fort identity and public access",
+            "uri": "https://www.fijitimes.com.fj/reviving-tavuni-hill-fort/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original WGS84 longitude 177.54175, latitude -18.13056. GeoNames S.HSTS.",
+            "id": "geonames:11104422",
+            "license": "CC BY 4.0",
+            "publisher": "GeoNames",
+            "revision": "Retrieved 2026-11-28; SHA-256 591700d42f921d2644010a1a640bc3cb3eb61002722f323d3f4f04758d063e79.",
+            "title": "Tavuni Fortification gazetteer record",
+            "uri": "https://sws.geonames.org/11104422/about.rdf"
+          }
+        ],
+        "source_uri": "https://www.tltb.com.fj/wp-content/uploads/2024/05/TLTB-Newsletter-1st-Issue-2022.pdf",
+        "title": "Tavuni Hill Fort",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/fj-tavuni-reopened.pdf",
+          "sha256": "f437d0d49771f4332df39642be0de726776d33e984f9b1c5b42ed8cc22573b7d",
+          "uri": "https://www.tltb.com.fj/wp-content/uploads/2024/05/TLTB-Newsletter-1st-Issue-2022.pdf"
+        },
+        {
+          "filename": "source/fj-tavuni-updates.html",
+          "sha256": "f9b928607d4091e98fdb367c73e37538fe7350b79675ad3dc1f7e3905c3fd992",
+          "uri": "https://www.fijitimes.com.fj/reviving-tavuni-hill-fort/"
+        },
+        {
+          "filename": "source/gn-11104422.rdf",
+          "sha256": "591700d42f921d2644010a1a640bc3cb3eb61002722f323d3f4f04758d063e79",
+          "uri": "https://sws.geonames.org/11104422/about.rdf"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Fixed French Wikipedia revision’s Cottle Church coordinate within the mapped ruin. The unrelated infobox heading was not retained as an alias.",
+        "point": [
+          -62.596046,
+          17.196505
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://fr.wikipedia.org/w/index.php?title=%C3%89glise_Cottle_de_Rawlins&oldid=238882391",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "An independent agent rechecked original GeoNames, Wikidata and permanent Wikimedia statements with exact native coordinates, point roles and reuse terms, visitor scope and World Heritage components. The displaced Fort George candidate was withheld.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "The standing ruins of the nineteenth-century Cottle Church on Nevis. The visitor record represents the church site on the former estate.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to source-backed visitor and coordinate identity.",
+          "note": "Historical phase not assigned in the point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Nevis Tourism Authority",
+          "Ministry of Education, Saint Kitts and Nevis",
+          "French Wikipedia contributors"
+        ],
+        "description": "The standing ruins of the nineteenth-century Cottle Church on Nevis. The visitor record represents the church site on the former estate.",
+        "description_zh": "科特尔教堂遗址位于圣基茨和尼维斯。地图标注主管方公开参观地点的代表点。",
+        "details": "The standing ruins of the nineteenth-century Cottle Church on Nevis. The visitor record represents the church site on the former estate.",
+        "geography": {
+          "authority_id": "supplement:auth:kn-public:Q5175639",
+          "countries": [
+            "KN"
+          ],
+          "note": "WGS84 representative point of the named original heritage venue.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official cultural itinerary describes public visits to the standing Cottle Church ruins on Nevis.",
+            "id": "auth:kn-public:Q5175639:evidence:1",
+            "license": null,
+            "publisher": "Nevis Tourism Authority",
+            "revision": "Retrieved 2026-11-28; SHA-256 c5fb9a706280af9c99714965c9d7fd653abd69790f9849660591140fcadccbea.",
+            "title": "Cottle Church Ruins identity and public access",
+            "uri": "https://www.nevisisland.com/itineraries/seven-day-itinerary-culturally-curious"
+          }
+        },
+        "id": "auth:kn-public:Q5175639",
+        "location_precision": null,
+        "names": [
+          "科特尔教堂遗址",
+          "Cottle Church Ruins",
+          "Cottle Church",
+          "Église Cottle de Rawlins"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -62.596046,
+          17.196505
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official cultural itinerary describes public visits to the standing Cottle Church ruins on Nevis.",
+            "id": "auth:kn-public:Q5175639:evidence:1",
+            "license": null,
+            "publisher": "Nevis Tourism Authority",
+            "revision": "Retrieved 2026-11-28; SHA-256 c5fb9a706280af9c99714965c9d7fd653abd69790f9849660591140fcadccbea.",
+            "title": "Cottle Church Ruins identity and public access",
+            "uri": "https://www.nevisisland.com/itineraries/seven-day-itinerary-culturally-curious"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official curriculum island map identifies Cottle Church as its own landmark on Nevis.",
+            "id": "auth:kn-public:Q5175639:evidence:2",
+            "license": null,
+            "publisher": "Ministry of Education, Saint Kitts and Nevis",
+            "revision": "Retrieved 2026-11-28; SHA-256 a7f8469b4b35ca0bad05f172d8f515ae56505d3ccec7648db54e9a1fe2ef2502.",
+            "title": "Cottle Church Ruins identity and public access",
+            "uri": "https://education.gov.kn/wp-content/uploads/2021/09/Enhanced-Curriculum-Grade-Five-5-Social-Studies.pdf"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original permanent revision coordinates at the named Cottle Church: longitude -62.596046, latitude 17.196505.",
+            "id": "wikipedia-fr:238882391",
+            "license": "CC BY-SA 4.0",
+            "publisher": "French Wikipedia contributors",
+            "revision": "French Wikipedia permanent revision 238882391.",
+            "title": "Église Cottle de Rawlins",
+            "uri": "https://fr.wikipedia.org/w/index.php?title=%C3%89glise_Cottle_de_Rawlins&oldid=238882391"
+          }
+        ],
+        "source_uri": "https://www.nevisisland.com/itineraries/seven-day-itinerary-culturally-curious",
+        "title": "Cottle Church Ruins",
+        "types": [
+          "archaeological-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/kn-nevis-tourism-cottle-bath.html",
+          "sha256": "c5fb9a706280af9c99714965c9d7fd653abd69790f9849660591140fcadccbea",
+          "uri": "https://www.nevisisland.com/itineraries/seven-day-itinerary-culturally-curious"
+        },
+        {
+          "filename": "source/kn-nevis-education.pdf",
+          "sha256": "a7f8469b4b35ca0bad05f172d8f515ae56505d3ccec7648db54e9a1fe2ef2502",
+          "uri": "https://education.gov.kn/wp-content/uploads/2021/09/Enhanced-Curriculum-Grade-Five-5-Social-Studies.pdf"
+        },
+        {
+          "filename": "source/discovery-fr-cottle.raw.json",
+          "sha256": "1379acbe5181e7d88431be64df897337e2a3e30035898ef0ad6ffebd07722f4d",
+          "uri": "https://fr.wikipedia.org/w/index.php?title=%C3%89glise_Cottle_de_Rawlins&oldid=238882391"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The source point matches the National Museum in the original Old Courts Building. The source specifies negative precision, so the published precision is unavailable.",
+        "point": [
+          -81.3827,
+          19.2941
+        ],
+        "precision": null,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2686650.json",
+        "statement_id": "Q2686650$AE768C82-9392-4093-A856-78ECBE49AA30"
+      },
+      "independent_review": {
+        "method": "An independent agent rechecked original GeoNames, Wikidata and permanent Wikimedia statements with exact native coordinates, point roles and reuse terms, visitor scope and World Heritage components. The displaced Fort George candidate was withheld.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic Old Courts Building at 64 Seafarers Way, now occupied by the Cayman Islands National Museum. The public museum route includes the preserved old gaol.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to source-backed visitor and coordinate identity.",
+          "note": "Historical phase not assigned in the point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Cayman Islands National Museum",
+          "Wikidata contributors"
+        ],
+        "description": "Historic Old Courts Building at 64 Seafarers Way, now occupied by the Cayman Islands National Museum. The public museum route includes the preserved old gaol.",
+        "description_zh": "开曼乔治敦旧法院位于开曼群岛。地图标注主管方公开参观地点的代表点。",
+        "details": "Historic Old Courts Building at 64 Seafarers Way, now occupied by the Cayman Islands National Museum. The public museum route includes the preserved old gaol.",
+        "geography": {
+          "authority_id": "supplement:auth:ky-public:Q2686650",
+          "countries": [
+            "KY"
+          ],
+          "note": "WGS84 representative point of the named original heritage venue.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum gives its street address and identifies the original Old Courts Building and public visitor galleries.",
+            "id": "auth:ky-public:Q2686650:evidence:1",
+            "license": null,
+            "publisher": "Cayman Islands National Museum",
+            "revision": "Retrieved 2026-11-28; SHA-256 866b8058d86e318f8544c36a0de67ec949f1aa818be574de30a8d655b9b3cee5.",
+            "title": "Old Courts Building, George Town identity and public access",
+            "uri": "https://museum.ky/visitorinformation/"
+          }
+        },
+        "id": "auth:ky-public:Q2686650",
+        "location_precision": null,
+        "names": [
+          "开曼乔治敦旧法院",
+          "Old Courts Building, George Town",
+          "Cayman Islands National Museum",
+          "Old Courts Building, Cayman Islands"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -81.3827,
+          19.2941
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The museum gives its street address and identifies the original Old Courts Building and public visitor galleries.",
+            "id": "auth:ky-public:Q2686650:evidence:1",
+            "license": null,
+            "publisher": "Cayman Islands National Museum",
+            "revision": "Retrieved 2026-11-28; SHA-256 866b8058d86e318f8544c36a0de67ec949f1aa818be574de30a8d655b9b3cee5.",
+            "title": "Old Courts Building, George Town identity and public access",
+            "uri": "https://museum.ky/visitorinformation/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original longitude -81.3827, latitude 19.2941.",
+            "id": "wikidata:Q2686650",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2451510660; P625 Q2686650$AE768C82-9392-4093-A856-78ECBE49AA30.",
+            "title": "Old Courts Building, George Town representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2686650.json"
+          }
+        ],
+        "source_uri": "https://museum.ky/visitorinformation/",
+        "title": "Old Courts Building, George Town",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ky-museum-public.html",
+          "sha256": "866b8058d86e318f8544c36a0de67ec949f1aa818be574de30a8d655b9b3cee5",
+          "uri": "https://museum.ky/visitorinformation/"
+        },
+        {
+          "filename": "source/Q2686650.json",
+          "sha256": "3c2bbb7dec8efe36d652682ac4aa68cfb4a984a79122328ba06460346a16ae62",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q2686650.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The named castle representative point lies within the original public estate beside the historic great house, not at a generic village location.",
+        "point": [
+          -81.2918,
+          19.2671
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7159960.json",
+        "statement_id": "Q7159960$C2A954D0-B9A2-4FF8-8AF4-4C50DCCBBCF9"
+      },
+      "independent_review": {
+        "method": "An independent agent rechecked original GeoNames, Wikidata and permanent Wikimedia statements with exact native coordinates, point roles and reuse terms, visitor scope and World Heritage components. The displaced Fort George candidate was withheld.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic stone great house and surrounding public National Historic Site in Savannah, Grand Cayman. The tour and on-site interpretation form one venue.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to source-backed visitor and coordinate identity.",
+          "note": "Historical phase not assigned in the point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Pedro St James National Historic Site operator",
+          "Wikidata contributors"
+        ],
+        "description": "Historic stone great house and surrounding public National Historic Site in Savannah, Grand Cayman. The tour and on-site interpretation form one venue.",
+        "description_zh": "开曼佩德罗圣詹姆斯历史宅邸位于开曼群岛。地图标注主管方公开参观地点的代表点。",
+        "details": "Historic stone great house and surrounding public National Historic Site in Savannah, Grand Cayman. The tour and on-site interpretation form one venue.",
+        "geography": {
+          "authority_id": "supplement:auth:ky-public:Q7159960",
+          "countries": [
+            "KY"
+          ],
+          "note": "WGS84 representative point of the named original heritage venue.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator lists public guided and self-guided visits to the Pedro estate.",
+            "id": "auth:ky-public:Q7159960:evidence:1",
+            "license": null,
+            "publisher": "Pedro St James National Historic Site operator",
+            "revision": "Retrieved 2026-11-28; SHA-256 7d0ec64951a850fae994ea5e98b70a79e35088922e03b7e4f3ecc9fcdc8bb092.",
+            "title": "Pedro St James identity and public access",
+            "uri": "https://pedrostjames.ky/tours/"
+          }
+        },
+        "id": "auth:ky-public:Q7159960",
+        "location_precision": null,
+        "names": [
+          "开曼佩德罗圣詹姆斯历史宅邸",
+          "Pedro St James",
+          "Pedro St. James Castle",
+          "Pedro Castle"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -81.2918,
+          19.2671
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator lists public guided and self-guided visits to the Pedro estate.",
+            "id": "auth:ky-public:Q7159960:evidence:1",
+            "license": null,
+            "publisher": "Pedro St James National Historic Site operator",
+            "revision": "Retrieved 2026-11-28; SHA-256 7d0ec64951a850fae994ea5e98b70a79e35088922e03b7e4f3ecc9fcdc8bb092.",
+            "title": "Pedro St James identity and public access",
+            "uri": "https://pedrostjames.ky/tours/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The operator distinguishes the preserved great house from the later interpretive facilities.",
+            "id": "auth:ky-public:Q7159960:evidence:2",
+            "license": null,
+            "publisher": "Pedro St James National Historic Site operator",
+            "revision": "Retrieved 2026-11-28; SHA-256 ae431ef1193a34cd9fef8ec6f29bbcd274cfae48c4e8ba9579c4e4e28115f1a0.",
+            "title": "Pedro St James identity and public access",
+            "uri": "https://pedrostjames.ky/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original longitude -81.2918, latitude 19.2671.",
+            "id": "wikidata:Q7159960",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2390004516; P625 Q7159960$C2A954D0-B9A2-4FF8-8AF4-4C50DCCBBCF9.",
+            "title": "Pedro St James representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7159960.json"
+          }
+        ],
+        "source_uri": "https://pedrostjames.ky/tours/",
+        "title": "Pedro St James",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/ky-pedro-public.html",
+          "sha256": "7d0ec64951a850fae994ea5e98b70a79e35088922e03b7e4f3ecc9fcdc8bb092",
+          "uri": "https://pedrostjames.ky/tours/"
+        },
+        {
+          "filename": "source/ky-pedro-history.html",
+          "sha256": "ae431ef1193a34cd9fef8ec6f29bbcd274cfae48c4e8ba9579c4e4e28115f1a0",
+          "uri": "https://pedrostjames.ky/"
+        },
+        {
+          "filename": "source/Q7159960.json",
+          "sha256": "f303ef32a3b384c5c2f9a9afa3657215c608b45c810620997d8e3cb3f031d7cf",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q7159960.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "The Wikidata point is inside the historic cathedral on Micoud Street. It does not denote the adjacent parish offices or public square.",
+        "point": [
+          -60.99008333,
+          14.00913333
+        ],
+        "precision": 2.77777777778e-06,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5052198.json",
+        "statement_id": "Q5052198$F4CE3A6D-23F5-47D2-961D-4702D619D8F6"
+      },
+      "independent_review": {
+        "method": "An independent agent rechecked original GeoNames, Wikidata and permanent Wikimedia statements with exact native coordinates, point roles and reuse terms, visitor scope and World Heritage components. The displaced Fort George candidate was withheld.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic cathedral in central Castries with visitor access guided by the church. Worship and local access rules take precedence.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to source-backed visitor and coordinate identity.",
+          "note": "Historical phase not assigned in the point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Saint Lucia Tourism Authority",
+          "Wikidata contributors"
+        ],
+        "description": "Historic cathedral in central Castries with visitor access guided by the church. Worship and local access rules take precedence.",
+        "description_zh": "卡斯特里圣母无原罪主教座堂位于圣卢西亚。地图标注主管方公开参观地点的代表点。",
+        "details": "Historic cathedral in central Castries with visitor access guided by the church. Worship and local access rules take precedence.",
+        "geography": {
+          "authority_id": "supplement:auth:lc-public:Q5052198",
+          "countries": [
+            "LC"
+          ],
+          "note": "WGS84 representative point of the named original heritage venue.",
+          "point_count": 1,
+          "regions": [
+            "latin-america-caribbean"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism authority names the original Castries basilica among the capital’s notable historic visitor sites.",
+            "id": "auth:lc-public:Q5052198:evidence:1",
+            "license": null,
+            "publisher": "Saint Lucia Tourism Authority",
+            "revision": "Retrieved 2026-11-28; SHA-256 95874911a31f28653bcf4418f2abe8e465ab03fc7bb4f108bfaf25c58527020e.",
+            "title": "Cathedral Basilica of the Immaculate Conception, Castries identity and public access",
+            "uri": "https://stlucia.org/en/places-to-visit/castries/"
+          }
+        },
+        "id": "auth:lc-public:Q5052198",
+        "location_precision": null,
+        "names": [
+          "卡斯特里圣母无原罪主教座堂",
+          "Cathedral Basilica of the Immaculate Conception, Castries",
+          "Castries Cathedral",
+          "Cathedral Basilica of the Immaculate Conception in Castries"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -60.99008333,
+          14.00913333
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The tourism authority names the original Castries basilica among the capital’s notable historic visitor sites.",
+            "id": "auth:lc-public:Q5052198:evidence:1",
+            "license": null,
+            "publisher": "Saint Lucia Tourism Authority",
+            "revision": "Retrieved 2026-11-28; SHA-256 95874911a31f28653bcf4418f2abe8e465ab03fc7bb4f108bfaf25c58527020e.",
+            "title": "Cathedral Basilica of the Immaculate Conception, Castries identity and public access",
+            "uri": "https://stlucia.org/en/places-to-visit/castries/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official visitor guide specifically presents the cathedral interior and murals as a cultural visit.",
+            "id": "auth:lc-public:Q5052198:evidence:2",
+            "license": null,
+            "publisher": "Saint Lucia Tourism Authority",
+            "revision": "Retrieved 2026-11-28; SHA-256 827996acea9056a3a98ee760649bb685d4e5f61b67a6d29d0d31d5e06694f4b8.",
+            "title": "Cathedral Basilica of the Immaculate Conception, Castries identity and public access",
+            "uri": "https://stlucia.org/fr/que-faire/que-faire-un-jour-de-pluie/"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original longitude -60.99008333, latitude 14.00913333.",
+            "id": "wikidata:Q5052198",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2526548394; P625 Q5052198$F4CE3A6D-23F5-47D2-961D-4702D619D8F6.",
+            "title": "Cathedral Basilica of the Immaculate Conception, Castries representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5052198.json"
+          }
+        ],
+        "source_uri": "https://stlucia.org/en/places-to-visit/castries/",
+        "title": "Cathedral Basilica of the Immaculate Conception, Castries",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/lc-castries-tourism.html",
+          "sha256": "95874911a31f28653bcf4418f2abe8e465ab03fc7bb4f108bfaf25c58527020e",
+          "uri": "https://stlucia.org/en/places-to-visit/castries/"
+        },
+        {
+          "filename": "source/lc-castries-visitor-church.html",
+          "sha256": "827996acea9056a3a98ee760649bb685d4e5f61b67a6d29d0d31d5e06694f4b8",
+          "uri": "https://stlucia.org/fr/que-faire/que-faire-un-jour-de-pluie/"
+        },
+        {
+          "filename": "source/Q5052198.json",
+          "sha256": "3ec6cfcd48789b7b005e506e8a82c5913bda91261aaf120578f17e0c8d1c5cba",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q5052198.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": "http://www.wikidata.org/entity/Q2",
+        "method": "wikidata",
+        "note": "Named cultural cave site with public route, not a pin asserting the exact historical landing point.",
+        "point": [
+          -169.91105,
+          -18.99746
+        ],
+        "precision": 1e-05,
+        "rank": "normal",
+        "source_uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3045995.json",
+        "statement_id": "q3045995$00363F89-C1C4-45C7-8898-D8FDE7A385D4"
+      },
+      "independent_review": {
+        "method": "An independent agent rechecked original GeoNames, Wikidata and permanent Wikimedia statements with exact native coordinates, point roles and reuse terms, visitor scope and World Heritage components. The displaced Fort George candidate was withheld.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Marine cave at a place of traditional landing on Niue’s west coast. Only the designated public cave and sea-track area is represented. The marked route is tide-dependent.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to source-backed visitor and coordinate identity.",
+          "note": "Historical phase not assigned in the point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Niue Tourism",
+          "Wikidata contributors"
+        ],
+        "description": "Marine cave at a place of traditional landing on Niue’s west coast. Only the designated public cave and sea-track area is represented. The marked route is tide-dependent.",
+        "description_zh": "阿瓦伊基洞位于纽埃。地图标注主管方公开参观地点的代表点。",
+        "details": "Marine cave at a place of traditional landing on Niue’s west coast. Only the designated public cave and sea-track area is represented. The marked route is tide-dependent.",
+        "geography": {
+          "authority_id": "supplement:auth:nu-public:Q3045995",
+          "countries": [
+            "NU"
+          ],
+          "note": "WGS84 representative point of the named original heritage venue.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official visitor guide names Avaiki and associates it with the traditional landing of the first canoe.",
+            "id": "auth:nu-public:Q3045995:evidence:1",
+            "license": null,
+            "publisher": "Niue Tourism",
+            "revision": "Retrieved 2026-11-28; SHA-256 dc3bab9ccf2d1b2c36fb0161efbfbb89d4b13cc36ded3233690c3d57d4ef9212.",
+            "title": "Avaiki Cave identity and public access",
+            "uri": "https://www.niueisland.com/see-and-do/tracks-walks-and-caves"
+          }
+        },
+        "id": "auth:nu-public:Q3045995",
+        "location_precision": null,
+        "names": [
+          "阿瓦伊基洞",
+          "Avaiki Cave",
+          "Avaiki Sea Track"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -169.91105,
+          -18.99746
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official visitor guide names Avaiki and associates it with the traditional landing of the first canoe.",
+            "id": "auth:nu-public:Q3045995:evidence:1",
+            "license": null,
+            "publisher": "Niue Tourism",
+            "revision": "Retrieved 2026-11-28; SHA-256 dc3bab9ccf2d1b2c36fb0161efbfbb89d4b13cc36ded3233690c3d57d4ef9212.",
+            "title": "Avaiki Cave identity and public access",
+            "uri": "https://www.niueisland.com/see-and-do/tracks-walks-and-caves"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The national visitor guide states that public access to Avaiki Cave is limited to low tide.",
+            "id": "auth:nu-public:Q3045995:evidence:2",
+            "license": null,
+            "publisher": "Niue Tourism",
+            "revision": "Retrieved 2026-11-28; SHA-256 1fdf96711d66081ef2772a70760793bc0360f49878de5dd47e01fbd92ea87a3d.",
+            "title": "Avaiki Cave identity and public access",
+            "uri": "https://www.niueisland.com/discover-niue/blog/post/best-snorkelling-holidays-in-the-south-pacific"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Original longitude -169.91105, latitude -18.99746.",
+            "id": "wikidata:Q3045995",
+            "license": "CC0",
+            "publisher": "Wikidata contributors",
+            "revision": "Wikidata revision 2408437054; P625 q3045995$00363F89-C1C4-45C7-8898-D8FDE7A385D4.",
+            "title": "Avaiki Cave representative point",
+            "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3045995.json"
+          }
+        ],
+        "source_uri": "https://www.niueisland.com/see-and-do/tracks-walks-and-caves",
+        "title": "Avaiki Cave",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/nu-tourism-history.html",
+          "sha256": "dc3bab9ccf2d1b2c36fb0161efbfbb89d4b13cc36ded3233690c3d57d4ef9212",
+          "uri": "https://www.niueisland.com/see-and-do/tracks-walks-and-caves"
+        },
+        {
+          "filename": "source/nu-tourism-avaiki-tides.html",
+          "sha256": "1fdf96711d66081ef2772a70760793bc0360f49878de5dd47e01fbd92ea87a3d",
+          "uri": "https://www.niueisland.com/discover-niue/blog/post/best-snorkelling-holidays-in-the-south-pacific"
+        },
+        {
+          "filename": "source/Q3045995.json",
+          "sha256": "ca7120a30eded3d7be08e9ab8cd814e0a8986d5fad64fa518c11365ecf5d08a9",
+          "uri": "https://www.wikidata.org/wiki/Special:EntityData/Q3045995.json"
+        }
+      ]
+    },
+    {
+      "coordinate": {
+        "globe": null,
+        "method": "authority",
+        "note": "Original public-domain photographer position under the main arch, as defined by Commons Camera location. Representative point of the heritage landscape; the designated trail is the public visitor approach.",
+        "point": [
+          -169.87741666666668,
+          -18.95925
+        ],
+        "precision": null,
+        "rank": null,
+        "source_uri": "https://commons.wikimedia.org/w/index.php?title=File:Center_of_Talava_Arch_from_underneath.jpg&oldid=1100359806",
+        "statement_id": null
+      },
+      "independent_review": {
+        "method": "An independent agent rechecked original GeoNames, Wikidata and permanent Wikimedia statements with exact native coordinates, point roles and reuse terms, visitor scope and World Heritage components. The displaced Fort George candidate was withheld.",
+        "reviewed_at": "2026-11-28",
+        "reviewer": "Codex independent source audit",
+        "status": "approved"
+      },
+      "scope_note": "Historic coastal lookout landscape and karst arches in northern Niue. The managed visitor trail is the available public approach to the site.",
+      "site": {
+        "chronology": {
+          "default_phase_id": null,
+          "method": "Named public property matched to source-backed visitor and coordinate identity.",
+          "note": "Historical phase not assigned in the point update.",
+          "phases": [],
+          "reviewed_at": "2026-11-28",
+          "status": "insufficient"
+        },
+        "contributors": [
+          "Niue Tourism",
+          "Pseudopanax via Wikimedia Commons"
+        ],
+        "description": "Historic coastal lookout landscape and karst arches in northern Niue. The managed visitor trail is the available public approach to the site.",
+        "description_zh": "塔拉瓦拱门历史瞭望地位于纽埃。地图标注主管方公开参观地点的代表点。",
+        "details": "Historic coastal lookout landscape and karst arches in northern Niue. The managed visitor trail is the available public approach to the site.",
+        "geography": {
+          "authority_id": "supplement:auth:nu-public:talava-arches",
+          "countries": [
+            "NU"
+          ],
+          "note": "WGS84 representative point of the named original heritage venue.",
+          "point_count": 1,
+          "regions": [
+            "asia-pacific"
+          ],
+          "source": {
+            "accessed": "2026-11-28",
+            "excerpt": "The official trail guide identifies Talava as a traditional lookout and describes the separate public trek to the arches.",
+            "id": "auth:nu-public:talava-arches:evidence:1",
+            "license": null,
+            "publisher": "Niue Tourism",
+            "revision": "Retrieved 2026-11-28; SHA-256 dc3bab9ccf2d1b2c36fb0161efbfbb89d4b13cc36ded3233690c3d57d4ef9212.",
+            "title": "Talava Arches Lookout Site identity and public access",
+            "uri": "https://www.niueisland.com/see-and-do/tracks-walks-and-caves"
+          }
+        },
+        "id": "auth:nu-public:talava-arches",
+        "location_precision": null,
+        "names": [
+          "塔拉瓦拱门历史瞭望地",
+          "Talava Arches Lookout Site",
+          "Talava Arches",
+          "Talava Sea Track"
+        ],
+        "period_evidence": [],
+        "periods": [],
+        "repr_point": [
+          -169.87741666666668,
+          -18.95925
+        ],
+        "source_kind": "supplement",
+        "source_refs": [
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official trail guide identifies Talava as a traditional lookout and describes the separate public trek to the arches.",
+            "id": "auth:nu-public:talava-arches:evidence:1",
+            "license": null,
+            "publisher": "Niue Tourism",
+            "revision": "Retrieved 2026-11-28; SHA-256 dc3bab9ccf2d1b2c36fb0161efbfbb89d4b13cc36ded3233690c3d57d4ef9212.",
+            "title": "Talava Arches Lookout Site identity and public access",
+            "uri": "https://www.niueisland.com/see-and-do/tracks-walks-and-caves"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "Source DMS 18°57′33.3″ S, 169°52′38.7″ W, converted to WGS84 decimal degrees. Photograph not reused.",
+            "id": "commons:1100359806",
+            "license": "Public domain",
+            "publisher": "Pseudopanax via Wikimedia Commons",
+            "revision": "Wikimedia Commons permanent revision 1100359806.",
+            "title": "Talava Arch published field geotag",
+            "uri": "https://commons.wikimedia.org/w/index.php?title=File:Center_of_Talava_Arch_from_underneath.jpg&oldid=1100359806"
+          },
+          {
+            "accessed": "2026-11-28",
+            "excerpt": "The official island guide lists the designated Talava trail and identifies the landscape’s traditional lookout role.",
+            "id": "auth:nu-public:talava-arches:independent-visit",
+            "license": null,
+            "publisher": "Niue Tourism",
+            "revision": "Retrieved 2026-11-28; SHA-256 d58b6f8d49a982c862d6688f34f82223ab200abb224f937cd37b9387bbcef745.",
+            "title": "Niue island guide: Talava Arches",
+            "uri": "https://www.niueisland.com/library/files/activityguidenew.pdf"
+          }
+        ],
+        "source_uri": "https://www.niueisland.com/see-and-do/tracks-walks-and-caves",
+        "title": "Talava Arches Lookout Site",
+        "types": [
+          "historic-site"
+        ]
+      },
+      "source_files": [
+        {
+          "filename": "source/nu-tourism-history.html",
+          "sha256": "dc3bab9ccf2d1b2c36fb0161efbfbb89d4b13cc36ded3233690c3d57d4ef9212",
+          "uri": "https://www.niueisland.com/see-and-do/tracks-walks-and-caves"
+        },
+        {
+          "filename": "source/nu-talava-source-revision.json",
+          "sha256": "c110c6adc5b9099fc283bee0f08fcb1226c81180734fa993a0b0bd992b35ab91",
+          "uri": "https://commons.wikimedia.org/w/index.php?title=File:Center_of_Talava_Arch_from_underneath.jpg&oldid=1100359806"
+        },
+        {
+          "filename": "independent-source/niue-official-guide.pdf",
+          "sha256": "d58b6f8d49a982c862d6688f34f82223ab200abb224f937cd37b9387bbcef745",
+          "uri": "https://www.niueisland.com/library/files/activityguidenew.pdf"
+        }
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "selection": "Eleven verified accessible cultural sites in Pacific, Caribbean and Atlantic island jurisdictions, retaining official visitor scope, coordinate source and specific point role."
+}
