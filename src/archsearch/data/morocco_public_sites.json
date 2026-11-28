@@ -1,0 +1,657 @@
+[
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed the public heritage identity and representative coordinates.",
+      "note": "The point-only intake does not record a dated historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Kasbah Agadir Oufella",
+      "Wikidata contributors"
+    ],
+    "description": "Kasbah of Agadir Oufella is a publicly interpreted cultural heritage place in the area of Agadir, Morocco.",
+    "description_zh": "阿加迪尔乌费拉古堡位于摩洛哥 Agadir，可查阅官方机构发布的遗产与参观资料。",
+    "details": "The heritage operator publishes access information for the historic hilltop kasbah. The record covers the publicly interpreted fortification. The mapped coordinates indicate one representative point.",
+    "geography": {
+      "authority_id": "supplement:auth:ma-public:Q2065708",
+      "countries": [
+        "MA"
+      ],
+      "note": "Present locality in the authority reference: Agadir.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The relevant public institution identifies the named heritage place and its visitor scope.",
+        "id": "ma-visitor:Q2065708",
+        "license": null,
+        "publisher": "Kasbah Agadir Oufella",
+        "revision": "Frozen public source, SHA-256 9a13ebe7d89d58a81a724b640f6c80c1cd378a59c5700e94675b6843c8806321",
+        "title": "Kasbah of Agadir Oufella · public visitor information",
+        "uri": "https://www.agadir-oufella.ma/fr/informations-utiles/"
+      }
+    },
+    "id": "auth:ma-public:Q2065708",
+    "location_precision": null,
+    "names": [
+      "阿加迪尔乌费拉古堡",
+      "Kasbah of Agadir"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -9.62417,
+      30.42944
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The relevant public institution identifies the named heritage place and its visitor scope.",
+        "id": "ma-visitor:Q2065708",
+        "license": null,
+        "publisher": "Kasbah Agadir Oufella",
+        "revision": "Frozen public source, SHA-256 9a13ebe7d89d58a81a724b640f6c80c1cd378a59c5700e94675b6843c8806321",
+        "title": "Kasbah of Agadir Oufella · public visitor information",
+        "uri": "https://www.agadir-oufella.ma/fr/informations-utiles/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -9.62417, latitude 30.42944",
+        "id": "ma-coordinate:Q2065708",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata Q2065708, revision 2495618095; P625 statement Q2065708$1E957872-6CE8-494C-92F1-64B10FF44D18",
+        "title": "Kasbah of Agadir Oufella · representative point",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&ids=Q923835%7CQ733798%7CQ7681888%7CQ3519548%7CQ2065708%7CQ58975694%7CQ2383366%7CQ48816034%7CQ41346%7CQ468574%7CQ3330628%7CQ27517991%7CQ3332493"
+      }
+    ],
+    "source_uri": "https://www.agadir-oufella.ma/fr/informations-utiles/",
+    "title": "Kasbah of Agadir Oufella",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed the public heritage identity and representative coordinates.",
+      "note": "The point-only intake does not record a dated historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Youth, Culture and Communication of Morocco",
+      "Wikidata contributors"
+    ],
+    "description": "Caves of Hercules is a publicly interpreted cultural heritage place in the area of near Cape Spartel, Tangier, Morocco.",
+    "description_zh": "赫拉克勒斯洞穴位于摩洛哥 near Cape Spartel, Tangier，可查阅官方机构发布的遗产与参观资料。",
+    "details": "The Ministry provides public admission to the named interpretation site at the coastal cave complex. The record covers the known visitor site, rather than individual or restricted cave passages. The mapped coordinates indicate one representative point.",
+    "geography": {
+      "authority_id": "supplement:auth:ma-public:Q27517991",
+      "countries": [
+        "MA"
+      ],
+      "note": "Present locality in the authority reference: near Cape Spartel, Tangier.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The relevant public institution identifies the named heritage place and its visitor scope.",
+        "id": "ma-visitor:Q27517991",
+        "license": null,
+        "publisher": "Ministry of Youth, Culture and Communication of Morocco",
+        "revision": "Frozen public source, SHA-256 93c284d816d5823dc81ae68eb142cf7698477db834c75a3d7021c1301c48b14d",
+        "title": "Caves of Hercules · public visitor information",
+        "uri": "https://e-services.minculture.gov.ma/fr/tickets/grottes-dhercule"
+      }
+    },
+    "id": "auth:ma-public:Q27517991",
+    "location_precision": null,
+    "names": [
+      "赫拉克勒斯洞穴",
+      "Caves of Hercules"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -5.939166666666667,
+      35.76027777777778
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The relevant public institution identifies the named heritage place and its visitor scope.",
+        "id": "ma-visitor:Q27517991",
+        "license": null,
+        "publisher": "Ministry of Youth, Culture and Communication of Morocco",
+        "revision": "Frozen public source, SHA-256 93c284d816d5823dc81ae68eb142cf7698477db834c75a3d7021c1301c48b14d",
+        "title": "Caves of Hercules · public visitor information",
+        "uri": "https://e-services.minculture.gov.ma/fr/tickets/grottes-dhercule"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -5.939166666666667, latitude 35.76027777777778",
+        "id": "ma-coordinate:Q27517991",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata Q27517991, revision 2514513059; P625 statement Q12244393$B0D4D50C-3415-4092-9188-87E98E96B55A",
+        "title": "Caves of Hercules · representative point",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&ids=Q923835%7CQ733798%7CQ7681888%7CQ3519548%7CQ2065708%7CQ58975694%7CQ2383366%7CQ48816034%7CQ41346%7CQ468574%7CQ3330628%7CQ27517991%7CQ3332493"
+      }
+    ],
+    "source_uri": "https://e-services.minculture.gov.ma/fr/tickets/grottes-dhercule",
+    "title": "Caves of Hercules",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed the public heritage identity and representative coordinates.",
+      "note": "The point-only intake does not record a dated historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Fondation Nationale des Musées",
+      "Wikidata contributors"
+    ],
+    "description": "Kasbah Museum (Dar al-Makhzen, Tangier) is a publicly interpreted cultural heritage place in the area of Tangier, Morocco.",
+    "description_zh": "丹吉尔卡斯巴宫博物馆位于摩洛哥 Tangier，可查阅官方机构发布的遗产与参观资料。",
+    "details": "The public museum occupies the named former palace of Tangier. It is a separately identifiable property near the mapped ancient city of Tingis. The mapped coordinates indicate one representative point.",
+    "geography": {
+      "authority_id": "supplement:auth:ma-public:Q3330628",
+      "countries": [
+        "MA"
+      ],
+      "note": "Present locality in the authority reference: Tangier.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The relevant public institution identifies the named heritage place and its visitor scope.",
+        "id": "ma-visitor:Q3330628",
+        "license": null,
+        "publisher": "Fondation Nationale des Musées",
+        "revision": "Frozen public source, SHA-256 6406084219bbc1fdb95949aa3de22fb6cf0ab1b297b988e8f71273112ba36702",
+        "title": "Kasbah Museum (Dar al-Makhzen, Tangier) · public visitor information",
+        "uri": "https://www.fnm.ma/museums/28"
+      }
+    },
+    "id": "auth:ma-public:Q3330628",
+    "location_precision": null,
+    "names": [
+      "丹吉尔卡斯巴宫博物馆",
+      "Kasbah Museum"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -5.8123369,
+      35.7882006
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The relevant public institution identifies the named heritage place and its visitor scope.",
+        "id": "ma-visitor:Q3330628",
+        "license": null,
+        "publisher": "Fondation Nationale des Musées",
+        "revision": "Frozen public source, SHA-256 6406084219bbc1fdb95949aa3de22fb6cf0ab1b297b988e8f71273112ba36702",
+        "title": "Kasbah Museum (Dar al-Makhzen, Tangier) · public visitor information",
+        "uri": "https://www.fnm.ma/museums/28"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -5.8123369, latitude 35.7882006",
+        "id": "ma-coordinate:Q3330628",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata Q3330628, revision 2344423034; P625 statement Q3330628$082AE6B0-1C63-448F-B826-7CAE1E640B8C",
+        "title": "Kasbah Museum (Dar al-Makhzen, Tangier) · representative point",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&ids=Q923835%7CQ733798%7CQ7681888%7CQ3519548%7CQ2065708%7CQ58975694%7CQ2383366%7CQ48816034%7CQ41346%7CQ468574%7CQ3330628%7CQ27517991%7CQ3332493"
+      }
+    ],
+    "source_uri": "https://www.fnm.ma/museums/28",
+    "title": "Kasbah Museum (Dar al-Makhzen, Tangier)",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed the public heritage identity and representative coordinates.",
+      "note": "The point-only intake does not record a dated historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Fondation de la Mosquée Hassan II",
+      "Wikidata contributors"
+    ],
+    "description": "Hassan II Mosque is a publicly interpreted cultural heritage place in the area of Casablanca, Morocco.",
+    "description_zh": "哈桑二世清真寺位于摩洛哥 Casablanca，可查阅官方机构发布的遗产与参观资料。",
+    "details": "The mosque foundation publishes organized guided visits to the historic architectural complex. Access is subject to the operator's published visitor arrangements. The mapped coordinates indicate one representative point.",
+    "geography": {
+      "authority_id": "supplement:auth:ma-public:Q41346",
+      "countries": [
+        "MA"
+      ],
+      "note": "Present locality in the authority reference: Casablanca.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The relevant public institution identifies the named heritage place and its visitor scope.",
+        "id": "ma-visitor:Q41346",
+        "license": null,
+        "publisher": "Fondation de la Mosquée Hassan II",
+        "revision": "Frozen public source, SHA-256 8a03929a73d90a98be763f703d260f819e0c2bace4091f91e811ef994123f9b3",
+        "title": "Hassan II Mosque · public visitor information",
+        "uri": "https://fmh2.ma/fr/mosqu%C3%A9e/visites/visites-guid%C3%A9es-payantes"
+      }
+    },
+    "id": "auth:ma-public:Q41346",
+    "location_precision": null,
+    "names": [
+      "哈桑二世清真寺",
+      "Hassan II Mosque"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -7.632561111111111,
+      33.60734166666667
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The relevant public institution identifies the named heritage place and its visitor scope.",
+        "id": "ma-visitor:Q41346",
+        "license": null,
+        "publisher": "Fondation de la Mosquée Hassan II",
+        "revision": "Frozen public source, SHA-256 8a03929a73d90a98be763f703d260f819e0c2bace4091f91e811ef994123f9b3",
+        "title": "Hassan II Mosque · public visitor information",
+        "uri": "https://fmh2.ma/fr/mosqu%C3%A9e/visites/visites-guid%C3%A9es-payantes"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -7.632561111111111, latitude 33.60734166666667",
+        "id": "ma-coordinate:Q41346",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata Q41346, revision 2540442843; P625 statement q41346$2A53D0FA-FF95-4355-A57B-BA4DBFF5F109",
+        "title": "Hassan II Mosque · representative point",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&ids=Q923835%7CQ733798%7CQ7681888%7CQ3519548%7CQ2065708%7CQ58975694%7CQ2383366%7CQ48816034%7CQ41346%7CQ468574%7CQ3330628%7CQ27517991%7CQ3332493"
+      }
+    ],
+    "source_uri": "https://fmh2.ma/fr/mosqu%C3%A9e/visites/visites-guid%C3%A9es-payantes",
+    "title": "Hassan II Mosque",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed the public heritage identity and representative coordinates.",
+      "note": "The point-only intake does not record a dated historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Tangier American Legation Museum",
+      "Wikidata contributors",
+      "United States Department of State"
+    ],
+    "description": "Tangier American Legation Museum is a publicly interpreted cultural heritage place in the area of Tangier, Morocco.",
+    "description_zh": "丹吉尔美国旧使馆博物馆位于摩洛哥 Tangier，可查阅官方机构发布的遗产与参观资料。",
+    "details": "The former legation is publicly visited as a museum and remains United States public property. This record concerns the named historic building rather than ancient Tingis or the Tangier Kasbah palace. The mapped coordinates indicate one representative point.",
+    "geography": {
+      "authority_id": "supplement:auth:ma-public:Q468574",
+      "countries": [
+        "MA"
+      ],
+      "note": "Present locality in the authority reference: Tangier.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The relevant public institution identifies the named heritage place and its visitor scope.",
+        "id": "ma-visitor:Q468574",
+        "license": null,
+        "publisher": "Tangier American Legation Museum",
+        "revision": "Frozen public source, SHA-256 818b365adb97e694c2312bac3d4d2ba4e85e8788502f6ed991c244ce030f9343",
+        "title": "Tangier American Legation Museum · public visitor information",
+        "uri": "https://www.legation.org/infovisitor"
+      }
+    },
+    "id": "auth:ma-public:Q468574",
+    "location_precision": null,
+    "names": [
+      "丹吉尔美国旧使馆博物馆",
+      "American Legation, Tangier"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -5.8108841666667,
+      35.783862777778
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The relevant public institution identifies the named heritage place and its visitor scope.",
+        "id": "ma-visitor:Q468574",
+        "license": null,
+        "publisher": "Tangier American Legation Museum",
+        "revision": "Frozen public source, SHA-256 818b365adb97e694c2312bac3d4d2ba4e85e8788502f6ed991c244ce030f9343",
+        "title": "Tangier American Legation Museum · public visitor information",
+        "uri": "https://www.legation.org/infovisitor"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "ma-evidence:Q468574:1",
+        "license": null,
+        "publisher": "United States Department of State",
+        "revision": "Frozen public source, SHA-256 6d6c02ac5787723407e5b40020792eaf7a3f54915eb6b2f56d0f9c6df8b2070e",
+        "title": "Tangier American Legation Museum · supporting public evidence",
+        "uri": "https://oboculturalheritage.state.gov/first-us-legation/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -5.8108841666667, latitude 35.783862777778",
+        "id": "ma-coordinate:Q468574",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata Q468574, revision 2546352931; P625 statement q468574$0332EC3E-923A-43C8-AEB2-6E6CD2AE7225",
+        "title": "Tangier American Legation Museum · representative point",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&ids=Q923835%7CQ733798%7CQ7681888%7CQ3519548%7CQ2065708%7CQ58975694%7CQ2383366%7CQ48816034%7CQ41346%7CQ468574%7CQ3330628%7CQ27517991%7CQ3332493"
+      }
+    ],
+    "source_uri": "https://www.legation.org/infovisitor",
+    "title": "Tangier American Legation Museum",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed the public heritage identity and representative coordinates.",
+      "note": "The point-only intake does not record a dated historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Youth, Culture and Communication of Morocco",
+      "Wikidata contributors"
+    ],
+    "description": "Kasbah of Chefchaouen is a publicly interpreted cultural heritage place in the area of Chefchaouen, Morocco.",
+    "description_zh": "舍夫沙万古堡位于摩洛哥 Chefchaouen，可查阅官方机构发布的遗产与参观资料。",
+    "details": "The Ministry lists paid public admission to the named kasbah. The point represents the fortress and museum property, distinct from the city as a whole. The mapped coordinates indicate one representative point.",
+    "geography": {
+      "authority_id": "supplement:auth:ma-public:Q58975694",
+      "countries": [
+        "MA"
+      ],
+      "note": "Present locality in the authority reference: Chefchaouen.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The relevant public institution identifies the named heritage place and its visitor scope.",
+        "id": "ma-visitor:Q58975694",
+        "license": null,
+        "publisher": "Ministry of Youth, Culture and Communication of Morocco",
+        "revision": "Frozen public source, SHA-256 3da218c952b074204b9a555ca2dac073bf938b11e3ca81e850dfad341bd031f2",
+        "title": "Kasbah of Chefchaouen · public visitor information",
+        "uri": "https://e-services.minculture.gov.ma/fr/tickets/qasba-de-chefchaouen"
+      }
+    },
+    "id": "auth:ma-public:Q58975694",
+    "location_precision": null,
+    "names": [
+      "舍夫沙万古堡",
+      "Kasbah of Chefchaouen"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -5.261507,
+      35.168672
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The relevant public institution identifies the named heritage place and its visitor scope.",
+        "id": "ma-visitor:Q58975694",
+        "license": null,
+        "publisher": "Ministry of Youth, Culture and Communication of Morocco",
+        "revision": "Frozen public source, SHA-256 3da218c952b074204b9a555ca2dac073bf938b11e3ca81e850dfad341bd031f2",
+        "title": "Kasbah of Chefchaouen · public visitor information",
+        "uri": "https://e-services.minculture.gov.ma/fr/tickets/qasba-de-chefchaouen"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -5.261507, latitude 35.168672",
+        "id": "ma-coordinate:Q58975694",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata Q58975694, revision 2328969380; P625 statement Q58975694$1dd2c52f-412c-21ca-84b8-d5edbeebbf09",
+        "title": "Kasbah of Chefchaouen · representative point",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&ids=Q923835%7CQ733798%7CQ7681888%7CQ3519548%7CQ2065708%7CQ58975694%7CQ2383366%7CQ48816034%7CQ41346%7CQ468574%7CQ3330628%7CQ27517991%7CQ3332493"
+      }
+    ],
+    "source_uri": "https://e-services.minculture.gov.ma/fr/tickets/qasba-de-chefchaouen",
+    "title": "Kasbah of Chefchaouen",
+    "types": [
+      "historic-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed the public heritage identity and representative coordinates.",
+      "note": "The point-only intake does not record a dated historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Rabat Région Patrimoine Historique",
+      "Wikidata contributors",
+      "Moroccan National Tourist Office"
+    ],
+    "description": "Archaeological Site of Banasa is a publicly interpreted cultural heritage place in the area of Sidi Kacem Province, Morocco.",
+    "description_zh": "巴纳萨考古遗址位于摩洛哥 Sidi Kacem Province，可查阅官方机构发布的遗产与参观资料。",
+    "details": "The regional public heritage operator identifies Banasa for visitors and the national tourism office names it in its admission catalogue. No current ticket schedule or unrestricted access is inferred. The mapped coordinates indicate one representative point.",
+    "geography": {
+      "authority_id": "supplement:auth:ma-public:Q733798",
+      "countries": [
+        "MA"
+      ],
+      "note": "Present locality in the authority reference: Sidi Kacem Province.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The relevant public institution identifies the named heritage place and its visitor scope.",
+        "id": "ma-visitor:Q733798",
+        "license": null,
+        "publisher": "Rabat Région Patrimoine Historique",
+        "revision": "Frozen public source, SHA-256 f08d415e5d41bc20259ba5dbfb9f5aff6754f4d1339bdb834455caa902779b9f",
+        "title": "Archaeological Site of Banasa · public visitor information",
+        "uri": "https://rabatsites.ma/tour-item/le-site-archeologique-de-banassa/"
+      }
+    },
+    "id": "auth:ma-public:Q733798",
+    "location_precision": null,
+    "names": [
+      "巴纳萨考古遗址",
+      "Iulia Valentia Banasa"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -6.115556,
+      34.601667
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The relevant public institution identifies the named heritage place and its visitor scope.",
+        "id": "ma-visitor:Q733798",
+        "license": null,
+        "publisher": "Rabat Région Patrimoine Historique",
+        "revision": "Frozen public source, SHA-256 f08d415e5d41bc20259ba5dbfb9f5aff6754f4d1339bdb834455caa902779b9f",
+        "title": "Archaeological Site of Banasa · public visitor information",
+        "uri": "https://rabatsites.ma/tour-item/le-site-archeologique-de-banassa/"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "",
+        "id": "ma-evidence:Q733798:1",
+        "license": null,
+        "publisher": "Moroccan National Tourist Office",
+        "revision": "Frozen public source, SHA-256 f39538bdbb5703a7101d35a6c6197a16a263a2bbd5161960205a8ba9c274c341",
+        "title": "Archaeological Site of Banasa · supporting public evidence",
+        "uri": "https://www.visitmorocco.com/sites/default/files/tarifs-musees-au-maroc.pdf"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -6.115556, latitude 34.601667",
+        "id": "ma-coordinate:Q733798",
+        "license": "CC0",
+        "publisher": "Wikidata contributors",
+        "revision": "Wikidata Q733798, revision 2569593115; P625 statement Q733798$8778175F-E07C-4F00-9512-435FBD9675AC",
+        "title": "Archaeological Site of Banasa · representative point",
+        "uri": "https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&ids=Q923835%7CQ733798%7CQ7681888%7CQ3519548%7CQ2065708%7CQ58975694%7CQ2383366%7CQ48816034%7CQ41346%7CQ468574%7CQ3330628%7CQ27517991%7CQ3332493"
+      }
+    ],
+    "source_uri": "https://rabatsites.ma/tour-item/le-site-archeologique-de-banassa/",
+    "title": "Archaeological Site of Banasa",
+    "types": [
+      "archaeological-site"
+    ]
+  },
+  {
+    "chronology": {
+      "default_phase_id": null,
+      "method": "Reviewed the public heritage identity and representative coordinates.",
+      "note": "The point-only intake does not record a dated historical phase.",
+      "phases": [],
+      "reviewed_at": "2026-11-28",
+      "status": "insufficient"
+    },
+    "contributors": [
+      "Ministry of Youth, Culture and Communication of Morocco",
+      "Pleiades contributors",
+      "M. Euzennat",
+      "Brady Kiesling",
+      "R. Talbert",
+      "Johan Åhlfeldt",
+      "Jeffrey Becker",
+      "Tom Elliott",
+      "DARMC",
+      "R. Warner",
+      "Sean Gillies"
+    ],
+    "description": "Archaeological Site of Lixus is a publicly interpreted cultural heritage place in the area of near Larache, Morocco.",
+    "description_zh": "利克苏斯考古遗址位于摩洛哥 near Larache，可查阅官方机构发布的遗产与参观资料。",
+    "details": "The Ministry lists public entry to the identified archaeological site near Larache. The representative point is the frozen Pleiades location for the ancient settlement. The mapped coordinates indicate one representative point.",
+    "geography": {
+      "authority_id": "supplement:auth:ma-public:Q923835",
+      "countries": [
+        "MA"
+      ],
+      "note": "Present locality in the authority reference: near Larache.",
+      "point_count": 1,
+      "regions": [
+        "arab-states"
+      ],
+      "source": {
+        "accessed": "2026-11-28",
+        "excerpt": "The relevant public institution identifies the named heritage place and its visitor scope.",
+        "id": "ma-visitor:Q923835",
+        "license": null,
+        "publisher": "Ministry of Youth, Culture and Communication of Morocco",
+        "revision": "Frozen public source, SHA-256 b9ffec9e4dffbc283c0d1afe7dcebf3b439fc1f7b4894b5a7bdc26ff8fc5738a",
+        "title": "Archaeological Site of Lixus · public visitor information",
+        "uri": "https://e-services.minculture.gov.ma/fr/tickets/site-archeologique-de-lixus"
+      }
+    },
+    "id": "auth:ma-public:Q923835",
+    "location_precision": null,
+    "names": [
+      "利克苏斯考古遗址",
+      "Lixus"
+    ],
+    "period_evidence": [],
+    "periods": [],
+    "repr_point": [
+      -6.109951512805376,
+      35.2002398463664
+    ],
+    "source_kind": "supplement",
+    "source_refs": [
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "The relevant public institution identifies the named heritage place and its visitor scope.",
+        "id": "ma-visitor:Q923835",
+        "license": null,
+        "publisher": "Ministry of Youth, Culture and Communication of Morocco",
+        "revision": "Frozen public source, SHA-256 b9ffec9e4dffbc283c0d1afe7dcebf3b439fc1f7b4894b5a7bdc26ff8fc5738a",
+        "title": "Archaeological Site of Lixus · public visitor information",
+        "uri": "https://e-services.minculture.gov.ma/fr/tickets/site-archeologique-de-lixus"
+      },
+      {
+        "accessed": "2026-11-28",
+        "excerpt": "Longitude -6.109951512805376, latitude 35.2002398463664",
+        "id": "ma-coordinate:Q923835",
+        "license": "CC BY 3.0",
+        "publisher": "Pleiades contributors",
+        "revision": "Pleiades 275666; 2024-01-30T19:21:04Z",
+        "title": "Archaeological Site of Lixus · representative point",
+        "uri": "https://pleiades.stoa.org/places/275666/json"
+      }
+    ],
+    "source_uri": "https://e-services.minculture.gov.ma/fr/tickets/site-archeologique-de-lixus",
+    "title": "Archaeological Site of Lixus",
+    "types": [
+      "archaeological-site"
+    ]
+  }
+]

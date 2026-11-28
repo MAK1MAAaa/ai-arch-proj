@@ -1,0 +1,22 @@
+{
+  "base_count": 4570,
+  "base_ids_sha256": "9a27f030f8b093a0cb2814436014cfbd60caa3ba13a15bcdf24977542b732c16",
+  "base_sites_sha256": "9d71683b8b79480feea8a4fcbb19a51e7628836c83b466eef84a2293eec4392b",
+  "cohort_version": "tunisia-amvppc-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 8,
+    "total": 4578
+  },
+  "files": {
+    "tunisia_public_review.json": {
+      "sha256": "4f69a96aa81163c5c60d4eaafa032eec198dde0d74aaa84d329dedfedfeee243"
+    },
+    "tunisia_public_sites.json": {
+      "sha256": "89ccb4b61061707fb118c139dfd0f1cc54cc1b2540b6b045cb145008c0583b9c"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Eight public archaeological properties in the Tunisian AMVPPC visiting catalogue. WGS84 coordinates match the independently recognized archaeological site and retain open original source statements."
+}

@@ -5,6 +5,7 @@ from __future__ import annotations
 import copy
 import hashlib
 import json
+from collections import Counter
 from collections.abc import Iterator
 from dataclasses import dataclass
 from pathlib import Path
@@ -20,6 +21,7 @@ from archsearch.catalogue_data import load_catalogue
 from archsearch.corpus import build_document, load_curated_corpus
 from archsearch.domain import Site
 from archsearch.polar_data import load_polar
+from archsearch.target_data import POINT_COHORTS
 
 
 def encoded(value: Any) -> bytes:
@@ -557,28 +559,33 @@ def test_real_api_preserves_source_country_labels_and_independent_supplement_cou
     response = bundled_client.get("/api/coverage")
     assert response.status_code == 200
     coverage = response.json()
-    assert coverage["corpus_version"] == "global-v21" and coverage["total"] == 4514
+    assert coverage["corpus_version"] == "global-v21" and coverage["total"] == 4586
     countries = {row["id"]: row for row in coverage["countries"]}
     assert len(countries) == 214
     labels = supplement.country_labels()
     expected_counts = {"CD": 5, "GY": 8}
+    added_counts: Counter[str] = Counter()
+    for cohort in POINT_COHORTS:
+        points = json.loads((supplement.DATA_DIR / cohort.filenames[1]).read_bytes())
+        for point in points:
+            added_counts.update(point["geography"]["countries"])
     assert all(countries[code]["label"] == label
-               and countries[code]["count"] == expected_counts.get(code, 1)
+               and countries[code]["count"] == expected_counts.get(code, 1) + added_counts[code]
                for code, label in labels.items())
     previous = json.loads((supplement.DATA_DIR / "catalogue_manifest.json").read_bytes())
     assert len(previous["countries"]) == 159
     assert all(countries[row["id"]]["label"] == row["label"] for row in previous["countries"])
     assert {row["id"]: row["count"] for row in coverage["sources"]} == {
-        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 2889,
+        "pleiades": 500, "global": 100, "unesco": 934, "ats": 91, "supplement": 2961,
     }
-    assert coverage["locations"] == {"mapped": 4118, "polar": 3, "unknown": 393}
+    assert coverage["locations"] == {"mapped": 4190, "polar": 3, "unknown": 393}
     assert coverage["authority"]["covered"] == coverage["authority"]["eligible_total"] == 1033
     assert coverage["polar_authority"]["covered"] == 91
     spatial = coverage["spatial_locations"]
     assert spatial["ready"] and spatial["records"] == 1239 and spatial["points"] == 5851
-    assert spatial["display_points"] == 8521
+    assert spatial["display_points"] == 8593
     status = bundled_client.get("/api/status").json()
-    assert status["corpus"]["count"] == 4514 and status["corpus"]["version"] == "global-v21"
+    assert status["corpus"]["count"] == 4586 and status["corpus"]["version"] == "global-v21"
     assert status["semantic"]["ready"] is False and status["history"]["ready"] is False
 
 

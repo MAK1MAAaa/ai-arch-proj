@@ -188,11 +188,40 @@ EGYPT_PUBLIC = NamedPlaceCohort(
     "89a99e29afb86070b703281471219c5454ea127554ac9b9da83b0382cb6df3d6",
     "fbfb0317e370df2f3f0fd4601ca2f6a00a130d10324733cdbc106f1bbb815c3e",
 )
+SOUTHEAST_PUBLIC = NamedPlaceCohort(
+    "vietnam-cambodia-public-v1",
+    "global-v21",
+    "southeast_public",
+    "5cb9406321605edf6c7a3fb96affc7a9fba9519712605caf6484fdd14dff348b",
+    "261a0aa22efe6beb61a518944538dcddeee6d416e4c866813dd543da7ccdc974",
+)
+CARIBBEAN_ISLANDS_PUBLIC = NamedPlaceCohort(
+    "caribbean-islands-public-v1",
+    "global-v21",
+    "caribbean_islands_public",
+    "ca91998d3226028b7f9272a684fce9048a2de5fe073a32023fa72ea730233136",
+    "7bd2b413ce2ef6cb8139bc2002cd30b6c4ef87aed1eaa9e2f78314b20de61c14",
+)
+TUNISIA_PUBLIC = NamedPlaceCohort(
+    "tunisia-amvppc-public-v1",
+    "global-v21",
+    "tunisia_public",
+    "4f69a96aa81163c5c60d4eaafa032eec198dde0d74aaa84d329dedfedfeee243",
+    "89ccb4b61061707fb118c139dfd0f1cc54cc1b2540b6b045cb145008c0583b9c",
+)
+MOROCCO_PUBLIC = NamedPlaceCohort(
+    "morocco-public-v1",
+    "global-v21",
+    "morocco_public",
+    "b344ca464c90c8df4fab286604bdbcfacfa6e800d8f909233dcf69e77d260f65",
+    "4a7d7186e52702bb0eb7c01ff2a28237d9f1cf7363f250e8e6fe9a4bc00acc9a",
+)
 POINT_COHORTS = (
     IRELAND, ANDALUCIA, TAIWAN_ICULTURE, MEXICO_SIC, FINLAND_VARK, WALES_CADW, THAILAND_FAD,
     AFRICA_VISIT, SCOTLAND_HES, CARIBBEAN_NRHP, PERU_PUBLIC, INDIA_ASI, INDIA_ASI_NEXT,
     SRI_LANKA_PUBLIC, SOUTH_ASIA_PUBLIC, CENTRAL_AMERICA_PUBLIC, SOUTHERN_PUBLIC,
-    NEW_ZEALAND_PUBLIC, EGYPT_PUBLIC,
+    NEW_ZEALAND_PUBLIC, EGYPT_PUBLIC, SOUTHEAST_PUBLIC, CARIBBEAN_ISLANDS_PUBLIC,
+    TUNISIA_PUBLIC, MOROCCO_PUBLIC,
 )
 
 

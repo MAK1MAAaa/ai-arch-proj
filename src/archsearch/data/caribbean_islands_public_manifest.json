@@ -1,0 +1,22 @@
+{
+  "base_count": 4542,
+  "base_ids_sha256": "c5cb92faced288e3b3e3f23b3d7dae3d4dde636700e28e5f6deec2f30159287c",
+  "base_sites_sha256": "ee0e568e96e7fc8a545e67b3af03f4aa79bd2d7210b974c6521ad8e09a429c17",
+  "cohort_version": "caribbean-islands-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 28,
+    "total": 4570
+  },
+  "files": {
+    "caribbean_islands_public_review.json": {
+      "sha256": "ca91998d3226028b7f9272a684fce9048a2de5fe073a32023fa72ea730233136"
+    },
+    "caribbean_islands_public_sites.json": {
+      "sha256": "7bd2b413ce2ef6cb8139bc2002cd30b6c4ef87aed1eaa9e2f78314b20de61c14"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Twenty-eight cultural properties in eleven independent Caribbean countries supported by official public visitor evidence, GeoNames and CC0 statements. The old Saint Kitts treasury museum was withheld during renovation."
+}

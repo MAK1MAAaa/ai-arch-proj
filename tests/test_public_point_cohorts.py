@@ -111,6 +111,12 @@ def test_public_point_search_catalogue_and_provenance(
             ("AR", "auth:public-americas:ar-", 2),
             ("NZ", "auth:nz-public:", 25),
             ("EG", "auth:eg-public:", 19),
+            ("VN", "auth:vn-public:", 19),
+            ("KH", "auth:kh-public:", 9),
+            ("TT", "auth:tt-public:", 3),
+            ("KN", "auth:kn-public:", 2),
+            ("TN", "auth:tn-public:", 8),
+            ("MA", "auth:ma-public:", 8),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -150,3 +156,18 @@ def test_public_point_search_catalogue_and_provenance(
         assert pencarrow["repr_point"] == [174.849917, -41.35893]
         beni_hasan = client.get("/api/sites/auth:eg-public:Q817286").json()
         assert beni_hasan["repr_point"] == [30.875280555556, 27.931388888889]
+        nokor = client.get("/api/sites/auth:kh-public:Q806972").json()
+        assert "Banteay Prey Nokor" not in nokor["names"]
+        assert client.get("/api/sites/auth:vn-public:Q10825838").status_code == 404
+        king_george = client.get("/api/sites/auth:tt-public:geonames-3574520").json()
+        assert king_george["repr_point"] == [-60.72697, 11.17777]
+        assert client.get("/api/sites/auth:kn-public:Q41575364").status_code == 404
+        bulla_regia = client.get("/api/sites/auth:tn-public:Q1004205").json()
+        assert bulla_regia["repr_point"] == [8.757016, 36.558893]
+        search = client.post("/api/search", json={
+            "query": "Bulla Regia", "mode": "bm25", "country": "TN",
+        }).json()
+        assert search["results"][0]["site"]["id"] == bulla_regia["id"]
+        lixus = client.get("/api/sites/auth:ma-public:Q923835").json()
+        assert lixus["repr_point"] == [-6.109951512805376, 35.2002398463664]
+        assert "M. Euzennat" in lixus["contributors"]

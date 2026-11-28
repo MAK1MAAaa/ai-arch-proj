@@ -1,0 +1,22 @@
+{
+  "base_count": 4578,
+  "base_ids_sha256": "ad151955f9a20afea927b182e023f5057e99d8fbd7b341694749495145dd57bb",
+  "base_sites_sha256": "733c1553f799e193f6020202764efe26b356491a37a766f59d049513f5af0021",
+  "cohort_version": "morocco-public-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 8,
+    "total": 4586
+  },
+  "files": {
+    "morocco_public_review.json": {
+      "sha256": "b344ca464c90c8df4fab286604bdbcfacfa6e800d8f909233dcf69e77d260f65"
+    },
+    "morocco_public_sites.json": {
+      "sha256": "4a7d7186e52702bb0eb7c01ff2a28237d9f1cf7363f250e8e6fe9a4bc00acc9a"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Eight Moroccan public archaeological and historical properties with corresponding original coordinates, verified visitor scope and source attribution."
+}
