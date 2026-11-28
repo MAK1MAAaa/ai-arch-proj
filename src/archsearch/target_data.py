@@ -75,7 +75,14 @@ TAIWAN_ICULTURE = NamedPlaceCohort(
     "860b2e16629089779e33699a8ba7f6bd06c3fdc020e934c88bc8ce824e4bb8ca",
     country_labels=(("TW", "Taiwan"),),
 )
-POINT_COHORTS = (IRELAND, ANDALUCIA, TAIWAN_ICULTURE)
+MEXICO_SIC = NamedPlaceCohort(
+    "mexico-sic-public-archaeology-v1",
+    "global-v21",
+    "mexico_sic",
+    "45793ce985a6ba2dd4035c9b58d7786943872ee5287a97d4f77c18162fbd08b4",
+    "9f1b3d27dfcfe2ed2b631e9f3cd140c8c660425fa4d2e5d4b2e46d7a87753286",
+)
+POINT_COHORTS = (IRELAND, ANDALUCIA, TAIWAN_ICULTURE, MEXICO_SIC)
 
 
 class TargetDataError(RuntimeError):

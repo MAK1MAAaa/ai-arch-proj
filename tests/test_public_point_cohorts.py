@@ -80,3 +80,13 @@ def test_public_point_search_catalogue_and_provenance(
             source["license"] == "Open Government Data License, version 1.0"
             for source in detail["source_refs"]
         )
+
+        mexico = client.get("/api/catalogue?country=MX").json()
+        assert mexico["total"] == 155
+        assert sum(point["id"].startswith("auth:mx-sic:") for point in mexico["points"]) == 124
+        vallecito = client.get("/api/sites/auth:mx-sic:1").json()
+        assert vallecito["title"] == "El Vallecito"
+        assert vallecito["repr_point"] == [-116.09759, 32.53888]
+        assert [source["license"] for source in vallecito["source_refs"]] == [
+            "SIC open data attribution terms", "CC BY 4.0",
+        ]

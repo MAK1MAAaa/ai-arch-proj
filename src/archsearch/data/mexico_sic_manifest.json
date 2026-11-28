@@ -1,0 +1,22 @@
+{
+  "base_count": 4072,
+  "base_ids_sha256": "aa29907b4293f80a0b444a45bee6bc927a6a7ab91df60a7be253bc44900356ee",
+  "base_sites_sha256": "7df3671e399721bf7c24e5b7fb4a048378232bbc971d9d5ee99cc1b621781f99",
+  "cohort_version": "mexico-sic-public-archaeology-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 124,
+    "total": 4196
+  },
+  "files": {
+    "mexico_sic_review.json": {
+      "sha256": "45793ce985a6ba2dd4035c9b58d7786943872ee5287a97d4f77c18162fbd08b4"
+    },
+    "mexico_sic_sites.json": {
+      "sha256": "9f1b3d27dfcfe2ed2b631e9f3cd140c8c660425fa4d2e5d4b2e46d7a87753286"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "124 cultural archaeological sites open in the INAH register, matched to unique SIC locations and checked against the official visitor point and existing sites. Excludes uncertain or overlapping identities."
+}
