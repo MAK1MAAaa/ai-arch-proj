@@ -138,6 +138,11 @@ def test_public_point_search_catalogue_and_provenance(
             ("BR", "auth:br-public:", 3),
             ("GY", "auth:gy-public:", 3),
             ("NO", "auth:no-askeladden:", 8),
+            ("JP", "auth:jp-public:", 20),
+            ("NA", "auth:na-public:", 5),
+            ("BW", "auth:bw-public:", 2),
+            ("ZW", "auth:zw-public:", 1),
+            ("ZM", "auth:zm-public:", 2),
         ):
             points = client.get(f"/api/catalogue?country={country}").json()["points"]
             added = [point for point in points if point["id"].startswith(prefix)]
@@ -243,3 +248,14 @@ def test_public_point_search_catalogue_and_provenance(
         fredriksten = client.get("/api/sites/auth:no-askeladden:122685").json()
         assert fredriksten["repr_point"] == [11.39722, 59.11981]
         assert {"NLOD 1.0", "CC0"}.issubset(ref["license"] for ref in fredriksten["source_refs"])
+        tagajo = client.get("/api/sites/auth:jp-public:Q870867").json()
+        assert tagajo["repr_point"] == [140.98833333, 38.30666667]
+        assert "多賀城跡" in tagajo["names"]
+        assert "reconstructed south gate" in tagajo["details"]
+        assert tagajo["chronology"]["phases"] == []
+        windhoek_heroes = client.get("/api/sites/auth:na-public:Q5743019").json()
+        assert windhoek_heroes["repr_point"] == [17.07820278, -22.66320556]
+        assert windhoek_heroes["geography"]["countries"] == ["NA"]
+        harare_heroes = client.get("/api/sites/auth:zw-public:Q6973056").json()
+        assert harare_heroes["geography"]["countries"] == ["ZW"]
+        assert harare_heroes["repr_point"] != windhoek_heroes["repr_point"]

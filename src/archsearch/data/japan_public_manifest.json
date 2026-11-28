@@ -1,0 +1,22 @@
+{
+  "base_count": 4713,
+  "base_ids_sha256": "9733731365e2e917ad84c1c9a8337aee8cb3dfdb1b2cb09182e0c077654d11a6",
+  "base_sites_sha256": "88eaba41b68c59ac62ff94d459c9e47c632da82762e93ee59451ec2a2ca72f19",
+  "cohort_version": "japan-public-heritage-v1",
+  "corpus_version": "global-v21",
+  "counts": {
+    "added": 20,
+    "total": 4733
+  },
+  "files": {
+    "japan_public_review.json": {
+      "sha256": "934caed564b481cf3cb613d04a6a01917c0f83f920c541d28b51fb4a8303fc9e"
+    },
+    "japan_public_sites.json": {
+      "sha256": "b8be883727c868de1703a622867010343ba18374cc221bfd1df91ab2e916c8f6"
+    }
+  },
+  "processing": "Source-based bilingual summaries; no generated dates or coordinates. Representative points retain their source scope; no inferred boundaries.",
+  "schema_version": 1,
+  "selection": "Publicly interpreted Japanese archaeological sites and castle properties, matched to government or operator evidence and individually checked against existing World Heritage locations and components."
+}
